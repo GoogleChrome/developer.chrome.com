@@ -38,7 +38,7 @@ as we progress in Q3 2023. The current proposals are as follows.
 
 Ad techs will be able to receive experiment labels for a portion of Chrome
 traffic. An ad tech can choose to coordinate with other ad techs, for example,
-to run [Protected Audience](/docs/privacy-sandbox/fledge/) auctions without
+to run [Protected Audience](/docs/privacy-sandbox/protected-audience/) auctions without
 third-party cookies for a consistent experiment group. Ad techs can also use
 these labels for their own independent experiments and testing. 
 

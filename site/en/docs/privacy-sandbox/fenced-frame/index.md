@@ -71,15 +71,15 @@ which suggests top-level sites should partition data. Many Privacy Sandbox
 proposals aim to satisfy cross-site use cases without third-party cookies or
 other tracking mechanisms. For example:
 
-*  [Protected Audience API](/docs/privacy-sandbox/fledge/) allows for interest-based ad serving
+*  [Protected Audience API](/docs/privacy-sandbox/protected-audience/) allows for interest-based ad serving
    in a privacy-preserving manner.
 *  [Shared Storage](https://github.com/pythagoraskitty/shared-storage) allows
    access to unpartitioned cross-site data in a secure environment.
 
 Let's consider how fenced frames could work with the
-[Protected Audience API](/docs/privacy-sandbox/fledge/) proposal. With the Protected Audience API, a user's interests
+[Protected Audience API](/docs/privacy-sandbox/protected-audience/) proposal. With the Protected Audience API, a user's interests
 are registered on an advertiser's site in [interest
-groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads that
+groups](/docs/privacy-sandbox/protected-audience/#interest-group-detail), along with ads that
 may be of interest to the user. Then, on a separate site (known as a
 "publisher"), the ads registered in relevant interest groups are auctioned and
 the winning ad is displayed in a fenced frame.

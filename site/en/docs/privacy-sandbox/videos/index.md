@@ -77,13 +77,13 @@ At Google I/O 2022, [Rowan Merewood](/authors/rowan_m/) from the Chrome team spo
 %}
 Refer to the documentation for the latest details:
 <a href="/docs/privacy-sandbox/topics/">Topics API</a>, 
-<a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>, 
+<a href="/docs/privacy-sandbox/protected-audience/">Protected Audience API</a>, 
 <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a>
 {% endColumn %}
 {% Column %}
 <strong>February 2023. Run time: 11:08</strong>
 
-[Danny Rojas](/authors/darojas/) of the Products Partnerships team provides a high-level view of the Privacy Sandbox ads APIs. He briefly describes the [Topics API](/docs/privacy-sandbox/topics/), the [Protected Audience API](/docs/privacy-sandbox/fledge/) (formerly FLEDGE), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/), along with some common use cases.
+[Danny Rojas](/authors/darojas/) of the Products Partnerships team provides a high-level view of the Privacy Sandbox ads APIs. He briefly describes the [Topics API](/docs/privacy-sandbox/topics/), the [Protected Audience API](/docs/privacy-sandbox/protected-audience/) (formerly FLEDGE), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/), along with some common use cases.
 {% endColumn %}
 {% endColumns %}
 
@@ -191,7 +191,7 @@ The Chrome team presents a high-level overview of the Attribution Reporting API 
 {% YouTube
   id='HkvmYKqnytw' 
 %}
-Refer to the documentation for the latest details: <a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>. 
+Refer to the documentation for the latest details: <a href="/docs/privacy-sandbox/protected-audience/">Protected Audience API</a>. 
 {% endColumn %}
 {% Column %}
 <strong>Sep 8, 2021. Run time: 5:51</strong>
@@ -205,7 +205,7 @@ Refer to the documentation for the latest details: <a href="/docs/privacy-sandbo
 {% YouTube
   id='znDD0gkdJyM' 
 %}
-Refer to the documentation for the latest details: <a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>. 
+Refer to the documentation for the latest details: <a href="/docs/privacy-sandbox/protected-audience/">Protected Audience API</a>. 
 
 {% endColumn %}
 {% Column %}
@@ -323,7 +323,7 @@ Origin trials are a way to test a new or experimental web platform feature. A th
   id='bXB1Iwq6Eq4' 
 %}
 Refer to the documentation for the latest details:
-<a href="/docs/privacy-sandbox/trust-tokens/">Private State Tokens</a>
+<a href="/docs/privacy-sandbox/private-state-tokens/">Private State Tokens</a>
 {% endColumn %}
 {% Column %}
 <strong>Jul 28, 2021. Run time: 8:17</strong>
