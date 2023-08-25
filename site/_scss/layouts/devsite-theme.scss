@@ -62,6 +62,12 @@ $CARD_BORDER: 2px solid #eef4ff;
   --devsite-item-description-margin: 1.325rem 0 0 0;
   --devsite-item-gap: 2rem;
 
+  /** Explicitly remove text-decoration from links, as PurgeCSS purges
+  DevSite's :link rule **/
+  a {
+    text-decoration: none;
+  }
+
   /* Override devsite.scss */
   section.devsite-landing-row[header-position=left]:not(.devsite-landing-row-cards):not(.devsite-landing-row-no-image-background) +
   section.devsite-landing-row[header-position=left]:not(.devsite-landing-row-cards):not([class^="devsite-landing-row-padding-"]) {
