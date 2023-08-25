@@ -4,12 +4,12 @@ title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
 date: 2023-03-09
-updated: 2023-05-19
+updated: 2023-08-28
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
 
-A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
+A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources.
 
 Background pages have been a fundamental component of extensions since their introduction. To put it simply, background pages provide an environment that lives independent of any other window or tab. This allows extensions to observe and act in response to events.
 
@@ -40,7 +40,7 @@ This page describes these tasks in detail.
 
 ## Update the "background" field in the manifest {: #update-bg-field }
 
-In Manifest V3, background pages are replaced by a *service worker*. The manifest changes are listed below. 
+In Manifest V3, background pages are replaced by a *service worker*. The manifest changes are listed below.
 
 - Replace `"background.scripts"` with `"background.service_worker"` in the `manifest.json`. Note that the `"service_worker"` field takes a string, not an array of strings.
 - Remove `"background.persistent"` from the `manifest.json`.
@@ -109,10 +109,17 @@ Communicate between offscreen documents and extension service workers using [mes
 
 ## Convert localStorage to another type {: #convert-localstorage }
 
-The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a service worker. To address this do one of the following:
+The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a service worker. To address this do one of two things. First, you can replace it with calls to another storage mechanism. The [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace will serve most use cases, but [other options](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#persist-data) are available.
 
-* Move its calls to an [offscreen document](/docs/extensions/reference/offscreen/).
-* Replace it with calls to another storage mechanism. The [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace will serve most use cases. [Other options](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#persist-data) are available.
+You can also move its calls to an [offscreen document](/docs/extensions/reference/offscreen/).
+
+1. Create an offscreen document with a conversion routine and a [`runtime.onMessage`](/docs/extensions/reference/runtime/#event-onMessage) handler.
+1. Add a conversion routine to the offscreen document.
+1. In the extension service worker check [`chrome.storage`](/docs/extensions/reference/storage/) for your data.
+1. If your data isn't found, [create](/docs/extensions/reference/offscreen/#method-createDocument) an offscreen document and call [`runtime.sendMessage()`](/docs/extensions/reference/runtime/#method-sendMessage) to start the conversion routine.
+1. In the `runtime.onMessage` handler that you added to the offscreen document, call the conversion routine.
+
+There are also some nuances with how web storage APIs work in extensions. Learn more in [Storage and Cookies][storage-and-cookies].
 
 ## Register listeners synchronously {: #register-listeners }
 
@@ -123,7 +130,7 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.browserAction.setBadgeText({ text: badgeText });
   chrome.browserAction.onClicked.addListener(handleActionClick);
 });
-``` 
+```
 
 This works with a persistent background page because the page is constantly running and never reinitialized. In Manifest V3, the service worker will be reinitialized when the event is dispatched. This means that when the event fires, the listeners will not be registered (since they are added asynchronously), and the event will be missed.
 
@@ -139,12 +146,12 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
 
 ## Replace XMLHttpRequest() with global fetch() {: #replace-xmlhttprequest }
 
-`XMLHttpRequest()` can't be called from a service worker, extension or otherwise. Replace calls from your background script to `XMLHttpRequest()` with calls to [global `fetch()`](https://developer.mozilla.org/docs/Web/API/fetch). 
+`XMLHttpRequest()` can't be called from a service worker, extension or otherwise. Replace calls from your background script to `XMLHttpRequest()` with calls to [global `fetch()`](https://developer.mozilla.org/docs/Web/API/fetch).
 
 {% Compare 'worse', 'XMLHttpRequest()' %}
 ```javascript
 const xhr = new XMLHttpRequest();
-console.log('UNSENT', xhr.readyState); 
+console.log('UNSENT', xhr.readyState);
 
 xhr.open('GET', '/api', true);
 console.log('OPENED', xhr.readyState);
@@ -189,7 +196,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
 ```
 {% endCompare %}
 
-For Manifest V3, replace the global variable with a call to [Storage API](/docs/extensions/reference/storage/). 
+For Manifest V3, replace the global variable with a call to [Storage API](/docs/extensions/reference/storage/).
 
 {% Compare 'better', 'Manifest V3 service worker' %}
 ```js
@@ -213,7 +220,7 @@ It's common to use delayed or periodic operations using the `setTimeout()` or `s
 {% Compare 'worse', 'Manifest V2 background script' %}
 ```js
 // 3 minutes in milliseconds
-const TIMEOUT = 3 * 60 * 1000; 
+const TIMEOUT = 3 * 60 * 1000;
 setTimeout(() => {
   chrome.action.setIcon({
     path: getRandomIconPath(),
