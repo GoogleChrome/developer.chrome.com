@@ -51,7 +51,7 @@ resume or inspect them more closely as appropriate.
 From the Application panel in Chrome DevTools, you can observe Protected Audience API interest
 group and auction events.
 
-If you visit the [Protected Audience API demo shopping site](https://protected-audience-demo-advertiser.web.app/)
+If you visit the [Protected Audience API demo advertiser site](https://protected-audience-demo-advertiser.web.app/)
 in a browser with the Protected Audience API enabled, DevTools will display information about the `join` event.
 
 <figure>
