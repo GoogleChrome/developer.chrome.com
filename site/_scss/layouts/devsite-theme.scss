@@ -202,6 +202,10 @@ $CARD_BORDER: 2px solid #eef4ff;
       top: 2.25rem;
     }
 
+    &[description-position=left] {
+      align-items: flex-start;
+    }
+
     &[description-position=bottom] {
       .devsite-landing-row-item-image {
         margin-bottom: 1.5rem;
@@ -638,6 +642,9 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     .dcc-blog-card {
+      display: block;
+      padding-left: 0;
+
       @media (max-width: 840px) {
         padding-top: 2.5rem;
 
