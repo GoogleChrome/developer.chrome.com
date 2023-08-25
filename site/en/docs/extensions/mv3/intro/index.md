@@ -10,40 +10,26 @@ updated: 2022-09-28
 
 {% Partial 'extensions/mv3-support.md' %}
 
-This site introduces Manifest V3, short for Manifest Version 3, which is the latest iteration of the Chrome extension platform. It shares the background and reasons for introducing Manifest V3 and the vision for the platform's future, along with resources on how to migrate.
+Manifest Version 3 (Manifest V3) is the latest iteration of the Chrome extension platform. This page outlines the changes in Manifest V3 and provides migration resources.
 
-## What is a manifest? {: #what-is-a-manifest }
+An extension [manifest][doc-manifest] gives the browser information about an extension's capabilities and the files it uses. The features available for extensions to use are defined by the current [manifest version][manifest-version]. Manifest V3 introduces enhancements to extension security, privacy, and performance, and allows extensions to use open web technologies such as service workers and promises.
 
-An extension [manifest][doc-manifest] gives the browser information about the extension, such as the most important files and the capabilities the extension might use. The extension platform features change when there's a new [manifest version][manifest-version].
+The Chrome Web Store no longer accepts new Manifest V2 extensions, and Manifest V2 will be [phased out][mv2-sunset] in 2024. We strongly recommend migrating your extensions to Manifest V3 as soon as possible.
 
-## Introducing Manifest V3 {: #introducing-manifest-v3 }
+## Resources {: #manifest-v3-resources }
 
-Manifest V3 represents one of the most significant shifts in the extensions platform since it launched a decade ago. Manifest V3 extensions enjoy enhancements in security, privacy, and performance; they can also use more contemporary open web technologies such as service workers and promises.
+Manifest V3 is part of a shift in Chrome's user security and privacy philosophy. The following articles provide an overview of Manifest V3, the reasons for the update, and how to
+implement it:
 
-## Manifest V3 resources {: #manifest-v3-resources }
+* [Platform vision][mv3-platform] explains how the Manifest V3 changes fit into the big picture.
 
-Manifest V3 is part of a shift in the philosophy behind user security and privacy. The following articles provide an overview of Manifest V3, the reasons behind it, and how to
-approach it:
+* [Overview of Manifest V3][mv3-overview] summarizes the technical changes introduced in Manifest V3.
 
-[Platform vision][mv3-platform]
-: Explains how the Manifest V3 changes fit into the big picture of where the platform is going.
+* [Migration guide][mv3-migration] explains how to update Manifest V2 extensions to use Manifest V3. For a quick reference, see [Migration checklist][mv3-checklist].
 
-[Overview of Manifest V3][mv3-overview]
-: Summarizes the technical changes introduced with Manifest V3.
+## Manifest V3 news {: #keep-up-with-the-latest-news }
 
-[Migration guide][mv3-migration]
-: Describes how to get started updating Manifest V2 extensions so they work in Manifest V3.
-
-[Migration checklist][mv3-checklist]
-: Provides a quick checklist to help adapt your extension to Manifest V3.
-
-## Start the conversion {: #start-the-conversion }
-
-As of January 17, 2022 the Chrome Web Store has stopped accepting new Manifest V2 extensions. We strongly recommend migrating your extensions to Manifest V3 as soon as possible; this will become mandatory after [Manifest V2 is phased out][mv2-sunset] in 2024.
-
-## Keep up with the latest news {: #keep-up-with-the-latest-news }
-
-We're excited about the improvements that Manifest V3 brings to the platform. Look for new announcements in [What's new in Chrome Extensions][doc-new] and the [Chrome Developer Blog][devs-blog].
+For more information and updates on Manifest V3, see [What's new in Chrome Extensions][doc-new] and the [Chrome Developer Blog][devs-blog].
 
 
 [devs-blog]: https://developer.chrome.com/tags/extensions/
