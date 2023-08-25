@@ -704,7 +704,7 @@ the browser:
 When a user clicks or views an ad, set the aggregation keys in the
 `Attribution-Reporting-Register-Aggregatable-Source` header.
 At this stage, for each key, you can only set the part of the key, or
-[key piece](#full-key), tha's known at ad-serving time.
+[key piece](#full-key), that's known at ad-serving time.
 
 Let's generate the key pieces:
 
