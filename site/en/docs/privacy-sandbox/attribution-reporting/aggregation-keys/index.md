@@ -29,9 +29,9 @@ To answer these questions, let's take a look at dimensions, keys, and values.
 
 To understand how your campaigns are generating revenue, as described here, you'll want to track the following dimensions:
 
-- Ad campaign ID
-- Geography ID: the geographic region where the ad was served
-- Product category
+- Ad campaign ID: the identifier for the specific campaign.
+- Geography ID: the geographic region where the ad was served.
+- Product category: the type of product as you've defined it.
 
 While the Campaign ID and the Geography ID dimensions are known when the ad is served (ad-serving time), the Product category will be known from a trigger event, when the user completes a conversion (conversion time).
 
@@ -41,7 +41,7 @@ For the diagram in this document, we'll display dimensions as follows:
 - Dimensions known at conversion time on a yellow background and underlined.
 {% endAside %}
 
-The dimensions you want to track for this example look like this:
+The dimensions you want to track for this example are as shown in the following image:
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/7H0FNCjZM9zr3VE48Q2G.png", alt="Campaign ID, Geography ID, and product category.", width="498", height="55" %}
 
 ### What are aggregation keys (buckets)?
@@ -60,7 +60,7 @@ You'll see later that an aggregation key does not look exactly like this in prac
 
 ### What are aggregatable values?
 
-To answer your questions with the dimensions we've outlined, you want to know, across many users and many keys:
+To answer your questions for the dimensions we've outlined, you want to know:
 
 -   The number of purchases (the purchase count). Once aggregated and made available in a summary report, this will be the total purchase count (summary value).
 -   The revenue for each purchase (the purchase value). Once aggregated and made available in a summary report, this will be the total revenue (summary value).
@@ -484,8 +484,8 @@ You also need to track the following:
 
 ### What to measure
 
-While many ad tech companies encourage advertisers to configure a variety of conversion types, focusing on the most important conversions such as purchases is a good way to ensure that aggregate results are detailed and accurate for these important events. 
-Indeed, the more metrics you measure, the smaller your contribution budget per metric gets, and hence the more noisy each value is likely to be. Therefore, you need to carefully select what to measure.
+While many ad tech companies encourage advertisers to configure a variety of conversion types, focusing on the most important conversions such as purchases is a good way to ensure that aggregate results are detailed and accurate for these important conversion events. 
+Indeed, the more metrics you measure, the smaller your contribution budget per metric, and hence the more noisy each value is likely to be. Therefore, you need to carefully select what to measure.
 
 In this example, we'll focus on campaign setups that measure only one conversion per click or view: a purchase. 
 
@@ -944,7 +944,7 @@ report.
   </tbody>
 </table>
 <figcaption>
-<sup>1</sup>Metric you want to request (for Campaign ID 12 x Geography ID 7 x Product category 25).
+<sup>1</sup>Metric you are looking to request (for Campaign ID 12 x Geography ID 7 x Product category 25).
 
 <sup>2</sup>Key to request to the aggregation service = Source-side key piece XOR Trigger-side key piece.
 </figcaption>
