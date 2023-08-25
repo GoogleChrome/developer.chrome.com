@@ -52,7 +52,7 @@ An aggregation key (key for short) is a piece of data that represents the values
 
 For example, let's assume you're tracking the dimensions Product category, Geography ID, and Campaign ID.
 
-When a user located in Geography ID 7 sees an ad for Campaign ID 12, and later converts by purchasing a product in Product category 25, you may set an aggregation key that looks like this:
+When a user located in Geography ID 7 sees an ad for Campaign ID 12, and later converts by purchasing a product in Product category 25, you may set an aggregation key that looks like the one in the following image:
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/dmpyjw7KIcunQemDqs8i.png", alt="Aggregation key for a conversion.", width="495", height="125" %}
 
