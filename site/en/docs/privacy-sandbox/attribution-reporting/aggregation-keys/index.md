@@ -46,7 +46,7 @@ The dimensions you want to track for this example are as shown in the following 
 
 ### What are aggregation keys (buckets)?
 
-Aggregation key and bucket refer to the same thing. The term _aggregation key_ is used in the browser APIs used to configure reports. The term _bucket_ is used in the aggregatable and summary reports, and in the [aggregation service APIs](/docs/privacy-sandbox/aggregation-service/).
+The terms aggregation key and bucket refer to the same thing.  _Aggregation key_ is used in the browser APIs used to configure reports. The term _bucket_ is used in the aggregatable and summary reports, and in the [aggregation service APIs](/docs/privacy-sandbox/aggregation-service/).
 
 An aggregation key (key for short) is a piece of data that represents the values of the dimensions being tracked. Data is later aggregated along each aggregation key.
 
