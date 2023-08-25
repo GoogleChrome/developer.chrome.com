@@ -62,7 +62,7 @@ Top Level domain match patterns
       </tr>
       <tr>
          <td><code>http://*/*</code></td>
-         <td>Matches any URL that uses the <code>https</code> scheme</td>
+         <td>Matches any URL that uses the <code>http</code> scheme</td>
          <td>http://74.125.127.100/search <br>http://example.com/</li></ul></td>
       </tr>
       <tr>
