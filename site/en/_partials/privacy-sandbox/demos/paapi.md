@@ -10,7 +10,7 @@ and then initiates an on-device auction to select an ad for display on a publish
 
 [Demo](https://protected-audience-demo.web.app/)
 
-[Docs](/docs/privacy-sandbox/fledge-api/)
+[Docs](/docs/privacy-sandbox/protected-audience-api/)
 
 {% endColumn %}
 {% Column %}

@@ -29,9 +29,9 @@ concepts, but doesn't go into much technical detail.
 * If you work in **advertising or ad tech**, you'll get an overview of
   [how Protected Audience works](#overview).
 * If you're a **developer or software engineer**, the
-  [Protected Audience API Developer Guide](/docs/privacy-sandbox/fledge-api) provides more
+  [Protected Audience API Developer Guide](/docs/privacy-sandbox/protected-audience-api) provides more
   in-depth technical detail about the proposal. Read the
-  [latest status of pending Protected Audience capabilities](/docs/privacy-sandbox/fledge-api/feature-status/).
+  [latest status of pending Protected Audience capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/).
 
 Refer to the [glossary](/docs/privacy-sandbox/glossary/) for terms used across
 Protected Audience documentation. At the end of this article, you can learn how to
@@ -55,7 +55,7 @@ FLEDGE works.
 ### Protected Audience API in one minute {: #overview}
 
 For a more in-depth overview of the Protected Audience API, read the
-[Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api/).
+[Protected Audience API developer guide](/docs/privacy-sandbox/protected-audience-api/).
 
 <figure class="w-figure">
   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png", alt="An overview of each stage of the Protected Audience API lifecycle",
@@ -113,7 +113,7 @@ the list provided by the interest group's configuration.
 The seller can report the auction outcome (`reportResult()`), and buyers can
 report their wins (`reportWin()`).
 
-Learn about [Protected Audience auction reports](/docs/privacy-sandbox/fledge-api/reports/).
+Learn about [Protected Audience auction reports](/docs/privacy-sandbox/protected-audience-api/reports/).
 
 ## Why do we need the Protected Audience API? {: #why}
 
@@ -132,8 +132,8 @@ information about what that person is interested in.
 
 {% Aside 'caution' %}
 
-Read the [developer guide](/docs/privacy-sandbox/fledge-api/) and
-[status of pending Protected Audience capabilities](/docs/privacy-sandbox/fledge-api/feature-status/)
+Read the [developer guide](/docs/privacy-sandbox/protected-audience-api/) and
+[status of pending Protected Audience capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/)
 to understand what features are currently available for testing in Chrome.
 
 Protected Audience features will be added over time, and we'll regularly update a list of
@@ -144,11 +144,11 @@ currently in an [origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
 ## How can I try the Protected Audience API? {: #try-fledge}
 
-* The [Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api) describes
+* The [Protected Audience API developer guide](/docs/privacy-sandbox/protected-audience-api) describes
   how to use the API, how to test locally and how to participate in the
   [relevence and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
-* [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a
+* [protected-audience-demo.web.app](https://protected-audience-demo.web.app/) provides a
   walkthrough of a basic Protected Audience deployment across advertiser and publisher
   sites. The Protected Audience demo video explains how this code works and previews
   how to use Chrome DevTools for debugging.
@@ -181,7 +181,7 @@ and membership is removed when users clear their site data.
 
 ### Can I opt out of the Protected Audience API? {: #opt-out}
 
-Learn how you can [block access to the Protected Audience API](/docs/privacy-sandbox/fledge-api/opt-out),
+Learn how you can [block access to the Protected Audience API](/docs/privacy-sandbox/protected-audience-api/opt-out),
 either as a site owner or as an individual user.
 
 ## Key concepts
@@ -516,14 +516,14 @@ navigator.runAdAuction(auctionConfig);
 ## Find out more
 
 For a more in-depth overview of the Protected Audience API, read the
-[Protected Audience API developer guide](/docs/privacy-sandbox/fledge-api/).
+[Protected Audience API developer guide](/docs/privacy-sandbox/protected-audience-api/).
 
 ### Developers
 
 If you're ready to start working with the Protected Audience API, read
-[experiment and participate](/docs/privacy-sandbox/fledge-experiment/).
+[experiment and participate](/docs/privacy-sandbox/protected-audience-experiment/).
 
-We've written an  [API developer guide](/docs/privacy-sandbox/fledge-api) and built a [Protected Audience API demo](https://fledge-demo.glitch.me), which offers a walkthrough of a basic Protected Audience API deployment. The [Protected Audience API demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) explains how the demo code works, and shows how to use Chrome DevTools for Protected Audience API debugging.
+We've written an  [API developer guide](/docs/privacy-sandbox/protected-audience-api) and built a [Protected Audience API demo](https://protected-audience-demo.web.app/), which offers a walkthrough of a basic Protected Audience API deployment. The [Protected Audience API demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) explains how the demo code works, and shows how to use Chrome DevTools for Protected Audience API debugging.
 
 ## Engage and share feedback
 

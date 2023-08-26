@@ -8,7 +8,7 @@ With the Private State Token API, a website can issue cryptographic tokens to a 
 
 [Demo](https://private-state-token-demo.glitch.me/)
 
-[Docs](/docs/privacy-sandbox/trust-tokens/)
+[Docs](/docs/privacy-sandbox/private-state-tokens/)
 {% endColumn %}
 
 {% Column %}

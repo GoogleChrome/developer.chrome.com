@@ -143,7 +143,7 @@ Check out previous updates on the origin trial. {% endDetailsSummary %}
 
 ##### Private Aggregation 1% ramp-up in Stable
 
-[Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) origin trial will be available at 1% of Chrome Stable unified experiment traffic from Monday April 17. The <code>[sendHistogramReport()](/docs/privacy-sandbox/private-aggregation/#sendhistogramreport)</code> function of Private Aggregation is available to be used in [Protected Audience API](/docs/privacy-sandbox/fledge/) and [Shared Storage](/docs/privacy-sandbox/shared-storage/) worklets. 
+[Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) origin trial will be available at 1% of Chrome Stable unified experiment traffic from Monday April 17. The <code>[sendHistogramReport()](/docs/privacy-sandbox/private-aggregation/#sendhistogramreport)</code> function of Private Aggregation is available to be used in [Protected Audience API](/docs/privacy-sandbox/protected-audience/) and [Shared Storage](/docs/privacy-sandbox/shared-storage/) worklets. 
 
 The traffic allocation will look like the following starting on Monday, April 17:
 
@@ -440,7 +440,7 @@ Also, Shared Storage’s URL Selection API origin trial will be increasing to 5%
    </td>
   </tr>
   <tr>
-   <td><a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>
+   <td><a href="/docs/privacy-sandbox/protected-audience/">Protected Audience API</a>
    </td>
    <td>Available in Stable, temporarily decreasing to 4% from January 26th 2023.
    </td>
@@ -490,7 +490,7 @@ on November 9th.
    </td>
   </tr>
   <tr>
-   <td><a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>
+   <td><a href="/docs/privacy-sandbox/protected-audience/">Protected Audience API</a>
    </td>
    <td>Available in Stable, increasing to 5% from November 9th.
    </td>
@@ -539,7 +539,7 @@ Protected Audience API and Fenced Frames will increase from November 9th. Read m
    </td>
   </tr>
   <tr>
-   <td><a href="/docs/privacy-sandbox/fledge/">Protected Audience API</a>
+   <td><a href="/docs/privacy-sandbox/protected-audience/">Protected Audience API</a>
    </td>
    <td>Available in Stable, increasing to 5% from November 9th.
    </td>
@@ -598,10 +598,10 @@ guide for the origin trial</a>.</td>
     <tr>
       <td>
 <a
-href="/docs/privacy-sandbox/fledge/">Protected Audience API</a></td>
+href="/docs/privacy-sandbox/protected-audience/">Protected Audience API</a></td>
       <td>
 <a
-href="/docs/privacy-sandbox/fledge-experiment/">Developer
+href="/docs/privacy-sandbox/protected-audience-experiment/">Developer
 guide for the origin trial</a>.</td>
     </tr>
     <tr>
@@ -671,10 +671,10 @@ guide for the origin trial</a>.</td>
     <tr>
       <td>
 <a
-href="/docs/privacy-sandbox/fledge-experiment/">Protected Audience API</a></td>
+href="/docs/privacy-sandbox/protected-audience-experiment/">Protected Audience API</a></td>
       <td>
 <a
-href="/docs/privacy-sandbox/fledge-experiment/">Developer
+href="/docs/privacy-sandbox/protected-audience-experiment/">Developer
 guide for the origin trial</a>.</td>
     </tr>
     <tr>
@@ -729,7 +729,7 @@ an individual origin trial.</td>
     <tr>
       <td>
 <a
-href="/docs/privacy-sandbox/fledge-experiment/">Protected Audience API</a></td>
+href="/docs/privacy-sandbox/protected-audience-experiment/">Protected Audience API</a></td>
       <td>
 Individual <a
 href="https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg/m/_0T5qleqCgAJ">Intent
@@ -971,7 +971,7 @@ in the origin trial over that period.
 For specific guidance on local developer testing, see:
 
 -  [Topics](/docs/privacy-sandbox/topics-experiment/)
--  [Protected Audience API](/docs/privacy-sandbox/fledge-experiment/)
+-  [Protected Audience API](/docs/privacy-sandbox/protected-audience-experiment/)
 -  [Attribution
    Reporting](/docs/privacy-sandbox/attribution-reporting-experiment/)
 

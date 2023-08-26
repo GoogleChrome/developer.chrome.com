@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /docs/privacy-sandbox/trust-tokens/
+  to: /docs/privacy-sandbox/private-state-tokens/
+
 - from: /articles/origin-private-file-system/
   to: https://web.dev/origin-private-file-system/
 
@@ -117,10 +120,10 @@ redirects:
   to: /blog/wasm-debugging/
 
 - from: /docs/privacy-sandbox/fledge-best-practices/
-  to: /docs/privacy-sandbox/fledge-api/latency/
+  to: /docs/privacy-sandbox/protected-audience-api/latency/
 
 - from: /blog/fledge-api/
-  to: /docs/privacy-sandbox/fledge-api/
+  to: /docs/privacy-sandbox/protected-audience-api/
 
 - from: /docs/privacy-sandbox/attribution-reporting-introduction/
   to: /docs/privacy-sandbox/attribution-reporting/
@@ -754,6 +757,9 @@ redirects:
 
 - from: /docs/extensions/reference/declarativeNetRequest/#limits-global-static-rule-limit
   to:  /docs/extensions/reference/declarativeNetRequest/#static-rules
+
+- from: /fledge/...
+  to: /protected-audience/...
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
