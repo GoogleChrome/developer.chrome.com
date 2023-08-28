@@ -155,37 +155,37 @@ Social & Communications
 The developer console also asks you specify a category for your theme. Choose the most appropriate category:
 
 Artist Series
-: TBD
+: Themes in collections curated by Google.
 
 Animals
-: TBD
+: Themes featuring your favorite animals.
 
 Art & Design
-: TBD
+: Themes build merely to make your browser look pretty.
 
 Cars
-: TBD
+: Themes featuring current and classic cars.
 
 Colors
-: TBD
+: Themes that skin your brwoser in custom colors.
 
 Dark & Black
-: TBD
+: Themes that feature dark colors and imagry.
 
 Entertainment
-: TBD
+: Themes with images of popular television and film franchises.
 
 Games & Anime
-: TBD
+: Themes that feature popular video games and anime.
 
 Minimalist
-: TBD
+: Themes that simplify the look of your browser.
 
 Nature & Landscapes
-: TBD
+: Themes that feature the great outdoors.
 
 Space
-: TBD
+: Themes that show images of outer space.
 
 Other
 : A category for themes that don't have a home anywhere else.
