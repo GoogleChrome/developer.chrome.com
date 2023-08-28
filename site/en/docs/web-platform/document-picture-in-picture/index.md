@@ -6,7 +6,7 @@ description: >
 authors:
   - beaufortfrancois
 date: 2023-02-02
-updated: 2023-07-19
+updated: 2023-08-28
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
