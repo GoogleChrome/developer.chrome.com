@@ -6,6 +6,7 @@ subhead: >
   CSS grid subgrid, entry and exit animation support for CSS, array grouping, iterator helpers, and more.
 layout: 'layouts/blog-post.njk'
 date: 2023-08-16
+updated: 2023-08-28
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/JEQ1ZvdVbdKX9jO3iTXd.png'
 alt: >
   Chrome 117 beta hero logo
@@ -132,6 +133,10 @@ Extend the WebRTC `RTCRtpTransceiver` API to offer control over which RTP header
 
 Adds "quantizer" `VideoEncoderBitrateMode` for VideoEncoder.
 This provides the ability to specify a quantizer parameter for each frame for AV1, VP9, and AVC video codecs.
+
+### WebUSB `exclusionFilters` option in `requestDevice()`
+
+The [`exclusionFilters`](https://wicg.github.io/webusb/#dom-usbdevicerequestoptions-exclusionfilters) option in `navigator.usb.requestDevice()` allows web developers to exclude some devices from the browser picker. It can be used to exclude devices that match a broader filter but are unsupported.
 
 ## Origin trials in progress
 
