@@ -77,9 +77,7 @@ For `PAGE_TO_OVERRIDE`, substitute one of the following:
 
 For an effective override page, follow these guidelines:
 
-**Make your page quick and small.**
-
-Users expect built-in browser pages to open instantly. Avoid doing things that might take a long
+**Make your page quick and small.**<br/>Users expect built-in browser pages to open instantly. Avoid doing things that might take a long
 time. For example, avoid synchronous fetches of network or database resources.
 
 **Include a title in your page.**
