@@ -14,7 +14,8 @@ Chrome normally provides like New Tab page. In addition to HTML, an override pag
 
 An extension can replace any one of the following pages:
 
-**Bookmark Manager:** The page that appears when the user chooses the Bookmark Manager menu item
+Bookmark Manager
+: The page that appears when the user chooses the Bookmark Manager menu item
 from the Chrome menu or, on Mac, the Bookmark Manager item from the Bookmarks menu. You can also
 get to this page by entering the URL **chrome://bookmarks**.
 History
