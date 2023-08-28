@@ -85,9 +85,7 @@ specifying the title: `<title>New Tab</title>`
 
 **Don't rely on the page having the keyboard focus.**<br/>The address bar always gets the focus first when the user creates a new tab.
 
-**Don't try to emulate the default New Tab page.**
-
-The APIs necessary to create a slightly modified version of the default New Tab page—with top
+**Don't try to emulate the default New Tab page.**<br/>The APIs necessary to create a slightly modified version of the default New Tab page—with top
 pages, recently closed pages, tips, a theme background image, and so on—don't exist.
 
 ## Examples {: #examples }
