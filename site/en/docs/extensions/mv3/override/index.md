@@ -17,7 +17,8 @@ An extension can replace any one of the following pages:
 **Bookmark Manager:** The page that appears when the user chooses the Bookmark Manager menu item
 from the Chrome menu or, on Mac, the Bookmark Manager item from the Bookmarks menu. You can also
 get to this page by entering the URL **chrome://bookmarks**.
-**History:** The page that appears when the user chooses the History menu item from the Chrome
+History
+: The page that appears when the user chooses the History menu item from the Chrome
 menu or, on Mac, the Show Full History item from the History menu. You can also get to this page
 by entering the URL **chrome://history**.
 **New Tab:** The page that appears when the user creates a new tab or window. You can also get to
