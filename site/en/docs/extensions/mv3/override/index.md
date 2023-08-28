@@ -83,9 +83,7 @@ time. For example, avoid synchronous fetches of network or database resources.
 **Include a title in your page.**<br/>Otherwise people might see the URL of the page, which could be confusing. Here's an example of
 specifying the title: `<title>New Tab</title>`
 
-**Don't rely on the page having the keyboard focus.**
-
-The address bar always gets the focus first when the user creates a new tab.
+**Don't rely on the page having the keyboard focus.**<br/>The address bar always gets the focus first when the user creates a new tab.
 
 **Don't try to emulate the default New Tab page.**
 
