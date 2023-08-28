@@ -80,9 +80,7 @@ For an effective override page, follow these guidelines:
 **Make your page quick and small.**<br/>Users expect built-in browser pages to open instantly. Avoid doing things that might take a long
 time. For example, avoid synchronous fetches of network or database resources.
 
-**Include a title in your page.**
-
-Otherwise people might see the URL of the page, which could be confusing. Here's an example of
+**Include a title in your page.**<br/>Otherwise people might see the URL of the page, which could be confusing. Here's an example of
 specifying the title: `<title>New Tab</title>`
 
 **Don't rely on the page having the keyboard focus.**
