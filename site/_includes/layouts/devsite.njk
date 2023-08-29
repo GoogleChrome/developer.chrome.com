@@ -108,6 +108,10 @@
         {% include 'partials/devsite-header.njk' %}
       {% endblock %}
 
+      {% block navigation_rail %}
+        {% include 'partials/devsite-navigation-rail.njk' %}
+      {% endblock %}
+
       <section  class="dcc-devsite-wrapper" theme="web-theme">
         {% block devsite_main %}{% endblock %}
       </section>
