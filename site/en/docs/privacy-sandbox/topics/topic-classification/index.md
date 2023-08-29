@@ -7,7 +7,7 @@ description: >
   More in-depth information about the topics themselves and how they are chosen.
   
 date: 2022-01-25
-updated: 2023-06-26
+updated: 2023-08-29
 authors:
   - samdutton
 ---
@@ -72,6 +72,8 @@ A caller can access topics via the JavaScript API from [within an iframe](/docs/
 A caller can also access topics from the [`Sec-Browsing-Topics` header](docs/privacy-sandbox/topics/integration-guide/#implement-with-http-headers) of a `fetch()` request, or of an iframe request. XHR requests are also enabled during origin trials (only), but this method is not recommended.
 
 {% endAside %}
+
+Topics returned for a user are recalculated for a caller depending on the top-level site. For example, if `adtech.example` requests the user's topics on `news-a.example`, then on `news-b.example` and then on news-c.example`, topics returned to them will be recalculated on each site. This means a caller is likely to get different topics for a user on different top-level sites, since the (maximum) three topics returned for a user are chosen at random from the top five for the past three [epochs](/docs/privacy-sandbox/topics/overview/#epoch) (with a 5% chance of getting a random topic). That makes it harder for a caller to identify a user by their topics, since these are likely to be different across different top-level sites (even for the same user, caller and epoch).
 
 ## The classifier model {: #classifier-model}
 
