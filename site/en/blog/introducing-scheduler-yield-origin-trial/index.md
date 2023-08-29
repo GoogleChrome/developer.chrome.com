@@ -5,7 +5,7 @@ description: |
   `scheduler.yield` is a proposed new addition to the scheduler API currently in origin trial, and is a novel approach to breaking up tasks for more responsive user experiences. Understand the benefits of this proposed addition to the scheduling API, and sign up for the origin trial to help us gain insights and feedback.
 authors:
   - jlwagner
-date: 2023-08-25
+date: 2023-08-29
 hero: image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/8vKzdbeRT4L2rBBcYxpM.jpg
 thumbnail: image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/da1Vdzrrs8xViNRf3NTt.jpg
 alt: A greyscale aerial photograph of a roundabout.
@@ -57,7 +57,7 @@ To see this in action, try out [this Glitch demo](https://task-chunking-demo.gli
 {% Glitch { id: 'scheduler-yield-demo' } %}
 
 {% Aside %}
-[The source code for this demo is available](https://task-chunking-demo.glitch.me/interact.js) if you want to dig further into what's going on.
+[The source code for this demo is available](https://scheduler-yield-demo.glitch.me/js/scripts.js) if you want to dig further into what's going on.
 {% endAside %}
 
 You'll notice that the box at the bottom of the demo will read something like this:
