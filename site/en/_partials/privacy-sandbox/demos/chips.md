@@ -12,7 +12,7 @@ Cookies Having Independent Partitioned State (CHIPS) allows developers to opt a 
 
 {% endColumn %}
 {% Column %}
-<a href="[https://fedcm-rp-demo.glitch.me](https://chips-site-a.glitch.me/)">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Un7OFSJTQHhly3twuEHw.png", alt="CHIPS demo.", width="597", height="417" %}</a>
+<a href="https://chips-site-a.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/Un7OFSJTQHhly3twuEHw.png", alt="CHIPS demo.", width="597", height="417" %}</a>
 {% endColumn %}
 {% endColumns %}
 {% endDetails %}
