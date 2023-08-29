@@ -5,16 +5,13 @@ subhead: >
   Here's where to start, including setup and a quick overview.
 description: >
   Here's where to start, including setup and a quick overview.
-date: 2023-07-10
+date: 2023-09-05
 authors:
   - maudn
 ---
 
-
 {% Aside %}
-<strong>Relevance</strong>
-
-- This document applies to both event-level and summary reports.
+This document applies to both event-level and summary reports.
 
 <strong>Hands-on resources</strong>
 
@@ -22,7 +19,7 @@ authors:
 - [Noise lab](https://noise-lab.uc.r.appspot.com/?mode=simple), [Noise lab background](/docs/privacy-sandbox/summary-reports/design-decisions/#appendix)
 - [Attribution Reporting Header Validator](https://wicg.github.io/attribution-reporting-api/validate-headers)
 {% endAside %}
-
+ 
  
 ## Planning and design decisions
 
@@ -40,13 +37,9 @@ It's important to note that aggregatable reports represent data that is eventual
 
 {% Partial 'privacy-sandbox/glossary-entries/event-level.njk' %}
 
-https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md
-
 #### Summary reports 
 
 {% Partial 'privacy-sandbox/glossary-entries/summary-report.njk' %}
-
-
 
 ## Implementation
 
@@ -56,7 +49,6 @@ Note that for a given event source, it's possible to generate both an
 event-level and an aggregatable report. The
 [demo](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.vk0ctjqbpr1g)
 walks you through the process. 
- 
 
 {% Aside 'important' %}
 Before you can register sources and triggers and get reports, your sites need to have SSL/TLS certificates; in other words, you need to be running over HTTPS.
@@ -72,7 +64,7 @@ Before you can register sources and triggers and get reports, your sites need to
 
     Note that `deduplication_key`, `priority`, and `trigger_data` are optional fields.
 
-1.  **Set up an endpoint** with the following URL: {: #event-endpoint}
+1.  **Set up an endpoint** with the following URL: {: #event-endpoint }
 
     `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-event-attribution`  
 
@@ -86,9 +78,9 @@ To be able to generate reports, follow these high-level steps.
 
 1. **Register a source**. Refer to [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more details. 
 
-1. **Register a trigger**. Refer to [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger).
+1. **Register a trigger**. Refer to [Registering a trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger). {: #summary-endpoint }
 
-1. **Set up an endpoint** for aggregatable reports with the following URL: {: #summary-endpoint}
+1. **Set up an endpoint** for aggregatable reports with the following URL: 
         `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-aggregate-attribution`
 
         Refer to the [example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L334). More on [.well-known](https://en.wikipedia.org/wiki/Well-known_URI).
@@ -132,7 +124,6 @@ If this feature detection check returns true, the API is allowed in the context 
 
 Note that this check alone isn't a guarantee that the API is usable on that page; the user may have disabled the API via their browser settings, or they may have other settings that prevent the API from being used. In order to protect user privacy, there is no way to check for this programmatically.
 
-
 ## Next steps
 
 If you're ready to begin implementation, check out these docs:
@@ -142,11 +133,8 @@ If you're ready to begin implementation, check out these docs:
 - [Prioritize specific clicks, views, or conversions](/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/)
 - [Constraints on Aggregation Reporting data](/docs/privacy-sandbox/attribution-reporting/constraints/)
 
-
 If you're still in the planning stage, take a look at these docs:
 - [System overview](/docs/privacy-sandbox/attribution-reporting/system-overview/) 
 - [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/) 
 - [Contribution budget](/docs/privacy-sandbox/attribution-reporting/contribution-budget/)
 - [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) 
-
-
