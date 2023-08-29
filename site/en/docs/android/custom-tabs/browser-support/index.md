@@ -162,7 +162,6 @@ This method is deprecated. Instead, you should use [`setSecondaryToolbarViews`](
 
 Adds an action button to the custom tab. Multiple buttons can be added via this method.
 
-
 {% AndroidBrowserSupportTable
  _method="addToolbarItem",
  chrome="y@114.0.5735.58",
@@ -553,7 +552,7 @@ Warm up the browser process.
 
 ### setEngagementSignalsCallback()
 
-Sets an `[EngagementSignalsCallback](https://developer.android.com//reference/androidx/browser/customtabs/EngagementSignalsCallback)` to receive callbacks for events related to the user's engagement with webpage within the tab.
+Sets an [`EngagementSignalsCallback`](https://developer.android.com//reference/androidx/browser/customtabs/EngagementSignalsCallback) to receive callbacks for events related to the user's engagement with webpage within the tab.
 
 {% AndroidBrowserSupportTable
  _method="setEngagementSignalsCallback",

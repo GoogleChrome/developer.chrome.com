@@ -156,7 +156,7 @@ If neither meets your needs, there is a wider set of Privacy Sandbox proposals f
 
 [Federated Credential Management (FedCM)](/docs/privacy-sandbox/fedcm/) enables privacy-preserving approach to federated identity services so users can log into sites without sharing their personal information with a third-party service or website.
 
-[Private State Tokens](/docs/privacy-sandbox/trust-tokens/) convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
+[Private State Tokens](/docs/privacy-sandbox/private-state-tokens/) convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 
 A suite of APIs is available to cover [ad relevance](/docs/privacy-sandbox/#show-relevant-content) and [measurement](/docs/privacy-sandbox/#measure-digital-ads) use cases such as interest-based advertising, on-device auctions for custom audiences, cross-site content selection, ad conversion measurement and attribution, and more.
 

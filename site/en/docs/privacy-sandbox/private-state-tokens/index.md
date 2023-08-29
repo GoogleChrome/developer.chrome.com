@@ -111,7 +111,7 @@ For more detail about the JavaScript calls in this example, see [Sample API usag
 
 ## Is tooling available for Privacy State Tokens?
 
-Chrome DevTools turns on inspection from the Network and Application tabs. Read more about this [DevTools integration](/blog/new-in-devtools-89/#trust-token) and about [Private State Tokens](/docs/privacy-sandbox/trust-tokens/).
+Chrome DevTools turns on inspection from the Network and Application tabs. Read more about this [DevTools integration](/blog/new-in-devtools-89/#trust-token) and about [Private State Tokens](/docs/privacy-sandbox/private-state-tokens/).
 
 ## How do publishers handle tokens from multiple trusted issuers?
 

@@ -70,7 +70,7 @@ The [Privacy Sandbox Relevance and Measurement origin
 trial](/blog/privacy-sandbox-unified-origin-trial/) enables the ecosystem to run
 unified tests for technical stability and developer experience across
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/),
-[FLEDGE](/docs/privacy-sandbox/fledge/),
+[Protected Audience](/docs/privacy-sandbox/protected-audience/),
 [Topics](/docs/privacy-sandbox/topics/), [fenced
 frames](/docs/privacy-sandbox/fenced-frame/), and we will be adding [Shared
 Storage](/docs/privacy-sandbox/shared-storage/) soon. The trial is currently
@@ -106,7 +106,7 @@ with implementation and testing guides.
     trial](/blog/privacy-sandbox-unified-origin-trial/)
 *   [Developer guide: Attribution
     Reporting](/docs/privacy-sandbox/attribution-reporting-experiment/)
-*   [Developer guide: FLEDGE](/docs/privacy-sandbox/fledge-experiment/)
+*   [Developer guide: Protected Audience](/docs/privacy-sandbox/protected-audience-experiment/)
 *   [Developer guide: Topics API](/docs/privacy-sandbox/topics-experiment/)
 
 {% endAside %}

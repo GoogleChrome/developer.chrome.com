@@ -16,9 +16,9 @@ authors:
 From Chrome Canary 98.0.4718.0, it's possible to debug the Protected Audience API and Protected Audience API
 worklets in Chrome DevTools.
 
-Read the [developer guide](/blog/fledge-api) for the full life cycle of the Protected Audience API. 
+Read the [developer guide](/docs/privacy-sandbox/protected-audience-api/) for the full life cycle of the Protected Audience API. 
 Not a developer? Refer to the
-[Protected Audience API overview](/docs/privacy-sandbox/fledge).
+[Protected Audience API overview](/docs/privacy-sandbox/protected-audience).
 
 ## Protected Audience API worklets {: #debugging }
 
@@ -51,7 +51,7 @@ resume or inspect them more closely as appropriate.
 From the Application panel in Chrome DevTools, you can observe Protected Audience API interest
 group and auction events.
 
-If you visit the [Protected Audience API demo shopping site](https://shopping-fledge-demo.glitch.me/advertiser/shopping.html)
+If you visit the [Protected Audience API demo advertiser site](https://protected-audience-demo-advertiser.web.app/)
 in a browser with the Protected Audience API enabled, DevTools will display information about the `join` event.
 
 <figure>
@@ -62,7 +62,7 @@ in a browser with the Protected Audience API enabled, DevTools will display info
 </figure>
 
 Now, if you visit the
-[Protected Audience API demo publisher site](https://publisher-fledge-demo.glitch.me/publisher/index.html?fencedframe)
+[Protected Audience API demo publisher site](https://protected-audience-demo-publisher.web.app/)
 in a browser with the Protected Audience API enabled, DevTools displays information about the `bid`
 and `win` events.
 
