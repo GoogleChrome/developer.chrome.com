@@ -5,6 +5,7 @@
         "check_name" : "Content team approval",
         "teams" : [],
         "users" : [
+          "PaulKinlan",
           "malchata",
           "rachelandrew",
           "heyawhite",
@@ -13,7 +14,6 @@
           "sofiayem",
           "nancymic2",
           "anusmitaray",
-          "IanStanion-google",
           "AmySteam"
         ],
         "paths" : [
@@ -46,16 +46,18 @@
         "teams" : [],
         "users" : [
           "PaulKinlan",
-          "jeffposnick",
-          "devnook",
           "malchata",
           "rachelandrew",
           "heyawhite",
           "jpmedley",
           "mihajlija",
           "sofiayem",
-          "AaronForinton",
-          "matthiasrohmer"
+          "nancymic2",
+          "anusmitaray",
+          "AmySteam",
+          "matthiasrohmer",
+          "devnook",
+          "tunetheweb"
         ],
         "paths" : [
           "site/_data/**.yml",
@@ -65,9 +67,18 @@
         ]
       },
       {
-        "check_name" : "Content (es) team approval",
+        "check_name" : "Content team or Spanish reader approval",
         "teams" : [],
         "users" : [
+          "malchata",
+          "rachelandrew",
+          "heyawhite",
+          "jpmedley",
+          "mihajlija",
+          "sofiayem",
+          "nancymic2",
+          "anusmitaray",
+          "AmySteam",
           "tropicadri"
         ],
         "paths" : [
