@@ -36,7 +36,7 @@ However, I can confidently say none of these were an issue!
 
 Before I tell my story, I'd like to talk about something that happened to me at the beginning of 2022. This incident was also an opportunity for me to participate in GSoC. I had wanted to migrate a browser extension based on Manifest V2 to Manifest V3. In order to complete the migration, I had to refer to the documentation and understand every API change. I also had to search for whether there were relevant samples for reference. Comprehending the new API and transferring the code is quite challenging for me.
 
-That's why I was highly excited when browsing the GSoC project list and catching the idea related to mv3. I'm eager to contribute to improving the Manifest V3 extension samples and provide an amenity for future developers.
+That's why I was highly excited when browsing the GSoC project list and catching the idea related to MV3. I'm eager to contribute to improving the Manifest V3 extension samples and provide an amenity for future developers.
 
 In March, I emailed Oliver, one of the mentors in charge, a brief email about my intention:
 
@@ -47,7 +47,7 @@ The application for participate in GSoC project
 
 Hi,
 
-I am a CS undergraduate student from China. I learned about the Chrome Extensions Samples related project at GSoC and I was interested in improving the Manifest V3 Samples. I don't have much prior experience in working on API Samples, however, I have experience in web development and mv3 extension development (https://github.com/daidr/paimon-webext), which has made me realize the importance of mv3 api samples, so I would like both to learn and to contribute to it. Can I still apply for this project?
+I am a CS undergraduate student from China. I learned about the Chrome Extensions Samples related project at GSoC and I was interested in improving the Manifest V3 Samples. I don't have much prior experience in working on API Samples, however, I have experience in web development and MV3 extension development (https://github.com/daidr/paimon-webext), which has made me realize the importance of MV3 api samples, so I would like both to learn and to contribute to it. Can I still apply for this project?
 
 Thanks.
 
@@ -92,7 +92,7 @@ The knowledge in the field of computer science is endless. When I compared mysel
 
 I also hope my experience can provide some reference for future participation in open-source activities.
 
-Here are some of my suggestions anyone wanting to participate in Google Summer of Code:
+Here are some of my suggestions for anyone wanting to participate in Google Summer of Code:
 
 1. Choose an idea that suits you: In my opinion, when looking for ideas, interest should be your priority, followed by skills. This strategy will allow you to maintain enthusiasm throughout the contribution process.
 2. Quality over quantity: You can submit many proposals to increase the chances of being accepted for GSoC. However, I believe that quality is probably more critical because human energy is limited. Focusing on two or three ideas may be more helpful in the end.
