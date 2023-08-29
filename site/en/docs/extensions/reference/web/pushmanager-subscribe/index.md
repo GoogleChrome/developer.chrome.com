@@ -15,6 +15,8 @@ This method requires an option named `userVisibleOnly`, which has always been se
 
 Chrome 117 or later.
 
+You can specify a minimum Chrome version using a [manifest key](/docs/extensions/mv3/manifest/minimum_chrome_version/).
+
 ## Permissions
 
 Requires the following in the permissions field of the manifest file:
