@@ -105,30 +105,15 @@
   <body class="" template="landing" theme="web-theme" type="article" layout="full" ready="" style="--devsite-js-header-height: 49px; --devsite-panel-height: 0px;">
     <div class="scaffold">
       {% block header %}
-        {# {% include 'partials/top-nav.njk' %} #}
         {% include 'partials/devsite-header.njk' %}
       {% endblock %}
-
-      {% block navigation_rail %}
-        {% include 'partials/navigation-rail.njk' %}
-      {% endblock %}
-
-      {% block sidebar %}
-        {% include 'partials/side-nav.njk' %}
-      {% endblock %}
-
-      {# <main tabindex="-1" id="main-content" data-side-nav-inert data-search-inert>
-        {% include 'partials/banner.njk' %}
-        {% block title_bar %}{% endblock %}
-        {% block content %}{% endblock %}
-      </main> #}
 
       <section  class="dcc-devsite-wrapper" theme="web-theme">
         {% block devsite_main %}{% endblock %}
       </section>
 
       {% block footer %}
-        {% include 'partials/footer.njk' %}
+        {% include 'partials/devsite-footer.njk' %}
       {% endblock %}
     </div>
     {% include 'partials/cookie-banner.njk' %}

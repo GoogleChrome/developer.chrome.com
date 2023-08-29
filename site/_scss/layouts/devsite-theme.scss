@@ -887,4 +887,26 @@ search-box {
   }
 }
 
+/* Hide sidebar  */
+[theme=web-theme] {
+  .scaffold {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+  }
+  
+  .scaffold > side-nav,
+  .scaffold > navigation-rail {
+    display: none;
+  }
+  
+  .dcc-devsite-wrapper {
+    width: 100%;
+  }
+}
+
 /* stylelint-enable */

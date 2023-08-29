@@ -4,7 +4,6 @@
  */
 
 const {dest, src} = require('gulp');
-
 const misc = () => {
   return src('./site/_static/**/*').pipe(dest('dist/'));
 };
