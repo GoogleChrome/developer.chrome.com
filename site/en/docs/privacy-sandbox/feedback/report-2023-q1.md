@@ -330,7 +330,7 @@ requests</a>.</td>
       <td style="vertical-align: top;">Clarification on timelines for testing and implementation for FLEDGE
 features such as Fenced Frame enforcement, K-Anonymity, and so forth.</td>
       <td style="vertical-align: top;">We have <a
-href="https://developer.chrome.com/docs/privacy-sandbox/fledge-api/feature-status/">shared a blog post</a> on various scoped FLEDGE features and when they will
+href="https://developer.chrome.com/docs/privacy-sandbox/protected-audience-api/feature-status/">shared a blog post</a> on various scoped FLEDGE features and when they will
 be supported. We welcome additional feedback on the announcement as
 we continue to develop FLEDGE.</td>
     </tr>
@@ -338,7 +338,7 @@ we continue to develop FLEDGE.</td>
       <td style="vertical-align: top;">Product rendering restrictions</td>
       <td style="vertical-align: top;">Request to loosen Ads Composed of Multiple Pieces restrictions for FLEDGE Fenced Frames</td>
       <td style="vertical-align: top;">As we <a
-href="https://developer.chrome.com/docs/privacy-sandbox/fledge-api/feature-status/">announced in February</a>, usage of Fenced Frames will remain optional until at
+href="https://developer.chrome.com/docs/privacy-sandbox/protected-audience-api/feature-status/">announced in February</a>, usage of Fenced Frames will remain optional until at
 least 2026, and iframes behavior will be supported by urn-iframes. We
 welcome further discussion on this topic.</td>
     </tr>
@@ -495,7 +495,7 @@ additional feedback here</a>.</td>
       <td style="vertical-align: top;">Interest in keeping certain data such as <code>highestScoringOtherBid</code>
 available even after third-party cookie deprecation</td>
       <td style="vertical-align: top;">As we shared in the <a
-href="https://developer.chrome.com/docs/privacy-sandbox/fledge-api/feature-status/">February
+href="/docs/privacy-sandbox/protected-audience-api/feature-status/">February
 blog post</a>, event-level auction win reporting will be supported
 until "at least 2026." We do not have further details to share at the
 moment, but we welcome additional feedback on why it is important to

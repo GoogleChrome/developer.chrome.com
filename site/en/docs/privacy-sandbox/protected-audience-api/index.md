@@ -17,7 +17,7 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-For those new to the Protected Audience API, read the [Protected Audience API overview](/docs/privacy-sandbox/fledge)
+For those new to the Protected Audience API, read the [Protected Audience API overview](/docs/privacy-sandbox/protected-audience)
 for a high-level explanation of the proposal.
 
 This post is written for developers as a technical reference for the most
@@ -32,7 +32,7 @@ Protected Audience API deployment is available, as are
 ## What is the Protected Audience API? {: #what}
 
 The Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
-[remarketing](/docs/privacy-sandbox/fledge#remarketing) and custom audience use
+[remarketing](/docs/privacy-sandbox/protected-audience#remarketing) and custom audience use
 cases, designed so that it cannot be used by third parties to track user
 browsing behavior across sites. The API enables on-device auctions by
 the browser, to choose relevant ads for websites the user has previously visited.
@@ -46,19 +46,19 @@ The Protected Audience API is the first experiment to be implemented in Chromium
 
 This document serves as an overview of the Protected Audience API. If you're looking for specific API methods and parameters:
 
-* Buyers guide for [`joinAdInterestGroup()` and `generateBid()`](/docs/privacy-sandbox/fledge-api/interest-groups).
+* Buyers guide for [`joinAdInterestGroup()` and `generateBid()`](/docs/privacy-sandbox/protected-audience-api/interest-groups).
 * Seller's guide for the Protected Audience API
-  [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction)
-* Buyers guide to [`reportWin()`](/docs/privacy-sandbox/fledge-api/reports) and
-  sellers guide to [`reportResult()`](/docs/privacy-sandbox/fledge-api/reports)
-* [Troubleshoot the Protected Audience API](/docs/privacy-sandbox/fledge-api/troubleshoot)
+  [`runAdAuction()`](/docs/privacy-sandbox/protected-audience-api/ad-auction)
+* Buyers guide to [`reportWin()`](/docs/privacy-sandbox/protected-audience-api/reports) and
+  sellers guide to [`reportResult()`](/docs/privacy-sandbox/protected-audience-api/reports)
+* [Troubleshoot the Protected Audience API](/docs/privacy-sandbox/protected-audience-api/troubleshoot)
 
-You can also read [Protected Audience API ad auction latency best practices](/docs/privacy-sandbox/fledge-api/latency).
+You can also read [Protected Audience API ad auction latency best practices](/docs/privacy-sandbox/protected-audience-api/latency).
 
 ### Protected Audience API demo {: #demo}
 
 A walk-through of a basic Protected Audience API deployment across advertiser and publisher
-sites is available at [fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
+sites is available at [protected-audience-demo.web.app/](https://protected-audience-demo.web.app/).
 
 <figure>
 {% YouTube
@@ -184,7 +184,7 @@ Read more about feature support and constraints in the
 ### Interest group permissions
 
 The default for the current implementation of the Protected Audience API is to allow calling
-[`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge-api/interest-groups)
+[`joinAdInterestGroup()`](/docs/privacy-sandbox/protected-audience-api/interest-groups)
 from anywhere in a page, even from cross-domain iframes.
 
 In the future, once site owners have had time to update their cross-domain
@@ -284,13 +284,13 @@ on the user's device, and is not shared with the browser vendor or anyone else.
 
 * **Read the Protected Audience API explainer**: [Browsers Record Interest Groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups).
 * **Read the API guide**: buyers and DSPs, learn how to
-  [`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge-api/interest-groups) and generate bids.
+  [`joinAdInterestGroup()`](/docs/privacy-sandbox/protected-audience-api/interest-groups) and generate bids.
 
 {% Aside %}
 The origin of the calling context for `joinAdInterestGroup()` must match the
 interest group owner's origin.
 
-[`joinAdInterestGroup()`](/docs/privacy-sandbox/fledge-api/interest-groups) must be called from an iframe owned by the interest group owner (for example, from a DSP). If the origin of the current document is the same as the interest group owner (for example, a website with its own interest groups), no iframe is needed.
+[`joinAdInterestGroup()`](/docs/privacy-sandbox/protected-audience-api/interest-groups) must be called from an iframe owned by the interest group owner (for example, from a DSP). If the origin of the current document is the same as the interest group owner (for example, a website with its own interest groups), no iframe is needed.
 {% endAside %}
 
 #### Specify ads for an interest group
@@ -310,7 +310,7 @@ optionally, arbitrary metadata that can be used at bidding time. For example:
 `generateBid()` is called for each interest group that the browser is a member
 of&mdash;if the interest group's owner is invited to bid.
 
-Read the [`generatedBid()` developer documentation](/docs/privacy-sandbox/fledge-api/interest-groups#generatebid).
+Read the [`generatedBid()` developer documentation](/docs/privacy-sandbox/protected-audience-api/interest-groups#generatebid).
 
 ### 3. The user visits a site that sells ad space
 
@@ -340,7 +340,7 @@ along with data from ad-space buyers and the sellers from the
 
 * **Read the Protected Audience API explainer**: [Sellers Run On-Device Auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions)
 * **Read the API guide**: sellers can learn more about
-  [`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction/) and the [ad auction latency best practices](/docs/privacy-sandbox/fledge-api/latency).
+  [`runAdAuction()`](/docs/privacy-sandbox/protected-audience-api/ad-auction/) and the [ad auction latency best practices](/docs/privacy-sandbox/protected-audience-api/latency).
 
 ### 5. The seller and participating buyers request real-time data from the Key/Value service
 
@@ -353,7 +353,7 @@ along with data from ad-space buyers and the sellers from the
 During an ad auction, the seller can request real-time data about specific ad
 creatives by making a request to their [Key/Value service](#keyvalue-service).
 The seller can request this information during
-[`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction/) by the `trustedScoringSignalsUrl` property,
+[`runAdAuction()`](/docs/privacy-sandbox/protected-audience-api/ad-auction/) by the `trustedScoringSignalsUrl` property,
 along with the keys from the `renderUrl` properties of all entries in the `ads`
 and `adComponents` fields of all interest groups in the auction.
 
@@ -394,7 +394,7 @@ owner. Learn more in [Bring Your Own Server](https://github.com/WICG/turtledove/
 %}
 </figure>
 
-The promise returned by [runAdAuction()](/docs/privacy-sandbox/fledge-api/ad-auction/) resolves to a fenced frame config object (`FencedFrameConfig`) when the`resolveToConfig` flag is set to `true` in the auction config. The frame config is used by a fenced frame to navigate the frame to the winning ad, but the URL of the ad is not visible to the frame embedder.
+The promise returned by [runAdAuction()](/docs/privacy-sandbox/protected-audience-api/ad-auction/) resolves to a fenced frame config object (`FencedFrameConfig`) when the`resolveToConfig` flag is set to `true` in the auction config. The frame config is used by a fenced frame to navigate the frame to the winning ad, but the URL of the ad is not visible to the frame embedder.
 
 {% Aside ‘important’ %}
 The `FencedFrameConfig` object is returned only when the flag `resolveToConfig` is set to `true` in the auction config. If the flag is not set, or is `false`, an opaque [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) will be returned which can only be rendered in an iframe.
@@ -415,7 +415,7 @@ call the `sendReportTo()` function. This takes a single argument: a string
 representing a URL that is fetched after the auction completes, which encodes
 event-level information to be reported.
 
-* **Read the API guide**: learn about [seller and buyer reporting](/docs/privacy-sandbox/fledge-api/reports)
+* **Read the API guide**: learn about [seller and buyer reporting](/docs/privacy-sandbox/protected-audience-api/reports)
 
 ### 8. An ad click is reported
 
@@ -570,7 +570,7 @@ to share feedback privately with the Chrome team outside of public forums.
 #### Opt-out {: #opt-out}
 
 Want to opt-out of the Protected Audience API? Learn how to
-[block access to the Protected Audience API](/docs/privacy-sandbox/fledge-api/opt-out/),
+[block access to the Protected Audience API](/docs/privacy-sandbox/protected-audience-api/opt-out/),
 as a site owner or an individual user.
 
 ### Get updates

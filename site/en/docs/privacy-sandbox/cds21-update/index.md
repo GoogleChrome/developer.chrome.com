@@ -131,7 +131,7 @@ There have also been more than half a dozen other proposals offered by other
 companies, in the same solution space. Through continued collaboration, we hope
 to define a path forward. 
 
-At the same time, we're starting [developer testing](/docs/privacy-sandbox/fledge/) for the
+At the same time, we're starting [developer testing](/docs/privacy-sandbox/protected-audience/) for the
 initial version of the Protected Audience API behind a flag in Chrome so developers can get their
 hands on it.
 

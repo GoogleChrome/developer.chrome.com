@@ -1887,5 +1887,17 @@
     "github": "daidr",
     "homepage": "https://im.daidr.me",
     "image": "image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/40TNtORm0BtUUR2IeF8Z.jpg"
+  },
+  "jlwagner": {
+    "github": "malchata",
+    "linkedin": "malchata",
+    "homepage": "https://jlwagner.net/",
+    "country": "US",
+    "image": "image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/YROiiX412sAFeV58NStI.jpg"
+  },
+  "adamraine": {
+    "country": "US",
+    "image": "image/9B7J9oWjgsWbuE84mmxDaY37Wpw2/gra2tr5xbhH5c8Zz9d3k.jpeg",
+    "github": "adamraine"
   }
 }

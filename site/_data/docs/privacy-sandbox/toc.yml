@@ -69,19 +69,19 @@
         - url: /docs/privacy-sandbox/topics/latest
     - title: i18n.docs.privacy-sandbox.ondevice-auctions
       sections:
-        - url: /docs/privacy-sandbox/fledge
-        - url: /docs/privacy-sandbox/fledge-experiment
+        - url: /docs/privacy-sandbox/protected-audience
+        - url: /docs/privacy-sandbox/protected-audience-experiment
           title: i18n.docs.privacy-sandbox.experiment-participate
-        - title: i18n.docs.privacy-sandbox.fledge-api
+        - title: i18n.docs.privacy-sandbox.protected-audience-api
           sections:
-            - url: /docs/privacy-sandbox/fledge-api/
-            - url: /docs/privacy-sandbox/fledge-api/ad-auction
-            - url: /docs/privacy-sandbox/fledge-api/interest-groups
-            - url: /docs/privacy-sandbox/fledge-api/latency
-            - url: /docs/privacy-sandbox/fledge-api/opt-out
-            - url: /docs/privacy-sandbox/fledge-api/reports
-            - url: /docs/privacy-sandbox/fledge-api/troubleshoot
-        - url: /docs/privacy-sandbox/fledge-api/feature-status
+            - url: /docs/privacy-sandbox/protected-audience-api/
+            - url: /docs/privacy-sandbox/protected-audience-api/ad-auction
+            - url: /docs/privacy-sandbox/protected-audience-api/interest-groups
+            - url: /docs/privacy-sandbox/protected-audience-api/latency
+            - url: /docs/privacy-sandbox/protected-audience-api/opt-out
+            - url: /docs/privacy-sandbox/protected-audience-api/reports
+            - url: /docs/privacy-sandbox/protected-audience-api/troubleshoot
+        - url: /docs/privacy-sandbox/protected-audience-api/feature-status
         - url: https://goo.gle/protected-audience-api-walkthrough
           title: i18n.docs.privacy-sandbox.paapi-walkthrough
     - title: i18n.docs.privacy-sandbox.content-selection
@@ -139,4 +139,4 @@
     - url: /docs/privacy-sandbox/summary-reports
 - title: i18n.docs.privacy-sandbox.fight-spam
   sections:
-    - url: /docs/privacy-sandbox/trust-tokens
+    - url: /docs/privacy-sandbox/private-state-tokens

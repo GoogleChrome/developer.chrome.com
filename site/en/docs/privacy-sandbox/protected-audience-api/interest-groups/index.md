@@ -18,19 +18,19 @@ authors:
 In this article, you'll find a technical reference for interest groups, as used
 in the current iteration of the experimental Protected Audience API.
 
-Read the [developer guide](/docs/privacy-sandbox/fledge-api) for the full life
+Read the [developer guide](/docs/privacy-sandbox/protected-audience-api) for the full life
 cycle of the Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
 how [browsers record interest groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups).
 
 Not a developer? Refer to the
-[Protected Audience API overview](/docs/privacy-sandbox/fledge).
+[Protected Audience API overview](/docs/privacy-sandbox/protected-audience).
 
 ## Protected Audience API interest groups
 
 A Protected Audience API interest group represents a group of people with a common interest,
 corresponding to a [remarketing](/docs/privacy-sandbox/glossary/#remarketing)
 list. Every Protected Audience API interest group has an
-[owner](/docs/privacy-sandbox/fledge#interest-group-types).
+[owner](/docs/privacy-sandbox/protected-audience#interest-group-types).
 
 Interest group owners act as the buyer in the Protected Audience API ad auction. Interest group
 membership is stored by the browser, on the user's device, and is not shared
@@ -282,7 +282,7 @@ For example:
 The interest group owner's script at `biddingLogicUrl` must
 include a `generateBid()` function.
 
-When a [seller calls `navigator.runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction),
+When a [seller calls `navigator.runAdAuction()`](/docs/privacy-sandbox/protected-audience-api/ad-auction),
 the `generateBid()` function is called once for each candidate ad. In other
 words, it's called for each interest group that the browser is a member
 of&mdash;if the interest group's owner is invited to bid. 
@@ -309,7 +309,7 @@ function.
 The script at `biddingLogicUrl` provided by a buyer must include a `generateBid()` function.
 
 This function is called once for each candidate ad.
-[`runAdAuction()`](/docs/privacy-sandbox/fledge-api/ad-auction/)
+[`runAdAuction()`](/docs/privacy-sandbox/protected-audience-api/ad-auction/)
 individually checks each ad, along with its associated bid and metadata, then
 assigns the ad a numerical desirability score.
 
