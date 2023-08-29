@@ -8,7 +8,7 @@ Cookies Having Independent Partitioned State (CHIPS) allows developers to opt a 
 
 [Demo](https://chips-site-a.glitch.me/)
 
-[Docs](https://developer.chrome.com/docs/privacy-sandbox/chips/)
+[Docs](/docs/privacy-sandbox/chips/)
 
 {% endColumn %}
 {% Column %}
