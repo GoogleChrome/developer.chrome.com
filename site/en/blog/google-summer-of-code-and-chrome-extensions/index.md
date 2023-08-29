@@ -82,7 +82,9 @@ After several big and small reviews, the code was successfully merged. You can f
 
 ## Wrapping Up
 
-If you ask me what GSoC has brought me: first of all, of course, is understanding the knowledge related to browser extension APIs. By reading the documentation and writing new samples, I gained a detailed understanding of various browser extension APIs. Additionally, I have acquired many skills I had little exposure to before being accepted for GSoC, such as following a comprehensive code review process and creating PRDs. I have also started using GitHub actions to automate workflows and learned how to use Babel to traverse all extension samples and track the APIs used. Moreover, I had my first experience with the Nunjucks template engine. These abilities are essential for programming, and I am delighted that I learned them in advance. Participating in open-source communities brings me joy.
+If you ask me what GSoC has brought me: first of all, of course, is understanding the knowledge related to browser extension APIs. By reading the documentation and writing new samples, I gained a detailed understanding of various browser extension APIs.
+
+Additionally, I have acquired many skills I had little exposure to before being accepted for GSoC, such as following a comprehensive code review process and creating PRDs. I have also started using GitHub actions to automate workflows and learned how to use Babel to traverse all extension samples and track the APIs used. Moreover, I had my first experience with the Nunjucks template engine. These abilities are essential for programming, and I am delighted that I learned them in advance. Participating in open-source communities brings me joy.
 
 This summer has given me many indelible memories. Coding makes me highly content. I have encountered patient mentors who guided me and taught me interesting knowledge, enriching my experience.
 
