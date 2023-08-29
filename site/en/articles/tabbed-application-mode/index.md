@@ -5,7 +5,7 @@ subhead: Work on more than one document at a time with tabs in your Progressive 
 authors:
   - thomassteiner
 date: 2021-02-25
-updated: 2023-08-17
+updated: 2023-08-28
 description: |
   Tabbed application mode allows Progressive Web App developers to add a tabbed document interface
   to their standalone PWAs.
@@ -89,7 +89,7 @@ window.
 | 1. Create explainer                      | [Completed][explainer]   |
 | 2. Create initial draft of specification | Not started              |
 | 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. Origin trial                          | Not started              |
+| 4. Origin trial                          | [In progress][ot]        |
 | 5. Launch                                | Not started              |
 
 </div>
@@ -228,3 +228,4 @@ was reviewed by [Joe Medley](https://github.com/jpmedley). Hero image by
 [cr-dev-twitter]: https://twitter.com/ChromiumDev
 [issue]: https://github.com/w3c/manifest/issues/737
 [explainer]: https://github.com/WICG/manifest-incubations/blob/gh-pages/tabbed-mode-explainer.md
+[ot]: https://developer.chrome.com/origintrials/#/view_trial/3547710606461108225
