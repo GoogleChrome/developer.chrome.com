@@ -25,6 +25,8 @@ There are a number of demos available for the Privacy Sandbox APIs. Most of them
 
 {% Partial 'privacy-sandbox/demos/shared-storage.njk' %}
 
+{% Partial 'privacy-sandbox/demos/chips.njk' %}
+
 {% Partial 'privacy-sandbox/demos/fps.njk' %}
 
 {% Partial 'privacy-sandbox/demos/permissions-policy.njk' %}
