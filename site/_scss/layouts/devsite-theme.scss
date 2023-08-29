@@ -89,10 +89,10 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     &-header-icon {
-      font-size: 2rem;
+      font-size: 1.8rem;
       background-color: $CHROME_BLUE;
-      padding: 0.5px;
-      display: inline-block;
+      padding: 0.675rem 0;
+      text-align: center;
     }
 
     &-item-description-content {
@@ -112,12 +112,10 @@ $CARD_BORDER: 2px solid #eef4ff;
 
     &-white {
       border-radius: 0;
-      font-weight: #{$TEXT_WEIGHT};
       padding: 0;
     }
 
     @media (max-width: 840px) {
-      font-weight: 500;
       padding: 0.8123rem 1rem;
 
       &-white {
@@ -129,14 +127,7 @@ $CARD_BORDER: 2px solid #eef4ff;
   .material-icons {
     border-radius: 100%;
     color: #fff;
-    display: inline;
-  }
-
-  .devsite-landing-row-header-icon {
-    background-color: $CHROME_BLUE;
     display: inline-block;
-    font-size: 2rem;
-    padding: 0.46875rem;
   }
 
   .devsite-landing-row-cards {
@@ -158,7 +149,7 @@ $CARD_BORDER: 2px solid #eef4ff;
 
     &-buttons {
       .button {
-        font-weight: #{$TEXT_BOLD_WEIGHT};
+        font-weight: #{$TEXT_WEIGHT};
         line-height: 1.3125rem;
         margin: 1rem 0 0 0;
         padding: 0.8125rem 2.5rem;
@@ -166,7 +157,6 @@ $CARD_BORDER: 2px solid #eef4ff;
 
       .button-white {
         border-radius: 0;
-        font-weight: #{$TEXT_WEIGHT};
         padding: 0;
       }
     }
@@ -258,7 +248,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     h3 {
-      font-size: 2.25rem;
+      font-size: 2.15rem;
       font-weight: #{$TEXT_WEIGHT};
       letter-spacing: -0.5px;
       line-height: 2.75rem;
@@ -462,7 +452,7 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
 
       @media (max-width: 591px) {
-        font-size: 1.75rem;
+        font-size: 2.5rem;
       }
 
       span {
@@ -653,6 +643,10 @@ $CARD_BORDER: 2px solid #eef4ff;
       &:nth-child(3) {
         padding-left: 0;
 
+        h3 {
+          font-weight: #{$TEXT_WEIGHT};
+        }
+
         @media (max-width: 840px) {
           padding-top: 0;
         }
@@ -827,12 +821,12 @@ $CARD_BORDER: 2px solid #eef4ff;
   display: flex;
   flex: 1;
   justify-content: flex-start;
-  margin-top: 0.5rem;
+  margin-top: 0.125rem;
 
   a {
     color: #{$TEXT_SECONDARY};
     font-family: "Google Sans";
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: #{$TEXT_WEIGHT};
     line-height: 1.25rem;
     letter-spacing: 0.25px;
@@ -890,20 +884,18 @@ search-box {
 /* Hide sidebar  */
 [theme=web-theme] {
   .scaffold {
-    display: grid;
-    height: 100vh;
     grid-template-columns: 1fr;
     grid-template-areas:
       'header'
       'main'
       'footer';
+
+    > side-nav,
+    > navigation-rail {
+      display: none;
+    }
   }
-  
-  .scaffold > side-nav,
-  .scaffold > navigation-rail {
-    display: none;
-  }
-  
+
   .dcc-devsite-wrapper {
     width: 100%;
   }
