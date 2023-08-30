@@ -106,7 +106,6 @@ $CARD_BORDER: 2px solid #eef4ff;
 
   .dcc-blog-card {
     padding: 5rem 2.125rem 3rem;
-    position: relative;
 
     span {
       position: absolute;
@@ -530,19 +529,15 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     @media (max-width: 1280px) {
+      --devsite-h1-font: 500 2.25rem #{$TEXT_PRIMARY_FONT_FAMILY};
+
       .devsite-landing-row-group {
         grid-template-columns: 1fr 1fr;
-      }
-
-      h2 {
-        font-size: 2.25rem;
       }
     }
 
     @media (max-width: 591px) {
-      h2 {
-        font-size: 1.75rem;
-      }
+      --devsite-h1-font: 500 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
 
       .devsite-landing-row-group {
         grid-template-columns: 1fr;
@@ -559,9 +554,7 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
 
       @media (max-width: 1280px) {
-        h2 {
-          font-size: 2.5rem;
-        }
+        --devsite-h1-font: 500 2.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
       }
     }
 
