@@ -161,7 +161,6 @@ $CARD_BORDER: 2px solid #eef4ff;
     --devsite-item-media-container-width: 11rem;
     --devsite-item-media-margin: 0 auto;
 
-
     margin-bottom: 2rem;
     padding: 3.5rem 2.5rem;
     
@@ -308,19 +307,16 @@ $CARD_BORDER: 2px solid #eef4ff;
     --devsite-button-padding: 12px 24px;
     --devsite-description-content-font: 1.3rem/1.875rem #{$TEXT_PRIMARY_FONT_FAMILY};
     --devsite-h2-font: 500 4rem #{$TEXT_PRIMARY_FONT_FAMILY};
-
+    
     padding: 1rem 0 0;
     text-align: center;
+    grid-gap: 0;
 
     h3 span {
         color: #{$TEXT_LINK};
         font-style: normal;
       }
-  
-    &-description {
-      margin-bottom: 0;
-    }
-    
+
     .button {
       margin: 0 auto;
     }
@@ -515,7 +511,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     @media (max-width: 1280px) {
       --devsite-h1-font: 500 2.25rem #{$TEXT_PRIMARY_FONT_FAMILY};
 
-      .devsite-landing-row-group {
+      header + div {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -523,7 +519,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     @media (max-width: 591px) {
       --devsite-h1-font: 500 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
 
-      .devsite-landing-row-group {
+      header + div {
         grid-template-columns: 1fr;
       }
     }
