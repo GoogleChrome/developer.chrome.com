@@ -645,10 +645,16 @@ $CARD_BORDER: 2px solid #eef4ff;
 
         h3 {
           font-weight: #{$TEXT_WEIGHT};
+          margin-top: 2.275rem;
         }
 
         @media (max-width: 840px) {
           padding-top: 0;
+          margin-left: -15px;
+
+          h3 { 
+            margin-top: 0;
+          }
         }
       }
     }
@@ -656,9 +662,11 @@ $CARD_BORDER: 2px solid #eef4ff;
     .dcc-blog-card {
       display: block;
       padding-left: 0;
+      border-radius: 0;
 
       @media (max-width: 840px) {
         padding-top: 2.5rem;
+        padding-left: 15px;
 
         .devsite-landing-row-item-labels {
           top: 0;
@@ -821,15 +829,21 @@ $CARD_BORDER: 2px solid #eef4ff;
   display: flex;
   flex: 1;
   justify-content: flex-start;
-  margin-top: 0.125rem;
+  margin-top: 0.05rem;
 
   a {
     color: #{$TEXT_SECONDARY};
     font-family: "Google Sans";
-    font-size: 0.9375rem;
+    font-size: 1.05rem;
     font-weight: #{$TEXT_WEIGHT};
     line-height: 1.25rem;
     letter-spacing: 0.25px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $TEXT_LINK;
+    }
   }
 
   @media (max-width: 840px) {
@@ -839,6 +853,15 @@ $CARD_BORDER: 2px solid #eef4ff;
 
 search-box {
   min-width: 20rem;
+  order: 1;
+
+  &[active] {
+    order: 0;
+
+    & + .dcc-top-menu::before {
+      display: none;
+    }
+  }
 
   .search-box__btn {
     color: #{$TEXT_SECONDARY};
@@ -881,7 +904,6 @@ search-box {
   }
 }
 
-/* Hide sidebar  */
 [theme=web-theme] {
   .scaffold {
     grid-template-columns: 1fr;
@@ -894,10 +916,32 @@ search-box {
     > navigation-rail {
       display: none;
     }
+
+    @media (min-width: 992px) {
+      top-nav > nav {
+        gap: 5rem;
+      }
+    }
   }
 
   .dcc-devsite-wrapper {
     width: 100%;
+  }
+}
+
+top-nav[data-search-active] .top-nav__hamburger, top-nav[data-search-active] .top-nav__logo,
+top-nav[data-search-active] .dcc-top-menu {
+  opacity: 0;
+}
+
+@media (max-width: 992px) {
+  top-nav .dcc-hamburger.button {
+    display: none;
+  }
+
+  search-box .search-box__btn {
+    width: 3.5rem;
+    right: 0;
   }
 }
 

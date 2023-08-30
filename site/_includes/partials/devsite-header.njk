@@ -3,7 +3,7 @@
 <top-nav role="banner" class="display-block hairline-bottom" data-side-nav-inert>
   <a href="#main-content" class="color-primary visually-hidden skip-link">{{ 'i18n.common.skip_to_content' | i18n(locale) }}</a>
 
-  <nav class="display-flex align-center" aria-label="{{ 'i18n.common.chrome_developers' | i18n(locale) }}" role="search">
+  <nav class="align-center display-grid" aria-label="{{ 'i18n.common.chrome_developers' | i18n(locale) }}" role="search">
     {# Hamburger button #}
     <button class="dcc-hamburger button display-flex align-center justify-content-center width-700 height-700" aria-label="{{ 'i18n.common.menu' | i18n(locale) }}">
       {{ icon('hamburger') }}
@@ -18,12 +18,6 @@
       </a>
     </div>
 
-    <nav class='dcc-top-menu'>
-      <a href='/' class='no-visited'>Get Inspired</a>
-      <a href='/docs' class='no-visited'>Docs</a>
-      <a href='/blog' class='no-visited'>Blog</a>
-    </nav>
-
     {# Search #}
     <search-box
       class="display-grid align-center"
@@ -34,5 +28,12 @@
       blogLabel="{{ 'i18n.common.blog' | i18n(locale) }}"
       placeholder="{{'i18n.common.search_placeholder' | i18n(locale)}}"
     ></search-box>
+
+    <nav class='dcc-top-menu'>
+      <a href='/' class='no-visited'>Get Inspired</a>
+      <a href='/docs' class='no-visited'>Docs</a>
+      <a href='/blog' class='no-visited'>Blog</a>
+      <a href='/articles' class='no-visited'>Articles</a>
+    </nav>
   </nav>
 </top-nav>
