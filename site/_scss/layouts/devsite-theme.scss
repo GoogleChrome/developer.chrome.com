@@ -448,6 +448,15 @@ $CARD_BORDER: 2px solid #eef4ff;
     .dcc-blog-card {
       max-width: 24.75rem;
       padding: 0;
+      
+      figure{
+        margin-bottom: 0;
+      }
+
+      img{
+        height: 12.5rem;
+        object-fit: cover;
+      }
 
       @media (max-width: 591px) {
         max-width: 100%;
