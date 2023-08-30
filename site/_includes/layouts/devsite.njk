@@ -112,6 +112,10 @@
         {% include 'partials/devsite-navigation-rail.njk' %}
       {% endblock %}
 
+      {% block sidebar %}
+        {% include 'partials/devsite-side-nav.njk' %}
+      {% endblock %}
+
       <section  class="dcc-devsite-wrapper" theme="web-theme">
         {% block devsite_main %}{% endblock %}
       </section>

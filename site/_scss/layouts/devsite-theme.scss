@@ -94,8 +94,6 @@ $CARD_BORDER: 2px solid #eef4ff;
     //padding-top: 4.25rem;
   }
 
-  
-
   .material-icons {
     background-color: $CHROME_BLUE;
     border-radius: 100%;
@@ -585,6 +583,24 @@ $CARD_BORDER: 2px solid #eef4ff;
 [theme=web-theme] {
   top-nav {
     padding: 0.5rem 1.5rem;
+  }
+
+  side-nav .navigation-rail {
+    &__close {
+      padding: 0;
+      border: 0;
+      margin: 0;
+      color: var(--color-secondary-text);
+    }
+
+    &__link {
+      color: var(--color-secondary-text);
+      font-weight: #{$TEXT_WEIGHT};
+
+      &[data-state="active"] {
+        color: $TEXT_LINK;
+      }
+    }
   }
 
   nav {
