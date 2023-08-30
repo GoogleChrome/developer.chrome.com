@@ -113,6 +113,10 @@ $CARD_BORDER: 2px solid #eef4ff;
       top: 2.25rem;
     }
 
+    img {
+      border-radius: #{$CARD_BORDER_RADIUS};
+    }
+
     &[description-position=left] {
       --devsite-item-align-items: flex-start;
     }
@@ -142,7 +146,6 @@ $CARD_BORDER: 2px solid #eef4ff;
       &[description-position=left] figure img,
       &[description-position=right] figure img,
       figure img {
-        border-radius: 1.5rem;
         height: 220px;
         object-fit: cover;
         object-position: center;
@@ -390,10 +393,6 @@ $CARD_BORDER: 2px solid #eef4ff;
     .dcc-blog-card {
       max-width: 24.75rem;
       padding: 0;
-
-      img {
-        border-radius: 1.5rem;
-      }
 
       @media (max-width: 591px) {
         max-width: 100%;
