@@ -42,4 +42,3 @@ repository.
 
 [1]: /docs/extensions/mv3/devtools
 [2]: https://www.softwareishard.com/blog/har-12-spec/
-[3]: /docs/extensions/mv3/samples#search:devtools.network
