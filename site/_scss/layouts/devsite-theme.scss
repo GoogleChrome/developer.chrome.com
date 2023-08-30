@@ -90,8 +90,8 @@ $CARD_BORDER: 2px solid #eef4ff;
   /* Override devsite.scss */
   section.devsite-landing-row[header-position=left]:not(.devsite-landing-row-cards):not(.devsite-landing-row-no-image-background) +
   section.devsite-landing-row[header-position=left]:not(.devsite-landing-row-cards):not([class^="devsite-landing-row-padding-"]) {
-    margin-top: 1.5rem;
-    padding-top: 4.25rem;
+    //margin-top: 1.5rem;
+    //padding-top: 4.25rem;
   }
 
   
@@ -307,14 +307,13 @@ $CARD_BORDER: 2px solid #eef4ff;
     --devsite-button-padding: 12px 24px;
     --devsite-description-content-font: 1.3rem/1.875rem #{$TEXT_PRIMARY_FONT_FAMILY};
     --devsite-h2-font: 500 4rem #{$TEXT_PRIMARY_FONT_FAMILY};
+    --devsite-landing-row-padding: 1rem 0 0;
     
-    padding: 1rem 0 0;
     text-align: center;
     grid-gap: 0;
 
     h3 span {
         color: #{$TEXT_LINK};
-        font-style: normal;
       }
 
     .button {
@@ -472,6 +471,9 @@ $CARD_BORDER: 2px solid #eef4ff;
   
 
   .dcc-docs {
+    --devsite-landing-group-padding: 4.25rem 1.5rem 0;
+    --devsite-landing-group-margin: 1.5rem auto;
+
     position: relative;
 
     &::before {
