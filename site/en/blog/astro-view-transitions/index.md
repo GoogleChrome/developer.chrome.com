@@ -85,18 +85,19 @@ export default defineConfig({
 
 Thankfully, the Astro community showed that the View Transitions API was already powerful without the product over-complicating things. After seeing some early demos, the Astro team were sold on the idea of a simple Astro API that could match the browser APIs as closely as possible. Instead of seeing View Transitions as an invisible implementation detail hidden inside of Astro, they could be directly exposed to the developer. Aligning Astro directly with the web platform and reducing overall complexity on the frontend.
 
-```javascript
+```jsx
+---
 // Add a simple fade transition with 2 lines of code!
 // 1. Import the <ViewTransitions> component
 // 2. Add it to your common/base head component, or individual pages.
 
 import { ViewTransitions } from 'astro:transitions';
-```
-```html
+---
 <head>
   <title>My View Transitions Demo</title>
   <ViewTransitions />
 </head>
+<!-- ... -->
 ```
 
 The work became simple: bring the new View Transitions API into Astro and provide automatic fallbacks that would bring to as many websites and browsers as possible. Fallback support is essential, because most browsers (outside of Chrome) haven’t shipped full support for native View Transitions yet.
