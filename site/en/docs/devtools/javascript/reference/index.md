@@ -468,12 +468,17 @@ expression.
   {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iWsdoHnowdltMpnOfSJG.png", alt="Delete expression", width="20", height="11" %}
   to delete it.
 
-## Make a minified file readable {: #format }
+## Browse minified files and fold code blocks {: #format }
 
-Click **Format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JCyivmZxQVqpI4tj7Sil.svg", alt="Format.", width="20", height="20" %} to make a minified
-file human-readable.
+By default, the **Sources** panel pretty-prints minified files and lets you fold and unfold code blocks.
 
-{% Img src="image/admin/cttlkengXdMrdvwjh5S3.svg", alt="The Format button.", width="800", height="609" %}
+To see the minified filed as it was loaded, click `{ }` in the bottom left corner of the **Editor**.
+
+To fold a code block, hover over the line number in the left column and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TGwMBZWZWJlVmQhR2cHx.svg", alt="Collapse.", width="20", height="20" %} **Collapse**. To unfold the code block, click `{...}` next to it.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/A99gci0l8aXMmv0IHAGH.mp4", width="800", height="456", autoplay="false", controls="true", muted="true", class="screenshot"  %}
+
+To configure this behavior, see {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Sources**](/docs/devtools/settings/preferences/#sources).
 
 ## Edit a script {: #edit }
 
