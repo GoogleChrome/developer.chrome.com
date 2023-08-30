@@ -1531,6 +1531,11 @@ samrichard:
     en: 'Sam Richard'
   description:
     en: 'Developer Advocate, Google ChromeOS'
+hadrijau:
+  title:
+    en: 'Hadrien Jaubert'
+  description:
+    en: 'Software Engineering Intern, Google Chrome DevTools'
 jlwagner:
   title:
     en: 'Jeremy Wagner'
