@@ -333,6 +333,10 @@ $CARD_BORDER: 2px solid #eef4ff;
       --devsite-description-content-font: 400 18px/30px #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-h2-font: 700 50px #{$TEXT_PRIMARY_FONT_FAMILY};
     
+       
+      display: flex;
+      flex-direction: column-reverse;
+
       figure {
         margin: 1rem auto 2rem;
       }
@@ -341,10 +345,6 @@ $CARD_BORDER: 2px solid #eef4ff;
     @media (max-width: 591px) {
       --devsite-h2-font: 700 28px #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-item-description-margin: 0;
-
-      display: flex;
-      flex-direction: column-reverse;
-
   
       h3 span {
         display: block;
@@ -375,16 +375,6 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
   }
 
-  .devsite-landing-row-2-up[header-position=left] {
-    .devsite-landing-row-header-buttons{
-      display: none;
-
-      @media (max-width: 991px) {
-        display: block;
-      }
-    }
-  }
-
   .devsite-landing-row[header-position=left] {
     position: relative;
     --devsite-landing-row-header-max-width: 17.5625rem;
@@ -404,12 +394,6 @@ $CARD_BORDER: 2px solid #eef4ff;
       --devsite-landing-row-group-grid-column: 1 / span 3;
       --devsite-landing-row-header-grid-column: 1 / span 3;
       --devsite-landing-row-header-max-width: 100%;
-
-      .dcc-blog-card {
-        .button{
-          display:none;
-        }
-      }
     }
   }
 
