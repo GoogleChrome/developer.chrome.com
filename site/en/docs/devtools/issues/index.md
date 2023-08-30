@@ -95,7 +95,7 @@ To group issues, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLM
 
 The Issues tab shows third-party cookies issues by default. 
 
-To hide such issues, clear {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** in the action bar at the top of the **Issues** tab. You can find third-party cookie issues in the **AFFECTED RESOURCES** section missing a link.
+To hide such issues, clear {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Clear.", width="24", height="24" %} **Include third-party cookie issues** in the action bar at the top of the **Issues** tab. You can find third-party cookie issues in the **AFFECTED RESOURCES** section missing a link.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hPAEUH4LTwDFyPoQoPQ0.png", alt="Third-party cookie without a linked resource in the Affected Resources section.", width="800", height="654" %}
 
