@@ -87,13 +87,6 @@ $CARD_BORDER: 2px solid #eef4ff;
 
   }
 
-  /* Override devsite.scss */
-  section.devsite-landing-row[header-position=left]:not(.devsite-landing-row-cards):not(.devsite-landing-row-no-image-background) +
-  section.devsite-landing-row[header-position=left]:not(.devsite-landing-row-cards):not([class^="devsite-landing-row-padding-"]) {
-    //margin-top: 1.5rem;
-    //padding-top: 4.25rem;
-  }
-
   .material-icons {
     background-color: $CHROME_BLUE;
     border-radius: 100%;
@@ -305,40 +298,44 @@ $CARD_BORDER: 2px solid #eef4ff;
     --devsite-button-padding: 12px 24px;
     --devsite-description-content-font: 1.3rem/1.875rem #{$TEXT_PRIMARY_FONT_FAMILY};
     --devsite-h2-font: 500 4rem #{$TEXT_PRIMARY_FONT_FAMILY};
-    --devsite-landing-row-padding: 1rem 0 0;
+    --devsite-landing-row-padding: 3rem 0 0;
+    --devsite-item-gap: 0;
     
+
     text-align: center;
-    grid-gap: 0;
+
 
     h3 span {
-        color: #{$TEXT_LINK};
-      }
+      color: #{$TEXT_LINK};
+    }
 
     .button {
       margin: 0 auto;
+      z-index: 1;
     }
 
     figure {
-      margin: -1rem auto 2rem;
+      margin: -3rem auto 6rem;
     }
 
     @media (max-width: 840px) {
       --devsite-description-content-font: 400 18px/30px #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-h2-font: 700 50px #{$TEXT_PRIMARY_FONT_FAMILY};
-    
+      --devsite-item-display: flex;
+      
+      [description-position]{
+        flex-direction: column-reverse;
+      }
        
-      display: flex;
-      flex-direction: column-reverse;
-
       figure {
-        margin: 1rem auto 2rem;
+        margin: -1rem auto 4rem;
       }
     }
 
     @media (max-width: 591px) {
       --devsite-h2-font: 700 28px #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-item-description-margin: 0;
-  
+      
       h3 span {
         display: block;
       }
