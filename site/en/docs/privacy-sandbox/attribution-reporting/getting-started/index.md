@@ -20,24 +20,18 @@ This document applies to both event-level and summary reports.
 - [Attribution Reporting Header Validator](https://wicg.github.io/attribution-reporting-api/validate-headers)
 {% endAside %}
  
- 
-## Planning and design decisions
 
-You'll need to develop or adapt your ad and reporting strategy to transition to the Attribution Reporting API. Understanding what data the API can report on, the [size constraints](/docs/privacy-sandbox/attribution-reporting/constraints/) of the data, the [timing of reports](/docs/privacy-sandbox/attribution-reporting/report-schedules/), and how you will [prioritize data to be reported](/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/) will be important.
+## Choose a report type
 
-Strategic planning will require a deeper understanding of the internal workings of the API, which is covered in other documentation, such as [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/).
+The Attribution Reporting API allows you to generate two types of reports: event-level and summary reports. Event-level reports require less setup than aggregatable/summary reports, so they may be a good place to start. Summary reports require integration with the [Aggregation Service](/docs/privacy-sandbox/aggregation-service/); event-level reports don't.
 
-### Choose a report type
+You can set up reporting for both event-level and summary reports. They are complementary. 
 
-The Attribution Reporting API is designed to allow you to generate two types of reports: event-level and summary reports. Event-level reports require less setup than aggregatable/summary reports, so they may be a good place to start. Of course, if you decide to, you can set up reporting for both event-level and summary reports. They are complementary. 
-
-It's important to note that aggregatable reports represent data that is eventually aggregated and summarized to produce summary reports. They can be thought of as an intermediate step in the generation of summary reports, which are the reports containing data that can be read by advertisers and ad techs. Summary reports require integration with the [Aggregation Service](/docs/privacy-sandbox/aggregation-service/); event-level reports don't. 
-
-#### Event-level reports
+### Event-level reports
 
 {% Partial 'privacy-sandbox/glossary-entries/event-level.njk' %}
 
-#### Summary reports 
+### Summary reports 
 
 {% Partial 'privacy-sandbox/glossary-entries/summary-report.njk' %}
 
@@ -56,7 +50,7 @@ Before you can register sources and triggers and get reports, your sites need to
 
 ### Event-level report generation
 
- Here are the minimum steps to follow to be able to generate event-level reports:
+Here are the minimum steps to follow to generate event-level reports:
 
 1. **Register a source**. Refer to [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more information.
 
@@ -74,7 +68,7 @@ More details on [event-level reports](https://github.com/WICG/attribution-report
 
 ### Summary report generation
 
-To be able to generate reports, follow these high-level steps.
+To generate reports, follow these high-level steps:
 
 1. **Register a source**. Refer to [Registering a source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more details. 
 
@@ -89,7 +83,7 @@ To be able to generate reports, follow these high-level steps.
     
 1. **Set up debug reports**: Learn how in the [Attribution reporting debugging series](/docs/privacy-sandbox/attribution-reporting-debugging/).
 
-1. **Batch and send the reports** for further processing with the aggregation service which will produce summary reports. Refer to [batched aggregatable reports](/docs/privacy-sandbox/attribution-reporting/system-overview/#batched-aggregatable-reports).
+1. **Batch and send the reports** for further processing by the [Aggregation Service](/docs/privacy-sandbox/aggregation-service/) which will produce summary reports. Refer to [batched aggregatable reports](/docs/privacy-sandbox/attribution-reporting/system-overview/#batched-aggregatable-reports).
 
 More details on [summary reports](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md) here.
 
@@ -132,9 +126,11 @@ If you're ready to begin implementation, check out these docs:
 - [Working with noise](/docs/privacy-sandbox/attribution-reporting/working-with-noise/)
 - [Prioritize specific clicks, views, or conversions](/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/)
 - [Constraints on Aggregation Reporting data](/docs/privacy-sandbox/attribution-reporting/constraints/)
+- [Debugging Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-debugging/)
 
 If you're still in the planning stage, take a look at these docs:
 - [System overview](/docs/privacy-sandbox/attribution-reporting/system-overview/) 
-- [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/) 
+- [Design decisions](/docs/privacy-sandbox/summary-reports/design-decisions/)
 - [Contribution budget](/docs/privacy-sandbox/attribution-reporting/contribution-budget/)
 - [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) 
+
