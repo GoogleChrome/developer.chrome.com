@@ -75,28 +75,28 @@ The next question the Astro team had to answer was, “how?” The team looked t
 One of the earliest attempts involved a full-page “smart transition” that would automatically compare every new page of HTML to the current HTML and then attempt to replace every element at once using JavaScript. It was clever, but error-prone.
 
 ```javascript
-    // An early API design for enabling view transitions
-    // in Astro via top-level config. Never implemented.
+// An early API design for enabling view transitions
+// in Astro via top-level config. Never implemented.
 
-    export default defineConfig({
-      router: 'spa'
-    })
+export default defineConfig({
+  router: 'spa'
+})
 ```
 
 Thankfully, the Astro community showed that the View Transitions API was already powerful without the product over-complicating things. After seeing some early demos, the Astro team were sold on the idea of a simple Astro API that could match the browser APIs as closely as possible. Instead of seeing View Transitions as an invisible implementation detail hidden inside of Astro, they could be directly exposed to the developer. Aligning Astro directly with the web platform and reducing overall complexity on the frontend.
 
 ```javascript
-    // Add a simple fade transition with 2 lines of code!
-    // 1. Import the <ViewTransitions> component
-    // 2. Add it to your common/base head component, or individual pages.
+// Add a simple fade transition with 2 lines of code!
+// 1. Import the <ViewTransitions> component
+// 2. Add it to your common/base head component, or individual pages.
 
-    import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from 'astro:transitions';
 ```
 ```html
-    <head>
-      <title>My View Transitions Demo</title>
-      <ViewTransitions />
-    </head>
+<head>
+  <title>My View Transitions Demo</title>
+  <ViewTransitions />
+</head>
 ```
 
 The work became simple: bring the new View Transitions API into Astro and provide automatic fallbacks that would bring to as many websites and browsers as possible. Fallback support is essential, because most browsers (outside of Chrome) haven’t shipped full support for native View Transitions yet.
@@ -118,19 +118,19 @@ Visit demo: [Live](https://live-transitions.pages.dev/), [Source](https://github
 Astro 3.0, finalizes support and unflags the new View Transitions API for everyone. These new APIs are now ready for you to adopt experimentally, or all-at-once.
 
 ```html
-    <main transition:animate="slide">
-      <p>Slide animation as you navigate to and from the page!</p>
-    </main>
-    <aside transition:name="my-aside">
-      <p>Animate and morph the matching "my-aside" element across pages automatically!</p>
-    </aside>
+<main transition:animate="slide">
+  <p>Slide animation as you navigate to and from the page!</p>
+</main>
+<aside transition:name="my-aside">
+  <p>Animate and morph the matching "my-aside" element across pages automatically!</p>
+</aside>
 ```
 An unexpected benefit of aligning Astro with the platform APIs is the ability to to experiment with building new features on top of the native View Transitions API. For example, the new Astro `transition:persist` directive lets any element persist itself across a full-page navigation. This powers long-lived elements like persistent audio and video players, something that used to only be possible in heavy-weight JavaScript SPAs. 
 
 ```html
-    <video controls="" autoplay="" transition:persist>
-      <source src="https://ia804502.us.archive.org/33/items/GoldenGa1939_3/GoldenGa1939_3_512kb.mp4" type="video/mp4">
-    </video>
+<video controls="" autoplay="" transition:persist>
+  <source src="https://ia804502.us.archive.org/33/items/GoldenGa1939_3/GoldenGa1939_3_512kb.mp4" type="video/mp4">
+</video>
 ```
 
 <figure>
