@@ -21,7 +21,7 @@ Today we would like to share more about Chrome and [Astro](https://astro.build/)
 
 ## Background
 
-Seamless transitions between different states of a pahe, known as _state transitions,_ have always been a complex aspect of building seamless, animated experiences on the web. Despite the availability of tools like CSS transitions, CSS animations, and the Web Animation API, creating state transitions has remained a daunting task. One of the challenges is handling interaction on outgoing elements, which can make the transitions more complex.
+Seamless transitions between different states of a page, known as _state transitions,_ have always been a complex aspect of building seamless, animated experiences on the web. Despite the availability of tools like CSS transitions, CSS animations, and the Web Animation API, creating state transitions has remained a daunting task. One of the challenges is handling interaction on outgoing elements, which can make the transitions more complex.
 
 In addition, maintaining reading position and focus for assistive devices is difficult. And, dealing with scroll position differences makes state transitions a cumbersome process. All these factors contribute to the complexity of implementing smooth transitions between various elements on a webpage
 
@@ -35,6 +35,8 @@ The [launch of the View Transitions API in Chrome 111](/blog/spa-view-transition
     With the View Transitions API, navigating traditional multi-page applications feels as seamless as using a native app.
   </figcaption>
 </figure>
+
+Visit demo: [Live](https://astro-movies.pages.dev/), [Source](https://github.com/Charca/astro-movies)
 
 ## Early explorations with view transitions
 
@@ -111,6 +113,7 @@ Astro released experimental View Transitions support in Astro 2.9. The response 
   </figcaption>
 </figure>
 
+Visit demo: [Live](https://live-transitions.pages.dev/), [Source](https://github.com/Charca/view-transitions-live)
 
 Astro 3.0, finalizes support and unflags the new View Transitions API for everyone. These new APIs are now ready for you to adopt experimentally, or all-at-once.
 
@@ -138,6 +141,8 @@ An unexpected benefit of aligning Astro with the platform APIs is the ability to
   </figcaption>
 </figure>
 
+Visit demo: [Live](https://astro-records.pages.dev/), [Source](https://github.com/Charca/astro-records)
+
 Astro is also free to make View Transitions more ergonomic to the developer. For instance, the team has already added support for custom forward/backward animations and animations for dynamic HTML. Both of these features are difficult to do with the lower-level APIs alone, but in Astro they are practically effortless.
 
 These features are only in Astro for now, but the Astro team hopes to feed their experience back to the specification authors and working groups for potential browser enhancements down the road. For example, by closely monitoring [a proposal](https://github.com/w3c/csswg-drafts/issues/8319) to make it easier to share animations in CSS.
@@ -147,7 +152,7 @@ These features are only in Astro for now, but the Astro team hopes to feed their
 
 The future for View Transitions on the web is bright. Astro, Nuxt, and HTMX have all shipped some degree of support, and many others have expressed interest. 
 
-The Chrome team is thrilled about Astro's native View Transitions support. It's a big step for web development, enabling more fluid and dynamic user experiences. Developers, we encourage you to dive into View Transitions in Astro 3.0. Whether you're creating new landing pages or upgrading existing sites, these enhancements are game-changers. View Transitions helped to fill a gap between what was possible with SPAs and MPAs. Chrome would love to hear from you on whether there are additional gaps in support for SPA and/or MPA. Feel free to comment on this [issue](https://github.com/WICG/view-transitions/issues) in the WICG GitHub to discuss this further. 
+The Chrome team is thrilled about Astro's native View Transitions support. It's a big step for web development, enabling more fluid and dynamic user experiences. Developers, we encourage you to dive into View Transitions in Astro 3.0. Whether you're creating new landing pages or upgrading existing sites, these enhancements are game-changers. View Transitions helped to fill a gap between what was possible with SPAs and MPAs. Chrome would love to hear from you on whether there are additional gaps in support for SPA and/or MPA. Feel free to comment on the [View Transitions WICG GitHub repo](https://github.com/WICG/view-transitions/) to discuss this further. 
 
 We're already inspired by the innovative demos and applications we've seen, and we're eager to see more. Your work with View Transitions is shaping the future of the web. Give View Transitions a try in Astro, share your work, and let's continue this journey together.
 
