@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
 date: 2023-05-17
-updated: 2023-07-27
+updated: 2023-08-30
 authors:
   - mihajlija
 ---
@@ -92,9 +92,13 @@ Another option is to browse through your site with third-party cookies blocked o
 
 To learn more about DevTools features you can use to investigate third-party cookies check out [the instructions on chromium.org](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox/third-party-cookie-phaseout/).
 
-In Chrome version 115 or higher, you can test the browser behavior after third-party cookie phase out by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the flag `--test-third-party-cookies-phaseout`. This will block third-party cookies, enable [third-party storage partitioning](/docs/privacy-sandbox/storage-partitioning) and [FedCM](/docs/privacy-sandbox/fedcm), and enable Chrome UI settings for [First-Party Sets](docs/privacy-sandbox/first-party-sets-integration) (["Allow related sites to see your activity in the group"](https://support.google.com/chrome/answer/95647?hl=EN#zippy=%2Callow-related-sites-to-access-your-activity)).
+In Chrome version 115 or higher, you can test the browser behavior after third-party cookie phase out by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the flag `--test-third-party-cookie-phaseout`. This will block third-party cookies, enable [third-party storage partitioning](/docs/privacy-sandbox/storage-partitioning) and [FedCM](/docs/privacy-sandbox/fedcm), and enable Chrome UI settings for [First-Party Sets](docs/privacy-sandbox/first-party-sets-integration) (["Allow related sites to see your activity in the group"](https://support.google.com/chrome/answer/95647?hl=EN#zippy=%2Callow-related-sites-to-access-your-activity)).
 
 If your site breaks when third-party cookies are blocked, you can report the issue to [Chrome's cookie breakage tracker](https://goo.gle/report-3pc-broken).
+
+{% Aside %}
+This article was updated on 30 August 2023 to correct a typing mistake in the testing flag `--test-third-party-cookie-phaseout`.
+{% endAside %}
 
 ## Partitioned cookies
 
