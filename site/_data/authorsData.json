@@ -1892,5 +1892,17 @@
     "country": "US",
     "image": "image/9B7J9oWjgsWbuE84mmxDaY37Wpw2/gra2tr5xbhH5c8Zz9d3k.jpeg",
     "github": "adamraine"
+  },
+  "schottfk": {
+    "twitter": "FredKSchott",
+    "image": "image/1L2RBhCLSnXjCnSlevaDjy3vba73/2jqKQUkysDpGKMudG0g8.jpg"
+  },
+  "phillipsm": {
+    "twitter": "matthewcp",
+    "image": "image/1L2RBhCLSnXjCnSlevaDjy3vba73/lu5YmuyoVJqP0flKUfKg.jpg"
+  },
+  "ferreiram": {
+    "twitter": "charca",
+    "image": "image/1L2RBhCLSnXjCnSlevaDjy3vba73/2nczWyIuJperJ2qSEpA3.jpg"
   }
 }
