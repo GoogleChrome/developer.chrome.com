@@ -301,7 +301,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
   }
 
-  .devsite-landing-row-100 .devsite-landing-row-item {
+  .dcc-hero {
     --devsite-button-background: #{$TEXT_LINK};
     --devsite-button-color: #fff;
     --devsite-button-padding: 12px 24px;
@@ -353,7 +353,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
   }
 
-  .devsite-landing-row-2-up[header-position=top]:not([background="pale-blue"]) {
+  .dcc-featured {
     --devsite-h2-font: 700 30px/38px #{$TEXT_PRIMARY_FONT_FAMILY};
     
 
@@ -371,29 +371,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
   }
 
-  .devsite-landing-row[header-position=left] {
-    position: relative;
-    --devsite-landing-row-header-max-width: 17.5625rem;
-
-    .dcc-blog-card {
-      max-width: 24.75rem;
-      padding: 0;
-
-      @media (max-width: 591px) {
-        max-width: 100%;
-      }
-    }
-
-
-    @media (max-width: 840px) {
-      --devsite-h2-font: #{$TEXT_WEIGHT} 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
-      --devsite-landing-row-group-grid-column: 1 / span 3;
-      --devsite-landing-row-header-grid-column: 1 / span 3;
-      --devsite-landing-row-header-max-width: 100%;
-    }
-  }
-
-  .devsite-landing-row-3-up {
+  .dcc-case-studies {
     --devsite-landing-row-group-background: #{$BG_PRIMARY};
     --devsite-landing-row-group-border-radius: #{$CARD_BORDER_RADIUS};
     --devsite-landing-row-group-max-width: 90rem;
@@ -469,7 +447,31 @@ $CARD_BORDER: 2px solid #eef4ff;
 
   }
 
-  .devsite-landing-row-4-up[header-position=left] {
+  .dcc-chrome-releases {
+    position: relative;
+    --devsite-landing-row-header-max-width: 17.5625rem;
+
+    .dcc-blog-card {
+      max-width: 24.75rem;
+      padding: 0;
+
+      @media (max-width: 591px) {
+        max-width: 100%;
+      }
+    }
+
+
+    @media (max-width: 840px) {
+      --devsite-h2-font: #{$TEXT_WEIGHT} 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
+      --devsite-landing-row-group-grid-column: 1 / span 3;
+      --devsite-landing-row-header-grid-column: 1 / span 3;
+      --devsite-landing-row-header-max-width: 100%;
+    }
+  }
+
+  
+
+  .dcc-docs {
     position: relative;
 
     &::before {
@@ -525,7 +527,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
   }
 
-  .devsite-landing-row-2-up[background="pale-blue"] {
+  .dcc-social {
       --devsite-item-gap: 3.125rem;
       --devsite-landing-row-header-text-margin: 0 0 2.875rem 0;
     
