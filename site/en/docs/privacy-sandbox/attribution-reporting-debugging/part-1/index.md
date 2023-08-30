@@ -173,6 +173,10 @@ You may want to reprocess reports when you're:
 - experimenting with different batching strategies.
 - experimenting with different epsilon values.
 
+### Data recovery
+
+Ad techs should enable debug mode for the Aggregation Service to be able to recover data in the event of a disaster such as unavailable or non-responsive services.
+
 ## Up next
 
 [Part 2: Set up debug reports](/docs/privacy-sandbox/attribution-reporting-debugging/part-2/)
