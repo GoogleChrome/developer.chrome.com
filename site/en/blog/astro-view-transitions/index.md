@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Astro View Transitions
 description: 
-  Highlight how the Astro community embraced View Transitions when Chrome was shaping up the API and the journey towards landing first-class support for it in Astro + persistent islands
+  Highlight how the Astro community embraced View Transitions when Chrome was shaping up the API and the journey towards landing first-class support for it in Astro + persistent islands.
 date: 2023-08-30
 authors:
   - schottfk
