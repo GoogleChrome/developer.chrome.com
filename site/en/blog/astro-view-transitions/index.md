@@ -83,7 +83,7 @@ One of the earliest attempts involved a full-page “smart transition” that wo
     })
 ```
 
-Thankfully, the Astro community showed that the View Transitions API was already powerful without the product over-complicating things. After seeing some early demos, the Astro team were sold on the idea of a simple Astro API that could match the browser APIs as closely as possible. Instead of seeing View Transitions as an invisible implementation detail hidden inside of Astro, they could be directly exposed to the developer. ligning Astro directly with the web platform and reducing overall complexity on the frontend.
+Thankfully, the Astro community showed that the View Transitions API was already powerful without the product over-complicating things. After seeing some early demos, the Astro team were sold on the idea of a simple Astro API that could match the browser APIs as closely as possible. Instead of seeing View Transitions as an invisible implementation detail hidden inside of Astro, they could be directly exposed to the developer. Aligning Astro directly with the web platform and reducing overall complexity on the frontend.
 
 ```javascript
     // Add a simple fade transition with 2 lines of code!
