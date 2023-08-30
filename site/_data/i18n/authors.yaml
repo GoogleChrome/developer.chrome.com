@@ -1546,3 +1546,18 @@ adamraine:
     en: 'Adam Raine'
   description:
     en: 'Software Engineer, Google'
+schottfk:
+  title:
+    en: 'Fred K Schott'
+  description:
+    en: 'Co-creator, Astro'
+phillipsm:
+  title:
+    en: 'Matthew Phillips'
+  description:
+    en: 'Co-creator, Astro'
+ferreiram:
+  title:
+    en: 'Maxi Ferreira'
+  description:
+    en: 'Creator, FrontendAtScale'
