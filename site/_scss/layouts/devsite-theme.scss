@@ -44,7 +44,8 @@ $CARD_BORDER: 2px solid #eef4ff;
   --devsite-card-border-radius: #{$CARD_BORDER_RADIUS};
   --devsite-h1-font: #{$TEXT_BOLD_WEIGHT} #{$H1_FONT_SIZE} #{$TEXT_PRIMARY_FONT_FAMILY};
   --devsite-h1-letter-spacing: #{$TEXT_LETTER_SPACING};
-  --devsite-h2-font: #{$TEXT_BOLD_WEIGHT} #{$H2_FONT_SIZE} #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-h2-font: 500 2.25rem/2.75rem  #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-h2-letter-spacing: -0.5px;
   --devsite-h2-margin: 0 0 1.875rem 0;
   --devsite-h3-font: #{$TEXT_BOLD_WEIGHT} #{$H3_FONT_SIZE} #{$TEXT_PRIMARY_FONT_FAMILY};
   --devsite-heading-color: #{$TEXT_PRIMARY};
@@ -62,11 +63,32 @@ $CARD_BORDER: 2px solid #eef4ff;
   --devsite-item-description-margin: 1.325rem 0 0 0;
   --devsite-item-gap: 2rem;
 
-  /** Explicitly remove text-decoration from links, as PurgeCSS purges
-  DevSite's :link rule **/
-  a {
-    text-decoration: none;
-  }
+  --devsite-landing-row-padding: 3.5rem 0;
+  --devsite-header-icon-size: 2rem;
+  --devsite-description-content-font: 1.125rem/1.875rem #{$TEXT_PRIMARY_FONT_FAMILY} ;
+  --devsite-item-body-display: block;
+  --devsite-background-4: $BG_PRIMARY;
+  --devsite-item-text-padding: 0;
+  --devsite-button-font: 500 1rem/1.3125rem #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-button-line-height: 1.3125rem;
+  --devsite-button-letter-spacing: 0.5px;
+  --devsite-button-margin: 1rem 0 0 0;
+  --devsite-button-padding: 0.8125rem 2.5rem;
+  --devsite-button-height: auto;
+  --devsite-buttons-margin: 1.5rem 0 0 -12px;
+  --devsite-label-font: 700 0.875rem/1.719rem #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-label-letter-spacing: 0.1rem;
+
+
+
+    @media (max-width: 591px) {
+       --devsite-button-padding: 0.8125rem 1rem;
+    }
+
+    @media (max-width: 591px) {
+       --devsite-landing-row-padding: 0 1.875rem;
+       --devsite-landing-group-padding: 0;
+    }
 
   /* Override devsite.scss */
   section.devsite-landing-row[header-position=left]:not(.devsite-landing-row-cards):not(.devsite-landing-row-no-image-background) +
@@ -75,125 +97,22 @@ $CARD_BORDER: 2px solid #eef4ff;
     padding-top: 4.25rem;
   }
 
-  .devsite-landing-row[header-position] .devsite-landing-row-inner {
-    @media (max-width: 591px) {
-      padding: 0 1.875rem;
-    }
-  }
-
-  .devsite-landing-row {
-    padding: 3.5rem 0;
-
-    @media (max-width: 591px) {
-      padding: 2.5rem 0;
-    }
-
-    &-header-icon {
-      font-size: 1.8rem;
-      background-color: $CHROME_BLUE;
-      padding: 0.675rem 0;
-      text-align: center;
-    }
-
-    &-item-description-content {
-      font-size: 1.125rem;
-      line-height: 1.875rem;
-    }
-  }
-
-  .button {
-    cursor: pointer;
-    font-weight: #{$TEXT_WEIGHT};
-    height: auto;
-    letter-spacing: 0.5px;
-    line-height: 1.5rem;
-    margin-left: 0;
-    padding: 0.8125rem 2.5rem;
-
-    &-white {
-      border-radius: 0;
-      padding: 0;
-    }
-
-    @media (max-width: 840px) {
-      padding: 0.8123rem 1rem;
-
-      &-white {
-        padding: 0;
-      }
-    }
-  }
+  
 
   .material-icons {
+    background-color: $CHROME_BLUE;
     border-radius: 100%;
     color: #fff;
-    display: inline-block;
-  }
-
-  .devsite-landing-row-cards {
-    .devsite-landing-row-item-body {
-      display: block;
-    }
-  }
-
-  .devsite-landing-row-item {
-    gap: 0;
-
-    &.devsite-landing-row-item-no-media {
-      border-radius: 0;
-    }
-
-    &-image {
-      background-color: inherit;
-    }
-
-    &-buttons {
-      .button {
-        font-weight: #{$TEXT_WEIGHT};
-        line-height: 1.3125rem;
-        margin: 1rem 0 0 0;
-        padding: 0.8125rem 2.5rem;
-      }
-
-      .button-white {
-        border-radius: 0;
-        padding: 0;
-      }
-    }
-
-    &-description {
-      padding: 0;
-    }
-
-    &-labels {
-      span {
-        font-size: 0.875rem;
-        font-weight: 700;
-        letter-spacing: 0.1rem;
-        line-height: 1.719rem;
-        margin-bottom: 1rem;
-      }
-    }
-
-    @media (max-width: 840px) {
-      &-buttons {
-        .button {
-          padding: 0.8123rem 1rem;
-          font-weight: 500;
-        }
-
-        .button-white {
-          padding: 0;
-        }
-      }
-    }
+    display: inline;
+    padding: 0.46875rem;
   }
 
   .dcc-blog-card {
     padding: 5rem 2.125rem 3rem;
     position: relative;
+    border-radius: 0;
 
-    .devsite-landing-row-item-labels {
+    span {
       position: absolute;
       top: 2.25rem;
     }
@@ -203,32 +122,34 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     &[description-position=bottom] {
-      .devsite-landing-row-item-image {
+      figure {
         margin-bottom: 1.5rem;
       }
     }
 
     @media (max-width: 840px) {
-      .devsite-landing-row-item-image {
+      padding-left: 15px;
+
+      figure {
         margin-bottom: 1.5rem;
       }
 
-      &.devsite-landing-row-item[description-position=left],
-      &.devsite-landing-row-item[description-position=right] {
+      &[description-position=left],
+      &[description-position=right] {
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
 
-        .devsite-landing-row-item-image img {
+        figure img {
           height: 100%;
         }
       }
     }
 
     @media (max-width: 591px) {
-      &.devsite-landing-row-item[description-position=left] .devsite-landing-row-item-image img,
-      &.devsite-landing-row-item[description-position=right] .devsite-landing-row-item-image img,
-      .devsite-landing-row-item-image img {
+      &[description-position=left] figure img,
+      &[description-position=right] figure img,
+      figure img {
         height: 220px;
         width: 100%;
         object-fit: cover;
@@ -239,7 +160,7 @@ $CARD_BORDER: 2px solid #eef4ff;
   }
 
   .dcc-services-card {
-    border-radius: var(--devsite-card-border-radius);
+    --devsite-h2-margin:1.6875rem auto auto; 
     margin-bottom: 2rem;
     padding: 3.5rem 2.5rem;
     
@@ -248,11 +169,6 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     h3 {
-      font-size: 2.15rem;
-      font-weight: #{$TEXT_WEIGHT};
-      letter-spacing: -0.5px;
-      line-height: 2.75rem;
-      margin: 1.6875rem auto auto;
       max-width: 90%;
       min-height: 8.375rem;
       text-align: center;
@@ -266,7 +182,7 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
     }
 
-    .devsite-landing-row-item-image {
+    figure {
       margin: 0 auto;
       max-width: 11rem;
     }
@@ -363,44 +279,16 @@ $CARD_BORDER: 2px solid #eef4ff;
   }
 
   .dcc-docs-card {
+    --devsite-item-image-width: 8rem;
+    --devsite-item-gap: 0;
+
     border: #{$CARD_BORDER};
-    border-radius: 1.5rem;
+    border-radius: #{$CARD_BORDER_RADIUS};
     max-width: 24.75rem;
     padding: 2.125rem;
 
-    h3 {
-      font-weight: #{$TEXT_WEIGHT};
-      margin-top: 1.75rem;
-    }
-
-    img {
-      border-radius: 1.5rem;
-    }
-
-    .devsite-landing-row-item-description {
-      margin: 0;
-    }
-
-    .devsite-landing-row-item-media {
-      border-radius: 100%;
-      height: 8rem;
-      width: 8rem;
-    }
-
-    .devsite-landing-row-item {
-      &-description-content {
-        line-height: 1.7rem;
-      }
-
-      &-buttons .button {
-        margin-top: 1.5rem;
-      }
-    }
-
     @media (max-width: 840px) {
-      h3{
-        font-size: 1.5rem;
-      }
+      --devsite-h2-font: 500 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
     }
 
     @media (max-width: 591px) {
@@ -409,35 +297,24 @@ $CARD_BORDER: 2px solid #eef4ff;
   }
 
   .dcc-social-card {
+    --devsite-h2-font: 500 2rem #{$TEXT_PRIMARY_FONT_FAMILY};
+    --devsite-item-image-width: 3rem;
+    --devsite-item-gap: 2rem;
+    --devsite-item-text-padding: 0;
+
     padding: 2.5rem;
 
     h3 {
-      font-size: 2rem;
-      font-weight: #{$TEXT_WEIGHT};
       text-align: left;
     }
 
-    .devsite-landing-row-item-description-content {
-      color: #{$TEXT_SECONDARY};
-      min-height: 3.125rem;
-    }
-
     .button {
-      margin-top: 0.125rem;
-      padding: 0;
-    }
-
-    .devsite-landing-row-item-media {
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      width: 3rem;
-
+      margin: 0;
+      padding:0;
     }
 
     @media (max-width: 840px) {
-      h3{
-        font-size: 1.5rem;
-      }
+      --devsite-h2-font: 500 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
     }
   }
 
@@ -452,7 +329,7 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
 
       @media (max-width: 591px) {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
       }
 
       span {
@@ -469,10 +346,6 @@ $CARD_BORDER: 2px solid #eef4ff;
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
         line-height: 1.875rem;
-
-        @media (max-width: 591px) {
-          font-size: 1.125rem;
-        }
       }
     }
 
@@ -521,27 +394,12 @@ $CARD_BORDER: 2px solid #eef4ff;
   }
 
   .devsite-landing-row-2-up[header-position=top]:not([background="pale-blue"]) {
+
     @media (max-width: 1280px) {
-      .devsite-landing-row-group {
-        display: block;
-      }
+      --devsite-landing-row-group-grid: 2 1;
 
       .dcc-blog-card {
         margin-bottom: 2rem;
-      }
-    }
-
-    @media (max-width: 591px) {
-      .devsite-landing-row-inner {
-        padding: 0;
-      }
-
-      .dcc-blog-card:first-child {
-        margin-bottom: 2rem;
-      }
-
-      .dcc-blog-card h3 {
-        font-size: 1.5rem;
       }
     }
   }
@@ -558,21 +416,14 @@ $CARD_BORDER: 2px solid #eef4ff;
 
   .devsite-landing-row[header-position=left] {
     position: relative;
+    --devsite-landing-row-header-max-width: 17.5625rem;
 
     .dcc-blog-card {
       max-width: 24.75rem;
       padding: 0;
 
-      h3 {
-        font-weight: #{$TEXT_WEIGHT};
-      }
-
       img {
         border-radius: 1.5rem;
-      }
-
-      &-buttons .button {
-        margin-top: 1.875rem;
       }
 
       @media (max-width: 591px) {
@@ -580,41 +431,15 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
     }
 
-    .devsite-landing-row {
-      &-group {
-        grid-gap: 3rem 2.5rem;
-      }
-
-      &-header-text {
-        margin-left: 0;
-        max-width: 17.5625rem;
-
-        h2 {
-          font-size: 2.5rem;
-          font-weight: #{$TEXT_BOLD_WEIGHT};
-          line-height: 2.9688rem;
-        }
-      }
-    }
 
     @media (max-width: 840px) {
-      .devsite-landing-row-inner > * {
-        grid-column: 1 / span 3;
-        width: 100%;
-      }
-
-      .devsite-landing-row-header-text {
-        max-width: 100%;
-
-        h2 {
-          font-size: 1.75rem;
-        }
-      }
+      --devsite-landing-row-header-max-width: 100%;
+      --devsite-landing-row-header-grid-column: 1 / span 3;
+      --devsite-landing-row-group-grid-column: 1 / span 3;
+      --devsite-h2-font: #{$TEXT_WEIGHT} 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
 
       .dcc-blog-card {
-        padding: 0;
-
-        .devsite-landing-row-item-buttons {
+        .button{
           display:none;
         }
       }
@@ -622,110 +447,70 @@ $CARD_BORDER: 2px solid #eef4ff;
   }
 
   .devsite-landing-row-3-up {
-    .devsite-landing-row-group {
-      background-color: #{$BG_PRIMARY};
-      border-radius: #{$CARD_BORDER_RADIUS};
-      max-width: 90rem;
-      padding: 1rem;
-    }
-
-    .devsite-landing-row-item:not(.dcc-blog-card) {
+    --devsite-landing-row-group-background: #{$BG_PRIMARY};
+    --devsite-landing-row-group-border-radius: #{$CARD_BORDER_RADIUS};
+    --devsite-landing-row-group-max-width: 90rem;
+    --devisite-landing-row-group-padding: 1rem;
+    
+    [description-position=bottom] {
       padding: 2.125rem;
+
+      &:first-child {
+        --devsite-item-media-container-width: 2.5rem;
+        --devsite-item-image-width: 2.5rem;
+        --devsite-item-text-align: left;  
+
+        @media (max-width: 840px) {
+          grid-column: 1 / span 3;
+        }
+      }
+
+      &:last-child {
+        padding-left: 0;
+
+        @media (max-width: 840px) {
+          grid-column: 2 / span 2;
+          padding-top: 0;
+        }
+      }
 
       @media (max-width: 591px) {
         padding: 1.125rem;
-
-        &.devsite-landing-row-item-no-media h3 {
-          font-size: 1.5rem;
-        }
-      }
-
-      &:nth-child(3) {
-        padding-left: 0;
-
-        h3 {
-          font-weight: #{$TEXT_WEIGHT};
-          margin-top: 2.275rem;
-        }
-
-        @media (max-width: 840px) {
-          padding-top: 0;
-          margin-left: -15px;
-
-          h3 { 
-            margin-top: 0;
-          }
-        }
+        grid-column: 1 / span 3;
       }
     }
 
-    .dcc-blog-card {
+    [description-position=top]{
+      --devsite-description-content-font: 0 #{$TEXT_PRIMARY_FONT_FAMILY};
+      
       display: block;
       padding-left: 0;
-      border-radius: 0;
 
       @media (max-width: 840px) {
         padding-top: 2.5rem;
-        padding-left: 15px;
 
-        .devsite-landing-row-item-labels {
+        span {
           top: 0;
         }
       }
 
       @media (max-width: 591px) {
         padding: 2.5rem 1.125rem 0;
+        grid-column: 1 / span 3;
 
-        .devsite-landing-row-item-image {
+        figure {
           margin-bottom: 0;
         }
       }
-
-      .devsite-landing-row-item-description-content {
-        display: none;
-      }
     }
 
-    .devsite-landing-row-item:first-child {
-      .devsite-landing-row-item-media {
-        display: block;
-        margin-bottom: 1.25rem;
-        width: 2.5rem;
-      }
-
-      .devsite-landing-row-item-body {
-        font-weight: 400;
-        text-align: left;
-        text-wrap: wrap;
-      }
-    }
-
+  
     @media (max-width: 591px) {
+      --devsite-landing-group-margin: 0 0 2rem 0;
+      --devsite-landing-group-padding: 0;
       padding: 0;
-
-      .devsite-landing-row-item {
-        grid-column: 1 / span 3;
-      }
     }
 
-    @media (max-width: 840px) {
-      .devsite-landing-row-item:first-child {
-        grid-column: 1 / span 3;
-      }
-
-      .devsite-landing-row-item:last-child {
-        grid-column: 2 / span 2;
-      }
-    }
-
-    &.devsite-landing-row[header-position] {
-      .devsite-landing-row-inner {
-        @media (max-width: 591px) {
-          padding: 0;
-          margin-bottom: 2rem;
-        }
-      }
-    }
   }
 
   .devsite-landing-row-4-up[header-position=left] {
@@ -760,28 +545,12 @@ $CARD_BORDER: 2px solid #eef4ff;
     --devsite-landing-row-header-text-margin: 0 auto;
     --devsite-h1-font: 500 3rem #{$TEXT_PRIMARY_FONT_FAMILY};
     --devsite-heading-color: #{$TEXT_PRIMARY_PALEBLUE};
+    --devsite-landing-row-padding: 3.5rem 0;
+    --devsite-landing-row-header-text-max-width: 57.8125rem;
+    --devsite-landing-row-header-text-margin: 0 auto 3.75rem auto;
 
-    padding: 3.5rem 0;
-    margin-top: 1.5rem;
-
-    .devsite-landing-row-header-text {
-      font-size: 3rem;
-      line-height: 3.5rem;
-      margin-bottom: 3.75rem;
-      max-width: 57.8125rem;
+    h2{
       text-align: center;
-    }
-
-    &.devsite-landing-row-2-up {
-      .devsite-landing-row-group {
-        grid-gap: 3.125rem;
-      }
-
-      .devsite-landing-row-header-text {
-        margin-bottom: 2.875rem;
-        max-width: 100%;
-        text-align: left;
-      }
     }
 
     @media (max-width: 1280px) {
@@ -789,17 +558,13 @@ $CARD_BORDER: 2px solid #eef4ff;
         grid-template-columns: 1fr 1fr;
       }
 
-      &.devsite-landing-row-2-up h2 {
-        font-size: 2.5rem;
-      }
-      
-      .devsite-landing-row-header-text > h2 {
+      h2 {
         font-size: 2.25rem;
       }
     }
 
     @media (max-width: 591px) {
-      .devsite-landing-row-header-text > h2 {
+      h2 {
         font-size: 1.75rem;
       }
 
@@ -808,6 +573,21 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
     }
   }
+
+  .devsite-landing-row-2-up[background="pale-blue"] {
+      --devsite-landing-row-header-text-margin: 0 0 2.875rem 0;
+      --devsite-item-gap: 3.125rem;
+
+      h2{
+        text-align: left;
+      }
+
+      @media (max-width: 1280px) {
+        h2 {
+          font-size: 2.5rem;
+        }
+      }
+    }
 
   footer {
     margin-top: 0;
@@ -904,6 +684,7 @@ search-box {
   }
 }
 
+/* Hide sidebar  */
 [theme=web-theme] {
   .scaffold {
     grid-template-columns: 1fr;
@@ -915,12 +696,6 @@ search-box {
     > side-nav,
     > navigation-rail {
       display: none;
-    }
-
-    @media (min-width: 992px) {
-      top-nav > nav {
-        gap: 5rem;
-      }
     }
   }
 
