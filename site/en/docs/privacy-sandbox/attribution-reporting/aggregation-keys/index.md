@@ -575,7 +575,7 @@ With strategy A, you can also directly answer this third question:
 "How much revenue for each product did each of my campaigns in each geographic
 region generate?"
 
-Note: even though the summary values will be noisy, you can determine when
+Even though the summary values will be noisy, you can determine when
 differences in the value measured between each campaign are not due to noise
 alone. Learn how to accomplish this in [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#evaluating-noise).
 
