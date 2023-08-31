@@ -62,6 +62,8 @@ Here are the minimum steps to follow to generate event-level reports:
 
 1. **Complete the source registration**. Upon receiving the request, respond with the header [`Attribution-Reporting-Register-Source`](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views). In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
 
+    Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) for the steps.
+
 More details on [event-level reports](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md) here.
 
 ### Summary report generation
@@ -78,6 +80,8 @@ To generate reports, follow these high-level steps:
         Refer to the [example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L334). More on [.well-known](https://en.wikipedia.org/wiki/Well-known_URI).
 
 1. **Complete the source registration**: Upon receiving the request, respond with the header [`Attribution-Reporting-Register-Source`](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views). In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
+
+    Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) for the steps.
     
 1. **Set up debug reports**: Learn how in the [Attribution reporting debugging series](/docs/privacy-sandbox/attribution-reporting-debugging/).
 
