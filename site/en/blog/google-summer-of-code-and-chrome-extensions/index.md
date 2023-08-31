@@ -72,7 +72,7 @@ After completing the draft, I sent it to my mentor for feedback. Once the applic
 
 During the initial bonding period, I first dealt with the remaining starter bugs and checked if there were any new skills I had to learn. And I spend the rest of the time reading documentation.
 
-After a discussion with my mentor, we adjusted some goals to make the time allocated to tasks more reasonable. We also discussed an idea for creating a new developer.chrome.com page listing all API samples and providing basic filters to help developers locate the needed samples quickly. It was a rather complex task for me, and it took my mentor and me quite some time to define the project and write a product requirements document.
+After a discussion with my mentor, we adjusted some goals to make the time allocated to tasks more reasonable. We also discussed an idea for creating a new developer.chrome.com page listing all API samples and providing basic filters to help developers locate the needed samples quickly. It was a rather complex task for me, and it took my mentor and me quite some time to define the project and write a [product requirements doc](https://en.wikipedia.org/wiki/Product_requirements_document) (PRD).
 
 For this larger task, we decided that we needed an automated script in the samples repo to traverse the repository and generate a JSON file containing a list of extension samples and the APIs they use. The developer.chrome.com documentation repo now uses this file to build a page.
 
