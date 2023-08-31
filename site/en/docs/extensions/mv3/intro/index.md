@@ -32,7 +32,7 @@ implement it:
 For more information and updates on Manifest V3, see [What's new in Chrome Extensions][doc-new] and the [Chrome Developer Blog][devs-blog].
 
 
-[devs-blog]: https://developer.chrome.com/tags/extensions/
+[devs-blog]: https://developer.chrome.com/tags/extensions-news/
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [doc-new]: /docs/extensions/whatsnew/
 [manifest-version]: /docs/extensions/mv3/manifest/manifest_version/
