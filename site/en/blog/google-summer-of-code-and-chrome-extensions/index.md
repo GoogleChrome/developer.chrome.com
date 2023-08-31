@@ -1,22 +1,22 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Google Summer of Code & Chrome Extensions
+title: Google Summer of Code and Chrome Extensions
 description: >
-  The experience and advice on participating in Google Summer of Code.
+  Experience and advice on participating in Google Summer of Code.
 date: 2023-08-29
 authors:
   - xuezhoudai
 
 hero: 'image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/8ZNtuWAIcc7NBdS3AQEv.jpg'
 alt: >
-  Google Summer of Code & Chrome Extensions
+  Google Summer of Code and Chrome Extensions
 
 sharing_image: 'image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/8ZNtuWAIcc7NBdS3AQEv.jpg'
 ---
 
-I'm a sophomore from China passionate about web development. In my first year, I joined a technical club at our college. This club was my introduction to coding and open source. In the club, I met a group of like-minded partners who love coding. And it was from them that I learned about Google Summer of Code at the beginning of this year. This Google-organized global program connects students with open-source organizations and guides them in making good use of their summer by participating in open-source activities.
+I'm a sophomore from China passionate about web development. In my first year, I joined a technical club at our college. This club was my introduction to coding and open source. In the club, I met a group of like-minded partners who love coding. And it was from them that I learned about Google Summer of Code at the beginning of 2023. This Google-organized global program connects students with open-source organizations and guides them in making good use of their summer by participating in open-source activities.
 
-With the attitude of having a try, I decided to submit my application. Fortunately, I was accepted. The summer I spent contributing to the Chrome Extension Samples repo has been memorable and precious. Of course, I have also learned a lot: communicating effectively, coding skills, and planning abilities, among other things.
+Giving it a try, I submitted my application. Fortunately, I was accepted. The summer I spent contributing to the Chrome Extension Samples repo has been memorable and precious. Of course, I've also learned a lot: effective communication, coding skills, and planning abilities, among other things.
 
 As GSoC 2023 is drawing to a close, it's worth sharing some of my experiences in GSoC. This post will briefly introduce the general process of GSoC through my own participation, hoping to be helpful to you!
 
@@ -26,23 +26,23 @@ I applied for the Chromium GSoC 2023 Project, where my main task would be upgrad
 
 ### At the Very Beginning
 
-I first learned of GSoC in February 2023 but was not yet  sure I wanted to apply. I had a few concerns back then:
+I first learned of GSoC in February 2023 but was not yet sure I wanted to apply. I had a few concerns back then:
 
 * I'm introverted, and English is not my native language, so communication with mentors might be challenging.
 * GSoC communities come from all over the world, and dealing with time zone differences could be difficult.
 * GSoC is such a renowned program that it can be competitive, making my chances seem slim.
 
-However, I can confidently say none of these were an issue!
+However, I can confidently say none of these were an issue.
 
-Before I tell my story, I'd like to talk about something that happened to me at the beginning of 2022. This incident was also an opportunity for me to participate in GSoC. I had wanted to migrate a browser extension based on Manifest V2 to Manifest V3. In order to complete the migration, I had to refer to the documentation and understand every API change. I also had to search for whether there were relevant samples for reference. Comprehending the new API and transferring the code is quite challenging for me.
+Before I tell my story, I'd like to talk about something that happened to me at the beginning of 2022. This incident was also an opportunity for me to participate in GSoC. I had wanted to migrate a browser extension based on Manifest V2 to Manifest V3. To complete the migration, I had to refer to the documentation and understand every API change. I also had to search for whether there were relevant samples for reference. Comprehending the new API and transferring the code is quite challenging for me.
 
-That's why I was highly excited when browsing the GSoC project list and catching the idea related to MV3. I'm eager to contribute to improving the Manifest V3 extension samples and provide an amenity for future developers.
+That's why I was highly excited when browsing the GSoC project list and catching the idea related to MV3. I was eager to contribute to improving the Manifest V3 extension samples and provide an amenity for future developers.
 
 In March, I emailed Oliver, one of the mentors in charge, a brief email about my intention:
 
-{% Details %}
+{% Details 'open' %}
 {% DetailsSummary %}
-The application for participate in GSoC project
+The application to participate in the GSoC project
 {% endDetailsSummary %}
 
 Hi,
@@ -76,15 +76,15 @@ After a discussion with my mentor, we adjusted some goals to make the time alloc
 
 For this larger task, we decided that we needed an automated script in the samples repo to traverse the repository and generate a JSON file containing a list of extension samples and the APIs they use. The developer.chrome.com documentation repo now uses this file to build a page.
 
-I first considered using Babel to analyze the sample code's [Abstract Syntax Tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) and identify its used APIs. After sharing this idea with my mentor, I discovered they had previously worked on something similar, confirming this approach's feasibility. After I completed the code, my mentor and other members of his team provided valuable suggestions including paying attention to code segmentation, standardizing code style, and documenting functions properly.
+I first considered using Babel to analyze the sample code's [Abstract Syntax Tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) and identify the APIs it used. After sharing this idea with my mentor, I discovered they had previously worked on something similar, confirming this approach's feasibility. After I completed the code, my mentor and other members of his team provided valuable suggestions including paying attention to code segmentation, standardizing code style, and documenting functions properly.
 
-After several big and small reviews, the code was successfully merged. You can find the whole thread on [GitHub](https://github.com/GoogleChrome/developer.chrome.com/pull/7029), and the live page is available [here](/docs/extensions/samples).
+After several big and small reviews, the code was successfully merged. You can find the whole thread on [GitHub](https://github.com/GoogleChrome/developer.chrome.com/pull/7029), or [view the live page](/docs/extensions/samples).
 
 ## Wrapping Up
 
 If you ask me what GSoC has brought me: first of all, of course, is understanding the knowledge related to browser extension APIs. By reading the documentation and writing new samples, I gained a detailed understanding of various browser extension APIs.
 
-Additionally, I have acquired many skills I had little exposure to before being accepted for GSoC, such as following a comprehensive code review process and creating PRDs. I have also started using GitHub actions to automate workflows and learned how to use Babel to traverse all extension samples and track the APIs used. Moreover, I had my first experience with the Nunjucks template engine. These abilities are essential for programming, and I am delighted that I learned them in advance. Participating in open-source communities brings me joy.
+Additionally, I have acquired many skills I had little exposure to before being accepted for GSoC, such as following a comprehensive code review process and creating a [product requirements doc](https://en.wikipedia.org/wiki/Product_requirements_document) (PRD). I've also started using GitHub actions to automate workflows and learned how to use Babel to traverse all extension samples and track the APIs used. Moreover, I had my first experience with the Nunjucks template engine. These abilities are essential for programming, and I am delighted that I learned them. Participating in open-source communities brings me joy.
 
 This summer has given me many indelible memories. Coding makes me highly content. I have encountered patient mentors who guided me and taught me interesting knowledge, enriching my experience.
 
@@ -96,8 +96,8 @@ Here are some of my suggestions for anyone wanting to participate in Google Summ
 
 1. Choose an idea that suits you: In my opinion, when looking for ideas, interest should be your priority, followed by skills. This strategy will allow you to maintain enthusiasm throughout the contribution process.
 2. Quality over quantity: You can submit many proposals to increase the chances of being accepted for GSoC. However, I believe that quality is probably more critical because human energy is limited. Focusing on two or three ideas may be more helpful in the end.
-3. Don't be afraid of new things: Don't hesitate to try new technologies you haven't experienced before in a project. You have nearly a month of community bonding to familiarize yourself with unfamiliar technologies and a whole summer to implement them. Just go for it!
+3. Don't be afraid of new things: Don't hesitate to try technologies you haven't worked with in a project. You have nearly a month of community bonding to familiarize yourself with unfamiliar technologies and a whole summer to implement them. Just go for it!
 4. Get acquainted with the project in advance: For example, read through development documentation, look at previous commit history and issues, and skim through past pull requests. Getting an overall understanding of the project in advance will help you write a more comprehensive proposal.
 5. Maintain communication: Regularly communicate with your mentor, and don't hesitate to ask questions when confronting problems, whether before applying or after being accepted. Most mentors are willing to help you solve problems; this way, they can also keep track of your progress.
 
-Thank you for reading!
+Thank you for reading.
