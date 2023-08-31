@@ -74,7 +74,7 @@ For `PAGE_TO_OVERRIDE`, substitute one of the following:
 * **Make your page quick and small.** <br/>Users expect built-in browser pages to open instantly. Avoid doing things that might take a long
 time, like synchronous fetches of network or database resources.
 
-* **To avoid user confusion, give your page a title.** <br/> Without a title, the page title defaults to the URL. Specify the title using the `title` tag in your HTML file.
+* **To avoid user confusion, give your page a title.** <br/> Without a title, the page title defaults to the URL. Specify the title using the `<title>` tag in your HTML file.
 
 * **Remember that new tabs give keyboard focus to the address bar first.** Don't rely on keyboard focus defaulting to other parts of the page.
 
