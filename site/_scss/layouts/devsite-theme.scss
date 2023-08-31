@@ -50,7 +50,7 @@ $ROW_PADDING: 3.5rem 0;
 $ROW_PADDING_MOBILE: 0 1.875rem;
 
 [theme="web-theme"] {
-  --devsite-background-4: #{$BG_PRIMARY};
+  --devsite-background-4: #fff;
   --devsite-background-color: #{$BG_PRIMARY};
   --devsite-button-background: #{$BUTTON_BG};
   --devsite-button-background-hover: #{$BUTTON_BG};
@@ -115,6 +115,9 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
   }
 
   .dcc-blog-card {
+    --devsite-buttons-margin: 0.5rem 0 0 -0.75rem;
+    --devsite-item-gap: 0;
+
     padding: 5rem 2.125rem 3rem;
 
     span {
@@ -127,12 +130,21 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     }
 
     &[description-position=left] {
-      --devsite-item-align-items: flex-start;
+      align-items: flex-start;
     }
 
     &[description-position=bottom] {
-      figure {
-        margin-bottom: 1.5rem;
+      padding: 5rem 1.125rem 3rem;
+
+      figure{
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      &[description-position=left] {
+        flex-direction: row-reverse;
       }
     }
 
@@ -143,10 +155,12 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
         margin-bottom: 1.5rem;
       }
 
+
+
       &[description-position=left],
       &[description-position=right] {
-        --devsite-item-align-items: center;
-        --devsite-item-justify-content: space-between;
+        align-items: center;
+        justify-content: space-between;
         flex-direction: row;
       }
     }
@@ -473,6 +487,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       
       figure{
         margin-bottom: 0;
+        padding: 0;
       }
 
       img{
