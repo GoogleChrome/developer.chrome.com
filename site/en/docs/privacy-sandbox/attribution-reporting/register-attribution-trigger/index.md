@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to register attribution triggers to count your conversions.
 date: 2022-12-15
-updated: 2023-06-29
+updated: 2023-08-31
 authors:
   - maudn
 ---

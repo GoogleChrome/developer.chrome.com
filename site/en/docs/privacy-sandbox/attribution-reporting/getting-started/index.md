@@ -16,8 +16,8 @@ This document applies to both event-level and summary reports.
 
 <strong>Hands-on resources</strong>
 
-- [Attribution Reporting API demo](https://arapi-home.web.app/), [Demo background]()
-- [Noise lab](https://noise-lab.uc.r.appspot.com/?mode=simple), [Noise lab background](/docs/privacy-sandbox/summary-reports/design-decisions/#appendix)
+- [Attribution Reporting API demo](https://arapi-home.web.app/)
+- [Noise lab](https://noise-lab.uc.r.appspot.com/?mode=simple) [Noise lab background](/docs/privacy-sandbox/summary-reports/design-decisions/#appendix)
 - [Attribution Reporting Header Validator](https://wicg.github.io/attribution-reporting-api/validate-headers)
 {% endAside %}
  
@@ -52,7 +52,7 @@ Before you can register sources and triggers and get reports, your sites need to
 
 Here are the minimum steps to follow to generate event-level reports:
 
-1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more information.
+1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more information. Note that [the steps](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-1-initiate-source-registration) are different for clicks and views.
 
 1. **Register a trigger**. Refer to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) for more information.
 
@@ -70,7 +70,7 @@ More details on [event-level reports](https://github.com/WICG/attribution-report
 
 To generate reports, follow these high-level steps:
 
-1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more details. 
+1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more details. Note that [the steps](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-1-initiate-source-registration) are different for clicks and views.
 
 1. **Register a trigger**. Refer to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger). {: #summary-endpoint }
 
