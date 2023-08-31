@@ -18,7 +18,7 @@ A match pattern is a URL with the following structure, used to specify a group o
   - The scheme must be separated from the rest of the pattern using a double slash (`//`).
 **host**: A hostname (`www.example.com`). A `*` before the hostname to match subdomains (`*.example.com`), or just a wildcard `*`.
   - If you use a wildcard in the host pattern, it must be the first or only character, and it must be followed by a period (`.`) or forward slash (`/`).
-- **path**: Must contain at least a forward slash. The slash by itself is treated as a wildcard `/*`. Other examples include the following:
+**path**: Must contain at least a forward slash. The slash by itself is treated as a wildcard `/*`. For example:
   * `/foo*`
   * `/foo/bar`.
 
