@@ -12,7 +12,7 @@ authors:
   - helencho
 ---
 
-Many Privacy Sandbox APIs are ramping up to General Availability (GA) in Chrome Stable in preparation for third-party cookie deprecation beginning in 2024. Some of these APIs will help preserve crucial cross-site cookie use cases, like [CHIPS](/en/docs/privacy-sandbox/chips/), and the API currently known as [First-Party Sets (FPS)](/en/docs/privacy-sandbox/first-party-sets/). In this post, we introduce Related Website Sets (RWS)—our new name for FPS that better reflects its purpose—and provide a refresher on key use cases along with an update on the associated subset domain limit. 
+Many Privacy Sandbox APIs are ramping up to General Availability (GA) in Chrome Stable in preparation for third-party cookie deprecation beginning in 2024. Some of these APIs will help preserve crucial cross-site cookie use cases, like [CHIPS](/docs/privacy-sandbox/chips/), and the API currently known as [First-Party Sets (FPS)](/docs/privacy-sandbox/first-party-sets/). In this post, we introduce Related Website Sets (RWS)—our new name for FPS that better reflects its purpose—and provide a refresher on key use cases along with an update on the associated subset domain limit. 
 
 
 ## Preserving critical user journeys
@@ -35,19 +35,22 @@ Since RWS is not intended as an ads solution, we are not taking into considerati
 
 ## Users have a choice for extended use cases, beyond five associated domains
 
-For user-impacting experiences that are not supported by this limit, Chrome is [working on a user prompting flow](https://github.com/cfredric/chrome-storage-access-api) that also leverages the Storage Access API (SAA), a standard adopted by other browsers. For use cases that need more than five associated domains, we encourage developers to evaluate how SAA may be supported in non-RWS contexts. We are following the Blink launch process separately for [this feature](https://groups.google.com/a/chromium.org/g/blink-dev/c/JHf7CWXDZUc/m/Dy2EElgvAgAJ), which will be rolling out in Chrome Desktop beginning in Chrome M117.
+For user-impacting experiences that are not supported by this limit, Chrome is [working on a user prompting flow](https://github.com/cfredric/chrome-storage-access-api) that also leverages the Storage Access API (SAA), a standard adopted by other browsers. For use cases that need more than five associated domains, we encourage developers to evaluate how SAA may be supported in non-RWS contexts. We are following the Blink launch process separately for [this feature](https://groups.google.com/a/chromium.org/g/blink-dev/c/JHf7CWXDZUc/m/Dy2EElgvAgAJ), which will be rolling out in Chrome Desktop beginning in Chrome 117.
 
 
 ## Next steps
 
 We're grateful for the ecosystem feedback that has helped shape the API so far. We have invested in RWS as a method of providing developers predictability, control, and agency in preserving the end user experience of the websites they build. We are excited to see how developers adopt and use RWS as we ramp up. The [submission process](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md) is currently live, and the [RWS JSON generator tool](https://goo.gle/rws-json-generator) is a great starting point to help with submissions.
 
-Follow the [Intent-to-Ship thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/7_6JDIfE1as/m/wModmpcaAgAJ) to track progress, and check out [these materials](/en/docs/privacy-sandbox/first-party-sets-integration/) for implementation guidance. 
+Follow the [Intent to Ship thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/7_6JDIfE1as/m/wModmpcaAgAJ) to track progress, and check out [these materials](/docs/privacy-sandbox/first-party-sets-integration/) for implementation guidance. 
 
 
 {% Details %}
+
 {% DetailsSummary %}
+
 References
+
 {% endDetailsSummary %}
 
 1. <a id="ref-1"></a>There is general agreement across browsers that these cross-site cookie use-cases are necessary, but have taken different approaches in enabling them. [Firefox](https://developer.mozilla.org/docs/Web/Privacy/Storage_Access_Policy#automatic_storage_access_upon_interaction) ([code](https://searchfox.org/mozilla-central/rev/3002762e41363de8ee9ca80196d55e79651bcb6b/dom/base/Document.cpp#16328)) and [Safari](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/#:~:text=Temporary%20Compatibility%20Fix%3A%20Automatic%20Storage%20Access%20for%20Popups) ([code](https://searchfox.org/wubkat/rev/5b368793a8c0a3d99c6991fcd3ef96e3dbd2cf2a/Source/WebKit/NetworkProcess/Classifier/ResourceLoadStatisticsDatabaseStore.cpp#1266)) have both implemented the pop-up heuristic that addresses the breakage observed, for example in the [Nintendo login flow](https://issuetracker.google.com/268390722).
