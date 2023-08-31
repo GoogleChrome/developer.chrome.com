@@ -16,61 +16,80 @@ $TEXT_BOLD_WEIGHT: 600;
 $TEXT_WEIGHT: 500;
 $TEXT_LETTER_SPACING: -0.03125rem;
 
-$H1_FONT_SIZE: 2.5rem;
-$H2_FONT_SIZE: 2rem;
-$H3_FONT_SIZE: 2rem;
+$H1_FONT: #{$TEXT_BOLD_WEIGHT} 2.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
+$H2_FONT: #{$TEXT_WEIGHT} 2.25rem/2.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
+$H2_LETTER_SPACING: -0.5px;
+$H2_MARGIN: 0 0 1.3rem 0;
+$H3_FONT: #{$TEXT_WEIGHT} 2rem #{$TEXT_PRIMARY_FONT_FAMILY};
 
 $BUTTON_BG: transparent;
 $BUTTON_BORDER: 2px solid #{$TEXT_LINK};
-$BUTTON_FONT_SIZE: 1rem;
+$BUTTON_BORDER_RADIUS: 2.75rem;
+$BUTTON_FONT: 500 1rem/1.3125rem #{$TEXT_PRIMARY_FONT_FAMILY};
+$BUTTON_LETTER_SPACING: 0.5px;
+$BUTTON_LINE_HEIGHT: 1.3125rem;
+$BUTTON_MARGIN: 1rem 0 0 0;
+$BUTTON_MARGIN_MOBILE: 1.5rem 0 0;
+$BUTTON_PADDING: 0.8125rem 2.5rem;
+$BUTTON_PADDING_MOBILE: 0.8125rem 1rem;
+$BUTTONS_MARGIN: 1.5rem 0 0 -0.75rem;
 
 $CARD_BORDER_RADIUS: 1.5rem;
 $CARD_GAP: 1.5rem;
 $CARD_BORDER: 2px solid #eef4ff;
 
+$DESCRIPTION_FONT: 1.125rem/1.875rem #{$TEXT_PRIMARY_FONT_FAMILY};
+$DESCRIPTION_MARGIN: 1.325rem 0 0 0;
+
+$HEADER_ICON_SIZE: 2rem;
+
+$LABEL_FONT: 700 0.875rem/1.719rem #{$TEXT_PRIMARY_FONT_FAMILY};
+$LABEL_LETTER_SPACING: 0.1rem;
+
+$ROW_PADDING: 3.5rem 0;
+$ROW_PADDING_MOBILE: 0 1.875rem;
+
 [theme="web-theme"] {
-  --devsite-background-4: $BG_PRIMARY;
+  --devsite-background-4: #{$BG_PRIMARY};
   --devsite-background-color: #{$BG_PRIMARY};
   --devsite-button-background: #{$BUTTON_BG};
   --devsite-button-background-hover: #{$BUTTON_BG};
   --devsite-button-border: #{$BUTTON_BORDER};
   --devsite-button-border-hover: #{$BUTTON_BORDER};
-  --devsite-button-border-radius: 2.75rem;
+  --devsite-button-border-radius: #{$BUTTON_BORDER_RADIUS};
   --devsite-button-color: #{$TEXT_LINK};
-  --devsite-button-font: #{$BUTTON_FONT_SIZE};
-  --devsite-button-font: 500 1rem/1.3125rem #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-button-font: #{$BUTTON_FONT};
   --devsite-button-height: auto;
-  --devsite-button-letter-spacing: 0.5px;
-  --devsite-button-line-height: 1.3125rem;
-  --devsite-button-margin: 1rem 0 0 0;
-  --devsite-button-padding: 0.8125rem 2.5rem;
+  --devsite-button-letter-spacing: #{$BUTTON_LETTER_SPACING};
+  --devsite-button-line-height: #{$BUTTON_LINE_HEIGHT};
+  --devsite-button-margin: #{$BUTTON_MARGIN};
+  --devsite-button-padding: #{$BUTTON_PADDING};
   --devsite-button-primary-background: #{$CHROME_BLUE};
   --devsite-button-text-transform: none;
-  --devsite-buttons-margin: 1.5rem 0 0 -12px;
+  --devsite-buttons-margin: #{$BUTTONS_MARGIN};
   --devsite-card-background: #{$BG_PRIMARY};
   --devsite-card-border: none;
   --devsite-card-border-radius: #{$CARD_BORDER_RADIUS};
-  --devsite-description-content-font: 1.125rem/1.875rem #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-description-content-font: #{$DESCRIPTION_FONT};
   --devsite-heading-color: #{$TEXT_PRIMARY};
-  --devsite-h1-font: #{$TEXT_BOLD_WEIGHT} #{$H1_FONT_SIZE} #{$TEXT_PRIMARY_FONT_FAMILY};
+  --devsite-h1-font: #{$H1_FONT};
   --devsite-h1-letter-spacing: #{$TEXT_LETTER_SPACING};
-  --devsite-h2-font: 500 2.25rem/2.75rem  #{$TEXT_PRIMARY_FONT_FAMILY};
-  --devsite-h2-letter-spacing: -0.5px;
-  --devsite-h2-margin: 0 0 1.3rem 0;
-  --devsite-h3-font: #{$TEXT_BOLD_WEIGHT} #{$H3_FONT_SIZE} #{$TEXT_PRIMARY_FONT_FAMILY};
-  --devsite-header-icon-size: 2rem;
+  --devsite-h2-font: #{$H2_FONT};
+  --devsite-h2-letter-spacing: #{$H2_LETTER_SPACING};
+  --devsite-h2-margin: #{$H2_MARGIN};
+  --devsite-h3-font: #{H3_FONT};
+  --devsite-header-icon-size: #{$HEADER_ICON_SIZE};
   --devsite-heading-color: #{$TEXT_PRIMARY};
   --devsite-landing-row-group-margin: 0;
   --devsite-landing-row-header-text-margin: 0 auto;
   --devsite-landing-row-header-text-max-width: 57.8125rem;
-  --devsite-landing-row-padding: 3.5rem 0;
+  --devsite-landing-row-padding: #{$ROW_PADDING};
   --devsite-item-body-display: block;
-  --devsite-item-description-margin: 1.325rem 0 0 0;
-  --devsite-item-gap: 2rem;
+  --devsite-item-description-margin: #{$DESCRIPTION_MARGIN};
   --devsite-item-gap: #{$CARD_GAP};
   --devsite-item-text-padding: 0;
-  --devsite-label-font: 700 0.875rem/1.719rem #{$TEXT_PRIMARY_FONT_FAMILY};
-  --devsite-label-letter-spacing: 0.1rem;
+  --devsite-label-font: #{$LABEL_FONT};
+  --devsite-label-letter-spacing: #{$LABEL_LETTER_SPACING};
   --devsite-primary-font-family: #{$TEXT_PRIMARY_FONT_FAMILY};
   --devsite-primary-text-color: #{$TEXT_PRIMARY};
   --devsite-text-color: #{$TEXT_PRIMARY};
@@ -80,10 +99,10 @@ $CARD_BORDER: 2px solid #eef4ff;
 
 
   @media (max-width: 591px) {
-    --devsite-button-padding: 0.8125rem 1rem;
-    --devsite-buttons-margin: 1.5rem 0 0;
+    --devsite-button-padding: #{$BUTTON_PADDING_MOBILE};
+    --devsite-buttons-margin: #{$BUTTON_MARGIN_MOBILE};
     --devsite-landing-group-padding: 0;
-    --devsite-landing-row-padding: 0 1.875rem;
+    --devsite-landing-row-padding: #{$ROW_PADDING_MOBILE};
 
   }
 
@@ -118,7 +137,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     @media (max-width: 840px) {
-      padding-left: 15px;
+      padding-left: 1rem;
 
       figure {
         margin-bottom: 1.5rem;
@@ -136,7 +155,7 @@ $CARD_BORDER: 2px solid #eef4ff;
       &[description-position=left] figure img,
       &[description-position=right] figure img,
       figure img {
-        height: 220px;
+        height: 13.75rem;
         object-fit: cover;
         object-position: center;
       }
@@ -176,7 +195,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     h3 + div {
       align-items: start;
       flex-direction: column;
-      max-width: 200px;
+      max-width: 12.5rem;
     }
 
     .button::before {
@@ -295,9 +314,9 @@ $CARD_BORDER: 2px solid #eef4ff;
   .dcc-hero {
     --devsite-button-background: #{$TEXT_LINK};
     --devsite-button-color: #fff;
-    --devsite-button-padding: 12px 24px;
+    --devsite-button-padding: 0.75rem 1.5rem;
     --devsite-description-content-font: 1.3rem/1.875rem #{$TEXT_PRIMARY_FONT_FAMILY};
-    --devsite-h2-font: 500 4rem #{$TEXT_PRIMARY_FONT_FAMILY};
+    --devsite-h2-font: 700 4rem/4.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
     --devsite-landing-row-padding: 3rem 0 0;
     --devsite-item-gap: 0;
     
@@ -319,8 +338,8 @@ $CARD_BORDER: 2px solid #eef4ff;
     }
 
     @media (max-width: 840px) {
-      --devsite-description-content-font: 400 18px/30px #{$TEXT_PRIMARY_FONT_FAMILY};
-      --devsite-h2-font: 700 50px #{$TEXT_PRIMARY_FONT_FAMILY};
+      --devsite-description-content-font: 400 1.125rem/1.875rem #{$TEXT_PRIMARY_FONT_FAMILY};
+      --devsite-h2-font: 700 3.125rem #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-item-display: flex;
       
       [description-position]{
@@ -330,25 +349,26 @@ $CARD_BORDER: 2px solid #eef4ff;
       figure {
         margin: -1rem auto 4rem;
       }
-    }
 
-    @media (max-width: 591px) {
-      --devsite-h2-font: 700 28px #{$TEXT_PRIMARY_FONT_FAMILY};
-      --devsite-item-description-margin: 0;
-      
       h3 span {
         display: block;
       }
+    }
+
+    @media (max-width: 591px) {
+      --devsite-h2-font: 700 3.125rem #{$TEXT_PRIMARY_FONT_FAMILY};
+      --devsite-item-description-margin: 0;
+      --devsite-buttons-padding: 2.5rem 0 0;
   
       .button {
         font-size: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
       }
     }
   }
 
   .dcc-featured {
-    --devsite-h2-font: 700 30px/38px #{$TEXT_PRIMARY_FONT_FAMILY};
+    --devsite-h2-font: 700 1.875rem/2.365rem #{$TEXT_PRIMARY_FONT_FAMILY};
     
 
     @media (max-width: 1280px) {
@@ -370,7 +390,7 @@ $CARD_BORDER: 2px solid #eef4ff;
     --devsite-landing-row-group-border-radius: #{$CARD_BORDER_RADIUS};
     --devsite-landing-row-group-max-width: 90rem;
     --devsite-landing-row-group-padding: 2rem 1rem 1rem;
-    --devsite-h2-font: 700 40px/47.5px #{$TEXT_PRIMARY_FONT_FAMILY};
+    --devsite-h2-font: 700 2.5rem/3rem #{$TEXT_PRIMARY_FONT_FAMILY};
     --devsite-item-gap: 0;
     
     [description-position=bottom] {
@@ -392,7 +412,7 @@ $CARD_BORDER: 2px solid #eef4ff;
       }
 
       &:last-child {
-        --devsite-h2-font: 700 32px/38px #{$TEXT_PRIMARY_FONT_FAMILY};
+        --devsite-h2-font: 700 2rem/2.375rem #{$TEXT_PRIMARY_FONT_FAMILY};
         padding-left: 0;
         padding-top:4rem;
 
