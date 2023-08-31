@@ -14,7 +14,7 @@ a separate process and communicates with it using standard input and standard ou
 
 ## Native messaging host {: #native-messaging-host }
 
-In order to register a native messaging host the application must save a file that
+In order to register a native messaging host, the application must save a file that
 defines the native messaging host configuration.
 
 An example of the file is as follows:
@@ -31,13 +31,20 @@ An example of the file is as follows:
 
 The native messaging host manifest file must be valid JSON and contain the following fields:
 
-|Name|Description|
-|----|-----------|
-|`name`|Name of the native messaging host. Clients pass this string to [`runtime.connectNative()`][connect-native] or [`runtime.sendNativeMessage()`][send-native-message]. This name can only contain lowercase alphanumeric characters, underscores and dots. The name cannot start or end with a dot, and a dot cannot be followed by another dot.|
-|`description`|Short application description.|
-|`path`|Path to the native messaging host binary. On Linux and macOS the path must be absolute. On Windows it can be relative to the directory in which the manifest file is located. The host process is started with the current directory set to the directory that contains the host binary. For example if this parameter is set to `C:\Application\nm_host.exe` then it will be started with current directory `C:\Application\`.|
-|`type`|Type of the interface used to communicate with the native messaging host. Currently there is only one possible value for this parameter: `stdio`. It indicates that Chrome should use `stdin` and `stdout` to communicate with the host.|
-|`allowed_origins`|List of extensions that should have access to the native messaging host. Wildcards such as `chrome-extension://*/*` are _not_ allowed.|
+`name`
+: Name of the native messaging host. Clients pass this string to [`runtime.connectNative()`][connect-native] or [`runtime.sendNativeMessage()`][send-native-message]. This name can only contain lowercase alphanumeric characters, underscores and dots. The name can't start or end with a dot, and a dot can't be followed by another dot.
+
+`description`
+: Short application description.
+
+`path`
+: Path to the native messaging host binary. On Linux and macOS the path must be absolute. On Windows it can be relative to the directory in which the manifest file is located. The host process is started with the current directory set to the directory that contains the host binary. For example if this parameter is set to `C:\Application\nm_host.exe` then it will be started with current directory `C:\Application\`.
+
+`type`
+: Type of the interface used to communicate with the native messaging host. Currently there is only one possible value for this parameter: `stdio`. It indicates that Chrome should use `stdin` and `stdout` to communicate with the host.
+
+`allowed_origins`
+: List of extensions that should have access to the native messaging host. `allowed-origins` values _can't_ contain wildcards.
 
 ### Native messaging host location {: #native-messaging-host-location }
 
@@ -70,18 +77,21 @@ browser (Google Chrome or Chromium). The system-wide native messaging hosts are 
 location, while the user-level native messaging hosts are looked up in the `NativeMessagingHosts/` subdirectory
 of the [user profile directory][user-data-directory].
 
-- macOS (system-wide)
-  - Google Chrome: `/Library/Google/Chrome/NativeMessagingHosts/com.my_company.my_application.json`
-  - Chromium: `/Library/Application Support/Chromium/NativeMessagingHosts/com.my_company.my_application.json`
-- macOS (user-specific, _default_ path)
-  - Google Chrome: `~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.my_company.my_application.json`
-  - Chromium: `~/Library/Application Support/Chromium/NativeMessagingHosts/com.my_company.my_application.json`
-- Linux (system-wide)
-  - Google Chrome: `/etc/opt/chrome/native-messaging-hosts/com.my_company.my_application.json`
-  - Chromium: `/etc/chromium/native-messaging-hosts/com.my_company.my_application.json`
-- Linux (user-specific, _default_ path)
-  - Google Chrome: `~/.config/google-chrome/NativeMessagingHosts/com.my_company.my_application.json`
-  - Chromium: `~/.config/chromium/NativeMessagingHosts/com.my_company.my_application.json`
+macOS (system-wide)
+: Google Chrome: `/Library/Google/Chrome/NativeMessagingHosts/com.my_company.my_application.json`
+: Chromium: `/Library/Application Support/Chromium/NativeMessagingHosts/com.my_company.my_application.json`
+
+macOS (user-specific, _default_ path)
+: Google Chrome: `~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.my_company.my_application.json`
+: Chromium: `~/Library/Application Support/Chromium/NativeMessagingHosts/com.my_company.my_application.json`
+
+Linux (system-wide)
+: Google Chrome: `/etc/opt/chrome/native-messaging-hosts/com.my_company.my_application.json`
+: Chromium: `/etc/chromium/native-messaging-hosts/com.my_company.my_application.json`
+
+Linux (user-specific, _default_ path)
+: Google Chrome: `~/.config/google-chrome/NativeMessagingHosts/com.my_company.my_application.json`
+: Chromium: `~/.config/chromium/NativeMessagingHosts/com.my_company.my_application.json`
 
 ### Native messaging protocol {: #native-messaging-host-protocol }
 
