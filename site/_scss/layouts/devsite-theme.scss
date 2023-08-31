@@ -112,6 +112,8 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     color: #fff;
     display: inline;
     padding: 0.46875rem;
+    position: relative;
+    top: 0.5rem;
   }
 
   .dcc-blog-card {
@@ -182,11 +184,12 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     --devsite-buttons-margin: auto;
     --devsite-buttons-padding: 1rem 0 0 0;
     --devsite-h2-margin: 1.6875rem auto auto;
+    --devsite-item-gap: 0;
     --devsite-item-media-container-width: 11rem;
     --devsite-item-media-margin: 0 auto;
 
     margin-bottom: 2rem;
-    padding: 3.5rem 2.5rem;
+    padding: 2.8rem 2.5rem;
     
     @media (max-width: 840px) {
       margin-bottom: 0;
@@ -278,7 +281,12 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     }
 
     @media (max-width: 840px) {
+      --devsite-h2-font: 500 2.25rem #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-button-font: 1.125rem #{$TEXT_PRIMARY_FONT_FAMILY};
+    }
+
+    @media (max-width: 591px) {
+      --devsite-h2-font: 500 1.15rem #{$TEXT_PRIMARY_FONT_FAMILY};
     }
   }
 
@@ -286,6 +294,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     --devsite-item-border-radius: #{$CARD_BORDER_RADIUS};
     --devsite-item-gap: 0;
     --devsite-item-image-width: 8rem;
+    --devsite-buttons-margin: 0.5rem 0 0 -0.75rem;
 
     border: #{$CARD_BORDER};
     max-width: 24.75rem;
@@ -303,8 +312,9 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
   .dcc-social-card {
     --devsite-buttons-margin: 1rem 0;
     --devsite-h2-font: 500 2rem #{$TEXT_PRIMARY_FONT_FAMILY};
-    --devsite-item-gap: 2rem;
+    --devsite-item-gap: 0rem;
     --devsite-item-image-width: 3rem;
+    --devsite-item-media-margin: 0 0 0.875rem 0;
     --devsite-item-media-padding: 0 1rem;
     --devsite-item-text-padding: 0;
 
@@ -503,10 +513,6 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
         height: 12.5rem;
         object-fit: cover;
       }
-
-      @media (max-width: 591px) {
-        max-width: 100%;
-      }
     }
 
 
@@ -516,14 +522,24 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       --devsite-landing-row-header-grid-column: 1 / span 3;
       --devsite-landing-row-header-max-width: 100%;
     }
+
+    @media (max-width: 591px) {
+      --devsite-h1-font: 700 1.5625rem #{$TEXT_PRIMARY_FONT_FAMILY};
+
+      .dcc-blog-card {
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
   }
 
   
 
   .dcc-docs {
-    --devsite-landing-group-padding: 4.25rem 1.5rem 0;
+    --devsite-landing-group-padding: 4.6875rem 1.5rem 0;
     --devsite-landing-group-margin: 1.5rem auto;
     --devsite-landing-row-header-padding: 0.5rem 0;
+    --devsite-buttons-margin: 0.5rem 0 0 0;
 
     position: relative;
 
@@ -545,6 +561,10 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       top: 0;
       width: 100%;
     }
+
+    @media (max-width: 591px) {
+      --devsite-h1-font: 500 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
+    }
   }
 
   [background="pale-blue"] {
@@ -558,6 +578,8 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     --devsite-landing-row-header-text-margin: 0 auto 3.75rem auto;
     --devsite-landing-row-header-text-max-width: 57.8125rem;
     --devsite-landing-row-padding: 3.5rem 0;
+
+    margin: 3rem 0 2.1875rem;
 
     h2{
       text-align: center;
@@ -583,13 +605,22 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
   .dcc-social {
       --devsite-item-gap: 3.125rem;
       --devsite-landing-row-header-text-margin: 0 0 2.875rem 0;
+      
     
       h2{
         text-align: left;
       }
 
+      h3 + div {
+        color: #606367;
+      }
+
       @media (max-width: 1280px) {
         --devsite-h1-font: 500 2.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
+      }
+
+      @media (max-width: 591px) {
+        --devsite-h1-font: 500 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
       }
     }
 
