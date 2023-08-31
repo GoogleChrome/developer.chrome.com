@@ -396,7 +396,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
 
     @media (max-width: 1280px) {
       --devsite-landing-row-group-grid: 2 1;
-      --devsite-h2-font: 500 1.5rem "Google Sans", sans-serif;
+      --devsite-h2-font: 500 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
 
       .dcc-blog-card {
         margin-bottom: 2rem;
@@ -461,7 +461,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
           grid-column: 2 / span 2;
           padding-top: 0;
 
-          --devsite-h2-font: 500 1.5rem "Google Sans", sans-serif;
+          --devsite-h2-font: 500 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
         }
 
         @media (max-width: 840px) {
@@ -779,7 +779,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     
       a {
         color: #{$TEXT_SECONDARY};
-        font-family: "Google Sans";
+        font-family: #{$TEXT_PRIMARY_FONT_FAMILY};
         font-size: 0.9375em;
         font-weight: #{$TEXT_WEIGHT};
         line-height: 1.25rem;
