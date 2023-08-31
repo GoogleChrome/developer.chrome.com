@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Related Website Sets - the new name for First-Party Sets in Chrome 117
 description: >
-  Related Website Sets (RWS) is the new name for First-Party Sets and also brings increased flexibility in defining sets.
+  Related Website Sets (RWS) is the new name for First-Party Sets. It also brings increased flexibility in defining sets.
 date: 2023-08-31
 thumbnail: 'image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png'
 alt: Privacy Sandbox logo
@@ -12,7 +12,7 @@ authors:
   - helencho
 ---
 
-Many Privacy Sandbox APIs are ramping up to General Availability (GA) in Chrome Stable in preparation for third-party cookie deprecation beginning in 2024. Some of these APIs will help preserve crucial cross-site cookie use cases, like [CHIPS](/en/docs/privacy-sandbox/chips/), and the API currently known as [First-Party Sets (FPS)](/en/docs/privacy-sandbox/first-party-sets/). In this post, we introduce Related Website Sets (RWS) — our new name for FPS that better reflects its purpose— provide a refresher on key use cases along with an update on the associated subset domain limit. 
+Many Privacy Sandbox APIs are ramping up to General Availability (GA) in Chrome Stable in preparation for third-party cookie deprecation beginning in 2024. Some of these APIs will help preserve crucial cross-site cookie use cases, like [CHIPS](/en/docs/privacy-sandbox/chips/), and the API currently known as [First-Party Sets (FPS)](/en/docs/privacy-sandbox/first-party-sets/). In this post, we introduce Related Website Sets (RWS)—our new name for FPS that better reflects its purpose—and provide a refresher on key use cases along with an update on the associated subset domain limit. 
 
 
 ## Preserving critical user journeys
@@ -21,21 +21,21 @@ RWS is designed to minimize disruptions to specific user-facing features once Ch
 
 * The [ccTLD use case](https://github.com/WICG/first-party-sets/tree/main#defining-a-set-through-use-case-based-subsets) addresses breakages like the [login example](https://issuetracker.google.com/268390722) filed in our public tracker. Such cases are often addressed in the ecosystem through heuristic-based exceptions (See [ref 1](#ref-1)).
 * The [service domain use case](https://github.com/WICG/first-party-sets/tree/main#defining-a-set-through-use-case-based-subsets) addresses a common developer practice to isolate sensitive functions (like supporting an authentication flow) from user-facing domains. Such cases may be addressed in the ecosystem through targeted [exceptions](https://searchfox.org/mozilla-central/rev/3002762e41363de8ee9ca80196d55e79651bcb6b/browser/extensions/webcompat/data/shims.js#686) (See [ref 2](#ref-2)).
-*   The [associated domain use case](https://github.com/WICG/first-party-sets/tree/main#defining-a-set-through-use-case-based-subsets) provides more flexibility for the types of domains that may require third-party cookie access for critical user journeys (See [ref 3](#ref-3)). While the ccTLD and service domain use cases employ strict technical checks based on domain characteristics to minimize abuse, the associated domain uses a numeric limit. Read more about this below.
+*   The [associated domain use case](https://github.com/WICG/first-party-sets/tree/main#defining-a-set-through-use-case-based-subsets) provides more flexibility for the types of domains that may require third-party cookie access for critical user journeys (See [ref 3](#ref-3)). While the ccTLD and service domain use cases employ strict technical checks based on domain characteristics to minimize abuse, the associated domain uses a numeric limit. Read more about this in the next section.
 
 
 ## Associated domain limit increased to five domains 
 
-Chrome previously proposed a numeric limit of 3 domains for the Associated Subset (plus one primary domain), in alignment with our objective to prevent widespread tracking abuse. We have heard feedback from web standards participants that the limit was too low for different types of use cases. 
+Chrome previously proposed a numeric limit of three domains for the Associated Subset (plus one primary domain), in alignment with our objective to prevent widespread tracking abuse. We have heard feedback from web standards participants that the limit was too low for different types of use cases. 
 
-We have decided to increase the associated domain limit to 5 domains (plus one primary domain) which best matches the most comparable implementation offered by another major browser (See [ref 4](#ref-4)). This will take effect beginning in Chrome 117.
+We have decided to increase the associated domain limit to five domains (plus one primary domain) which best matches the most comparable implementation offered by another major browser (See [ref 4](#ref-4)). This will take effect beginning in Chrome 117.
 
 Since RWS is not intended as an ads solution, we are not taking into consideration feedback on how to improve RWS to better serve ads use cases. For ads use cases, developers should explore using the Topics, Protected Audience, and Attribution Reporting APIs and provide feedback on them accordingly. 
 
 
-## Users have a choice for extended use cases, beyond 5 associated domains
+## Users have a choice for extended use cases, beyond five associated domains
 
-For user-impacting experiences that are not supported by this limit, Chrome is [working on a user prompting flow](https://github.com/cfredric/chrome-storage-access-api) that also leverages the Storage Access API (SAA), a standard adopted by other browsers. For use cases that need more than 5 associated domains, we encourage developers to evaluate how SAA may be supported in non-RWS contexts. We are following the Blink launch process separately for [this feature](https://groups.google.com/a/chromium.org/g/blink-dev/c/JHf7CWXDZUc/m/Dy2EElgvAgAJ), which will be rolling out in Chrome Desktop beginning in Chrome M117.
+For user-impacting experiences that are not supported by this limit, Chrome is [working on a user prompting flow](https://github.com/cfredric/chrome-storage-access-api) that also leverages the Storage Access API (SAA), a standard adopted by other browsers. For use cases that need more than five associated domains, we encourage developers to evaluate how SAA may be supported in non-RWS contexts. We are following the Blink launch process separately for [this feature](https://groups.google.com/a/chromium.org/g/blink-dev/c/JHf7CWXDZUc/m/Dy2EElgvAgAJ), which will be rolling out in Chrome Desktop beginning in Chrome M117.
 
 
 ## Next steps
