@@ -29,6 +29,7 @@
     - url: /docs/extensions/migrating/api-calls
     - url: /docs/extensions/migrating/blocking-web-requests
     - url: /docs/extensions/migrating/improve-security
+    - url: /docs/extensions/migrating/publish-mv3
     - url: /docs/extensions/migrating/mv2-sunset
     - url: /docs/extensions/migrating/known-issues
 - url: /docs/extensions/reference
