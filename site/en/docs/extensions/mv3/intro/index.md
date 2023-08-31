@@ -5,7 +5,7 @@ seoTitle: Welcome to the Chrome Extension Manifest V3
 subhead: 'A step in the direction of security, privacy, and performance.'
 description: 'An introduction to Manifest V3'
 date: 2020-11-09
-updated: 2022-09-28
+updated: 2023-08-31
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
