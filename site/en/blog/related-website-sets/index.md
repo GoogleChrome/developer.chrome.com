@@ -4,10 +4,8 @@ title: Related Website Sets - the new name for First-Party Sets in Chrome 117
 description: >
   Related Website Sets (RWS) is the new name for First-Party Sets and also brings increased flexibility in defining sets.
 date: 2023-08-31
-thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg'
-alt: A diagram showing First-Party Sets. One set contains domains example.com,
-  example.rs, and example.co.uk. The other set containts brandx.site,
-  fly-brandx.site, and drive-brandx.site.
+thumbnail: 'image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png'
+alt: Privacy Sandbox logo
 tags: 
   - privacy
 authors:
@@ -46,12 +44,10 @@ We're grateful for the ecosystem feedback that has helped shape the API so far. 
 
 Follow the [Intent-to-Ship thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/7_6JDIfE1as/m/wModmpcaAgAJ) to track progress, and check out [these materials](/en/docs/privacy-sandbox/first-party-sets-integration/) for implementation guidance. 
 
-## References
 
 {% Details %}
-
 {% DetailsSummary %}
-Details for the references used above.
+References
 {% endDetailsSummary %}
 
 1. <a id="ref-1"></a>There is general agreement across browsers that these cross-site cookie use-cases are necessary, but have taken different approaches in enabling them. [Firefox](https://developer.mozilla.org/docs/Web/Privacy/Storage_Access_Policy#automatic_storage_access_upon_interaction) ([code](https://searchfox.org/mozilla-central/rev/3002762e41363de8ee9ca80196d55e79651bcb6b/dom/base/Document.cpp#16328)) and [Safari](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/#:~:text=Temporary%20Compatibility%20Fix%3A%20Automatic%20Storage%20Access%20for%20Popups) ([code](https://searchfox.org/wubkat/rev/5b368793a8c0a3d99c6991fcd3ef96e3dbd2cf2a/Source/WebKit/NetworkProcess/Classifier/ResourceLoadStatisticsDatabaseStore.cpp#1266)) have both implemented the pop-up heuristic that addresses the breakage observed, for example in the [Nintendo login flow](https://issuetracker.google.com/268390722).
