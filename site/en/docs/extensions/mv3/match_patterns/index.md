@@ -26,7 +26,7 @@ Extensions use match patterns for a variety of purposes, including declaring [ho
 
 ## Special cases {: #special }
 
-`<all_urls>`
+`"<all_urls>"`
 : Matches any URL that starts with a permitted scheme, including any pattern listed under [valid patterns](#valid-examples). Because it affects all hosts, Chrome web store reviews for extensions that use it [may take longer](/docs/webstore/review-process/#review-time-factors).
 
 `file:///`
