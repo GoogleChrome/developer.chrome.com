@@ -442,8 +442,10 @@ $CARD_BORDER: 2px solid #eef4ff;
   }
 
   .dcc-chrome-releases {
-    position: relative;
     --devsite-landing-row-header-max-width: 17.5625rem;
+    --devsite-landing-row-header-padding: 0.5rem 0;
+
+    position: relative;
 
     .dcc-blog-card {
       max-width: 24.75rem;
@@ -477,6 +479,7 @@ $CARD_BORDER: 2px solid #eef4ff;
   .dcc-docs {
     --devsite-landing-group-padding: 4.25rem 1.5rem 0;
     --devsite-landing-group-margin: 1.5rem auto;
+    --devsite-landing-row-header-padding: 0.5rem 0;
 
     position: relative;
 
