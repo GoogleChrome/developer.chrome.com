@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Override Chrome pages"
 seoTitle: "Chrome Extensions: Override Chrome pages"
 date: 2012-09-18
-updated: 2023-02-06
+updated: 2023-08-31
 description: >
   How to override the Chrome bookmark manager, history, and new tab
   pages from your Chrome Extension.
@@ -65,9 +65,9 @@ Use the following code to register an override page in the [extension manifest][
 
 For `PAGE_TO_OVERRIDE`, substitute one of the following:
 
-- `bookmarks`
-- `history`
-- `newtab`
+- `"bookmarks"`
+- `"history"`
+- `"newtab"`
 
 ## Best practices {: #tips }
 
