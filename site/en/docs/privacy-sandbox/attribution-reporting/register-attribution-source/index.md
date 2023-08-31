@@ -40,6 +40,32 @@ registration HTTP response header.
     registration header. Upon receiving that request, respond with the header
     `Attribution-Reporting-Register-Source`. In that header, specify the
     desired Attribution Reporting configuration. This step is the same for both clicks and views.
+   
+   **Example for summary reports:**
+
+   ```json
+   {
+      "aggregation_keys": {
+      "campaignCounts": "0x159", 
+      "geoValue": "0x5" 
+    },
+
+    "aggregatable_report_window": "86400",
+    "destination": "https://example.com"
+   }
+   ```
+
+   **Example for event-level reports:**
+
+   ```json
+   {
+      "source_event_id": "12340873456",
+      "destination": "[eTLD+1]",
+      "expiry": "[64-bit signed integer]",
+      "priority": "[64-bit signed integer]",
+      "event_report_window": "[64-bit signed integer]"
+   }
+   ```
 
 ### Required and optional attributes
 
@@ -292,17 +318,20 @@ your response the `Attribution-Reporting-Register-Source` header.
  res.set(
   'Attribution-Reporting-Register-Source',    
   JSON.stringify({
-	// Use source_event_id to map it to any granular information 
-  //you need at ad-serving time
+	// Use source_event_id to map it to any granular information
+      // you need at ad-serving time
       source_event_id: '412444888111012',
       destination: 'https://advertiser.example',
       // Optional fields
       expiry: '604800',
       priority: '100',
-	debug_key: '122939999'
+      debug_key: '122939999'
     })
  );
 ```
+Once stringified, your header looks like this:
+
+`{"source_event_id":"412444888111012","destination":"https://advertiser.example","expiry":"604800","priority":"100","debug_key":"122939999"}`
 
 ## Next steps
 
