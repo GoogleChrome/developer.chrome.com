@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Match patterns'
 seoTitle: 'Chrome Extensions match patterns'
 date: 2012-09-18
-updated: 2023-07-28
+updated: 2023-08-31
 description: Understanding URL match patterns in Chrome extensions.
 ---
 
