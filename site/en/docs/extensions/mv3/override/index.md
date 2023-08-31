@@ -39,7 +39,7 @@ The following screenshots show the default New Tab page and then a custom New Ta
   <figcaption>A custom new tab page.</figcaption>
 </figure>
 
-For more examples, see our [override samples][1].
+To try this out, see our [override samples][1].
 
 ## Incognito window behavior {: #incognito }
 
