@@ -658,16 +658,15 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       }
     }
 
+    @media (max-width: 480px) {
+      min-width: auto;
+    }
+
     .search-box__btn {
       color: #{$TEXT_SECONDARY};
       display: inline-block;
       padding: 0;
       margin-top: 0;
-  
-      @media (max-width: 992px) {
-        position: absolute;
-        right: 0;
-      }
   
       &:hover {
         border: none;
@@ -694,6 +693,12 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       font-size: 1.125rem;
       font-weight: 400;
       line-height: 1.875rem;
+      min-width: auto;
+
+      &:not([active]) .search-box__btn {
+        position: absolute;
+        right: 0;
+      }
     }
   }
 
@@ -725,7 +730,6 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
 
     search-box .search-box__btn {
       width: 3.5rem;
-      right: 0;
     }
   }
 
@@ -743,6 +747,10 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
 
       .top-nav__logo {
         margin-left: 3.5rem;
+
+        @media (max-width: 480px) {
+          margin-left: 3rem;
+        }
       }
     }
 
