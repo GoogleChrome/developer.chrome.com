@@ -60,6 +60,8 @@ Here are the minimum steps to follow to generate event-level reports:
 
     `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-event-attribution`  
 
+     Refer to the [example code in adtech.js](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L309) to see the `post` method. More information on [.well-known](https://en.wikipedia.org/wiki/Well-known_URI) is here.
+
 1. **Complete the source registration**. Upon receiving the request, respond with the header [`Attribution-Reporting-Register-Source`](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views). In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
 
     Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) for the steps.
@@ -77,7 +79,7 @@ To generate reports, follow these high-level steps:
 1. **Set up an endpoint** for aggregatable reports with the following URL: 
         `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-aggregate-attribution`
 
-        Refer to the [example code](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L334). More on [.well-known](https://en.wikipedia.org/wiki/Well-known_URI).
+        Refer to the [example code in adtech.js](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L334) to see the `post` method. More information on [.well-known](https://en.wikipedia.org/wiki/Well-known_URI) is here.
 
 1. **Complete the source registration**: Upon receiving the request, respond with the header [`Attribution-Reporting-Register-Source`](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views). In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
 
@@ -101,7 +103,7 @@ In addition to understanding the implementation steps here, the following concep
 
 1. **Set up filters (optional)**:
     1. Follow the instructions in
-        [Define filters](/docs/privacy-sandbox/attribution-reporting/define-filters/).
+        [Define custom rules using filters](/docs/privacy-sandbox/attribution-reporting/define-filters/).
     1. Review details specific to filters for aggregatable reports in
         the
         [explainer](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md).
