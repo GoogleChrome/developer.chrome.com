@@ -14,7 +14,7 @@ Manifest Version 3 (Manifest V3) is the latest iteration of the Chrome extension
 
 An extension [manifest][doc-manifest] gives the browser information about an extension's capabilities and the files it uses. The features available for extensions to use are defined by the current [manifest version][manifest-version]. Manifest V3 introduces enhancements to extension security, privacy, and performance, and allows extensions to use open web technologies such as service workers and promises.
 
-The Chrome Web Store no longer accepts new Manifest V2 extensions, and Manifest V2 will be [phased out][mv2-sunset] in 2024. We strongly recommend migrating your extensions to Manifest V3 as soon as possible.
+The Chrome Web Store no longer accepts new Manifest V2 extensions. Watch the [Manifest V2 support timeline][mv2-sunset] for details. We strongly recommend migrating your extensions to Manifest V3 as soon as possible.
 
 ## Resources {: #manifest-v3-resources }
 
