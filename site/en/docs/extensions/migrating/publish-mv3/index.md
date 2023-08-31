@@ -1,21 +1,26 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: TBD
-seoTitle: Best practices when publishing a converted Manifest V3 extension.
-description: 'TBD'
-date: 2022-09-23
-updated: 2023-05-10
+title: Publish your Manifest V3 extension.
+seoTitle: Publishing a new Manifest V3 Chrome extension.
+description: 'Best practices for publishing a new Manifest V3 extension'
+date: 2023-09-06
+# updated: 2023-05-10
 ---
 
-After following the [MV3 Migration Checklist][migration-checklist] to convert your extension, you are ready to move on to distributing your extension in the Chrome Web Store. This article includes a few helpful recommendations to ensure your extension is released smoothly.
+After following the [MV3 Migration Checklist][migration-checklist] to convert your extension, you are ready to publish your update in the Chrome Web Store. This article includes a few helpful recommendations to ensure your release goes smoothly.
 
 ## Keep the current set of features {: #keep-features }
 
 When publishing your Manifest V3 extension for the first time, we recommend not adding extra functionality. This way, you can minimize the chances of unexpected issues or bugs. If new features require new permissions, it may [trigger a warning][perm-warn], which means your extension may be disabled until the user enables it again.
 
-_Screenshot of disabled extension_
+<figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/tQgKKMKbzmCzwBEAoatX.gif", alt="ALT_TEXT_HERE", width="496", height="388" %}
+    <figcaption>
+    Extension disabled until user accepts new permission.
+    </figcaption>
+</figure>
 
-Note that the extension will also be disabled if `"host_permissions"` are added or modified in the manifest. This includes `"content_scripts.matches"`, which are also considered host permissions. See [Permission warnings][perm-warn] to learn of other ways to add permission without displaying a warning.
+Note that the extension will also be disabled if [`"host_permissions"`][host-perms] are added or modified in the manifest. This includes [`"content_scripts.matches"`][content-manifest], which are also considered host permissions. See [Permissions Best Practices][perm-warn] to learn of other ways to add permission without displaying a warning.
 
 ## Publish a beta testing version {: #publish-beta }
 
@@ -32,7 +37,9 @@ First, you must label this extension as a testing version by following these ste
 1. Add the label “BETA” at the end of the name of your extension.
 2. Add "THIS EXTENSION IS FOR BETA TESTING" to the description.
 
-Note that skipping this step may result in your extension being rejected for [repetitive content][spam-policy]. 
+{% Aside 'caution' %}
+Skipping this step may result in your extension being rejected for [repetitive content][spam-policy]. 
+{% endAside %}
 
 Now that your beta version is clearly labeled, you can either distribute it to specified email addresses, to members of a Google group or share as a direct link.
 
@@ -41,22 +48,18 @@ Now that your beta version is clearly labeled, you can either distribute it to s
 Follow these steps to distribute to a small number of testers:
 
 1. Go to the Account tab of the Developer Dashboard.
-2. Scroll down to Management.
-3. Under Trusted Testers, enter email addresses separated by spaces or commas.
-4. Save changes at the bottom of the page.
-
-<figure>
-    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SrVxYFc0lmMgXxtN30gA.png", alt="Screenshot showing trusted tester accounts listed in a Chrome Web Store developer account page", height="395", width="800" %}
-    <figcaption>
-        Trusted tester emails listed in a Chrome Web Store developer Account page.
-    </figcaption>
-</figure>
-
+1. Scroll down to Management.
+1. Under Trusted Testers, enter email addresses separated by spaces or commas.
+    <figure>
+        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SrVxYFc0lmMgXxtN30gA.png", alt="Screenshot showing trusted tester accounts listed in a Chrome Web Store developer account page", height="395", width="800", class="screenshot" %}
+        <figcaption>
+            Trusted tester emails listed in a Chrome Web Store developer Account page.
+        </figcaption>
+    </figure>
+1. Save changes at the bottom of the page.
 1. Upload the beta version of your extension
-2. Go to the Distribution tab
-3. Set the Visibility to **Private**. 
-
-_Example Screenshot_
+1. Go to the Distribution tab
+1. Set the Visibility to **Private**. 
 
 ### Distribute to members of a Google group {: #dist-group }
 
@@ -65,7 +68,7 @@ Once you've received enough feedback from your beta testers, you can expand dist
 Go to the Distribution tab, set the Visibility to **Private**, and choose your beta tester Google group from the dropdown menu. 
 
 <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/VjVunVpPxNsVKpIXKMpr.png", alt="Screenshot of the Private Visibility Setting and Google Group Selection Dropdown", width="800", height="445" %}
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/eW95QyUHVYrQw0eThSNc.png", alt="ALT_TEXT_HERE", width="600", height="445" %}
     <figcaption>
         Distributing to Members of a Google Group
     </figcaption>
@@ -79,41 +82,79 @@ Another alternative is to set the Visibility as **Unlisted**. This way, only use
 
 The Chrome Web Store allows you to roll out a new version gradually. This ensures that any unexpected problems will have minimal impact. This is only available for extensions with more than 10,000 active users. To start rolling out your extension partially, follow these steps:
 
-1. [Upload](/docs/webstore/publish/) your new version.
+1. [Upload][cws-upload] your new version.
 2. Go to the Distribution tab.
 3. Enter a percentage in **Percentage rollout** field.
 
+<figure>
+    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png", alt="Screenshot showing the 'more' menu's defer publish option", width="286", height="184", class='screenshot' %}
+    <figcaption>
+        Setting the initial rollout percentage.
+    </figcaption>
+</figure>
+
 To continue rolling out gradually, navigate to the **Package** tab of your item and increase the percentage located in the **Published** section. Note that the percentage can only be increased, and it doesn't trigger an additional review.
 
-## Understand the review process {: #review }
+<figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/UA8vDp8aG89exqqjzY55.png", alt="Screenshot of the Chrome Web Store update percent rollout field", width="800", height="395", class='screenshot' %}
+    <figcaption>
+        Updating the rollout percentage
+    </figcaption>
+</figure>
 
-We recommend planing enough time for your item to be reviewed. Review times vary based on [different factors](/docs/webstore/review-process/#review-time-factors). You can be more proactive by staging the release and checking the review status to follow up quickly if the version is rejected.
+## Plan for review times {: #review }
+
+We recommend planning enough time for your item to be reviewed as review times may vary based on [different factors][review-factors]. Consider staging your release and regularly checking your item's status to make changes quickly if necessary.
 
 ### Stage your release {: #staged-release }
 
-The Chrome web store offers a way to stage a release by submitting it for review ahead of time. This way, when you are ready, you can officially release it. 
+The Chrome Web Store offers a way to stage a release by submitting it for review ahead of time. This way, when you are ready, you can officially release it. 
 
 You can do this by unchecking the "Publish automatically" checkbox when you submit the item. 
 
+<figure>
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BiZituXHHZ74SIkwc3q7.png", alt="Screenshot of the Chrome Web Store confirm submission dialog", height="388", width="800" %}
+    <figcaption>
+        Checkbox to stage an extension update.
+    </figcaption>
+</figure>
 
 Or you can do it later by choosing "Defer publish" in the three-dot menu on the top-right.
 
-Aside
+<figure>
+    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png", alt="Screenshot showing the 'more' menu's defer publish option", width="286", height="184", class='screenshot' %}
+    <figcaption>
+      Choosing deferred publishing in menu.
+    </figcaption>
+</figure>
+
+{% Aside %}
 Once your item is approved, you have up to 30 days to publish. After that period expires, the staged submission will revert to a draft, which will have to be reviewed again. You can check when your staged submission will expire under the status of your item.
+{% endAside %}
 
 ### Check your item status {: #check-status }
 
-Most extensions are reviewed within three days. You should receive an email notifying you if your item has passed or if a violation has been found. If you have not received an email in a week or two, you can check your item's status in the Published section of the Status tab. For example:
+Most extensions are reviewed within three days. You should receive an email notifying you if your item has passed or if a violation has been found. If you have not received an email in a week, check your item's status in the Published section of the **Status** tab.
 
-If your extension is pending review for over three weeks, you can [contact developer support][cws-support] to request assistance.
+<figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/C4wpnEeMriI9YeDAMDIr.png", alt="The Chrome Web Store Status Tab", width="700", height="276", class='screenshot' %}
+    <figcaption>
+        Status tab in the Developer Dashboard.
+    </figcaption>
+</figure>
+
+If your extension is pending review for over two weeks, you can [contact developer support][cws-support] to request assistance.
 
 ## Additional tips {: #learn-more }
 
 There are other ways to make your extension more robust as you transition to Manifest Version 3. See [Engineering resilient extensions](TBD) for best practices for building a reliable extension.
 
-
-[perm-warn]: /docs/extensions/mv2/permission_warnings/
+[content-manifest]: /docs/extensions/manifest/content_scripts
 [cws-support]: /docs/webstore/review-process/#support
-[migration-checklist]: /docs/extensions/migrating/checklist/
-[spam-policy]: /docs/webstore/troubleshooting/#spam
+[cws-upload]: /docs/webstore/upload
 [google-group]: https://groups.google.com/my-groups
+[host-perms]: /docs/extensions/mv3/declare_permissions/#host-permissions
+[migration-checklist]: /docs/extensions/migrating/checklist/
+[perm-warn]: /docs/extensions/mv3/permission_warnings/
+[review-factors]: /docs/webstore/review-process/#review-time-factors
+[spam-policy]: /docs/webstore/troubleshooting/#spam
