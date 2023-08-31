@@ -66,7 +66,7 @@ Include all the [required images][cws-images] (icon, tile, marquee, and screensh
 
 ### Choose your extension's category well {: #choose-category-well}
 
-The developer console asks you specify a category for your extension. Choose the most appropriate category:
+The developer console requires you to specify a category for your extension. Choose the most appropriate category:
 
 Accessibility
 : Extensions designed to enhance the browsing experience for individuals with visual impairments, hearing loss, limited dexterity, and other disabilities. This may include tools like screen readers, dark mode extensions, or utilities that help with navigation, using keyboard shortcuts, voice commands, among others.
