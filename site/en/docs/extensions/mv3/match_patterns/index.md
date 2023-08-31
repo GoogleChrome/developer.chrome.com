@@ -30,7 +30,7 @@ Extensions use match patterns for a variety of purposes, including declaring [ho
 : Matches any URL that starts with a permitted scheme, including any pattern listed under [valid patterns](#valid-examples). Because it affects all hosts, Chrome web store reviews for extensions that use it [may take longer](/docs/webstore/review-process/#review-time-factors).
 
 `file:///`
-: Allows your extension to run on local files. This pattern has no host and requires the user to manually [grant access][permissions-allow-access].
+: Allows your extension to run on local files. This pattern requires the user to manually [grant access][permissions-allow-access].
 
 Localhost URLs and IP addresses
 : To match any localhost port during development, use `http://localhost:*/*`. Specify a port using the port number, as in `http://localhost:8080`.  For IP addresses, specify the address plus a wildcard in the path, as in `http://127.0.0.1/*`. You can also use `http://*:*/*` to match localhost, IP addresses, and any port.
