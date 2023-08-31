@@ -173,6 +173,29 @@ A complete example to configure the behavior of an app with a tabbed interface m
 }
 ```
 
+### Detecting tabbed application mode
+
+Apps can detect whether they are running in tabbed application mode by checking the
+[`display-mode`](https://developer.mozilla.org/docs/Web/CSS/@media/display-mode) CSS media feature
+in either CSS or JavaScript:
+
+```css
+@media (display-mode: tabbed) {
+  /* Styles to apply in tabbed application mode. */
+}
+```
+
+```js
+const tabbedApplicationModeEnabled = window.matchMedia('(display-mode: tabbed)').matches;
+```
+
+### Interaction with the Launch Handler API
+
+The [Launch Handler API](/docs/web-platform/launch-handler/) lets sites redirect app
+launches into existing app windows to prevent duplicate windows from being opened. When a
+tabbed app sets `"client_mode": "navigate-new"`, app launches will open a new tab in an
+existing app window.
+
 ### Demo
 
 You can try tabbed application mode by setting a browser flag:

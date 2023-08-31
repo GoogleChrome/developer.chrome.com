@@ -95,4 +95,4 @@ See the [override samples][4].
 [1]: /docs/extensions/mv3/manifest/incognito
 [2]: /docs/extensions/mv3/user_privacy#data-incognito
 [3]: /docs/extensions/mv3/manifest/
-[4]: /docs/extensions/mv3/samples#search:chrome_url_overrides
+[4]: /docs/extensions/samples/
