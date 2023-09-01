@@ -104,7 +104,7 @@ closely with the CMA before taking further steps to expand deprecation.
 
 For the duration of Mode A and Mode B we will be introducing a temporary `Cookie-Deprecation` value accessible via an opt-in HTTP header and JavaScript API provide the label for the browser's applicable Mode A or B experiment group (as defined by the percentages above), if it falls into one. We will remove this value when the experiment ends.
 
-Accessing labels involves accessing information stored on the user’s device. In some jurisdictions (e.g., the EU and UK), we understand that this activity is analogous to the use of cookies and thus accessing labels likely requires end user consent. Before you begin requesting labels, we recommend that you seek legal advice as to whether this consent obligation applies to you.
+Accessing labels involves accessing information stored on the user’s device. In some jurisdictions (for example, the EU and UK), we understand that this activity is analogous to the use of cookies and thus accessing labels likely requires end user consent. Before you begin requesting labels, we recommend that you seek legal advice as to whether this consent obligation applies to you.
 
 {% Aside %}
 
