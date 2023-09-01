@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: Publish your Manifest V3 extension.
 seoTitle: Publishing a new Manifest V3 Chrome extension.
-description: 'Best practices for publishing a new Manifest V3 extension'
+description: 'Guidance for publishing a new Manifest V3 extension'
 date: 2023-09-04
 # updated: 2023-05-10
 ---
