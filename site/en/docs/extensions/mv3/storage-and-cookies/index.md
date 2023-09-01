@@ -100,8 +100,8 @@ more information, see the [API reference][chrome-cookies-partitioning].
 [indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
 [session-storage]: https://developer.mozilla.org/docs/Web/API/Window/sessionStorage
-[chrome-storage-api]: /extensions/reference/storage
-[offscreen]: /extensions/reference/offscreen
+[chrome-storage-api]: /docs/extensions/reference/storage
+[offscreen]: /docs/extensions/reference/offscreen
 [on-message]: /docs/extensions/reference/runtime/#event-onMessage
 [create-offscreen]: /docs/extensions/reference/offscreen/#method-createDocument
 [send-message]: /docs/extensions/reference/runtime/#method-sendMessage
@@ -111,6 +111,6 @@ more information, see the [API reference][chrome-cookies-partitioning].
 [chips]: /docs/privacy-sandbox/chips
 [same-site]: https://web.dev/samesite-cookies-explained
 [privacy-sandbox-timeline]: https://privacysandbox.com/open-web/#open-web-timeline-3pc
-[chrome-cookies]: /extensions/reference/cookies
-[chrome-cookies-partitioning]: /extensions/reference/cookies#partitioning
+[chrome-cookies]: /docs/extensions/reference/cookies
+[chrome-cookies-partitioning]: /docs/extensions/reference/cookies#partitioning
 [storage-persist]: https://developer.mozilla.org/docs/Web/API/StorageManager/persist
