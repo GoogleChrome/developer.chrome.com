@@ -102,7 +102,7 @@ closely with the CMA before taking further steps to expand deprecation.
 
 ## Accessing labels via the `Cookie-Deprecation` value {: #cookie-deprecation-value}
 
-For the duration of Mode A and Mode B we will be introducing a temporary `Cookie-Deprecation` value accessible via an opt-in HTTP header and JavaScript API provide the label for the browser's applicable Mode A or B experiment group (as defined by the percentages above), if it falls into one. We will remove this value when the experiment ends.
+For the duration of Mode A and Mode B we will be introducing a temporary `Cookie-Deprecation` value accessible via an opt-in HTTP header and JavaScript API, which will provide the label for the browser's applicable Mode A or B experiment group (as defined by the percentages above), if it falls into one. We will remove this value when the experiment ends.
 
 Accessing labels involves accessing information stored on the user’s device. In some jurisdictions (for example, the EU and UK), we understand that this activity is analogous to the use of cookies and thus accessing labels likely requires end user consent. Before you begin requesting labels, we recommend that you seek legal advice as to whether this consent obligation applies to you.
 
@@ -137,7 +137,7 @@ As labels are tied to the presence of the cookie, if the cookie is deleted, labe
 
 ### Accessing the cookieDeprecationLabel JavaScript API
 
-The `Cookie-Deprecation` value can also be accessed via the `navigator.cookieDeprecationLabel.getValue()` JavaScript API. This will return a promise which resolves to a string containing the applicable group label. For example, if the browser was in the `example_label_1`:
+The `Cookie-Deprecation` value can also be accessed via the `navigator.cookieDeprecationLabel.getValue()` JavaScript API. This will return a promise which resolves to a string containing the applicable group label. For example, if the browser was in the `example_label_1` group:
 
 ```js
 // Feature detect temporary API first
