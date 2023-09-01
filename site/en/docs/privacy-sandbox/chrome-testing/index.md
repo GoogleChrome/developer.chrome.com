@@ -171,3 +171,5 @@ You can also [raise new questions or discussions](https://github.com/GoogleChrom
 The [Competition and Markets Authority (CMA)](https://www.gov.uk/government/organisations/competition-and-markets-authority) has published their [guidance on testing Privacy Sandbox APIs](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes#industry-testing) with relevant information on timelines, approaches to testing, and next steps.
 
 {% endAside %}
+
+If you're a developer, you can ask questions and join discussions in the [Privacy Sandbox Developer Support repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on GitHub.
