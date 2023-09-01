@@ -15,6 +15,8 @@ tags:
   - prototype-fixes
 ---
 
+{% YouTube id='zW9ibQbYJNE' %}
+
 If you find yourself running the same code in the [**Console**][1] repeatedly, consider saving the code as a snippet instead. Snippets have access to the page's JavaScript context. They are an alternative to [bookmarklets][3].
 
 You can author snippets in the [**Sources** panel][2] and run them on any page and in incognito mode.

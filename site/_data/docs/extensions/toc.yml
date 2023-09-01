@@ -32,7 +32,7 @@
     - url: /docs/extensions/migrating/mv2-sunset
     - url: /docs/extensions/migrating/known-issues
 - url: /docs/extensions/reference
-- url: https://github.com/GoogleChrome/chrome-extensions-samples
+- url: /docs/extensions/samples
   title: i18n.docs.extensions.samples
   description: i18n.docs.extensions.samples_description
 - title: i18n.docs.extensions.develop

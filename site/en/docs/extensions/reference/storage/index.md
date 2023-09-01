@@ -4,7 +4,7 @@ api: storage
 
 ## Overview {: #overview }
 
-The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], and [Storage][mdn-storage]), but was designed to meet the storage needs of extensions. The following are a few key features: 
+The Storage API provides an extension-specific way to persist user data and state. It's similar to the web platform's storage APIs ([IndexedDB][mdn-indexeddb], and [Storage][mdn-storage]), but was designed to meet the storage needs of extensions. The following are a few key features:
 
 - All extension contexts, including the extension service worker and content scripts have access to the Storage API.
 - The JSON serializable values are stored as object properties.
@@ -39,7 +39,7 @@ There are also some nuances with how web storage APIs work in extensions. Learn 
 
 ### Storage areas
 
-The Storage API is divided into the following four buckets ("storage areas"): 
+The Storage API is divided into the following four buckets ("storage areas"):
 
 [`storage.local`][prop-local]
 : Data is stored locally, which is cleared when the extension is removed. The quota limitation is approximately 10 MB, but can be increased by requesting the `"unlimitedStorage"` permission. Consider using it to store larger amounts of data.
@@ -49,7 +49,7 @@ Before Chrome 114, the quota was approximately 5 MB.
 {% endAside %}
 
 [`storage.sync`][prop-sync]
-: If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item. Consider using it to preserve user settings across synced browsers. 
+: If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item. Consider using it to preserve user settings across synced browsers.
 
 {% Aside 'warning' %}
 Local and sync storage areas should not store confidential user data because they are not encrypted. When working with sensitive data, consider using the `session` storage area to hold values in memory until the browser is shut down.
@@ -256,7 +256,7 @@ To see other demos of the Storage API, explore any of the following examples:
 [doc-manifest]: /docs/extensions/mv3/manifest
 [gh-global-context-search]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/17956f44b6f04d28407a4b7eee428611affd4fab/api/contextMenus/global_context_search
 [gh-water-alarm]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/17956f44b6f04d28407a4b7eee428611affd4fab/examples/water_alarm_notification
-[incognito]: /docs/extensions/mv2/manifest/incognito
+[incognito]: /docs/extensions/mv3/manifest/incognito
 [manifest-storage]: /docs/extensions/mv3/manifest/storage
 [mdn-indexeddb]: https://developer.mozilla.org/docs/Web/API/Window/indexeddb
 [mdn-storage]: https://developer.mozilla.org/docs/Web/API/Storage

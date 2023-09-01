@@ -43,7 +43,7 @@ the source code, see [Samples][3].
 
 [1]: /docs/extensions/mv3/declare_permissions
 [2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/cookies/cookie-clearer
-[3]: /docs/extensions/mv3/samples
+[3]: /docs/extensions/samples
 [chips]: /docs/privacy-sandbox/chips
 [partitioning-api-proposal]: https://docs.google.com/document/d/1iZKjdUft0x3m6pTH8hnppF5VHinCy0Wlprk7bUwV-XY/edit?usp=sharing
 [cookie-partitioning]: /docs/extensions/mv3/storage-and-cookies/#cookies-partitioning

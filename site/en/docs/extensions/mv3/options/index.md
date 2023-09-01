@@ -13,7 +13,7 @@ what functionality is relevant to their needs.
 
 ## Locating the options page {: #view_page }
 
-Users can access the options page by [direct link][section-link-options] or by right-clicking the extension icon in the toolbar and then selecting options. Additionally, users can navigate to the Extensions page at `chrome://extensions`, locate the desired extension, click **Details**, and then select the options link.
+Users can access the options page by [direct link][section-link-options] or by right-clicking the extension icon in the toolbar and then selecting options. Additionally, users can navigate to the options page by, first, opening `chrome://extensions`, locating the desired extension, clicking **Details**, and then selecting the options link.
 
 {% Columns %}
 
@@ -133,13 +133,12 @@ Finally, add the `"storage"` permission to the extension's [manifest][doc-manife
 
 ## Declare options page behavior {: #declare_options }
 
-There are two available types of extension options pages, [full page][2] and [embedded][3]. The type
+There are two types of extension options pages, [full page][2] and [embedded][3]. The type
 of options page is determined by how it is declared in the manifest.
 
 ### Full page options {: #full_page }
 
-An extension's options page is displayed in a new tab. The options HTML file is
-registered under the `"options_page"` field.
+A _full page_ options page is displayed in a new tab. Register the options HTML file in the manifest in the `"options_page"` field.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -161,7 +160,7 @@ registered under the `"options_page"` field.
 
 ### Embedded options {:#embedded_options }
 
-Embedded options allows users to adjust extension options without navigating away from the
+An _embedded options_ page allows users to adjust extension options without navigating away from the
 extensions management page inside an embedded box. To declare embedded options, register the HTML
 file under the `"options_ui"` field in the extension manifest, with the `"open_in_tab"` key set to `false`.
 
@@ -188,14 +187,14 @@ file under the `"options_ui"` field in the extension manifest, with the `"open_i
 </figure>
 
 `page` (string)
-: Path to the options page, relative to the extension's root.
+: Specifies the path to the options page, relative to the extension's root.
 
 `open_in_tab` (boolean)
-: Specify as `false` to declare an embedded options page. If `true`, the extension's options page will be opened in a new tab rather than embedded in _chrome://extensions_.
+: Indicates whether the extension's options page will be opened in a new tab. If set to `false`, the extension's options page is embedded in `chrome://extensions` rather than opened in a new tab.
 
 ## Consider the differences {: #considerations }
 
-Options pages embedded inside _chrome://extensions_ have subtle behavior differences from options pages in tabs.
+Options pages embedded inside `chrome://extensions` have subtle behavior differences from options pages in tabs.
 
 ### Linking to the options page {: #linking }
 
@@ -223,15 +222,8 @@ document.querySelector('#go-to-options').addEventListener('click', function() {
 
 ### Tabs API {: #tabs-api }
 
-Extension embedded options page code is not hosted inside a tab, affecting how the [Tabs API][5] can
-be used:
-
-- [`tabs.query()`][6] will never find a tab within an extension's options page URL.
-- [`tabs.onCreated`][7] will not fire when the options page is opened.
-- [`tabs.onUpdated`][8] will not fire when the options page load state changes.
-- [`tabs.connect()`][9] or [`tabs.sendMessage()`][10] cannot be used to communicate with the options page.
-
-Use [`runtime.connect()`][11] and [`runtime.sendMessage()`][12] to work around these restrictions,
+Because embedded options code is not hosted in a tab, the Tabs API cannot be used.
+Use [`runtime.connect()`][11] and [`runtime.sendMessage()`][12] instead,
 if the options page does need to manipulate the containing tab.
 
 ### Messaging APIs {: #messaging-api }
@@ -258,7 +250,6 @@ embedded page will find an appropriate size.
 [7]: /docs/extensions/reference/tabs#event-onCreated
 [8]: /docs/extensions/reference/tabs#event-onUpdated
 [9]: /docs/extensions/reference/tabs#method-connect
-[10]: /docs/extensions/reference/tabs#method-sendMessage
 [11]: /docs/extensions/runtime#method-connect
 [12]: /docs/extensions/runtime#method-sendMessage
 [13]: /docs/extensions/runtime#method-connect

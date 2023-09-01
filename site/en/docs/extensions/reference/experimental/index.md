@@ -12,9 +12,6 @@ We'd like your [feedback][1] on the following experimental APIs:
 
 <table><tbody><tr><th>Name</th><th>Description</th></tr></tbody></table>
 
-Pay special attention to the following APIs, which we expect to finalize soon: **devtools**,
-**permissions**, For examples of using the experimental APIs, see [Samples][2].
-
 <div class="aside aside--warning"><b>Caution:</b> Don't depend on these experimental APIs. They might disappear, and they <em>will</em> change. Also, the Chrome Web Store doesn't allow you to upload items that use experimental APIs.</div>
 
 ## How to use experimental APIs {: #using }
@@ -53,10 +50,9 @@ Pay special attention to the following APIs, which we expect to finalize soon: *
 For information on the standard APIs, see [chrome.\* APIs][7] and [Other APIs][8].
 
 [1]: https://groups.google.com/a/chromium.org/group/chromium-extensions/topics
-[2]: /docs/extensions/mv2/samples#search:experimental
 [3]: https://tools.google.com/dlpage/chromesxs
 [4]: https://www.chromium.org/getting-involved/dev-channel
-[5]: /docs/extensions/mv2/declare_permissions
+[5]: /docs/extensions/mv3/declare_permissions
 [6]: https://groups.google.com/a/chromium.org/group/chromium-extensions/topics
 [7]: /docs/extensions/reference
 [8]: https://developer.mozilla.org/docs/Web/API
