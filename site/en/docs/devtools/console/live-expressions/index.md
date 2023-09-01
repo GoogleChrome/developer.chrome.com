@@ -13,6 +13,8 @@ tags:
   - javascript
 ---
 
+{% YouTube id='zW9ibQbYJNE' %}
+
 If you find yourself typing the same JavaScript expression in the Console repeatedly, you might find
 it easier to create a **Live Expression**. With **Live Expressions**, you type an expression once and
 then pin it to the top of your Console. The value of the expression updates in near real time.
