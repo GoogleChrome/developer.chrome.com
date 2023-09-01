@@ -24,11 +24,6 @@ to access. For example:
 
 ## Partitioning {: #partitioning }
 
-{% Aside %}
-We recently published an [API proposal][partitioning-api-proposal] for changes to the
-`chrome.cookies` API that would improve support for partitioning.
-{% endAside %}
-
 [Partitioned cookies][chips] allow a site to mark that certain cookies should be keyed against the
 origin of the top level frame. This means that if site A is embedded using an iframe in site B
 and site C, a partitioned cookie can have a different value in each.

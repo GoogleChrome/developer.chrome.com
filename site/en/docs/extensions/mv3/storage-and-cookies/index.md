@@ -9,8 +9,7 @@ description: Overview of how web storage APIs and cookies work in extensions.
 Extensions can store cookies and access web storage APIs similarly to a normal website. However, in
 some cases these behave differently in extensions.
 
-This article does not cover extension specific APIs. For more on these, see
-[`chrome.storage`][chrome-storage-api].
+See [`chrome.storage`][chrome-storage-api] for information on the extension API.
 
 ## Storage {: #storage }
 
