@@ -52,9 +52,9 @@ Before you can register sources and triggers and get reports, your sites need to
 
 Here are the minimum steps to follow to generate event-level reports:
 
-1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more information. Note that [the steps](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-1-initiate-source-registration) are different for clicks and views.
+1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for the instructions. Note that [the steps](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-1-initiate-source-registration) are different for clicks and views.
 
-1. **Register a trigger**. Refer to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) for more information.
+1. **Register a trigger**. Refer to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) for the instructions.
 
 1.  **Set up an endpoint** with the following URL: {: #event-endpoint }
 
@@ -64,7 +64,7 @@ Here are the minimum steps to follow to generate event-level reports:
 
 1. **Complete the source registration**. Upon receiving the request, respond with the header [`Attribution-Reporting-Register-Source`](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views). In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
 
-    Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) for the steps.
+    Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) for the instructions.
 
 More details on [event-level reports](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md) here.
 
@@ -72,9 +72,9 @@ More details on [event-level reports](https://github.com/WICG/attribution-report
 
 To generate reports, follow these high-level steps:
 
-1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for more details. Note that [the steps](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-1-initiate-source-registration) are different for clicks and views.
+1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for the instructions. Note that [the steps](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-1-initiate-source-registration) are different for clicks and views.
 
-1. **Register a trigger**. Refer to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger). {: #summary-endpoint }
+1. **Register a trigger**. Refer to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) for the instructions. {: #summary-endpoint }
 
 1. **Set up an endpoint** for aggregatable reports with the following URL: 
         `{REPORTING_ENDPOINT}/.well-known/attribution-reporting/report-aggregate-attribution`
@@ -83,7 +83,7 @@ To generate reports, follow these high-level steps:
 
 1. **Complete the source registration**: Upon receiving the request, respond with the header [`Attribution-Reporting-Register-Source`](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views). In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
 
-    Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) for the steps.
+    Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) for the instructions.
     
 1. **Set up debug reports**: Learn how in the [Attribution reporting debugging series](/docs/privacy-sandbox/attribution-reporting-debugging/).
 
