@@ -78,7 +78,7 @@ time, like synchronous fetches of network or database resources.
 
 * **Remember that new tabs give keyboard focus to the address bar first.** Don't rely on keyboard focus defaulting to other parts of the page.
 
-* **Make the new tab page your own.** <br/>Avoid creating a new tab page which users may confuse with Chrome's built in new tab page.
+* **Make the new tab page your own.** <br/>Avoid creating a new tab page which users may confuse with Chrome's default new tab page.
 
 ## Examples {: #examples }
 
