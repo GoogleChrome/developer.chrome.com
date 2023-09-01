@@ -57,8 +57,8 @@ if their ad tech partners are participating in the experiment.
 
 We expect this to allow for meaningful experimentation, where all involved
 sites and services can coordinate to ensure third-party cookies are not used at
-any point within the process. We anticipate providing labels for up to 10% of
-Chrome browsers via a new request header and low-entropy client hint. We
+any point within the process. We anticipate providing labels for up to 9% of
+Chrome browsers. We
 encourage anyone interested in testing to provide
 [feedback](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues)
 from the ecosystem on the method for accessing labels and the granularity of
