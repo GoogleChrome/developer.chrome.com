@@ -78,8 +78,7 @@ time, like synchronous fetches of network or database resources.
 
 * **Remember that new tabs give keyboard focus to the address bar first.** Don't rely on keyboard focus defaulting to other parts of the page.
 
-* **Don't copy the default New Tab page.** <br/>The APIs necessary to create a slightly modified version of the default New Tab page—with top
-pages, recently closed pages, tips, a theme background image, and so on—don't exist.
+* **Make the new tab page your own.** <br/>Avoid creating a new tab page which users may confuse with Chrome's built in new tab page.
 
 ## Examples {: #examples }
 
