@@ -71,7 +71,7 @@ Too vague.
   name="description"
   content="Mary's simple recipe for maple bacon donuts
            makes a sticky, sweet treat with just a hint
-           of salt that you'll keep coming back for.">
+           of salt that you'll keep coming back for more.">
 ```
 {% CompareCaption %}
 Descriptive yet concise.
