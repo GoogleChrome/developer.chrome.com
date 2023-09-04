@@ -23,15 +23,12 @@ const {App} = require('octokit');
 
 const GITHUB_APP_ID = process.env.GITHUB_APP_ID;
 const GITHUB_APP_KEY = process.env.GITHUB_APP_KEY;
-const GITHUB_APP_INSTALLATION_ID = process.env.GITHUB_APP_INSTALLATION_ID;
+const GITHUB_APP_INSTALLATION_ID = Number(
+  process.env.GITHUB_APP_INSTALLATION_ID
+);
 
 const REPO_OWNER = 'GoogleChrome';
 const REPO_NAME = 'developer.chrome.com';
-
-const app = new App({
-  appId: GITHUB_APP_ID,
-  privateKey: GITHUB_APP_KEY,
-});
 
 let client = null;
 
@@ -41,6 +38,17 @@ let client = null;
  */
 async function getGitHubApiClient() {
   if (!client) {
+    if (!GITHUB_APP_ID || !GITHUB_APP_KEY || !GITHUB_APP_INSTALLATION_ID) {
+      throw new Error(
+        'Missing GitHub app configuration. Please set GITHUB_APP_ID, GITHUB_APP_KEY, and GITHUB_APP_INSTALLATION_ID'
+      );
+    }
+
+    const app = new App({
+      appId: GITHUB_APP_ID,
+      privateKey: GITHUB_APP_KEY,
+    });
+
     client = await app.getInstallationOctokit(GITHUB_APP_INSTALLATION_ID);
   }
 

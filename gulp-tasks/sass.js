@@ -36,6 +36,10 @@ const entrypoints = [
     dest: './dist/css/fugu-showcase.css',
   },
   {
+    src: './site/_scss/layouts/extension-samples.scss',
+    dest: './dist/css/extension-samples.css',
+  },
+  {
     src: './site/_scss/layouts/landing.scss',
     dest: './dist/css/landing.css',
   },

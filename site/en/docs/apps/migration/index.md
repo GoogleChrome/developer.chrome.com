@@ -234,7 +234,7 @@ programmatically.][203]
 [21]: https://bugs.chromium.org/p/chromium/issues/detail?id=844279
 [22]: https://developer.android.com/guide/components/activities/activity-lifecycle
 [23]: /apps/app_runtime#event-onRestarted
-[24]: /blog/page-lifecycle-api/
+[24]: /articles/page-lifecycle-api/
 [25]: https://developer.android.com/guide/components/activities/activity-lifecycle#onresume
 [26]: /apps/app_window
 [27]: https://crbug.com/897300
@@ -310,7 +310,7 @@ programmatically.][203]
 [97]: https://developer.android.com/reference/android/printservice/package-summary
 [98]: /extensions/printerProvider
 [99]: /apps/runtime
-[100]: /blog/page-lifecycle-api/
+[100]: /articles/page-lifecycle-api/
 [101]: /extensions/runtime
 [102]: /apps/messaging#connect
 [103]: https://www.chromestatus.com/feature/6710044586409984

@@ -92,7 +92,7 @@ There have also been more than half a dozen other proposals offered by other
 companies, in the same solution space. Through continued collaboration, we hope
 to define a path forward.
 
-[Testing for Protected Audience](/docs/privacy-sandbox/fledge-experiment/) and
+[Testing for Protected Audience](/docs/privacy-sandbox/protected-audience-experiment/) and
 other APIs is available behind a Chrome flag, so developers can access them
 early.
 

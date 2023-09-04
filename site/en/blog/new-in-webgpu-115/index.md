@@ -5,7 +5,7 @@ description: "Supported WGSL language extensions, experimental support for Direc
 hero: "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/IOiG6dNWepqrGWtntbBx.png"
 alt: "What's new in WebGPU logo"
 date: 2023-06-20
-updated: 2023-06-26
+updated: 2023-08-10
 authors:
   - beaufortfrancois
 tags:
@@ -22,18 +22,6 @@ The [`wgslLanguageFeatures`](https://www.w3.org/TR/webgpu/#gpuwgsllanguagefeatur
 if (navigator.gpu.wgslLanguageFeatures?.has("unknown-feature")) {
   // Use unknown-feature in WGSL shader code.
 }
-```
-
-## Unset vertex buffer
-
-Passing `null` rather than a [`GPUBuffer`](https://developer.mozilla.org/docs/Web/API/GPUBuffer) to `setVertexBuffer()` on [`GPURenderPassEncoder`](https://developer.mozilla.org/docs/Web/API/GPURenderPassEncoder/setVertexBuffer) or [`GPURenderBundleEncoder`](https://developer.mozilla.org/docs/Web/API/GPURenderBundleEncoder/setVertexBuffer) allows you to unset a previously set vertex buffer in a given slot. See [issue dawn:1675](https://bugs.chromium.org/p/dawn/issues/detail?id=1675).
-
-```js
-// Set vertex buffer in slot 0.
-myRenderPassEncoder.setVertexBuffer(0, myVertexBuffer);
-
-// Then later, unset vertex buffer in slot 0.
-myRenderPassEncoder.setVertexBuffer(0, null);
 ```
 
 ## Experimental support for Direct3D 11
@@ -100,6 +88,18 @@ The `use_user_defined_labels_in_backend` debug toggle allows you to forward obje
 The `dump_shaders` debug toggle allows you to log input WGSL shaders and translated backend shaders. From now on, when you enable it for [debugging](https://dawn.googlesource.com/dawn/+/refs/heads/main/docs/dawn/debugging.md), the HLSL will be dumped if it fails compilation. See [issue dawn:1681](https://bugs.chromium.org/p/dawn/issues/detail?id=1681)
 
 ## Dawn updates
+
+### Unset vertex buffer
+
+Passing `nullptr` rather than a `wgpu::Buffer` to `SetVertexBuffer()` on `wgpu::RenderPassEncoder` or `wgpu::RenderBundleEncoder` allows you to unset a previously set vertex buffer in a given slot. See [issue dawn:1675](https://bugs.chromium.org/p/dawn/issues/detail?id=1675).
+
+```cpp
+// Set vertex buffer in slot 0.
+myRenderPassEncoder.SetVertexBuffer(0, myVertexBuffer);
+
+// Then later, unset vertex buffer in slot 0.
+myRenderPassEncoder.SetVertexBuffer(0, nullptr);
+```
 
 ### Transient attachments
 
