@@ -116,6 +116,10 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     top: 0.5rem;
   }
 
+  a:not([class]){
+    text-decoration: none;
+  }
+
   .dcc-blog-card {
     --devsite-buttons-margin: 0.5rem 0 0 -0.75rem;
     --devsite-item-gap: 0;
