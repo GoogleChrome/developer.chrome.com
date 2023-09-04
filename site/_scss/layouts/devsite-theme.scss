@@ -126,7 +126,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
 
     padding: 5rem 2.125rem 3rem;
 
-    span {
+    .devsite-landing-row-item-labels span {
       position: absolute;
       top: 2.25rem;
     }
@@ -494,7 +494,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       @media (max-width: 1290px) {
         padding-top: 2.5rem;
 
-        span {
+        .devsite-landing-row-item-labels span {
           top: 0;
         }
       }
