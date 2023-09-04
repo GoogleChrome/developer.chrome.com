@@ -52,15 +52,8 @@
           "source": "document",
           "where": {
             "and": [
-              {
-                "href_matches": "/*\\?*#*", "relative_to": "document"
-              },
-              {
-                "not": {
-                  "href_matches": "/articles/*\\?*#*",
-                  "relative_to": "document"
-                }
-              }
+              {"href_matches": "/*\\?*#*"},
+              {"not": {"href_matches": "/articles/*\\?*#*"}}
             ]
           },
           "eagerness": "moderate"
