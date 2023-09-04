@@ -109,6 +109,11 @@
     > nav {
       gap: 4.5rem;
       grid-template-columns: 1fr 6fr 1fr;
+
+      @media (max-width: 991px) {
+        gap: 0;
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .dcc-hamburger.button {
