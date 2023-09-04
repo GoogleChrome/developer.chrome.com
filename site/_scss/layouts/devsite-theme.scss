@@ -287,9 +287,6 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
 
     @media (max-width: 840px) {
       --devsite-button-font: 1.125rem #{$TEXT_PRIMARY_FONT_FAMILY};
-    }
-
-    @media (max-width: 591px) {
       --devsite-h2-font: 500 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
     }
   }
@@ -439,7 +436,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       &:first-child {
         --devsite-item-image-width: 2.5rem;
         --devsite-item-media-container-width: 2.5rem;
-        --devsite-item-text-align: left;  
+        --devsite-item-text-align: left;
         --devsite-h2-font: 700 2.5rem/3rem #{$TEXT_PRIMARY_FONT_FAMILY};
 
         padding-right: 0;
@@ -454,6 +451,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
         }
 
         @media (max-width: 840px) {
+          --devsite-h2-font: 700 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
           padding: 1.125rem 0;
         }
       }
@@ -547,6 +545,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     }
 
     @media (max-width: 840px) {
+      --devsite-h1-font: 700 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-h2-font: #{$TEXT_WEIGHT} 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-landing-row-group-grid-column: 1 / span 3;
       --devsite-landing-row-header-grid-column: 1 / span 3;
@@ -591,8 +590,8 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       width: 100%;
     }
 
-    @media (max-width: 591px) {
-      --devsite-h1-font: 500 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
+    @media (max-width: 840px) {
+      --devsite-h1-font: 700 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
     }
   }
 
@@ -659,7 +658,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
         --devsite-h1-font: 700 2.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
       }
 
-      @media (max-width: 591px) {
+      @media (max-width: 840px) {
         --devsite-h1-font: 700 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
       }
     }
