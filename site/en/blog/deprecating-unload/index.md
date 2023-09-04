@@ -9,7 +9,7 @@ authors:
   - demianrenzulli
   - tunetheweb
 date: 2023-08-10
-updated: 2023-08-17
+updated: 2023-09-04
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Mxh3dDENwFYXpkwD1z9X.jpg
 alt: Shipping container being unloaded by a large crane
 tags:
@@ -19,7 +19,9 @@ tags:
   - chrome-117
 ---
 
-The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) starting from Chrome 117. The deprecation will occur by gradually changing the default so that `unload` handlers stop firing on pages unless a page explicitly opts in to re-enable them.
+The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) by gradually changing the default so that `unload` handlers stop firing on pages unless a page explicitly opts in to re-enable them. The developer trial of the deprecation is available from Chrome 117 with the `chrome://flags/#deprecate-unload` flag. Enabling this flag make the default to deny access to unload handlers for all pages.
+
+The exact timeframe of when this will start to be enabled without a flag is still to be confirmed. This post and [the Chrome Status entry for this feature](https://chromestatus.com/feature/5579556305502208) will both be updated when this happens.
 
 ## Background
 
