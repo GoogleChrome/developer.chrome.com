@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Google Summer of Code and Chrome Extensions
 description: >
   Experience and advice on participating in Google Summer of Code.
-date: 2023-08-29
+date: 2023-09-04
 authors:
   - xuezhoudai
 
