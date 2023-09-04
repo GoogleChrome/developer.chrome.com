@@ -14,16 +14,23 @@ Chrome normally provides like New Tab page. In addition to HTML, an override pag
 
 An extension can replace any one of the following pages:
 
-- **Bookmark Manager:** The page that appears when the user chooses the Bookmark Manager menu item
-  from the Chrome menu or, on Mac, the Bookmark Manager item from the Bookmarks menu. You can also
-  get to this page by entering the URL **chrome://bookmarks**.
-- **History:** The page that appears when the user chooses the History menu item from the Chrome
-  menu or, on Mac, the Show Full History item from the History menu. You can also get to this page
-  by entering the URL **chrome://history**.
-- **New Tab:** The page that appears when the user creates a new tab or window. You can also get to
-  this page by entering the URL **chrome://newtab**.
+Bookmark Manager
+: The page that appears when the user chooses the Bookmark Manager menu item
+from the Chrome menu or, on Mac, the Bookmark Manager item from the Bookmarks menu. You can also
+get to this page by entering the URL **chrome://bookmarks**.
 
-<div class="aside aside--note"><b>Note:</b> A single extension can override <b>only one page</b>. For example, an extension can't override both the Bookmark Manager and History pages.</div>
+History
+: The page that appears when the user chooses the History menu item from the Chrome
+menu or, on Mac, the Show Full History item from the History menu. You can also get to this page
+by entering the URL **chrome://history**.
+
+New Tab
+: The page that appears when the user creates a new tab or window. You can also get to
+this page by entering the URL **chrome://newtab**.
+
+{% Aside %}
+A single extension can override <b>only one page</b>. For example, an extension can't override both the Bookmark Manager and History pages.
+{% endAside %}
 
 Incognito windows are treated specially. New Tab pages cannot be overridden in incognito windows.
 Other override pages work in incognito windows as long as the [incognito][1] manifest property is
@@ -31,11 +38,17 @@ set to "spanning" (which is the default value). See [Saving data and incognito m
 
 The following screenshots show the default New Tab page and then a custom New Tab page.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LbjiI23vPdf5z8jjttwN.png",
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LbjiI23vPdf5z8jjttwN.png",
        alt="The default new tab page", height="173", width="200" %}
+  <figcaption>The default new tab page.</figcaption>
+</figure>
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OvYbqxEERBMXwIQsxkm7.png",
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OvYbqxEERBMXwIQsxkm7.png",
        alt="A custom new tab page", height="173", width="200" %}
+  <figcaption>A custom new tab page.</figcaption>
+</figure>
 
 ## Manifest {: #manifest }
 
@@ -64,17 +77,16 @@ For `PAGE_TO_OVERRIDE`, substitute one of the following:
 
 For an effective override page, follow these guidelines:
 
-- **Make your page quick and small.**
-  Users expect built-in browser pages to open instantly. Avoid doing things that might take a long
-  time. For example, avoid synchronous fetches of network or database resources.
-- **Include a title in your page.**
-  Otherwise people might see the URL of the page, which could be confusing. Here's an example of
-  specifying the title: `<title>New Tab</title>`
-- **Don't rely on the page having the keyboard focus.**
-  The address bar always gets the focus first when the user creates a new tab.
-- **Don't try to emulate the default New Tab page.**
-  The APIs necessary to create a slightly modified version of the default New Tab page—with top
-  pages, recently closed pages, tips, a theme background image, and so on—don't exist.
+**Make your page quick and small.**<br/>Users expect built-in browser pages to open instantly. Avoid doing things that might take a long
+time. For example, avoid synchronous fetches of network or database resources.
+
+**Include a title in your page.**<br/>Otherwise people might see the URL of the page, which could be confusing. Here's an example of
+specifying the title: `<title>New Tab</title>`
+
+**Don't rely on the page having the keyboard focus.**<br/>The address bar always gets the focus first when the user creates a new tab.
+
+**Don't try to emulate the default New Tab page.**<br/>The APIs necessary to create a slightly modified version of the default New Tab page—with top
+pages, recently closed pages, tips, a theme background image, and so on—don't exist.
 
 ## Examples {: #examples }
 
@@ -83,4 +95,4 @@ See the [override samples][4].
 [1]: /docs/extensions/mv3/manifest/incognito
 [2]: /docs/extensions/mv3/user_privacy#data-incognito
 [3]: /docs/extensions/mv3/manifest/
-[4]: /docs/extensions/mv3/samples#search:chrome_url_overrides
+[4]: /docs/extensions/samples/

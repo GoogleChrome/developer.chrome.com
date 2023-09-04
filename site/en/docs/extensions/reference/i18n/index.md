@@ -354,7 +354,7 @@ For more details on calling `detectLanguage(inputText)`, see the [API reference]
 [13]: https://www.chromium.org/developers/creating-and-using-profiles
 [14]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/api/i18n/
 [15]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/extensions/news/
-[16]: /docs/extensions/mv3/samples
+[16]: /docs/extensions/samples/
 [17]: /docs/extensions/mv3/i18n-messages/#placeholders
 [18]: #method-getMessage
 [19]: #method-getAcceptLanguages

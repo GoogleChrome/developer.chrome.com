@@ -16,7 +16,7 @@ Developing for mobile should be just as easy as it is developing for desktop. We
 
 Until now, while remote debugging you've had to shift your eyes back and forth between your device and your devtools. Now, **Screencast displays your devices's screen right alongside your devtools**. Seeing it is good, but interacting with it is even better:
 
-- licks on the screencast are **translated into taps** and proper touch events are fired on the device.
+- Clicks on the screencast are **translated into taps** and proper touch events are fired on the device.
 - **Inspect element** on your device with your desktop pointer
 - Type on your desktop keyboard--**all keystrokes are sent to the device**. A huge timesaver over typing with your thumbs.
 - Scroll the page by flinging it with your pointer or just sliding on your laptop trackpad.

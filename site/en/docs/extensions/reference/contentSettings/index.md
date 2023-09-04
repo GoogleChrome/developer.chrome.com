@@ -99,7 +99,7 @@ across plugin updates.
 To try this API, install the [contentSettings API example][6] from the [chrome-extension-samples][7]
 repository.
 
-[1]: /docs/extensions/mv2/match_patterns
+[1]: /docs/extensions/mv3/match_patterns
 [2]: #property-notifications
 [3]: #property-cookies
 [4]: #property-plugins

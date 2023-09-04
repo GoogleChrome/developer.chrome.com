@@ -14,7 +14,6 @@ A list of everything that has been covered in the [What's New in WebGPU](/tags/n
 ### Chrome 115 {: #chrome115 }
 
 * [Supported WGSL language extensions](/blog/new-in-webgpu-115/#supported-wgsl-language-extensions)
-* [Unset vertex buffer](/blog/new-in-webgpu-115/#unset-vertex-buffer)
 * [Experimental support for Direct3D 11](/blog/new-in-webgpu-115/#experimental-support-for-direct3d-11)
 * [Get discrete GPU by default on AC power](/blog/new-in-webgpu-115/#get-discrete-gpu-by-default-on-ac-power)
 * [Improving developer experience](/blog/new-in-webgpu-115/#improving-developer-experience)
