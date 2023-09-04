@@ -103,6 +103,8 @@
     </script>
     {% endif %}
 
+  {% set isDevsite = true %}
+
   </head>
   <body class="" template="landing" theme="web-theme" type="article" layout="full" ready="" style="--devsite-js-header-height: 49px; --devsite-panel-height: 0px;">
     <div class="scaffold">
@@ -111,11 +113,11 @@
       {% endblock %}
 
       {% block navigation_rail %}
-        {% include 'partials/devsite-navigation-rail.njk' %}
+        {% include 'partials/navigation-rail.njk' %}
       {% endblock %}
 
       {% block sidebar %}
-        {% include 'partials/devsite-side-nav.njk' %}
+        {% include 'partials/side-nav.njk' %}
       {% endblock %}
 
       <section  class="dcc-devsite-wrapper" theme="web-theme">
@@ -123,7 +125,7 @@
       </section>
 
       {% block footer %}
-        {% include 'partials/devsite-footer.njk' %}
+        {% include 'partials/footer.njk' %}
       {% endblock %}
     </div>
     {% include 'partials/cookie-banner.njk' %}
