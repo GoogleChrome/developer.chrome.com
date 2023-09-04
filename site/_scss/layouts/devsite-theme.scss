@@ -478,6 +478,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
         padding: 1.125rem;
         grid-column: 1 / span 3;
       }
+
     }
 
     [description-position=top] {
@@ -514,7 +515,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     }
 
     @media (max-width: 591px) {
-      --devsite-landing-group-margin: 0 0 2rem 0;
+      --devsite-landing-group-margin: 0 1rem 2rem 1rem;
       --devsite-landing-group-padding: 0;
       padding: 0;
     }
