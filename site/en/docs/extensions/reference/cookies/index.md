@@ -30,4 +30,4 @@ the source code, see [Samples][3].
 
 [1]: /docs/extensions/mv3/declare_permissions
 [2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/cookies/cookie-clearer
-[3]: /docs/extensions/mv3/samples
+[3]: /docs/extensions/samples/

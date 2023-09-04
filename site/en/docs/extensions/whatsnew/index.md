@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-08-08
+updated: 2023-08-23
 tags:
   - extensions-news
 
@@ -14,6 +14,18 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Chrome 117: Expanded URL protections on extension API navigations {: #expanded-kill-url }
+
+<p class="color-secondary-text type--caption">Posted on <time>August 23, 2023</time></p>
+
+Previously navigation triggered from extension API calls for [`tabs.update()`](/docs/extensions/reference/tabs/#method-update), [`tabs.create()`](/docs/extensions/reference/tabs/#method-create), and [`windows.create()`](/docs/extensions/reference/windows/#method-create) emitted an error for some chrome:// URLs. Additionally, calling `tabs.update()` with a JavaScript URL was forbidden. In 117, these protections on JavaScript URLs have been expanded to the `tabs.create()` method and a number of additional chrome:// URLs have been added to the list of forbidden URLs that applies to all of the previously mentioned methods.
+
+### Improved guidance for the declarativeNetRequest API {: #new-dnr-guidance }
+
+<p class="color-secondary-text type--caption">Posted on <time>August 8, 2023</time></p>
+
+The [`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/) API blocks or modifies network requests by specifying declarative rules. This lets extensions modify network requests without intercepting them and viewing their content, thus providing more privacy to users. It's also tricky to use. With that in mind, we've rewritten the guidance in a way that we think paints a clearer picture of how to implement declarative rulesets. Read the new section at the link above.
 
 ### Using your Google Analytics account with the Chrome Web Store {: #ga-with-cws }
 
@@ -31,7 +43,7 @@ Injected content scripts are now in the DevTools ignore list by default. This do
 
 <p class="color-secondary-text type--caption">Posted on <time>July 21, 2023</time></p>
 
-Chrome 116 is a big release for extensions. You can now open side panels programmatically. A new method lets you learn if there's an active offscreen document. Service workers got serveral improvements. There's enough improvements in 116 that we've written [a blog post to cover them](/blog/chrome-116-beta-whats-new-for-extensions/#runtime-get-contexts). Chrome 116 is in beta as of July 19.
+Chrome 116 is a big release for extensions. You can now open side panels programmatically. A new method lets you learn if there's an active offscreen document. Service workers got serveral improvements. There's enough improvements in 116 that we've written [a blog post to cover them](/blog/chrome-116-beta-whats-new-for-extensions/). Chrome 116 is in beta as of July 19.
 
 ### Blog post: What's happening in Chrome Extensions {: #whats-happening-7-23 }
 

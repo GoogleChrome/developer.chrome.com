@@ -542,9 +542,9 @@ bmeurer:
     en: 'Googler working on Chrome DevTools.'
 demianrenzulli:
   title:
-    en: 'Demian Renzulli'
+    en: 'Demián Renzulli'
   description:
-    en: 'Demián is a Web Ecosystems Consultant working at Google New York.'
+    en: 'Demián is a Partner Engineer working at Google New York.'
 samdutton:
   title:
     en: 'Sam Dutton'
@@ -1516,3 +1516,48 @@ elabadysayed:
     en: 'Sayed El-Abady'
   description:
     en: 'Software Engineer, Google'
+hemeryar:
+  title:
+    en: 'Arthur Hemery'
+  description:
+    en: 'Software Engineer, Google'
+nrosenthal:
+  title:
+    en: 'Noam Rosenthal'
+  description:
+    en: 'Software engineer at Google working on web performance.'
+samrichard:
+  title:
+    en: 'Sam Richard'
+  description:
+    en: 'Developer Advocate, Google ChromeOS'
+hadrijau:
+  title:
+    en: 'Hadrien Jaubert'
+  description:
+    en: 'Software Engineering Intern, Google Chrome DevTools'
+jlwagner:
+  title:
+    en: 'Jeremy Wagner'
+  description:
+    en: 'Tech writin'', doc slingin'' reprobate.'
+adamraine:
+  title:
+    en: 'Adam Raine'
+  description:
+    en: 'Software Engineer, Google'
+schottfk:
+  title:
+    en: 'Fred K Schott'
+  description:
+    en: 'Co-creator, Astro'
+phillipsm:
+  title:
+    en: 'Matthew Phillips'
+  description:
+    en: 'Co-creator, Astro'
+ferreiram:
+  title:
+    en: 'Maxi Ferreira'
+  description:
+    en: 'Creator, FrontendAtScale'

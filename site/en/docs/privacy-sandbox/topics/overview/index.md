@@ -6,7 +6,7 @@ subhead: >
 description: >
   The Topics API enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits.
 date: 2022-01-25
-updated: 2023-06-26
+updated: 2023-08-29
 authors:
   - samdutton
 ---
@@ -44,7 +44,7 @@ Previously, in order for a caller to be regarded by the browser as having observ
 
 ### Epochs {: #epoch}
 
-Of course the Topics API must ensure that the topics of interest it provides are kept up to date. The browser infers topics for a user based on their browsing activity during a period of time known as an *epoch*, currently one week. The topic selected for each epoch is randomly selected from the user's top five topics for that time period. To further enhance privacy and ensure that all topics may be represented, there is a 5% chance the topic is randomly selected from all possible topics in a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) of interests.
+Of course the Topics API must ensure that the topics of interest it provides are kept up to date. The browser infers topics for a user based on their browsing activity during a period of time known as an *epoch*, currently one week. Each user has their own epochs (epochs are "per user") and the initial start time is randomized. The topic selected for each epoch is randomly selected from the user's top five topics for that time period. To further enhance privacy and ensure that all topics may be represented, there is a 5% chance the topic is randomly selected from all possible topics in a [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) of interests.
 
 The Topics API has three main tasks:
 

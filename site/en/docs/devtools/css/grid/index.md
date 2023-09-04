@@ -27,7 +27,7 @@ can see a [`grid` badge](/docs/devtools/elements/badges/#grid) next to it in the
 
 {% Img src="image/admin/SbWH3OGFQDiXKV2Eev2j.png", alt="Discover grid", width="800", height="524" %}
 
-Clicking the badge to toggle the display of a grid overlay on the page. The overlay appears over the
+Click the badge to toggle the display of a grid overlay on the page. The overlay appears over the
 element, laid out like a grid to show the position of its grid lines and tracks:
 
 {% Img src="image/admin/YwKMuoODL6eFMvfJOzlF.png", alt="Toggle grid badge.", width="800", height="524" %}
@@ -73,7 +73,7 @@ The **Overlay display settings** consists of two parts:
 a. A drop-down menu with the following options:
 
 - **Hide line labels**: Hide the line labels for each grid overlay.
-- **Show lines number**: Show the line numbers for each grid overlay (selected by default).
+- **Show line numbers**: Show the line numbers for each grid overlay (selected by default).
 - **Show line names**: Show the line names for each grid overlay in the case of grids with line
   names.
 
@@ -105,8 +105,8 @@ Select **Hide line labels** to hide the line numbers.
 You can select **Show line names** to view the line names instead of numbers. In this example, we
 have four lines with names: left, middle1, middle2 and right.
 
-In this demo, **orange** element spans from left to right, with CSS `grid-column: left / right`.
-Showing line names make it easier to visualize the start and end position of the element.
+In this demo, the **orange** element spans from left to right, with CSS `grid-column: left / right`.
+Showing line names makes it easier to visualize the start and end position of the element.
 
 {% Img src="image/admin/fiQzqCmGbD0acgVNXWyR.png", alt="Show line names.", width="800", height="524" %}
 
@@ -115,7 +115,7 @@ Showing line names make it easier to visualize the start and end position of the
 Enable the **Show track sizes** checkbox to view the track sizes of the grid.
 
 DevTools will display `[authored size] - [computed size]` in each line label: **Authored** size: The
-size defined in stylesheet (omitted if not defined). **Computed** size: The actual size on screen.
+size defined in the stylesheet (omitted if not defined). **Computed** size: The actual size on the screen.
 
 In this demo, the `snack-box` column sizes are defined in the CSS `grid-template-columns:1fr 2fr;`.
 Therefore, the column line labels show both authored and computed sizes: **1fr - 96.66px** and

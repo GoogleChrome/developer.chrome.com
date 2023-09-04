@@ -21,6 +21,14 @@ declare global {
   }
   interface Window extends Window {
     dataLayer: Record<string, any>[];
+    /**
+     * The `gtag` function for Google Analytics.
+     *
+     * @param {string} command - The command for gtag.
+     * @param {string} eventName - The name of the event.
+     * @param {Object} [params] - Additional parameters.
+     */
+    gtag: (command: string, eventName: string, params?: any) => void;
   }
 }
 

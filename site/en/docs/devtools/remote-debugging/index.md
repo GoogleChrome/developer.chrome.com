@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2023-03-08
+updated: 2023-08-09
 description:
   "Remote debug live content on an Android device from a Windows, Mac, or Linux computer."
 ---
@@ -138,6 +138,41 @@ Some notes on screencasts:
   animations to get a more accurate picture of your page's performance.
 - If your Android device screen locks, the content of your screencast disappears. Unlock your
   Android device screen to automatically resume the screencast.
+
+## Debug manually through Android Debug Bridge (adb)  {: #adb }
+
+In some rare cases, an alternative method of remote debugging may be useful. For example, you may want to connect directly to the [Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) (CDP) of your Chrome on Android.
+
+To do this, you can use the [Android Debug Bridge (adb)](https://developer.android.com/tools/adb):
+
+1. Make sure to enable [Developer options](https://developer.android.com/studio/debug/dev-options#enable) and [USB debugging](https://developer.android.com/studio/debug/dev-options#Enable-debugging) on your Android device.
+1. Open up Chrome on your Android Device.
+1. Connect the Android device to your development machine through:
+
+   - A USB cable (straightforward).
+   - Alternatively, [adb Wi-Fi connection](https://developer.android.com/tools/adb#wireless-android11-command-line).
+
+1. In your development machine's command line, run [`adb devices -l`](https://developer.android.com/tools/adb#devicestatus) and check if your device is present in the list.
+1. Forward the CDP socket on the device to your machine's local port, for example, `9222`. To do this, run:
+
+   ```bash
+   adb forward tcp:9222 localabstract:chrome_devtools_remote
+   ```
+   
+1. Once successfully connected, see that:
+
+    - `http://localhost:9222/json` lists your `page` targets.
+    - `http://localhost:9222/json/version` exposes the `browser` target endpoint, as the [CDP documentation](https://chromedevtools.github.io/devtools-protocol/) indicates.
+    - `chrome://inspect/#devices` is populated, even without the _Discover USB devices_ setting checked.
+
+For troubleshooting, see:
+
+- [`adb` documentation](https://developer.android.com/tools/adb)
+- Optionally, you can read older guides:
+
+  - [remote-debugging-legacy](https://web.archive.org/web/20140909210640/https://developer.chrome.com/devtools/docs/remote-debugging-legacy)
+  - [remote-debugging](https://web.archive.org/web/20140913083903/https://developer.chrome.com/devtools/docs/remote-debugging)
+  - [girish.in/…how](https://www.girish.in/how-remote-debugging-works-in-chrome/)
 
 [1]: #troubleshooting
 [2]: https://developer.android.com/studio/debug/dev-options.html

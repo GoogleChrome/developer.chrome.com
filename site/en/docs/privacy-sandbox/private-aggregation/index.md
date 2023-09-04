@@ -24,7 +24,7 @@ privacy-preserving manner.
 ## What is the Private Aggregation API
 
 The Private Aggregation API allows developers to generate aggregate data reports
-with data from the [Protected Audience API](/docs/privacy-sandbox/fledge/) and
+with data from the [Protected Audience API](/docs/privacy-sandbox/protected-audience/) and
 cross-site data from [Shared Storage](/docs/privacy-sandbox/shared-storage/). 
 
 This API currently provides one operation, `sendHistogramReport()`, but more may be
@@ -78,7 +78,7 @@ A demo of Private Aggregation API for the Protected Audience API will be publish
 
 ## Use cases
 
-Private Aggregation is a general purpose API for cross-site measurement, and it’s available to be used in [Shared Storage](/docs/privacy-sandbox/shared-storage/) and [Protected Audience API](/docs/privacy-sandbox/fledge/) worklets. The first step is to decide specifically what information you want to collect. Those data points are the basis of your aggregation keys.
+Private Aggregation is a general purpose API for cross-site measurement, and it’s available to be used in [Shared Storage](/docs/privacy-sandbox/shared-storage/) and [Protected Audience API](/docs/privacy-sandbox/protected-audience/) worklets. The first step is to decide specifically what information you want to collect. Those data points are the basis of your aggregation keys.
 
 ### With Shared storage
 
