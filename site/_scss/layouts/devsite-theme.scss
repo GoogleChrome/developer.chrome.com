@@ -157,8 +157,6 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
         margin-bottom: 1.5rem;
       }
 
-
-
       &[description-position=left],
       &[description-position=right] {
         align-items: center;
@@ -538,7 +536,6 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       }
     }
 
-
     @media (max-width: 840px) {
       --devsite-h2-font: #{$TEXT_WEIGHT} 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-landing-row-group-grid-column: 1 / span 3;
@@ -555,8 +552,6 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       }
     }
   }
-
-  
 
   .dcc-docs {
     --devsite-landing-group-padding: 4.6875rem 1.5rem 0;
