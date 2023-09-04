@@ -19,7 +19,9 @@ tags:
   - chrome-117
 ---
 
-The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) starting from Chrome 117 (where it is available behind a flag to allow sites to test this change). The deprecation will occur by gradually changing the default so that `unload` handlers stop firing on pages unless a page explicitly opts in to re-enable them. The exact timeframe of when this will start to be enabled without a flag is still to be confirmed and this post and [the Chrome Status for this feature](https://chromestatus.com/feature/5579556305502208) will be updated when this happens.
+The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) starting from Chrome 117 (where it is available behind a flag to allow sites to test this change). The deprecation will occur by gradually changing the default so that `unload` handlers stop firing on pages unless a page explicitly opts in to re-enable them.
+
+The exact timeframe of when this will start to be enabled without a flag is still to be confirmed. This post and [the Chrome Status for this feature](https://chromestatus.com/feature/5579556305502208) will both be updated when this happens.
 
 ## Background
 
