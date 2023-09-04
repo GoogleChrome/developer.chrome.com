@@ -1,0 +1,15 @@
+getInspired:
+  text: i18n.nav.side_nav.getInspired
+  url: /
+
+docs:
+  text: i18n.nav.side_nav.docs
+  url: /docs/
+
+blog:
+  text: i18n.nav.side_nav.blog
+  url: /blog/
+
+articles:
+  text: i18n.nav.side_nav.articles
+  url: /articles/
