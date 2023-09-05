@@ -130,6 +130,18 @@
     </div>
     {% include 'partials/cookie-banner.njk' %}
 
-    {% block scripts %}{% endblock %}
+    {% block scripts %}
+    
+    <script>
+        const button = document.querySelector('.dcc-hero .button');
+        const pillars = document.querySelector('.dcc-pillars');
+        
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            pillars.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+    
+    {% endblock %}
   </body>
 </html>
