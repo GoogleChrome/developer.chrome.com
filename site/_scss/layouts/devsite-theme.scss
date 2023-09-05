@@ -264,10 +264,6 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
 
     margin-bottom: 2rem;
     padding: 2.8rem 2.5rem;
-    
-    @media (max-width: 840px) {
-      margin-bottom: 0;
-    }
 
     h3 {
       max-width: 90%;
@@ -289,9 +285,14 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       max-width: 12.5rem;
     }
 
+    @media (max-width: 1440px) and (min-width: 1280px) {
+      --devsite-h2-font: 500 1.875rem #{$TEXT_PRIMARY_FONT_FAMILY};
+    }
+
     @media (max-width: 840px) {
       --devsite-button-font: 1.125rem #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-h2-font: 500 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
+      margin-bottom: 0;
     }
   }
 
