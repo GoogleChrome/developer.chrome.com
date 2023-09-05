@@ -4,6 +4,7 @@ title: Improve extension security
 subhead: 'Improving security in Manifest V3'
 description: 'The last of three sections describing changes needed for code that is not part of the extension service worker.'
 date: 2023-03-08
+updated: 2023-09-05
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
@@ -38,12 +39,16 @@ Externalized logic with a remote service
 Bundle third-party libraries
 : Your extension includes minified files. Popular frameworks such as [React](https://reactjs.org/docs/cdn-links.html) and [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) have minified versions available for download. Include them in your bundle and reference them as you would any other script. For example:
 
-```html
-<script src="./react-dom.production.min.js"></script>
-<link href="./bootstrap.min.css" rel="stylesheet">
-```
+  ```html
+  <script src="./react-dom.production.min.js"></script>
+  <link href="./bootstrap.min.css" rel="stylesheet">
+  ```
 
-To include a library in a service worker set the `"background.type"` to `"module"` in the manifest and use an `import` statement.
+  To include a library in a service worker set the `"background.type"` to `"module"` in the manifest and use an `import` statement.
+
+  {% Aside 'caution' %}
+  Whatever library you chose, verify that it does not use remotely-hosted code.
+  {% endAside %}
 
 ### Use external libraries in tab-injected scripts {: #use-external-libraries }
 
