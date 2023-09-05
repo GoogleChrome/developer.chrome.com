@@ -32,7 +32,7 @@ Extensions use match patterns for a variety of purposes, including declaring [ho
 `"<all_urls>"`
 : Matches any URL that starts with a permitted scheme, including any pattern listed under [valid patterns](#valid-examples). Because it affects all hosts, Chrome web store reviews for extensions that use it [may take longer](/docs/webstore/review-process/#review-time-factors).
 
-`file:///`
+`"file:///"`
 : Allows your extension to run on local files. This pattern requires the user to manually [grant access][permissions-allow-access].
 
 Localhost URLs and IP addresses
