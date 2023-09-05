@@ -14,7 +14,7 @@ a separate process and communicates with it using standard input and standard ou
 
 ## Native messaging host {: #native-messaging-host }
 
-In order to register a native messaging host, the application must save a file that
+To register a native messaging host, the application must save a file that
 defines the native messaging host configuration.
 
 An example of the file is as follows:
