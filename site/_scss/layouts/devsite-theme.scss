@@ -110,6 +110,10 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
 
   a:not([class]){
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .material-icons {
