@@ -1,6 +1,6 @@
 getInspired:
   text: i18n.nav.side_nav.getInspired
-  url: /
+  url: /tags/case-study/
 
 docs:
   text: i18n.nav.side_nav.docs
