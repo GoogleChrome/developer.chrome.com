@@ -12,7 +12,7 @@ authors:
 ---
 
 {% Aside %}
-This article previously referred to Private State Tokens as "Trust Tokens". The
+This article previously referred to Private State Tokens as "Trust Tokens." The
 Trust Token API has been renamed to the Private State Token API to better
 showcase its privacy and utility benefits.
 
@@ -23,6 +23,10 @@ for more information.
 ## Implementation status
 
 {% Partial 'privacy-sandbox/timeline/private-state-tokens.njk' %}
+
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/private-state.njk' %}
+{% endAside %}
 
 ## What are Private State Tokens?
 

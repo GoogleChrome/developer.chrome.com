@@ -1,6 +1,6 @@
 {% Details %}
 {% DetailsSummary %}
-**Topics API**
+**Topics API demo and colab**
 {% endDetailsSummary %}
 
 **Demo**

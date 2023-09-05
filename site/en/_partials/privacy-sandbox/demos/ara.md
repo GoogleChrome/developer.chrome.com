@@ -1,6 +1,6 @@
 {% Details %}
 {% DetailsSummary %}
-**Attribution Reporting**
+**Attribution Reporting Demo**
 {% endDetailsSummary %}
 
 **Demo**

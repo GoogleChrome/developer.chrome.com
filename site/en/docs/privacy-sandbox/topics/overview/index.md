@@ -15,6 +15,10 @@ authors:
 
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/topics.njk' %}
+{% endAside %}
+
 ## What is the Topics API?
 
 The Topics API is a [Privacy Sandbox](/docs/privacy-sandbox/overview/) mechanism designed to preserve privacy while allowing a browser to share information with third parties about a user's interests. It enables interest-based advertising (IBA) without having to resort to tracking the sites a user visits.

@@ -1,6 +1,6 @@
 {% Details %}
 {% DetailsSummary %}
-**CHIPS**
+**CHIPS demo**
 {% endDetailsSummary %}
 {% Columns %}
 {% Column %}

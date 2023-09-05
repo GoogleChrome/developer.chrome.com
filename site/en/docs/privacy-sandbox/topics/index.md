@@ -28,6 +28,10 @@ The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.gli
 
 You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/topics.njk' %}
+{% endAside %}
+
 ### Test Topics in an origin trial {: #origin-trial}
 
 A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [Protected Audience](/docs/privacy-sandbox/protected-audience/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.

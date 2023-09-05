@@ -12,6 +12,10 @@ authors:
   - mihajlija
 ---
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/fps.njk' %}
+{% endAside %}
+
 Many organizations have related sites with different domain names, such as `brandx.com` and `fly-brandx.com`—or domains for different countries such as `example.com`, `example.rs`, `example.co.uk` and so on.
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png", alt="Diagram showing brandx.com, fly-brandx.com and drive-brandx.com as one group and example.com, example.rs, example.co.uk as another group.", width="800", height="348" %}

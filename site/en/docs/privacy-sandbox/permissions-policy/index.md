@@ -10,6 +10,10 @@ authors:
   - kevinkiklee
 ---
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/permissions-policy.njk' %}
+{% endAside %}
+
 Permissions Policy, formerly known as Feature Policy, allows the developer to
 control the browser features available to a page, its iframes, and
 subresources, by declaring a set of policies for the browser to enforce. These

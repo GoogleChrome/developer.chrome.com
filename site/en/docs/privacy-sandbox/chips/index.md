@@ -23,6 +23,10 @@ tags:
 
 {% Partial 'privacy-sandbox/timeline/chips.njk' %}
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/chips.njk' %}
+{% endAside %}
+
 ## What is CHIPS
 
 Cookies Having Independent Partitioned State (CHIPS) allows developers to opt a cookie into partitioned storage, with separate cookie jars per top-level site, improving user privacy and security.

@@ -15,6 +15,10 @@ authors:
 ## Implementation status
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/topics.njk' %}
+{% endAside %}
+
 ## What is a topic?
 A topic, in the Topics API, is a subject a user is interested in as evidenced by the websites they visit.
 

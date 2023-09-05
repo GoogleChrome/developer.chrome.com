@@ -16,6 +16,11 @@ authors:
 
 {% YouTube id='UGA74CIcom8' %}
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/ara.njk' %}
+{% endAside %}
+
+
 ## Who is this for?
 
 This article covers the basics of Attribution Reporting and explains some

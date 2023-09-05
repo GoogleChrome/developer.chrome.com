@@ -18,6 +18,10 @@ approach to federated identity services (such as "Sign in with...")  where
 users can log into sites without sharing their personal information with the
 identity service or the site.
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/fedcm.njk' %}
+{% endAside %}
+
 ## Implementation status
 
 {% Partial 'privacy-sandbox/timeline/fedcm.njk' %}

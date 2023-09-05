@@ -30,6 +30,10 @@ available before attempting to use it.
 
 {% endAside %}
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/topics.njk' %}
+{% endAside %}
+
 1. Check the Privacy Sandbox [status page](/docs/privacy-sandbox/status/#topics) for updates on the
 implementation status of the Topics API.
 2. Experiment with the API:
@@ -57,7 +61,6 @@ For bugs and issues with the implementation of the Topics API in Chrome:
 *  [View existing issues](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestCohort)
    reported for the API.
 *  Raise a new issue at [crbug.com/new](https://crbug.com/new).
-
 
 ## Join the discussion
 

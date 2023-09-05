@@ -21,6 +21,10 @@ authors:
   id='HkvmYKqnytw'
 %}
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/paapi.njk' %}
+{% endAside %}
+
 ## Who is this article for?
 
 This article covers the basics of the Protected Audience API and explains some underlying

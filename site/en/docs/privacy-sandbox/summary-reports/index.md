@@ -17,6 +17,11 @@ authors:
 *  Participate and experiment with [Attribution Reporting summary reports](/docs/privacy-sandbox/attribution-reporting-experiment/).
    *  This API is available in the [ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
 
+   
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/ara.njk' %}
+{% endAside %}
+
 ## What is a summary report?
 
 A _summary report_ is compiled for a group of users so that it cannot be tied

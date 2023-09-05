@@ -1,6 +1,6 @@
 {% Details %}
 {% DetailsSummary %}
-**FedCM**
+**FedCM demo**
 {% endDetailsSummary %}
 {% Columns %}
 {% Column %}

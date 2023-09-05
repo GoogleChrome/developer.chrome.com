@@ -20,6 +20,10 @@ This document outlines a proposal for unpartitioned, cross-site storage: the Sha
 
 {% Partial 'privacy-sandbox/timeline/shared-storage-features.njk' %}
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/shared-storage.njk' %}
+{% endAside %}
+
 ## Why do we need this API?
 
 To prevent cross-site user tracking, browsers are

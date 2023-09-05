@@ -1,6 +1,6 @@
 {% Details %}
 {% DetailsSummary %}
-**Permissions Policy**
+**Permissions Policy demo**
 {% endDetailsSummary %}
 {% Columns %}
 {% Column %}

@@ -15,6 +15,10 @@ authors:
 
 {% Partial 'privacy-sandbox/timeline/ua-ch.njk' %}
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/ua-reduction.njk' %}
+{% endAside %}
+
 ## What is User-Agent reduction?
 
 User-Agent (UA) reduction minimizes the identifying information

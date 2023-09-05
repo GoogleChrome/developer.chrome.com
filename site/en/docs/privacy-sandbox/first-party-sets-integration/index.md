@@ -13,12 +13,15 @@ authors:
   - sarino
 ---
 
+{% Aside %}
+{% Partial 'privacy-sandbox/demos/fps.njk' %}
+{% endAside %}
 
 [First-Party Sets (FPS)](docs/privacy-sandbox/first-party-sets/) is a web platform mechanism which helps browsers to understand the relationships amongst a collection of domains. This allows browsers to make key decisions to enable certain site functions (such as whether to allow access to cross-site cookies) and to present this information to users.
 
 As Chrome deprecates third-party cookies, its goal is to maintain key use cases on the web while improving privacy for users. For example, many sites rely on multiple domains to serve a single user experience. Organizations may want to maintain different top-level domains for multiple use cases like country specific domains or service domains for hosting images or video. FPS allows sites to share data across domains, with specific controls.
 
-## What is a First-Party Set
+## What is a First-Party Set?
 
 At a high level, a First-Party Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members".
 
