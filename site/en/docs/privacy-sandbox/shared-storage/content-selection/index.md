@@ -43,7 +43,7 @@ When a user first observes a winning ad space, you can store an ID and click sta
   width="800", height="354" %}
 </figure>
 
-Your JavaScript runs in a worklet to retrieve this information, but your code
+Your JavaScript runs in a [worklet](/docs/privacy-sandbox/glossary/#worklet) to retrieve this information, but your code
 cannot interact with or communicate outside of the iframe or fenced frame on
 the parent page.
 
