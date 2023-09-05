@@ -41,7 +41,7 @@ The native messaging host manifest file must be valid JSON and contain the follo
 : Path to the native messaging host binary. On Linux and macOS the path must be absolute. On Windows it can be relative to the directory containing the manifest file. The host process is started with the current directory set to the directory that contains the host binary. For example if this parameter is set to `C:\Application\nm_host.exe` then it will be started with current directory `C:\Application\`.
 
 `type`
-: Type of the interface used to communicate with the native messaging host. Currently there is only one possible value for this parameter: `stdio`. It indicates that Chrome should use `stdin` and `stdout` to communicate with the host.
+: Type of the interface used to communicate with the native messaging host. This parameter has one possible value: `stdio`. It indicates that Chrome should use `stdin` and `stdout` to communicate with the host.
 
 `allowed_origins`
 : List of extensions that should have access to the native messaging host. `allowed-origins` values _can't_ contain wildcards.
