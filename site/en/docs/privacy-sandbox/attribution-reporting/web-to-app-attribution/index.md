@@ -19,7 +19,7 @@ If a user clicks an ad in a Chrome mobile browser, and then goes on to later mak
 
 Similarly, if a user clicks an ad in an Android app, and then goes on to later make a purchase in a Chrome mobile browser, the Attribution Reporting API can directly attribute that conversion. That's app-to-web attribution.
 
-Note that the API records web-to-app attributions when they occur on the same device.
+The API records web-to-app attributions when they occur on the same device.
 
 ## How is web-to-app attribution implemented?
 
