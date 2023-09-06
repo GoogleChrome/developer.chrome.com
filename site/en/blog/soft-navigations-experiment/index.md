@@ -74,7 +74,7 @@ Site owners can choose to include the origin trial on their pages for all, or fo
 
 ## How can I measure Core Web Vitals per soft navigation?
 
-To includes soft navigation Web Vitals you need to include `includeSoftNavigationObservations: true` in your performance observer's `observe` call:
+To include soft navigation metric entries, you need to include `includeSoftNavigationObservations: true` in your performance observer's `observe` call:
 
 ```js
 new PerformanceObserver((entryList) => {
@@ -84,9 +84,9 @@ new PerformanceObserver((entryList) => {
 }).observe({type: 'largest-contentful-paint', buffered: true, includeSoftNavigationObservations: true});
 ```
 
-This extra flag on the `observe` method is needed in addition to [enabling the soft navigation functionality in Chrome](#how-do-i-enable-soft-navigations-in-chrome). This explicit opt-in at the performance observer level is to [ensure existing performance observers aren't surprised by these extra entries](https://github.com/WICG/soft-navigations/issues/11) as some considerations need to be taken into account when attempting to measure Core Web Vitals for soft navigations.
+This extra flag on the `observe` method is needed in addition to [enabling the soft navigation functionality in Chrome](#how-do-i-enable-soft-navigations-in-chrome). This explicit opt-in at the performance observer level is to [ensure existing performance observers aren't surprised by these extra entries](https://github.com/WICG/soft-navigations/issues/11) as some additional considerations need to be taken into account when attempting to measure Core Web Vitals for soft navigations.
 
-Some metrics have traditionally been measured throughout the life of the page: LCP, for example, can change until an interaction occurs. CLS, FID and INP can be updated until the page is navigated away from. Therefore each "navigation" (including the original navigation) will need to finalize these metrics as each new soft navigation occurs.
+Some metrics have traditionally been measured throughout the life of the page: LCP, for example, can change until an interaction occurs. CLS, FID and INP can be updated until the page is navigated away from. Therefore each "navigation" (including the original navigation) will need to finalize these metrics as each new soft navigation occurs, meaning the initial "hard" navigation metrics may be finalised earlier that usual.
 
 Similarly, when starting to measure the metrics for the new soft navigation of these long-lived metrics, metrics will need to be "reset" or "reinitialized" and treated as new metrics, with no memory of the values that were set for previous "pages".
 
