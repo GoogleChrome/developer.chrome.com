@@ -47,7 +47,7 @@ Bundle third-party libraries
   To include a library in a service worker set the `"background.type"` to `"module"` in the manifest and use an `import` statement.
 
   {% Aside 'caution' %}
-  Whatever library you chose, verify that it does not use remotely-hosted code.
+  When choosing a library, verify that it does not use remotely-hosted code. This is [prohibited by policy](https://developer.chrome.com/docs/webstore/program-policies/mv3-requirements/).
   {% endAside %}
 
 ### Use external libraries in tab-injected scripts {: #use-external-libraries }
