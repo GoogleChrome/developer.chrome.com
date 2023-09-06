@@ -3,9 +3,9 @@
 <top-nav role="banner" class="display-block hairline-bottom" data-side-nav-inert>
   <a href="#main-content" class="color-primary visually-hidden skip-link">{{ 'i18n.common.skip_to_content' | i18n(locale) }}</a>
 
-  <nav class="display-grid align-center" aria-label="{{ 'i18n.common.chrome_developers' | i18n(locale) }}" role="search">
+  <nav class="align-center display-grid" aria-label="{{ 'i18n.common.chrome_developers' | i18n(locale) }}" role="search">
     {# Hamburger button #}
-    <button class="top-nav__hamburger button display-flex lg:display-none align-center justify-content-center width-700 height-700" aria-label="{{ 'i18n.common.menu' | i18n(locale) }}">
+    <button class="dcc-hamburger top-nav__hamburger button display-flex lg:display-none align-center justify-content-center width-700 height-700" aria-label="{{ 'i18n.common.menu' | i18n(locale) }}">
       {{ icon('hamburger', {hidden: true}) }}
     </button>
 
@@ -28,5 +28,12 @@
       blogLabel="{{ 'i18n.common.blog' | i18n(locale) }}"
       placeholder="{{'i18n.common.search_placeholder' | i18n(locale)}}"
     ></search-box>
+
+    <nav class='dcc-top-menu'>
+      <a href='/tags/case-study' class='no-visited'>{{ 'i18n.nav.side_nav.getInspired' | i18n(locale) }}</a>
+      <a href='/docs' class='no-visited'>{{ 'i18n.nav.side_nav.docs' | i18n(locale) }}</a>
+      <a href='/blog' class='no-visited'>{{ 'i18n.nav.side_nav.blog' | i18n(locale) }}</a>
+      <a href='/articles' class='no-visited'>{{ 'i18n.nav.side_nav.articles' | i18n(locale) }}</a>
+    </nav>
   </nav>
 </top-nav>

@@ -1,3 +1,5 @@
+$devsite-text-link: #3982f7;
+
 top-nav {
   padding: map-get($top-nav-padding, 'sm');
 
@@ -12,7 +14,17 @@ top-nav {
 
     @include media-query('lg') {
       gap: get-size(800);
-      grid-template-columns: 1fr 2fr 1fr;
+    }
+  }
+
+  > nav[role='search'] {
+    gap: 4.5rem;
+    grid-template-columns: 1fr 6fr 1fr;
+    position: relative;
+
+    @media (max-width: 991px) {
+      gap: 0;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
@@ -23,7 +35,6 @@ top-nav[data-search-active] {
   // so the search can take the full width of the top-nav.
   @include media-query('lg-max') {
     nav {
-      grid-template-columns: 1fr;
       padding: 0 get-size(400);
     }
   
@@ -31,6 +42,26 @@ top-nav[data-search-active] {
     .top-nav__logo {
       display: none;
     }
+  }
+
+  > nav[role='search'] {
+    gap: 4.5rem;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    @media (max-width: 1280px) {
+      grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .top-nav__hamburger,
+  .top-nav__logo,
+  .dcc-top-menu {
+    height: 0;
+    opacity: 0;
   }
 
   // Recreate the hairline that appears at the bottom of the top-nav.
@@ -59,5 +90,151 @@ top-nav[data-search-active] {
     left: 0;
     position: absolute;
     top: 0;
+  }
+
+  search-box[active] {
+    order: 0;
+
+    + .dcc-top-menu::before {
+      display: none;
+    }
+
+    .search-box__inner {
+      margin: 0;
+    }
+  }
+
+  .search-box__btn input[type='text'] {
+    padding-left: 1.5rem;
+  }
+
+  @media (max-width: 991px) {
+    search-box[active] .search-box__inner {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+search-box {
+  min-width: 20rem;
+  order: 1;
+
+  .search-box__btn {
+    color: get-color('grey-700');
+    display: inline-block;
+    margin-top: 0;
+    padding: 0;
+
+    &:hover {
+      border: 0;
+      color: get-color('grey-700');
+    }
+
+    &:focus,
+    &:active {
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 840px) {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    min-width: auto;
+  }
+
+  @media (max-width: 991px) {
+    &:not([active]) .search-box__btn {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-width: auto;
+  }
+}
+
+.dcc-hamburger.button {
+  border: 0;
+  color: get-color('grey-700');
+  display: none;
+  line-height: 1;
+  margin: 0 1.375rem 0 0;
+  padding: 0;
+  width: 2.325rem;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 0;
+    color: get-color('grey-700');
+  }
+
+  @media (max-width: 840px) {
+    display: block;
+  }
+}
+
+.dcc-top-menu {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  margin-top: 0.05rem;
+
+  a {
+    color: get-color('grey-700');
+    font-family: 'Google Sans', sans-serif;
+    font-size: 0.9375em;
+    letter-spacing: 0.25px;
+    line-height: 1.25rem;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $devsite-text-link;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  top-nav nav {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  top-nav {
+    padding: 0.125rem 0.75rem;
+
+    .dcc-hamburger.button {
+      display: block;
+      position: absolute;
+    }
+
+    .top-nav__logo {
+      margin-left: 3.5rem;
+
+      @media (max-width: 480px) {
+        margin-left: 3rem;
+      }
+    }
+
+    .dcc-top-menu {
+      display: none;
+    }
+  }
+
+  .scaffold {
+    display: block;
+  }
+}
+
+@media (max-width: 840px) {
+  top-nav nav {
+    gap: 0;
   }
 }

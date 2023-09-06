@@ -49,8 +49,6 @@ $LABEL_LETTER_SPACING: 0.1rem;
 $ROW_PADDING: 3.5rem 0;
 $ROW_PADDING_MOBILE: 0 1.875rem;
 
-@import '../globals/devsite-layout';
-
 [theme="web-theme"] {
   --devsite-background-4: #fff;
   --devsite-background-color: #{$BG_PRIMARY};
@@ -670,6 +668,10 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
 
   footer {
     margin-top: 0;
+  }
+
+  .dcc-devsite-wrapper {
+    width: 100%;
   }
 }
 /* stylelint-enable */

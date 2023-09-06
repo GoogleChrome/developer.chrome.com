@@ -27,7 +27,7 @@
   }
 
   > button {
-    margin-bottom: get-size(300);
+    margin: 0 1rem get-size(300) 0;
     min-width: 8rem;
   }
 }
