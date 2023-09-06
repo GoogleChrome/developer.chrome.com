@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to register sources to attribute clicks and views to the appropriate events.
 date: 2022-12-15
-updated: 2023-08-31
+updated: 2023-09-06
 authors:
   - maudn
 ---
