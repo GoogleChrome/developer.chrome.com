@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Understanding aggregation keys'
 subhead: >
-  What aggregation keys are, how they're used, and how you can translate goals into keys.
+  What aggregation keys are, how they're used in the Attribution Reporting API, and how you can translate goals into keys.
 description: >
-  What aggregation keys are, how they're used, and how you can translate goals into keys.
+  What aggregation keys are, how they're used in the Attribution Reporting API, and how you can translate goals into keys.
 date: 2022-12-15
 updated: 2023-08-25
 authors:
@@ -23,6 +23,10 @@ To do so, you'll need to think of what questions you want to answer before data 
 ## Dimensions, keys, and values
 
 To answer these questions, let's take a look at dimensions, keys, and values.
+
+{% Aside %}
+The aggregation keys discussed in this document are specific to the Attribuion Reporting API.
+{% endAside %}
 
 ### Dimensions
 
