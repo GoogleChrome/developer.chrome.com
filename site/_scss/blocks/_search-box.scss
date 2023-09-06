@@ -42,8 +42,10 @@ search-box[active] {
   align-items: center;
   color: get-color('grey-700');
   display: inline-block;
+  font-family: 'Google Sans', sans-serif;
   height: 100%;
   justify-content: center;
+  line-height: get-size(400);
   margin-top: 0;
   padding: 0;
   width: get-size(700);

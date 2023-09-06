@@ -197,6 +197,7 @@ search-box {
     &:active,
     &:focus {
       color: $devsite-text-link;
+      text-decoration: none;
     }
   }
 }
