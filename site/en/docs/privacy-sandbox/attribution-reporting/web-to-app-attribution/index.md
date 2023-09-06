@@ -5,7 +5,7 @@ subhead: >
   Learn how your Chrome web app can pass attributions to your Android app.  
 description: >
   Learn how your Chrome web app can pass attributions to your Android app.    
-date: 2023-08-06
+date: 2023-09-06
 authors:
   - maudn
   - nmichell
