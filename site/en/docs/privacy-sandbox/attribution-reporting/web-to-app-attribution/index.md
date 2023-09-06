@@ -8,6 +8,7 @@ description: >
 date: 2023-08-09
 authors:
   - maudn
+  - nmichell
 ---
 
 The Privacy Sandbox natively supports web-to-app and app-to-web attribution, and the Attribution Reporting API allows measurement across mobile browsers and Android apps.
