@@ -78,6 +78,7 @@
   sections:
     - url: /docs/extensions/mv3/user_privacy
     - url: /docs/extensions/mv3/permission_warnings
+    - url: /docs/extensions/mv3/onboarding
     - url: /docs/extensions/mv3/security
     - url: /docs/extensions/mv3/a11y
     - url: /docs/extensions/mv3/i18n-messages
