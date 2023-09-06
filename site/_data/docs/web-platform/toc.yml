@@ -9,6 +9,7 @@
 
 - title: i18n.docs.web-platform.shipped
   sections:
+    - url: /docs/web-platform/document-picture-in-picture
     - url: /docs/web-platform/conditional-focus
     - url: /docs/web-platform/screen-sharing-controls
     - url: /docs/web-platform/capture-handle
@@ -23,7 +24,6 @@
 
 - title: i18n.docs.web-platform.origin-trials
   sections:
-    - url: /docs/web-platform/document-picture-in-picture
     - url: /docs/web-platform/launch-handler
     - url: /docs/web-platform/popup-api
     - url: /docs/web-platform/bfcache-notrestoredreasons

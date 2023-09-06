@@ -92,7 +92,7 @@ navigated or is closed.
 
 While the `activeTab` permission is enabled for a tab, an extension can:
 
-- Call [`scripting.insertCSS`][insert-css-method] or [`scripting.executeScript`][execute-script-method] on that tab.
+- Call [`scripting.insertCSS`][insert-css-method] or [`scripting.executeScript`][execute-script-method] on that tab if the `"scripting"` [permission][permissions] is also declared (as in the [example above](#example)).
 - Get the URL, title, and favicon for that tab via an API that returns a [`tabs.Tab`][tabs-tab] object
   (essentially, `"activeTab"` grants [host permission][match-pattern] temporarily).
 - Intercept network requests in the tab to the tab's main frame origin using the [webRequest][api-webrequest]
@@ -116,4 +116,5 @@ The following user gestures enable `activeTab`:
 [gh-page-redder]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.page-redder
 [insert-css-method]: /docs/extensions/reference/scripting#method-insertCSS
 [match-pattern]: /docs/extensions/mv3/match_patterns/
+[permissions]: /docs/extensions/mv3/declare_permissions/#permissions
 [tabs-tab]: /docs/extensions/reference/tabs#type-Tab

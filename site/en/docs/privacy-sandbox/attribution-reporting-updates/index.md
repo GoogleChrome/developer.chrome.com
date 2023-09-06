@@ -31,8 +31,9 @@ If you're new to this API or have not experimented with it yet, read the
 
 ## Changelog
 
+* **August 9, 2023**: We have begun the [ramp up for the Ads Measurement and Relevance APIs, and testers can expect to see traffic levels increase over the next few days](https://groups.google.com/a/chromium.org/g/attribution-reporting-api-dev/c/w41-x4HmJO4/m/MndCUVf4AgAJ). 
 * **March 17, 2023**: We've updated the
-  [status for API features](/docs/privacy-sandbox/attribution-reporting#status)
+  [status for API features](/docs/privacy-sandbox/attribution-reporting#status).
 * **December 15, 2022**: We've published why we plan to
   [ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping)
   in the first half of 2023.

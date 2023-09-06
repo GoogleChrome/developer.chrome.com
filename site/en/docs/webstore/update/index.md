@@ -93,7 +93,7 @@ minimal impact.
 {% Aside %}
 
 This is only available for new versions of an **already-published** item with over **10,000 seven-day
-active users**
+active users. The section does not appear until a new draft has been uploaded.**
 
 {% endAside %}
 
