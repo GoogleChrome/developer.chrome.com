@@ -4,7 +4,7 @@ title: 'Introduction to debug reports'
 subhead: Part 1 of 3 on debugging Attribution Reporting. Learn why debugging matters and when to use debug reports in testing.
 description: Part 1 of 3 on debugging Attribution Reporting. Learn why debugging matters and when to use debug reports in testing.
 date: 2022-12-13
-updated: 2023-03-02
+updated: 2023-09-06
 authors:
   - maudn
   - alexandrawhite
