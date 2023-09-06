@@ -116,10 +116,12 @@ As soft navigations can only be seen after they have occurred, some metrics will
 The `navigationID` attribute of the appropriate `PerformanceEntry` can be used to tie the event back to the correct URL. This can be looked up with the [`PerformanceEntry` API](https://developer.mozilla.org/docs/Web/API/PerformanceEntry):
 
 ```js
-const navEntry =
-  performance.getEntriesByType('soft-navigation', 'navigation').filter(
+const softNavEntry =
+  performance.getEntriesByType('soft-navigation').filter(
     (entry) => entry.navigationId === navigationId
   )[0];
+const hardNavEntry = performance.getEntriesByType('navigation')[0];
+const navEntry = softNavEntry || hardNavEntry;
 const pageUrl = navEntry?.name;
 ```
 
@@ -130,10 +132,12 @@ This `pageUrl` should be used to report the metrics against the correct URL, rat
 The navigation start time can be obtained in a similar manner:
 
 ```js
-const navEntry =
-  performance.getEntriesByType('soft-navigation', 'navigation').filter(
+const softNavEntry =
+  performance.getEntriesByType('soft-navigation').filter(
     (entry) => entry.navigationId === navigationId
   )[0];
+const hardNavEntry = performance.getEntriesByType('navigation')[0];
+const navEntry = softNavEntry || hardNavEntry;
 const startTime = navEntry?.startTime;
 ```
 
