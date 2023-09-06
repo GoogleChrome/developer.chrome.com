@@ -107,7 +107,7 @@ side-nav .navigation-rail {
 
   &__link {
     color: var(--color-secondary-text);
-    // font-weight: #{$TEXT_WEIGHT};
+    font-weight: 500;
 
     &[data-state='active'] {
       color: $devsite-text-link;
