@@ -116,12 +116,11 @@ As soft navigations can only be seen after they have occurred, some metrics will
 The `navigationID` attribute of the appropriate `PerformanceEntry` can be used to tie the event back to the correct URL. This can be looked up with the [`PerformanceEntry` API](https://developer.mozilla.org/docs/Web/API/PerformanceEntry):
 
 ```js
-const softNavEntry =
-  performance.getEntriesByType('soft-navigation').filter(
+const navEntry =
+  performance.getEntriesByType('soft-navigation', 'navigation').filter(
     (entry) => entry.navigationId === navigationId
   )[0];
-const hardNavEntry = performance.getEntriesByType('navigation')[0];
-const pageUrl = softNavEntry ? softNavEntry.name : hardNavEntry.name;
+const pageUrl = navEntry?.name;
 ```
 
 This `pageUrl` should be used to report the metrics against the correct URL, rather than the current URL that they may have used in the past.
@@ -131,15 +130,16 @@ This `pageUrl` should be used to report the metrics against the correct URL, rat
 The navigation start time can be obtained in a similar manner:
 
 ```js
-const softNavEntry =
-  performance.getEntriesByType('soft-navigation').filter(
+const navEntry =
+  performance.getEntriesByType('soft-navigation', 'navigation').filter(
     (entry) => entry.navigationId === navigationId
   )[0];
-const hardNavEntry = performance.getEntriesByType('navigation')[0];
-const startTime = softNavEntry ? softNavEntry.startTime : hardNavEntry.startTime;
+const startTime = navEntry?.startTime;
 ```
 
-The `startTime` is the time of the initial interaction (for example, a button click) that initiated the soft navigation. Again, this is subject to change as noted above.
+The `startTime` is the time of the initial interaction (for example, a button click) that initiated the soft navigation.
+
+All performance timings, including those for soft navigations, are reported as a time from the initial "hard" page navigation time. Therefore, the soft navigation start time is needed to baseline the soft navigation loading metric times (for example LCP), relative to this soft navigation time instead.
 
 ### How should content that remains the same between navigations be treated?
 
