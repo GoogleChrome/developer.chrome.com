@@ -15,7 +15,7 @@ The Privacy Sandbox natively supports web-to-app and app-to-web attribution, and
 
 ## What is web-to-app attribution?
 
-If a user clicks an ad in a Chrome mobile browser, and then goes on to later make a purchase in an Android app, the Attribution Reporting API can directly attribute that conversion performed in the Android app to the ads shown in the Chrome mobile browser. That's web-to-app attribution.
+If a user clicks an ad in a Chrome mobile browser, then goes on to later make a purchase in an Android app, the Attribution Reporting API can directly attribute that conversion performed in the Android app to the ads shown in the Chrome mobile browser. That's web-to-app attribution.
 
 Similarly, if a user clicks an ad in an Android app, and then goes on to later make a purchase in a Chrome mobile browser, the Attribution Reporting API can directly attribute that conversion. That's app-to-web attribution.
 
