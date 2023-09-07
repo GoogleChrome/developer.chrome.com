@@ -22,12 +22,12 @@
   margin-top: get-size(300);
 
   @include media-query('md') {
-    margin-left: get-size(400);
+    margin-left: get-size(300);
     margin-top: 0;
   }
 
   > button {
-    margin: 0 1rem get-size(300) 0;
+    margin: get-size(100) 1rem get-size(100) 0;
     min-width: 8rem;
   }
 }

@@ -7,14 +7,15 @@ announcement-banner[hidden] {
 }
 
 announcement-banner {
-  [data-banner-close-btn] {
+  &:not(.cookie-banner) [data-banner-close-btn] {
+    margin: -0.5rem 1rem -0.5rem 0;
     opacity: 0;
+    padding: 0 0.5rem;
     pointer-events: none;
   }
 
   &[active] {
     [data-banner-close-btn] {
-      margin: 0 1rem 0 0;
       opacity: 1;
       pointer-events: auto;
     }
