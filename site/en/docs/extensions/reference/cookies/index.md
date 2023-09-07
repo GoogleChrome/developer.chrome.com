@@ -32,8 +32,8 @@ and site C, a partitioned cookie can have a different value in each.
 read and write cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in
 the default partition.
 
-For more details on the general impact of partitioning for extensions, see the
-[Storage and Cookies][cookie-partitioning] page.
+For details on the general impact of partitioning for extensions, see
+[Storage and Cookies][cookie-partitioning].
 
 ## Examples
 

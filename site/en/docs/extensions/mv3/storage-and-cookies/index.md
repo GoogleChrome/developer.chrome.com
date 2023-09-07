@@ -38,8 +38,8 @@ and not the extension.
 
 ### Access in service workers {: #storage-in-service-workers }
 
-Some web storage APIs like [IndexedDB][indexeddb] are accessible in service workers. However,
-[Local Storage][local-storage] and [Session Storage][session-storage] are not.
+The [IndexedDB][indexeddb] and [Cache Storage][cache-storage] APIs are accessible in service
+workers. However, [Local Storage][local-storage] and [Session Storage][session-storage] are not.
 
 If you have a specific use case, use an [offscreen document][offscreen] to access these.
 
@@ -52,7 +52,7 @@ keys are defined to prevent certain types of cross-site tracking. In practice, t
 site A embeds an iframe containing site B, site B will not be able to access the same storage it
 would usually have when navigated to directly.
 
-To mitigate the impact of this in extensions, two key exemptions apply:
+To mitigate the impact of this in extensions, two exemptions apply:
 
 - If a page with the `chrome-extension://` scheme is embedded in any site, storage partitioning will
 not apply, and the extension will have access to its top-level partition.
@@ -114,3 +114,4 @@ more information, see the [API reference][chrome-cookies-partitioning].
 [chrome-cookies]: /docs/extensions/reference/cookies
 [chrome-cookies-partitioning]: /docs/extensions/reference/cookies#partitioning
 [storage-persist]: https://developer.mozilla.org/docs/Web/API/StorageManager/persist
+[cache-storage]: https://developer.mozilla.org/docs/Web/API/CacheStorage
