@@ -72,7 +72,7 @@ For `PAGE_TO_OVERRIDE`, substitute one of the following:
 ## Best practices {: #tips }
 
 * **Make your page quick and small.** <br/>Users expect built-in browser pages to open instantly. Avoid doing things that might take a long
-time, like synchronous fetches of network or database resources.
+time. Specifically, avoid accessing database resources synchronously. When making network resources, prefer [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) over `XMLHttpRequest()`.
 
 * **To avoid user confusion, give your page a title.** <br/> Without a title, the page title defaults to the URL. Specify the title using the `<title>` tag in your HTML file.
 
