@@ -111,9 +111,8 @@ Developers should inform admins to update their [ExtensionInstallForcelist polic
 
 If you have any technical questions here are some resources you can use to get support:
 
-- For Chrome App to web application questions use [this Stack Overflow template][37].
-- For Chrome App to Chrome Extension help use [this Stack Overflow template][38].
-- For missing web app capabilities, request a new capability under [Capabilities, aka. Project Fugu][39].
+- For questions related to migrating from Chrome Apps to Web Applications or Chrome Extensions join the [ChromeOS developer community on Discord][37].
+- For missing web app capabilities, request a new capability under [Capabilities, aka. Project Fugu][38].
 
 [1]: https://blog.chromium.org/2021/10/extending-chrome-app-support-on-chrome.html
 [2]: https://developer.chrome.com/blog/capabilities/
@@ -151,6 +150,5 @@ If you have any technical questions here are some resources you can use to get s
 [34]: https://support.google.com/chrome/a/answer/6306504
 [35]: https://chromeenterprise.google/policies/#ExtensionInstallForcelist
 [36]: https://chromeenterprise.google/policies/#WebAppInstallForceList
-[37]: https://stackoverflow.com/users/login?ssrc=anon_ask&returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2fask%3ftags%3dprogressive-web-apps%2cgoogle-chrome-app
-[38]: https://stackoverflow.com/users/login?ssrc=anon_ask&returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2fask%3ftags%3dgoogle-chrome-extension%2cgoogle-chrome-app
-[39]: https://developer.chrome.com/capabilities/
+[37]: https://chromeos.dev/en/posts/join-us-in-the-chromeos-developer-community-on-discord
+[38]: https://developer.chrome.com/capabilities/
