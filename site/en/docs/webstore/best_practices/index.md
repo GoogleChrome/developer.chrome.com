@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: Best Practices
 seoTitle: Best Practices for Chrome extensions
 date: 2017-08-30
-updated: 2023-08-07
+updated: 2023-08-24
 description: >
   How to create a high-quality extension and Chrome Web store listing.
 ---
@@ -26,7 +26,7 @@ Your extension should be safe for your users. For example, send user data secure
 
 ## Privacy
 
-An Extension is required to disclose in the [Privacy tab][privacy-tab] what user data it will collect and how it will handle user data. This information must be accurate, up-to-date, and match the extension's [privacy policy][privacy-policy]. For more guidance on privacy, see [Protecting User Privacy policies][user-privacy] and the [User Data FAQs][user-data]. 
+An extension is required to disclose in the [Privacy tab][privacy-tab] what user data it will collect and how it will handle user data. This information must be accurate, up-to-date, and match the extension's [privacy policy][privacy-policy]. For more guidance on privacy, see [Protecting User Privacy policies][user-privacy] and the [User Data FAQs][user-data].
 
 ## Performance and functionality {: #performance}
 
@@ -71,35 +71,84 @@ The developer console lets you specify a category for each extension. Choose the
 Accessibility
 : Extensions designed to enhance the browsing experience for individuals with visual impairments, hearing loss, limited dexterity, and other disabilities. This may include tools like screen readers, dark mode extensions, or utilities that help with navigation, using keyboard shortcuts, voice commands, among others.
 
-Blogging
-: Tools to assist bloggers with a variety of tasks, such as composing, editing, and publishing posts. They can also provide easy integration with popular blogging platforms.
+Art & Design
+: These extensions provide tools for viewing, editing, organizing, and sharing images and photos. They may also offer features for capturing screenshots, image searching, and integrating with popular image hosting or editing services.
+
+Communication
+: Extensions that enable communications. This category covers a wide variety of things: composing and templating emails, email management, screen sharing, video conferencing apps and enhancements, and much more.
 
 Developer Tools
 : Extensions that help web developers perform tasks like debugging, performance analysis, code linting, and tools that enhance the browser's Dev Tools. For example, real-time HTML/CSS/JavaScript editing, API testing, and CSS inspection.
 
-Fun
+Education
+: Extensions that teach or aid in teaching, including language learning, note-taking, teaching aids, and sign-language instruction, among others.
+
+Entertainment
+: These extensions are designed for fans of sports, music, television, and cinema.
+
+Functionality & UI
+: Extensions that enhance the Chrome user interface, such as tab managers, shortcut managers, and app launchers.
+
+Games
+: Extensions providing a wide array of desktop and arcade-style games.
+
+Household
+: Extensions for helping you around the house. This category includes recipe savers and managers, budgeting, product research, and more.
+
+Just for Fun
 : These extensions are designed for entertainment. They can include games, interesting new tab backgrounds, quirky widgets, jokes, trivia, and more.
 
 News & Weather
 : These extensions keep users informed about current events and weather conditions. They can collect news from multiple sources, present real-time weather updates, notify breaking news, and more.
 
-Photos
-: These extensions provide tools for viewing, editing, organizing, and sharing photos. They may also offer features for capturing screenshots, image searching, and integrating with popular image hosting or editing services.
-
-Productivity
-: This is the most popular category. It provides tools to help users perform their tasks more efficiently. They could range from time trackers, tools to stay focused, to-do list managers, email organizers, document editors, and calendar utilities, among others.
-
-Search Tools
-: These extensions enhance the browser's search capabilities. For example, custom search engines, quick search shortcuts, automatic highlighters, etc.
+Privacy & Security
+: Extensions such as VPNs, password safes, and phishing deterrence.
 
 Shopping
 : These extensions aim to enhance the online shopping experience. They might offer features like price comparison, coupon finders, reviews and ratings, wish list management, and more.
 
-Social & Communication
+Social Media & Networking
 : These extensions are designed to enhance social media platforms. They can integrate with services and offer features like easy sharing, notifications, status updates, and more.
 
-Sports
-: These extensions are designed for sports fans. They can provide live score updates, sports news, game reminders, manage sports fantasy leagues, and integrate with various sports platforms.
+Tools
+: Tools that don't fit into other categories
+
+Travel
+: Extensions for planning trips.
+
+Well-being
+: Extensions for self-help, mindfulness, and personal development.
+
+Workflow & Planning
+: Extensions to help users perform their tasks more efficiently. They could range from time trackers, tools to stay focused, to-do list managers, email organizers, document editors, and calendar utilities, among others.
+
+### Category revisions {: #category-revisions }
+
+In mid 2023 the categories changed. Most of the new categories match previous ones. Several were
+replaced by multiple categories. If you previously used one of the replaced categories, use the
+table below to decide which new category best suits your extension.
+
+Fun
+: * Entertainment
+  * Games
+  * Just for Fun
+
+Photos
+: * Art & Design
+
+Productivity
+: * Education
+  * Functionality & UI
+  * Household
+  * Privacy & Security
+  * Tools
+  * Workflow & Planning
+
+Social & Communications
+: * Communication
+  * Social Media & Networking
+  * Travel
+  * Well-being
 
 [api-sidepanel]: /docs/extensions/reference/sidePanel/
 [completing-listing]: /docs/webstore/cws-dashboard-listing/

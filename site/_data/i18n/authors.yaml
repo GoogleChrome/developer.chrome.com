@@ -1526,4 +1526,49 @@ paulrossman:
     en: 'Paul Rossman'
   description:
     en: 'Paul is a Technical Program Manager at Google'
-  
+nrosenthal:
+  title:
+    en: 'Noam Rosenthal'
+  description:
+    en: 'Software engineer at Google working on web performance.'
+samrichard:
+  title:
+    en: 'Sam Richard'
+  description:
+    en: 'Developer Advocate, Google ChromeOS'
+xuezhoudai:
+  title:
+    en: 'Xuezhou Dai'
+    zh: '戴学舟'
+  description:
+    en: 'Summer of Code ''23 Contributor'
+hadrijau:
+  title:
+    en: 'Hadrien Jaubert'
+  description:
+    en: 'Software Engineering Intern, Google Chrome DevTools'
+jlwagner:
+  title:
+    en: 'Jeremy Wagner'
+  description:
+    en: 'Tech writin'', doc slingin'' reprobate.'
+adamraine:
+  title:
+    en: 'Adam Raine'
+  description:
+    en: 'Software Engineer, Google'
+schottfk:
+  title:
+    en: 'Fred K Schott'
+  description:
+    en: 'Co-creator, Astro'
+phillipsm:
+  title:
+    en: 'Matthew Phillips'
+  description:
+    en: 'Co-creator, Astro'
+ferreiram:
+  title:
+    en: 'Maxi Ferreira'
+  description:
+    en: 'Creator, FrontendAtScale'

@@ -93,7 +93,7 @@ You can alternatively use `-1.0` for any of the HSL values to specify _no change
 [1]: /docs/extensions/mv3/linux_hosting/#packaging
 [2]: https://chrome.google.com/webstore/category/themes
 [3]: /docs/extensions/mv3/manifest/
-[4]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kOverwritableColorTable
+[4]: https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/themes/browser_theme_pack.cc;l=222
 [5]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kPersistingImages$
 [6]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kDisplayProperties$
 [7]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kTintTable$

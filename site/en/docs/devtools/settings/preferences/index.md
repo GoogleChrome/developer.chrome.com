@@ -158,6 +158,8 @@ This section lists options that customize the **Sources** panel.
 This video shows how to search for text in an extension source file.
 {% endDetails %}
 
+{: #reveal-files }
+
 {% Details %}
 
 {% DetailsSummary %}
@@ -234,6 +236,8 @@ This video first doesn't show any suggestions. Then when you enable this option,
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Pb1iDVxwwgudmhHAjRLq.png", alt="A curly bracket without a pair underlined with red.", width="800", height="480" %}
 {% endDetails %}
+
+{: #code-folding }
 
 {% Details %}
 

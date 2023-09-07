@@ -438,8 +438,6 @@ var backgroundPageConnection = chrome.runtime.connect({
 });
 ```
 
-<!-- TODO this section's ID was previously #examples which is a duplicate of another section -->
-
 ## DevTools extension examples
 
 Browse the source of these DevTools extension examples:
@@ -484,7 +482,7 @@ You can find examples that use DevTools APIs in [Samples][doc-samples].
 [api-scripting-executescript]: /docs/extensions/reference/scripting#method-executeScript
 [api-scripting-sendmessage]: /docs/extensions/reference/scripting#method-sendMessage
 [doc-message-passing]: /docs/extensions/mv3/messaging
-[doc-samples]: /docs/extensions/mv3/samples#devtools
+[doc-samples]: /docs/extensions/samples/
 [doc-utilities]: /docs/devtools/console/utilities/
 [gh-coquette]: https://github.com/thomasboyt/coquette-inspect
 [gh-devtools-messaging]: https://github.com/GoogleChrome/devtools-docs/issues/143

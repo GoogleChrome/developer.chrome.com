@@ -9,7 +9,7 @@ authors:
   - demianrenzulli
   - tunetheweb
 date: 2023-08-10
-#updated: 2023-08-10
+updated: 2023-09-04
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Mxh3dDENwFYXpkwD1z9X.jpg
 alt: Shipping container being unloaded by a large crane
 tags:
@@ -19,7 +19,9 @@ tags:
   - chrome-117
 ---
 
-The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) starting from Chrome 117. The deprecation will occur by gradually changing the default so that `unload` handlers stop firing on pages unless a page explicitly opts in to re-enable them.
+The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) by gradually changing the default so that `unload` handlers stop firing on pages unless a page explicitly opts in to re-enable them. The developer trial of the deprecation is available from Chrome 117 with the `chrome://flags/#deprecate-unload` flag. Enabling this flag make the default to deny access to unload handlers for all pages.
+
+The exact timeframe of when this will start to be enabled without a flag is still to be confirmed. This post and [the Chrome Status entry for this feature](https://chromestatus.com/feature/5579556305502208) will both be updated when this happens.
 
 ## Background
 
@@ -31,18 +33,32 @@ Scenarios where this event was most commonly used include:
 - **Performing cleanup tasks**: Closing open resources before abandoning the page.
 - **Sending analytics**: Sending data related to user interactions at the end of the session.
 
-However the `unload` event [is extremely unreliable](/blog/page-lifecycle-api/#the-unload-event). In most browsers the code often won't run and it has a negative impact on a site's performance, by preventing the usage of [bfcache (back/forward cache)](https://web.dev/bfcache/#never-use-the-unload-event).
+However the `unload` event [is extremely unreliable](/articles/page-lifecycle-api/#the-unload-event).
 
-This is a historical legacy and the `unload` handler [should not prevent use of the bfcache according to specification](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#unload-as-specced). Chrome aims to move to conform more to specification (as Safari already does), and with the aim of being able to fully deprecate the legacy `unload` handler at some point in the future.
+On desktop Chrome and Firefox, `unload` is reasonably reliable but it has a negative impact on a site's performance by preventing the usage of [bfcache (back/forward cache)](https://web.dev/bfcache/#never-use-the-unload-event).
+
+On mobile browsers `unload` often doesn't run as tabs are frequently backgrounded and then killed. For this reason browsers choose to prioritize the bfcache on mobile over `unload`, making them even more unreliable. Safari also uses this behaviour on desktop.
+
+The Chrome team believe using the mobile model of prioritizing bfcache over `unload` on desktop [would be disruptive](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#unload-as-specced-is-a-footgun) by making it more unreliable there too, when previously this has been reasonably reliable in Chrome (and Firefox). Instead, Chrome's aim is to remove the `unload` event completely. Until then it will remain reliable on desktop for those who have explicitly opted-out of the deprecation.
+
+## Why deprecate the `unload` event?
+
+Deprecating `unload` is a key step in a much bigger recognition of the web we live in now. The `unload` event gives a false sense of control of the app lifecycle that is increasingly untrue of how we browse the web in the modern computing world.
+
+Mobile operating systems frequently freeze or unload web pages to conserve memory and desktop browsers are doing this more and more now too for the same reasons. Even without operating system interventions, users themselves frequently tab switch and kill old tabs without formally "leaving pages".
+
+Removing the `unload` event as obselete is a recognition that we as web developers need to ensure our paradigm matches that of the real world and not depend on outdated concepts that no longer hold true—if they ever did.
 
 ## Alternatives to `unload` events
 
 Instead of `unload` it is recommended to use:
 
-- [`visibilitychange`](/blog/page-lifecycle-api/#event-visibilitychange): To determine when the visibility of a page changes. This event happens when the user switches tabs, minimizes the browser window, or opens a new page. Consider the [`hidden` state](/blog/page-lifecycle-api/#advice-hidden) the last reliable time to save app and user data.
-- [`pagehide`](/blog/page-lifecycle-api/#event-pagehide): To determine when the user has navigated away from the page. This event happens when the user navigates away from the page, reloads the page, or closes the browser window. The `pagehide` event is not fired when the page is simply minimized or switched to another tab. Note that, as `pagehide` does not make a page ineligible for the back/forward cache, it is possible a page can be restored after this event fires. If you're cleaning up any resources in this event, then they may have to be restored on page restore.
+- [`visibilitychange`](/articles/page-lifecycle-api/#event-visibilitychange): To determine when the visibility of a page changes. This event happens when the user switches tabs, minimizes the browser window, or opens a new page. Consider the [`hidden` state](/articles/page-lifecycle-api/#advice-hidden) the last reliable time to save app and user data.
+- [`pagehide`](/articles/page-lifecycle-api/#event-pagehide): To determine when the user has navigated away from the page. This event happens when the user navigates away from the page, reloads the page, or closes the browser window. The `pagehide` event is not fired when the page is simply minimized or switched to another tab. Note that, as `pagehide` does not make a page ineligible for the back/forward cache, it is possible a page can be restored after this event fires. If you're cleaning up any resources in this event, then they may have to be restored on page restore.
 
-For more details, see [this advice on never using the `unload` handler](https://web.dev/bfcache/#never-use-the-unload-event).
+The [`beforeunload`](https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event) event has a slightly different use case to `unload` in that it is a cancellable event. It is often used to warn users of unsaved changes when navigating away. This event is also unrealiable as it will not fire if a background tab is killed. It is recommended to limit use of `beforeunload` and [only add it conditionally](/blog/page-lifecycle-api/#the-beforeunload-event). Instead, use the above events for most `unload` replacements.
+
+For more details, see [this advice on never using the `unload` handler](/articles/page-lifecycle-api/#the-unload-event).
 
 ## Detect usage of `unload`
 
@@ -71,6 +87,12 @@ If your page isn't eligible for back/forward caching, the **Back/forward cache**
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/fY1MHKVLYCr5wcRcnyw3.png", alt="Chrome DevTools Back/forward cache testing tool showing an unload handler was used", width="800", height="422" %}
 </figure>
+
+### Reporting API
+
+The [Reporting API](https://www.w3.org/TR/reporting-1/) can be used to in conjuction with a read-only Permission Policy to detect usage of `unload` from your website users.
+
+For more details see [usUsing Reporting API to find unloads](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#using-reportingapi-to-find-unloads)
 
 ### Bfcache `notRestoredReasons` API
 
@@ -108,11 +130,13 @@ This [will be extended in Chrome 117](https://chromestatus.com/feature/557955630
 
 Enterprises that have software that depends on the `unload` event to function correctly can use the [`ForcePermissionPolicyUnloadDefaultEnabled` policy](https://chromium-review.googlesource.com/c/chromium/src/+/4730081) to prevent the gradual deprecation for devices under their control. By enabling this policy, `unload` will continue to default to enabled for all origins. A page may still set a stricter policy if it wants. Like the Permissions Policy opt-out, this is a tool to mitigate potential breaking changes, but it should not be used indefinitely.
 
-### Chrome flags
+### Chrome flags and command line switches
 
-As well as the enterprise policy, you can disable the deprecation for individual users via the flag: `chrome://flags/#deprecate-unload`. Setting this to `disabled` will prevent Chrome from switching the default on `unload` handlers and allow them to continue to fire. They can still be overridden on a site-by-site basis via Permissions Policy, but will continue to fire by default.
+As well as the enterprise policy, you can disable the deprecation for individual users via the Chrome flags and command lines swtiches:
 
-As well as Chrome flags, these settings [can be controlled by command line options](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#testing-with-chrome).
+Setting `chrome://flags/#deprecate-unload` this to `enabled` will bring forward the deprecation default and prevent `unload` handlers from firing. They can still be overridden on a site-by-site basis via Permissions Policy, but will continue to fire by default.
+
+These settings can be also be controlled by [command line switches](https://github.com/fergald/docs/blob/master/explainers/permissions-policy-deprecate-unload.md#testing-with-chrome).
 
 ### Options comparison
 
@@ -139,9 +163,15 @@ The following table summarizes the different uses of the options discussed previ
       <td style="text-align: center;">No</td>
       <td style="text-align: center;">No</td>
       <td style="text-align: center;">Yes</td>
-      </tr>
+    </tr>
     <tr>
       <td>Chrome flags<br><em>(applies to individual users)</em></td>
+      <td style="text-align: center;">Yes</td>
+      <td style="text-align: center;">No</td>
+      <td style="text-align: center;">No</td>
+    </tr>
+    <tr>
+      <td>Chrome command line switches<br><em>(applies to individual users)</em></td>
       <td style="text-align: center;">Yes</td>
       <td style="text-align: center;">No</td>
       <td style="text-align: center;">Yes</td>

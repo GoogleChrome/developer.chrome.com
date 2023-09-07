@@ -30,7 +30,7 @@ You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try 
 
 ### Test Topics in an origin trial {: #origin-trial}
 
-A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [Protected Audience](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
+A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [Protected Audience](/docs/privacy-sandbox/protected-audience/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
 #### Provide an origin trial token
 

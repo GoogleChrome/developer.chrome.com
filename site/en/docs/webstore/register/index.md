@@ -22,7 +22,7 @@ account; here are some tips about which email to use:
 
 To register, just access the [developer console][3]. The first time you do this, the following registration screen will appear. First agree to the developer agreement and policies then pay the registration fee.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/adH2VFqS92VdzPTjsHtB.png", 
+{% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/TicgeLawYpcvWXvTThia.png", 
        alt="Screenshot of the Chrome Web Store developer registration page", height="678", width="800" %}
 
 Once you pay the registration fee and agree to the terms, you will not see this registration page again.
