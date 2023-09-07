@@ -32,6 +32,7 @@
   --flow-space: #{get-size(500)};
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 body {
