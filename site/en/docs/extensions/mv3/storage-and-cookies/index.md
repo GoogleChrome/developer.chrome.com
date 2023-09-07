@@ -24,8 +24,8 @@ This applies to any data stored using web storage APIs (such as
 [Local Storage][local-storage] and [IndexedDB][indexeddb]).
 
 By default, extensions are subject to the normal quota restrictions on storage, which can be checked
-by calling `navigator.storage.estimate()`. Storage can also be evicted under heavy memory
-pressure, although this is rare. To avoid this:
+by calling [`navigator.storage.estimate()`][storage-estimate]. Storage can also be evicted under
+heavy memory pressure, although this is rare. To avoid this:
 
 - Request the `"unlimitedStorage"` permission, which affects both extension and web storage APIs and
 exempts extensions from both quota restrictions and eviction.
@@ -113,5 +113,6 @@ more information, see the [API reference][chrome-cookies-partitioning].
 [privacy-sandbox-timeline]: https://privacysandbox.com/open-web/#open-web-timeline-3pc
 [chrome-cookies]: /docs/extensions/reference/cookies
 [chrome-cookies-partitioning]: /docs/extensions/reference/cookies#partitioning
+[storage-estimate]: https://developer.mozilla.org/docs/Web/API/StorageManager/estimate
 [storage-persist]: https://developer.mozilla.org/docs/Web/API/StorageManager/persist
 [cache-storage]: https://developer.mozilla.org/docs/Web/API/CacheStorage
