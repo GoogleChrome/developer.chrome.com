@@ -7,7 +7,7 @@ description: A reference for extension-specific information about web platform A
 date: 2023-08-28
 ---
 
-Web platform APIs may be used in extensions. Some of these APIs limitations and requirements before they will function in an extension. The pages below describe those limitations and requirements.
+Virtually any Web platform APIs may be used in extensions. Some APIs have extension specific limitations or differences. The pages below describe those limitations and differences.
 
 [`PushManager.subscribe()`](/docs/extensions/reference/web/pushmanager-subscribe)
 : Subscribes an extension to a push service.
