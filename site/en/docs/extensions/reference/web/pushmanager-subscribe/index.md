@@ -18,7 +18,7 @@ The Push API is available in any Chrome extension; however, some versions have d
 You can specify a minimum Chrome version using the [`"minimum_chrome_version"`](/docs/extensions/mv3/manifest/minimum_chrome_version/) manifest key.
 
 `userVisibleOnly` (Chrome 117 or later)
-This argument to `PushManager.subscribe()` specifies whether push messages from the server must be shown to the user as a notification. Typically, this value is required to be set to `true`. When used in an extension, this argument may be `false` in Chrome 117 or later, meaning that no notification will be shown. This allows a push to be used as an alternative to WebSockets in extension service workers for asynchronous client-server communication.
+: This argument to `PushManager.subscribe()` specifies whether push messages from the server must be shown to the user as a notification. Typically, this value is required to be set to `true`. When used in an extension, this argument may be `false` in Chrome 117 or later, meaning that no notification will be shown. This allows a push to be used as an alternative to WebSockets in extension service workers for asynchronous client-server communication.
 
 ## Permissions
 
