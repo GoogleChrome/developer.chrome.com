@@ -45,12 +45,13 @@ If you have a specific use case, use an [offscreen document][offscreen] to acces
 
 ### Partitioning {: #storage-partitioning }
 
-Partitioning is where keys are introduced for stored data to limit where it can be accessed.
+Partitioning is where keys are introduced for stored data to limit where it can be accessed. Storage
+has historically been keyed by origin.
 
-When enabled, [storage partitioning][storage-partitioning] introduces changes to how partitioning
-keys are defined to prevent certain types of cross-site tracking. In practice, this means that if
-site A embeds an iframe containing site B, site B will not be able to access the same storage it
-would usually have when navigated to directly.
+Starting in Chrome 115, [storage partitioning][storage-partitioning] introduces changes to how
+partitioning keys are defined to prevent certain types of cross-site tracking. In practice, this
+means that if site A embeds an iframe containing site B, site B will not be able to access the same
+storage it would usually have when navigated to directly.
 
 To mitigate the impact of this in extensions, two exemptions apply:
 
