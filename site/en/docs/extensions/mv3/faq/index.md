@@ -116,7 +116,7 @@ The reason that [replacing the content][47] hosted at these URLs entirely is all
 forces an extension developer to implement all of the functionality they want without depending on
 the browser's internal implementation to stay the same.
 
-### Can extensions open browser/page action popups without a user interaction? {: #faq-open-popups }
+### Can extensions open action popups without a user interaction? {: #faq-open-popups }
 
 No. Popups can only be opened if the user clicks the corresponding action. An
 extension cannot open its popup programmatically.
