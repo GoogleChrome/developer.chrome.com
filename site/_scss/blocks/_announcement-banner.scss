@@ -8,7 +8,8 @@ announcement-banner[hidden] {
 
 announcement-banner {
   &:not(.cookie-banner) [data-banner-close-btn] {
-    margin: -0.5rem 1rem -0.5rem 0;
+    line-height: 1.125rem;
+    margin: -0.5rem 1rem -0.4rem 0;
     opacity: 0;
     padding: 0 0.5rem;
     pointer-events: none;
