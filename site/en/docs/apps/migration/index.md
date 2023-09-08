@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Transitioning from Chrome Apps"
 date: 2016-08-18
-updated: 2023-08-17
+updated: 2023-09-08
 description: How to migrate your Chrome packaged or hosted app.
 authors:
   - demianrenzulli
