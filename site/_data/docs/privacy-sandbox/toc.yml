@@ -112,6 +112,7 @@
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
         - title: i18n.docs.privacy-sandbox.attribution-reporting-developer-guide
           sections:
+            - url: /docs/privacy-sandbox/attribution-reporting/getting-started/
             - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-source/
             - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/
             - url: /docs/privacy-sandbox/attribution-reporting/change-attribution-logic/
@@ -121,6 +122,8 @@
             - url: /docs/privacy-sandbox/attribution-reporting/multiple-reporters/
             - url: /docs/privacy-sandbox/attribution-reporting/report-schedules/
             - url: /docs/privacy-sandbox/attribution-reporting/constraints/
+            - url: /docs/privacy-sandbox/attribution-reporting/web-to-app-attribution/
+            - url: /docs/privacy-sandbox/attribution-reporting/aggregation-keys/
             - url: /docs/privacy-sandbox/attribution-reporting/understanding-noise/
             - url: /docs/privacy-sandbox/attribution-reporting/working-with-noise/
             - url: /docs/privacy-sandbox/attribution-reporting/contribution-budget/    

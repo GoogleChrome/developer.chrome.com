@@ -7,7 +7,7 @@ description: |
 authors:
   - tunetheweb
 date: 2023-08-22
-#updated: 2023-08-22
+updated: 2023-08-30
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/ALZTuy3IA4jUdOpjjm2j.jpg
 alt: A picture of developer hunched over a computer screen with code on it
 tags:
@@ -56,7 +56,7 @@ Speculation rules can be used to prefetch the next navigation's document. For ex
 Prefetch speculation rules only prefetch the document, not its subresources. This uses fewer resources than a full prerender of a potential next navigation, but also means the subresources need to be fetched and rendered upon navigation.
 {% endAside %}
 
-Speculation rules are used for navigation prefetches have some advantages over the older `<link rel="prefetch">` syntax, such as a more expressive API and the results being stored in memory cache rather than the HTTP disk cache.
+Using speculation rules for navigation prefetches has some advantages over the older `<link rel="prefetch">` syntax, such as a more expressive API and the results being stored in memory cache rather than the HTTP disk cache.
 
 ### Debugging `prefetch` speculation rules
 
@@ -262,7 +262,7 @@ Note that speculation rules themselves are not actioned until the prerendered pa
 
 The previous sections discuss how to debug prerendered pages on the page which initiates the prerendering. However, it's also possible for the prerendered pages themselves to provide debugging information, either by making analytics calls or logging to the console (which is viewable as described above).
 
-Additionally, once a prerendered page is activated by the user navigating to it, the **This Page** pane will show this status, and whether it was successfully prerendered or not. If it could not be prerender an explanation as to why that was the case is provided:
+Additionally, once a prerendered page is activated by the user navigating to it, the **This Page** pane will show this status, and whether it was successfully prerendered or not. If it could not be prerendered an explanation as to why that was the case is provided:
 
 <figure>
   {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/7ksJhB9WgTxSn4y0qBdX.png", alt="Chrome DevTools Preloading This Page pane showing both a successful and failed prerendered page", width="800", height="413" %}

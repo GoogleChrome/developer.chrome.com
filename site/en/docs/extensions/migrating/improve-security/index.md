@@ -17,8 +17,15 @@ You can no longer [execute external logic](/docs/extensions/mv3/intro/mv3-overvi
 - Move all external code (JS, Wasm, CSS) into your extension bundle.
 - Update script and style references to load resources from the extension bundle.
 - Use [`chrome.runtime.getURL()`](/docs/extensions/reference/runtime/#method-getURL) to build resource URLs at runtime.
+- Use a sandboxed iframe: `eval` and `new Function(...)` are still supported in sandboxed iframes. For more details read the [guide on sandboxed iframes][sandbox-eval]. 
 
 The `executeScript()` method is now in the [`scripting`](/docs/extensions/reference/scripting/) namespace rather than the `tabs` namespace. For information on updating calls, see [Move executeScript()](/docs/extensions/upgrade-to-mv3/update-code#move-executescript).
+
+There are a few special cases in which executing arbitrary strings is still possible:
+
+-   [Inject remote hosted stylesheets into a web page using insertCSS][insert-css]
+-   For extensions using `chrome.devtools`: [inspectWindow.eval][inspect-window-eval] allows executing JavaScript in the context of the inspected page.
+-   Debugger extensions can use [chrome.debugger.sendCommand][send-command] to execute JavaScript in a debug target.
 
 ## Remove remotely hosted code {: #remove-remote-code }
 
@@ -35,15 +42,19 @@ Configuration-driven features and logic
 Externalized logic with a remote service
 : Your extension calls a remote web service. This lets you keep code private and change it as needed while avoiding the extra overhead of resubmitting to the Chrome Web Store.
 
+Embed remotely hosted code in a sandboxed iframe
+: Remotely hosted code [is supported in sandboxed iframes][sandbox-eval]. However, this approach does not work if the code requires access to the embedding page's DOM.
+
 Bundle third-party libraries
-: Your extension includes minified files. Popular frameworks such as [React](https://reactjs.org/docs/cdn-links.html) and [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) have minified versions available for download. Include them in your bundle and reference them as you would any other script. For example:
+: If you are using a popular framework like React or Bootstrap which you were previously loading from an external server, you can download the minified files, add them to your project and import them locally. For example:
+    ```html
+    <script src="./react-dom.production.min.js"></script>
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    ```
+    In some cases, libraries, such as Firebase, will fetch additional code on a by need basis at runtime. In this case, you have to download all possible dynamic imports at build time. Here is an [example script that bundles Firebase using Rollup.js][firebase].
 
-```html
-<script src="./react-dom.production.min.js"></script>
-<link href="./bootstrap.min.css" rel="stylesheet">
-```
-
-To include a library in a service worker set the `"background.type"` to `"module"` in the manifest and use an `import` statement.
+Look for other workarounds
+: If the previous approaches don’t help with your use case you might have to either find an alternative solution (i.e. migrate to a different library) or find other ways to use the library's functionality. For example, in the case of Google Analytics, you can switch to the Google measurement protocol instead of using the official remote hosted JavaScript version as described in our [Google Analytics 4 guide][google-analytics].
 
 ### Use external libraries in tab-injected scripts {: #use-external-libraries }
 
@@ -151,5 +162,11 @@ Manifest V3 disallows certain content security policy values in the `"extension_
 
 Content security policy values for `sandbox` have no such new restrictions.
 
-
 [mdn-cdn]: https://developer.mozilla.org/docs/Glossary/CDN
+[sandbox-eval]: /docs/extensions/mv3/sandboxingEval/
+[insert-css]: /docs/extensions/reference/scripting/#method-insertCSS
+[inspect-window-eval]: /docs/extensions/reference/devtools_inspectedWindow/
+[send-command]: /docs/extensions/reference/debugger/#method-sendCommand
+[firebase]: https://gist.github.com/patrickkettner/8c1a91b1b8f9502b3b67d874e7024a7b
+[google-analytics]: /docs/extensions/mv3/tut_analytics/
+

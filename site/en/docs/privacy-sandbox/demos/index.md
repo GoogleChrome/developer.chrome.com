@@ -6,8 +6,9 @@ subhead: >
 description: >
   Demos and colabs walk you through the Privacy Sandbox APIs.
 date: 2023-08-18
+updated: 2023-08-29
 authors:
-  - alexandrawhite
+  - nmichell
 ---
 
 There are a number of demos available for the Privacy Sandbox APIs. Most of them will require you to be familiar with the APIs, so if you haven't read the docs, check out the links we've listed along with the demos.
@@ -24,6 +25,8 @@ There are a number of demos available for the Privacy Sandbox APIs. Most of them
 {% Partial 'privacy-sandbox/demos/ara.njk' %}
 
 {% Partial 'privacy-sandbox/demos/shared-storage.njk' %}
+
+{% Partial 'privacy-sandbox/demos/chips.njk' %}
 
 {% Partial 'privacy-sandbox/demos/fps.njk' %}
 

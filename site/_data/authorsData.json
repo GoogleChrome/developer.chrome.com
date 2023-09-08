@@ -1866,6 +1866,10 @@
     "country": "FR",
     "github": "hemeryar"
   },
+    "paulrossman": {
+    "country": "US",
+    "github": "paulrossman"
+  },
   "nrosenthal": {
     "country": "IL",
     "github": "noamr",
@@ -1881,6 +1885,19 @@
     "homepage": "https://snugug.com",
     "image": "image/admin/5kuER6QRWs54zbYIJ4zS.jpg"
   },
+  "xuezhoudai": {
+    "country": "CN",
+    "twitter": "imdaidr",
+    "github": "daidr",
+    "homepage": "https://im.daidr.me",
+    "image": "image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/40TNtORm0BtUUR2IeF8Z.jpg"
+  },
+  "hadrijau": {
+    "country": "DE",
+    "github": "hadrijau",
+    "homepage": "https://www.hadrienjaubert.com",
+    "image": "image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wawuvrG5lPYcSKABrMgq.png"
+  },
   "jlwagner": {
     "github": "malchata",
     "linkedin": "malchata",
@@ -1892,5 +1909,17 @@
     "country": "US",
     "image": "image/9B7J9oWjgsWbuE84mmxDaY37Wpw2/gra2tr5xbhH5c8Zz9d3k.jpeg",
     "github": "adamraine"
+  },
+  "schottfk": {
+    "twitter": "FredKSchott",
+    "image": "image/1L2RBhCLSnXjCnSlevaDjy3vba73/2jqKQUkysDpGKMudG0g8.jpg"
+  },
+  "phillipsm": {
+    "twitter": "matthewcp",
+    "image": "image/1L2RBhCLSnXjCnSlevaDjy3vba73/lu5YmuyoVJqP0flKUfKg.jpg"
+  },
+  "ferreiram": {
+    "twitter": "charca",
+    "image": "image/1L2RBhCLSnXjCnSlevaDjy3vba73/2nczWyIuJperJ2qSEpA3.jpg"
   }
 }

@@ -39,7 +39,7 @@ The following screenshots show the default New Tab page and then a custom New Ta
   <figcaption>A custom new tab page.</figcaption>
 </figure>
 
-To try this out, see our [override samples][1].
+To try this out, see our [override samples][4].
 
 ## Incognito window behavior {: #incognito }
 
@@ -82,8 +82,7 @@ time. Specifically, avoid accessing database resources synchronously. When makin
 
 ## Examples {: #examples }
 
-See the [override samples][4].
-
+See the [override samples][1].
 
 [1]: /docs/extensions/mv3/samples#search:chrome_url_overrides
 [2]: /docs/extensions/mv3/manifest/incognito
