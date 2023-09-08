@@ -761,6 +761,9 @@ redirects:
 - from: /docs/privacy-sandbox/fledge/...
   to: /docs/privacy-sandbox/protected-audience/...
 
+- from: /docs/extensions/gethelp
+  to: /docs/extensions/support-feedback
+
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
 - from: /...
