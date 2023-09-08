@@ -40,6 +40,20 @@ Finally, **Search** now supports [ignore listing](/docs/devtools/settings/ignore
 
 Chromium issues: [1468875](https://crbug.com/1468875), [1472019](https://crbug.com/1472019).
 
+## New section for custom properties in Elements > Styles {: #css }
+
+The **Elements** panel now supports the [@property CSS at-rule](https://developer.mozilla.org/docs/Web/CSS/@property). It lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
+
+To inspect your registered custom properties, in **Elements** > **Styles**, hover over the property name and see its descriptors in a tooltip. In the tooltip, click the link to view the registered property in the collapsible `@property` section.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/vDfXTULIyNIJXVw6lKvf.mp4", width="800", height="511", autoplay="false", loop="true", muted="true", controls="true", class="screenshot" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b98b663cb79d1cd341efe824d1bc1995d917e385 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/69d1f4a605113e436deb6fa5f2f7dc4316819f57 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/1cfe38799440fe5d58d9387a4009cfdae2deced2 #}
+
+Chromium issues: [1471102](https://crbug.com/1471102), [1471103](https://crbug.com/1471103), [1471105](https://crbug.com/1471105).
+
 ## Lighthouse 11 {: #lighthouse }
 
 The **Lighthouse** panel now runs [Lighthouse 11](/blog/lighthouse-11-0/). Most notably, this version:
