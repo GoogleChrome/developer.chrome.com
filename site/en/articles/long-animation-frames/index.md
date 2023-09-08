@@ -277,9 +277,11 @@ const observer = new PerformanceObserver(list => {
   ).slice(0, MAX_LOAFS_TO_CONSIDER);
 });
 observer.observe({ type: 'long-animation-frame', buffered: true });
+```
 
-// At the appropriate time, beacon back to analytics.
-// Example here logs to console
+At the appropriate time ([ideally on the `visibilitychange` event](/articles/page-lifecycle-api/#:~:text=it%27s%20always%20better%20to%20rely%20on%20the%20visibilitychange%20event%20to%20determine%20when%20a%20session%20ends)) beacon back to analytics. For local testing you can use `console.table` periodically:
+
+```js
 console.table(longestBlockingLoAFs);
 ```
 
