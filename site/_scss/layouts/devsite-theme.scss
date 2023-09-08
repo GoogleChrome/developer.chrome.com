@@ -594,6 +594,20 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       }
     }
 
+    @media (max-width: 992px) {
+      &[header-position=left] > div {
+        display: block;
+
+        header + div {
+          margin-top: 32px;
+        }
+
+        .dcc-blog-card {
+          max-width: 100%;
+        }
+      }
+    }
+
     @media (max-width: 840px) {
       --devsite-h1-font: 700 1.75rem #{$TEXT_PRIMARY_FONT_FAMILY};
       --devsite-h2-font: #{$TEXT_WEIGHT} 1.5rem #{$TEXT_PRIMARY_FONT_FAMILY};
@@ -638,6 +652,20 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
       position: absolute;
       top: 0;
       width: 100%;
+    }
+
+    @media (max-width: 992px) {
+      &[header-position=left] > div {
+        display: block;
+
+        header + div {
+          margin-top: 32px;
+        }
+
+        .dcc-docs-card {
+          max-width: 100%;
+        }
+      }
     }
 
     @media (max-width: 840px) {
