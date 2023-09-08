@@ -40,6 +40,20 @@ Finally, **Search** now supports [ignore listing](/docs/devtools/settings/ignore
 
 Chromium issues: [1468875](https://crbug.com/1468875), [1472019](https://crbug.com/1472019).
 
+## Lighthouse 11 {: #lighthouse }
+
+The **Lighthouse** panel now runs [Lighthouse 11](/blog/lighthouse-11-0/). Most notably, this version:
+
+- Removes legacy navigatation. 
+- Adds new `DevtoolsLog` and `Trace` artifacts
+- Adds a few new accessibility audits
+
+See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.0.0). To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8b7d433f10fd854784121020b76e29295bf51f84 #}
+
+Chromium issue: [772558](https://crbug.com/772558).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
