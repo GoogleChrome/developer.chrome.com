@@ -305,7 +305,7 @@ const observer = new PerformanceObserver(list => {
       if (entry.duration > REPORTING_THRESHOLD_MS &&
         entry.firstUIEventTimestamp > 0
       ) {
-      // Example here logs to console, but could also report back to analytics
+        // Example here logs to console, but could also report back to analytics
         console.log(entry);
       }
     }
