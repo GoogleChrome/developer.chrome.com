@@ -54,6 +54,24 @@ To inspect your registered custom properties, in **Elements** > **Styles**, hove
 
 Chromium issues: [1471102](https://crbug.com/1471102), [1471103](https://crbug.com/1471103), [1471105](https://crbug.com/1471105).
 
+## Streamlined workspace in the Sources panel {: #sources }
+
+The [workspace](/docs/devtools/workspaces/) feature in the **Sources** panel is new streamlined:
+
+- **Consistent naming**. most notably, the **Sources** > **Filesystem** pane was renamed into **Workspace**. Various UI texts in this pane are now clearer and free of redundancy.
+- **Imropoved drag-and-drop setup**. Provides visual cues for adding folders and a link for folder selection.
+
+See the new setup and workflow in action:
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/1T78X6ldgLhiH6iJgAMk.mp4", width="800", height="436", autoplay="false", loop="true", muted="true", controls="true", class="screenshot" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/9e9dd3ac6799946946e5442d5ab52acef6f53746 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/f9a46dfec696a73efb8824e1a794155d50a14e7e #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/9d4f22fb8fb50085dd0a908c4099e0d275143886 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/49b05f57392ec6294c96ed385f2e91b2900224eb #}
+
+Chromium issues: [1473771](https://crbug.com/1473771), [1473880](https://crbug.com/1473880), [1473963](https://crbug.com/1473963), [1474686](https://crbug.com/1474686), [1474687](https://crbug.com/1474687).
+
 ## Lighthouse 11 {: #lighthouse }
 
 The **Lighthouse** panel now runs [Lighthouse 11](/blog/lighthouse-11-0/). Most notably, this version:
