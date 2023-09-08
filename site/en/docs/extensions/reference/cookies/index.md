@@ -28,7 +28,7 @@ to access. For example:
 origin of the top level frame. This means that if site A is embedded using an iframe in site B
 and site C, a partitioned cookie can have a different value in each.
 
-`chrome.cookies` does not currently support partitioning, which means that all methods
+`chrome.cookies` does not support partitioning, which means that all methods
 read and write cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in
 the default partition.
 
