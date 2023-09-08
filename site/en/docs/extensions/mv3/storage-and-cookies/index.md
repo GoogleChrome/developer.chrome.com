@@ -19,7 +19,7 @@ web.
 
 ### Persistence {: #storage-persistence }
 
-Extension storage is not cleared when a user ["clears browsing data"][clear-browsing-data].
+Extension storage is not cleared when a user [clears browsing data][clear-browsing-data].
 This applies to any data stored using web storage APIs (such as
 [Local Storage][local-storage] and [IndexedDB][indexeddb]).
 
