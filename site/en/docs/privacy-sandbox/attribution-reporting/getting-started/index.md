@@ -99,7 +99,7 @@ In addition to understanding the implementation steps here, the following concep
         [Define custom rules using filters](/docs/privacy-sandbox/attribution-reporting/define-filters/).
     1. Review details specific to filters for aggregatable reports in
         the
-        [explainer](https://www.google.com/url?q=https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md%23attribution-trigger-registration&sa=D&source=docs&ust=1694176479196761&usg=AOvVaw3PKuN1EVMGwA3YJA2NLLKR).
+        [explainer](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-trigger-registration).
 
 ### Don't forget feature detection
 
