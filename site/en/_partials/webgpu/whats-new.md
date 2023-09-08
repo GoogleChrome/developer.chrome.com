@@ -2,6 +2,12 @@
 
 A list of everything that has been covered in the [What's New in WebGPU](/tags/new-in-webgpu/) series.
 
+### Chrome 118 {: #chrome118 }
+
+* [HTMLImageElement and ImageData support in copyExternalImageToTexture()](/blog/new-in-webgpu-118/#htmlimageelement-and-imagedata-support-in-copyexternalimagetotexture)
+* [Experimental support for read-write and read-only storage texture](/blog/new-in-webgpu-118/#experimental-support-for-read-write-and-read-only-storage-texture)
+* [Dawn updates](/blog/new-in-webgpu-118/#dawn-updates)
+
 ### Chrome 117 {: #chrome117 }
 
 * [Unset vertex buffer](/blog/new-in-webgpu-117/#unset-vertex-buffer)
