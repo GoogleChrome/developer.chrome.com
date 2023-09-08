@@ -41,7 +41,7 @@ and not the extension.
 The [IndexedDB][indexeddb] and [Cache Storage][cache-storage] APIs are accessible in service
 workers. However, [Local Storage][local-storage] and [Session Storage][session-storage] are not.
 
-If you have a specific use case, use an [offscreen document][offscreen] to access these.
+If you need to access Local Storage or Session Storage from the service worker, use an [offscreen document][offscreen].
 
 ### Partitioning {: #storage-partitioning }
 
