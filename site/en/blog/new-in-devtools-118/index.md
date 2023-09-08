@@ -24,7 +24,7 @@ tags:
 
 ## Enhanced search {: #search }
 
-[**Search**](/docs/devtools/search/) results now show an entry per all the matches it found in a line of code. Previously, it showed only the first match per line of code. The new behaviour is especially useful when you search across minified files. When you click a search result, it opens the file in the editor and now scrolls the match into view not only vertically but also horizontally.
+[**Search**](/docs/devtools/search/) results now show an entry per all the matches it found in a line of code. Previously, it showed only the first match per line of code. The new behavior is especially useful when you search across minified files. When you click a search result, it opens the file in the editor and now scrolls the match into view not only vertically but also horizontally.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/f5Yu4fSECIVDllWkpEZs.png", alt="The before and after making search show all the matches per line.", width="800", height="424" %}
 
@@ -44,7 +44,7 @@ Chromium issues: [1468875](https://crbug.com/1468875), [1472019](https://crbug.c
 
 The **Lighthouse** panel now runs [Lighthouse 11](/blog/lighthouse-11-0/). Most notably, this version:
 
-- Removes legacy navigatation. 
+- Removes legacy navigation. 
 - Adds new `DevtoolsLog` and `Trace` artifacts
 - Adds a few new accessibility audits
 
