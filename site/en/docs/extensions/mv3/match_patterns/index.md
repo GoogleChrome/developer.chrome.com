@@ -25,7 +25,12 @@ A match pattern is a URL with the following structure, used to specify a group o
 * `/foo*`
 * `/foo/bar`
 
-Extensions use match patterns for a variety of purposes, including declaring [host permissions][host-permissions] and other permissions for Chrome APIs or [content script][content-scripts] injection, as well as [`"web_accessible_resources.matches"`][war] and [`"externally_connectable.matches"`][ext-connect].
+Extensions use match patterns to [declare permissions](/docs/extensions/mv3/declare_permissions) in a variety of use cases, including the following:
+
+* Chrome APIs
+* [Content script][content-scripts] injection
+* [`"web_accessible_resources.matches"`][war]
+* [`"externally_connectable.matches"`][ext-connect].
 
 ## Special cases {: #special }
 
@@ -70,7 +75,6 @@ Top Level domain match patterns
 [content-scripts]: /docs/extensions/mv3/content_scripts
 [cs-frames]: /docs/extensions/mv3/content_scripts/#injecting-in-related-frames
 [ext-connect]: /docs/extensions/mv3/manifest/externally_connectable/#manifest
-[host-permissions]: /docs/extensions/mv3/declare_permissions/#host-permissions
 [mdn-tld]: https://developer.mozilla.org/docs/Glossary/TLD
 [permissions]: /docs/extensions/mv3/declare_permissions/#allow_access
 [war]: /docs/extensions/mv3/manifest/web_accessible_resources/#manifest-declaration
