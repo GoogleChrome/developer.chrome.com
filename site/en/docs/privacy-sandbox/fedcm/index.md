@@ -251,7 +251,7 @@ Several updates have already been applied based on feedback. And also it's
 expected to continue evolving until Q4 2023 at least to stabilize. Please see
 Updates for more details.
 
-* **Change Log**: Federated Credential Management API [updates](https://developer.chrome.com/docs/privacy-sandbox/fedcm-updates/).
+* **Change Log**: Federated Credential Management API [updates](/docs/privacy-sandbox/fedcm-updates/).
 
 Additionally, there are unresolved issues we are actively exploring including
 specific proposals that we are evaluating or prototyping:
