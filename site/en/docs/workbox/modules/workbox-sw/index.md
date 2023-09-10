@@ -225,7 +225,7 @@ const {CacheableResponse} = workbox.cacheableResponse;
 registerRoute(
   ({request}) => request.destination === 'image',
   new CacheFirst({
-    plugins: [new CacheableResponsePlugin({statuses: [0, 200]})],
+    plugins: [new CacheableResponse({statuses: [0, 200]})],
   })
 );
 ```
