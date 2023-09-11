@@ -324,7 +324,7 @@ Analytics are used to measure website usage, for example using Google Analytics 
 
 Pages should only be prerendered when there is a high probability the page will be loaded by the user. This is why the Chrome address bar prerendering options only happen when there is such a high probability (greater than 80% of the time).
 
-However—particularly when using the Speculation Rules API—prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation as not all analytics providers may do this by default.
+However—particularly when using the Speculation Rules API—prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation, as not all analytics providers may do this by default.
 
 {% Aside 'update' %}
 Google Analytics handles prerender by default as of September 2023.
