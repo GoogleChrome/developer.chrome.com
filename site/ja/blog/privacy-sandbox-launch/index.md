@@ -4,19 +4,16 @@ title: プライバシーサンドボックス広告関連 API のリリース
 authors:
   - rowan_m
   - anusmitaray
-description: |2-
-
+description:
   Chrome 115 でプライバシーサンドボックス広告関連 API を段階的に有効にするための計画とタイムライン、オリジントライアルの終了、および登録に関する更新情報。
-subhead: |2-
-
+subhead:
   Chrome 115 でプライバシーサンドボックス広告関連 API を段階的に有効にするための計画とタイムライン、オリジントライアルの終了、および登録に関する更新情報。
-date: '2023-07-20'
+date: 2023-07-20
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png
-alt: |2-
-
+alt:
   プライバシーサンドボックス広告関連 API のリリース
 tags:
-  - プライバシー
+  - privacy
 ---
 
 5 月に、Chrome 115 における[プライバシーサンドボックス広告関連 API のリリース計画](/blog/shipping-privacy-sandbox/)を発表しましたが、遂にその時期がやってきました。Chrome 115 は安定版としてリリースされ、今後数日のうちに、API の段階的な有効化が開始されます。

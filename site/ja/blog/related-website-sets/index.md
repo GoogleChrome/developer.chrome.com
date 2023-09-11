@@ -1,14 +1,12 @@
 ---
 layout: layouts/blog-post.njk
 title: Related Website Sets   - Chrome 117 で First-Party Sets の名前を変更
-description: |2-
-
-  Related Website Sets（RWS）は、First-Party Sets の新しい名前です。セットをさらに柔軟に定義できるように改善されています。
-date: '2023-08-31'
+description: Related Website Sets（RWS）は、First-Party Sets の新しい名前です。セットをさらに柔軟に定義できるように改善されています。
+date: 2023-08-31
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png
 alt: プライバシーサンドボックスのロゴ
 tags:
-  - プライバシー
+  - privacy
 authors:
   - helencho
 ---
