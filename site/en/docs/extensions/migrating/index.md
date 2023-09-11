@@ -19,6 +19,25 @@ This section helps you upgrade an extension from Manifest V2 to Manifest V3, the
 
 We also have an [Extension Manifest Converter](https://github.com/GoogleChromeLabs/extension-manifest-converter). It does not do everything for you, but it will get you started. The converter's README describes what the tool changes.
 
-## New extension features
+## Keep the current set of features {: #keep-features }
+
+To reduce the chances of unexpected issues or bugs, we recommend not adding new functionality when publishing a new release. For instance, adding a feature that requires new permissions may [trigger a permission warning][perm-warn], which may disable your extension until the user enables it.
+
+<figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/tQgKKMKbzmCzwBEAoatX.gif", alt="Example of extension that is disabled until the user accepts new permission.", width="496", height="388" %}
+    <figcaption>
+    Extension disabled until user accepts new permission.
+    </figcaption>
+</figure>
+
+Note that the extension will also be disabled if [`"host_permissions"`][host-perms] are added or modified in the manifest. This includes [`"content_scripts.matches"`][content-manifest], which are also considered host permissions. See [Permissions Best Practices][perm-warn] to learn of other ways to add permission without displaying a warning.
+
+## New extension platform features
 
 Since the release of Manifest V3, we've continued to [add new features](/docs/extensions/whatsnew/), many of which are usable in both Manifest V2 and Manifest V3. You are not required to use them when converting; however, when they replace older features, you should prefer them to the features they replace and expect that the replaced features will eventually be deprecated and removed.
+
+[cws]: https://chrome.google.com/webstore
+[host-perms]: /docs/extensions/mv3/declare_permissions/#host-permissions
+[content-manifest]: /docs/extensions/manifest/content_scripts
+[perm-warn]: /docs/extensions/mv3/permission_warnings/
+

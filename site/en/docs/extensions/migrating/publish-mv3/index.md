@@ -7,20 +7,7 @@ date: 2023-09-04
 # updated: 2023-05-10
 ---
 
-After following the [MV3 Migration Checklist][migration-checklist] to convert your extension, you are ready to publish your update in the Chrome Web Store. This article includes a few helpful recommendations to ensure your release goes smoothly.
-
-## Keep the current set of features {: #keep-features }
-
-When migrating to Manifest V3 extension, we recommend not adding extra functionality. This way, you can minimize the chances of unexpected issues or bugs unrelated to the migration. If new features require new permissions, it may [trigger a warning][perm-warn], which means your extension may be disabled until the user enables it again.
-
-<figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/tQgKKMKbzmCzwBEAoatX.gif", alt="ALT_TEXT_HERE", width="496", height="388" %}
-    <figcaption>
-    Extension disabled until user accepts new permission.
-    </figcaption>
-</figure>
-
-Note that the extension will also be disabled if [`"host_permissions"`][host-perms] are added or modified in the manifest. This includes [`"content_scripts.matches"`][content-manifest], which are also considered host permissions. See [Permissions Best Practices][perm-warn] to learn of other ways to add permission without displaying a warning.
+After following the [MV3 Migration Checklist][migration-checklist] to convert your extension, you are ready to publish your update in the [Chrome Web Store][cws]. This article includes a few helpful recommendations to ensure your release goes smoothly.
 
 ## Publish a beta testing version {: #publish-beta }
 
@@ -143,18 +130,15 @@ Most extensions are reviewed within three days. You should receive an email noti
     </figcaption>
 </figure>
 
-If your extension is pending review for over two weeks, you can [contact developer support][cws-support] to request assistance.
+If your extension has been pending review for over two weeks, you can [contact developer support][cws-support] to request assistance.
 
 ## Additional tips {: #learn-more }
 
 There are other ways to make your extension more robust as you transition to Manifest Version 3. See [Engineering resilient extensions](TBD) for best practices for building a reliable extension.
 
-[content-manifest]: /docs/extensions/manifest/content_scripts
 [cws-support]: /docs/webstore/review-process/#support
 [cws-upload]: /docs/webstore/upload
 [google-group]: https://groups.google.com/my-groups
-[host-perms]: /docs/extensions/mv3/declare_permissions/#host-permissions
 [migration-checklist]: /docs/extensions/migrating/checklist/
-[perm-warn]: /docs/extensions/mv3/permission_warnings/
 [review-factors]: /docs/webstore/review-process/#review-time-factors
 [spam-policy]: /docs/webstore/troubleshooting/#spam
