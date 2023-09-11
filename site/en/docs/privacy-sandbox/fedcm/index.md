@@ -237,6 +237,16 @@ They can do the same for Chrome on desktop by going to
 
 We are working on landing a number of changes on the FedCM.
 
+Several updates have already been applied based on feedback. And also it's
+expected to continue evolving until Q4 2023 at least to stabilize. Please see
+Updates for more details.
+
+* **Change Log**: Federated Credential Management API [updates](/docs/privacy-sandbox/fedcm-updates/).
+  * **Cross-origin iframe support**: Call FedCM API from [cross origin iframe](/docs/privacy-sandbox/fedcm-developer-guide/#call-fedcm-from-within-a-cross-origin-iframe)
+  * **Personalized button**: Decorate FedCM Sign-In Button with [User Info API](/blog/fedcm-chrome-116-updates/#user-info)
+  * **IdP Sign-in Status API**: IdP informs the user's [sign-in
+    status](/blog/fedcm-chrome-116-updates/#idp-signin-status) to the browser. 
+
 There are a few things we know that still need to be done, including issues we
 heard about from IdPs, RPs and browser vendors. We believe we know how to
 resolve these issues:
@@ -246,12 +256,6 @@ resolve these issues:
 * **Personalized button**: IdPs can display a returning user's identity on the
   sign-in button from within an IdP owned cross-origin iframe.
 * **Metrics endpoint**: Provides performance metrics to IdPs.
-
-Several updates have already been applied based on feedback. And also it's
-expected to continue evolving until Q4 2023 at least to stabilize. Please see
-Updates for more details.
-
-* **Change Log**: Federated Credential Management API [updates](/docs/privacy-sandbox/fedcm-updates/).
 
 Additionally, there are unresolved issues we are actively exploring including
 specific proposals that we are evaluating or prototyping:
