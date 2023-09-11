@@ -47,7 +47,7 @@ Once the soft navigation heuristics are enabled (more on this in the next sectio
 - The performance API will provide access to a `soft-navigation` timing entry, as emitted by the above `PerformanceTiming` event.
 - The [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint), [First Contentful Paint (FCP)](https://web.dev/fcp/), [Largest Contentful Paint (LCP)](https://web.dev/lcp/) metrics will be reset, and re-emitted on the next appropriate occurrences of these. (Note: FP, and FCP are not yet implemented.)
 - The [First Input Delay (FID)](https://web.dev/fcp/) will be reset, and re-emitted on the first input (note: this is not yet implemented).
-- A `navigationId` attribute will be added to each of performance timings (`first-paint`, `first-contentful-paint`, `largest-contentful-paint`, `first-input-delay`, `event`, `layout-shift`) corresponding to the navigation entry the event was related to, allowing [Cumulative Layout Shift (CLS)](https://web.dev/cls/) and [Interaction to Next Paint (INP)](https://web.dev/inp/) to be calculated.
+- A `navigationId` attribute will be added to each of performance timings (`first-paint`, `first-contentful-paint`, `largest-contentful-paint`, `first-input-delay`, `event`, and `layout-shift`) corresponding to the navigation entry the event was related to, allowing [Cumulative Layout Shift (CLS)](https://web.dev/cls/) and [Interaction to Next Paint (INP)](https://web.dev/inp/) to be calculated.
 
 These changes will allow the Core Web Vitals—and some of the associated diagnostic metrics—to be measured per page navigation, though there are some nuances that need to be considered.
 
