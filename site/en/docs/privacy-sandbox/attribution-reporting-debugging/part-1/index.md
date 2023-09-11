@@ -175,7 +175,7 @@ You may want to reprocess reports when you're:
 
 ### Data recovery
 
-During this testing phase, and before the deprecation of third-party cookies when debug reports will be deprecated, ad techs can enable debug mode to receive debug reports so they can recover their reporting data in the case of Aggregation service disasters such as unavailable or non-responsive services that may cause summary report generation to fail.
+During this testing phase, and before the deprecation of third-party cookies when debug reports will be deprecated, ad techs can enable debug mode to receive debug reports so they can recover their reporting data. This is useful in cases of Aggregation Service issues such as unavailable or non-responsive services that may cause summary report generation to fail.
 
 ## Up next
 
