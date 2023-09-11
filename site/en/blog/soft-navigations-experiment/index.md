@@ -18,7 +18,7 @@ tags:
 ---
 
 {% Aside 'update' %}
-The Soft Navigations origin trial has entered a [second origin trial from Chrome 117](/origintrials/#/view_trial/21392098230009857) after taking on board feedback from the initial trial.
+The Soft Navigations origin trial has entered a [second origin trial from Chrome 117](/origintrials/#/view_trial/21392098230009857) after taking feedback on board from the initial trial.
 {% endAside %}
 
 Since its launch, the [Core Web Vitals initiative](https://web.dev/vitals/) has sought to measure the actual user experience of a website, rather than technical details behind how a website is created or loaded. The three Core Web Vitals metrics were created as [user-centric metrics](https://web.dev/user-centric-performance-metrics/)—an evolution over existing technical metrics such as[`DOMContentLoaded`](https://developer.mozilla.org/docs/Web/API/Document/DOMContentLoaded_event) or [`load`](https://developer.mozilla.org/docs/Web/API/Window/load_event) that measured timings that were often unrelated to how users perceived the performance of the page. Because of this, the technology used to build the site should not impact the scoring providing the site performs well.
