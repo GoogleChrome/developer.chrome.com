@@ -6,7 +6,7 @@ layout: 'layouts/blog-post.njk'
 date: 2023-09-12
 authors:
   - ajara
-hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/D40mYqd8kvfXSy2IxbVv.png'
+hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/msCTpRahj6qrF4R4m5y3.png'
 alt: >
   New in Chrome hero logo
 tags:
@@ -14,7 +14,7 @@ tags:
   - chrome-117
 ---
 
-{% YouTube id='JHwWUsMKYdk' %}
+{% YouTube id='MOQpPiyoolM' %}
 
 Esto es lo que necesitas saber:
 

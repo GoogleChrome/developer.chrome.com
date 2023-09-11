@@ -1,3 +1,20 @@
+---
+title: New in Chrome 117
+description: >
+  Chrome 117 is rolling out now! With three new CSS features that make it easy to add smooth entry and exit animations, array grouping to compute higher order datasets, devtools makes local overrides easier and there’s plenty more.
+layout: 'layouts/blog-post.njk'
+date: 2023-09-12
+authors:
+  - ajara
+hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/msCTpRahj6qrF4R4m5y3.png'
+alt: >
+  New in Chrome hero logo
+tags:
+  - new-in-chrome
+  - chrome-117
+---
+
+{% YouTube id='MOQpPiyoolM' %}
 
 Here's what you need to know:
 
