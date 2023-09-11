@@ -11,7 +11,7 @@ After following the [MV3 Migration Checklist][migration-checklist] to convert yo
 
 ## Keep the current set of features {: #keep-features }
 
-When publishing your Manifest V3 extension for the first time, we recommend not adding extra functionality. This way, you can minimize the chances of unexpected issues or bugs. If new features require new permissions, it may [trigger a warning][perm-warn], which means your extension may be disabled until the user enables it again.
+When migrating to Manifest V3 extension, we recommend not adding extra functionality. This way, you can minimize the chances of unexpected issues or bugs unrelated to the migration. If new features require new permissions, it may [trigger a warning][perm-warn], which means your extension may be disabled until the user enables it again.
 
 <figure>
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/tQgKKMKbzmCzwBEAoatX.gif", alt="ALT_TEXT_HERE", width="496", height="388" %}
