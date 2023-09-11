@@ -4,7 +4,7 @@ title: 'Privacy-related Compliance FAQs'
 subhead: >
    Answers to frequently asked questions about obligations, consent, and user controls.
 description: >
-   Privacy-related Compliance FAQs for Privacy Sandbox Relevance and Measurement APIs.
+   Answers to frequently asked questions about obligations, consent, and user controls.
 date: 2023-09-11
 ---
 
