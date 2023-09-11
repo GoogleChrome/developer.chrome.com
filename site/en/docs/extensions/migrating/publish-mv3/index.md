@@ -1,13 +1,13 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Publish your Manifest V3 extension.
+title: Publish your extension
 seoTitle: Publishing a new Manifest V3 Chrome extension.
 description: 'Guidance for publishing a new Manifest V3 extension'
 date: 2023-09-04
 # updated: 2023-05-10
 ---
 
-After following the [MV3 Migration Checklist][migration-checklist] to convert your extension, you are ready to publish your update in the [Chrome Web Store][cws]. This article includes a few helpful recommendations to ensure your release goes smoothly.
+After [converting your extension][migration-checklist] to Manifest Version 3, it's time to release it on the [Chrome Web Store][cws]. There are a few ways to publish your new release gradually. This article discusses releasing a beta version and slowly increasing the number of testers, gradually rolling out to your user base, and monitoring your extension review status to quickly publish any fixes if needed.
 
 ## Publish a beta testing version {: #publish-beta }
 
@@ -40,7 +40,7 @@ Follow these steps to distribute to a small number of testers:
     <figure>
         {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SrVxYFc0lmMgXxtN30gA.png", alt="Screenshot showing trusted tester accounts listed in a Chrome Web Store developer account page", height="395", width="800", class="screenshot" %}
         <figcaption>
-            Trusted tester emails listed in a Chrome Web Store developer Account page.
+            Trusted tester emails in the Chrome Web Store developer Account page.
         </figcaption>
     </figure>
 1. Save changes at the bottom of the page.
@@ -106,7 +106,7 @@ You can do this by unchecking the "Publish automatically" checkbox when you subm
     </figcaption>
 </figure>
 
-Or you can do it later by choosing "Defer publish" in the three-dot menu on the top-right.
+Or you can do it later by choosing "Defer publish" in the three-dot menu on the top right.
 
 <figure>
     {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png", alt="Screenshot showing the 'more' menu's defer publish option", width="286", height="184", class='screenshot' %}
@@ -121,7 +121,7 @@ Once your item is approved, you have up to 30 days to publish. After that period
 
 ### Check your item status {: #check-status }
 
-Most extensions are reviewed within three days. You should receive an email notifying you if your item has passed or if a violation has been found. If you have not received an email in a week, check your item's status in the Published section of the **Status** tab.
+Most extensions are reviewed within three days. When your item has passed or if a violation has been found, you will receive a notification email. If you have not received an email in a week, check your item's status in the Published section of the **Status** tab.
 
 <figure>
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/C4wpnEeMriI9YeDAMDIr.png", alt="The Chrome Web Store Status Tab", width="700", height="276", class='screenshot' %}
@@ -130,12 +130,13 @@ Most extensions are reviewed within three days. You should receive an email noti
     </figcaption>
 </figure>
 
-If your extension has been pending review for over two weeks, you can [contact developer support][cws-support] to request assistance.
+If your extension has been pending review for over two weeks, [contact developer support][cws-support] to request assistance.
 
 ## Additional tips {: #learn-more }
 
 There are other ways to make your extension more robust as you transition to Manifest Version 3. See [Engineering resilient extensions](TBD) for best practices for building a reliable extension.
 
+[cws]: https://chrome.google.com/webstore
 [cws-support]: /docs/webstore/review-process/#support
 [cws-upload]: /docs/webstore/upload
 [google-group]: https://groups.google.com/my-groups
