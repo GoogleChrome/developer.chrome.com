@@ -45,16 +45,16 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 
 ## 202308
 
-[Announcement](?????)
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/CJT8_DbO9DU)
 
 Publication date
  : September 12, 2023
 
 What's new
  : We’re seeing continual improvements across most of the metrics which seem to be driven by the following changes:
- : - Chrome [started rolling out a change to increase image priority from low to medium for the first 5 images](https://bugs.chromium.org/p/chromium/issues/detail?id=1431169) which may have improved LCP and CLS (testing showed less impact on LCP, and more on CLS).
- : - Chrome made a change for LCP whereby animated image formats (for example, GIFs) which now measure [the first frame rather than the full image load time as the LCP time](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_08_lcp.md#animated-images). This is expected to improve the LCP for the small number of sites that have animated images as LCP elements.
- : - Chrome made another change for LCP whyereby [video elements are now considered as LCP element candidates](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_08_lcp.md#videos). Previously they were only considered with a poster image. As videos are typically larger resources to download, this is expected to deteriorate the LCP for the small number of sites that have videos as LCP elements.
+ : - Chrome [started rolling out a change to increase image priority from low to medium for the first 5 images](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_08_image_loading.md) which may have improved LCP and CLS (testing showed less impact on LCP, and more on CLS).
+ : - Chrome made a change for LCP for animated image formats (for example, GIFs) which now measure [the first frame rather than the full image load time as the LCP time](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_08_lcp.md#animated-images). This is expected to improve the LCP for the small number of sites that have animated images as LCP elements.
+ : - Chrome made another change for LCP whereby [video elements are now considered as LCP element candidates](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_08_lcp.md#videos). Previously they were only considered with a poster image. As videos are typically larger resources to download, this is expected to deteriorate the LCP for the small number of sites that have videos as LCP elements.
  : Note that all of these changes are still rolling out so the full effect of all these changes has not been seen yet and hopefully we will see further improvements next month too.
  : On a less positive note, INP pass rates remained static, showing it’s a more tricky metric to optimize for.
 
