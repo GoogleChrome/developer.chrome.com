@@ -166,6 +166,17 @@ Chromium issues: [1470401](https://crbug.com/1470401), [1471301](https://crbug.c
 
 These are some noteworthy fixes and improvements in this release:
 
+- **Network**: New icons for popular resources types: `media`, `wasm`, `websocket`, `manifest`, `fetch/xhr`, `json` ([1466298](https://crbug.com/1466298)).
+- Color updates to material 3 colors in many UI elements, most notably in the **Elements** and **Performance** panels ([1456690](https://crbug.com/1456690), [1472243](https://crbug.com/1472243)).
+- **Issues** now preserves cookie issues across navigations ([1466601](https://crbug.com/1466601)).
+- Various [**Application** > **Preloading**](/blog/new-in-devtools-117/#preloading) improvements, most notably sortable grids and revised rule set details ([1410709](https://crbug.com/1410709)).
+- Various improvements of the command editor in [**Protocol monitor**](/blog/new-in-devtools-117/#protocol-monitor), most notably warnings on wrong input, editing a sent command, editor for object parameters without predefined keys, support for enums undefined by references, objects without type reference, filter commands by substring matches, and more ([1448050](https://crbug.com/1448050)).
+- **Performance** flame chart gets a border around the total box on the pie chart ([1470147](https://crbug.com/1470147)).
+- **Sources** now doesn't treat dashes a word characters in CSS ([1471354](https://crbug.com/1471354)).
+- Autocomplete now always sorts CSS-wise keywords at the end.
+- RegEx filters now support spaces ([1346936](https://crbug.com/1346936)).
+- **Elements** fixed media query feature detection ([1472693](https://crbug.com/1472693)).
+
 ## [Experimental] New Application > Storage > Storage buckets section {: #storage-buckets }
 
 {% Aside 'note' %}
