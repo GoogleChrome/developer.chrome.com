@@ -71,7 +71,7 @@ your code.
 
 ### Can extensions store data locally? {: #faq-dev-08 }
 
-Yes. Extensions provides a [storage API][63] designed specifically for extenions. You can also use
+Yes. Extensions provide a [storage API][63] designed specifically for extensions. You can also use
 the web platform's storage APIs: the [Web Storage API][37], and [IndexedDB][38]. If you use an
 [extension service worker][64], [CacheStorage][65] is also available.
 
