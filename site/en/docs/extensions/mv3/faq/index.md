@@ -146,7 +146,7 @@ can add [some limited UI elements to Chrome itself.][49]
 
 ### How much data can I store in localStorage? {: #faq-dev-09 }
 
-Extensions can store up to 10MB of data in localStorage.
+Extensions can store up to 10MB of data in [`storage.local`][local-storage].
 
 ### How do I create an options menu for my extension? {: #faq-dev-10 }
 
@@ -309,5 +309,6 @@ The steps you should follow to ensure this are:
 [63]: /docs/extensions/reference/storage/
 [64]: /docs/extensions/mv3/service_workers/
 [65]: https://developer.mozilla.org/docs/Web/API/CacheStorage
+[local-storage]: /docs/extensions/reference/storage/#property-local
 [stringify]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 [parse]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
