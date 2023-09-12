@@ -90,7 +90,7 @@ Chromium issues: [1473758](https://crbug.com/1473758).
 
 The **Sources** panel can now:
 
-- Pretty-print inline JavaScript withing the following script types: [`module`](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Modules), [`importmap`](https://developer.mozilla.org/docs/Web/HTML/Element/script/type/importmap), [`speculationrules`](https://github.com/WICG/nav-speculation/blob/main/triggers.md#speculation-rules).
+- Pretty-print inline JavaScript within the following script types: [`module`](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Modules), [`importmap`](https://developer.mozilla.org/docs/Web/HTML/Element/script/type/importmap), [`speculationrules`](https://github.com/WICG/nav-speculation/blob/main/triggers.md#speculation-rules).
 - Highlight the syntax of `importmap` and `speculationrules` script types, both of which hold JSON.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yZYe1CF5ObuLu7zVjcot.png", alt="Before and after pretty-printing and syntax highlighting of speculation rules script type.", width="800", height="395" %}
