@@ -162,7 +162,7 @@ Chrome's built-in developer tools can be used to debug extensions as well as web
 
 ### Why do wildcard matches not work for top level domains? {: #faq-dev-16 }
 
-You cannot use wildcard match patterns like `https://google.*/*` to match top leve domains (like
+You cannot use wildcard match patterns like `https://google.*/*` to match top level domains (like
 `https://google.es` and `https://google.fr`) due to the complexity of actually restricting such a
 match to only the desired domains.
 
