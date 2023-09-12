@@ -58,8 +58,10 @@ Chromium issues: [1471102](https://crbug.com/1471102), [1471103](https://crbug.c
 
 The [workspace](/docs/devtools/workspaces/) feature in the **Sources** panel is new streamlined:
 
-- **Consistent naming**. most notably, the **Sources** > **Filesystem** pane was renamed into **Workspace**. Various UI texts in this pane are now clearer and free of redundancy.
-- **Imropoved drag-and-drop setup**. Provides visual cues for adding folders and a link for folder selection.
+- **Consistent naming**. Most notably, the **Sources** > **Filesystem** pane was renamed into **Workspace**. Various UI texts in this pane are now clearer and free of redundancy.
+- **Imropoved setup**. See better cues for dragging and dropping folders or click a link to select a folder.
+
+[**Sources** > **Workspace**](/docs/devtools/workspaces/) lets you sync changes you make in DevTools directly to your source files.
 
 See the new setup and workflow in action:
 

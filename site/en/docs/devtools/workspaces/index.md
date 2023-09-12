@@ -1,12 +1,12 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Edit and save files with Workspaces"
+title: "Edit and save files with Workspace"
 authors:
   - kaycebasques
   - sofiayem
 date: 2018-04-10
 updated: 2022-10-31
-description: "Learn how to save changes made within DevTools to disk."
+description: "Learn how to save changes made within DevTools to your source files."
 tags:
   - prototype-fixes
   - html
@@ -16,8 +16,8 @@ tags:
 
 {% YouTube id='Zu9CdbnS5ps' %}
 
-**Goal**: This tutorial provides hands-on practice in setting up and using Workspaces so that you
-can use Workspaces in your own projects. Workspaces enable you to save changes that you make within
+**Goal**: This tutorial provides hands-on practice in setting up a Workspace so that you
+can use it in your own projects. Workspace lets you to save changes that you make within
 DevTools to source code that's stored on your computer.
 
 {% Aside "caution" %}
@@ -32,7 +32,7 @@ DevTools to source code that's stored on your computer.
 
 ## Overview {: #overview }
 
-Workspaces enable you to save a change that you make in Devtools to a local copy of the same file on
+Workspace lets you save a change that you make in DevTools to a local copy of the same file on
 your computer. For example, suppose:
 
 - You have the source code for your site on your desktop.
@@ -41,30 +41,30 @@ your computer. For example, suppose:
 - You've got `localhost:8080` open in Google Chrome, and you're using DevTools to change the site's
   CSS.
 
-With Workspaces enabled, the CSS changes that you make within DevTools are saved to the source code
+With Workspace enabled, the CSS changes that you make within DevTools are saved to the source code
 on your desktop.
 
 ## Limitations {: #limitations }
 
 If you're using a modern framework, it probably transforms your source code from a format that's
-easy for you to maintain into a format that's optimized to run as quickly as possible. Workspaces is
+easy for you to maintain into a format that's optimized to run as quickly as possible. Workspace is
 usually able to map the optimized code back to your original source code with the help of [source
 maps][4].
 
 The DevTools community works to support the capabilities provided by source maps across a [variety of frameworks and tools](/docs/devtools/javascript/source-maps/#use_a_supported_preprocessor).
-If you run into issues while using Workspaces with your framework of choice, or you get it working
+If you run into issues while using Workspace with your framework of choice, or you get it working
 after some custom configuration, please [start a thread in the mailing list][5] or [ask a question
 on Stack Overflow][6] to share your knowledge with the rest of the DevTools community.
 
 ## Related feature: Local Overrides {: #overrides }
 
-[Local overrides][7] is another DevTools feature that is similar to Workspaces. Use local overrides
+[Local overrides][7] is another DevTools feature that is similar to Workspace. Use local overrides
 when you want to experiment with changes to a page, and you need to see those changes across page
 loads, but you don't care about mapping your changes to the page's source code.
 
 ## Step 1: Setup {: #setup }
 
-Complete this tutorial to get hands-on experience with Workspaces.
+Complete this tutorial to get hands-on experience with Workspace.
 
 ### Set up the demo {: #demo }
 
@@ -229,7 +229,7 @@ to your site. There's a way to have the **Sources** panel open alongside other p
 Congratulations! You now know how to save to sources the changes you make in DevTools to your locally hosted website.
 {% endAside %}
 
-You can set up multiple folders as **Workspaces**. All such folders are listed in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Workspace**](/docs/devtools/settings/#workspace).
+You can set up multiple folders in a **Workspace**. All such folders are listed in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Workspace**](/docs/devtools/settings/#workspace).
 
 Next, learn how to use DevTools to [change CSS](/docs/devtools/css/) and [debug JavaScript](/docs/devtools/javascript/).
 
