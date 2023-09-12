@@ -206,7 +206,7 @@ The syntax and loading strategy for including popular third-party scripts such a
 
 ## Conclusion
 
-Third-party scripts are usually created to include specific features in the consuming website. To reduce the impact of non-critical scripts, we recommend deferring them&mdash;which the Next.js Script component does by default. Developers have the assurance that included scripts will not delay critical functionality unless they explicitly apply the `beforeInteractive` strategy. Like the Next.js Script component, framework developers can also consider building these features in other frameworks. We are actively exploring landing a similar component with the Nuxt.js team. Based on feedback, we also hope to enhance the [Script component](https://github.com/vercel/next.js/blob/canary/packages/next/client/script.tsx) further to cover additional use cases.
+Third-party scripts are usually created to include specific features in the consuming website. To reduce the impact of non-critical scripts, we recommend deferring them&mdash;which the Next.js Script component does by default. Developers have the assurance that included scripts will not delay critical functionality unless they explicitly apply the `beforeInteractive` strategy. Like the Next.js Script component, framework developers can also consider building these features in other frameworks. We are actively exploring landing a similar component with the Nuxt.js team. Based on feedback, we also hope to enhance the [Script component](https://vercel.com/templates/next.js/script-component-strategies) further to cover additional use cases.
 
 ## Acknowledgments
 

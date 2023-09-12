@@ -150,7 +150,7 @@ console.log('IdleDetector is stopped.');
 
 ### DevTools support
 
-Starting in Chromium&nbsp;94, you can emulate idle events in DevTools without actually being idle.
+Starting in Chromium&nbsp;94, you can [emulate idle events in DevTools](/docs/devtools/sensors/#idle) without actually being idle.
 In DevTools, open the **Sensors** tab and look for **Emulate Idle Detector state**.
 You can see the various options in the video below.
 
@@ -171,7 +171,7 @@ You can see the various options in the video below.
 ### Puppeteer support
 
 As of Puppeteer version&nbsp;5.3.1, you can
-[emulate the various idle states](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageemulateidlestateoverrides)
+[emulate the various idle states](https://pptr.dev/api/puppeteer.page.emulateidlestate/)
 to programmatically test how your web app's behavior changes.
 
 ### Demo

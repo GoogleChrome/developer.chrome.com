@@ -1,0 +1,4 @@
+- The [Topics API proposal](https://github.com/jkarlin/topics) has completed the public discussion phase and is currently available in an [origin trial](/docs/privacy-sandbox/unified-origin-trial/). The API is now approaching launch for scaled adoption. 
+- To provide your feedback on the Topics API, create an Issue on the [Topics explainer](https://github.com/jkarlin/topics/issues) or participate in discussions in the [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants). The explainer has a number of open questions that still require further definition.
+- [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides implementation timelines for the Topics API and other Privacy Sandbox proposals.
+- [Topics API: latest updates](/docs/privacy-sandbox/topics/latest/) details changes and enhancements to the Topics API and implementations.

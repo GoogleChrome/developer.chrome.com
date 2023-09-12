@@ -2,11 +2,15 @@
 layout: 'layouts/doc-post.njk'
 title: Max Potential First Input Delay
 description: |
-  Learn about Lighthouse's Max Potential First Input Delay metric and
+  Learn about Lighthouse's deprecated Max Potential First Input Delay metric and
   how to measure and optimize it.
 date: 2019-05-02
 updated: 2019-10-16
 ---
+
+{% Aside 'caution' %}
+Max Potential First Input Delay was deprecated in Lighthouse 6.0. Moving forward, consider using [Total Blocking Time](https://web.dev/lcp/) in the lab and [First Input Delay](https://web.dev/fid/) and [Interaction to Next Paint](https://web.dev/inp/) in the field.
+{% endAside %}
 
 Max Potential First Input Delay (FID) is one of the metrics
 tracked in the **Performance** section of the Lighthouse report.

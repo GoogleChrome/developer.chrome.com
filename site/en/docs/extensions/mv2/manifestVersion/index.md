@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest version"
+seoTitle: "MV2 - Manifest version [Deprecated]"
 date: 2012-09-18
 updated: 2019-08-12
 description: >
@@ -8,7 +9,11 @@ description: >
   of the manifest specification a Chrome Extension targets.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest_version](/docs/extensions/mv3/manifest/manifest_version) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Extensions, themes, and applications are simply bundles of resources, wrapped up with a
 [`manifest.json`][1] file that describes the package's contents. The format of this file is

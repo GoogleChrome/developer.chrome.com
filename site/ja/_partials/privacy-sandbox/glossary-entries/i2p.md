@@ -1,0 +1,1 @@
+Intent to Prototype（I2P）は、[Blink](#blink) の[新機能を開発する](/blog/progress-in-the-privacy-sandbox-2021-12/#chromium-development-process)最初の段階です。この発表は、[blink-dev メーリング リスト](https://groups.google.com/a/chromium.org/g/blink-dev)に、ディスカッションを行っている提案のリンクとともに投稿されます。

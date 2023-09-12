@@ -36,8 +36,8 @@ tags:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Запись событий двойного клика и клика правой кнопкой мыши во вкладке Recorder", width="800", height="572" %}
 
-<!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
-На этой [тестовой странице](https://jec.fyi/demo/dbl-right-click) начните [запись](/docs/devtools/recorder/#record) и выполните следующие действия:
+<!-- In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
+На этой [тестовой странице](https://jec.fish/demo/dbl-right-click) начните [запись](/docs/devtools/recorder/#record) и выполните следующие действия:
 
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->
@@ -50,7 +50,7 @@ tags:
 <!-- - **Double-click** is captured as `type: doubleClick`.
 - **Right-click** event is captured as `type: click` but with the `button` property is set to `secondary`. The `button` value of a normal mouse click is `primary`. -->
 - **Двойной клик** записался как `type: doubleClick`.
-- Событие **клика правой кнопкой мыши** записалось как `type: click`, но со значением `secondary` у свойства `button`. 
+- Событие **клика правой кнопкой мыши** записалось как `type: click`, но со значением `secondary` у свойства `button`.
 
 Задачи в трекере Chromium: [1300839](https://crbug.com/1300839), [1322879](https://crbug.com/1322879), [1299701](https://crbug.com/1299701), [1323688](https://crbug.com/1323688)
 
@@ -59,12 +59,12 @@ tags:
 ## Новые режимы: Анализ временного диапазона и Сводка во вкладке Lighthouse {: #lighthouse }
 
 <!-- You can now use **Lighthouse** to measure your website’s performance beyond page load. -->
-Теперь вы можете использовать **Lighthouse** для измерения производительности вашего сайта не только при загрузке страницы. 
+Теперь вы можете использовать **Lighthouse** для измерения производительности вашего сайта не только при загрузке страницы.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3GGcCxlOGrnXLMfp0t9y.png", alt="Новые режимы: Анализ временного диапазона и Сводка во вкладке Lighthouse", width="800", height="507" %}
 
 <!-- The **Lighthouse** panel now supports 3 modes of user flow measurement:  -->
-Вкладка **Lighthouse** теперь поддерживает 3 режима измерения пользовательского потока: 
+Вкладка **Lighthouse** теперь поддерживает 3 режима измерения пользовательского потока:
 
 <!-- - [Navigation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#navigation) reports analyze a single page load. Navigation is the most common report type. All Lighthouse reports before the current version are navigation reports.
 - [Timespans](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md#timespan) reports analyze an arbitrary time period, typically containing user interactions.
@@ -159,7 +159,7 @@ DevTools теперь поддерживают возможность выбра
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8e1a99324bde8d093e32ede5c8d1bf50110fac66 #}
 
-Задача в трекере Chromium: [1316340](https://crbug.com/1316340) 
+Задача в трекере Chromium: [1316340](https://crbug.com/1316340)
 
 
 <!-- ## Support large blobs for virtual authenticators {: #webauthn } -->
@@ -174,7 +174,7 @@ DevTools теперь поддерживают возможность выбра
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/519350816e99a82142712b2e5b6781984a77e39c #}
 
-Задача в трекере Chromium: [1321803](https://crbug.com/1321803) 
+Задача в трекере Chromium: [1321803](https://crbug.com/1321803)
 
 
 <!-- ## New keyboard shortcuts in the Sources panel {: #shortcuts } -->
@@ -195,34 +195,34 @@ DevTools теперь поддерживают возможность выбра
 Задачи в трекере Chromium: [1226363](https://crbug.com/1226363)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemaps } -->
+<!-- ## Source maps improvements {: #sourcemaps } -->
 ## Улучшения карты исходников {: #sourcemaps }
- 
+
 <!-- Previously, developers experience random failure during: -->
 Ранее разработчики могли сталкиваться со случайными сбоями при следующих действиях:
- 
+
 <!-- - Debugging with [Codepen](https://codepen.io/) example
 - Identifying source location of performance issues in a [Codepen](https://codepen.io/) example
 - Missing **Component** tab when [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) is enabled -->
 - Отладка кода примера, опубликованного на [Codepen](https://codepen.io/)
 - Определение источника проблем с производительностью в примере, опубликованном на [Codepen](https://codepen.io/)
 - Отсутствие вкладки **Компонент** (Component) при включении [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
- 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 Вот несколько исправлений в картах исходников для улучшения отладки:
- 
+
 <!-- - Correct mapping between location and offset for inline scripts and source location
 - Use fallback information for frame’s text location
 - Properly resolve relative urls with frame's URL   -->
 - Корректное сопоставление нахождения и смещения для инлайновых скриптов и исходников
 - Использование фолбэк-информации для нахождения текста во фрейме
-- Правильное преобразование относительных адресов в URL фрейма 
- 
+- Правильное преобразование относительных адресов в URL фрейма
+
 {# https://chromium.googlesource.com/v8/v8/+/d821a6a373ecf086a2ef0d233ace7f3431e47732 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9d3d33e0bde8357d58a3c4981dd016e9b9c553f3 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/04a58f2837c1ec9e78bd722bbe81e9cd7ab38727 #}
 
-Задачи в трекере Chromium: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)  
+Задачи в трекере Chromium: [1319828](https://crbug.com/1319828), [1318635](https://crbug.com/1318635), [1305475](https://crbug.com/1305475)
 
 
 {% Partial 'devtools/reach-out.md' %}

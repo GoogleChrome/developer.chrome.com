@@ -80,7 +80,7 @@ async increment() {
 ### Автоматическое игнорирование известных сторонних скриптов {: #auto-ignore }
 
 <!-- Identify issues in your code quicker during debugging because DevTools now automatically adds known third-party scripts to the ignore list. -->
-Быстрее находите ошибки в своём коде при отладке благодаря тому, что теперь DevTools добавляет известные сторонние скрипты в список игнорируемых. 
+Быстрее находите ошибки в своём коде при отладке благодаря тому, что теперь DevTools добавляет известные сторонние скрипты в список игнорируемых.
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/) and click on the increment button. Expand the error message in **Console**. The stack trace shows only your code (e.g. `app.component.ts` `button.component.ts`). Click **Show more frames** to view the full stack trace. -->
 Откройте [демо](https://ng-devtools.netlify.app/) и нажмите на кнопку <kbd>+</kbd>. Разверните ошибку в консоли. Трассировка стека покажет только ваш код (например, `app.component.ts` и `button.component.ts`). Нажмите **Показать ещё фреймы** (Show more frames), чтобы увидеть полную трассировку стека.
@@ -92,7 +92,7 @@ async increment() {
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="Автоматическое игнорирование известных сторонних скриптов при трассировке стека", width="800", height="425" %}
 
-<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
+<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in source maps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
 По капотом DevTools игнорируют сторонние скрипты при помощи нового свойства `x_google_ignoreList` для карт источников. Фреймворки и сборщики должны предоставлять эту информацию. Читайте [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 
 <!-- Optionally, if you prefer to always view full stack traces, you can disable the setting via **Settings** > **Ignore list** > **Automatically add known third-party scripts to ignore list**. -->
@@ -128,7 +128,7 @@ async increment() {
 ## Скрытие источников из списка игнорируемых во вкладке Источники (Sources) {: #ignore-nav }
 
 <!-- Enable **hide ignore-listed sources** to hide irrelevant files in the **Navigation** pane. This way, you can focus only on your code. -->
-Включите настроку **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources), чтобы спрятать нерелевантные файлы в панели **Навигация** (Navigation). 
+Включите настроку **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources), чтобы спрятать нерелевантные файлы в панели **Навигация** (Navigation).
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/). In the **Sources** panel. The `node_modules` and `webpack` are the third-party scripts. Click on the 3-dot menu and select **hide ignore-listed sources** to hide them from the pane. -->
 Откройте это [демо](https://ng-devtools.netlify.app/). Перейдите на вкладку **Источники** (Sources). `node_modules` и `webpack` — сторонние скрипты. Нажмите на иконку меню  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; и выберите  **Скрыть источники из списка игнорируемых** (Hide ignore-listed sources), чтобы спрятать такие файлы из дерева навигации.

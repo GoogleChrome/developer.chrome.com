@@ -59,13 +59,37 @@ module.exports = collection => {
   /** @type FeedsCollection */
   const tagsFeeds = {};
 
+  /** @type FeedsCollection */
+  const authorsFeeds = {};
+
+  /** @type {EleventyCollectionItem[]} */
+  const all = [];
+
   /** @type {EleventyCollectionItem[]} */
   const blog = [];
 
+  /** @type {EleventyCollectionItem[]} */
+  const articles = [];
+
   for (const post of posts) {
-    // If post is a blog post, push it into blog array.
-    if (post.data.type === 'blogPost' && blog.length < MAX_POSTS) {
-      blog.push(post);
+    switch (post.data.type) {
+      case 'blogPost':
+        if (blog.length < MAX_POSTS) {
+          blog.push(post);
+        }
+        if (all.length < MAX_POSTS) {
+          all.push(post);
+        }
+        break;
+
+      case 'article':
+        if (articles.length < MAX_POSTS) {
+          articles.push(post);
+        }
+        if (all.length < MAX_POSTS) {
+          all.push(post);
+        }
+        break;
     }
 
     const postTags = tagsForData(post.data);
@@ -85,12 +109,33 @@ module.exports = collection => {
         tagsFeeds[tag].items.push(post);
       }
     }
+
+    const authors = post.data.authors ?? [];
+    for (const author of authors) {
+      // If author feed does not exist in feeds yet, create FeedsCollectionItem
+      if (!authorsFeeds[author]) {
+        authorsFeeds[author] = {
+          items: [],
+          permalink: `/authors/${author}/feed.xml`,
+          title: i18n(`i18n.authors.${author}.title`),
+          url: `/authors/${author}`,
+        };
+      }
+
+      authorsFeeds[author].items.push(post);
+    }
   }
 
   // We write these feeds out in their own object so it's obvious that they will "win" over any
   // tagged feeds of the same name.
   /** @type {FeedsCollection} */
   const specialFeeds = {
+    articles: {
+      items: articles,
+      permalink: '/feeds/articles.xml',
+      title: i18n('i18n.common.articles'),
+      url: '/articles',
+    },
     blog: {
       items: blog,
       permalink: '/feeds/blog.xml',
@@ -98,10 +143,10 @@ module.exports = collection => {
       url: '/blog',
     },
     all: {
-      items: posts.slice(0, MAX_POSTS),
+      items: all,
       permalink: '/feeds/all.xml',
     },
   };
 
-  return {...tagsFeeds, ...specialFeeds};
+  return {...tagsFeeds, ...authorsFeeds, ...specialFeeds};
 };

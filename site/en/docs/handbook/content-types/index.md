@@ -12,3 +12,4 @@ along with a sample page for each type.
 - [Docs post](/docs/handbook/content-types/doc-post)
 - [Docs landing](/docs/handbook/content-types/docs-landing)
 - [Landing](/docs/handbook/content-types/landing)
+- [Meet the team](/docs/handbook/content-types/meet-the-team)

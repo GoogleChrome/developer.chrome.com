@@ -27,12 +27,12 @@ Cuando una animación no se puede componer, Chrome informa las razones de la fal
 
 ## Cómo asegurarse de que las animaciones estén compuestas
 
-Consulta [Adherirse a las propiedades exclusivas del compositor y administrar el número de capas](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) y [las animaciones de alto rendimiento](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) .
+Consulta [Adherirse a las propiedades exclusivas del compositor y administrar el número de capas](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) y [las animaciones de alto rendimiento](https://web.dev/animations-guide/) .
 
 ## Recursos
 
 - [Código fuente para la auditoría de _Evitar animaciones no compuestas_](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/non-composited-animations.js)
 - [Limítate a las propiedades exclusivas del compositor y gestiona el número de capas](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
-- [Animaciones de alto rendimiento](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
+- [Animaciones de alto rendimiento](https://web.dev/animations-guide/)
 - [Simplifica la complejidad de la pintura y reduce sus áreas](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas)
 - [Una mirada al interior de los navegadores web modernos (parte 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)

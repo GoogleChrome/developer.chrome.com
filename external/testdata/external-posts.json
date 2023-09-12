@@ -1,0 +1,360 @@
+[
+  {
+    "bramus": [
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33389",
+        "title": "What’s new in CSS? (2022.03.23 @ DevDay)",
+        "date": "Sat, 08 Apr 2023 09:49:25 +0000",
+        "summary": "Slides of the talk “What’s new in CSS” I gave at DevDay"
+      },
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33375",
+        "title": "CSS Trigonometric Functions land in Chrome 111",
+        "date": "Fri, 10 Mar 2023 23:06:49 +0000",
+        "summary": "Put your CSS <code>calc()</code> hat on because <code>sin()</code>, <code>cos()</code>, <code>tan()</code>, and friends are available in Chrome 111! "
+      },
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33332",
+        "title": "(255,255,255) is the Highest Specificity",
+        "date": "Tue, 21 Feb 2023 11:05:04 +0000",
+        "summary": "Exploring how browser engines store Specificity and what, if any, its limits are."
+      },
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33089",
+        "title": "Scroll-Driven Animations: Cover Flow (2022.10.06 @ Full Stack Europe)",
+        "date": "Sun, 12 Feb 2023 08:05:03 +0000",
+        "summary": "Lightning talk on how I recreated Cover Flow using only HTML and CSS, thanks to Scroll-Driven Animations."
+      },
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33242",
+        "title": "The gotcha with @property",
+        "date": "Tue, 31 Jan 2023 23:12:10 +0000",
+        "summary": "Custom properties registered using <code>@property</code> don’t animate on the compositor."
+      },
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33212",
+        "title": "Using :is() in complex selectors selects more than you might initially think",
+        "date": "Tue, 17 Jan 2023 20:33:25 +0000",
+        "summary": "Because selector matching in browsers happens from right to left, you might end up with more matches than you expected when using <code>.a :is(.b .c)</code>."
+      },
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33174",
+        "title": "Sibling Scopes in CSS, thanks to :has() and ~",
+        "date": "Thu, 12 Jan 2023 00:05:24 +0000",
+        "summary": "Leverage CSS <code>:has()</code> to select all siblings between two element boundaries."
+      },
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33112",
+        "title": "CSS :has() feature detection with @supports(selector(…)): You want :has(+ *), not :has(*)",
+        "date": "Wed, 04 Jan 2023 20:20:17 +0000",
+        "summary": "When feature detecting support for <code>:has()</code>, use <code>:has(+ *)</code> instead of <code>:has(*)</code>"
+      },
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33100",
+        "title": "CSS in 2022 (and beyond) (2022.10.07 @ Full Stack Europe)",
+        "date": "Tue, 20 Dec 2022 11:21:49 +0000",
+        "summary": "Slides of the talk I gave at “Full Stack Europe 2022” + Trip Report"
+      },
+      {
+        "source": "bram.us",
+        "url": "https://www.bram.us/?p=33059",
+        "title": "Help choose the syntax for CSS Nesting!",
+        "date": "Fri, 16 Dec 2022 12:14:55 +0000",
+        "summary": "The CSS Working Group is continuing a debate over the best way to define nesting in CSS. And if you are someone who writes CSS, we’d like your help."
+      }
+    ]
+  },
+  {
+    "paulkinlan": [
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/querying-browser-compat-data-with-a-llm/",
+        "title": "Querying browser compat data with a LLM",
+        "date": "Tue, 11 Apr 2023 13:19:43 +0000",
+        "summary": "I've been noodling about a lot with LLMs recently and naturally I wanted to see if they could help me with my role. There's a lot of places I've found them to be useful, but an area where I've struggled is their data sources not being up to date with the current state of the web. I build a lot of sites and speak to a lot of Web Developers and a huge problem we have is knowing what APIs are supported so that I can use and rely on it in my sites without having to worry about compatibility as much."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/building-ask-paul/",
+        "title": "Building Ask Paul",
+        "date": "Fri, 07 Apr 2023 17:36:14 +0000",
+        "summary": "I've been doing a lot of experimentation with Generative Machine Learning and one of the demo's that I've build is called &quot;Ask Paul&quot;. You can ask me nearly any front-end web development question and the software will give you a direct answer if it can and links to further reading across the sites that I create content for (this blog, web.dev and developer.chrome.com) You can try it with a couple more queries:"
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/aiming-for-the-future-at-bangor-university/",
+        "title": "Talk: \"Aiming for the future\" at Bangor University",
+        "date": "Tue, 21 Mar 2023 12:51:19 +0000",
+        "summary": "I was honoured to be able to present at the &quot;School of Computer Science and Electronic Engineering&quot; last week with a talk called &quot;Aiming for the Future&quot; [pdf]. I had a lot of fun creating this talk where I could go from the earliest computing with the Difference Engine all the way to today and try and talk about the evolutions of computing and possibility at every transition (I tied the transitions to delivery of content/data)."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/bcd-experimental-apis/",
+        "title": "BCD - Experimental APIs",
+        "date": "Mon, 13 Feb 2023 09:45:35 +0000",
+        "summary": "This is just a small update. I've spent a bit of time adding some features to &quot;time-to-stable&quot;. As I try to think about what is stable across the web platform it is useful to think about what APIs are marked as experimental. I added a new page to the site which lets you discover the APIs across a selected list of browsers that are still marked as experimental in BCD (Browser Compat Data)."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/the-local-only-web/",
+        "title": "The local-only web",
+        "date": "Thu, 26 Jan 2023 11:23:59 +0000",
+        "summary": "I was very happy to do a keynote session for the Tokyo and New York Google Developer Groups. I love doing talks that are centred around &quot;The web in 202x&quot; and these where no different. The New York keynote was a little different to the event in Tokyo because I had an extra 15 minutes to talk, and I like talking. One area that I got to spend more time on was using talking about areas that I am personally excited in 2023 and beyond."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/support-during-layoffs-2023/",
+        "title": "Support during layoffs",
+        "date": "Thu, 26 Jan 2023 11:13:26 +0000",
+        "summary": "If you are impacted by any of the layoffs at Google or across the industry, please reach out and I will try and help in any way that I can. I am happy to make connections and intros, LinkedIn recommendations, resume review, interview prep, a listening ear. For over a year now I've been running calls and I want to try and help you all as much as I can. My calendar is open, please use me in anyway that you think I might be able to help."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/creating-a-simple-lighthouse-audit/",
+        "title": "Using ML to Create a Simple Lighthouse Audit to Detect a Button",
+        "date": "Mon, 23 Jan 2023 14:37:48 +0000",
+        "summary": "This post wraps up the series of posts I created about applying ML to some developer tasks that are hard to do programatically. Specifically, I wanted to create a tool that would let me detect if an anchor on a page &lt;a&gt; was styled to look like a button or not (woot, it worked!) You can check out the previous posts here: Scraping images of links and buttons to train an ML model"
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/lighthouse-full-res-screenshot-gatherer/",
+        "title": "Creating a Lighthouse Gatherer to generate high-res screenshots for your Audit",
+        "date": "Mon, 16 Jan 2023 09:51:54 +0000",
+        "summary": "I created a custom Lighthouse Gatherer that captures high-resolution screenshots of web pages, using the Puppeteer API. Despite the complexity of the task, the process was surprisingly easy and efficient."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/ml-deno-fresh-tensorflow/",
+        "title": "Creating a web app with Deno, Fresh and TensorflowJS",
+        "date": "Thu, 12 Jan 2023 11:10:43 +0000",
+        "summary": "After I trained a simple machine learning model that can detect if an image looks like a link or a button. I created a web app to help me test it using Deno, Fresh and TensorflowJS. My demo allows for dragging and dropping many images on a page and automatically classifying them."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/training-the-button-detector-ml-model/",
+        "title": "Training the Button detector ML model",
+        "date": "Fri, 06 Jan 2023 14:47:52 +0000",
+        "summary": "A guide on how I trained an ML model that detects Buttons and Links in a web page."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/button-and-link-scraping-for-ml-training/",
+        "title": "Button and Link Scraping for ML training",
+        "date": "Sat, 31 Dec 2022 19:31:05 +0000",
+        "summary": "After over 20 years I'm getting back in to ML. I looking at a simple (but practical) example that I can get back up to speed on"
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/dec-23rd-2022/",
+        "title": "Dec 23rd, 2022",
+        "date": "Fri, 23 Dec 2022 01:14:21 +0000",
+        "summary": "Created Adding ActivityPub to your static site and also added a lot more functionality to my site. I can now show Likes, &quot;Boosts&quot; and replies. See Interactions from around the fediverse with https://paul.kinlan.me/adding-activity-pub-to-your-static-site/ as an example Added resources to ActivityPub to help people find the best information ML Google Colab - Colab is a rather amazing tool, I've also built some dashboards in the past with it but for ML with Tensorflow it's worked really well."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/adding-activity-pub-to-your-static-site/",
+        "title": "Adding ActivityPub to your static site",
+        "date": "Fri, 16 Dec 2022 14:16:15 +0000",
+        "summary": "This is a short post about I how I added ActivityPub to my Hugo static blog"
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/post-deploy-webhook-for-vercel/",
+        "title": "Post Deploy Webhook for Vercel",
+        "date": "Tue, 13 Dec 2022 20:44:13 +0000",
+        "summary": "This custom integration was created because Vercel does not currently offer the ability to configure webhooks for project-related events such as Deploy Successful."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/dec-13th-2022/",
+        "title": "Dec 13th, 2022",
+        "date": "Tue, 13 Dec 2022 09:55:15 +0000",
+        "summary": "Note taking has become irregular. Need to get back into it. Very happy to see updates to web.dev/learn Learn Accessibility Learn HTML I know there is a lot more coming in the new year. Spent some time researching ActivityPub - Personally I found it all a bit complex Added ActivityPub to this blog so that it publishes a feed and posts it to subscribers. ActivityPub ecosystem needs a Technical Writer."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/thoughts-on-web-follow/",
+        "title": "Thoughts on a \"Web Follow\" protocol",
+        "date": "Sat, 03 Dec 2022 19:40:32 +0000",
+        "summary": "Thinking about the follow action on the web."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/ml-to-help-with-developer-experience/",
+        "title": "Using ML to improve developer experience.",
+        "date": "Fri, 02 Dec 2022 02:30:29 +0000",
+        "summary": "My world has been shook. I started writing this post in March 2021 and am revisiting it today. I discussed how watching Corridor Crew inspired me to look for ways ML can improve developer experience. After researching, I identified four challenges: inferring what developers meant for the DOM, aiding with accessibility, helping with performance, and creating layouts and images. Finally, I questioned how GPT-Chat has changed my job as a DevRel lead."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/detecting-if-a-url-scheme-can-be-handled/",
+        "title": "Detecting if a URL scheme can be handled",
+        "date": "Mon, 21 Nov 2022 20:24:15 +0000",
+        "summary": "Can we detect if a url with a custom URL scheme can be handled? Why yes. Yes we can."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/nov-21st-2022/",
+        "title": "Nov 21st, 2022",
+        "date": "Mon, 21 Nov 2022 12:02:14 +0000",
+        "summary": "Events are hard. Collating lots of posts about the Modern Frontends event. Stop treating all of your content as if it were news – Rachel Andrew Drawing a star with DOMMatrix - JakeArchibald.com Building a Cross-Platform Mobile Messaging Experience Reading Enhance docs Collated TPAC 2022 - currently reading through a lot of the discussions. Read Optimizing Interaction to Next Paint (INP) by Jeremy Wagner Read Can we enterprise CSS grid?"
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/twitter/",
+        "title": "Twitter",
+        "date": "Fri, 04 Nov 2022 19:52:39 +0000",
+        "summary": "Sigh..."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/on-mastodon/",
+        "title": "On Mastodon",
+        "date": "Fri, 04 Nov 2022 19:22:23 +0000",
+        "summary": "Some thoughts about why Mastodon"
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/sep-16th-2022/",
+        "title": "Sep 16th, 2022",
+        "date": "Thu, 15 Sep 2022 23:16:13 +0000",
+        "summary": "Thinking about Competitive Dashboards Created Chrome Release 106 a super-light list of what is in each release of Chrome powered by Chrome Status. Mostly an experiment with Deno and Deno Deploy, but it was amazing to build a UI in Lit and then just move it to run on the server (note: I removed Lit and used my own templating tool that is very similar.) Read How To Improve Largest Contentful Paint for Faster Load Times - Calibre Read Modern alternatives to BEM - daverupert."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/sep-12th-2022/",
+        "title": "Sep 12th, 2022",
+        "date": "Mon, 12 Sep 2022 00:16:49 +0000",
+        "summary": "Read Fronteers - Debugging Web Privacy [public] - Google Slides Read Critical CSS? Not So Fast! – CSS Wizardry – Web Performance Optimisation Read A Dangerous Addiction. I wanted to talk about something I’ve… | by Alex Komoroske | Jul, 2022 | Medium This post resonates a lot with me and was similar to a conversation I had with Alex earlier in my career when we worked together TIL https://internet."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/what-is-new-on-the-web/",
+        "title": "What is new on the web?",
+        "date": "Fri, 09 Sep 2022 06:00:00 +0000",
+        "summary": "When does an API become available to use on the web?"
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/sep-5th-2022/",
+        "title": "Sep 5th, 2022",
+        "date": "Mon, 05 Sep 2022 18:05:48 +0000",
+        "summary": "The USA was off on national holiday today, so I spent some time investigating what you can do with Browser Compat Data Built Now Stable across Chrome, Firefox, and Safari - to help us work out what is new to the web each month. Built Time to Stable - To help us how long it takes features to reach a stable portion of the web Test: Time to Stable across Chrome, Firefox, and Safari browser-compat-data/browsers-schema."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/aug-22nd-2022/",
+        "title": "Aug 22nd, 2022",
+        "date": "Sun, 21 Aug 2022 23:10:10 +0000",
+        "summary": "Read Sustainable Web Manifesto - not really sure what to make of it. On one hand I totally get it, on the other who knows how to actually quantify this? I know the Pixel 6 has a power rail that can be measured and you could look at the impact of loading a page in terms of power usage, but measuring on the client is only one aspect, how do you quantify the impact of any server interaction."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/aug-15th-2022/",
+        "title": "Aug 15th, 2022",
+        "date": "Sun, 14 Aug 2022 23:02:21 +0000",
+        "summary": "Read Adactio: Journal—Democratising dev This is another great post, and there's this bit at the end: Don’t get me wrong. I love having my own website. Like, I really love it. But I’m also well aware that it doesn’t scale. It’s unreasonable to expect someone to learn new skills just to make a web page about, say, an event they want to publicise. I don't always think it's the complexity of building the site that is the biggest blocker to a lot of people, it's the deploying and running."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/aug-10th-2022/",
+        "title": "Aug 10th, 2022",
+        "date": "Tue, 09 Aug 2022 23:06:38 +0000",
+        "summary": "New CRUX available - https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/N5B3F9QVOmY - July data set. Chrome UX Report - Chrome Developers CrUX is probably one of the most valuable datasources that you don't yet use. Watched: What are Chrome release channels? - YouTube - I love Sam's videos, he creates clear and concise content that is easy to understand but covers what I need to know. WASM coming to Vercel Edge ? PHP 7.4.20 - phpinfo() - I'm actually curious to see what this actually means (not the PHP link)."
+      },
+      {
+        "source": "paul.kinlan.me",
+        "url": "https://paul.kinlan.me/journal/aug-2nd-2022/",
+        "title": "Aug 2nd, 2022",
+        "date": "Wed, 03 Aug 2022 13:35:40 +0000",
+        "summary": "Read Tailwind CSS v3.0 – Tailwind CSS I get that people don't like tailwind from a purist CSS abstraction POV, but it's got lots of stuff that just kinda work and is just kinda easy. Thinking - Related to above, I'm just not happy with the style of my blog and I'm looking to find someone to help with a make-over. Blast from the past - 2001. I started a company many many years ago, and this was our home page https://web."
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/farewell-html5rocks/",
+        "title": "Farewell to HTML5Rocks",
+        "date": "2022-06-29T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/googleio22-recap/",
+        "title": "Google I/O 2022: That's a wrap!",
+        "date": "2022-05-13T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/css-gradient-generator/",
+        "title": "Quickly create nice CSS gradients with the CSS Gradient Creator",
+        "date": "2022-05-04T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/media-recording-audio/",
+        "title": "Recording Audio from the User",
+        "date": "2016-08-23T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/media-capturing-images/",
+        "title": "Capturing an image from the user",
+        "date": "2016-08-23T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/beyond-the-rack/",
+        "title": "Beyond the Rack",
+        "date": "2015-10-25T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/user-location/",
+        "title": "User Location",
+        "date": "2014-01-01T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/mobile-touchandmouse/",
+        "title": "Touch and mouse",
+        "date": "2013-03-13T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/multiplayer-audio-fun/",
+        "title": "Multiplayer audio fun",
+        "date": "2011-07-01T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/3d-css/",
+        "title": "3D and CSS",
+        "date": "2010-09-07T00:00:00Z",
+        "summary": ""
+      },
+      {
+        "source": "webdev",
+        "url": "https://web.dev/webdatabase-todo/",
+        "title": "A simple TODO list using HTML5 WebDatabases",
+        "date": "2010-02-17T00:00:00Z",
+        "summary": ""
+      }
+    ]
+  }
+]

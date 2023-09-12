@@ -2,12 +2,12 @@
 layout: "layouts/doc-post.njk"
 title: "Prepare to publish: set up payment and distribution"
 date: 2020-12-07
-updated: 2021-09-23
+updated: 2023-05-01
 description: >
   How to choose which countries will list your item and who will see it in the Chrome Web Store.
 ---
 
-In the Payment and Distribution tab you can declare if your extension is free or contains in-app purchases. You can also choose who will see it on the Chrome Web Store.
+In the Distribution tab you can declare if your extension is free or contains in-app purchases. You can also choose who will see it on the Chrome Web Store.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QQZihsAu4qF7vKH7n648.png", alt="Screenshot of the Chrome Web Store payment and distribution page", width="800", height="388" %}
 
@@ -32,7 +32,8 @@ All visibility settings have the same policy requirements and will go through th
 ### Private visibility: Trusted testers {: #private-visibility-trusted-testers }
 
 Private allows your trusted testers to install the item. You designate trusted testers by listing
-them on your Chrome Web Store account home page.
+them in your account settings in the developer dashboard. Each email should be associated with a
+Google account which will be able to view and install your item on the Chrome Web Store.
 
 {% Aside %}
 

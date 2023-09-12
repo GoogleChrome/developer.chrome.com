@@ -89,13 +89,13 @@ you'll need to build with [TLS] in mind.
 As a security precaution, `navigator.usb.requestDevice()` may only
 be called through a user gesture such as a touch or mouse click.
 
-### Feature Policy
+### Permissions Policy
 
-A [feature policy] is a mechanism that allows developers to selectively enable
+A [Permissions Policy] is a mechanism that allows developers to selectively enable
 and disable various browser features and APIs. It can be defined via an HTTP
 header and/or an iframe "allow" attribute.
 
-You can define a feature policy that controls whether the usb attribute is
+You can define a Permissions Policy that controls whether the `usb` attribute is
 exposed on the Navigator object, or in other words if you allow WebUSB.
 
 Below is an example of a header policy where WebUSB is not allowed:
@@ -410,7 +410,7 @@ Thanks to [Joe Medley] for reviewing this article.
 [origin trial]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
 [secure contexts]: https://w3c.github.io/webappsec/specs/powerfulfeatures/#intro
 [tls]: https://en.wikipedia.org/wiki/Transport_Layer_Security
-[feature policy]: https://developer.mozilla.org/docs/Web/HTTP/Feature_Policy
+[permissions policy]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy
 [promises]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [promises tutorial]: https://web.dev/promises
 [arrow functions]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions

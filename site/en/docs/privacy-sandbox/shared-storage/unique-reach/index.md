@@ -6,6 +6,7 @@ subhead: >
 description: >
   Use Shared Storage and Private Aggregation for unique reach measurement
 date: 2022-11-08
+updated: 2023-01-19
 authors:
   - alexandrawhite
   - kevinkiklee
@@ -17,7 +18,7 @@ possible use cases. [Private Aggregation API](/docs/privacy-sandbox/private-aggr
 
 ## Try unique reach measurement
 
-To experiment with unique reach measurement with Shared Storage and Private Aggregation, confirm you're using Chrome Canary and Dev M107 or later. Then enable the **Privacy Sandbox Ads APIs experiment** flag at `chrome://flags/#privacy-sandbox-ads-apis`.
+To experiment with unique reach measurement with Shared Storage and Private Aggregation, confirm you're using Chrome M107 or later. Then enable the **Privacy Sandbox Ads APIs experiment** flag at `chrome://flags/#privacy-sandbox-ads-apis`.
 
 {% Img
 	src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/CWfgCMJQ5cYPOfjttF3k.png",

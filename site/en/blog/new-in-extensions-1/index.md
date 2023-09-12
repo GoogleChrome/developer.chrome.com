@@ -95,5 +95,5 @@ Extension and site specific:
 
 m89
 
-[war-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources
+[war-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/web-accessible-resources
 [war-docs]: https://developer.chrome.com/docs/extensions/mv3/manifest/web_accessible_resources/

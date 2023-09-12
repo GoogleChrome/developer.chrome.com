@@ -191,8 +191,8 @@ chrome.declarativeWebRequest.onRequest.addRules([rule1, rule2]);
 ## Filtered events {: #filtered }
 
 Filtered events are a mechanism that allows listeners to specify a subset of events that they are
-interested in. A listener that makes use of a filter won't be invoked for events that don't pass the
-filter, which makes the listening code more declarative and efficient - a [service worker][17] need
+interested in. A listener that uses a filter won't be invoked for events that don't pass the
+filter, which makes the listening code more declarative and efficient. A [service worker][17] need
 not be woken up to handle events it doesn't care about.
 
 Filtered events are intended to allow a transition from manual filtering code like this:

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Kiosk Apps"
+seoTitle: "Kiosk Chrome Apps [Deprecated]"
 date: 2013-05-11
 updated: 2014-07-18
 description: Reference documentation for the kiosk_enabled property of manifest.json.

@@ -1,12 +1,5 @@
 .toc-container {
-  max-width: 100%;
-}
-
-.toc-container-under-navigation-tree {
-  margin-left: 1.5rem;
-  margin-top: 2rem;
-  position: sticky;
-  top: 0;
+  max-width: px-to-rem(300px);
 }
 
 .toc > summary {
@@ -57,9 +50,6 @@ toc-active {
 
   li {
     line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 
     &::before {
       display: none;

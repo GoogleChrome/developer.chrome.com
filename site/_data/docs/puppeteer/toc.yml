@@ -18,10 +18,10 @@
       title: i18n.docs.puppeteer.project_npm
     - url: https://github.com/puppeteer/puppeteer
       title: i18n.docs.puppeteer.project_github
-    - url: https://github.com/puppeteer/puppeteer/issues/new
+    - url: https://github.com/puppeteer/puppeteer/issues/new/choose
       title: i18n.docs.puppeteer.project_issue
     - url: https://github.com/puppeteer/puppeteer/releases
       title: i18n.docs.puppeteer.project_releases
-    - url: https://github.com/puppeteer/puppeteer/blob/main/CONTRIBUTING.md
+    - url: https://pptr.dev/contributing
       title: i18n.docs.puppeteer.project_contribute
     - url: /docs/puppeteer/faq

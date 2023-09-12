@@ -5,8 +5,13 @@ description: |
   Learn how to make your page more secure by replacing JavaScript libraries
   that have known vulnerabilities.
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2023-04-26
+is_outdated: true
 ---
+
+{% Aside 'caution' %}
+This audit was removed from [Lighthouse v10.0.0](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.0.0) on February 9th 2023. For more information on the removal of this audit, see the relevant [GitHub pull request](https://github.com/GoogleChrome/lighthouse/pull/14194).
+{% endAside %}
 
 Intruders have automated web crawlers that can scan your site
 for known security vulnerabilities.

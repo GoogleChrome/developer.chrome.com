@@ -1,5 +1,10 @@
 {% extends "layouts/base.njk" %}
 
+
+{% block css %}
+{% InlineCss '/css/single-post.css' %}
+{% endblock %}
+
 {% block content %}
   <div class="measure-short pad-400 gap-top-900 center-margin">
     {% Img

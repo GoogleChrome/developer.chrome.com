@@ -20,6 +20,6 @@ sessions:
       into plenty of information about browser support to help you adopt new things with confidence.
     topics: []
     type: speaker
-    slidesUrl: null
-    videoUrl: null
+    slidesUrl: https://noti.st/rachelandrew/YyNEXE/whats-new-in-responsive-design
+    videoUrl: https://www.youtube.com/watch?v=gSjPjkhIkNs
 ---

@@ -29,7 +29,7 @@ tags:
 <!-- end: translation instructions -->
 
 <!-- ## Chrome 100  {: #m100 } -->
-## Chrome 100  {: #m100 } 
+## Chrome 100  {: #m100 }
 <!-- Here’s to the 100th Chrome version! Chrome DevTools will continue to provide reliable tools for developers to build on the web. Take a moment to click around in the **What’s New** tab to celebrate the milestones. -->
 Aqui está a 100ª versão do Chrome! O Chrome DevTools continuará a fornecer ferramentas confiáveis para os desenvolvedores criarem na web. Reserve um momento para clicar na guia **O que há de novo** para comemorar os marcos.
 <!-- As usual, you can watch the latest [What’s New in DevTools video](https://goo.gle/devtools-youtube) by clicking on the image. -->
@@ -42,8 +42,8 @@ Como de costume, você pode assistir ao último [vídeo What's New in DevTools](
 ## Visualize e edite @supports em rules no painel Estilos {: #supports }
 <!-- You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time. -->
 Agora você pode visualizar e editar as at-rules do CSS `@supports` no painel **Estilos**. Essas alterações facilitam a experiência com as rules em tempo real.
-<!-- Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
-Abra esta [página de demonstração](https://jec.fyi/demo/at-support), [inspecione](/docs/devtools/dom/#inspect) o elemento `<div class=”box”>`, visualize as rules do `@supports` no painel **Estilos**. Clique na declaração da rule para editá-la.
+<!-- Open this [demo page](https://jec.fish/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
+Abra esta [página de demonstração](https://jec.fish/demo/at-support), [inspecione](/docs/devtools/dom/#inspect) o elemento `<div class=”box”>`, visualize as rules do `@supports` no painel **Estilos**. Clique na declaração da rule para editá-la.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="Visualize e edite @supports em rules", width="800", height="502" %}
 
@@ -69,8 +69,8 @@ Ao determinar um seletor exclusivo durante a gravação, o painel [Gravação](/
 
 <!-- The attributes above are common selectors used in test automation.  -->
 Os atributos acima são seletores comuns usados na automação de teste.
-<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
-Por exemplo, [inicie uma nova gravação](/docs/devtools/recorder/#record) com esta [página de demonstração](https://jec.fyi/demo/recorder). Preencha um endereço de e-mail e observe o valor do seletor.
+<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fish/demo/recorder). Fill in an email address and observe the selector value. -->
+Por exemplo, [inicie uma nova gravação](/docs/devtools/recorder/#record) com esta [página de demonstração](https://jec.fish/demo/recorder). Preencha um endereço de e-mail e observe o valor do seletor.
 <!-- Since the email element has `data-testid` defined, it’s used as the selector automatically instead of the `id` or `class` attributes. -->
 Como o elemento email tem `data-testid` definido, ele é usado como seletor automaticamente em vez dos atributos `id` ou `class`.
 
@@ -81,8 +81,8 @@ Como o elemento email tem `data-testid` definido, ele é usado como seletor auto
 ### Personalize o seletor de gravação {: #customize-selector }
 <!-- You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector). -->
 Você pode personalizar o seletor de uma gravação se não estiver usando os [seletores comuns](/docs/devtools/recorder/#selector).
-<!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
-Por exemplo, esta [página de demonstração](https://jec.fyi/demo/recorder) usa o atributo `data-automate` como seletor. [iniciar uma nova gravação](/docs/devtools/recorder/#record) e digite `data-automate` como atributo seletor. Preencha um endereço de e-mail e observe o valor do seletor (`[data-automate=email-address]`).
+<!-- For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
+Por exemplo, esta [página de demonstração](https://jec.fish/demo/recorder) usa o atributo `data-automate` como seletor. [iniciar uma nova gravação](/docs/devtools/recorder/#record) e digite `data-automate` como atributo seletor. Preencha um endereço de e-mail e observe o valor do seletor (`[data-automate=email-address]`).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Personalização do seletor de gravação", width="800", height="524" %}
 
@@ -90,7 +90,7 @@ Por exemplo, esta [página de demonstração](https://jec.fyi/demo/recorder) usa
 
 
 <!-- ### Rename a recording {: #recorder-rename } -->
-### Renomeação de gravação {: #recorder-rename } 
+### Renomeação de gravação {: #recorder-rename }
 <!-- You can now rename a recording in the [Recorder](/docs/devtools/recorder/) panel with the edit button (pencil icon) next to the recording’s title. -->
 Agora você pode renomear uma gravação no painel [Gravador](/docs/devtools/gravador/) com o botão de edição (ícone de lápis) ao lado do título da gravação.
 
@@ -111,7 +111,7 @@ Issue relacionada: [1049947](https://crbug.com/1049947)
 
 
 <!-- ## Partially presented frames in the Performance panel {: #perf } -->
-## Quadros parcialmente apresentados no painel Desempenho {: #perf } 
+## Quadros parcialmente apresentados no painel Desempenho {: #perf }
 <!-- Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.  -->
 A gravação de desempenho agora exibe uma nova categoria de quadro "Quadros parcialmente apresentados" na linha do tempo **Frames**.
 <!-- Previously, the **Frames** timeline visualizes any frames with delayed main-thread work as "dropped frames". However, there are cases where some frames may still produce visual updates (e.g. scrolling) driven by the compositor thread. -->
@@ -136,8 +136,8 @@ Estas são algumas correções dignas de nota nesta versão:
 - Strings de agente do usuário do iPhone atualizadas para [dispositivos emulados](/docs/devtools/device-mode/#device). Todas as versões do iPhone após a 5 têm uma string user-agent com o iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553))
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
 - Agora você pode salvar [snippet](/docs/devtools/javascript/snippets/) diretamente como um arquivo JavaScript. Anteriormente, você precisava anexar a extensão de arquivo `.js` manualmente. ([1137218](https://crbug.com/1137218))
-<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
-- O painel **Sources** agora exibe corretamente os nomes das variáveis de escopo ao depurar com o mapa de origem. Anteriormente, o painel **Sources** exibia nomes de variáveis de escopo reduzidos, apesar do sourcemap ser fornecido. ([1294682](https://crbug.com/1294682))
+<!-- - The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
+- O painel **Sources** agora exibe corretamente os nomes das variáveis de escopo ao depurar com o mapa de origem. Anteriormente, o painel **Sources** exibia nomes de variáveis de escopo reduzidos, apesar do source map ser fornecido. ([1294682](https://crbug.com/1294682))
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 - O painel **Sources** agora restaura a posição de rolagem corretamente no carregamento da página. Anteriormente, a posição não era restaurada corretamente causando transtornos na depuração. ([1294422](https://crbug.com/1294422))
 

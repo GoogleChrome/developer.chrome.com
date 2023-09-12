@@ -2,14 +2,15 @@
 {% from 'macros/landing-deco.njk' import landingDeco with context %}
 {% from 'macros/related-articles.njk' import relatedArticles with context %}
 
-{% macro landingSectionExpanded(title, desc, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, relatedTitle, relatedItems) %}
+{% macro landingSectionExpanded(title, desc, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, relatedTitle, relatedItems, customId) %}
+{% set sectionId = customId if customId else title %}
 
 <section
   class="landing-section landing-section--{{type}} {% if ordered %} landing-section--ordered {% endif %} hairline rounded-lg width-full display-grid gap-top-400"
-  style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);">
+  style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);"
+  id="{{sectionId | slugify | ensureUniqueHrefInProduction }}">
 
   {{ landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) }}
-
   <div class="gap-top-200 gap-left-200 gap-right-200">
     <div class="landing-section__links">
       {% for item in items %}

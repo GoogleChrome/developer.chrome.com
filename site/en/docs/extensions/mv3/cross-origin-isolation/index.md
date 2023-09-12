@@ -36,7 +36,7 @@ more information on this.
 {% Aside 'caution' %}
 
 Even if an extension opts into cross-origin isolation, not all extension contexts will be
-cross-origin isolated. For example, cross-origin isolation [is not fully implemented][crbug-issue])
+cross-origin isolated. For example, cross-origin isolation [is not fully implemented][crbug-issue]
 for service and shared workers currently. Similarly, a cross-origin isolated extension's
 web-accessible subframe on a regular web page is not considered cross-origin isolated currently.
 

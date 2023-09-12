@@ -93,4 +93,4 @@ for more on collecting real-user metrics.
 - [Paint Timing specification](https://w3c.github.io/paint-timing)
 
 [metrics]: https://web.dev/user-centric-performance-metrics/
-[tracking]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fpfcp
+[tracking]: https://web.dev/user-centric-performance-metrics/#important-metrics-to-measure

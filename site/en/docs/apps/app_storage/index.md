@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Storage APIs"
+seoTitle: "Chrome Apps - Storage APIs [Deprecated]"
 date: 2012-09-17
 updated: 2014-09-10
 description: How to handle storage in your Chrome App.
@@ -287,9 +288,9 @@ the remote folder layout is **not** guaranteed to remain backwards compatible be
 [4]: /docs/apps/offline_apps/
 [5]: /docs/extensions/reference/fileSystem/
 [6]: /docs/extensions/reference/syncFileSystem/
-[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/apps/samples/filesystem-access
-[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/apps/samples/syncfs-editor
-[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/apps/samples/storage
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/apps/samples/filesystem-access
+[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/apps/samples/syncfs-editor
+[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/apps/samples/storage
 [10]: /docs/apps/contentSecurityPolicy/
 [11]: /docs/apps/app_external/#external
 [12]: /docs/apps/app_external/#webview

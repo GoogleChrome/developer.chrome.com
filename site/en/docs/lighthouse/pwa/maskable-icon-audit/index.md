@@ -67,7 +67,7 @@ In order to pass the audit:
 - [Add a web app manifest][manifest]
 - [The `icons` property on MDN](https://developer.mozilla.org/docs/Web/Manifest/icons)
 
-[guide]: /maskable-icon/
+[guide]: https://web.dev/maskable-icon/
 [editor]: https://maskable.app/editor
 [manifest]: /add-manifest/
 [values]: https://developer.mozilla.org/docs/Web/Manifest/icons#Values

@@ -18,10 +18,10 @@ of visits are abandoned if a mobile page takes over [3 seconds to load](https://
 Last week, Google Search and Ads teams announced two new speed initiatives to
 help improve user-experience on the web. Both efforts recommend that site owners
 and developers pay attention to
-[user-centric performance metrics](/web/fundamentals/performance/user-centric-performance-metrics)
-and use tools such as [Lighthouse](/web/tools/lighthouse/) and
-[PageSpeed Insights](/speed/pagespeed/insights/), and real-world field data
-(e.g. see [Chrome User Experience Report](/web/tools/chrome-user-experience-report/))
+[user-centric performance metrics](https://web.dev/user-centric-performance-metrics/)
+and use tools such as [Lighthouse](/docs/lighthouse/) and
+[PageSpeed Insights](https://web.dev/whats-new-pagespeed-insights/), and real-world field data
+(e.g. see [Chrome User Experience Report](/docs/crux/))
 to diagnose and improve user experiences.
 
 ## Speed is now used as a ranking factor for mobile searches
@@ -34,22 +34,21 @@ for desktop searches in 2010 and as of this month (July 2018), page [speed will 
 too.
 
 If you're a developer working on a site, now is a good time to evaluate your
-performance using our [speed tools](/web/fundamentals/performance/speed-tools/). Think about how
-[performance](/web/fundamentals/performance/rail) affects the user experience
-of your pages and consider measuring a variety of real-world [user-centric performance metrics](/web/updates/2017/06/user-centric-performance-metrics).
+performance using our [speed tools](https://web.dev/speed-tools/). Think about how
+[performance](https://web.dev/rail/) affects the user experience
+of your pages and consider measuring a variety of real-world [user-centric performance metrics](https://web.dev/user-centric-performance-metrics/).
 
-Are you shipping [too much JavaScript](/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)?
-[Too many images](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization)?
-Images and JavaScript are the [most significant contributors](https://paulcalvano.com/index.php/2018/07/02/impact-of-page-weight-on-load-time/)
-to the page weight that affect page load time based on data from [HTTP Archive](https://httparchive.org/) and the [Chrome User Experience Report](/web/tools/chrome-user-experience-report/) - our public dataset for key
+Are you shipping [too much JavaScript](https://web.dev/performance-optimizing-content-efficiency/)?
+Too many images? Images and JavaScript are the [most significant contributors](https://paulcalvano.com/index.php/2018/07/02/impact-of-page-weight-on-load-time/)
+to the page weight that affect page load time based on data from [HTTP Archive](https://httparchive.org/) and the [Chrome User Experience Report](/docs/crux/) - our public dataset for key
 UX metrics as experienced by Chrome users under real-world conditions.
 
 To evaluate performance, check:
 
-- [PageSpeed Insights](/speed/pagespeed/insights/), an online tool that shows
-  speed [field data](/web/fundamentals/performance/speed-tools/#field_data) for
+- [PageSpeed Insights](https://pagespeed.web.dev/), an online tool that shows
+  speed [field data](https://web.dev/speed-tools/#field-data) for
   your site, alongside suggestions for common optimizations to improve it.
-- [Lighthouse](/web/tools/lighthouse/), [a lab tool](/web/fundamentals/performance/speed-tools/#lab_data) providing
+- [Lighthouse](/docs/lighthouse/), [a lab tool](https://web.dev/speed-tools/#lab_data) providing
   personalized advice on how to improve your website across performance,
   accessibility, PWA, SEO, and other best practices.
 
@@ -86,15 +85,16 @@ Optimized web experiences lead to higher user engagement, conversions, and ROI;
 performance is a feature and a competitive edge.
 
 Looking for tools and tips on which tools and metrics to use, or how to
-evaluate and make a business case for performance? Check out our ["How to Think about Speed Tools"](/performance-speed-tools/) guide for a
+evaluate and make a business case for performance? Check out our ["How to Think about Speed Tools"](https://web.dev/speed-tools/) guide for a
 hands-on overview.
 
-<a href="/performance-speed-tools/">
+<a href="/https://web.dev/speed-tools/">
 {% Img src="image/C47gYyWYVMMhDmtYSLOWazuyePF2/x79VpgagKcAAlHH5avMU.jpeg", alt="Speed Tools infographic", width="800", height="399" %}
 </a>
 
 Looking for tools and tips on which tools and metrics to use, or how to
 evaluate and make a business case for performance? Check out our
-[How to Think about Speed Tools](/performance-speed-tools/)
+
+[How to Think about Speed Tools](https://web.dev/speed-tools/)
 guide for a hands-on overview. Or, if you're looking for a fast-by-default
 framework for you pages, take a look at [AMP](https://www.ampproject.org/).

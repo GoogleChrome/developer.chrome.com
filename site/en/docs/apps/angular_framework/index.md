@@ -1,9 +1,10 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Build Apps with AngularJS"
+title: "Build Apps with AngularJS" 
+seoTitle: "Build Apps with AngularJS [Deprecated]" 
 date: 2012-11-16
 updated: 2017-03-01
-description: A guide on building Chrome Apps with AngularJS.
+description: A guide on building Chrome Apps with AngularJS. 
 ---
 
 {% Aside 'caution' %}

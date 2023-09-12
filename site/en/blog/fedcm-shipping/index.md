@@ -12,6 +12,9 @@ authors:
  - samuelgoto
 date: 2022-11-09
 updated: 2022-11-28
+tags:
+  - privacy
+  - identity
 ---
 
 The [Federated Credential Management API](/docs/privacy-sandbox/fedcm/) (FedCM) is shipping in Chrome 108 (currently on the Beta channel). When it ships in Chrome Stable at the end of November 2022, the FedCM API will work in Chrome without requiring a flag or an origin trial token.

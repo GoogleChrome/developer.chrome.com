@@ -169,19 +169,19 @@ Chromium issues: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 Chromium issue: [1068788](https://crbug.com/1068788)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemap } -->
+<!-- ## Source maps improvements {: #sourcemap } -->
 
 ## ソースマップの改善 {: #sourcemap }
 
-<!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
+<!-- ### Debug Chrome extension with source map files {: #extension } -->
 
 ### ソースマップファイルを使用した Chrome 拡張機能のデバッグ {: #extension }
 
-<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
+<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
 
 ソースマップファイルを使用して [Chrome 拡張機能をデバッグ](/docs/extensions/mv3/getstarted/#unpacked)できるようになりました。これまで、Chrome 拡張機能のデバッグに関して、DevTools はインラインのソースマップだけをサポートしていました。
 
-<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with sourcemap files", width="800", height="518" %} -->
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with source map files", width="800", height="518" %} -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="ソースマップファイルを使用した Chrome 拡張機能のデバッグ", width="800", height="518" %}
 
@@ -194,7 +194,7 @@ Chromium issue: [212374](https://crbug.com/212374)
 
 ### Sources パネルのソースフォルダツリーの改善 {: #source-tree }
 
-<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
+<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the source maps. -->
 
 **Sources** パネルのソースフォルダツリーがフォルダ構造と名前付け（例、"../"、"./"など）により乱れにくく改善されました。内部的には、ソースマップ内の絶対ソースURLが正規化された結果が使用されています。
 
@@ -221,7 +221,7 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
-Chromium issue: [1277002](https://crbug.com/1277002) 
+Chromium issue: [1277002](https://crbug.com/1277002)
 
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
@@ -266,7 +266,7 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f60936b29519e0cf387cd0a133d43885c6eb183d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22bb84d657aa69f6f7d5067605c2c133a5714172 #}
 
-Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995) 
+Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->

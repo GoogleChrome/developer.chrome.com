@@ -66,7 +66,7 @@ New context menu in the **Console** allows you to copy any string in as content,
 
 In Chrome 90, DevTools updated the **Console** to always [format string outputs as valid JSON literals](/blog/new-in-devtools-90/#double-quotes). We received feedback from the developers that this change could be confusing, some feel that the amount of escaping is excessive and makes the output unreadable.
 
-The **Console** now formats string outputs as valid JavaScript litera, and furthermore provides you 3 copy string options. The **Copy as JavaScript literal** option will escape appropriate special characters and wrap the string in either single quotes, double quotes, or backticks depending on the string content. The **Copy string contents** instead copies the raw string contents (including new lines and other special characters) verbatim to the clipboard. Finally, **Copy as JSON literal** formats the string as a valid JSON literal and copies it to the clipboard.
+The **Console** now formats string outputs as valid JavaScript literals, and furthermore provides you 3 copy string options. The **Copy as JavaScript literal** option will escape appropriate special characters and wrap the string in either single quotes, double quotes, or backticks depending on the string content. The **Copy string contents** instead copies the raw string contents (including new lines and other special characters) verbatim to the clipboard. Finally, **Copy as JSON literal** formats the string as a valid JSON literal and copies it to the clipboard.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9242d13569e9fe67ac01e75d28fa2b6e6bf310d2 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5715a7b9800532d8b28e2c9fa2d3c1e220ba54a8 #}

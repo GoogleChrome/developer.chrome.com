@@ -49,7 +49,7 @@ We’ve recently added a new tool to this list, and it’s a bit different from 
 
 {% YouTube id='mK_XmFb8E_w' %}
 
-In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.com/puppeteer/puppeteer/blob/v5.4.1/docs/api.md#pageemulatevisiondeficiencytype) lets you programmatically enable these simulations.
+In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://pptr.dev/api/puppeteer.page.emulatevisiondeficiency/) lets you programmatically enable these simulations.
 
 ## Color vision deficiencies {: #cvd }
 

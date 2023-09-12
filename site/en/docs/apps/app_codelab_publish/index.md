@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: "Step 7: Publish Your App"
+seoTitle: "Step 7: Publish Your App [Deprecated]"
 date: 2014-10-17
 #updated: TODO
 description: How to publish your Chrome App in the Chrome Web Store.

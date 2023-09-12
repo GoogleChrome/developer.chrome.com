@@ -467,7 +467,7 @@ Chromium issue: [1121900][50]
 [9]: https://crbug.com/1126824
 [10]: https://github.com/GoogleChrome/lighthouse/releases/tag/v7.0.0
 [11]: https://crbug.com/772558
-[12]: https://jec.fyi/demo/css-target#section-2
+[12]: https://jec.fish/demo/css-target#section-2
 [13]: https://crbug.com/1156628
 [14]: https://crbug.com/1150797
 [15]: https://crbug.com/1150797
@@ -494,7 +494,7 @@ Chromium issue: [1121900][50]
 [36]: https://crbug.com/1054281
 [37]: https://pptr.dev/
 [38]: https://chromedevtools.github.io/devtools-protocol/
-[39]: https://jec.fyi/demo/recorder
+[39]: https://jec.fish/demo/recorder
 [40]: https://pptr.dev/
 [41]: https://crbug.com/1144127
 [42]: https://crbug.com/1093229

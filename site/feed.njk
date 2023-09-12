@@ -32,13 +32,8 @@ pagination:
       {% for authorId in item.data.authors %}
       {% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
       <author>
-        <name>
-          {%- if author -%}
-            {{ authorTitle | i18n(locale) }}
-          {%- else -%}
-            {{ authorId }}
-          {%- endif -%}
-        </name>
+        <name>{{ authorTitle | i18n(locale) }}</name>
+        <uri>{{ site.url }}/authors/{{ authorId }}/</uri>
       </author>
       {% endfor %}
     {% else %}

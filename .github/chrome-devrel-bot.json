@@ -5,15 +5,16 @@
         "check_name" : "Content team approval",
         "teams" : [],
         "users" : [
+          "PaulKinlan",
           "malchata",
           "rachelandrew",
           "heyawhite",
           "jpmedley",
           "mihajlija",
           "sofiayem",
-          "AaronForinton",
+          "nancymic2",
           "anusmitaray",
-          "IanStanion-google"
+          "AmySteam"
         ],
         "paths" : [
           "site/**/*.md"
@@ -25,18 +26,19 @@
         "users" : [
           "PaulKinlan",
           "matthiasrohmer",
-          "devnook"
+          "devnook",
+          "tunetheweb"
         ],
         "paths" : [
-          "*.js",
-          "*.json",
-          "*.css",
-          "*.scss",
-          "*.html",
-          "*.htm",
-          "*.njk",
-          "*.toml",
-          "*.sh"
+          "**/*.js",
+          "**/*.json",
+          "**/*.css",
+          "**/*.scss",
+          "**/*.html",
+          "**/*.htm",
+          "**/*.njk",
+          "**/*.toml",
+          "**/*.sh"
         ]
       },
       {
@@ -44,22 +46,43 @@
         "teams" : [],
         "users" : [
           "PaulKinlan",
-          "jeffposnick",
-          "devnook",
           "malchata",
           "rachelandrew",
           "heyawhite",
           "jpmedley",
           "mihajlija",
           "sofiayem",
-          "AaronForinton",
-          "matthiasrohmer"
+          "nancymic2",
+          "anusmitaray",
+          "AmySteam",
+          "matthiasrohmer",
+          "devnook",
+          "tunetheweb"
         ],
         "paths" : [
           "site/_data/**.yml",
           "site/_data/**.yaml",
           "site/_data/**.json",
           "redirects.yaml"
+        ]
+      },
+      {
+        "check_name" : "Content team or Spanish reader approval",
+        "teams" : [],
+        "users" : [
+          "malchata",
+          "rachelandrew",
+          "heyawhite",
+          "jpmedley",
+          "mihajlija",
+          "sofiayem",
+          "nancymic2",
+          "anusmitaray",
+          "AmySteam",
+          "tropicadri"
+        ],
+        "paths" : [
+          "site/es/**/*.md"
         ]
       }
     ]

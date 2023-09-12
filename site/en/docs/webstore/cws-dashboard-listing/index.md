@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Complete your listing information"
 date: 2020-12-07
-updated: 2021-12-06
+updated: 2023-05-01
 description: How to add listing information for your Chrome Web Store item.
 ---
 
@@ -10,7 +10,7 @@ This page describes the fields you must fill out to complete your store listing.
 make your listing more compelling, be sure to read [Creating a great listing page][best-listing].
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4RwZvdR4eACU46OCy7rm.png",
-       alt="Screenshot of the Chrome Web Store developer dashboard item listing tab", height="472", width="800" %}
+       alt="Screenshot of the Chrome Web Store developer dashboard Store listing tab", height="472", width="800" %}
 
 Add the store listing information for your item that isn't in the ZIP file, such as a long
 description, screenshots, videos and links to related sites. 

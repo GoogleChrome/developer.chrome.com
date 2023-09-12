@@ -9,7 +9,7 @@ description: >
 authors:
   - samdutton
 date: 2020-06-22
-updated: 2022-10-07
+updated: 2023-01-05
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
 alt: Pipette with purple liquid.
 tags:
@@ -44,6 +44,7 @@ trials, as feedback is incorporated and adjustments are made.
 
 Origin trials are also available for [Firefox](https://wiki.mozilla.org/Origin_Trials) and [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/).
 
+
 ## Third-party origin trials {: #third-party}
 
 Origin trials are usually only available on a first-party basis: they only work for a single
@@ -52,7 +53,6 @@ it possible for providers of embedded content to try a new feature across multip
 without requiring a token for every origin.
 
 Find out more: [What are third-party origin trials?](/docs/web-platform/third-party-origin-trials/)
-
 
 ## Deprecation trials
 
@@ -91,9 +91,8 @@ multiple tokens in the same page. This can be useful if you need to provide toke
 that are valid for resources served from different origins, such as code included on multiple 
 sites that you own.
 
-The origin trials framework looks for the first valid token and then
-ignores all other tokens. You can validate this
-[with Chrome DevTools](/docs/web-platform/origin-trial-troubleshooting/#use-chrome-devtools-to-check-tokens).
+The origin trials framework looks for the first valid token and then ignores all other tokens. You
+can validate this [with Chrome DevTools](/docs/web-platform/origin-trial-troubleshooting/#use-chrome-devtools-to-check-tokens).
 
 ### Provide a token programmatically {: #programmatic}
 
@@ -109,19 +108,19 @@ document.head.append(otMeta);
 
 Use this method if you're participating in a [third-party trial](#third-party).
 
-{% Aside %}
-
-Usually if an API lands unchanged after a successful origin trial, there is a
-short period between the end of the origin trial and the date the implementation ships in the
-browser when the API is unavailable. This is by design. If Chrome were to avoid the
-mandatory total-breakage period, that would bias toward avoiding breakages in the API surface. Such
-breakages are often needed to improve the API. The final shipping API might be worse for it.
-
-In some circumstances, if there was clear evidence that developers engaged with the origin trial and
-that their concerns were taken into account in the final API design and implementation, this
-breakage period may be skipped [upon request](https://sites.google.com/a/chromium.org/dev/blink/launching-features#sites-canvas-main-content:~:text=If%20you%20wish%20to%20skip%20the,Ship%20imply%20approval%20of%20the%20request.).
-
+{% Aside 'caution' %}
+A third-party token must be provided in an external JavaScript file included via a `<script>`
+element: a third-party token won't work in a meta tag, inline script or HTTP header.
 {% endAside %}
+
+### Tokens and iframes {: #iframe}
+
+To access a trial feature from an iframe, you can provide a trial token in a meta tag, an HTTP
+header, or [programmatically](#programmatic).
+
+As for all token usage, the origin registered for the token must match the context of JavaScript
+that accesses the trial feature: either the origin of the page the includes an inline script,
+or the `src` of a `<script>` element for JavaScript included from an external file.
 
 ### Renew origin trial enrollment {: #renew}
 
@@ -138,8 +137,12 @@ registration and provide a new token, for each origin enrolled in the trial.
 3. Copy the new token and make it available for every page that should remain enrolled in the trial.
 You can provide multiple tokens if necessary: Chrome will ignore invalid or expired tokens.
 
+{% Aside %}
+The requirement for a [breaking period](https://docs.google.com/document/d/1oSlxRwsc8vTUGDGAPU6CaJ8dXRdvCdxvZJGxDp9IC3M/edit#heading=h.r5cdr0aazfpm) was [removed in April 2022](https://www.chromium.org/blink/launching-features/#step-5-optional-origin-trial).
+{% endAside %}
 
-## View origin trial information in Chrome DevTools {: #devtools}
+
+## View origin trial information {: #devtools}
 
 View information about the origin trials available to a page from the **Application** panel in
 [Chrome DevTools](/blog/new-in-devtools-94/#origin-trials).
@@ -148,24 +151,32 @@ View information about the origin trials available to a page from the **Applicat
    information for a site displayed in Chrome DevTools **Application** panel frame details view.",
    width="800", height="465" %}
 
+You can also use our [origin trial token decoder](http://ot-decode.glitch.me) to view the data
+encoded in a token.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/6QMydxrJrS4nYQD6jQDl.png",
+   alt="Origin trial decoder tool, showing decoded origin trial values.",
+   width="800", height="823" %}
 
 ## Origin trial demos
 
--  [Token in a meta tag](https://ot-meta.glitch.me)
--  [Token in a header](https://ot-header.glitch.me)
--  [Feature accessed in an iframe](https://ot-iframe.glitch.me)
--  [Token injected by third-party script](https://ot-3p.glitch.me)
+* [Token in a meta tag](https://ot-meta.glitch.me)
+* [Token in a header](https://ot-header.glitch.me)
+* [Token injected by third-party script](https://ot-3p.glitch.me)
+* [Feature accessed in an iframe](https://ot-iframe.glitch.me)
+* [Cross-origin iframe examples](https://ot-iframe-3p.glitch.me)
+* [Origin trial token decoder](http://ot-decode.glitch.me)
 
 
 ## Find out more
 
--  [Troubleshooting Chrome's origin trials](/docs/web-platform/origin-trial-troubleshooting)
--  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
--  [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
--  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
--  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
--  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
--  [What are third-party origin trials?](/docs/web-platform/third-party-origin-trials/)
--  [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
--  [Use Origin Trials in Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/)
--  [Origin trials for Firefox](https://wiki.mozilla.org/Origin_Trials)
+* [Troubleshooting Chrome's origin trials](/docs/web-platform/origin-trial-troubleshooting)
+* [What are third-party origin trials?](/docs/web-platform/third-party-origin-trials/)
+* [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
+* [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
+* [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
+* [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
+* [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
+* [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
+* [Use Origin Trials in Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/origin-trials/)
+* [Origin trials for Firefox](https://wiki.mozilla.org/Origin_Trials)

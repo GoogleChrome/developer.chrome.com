@@ -1,4 +1,16 @@
 .events-list {
+  @include media-query('lg') {
+    margin-top: get-size(600);
+  }
+
+  &[data-active-filters] {
+    margin-top: calc(#{get-size(200)} - 1px);
+
+    .events-list__selected-filters {
+      margin-bottom: calc(#{get-size(200)} - 1px);
+    }
+  }
+
   [role=tab] {
     cursor: pointer;
     font-family: #{$font-google-sans};
@@ -24,6 +36,28 @@
     @include media-query('lg') {
       display: inline-flex;
       width: auto;
+    }
+  }
+
+  .load-more__button {
+    margin-top: var(--flow-space);
+  }
+
+  .load-more__items {
+    display: grid;
+    gap: get-size(400);
+  }
+}
+
+.mobile-filters-btn {
+  @include media-query('lg') {
+    display: none;
+  }
+
+  &.tag-pill {
+    .icon {
+      margin-left: 0;
+      margin-right: get-size(200);
     }
   }
 }

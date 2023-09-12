@@ -140,7 +140,7 @@ A partir do Chromium 94, você pode emular eventos ociosos no DevTools sem realm
 
 ### Suporte para Puppeteer
 
-A partir da versão 5.3.1 do Puppeteer, você pode [emular os vários estados inativos](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageemulateidlestateoverrides) para testar programaticamente como o comportamento do seu aplicativo da web muda.
+A partir da versão 5.3.1 do Puppeteer, você pode [emular os vários estados inativos](https://pptr.dev/api/puppeteer.page.emulateidlestate/) para testar programaticamente como o comportamento do seu aplicativo da web muda.
 
 ### Demo
 

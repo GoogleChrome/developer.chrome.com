@@ -46,8 +46,8 @@ tags:
 <!-- You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time. -->
 您现在可以在**样式**边栏中查看并修改 CSS `@supports` at-rule 了。这些改动可以让实时实验 @supports at-rules 更容易。
 
-<!-- Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
-打开此[演示页面](https://jec.fyi/demo/at-support)，[检查](/docs/devtools/dom/#inspect) `<div class="box">` 元素，即可在**样式**边栏中查看 `@supports` at-rule。点击该 at-rule 的声明来编辑它。
+<!-- Open this [demo page](https://jec.fish/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.  -->
+打开此[演示页面](https://jec.fish/demo/at-support)，[检查](/docs/devtools/dom/#inspect) `<div class="box">` 元素，即可在**样式**边栏中查看 `@supports` at-rule。点击该 at-rule 的声明来编辑它。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="查看并编辑 @supports at-rules", width="800", height="502" %}
 
@@ -76,8 +76,8 @@ Chromium 议题: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 <!-- The attributes above are common selectors used in test automation.  -->
 上列属性是在自动化测试中常用的选择器。
 
-<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
-举个例子，在这个[演示页面](https://jec.fyi/demo/recorder)[开始一段新的录制](/docs/devtools/recorder/#record)。填写一个电子邮箱地址并观察它的选择器值。
+<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fish/demo/recorder). Fill in an email address and observe the selector value. -->
+举个例子，在这个[演示页面](https://jec.fish/demo/recorder)[开始一段新的录制](/docs/devtools/recorder/#record)。填写一个电子邮箱地址并观察它的选择器值。
 
 <!-- Since the email element has `data-testid` defined, it’s used as the selector automatically instead of the `id` or `class` attributes. -->
 因为该电子邮箱元素定义了 `data-testid` 属性，该属性被自动用为选择器，而不是它的 `id` 或 `class` 属性。
@@ -90,8 +90,8 @@ Chromium 议题: [1222574](https://crbug.com/1222574), [1222573](https://crbug.c
 <!-- You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector). -->
 如果您没有使用[常用的选择器](/docs/devtools/recorder/#selector)，您可以自定义一段录制内容的选择器。
 
-<!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
-举个例子，这个[演示页面](https://jec.fyi/demo/recorder)使用了 `data-automate` 属性作为选择器。[开始一段新的录制](/docs/devtools/recorder/#record)并把 `data-automate` 作为选择器属性输入。填写电子邮箱地址并观察选择器值（`[data-automate=email-address]`）。
+<!-- For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
+举个例子，这个[演示页面](https://jec.fish/demo/recorder)使用了 `data-automate` 属性作为选择器。[开始一段新的录制](/docs/devtools/recorder/#record)并把 `data-automate` 作为选择器属性输入。填写电子邮箱地址并观察选择器值（`[data-automate=email-address]`）。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="自定义一段录制内容的选择器", width="800", height="524" %}
 
@@ -153,8 +153,8 @@ Chromium 议题: [1261130](https://crbug.com/1261130)
 为[模拟的设备](/docs/devtools/device-mode/#device)更新了 iPhone 的用户代理字符串。所有 iPhone 5 之后的版本都会带有 iPhone OS 13_2_3 的用户代理字符串。([1289553](https://crbug.com/1289553))
 <!-- - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218)) -->
 您现在可以将[代码段](/docs/devtools/javascript/snippets/)直接存为一个 JavaScript 文件。在此之前，您需要手动添加 `.js` 文件名后缀。([1137218](https://crbug.com/1137218))
-<!-- - The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
-**来源**面板现在在调试带有来源映射（sourcemap）的代码时，可以正确展示作用域变量名了。在此之前，**来源**面板即使在有来源映射的情况下，还是会展示压缩之后的作用域变量名。([1294682](https://crbug.com/1294682))
+<!-- - The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682))  -->
+**来源**面板现在在调试带有来源映射（source map）的代码时，可以正确展示作用域变量名了。在此之前，**来源**面板即使在有来源映射的情况下，还是会展示压缩之后的作用域变量名。([1294682](https://crbug.com/1294682))
 <!-- - The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))  -->
 **来源**面板现在可以在页面重加载后正确恢复滚动位置。在此之前，滚动位置没有正确恢复，造成了调试的不便。
 

@@ -64,9 +64,9 @@ To make this clearer, here is a concrete example of the flow:
    `https://coffeeshop.example.com/coffee?type=web%2Bcoffee%3A%2F%2Flatte-macchiato`. The search
    string URL-decoded then reads `?type=web+coffee://latte-macchiato`.
 
-## What this proposal is about
+## What protocol handling is about
 
-The present _URL protocol handler registration for PWAs_ proposal is about offering protocol handler
+The present _URL protocol handler registration for PWAs_ mechanism is about offering protocol handler
 registration as part of a PWA installation through its manifest. After registering a PWA as a
 protocol handler, when a user clicks on a hyperlink with a specific scheme such as `mailto` ,
 `bitcoin`, or `web+music` from a browser or a platform-specific app, the registered PWA will open
@@ -227,7 +227,7 @@ and let us know where and how you're using it.
 ## Useful links
 
 - [Explainer][explainer]
-- [Spec proposal][specification]
+- [Spec draft][specification]
 - [GitHub][github]
 - [ChromeStatus](https://chromestatus.com/feature/5151703944921088)
 - [Chromium bug](https://crbug.com/1019239)

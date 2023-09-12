@@ -31,8 +31,8 @@ The following table describes each transition type.
 
 ## Examples
 
-For examples of using this API, see the [history sample directory][8] and the [history API test
-directory][9]. For other examples and for help in viewing the source code, see [Samples][10].
+To try this API, install the [history API example](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/history) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
 
 [1]: /docs/extensions/mv3/manifest
 [2]: #tt_generated
@@ -41,6 +41,6 @@ directory][9]. For other examples and for help in viewing the source code, see [
 [5]: #tt_keyword
 [6]: #tt_keyword_generated
 [7]: #tt_keyword
-[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/history/
+[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/history/
 [9]: https://chromium.googlesource.com/chromium/src/+/master/chrome/test/data/extensions/api_test/history/
 [10]: /docs/extensions/mv2/samples

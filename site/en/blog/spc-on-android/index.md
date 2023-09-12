@@ -9,7 +9,18 @@ alt: Phone/Lock/Safe.
 authors:
   - smcgruer
 date: 2022-12-01
+updated: 2023-03-09
 ---
+
+{% Aside %}
+
+**Update, March 2023**
+
+As of Chrome 112, [the technical limitation](https://crbug.com/1393662) that led
+`authenticatorSelection.residentKey` to be `preferred` instead of `required` has
+been lifted. Documents have been updated following the change.
+
+{% endAside %}
 
 ## Overview
 
@@ -87,16 +98,7 @@ that relying party across any merchant that integrates SPC.
 
 Developers can follow [the existing implementation
 guide](/articles/secure-payment-confirmation/) written for desktop integration
-to learn how the API works. There is only one API change that developers need to
-be aware of with this launch. Due to [a technical
-limitation](https://crbug.com/1393662) at time of launch, SPC for Google Chrome
-on Android does not yet support [discoverable
-credentials](https://w3c.github.io/webauthn/#client-side-discoverable-credential).
-This limitation is being worked on, but will not be available in M109.
-
-Due to this, developers should pass `preferred` (instead of `required`) for the
-[`residentKey`](https://w3c.github.io/webauthn/#dom-authenticatorselectioncriteria-residentkey)
-parameter at credential creation time, when creating credentials for SPC:
+to learn how the API works.
 
 ```js
 navigator.credentials.create({  

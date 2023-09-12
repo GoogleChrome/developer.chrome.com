@@ -10,50 +10,48 @@
   {{ icon('video', {id: 'videoIcon', hidden:true}) }}
 </div>
 
-<web-tabs class="events-list">
-  <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }}">
-    <div id="upcoming-events"
-         class="display-grid grid-cols-1 grid-gap-400"
-         total-items="{{ collections.currentEvents.length }}">
-      {% for event in collections.currentEvents.slice(0,show) %}
-        {% include 'partials/event-card.njk' %}
-      {% endfor %}
-    </div>
+<div class="events-list">
+  <div class="events-list__selected-filters display-flex flex-flow-row-wrap grid-gap-100">
+      <span id="mobile-filters-opener"
+            class="mobile-filters-btn surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
+        {{ icon('filters') }} {{ 'i18n.events.filters' | i18n(locale) }}
+      </span>
 
-    {% if collections.currentEvents.length > show %}
-      <button id="load-upcoming-events"
-         class="load-more__button type--small display-inline-flex"
-         aria-controls="upcoming-events"
-      >
-        {{ 'i18n.events.load_more' | i18n(locale) }}
-        {{ icon('arrow-forward', {hidden: true}) }}
-      </button>
-    {% endif %}
-  </web-tab>
+    <tag-pill-list id="active-filters"></tag-pill-list>
+  </div>
 
-  <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }}">
-    <div id="past-events"
-         class="display-grid grid-cols-1 grid-gap-400"
-         total-items="{{ collections.pastEvents.length }}">
-      {% for event in collections.pastEvents.slice(0,show) %}
-        {% include 'partials/event-card.njk' %}
-      {% endfor %}
-    </div>
+  <web-tabs>
+    {% set loadMorei18n = {
+      buttonLabel: 'i18n.events.load_more' | i18n,
+      errorMessage: 'i18n.events.load_more_error' | i18n,
+      errorLinkLabel: 'i18n.events.load_more_error_link' | i18n,
+      noResultsMessage: 'i18n.events.no_upcoming_matches' | i18n
+    } %}
+    <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }} ({{ collections.currentEvents.length }})">
+      <load-more  id="upcoming-events"
+                  total="{{ collections.currentEvents.length }}"
+                  i18n='{{ loadMorei18n|dump|safe }}'>
+        {% for event in collections.currentEvents.slice(0,show) %}
+          {% include 'partials/event-card.njk' %}
+        {% endfor %}
+      </load-more>
+    </web-tab>
 
-    {% if collections.pastEvents.length > show %}
-      <button id="load-past-events"
-              class="load-more__button type--small display-inline-flex"
-              aria-controls="upcoming-events"
-      >
-        {{ 'i18n.events.load_more' | i18n(locale) }}
-        {{ icon('arrow-forward', {hidden: true}) }}
-      </button>
-    {% endif %}
-  </web-tab>
-</web-tabs>
+    {% set loadMorei18n = {
+      buttonLabel: 'i18n.events.load_more' | i18n,
+      errorMessage: 'i18n.events.load_more_error' | i18n,
+      errorLinkLabel: 'i18n.events.load_more_error_link' | i18n,
+      noResultsMessage: 'i18n.events.no_past_matches' | i18n
+    } %}
+    <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }} ({{ collections.pastEvents.length }})">
+      <load-more id="past-events"
+                 total="{{ collections.pastEvents.length }}"
+                 i18n='{{ loadMorei18n|dump|safe }}'>
+        {% for event in collections.pastEvents.slice(0,show) %}
+          {% include 'partials/event-card.njk' %}
+        {% endfor %}
+      </load-more>
+    </web-tab>
+  </web-tabs>
+</div>
 
-<p id="loading-error" class="color-red-medium gap-top-100 display-none">
-  {{ 'i18n.events.load_more_error' | i18n(locale) }}
-  <a href="https://github.com/GoogleChrome/developer.chrome.com/issues/new?labels=bug&template=bug_report.md"
-     class="color-red-medium">{{ 'i18n.events.load_more_error_link' | i18n(locale) }}</a>.
-</p>

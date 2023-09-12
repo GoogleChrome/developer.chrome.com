@@ -36,8 +36,8 @@ tags:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qsleBCUrr2twMujW0R94.png", alt="Recorder 面板捕获双击和右击事件", width="800", height="572" %}
 
-<!-- In this [example](https://jec.fyi/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
-在这个[例子](https://jec.fyi/demo/dbl-right-click)里面，可以开始 [recording](/docs/devtools/recorder/#record) 并尝试执行以下步骤：
+<!-- In this [example](https://jec.fish/demo/dbl-right-click), start a [recording](/docs/devtools/recorder/#record) and try to perform the following steps:  -->
+在这个[例子](https://jec.fish/demo/dbl-right-click)里面，可以开始 [recording](/docs/devtools/recorder/#record) 并尝试执行以下步骤：
 
 <!-- - Double-click the card to enlarge it
 - Right-click the card and select an action from the context menu -->
@@ -199,8 +199,8 @@ Chromium 议题：[1321803](https://crbug.com/1321803)
 Chromium 议题：[1226363](https://crbug.com/1226363)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemaps } -->
-## Sourcemaps 改进 {: #sourcemaps }
+<!-- ## Source maps improvements {: #sourcemaps } -->
+## Source maps 改进 {: #sourcemaps }
 
 <!-- Previously, developers experience random failure during: -->
 在此之前，开发者会随机遇到以下问题：
@@ -212,8 +212,8 @@ Chromium 议题：[1226363](https://crbug.com/1226363)
 - 在定位 [Codepen](https://codepen.io/) 示例所出现性能问题的过程中，会遇到一些问题
 - 在启用 [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) 的前提下，出现丢失 **Component** 选项卡的情况
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
-这里有几个对 sourcemaps 的改进，旨在提高整体调试体验：
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
+这里有几个对 source maps 的改进，旨在提高整体调试体验：
 
 <!-- - Correct mapping between location and offset for inline scripts and source location
 - Use fallback information for frame’s text location

@@ -21,7 +21,7 @@ You can store whether the user has registered on your site into Shared Storage,
 then render a seperate element based on whether the user's stored status (is
 the user a "known" customer).
 
-## Try setting known customers
+## Set known customers
 
 To experiment with identifying known customers in Shared Storage, confirm
 you're using Chrome 104.0.5086.0 or later. Then enable the
@@ -50,7 +50,7 @@ In this example:
 *   `known-customer.js` is embedded in a frame. This script sets the options for which button should be displayed on a site, “Register” or “Buy now.”
 *   `known-customer-worklet.js`  is the shared storage worklet that determines if the user is known. If the user is known, the information is returned. If the user is unknown, that information is returned to display the “Register” button and the user is marked as known for the future.
 
-**[known-customer.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/known-customer.js)**
+**[known-customer.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/known-customer.js)**
 
 ```js
 // The first URL for the "register" button is rendered for unknown users.
@@ -69,16 +69,18 @@ async function injectButton() {
   });
 
   // Run the URL selection operation to choose the button based on the user status
-  const opaqueURL = await window.sharedStorage.selectURL('known-customer', BUTTON_URLS);
+  const fencedFrameConfig = await window.sharedStorage.selectURL('known-customer', BUTTON_URLS, {
+    resolveToConfig: true
+  });
 
   // Render the opaque URL into a fenced frame
-  document.getElementById('button-slot').src = opaqueURL;
+  document.getElementById('button-slot').src = fencedFrameConfig;
 }
 
 injectButton();
 ```
 
-**[known-customer-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/advertiser/known-customer-worklet.js)**
+**[known-customer-worklet.js](https://github.com/GoogleChromeLabs/shared-storage-demo/blob/main/sites/content-producer/url-selection/known-customer-worklet.js)**
 
 ```js
 class SelectURLOperation {

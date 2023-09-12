@@ -16,3 +16,4 @@
 
 export * from './side-nav';
 export * from './search';
+export * from './filter';

@@ -12,7 +12,7 @@ not specified.
 
 ## Manifest
 
-In order to use the `chrome.action` API, you need to specify a `"manifest_version"` of `3` or higher
+To use the `chrome.action` API, you need to specify a `"manifest_version"` of `3` or higher
 and include the `action` key in your [manifest file][doc-manifest].
 
 ```json
@@ -168,9 +168,9 @@ in the toolbar.
 
 ## Examples
 
-The following examples show some common ways that actions are used in extensions. For a more robust
-demonstration of action capabilities, see the [Action API example][sample-example] in the
-[chrome-extension-samples][repo-samples] repository.
+The following examples show some common ways that actions are used in extensions. To try this API,
+install the [Action API example][sample-example] from the [chrome-extension-samples][repo-samples]
+repository.
 
 ### Show a popup
 
@@ -294,4 +294,4 @@ chrome.runtime.onInstalled.addListener(() => {
 [html-canvas]: https://developer.mozilla.org/docs/Web/API/HTMLCanvasElement
 [html-offscreencanvas]: https://developer.mozilla.org/docs/Web/API/OffscreenCanvas
 [repo-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
-[sample-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
+[sample-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/action

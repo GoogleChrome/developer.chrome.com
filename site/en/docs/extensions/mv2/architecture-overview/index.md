@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
+seoTitle: "MV2 - Architecture overview [Deprecated]"
 date: 2012-09-18
 updated: 2018-06-07
 description: A high-level explanation of the software architecture of Chrome Extensions.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Architecture overview](/docs/extensions/mv3/architecture-overview) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Extensions are zipped bundles of HTML, CSS, JavaScript, images, and other files used in the web
 platform, that customize the Google Chrome browsing experience. Extensions are built using web
@@ -286,8 +291,8 @@ custom Chrome with the following resources.
 [doc-options-page]: /docs/extensions/mv2/options
 [doc-ui-popup]: /docs/extensions/mv2/user_interface/#popup
 [doc-ui]: /docs/extensions/mv2/user_interface/
-[sample-mail-checker]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/gmail
-[sample-mappy]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/mappy
+[sample-mail-checker]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/extensions/gmail
+[sample-mappy]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/mv2/extensions/mappy
 [section-background]: #background_script
 [section-content-scripts]: #contentScripts
 [section-options-page]: #optionsPage

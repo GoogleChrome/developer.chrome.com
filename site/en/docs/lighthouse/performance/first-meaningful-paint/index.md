@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: First Meaningful Paint
 description: |
-  Learn about Lighthouse's First Meaningful Paint metric and
+  Learn about Lighthouse's deprecated First Meaningful Paint metric and
   how to measure and optimize it.
 date: 2019-05-02
 updated: 2019-11-05
@@ -118,6 +118,6 @@ enables you to see User Timing data in your report.
 - [Time to First Meaningful Paint: a layout-based approach](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view)
 - [Largest Contentful Paint](https://web.dev/lcp/)
 
-[metrics]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics
-[tracking]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fmp_using_hero_elements
+[metrics]: https://web.dev/user-centric-performance-metrics/
+[tracking]: https://web.dev/user-centric-performance-metrics/
 [lcp]: https://web.dev/lcp/#how-to-improve-lcp

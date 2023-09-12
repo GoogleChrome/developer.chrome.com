@@ -4,7 +4,7 @@ title: Is not configured for a custom splash screen
 description: |
   Learn how to create a custom splash screen for your Progressive Web App.
 date: 2019-05-04
-updated: 2019-09-19
+updated: 2023-03-16
 ---
 
 A custom splash screen makes your [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/#make-it-installable) feel more like an
@@ -33,6 +33,7 @@ you meet the following requirements in your [web app manifest](https://web.dev/a
 
 - The `name` property is set to the name of your PWA.
 - The `background_color` property is set to a valid CSS color value.
+- The `theme_color` property is set to a valid CSS color value.
 - The `icons` array specifies an icon that is at least 512x512&nbsp;px.
 - The specified icon exists and is a PNG.
 

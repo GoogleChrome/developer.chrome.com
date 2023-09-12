@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Internationalize your extension
 date: 2017-08-30
-updated: 2021-11-08
+updated: 2023-08-18
 description: How to internationalize your Chrome Web Store extension.
 ---
 
@@ -43,7 +43,7 @@ localizing the name, description, and detailed description.
 
 ## Choose locales to support {: #choosing-locales-to-support }
 
-You can localize your extension to any of the following locales.
+You can localize your extension to any of the following locales. Note that Chrome Web Store does not support all of the locals supported by Chrome. If your locale is not listed here, choose the closest alternative. For example, if the default locale of your extension is "de_CH", choose "de" in the Chrome Web Store.
 
 | Locale code | Language (region)                     |
 | :---------- | :------------------------------------ |
@@ -57,6 +57,7 @@ You can localize your extension to any of the following locales.
 | de          | German                                |
 | el          | Greek                                 |
 | en          | English                               |
+| en_AU       | English (Australia)                   |
 | en_GB       | English (Great Britain)               |
 | en_US       | English (USA)                         |
 | es          | Spanish                               |
@@ -222,7 +223,7 @@ the next language.
 
 By default, your extension is listed in all regions that can use the Chrome Web Store. If you don't
 want your extension to be listed in a particular region, unselect that region from the following
-list in the **Regions** section of the [Payments and Distribution][distribution] tab.
+list in the **Regions** section of the [Distribution][distribution] tab.
 
 - Australia
 - Austria

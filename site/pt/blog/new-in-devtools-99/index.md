@@ -30,7 +30,7 @@ tags:
 <!-- end: translation instructions -->
 
 <!-- ## Throttling WebSocket requests {: #websocket } -->
-## Limitando requests de WebSocket {: #websocket } 
+## Limitando requests de WebSocket {: #websocket }
 <!-- The **Network** panel now supports throttling web socket requests. Previously, the network throttling didn't work on web socket requests. -->
 O painel **Rede** agora é compatível com a limitação de requests de web sockets. Anteriormente, a limitação de rede não funcionava em requests de web sockets.
 <!-- Open the **Network** panel, click on a web socket request and open the **Messages** tab to observe the message transfers. Select **Slow 3G** to throttle the speed.  -->
@@ -75,7 +75,7 @@ Issue relacionada: [1257499](https://crbug.com/1257499#c38)
 
 
 <!-- ## Better console styling, formatting and filtering {: #console } -->
-## Melhor estilização, formatação e filtragem do console {: #console } 
+## Melhor estilização, formatação e filtragem do console {: #console }
 <!-- ### Properly style log messages with ANSI escape code {: #console-styling }  -->
  ### Estilize corretamente as mensagens de log com código de escape ANSI {: #console-styling }
 
@@ -121,14 +121,14 @@ Além disso, se uma mensagem do console for exibida, o grupo (ou o grupo ancestr
 Issue relacionada: [1068788](https://crbug.com/1068788)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemap } -->
-## Melhorias nos sourcemaps {: #sourcemap }
-<!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
-### Depuração de extensões do Chrome com arquivos de sourcemap  {: #extension }
-<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
-Agora você pode [depurar a extensão do Chrome](/docs/extensions/mv3/getstarted/#unpacked) com arquivos de sourcemap. Anteriormente, o DevTools suportava apenas o sourcemap inline para depuração de extensão do Chrome.
+<!-- ## Source maps improvements {: #source map } -->
+## Melhorias nos source maps {: #sourcemap }
+<!-- ### Debug Chrome extension with source map files {: #extension } -->
+### Depuração de extensões do Chrome com arquivos de source map  {: #extension }
+<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
+Agora você pode [depurar a extensão do Chrome](/docs/extensions/mv3/getstarted/#unpacked) com arquivos de source map. Anteriormente, o DevTools suportava apenas o sourcemap inline para depuração de extensão do Chrome.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with sourcemap files", width="800", height="518" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with source map files", width="800", height="518" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1e73eb62955de7c4b0920575c7b374d47dab6a65 #}
 
@@ -137,8 +137,8 @@ Issue relacionada: [212374](https://crbug.com/212374)
 
 <!-- ### Improved source folder tree in the Sources panel {: #source-tree } -->
 ### Árvore de pastas aprimorada no painel Fontes {: #source-tree }
-<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
-A árvore de pastas no painel **Fontes** agora foi aprimorada com menos confusão nas estruturas de pastas e nomenclatura (por exemplo, “../”, “./”, etc). Sob o capô, isso é o resultado da normalização das URLs de origem absolutas nos sourcemaps.
+<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the source maps. -->
+A árvore de pastas no painel **Fontes** agora foi aprimorada com menos confusão nas estruturas de pastas e nomenclatura (por exemplo, “../”, “./”, etc). Sob o capô, isso é o resultado da normalização das URLs de origem absolutas nos source maps.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="Árvore de pastas aprimorada no painel Fontes", width="800", height="444" %}
 
@@ -156,7 +156,7 @@ Issue relacionada: [1284737](https://crbug.com/1284737)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
-Issue relacionada: [1277002](https://crbug.com/1277002) 
+Issue relacionada: [1277002](https://crbug.com/1277002)
 
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
@@ -188,7 +188,7 @@ Aqui está um exemplo capturado com a tela sensível ao toque do dispositivo [Go
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f60936b29519e0cf387cd0a133d43885c6eb183d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22bb84d657aa69f6f7d5067605c2c133a5714172 #}
 
-Issues relacionadas: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995) 
+Issues relacionadas: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->

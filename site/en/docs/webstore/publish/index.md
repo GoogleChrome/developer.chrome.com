@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2022-12-02
+updated: 2023-05-01
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -18,7 +18,7 @@ publishing][group-publishers].
 {% endAside %}
 
 Before you publish an extension, you need to load it locally and test that it works, as described in
-[Hello extensions][hello-extension]. Make sure that it runs correctly and that all its functionality works as you
+[Development Basics][dev-basics]. Make sure that it runs correctly and that all its functionality works as you
 intend.
 
 To publish your item to the Chrome Web Store, follow these steps:
@@ -78,7 +78,7 @@ Here you can provide your developer profile information, configure management se
 | **Trusted tester accounts** | (Optional) A comma-separated list of individuals' email addresses to make your extension available to them for testing. |
 
 {% Aside 'important' %}
-The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups or other forums. If you need to test with a group, do so using the item level visibility setting. Click **Items** in the menu at left. Scroll to **Visibility**. Then select **Private** and **Only truested testers from the current publisher settings**.
+The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups or other forums. If you need to test with a group, do so using the item level visibility setting. Click **Items** in the menu at left. Scroll to **Visibility**. Then select **Private** and **Only trusted testers from the current publisher settings**.
 {% endAside %}
 
 
@@ -138,7 +138,7 @@ detail about how to fill in each tab.
   Store.
 - The [Privacy][privacy] tab is where you include declarations about how your item uses privacy and
   security related features.
-- The [Payment and Distribution][distribution] tab lets you control which countries will list your item and
+- The [Distribution][distribution] tab lets you control which countries will list your item and
   which set of users will see it.
 
 ### To publish your item: {: #publish-item}
@@ -200,6 +200,7 @@ staged and reviewed items", width="709", height="238" %}
 [cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [description]: /docs/apps/manifest/description/
+[dev-basics]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
 [distribution]: /docs/webstore/cws-dashboard-distribution
 [group-publishers]: /docs/webstore/group-publishers

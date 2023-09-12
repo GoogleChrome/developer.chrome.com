@@ -7,7 +7,8 @@ description: |2
 
   que têm vulnerabilidades conhecidas.
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2023-04-26
+is_outdated: true
 ---
 
 Os invasores têm rastreadores da web automatizados que podem varrer seu site em busca de vulnerabilidades de segurança conhecidas. Quando o rastreador da web detecta uma vulnerabilidade, ele alerta o intruso. A partir daí, o invasor só precisa descobrir como explorar a vulnerabilidade em seu site.

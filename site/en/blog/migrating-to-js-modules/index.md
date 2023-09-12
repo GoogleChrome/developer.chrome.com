@@ -202,7 +202,7 @@ Some symbols were named solely `Module.File` or even `Module.CompletelyDifferent
 This inconsistency meant that we had to create an internal mapping from the old global object to the new imported object.
 2. Sometimes there would be clashes between moduleScoped names.
 Most prominently, we used a pattern of declaring certain types of `Events`, where each symbol was named just `Events`.
-This meant that if you were listening for multiple types of events declared in different files, a nameclash would occur on the `import`-statement for those `Events`.
+This meant that if you were listening for multiple types of events declared in different files, a name clash would occur on the `import`-statement for those `Events`.
 3. As it turned out, there were circular dependencies between files.
 This was fine in a global scope context, as the usage of the symbol was after all code was loaded.
 However, if you require an `import`, the circular dependency would be made explicit.

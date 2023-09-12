@@ -231,7 +231,12 @@ async function buildMatcher(source = 'dist/', avoidDirs = defaultAvoidDirs) {
     if (scope === path.dirname(p)) {
       force = true;
     }
-    insertRoot(scope, p, key, force);
+
+    try {
+      insertRoot(scope, p, key, force);
+    } catch (e) {
+      console.error(`Error: Failed to insert '${p}' into '${scope}': ${e}`);
+    }
   }
 
   // Look at all redirs in avoided directories, and move them to the root only if possible. This basically

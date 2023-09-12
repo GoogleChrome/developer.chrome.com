@@ -4,7 +4,8 @@ title: No proporciona un ícono apple-touch-icon válido
 description: Aprenda a especificar qué icono muestra su aplicación web progresiva en las pantallas de inicio de iOS.
 codelabs: laboratorio-de-código-apple-touch-icon
 date: 2019-08-27
-updated: 2019-09-19
+updated: 2023-03-24
+is_outdated: true
 ---
 
 Cuando los usuarios de iOS Safari agregan [aplicaciones web progresivas (PWA)](/es/docs/lighthouse/pwa/#instalable) a sus pantallas de inicio, el ícono que aparece se llama *ícono táctil de Apple*. Puede especificar qué ícono debe usar su aplicación al incluir una etiqueta `<link rel="apple-touch-icon" href="/example.png">` en la `<head>` de su página. Si su página no tiene esta etiqueta de enlace, iOS genera un icono tomando una captura de pantalla del contenido de la página. En otras palabras, indicarle a iOS que descargue un icono da como resultado una experiencia de usuario más refinada.

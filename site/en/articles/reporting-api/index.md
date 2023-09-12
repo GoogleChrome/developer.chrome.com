@@ -18,7 +18,7 @@ tags:
 <p>This is an API guide with detailed usage examples for the <strong>Reporting
 API (v1)</strong>, which uses the <code>Reporting-Endpoints</code> header.</p>
 
-<p>If you're using the legacy Reporting API (<code>Report-To</code> header), read about <a href="/reporting-api-migration/">API migration</a> instead.</p>
+<p>If you're using the legacy Reporting API (<code>Report-To</code> header), read about <a href="/blog/reporting-api-migration/">API migration</a> instead.</p>
 
 <p>Are you looking for <a href="https://web.dev/network-error-logging/">Network Error Logging</a> documentation? Head over to Network Error logging instead.</p>
 {% endAside %}

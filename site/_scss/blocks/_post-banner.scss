@@ -1,0 +1,23 @@
+.post-banner {
+  background-color: #fff;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 24px;
+  z-index: 9;
+
+  &__content {
+    --link-color: var(--color-red-darkest);
+    --link-visited-color: var(--color-red-darkest);
+    --link-rgb-background: var(--rgb-red-darkest);
+    background-color: var(--color-red-lightest);
+    border-radius: 6px;
+    color: var(--color-red-darkest);
+    font-size: 14px;
+    padding: get-size(400);
+
+    @include media-query('md') {
+      font-size: 16px;
+    }
+  }
+}

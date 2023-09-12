@@ -32,7 +32,7 @@ As usual, you can watch the latest [What’s New in DevTools video](https://goo.
 ## View and edit @supports at rules in the Styles pane {: #supports }
 
 You can now view and edit the CSS `@supports` at-rules in the **Styles** pane. These changes make it easier to experiment with the at-rules in real time.
-Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it. 
+Open this [demo page](https://jec.fish/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class=”box”>` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule’s declaration to edit it.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="View and edit @supports at rules", width="800", height="502" %}
 
@@ -55,9 +55,9 @@ When determining an unique selector during recording, the [Recorder](/docs/devto
 - data-qa-id
 - data-testing
 
-The attributes above are common selectors used in test automation. 
+The attributes above are common selectors used in test automation.
 
-For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value.
+For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fish/demo/recorder). Fill in an email address and observe the selector value.
 
 Since the email element has `data-testid` defined, it’s used as the selector automatically instead of the `id` or `class` attributes.
 
@@ -68,7 +68,7 @@ Since the email element has `data-testid` defined, it’s used as the selector a
 
 You can customize the selector of a recording if you are not using the [common selectors](/docs/devtools/recorder/#selector).
 
-For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`).
+For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Customize the recording’s selector", width="800", height="524" %}
 
@@ -96,11 +96,11 @@ Chromium issue: [1049947](https://crbug.com/1049947)
 
 ## Partially presented frames in the Performance panel {: #perf }
 
-Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline. 
+Performance recording now displays a new frame category "Partially presented frames" in the **Frames** timeline.
 
 Previously, the **Frames** timeline visualizes any frames with delayed main-thread work as "dropped frames". However, there are cases where some frames may still produce visual updates (e.g. scrolling) driven by the compositor thread.
 
-This leads to user confusion because the screenshots of these “Dropped frames” are still reflecting visual updates. 
+This leads to user confusion because the screenshots of these “Dropped frames” are still reflecting visual updates.
 
 The new "Partially presented frames" aims to indicate more intuitively that although some content is not presented timely in the frame, but the issue is not so severe as to block visual updates altogether.
 
@@ -117,8 +117,8 @@ These are some noteworthy fixes in this release:
 
 - Updated iPhone user agent strings for [emulated devices](/docs/devtools/device-mode/#device). All iPhone versions after 5 have a user-agent string with iPhone OS 13_2_3. ([1289553](https://crbug.com/1289553))
 - You can now save [snippet](/docs/devtools/javascript/snippets/) as a JavaScript file directly. Previously, you needed to append `.js` file extension manually. ([1137218](https://crbug.com/1137218))
-- The **Sources** panel now correctly displays scope variable names when debugging with sourcemap. Previously, the **Sources** panel displays minified scope variable names despite sourcemap being provided. ([1294682](https://crbug.com/1294682)) 
-- The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422)) 
+- The **Sources** panel now correctly displays scope variable names when debugging with source map. Previously, the **Sources** panel displays minified scope variable names despite source map being provided. ([1294682](https://crbug.com/1294682))
+- The **Sources** panel now restores scroll position correctly on page load. Previously, the position was not restored correctly causing inconvenience in debugging. ([1294422](https://crbug.com/1294422))
 
 
 {% Partial 'devtools/reach-out.md' %}

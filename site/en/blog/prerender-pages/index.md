@@ -7,7 +7,7 @@ description: |
 authors:
  - tunetheweb
 date: 2022-12-02
-#updated: 2022-12-02
+updated: 2023-09-08
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -65,7 +65,7 @@ See the [Measuring performance](#measuring-performance) section for more informa
 
 ### Viewing Chrome's address bar predictions
 
-For the first two use cases, you can view Chrome's predictions for URLs in the `chrome://predictors` page:
+For the first use case, you can view Chrome's predictions for URLs in the `chrome://predictors` page:
 
 <figure>
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Oy3gv9Gyhx0eTKWVtUVo.png", alt="Screenshot of the Chrome Predictors page filtered to show low (grey), medium (amber), and high (green) predictions based on text entered.", width="800", height="560" %}
@@ -86,7 +86,7 @@ Chrome will continually update its predictors based on your typing and selection
 - For a greater than 50% confidence level (shown in amber), Chrome proactively preconnects to the domain, but does not prerender the page.
 - For a greater than 80% confidence level (shown in green), Chrome will prerender the URL.
 
-### Using the Speculation Rules API to prerender pages
+## The Speculation Rules API
 
 For the third prerender option, web developers can insert JSON instructions onto their pages to inform the browser about which URLs to prerender:
 
@@ -103,20 +103,39 @@ For the third prerender option, web developers can insert JSON instructions onto
 </script>
 ```
 
-The Speculation Rules API is planned to be expanded beyond this simple example with the addition of prefetch, [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead fo `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
+Speculation rules can also be used to just prefetch pages, without a full prerender. This can often be a good first step on the road to prerendering:
 
-For now, only the above syntax is supported in Chrome, which is a simple list of urls to prerender.
+```html
+<script type="speculationrules">
+{
+  "prefetch": [
+    {
+      "source": "list",
+      "urls": ["next.html", "next2.html"]
+    }
+  ]
+}
+</script>
+```
 
-For the initial launch in Chrome 108, prerender is restricted to same-origin pages, opened within the same tab. Chrome 109 plans expand this to allow [prerendering same-site cross-origin pages](https://chromestatus.com/feature/4899735257743360) (for example, `https://a.example.com` could prerender a page on `https://b.example.com`, where the other site has opted in to same-site, cross-origin prerendering). Future versions may also [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
+{% Aside %}
+Unlike the older `<link rel="prefetch">` resource hint which just prefetched to the HTTP cache, documents loaded via speculation rules are processed in the same way that navigations are (but then not rendered) and are held in memory so will be available quicker to the browser once needed. Using speculation rules for prefetches will also allow use of [future enhancements](#speculation-rules-restrictions-and-future-enhancements) as they are added to the API.
+
+[Only Chromium-based browsers support document prefetches](https://github.com/whatwg/html/issues/6723) via `<link rel="prefetch">`, and given the above, it is recommended to use speculation rules for these going forward, with `<link rel="prefetch">` only used for prefetching subresources.
+{% endAside %}
 
 Speculation rules can be:
 
-* Statically inserted in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
-* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or even `preload`. Those favoring dynamic insertion, are recommended to keep an eye on Speculation Rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
+* Statically included in the page's HTML. For example a news media site, or a blog may prerender the newest article, if that is often the next navigation for a large proportion of users.
+* Dynamically inserted into the page by JavaScript. This could be based on application logic, personalized to the user, or on certain user actions such as hovering over, or clicking down on a link—as many libraries have done in the past with `preconnect`, `prefetch`, or the older NoState Prefetch `prerender`. Those favoring dynamic insertion, are recommended to keep an eye on speculation rules support, as the document rules may make allow the browser to handle many of your use cases as this is introduced in the future.
 
 Speculation rules can be added in either the `<head>` or the `<body>` of in the main frame. Speculation rules in subframes are not acted upon, and speculation rules in prerendered pages are only acted upon once that page is activated.
 
-#### Multiple Speculation Rules
+### Debugging speculation rules
+
+Please see the [dedicated post on debugging speculation rules](/blog/debugging-speculation-rules/), for new Chrome DevTools features to assist with viewing and debugging this new API.
+
+### Multiple speculation rules
 
 Multiple speculation rules can also be added to the same page, and they append to the existing rules. Therefore, the following different ways all result in both `one.html` and `two.html` prerendering:
 
@@ -179,7 +198,25 @@ Multiple speculation rules can also be added to the same page, and they append t
 </script>
 ```
 
-#### Detecting of Speculation Rules API support
+### Speculation rules restrictions and future enhancements
+
+At present, speculation rules are restricted to pages opened within the same tab, but we are working to reduce that restrictions. By default prerender is restricted to same-origin pages.
+
+{% Aside 'update' %}
+[Prerendering same-site cross-origin pages](https://chromestatus.com/feature/4899735257743360) (for example, `https://a.example.com` could prerender a page on `https://b.example.com`) is supported from Chrome 109.
+
+To use this the prerendered page (`https://b.example.com` in this example) needs to opt-in by including a `Supports-Loading-Mode: credentialed-prerender` HTTP header or Chrome will cancel the prerender.
+{% endAside %}
+
+Future versions may also [allow prerender for cross-origin pages](https://bugs.chromium.org/p/chromium/issues/detail?id=1176054) (where the site opts in with a similar `Supports-Loading-Mode: uncredentialed-prerender` HTTP header), and [enable prerendering in new tabs](https://bugs.chromium.org/p/chromium/issues/detail?id=1350676).
+
+The Speculation Rules API is planned to be expanded beyond this simple example with the addition of [scores](https://github.com/WICG/nav-speculation/blob/main/triggers.md#scores) (for example, the likelihood of a navigation), and syntax to implement [document rules](https://github.com/WICG/nav-speculation/blob/main/triggers.md#document-rules) instead of `list` rules (for example, matching `href` patterns on the page), which can be combined to only prerender links on mouse down, for example.
+
+{% Aside 'update' %}
+A number of [experiments](https://github.com/WICG/nav-speculation/blob/main/chrome-2023q1-experiment-overview.md) are currently being run in Chrome for some of these additional features. Sites can opt-in to via an [origin trial](/origintrials/#/view_trial/705939241590325249) to try out—and give feedback—on these potential future additions. [Learn more about origin trials](/docs/web-platform/origin-trials/).
+{% endAside %}
+
+### Detecting of Speculation Rules API support
 
 You can feature detect Speculation Rules API support with standard HTML checks:
 
@@ -189,7 +226,7 @@ if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')
 }
 ```
 
-#### Adding Speculation Rules dynamically through JavaScript
+### Adding speculation rules dynamically through JavaScript
 
 Below is a simple example of adding a `prerender` speculation rule with JavaScript:
 
@@ -214,19 +251,21 @@ if (HTMLScriptElement.supports &&
 
 You can view a demo of Speculation Rules API prerendering, using JavaScript insertion, on [this demo page](https://prerender-demos.glitch.me/).
 
-#### Cancelling Speculation Rules
+### Cancelling speculation rules
 
-Removing Speculation Rules will result in the prerender being cancelled but, by the time this has happened, resources will likely have already been spent to initiate the prerender, so it is recommended not to prerender if there is a likelihood of needing to cancel the prerender.
+Removing speculation rules will result in the prerender being cancelled but, by the time this has happened, resources will likely have already been spent to initiate the prerender, so it is recommended not to prerender if there is a likelihood of needing to cancel the prerender.
 
-#### Speculation Rules and Content Security Policy
+### Speculation rules and Content Security Policy
 
-As Speculation Rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this—either using a hash or nonce. In future, a new `inline-speculation-rules` source will be supported in `script-src` allowing all `<script type="speculationrules">` elements on a page to be supported without the need of hashes or nonces.
+As speculation rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this—either using a hash or nonce.
+
+A new `inline-speculation-rules` can be added to `script-src` allowing `<script type="speculationrules">` elements injected from hash/nonced scripts to be supported. At present, this only supports injected rules and does not [yet support rules includes in the initial HTML](https://bugs.chromium.org/p/chromium/issues/detail?id=1433616).
 
 ## Detecting and disabling prerendering
 
 Prerender is usually a positive experience for users as it allows fast page rendering—often instant. This benefits both the user, and the site owner, since prerendered pages allow a better user experience that may be difficult to achieve otherwise.
 
-However, there may be instances when you do not wish prerendering of pages to happen, for example when pages change state—either based on the initial request, or based on JavaScript executing on the page.
+However, there may be instances when you [do not wish prerendering of pages to happen](https://docs.google.com/document/d/1_9XkDUKMGf2f3tDt1gvQQjfliNLpGyFf36BB1-NUZ98/edit), for example when pages change state—either based on the initial request, or based on JavaScript executing on the page.
 
 ### Enabling and disabling prerender in Chrome
 
@@ -250,7 +289,7 @@ The `document.prerendering` API will return `true` while the page is prerenderin
 
 Once a prerendered document is activated, `PerformanceNavigationTiming`'s `activationStart` will also be set to a non-zero time representing the time between when the prerender was started and the document was actually activated.
 
-You can have a function to check for _prendering_ and _prerendered_ pages like the following:
+You can have a function to check for _prerendering_ and _prerendered_ pages like the following:
 
 ```js
 function pagePrerendered() {
@@ -267,12 +306,16 @@ The easiest way to see if a page was prerendered is to open DevTools after the p
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/C3pNnuCo3i4zHgbLWEo0.png", alt="Console in Chrome DevTools showing a positive activationStart indicating the page was prerendered", width="400", height="98.5" %}
 </figure>
 
+{% Aside 'update' %}
+From Chrome 117, additional Chrome DevTools debugging features are available for debugging prerendered pages. Please see the [Debugging speculation rules post](/blog/debugging-speculation-rules/) for more details.
+{% endAside %}
+
 When the page is activated by the user viewing the page, the `prerenderingchange` event will be dispatched on the `document`, which can then be used to enable activities that previously would be started by default on page load but which you wish to delay until the page is actually viewed by the user.
 
 Using these APIs, front-end JavaScript can detect and act upon prerendered pages appropriately.
 
 {% Aside 'warning' %}
-  At present the [`PerformanceNavigationTiming.type`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming/type) is not using the `prerender` value, that was for the older, original `<link rel="prerender"...>` navigation type. This is liable to change in future but for now, clients should use the `document.prerendering` API to identify prerendering pages and a non-zero `PerformanceNavigationTiming.activationStart` field to identify prerendered pages that have since been activated.
+  At present, the [`PerformanceNavigationTiming.type`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming/type) is not using the `prerender` value, that was for the older, original `<link rel="prerender"...>` navigation type. This is liable to change in future but for now, clients should use the `document.prerendering` API to identify prerendering pages and a non-zero `PerformanceNavigationTiming.activationStart` field to identify prerendered pages that have since been activated.
 {% endAside %}
 
 ## Impact on analytics
@@ -281,7 +324,11 @@ Analytics are used to measure website usage, for example using Google Analytics 
 
 Pages should only be prerendered when there is a high probability the page will be loaded by the user. This is why the Chrome address bar prerendering options only happen when there is such a high probability (greater than 80% of the time).
 
-However—particularly when using the Speculation Rules API—prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation.
+However—particularly when using the Speculation Rules API—prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation, as not all analytics providers may do this by default.
+
+{% Aside 'update' %}
+Google Analytics handles prerender by default as of September 2023.
+{% endAside %}
 
 This could be achieved by using a `Promise` which waits for the `prerenderingchange` event if a document is prerendering, or resolves immediately if it is now:
 
@@ -353,6 +400,7 @@ Prerendering is in active development by the Chrome team, and there are plenty o
 
 ## Related links
 
+- [Debugging speculation rules](/blog/debugging-speculation-rules/)
 - [Introducing NoState Prefetch](/blog/nostate-prefetch/)
 - [Speculation Rules API](https://github.com/jeremyroman/alternate-loading-modes/blob/main/triggers.md#speculation-rules)
 - [The Navigational speculation GitHub repo](https://github.com/WICG/nav-speculation/)

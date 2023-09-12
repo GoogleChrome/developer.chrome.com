@@ -121,5 +121,5 @@ can be a good proxy for TTI.
 - [Optimize third-party resources][3p]
 
 [metrics]: https://web.dev/user-centric-performance-metrics/
-[tracking]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti
+[tracking]: https://web.dev/user-centric-performance-metrics/
 [3p]: https://web.dev/fast/#optimize-your-third-party-resources

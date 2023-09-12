@@ -6,7 +6,7 @@ subhead: >
 authors:
   - beaufortfrancois
 date: 2015-07-21
-updated: 2021-10-01
+updated: 2023-04-04
 hero: image/admin/CME5IVhdn0pngs7jAlFX.jpg
 thumbnail: image/admin/1J1OTu90a2oH8wFogKnF.jpg
 alt: A Bluetooth chip on a coin
@@ -192,6 +192,32 @@ At the time of writing, the `manufacturerData` filter key is available in
 Chrome&nbsp;92. If backwards compatibility with older browsers is desired, you
 have to provide a fallback option as the manufacturer data filter is considered
 empty. See an [example].
+{% endAside %}
+
+#### Exclusion filters
+
+The `exclusionFilters` option in `navigator.bluetooth.requestDevice()` allows
+you to exclude some devices from the browser picker. It can be used to exclude
+devices that match a broader filter but are unsupported.
+
+```js
+// Request access to a bluetooth device whose name starts with "Created by".
+// The device named "Created by Francois" has been reported as unsupported.
+navigator.bluetooth.requestDevice({
+  filters: [{
+    namePrefix: "Created by"
+  }],
+  exclusionFilters: [{
+    name: "Created by Francois"
+  }],
+  optionalServices: ['battery_service'] // Required to access service later.
+})
+.then(device => { /* … */ })
+.catch(error => { console.error(error); });
+```
+
+{% Aside %}
+The `exclusionFilters` option is available in Chrome&nbsp;114.
 {% endAside %}
 
 #### No filters
@@ -447,6 +473,7 @@ Service, or a Health Thermometer Service.
 - [Get Characteristics](https://googlechrome.github.io/samples/web-bluetooth/get-characteristics.html) - get all characteristics of an advertised service from a BLE Device.
 - [Get Descriptors](https://googlechrome.github.io/samples/web-bluetooth/get-descriptors.html) - get all characteristics' descriptors of an advertised service from a BLE Device.
 - [Manufacturer Data Filter](https://googlechrome.github.io/samples/web-bluetooth/manufacturer-data-filter.html) - retrieve basic device information from a BLE Device that matches manufacturer data.
+- [Exclusion Filters](https://googlechrome.github.io/samples/web-bluetooth/exclusion-filters.html) - retrieve basic device information from a BLE Device featuring basic exclusion filters.
 
 ### Combining multiple operations
 

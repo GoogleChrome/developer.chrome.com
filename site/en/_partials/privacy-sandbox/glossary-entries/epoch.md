@@ -1,0 +1,1 @@
+In the Topics API, an epoch is the period of time during which the browser infers topics for a user based on their browsing activity. It is currently set to one week.

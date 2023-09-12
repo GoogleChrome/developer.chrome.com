@@ -43,7 +43,7 @@ have changed. Chrome auto-updates to a new major version about every 6 weeks.
 Previously, any changes that you made in DevTools would be lost when you reloaded the page. **Local
 Overrides** work for most file types, with a couple of exceptions. See [Limitations][7].
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pPRYEcOzEloITwitsHRd.gif", alt="Persisting a CSS change across page loads with Local Overrides.", width="800", height="469" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NTLRycUgArW87HosgaLR.gif", alt="Persisting a CSS change across page loads with Local Overrides.", width="800", height="470", class="screenshot" %}
 
 **Figure 1**. Persisting a CSS change across page loads with **Local Overrides**
 

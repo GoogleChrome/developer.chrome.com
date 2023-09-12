@@ -3,11 +3,10 @@ layout: "layouts/doc-post.njk"
 title: "Installing extensions on Linux"
 seoTitle: "Installing Chrome extensions on Linux"
 date: 2017-12-14
-updated: 2018-03-23
+updated: 2023-02-06
 description: How to package, host, and update crx files from a personal server for Linux users.
 ---
 
-{% Partial 'extensions/mv2page-in-mv3.md' %}
 
 Linux is the only platform where Chrome users can install extensions that are hosted outside of the
 [Chrome Web Store][chrome-web-store]. This article describes how to package, host, and update `crx`
@@ -36,12 +35,6 @@ popup window, click the blue `main.crx` link to download it.
 The downloaded file can be hosted on a personal server. This is the most secure way to host an
 extension locally as the contents of the extension will be signed by the Chrome Web Store. This
 helps detect potential attacks and tampering.
-
-{% Aside %}
-
-Read more about the [hosting policy][hosting-changes].
-
-{% endAside %}
 
 ### Create .crx locally {: #create }
 
@@ -275,7 +268,6 @@ This would ensure that users would autoupdate to version 2 only if they are runn
 [chromium-with-flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [developer-dashboard]: https://chrome.google.com/webstore/developer/dashboard
 [header-updating]: #update
-[hosting-changes]: /docs/extensions/mv2/hosting_changes/
 [hosting-options]: /docs/extensions/mv3/hosting
 [load-locally]: #create
 [manifest]: /docs/extensions/mv3/manifest/

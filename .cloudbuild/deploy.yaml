@@ -17,10 +17,6 @@ steps:
     env:
       - 'NODE_OPTIONS="--max_old_space_size=8192"' # https://github.com/GoogleChrome/developer.chrome.com/issues/2439
 
-  - name: node:16.14.2
-    entrypoint: npm
-    args: ['run', 'algolia']
-
   - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: 'bash'
     args:

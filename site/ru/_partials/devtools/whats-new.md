@@ -5,6 +5,58 @@
 
 {# $content #}
 
+{# ### Chrome 112 {: #chrome112 }
+
+* [Recorder updates](/ru/blog/new-in-devtools-112/#recorder)
+* [Recorder replay extensions](/ru/blog/new-in-devtools-112/#replay-extensions)
+* [Record with pierce selectors](/ru/blog/new-in-devtools-112/#pierce-selectors)
+* [Export recordings as Puppeteer scripts with Lighthouse analysis](/ru/blog/new-in-devtools-112/#puppeteer-lighthouse)
+* [Get extensions](/ru/blog/new-in-devtools-112/#get-extensions)
+* [Elements > Styles updates](/ru/blog/new-in-devtools-112/#elements-styles)
+* [CSS documentation in the Styles pane](/ru/blog/new-in-devtools-112/#css)
+* [CSS nesting support](/ru/blog/new-in-devtools-112/#nesting)
+* [Marking logpoints and conditional breakpoints in the Console](/ru/blog/new-in-devtools-112/#logpoint)
+* [Ignore irrelevant scripts during debugging](/ru/blog/new-in-devtools-112/#ignore-list)
+* [JavaScript Profiler deprecation started](/ru/blog/new-in-devtools-112/#js-profiler-deprecation)
+* [Emulate reduced contrast](/ru/blog/new-in-devtools-112/#reduced-contrast)
+* [Lighthouse 10](/ru/blog/new-in-devtools-112/#lighthouse)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-112/#misc)
+ #}
+
+{# ### Chrome 111 {: #chrome111 }
+
+* [Debugging HD color with the Styles pane](/ru/blog/new-in-devtools-111/#color)
+* [Enhanced breakpoint UX](/ru/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Customizable Recorder shortcuts](/ru/blog/new-in-devtools-111/#recorder)
+* [Better syntax highlight for Angular](/ru/blog/new-in-devtools-111/#syntax)
+* [Reorganize caches in the Application panel](/ru/blog/new-in-devtools-111/#cache)
+* [Miscellaneous highlights](/ru/blog/new-in-devtools-111/#misc)
+ #}
+
+
+### Chrome 110 {: #chrome110 }
+
+* [Очистка вкладки Производительность при перезагрузке](/ru/blog/new-in-devtools-110/#perf)
+* [Обновления Регистратора (Recorder)](/ru/blog/new-in-devtools-110/#recorder)
+* [Просмотр и подсветка кода в пользовательском сценарии в Регистраторе](/ru/blog/new-in-devtools-110/#recorder-code)
+* [Настройка типов селекторов записи](/ru/blog/new-in-devtools-110/#recorder-selector)
+* [Редактирование пользовательского сценария во время записи](/ru/blog/new-in-devtools-110/#recorder-edit)
+* [Автоматическое красивое форматирование внутри файла](/ru/blog/new-in-devtools-110/#pretty-print)
+* [Улучшенная подсветка синтаксиса и встроенный предварительный просмотр для Vue, SCSS и других](/ru/blog/new-in-devtools-110/#highlight)
+* [Эргономичное и единообразное автодополнения в Консоли (Console)](/ru/blog/new-in-devtools-110/#console)
+* [Другие важные моменты](/ru/blog/new-in-devtools-110/#misc)
+
+
+### Chrome 109 {: #chrome109 }
+
+* [Recorder: опции копирования для шага, воспроизведение на странице, контекстное меню шага](/ru/blog/new-in-devtools-109/#recorder)
+* [Показ настоящих названий функций в записях производительности](/ru/blog/new-in-devtools-109/#performance)
+* [Новые горячие клавиши во вкладках Консоль (Console) и Источники (Sources)](/ru/blog/new-in-devtools-109/#keyboard-shortcuts)
+* [Улучшенная отладка JavaScript](/ru/blog/new-in-devtools-109/#debugging)
+* [Другие важные моменты](/ru/blog/new-in-devtools-109/#misc)
+* [[Эксперимент] Улучшенный UX в интерфейсе управления точками останова](/ru/blog/new-in-devtools-109/#breakpoint-redesign)
+* [[Эксперимент] Автоматическое красивое форматирование внутри файла](/ru/blog/new-in-devtools-109/#pretty-print)
+
 
 ### Chrome 108 {: #chrome108 }
 

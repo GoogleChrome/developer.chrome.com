@@ -55,7 +55,7 @@ and improve
 
 Some frameworks like Preact
 [ship with tools](https://github.com/developit/preact-render-to-string)
-that address server-side rendering. If your framework has a prendering
+that address server-side rendering. If your framework has a prerendering
 solution, please stick with that. There's no reason to bring another tool
 (headless Chrome and Puppeteer) into the mix.
 
@@ -294,7 +294,7 @@ What about performance numbers? On one of my
 ([code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)), headless
 Chrome takes about 1s to render the page on the server. Once the page is cached,
 DevTools **3G Slow emulation** puts
-[FCP](/web/fundamentals/performance/user-centric-performance-metrics) at
+[FCP](https://web.dev/user-centric-performance-metrics/) at
 **8.37s faster** than the client-side version.
 
 <table>
@@ -774,7 +774,7 @@ In practice, I've found universal JS difficult to pull off. A personal story...
 I recently started
 [a project](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)
 and wanted to give [lit-html](https://github.com/Polymer/lit-html) a try. Lit
-is a great little library that lets you write [HTML &lt;template>s](https://www.html5rocks.com/en/tutorials/webcomponents/template/)
+is a great little library that lets you write [HTML 5 templates](https://developer.mozilla.org/docs/Web/HTML/Element/template)
 using JS template literals, then efficiently render those templates to
 DOM. The problem is that its core feature (using the `<template>` element)
 doesn't work outside of the browser. That means it won't work in a Node server.

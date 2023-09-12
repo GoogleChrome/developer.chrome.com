@@ -155,9 +155,14 @@ popup. There is no way to keep the popup open after the user has clicked away.
 
 ### Can extensions be notified when they are installed/uninstalled? {: #faq-lifecycle-events }
 
-You can listen to the [runtime.onInstalled][48] event to be notified when your extension is
-installed or updated, or when Chrome itself is updated. There is no corresponding event for when
-your extension is uninstalled.
+You can listen to the [runtime.onInstalled][48] event to be notified when your
+extension is installed or updated, or when Chrome itself is updated. While there
+is no event listener for uninstalling an extension, a URL can be set by calling
+[`runtime.setUninstallUrl()`](/docs/extensions/reference/runtime/#method-setUninstallURL)
+to open a URL when the extension is uninstalled. This allows for some final
+functionality, like cleaning up server-side data, doing analytics, and
+implementing surveys without access to any extension APIs.
+
 
 ## Development {: #development2 }
 
@@ -197,11 +202,6 @@ the hostile site could potentially attack your extension in order to get access 
 increased privileges.
 
 You should explicitly enumerate the TLDs that you wish to run your extension on.
-
-### Why does the management API not fire events when my extension is installed/uninstalled? {: #faq-management }
-
-The [management API][52] was intended to help create new tab page replacement extensions. It was not
-intended to fire install/uninstall events for the current extension.
 
 ### How can an extension determine whether it is running for the first time? {: #faq-firstrun }
 
@@ -323,7 +323,6 @@ The steps you should follow to ensure this are:
 [49]: #faq-dev-05
 [50]: /docs/extensions/mv3/options
 [51]: /docs/extensions/mv3/tut_debugging
-[52]: /docs/extensions/reference/management
 [53]: /docs/extensions/reference/runtime#event-onInstalled
 [54]: #faq-lifecycle-events
 [55]: https://crbug.com

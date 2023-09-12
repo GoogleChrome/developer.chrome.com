@@ -8,7 +8,7 @@ title: "Chrome Web Store API Reference"
 
 {% Aside 'warning' %}
 
-The Licensing API used by the Chrome Web Store payments system is now deprecated. See [Payment
+The Payments API used by the Chrome Web Store payments system is now deprecated. See [Payment
 deprecation](/docs/webstore/cws-payments-deprecation/) to learn about migration and official
 timelines.
 

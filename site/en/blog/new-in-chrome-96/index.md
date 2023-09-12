@@ -5,7 +5,7 @@ description: >
   manifest. The id property allows you to specify a unique ID for your PWA,
   and the protocol_handlers property allows you to automatically register your
   PWA as a protocol handler upon installation. There's a new origin trial that
-  allows you to specify priority hints for downloading resources. And there's
+  allows you to specify fetch priority for downloading resources. And there's
   plenty more!
 layout: 'layouts/blog-post.njk'
 date: 2021-11-16
@@ -29,7 +29,7 @@ Here's what you need to know:
 * The [`protocol_handlers` property](#pwa-protocol-handlers) allows you to
   automatically register your PWA as a protocol handler upon installation.
 * The [priority hints origin trial](#pri-hints) allows you to specify
-  priority hints for downloading resources.
+  fetch priority for downloading resources.
 * You can [force the Chrome version to 100](#chrome-100) to test how your code
   will react to a three digit version number.
 * Videos from the [Chrome Dev Summit](#cds-videos) are all online.
@@ -134,7 +134,7 @@ Web Vitals. The `importance` attribute allows you to specify the priority
 for resource types such as CSS, fonts, scripts, images, and iframes.
 
 {% Aside 'warning' %}
-The `importance` attribute has been renamed `fetchpriority`. Read [Optimizing resource loading with Priority Hints](https://web.dev/priority-hints/) for the latest on this feature.
+The `importance` attribute has been renamed `fetchpriority`. Read [Optimizing resource loading with the Fetch Priority API](https://web.dev/fetch-priority/) for the latest on this feature.
 {% endAside %}
 
 ```html
@@ -163,7 +163,7 @@ seconds.
 
 {% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/MGM6YFi3IHrjRoguRr92.mp4", autoplay="true", muted="true", loop="true" %}
 
-Check out [Optimizing resource loading with Priority Hints][wd-phints] for
+Check out [Optimizing resource loading with the Fetch Priority API][wd-phints] for
 all the details, how to register for the origin trial, and some great examples
 of how it can help to improve your rendering performance.
 
@@ -220,7 +220,7 @@ tell you what's new in Chrome!
 [manifest-id]: /blog/pwa-manifest-id/
 [mdn-regph]: https://developer.mozilla.org/docs/Web/API/Navigator/registerProtocolHandler
 [wd-phreg]: https://web.dev/url-protocol-handler/
-[wd-phints]: https://web.dev/priority-hints/
+[wd-phints]: https://web.dev/fetch-priority/
 [ph-ot]: /origintrials/#/view_trial/365917469723852801
 [dcc-cr100]: /blog/force-major-version-to-100/
 [cds-site]: /devsummit/

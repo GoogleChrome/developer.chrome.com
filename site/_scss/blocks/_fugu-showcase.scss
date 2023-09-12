@@ -1,0 +1,75 @@
+.fugu-showcase {
+  .search-box {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-box__input {
+    background: var(--color-bg-shade);
+    border: 0;
+    border-radius: px-to-rem(100px);
+    display: block;
+    margin: 0;
+    padding: get-size(200) get-size(700);
+
+    &::placeholder {
+      color: var(--color-secondary-text);
+    }
+  }
+
+  .search-box__btn--close {
+    justify-self: end;
+  }
+
+  .search-box__btn--close {
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  label[for='api-select'] {
+    text-transform: uppercase;
+  }
+
+  .enhanced-select__wrapper {
+    border: 0;
+    color: var(--color-primary);
+  }
+
+  .blog-grid {
+    justify-content: space-evenly;
+  }
+
+  .fugu-card__actions {
+    align-items: center;
+    border-bottom: 1px solid var(--color-hairline);
+    justify-content: space-between;
+    width: 100%;
+
+    a {
+      align-items: center;
+      text-decoration: none;
+    }
+
+    svg {
+      margin-right: 8px;
+    }
+
+    &--secondary {
+      border-bottom: 0;
+      border-top: 1px solid var(--color-hairline);
+    }
+  }
+
+  .blog-card__thumbnail img {
+    max-height: unset;
+  }
+
+  .web-share {
+    appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+}

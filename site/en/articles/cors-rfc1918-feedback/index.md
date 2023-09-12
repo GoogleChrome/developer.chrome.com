@@ -8,6 +8,8 @@ authors:
 date: 2020-11-09
 hero: image/admin/OPuAZvdfh0W5fLAvB5Rv.jpg
 alt: A router with ethernet cables connected.
+is_outdated: true
+new_available_content_url: /blog/private-network-access-preflight/
 tags:
   - security
   - cors

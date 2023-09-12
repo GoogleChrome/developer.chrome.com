@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: Sensors for the web
-subhead: Use the Generic Sensor API to get access to on-device sensors like accelerometers, gyroscopes, and magentometers.
+subhead: Use the Generic Sensor API to get access to on-device sensors like accelerometers, gyroscopes, and magnetometers.
 authors:
   - alexshalamov
   - pozdnyakov

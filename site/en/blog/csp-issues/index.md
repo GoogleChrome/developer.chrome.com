@@ -137,7 +137,7 @@ A small complication is the fact that we also wanted to report issues that occur
 This concluded the back-end work, and we now needed to focus on how to surface the issue in the front-end.
 
 
-### Step 5: Designing the issues text
+### Step 5: designing the issues text
 Designing the issues text is a process that involves several teams besides our own, for example, we often rely on insight from the team that implements a feature (in this case that would be the CSP team) and of course the DevRel team, which designs how web developers are supposed to deal with a certain type of problem. The issue text usually goes through some refinement until it is finished.
 
 Usually the DevTools team will start with a rough draft of what they imagine:
