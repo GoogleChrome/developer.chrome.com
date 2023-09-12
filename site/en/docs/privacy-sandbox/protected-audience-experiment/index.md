@@ -67,7 +67,7 @@ about **your implementation**, the **demo**, or the **documentation**:
    on the Privacy Sandbox Dev Support repository. Make sure to select the
    Issue template for the Protected Audience API.
 *  Raise an issue on the [demo code repo on
-   GitHub](https://github.com/JackJey/fledge-demo).
+   GitHub](https://github.com/GoogleChromeLabs/protected-audience-demo).
 *  For more general questions about how to meet your **use cases** with the
    API, [file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
 

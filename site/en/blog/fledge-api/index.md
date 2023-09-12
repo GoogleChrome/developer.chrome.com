@@ -1272,7 +1272,7 @@ to share feedback privately with the Chrome team outside of public forums.
 To ask a question about **your implementation**, about the **demo**, or about the **documentation**:
 * [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
 on the privacy-sandbox-dev-support repository. Make sure to select the issue template for Protected Audience.
-* Raise an issue on the [demo code repo on GitHub](https://github.com/JackJey/fledge-demo).
+* Raise an issue on the [demo code repo on GitHub](https://github.com/GoogleChromeLabs/protected-audience-demo).
 * For more general questions about how to meet your **use cases** with the API,
 [file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
 

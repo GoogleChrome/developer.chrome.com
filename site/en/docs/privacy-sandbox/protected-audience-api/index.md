@@ -550,7 +550,7 @@ documentation:
 *  **GitHub**: Read the
   [proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md), 
    [raise questions, and follow  discussion](https://github.com/WICG/turtledove/issues).
-* **Demo**: Raise an issue on the [demo code repository](https://github.com/JackJey/fledge-demo).
+* **Demo**: Raise an issue on the [demo code repository](https://github.com/GoogleChromeLabs/protected-audience-demo).
 *  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support 
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
