@@ -151,8 +151,6 @@ DevTools now supports more navigation keystrokes:
 
 Additionally, several screen reader announcement issues have been fixed.
 
-The DevTools team expresses gratitude to [Christy Chen](https://chromium.googlesource.com/devtools/devtools-frontend/+/b16ef33f36c694dd67fe07a24b0ff5da98ab9307), [Guangyue Xu](https://chromium.googlesource.com/devtools/devtools-frontend/+/bd7b236205de8c3e7cb3e67d83e8c4f1ada44ad4), [Yanling Wang](https://chromium.googlesource.com/devtools/devtools-frontend/+/11ca806035cccb4af046583e8b8d7aa7dc1af0f1), and [Jimmy Seto](https://chromium.googlesource.com/devtools/devtools-frontend/+/c4a2a6833828f4425e5e5add1b7aec6aafb3a451) for landing these improvements.
-
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b16ef33f36c694dd67fe07a24b0ff5da98ab9307 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/bd7b236205de8c3e7cb3e67d83e8c4f1ada44ad4 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/11ca806035cccb4af046583e8b8d7aa7dc1af0f1 #}
@@ -172,7 +170,7 @@ These are some noteworthy fixes and improvements in this release:
 - Various [**Application** > **Preloading**](/blog/new-in-devtools-117/#preloading) improvements, most notably sortable grids and revised rule set details ([1410709](https://crbug.com/1410709)).
 - Various improvements of the command editor in [**Protocol monitor**](/blog/new-in-devtools-117/#protocol-monitor), most notably warnings on wrong input, editing a sent command, editor for object parameters without predefined keys, support for enums undefined by references, objects without type reference, filter commands by substring matches, and more ([1448050](https://crbug.com/1448050)).
 - **Performance** flame chart gets a border around the total box on the pie chart ([1470147](https://crbug.com/1470147)).
-- **Sources** now doesn't treat dashes a word characters in CSS ([1471354](https://crbug.com/1471354)).
+- **Sources** now doesn't treat dashes as word characters in CSS ([1471354](https://crbug.com/1471354)).
 - Autocomplete now always sorts CSS-wise keywords at the end.
 - RegEx filters now support spaces ([1346936](https://crbug.com/1346936)).
 - **Elements** fixed media query feature detection ([1472693](https://crbug.com/1472693)).
