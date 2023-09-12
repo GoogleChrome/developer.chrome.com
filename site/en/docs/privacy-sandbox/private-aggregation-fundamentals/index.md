@@ -12,7 +12,7 @@ authors:
 
 ## Who is this article for?
 
-The [Private Aggregation API]( /docs/privacy-sandbox/private-aggregation) enables aggregate data collection from worklets with access to cross-site data. The concepts shared here are important for developers building reporting functions within Shared Storage and Protected Audience API.
+The [Private Aggregation API](/docs/privacy-sandbox/private-aggregation) enables aggregate data collection from worklets with access to cross-site data. The concepts shared here are important for developers building reporting functions within Shared Storage and Protected Audience API.
 
 *   If you're a **developer** building a reporting system for cross-site measurement. 
 *   If you're a **marketer**, **data scientist**, or other **summary report consumer**, understanding these mechanisms will help you make design decisions to retrieve an optimized summary report.
@@ -44,7 +44,7 @@ When you call the Private Aggregation API with an aggregation key and an aggrega
 A _trusted execution environment_ is a special configuration of computer hardware and software that allows external parties to verify the exact versions of software running on the computer. TEEs allow external parties to verify that the software does exactly what the software manufacturer claims it does—nothing more or less.
 {% endAside %}
 
-The workflow described in this section is similar to the [Attribution Reporting API](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#). However, Attribution Reporting associates data gathered from an impression event and a conversion event, which happen at different times. Private Aggregation measures a single, cross-site event. 
+The workflow described in this section is similar to the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/). However, Attribution Reporting associates data gathered from an impression event and a conversion event, which happen at different times. Private Aggregation measures a single, cross-site event. 
 
 ## Aggregation key
 
@@ -157,7 +157,7 @@ When you sum all aggregatable values across all aggregation keys, the sum must b
 
 The _contribution budget_ is represented by the parameter `L<sub>1</sub>`, and for the current Privacy Sandbox Origin Trial, the contribution budget has been set to 2<sup>16</sup> = 65,536.  The value of the contribution budget is arbitrary where noise is scaled to it, and you can use this budget to maximize signal-to-noise ratio on the summary values (discussed more below in the [Noise and scaling](#noise-and-scaling) section below). 
 
-To learn more about contribution budgets, see the [explainer](https://github.com/patcg-individual-drafts/private-aggregation-api#contribution-bounding-and-budgeting). Also, refer to the [Contribution Budget section of the Attribution Reporting strategy guide](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#) for more guidance. 
+To learn more about contribution budgets, see the [explainer](https://github.com/patcg-individual-drafts/private-aggregation-api#contribution-bounding-and-budgeting). Also, refer to [Contribution Budget](/docs/privacy-sandbox/attribution-reporting/contribution-budget/) for more guidance. 
 
 ## Aggregatable reports
 
