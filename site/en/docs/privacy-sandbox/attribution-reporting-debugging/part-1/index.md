@@ -4,7 +4,7 @@ title: 'Introduction to debug reports'
 subhead: Part 1 of 3 on debugging Attribution Reporting. Learn why debugging matters and when to use debug reports in testing.
 description: Part 1 of 3 on debugging Attribution Reporting. Learn why debugging matters and when to use debug reports in testing.
 date: 2022-12-13
-updated: 2023-03-02
+updated: 2023-09-11
 authors:
   - maudn
   - alexandrawhite
@@ -172,6 +172,10 @@ You may want to reprocess reports when you're:
 - attempting to debug the Aggregation Service.
 - experimenting with different batching strategies.
 - experimenting with different epsilon values.
+
+### Data recovery
+
+We recommend ad techs enable debug mode to receive debug reports so they can recover their reporting data. This is useful in cases of Aggregation Service issues such as unavailable or non-responsive services that may cause summary report generation to fail.
 
 ## Up next
 
