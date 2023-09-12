@@ -73,7 +73,7 @@ your code.
 
 Yes. Extensions provide a [storage API][63] designed specifically for extensions. You can also use
 the web platform's storage APIs: the [Web Storage API][37], and [IndexedDB][38]. If you use an
-[extension service worker][64], [CacheStorage][65] is also available.
+[extension service worker][64], you can use[CacheStorage][65] in addition to extensions APIs.
 
 ### Can extensions use OAuth? {: #faq-dev-04 }
 
