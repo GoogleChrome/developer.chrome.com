@@ -52,6 +52,8 @@ You can override web content or response headers right away in the **Network** p
 
 To temporarily disable local overrides or delete all the override files, navigate to **Sources** > **Overrides** and clear the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Enable Local Overrides** checkbox or click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mMGdymtMmpYX2j3PRSfa.svg", alt="Clear.", width="24", height="24" %} **Clear** respectively.
 
+To quickly see all overrides, in the **Network** panel, right-click a request and select **Show all overrides**. DevTools will take you to **Sources** > **Overrides**.
+
 ## Override web content {: #make-changes }
 
 To override web content:
