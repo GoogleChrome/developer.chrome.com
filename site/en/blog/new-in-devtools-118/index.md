@@ -161,11 +161,30 @@ The DevTools team expresses gratitude to [Christy Chen](https://chromium.googles
 
 Chromium issues: [1470401](https://crbug.com/1470401), [1471301](https://crbug.com/1471301), [1474108](https://crbug.com/1474108), [1468631](https://crbug.com/1468631).
 
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
 
+## [Experimental] New Application > Storage > Storage buckets section {: #storage-buckets }
 
+{% Aside 'note' %}
+This is an experimental feature. To turn it on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable Storage Buckets Tree in Application panel** in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments**.
+{% endAside %}
+
+In continuation to [storage buckets support in version 116](/blog/new-in-devtools-116/#storage), the **Application** > **Storage** section gets a new **Storage buckets** subsection that contains a list of all the storage buckets for the page, with the following for each bucket:
+
+- A list of supported storage APIs. 
+- An IndexedDB tree with the IndexedDB information stored in the bucket.
+- A Cache storage tree with cache storage information stored in the bucket.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HYeHx3xXkyMxiC4rWJoB.png", alt="The storage buckets section in the Application panel.", width="800", height="487" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/136e27d0a695df800c6ff3b56beae7c2d89662aa #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/f81354c8c35cea82e3d3a0531260106af6b723ad #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/c5c9f2be0de6b57305fb233c1dca6882df13a151 #}
+
+Chromium issue: [1406017](https://crbug.com/1406017).
 
 <!-- $contentEnd -->
 
