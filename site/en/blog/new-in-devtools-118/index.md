@@ -61,7 +61,7 @@ Chromium issues: [1471102](https://crbug.com/1471102), [1471103](https://crbug.c
 The [workspace](/docs/devtools/workspaces/) feature in the **Sources** panel is new streamlined:
 
 - **Consistent naming**. Most notably, the **Sources** > **Filesystem** pane was renamed into **Workspace**. Various UI texts in this pane are now clearer and free of redundancy.
-- **Imropoved setup**. See better cues for dragging and dropping folders or click a link to select a folder.
+- **Improved setup**. See better cues for dragging and dropping folders or click a link to select a folder.
 
 [**Sources** > **Workspace**](/docs/devtools/workspaces/) lets you sync changes you make in DevTools directly to your source files.
 
@@ -90,7 +90,7 @@ Chromium issues: [1473758](https://crbug.com/1473758).
 
 The **Sources** panel can now:
 
-- Pretty-print inline JavaScript within the following script types: [`module`](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Modules), [`importmap`](https://developer.mozilla.org/docs/Web/HTML/Element/script/type/importmap), [`speculationrules`](https://github.com/WICG/nav-speculation/blob/main/triggers.md#speculation-rules).
+- Pretty-print inline JavaScript within the following script types: [`module`](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Modules), [`importmap`](https://developer.mozilla.org/docs/Web/HTML/Element/script/type/importmap), [`speculationrules`](/blog/debugging-speculation-rules/).
 - Highlight the syntax of `importmap` and `speculationrules` script types, both of which hold JSON.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yZYe1CF5ObuLu7zVjcot.png", alt="Before and after pretty-printing and syntax highlighting of speculation rules script type.", width="800", height="395" %}
