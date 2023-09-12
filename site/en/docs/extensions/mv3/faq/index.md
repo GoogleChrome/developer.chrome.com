@@ -41,7 +41,7 @@ the browser.
 ### Are extensions fetched from the web every time the browser is loaded? {: #faq-gen-03 }
 
 Extensions are downloaded by the Chrome browser upon install, and are subsequently run off of
-local memory to speed up performance. However, if a new version of the extension is uploaded to
+local disk to speed up performance. However, if a new version of the extension is uploaded to
 the Chrome Web STopre, it will be automatically downloaded in the background for any users who have
 the extension installed. Extensions may also make requests for remote data at any time, but not
 remotely-hosted code.
