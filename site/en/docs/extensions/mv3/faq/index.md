@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Frequently asked questions"
 seoTitle: "Chrome Extensions: Frequently asked questions"
 date: 2014-02-28
-updated: 2023-09-08
+updated: 2023-09-12
 description: Frequently asked questions about Chrome Extensions.
 ---
 
@@ -71,9 +71,7 @@ your code.
 
 ### Can extensions store data locally? {: #faq-dev-08 }
 
-Yes. Extensions provide a [storage API][63] designed specifically for extensions. You can also use
-the web platform's storage APIs: the [Web Storage API][37], and [IndexedDB][38]. If you use an
-[extension service worker][64], you can use[CacheStorage][65] in addition to extensions APIs.
+Yes. Extensions provide a [storage API][63] designed specifically for extensions. An extension service worker can als0 use [CacheStorage][65], and [IndexedDB][38]. Additionally, contexts outside the extension service worker can use the [Web Storage API][37].
 
 ### Can extensions use OAuth? {: #faq-dev-04 }
 
