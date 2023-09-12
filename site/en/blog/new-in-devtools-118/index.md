@@ -86,6 +86,22 @@ You can now reorder panes on the left side of the **Sources** panel by dragging 
 
 Chromium issues: [1473758](https://crbug.com/1473758).
 
+### Syntax highlighting and pretty-printing for more script types {: #syntax }
+
+The **Sources** panel can now:
+
+- Pretty-print inline JavaScript withing the following script types: [`module`](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Modules), [`importmap`](https://developer.mozilla.org/docs/Web/HTML/Element/script/type/importmap), [`speculationrules`](https://github.com/WICG/nav-speculation/blob/main/triggers.md#speculation-rules).
+- Highlight the syntax of `importmap` and `speculationrules` script types, both of which hold JSON.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/yZYe1CF5ObuLu7zVjcot.png", alt="Before and after pretty-printing and syntax highlighting of speculation rules script type.", width="800", height="395" %}
+
+For more information on speculation rules, see [Prerender pages in Chrome for instant page navigations](/blog/prerender-pages/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/d9f69138dae7d7042d5a964de4a91799029ba63e #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a49a95dd95a964a380334ddfba99b395d645f51a #}
+
+Chromium issue: [1473875](https://crbug.com/1473875).
+
 ## Lighthouse 11 {: #lighthouse }
 
 The **Lighthouse** panel now runs [Lighthouse 11](/blog/lighthouse-11-0/). Most notably, this version:
