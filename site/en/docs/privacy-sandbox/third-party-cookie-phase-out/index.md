@@ -6,6 +6,7 @@ subhead: >
 description: >
   Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
 date: 2023-05-17
+updated: 2023-08-30
 authors:
   - mihajlija
 ---
@@ -83,11 +84,21 @@ Set-Cookie: cookie-name=value; SameSite=None; Secure
 Make sure to review your cookies and have a list of those set with the `SameSite=None`. These are the cookies for which you will need to take action to ensure they keep functioning properly.
 {% endAside %}
 
-One way to identify them is to examine your code base and search for cookies containing `SameSite=None`.
+## Debugging cookies
 
-Another option is to browse through your site with third-party cookies blocked on your machine and use DevTools to investigate any potential breakage.
+One way to identify third-party cookies in your code base is to search for cookies containing `SameSite=None`.
+
+Another option is to browse through your site with third-party cookies blocked on your machine and use DevTools to investigate any potential breakage. 
 
 To learn more about DevTools features you can use to investigate third-party cookies check out [the instructions on chromium.org](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox/third-party-cookie-phaseout/).
+
+In Chrome version 115 or higher, you can test the browser behavior after third-party cookie phase out by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the flag `--test-third-party-cookie-phaseout`. This will block third-party cookies, enable [third-party storage partitioning](/docs/privacy-sandbox/storage-partitioning) and [FedCM](/docs/privacy-sandbox/fedcm), and enable Chrome UI settings for [First-Party Sets](docs/privacy-sandbox/first-party-sets-integration) (["Allow related sites to see your activity in the group"](https://support.google.com/chrome/answer/95647?hl=EN#zippy=%2Callow-related-sites-to-access-your-activity)).
+
+If your site breaks when third-party cookies are blocked, you can report the issue to [Chrome's cookie breakage tracker](https://goo.gle/report-3pc-broken).
+
+{% Aside %}
+This article was updated on 30 August 2023 to correct a typing mistake in the testing flag `--test-third-party-cookie-phaseout`.
+{% endAside %}
 
 ## Partitioned cookies
 
@@ -149,7 +160,7 @@ If neither meets your needs, there is a wider set of Privacy Sandbox proposals f
 
 [Federated Credential Management (FedCM)](/docs/privacy-sandbox/fedcm/) enables privacy-preserving approach to federated identity services so users can log into sites without sharing their personal information with a third-party service or website.
 
-[Private State Tokens](/docs/privacy-sandbox/trust-tokens/) convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
+[Private State Tokens](/docs/privacy-sandbox/private-state-tokens/) convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 
 A suite of APIs is available to cover [ad relevance](/docs/privacy-sandbox/#show-relevant-content) and [measurement](/docs/privacy-sandbox/#measure-digital-ads) use cases such as interest-based advertising, on-device auctions for custom audiences, cross-site content selection, ad conversion measurement and attribution, and more.
 

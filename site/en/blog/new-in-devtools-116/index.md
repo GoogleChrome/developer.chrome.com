@@ -5,7 +5,7 @@ authors:
   - sofiayem
 date: 2023-06-23
 description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AcuNkf8XxCL3z5qSfzBS.png'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RoVDUJYn1tZGSw1iXVIM.png'
 alt: 'Improved debugging of missing stylesheets, linear timing support in the Easing Editor, storage buckets and metadata view, and more.'
 tags:
   - new-in-devtools
@@ -18,7 +18,7 @@ tags:
 
 *There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
 
-{% YouTube id='CrSmjooOEiE' %}
+{% YouTube id='e8tl_yp5BQg' %}
 
 <!-- $contentStart -->
 

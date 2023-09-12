@@ -12,7 +12,7 @@ content-selection:
   en: 'Cross-site content selection'
 fledge:
   en: 'FLEDGE'
-fledge-best-practices:
+protected-audience-best-practices:
   en: 'FLEDGE latency best practices'
 topics-api:
   en: 'The Topics API'
@@ -117,9 +117,9 @@ enroll:
   en: 'Enroll your site'
 topics-experiment:
   en: 'Topics API: Experiment and participate'
-fledge-experiment:
+protected-audience-experiment:
   en: 'Protected Audience: Experiment and participate'
-fledge-overview:
+protected-audience-overview:
   en: 'Protected Audience overview'
 first-party-sets:
   en: 'First-Party Sets'
@@ -129,7 +129,11 @@ privacy-budget:
   en: 'Privacy Budget'
 fenced-frame:
   en: 'Fenced Frames'
-fledge-api:
+protected-audience-api:
   en: 'Developer guide'
 paapi-walkthrough:
   en: 'Protected Audience API walkthrough'
+fedcm-developer-guide:
+  en: 'Federated Credential Management API: developer guide'
+shared-storage-walkthrough: 
+  en: 'Shared Storage API walkthrough'

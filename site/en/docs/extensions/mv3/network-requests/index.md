@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Cross-origin network requests"
 seoTitle: "Chrome Extensions: cross-origin network requests"
 date: 2012-09-18
-updated: 2023-05-23
+updated: 2023-07-13
 description: How to implement cross-origin network requests in your Chrome Extension.
 ---
 
@@ -11,16 +11,16 @@ Regular web pages can use the [fetch()][13] or [`XMLHttpRequest`][1] APIs to sen
 servers, but they're limited by the [same origin policy][2]. [Content scripts][3] initiate requests
 on behalf of the web origin that the content script has been injected into and therefore content
 scripts are also subject to the [same origin policy][4]. (Content scripts have been subject to [CORB
-since Chrome 73 and CORS since Chrome 83][5].) Extension origins aren't so limited - a script
-executing in an extension's background page or foreground tab can talk to remote servers outside of
+since Chrome 73 and CORS since Chrome 83][5].) Extension origins aren't so limited. A script
+executing in an extension service worker or foreground tab can talk to remote servers outside of
 its origin, as long as the extension requests cross-origin permissions.
 
 ## Extension origin {: #extension-origin }
 
 Each running extension exists within its own separate security origin. Without requesting additional
-privileges, the extension can use `fetch()` to get resources within its installation. For
+privileges, the extension can call `fetch()` to get resources within its installation. For
 example, if an extension contains a JSON configuration file called `config.json`, in a
-`config_resources` folder, the extension can retrieve the file's contents like this:
+`config_resources/` folder, the extension can retrieve the file's contents like this:
 
 ```js
 const response = await fetch('/config_resources/config.json');
@@ -33,8 +33,8 @@ permissions.
 
 ## Requesting cross-origin permissions {: #requesting-permission }
 
-By adding hosts or host match patterns (or both) to the [host_permissions][6] section of the
-[manifest][7] file, the extension can request access to remote servers outside of its origin.
+To request access to remote servers outside an extension's origin, add hosts, [match patterns][14],
+or both to the [host_permissions][6] section of the [manifest][7] file.
 
 ```json
 {
@@ -73,15 +73,15 @@ non-secure HTTP access to a given host or set of hosts, it must declare the perm
 
 ## Fetch() vs. XMLHttpRequest()
 
-`fetch()` was created specifically for service workers and follows a broader web trend away from synchronous operations. The `XMLHttpRequest` API is supported in extensions outside of the service worker, and calling `XMLHttpRequest` will trigger the service worker's fetch handler. New work should favor the use of `fetch()` wherever possible. 
+`fetch()` was created specifically for service workers and follows a broader web trend away from synchronous operations. The `XMLHttpRequest()` API is supported in extensions outside of the service worker, and calling it triggers the extension service worker's fetch handler. New work should favor `fetch()` wherever possible. 
 
 ## Security considerations {: #security-considerations }
 
-### Avoiding cross-site scripting vulnerabilities {: #xss }
+### Avoid cross-site scripting vulnerabilities {: #xss }
 
 When using resources retrieved via `fetch()`, your extension service worker should be careful not to
-fall victim to [cross-site scripting][9]. Specifically, avoid using dangerous APIs such as the
-below:
+fall victim to [cross-site scripting][9]. Specifically, avoid using dangerous APIs such as
+`innerHTML`. For example:
 
 
 ```js
@@ -110,38 +110,41 @@ document.getElementById("resp").textContent = jsonData;
 
 ```
 
-### Limiting content script access to cross-origin requests {: #xhr-vs-content-scripts }
+### Limit content script access to cross-origin requests {: #xhr-vs-content-scripts }
 
 When performing cross-origin requests on behalf of a content script, be careful to [guard against
 malicious web pages][10] that might try to impersonate a content script. In particular, do not allow
 content scripts to request an arbitrary URL.
 
 Consider an example where an extension performs a cross-origin request to let a content script
-discover the price of an item. One (insecure) approach would be to have the content script specify
+discover the price of an item. One not-so-secure approach would be to have the content script specify
 the exact resource to be fetched by the background page.
 
 ```js
 chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if (request.contentScriptQuery == 'fetchUrl') {
-        // WARNING: SECURITY PROBLEM - a malicious web page may abuse
-        // the message handler to get access to arbitrary cross-origin
-        // resources.
-        fetch(request.url)
-            .then(response => response.text())
-            .then(text => sendResponse(text))
-            .catch(error => ...)
-        return true;  // Will respond asynchronously.
-      }
-    });
+  function(request, sender, sendResponse) {
+    if (request.contentScriptQuery == 'fetchUrl') {
+      // WARNING: SECURITY PROBLEM - a malicious web page may abuse
+      // the message handler to get access to arbitrary cross-origin
+      // resources.
+      fetch(request.url)
+        .then(response => response.text())
+        .then(text => sendResponse(text))
+        .catch(error => ...)
+      return true;  // Will respond asynchronously.
+    }
+  }
+);
 ```
 
 ```js
 chrome.runtime.sendMessage(
-    {contentScriptQuery: 'fetchUrl',
-     url: 'https://another-site.com/price-query?itemId=' +
-              encodeURIComponent(request.itemId)},
-    response => parsePrice(response.text()));
+  {
+    contentScriptQuery: 'fetchUrl',
+    url: `https://another-site.com/price-query?itemId=${encodeURIComponent(request.itemId)}`
+  },
+  response => parsePrice(response.text())
+);
 ```
 
 In the approach above, the content script can ask the extension to fetch any URL that the extension
@@ -153,24 +156,25 @@ Instead, design message handlers that limit the resources that can be fetched. B
 
 ```js
 chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if (request.contentScriptQuery == 'queryPrice') {
-        const url = 'https://another-site.com/price-query?itemId=' +
-            encodeURIComponent(request.itemId);
-        fetch(url)
-            .then(response => response.text())
-            .then(text => parsePrice(text))
-            .then(price => sendResponse(price))
-            .catch(error => ...)
-        return true;  // Will respond asynchronously.
-      }
-    });
+  function(request, sender, sendResponse) {
+    if (request.contentScriptQuery == 'queryPrice') {
+      const url = `https://another-site.com/price-query?itemId=${encodeURIComponent(request.itemId)}`
+      fetch(url)
+        .then(response => response.text())
+        .then(text => parsePrice(text))
+        .then(price => sendResponse(price))
+        .catch(error => ...)
+      return true;  // Will respond asynchronously.
+    }
+  }
+);
 ```
 
 ```js
 chrome.runtime.sendMessage(
-    {contentScriptQuery: 'queryPrice', itemId: 12345},
-    price => ...);
+  {contentScriptQuery: 'queryPrice', itemId: 12345},
+  price => ...
+);
 ```
 
 ### Preferring HTTPS over HTTP {: #http-man-in-the-middle }
@@ -199,3 +203,4 @@ be careful when explicitly adding either the `connect-src` or `default-src` dire
 [11]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
 [12]: /docs/extensions/mv3/intro/mv3-migration/#content-security-policy
 [13]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+[14]: /docs/extensions/mv3/match_patterns/

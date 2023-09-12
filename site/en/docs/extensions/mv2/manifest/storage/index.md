@@ -7,7 +7,11 @@ updated: 2018-05-14
 description: Reference documentation for the storage property of manifest.json.
 ---
 
-{% Partial 'extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest storage](/docs/extensions/mv3/manifest/storage) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Unlike the `local` and `sync` storage areas, the `managed` storage area requires its structure to be
 declared as [JSON Schema][1] and is strictly validated by Chrome. This schema must be stored in a

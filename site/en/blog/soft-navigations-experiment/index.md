@@ -3,12 +3,12 @@
 layout: 'layouts/blog-post.njk'
 title: Experimenting with measuring soft navigations
 description: |
- The Chrome team is working on better measuring so-called soft navigations used by Single Page Applications and a new API is now in origin trial to allow sites to experiment with this too.
+ The Chrome team is working on better measuring so-called soft navigations used by Single Page Applications and a new API is now available behind a flag to allow sites to experiment with this too.
 authors:
  - tunetheweb
  - yoavweiss
 date: 2023-02-01
-updated: 2023-02-11
+updated: 2023-09-04
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/ZJLD5QJvoFcWXkqF8m5P.jpg
 alt: A compass on top of some booklets labeled Field Notes
 tags:
@@ -17,13 +17,17 @@ tags:
  - origin-trials
 ---
 
+{% Aside 'update' %}
+The Soft Navigations origin trial has entered a [second origin trial from Chrome 117](/origintrials/#/view_trial/21392098230009857) after taking feedback on board from the initial trial.
+{% endAside %}
+
 Since its launch, the [Core Web Vitals initiative](https://web.dev/vitals/) has sought to measure the actual user experience of a website, rather than technical details behind how a website is created or loaded. The three Core Web Vitals metrics were created as [user-centric metrics](https://web.dev/user-centric-performance-metrics/)—an evolution over existing technical metrics such as[`DOMContentLoaded`](https://developer.mozilla.org/docs/Web/API/Document/DOMContentLoaded_event) or [`load`](https://developer.mozilla.org/docs/Web/API/Window/load_event) that measured timings that were often unrelated to how users perceived the performance of the page. Because of this, the technology used to build the site should not impact the scoring providing the site performs well.
 
-The reality is always a little trickier than the ideal, and the popular Single Page Application architecture has [never been fully supported by the Core Web Vitals metrics](https://web.dev/vitals-spa-faq/). Rather than loading distinct, individual web pages as the user navigates about the site, these web applications use so-called “soft navigations”, where the page content is instead changed by JavaScript. In these applications, the illusion of a traditional webpage architecture is maintained by altering the URL and pushing previous URLs in the browser’s history to allow the back and forward buttons to work as the user would expect.
+The reality is always a little trickier than the ideal, and the popular Single Page Application architecture has [never been fully supported by the Core Web Vitals metrics](https://web.dev/vitals-spa-faq/). Rather than loading distinct, individual web pages as the user navigates about the site, these web applications use so-called "soft navigations", where the page content is instead changed by JavaScript. In these applications, the illusion of a traditional webpage architecture is maintained by altering the URL and pushing previous URLs in the browser's history to allow the back and forward buttons to work as the user would expect.
 
-Many JavaScript frameworks use this model, but each in a different way. Since this is outside of what the browser traditionally understands as a “page”, measuring this has always been difficult: where is the line to be drawn between an interaction on the _current_ page, versus considering this as a _new_ page?
+Many JavaScript frameworks use this model, but each in a different way. Since this is outside of what the browser traditionally understands as a "page", measuring this has always been difficult: where is the line to be drawn between an interaction on the _current_ page, versus considering this as a _new_ page?
 
-The Chrome team has been been considering this challenge for some time now, and is looking to standardize a definition of what is a “soft-navigation”, and how the Core Web Vitals can be measured for this—in a similar way that websites implemented in the traditional multi-page architecture (MPA) is currently measured. While still in early stages, the team is now ready to make what has already been implemented more widely available through the use of an origin trial. This will allow sites that wish to trial this to provide feedback on the approach so far.
+The Chrome team has been been considering this challenge for some time now, and is looking to standardize a definition of what is a "soft-navigation", and how the Core Web Vitals can be measured for this—in a similar way that websites implemented in the traditional multi-page architecture (MPA) is currently measured. While still in early stages, the team is now ready to make what has already been implemented more widely available for sites to experiment with. This will allow sites to provide feedback on the approach so far.
 
 ## What is a soft navigation?
 
@@ -33,7 +37,7 @@ We have come up with the following definition of a _soft navigation_:
 - The navigation results in a visible URL change to the user, and a history change.
 - The navigation results in a DOM change.
 
-For some sites, these heuristics may lead to false positives (that users would not really consider a "navigation" to have happened) or false negatives (where the user does consider a “navigation” to have happened despite not meeting the above criteria). We welcome feedback at [the soft navigation specification repository](https://github.com/WICG/soft-navigations/issues) on the heuristics.
+For some sites, these heuristics may lead to false positives (that users would not really consider a "navigation" to have happened) or false negatives (where the user does consider a "navigation" to have happened despite not meeting the above criteria). We welcome feedback at [the soft navigation specification repository](https://github.com/WICG/soft-navigations/issues) on the heuristics.
 
 ### How does Chrome implement soft navigations?
 
@@ -41,9 +45,9 @@ Once the soft navigation heuristics are enabled (more on this in the next sectio
 
 - A `soft-navigation` [`PerformanceTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceTiming) event will be emitted after each soft navigation is detected.
 - The performance API will provide access to a `soft-navigation` timing entry, as emitted by the above `PerformanceTiming` event.
-- The [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint), [First Contentful Paint (FCP)](https://web.dev/fcp/), [Largest Contentful Paint (LCP)](https://web.dev/lcp/) metrics will be reset, and re-emitted on the next appropriate occurrences of these.
+- The [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint), [First Contentful Paint (FCP)](https://web.dev/fcp/), [Largest Contentful Paint (LCP)](https://web.dev/lcp/) metrics will be reset, and re-emitted on the next appropriate occurrences of these. (Note: FP, and FCP are not yet implemented.)
 - The [First Input Delay (FID)](https://web.dev/fcp/) will be reset, and re-emitted on the first input (note: this is not yet implemented).
-- A `navigationId` attribute will be added to each of performance timings (`first-paint`, `first-contentful-paint`, `largest-contentful-paint`, `first-input-delay`, `event`, `layout-shift`) corresponding to the navigation entry the event was related to, allowing [Cumulative Layout Shift (CLS)](https://web.dev/cls/) and [Interaction to Next Paint (INP)](https://web.dev/inp/) to be calculated. _Note: this is [subject to change](#reporting-the-metrics-against-the-appropriate-url)._
+- A `navigationId` attribute will be added to each of performance timings (`first-paint`, `first-contentful-paint`, `largest-contentful-paint`, `first-input-delay`, `event`, and `layout-shift`) corresponding to the navigation entry the event was related to, allowing [Cumulative Layout Shift (CLS)](https://web.dev/cls/) and [Interaction to Next Paint (INP)](https://web.dev/inp/) to be calculated.
 
 These changes will allow the Core Web Vitals—and some of the associated diagnostic metrics—to be measured per page navigation, though there are some nuances that need to be considered.
 
@@ -64,13 +68,13 @@ Soft navigations are not enabled by default in Chrome, but are available for exp
 
 For developers, this can be enabled by turning on the _Experimental Web Platform features_ flag at `chrome://flags/#enable-experimental-web-platform-features` or by using the `--enable-experimental-web-platform-features` command line argument when launching Chrome.
 
-For a website that wishes to enable this for all their visitors to see the impact, there is an origin trial running from Chrome 110 to Chrome 112 which can be enabled by signing up for the trial and including a meta element with the origin trial token in the HTML or HTTP header. See the [Get started with origin trials](/docs/web-platform/origin-trials/) post for more information.
+For a website that wishes to enable this for all their visitors to see the impact, there is an origin trial running from Chrome 117 which can be enabled by signing up for the trial and including a meta element with the origin trial token in the HTML or HTTP header. See the [Get started with origin trials](/docs/web-platform/origin-trials/) post for more information.
 
 Site owners can choose to include the origin trial on their pages for all, or for just a subset of users. Be aware of the [implications section](#what-are-the-implications-of-enabling-soft-navigations-in-chrome) above as to how this changes how your metrics may be reported, especially if enabling this origin trial for a large proportion of your users. Note that CrUX will continue to report the metrics in the existing manner regardless of this soft navigation setting so is not impacted by those implications. It should also be noted that origin trials are also limited to enabling experimental features on a maximum of 0.5% of all Chrome page loads as a median over 14 days, but this should only be an issue for very large sites.
 
 ## How can I measure Core Web Vitals per soft navigation?
 
-To includes soft navigations you need to include `includeSoftNavigationObservations: true` in your performance observer's `observe` call:
+To include soft navigation metric entries, you need to include `includeSoftNavigationObservations: true` in your performance observer's `observe` call:
 
 ```js
 new PerformanceObserver((entryList) => {
@@ -80,27 +84,27 @@ new PerformanceObserver((entryList) => {
 }).observe({type: 'largest-contentful-paint', buffered: true, includeSoftNavigationObservations: true});
 ```
 
-This extra flag on the `observe` method is needed in addition to [enabling the soft navigation functionality in Chrome](#how-do-i-enable-soft-navigations-in-chrome). This explicit opt-in at the performance observer level is to [ensure existing performance observers aren't surprised by these extra entries](https://github.com/WICG/soft-navigations/issues/11) as some considerations need to be taken into account when attempting to measure Core Web Vitals for soft navigations.
+This extra flag on the `observe` method is needed in addition to [enabling the soft navigation functionality in Chrome](#how-do-i-enable-soft-navigations-in-chrome). This explicit opt-in at the performance observer level is to [ensure existing performance observers aren't surprised by these extra entries](https://github.com/WICG/soft-navigations/issues/11) as some additional considerations need to be taken into account when attempting to measure Core Web Vitals for soft navigations.
 
-Some metrics have traditionally been measured throughout the life of the page: LCP, for example, can change until an interaction occurs. CLS, FID and INP can be updated until the page is navigated away from. Therefore each “navigation” (including the original navigation) will need to finalize these metrics as each new soft navigation occurs.
+Some metrics have traditionally been measured throughout the life of the page: LCP, for example, can change until an interaction occurs. CLS, FID and INP can be updated until the page is navigated away from. Therefore each "navigation" (including the original navigation) will need to finalize these metrics as each new soft navigation occurs, meaning the initial "hard" navigation metrics may be finalised earlier that usual.
 
-Similarly, when starting to measure the metrics for the new soft navigation of these long-lived metrics, metrics will need to be “reset” or “reinitialized” and treated as new metrics, with no memory of the values that were set for previous “pages”.
+Similarly, when starting to measure the metrics for the new soft navigation of these long-lived metrics, metrics will need to be "reset" or "reinitialized" and treated as new metrics, with no memory of the values that were set for previous "pages".
 
-Timings will still be returned in respect of the original “hard” navigation start time. So to calculate LCP for a soft navigation for example, you will need to take the LCP timing and subtract the appropriate soft navigation start time to get a timing relative to the soft navigation. This has been done to keep all timings consistent so other performance timings (such as event timings) that are not measured from the “navigation” time can be treated the same.
+Timings will still be returned in respect of the original "hard" navigation start time. So to calculate LCP for a soft navigation for example, you will need to take the LCP timing and subtract the appropriate soft navigation start time to get a timing relative to the soft navigation. This has been done to keep all timings consistent so other performance timings (such as event timings) that are not measured from the "navigation" time can be treated the same.
 
 ### Reporting soft navigations
 
 Once the soft navigations experiment is enabled, the metrics will be reporting via the [`PerformanceObserver`](https://developer.mozilla.org/docs/Web/API/PerformanceObserver) API as usual, but with an additional `navigationId` added to each metric, corresponding to the navigation entry the metric was emitted for.
 
 {% Aside 'note' %}
-Note: [FID is not currently reported](https://bugs.chromium.org/p/chromium/issues/detail?id=1407656) for soft navigations.
+Note: [FP and FCP are currently not reported for soft navigations](https://bugs.chromium.org/p/chromium/issues/detail?id=1479350), and [neither is FID](https://bugs.chromium.org/p/chromium/issues/detail?id=1407656).
 {% endAside %}
 
 You can use a `PerformanceObserver` to observe soft navigations. Below is an example code snippet that logs soft navigation entries to the console—including previous soft navigations on this page via the `buffered` option:
 
 ```js
 const observer = new PerformanceObserver(console.log);
-observer.observe({ type: "soft-navigation", buffered: true, includeSoftNavigationObservations: true });
+observer.observe({ type: "soft-navigation", buffered: true });
 ```
 
 This can be used to finalize full-life page metrics for the previous navigation.
@@ -112,16 +116,14 @@ As soft navigations can only be seen after they have occurred, some metrics will
 The `navigationID` attribute of the appropriate `PerformanceEntry` can be used to tie the event back to the correct URL. This can be looked up with the [`PerformanceEntry` API](https://developer.mozilla.org/docs/Web/API/PerformanceEntry):
 
 ```js
-pageUrl =
-  performance.getEntriesByType('soft-navigation')[navigationId - 2]?.name
-  || performance.getEntriesByType('navigation')[0]?.name
+const softNavEntry =
+  performance.getEntriesByType('soft-navigation').filter(
+    (entry) => entry.navigationId === navigationId
+  )[0];
+const hardNavEntry = performance.getEntriesByType('navigation')[0];
+const navEntry = softNavEntry || hardNavEntry;
+const pageUrl = navEntry?.name;
 ```
-
-Here we are subtracting `2` as the first soft navigation is `2` and `getEntriesByType` returns an array, which like all JavaScript arrays, is zero-indexed.
-
-{% Aside 'warning' %}
-There are discussions on [whether there are better ways to link event entries to the navigation entries](https://github.com/WICG/soft-navigations/issues/12), so this may change.
-{% endAside %}
 
 This `pageUrl` should be used to report the metrics against the correct URL, rather than the current URL that they may have used in the past.
 
@@ -130,12 +132,18 @@ This `pageUrl` should be used to report the metrics against the correct URL, rat
 The navigation start time can be obtained in a similar manner:
 
 ```js
-startTime =
-  performance.getEntriesByType('soft-navigation')[navigationId - 2]?.startTime
-  || performance.getEntriesByType('navigation')[0]?.startTime
+const softNavEntry =
+  performance.getEntriesByType('soft-navigation').filter(
+    (entry) => entry.navigationId === navigationId
+  )[0];
+const hardNavEntry = performance.getEntriesByType('navigation')[0];
+const navEntry = softNavEntry || hardNavEntry;
+const startTime = navEntry?.startTime;
 ```
 
-The `startTime` is the time of the initial interaction (for example, a button click) that initiated the soft navigation. Again, this is subject to change as noted above.
+The `startTime` is the time of the initial interaction (for example, a button click) that initiated the soft navigation.
+
+All performance timings, including those for soft navigations, are reported as a time from the initial "hard" page navigation time. Therefore, the soft navigation start time is needed to baseline the soft navigation loading metric times (for example LCP), relative to this soft navigation time instead.
 
 ### How should content that remains the same between navigations be treated?
 
@@ -149,15 +157,15 @@ As this example shows, the LCP element for the soft navigation can be reported d
 
 [Time to First Byte (TTFB)](https://web.dev/ttfb/) for a traditional page load represents the time that the first bytes of the original request are returned.
 
-For a soft navigation this is a more tricky question. Should we measure the first request made for the new page? What if all the content already exists in the app and there are no additional requests? What if that request is made in advance with a prefetch? What if a request unrelated to the soft navigation from a user perspective (for example, it’s an analytics request)?
+For a soft navigation this is a more tricky question. Should we measure the first request made for the new page? What if all the content already exists in the app and there are no additional requests? What if that request is made in advance with a prefetch? What if a request unrelated to the soft navigation from a user perspective (for example, it's an analytics request)?
 
 A simpler method is to report TTFB of 0 for soft navigations—in a similar manner as we recommend for [back/forward cache](https://web.dev/bfcache/) restores. This is the method the [`web-vitals` library](#using-the-web-vitals-library-to-measure-core-web-vitals-for-soft-navigations) currently uses for soft navigations.
 
-In the future, we may support more precise ways of knowing which request is the soft navigation’s “navigation request” and will be able to have more precise TTFB measurements. But that’s not part of the current experiment.
+In the future, we may support more precise ways of knowing which request is the soft navigation's "navigation request" and will be able to have more precise TTFB measurements. But that's not part of the current experiment.
 
 ### How to measure both old and new?
 
-During this experiment, it is recommended to continue to measure your Core Web Vitals in the current manner, based on “hard” page navigations to match what CrUX will measure and report on as the official dataset of the Core Web Vitals initiative.
+During this experiment, it is recommended to continue to measure your Core Web Vitals in the current manner, based on "hard" page navigations to match what CrUX will measure and report on as the official dataset of the Core Web Vitals initiative.
 
 Soft navigations should be measured in addition to these to allow you to see how these might be measured in the future, and to give you the opportunity to provide feedback to the Chrome team about how this implementation works in practice. This will help you and the Chrome team to shape the API going forward.
 
@@ -210,7 +218,7 @@ The `web-vitals` library currently reports the following metrics for soft naviga
     </tr>
     <tr>
       <td>FCP</td>
-      <td>The time of the next contentful paint, relative to the soft navigation start time. Existing paints present from the previous navigation are not considered. Therefore, the FCP will be >= 0.</td>
+      <td>Currently only the first FCP for the page is reported by the <code>web-vitals</code> library.</td>
     </tr>
     <tr>
       <td>LCP</td>
@@ -232,7 +240,7 @@ The `web-vitals` library currently reports the following metrics for soft naviga
 </table>
 
 {% Aside 'warning' %}
-The `web-vitals` implementation is under active development and is subject to change with new changes being published to that branch. At present, it does not support FID on soft navigations, as that requires [more underlying work in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1407656) or polyfilling FID-based on events.
+The `web-vitals` implementation is under active development and is subject to change with new changes being published to that branch. At present, it does not support FCP and FID on soft navigations, as that requires [more underlying work in Chrome for FCP](https://bugs.chromium.org/p/chromium/issues/detail?id=1479350) and [for FID](https://bugs.chromium.org/p/chromium/issues/detail?id=1407656).
 
 Those using the `web-vitals` JavaScript library should be aware of this if looking to use this library on production sites, and should take a local copy and test that version, and monitor the branch for changes.
 {% endAside %}
@@ -241,11 +249,11 @@ Those using the `web-vitals` JavaScript library should be aware of this if looki
 
 At present, this soft navigation experiment is exactly that—an experiment. We wish to evaluate the heuristics and see if they more accurately reflect the user experience before we make any decision on whether this will be integrated in the Core Web Vitals initiative. We are very excited at the possibility of this experiment, but cannot offer guarantees on whether or when this will replace the current measurements.
 
-We value web developers' feedback on the experiment, the heuristics used, and whether you feel it more accurately reflects the experience. The [soft navigation GitHub repository](https://github.com/WICG/soft-navigations/issues) is the best place to provide that feedback, though individual bugs with Chrome’s implementation of that should be raised in the [Chrome issue tracker](https://bugs.chromium.org/p/chromium/issues/list).
+We value web developers' feedback on the experiment, the heuristics used, and whether you feel it more accurately reflects the experience. The [soft navigation GitHub repository](https://github.com/WICG/soft-navigations/issues) is the best place to provide that feedback, though individual bugs with Chrome's implementation of that should be raised in the [Chrome issue tracker](https://bugs.chromium.org/p/chromium/issues/list).
 
 ### How will soft navigations be reported in CrUX?
 
-How exactly soft navigations will be reported in CrUX, should this experiment be successful, is also still to be determined. It is not necessarily a given that they will be treated the same as current “hard” navigations are treated.
+How exactly soft navigations will be reported in CrUX, should this experiment be successful, is also still to be determined. It is not necessarily a given that they will be treated the same as current "hard" navigations are treated.
 
 In some web pages, soft navigations are almost identical to full page loads as far as the user is concerned and the use of Single Page Application technology is just an implementation detail. In others, they may be more akin to a partial load of additional content.
 
@@ -258,7 +266,7 @@ At present, the team is concentrating on the heuristic and technical implementat
 We are actively seeking feedback on this experiment at the following places:
 
 - [The soft navigations heuristics and standardization](https://github.com/WICG/soft-navigations/issues).
-- [Chrome implementation issues](https://bugs.chromium.org/p/chromium/issues/list) of those heuristics.
+- [Chrome implementation issues](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect&components=Blink%3EPerformanceAPIs) of those heuristics.
 - General web vitals feedback at [web-vitals-feedback@googlegrouops.com](mailto:web-vitals-feedback@googlegrouops.com).
 
 ## Conclusion

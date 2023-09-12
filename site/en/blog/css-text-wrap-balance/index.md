@@ -16,11 +16,11 @@ alt: >
   A cairn of rocks balanced.
 ---
 
-[Chrome Canary](https://www.google.com/chrome/canary/) includes a new feature—`text-wrap: balance` from [CSS Text Level
-4](https://www.w3.org/TR/css-text-4/#text-wrap). To check it out, enable
-[chrome://flags/#enable-experimental-web-platform-features](chrome://flags/#enable-experimental-web-platform-features),
-and then take a look at the examples in this post to learn how this one line of
-CSS can massively improve your text layouts.
+[Chrome Canary](https://www.google.com/chrome/canary/) includes a new
+feature—`text-wrap: balance` from [CSS Text Level
+4](https://www.w3.org/TR/css-text-4/#text-wrap). In Chrome
+114 or newer, take a look at the examples in this post to learn how
+this one line of CSS can massively improve your text layouts.
 
 <figure>
   {% Video
@@ -70,10 +70,7 @@ With `text-wrap: balance` from [CSS Text
 4](https://www.w3.org/TR/css-text-4/#text-wrap), you can request the browser to
 figure out the best balanced line wrapping solution for the text. The browser
 **does know** all the factors, like font size, language, and allocated area.
-Results of browser balanced text wrapping looks like this today in [Chrome
-Canary](https://www.google.com/chrome/canary/) with
-[chrome://flags/#enable-experimental-web-platform-features](chrome://flags/#enable-experimental-web-platform-features)
-enabled:
+Results of browser balanced text wrapping looks like this today:
 
 <figure>
   {% Img src="image/vS06HQ1YTsbMKSFTIPl2iogUQP73/49XR6eV5QLBiiZg0jr5P.png", alt="Headline is highlighted like the previous DevTools, this time is not spanning the full width. It started a new line before the end and as such is a balanced block of text.", width="800", height="210" %}
@@ -166,11 +163,11 @@ once for any language.
 
 The task of balancing text is not free. The browser needs to loop over
 iterations to discover the best balanced wrapping solution. This performance
-cost is mitigated by a rule, it **only works for 4 wrapped lines and under**.
+cost is mitigated by a rule, it **only works for six wrapped lines and under**.
 
 <figure>
   {% Video
-    src="video/vS06HQ1YTsbMKSFTIPl2iogUQP73/VgQm74ZYnMJ9fCSprKCS.mp4",
+    src="video/vS06HQ1YTsbMKSFTIPl2iogUQP73/9WWmzquQEUw8Nue2zAJJ.mp4",
     autoplay="true",
     loop="true",
     muted="true",

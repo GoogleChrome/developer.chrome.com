@@ -11,7 +11,7 @@ description: "Keep your client-side code readable and debuggable even after you'
 ---
 
 Keep your client-side code readable and debuggable even after you've combined, minified or compiled
-it. Use source maps to map your source code to your compiled code in the **Sources** panel.
+it. Use [source maps](https://web.dev/source-maps/) to map your source code to your compiled code in the **Sources** panel.
 
 {% YouTube id='SkUcO4ML5U0' %}
 

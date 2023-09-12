@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-05-10
+updated: 2023-08-03
 
 # Optional
 # How to add a new author
@@ -194,12 +194,6 @@ Note: The values for each percentile are synthetically derived, it does not impl
 <td>milliseconds</td>
 <td><a href="https://web.dev/ttfb/">ttfb</a></td>
 </tr>
-<tr>
-<td><code>experimental_interaction_to_next_paint</code> (deprecated)</td>
-<td>int</td>
-<td>milliseconds</td>
-<td><a href="https://web.dev/inp/">inp</a></td>
-</tr>
 </tbody>
 </table></div>
 
@@ -241,10 +235,6 @@ The `interaction_to_next_paint` metric is available both with and without the ex
 <tr>
 <td><code>experimental_time_to_first_byte</code></td>
 <td><code>experimental.time_to_first_byte</code></td>
-</tr>
-<tr>
-<td><code>experimental_interaction_to_next_paint</code> (deprecated)</td>
-<td><code>experimental.interaction_to_next_paint</code> (deprecated)</td>
 </tr>
 </tbody>
 </table></div>
@@ -321,7 +311,6 @@ If the `metrics` property is not set then all available metrics will be returned
 - `first_input_delay`
 - `interaction_to_next_paint`
 - `largest_contentful_paint`
-- `experimental_interaction_to_next_paint`
 - `experimental_time_to_first_byte`
 
 If no `formFactor` value is provided then the values will be aggregated across all form factors.
@@ -410,7 +399,7 @@ The request body should contain data with the following structure:
       <td><code translate="no" dir="ltr">metrics[]</code></td>
       <td>
         <p><strong><code class="apitype" translate="no" dir="ltr">string</code></strong></p>
-        <p>The metrics that should be included in the response. If none are specified then any metrics found will be returned.</p><p>Allowed values: <code>["cumulative_layout_shift", "first_contentful_paint", "first_input_delay", "interaction_to_next_paint", "largest_contentful_paint", "experimental_time_to_first_byte", "experimental_interaction_to_next_paint"]</code></p>
+        <p>The metrics that should be included in the response. If none are specified then any metrics found will be returned.</p><p>Allowed values: <code>["cumulative_layout_shift", "first_contentful_paint", "first_input_delay", "interaction_to_next_paint", "largest_contentful_paint", "experimental_time_to_first_byte"]</code></p>
       </td>
     </tr>
     <tr>

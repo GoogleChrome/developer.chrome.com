@@ -211,6 +211,8 @@ To track store item metrics, you can opt in to Google Analytics 4 by clicking **
 The Chrome Web Store manages the account for you and makes the data available in Google Analytics. Chrome Web Store grants you access only to non user-level data. For group publishers, all developers within the group, regardless of their role within the group, are granted access to data for items owned by the group.
 {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/etCDPbAFMIeOcKvAW4rN.png", alt="Where to opt in to Google Analytics", width="713", height="123" %}
 
+Learn more [here][analytics].
+
 [cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
@@ -219,3 +221,4 @@ The Chrome Web Store manages the account for you and makes the data available in
 [support-tab]: #user-support-tab
 [troubleshooting]: /docs/webstore/troubleshooting/
 [whats-new]: /docs/extensions/whatsnew/
+[analytics]: /docs/webstore/google-analytics/

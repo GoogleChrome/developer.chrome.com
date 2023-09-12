@@ -9,6 +9,7 @@
     - url: /docs/privacy-sandbox/glossary
       title: i18n.docs.privacy-sandbox.glossary
     - url: /docs/privacy-sandbox/events
+    - url: /docs/privacy-sandbox/demos
     - url: /tags/privacy
       title: i18n.docs.privacy-sandbox.blog
     - url: /docs/privacy-sandbox/videos
@@ -33,12 +34,15 @@
     - title: i18n.docs.privacy-sandbox.cross-site-federation
       sections:
         - url: /docs/privacy-sandbox/fedcm
+        - url: /docs/privacy-sandbox/fedcm-developer-guide
         - url: /docs/privacy-sandbox/fedcm-updates
     - title: i18n.docs.privacy-sandbox.control-browser-features
       sections:
         - url: /docs/privacy-sandbox/permissions-policy
           title: i18n.docs.privacy-sandbox.permissions-policy
     - url: /docs/privacy-sandbox/shared-storage
+    - url: https://goo.gle/shared-storage-walkthrough
+      title: i18n.docs.privacy-sandbox.shared-storage-walkthrough
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/ip-protection
@@ -65,20 +69,20 @@
         - url: /docs/privacy-sandbox/topics/latest
     - title: i18n.docs.privacy-sandbox.ondevice-auctions
       sections:
-        - url: /docs/privacy-sandbox/fledge
-        - url: /docs/privacy-sandbox/fledge-experiment
+        - url: /docs/privacy-sandbox/protected-audience
+        - url: /docs/privacy-sandbox/protected-audience-experiment
           title: i18n.docs.privacy-sandbox.experiment-participate
-        - title: i18n.docs.privacy-sandbox.fledge-api
+        - title: i18n.docs.privacy-sandbox.protected-audience-api
           sections:
-            - url: /docs/privacy-sandbox/fledge-api/
-            - url: /docs/privacy-sandbox/fledge-api/ad-auction
-            - url: /docs/privacy-sandbox/fledge-api/interest-groups
-            - url: /docs/privacy-sandbox/fledge-api/latency
-            - url: /docs/privacy-sandbox/fledge-api/opt-out
-            - url: /docs/privacy-sandbox/fledge-api/reports
-            - url: /docs/privacy-sandbox/fledge-api/troubleshoot
-        - url: /docs/privacy-sandbox/fledge-api/feature-status
-        - url: https://docs.google.com/document/d/16U6nCs5-RTpYDF5nuUVopvUXKzDgH6yDKaYbzY3ouiI/view
+            - url: /docs/privacy-sandbox/protected-audience-api/
+            - url: /docs/privacy-sandbox/protected-audience-api/ad-auction
+            - url: /docs/privacy-sandbox/protected-audience-api/interest-groups
+            - url: /docs/privacy-sandbox/protected-audience-api/latency
+            - url: /docs/privacy-sandbox/protected-audience-api/opt-out
+            - url: /docs/privacy-sandbox/protected-audience-api/reports
+            - url: /docs/privacy-sandbox/protected-audience-api/troubleshoot
+        - url: /docs/privacy-sandbox/protected-audience-api/feature-status
+        - url: https://goo.gle/protected-audience-api-walkthrough
           title: i18n.docs.privacy-sandbox.paapi-walkthrough
     - title: i18n.docs.privacy-sandbox.content-selection
       sections:
@@ -108,16 +112,21 @@
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
         - title: i18n.docs.privacy-sandbox.attribution-reporting-developer-guide
           sections:
+            - url: /docs/privacy-sandbox/attribution-reporting/getting-started/
             - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-source/
             - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/
             - url: /docs/privacy-sandbox/attribution-reporting/change-attribution-logic/
             - url: /docs/privacy-sandbox/attribution-reporting/define-filters/
+            - url: /docs/privacy-sandbox/attribution-reporting/prevent-duplication/
             - url: /docs/privacy-sandbox/attribution-reporting/custom-report-windows/
+            - url: /docs/privacy-sandbox/attribution-reporting/multiple-reporters/
+            - url: /docs/privacy-sandbox/attribution-reporting/report-schedules/
+            - url: /docs/privacy-sandbox/attribution-reporting/constraints/
+            - url: /docs/privacy-sandbox/attribution-reporting/web-to-app-attribution/
+            - url: /docs/privacy-sandbox/attribution-reporting/aggregation-keys/
             - url: /docs/privacy-sandbox/attribution-reporting/understanding-noise/
             - url: /docs/privacy-sandbox/attribution-reporting/working-with-noise/
-            - url: /docs/privacy-sandbox/attribution-reporting/contribution-budget/
-            - url: https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/view?usp=sharing
-              title: i18n.docs.privacy-sandbox.attribution-reporting-handbook        
+            - url: /docs/privacy-sandbox/attribution-reporting/contribution-budget/    
         - url: /docs/privacy-sandbox/attribution-reporting-updates
           title: i18n.docs.privacy-sandbox.attribution-reporting-changing
     - title: i18n.docs.privacy-sandbox.measure-cross-site
@@ -133,4 +142,4 @@
     - url: /docs/privacy-sandbox/summary-reports
 - title: i18n.docs.privacy-sandbox.fight-spam
   sections:
-    - url: /docs/privacy-sandbox/trust-tokens
+    - url: /docs/privacy-sandbox/private-state-tokens

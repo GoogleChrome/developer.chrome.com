@@ -63,7 +63,9 @@ Here are some of them highlighted:
 
 Links may be styled differently. If you're not sure if something is a link, try clicking it to find out.
 
-### View CSS documentation {: #view-docs }
+### View tooltips with CSS documentation, specificity, and custom property values {: #tooltips }
+
+#### View CSS documentation {: #view-docs }
 
 To see a tooltip with a short CSS description, hover over the property name in the **Styles** pane.
 
@@ -78,6 +80,18 @@ Click **Learn more** to go to an [MDN CSS Reference](https://developer.mozilla.o
 To turn the tooltips off, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Don't show**.
 
 To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Elements**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip**.
+
+#### View selector specificity {: #selector-specificity }
+
+Hover over a selector to see a tooltip with its [specificity](https://developer.mozilla.org/docs/Web/CSS/Specificity) weight.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uzY4LvyHgWhD8LEPrXju.png", alt="The tooltip with specificity weight of a matched selector.", width="800", height="451" %}
+
+#### View the values of custom properties {: #custom-css }
+
+Hover over a [`--custom-property`](https://developer.mozilla.org/docs/Web/CSS/--*) to see its value in a tooltip.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7cUcqUfywnS2KQdQqWes.png", alt="The value of a custom property in a tooltip.", width="800", height="645" %}
 
 ### View invalid, overridden, inactive, and other CSS {: #css-issues }
 
@@ -601,27 +615,36 @@ To change shadows with the **Shadow Editor**:
 
 ### Edit animation and transition timings with the Easing Editor {: #edit-easing }
 
-The **Easing Editor** provides a GUI for changing the easing values of [`transition-timing-function`][36] and [`animation-timing-function`][37].
+The **Easing Editor** provides a GUI for changing the values of [`transition-timing-function`][36] and [`animation-timing-function`][37].
 
-To change the values with the **Easing Editor**:
+To open the **Easing Editor**:
 
 1. [Select an element][27] with a timing function declaration, like the `<body>` element on this page.
-1. In the **Styles** tab, find the purple {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/U0vVF9a5jrj948Gegu6o.png", alt="Ease.", width="22", height="22" %} icon next to the `transition-timing-function` or `animation-timing-function` declarations.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ulG0cDcH3SnYS13kJbuB.png", alt="Ease icon.", width="800", height="434" %}
+1. In the **Styles** tab, find the purple {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/U0vVF9a5jrj948Gegu6o.png", alt="Ease.", width="22", height="22" %} icon next to the `transition-timing-function`, `animation-timing-function` declarations, or the `transition` shorthand property.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/H1aAwZxrVvJvjwpoOxN5.png", alt="The Easing Editor icon.", width="800", height="463" %}
 1. Click the icon to open the **Easing Editor**:
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JujOC1By7NK2YzfHT7lD.png", alt="The Easing Editor.", width="800", height="584" %}
-1. To set a [keyword value][38], click one of the picker buttons:
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IPbaYo0rCjI4NaczFoyN.png", alt="The Easing Editor.", width="800", height="726" %}
+
+### Use presets to adjust timings {: #presets }
+
+To adjust timings with a click, use the presets in the **Easing Editor**:
+
+1. In the **Easing Editor**, to set a [keyword value][38], click one of the picker buttons:
+   - **linear** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z9pH2ZrmGkZpaHtdSIUg.png", alt="The linear button.", width="24", height="24" %}
    - **ease-in-out** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/a0WRju7wMXvxVXiCqFuc.png", alt="The ease-in-out button.", width="24", height="24" %}
    - **ease-in** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3kjLNBHixVNDmxarpnqF.png", alt="The ease-in button.", width="24", height="24" %}
    - **ease-out** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jlueFxpe3WZ05X2lxp20.png", alt="The ease-out button.", width="24", height="24" %}
 1. In the **Presets switcher**, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/79O9ggoDdHGLL73Q1tdG.svg", alt="Left.", width="24", height="24" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/19mp1EDARktd9LnrvI5L.svg", alt="Right.", width="24", height="24" %} buttons to pick one of the following presets:
 
+  - Linear presets: `elastic`, `bounce`, or `emphasized`.
+  - [Cubic Bezier](https://developer.mozilla.org/docs/Glossary/Bezier_curve) presets:
+
 <table>
 <thead>
   <tr>
-    <th>Easing type</th>
+    <th>Timing keyword</th>
     <th>Preset</th>
-    <th>Bezier equivalent</th>
+    <th>Cubic Bezier</th>
   </tr>
 </thead>
 <tbody>
@@ -691,9 +714,17 @@ To change the values with the **Easing Editor**:
 </tbody>
 </table>
 
-Alternatively, in the **Curve editor**, drag the purple circles to set a custom [`cubic-bezier(x1,y1,x2,y2)`](https://developer.mozilla.org/docs/Glossary/Bezier_curve) value.
+### Configure custom timings {: #custom-timings }
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RrpIeYlQURppXdbUXV6C.png", alt="Curve editor.", width="800", height="584" %}
+To set custom values for timing functions, use the control points on the lines:
+
+- For linear functions, click anywhere on the line to add a control point and drag it. Double-click to remove the point.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sy89NLWDhT7oHgVLnnaF.png", alt="Dragging a control point of a linear function.", width="800", height="720" %}
+
+- For Cubic Bezier functions, drag one of the control points.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Y6ZAZfS5jZYwifaFfzRD.png", alt="Dragging the control points of a Cubic Bezier function.", width="800", height="720" %}
 
 Any change triggers a ball animation in the **Preview** at the top of editor.
 

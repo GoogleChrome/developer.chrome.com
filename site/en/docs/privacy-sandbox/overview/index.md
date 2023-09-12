@@ -81,7 +81,7 @@ Several key proposals are listed below.
 * [**Topics API**](/docs/privacy-sandbox/topics): Enable interest-based
   advertising without use of third-party cookies or tracking user behavior
   across sites.
-* [**Protected Audience API**](/docs/privacy-sandbox/fledge): Ad selection to serve remarketing
+* [**Protected Audience API**](/docs/privacy-sandbox/protected-audience): Ad selection to serve remarketing
   and custom audience use cases, designed so that it cannot be used by third
   parties to track user browsing behavior across sites. The Protected Audience API is the first
   experiment to be implemented in Chromium from the

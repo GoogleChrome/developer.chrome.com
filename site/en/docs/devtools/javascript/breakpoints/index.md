@@ -11,6 +11,8 @@ tags:
   - javascript
 ---
 
+{% YouTube id='JyHjoaUhAus' %}
+
 Use breakpoints to pause your JavaScript code. This guide explains each type of breakpoint that's
 available in DevTools, as well as when to use and how to set each type. For a hands-on tutorial of
 the debugging process, see [Get Started with Debugging JavaScript in Chrome DevTools][1].
