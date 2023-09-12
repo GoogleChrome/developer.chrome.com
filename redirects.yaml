@@ -81,6 +81,9 @@ redirects:
 - from: /docs/privacy-sandbox/status
   to: https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline
 
+- from: /docs/privacy-sandbox/use-shared-storage/
+  to: /docs/privacy-sandbox/shared-storage/
+
 - from: /android
   to: /docs/android
 
