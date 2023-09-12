@@ -16,7 +16,7 @@ tags:
 
 {% YouTube id='Zu9CdbnS5ps' %}
 
-**Goal**: This tutorial provides hands-on practice in setting up a Workspace so that you
+**Goal**: This tutorial provides hands-on practice in setting up a workspace so that you
 can use it in your own projects. Workspace lets you to save changes that you make within
 DevTools to source code that's stored on your computer.
 
@@ -41,7 +41,7 @@ your computer. For example, suppose:
 - You've got `localhost:8080` open in Google Chrome, and you're using DevTools to change the site's
   CSS.
 
-With Workspace enabled, the CSS changes that you make within DevTools are saved to the source code
+With workspace enabled, the CSS changes that you make within DevTools are saved to the source code
 on your desktop.
 
 ## Limitations {: #limitations }
@@ -58,13 +58,13 @@ on Stack Overflow][6] to share your knowledge with the rest of the DevTools comm
 
 ## Related feature: Local Overrides {: #overrides }
 
-[Local overrides][7] is another DevTools feature that is similar to Workspace. Use local overrides
+[Local overrides][7] is another DevTools feature that is similar to workspace. Use local overrides
 when you want to experiment with changes to a page, and you need to see those changes across page
 loads, but you don't care about mapping your changes to the page's source code.
 
 ## Step 1: Setup {: #setup }
 
-Complete this tutorial to get hands-on experience with Workspace.
+Complete this tutorial to get hands-on experience with a workspace.
 
 ### Set up the demo {: #demo }
 
