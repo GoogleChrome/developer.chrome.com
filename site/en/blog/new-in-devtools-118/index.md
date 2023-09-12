@@ -107,14 +107,33 @@ Chromium issue: [1473875](https://crbug.com/1473875).
 The **Lighthouse** panel now runs [Lighthouse 11](/blog/lighthouse-11-0/). Most notably, this version:
 
 - Removes legacy navigation. 
-- Adds new `DevtoolsLog` and `Trace` artifacts
-- Adds a few new accessibility audits
+- Adds new `DevtoolsLog` and `Trace` artifacts.
+- Adds a few new accessibility audits.
 
 See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.0.0). To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8b7d433f10fd854784121020b76e29295bf51f84 #}
 
 Chromium issue: [772558](https://crbug.com/772558).
+
+## Accessibility improvements {: #accessibility }
+
+DevTools now supports more navigation keystrokes:
+
+- **CSS Overview**: Use the up and down arrows to navigate sections in the left sidebar.
+- **Memory**: In the left sidebar, focus the **Save** button next to snapshots with <kbd>Tab</kbd> and press <kbd>Enter</kbd> to select folder.
+
+Additionally, several screen reader announcement issues have been fixed.
+
+The DevTools team expresses gratitude to [Christy Chen](https://chromium.googlesource.com/devtools/devtools-frontend/+/b16ef33f36c694dd67fe07a24b0ff5da98ab9307), [Guangyue Xu](https://chromium.googlesource.com/devtools/devtools-frontend/+/bd7b236205de8c3e7cb3e67d83e8c4f1ada44ad4), [Yanling Wang](https://chromium.googlesource.com/devtools/devtools-frontend/+/11ca806035cccb4af046583e8b8d7aa7dc1af0f1), and [Jimmy Seto](https://chromium.googlesource.com/devtools/devtools-frontend/+/c4a2a6833828f4425e5e5add1b7aec6aafb3a451) for landing these improvements.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b16ef33f36c694dd67fe07a24b0ff5da98ab9307 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/bd7b236205de8c3e7cb3e67d83e8c4f1ada44ad4 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/11ca806035cccb4af046583e8b8d7aa7dc1af0f1 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/33964c8dfa442b928c5320a8f82d14287ab06a8e #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/c4a2a6833828f4425e5e5add1b7aec6aafb3a451 #}
+
+Chromium issues: [1470401](https://crbug.com/1470401), [1471301](https://crbug.com/1471301), [1474108](https://crbug.com/1474108), [1468631](https://crbug.com/1468631).
 
 ## Miscellaneous highlights {: #misc }
 
