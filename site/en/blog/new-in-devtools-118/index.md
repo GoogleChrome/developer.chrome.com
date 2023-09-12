@@ -54,7 +54,9 @@ To inspect your registered custom properties, in **Elements** > **Styles**, hove
 
 Chromium issues: [1471102](https://crbug.com/1471102), [1471103](https://crbug.com/1471103), [1471105](https://crbug.com/1471105).
 
-## Streamlined workspace in the Sources panel {: #sources }
+## Improved Sources panel {: #sources }
+
+### Streamlined workspace in the Sources panel {: #workspace }
 
 The [workspace](/docs/devtools/workspaces/) feature in the **Sources** panel is new streamlined:
 
@@ -73,6 +75,16 @@ See the new setup and workflow in action:
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/49b05f57392ec6294c96ed385f2e91b2900224eb #}
 
 Chromium issues: [1473771](https://crbug.com/1473771), [1473880](https://crbug.com/1473880), [1473963](https://crbug.com/1473963), [1474686](https://crbug.com/1474686), [1474687](https://crbug.com/1474687).
+
+### Reorder panes in Sources {: #reorder-panes }
+
+You can now reorder panes on the left side of the **Sources** panel by dragging and dropping, similar to how you can [reorder other panels, tabs, and panes](/docs/devtools/customize/#reorder).
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/bHYhk8yS881OvomklbjW.mp4", width="800", height="375", autoplay="false", loop="true", muted="true", controls="true", class="screenshot" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/49160d253ecbbcea84586457014947c1fa7e7876 #}
+
+Chromium issues: [1473758](https://crbug.com/1473758).
 
 ## Lighthouse 11 {: #lighthouse }
 
