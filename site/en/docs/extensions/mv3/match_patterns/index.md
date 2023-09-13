@@ -27,7 +27,8 @@ A match pattern is a URL with the following structure, used to specify a group o
 
 Extensions use match patterns in a variety of use cases, including the following:
 
-* [Declaring permissions](/docs/extensions/mv3/declare_permissions) for Chrome APIs and [content script][content-scripts] injection
+* Injecting [content script][content-scripts].
+* [Declaring host permissions][host-permissions] that some Chrome APIs require in addition to their own permissions.
 * Granting access to [web-accessible resources][war]
 * Allowing message sending and receiving using ["externally_connectable.matches"][ext-connect].
 
