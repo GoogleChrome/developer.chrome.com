@@ -110,6 +110,12 @@ Allows web developers to use the [WebUSB API](https://developer.mozilla.org/docs
 
 Due to a bug in libxml, CDATA sections in an XHTML document can sometimes erroneously produce multiple nodes, depending on the size of the document and the position of the CDATA section in the document. When a single CDATA section spans multiple input parser chunks, libxml buffers and emits the CDATA input into 300 byte runs. This unexpectedly turns a single CDATA section into multiple nodes (if the length of the input chunk is greater than 300 bytes). This change causes sibling CDATA section nodes to be merged into a single CDATA section during parsing. This fixes the libxml bug during parsing but will also merge authored separate nodes, for example: `<![CDATA[foo]]><!CDATA[bar]]>` Will produce a single CDATA DOM node with content `"foobar": CDATA "foobar"`.
 
+### Change beforeunload handler dialog condition
+
+There are two new changes on how the cancel dialog gets prompted for the `beforeunload` event.
+
+If `event.preventDefault()` is called, prompt cancel dialog.
+If `event.returnValue` is the empty string, do not prompt cancel dialog.
 
 ## Origin trials in progress
 
@@ -162,13 +168,6 @@ Since only standard [`appearance`](https://developer.mozilla.org/docs/Web/CSS/ap
 
 Note that value `slider-vertical` will not be removed as part of this
 patch it is used for allowing `<input type=range>` vertical. It will be
-removed once feature FormControlsVerticalWritingModeSupport is fully adopted.
+removed once [form controls vertical writing mode](https://chromestatus.com/feature/5602118873907200) is fully adopted.
 
 Prior to being deactivated, if using any of the above keywords, a console warning will be shown, but the keyword will be recognized as a valid value.
-
-### Change beforeunload handler dialog condition
-
-There are two new changes on how the cancel dialog gets prompted for the `beforeunload` event.
-
-If `event.preventDefault()` is called, prompt cancel dialog.
-If `event.returnValue` is the empty string, do not prompt cancel dialog.
