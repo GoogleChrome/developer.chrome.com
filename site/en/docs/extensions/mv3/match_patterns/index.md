@@ -77,4 +77,5 @@ Top Level domain match patterns
 [ext-connect]: /docs/extensions/mv3/manifest/externally_connectable/#manifest
 [mdn-tld]: https://developer.mozilla.org/docs/Glossary/TLD
 [permissions]: /docs/extensions/mv3/declare_permissions/#allow_access
+[host-permissions]: /docs/extensions/mv3/declare_permissions/#host-permissions
 [war]: /docs/extensions/mv3/manifest/web_accessible_resources/#manifest-declaration
