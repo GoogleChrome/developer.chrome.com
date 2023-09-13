@@ -3,7 +3,7 @@ layout: layouts/doc-post.njk
 title: プライバシー サンドボックスに登録する
 subhead: あなたのアイデンティティを検証し、Chrome と Android を跨いだプライバシーサンドボックス広告関連 API の構成情報を共有してください。
 description: あなたのアイデンティティを検証し、Chrome と Android を跨いだプライバシーサンドボックス広告関連 API の構成情報を共有してください。
-date: '2023-06-13'
+date: 2023-06-13
 authors:
   - georgiafranklin
 ---
