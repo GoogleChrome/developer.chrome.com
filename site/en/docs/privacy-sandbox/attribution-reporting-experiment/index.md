@@ -24,10 +24,10 @@ in the first half of 2023.
      guide](https://docs.google.com/document/d/1NY7SScCYcPc9v5wtf_fVAikFxGQTAFvwldhExN1P03Y/edit#)
      to participate in the latest origin trial.
    * To experiment with the API, follow these guides:
-     * [What you should know about the Attribution Reporting
-       API](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/)
+     * [Getting started with the Attribution Reporting
+       API](/docs/privacy-sandbox/attribution-reporting/getting-started/)
 4. Experiment with [summary
-   reports](/docs/privacy-sandbox/summary-reports).
+   reports](/docs/privacy-sandbox/summary-reports/).
    *  Ad techs can generate summary reports with the [aggregation service](/docs/privacy-sandbox/aggregation-service). Set up
       [local testing](https://github.com/google/trusted-execution-aggregation-service/#set-up-local-testing)
       or [test in production with Amazon Web Services](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports) (AWS) :
@@ -37,7 +37,7 @@ in the first half of 2023.
         *  Complete the aggregation service
 	      [onboarding form](https://forms.gle/EHoecersGKhpcLPNA). After you've
 		submitted this form, we'll send a verification email and instructions.
-   *  Refer to the [strategy and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing).
+   *  Refer to the [Getting started guide](/docs/privacy-sandbox/attribution-reporting/getting-started/).
 
 ## Get support
 

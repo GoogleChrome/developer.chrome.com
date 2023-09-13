@@ -49,17 +49,15 @@ here. Your suggestions, additions, and questions are welcome!
 
 ### Before you start
 
-1. Read [Attribution Reporting: summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/) and [What you should know about the Attribution Reporting API](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit) for an introduction.
-2. Scan [Strategy and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.j8m326urvgnt)⏤in particular the [essential notions](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.kizul7z2av3y) required for you to make best use of this guide.
+1. Read [Attribution Reporting: summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/) and [Attribution Reporting full system overview](/docs/privacy-sandbox/attribution-reporting/system-overview/) for an introduction.
+2. Scan [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) and [Understanding aggregation keys](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/) to make best use of this guide.
 
 ## Design decisions
 
 ### Core design principle {: #core}
 
-There are
-[foundational differences](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit#heading=h.ktl1cq7bdlk)
-between how third-party cookies and summary reports operate. One key difference is the
-[noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) added to measurement data in summary reports.
+There are foundational differences between how third-party cookies and summary reports operate. One key difference is the
+[noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) added to measurement data in summary reports. Another is how reports are [scheduled](/docs/privacy-sandbox/attribution-reporting/report-schedules/).
 
 **To access summary report measurement data with higher signal-to-noise
 ratios, demand-side platforms (DSPs) and ad measurement providers will need to
@@ -176,7 +174,7 @@ are included; you can also modify these.
 
 Another design decision that will impact the number of attributed conversion
 events within a single bucket is the
-[key structures](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.81usg7c4jnsg)
+[key structures](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/#aggregation-keys-in-practice)
 you decide to use. Consider the following examples of aggregation keys:
 
 - One key structure with all dimensions; let's call this Key Strategy A.
@@ -191,7 +189,7 @@ reports may already give you the information you need. This means that Strategy 
 will likely lead to better signal-to-noise ratios than Strategy A. However, the
 noise may already be acceptable with Strategy A, so you may still decide to favor
 Strategy A for simplicity.
-[Learn more in the detailed example outlining these two strategies](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.i6ovl4dm1npa).
+[Learn more in the detailed example outlining these two strategies](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/#translate-goals-into-keys).
 
 Key management is a deep topic. A number of elaborate techniques can be
 considered to improve signal-to-noise ratios. One is described in [Advanced key
@@ -234,12 +232,11 @@ batching frequency is how often you process aggregatable reports.
 A report that is scheduled for aggregation more frequently (e.g. each hour) will
 have fewer conversion events included than the same report with a less frequent
 aggregation schedule (e.g. each week). As a result, the hourly report will have
-a higher signal-to-noise ratio than the weekly report, all else being equal. **Experiment with reporting requirements at various frequencies, and assess
-signal-to-noise ratios for each.**
+a higher signal-to-noise ratio than the weekly report, all else being equal. **Experiment with reporting requirements at various frequencies, and assess signal-to-noise ratios for each.**
 
 Learn more in
-[Batching](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.pef51jskrx06)
-and [Aggregating over longer time periods](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.pef51jskrx06).
+[Batching](/docs/privacy-sandbox/summary-reports/#batching)
+and [Aggregating over longer time periods](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#aggregating-over-longer-time-periods-increases-signal-to-noise-ratio).
 
 ### Decision: Campaign variables that affect attributable conversions {: #campaign-variables}
 
