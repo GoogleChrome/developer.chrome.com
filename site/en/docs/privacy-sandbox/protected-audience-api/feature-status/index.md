@@ -32,7 +32,7 @@ find a list of the scoped Protected Audience API features and when they'll be su
     </tr>
   </thead>
   <tr>
-    <td><a href="/docs/privacy-sandbox/protected-audience-api/feature-status/#event-level-auction-win-reporting">Event-level auction win reporting</a>
+    <td><a href="#event-level-auction-win-reporting">Event-level auction win reporting</a>
    </td>
     <td>Now</td>
     <td><p>Supported until at least 2026.</p>
