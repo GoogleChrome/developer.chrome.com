@@ -242,8 +242,8 @@ const credential = await navigator.credentials.get({
 
 Chrome starts an [IdP Sign-In Status API origin 
 trial](/origintrials/#/registration/-7757239251913146367) 
-on desktop from Chrome 116, followed by Android Chrome later. [Origin 
-trials](/docs/web-platform/origin-trials/) give you 
+on desktop from Chrome 116, and Android Chrome from 117.
+[Origin trials](/docs/web-platform/origin-trials/) give you 
 access to a new or experimental feature to build functionality your users can 
 try out for a limited time before the feature is made available to everyone.
 
