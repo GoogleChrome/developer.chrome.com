@@ -10,6 +10,8 @@ and then initiates an on-device auction to select an ad for display on a publish
 
 [Demo](https://protected-audience-demo.web.app/)
 
+[Demo code](https://github.com/GoogleChromeLabs/protected-audience-demo)
+
 [Docs](/docs/privacy-sandbox/protected-audience-api/)
 
 {% endColumn %}

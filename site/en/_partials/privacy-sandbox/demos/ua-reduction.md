@@ -1,6 +1,6 @@
 {% Details %}
 {% DetailsSummary %}
-**User Agent Reduction demo**
+**User Agent Reduction demos**
 {% endDetailsSummary %}
 {% Columns %}
 {% Column %}
