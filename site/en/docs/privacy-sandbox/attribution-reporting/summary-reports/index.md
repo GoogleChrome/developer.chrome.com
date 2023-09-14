@@ -16,7 +16,6 @@ authors:
 ## Implementation status
 
 *  [Chrome platform status](https://chromestatus.com/feature/5762222527610880)
-*  This API is available in the [ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
 *  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
 *  Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
 
@@ -167,10 +166,7 @@ that supports needed security features.
 
 {% Aside %}
 
-You can [participate in an origin trial](/docs/privacy-sandbox/attribution-reporting-experiment/)
-for Attribution Reporting with the aggregation service, which will initially
-support local testing or testing in TEEs provided by Amazon Web Services. Read
-detailed [setup instructions for the aggregation
+Read detailed [setup instructions for the aggregation
 service](https://github.com/google/trusted-execution-aggregation-service/#set-up-aggregation-service-for-aggregatable-reports).
 
 In the future, we intend to add support for other cloud providers that meet the
@@ -197,8 +193,8 @@ The coordinator has several responsibilities:
 *  Track the aggregatable reports to prevent reuse in aggregation for summary
    reports, as reuse may reveal personal identifying information (PII).
 
-To make testing of the aggregation service available in an origin trial,
-Google will play the role of the coordinator. Longer term, we are working to
+To make testing of the aggregation service available in the now-ended origin trial,
+Google played the role of the coordinator. Longer term, we are working to
 identify one or more independent entities who can share this role.
 
 ### What information is captured?

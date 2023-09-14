@@ -18,7 +18,7 @@ ask your question.
 ## What's changing?
 
 Following the [API proposal](https://github.com/WICG/conversion-measurement-api)'s changes
-in the first months of 2021, the API implementation in Chrome is evolving. Here's what changing:
+in the first months of 2021, the API implementation in Chrome is evolving. Here's what's changing:
 
 - The API name, and the permissions policy name.
 - The HTML attribute names and `.well-known` URLs.

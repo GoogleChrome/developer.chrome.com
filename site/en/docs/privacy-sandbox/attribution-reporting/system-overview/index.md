@@ -50,8 +50,7 @@ In this article, you'll read a high-level, end-to-end explanation of how the
 services work for the Attribution Reporting API. If you're a technical
 practitioner, you can
 [experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/)
-locally or in production with the
-[unified Privacy Sandbox Relevance and Measurement Origin Trial](/blog/privacy-sandbox-unified-origin-trial/).
+locally.
 
 ## Overview
 
@@ -290,7 +289,7 @@ works for everyone.
 
 ### Discuss the API
 
-Like other Privacy Sandbox proposals, this API is documented and
+Like other Privacy Sandbox APIs, this API is documented and
 [discussed publicly](/docs/privacy-sandbox/attribution-reporting-experiment/#join-the-discussion).
 
 ### Experiment with the API

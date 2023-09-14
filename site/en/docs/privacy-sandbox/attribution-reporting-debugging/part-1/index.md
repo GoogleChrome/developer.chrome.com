@@ -18,10 +18,7 @@ If you're testing the Attribution Reporting API,
 you should check that your integration is working properly, understand gaps in measurement results between your
 cookie-based implementation and your Attribution Reporting implementation, and troubleshoot any issues with your integration.
 
-Debug reports are required to complete these tasks. Therefore, if you're participating
-in the
-[origin trial](/docs/privacy-sandbox/unified-origin-trial/),
-we strongly recommend you set up debug reports.
+Debug reports are required to complete these tasks. Therefore, we strongly recommend you set up debug reports.
 
 ## Glossary
 
