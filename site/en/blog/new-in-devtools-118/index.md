@@ -22,6 +22,49 @@ tags:
 
 <!-- $contentStart -->
 
+## New section for custom properties in Elements > Styles {: #css }
+
+The **Elements** panel now supports the [@property CSS at-rule](https://web.dev/at-property/). It lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
+
+To inspect your registered custom properties, in **Elements** > **Styles**, hover over the property name and see its descriptors in a tooltip. In the tooltip, click the link to view the registered property in the collapsible `@property` section.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/vDfXTULIyNIJXVw6lKvf.mp4", width="800", height="511", autoplay="false", loop="true", muted="true", controls="true", class="screenshot" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b98b663cb79d1cd341efe824d1bc1995d917e385 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/69d1f4a605113e436deb6fa5f2f7dc4316819f57 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/1cfe38799440fe5d58d9387a4009cfdae2deced2 #}
+
+Chromium issues: [1471102](https://crbug.com/1471102), [1471103](https://crbug.com/1471103), [1471105](https://crbug.com/1471105).
+
+
+## More local overrides improvements {: #overrides }
+
+Continuing the stream of improvements in the [previous version](/blog/new-in-devtools-117/#overrides), [local overrides](/docs/devtools/overrides/) now do the following:
+
+- In **Sources** > **Page**, when you right-click a source mapped file and select **Override content**, DevTools will show a dialog that takes to the original source instead. Content overrides of source mapped files can't be overridden.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7pgnWI5CLcNBnv2H7aWT.png", alt="The dialog that takes you to the original code instead of the source mapped file.", width="800", height="458" %}
+
+- The **Network** panel get a new **Has overrides** column and a corresponding `has-overrides:[content|headers|yes|no]` filter. To see the **Has overrides** column, [right-click](/docs/devtools/network/reference/#columns) the table header and select it.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8YIC3pobJEwjA6xCdE4I.png", alt="Filtering for 'has-overrides:yes' value in the 'Has overrides' column.", width="800", height="512" %}
+
+- In **Sources** > **Overrides**, the **Delete all overrides** menu option has been replaced with the **Delete** option with precise behavior.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GiuilKK9SD0duIIYK1Ig.png", alt="Before and after replacing 'Delete all overrides' with 'Delete'.", width="800", height="443" %}
+
+  - The previous **Delete all overrides** was confusing because it deleted only the overrides active in the current session, marked by the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s81rU6SgdmbseeBDGbPl.png", alt="Saved.", width="17", height="20" %} purple dot icon.
+
+  - The new **Delete** option, first shows a warning message and prompts confirmation, then deletes the folder you clicked with all its contents.
+
+  To bring back the previous option, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable "Delete all overrides temporarily"** in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments**.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/77c8346f9025d1430c418bf596ff88f93f6ff2a9 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/fca7018689c03a74041741baee510fd2758b55d3 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/2b9c9f9d07db75e8b4dda600718384039083f0e5 #}
+
+Chromium issues: [1472952](https://crbug.com/1472952), [1416338](https://crbug.com/1416338), [1472580](https://crbug.com/1472580), [1473681](https://crbug.com/1473681) [1475668](https://crbug.com/1475668).
+
 ## Enhanced search {: #search }
 
 [**Search**](/docs/devtools/search/) results now show an entry per all the matches it found in a line of code. Previously, it showed only the first match per line of code. The new behavior is especially useful when you search across minified files. When you click a search result, it opens the file in the editor and now scrolls the match into view not only vertically but also horizontally.
@@ -39,20 +82,6 @@ Finally, **Search** now supports [ignore listing](/docs/devtools/settings/ignore
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1cfe38799440fe5d58d9387a4009cfdae2deced2 #}
 
 Chromium issues: [1468875](https://crbug.com/1468875), [1472019](https://crbug.com/1472019).
-
-## New section for custom properties in Elements > Styles {: #css }
-
-The **Elements** panel now supports the [@property CSS at-rule](https://web.dev/at-property/). It lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
-
-To inspect your registered custom properties, in **Elements** > **Styles**, hover over the property name and see its descriptors in a tooltip. In the tooltip, click the link to view the registered property in the collapsible `@property` section.
-
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/vDfXTULIyNIJXVw6lKvf.mp4", width="800", height="511", autoplay="false", loop="true", muted="true", controls="true", class="screenshot" %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b98b663cb79d1cd341efe824d1bc1995d917e385 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/69d1f4a605113e436deb6fa5f2f7dc4316819f57 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/1cfe38799440fe5d58d9387a4009cfdae2deced2 #}
-
-Chromium issues: [1471102](https://crbug.com/1471102), [1471103](https://crbug.com/1471103), [1471105](https://crbug.com/1471105).
 
 ## Improved Sources panel {: #sources }
 
@@ -101,34 +130,6 @@ For more information on speculation rules, see [Prerender pages in Chrome for in
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a49a95dd95a964a380334ddfba99b395d645f51a #}
 
 Chromium issue: [1473875](https://crbug.com/1473875).
-
-## More local overrides improvements {: #overrides }
-
-Continuing the stream of improvements in the [previous version](/blog/new-in-devtools-117/#overrides), [local overrides](/docs/devtools/overrides/) now do the following:
-
-- In **Sources** > **Page**, when you right-click a source mapped file and select **Override content**, DevTools will show a dialog that takes to the original source instead. Content overrides of source mapped files can't be overridden.
-
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7pgnWI5CLcNBnv2H7aWT.png", alt="The dialog that takes you to the original code instead of the source mapped file.", width="800", height="458" %}
-
-- The **Network** panel get a new **Has overrides** column and a corresponding `has-overrides:[content|headers|yes|no]` filter. To see the **Has overrides** column, [right-click](/docs/devtools/network/reference/#columns) the table header and select it.
-
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8YIC3pobJEwjA6xCdE4I.png", alt="Filtering for 'has-overrides:yes' value in the 'Has overrides' column.", width="800", height="512" %}
-
-- In **Sources** > **Overrides**, the **Delete all overrides** menu option has been replaced with the **Delete** option with precise behavior.
-
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GiuilKK9SD0duIIYK1Ig.png", alt="Before and after replacing 'Delete all overrides' with 'Delete'.", width="800", height="443" %}
-
-  - The previous **Delete all overrides** was confusing because it deleted only the overrides active in the current session, marked by the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s81rU6SgdmbseeBDGbPl.png", alt="Saved.", width="17", height="20" %} purple dot icon.
-
-  - The new **Delete** option, first shows a warning message and prompts confirmation, then deletes the folder you clicked with all its contents.
-
-  To bring back the previous option, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable "Delete all overrides temporarily"** in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments**.
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/77c8346f9025d1430c418bf596ff88f93f6ff2a9 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/fca7018689c03a74041741baee510fd2758b55d3 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/2b9c9f9d07db75e8b4dda600718384039083f0e5 #}
-
-Chromium issues: [1472952](https://crbug.com/1472952), [1416338](https://crbug.com/1416338), [1472580](https://crbug.com/1472580), [1473681](https://crbug.com/1473681) [1475668](https://crbug.com/1475668).
 
 ## Lighthouse 11 {: #lighthouse }
 
