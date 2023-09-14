@@ -4,9 +4,9 @@ title: "What's New in DevTools (Chrome 118)"
 authors:
   - sofiayem
 date: 2023-09-07
-description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oM7ywmnxgVDuegxueVbK.png'
-alt: ''
+description: "New section for custom properties in Elements > Styles, more local overrides improvements, enhanced search, streamlined workspace in Sources, and more."
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/r8TZKv9wtqFJvjYbyBeb.png'
+alt: 'New section for custom properties in Elements > Styles, more local overrides improvements, enhanced search, streamlined workspace in Sources, and more.'
 tags:
   - new-in-devtools
   - devtools
@@ -53,11 +53,11 @@ Continuing the stream of improvements in the [previous version](/blog/new-in-dev
 
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GiuilKK9SD0duIIYK1Ig.png", alt="Before and after replacing 'Delete all overrides' with 'Delete'.", width="800", height="443" %}
 
-  - The previous **Delete all overrides** was confusing because it deleted only the overrides active in the current session, marked by the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s81rU6SgdmbseeBDGbPl.png", alt="Saved.", width="17", height="20" %} purple dot icon.
+The previous **Delete all overrides** was confusing because it deleted only the overrides active in the current session, marked by the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s81rU6SgdmbseeBDGbPl.png", alt="Saved.", width="17", height="20" %} purple dot icon.
 
-  - The new **Delete** option, first shows a warning message and prompts confirmation, then deletes the folder you clicked with all its contents.
+The new **Delete** option, first shows a warning message and prompts confirmation, then deletes the folder you clicked with all its contents.
 
-  To bring back the previous option, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable "Delete all overrides temporarily"** in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments**.
+To bring back the previous option, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable "Delete all overrides temporarily"** in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments**.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/77c8346f9025d1430c418bf596ff88f93f6ff2a9 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/fca7018689c03a74041741baee510fd2758b55d3 #}
