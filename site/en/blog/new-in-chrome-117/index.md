@@ -204,4 +204,4 @@ To stay up to date, [subscribe](https://goo.gl/6FP1a5) to the
 [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
 and you'll get an email notification whenever we launch a new video.
 
-Yo soy Adriana Jara, and as soon as Chrome 117 is released, I'll be right here to tell you what's new in Chrome!
+Yo soy Adriana Jara, and as soon as Chrome 118 is released, I'll be right here to tell you what's new in Chrome!
