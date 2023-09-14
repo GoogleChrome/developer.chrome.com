@@ -17,6 +17,7 @@ authors:
 {% YouTube id='UGA74CIcom8' %}
 
 {% Aside %}
+**Hands-on Resources**
 {% Partial 'privacy-sandbox/demos/ara.njk' %}
 {% endAside %}
 
