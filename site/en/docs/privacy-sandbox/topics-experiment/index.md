@@ -11,6 +11,8 @@ authors:
   - samdutton
 ---
 
+{% Partial 'privacy-sandbox/ot-end.njk' %}
+
 ## Learn the essentials
 
 * [Topics API overview](/docs/privacy-sandbox/topics/overview) introduces the API and explains the issues it addresses. 
@@ -18,17 +20,6 @@ authors:
 * [The Topics API developer guide](/docs/privacy-sandbox/topics/#get-and-set-topics) covers setup, getting and setting topics using JavaScript and headers, and debugging.
 
 ## Try the API
-
-{% Aside 'caution' %}
-
-Not all users may be eligible for the Privacy Sandbox Relevance and Measurement origin trial, even
-on pages that provide a valid trial token.
-
-[Testing the Privacy Sandbox ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial#eligible-users)
-explains why this is so, and shows how you can (and should) detect if an origin trial feature is
-available before attempting to use it.
-
-{% endAside %}
 
 1. Check the Privacy Sandbox [status page](/docs/privacy-sandbox/status/#topics) for updates on the
 implementation status of the Topics API.

@@ -11,68 +11,20 @@ authors:
   - samdutton
 ---
 
+{% Partial 'privacy-sandbox/ot-end.njk' %}
+
 ## Implementation status
 
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
-## Try the Topics API
+## Try the demo {: #demo}
 
-Topics is not currently available by default in any version of Chrome, but you can activate the API in two ways, as a single user or at scale:
-
--   The Topics API demo allows you to try it out as a single user.
--   The Topics origin trial allows you to try the API at scale with your website users.
-
-### Try the demo {: #demo}
+The Topics API demo allows you to try it out as a single user.
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
 
-### Test Topics in an origin trial {: #origin-trial}
-
-A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [Protected Audience](/docs/privacy-sandbox/protected-audience/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
-
-#### Provide an origin trial token
-
-To take part in the origin trial, you can provide a valid trial token
-[programmatically, in a header, or in a meta tag](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial).
-Whichever method you choose to provide a trial token, and [whichever way you use the Topics API](#access-topics),
-you must provide a valid token **before** calling the API, and the token must be registered for the
-appropriate origin.
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left;">API usage</th>
-      <th style="text-align: left;">Trial token origin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>fetch()</code></td>
-      <td>Origin of the code making the call.</td>
-    </tr>
-    <tr>
-      <td><code>document.browsingTopics()</code></td>
-      <td>Origin of the code making the call.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top; white-space: nowrap"><code>&lt;iframe browsingtopics&nbsp;...&gt;</code></td>
-      <td>The token is required in the document that embeds the iframe: a token must be provided
-      that has been registered for the same origin as the code that creates the iframe.</td>
-    </tr>
-  </tbody>
-</table>
-
-When using the `fetch()` or `document.browsingTopics()` approach in a third-party context, the API
-caller must provide a token registered for the origin of the code making the call. That origin will
-be the same wherever the code is embedded. For example, multiple sites might include `<script
-src="https://adtech.example/js/topics.js">`, which would provide a token registered for
-`https://adtech.com` before making an API call. If the Topics API is used from a script element in a
-page in an iframe (as opposed to a script included from a different origin) a trial token must be
-provided in the page, registered for its origin.
-
-Always do [feature detection](#feature-detection) before attempting to use an origin trial API.
 
 ## Get and set topics {: #epoch}
 
