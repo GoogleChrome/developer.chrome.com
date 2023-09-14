@@ -41,7 +41,7 @@ about **your implementation** or about the **documentation**:
 *  [Open a new issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)
    on the Privacy Sandbox Dev Support repository. Make sure to select the issue template for Topics.
 *  For more general questions about how to meet your **use cases** with the 
-   API, [file an issue on the proposal repository](https://github.com/jkarlin/topics/issues/new).
+   API, [file an issue on the API repository](https://github.com/jkarlin/topics/issues/new).
 
 For bugs and issues with the implementation of the Topics API in Chrome:
 
@@ -52,14 +52,14 @@ For bugs and issues with the implementation of the Topics API in Chrome:
 
 ## Join the discussion
 
-Everyone is welcome to join in discussion of the Topics proposal. In particular, if you're
+Everyone is welcome to join in discussion of the Topics API. In particular, if you're
 experimenting with the API, your feedback is essential.
 
 ### Discuss the API
 
-Like other Privacy Sandbox proposals, this API is documented and discussed publicly.
+Like other Privacy Sandbox APIs, this API is documented and discussed publicly.
 
-* [Read the proposal explainer on GitHub](https://github.com/jkarlin/topics).
+* [Read the explainer on GitHub](https://github.com/jkarlin/topics).
 * Join the conversation about [existing issues](hhttps://github.com/jkarlin/topics/issues).
 * [Open a new issue](https://github.com/jkarlin/topics/issues/new) to ask a question, propose a
 feature, or discuss a use case.
@@ -73,14 +73,14 @@ feature, or discuss a use case.
 * Use the Privacy Sandbox [feedback form](/docs/privacy-sandbox/feedback/#feedback-form)
 to share feedback privately with the Chrome team outside of public forums.
 * [Privacy Sandbox Feedback](/docs/privacy-sandbox/feedback/#topics-api) explains how to provide
-other types of feedback, and how to engage in discussion of Privacy Sandbox proposals.
+other types of feedback, and how to engage in discussion of Privacy Sandbox APIs.
 
 
 ## Get updates
 
 * To be notified of status changes in the API, join the [mailing list for
   developers](https://groups.google.com/u/3/a/chromium.org/g/topics-api-announce).
-* To closely follow all ongoing discussions on the API, click the **Watch** button on the [proposal page on
+* To closely follow all ongoing discussions on the API, click the **Watch** button on the [GitHub page on
   GitHub](https://github.com/jkarlin/topics). This requires you have or [create a GitHub
   account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
 * To get overall updates on the Privacy Sandbox, subscribe to the RSS feed [Progress in the Privacy

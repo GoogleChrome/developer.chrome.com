@@ -20,12 +20,12 @@ create a [summary report](/docs/privacy-sandbox/summary-report/).
 
 ## Implementation status
 
-* The [Aggregation Service proposal](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md)
+* The [Aggregation Service](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md)
   is [now moving to general availability](/blog/privacy-sandbox-launch/).
 * The [Aggregation Service can be tested](#test) with the
   Attribution Reporting API and the Private Aggegration API for Protected Audience API and Shared Storage.
 
-The proposal outlines
+The explainer outlines
 [key terms](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms),
 useful for understanding the Aggregation Service.
 
@@ -169,7 +169,7 @@ To test on AWS, install [Terraform](https://www.terraform.io/) and the latest
 
 ## Engage and share feedback
 
-The Aggregation Service is a key piece of the Privacy Sandbox measurement proposals. Like other Privacy Sandbox proposals, this is documented and discussed publicly on GitHub.
+The Aggregation Service is a key piece of the Privacy Sandbox measurement APIs. Like other Privacy Sandbox APIs, this is documented and discussed publicly on GitHub.
   
-* **Github**: Read the [proposal](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md), [raise questions and participate in the discussion](https://github.com/WICG/attribution-reporting-api/issues). Also take a look at the [Aggregation Service implementation](https://github.com/privacysandbox/aggregation-service) and provide [feedback on the implementation](https://github.com/privacysandbox/aggregation-service/issues).
+* **Github**: Read the [explainer](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md), [raise questions and participate in the discussion](https://github.com/WICG/attribution-reporting-api/issues). Also take a look at the [Aggregation Service implementation](https://github.com/privacysandbox/aggregation-service) and provide [feedback on the implementation](https://github.com/privacysandbox/aggregation-service/issues).
 * **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).

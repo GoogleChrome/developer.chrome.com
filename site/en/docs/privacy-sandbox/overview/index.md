@@ -2,7 +2,7 @@
 layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
 subhead: >
-  A series of proposals to satisfy cross-site use cases without
+  A series of APIs to satisfy cross-site use cases without
   third-party cookies or other tracking mechanisms.
 description: "What's in it, what's it for, and how to get involved."
 date: 2021-05-18
@@ -34,7 +34,7 @@ direction for browsers.
 The Privacy Sandbox's vision of the future has browsers providing specific
 tools to satisfy specific use cases, while preserving user privacy.
 
-## What are the Privacy Sandbox proposals?
+## What are the Privacy Sandbox APIs?
 
 Chrome and other ecosystem stakeholders have offered more than 30 proposals to
 date, which can be found in the
@@ -85,7 +85,7 @@ Several key proposals are listed below.
   and custom audience use cases, designed so that it cannot be used by third
   parties to track user browsing behavior across sites. The Protected Audience API is the first
   experiment to be implemented in Chromium from the
-  [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
+  [TURTLEDOVE](https://github.com/WICG/turtledove) family of APIs.
 
 ### Measure digital ads
 
@@ -211,8 +211,8 @@ turned on, even on pages which provide a valid origin trial token.
 
 The exception is cookies that are modified by either the
 [CHIPS](/docs/privacy-sandbox/chips/) or
-[First-Party Sets](/docs/privacy-sandbox/first-party-sets/) proposal.
-These allow for a subset of cross-site use cases. As these proposals are
+[First-Party Sets](/docs/privacy-sandbox/first-party-sets/).
+These allow for a subset of cross-site use cases. As these features and APIs are
 under active discussion, the final formats and functionality may change.
 
 
@@ -238,12 +238,12 @@ and the [Web Incubator Community Group](https://github.com/WICG).
 
 You can follow the monthly updates to the [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/) series of articles which also includes an [RSS / Atom feed where you can subscribe](/feeds/progress-in-the-privacy-sandbox.xml) with your preferred reader.
 
-The article series links to the matching monthly updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) which shows the current status and schedule for proposals.
+The article series links to the matching monthly updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) which shows the current status and schedule for Privacy Sandbox APIs.
 
-These high-level resources will provide signposts to changes across the project, but for individual proposals where you want to follow in detail you should:
+These high-level resources will provide signposts to changes across the project, but for individual APIs where you want to follow in detail you should:
 
- - Watch or Star proposal repos on GitHub to get notification of new issues and updates: the Privacy Sandbox [status page](/docs/privacy-sandbox/status/) provides a link to the repo for each proposal
- - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the proposal detail
+ - Watch or Star API repos on GitHub to get notification of new issues and updates: the Privacy Sandbox [status page](/docs/privacy-sandbox/status/) provides a link to the repo for each API.
+ - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the API detail.
  - Star the associated entry on [Chrome Platform Status](https://chromestatus.com) for email updates on Chrome implementation changes.
 
 ### Get involved
