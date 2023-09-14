@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Web API reference
-seoTitle: Web API reference for Chrome extensions
+title: Web platform suplement
+seoTitle: Use web platform features in extensions
 subhead: A reference for extension-specific information about web platform APIs.
 description: A reference for extension-specific information about web platform APIs.
 date: 2023-08-28
