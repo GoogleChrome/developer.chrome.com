@@ -11,6 +11,8 @@ The Topics API allows a browser to share information about a user's interests wi
 
 [Demo](https://topics-demo.glitch.me/)
 
+[Demo code](https://glitch.com/edit/#!/topics-fetch-demo?path=README.md%3A1%3A0)
+
 [Walkthrough video](https://www.youtube.com/watch?v=hEBzWuXjeTQ)
 
 [Docs](/docs/privacy-sandbox/topics/overview/)
