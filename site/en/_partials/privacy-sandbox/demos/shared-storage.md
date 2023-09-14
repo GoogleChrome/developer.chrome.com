@@ -9,6 +9,8 @@ The Shared Storage API provides storage that can be used cross-site, meaning you
 
 [Demo](https://shared-storage-demo.web.app/)
 
+[Demo code](https://github.com/GoogleChromeLabs/shared-storage-demo)
+
 [Docs](/docs/privacy-sandbox/shared-storage/)
 
 {% endColumn %}
