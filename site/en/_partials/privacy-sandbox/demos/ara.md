@@ -12,6 +12,8 @@ ads in a third-party iframe, and ads in a first-party context. In this demo an a
 
 [Demo](https://arapi-home.web.app/)
 
+[Demo code](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting)
+
 [Docs](/docs/privacy-sandbox/attribution-reporting/)
 
 [Summary reports walkthrough video](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/view)
