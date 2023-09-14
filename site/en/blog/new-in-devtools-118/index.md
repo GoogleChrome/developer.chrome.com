@@ -42,7 +42,7 @@ Chromium issues: [1468875](https://crbug.com/1468875), [1472019](https://crbug.c
 
 ## New section for custom properties in Elements > Styles {: #css }
 
-The **Elements** panel now supports the [@property CSS at-rule](https://developer.mozilla.org/docs/Web/CSS/@property). It lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
+The **Elements** panel now supports the [@property CSS at-rule](https://web.dev/at-property/). It lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
 
 To inspect your registered custom properties, in **Elements** > **Styles**, hover over the property name and see its descriptors in a tooltip. In the tooltip, click the link to view the registered property in the collapsible `@property` section.
 
@@ -122,6 +122,8 @@ Continuing the stream of improvements in the [previous version](/blog/new-in-dev
 
   - The new **Delete** option, first shows a warning message and prompts confirmation, then deletes the folder you clicked with all its contents.
 
+  To bring back the previous option, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable "Delete all overrides temporarily"** in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Experiments**.
+
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/77c8346f9025d1430c418bf596ff88f93f6ff2a9 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/fca7018689c03a74041741baee510fd2758b55d3 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2b9c9f9d07db75e8b4dda600718384039083f0e5 #}
@@ -130,11 +132,7 @@ Chromium issues: [1472952](https://crbug.com/1472952), [1416338](https://crbug.c
 
 ## Lighthouse 11 {: #lighthouse }
 
-The **Lighthouse** panel now runs [Lighthouse 11](/blog/lighthouse-11-0/). Most notably, this version:
-
-- Removes legacy navigation. 
-- Adds new `DevtoolsLog` and `Trace` artifacts.
-- Adds a few new accessibility audits.
+The **Lighthouse** panel now runs [Lighthouse 11](/blog/lighthouse-11-0/). Most notably, this version removes legacy navigation and adds new accessibility audits and changes how the accessibility category is scored.
 
 See also the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.0.0). To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
 
