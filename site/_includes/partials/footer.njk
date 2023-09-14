@@ -92,13 +92,13 @@
         <path fill="#ea4335" d="m285.38 58.4 8.17 5.45a23.83 23.83 0 0 1-19.97 10.63c-13.61 0-23.78-10.54-23.78-23.98 0-14.26 10.26-23.98 22.6-23.98s18.51 9.9 20.51 15.26L294 44.5l-32.04 13.26c2.45 4.81 6.26 7.27 11.62 7.27s9.08-2.63 11.8-6.63Zm-25.14-8.63 21.42-8.9c-1.18-3-4.72-5.09-8.89-5.09-5.35 0-12.8 4.72-12.52 13.99Z"/>
       </svg>
       <div class="footer__cluster cluster flex-1 gap-top-300 flow-space-300 lg:gap-top-0 lg:gap-left-500 lg:flow-space-500">
-        <div role="list">
-          <a role="listitem" class="footer__link" href="https://www.google.com/chrome/">Chrome</a>
-          <a role="listitem" class="footer__link" href="https://firebase.google.com">Firebase</a>
-          <a role="listitem" class="footer__link" href="https://developers.google.com/products">{{ 'i18n.footer.all_products' | i18n(locale) }}</a>
-          <a role="listitem" class="footer__link" href="https://policies.google.com/privacy">{{ 'i18n.footer.privacy' | i18n(locale) }}</a>
-          <a role="listitem" class="footer__link" href="https://policies.google.com/terms">{{ 'i18n.footer.terms' | i18n(locale) }}</a>
-        </div>
+        <ul role="list">
+          <li role="listitem"><a class="footer__link" href="https://www.google.com/chrome/">Chrome</a></li>
+          <li role="listitem"><a class="footer__link" href="https://firebase.google.com">Firebase</a><li>
+          <li role="listitem"><a class="footer__link" href="https://developers.google.com/products">{{ 'i18n.footer.all_products' | i18n(locale) }}</a></li>
+          <li role="listitem"><a class="footer__link" href="https://policies.google.com/privacy">{{ 'i18n.footer.privacy' | i18n(locale) }}</a></li>
+          <li role="listitem"><a class="footer__link" href="https://policies.google.com/terms">{{ 'i18n.footer.terms' | i18n(locale) }}</a></li>
+        </ul>
       </div>
       <language-select current="{{ locale }}" supported="{{ site.locales }}"></language-select>
     </div>
