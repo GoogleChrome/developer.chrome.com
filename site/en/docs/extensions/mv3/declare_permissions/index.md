@@ -176,9 +176,8 @@ for details.
 : Gives access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API when host permissions are required.
 
 `"declarativeNetRequestFeedback"`
-: Gives access to events and methods within the <a
-          href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API, which returns information on declarative rules matched.
-
+: Gives permission to write errors and warnings to the DevTools console when using the <a
+          href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API. This permission is for use with [unpacked extensions](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked) and is ignored for extensions installed from the Chrome Web Store.
 <!-- No corresponding reference entry
     `"displaySource"`
     : Gives access to the <a href="/docs/extensions/reference/displaySource/">chrome.displaySource</a> API.
