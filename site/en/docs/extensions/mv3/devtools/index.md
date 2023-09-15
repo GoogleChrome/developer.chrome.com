@@ -58,7 +58,7 @@ manifest:
 The `devtools_page` field must point to an HTML page. Because the DevTools
 page must be local to your extension, we recommend specifying it it using a relative URL.
 
-The `chrome.devtools.*` API modules are available only to the pages loaded within the DevTools
+The members of the `chrome.devtools` API are available only to the pages loaded within the DevTools
 window while that window is open. Content scripts and other extension pages don't have access
 to these APIs.
 
