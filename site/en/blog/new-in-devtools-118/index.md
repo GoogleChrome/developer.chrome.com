@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "What's New in DevTools (Chrome 118)"
 authors:
   - sofiayem
-date: 2023-09-07
+date: 2023-09-15
 description: "New section for custom properties in Elements > Styles, more local overrides improvements, enhanced search, streamlined workspace in Sources, and more."
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/r8TZKv9wtqFJvjYbyBeb.png'
 alt: 'New section for custom properties in Elements > Styles, more local overrides improvements, enhanced search, streamlined workspace in Sources, and more.'
