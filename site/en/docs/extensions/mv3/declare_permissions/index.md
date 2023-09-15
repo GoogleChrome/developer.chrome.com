@@ -230,7 +230,7 @@ for details.
 : Gives access to the <a href="/docs/extensions/reference/fontSettings/">chrome.fontSettings</a> API.
 
 `"gcm"`
-: Gives access to the <a href="/docs/extensions/reference/gcm/">chrome.gcm</a> API.
+: Gives access to the <a href="/docs/extensions/reference/gcm/"><code>chrome.gcm</code></a> and <a href="https://developer.chrome.com/docs/extensions/reference/instanceID/"><code>chrome.instanceID</code></a> APIs.
 
 `"geolocation"`
 :Allows the extension to use the <a
