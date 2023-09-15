@@ -90,7 +90,7 @@ chrome.devtools.panels.create("My Panel",
 );
 ```
 
-JavaScript executed in a panel or sidebar pane has access to the the same APIs as the DevTools page.
+JavaScript executed in a panel or sidebar pane has access to the same APIs as the DevTools page.
 
 To create a basic sidebar pane, use the following code:
 
@@ -235,7 +235,7 @@ same context as the content scripts, so it can access the `setSelectedElement` m
 ### Get a reference panel's `window` {: #panel-window }
 
 To call `postMessage()` from a devtools panel, you'll need a reference to its `window` object. Get a
-panel's iframe window from the the [`panel.onShown`][api-panels-onshown] event handler:
+panel's iframe window from the [`panel.onShown`][api-panels-onshown] event handler:
 
 ```js
 onShown.addListener(function callback)
