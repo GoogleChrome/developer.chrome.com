@@ -52,7 +52,7 @@ usually able to map the optimized code back to your original source code with th
 maps][4].
 
 The DevTools community works to support the capabilities provided by source maps across a [variety of frameworks and tools](/docs/devtools/javascript/source-maps/#use_a_supported_preprocessor).
-If you run into issues while using Workspace with your framework of choice, or you get it working
+If you run into issues while using a workspace with your framework of choice, or you get it working
 after some custom configuration, please [start a thread in the mailing list][5] or [ask a question
 on Stack Overflow][6] to share your knowledge with the rest of the DevTools community.
 
@@ -229,7 +229,7 @@ to your site. There's a way to have the **Sources** panel open alongside other p
 Congratulations! You now know how to save to sources the changes you make in DevTools to your locally hosted website.
 {% endAside %}
 
-You can set up multiple folders in a **Workspace**. All such folders are listed in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Workspace**](/docs/devtools/settings/#workspace).
+You can set up multiple folders in a workspace. All such folders are listed in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Workspace**](/docs/devtools/settings/#workspace).
 
 Next, learn how to use DevTools to [change CSS](/docs/devtools/css/) and [debug JavaScript](/docs/devtools/javascript/).
 

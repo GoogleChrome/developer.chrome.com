@@ -131,6 +131,18 @@ For more information on speculation rules, see [Prerender pages in Chrome for in
 
 Chromium issue: [1473875](https://crbug.com/1473875).
 
+## Emulate prefers-reduced-transparency media feature {: #reduced-transparency }
+
+[Chrome 118 now supports](/blog/chrome-118-beta/#media-queries-prefers-reduced-transparency-feature) the [`prefers-reduced-transparency` media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency). This feature lets developers adapt web content to user-selected preference for reduced transparency in the OS, such as the **Reduce transparency** setting on macOS.
+
+To emulate this media feature, open the **Rendering** tab and scroll down to it.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111 #}
+
+Chromium issue: [1424879](https://crbug.com/1424879).
+
 ## Lighthouse 11 {: #lighthouse }
 
 The **Lighthouse** panel now runs [Lighthouse 11](/blog/lighthouse-11-0/). Most notably, this version removes legacy navigation and adds new accessibility audits and changes how the accessibility category is scored.
@@ -157,18 +169,6 @@ Additionally, several screen reader announcement issues have been fixed.
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c4a2a6833828f4425e5e5add1b7aec6aafb3a451 #}
 
 Chromium issues: [1470401](https://crbug.com/1470401), [1471301](https://crbug.com/1471301), [1474108](https://crbug.com/1474108), [1468631](https://crbug.com/1468631).
-
-## Emulate prefers-reduced-transparency media feature {: #reduced-transparency }
-
-[Chrome 118 now supports](/blog/chrome-118-beta/#media-queries-prefers-reduced-transparency-feature) the [`prefers-reduced-transparency` media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency). This feature lets developers adapt web content to user-selected preference for reduced transparency in the OS, such as the **Reduce transparency** setting on macOS.
-
-To emulate this media feature, open the **Rendering** tab and scroll down to it.
-
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/8f2118f91bab0707949706421727ca423d53e111 #}
-
-Chromium issue: [1424879](https://crbug.com/1424879).
 
 ## Miscellaneous highlights {: #misc }
 
