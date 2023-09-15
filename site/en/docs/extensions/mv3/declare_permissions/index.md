@@ -290,7 +290,7 @@ for details.
 `"printingMetrics"`
 : Gives access to the <a href="/docs/extensions/reference/printingMetrics/">chrome.printingMetrics</a> API.
 
-`"privacy"
+`"privacy"`
 : Gives access to the <a href="/docs/extensions/reference/privacy/">chrome.privacy</a> API.
 
 `"processes"`
