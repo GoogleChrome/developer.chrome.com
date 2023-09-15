@@ -17,7 +17,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 ### Chrome 118: Changes to opening file: scheme URLs {: #changes-to-file-scheme }
 
-Beginning in Chrome 118, extensions will need the "Allow access to file URLs" setting enabled from the chrome://extensions page to open file: scheme URLs, such as with the tabs or windows APIs. You can programmatically check for this access by calling [`chrome.extension.isAllowedFileSchemeAccess()`](/docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess)`. Firefox already restricts file URLs, and Safari supports the change. For more information, read the [post in the extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/ZtCvVISQU54/m/tOjjlzkfAgAJ).
+Beginning in Chrome 118, extensions will need the "Allow access to file URLs" setting enabled from the `chrome://extensions` page to open file:// scheme URLs using the [Tabs](/docs/extensions/reference/tabs/) or [Windows](/docs/extensions/reference/windows/) APIs. You can programmatically check for this access by calling [`chrome.extension.isAllowedFileSchemeAccess()`](/docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess). Firefox already restricts file URLs, and Safari supports the change. For more information, read the [post in the extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/ZtCvVISQU54/m/tOjjlzkfAgAJ).
 
 ### Chrome 117: Expanded URL protections on extension API navigations {: #expanded-kill-url }
 
