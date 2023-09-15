@@ -173,7 +173,7 @@ for details.
 : Gives access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API. 
 
 `"declarativeNetRequestWithHostAccess"`
-: Gives extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API. Also requires host permissions to the request URL and initiator to act on a request.
+: Gives access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API when host permissions are required.
 
 `"declarativeNetRequestFeedback"`
 : Gives access to events and methods within the <a
