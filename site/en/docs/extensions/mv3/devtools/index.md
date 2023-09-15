@@ -130,7 +130,7 @@ The DevTools page can't call [`scripting.executeScript()`][api-scripting-execute
 inject a content script from the DevTools page, you must retrieve the inspected window's tab ID
 using the [`inspectedWindow.tabId`][api-inspectedwindow-tabid] property and send a message to
 the background page. From the background page, call
-[`scripting.executeScript`][api-scripting-executescript] to inject the script.
+[`scripting.executeScript()`][api-scripting-executescript] to inject the script.
 
 The following code snippets show how to inject a content script using `executeScript`.
 
