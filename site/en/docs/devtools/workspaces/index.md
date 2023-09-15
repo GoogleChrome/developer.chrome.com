@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Edit and save files with Workspace"
+title: "Edit and save files in a workspace"
 authors:
   - kaycebasques
   - sofiayem
