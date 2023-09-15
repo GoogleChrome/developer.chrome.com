@@ -33,7 +33,7 @@ Protected Audience API deployment is available, as are
 
 ## What is the Protected Audience API? {: #what}
 
-The Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) was built to serve
+The Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) API designed to serve
 [remarketing](/docs/privacy-sandbox/protected-audience#remarketing) and custom audience use
 cases, designed so that it cannot be used by third parties to track user
 browsing behavior across sites. The API enables on-device auctions by
@@ -109,7 +109,7 @@ This is an in-progress version of the Protected Audience API for early testing. 
 considered complete or indicative of the final implementation. Protected Audience API progress
 and status are discussed in the regular WICG meetings.
 
-The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing for Protected Audience API and other Privacy Sandbox APIs.
+The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timelines for Protected Audience API and other Privacy Sandbox APIs.
 
 {% endAside %}
 

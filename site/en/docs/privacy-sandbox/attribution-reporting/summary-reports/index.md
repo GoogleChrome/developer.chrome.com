@@ -193,7 +193,7 @@ The coordinator has several responsibilities:
 *  Track the aggregatable reports to prevent reuse in aggregation for summary
    reports, as reuse may reveal personal identifying information (PII).
 
-To make testing of the aggregation service available in the now-ended origin trial,
+To make testing of the aggregation service available in the now-complete origin trial,
 Google played the role of the coordinator. Longer term, we are working to
 identify one or more independent entities who can share this role.
 

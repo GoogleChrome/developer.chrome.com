@@ -121,7 +121,7 @@ This is a subcase of not receiving a debug report: if for a given cookie convers
 
 - Fundamental integration issue. Review how to troubleshoot these in [Fix fundamental integration issues](/docs/privacy-sandbox/attribution-reporting-debugging/part-2/#fix-fundamental-issues).
 - Possible network issues.
-- User preferences in browser settings, e.g. Privacy Sandbox turned off.
+- User preferences in browser settings such as Privacy Sandbox turned off.
 
 ## Verbose debug reports reference
 

@@ -14,7 +14,7 @@ authors:
 ## What is FedCM?
 
 FedCM (Federated Credential Management) is a privacy-preserving
-approach to federated identity services (such as "Sign in with...") where
+approach to federated identity services (such as "Sign in with...") whereby
 users can log into sites without sharing their personal information with the
 identity service or the site.
 
