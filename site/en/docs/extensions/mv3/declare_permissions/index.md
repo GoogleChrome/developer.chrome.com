@@ -122,7 +122,7 @@ If your extension needs to run on `file://` URLs or operate in incognito mode, u
 
 {% endDetails %}
 
-To detect whether the user has allowed access, you can use [`extension.isAllowedIncognitoAccess()`][incognito-allow] or 
+To detect whether the user has allowed access, you can call [`extension.isAllowedIncognitoAccess()`][incognito-allow] or 
 [`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
 
 ## Permissions list {: #permissions }
