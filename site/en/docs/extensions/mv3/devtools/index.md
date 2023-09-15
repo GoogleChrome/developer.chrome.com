@@ -175,7 +175,7 @@ chrome.runtime.onConnect.addListener(function(devToolsConnection) {
 ```
 
 If a content script has already been injected, you can add additional context scripts using the
-`eval()` method. See [Pass the Selected Element to a Content Script][header-selected-element] for
+`eval()` method. See [Pass the selected element to a content script][header-selected-element] for
 more information.
 
 ### Evaluate JavaScript in the inspected window {: #evaluating-js }
