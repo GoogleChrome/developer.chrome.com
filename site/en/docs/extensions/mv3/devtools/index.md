@@ -10,12 +10,15 @@ description: How to create a Chrome Extension that adds functionality to Chrome 
 DevTools extensions add functionality to Chrome DevTools by accessing DevTools-specific
 extension APIs through a DevTools page added to the extension.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/kcLMpTY6qtez03TVSqt4.png",
-       alt="Architecture diagram showing DevTools page communicating with the
-       inspected window and the service worker. The service worker is shown
-       communicating with the content scripts and accessing extension APIs.
-       The DevTools page has access to the DevTools APIs, for example, creating panels.",
-       height="556", width="522" %}
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/kcLMpTY6qtez03TVSqt4.png",
+         alt="Architecture diagram showing DevTools page communicating with the
+         inspected window and the service worker. The service worker is shown
+         communicating with the content scripts and accessing extension APIs.
+         The DevTools page has access to the DevTools APIs, for example, creating panels.",
+         height="556", width="522" %}
+  <figcaption>DevTools extension architecture./figcaption>
+</figure>
 
 The DevTools-specific extension APIs include the following:
 
@@ -74,8 +77,11 @@ DevTools extension can add UI elements to the DevTools window:
   version of Chrome you're using and where the DevTools window is docked, your sidebar panes might
   look like the following example image:
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png", class="screenshot",
-    alt="DevTools window showing Elements panel and Styles sidebar pane.", height="302", width="770" %}
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png", class="screenshot",
+      alt="DevTools window showing Elements panel and Styles sidebar pane.", height="302", width="770" %}
+  <figcaption>DevTools window showing Elements panel and Styles sidebar pane.</figcaption>
+</figure>
 
 Each panel is its own HTML file, which can include other resources (JavaScript, CSS, images, and so
 on). To create a basic panel, use the following code:
