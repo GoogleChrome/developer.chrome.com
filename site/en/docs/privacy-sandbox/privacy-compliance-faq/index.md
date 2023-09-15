@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Privacy-related Compliance FAQs'
+title: 'Privacy-related compliance FAQs'
 subhead: >
    Answers to frequently asked questions about obligations, consent, and user controls.
 description: >
@@ -8,7 +8,7 @@ description: >
 date: 2023-09-11
 ---
 
-## Privacy-related Compliance FAQs for Privacy Sandbox Relevance and Measurement APIs
+## Privacy-related compliance FAQs for Privacy Sandbox Relevance and Measurement APIs
 
 Privacy Sandbox relevance and measurement APIs and updated user controls are
 now
