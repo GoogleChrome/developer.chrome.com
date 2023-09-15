@@ -13,7 +13,7 @@ To use most [extension APIs][api-ref] and features, you must declare your extens
 : Contains items from a list of [known strings](#permissions). Changes may trigger a [warning](#warnings).
 
 [`"optional_permissions"`][api-perms]
-: These permissions are granted by the user at runtime, instead of in advance. <!--should this be "instead of at install time"?-->
+: Granted by the user at runtime, instead of at install time.
 
 [`"content_scripts.matches"`][doc-cs-static]
 : Contains one or more [match patterns][doc-match] that allows content scripts to inject into one or more hosts. Changes may trigger a [warning](#warnings).
