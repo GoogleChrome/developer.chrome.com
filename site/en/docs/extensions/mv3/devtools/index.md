@@ -38,7 +38,7 @@ extension APIs, and can do the following:
 
 The DevTools page can't use most extensions APIs directly. Instead, it uses the same subset of
 the [`extension`][api-extension] and [`runtime`][api-runtime] APIs as content scripts do, and
-communicates with the service worker using [Message Passing][doc-message-passing]. For an
+communicates with the service worker using [message passing][doc-message-passing]. For an
 example, see [Inject a Content Script][header-injecting].
 
 ## Create a DevTools extension {: #creating }
