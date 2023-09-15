@@ -235,7 +235,7 @@ same context as the content scripts, so it can access the `setSelectedElement` m
 ### Get a reference panel's `window` {: #panel-window }
 
 To call `postMessage()` from a devtools panel, you'll need a reference to its `window` object. Get a
-panel's iframe window in <!--what does "get in" mean here? Is there a technical term we can use?--> from the the [`panel.onShown`][api-panels-onshown] event handler:
+panel's iframe window from the the [`panel.onShown`][api-panels-onshown] event handler:
 
 ```js
 onShown.addListener(function callback)
