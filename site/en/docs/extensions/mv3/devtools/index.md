@@ -410,7 +410,7 @@ var backgroundPageConnection = chrome.runtime.connect({
 
 ## DevTools extension examples
 
-Browse the source of these DevTools extension examples: <!--Does this mean that the examples on this page come from these links? Or that these links provide more examples? How is this section different from the "examples" section at the end?-->
+The examples on this page come from the following pages:
 
 - [Polymer Devtools Extension][gh-polymer-dt] - Uses many helpers running in the host page to query
   DOM/JS state to send back to the custom panel.
