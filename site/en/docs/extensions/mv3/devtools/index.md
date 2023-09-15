@@ -327,7 +327,7 @@ backgroundPageConnection.postMessage({
 ### Send messages from injected scripts to the DevTools page {: #evaluated-scripts-to-devtools }
 
 Code injected directly into the page without a content script, including by appending a `<script>`
-tag or using [`inspectedWindow.eval()`][api-inspectedwindow-eval], can't send messages to the
+tag or calling [`inspectedWindow.eval()`][api-inspectedwindow-eval], can't send messages to the
 DevTools page using [`runtime.sendMessage()`][api-runtime-sendmessage]. Instead, we recommend
 combining your injected script wtih a content script that can act as an intermediary, and using
 the [`window.postMessage()`][mdn-postmessage] method. The following example uses the background script
