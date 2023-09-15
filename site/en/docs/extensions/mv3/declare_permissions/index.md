@@ -154,12 +154,6 @@ for details.
 `"certificateProvider"`
 : Gives access to the <a href="/docs/extensions/reference/certificateProvider/">chrome.certificateProvider</a> API.
 
-`"clipboardRead"`
-: Allows use of `document.execCommand('paste')`.
-
-`"clipboardWrite"`
-: Allows use of `document.execCommand('copy')`.
-
 `"contentSettings"`
 : Gives access to the <a href="/docs/extensions/reference/contentSettings/">chrome.contentSettings</a> API.
 
