@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Extending DevTools"
 seoTitle: "Extending DevTools with Chrome Extensions"
 date: 2012-09-17
-updated: 2023-07-12
+updated: 2023-09-15
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.
 ---
 
