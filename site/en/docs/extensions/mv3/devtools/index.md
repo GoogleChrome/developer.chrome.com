@@ -181,7 +181,7 @@ code in the context of the inspected page. You can invoke the `eval()` method fr
 panel, or sidebar pane.
 
 Caution: Use `eval()` only if you need access to the JavaScript content of an inspected page. Otherwise,
-we recommend using the [`scripting.executeScript()`][api-scripting-executescript] method run scripts. For
+we recommend using [`scripting.executeScript()`][api-scripting-executescript] to run scripts. For
 more information, see [`inspectedWindow`][api-inspectedwindow].
 
 By default, the expression is evaluated in the context of the main frame of the page.
