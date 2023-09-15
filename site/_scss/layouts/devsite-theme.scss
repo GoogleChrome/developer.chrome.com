@@ -1,6 +1,6 @@
 /* stylelint-disable */
 
-$CHROME_BLUE: #2283F8;
+$CHROME_BLUE: #006bee;
 $CHROME_GREEN: #4da949;
 $CHROME_RED: #ea3323;
 $CHROME_YELLOW: #f5b840;
@@ -11,7 +11,7 @@ $TEXT_PRIMARY_FONT_FAMILY: '"Google Sans", sans-serif';
 $TEXT_PRIMARY: #000;
 $TEXT_PRIMARY_PALEBLUE: #3a3a3a;
 $TEXT_SECONDARY: #5f6368;
-$TEXT_LINK: #3982f7;
+$TEXT_LINK: #006bee;
 $TEXT_BOLD_WEIGHT: 600;
 $TEXT_WEIGHT: 500;
 $TEXT_LETTER_SPACING: -0.03125rem;
@@ -143,6 +143,8 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
   --link-color: #{$TEXT_PRIMARY};
   --link-rgb-background: #{$BUTTON_BG};
   --link-visited-color: #{$TEXT_PRIMARY};
+  --rgb-button-overlay: #{$TEXT_LINK};
+  --devsite-link-color: #{$TEXT_LINK};;
 
 
   @media (max-width: 591px) {
