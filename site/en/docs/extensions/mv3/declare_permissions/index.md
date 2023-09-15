@@ -129,6 +129,12 @@ To detect whether the user has allowed access, you can call [`extension.isAllowe
 
 The following table lists the currently available permissions. See Permission warnings][doc-warning-table] for a list of permission warnings.
 
+`"accessibilityFeatures.modify"'
+: Lets extensions modify accessibility states when using the <a href="/docs/extensions/reference/accessibilityFeatures/"><code>chrome.accessibilityFeatures</code></a> API.
+
+`"accessibilityFeatures.read"'
+: Lets extensions read accessibility states when using the <a href="/docs/extensions/reference/accessibilityFeatures/"><code>chrome.accessibilityFeatures</code></a> API.
+
 `"activeTab"`
 : Gives temporary access to the active tab through a user gesture. See <a href="/docs/extensions/mv3/manifest/activeTab"><code>activeTab</code></a>
 for details.
