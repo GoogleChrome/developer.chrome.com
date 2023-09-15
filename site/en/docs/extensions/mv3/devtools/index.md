@@ -22,7 +22,7 @@ The DevTools-specific extension APIs include the following:
 - [`devtools.inspectedWindow`][api-inspectedwindow]
 - [`devtools.network`][api-network]
 - [`devtools.panels`][api-panels]
-- [`devtools.recorder` (preview feature)][api-recorder]
+- [`devtools.recorder`][api-recorder]
 
 ## The DevTools page {: #devtools-page }
 
