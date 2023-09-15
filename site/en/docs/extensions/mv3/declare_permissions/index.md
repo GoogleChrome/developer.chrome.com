@@ -244,18 +244,6 @@ for details.
 `"idle"`
 : Gives access to the <a href="/docs/extensions/reference/idle/">chrome.idle</a> API.
 
-<!-- No corresponding reference entry
-    `"idltest"`
-    : Gives access to the <a href="/docs/extensions/reference/idltest/">chrome.idltest</a> API.
-    
-    `"login"`
-    : Gives access to the <a href="/docs/extensions/reference/login/">chrome.login</a> API.
-
-    `"loginScreenStorage"`
-    : Gives access to the <a href="/docs/extensions/reference/loginScreenStorage/">chrome.loginScreenStorage</a> API.
--->
-<!--Same question: why are these commented?-->
-
 `"loginState"`
 : Gives access to the <a href="/docs/extensions/reference/loginState/">chrome.loginState</a> API.
 
