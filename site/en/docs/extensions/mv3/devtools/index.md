@@ -180,9 +180,12 @@ You can use the [`inspectedWindow.eval()`][api-inspectedwindow-eval] method to e
 code in the context of the inspected page. You can invoke the `eval()` method from a DevTools page,
 panel, or sidebar pane.
 
-Caution: Use `eval()` only if you need access to the JavaScript content of an inspected page. Otherwise,
-we recommend using [`scripting.executeScript()`][api-scripting-executescript] to run scripts. For
-more information, see [`inspectedWindow`][api-inspectedwindow].
+{% Aside 'caution' %}
+Use `eval()` only if you need access to the JavaScript content of an inspected page. Otherwise,
+we recommend using the [`scripting.executeScript()`][api-scripting-executescript] method to run scripts.
+For more information, see [`inspectedWindow`][api-inspectedwindow].
+{% endAside %}
+
 
 By default, the expression is evaluated in the context of the main frame of the page.
 `inspectedWindow.eval()` uses the same script execution context and options as code
