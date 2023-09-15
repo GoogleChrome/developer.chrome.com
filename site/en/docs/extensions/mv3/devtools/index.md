@@ -62,8 +62,6 @@ The members of the `chrome.devtools` API are available only to the pages loaded 
 window while that window is open. Content scripts and other extension pages don't have access
 to these APIs.
 
-For information on additional experimental DevTools APIs, refer to [chrome.experimental.\*
-APIs][api-index].
 
 ## DevTools UI elements: panels and sidebar panes {: #devtools-ui }
 
