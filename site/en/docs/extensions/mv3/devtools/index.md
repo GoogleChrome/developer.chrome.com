@@ -112,7 +112,7 @@ There are several ways to display content in a sidebar pane:
 
 - HTML content: Call [`setPage()`][api-panels-setpane] to specify an HTML page to display in the pane.
 - JSON data: Pass a JSON object to [`setObject()`][api-panels-setobject].
-- JavaScript expression: Pass an expression to [`setExpression`][api-panels-setexpression]. DevTools
+- JavaScript expression: Pass an expression to [`setExpression()`][api-panels-setexpression]. DevTools
   evaluates the expression in the context of the inspected page, then displays the return value.
 
 For both `setObject` and `setExpression`, the pane displays the value as it would appear in the
