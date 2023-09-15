@@ -129,10 +129,10 @@ To detect whether the user has allowed access, you can call [`extension.isAllowe
 
 Here's the list of permissions. See [Permission warnings][doc-warning-table] for a list of permission warnings.
 
-`"accessibilityFeatures.modify"'
+`"accessibilityFeatures.modify"`
 : Lets extensions modify accessibility states when using the <a href="/docs/extensions/reference/accessibilityFeatures/"><code>chrome.accessibilityFeatures</code></a> API.
 
-`"accessibilityFeatures.read"'
+`"accessibilityFeatures.read"`
 : Lets extensions read accessibility states when using the <a href="/docs/extensions/reference/accessibilityFeatures/"><code>chrome.accessibilityFeatures</code></a> API.
 
 `"activeTab"`
