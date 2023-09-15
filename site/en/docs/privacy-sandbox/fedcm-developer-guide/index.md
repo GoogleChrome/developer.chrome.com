@@ -4,12 +4,12 @@ title: 'Federated Credential Management API: developer guide'
 subhead: >
   Learn how to use FedCM for for privacy-preserving identity federation.
 date: 2022-04-25
-updated: 2023-07-10
+updated: 2023-09-18
 authors:
   - agektmr
 ---
 
-[FedCM (Federated Credential Management)](docs/privacy-sandbox/fedcm) is a proposal for a privacy-preserving
+[FedCM (Federated Credential Management)](docs/privacy-sandbox/fedcm) is a privacy-preserving
 approach to federated identity services (such as "Sign in with...")  where
 users can log into sites without sharing their personal information with the
 identity service or the site.

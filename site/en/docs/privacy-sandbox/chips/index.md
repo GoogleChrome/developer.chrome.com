@@ -7,7 +7,7 @@ description: >
   Allow developers to opt-in a cookie to "partitioned" storage, with a separate cookie jar per top-level site.
   Partitioned cookies can be set by a third-party service, but only read within the context of the top-level site where they were initially set.
 date: 2022-02-15
-updated: 2023-08-15
+updated: 2023-09-18
 authors:
   - mihajlija
 tags:
@@ -157,7 +157,7 @@ If you have a use case that relies on a shared cookie partition across sites wit
 
 ### Security design
 
-To encourage good security practices, CHIPS proposes cookies only be set by and sent over secure protocols.
+To encourage good security practices, with CHIPS, cookies are only set by and sent over secure protocols.
 
 Partitioned cookies must be set with `Secure`.
 
@@ -296,5 +296,5 @@ To reset the demo, clear all cookies for the site:
 
 ## Resources
 
-+   **GitHub**: Read the [proposal](https://github.com/WICG/CHIPS), [raise questions and follow the discussion](https://github.com/WICG/CHIPS/issues).
++   **GitHub**: Read the [explainer](https://github.com/WICG/CHIPS), [raise questions and follow the discussion](https://github.com/WICG/CHIPS/issues).
 +   **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).

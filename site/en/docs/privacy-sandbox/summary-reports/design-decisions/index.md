@@ -17,11 +17,13 @@ tags:
   - privacy
 ---
 
+{% Partial 'privacy-sandbox/ot-end.njk' %}
+
 ## About this document
 
 When you read this article, you will:
 
-- Understand what strategies to create before generating summary reports in the origin trial.
+- Understand what strategies to create before generating summary reports.
 - Be introduced to [Noise Lab](https://goo.gle/noise-lab), a tool that helps grasp the effects of various noise parameters, and that enables quick exploration and assessment of various noise management strategies.
 
 <figure>

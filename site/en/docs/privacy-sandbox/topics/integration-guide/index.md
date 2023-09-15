@@ -10,6 +10,8 @@ authors:
   - samdutton
 ---
 
+{% Partial 'privacy-sandbox/ot-end.njk' %}
+
 {% Aside %}
 We'd love to know how this article could be improved!
 
@@ -39,7 +41,6 @@ The first step is to familiarize yourself with the Topics API and services.
 ## Build and test locally
 
 This section describes how to try out the Topics API as an individual developer. 
-[Participate in the origin trial](#participate-in-the-origin-trial) explains how to test at scale with your users by taking part in the origin trial.
 
 1. Local testing and deployment (Estimated time: around 2 days)
     1. Enable the API with your local browser from the command line with [feature flags](/docs/privacy-sandbox/topics/#feature-flags). Test the [header](https://topics-fetch-demo.glitch.me/) and [JavaScript API](https://topics-demo.glitch.me/) demos to see Topics in action ([walkthrough video](https://www.youtube.com/watch?v=hEBzWuXjeTQ)).
@@ -129,7 +130,7 @@ There are two ways to observe and access the topics for a user. You can use
 * The JavaScript API from within an iframe:
     * Adding an iframe on target websites (publisher's websites) that contains JavaScript code calling the Topics API using `document.browsingTopics()`.
 * Headers option:
-    * Fetch **(which is recommended)** or XHR (**not recommended** and only available during origin trial):
+    * Fetch **(which is recommended)** or XHR (**not recommended** and was only available during the  completed origin trial):
         * You can access topics from the `Sec-Browsing-Topics` header in requests to the ad tech back end. This is the most performant option (low latency to observe topics of one specific user).
     * Using an iframe tag with the `browsingtopics` attribute:
         * You can add an iframe with a `browsingtopics` attribute and Chrome will include topics (observed for the eTLD+1  of the iframe) in the `Sec-Browsing-Topics` header on the request for the iframe.

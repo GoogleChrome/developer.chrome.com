@@ -6,7 +6,7 @@ subhead: >
 description: >
   The Protected Audience API is a Privacy Sandbox API to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-03-31
-updated: 2022-08-12
+updated: 2022-09-18
 authors:
   - samdutton
 ---

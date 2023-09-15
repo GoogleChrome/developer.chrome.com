@@ -8,7 +8,7 @@ description: >
 authors:
  - agektmr
 date: 2022-11-09
-updated: 2023-07-10
+updated: 2023-09-18
 ---
 
 The Federated Credential Management API is

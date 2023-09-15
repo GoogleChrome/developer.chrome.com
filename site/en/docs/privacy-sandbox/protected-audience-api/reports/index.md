@@ -18,7 +18,7 @@ Protected Audience API auction wins, as used in the current iteration of the exp
 Protected Audience API.
 
 Read the [developer guide](/docs/privacy-sandbox/protected-audience-api) for the full life
-cycle of the Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
+cycle of the Protected Audience API, and refer to the Protected Audience API explainer for an in-depth discussion of
 [event-level reporting (temporary)](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now).
 
 Not a developer? Refer to the [Protected Audience API API overview](/docs/privacy-sandbox/protected-audience).

@@ -4,7 +4,7 @@ title: 'Controlling browser features with Permissions Policy'
 subhead: >
   Manage how your page and third-party iframes on your page have access to browser features.
 description: >
-  A proposal to manage how your page and embedded third-party iframes access to browser features.
+  Manage how your page and embedded third-party iframes access to browser features.
 date: 2022-04-20
 authors:
   - kevinkiklee
@@ -27,7 +27,7 @@ the developer can be certain that no third party will gain access to the user's
 geolocation. 
 
 {% Aside %}
-[Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox/) is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
+[Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox/) is a series of proposals and APIs to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
 
 Privacy Sandbox APIs, such as [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) and the [Topics API](/docs/privacy-sandbox/topics/), are managed by Permissions Policy in the same way that features like `geolocation` and `camera` are managed. For a list of web platform APIs that rely on Permissions Policy, see the [feature list](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md). Note, this list may not be current.
 {% endAside %}

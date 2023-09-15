@@ -8,7 +8,7 @@ description: >
   Measure when an ad click or view leads to a conversion, such as a
   purchase on an advertiser site.
 date: 2021-05-18
-updated: 2023-03-14
+updated: 2023-09-18
 authors:
   - maudn
   - alexandrawhite

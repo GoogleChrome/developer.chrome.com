@@ -6,11 +6,13 @@ subhead: >
   third-party cookies or other tracking mechanisms.
 description: "What's in it, what's it for, and how to get involved."
 date: 2021-05-18
-updated: 2023-02-27
+updated: 2023-09-18
 authors:
   - samdutton
   - alexandrawhite
 ---
+
+{% Partial 'privacy-sandbox/ot-end.njk' %}
 
 The Privacy Sandbox initiative aims to create technologies that both
 protect people's privacy online and give companies and developers tools to
@@ -144,17 +146,6 @@ You can
 then [run it with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 to allow access to APIs that are in the process of implementation.
 
-{% Aside 'caution' %}  
-Chrome origin trials are designed to work for Chrome users. Don't rely on Chrome
-origin trial tokens to allow trial features in other browsers, including Chromium,
-and other Chromium-based browsers.
-
-For more detailed information, see
-[Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
-
-Chrome on iOS and iPadOS does not support Chrome origin trials.
-{% endAside%}  
-
 ## When will the APIs be implemented?
 
 The [timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)
@@ -177,14 +168,6 @@ may be made available for testing.
    within the more accessible `chrome://flags` interface.
    `chrome://flags#enable-experimental-web-platform-features` bundles together
    current experimental features.
--  **For your users, in an origin trial**  
-   Once an iteration of a new feature is code-complete and relatively stable,
-   an [origin trial](/docs/web-platform/origin-trials/) may be provided to allow
-   individual sites to turn on the feature for Chrome users on their site. If
-   an [origin trial](/docs/web-platform/origin-trials/) is available for an API you
-   want to test with your users,
-   [register for the origin trial](/origintrials/#/trials/active) and provide
-   a valid trial token with every page load.
 -  **For users of early Chrome releases**  
    When a feature is approved to ship in a given release, it will progress
    through each [Chrome release channel](/docs/web-platform/chrome-release-channels/),
@@ -192,9 +175,9 @@ may be made available for testing.
    be turned on by default for all users of those channels.
 
 {% Aside 'caution' %}  
-Chrome offers users the ability to opt-out of Privacy Sandbox trials in
+Chrome offers users the ability to opt-out of Privacy Sandbox APIs in
 browser settings. Users who opt-out will not have Privacy Sandbox features
-turned on, even on pages which provide a valid origin trial token.  
+turned on.  
 {% endAside%}  
 
 ## Will `SameSite` become irrelevant after third-party cookies are deprecated?

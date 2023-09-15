@@ -40,10 +40,6 @@ You should read this article if:
    system architect, or data scientist) who will be setting up experiments with
    this API and Aggregation Service environment.
 
-{% Aside %}
-Right now, publishers don't have to take any action with this API. If this changes, this article will be updated accordingly.
-{% endAside %}
-
 In this article, you'll read a high-level, end-to-end explanation of how the
 services work for the Attribution Reporting API. If you're a technical
 practitioner, you can
