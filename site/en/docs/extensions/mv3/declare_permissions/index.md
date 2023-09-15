@@ -22,7 +22,7 @@ To use most [extension APIs][api-ref] and features, you must declare your extens
 : Contains one or more [match patterns][doc-match] that give access to one or more hosts. Changes may trigger a [warning](#warnings).
 
 `"optional_host_permissions"`
-: These host permissions are granted by the user at runtime, instead of at install time.
+: Granted by the user at runtime, instead of at install time.
 
 Permissions help to limit damage if your extension is compromised by malware. Some permission warning are displayed to users for their consent before
 installation or at runtime, as detailed in [Permission with warnings](#warnings).
