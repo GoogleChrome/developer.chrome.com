@@ -240,7 +240,7 @@ for details.
 
 `"geolocation"`
 :Allows the extension to use the <a
-          href="https://dev.w3.org/geo/api/spec-source.html">geolocation API</a> without prompting the user for permission.
+          href="https://developer.mozilla.org/docs/Web/API/Geolocation_API">geolocation API</a> without prompting the user for permission.
 
 `"history"`
 :Gives access to the <a href="/docs/extensions/reference/history/">chrome.history</a> API.
