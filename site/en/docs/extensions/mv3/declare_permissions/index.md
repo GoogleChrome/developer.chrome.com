@@ -140,7 +140,7 @@ Here's the list of permissions. See [Permission warnings][doc-warning-table] for
 for details.
 
 `"alarms"`
-: Gives access to the <a href="/docs/extensions/reference/alarms">chrome.alarms</a> API.
+: Gives access to the <a href="/docs/extensions/reference/alarms"><code>chrome.alarms</code></a> API.
 
 `"background"`
 : Makes Chrome start up early (as soon as the user logs into their computer, before they launch Chrome), and shut down late (even after its last window is closed, until the user explicitly quits Chrome).
