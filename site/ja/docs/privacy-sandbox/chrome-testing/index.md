@@ -71,7 +71,7 @@ Chromium で出荷されるすべての機能と同様に、[Blink 開発プロ�
 
 {% endAside %}
 
-### Accessing the `Sec-Cookie-Deprecation` HTTP header
+### `Sec-Cookie-Deprecation` HTTP ヘッダーへのアクセス
 
 `Sec-Cookie-Deprecation` リクエストヘッダーを受信するには、サイトはまず、`receive-cookie-deprecation` Cookie を設定する必要があります。この Cookie は <code>[Partitioned attribute](/docs/privacy-sandbox/chips/)</code> を使用する必要があります。つまり、ヘッダーを受信するためのオプトインをトップレベルサイトごとに行う必要があるということです。
 
@@ -89,11 +89,11 @@ Set-Cookie: receive-cookie-deprecation=1; Secure; HttpOnly; Path=/; SameSite=Non
 Sec-Cookie-Deprecation: example_label_1
 ```
 
-If the browser is not part of a group, no header will be sent.
+ブラウザがグループに属していない場合、ヘッダーは送信されません。
 
 ラベルは Cookie の存在に関連付けられているため、Cookie が削除されるとラベルも送信されなくなります。`Partitioned` 属性は、サードパーティ Cookie が完全に廃止になった後も継続して使用することを目的としているため、サードパーティ Cookie がブロックされるときに `Partitioned` Cookie が設定される可能性があります。
 
-### Accessing the cookieDeprecationLabel JavaScript API
+### cookieDeprecationLabel JavaScript API へのアクセス
 
 `Cookie-Deprecation` 値には、`navigator.cookieDeprecationLabel.getValue()` JavaScript API を介してアクセスすることもできます。これにより、該当するグループラベルを含む文字列に解決される Promise が返されます。たとえば、ブラウザが `example_label_1` グループに属していた場合、以下のようになります。
 
@@ -112,7 +112,7 @@ if ('cookieDeprecationLabel' in navigator) {
 
 JavaScript API は `receive-cookie-deprecation` Cookie の存在に関係なく呼び出すことができます。
 
-## Feedback
+## フィードバック
 
 ウェブエコシステム全体の多様な関係者からのフィードバックは、プライバシーサンドボックスイニシアチブにとって非常に重要です。専用の[フィードバックセクション](/docs/privacy-sandbox/feedback/)には、フォローしたりディスカッションに参加したりできる既存の公開チャンネルの概要と、いつでも Chrome チームに直接連絡できるフィードバックフォームが用意されています。
 
