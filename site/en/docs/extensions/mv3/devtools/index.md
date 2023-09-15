@@ -37,7 +37,7 @@ extension APIs, and can do the following:
 - Get information about the inspected window and evaluate code in the inspected window using the
   [`devtools.inspectedWindow`][api-inspectedwindow] APIs.
 - Get information about network requests using the [`devtools.network`][api-network] APIs.
-- Extend the [Recorder panel](/docs/devtools/recorder/) using the [`devtools.recorder`][api-recorder] APIs (preview feature).
+- Extend the [Recorder panel](/docs/devtools/recorder/) using the [`devtools.recorder`][api-recorder] APIs.
 
 The DevTools page can't use most extensions APIs directly. Instead, it uses the same subset of
 the [`extension`][api-extension] and [`runtime`][api-runtime] APIs as content scripts do, and
