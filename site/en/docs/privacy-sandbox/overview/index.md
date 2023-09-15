@@ -52,12 +52,12 @@ Several key proposals are listed below.
 
 ### Strengthen cross-site privacy boundaries
 
-* [**CHIPS**](/docs/privacy-sandbox/chips/): Allow developers to opt-in a
+* [**CHIPS**](/docs/privacy-sandbox/chips/) (released): Allow developers to opt-in a
   cookie to partitioned storage, with a separate cookie jar per top-level site.
-* [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): Allow related
+* [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets) (released): Allow related
   domain names owned by the same entity to declare themselves as belonging to
   the same first party.
-* [**Shared Storage**](/docs/privacy-sandbox/shared-storage/): Create a
+* [**Shared Storage**](/docs/privacy-sandbox/shared-storage/) (released): Create a
   general-purpose API which allows sites to store and access unpartitioned
   cross-site data. This data must be read in a secure environment to prevent leakage.
 * [**Storage Partitioning**](https://github.com/privacycg/storage-partitioning):
@@ -65,23 +65,23 @@ Several key proposals are listed below.
   such as `localStorage` or cookies, to be double-keyed: by the top-level site
   as well as the origin of the resource being loaded, rather than a single
   origin or site.
-* [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame): Securely embed
+* [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame) (released): Securely embed
   content onto a page without sharing cross-site data.
 * [**Network State Partitioning**](https://github.com/MattMenke2/Explainer---Partition-Network-State):
   Prevent browser network resources being shared across first-party contexts,
   by ensuring that every request has a network partition key that must match in
   order for resources to be reused.
-* [**Federated Credential Management (FedCM)**](/docs/privacy-sandbox/fedcm/):
+* [**Federated Credential Management (FedCM)**](/docs/privacy-sandbox/fedcm/) (released):
   Support federated identity without sharing the user's email address or other
   identifying information with a third-party service or website, unless the
   user explicitly agrees to do so.
 
 ### Show relevant content and ads
 
-* [**Topics API**](/docs/privacy-sandbox/topics): Enable interest-based
+* [**Topics API**](/docs/privacy-sandbox/topics) (released): Enable interest-based
   advertising without use of third-party cookies or tracking user behavior
   across sites.
-* [**Protected Audience API**](/docs/privacy-sandbox/protected-audience): Ad selection to serve remarketing
+* [**Protected Audience API**](/docs/privacy-sandbox/protected-audience) (released): Ad selection to serve remarketing
   and custom audience use cases, designed so that it cannot be used by third
   parties to track user browsing behavior across sites. The Protected Audience API is the first
   experiment to be implemented in Chromium from the
@@ -89,15 +89,15 @@ Several key proposals are listed below.
 
 ### Measure digital ads
 
-* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting):
+* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting) (released):
   Correlate ad clicks or ad views with conversions. Ad techs can generate
   event-level or [summary reports](/docs/privacy-sandbox/summary-reports).
-* [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/):
+* [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/) (released):
   Generate noisy summary reports with cross-site data.
 
 ### Prevent covert tracking
 
-* [**User-Agent reduction and User-Agent Client Hints**](/docs/privacy-sandbox/user-agent/):
+* [**User-Agent reduction and User-Agent Client Hints**](/docs/privacy-sandbox/user-agent/) (released):
   Limit passively shared browser data to reduce the volume of sensitive
   information which leads to fingerprinting. Client Hints allow developers to
   actively request only the information they need about the user's device or
@@ -112,7 +112,7 @@ Several key proposals are listed below.
 
 ### Fight spam and fraud on the web
 
-* [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens): Allow
+* [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens) (released): Allow
   websites to convey a limited amount of information from one browsing context
   to another (for example, across sites) to help combat fraud, without passive
   tracking.

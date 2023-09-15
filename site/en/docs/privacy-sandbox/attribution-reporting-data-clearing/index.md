@@ -6,7 +6,7 @@ subhead: >
 description: >
   How does user-initiated data clearing impact attribution reports? How does that compare with cookie-based measurement?
 date: 2021-10-19
-updated: 2021-10-19
+updated: 2023-09-18
 authors:
   - maudn
 ---
@@ -23,8 +23,8 @@ Instead, it works as follows: attribution reports that link an ad click with a c
 generated and stored on the user's device; later, the browser sends these reports to a predefined
 endpoint.
 
-Sites have experimented with the Attribution Reporting API in Chrome, via an [origin
-trial](/docs/privacy-sandbox/attribution-reporting/#status), which have now concluded.
+Sites have experimented with the Attribution Reporting API in Chrome, via an origin
+trial, which has now concluded.
 
 One of the insights
 provided by these early experiments is the impact of **user-initiated data clearing, such as browser history clearing,** on the data advertisers and ad tech companies get from the API. [Aggregate Chrome statistics](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)

@@ -35,9 +35,7 @@ You should read this article if:
 
 *  You're an ad tech or advertiser's **technical decision-maker**. You may work
    in operations, DevOps, data science, IT, marketing, or another role where
-   you make technical implementation decisions. You're wondering how the many
-   proposals for Attribution Reporting systems work together to build a tool
-   for privacy-preserving measurement.
+   you make technical implementation decisions. You're wondering how the APIs work for privacy-preserving measurement.
 *  You're a **technical practitioner** (such as a developer, system operator,
    system architect, or data scientist) who will be setting up experiments with
    this API and Aggregation Service environment.

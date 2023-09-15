@@ -4,7 +4,7 @@ title: '[Obsolete] Migration guide (Chrome 92): Conversion Measurement API to At
 subhead: >
   The Conversion Measurement API is changing in Chrome 92.
 date: 2021-06-22
-updated: 2021-06-22
+updated: 2023-09-18
 authors:
   - maudn
 ---
@@ -28,11 +28,6 @@ in the first months of 2021, the API implementation in Chrome is evolving. Here'
 What remains unchanged in Chrome 92 is the set of supported features: event-level reports, for clicks only.
 **Expect updates on this**. After this change, other updates and features will be released in future Chrome versions.
 
-{% Aside %}
-To receive updates on the origin trial for this API and upcoming features, subscribe to
-the [mailing list](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
-{% endAside %}
-
 ## When do these changes take effect?
 
 These changes take effect starting from [Chrome
@@ -45,7 +40,7 @@ Chrome 92 beta was released on June 3rd 2021.
 There are more changes to the API coming in future versions. They will use the new naming adopted in Chrome 92.
 {% endAside %}
 
-If you're running an origin trial or have implemented a demo for this API, you have two
+If you were running an origin trial or have implemented a demo for this API, you have two
 options:
 
 - **Option 1 (recommended)**: migrate your code now or in the following weeks, ideally before

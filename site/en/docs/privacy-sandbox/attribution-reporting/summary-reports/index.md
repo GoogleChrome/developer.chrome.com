@@ -98,7 +98,7 @@ They detail cross-site user behavior and
 by ad tech providers.
 {% endAside %}
 
-The proposed process to create a summary report is as follows:
+The process to create a summary report is as follows:
 
 1. Aggregatable reports are sent to the _reporting origin_, operated by an
    ad tech provider.
@@ -124,7 +124,7 @@ The proposed process to create a summary report is as follows:
 {% Img
    class="screehshot",
    src="image/VbsHyyQopiec0718rMq2kTE1hke2/hoRtQVV2b2MCXIKi1okK.jpg", 
-   alt="The proposed process to create a summary report is represented by encrypted reports sent to a collector server. The collector server sends the data to a secure aggregation service, which has a key to decrypt the data and create the summary report. The report is then sent back to the ad tech provider.",
+   alt="The process to create a summary report is represented by encrypted reports sent to a collector server. The collector server sends the data to a secure aggregation service, which has a key to decrypt the data and create the summary report. The report is then sent back to the ad tech provider.",
    width="800", height="168"
 %}
   <figcaption>
@@ -159,7 +159,7 @@ does—nothing more or less.
 {% endAside %}
 
 [The initial
-proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
+design](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
 asks each ad tech provider to operate their own instance of the aggregation
 service, in a trusted execution environment (TEE) deployed on a cloud service
 that supports needed security features.
@@ -272,7 +272,7 @@ taken:
 The ad tech can use the summary report to inform bidding and to offer
 reporting  to its own customers. A [JSON-encoded
 scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)
-is the proposed format for summary reports.
+is the format for summary reports.
 
 {% Partial 'privacy-sandbox/ar-engage.njk' %}
 

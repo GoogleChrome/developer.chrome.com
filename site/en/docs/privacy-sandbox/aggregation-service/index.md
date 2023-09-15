@@ -151,21 +151,9 @@ We recommend reading the corresponding experiment and participate guide for the 
 * [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-experiment/)
 * [Private Aggregation API](/docs/privacy-sandbox/private-aggregation-experiment/)
 
-### Local testing
+To test the Aggregation Service on AWS, see [these instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md#test-on-aws-with-support-for-encrypted-reports). 
 
-We've created a local testing tool to process aggregatable reports for Attribution Reporting and the Private Aggregation API. [Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md).
-
-
-### Test on AWS
-
-To test the Aggregation Service on AWS, [register for the origin trial](/origintrials/#/view_trial/771241436187197441) and complete the
-[onboarding form](https://forms.gle/EHoecersGKhpcLPNA).
-Once submitted, we'll contact you to verify your information and send the remaining instructions.
-
-To test on AWS, install [Terraform](https://www.terraform.io/) and the latest
-[AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-
-[Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md#test-on-aws-with-support-for-encrypted-reports).
+A [local testing tool](https://github.com/privacysandbox/aggregation-service/blob/main/README.md) is also available to process aggregatable reports for Attribution Reporting and the Private Aggregation API.
 
 ## Engage and share feedback
 

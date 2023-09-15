@@ -167,7 +167,7 @@ conversion data is too coarse)—is an area of active research.
 
 ### Other features
 
-Other features proposed for this API include:
+Other features of this API include:
 
 - [App-to-web attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md):
   see or click an ad in an app and convert on the web.
@@ -193,16 +193,16 @@ In a future without third-party cookies, this API would be combined with other p
 {% Details %}
 
 {% DetailsSummary 'h3' %}
-Differences between the API proposed by Chrome and the API proposed by WebKit
+Differences between the Attribution Reporting API and the API proposed by WebKit
 {% endDetailsSummary %}
 
 Though the two APIs are different, Chrome and WebKit are working together in the open to simplify
 the developer experience, for example by aligning on the attribute names and on the [JSON structure
 for reports](https://github.com/privacycg/private-click-measurement/issues/30).
 
-The feature set of the Attribution Reporting API proposed by Chrome is different from that of the
+The feature set of the Attribution Reporting API is different from that of the
 Private Click Measurement API proposed by Safari/WebKit.
-Most notably, with the Attribution Reporting API proposed by Chrome:
+Most notably, with the Attribution Reporting API:
 
 - View-through measurement is supported.
 - Event-level reports can be provided.
