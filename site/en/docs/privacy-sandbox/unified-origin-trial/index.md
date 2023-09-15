@@ -8,12 +8,14 @@ description: >
    Run unified experiments across Attribution Reporting, Protected Audience API,
    Topics, Fenced Frames, and Shared Storage.
 date: 2022-09-08
-updated: 2023-06-05
+updated: 2023-09-18
 authors:
   - anusmitaray
   - kevinkiklee
   - rowan_m
 ---
+
+{% Partial 'privacy-sandbox/ot-end.njk' %}
 
 The Privacy Sandbox includes a selection of proposals to enable advertising use
 cases without the need for cross-site tracking. [Origin

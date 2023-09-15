@@ -303,7 +303,7 @@ User-Agent string.
 
 *  **Origin trial**: [Share your feedback](https://github.com/miketaylr/user-agent-reduction/issues).
 *  **Demo**: Try our [demo of User-Agent reduction](https://uar-ot.glitch.me/).
-*  **GitHub**: Read the [UA-CH proposal](https://github.com/WICG/ua-client-hints),
+*  **GitHub**: Read the [UA-CH explainer](https://github.com/WICG/ua-client-hints),
    [raise questions and follow discussion](https://github.com/WICG/ua-client-hints/issues).
 *  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
