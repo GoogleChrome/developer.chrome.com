@@ -346,12 +346,6 @@ including <a href="/docs/extensions/reference/tabs">chrome.tabs</a> and <a href=
 `"ttsEngine"`
 : Gives access to the <a href="/docs/extensions/reference/ttsEngine/">chrome.ttsEngine</a> API.
 
-`"unlimitedStorage"`
-: Provides unlimited storage for clientside data to Web SQL Database and application caches <!--has http://crbug.com/58985 been fixed?-->. Without this permission, the extension is limited to 10 MB of local storage.
-<!--This permission applies only to Web SQL Database and application cache
-          (see issue <a href="http://crbug.com/58985">58985</a>). Also, it doesn't currently work with wildcard
-          subdomains such as <code>http://*.example.com</code>.-->
-
 `"vpnProvider"`
 : Gives access to the <a href="/docs/extensions/reference/vpnProvider/">chrome.vpnProvider</a> API.
 
