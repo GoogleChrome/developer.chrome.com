@@ -216,9 +216,6 @@ for details.
 `"enterprise.platformKeys"`
 : Gives access to the <a href="/docs/extensions/reference/enterprise_platformKeys/">chrome.enterprise.platformKeys</a> API.
 
-`"experimental"`
-: Allows the use of <a href="/docs/extensions/reference/#experimental_apis/">chrome.experimental.* APIs</a>.
-
 `"fileBrowserHandler"`
 : Gives access to the <a href="/docs/extensions/reference/fileBrowserHandler/">chrome.fileBrowserHandler</a> API.
 
