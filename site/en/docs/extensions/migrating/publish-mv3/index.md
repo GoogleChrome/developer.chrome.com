@@ -7,7 +7,9 @@ date: 2023-09-04
 # updated: 2023-05-10
 ---
 
-After [converting your extension][migration-checklist] to Manifest Version 3, it's time to release it on the [Chrome Web Store][cws]. There are a few ways to publish your new release gradually. This article discusses releasing a beta version and slowly increasing the number of testers, gradually rolling out to your user base, and monitoring your extension review status to quickly publish any fixes if needed.
+After [converting your extension][migration-checklist] to Manifest Version 3, it's time to release it on the [Chrome Web Store][cws]. Depending on how many adjustments you had to make to your app, it can be advisable to perform a step-wise roll out to make sure that your MV3 extension works as expected by testing it with a smaller audience first. 
+
+There are a few ways to publish your new release gradually. This article discusses recommended approaches such as releasing a beta version and slowly increasing the number of testers, gradually rolling out to your user base, and monitoring your extension review status to quickly publish any fixes if needed.
 
 ## Publish a beta testing version {: #publish-beta }
 
