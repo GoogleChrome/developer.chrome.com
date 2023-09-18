@@ -31,7 +31,7 @@ This generates network requests that you then respond to with a trigger registra
 ## Register a trigger to attribute a conversion
 
 Registering a trigger is similar to
-[registering an attribution source event](http://localhost:8080/docs/privacy-sandbox/attribution-reporting/register-attribution-source/). The [complete steps](#step-1-initiate-the-trigger-registration) are described later. Here's the summary:
+[registering an attribution source event](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/). The [complete steps](#step-1-initiate-the-trigger-registration) are described later. Here's the summary:
 
 1. **Initiate the trigger registration.** Use a pixel or a `fetch()` call to make
     a request.
