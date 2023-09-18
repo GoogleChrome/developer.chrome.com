@@ -5,7 +5,7 @@ subhead: >
    Answers to frequently asked questions about obligations, consent, and user controls.
 description: >
    Answers to frequently asked questions about obligations, consent, and user controls.
-date: 2023-09-11
+date: 2023-09-18
 ---
 
 ## Privacy-related compliance FAQs for Privacy Sandbox Relevance and Measurement APIs
