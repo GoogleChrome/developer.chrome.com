@@ -142,6 +142,9 @@ for details.
 `"alarms"`
 : Gives access to the <a href="/docs/extensions/reference/alarms"><code>chrome.alarms</code></a> API.
 
+`"audio"`
+: Gives access to the <a href="/docs/extensions/reference/audio"><code>chrome.audio</code></a> API.
+
 `"background"`
 : Makes Chrome start up early (as soon as the user logs into their computer, before they launch Chrome), and shut down late (even after its last window is closed, until the user explicitly quits Chrome).
 
