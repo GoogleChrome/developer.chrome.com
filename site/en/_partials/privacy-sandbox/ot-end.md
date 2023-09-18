@@ -1,3 +1,3 @@
  {% Aside 'important' %}
- The Privacy Sandbox Relevance and Measurement origin trial ends September 20, 2023 and the APIs are now available for 99% of Chrome users, so enrolling in the origin trial is no longer recommended.
+ The Privacy Sandbox Relevance and Measurement origin trial ended September 20, 2023 and the APIs are now available for 99% of Chrome users, so origin trial is now closed. To keep abreast of the percentage of users each API is enabled for, refer to the [Chrome status graphs](https://pscs.glitch.me/).
  {% endAside %}
