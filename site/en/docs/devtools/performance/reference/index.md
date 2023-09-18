@@ -476,7 +476,7 @@ outlines the selected frame in blue.
 Expand the **Network** section to view a waterfall of network requests that occurred during the
 recording.
 
-{% Img src="image/admin/ZkpNSWGs2csexM9Mo7GO.svg", alt="The Network section.", width="800", height="950" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/o92Wkwgu306BlRGTXuGJ.png", alt="A request selected in the Network sections, with the Summary tab open.", width="800", height="722" %}
 
 Requests are color-coded as follows:
 
@@ -485,13 +485,13 @@ Requests are color-coded as follows:
 - JS: Yellow
 - Images: Green
 
-Click on a request to view more information about it in the **Summary** tab. In the example above,
-the **Summary** tab is displaying more information about the blue request that's selected in the
-**Network** section.
+Click a request to view more information about it in the **Summary** tab. In the example above, the **Summary** tab is displaying information about the selected green request.
 
 A darker-blue square in the top-left of a request means it's a higher-priority request. A
-lighter-blue square means lower-priority. In the example above, the selected request is
-higher-priority, and the green one above it is lower-priority.
+lighter-blue square means lower-priority. In the example above, the selected request is of
+high priority, and the blue one above it is highest-priority.
+
+The **Summary** section includes **Initial Priority** and (final) **Priority** fields. If their values differ, the fetch priority of the request has changed during the recording. For more information, see [Optimizing resource loading with the Fetch Priority API](https://web.dev/fetch-priority/).
 
 In the example above, the request for `www.google.com` is represented by a line on the left, a bar in the
 middle with a dark portion and a light portion, and a line on the right. The screenshot below shows the
