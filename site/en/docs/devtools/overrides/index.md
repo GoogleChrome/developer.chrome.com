@@ -4,7 +4,7 @@ title: "Override web content and HTTP response headers locally"
 authors:
   - sofiayem
 date: 2023-04-12
-updated: 2023-08-21
+updated: 2023-09-20
 description: "Use local overrides to mock remote resources and keep the changes you make in DevTools across page loads."
 tags:
   - prototype-fixes
@@ -59,6 +59,10 @@ To quickly see all overrides, in the **Network** panel, right-click a request an
 To override web content:
 1. [Set up local overrides](#set-up).
 1. Make changes to files and save them in DevTools.
+
+{% Aside 'note' %}
+You can't override [source-mapped](/docs/devtools/javascript/source-maps/) files. If you right-click a request in the **Network** panel and select **Override content** DevTools shows you a dialog that takes you to the original source files instead.
+{% endAside %}
 
 For example, you can edit [files in **Sources**](/docs/devtools/javascript/reference/#edit) or [CSS in **Elements** > **Styles**](/docs/devtools/css/reference/#change-declaration), unless the CSS lives in [HTML files](#limitations).
 
