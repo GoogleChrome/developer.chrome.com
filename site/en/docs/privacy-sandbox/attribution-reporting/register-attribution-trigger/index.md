@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to register attribution triggers to count your conversions.
 date: 2022-12-15
-updated: 2023-06-29
+updated: 2023-09-06
 authors:
   - maudn
 ---
@@ -31,7 +31,7 @@ This generates network requests that you then respond to with a trigger registra
 ## Register a trigger to attribute a conversion
 
 Registering a trigger is similar to
-[registering an attribution source event](http://localhost:8080/docs/privacy-sandbox/attribution-reporting/register-attribution-source/). The [complete steps](#step-1-initiate-the-trigger-registration) are described later. Here's the summary:
+[registering an attribution source event](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/). The [complete steps](#step-1-initiate-the-trigger-registration) are described later. Here's the summary:
 
 1. **Initiate the trigger registration.** Use a pixel or a `fetch()` call to make
     a request.
@@ -52,7 +52,42 @@ Registering a trigger is similar to
     sources will be matched. When the header is received, the
     browser looks for matching sources and schedules a report.
     
+    **Example for event-level reports:**
 
+     ```json
+    {
+      "event_trigger_data": [{
+        "trigger_data": "[unsigned 64-bit integer]",
+        "priority": "[signed 64-bit integer]",
+        "deduplication_key": "[unsigned 64-bit integer]"
+      }]
+    }
+    ```
+
+    **Example for summary reports:**
+    
+    ```json
+    {
+      ... // existing fields, such as "event_trigger_data"
+
+      "aggregatable_trigger_data": [
+       {
+         "key_piece": "0x400",
+         "source_keys": ["campaignCounts"]
+       },
+       {
+         "key_piece": "0xA80",
+         "source_keys": ["geoValue", "nonMatchingKeyIdsAreIgnored"]
+       }
+      ],
+      "aggregatable_values": {
+        "campaignCounts": 32768,
+        "geoValue": 1664
+      }
+    }
+    ```
+
+<p>
     {% Aside %}
     When the browser receives an attribution trigger response from an attributionsrc URL on a given page, a local storage lookup is done to find a source that matches both the attributionsrc origin and that page URL's eTLD+1.
     <br>
@@ -129,14 +164,15 @@ is sufficient to register a trigger.</td>
 
 You can register a trigger using a pixel (`<img>` tag) or script tag.
 
-#### Using existing conversion pixels
+#### Using a new or existing conversion pixel
 
 ```html
-<img src="..." width="1" height="1">
+<img src="https://ad-tech.example/conversionpixel"
+     attributionsrc="https://adtech.example/attribution_trigger?purchase=13">
 ```
 
 {% Aside 'important' %}
-*   The origin for src must match the origin that performed source registration. 
+*   The origin for `src` must match the origin that performed the source registration. 
 *   An attribution can only be triggered on a page whose [eTLD+1](https://web.dev/same-site-same-origin/#%22schemeful-same-site%22) matches the site that was provided in destination upon source registration. 
 {% endAside %}
 
@@ -219,7 +255,7 @@ JSON.stringify({event_trigger_data: [{
       trigger_data: '412444888111012',
       // Optional
       priority: '1000000000000',
-	deduplication_key: '2345698765'
+      deduplication_key: '2345698765'
     }], debug_key: '1115698977'})
 ```
 

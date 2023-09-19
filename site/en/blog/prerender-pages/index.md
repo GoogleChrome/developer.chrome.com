@@ -7,7 +7,7 @@ description: |
 authors:
  - tunetheweb
 date: 2022-12-02
-updated: 2023-08-22
+updated: 2023-09-08
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -324,7 +324,11 @@ Analytics are used to measure website usage, for example using Google Analytics 
 
 Pages should only be prerendered when there is a high probability the page will be loaded by the user. This is why the Chrome address bar prerendering options only happen when there is such a high probability (greater than 80% of the time).
 
-However—particularly when using the Speculation Rules API—prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation.
+However—particularly when using the Speculation Rules API—prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation, as not all analytics providers may do this by default.
+
+{% Aside 'update' %}
+Google Analytics handles prerender by default as of September 2023.
+{% endAside %}
 
 This could be achieved by using a `Promise` which waits for the `prerenderingchange` event if a document is prerendering, or resolves immediately if it is now:
 

@@ -52,7 +52,7 @@ If you have several measurement goals&mdash;for example, purchase count and purc
 
 In this case, your scaling factors will be different for different aggregatable values, depending on the expected maximum of a given aggregatable value.
 
-Read details in the [complete example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/view#heading=h.duini3m1xb4y).
+Read details in the [Understanding aggregation keys](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/).
 
 {% Aside %}
 You may decide to allocate the budget equally between two measurement goals, or you can choose to prioritize different measurement goals by allocating more budget to certain goals and less to others.

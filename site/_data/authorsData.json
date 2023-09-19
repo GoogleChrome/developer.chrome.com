@@ -1866,6 +1866,10 @@
     "country": "FR",
     "github": "hemeryar"
   },
+    "paulrossman": {
+    "country": "US",
+    "github": "paulrossman"
+  },
   "nrosenthal": {
     "country": "IL",
     "github": "noamr",
@@ -1880,6 +1884,13 @@
     "glitch": "snugug",
     "homepage": "https://snugug.com",
     "image": "image/admin/5kuER6QRWs54zbYIJ4zS.jpg"
+  },
+  "xuezhoudai": {
+    "country": "CN",
+    "twitter": "imdaidr",
+    "github": "daidr",
+    "homepage": "https://im.daidr.me",
+    "image": "image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/40TNtORm0BtUUR2IeF8Z.jpg"
   },
   "hadrijau": {
     "country": "DE",

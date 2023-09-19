@@ -5,7 +5,7 @@ seoTitle: 'Chrome Extensions 101'
 subhead: 'Explore basic concepts of Chrome extension development.'
 description: 'Explore basic concepts of Chrome extension development.'
 date: 2022-10-04
-# updated: 2022-06-13
+updated: 2023-09-08
 ---
 
 This page describes what an extension is and provides a brief introduction to Chrome extension development. It also includes links to [beginner tutorials][section-tutorials].
@@ -29,6 +29,7 @@ Extensions are written with the same web technologies used to create web applica
 - [HTML][web-dev-html] is used as a content markup language.
 - [CSS][web-dev-css] is used for styling.
 - [JavaScript][mdn-js] is used for scripting and logic.
+- [Web platform APIs][web-apis] let you use virtually any feature available to a standard web page.
 
 Before moving forward, we recommend that you become familiar with these technologies.
 
@@ -185,6 +186,7 @@ extension and Chrome Web store documentation:
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager
+[web-apis]: https://developer.mozilla.org/docs/Web/API
 [web-dev-css]: https://web.dev/learn/css/
 [web-dev-html]: https://web.dev/learn/html/
 

@@ -32,7 +32,7 @@ find a list of the scoped Protected Audience API features and when they'll be su
     </tr>
   </thead>
   <tr>
-    <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now">Event-level auction win reporting</a>
+    <td><a href="#event-level-auction-win-reporting">Event-level auction win reporting</a>
    </td>
     <td>Now</td>
     <td><p>Supported until at least 2026.</p>
@@ -40,31 +40,31 @@ find a list of the scoped Protected Audience API features and when they'll be su
     </td>
   </tr>
   <tr>
-    <td><a href="/docs/privacy-sandbox/private-aggregation/#contributetohistogramonevent">Trigger-based aggregation</a>
+    <td><a href="#trigger-based-aggregate-reporting">Trigger-based aggregation</a>
    </td>
     <td>Now</td>
     <td><p>Available for testing in Chrome Canary/Dev M113+ and Beta/Stable M115+.</p>
     </td>
   </tr>
   <tr>
-    <td><a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment">Trusted Execution Environment (TEE)</a> usage for Key/Value service</td>
+    <td><a href="#trusted-execution-environment-usage-for-keyvalue-service">Trusted Execution Environment (TEE)</a> usage for Key/Value service</td>
     <td>Now</td>
     <td>Required no sooner than Q3 2025.</td>
   </tr>
   <tr>
-    <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced frames</a>
+    <td><a href="#fenced-frames">Fenced frames</a>
    </td>
     <td>Now
    </td>
     <td>Required no sooner than 2026.</td>
   </tr>
   <tr>
-    <td>Improved Protected Audience API + <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a> integration.</td>
+    <td><a href="#improved-protected-audience-api-and-attribution-reporting-integration">Improved Protected Audience API + Attribution Reporting integration</a></td>
     <td>2023 Q2</td>
     <td>Available for testing in Chrome Stable M112+.</td>
   </tr>
  <tr>
-    <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md">K-anonymity</a>
+    <td><a href="#k-anonymity">K-anonymity</a>
    </td>
     <td>Later in 2023 Q3
    </td>
@@ -72,7 +72,7 @@ find a list of the scoped Protected Audience API features and when they'll be su
    </td>
   </tr>
     <tr>
-    <td><a href="/blog/fledge-service-overview/#bidding-auction-service">Bidding and Auction services</a>
+    <td><a href="#bidding-and-auction-services">Bidding and Auction services</a>
    </td>
     <td>Targeted for testing in H2 2023.</td>
     <td>In development.</td>

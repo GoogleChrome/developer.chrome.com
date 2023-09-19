@@ -468,14 +468,31 @@ expression.
   {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iWsdoHnowdltMpnOfSJG.png", alt="Delete expression", width="20", height="11" %}
   to delete it.
 
-## Make a minified file readable {: #format }
+## Inspect and edit scripts {: #editor }
 
-Click **Format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JCyivmZxQVqpI4tj7Sil.svg", alt="Format.", width="20", height="20" %} to make a minified
-file human-readable.
+When you open a script in the [**Page**](/docs/devtools/javascript/reference/#file-tree) pane, DevTools shows you its contents in the **Editor** pane. In the **Editor** pane, you can browse and edit your code.
 
-{% Img src="image/admin/cttlkengXdMrdvwjh5S3.svg", alt="The Format button.", width="800", height="609" %}
+Additionally, you can [override](/docs/devtools/overrides/) the contents locally or create a [workspace](/docs/devtools/workspaces/) and save the changes you make in DevTools directly to your local sources.
 
-## Edit a script {: #edit }
+### Make a minified file readable {: #format }
+
+By default, the **Sources** panel pretty-prints minified files. When pretty-printed, the **Editor** may show a single long code line in multiple lines, with `-` to indicate that it's the line continuation.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vqpCILSqkHx4mJlliMf5.png", alt="A pretty-printed long code line shown in multiple lines, with '-' to indicate line continuation.", width="800", height="557" %}
+
+To see the minified filed as it was loaded, click `{ }` in the bottom left corner of the **Editor**.
+
+### Fold code blocks {: #fold-code-blocks }
+
+To fold a code block, hover over the line number in the left column and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TGwMBZWZWJlVmQhR2cHx.svg", alt="Collapse.", width="20", height="20" %} **Collapse**.
+
+To unfold the code block, click `{...}` next to it.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/A99gci0l8aXMmv0IHAGH.mp4", width="800", height="456", autoplay="false", controls="true", muted="true", class="screenshot"  %}
+
+To configure this behavior, see {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Sources**](/docs/devtools/settings/preferences/#sources).
+
+### Edit a script {: #edit }
 
 When fixing a bug, you often want to test out some changes to your JavaScript code. You don't need
 to make the changes in an external browser and then reload the page. You can edit your script in
@@ -492,7 +509,7 @@ To edit a script:
 
     The **Editor** pane on the screenshot above is outlined in blue.
 
-## Edit a paused function live {: #live-edit}
+### Edit a paused function live {: #live-edit}
 
 {% Aside %}
 **Note:** This feature is available from Chrome version 105.
@@ -520,7 +537,7 @@ Watch the video below to learn this workflow.
 
 In this example, the `addend1` and `addend2` variables initially have an incorrect `string` type. So, instead of adding numbers, the strings are concatenated. To fix it, the `parseInt()` functions are added during live editing.
 
-## Search and replace text in a script {: #search }
+### Search and replace text in a script {: #search }
 
 To search for text in a script:
 

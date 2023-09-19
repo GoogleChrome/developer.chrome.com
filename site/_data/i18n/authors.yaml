@@ -1521,6 +1521,11 @@ hemeryar:
     en: 'Arthur Hemery'
   description:
     en: 'Software Engineer, Google'
+paulrossman:
+  title:
+    en: 'Paul Rossman'
+  description:
+    en: 'Paul is a Technical Program Manager at Google'
 nrosenthal:
   title:
     en: 'Noam Rosenthal'
@@ -1531,6 +1536,12 @@ samrichard:
     en: 'Sam Richard'
   description:
     en: 'Developer Advocate, Google ChromeOS'
+xuezhoudai:
+  title:
+    en: 'Xuezhou Dai'
+    zh: '戴学舟'
+  description:
+    en: 'Summer of Code ''23 Contributor'
 hadrijau:
   title:
     en: 'Hadrien Jaubert'

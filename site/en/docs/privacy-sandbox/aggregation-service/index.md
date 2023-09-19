@@ -135,7 +135,7 @@ data by a scaling factor to reduce the impact of noise.
 
 To understand how noise is added, your controls, and the impact on your
 reports, refer to the
-[Contribution section of the Attribution Reporting strategy guide](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.683u7t2q1xk2). 
+[Contribution budget](/docs/privacy-sandbox/attribution-reporting/contribution-budget/) and [Scale up to contribution budget](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#scale-up-to-contribution-budget) in [Working with noise](/docs/privacy-sandbox/attribution-reporting/working-with-noise/).
 
 ## Generate summary reports
 
