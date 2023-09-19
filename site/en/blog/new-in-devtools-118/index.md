@@ -41,11 +41,11 @@ Chromium issues: [1471102](https://crbug.com/1471102), [1471103](https://crbug.c
 
 Continuing the stream of improvements in the [previous version](/blog/new-in-devtools-117/#overrides), [local overrides](/docs/devtools/overrides/) now do the following:
 
-- In **Sources** > **Page**, when you right-click a source mapped file and select **Override content**, DevTools will show a dialog that takes to the original source instead. Content overrides of source mapped files can't be overridden.
+- In **Sources** > **Page**, when you right-click a source-mapped file and select **Override content**, DevTools will show a dialog that takes you to the original source instead. Contents of source-mapped files can't be overridden.
 
-  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7pgnWI5CLcNBnv2H7aWT.png", alt="The dialog that takes you to the original code instead of the source mapped file.", width="800", height="458" %}
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7pgnWI5CLcNBnv2H7aWT.png", alt="The dialog that takes you to the original code instead of the source-mapped file.", width="800", height="458" %}
 
-- The **Network** panel get a new **Has overrides** column and a corresponding `has-overrides:[content|headers|yes|no]` filter. To see the **Has overrides** column, [right-click](/docs/devtools/network/reference/#columns) the table header and select it.
+- The **Network** panel gets a new **Has overrides** column and a corresponding `has-overrides:[content|headers|yes|no]` filter. To see the **Has overrides** column, [right-click](/docs/devtools/network/reference/#columns) the table header and select it.
 
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8YIC3pobJEwjA6xCdE4I.png", alt="Filtering for 'has-overrides:yes' value in the 'Has overrides' column.", width="800", height="512" %}
 
