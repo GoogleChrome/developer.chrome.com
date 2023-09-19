@@ -145,6 +145,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
   --link-visited-color: #{$TEXT_PRIMARY};
   --rgb-button-overlay: #{$TEXT_LINK};
   --devsite-link-color: #{$TEXT_LINK};;
+  --devsite-landing-row-max-width: 1280px;
 
 
   @media (max-width: 591px) {
@@ -152,7 +153,6 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     --devsite-buttons-margin: #{$BUTTON_MARGIN_MOBILE};
     --devsite-landing-group-padding: 0;
     --devsite-landing-row-padding: #{$ROW_PADDING_MOBILE};
-
   }
 
   a:not([class]){
@@ -303,7 +303,7 @@ $ROW_PADDING_MOBILE: 0 1.875rem;
     --devsite-button-padding: 0;
     --devsite-buttons-margin: auto;
     --devsite-buttons-padding: 1rem 0 0 0;
-    --devsite-h2-font: 500 2.15rem #{$TEXT_PRIMARY_FONT_FAMILY};
+    --devsite-h2-font: 500 1.8rem #{$TEXT_PRIMARY_FONT_FAMILY};
     --devsite-h2-margin: 1.6875rem auto auto;
     --devsite-item-gap: 0;
     --devsite-item-media-container-width: 11rem;
