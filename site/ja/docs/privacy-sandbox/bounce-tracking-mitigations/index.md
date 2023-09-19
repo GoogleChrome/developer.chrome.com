@@ -14,8 +14,8 @@ authors:
 
 このドキュメントでは、[バウンストラッキング対策に関する新しい提案](https://github.com/wanderview/bounce-tracking-mitigations)の概要を説明します。
 
-- [バウンス トラッキング対策の提案](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md)が[公開ディスカッション](https://github.com/wanderview/bounce-tracking-mitigations/issues)に進みました。
-- この提案は[どのブラウザにも実装されていません](https://chromestatus.com/feature/5705149616488448?context=myfeatures)。
+{% Partial 'privacy-sandbox/timeline/bounce-tracking.njk' %}
+
 - [プライバシーサンドボックスのタイムライン](http://privacysandbox.com/timeline)には、バウンストラッキング対策やその他のプライバシーサンドボックスの提案の実装タイミングに関する情報が提供されています。
 
 ## この提案が必要とされる理由 {: #proposal-reason}
