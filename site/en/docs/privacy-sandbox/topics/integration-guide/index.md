@@ -35,7 +35,7 @@ The first step is to familiarize yourself with the Topics API and services.
 1. Keep up with the [latest news](/docs/privacy-sandbox/topics/latest/) about the Topics API.
 1. Contribute to the conversation via [GitHub issues](https://github.com/patcg-individual-drafts/topics/issues) or [W3C calls](https://github.com/patcg-individual-drafts/topics/issues/115).
 1. If you encounter unfamiliar terms, review the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
-1. For more information on Chrome concepts, such as origin trials or Chrome flags, review the short videos and articles available at [goo.gle/cc](http://goo.gle/cc).
+1. For more information on Chrome concepts, such as Chrome flags, review the short videos and articles available at [goo.gle/cc](http://goo.gle/cc).
 
 
 ## Build and test locally
@@ -262,93 +262,6 @@ Topics data can be considered alongside other signals such as URLs, keywords, an
 As explained in [Maximize ad relevance after third-party cookies](/docs/privacy-sandbox/maximize-ad-relevance/), there are multiple approaches to leveraging Topics to serve relevant ads. Some of these involve using topics to build audiences, and others suggest using Topics as one signal among others to train machine learning models that will be used to infer additional interests of the audience or even to optimize bidding logic. 
 
 
-### Participate in the origin trial
-
-Now that you've deployed locally, the following section will guide you on how to deploy and test at scale with your users. To achieve this, you must register the eTLD+1 of your code for the [Privacy Sandbox Relevance and Measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/). The Topics API will be activated on any page that provides a valid trial token. You can check the [current status of this Origin Trial](/docs/privacy-sandbox/unified-origin-trial/#status) on the status page.
-
-
-[Origin trials](/docs/web-platform/origin-trials/) are a safe way to test new or experimental web platform features in Chrome. Anyone participating in the trial can test these features and provide feedback on usability and effectiveness. Typically these trials are limited in duration.
-
-#### Configure your site or app to participate in the origin trial
-
-The Privacy Sandbox Relevance and Measurement origin trial makes the trial APIs available for both first-party and third-party contexts. This means you can access the trial APIs in code running on your own eTLD+1, and also from JavaScript code from your eTLD+1 that is embedded on a third-party site.
-
-To allow usage in a third-party context, you must select **Third-party matching** when you register your eTLD+1 for the trial. 
-
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/6bRyXMiYLzRfKZ9R3Sxa.png", alt="Registration page for the Privacy Sandbox Relevance and Measurement origin trial.", width="800", height="512" %}
-<figcaption>The origin trial registration page with third-party matching.</figcaption>
-
-{% Aside 'caution' %}
-A third-party token must be provided in an external JavaScript file included via a `script` element; a third-party token won't work in a meta tag, inline script, or HTTP header.
-
-You can register multiple tokens for the same eTLD+1 if necessary—both first- and third-party. 
-{% endAside %}
-
-1. **[Register](/docs/privacy-sandbox/unified-origin-trial/#configure) yourself** on behalf of your company. This is recommended when you are going to implement and integrate the Topics API directly in your application (building the iframe, calling the Topics API). 
- 
-
-    In this case you will need to add an origin trial token to your Topics iframe, to help you decide which token you will need in your application. We recommend you use a First-Party Token with the JavaScript API.
-
-    The figure below shows part of the registration page. To register a first-party token, do not check any boxes in this section. 
-
-    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/mctvCWr97SWNylSRktwW.png", width="715", height="411", alt="Registration page for the Privacy Sandbox Relevance and Measurement origin trial." %}
-    <figcaption>The origin trial registration page for first-party token.</figcaption>
-
-    The following decision tree can help you decide which token you need. 
-
-    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cgWSN3o9pUqFq8ZtRB3e.png", alt="Decision tree to help you determine the type of token you need.", width="800", height="455" %}
-    <figcaption>Determining which token you need. 
-    </figcaption>
-
-1. **Register as a third party**. This is recommended when you are not implementing the Topics API directly into your application and are relying on another partner to test it for you. [Learn about third-party origin trials](/docs/web-platform/third-party-origin-trials/).
-
-
-#### Key recommendations
-
-1. Discuss with your team to make sure you have selected the correct origin trial option for your specific case.
-1. After registering, [embed the origin trial token](/docs/web-platform/origin-trials/#iframe) in your iframe code, not in the top-level site where the iframe is embedded.
-
-
-#### Provide a first-party origin trial token
-
-A first-party token can be provided in a meta tag, an HTTP header, or [programmatically](/docs/web-platform/origin-trials/#programmatic), for the eTLD+1 of the Topics caller.
-
-For example, here's how to do it in a page in an iframe that includes code (from the same eTLD+1) that calls `document.browsingTopics()`:
-
-```html
-<meta http-equiv="origin-trial" content="OT_FOR_<topics_caller_eTLD+1>">
-```
-
-#### Provide a third-party origin trial token
-
-To use Topics with fetch headers, a third-party origin trial token must be provided programmatically by the party making the fetch call, registered for the same origin as the call (and making sure the token is read before the call is made). Read more about how to [programmatically provide an origin trial token](/docs/web-platform/origin-trials/#programmatic). An example is shown here:
-
-
-```javascript
-{
-  // Programmatically inject <meta> tag for
-  // Third-party origin trial token
-  
-  const otMeta = document.createElement('meta');
-  otMeta.httpEquiv = 'origin-trial';
-  otMeta.content = 'YOUR TOKEN HERE';
-  document.head.append(otMeta);
-}
-
-fetch('<topics_caller_eTLD+1>', {browsingTopics: true})
-    .then((response) => {
-        // Process the response
- })
-```
-
-{% Aside %}
-Given that the origin trial token has to be generated for the same origin as the code, it is recommended   that publishers use a script owned by the ad tech. This way, multiple sites can include the same script (as shown in the example below) which provides a third-party token registered for the ad tech origin (https://adtech.com).
-{% endAside %}
-
-```html
-<script src="https://adtech.com/js/topics.js">
-```
-
 ## Build and deploy
 
 1. Collect topics by observing users in production—not scaled yet (Estimated time: approximately 1 week)
@@ -356,7 +269,6 @@ Given that the origin trial token has to be generated for the same origin as the
     1. Define the domain of the iframe.
     1. Build the JavaScript code, using the [demo app](https://topics-demo.glitch.me/) as a code reference — or implement the headers option.
     1. Deploy Topics to your controlled environment (some production sites).
-    1. Register for the origin trial.
     1. Add the Topics implementation to some target sites (no more than five sites at this time).
     1. Functional testing and validation.
 2. [Optional] Use Topics data as a contextual signal (with URLs, tags, etc.) (Estimated time: around 3 days).
@@ -365,7 +277,7 @@ Given that the origin trial token has to be generated for the same origin as the
 
 ### Deploy to some target sites
 
-Now that you have the code and you have registered for the origin trial, let's add it to some target sites for a first test and to make sure the API is stable and working in this controlled environment.
+Now that you have the code, let's add it to some target sites for a first test and to make sure the API is stable and working in this controlled environment.
 
 We recommend that you pick target websites that:
 
@@ -384,9 +296,9 @@ When calling the Topics API in this limited environment you can expect:
 * A list of zero to three topics, representing the interests of this user.
 * After seven days of observation you should receive:
     * One topic representing the interest of that user calculated from the navigation history of that week.
-        * One important detail: if not enough topics have been observed by you for a user for the Topics API to calculate the top five topics of that week, then Topics will add as many random topics as necessary to arrive at the total number of five. Find [more details in the API proposal](https://github.com/patcg-individual-drafts/topics#specific-details).
+        * One important detail: if not enough topics have been observed by you for a user for the Topics API to calculate the top five topics of that week, then Topics will add as many random topics as necessary to arrive at the total number of five. Find [more details about the API](https://github.com/patcg-individual-drafts/topics#specific-details).
 * A new topic entry replacing one of the three if you are calling it after four weeks of observation.
-    * This happens because the Topics API will be stable for the following weeks, not exposing too many of the user's interests. Find [more details in the API proposal](https://github.com/patcg-individual-drafts/topics#specific-details).
+    * This happens because the Topics API will be stable for the following weeks, not exposing too many of the user's interests. Find [more details on GitHub](https://github.com/patcg-individual-drafts/topics#specific-details).
 * If you have not observed topics for the user for more than three weeks, then the Topics API will return an empty array `[]` again.
 
 Measure the performance and metrics of your user experience.
@@ -404,27 +316,18 @@ Measure the performance and metrics of your user experience.
 <dd>
 If you are calling the Topics API within the first week of observing a user, then this is expected.
 </dd>
-<dt>
-<strong>I can't see much traffic from users with Topics API enabled visiting my site, what can I do?</strong>
-</dt>
-<dd>
-Make sure your origin trial configuration is correct. <a href="/docs/web-platform/origin-trial-troubleshooting/">Troubleshoot Chrome origin trials</a> provides a checklist to help fix origin trial problems.
 
-When using the JavaScript API from an iframe, a common mistake is to add an origin trial token to the target site (top level site). Instead, the origin trial token must be provided from your iframe.
-
-</dd>
 </dl>
 
 ### Key recommendations
 
 1. Test your front-end code to make sure your JavaScript is working as expected.
-    1. It's important to make sure your origin trial token is valid and can be used in your context. We highly recommend you use the Chrome DevTools (Application tab) to troubleshoot and validate that your origin trial token is being used correctly. More details can be found in the  [origin trials troubleshooting guide](/docs/web-platform/origin-trial-troubleshooting/#use-chrome-devtools-to-check-tokens).
+
 1. Test your back end to receive the topics results.
     1. Remember to make sure data types and back-end API parameters are configured correctly.
     1. Make sure your back end is configured to scale appropriately.
 1. From our experience, it is necessary to allow at least three weeks before starting to get more relevant topics results.
-1. Not all users will have Topics enabled during the origin trial: 
-    1. It depends on the device being selected to participate in this origin trial .
+1. Not all users will have Topics enabled:
     1. Users can explicitly disable the Topics API.
     1. Publisher's pages can control permissions policy. Refer to ([opt-out](/docs/privacy-sandbox/topics/#site-opt-out)) in the Topics API developer guide.
     1. Check [chromestatus.com](https://chromestatus.com/) for more details.
