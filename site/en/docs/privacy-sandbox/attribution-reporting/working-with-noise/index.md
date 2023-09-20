@@ -133,7 +133,7 @@ An important part of allocating budget between different keys is understanding h
 
 ### Experimenting with epsilon 
 
-Lower values of epsilon provide greater privacy protection.
+Ad techs can set epsilon to a value greater than 0 and up to and including 64. This range allows for flexible testing. Lower values of epsilon provide greater privacy protection. We recommend you start with epsilon=10.
 
 #### Recommendations to experiment
 
