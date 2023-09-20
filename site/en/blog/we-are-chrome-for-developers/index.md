@@ -1,7 +1,7 @@
 ---
 title: We are Chrome for Developers
 description: >
-  Celebrating Chrome 15th anniversary and our role as a trusted, helpful partner to developers.
+  Celebrating Chrome's 15th anniversary and our role as a trusted, helpful partner to developers.
 layout: 'layouts/blog-post.njk'
 date: 2023-09-20
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/qoyOvOMMXCv8LbhvSr2k.png'
