@@ -4,12 +4,14 @@ title: 'The Protected Audience API: experiment and participate'
 subhead: >
   Quick guide to implement and test the API. Set up privacy-preserving ad auctions to serve remarketing and custom audience use cases.
 description: >
-  The Protected Audience API is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
+  The Protected Audience API is a Privacy Sandbox API to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-03-31
-updated: 2022-08-12
+updated: 2022-09-18
 authors:
   - samdutton
 ---
+
+{% Partial 'privacy-sandbox/ot-end.njk' %}
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
@@ -17,7 +19,7 @@ authors:
 
 * If you're a developer or software engineer, the
   [Protected Audience API Developer Guide](/docs/privacy-sandbox/protected-audience-api/) provides an
-  in-depth technical reference for the proposal.
+  in-depth technical reference.
 * The [Protected Audience API overview](/docs/privacy-sandbox/protected-audience) offers a higher level
   explanation for those who work in advertiser and ad tech, who are new to the Privacy
   Sandbox.
@@ -25,10 +27,6 @@ authors:
 ## Try the API
 
 {% Aside 'caution' %}
-
-Not all users may be eligible to experience features from the Privacy Sandbox
-Relevance and Measurement origin trial, even on pages that provide a valid
-trial token.
 
 Read about [feature detection](/docs/privacy-sandbox/unified-origin-trial/#feature-detection)
 to learn how to determine if a feature is available before attempting to use it.
@@ -45,13 +43,12 @@ to learn how to determine if a feature is available before attempting to use it.
    * Review the [source code](https://github.com/GoogleChromeLabs/protected-audience-demo).
    * Watch the [Protected Audience demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) to learn how the demo code works and how to use Chrome DevTools for FLEDGE debugging.
 3. Experiment with the API.
-   * Sign up for the [origin trial](/docs/privacy-sandbox/protected-audience-api/#origin-trial)
-   * Try out FLEDGE for a single user by enabling
+   * Try out the Protected Audience API for a single user by enabling
      `chrome://flags/#privacy-sandbox-ads-apis` or by running Chrome from the
      command line with [Protected Audience feature flags](/docs/privacy-sandbox/protected-audience-api/#flags).
-   * [Troubleshoot Protected Audience worklets](/docs/privacy-sandbox/protected-audience-api/troubleshoot/) with Chrome DevTools. Learn how to debug FLEDGE bidding and auction code.
+   * [Troubleshoot Protected Audience worklets](/docs/privacy-sandbox/protected-audience-api/troubleshoot/) with Chrome DevTools. Learn how to debug Protected Audience bidding and auction code.
 4. Review the [Protected Audience status](/docs/privacy-sandbox/status/#fledge) for updates
-   on the implementation of the FLEDGE API. Review the
+   on the implementation of the Protected Audience API. Review the
    [pending Protected Audience capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/)
    for more details.
 
@@ -69,7 +66,7 @@ about **your implementation**, the **demo**, or the **documentation**:
 *  Raise an issue on the [demo code repo on
    GitHub](https://github.com/GoogleChromeLabs/protected-audience-demo).
 *  For more general questions about how to meet your **use cases** with the
-   API, [file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
+   API, [file an issue on the API repository](https://github.com/WICG/turtledove/issues/new).
 
 For bugs and issues with the implementation of the Protected Audience API in Chrome:
 
@@ -79,12 +76,12 @@ For bugs and issues with the implementation of the Protected Audience API in Chr
 
 ## Join the discussion
 
-Everyone is welcome to join in discussion of the Protected Audience API proposal. In 
+Everyone is welcome to join in discussion of the Protected Audience API. In 
 particular, if you're experimenting with the API, your feedback is essential.
 
 ### Discuss the API
 
-Like other Privacy Sandbox proposals, this API is documented and discussed publicly.
+Like other Privacy Sandbox APIs, this API is documented and discussed publicly.
 
 *  Read the [FLEDGE explainer on GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md).
 *  Join the conversation about [existing issues](https://github.com/WICG/turtledove/issues).
@@ -104,14 +101,14 @@ Discuss industry use cases in the
 
 [Privacy Sandbox feedback](/docs/privacy-sandbox/feedback/#fledge-api)
 explains how to provide other types of feedback, and how to engage in
-discussion of Privacy Sandbox proposals.
+discussion of Privacy Sandbox APIs.
 
 ## Get updates
 
 * To be notified of status changes in the API, join the
   [mailing list for developers](https://groups.google.com/u/3/a/chromium.org/g/fledge-api-announce).
 * To closely follow all ongoing discussions on the API, click the **Watch**
-  button on the [proposal page on GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md).
+  button on the [API page on GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md).
   This requires you have or
   [create a GitHub account](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
 * To get overall updates on the Privacy Sandbox, subscribe to the RSS feed

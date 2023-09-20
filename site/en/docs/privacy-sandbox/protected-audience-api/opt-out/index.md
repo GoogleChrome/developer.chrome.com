@@ -6,6 +6,7 @@ subhead: >
 description: >
   For developers and users who want to opt-out of the Protected Audience API.
 date: 2022-10-29
+updated: 2023-09-18
 authors:
   - samdutton
   - alexandrawhite
@@ -20,8 +21,8 @@ You can block access to the Protected Audience API, as a [site owner](#opt-out-s
 The Protected Audience API will eventually require sites to set a [Permissions Policy](/docs/privacy-sandbox/permissions-policy/)
 to allow the Protected Audience API functionality to be available. This will help ensure that
 arbitrary third parties can't use the API without a site's knowledge. However,
-to facilitate testing during [the first origin trial](/blog/privacy-sandbox-unified-origin-trial),
-this requirement is [waived by default](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy).
+to facilitate testing during the first origin trial, 
+this requirement was [waived by default](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#permissions-policy).
 
 Sites that would like to explicitly disable Protected Audience API functionality during the
 testing period can use the relevant Permissions Policy to block access. There

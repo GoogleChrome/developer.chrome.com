@@ -5,8 +5,8 @@ experimenting with the API, your feedback is essential.
 
 ### Discuss the API
 
-Like other Privacy Sandbox proposals, this API is documented and discussed publicly on GitHub. 
-[Read this proposal](https://github.com/WICG/conversion-measurement-api/).
+Like other Privacy Sandbox APIs, this API is documented and discussed publicly on GitHub. 
+[Read about the API](https://github.com/WICG/conversion-measurement-api/).
 
 *  Join the conversation on [existing  issues](https://github.com/WICG/conversion-measurement-api/issues).
 *  [Open a new Issue](https://github.com/WICG/conversion-measurement-api/issues/new) to ask

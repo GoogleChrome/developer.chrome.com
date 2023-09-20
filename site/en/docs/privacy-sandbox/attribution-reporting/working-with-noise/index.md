@@ -133,9 +133,7 @@ An important part of allocating budget between different keys is understanding h
 
 ### Experimenting with epsilon 
 
-Lower values of epsilon provide greater privacy protection.
-
-During the origin trial, ad tech companies can choose epsilon within a given range. We recommend you start with epsilon=10. Epsilon can be set to any value between 0 and 64: 0 < epsilon ≤ 64. This range is wide enough to allow for flexible testing.
+Ad techs can set epsilon to a value greater than 0 and up to and including 64. This range allows for flexible testing. Lower values of epsilon provide greater privacy protection. We recommend you start with epsilon=10.
 
 #### Recommendations to experiment
 

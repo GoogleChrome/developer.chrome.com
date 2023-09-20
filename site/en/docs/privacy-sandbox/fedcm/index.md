@@ -6,15 +6,15 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2023-02-27
+updated: 2023-09-18
 authors:
   - agektmr
 ---
 
 ## What is FedCM?
 
-FedCM (Federated Credential Management) is a proposal for a privacy-preserving
-approach to federated identity services (such as "Sign in with...")  where
+FedCM (Federated Credential Management) is a privacy-preserving
+approach to federated identity services (such as "Sign in with...") whereby
 users can log into sites without sharing their personal information with the
 identity service or the site.
 
@@ -323,7 +323,7 @@ To learn how to use the FedCM API check out the [FedCM developer guide](docs/pri
 ## Engage and share feedback {: #share-feedback}
 
 *  **GitHub**: Read the
-   [proposal](https://github.com/fedidcg/FedCM/blob/main/explainer.md), [raise
+   [explainer](https://github.com/fedidcg/FedCM/blob/main/explainer.md), [raise
    issues and follow discussion](https://github.com/fedidcg/FedCM/issues).
 *  **Developer support**: Ask questions and join discussions on the [Privacy
    Sandbox Developer Support

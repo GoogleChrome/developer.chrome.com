@@ -1,17 +1,18 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Why Chrome plans to ship the Attribution Reporting API'
+title: 'Why Chrome shipped the Attribution Reporting API'
 description: >
-  Understand why we plan to ship this API in the first half of 2023, while
+  Understand why we shipped this API while
   it is in incubation in the Web Incubator Community Group.
 date: 2022-12-15
+updated: 2023-09-18
 authors:
   - csharrison
   - cilvento
   - maudn
 ---
 
-The Attribution Reporting API is Chrome's proposal to support
+The Attribution Reporting API is Chrome's API to support
 [Attribution Reporting use cases](/docs/privacy-sandbox/attribution-reporting/#use-cases-and-features)
 while enhancing privacy for users. It's one of many proposals
 ([1](https://github.com/patcg-individual-drafts/ipa),
@@ -20,8 +21,7 @@ while enhancing privacy for users. It's one of many proposals
 [4](https://github.com/WICG/privacy-preserving-ads/blob/main/Bucketization.md),
 and more) attempting to solve the same problem.
 
-This article explains our plans to ship the Attribution Reporting API sometime
-in the first half of 2023, while it's still in incubation in the
+This article explains why we shipped the Attribution Reporting API while it's still in incubation in the
 [Web Incubator Community Group](https://github.com/WICG/attribution-reporting-api).
 Chrome is fully committed to participating in the relevant W3C processes, and
 Chrome teams are working in the
@@ -88,7 +88,7 @@ positive signals for Chrome's proposal. Our long-term goal remains an
 interoperable standard that browsers broadly support, and we are actively
 working to identify such a solution.
 
-If, after we ship the Attribution Reporting API, a different mutually-agreeable
+Now that we've shipped the Attribution Reporting API, if a different mutually-agreeable
 standard arrives, we would work with the ecosystem to support a thoughtful
 transition to the new API. At that point, we could explore deprecating the
 Attribution Reporting API. This would likely mean a significant period when
@@ -108,7 +108,7 @@ already in response to developer feedback (such as
 We welcome further feedback and look forward to continuing to work closely with
 the community.
 
-* **GitHub**: Read the [Attribution Reporting API proposal](https://github.com/WICG/attribution-reporting-api),
+* **GitHub**: Read the [Attribution Reporting API explainer](https://github.com/WICG/attribution-reporting-api),
   and [raise questions and follow discussion.](https://github.com/WICG/attribution-reporting-api)
 * **Developer support**: Ask questions and join discussions on the
   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).

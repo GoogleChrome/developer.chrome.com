@@ -5,11 +5,11 @@ subhead: >
   On-device ad auctions to serve remarketing and custom audiences,
   without cross-site third-party tracking.
 description: >
-  A proposal for on-device ad auctions to choose relevant ads from
+  An API for on-device ad auctions to choose relevant ads from
   websites a user has previously visited, designed so it cannot be
   used by third parties to track user browsing behavior across sites.
 date: 2022-01-27
-updated: 2022-08-23
+updated: 2022-09-18
 authors:
   - samdutton
   - kevinkiklee
@@ -30,7 +30,7 @@ concepts, but doesn't go into much technical detail.
   [how Protected Audience works](#overview).
 * If you're a **developer or software engineer**, the
   [Protected Audience API Developer Guide](/docs/privacy-sandbox/protected-audience-api) provides more
-  in-depth technical detail about the proposal. Read the
+  in-depth technical detail about the API. Read the
   [latest status of pending Protected Audience capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/).
 
 Refer to the [glossary](/docs/privacy-sandbox/glossary/) for terms used across
@@ -50,7 +50,7 @@ The Protected Audience API is the first experiment to be implemented in Chromium
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals. The
 difference between Protected Audience and TURTLEDOVE primarily pertain to separation of
 the on-device role of the ad buyer and seller. The sections below explain how
-FLEDGE works.
+the Protected Audience API works.
 
 ### Protected Audience API in one minute {: #overview}
 
@@ -137,16 +137,14 @@ Read the [developer guide](/docs/privacy-sandbox/protected-audience-api/) and
 to understand what features are currently available for testing in Chrome.
 
 Protected Audience features will be added over time, and we'll regularly update a list of
-which features are already implemented and what's still in progress. The Protected Audience API is
-currently in an [origin trial](/docs/privacy-sandbox/unified-origin-trial/).
+which features are already implemented and what's still in progress.
 
 {% endAside %}
 
 ## How can I try the Protected Audience API? {: #try-fledge}
 
 * The [Protected Audience API developer guide](/docs/privacy-sandbox/protected-audience-api) describes
-  how to use the API, how to test locally and how to participate in the
-  [relevence and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
+  how to use the API and how to test locally.
 
 * [protected-audience-demo.web.app](https://protected-audience-demo.web.app/) provides a
   walkthrough of a basic Protected Audience deployment across advertiser and publisher
@@ -527,7 +525,7 @@ We've written an  [API developer guide](/docs/privacy-sandbox/protected-audience
 
 ## Engage and share feedback
 
--  **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md),
+-  **GitHub**: Read the [explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md),
    [raise questions and follow discussion](https://github.com/WICG/turtledove/issues).
 -  **Announcements**: Join or view past announcements on the [Protected Audience API mailing list](https://groups.google.com/u/0/a/chromium.org/g/fledge-api-announce).
 -  **W3C**: Discuss industry use cases in the [Improving Web Advertising Business

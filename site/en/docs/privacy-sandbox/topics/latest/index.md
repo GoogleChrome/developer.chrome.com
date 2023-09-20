@@ -6,10 +6,13 @@ subhead: >
 description: >
  Updates and enhancements to the design and implementation of the API.
 date: 2023-01-24
+updated: 2023-09-18
 authors:
  - leeronisrael
  - joeytrotz
 ---
+
+{% Partial 'privacy-sandbox/ot-end.njk' %}
 
 {% Aside %}
 

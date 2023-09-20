@@ -6,6 +6,7 @@ subhead: >
 description: >
    Key concepts of the Private Aggregation API
 date: 2022-10-11
+updated: 2023-09-18
 authors:
    - kevinkiklee
 ---
@@ -155,7 +156,7 @@ Each call to the Private Aggregation API is called a _contribution_. To protect 
 
 When you sum all aggregatable values across all aggregation keys, the sum must be less than the contribution budget. The budget is scoped per-worklet [origin](https://web.dev/same-site-same-origin/#origin), per-day, and is separate for Protected Audience API and Shared Storage worklets. A rolling window of approximately the last 24 hours is used for the day. If a new aggregatable report would cause the budget to be exceeded, the report is not created.
 
-The _contribution budget_ is represented by the parameter `L<sub>1</sub>`, and for the current Privacy Sandbox Origin Trial, the contribution budget has been set to 2<sup>16</sup> = 65,536.  The value of the contribution budget is arbitrary where noise is scaled to it, and you can use this budget to maximize signal-to-noise ratio on the summary values (discussed more below in the [Noise and scaling](#noise-and-scaling) section below). 
+The _contribution budget_ is represented by the parameter `L<sub>1</sub>`, and for now complete Privacy Sandbox Origin Trial, the contribution budget was set to 2<sup>16</sup> = 65,536.  The value of the contribution budget is arbitrary where noise is scaled to it, and you can use this budget to maximize signal-to-noise ratio on the summary values (discussed more below in the [Noise and scaling](#noise-and-scaling) section below). 
 
 To learn more about contribution budgets, see the [explainer](https://github.com/patcg-individual-drafts/private-aggregation-api#contribution-bounding-and-budgeting). Also, refer to [Contribution Budget](/docs/privacy-sandbox/attribution-reporting/contribution-budget/) for more guidance. 
 
@@ -247,8 +248,8 @@ See the [Contribution section of the Attribution Reporting strategy guide](https
 
 ## Engage and share feedback
 
-The Private Aggregation API proposal is under active discussion and subject to change in the future. If you try this API and have feedback, we'd love to hear it.
+The Private Aggregation API is under active discussion and subject to change in the future. If you try this API and have feedback, we'd love to hear it.
 
-*   **GitHub**: Read the [proposal](https://github.com/patcg-individual-drafts/private-aggregation-api), [raise questions and participate in discussion](https://github.com/patcg-individual-drafts/private-aggregation-api/issues).
+*   **GitHub**: Read the [explainer](https://github.com/patcg-individual-drafts/private-aggregation-api), [raise questions and participate in discussion](https://github.com/patcg-individual-drafts/private-aggregation-api/issues).
 *   **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 *   Join the [Shared Storage API group](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements) and the [Protected Audience API group](https://groups.google.com/a/chromium.org/g/fledge-api-announce/) for the latest announcements related to Private Aggregation. 

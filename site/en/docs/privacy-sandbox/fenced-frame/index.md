@@ -10,12 +10,12 @@ authors:
   - alexandrawhite
   - kevinkiklee
 date: 2022-03-07
-updated: 2023-03-14
+updated: 2023-09-18
 ---
 
 ## Implementation status
 
-This document outlines a proposal for a new HTML element: `<fencedframe>`.
+This document outlines a new HTML element: `<fencedframe>`.
 
 {% Partial 'privacy-sandbox/timeline/fenced-frames.njk' %}
 
@@ -23,7 +23,7 @@ This document outlines a proposal for a new HTML element: `<fencedframe>`.
 
 ## Why do we need fenced frames?
 
-A fenced frame (`<fencedframe>`) is a proposed HTML element for embedded
+A fenced frame (`<fencedframe>`) is an HTML element for embedded
 content, similar to an iframe. Unlike iframes, a fenced frame restricts
 communication with its embedding context to allow the frame access to cross-site
 data without sharing it with the embedding context. Some Privacy Sandbox APIs
@@ -66,9 +66,9 @@ leakage across first-party storage will be significantly reduced.
 
 ### Work with cross-site data {: #cross-site-data }
 
-Fenced frames is a [Privacy Sandbox proposal](/docs/privacy-sandbox/overview/)
+Fenced frames is a [Privacy Sandbox feature](/docs/privacy-sandbox/overview/)
 which suggests top-level sites should partition data. Many Privacy Sandbox
-proposals aim to satisfy cross-site use cases without third-party cookies or
+proposals and APIs aim to satisfy cross-site use cases without third-party cookies or
 other tracking mechanisms. For example:
 
 *  [Protected Audience API](/docs/privacy-sandbox/protected-audience/) allows for interest-based ad serving
@@ -77,7 +77,7 @@ other tracking mechanisms. For example:
    access to unpartitioned cross-site data in a secure environment.
 
 Let's consider how fenced frames could work with the
-[Protected Audience API](/docs/privacy-sandbox/protected-audience/) proposal. With the Protected Audience API, a user's interests
+[Protected Audience API](/docs/privacy-sandbox/protected-audience/). With the Protected Audience API, a user's interests
 are registered on an advertiser's site in [interest
 groups](/docs/privacy-sandbox/protected-audience/#interest-group-detail), along with ads that
 may be of interest to the user. Then, on a separate site (known as a
@@ -172,7 +172,7 @@ Fenced frames support fewer external communication options to preserve privacy.
 ### Will fenced frames replace iframes?
 
 Ultimately, fenced frames won't replace iframes and you won't have to use them.
-Fenced frames are proposed for a more private frame for usage when data from
+Fenced frames are a more private frame for usage when data from
 different top-level partitions needs to be displayed on the same page.
 
 Same-site iframes (sometimes known as friendly iframes) are considered trusted
@@ -180,7 +180,7 @@ content.
 
 ## Use fenced frames {: #use-cases }
 
-Fenced frames will work in combination with other Privacy Sandbox proposals to
+Fenced frames will work in combination with other Privacy Sandbox APIs to
 display documents from different storage partitions within a single page.
 Potential APIs are currently in discussion.
 
@@ -355,10 +355,10 @@ browsers](https://chromestatus.com/feature/5699388062040064#consensus).
 
 ## Engage and share feedback
 
-The Fenced Frame proposal is under active discussion and subject to change in
+Fenced Frames are under active discussion and subject to change in
 the future. If you try this API and have feedback, we'd love to hear it.
 
-*  **GitHub**: Read the [proposal](https://github.com/shivanigithub/fenced-frame), 
+*  **GitHub**: Read the [explainer](https://github.com/shivanigithub/fenced-frame), 
    [raise questions, and follow 
    discussion](https://github.com/shivanigithub/fenced-frame/issues).
 *  **Developer support**: Ask questions and join discussions on the
