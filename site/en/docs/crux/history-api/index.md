@@ -314,7 +314,7 @@ The URL uses [gRPC Transcoding](https://google.aip.dev/127) syntax.
 
 ### Request body
 
-The CrUX History API uses the same request bodies as [the daily CrUX API](../api/#request-body), with the exception of not supporting the `effectiveConnectionType` request field.
+The CrUX History API uses the same request bodies as [the daily CrUX API](/docs/crux/api/#request-body), with the exception of not supporting the `effectiveConnectionType` request field.
 
 For example, to request the desktop Largest Contentful Paint values for the web.dev homepage:
 
