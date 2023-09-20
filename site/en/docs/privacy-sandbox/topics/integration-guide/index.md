@@ -4,6 +4,7 @@ title: 'Topics API integration guide'
 subhead: Learn how to use the Topics API to meet specific ad tech use cases.
 description: Learn how to use the Topics API to meet specific ad tech use cases.
 date: 2023-06-02
+updated: 2023-09-20
 authors:
   - thiagodiogo
   - andreeacucu
@@ -292,7 +293,7 @@ We recommend that you pick target websites that:
 
 When calling the Topics API in this limited environment you can expect:
 
-* An empty array of topics [] if this is the first call of this device, for this site and caller in the last seven days.
+* An empty array of topics `[]` if this is the first call of this device, for this site and caller in the last seven days.
 * A list of zero to three topics, representing the interests of this user.
 * After seven days of observation you should receive:
     * One topic representing the interest of that user calculated from the navigation history of that week.
