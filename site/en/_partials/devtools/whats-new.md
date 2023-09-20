@@ -4,6 +4,20 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 118 {: #chrome118 }
+
+* [New section for custom properties in Elements > Styles](/blog/new-in-devtools-118/#css)
+* [More local overrides improvements](/blog/new-in-devtools-118/#overrides)
+* [Enhanced search](/blog/new-in-devtools-118/#search)
+* [Improved Sources panel](/blog/new-in-devtools-118/#sources)
+* [Streamlined workspace in the Sources panel](/blog/new-in-devtools-118/#workspace)
+* [Reorder panes in Sources](/blog/new-in-devtools-118/#reorder-panes)
+* [Syntax highlighting and pretty-printing for more script types](/blog/new-in-devtools-118/#syntax)
+* [Emulate prefers-reduced-transparency media feature](/blog/new-in-devtools-118/#reduced-transparency)
+* [Lighthouse 11](/blog/new-in-devtools-118/#lighthouse)
+* [Accessibility improvements](/blog/new-in-devtools-118/#accessibility)
+* [Miscellaneous highlights](/blog/new-in-devtools-118/#misc)
+
 ### Chrome 117 {: #chrome117 }
 
 * [Network panel improvements](/blog/new-in-devtools-117/#network)
