@@ -26,7 +26,7 @@ Extensions use match patterns in a variety of use cases, including the following
 
 * Injecting [content script][content-scripts].
 * [Declaring host permissions][host-permissions] that some Chrome APIs require in addition to their own permissions.
-* Granting access to [web-accessible resources][war]
+* Granting access to [web-accessible resources][war].
 * Allowing message sending and receiving using ["externally_connectable.matches"][ext-connect].
 
 ## Special cases {: #special }
