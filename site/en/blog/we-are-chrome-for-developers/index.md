@@ -56,3 +56,5 @@ Over the past few years, we've been working in earnest to address this problem. 
 Over the years, we've actively [contributed to](https://blog.chromium.org/2017/10/building-unified-documentation-for-web.html) and [collaborated on](https://web.dev/open-web-docs/) many initiatives with ecosystem partners to build [an open, stable web](https://io.google/2023/program/528a223c-a3d6-46c5-84e4-88af2cf62670/).  This work will continue as we move the platform forward.
 
 Reflecting back at our journey so far, we find ourselves marveling at the progress the web has made, and the prospect of what's next for Chrome and the web gives us a tingle of excitement. As we continue to play our role in the web ecosystem, we are more motivated than ever to be a trusted, helpful partner in building a powerful web that is made easier for developers. We are _Chrome for Developers_.
+
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/ijjUVcPHYBhjZeNMud6n.gif", alt="The Chrome Developers logo transforming into Chrome for Developers.", width="800", height="208" %}
