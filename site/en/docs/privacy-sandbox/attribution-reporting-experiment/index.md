@@ -13,7 +13,7 @@ authors:
 Read [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) to
 see the use cases and key concepts for this API and check the most recent [updates](/docs/privacy-sandbox/attribution-reporting-updates/).
 
-Learn why [shipped the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping).
+Learn why [we shipped the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping).
 
 ## Try the API
 
