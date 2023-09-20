@@ -422,6 +422,7 @@ They provide conversion insights without tracking users across sites, by using t
 -  For questions about the API:
    [create an issue](https://github.com/WICG/conversion-measurement-api/issues) 
    on the API repo.
+-  Follow API updates and announcements on the [Attribution Reporting mailing list](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
 -  If you have technical questions, [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=attribution%20reporting).
 -  For implementation, integration, and general best practice questions:
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
