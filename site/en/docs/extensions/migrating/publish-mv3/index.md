@@ -7,21 +7,25 @@ date: 2023-09-04
 # updated: 2023-05-10
 ---
 
-After [converting your extension][migration-checklist] to Manifest Version 3, it's time to release it on the [Chrome Web Store][cws]. Depending on how many adjustments you had to make to your app, it can be advisable to perform a step-wise roll out to make sure that your MV3 extension works as expected by testing it with a smaller audience first. 
+After [converting your extension][migration-checklist] to Manifest Version 3, the next step is to release
+it on the [Chrome Web Store][cws]. Depending on the extent of the changes during conversion, it can be advisable to perform a gradual release to ensure your MV3 extension works as
+expected by testing it with a limited audience first. 
 
-There are a few ways to publish your new release gradually. This article discusses recommended approaches such as releasing a beta version and slowly increasing the number of testers, gradually rolling out to your user base, and monitoring your extension review status to quickly publish any fixes if needed.
+There are a few ways to release your extension gradually. This article explores different approaches such as releasing a beta version and slowly increasing the number of testers, gradually
+rolling out to your user base, and monitoring your extension review status to quickly publish any
+fixes if needed.
 
 ## Publish a beta testing version {: #publish-beta }
 
-The Chrome Web Store provides a way to publish to beta testers. This way, a subset of users can report any issues before publishing to the rest of your user base. 
+Publishing a beta release allows you to gather feedback and identify any issues with a select group of testers before releasing it to the rest of your user base. 
 
 {% Aside %}
-Beta releases will also be subject to the Chrome Web Store review process.    
+Beta releases also go through the [Chrome Web Store review process][cws-review], so make sure you plan for that.
 {% endAside %}
 
 ### Label your beta version {: #label-beta }
 
-First, you must label this extension as a testing version by following these steps:
+First, you must label the beta release as a testing version by following these steps:
 
 1. Add the label “BETA” at the end of the name of your extension.
 2. Add "THIS EXTENSION IS FOR BETA TESTING" to the description.
@@ -30,7 +34,7 @@ First, you must label this extension as a testing version by following these ste
 Skipping this step may result in your extension being rejected for [repetitive content][spam-policy]. 
 {% endAside %}
 
-Now that your beta version is clearly labeled, you can either distribute it to specified email addresses, to members of a Google group or share as a direct link.
+Now that your beta version is clearly labeled, you can either distribute it to specified email addresses, to members of a Google group or share it as a direct link.
 
 ### Distribute to testers by email {: #dist-email }
 
@@ -138,10 +142,14 @@ If your extension has been pending review for over two weeks, [contact developer
 
 There are other ways to make your extension more robust as you transition to Manifest Version 3. See [Engineering resilient extensions](TBD) for best practices for building a reliable extension.
 
+Additionally, get user feedback as quickly as possible by adding a link to a [dedicated support site][support-site] under the Support tab of your extension listing.
+
 [cws]: https://chrome.google.com/webstore
+[cws-review]: /docs/webstore/review-process/
 [cws-support]: /docs/webstore/review-process/#support
 [cws-upload]: /docs/webstore/upload
 [google-group]: https://groups.google.com/my-groups
 [migration-checklist]: /docs/extensions/migrating/checklist/
 [review-factors]: /docs/webstore/review-process/#review-time-factors
 [spam-policy]: /docs/webstore/troubleshooting/#spam
+[support-site]: /docs/webstore/manage/#dedicated-support-site
