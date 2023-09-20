@@ -7,10 +7,6 @@
     <meta name="robots" content="noindex">
     {%- endif %}
 
-    {# Dogfood document speculation rules origin trial #}
-    <!-- developer.chrome.com origin trial token for speculation rules document rules -->
-    <meta http-equiv="origin-trial" content="AhaT7AdLUbVk3M0VorYLzXSY8Km9PJZlzg3Xkv6KT2QMZ4zyqA5BfdTJLCj1TVnGhryWtQH66HWQEsIbZDUrsAwAAABseyJvcmlnaW4iOiJodHRwczovL2RldmVsb3Blci5jaHJvbWUuY29tOjQ0MyIsImZlYXR1cmUiOiJTcGVjdWxhdGlvblJ1bGVzUHJlZmV0Y2hGdXR1cmUiLCJleHBpcnkiOjE2OTQxMzExOTl9">
-
     {% include 'partials/meta.njk' %}
     {% block feed %}
       <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/all.xml">
@@ -20,9 +16,15 @@
 
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/regular/latin.woff2">
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/medium/latin.woff2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
 
-
-    {% block css %}{% endblock %}
+    {% block css %}
+      {% InlineCss '/css/home.css' %}
+      {% InlineCss '/css/devsite.css' %}
+      {% InlineCss '/css/devsite-theme.css' %}
+    {% endblock %}
 
     <script type="module" src="{{ helpers.hashForProd('/js/main.js') }}"></script>
     {% if process.env.NODE_ENV === 'production' %}
@@ -44,6 +46,9 @@
       {% endfor %}
     {% endif %}
 
+    {# Dogfood document speculation rules origin trial #}
+    <!-- developer.chrome.com origin trial token - valid until 23 Mar 2023 -->
+    <meta http-equiv="origin-trial" content="AhaT7AdLUbVk3M0VorYLzXSY8Km9PJZlzg3Xkv6KT2QMZ4zyqA5BfdTJLCj1TVnGhryWtQH66HWQEsIbZDUrsAwAAABseyJvcmlnaW4iOiJodHRwczovL2RldmVsb3Blci5jaHJvbWUuY29tOjQ0MyIsImZlYXR1cmUiOiJTcGVjdWxhdGlvblJ1bGVzUHJlZmV0Y2hGdXR1cmUiLCJleHBpcnkiOjE2OTQxMzExOTl9">
     {# Exclude the /articles/ section as a control #}
     <script type="speculationrules">
     {
@@ -52,8 +57,15 @@
           "source": "document",
           "where": {
             "and": [
-              {"href_matches": "/*\\?*#*"},
-              {"not": {"href_matches": "/articles/*\\?*#*"}}
+              {
+                "href_matches": "/*\\?*", "relative_to": "document"
+              },
+              {
+                "not": {
+                  "href_matches": "/articles/*\\?*",
+                  "relative_to": "document"
+                }
+              }
             ]
           },
           "eagerness": "moderate"
@@ -91,8 +103,10 @@
     </script>
     {% endif %}
 
+  {% set isDevsite = true %}
+
   </head>
-  <body>
+  <body class="" template="landing" theme="web-theme" type="article" layout="full" ready="" style="--devsite-js-header-height: 49px; --devsite-panel-height: 0px;">
     <div class="scaffold">
       {% block header %}
         {% include 'partials/top-nav.njk' %}
@@ -102,11 +116,9 @@
         {% include 'partials/side-nav.njk' %}
       {% endblock %}
 
-      <main tabindex="-1" id="main-content" data-side-nav-inert data-search-inert>
-        {% include 'partials/banner.njk' %}
-        {% block title_bar %}{% endblock %}
-        {% block content %}{% endblock %}
-      </main>
+      <section  class="dcc-devsite-wrapper" theme="web-theme">
+        {% block devsite_main %}{% endblock %}
+      </section>
 
       {% block footer %}
         {% include 'partials/footer.njk' %}
