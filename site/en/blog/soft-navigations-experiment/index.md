@@ -8,7 +8,7 @@ authors:
  - tunetheweb
  - yoavweiss
 date: 2023-02-01
-updated: 2023-09-04
+updated: 2023-09-20
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/ZJLD5QJvoFcWXkqF8m5P.jpg
 alt: A compass on top of some booklets labeled Field Notes
 tags:
@@ -72,33 +72,15 @@ For a website that wishes to enable this for all their visitors to see the impac
 
 Site owners can choose to include the origin trial on their pages for all, or for just a subset of users. Be aware of the [implications section](#what-are-the-implications-of-enabling-soft-navigations-in-chrome) above as to how this changes how your metrics may be reported, especially if enabling this origin trial for a large proportion of your users. Note that CrUX will continue to report the metrics in the existing manner regardless of this soft navigation setting so is not impacted by those implications. It should also be noted that origin trials are also limited to enabling experimental features on a maximum of 0.5% of all Chrome page loads as a median over 14 days, but this should only be an issue for very large sites.
 
-## How can I measure Core Web Vitals per soft navigation?
+## How can I measure soft navigations?
 
-To include soft navigation metric entries, you need to include `includeSoftNavigationObservations: true` in your performance observer's `observe` call:
-
-```js
-new PerformanceObserver((entryList) => {
-  for (const entry of entryList.getEntries()) {
-    console.log('LCP candidate:', entry.startTime, entry);
-  }
-}).observe({type: 'largest-contentful-paint', buffered: true, includeSoftNavigationObservations: true});
-```
-
-This extra flag on the `observe` method is needed in addition to [enabling the soft navigation functionality in Chrome](#how-do-i-enable-soft-navigations-in-chrome). This explicit opt-in at the performance observer level is to [ensure existing performance observers aren't surprised by these extra entries](https://github.com/WICG/soft-navigations/issues/11) as some additional considerations need to be taken into account when attempting to measure Core Web Vitals for soft navigations.
-
-Some metrics have traditionally been measured throughout the life of the page: LCP, for example, can change until an interaction occurs. CLS, FID and INP can be updated until the page is navigated away from. Therefore each "navigation" (including the original navigation) will need to finalize these metrics as each new soft navigation occurs, meaning the initial "hard" navigation metrics may be finalised earlier that usual.
-
-Similarly, when starting to measure the metrics for the new soft navigation of these long-lived metrics, metrics will need to be "reset" or "reinitialized" and treated as new metrics, with no memory of the values that were set for previous "pages".
-
-Timings will still be returned in respect of the original "hard" navigation start time. So to calculate LCP for a soft navigation for example, you will need to take the LCP timing and subtract the appropriate soft navigation start time to get a timing relative to the soft navigation. This has been done to keep all timings consistent so other performance timings (such as event timings) that are not measured from the "navigation" time can be treated the same.
-
-### Reporting soft navigations
-
-Once the soft navigations experiment is enabled, the metrics will be reporting via the [`PerformanceObserver`](https://developer.mozilla.org/docs/Web/API/PerformanceObserver) API as usual, but with an additional `navigationId` added to each metric, corresponding to the navigation entry the metric was emitted for.
+Once the soft navigations experiment is enabled, the metrics will be reporting via the [`PerformanceObserver`](https://developer.mozilla.org/docs/Web/API/PerformanceObserver) API as usual. However, there are some extra considerations that need to be taken into account for these metrics.
 
 {% Aside 'note' %}
 Note: [FP and FCP are currently not reported for soft navigations](https://bugs.chromium.org/p/chromium/issues/detail?id=1479350), and [neither is FID](https://bugs.chromium.org/p/chromium/issues/detail?id=1407656).
 {% endAside %}
+
+### Reporting soft navigations
 
 You can use a `PerformanceObserver` to observe soft navigations. Below is an example code snippet that logs soft navigation entries to the console—including previous soft navigations on this page via the `buffered` option:
 
@@ -113,7 +95,7 @@ This can be used to finalize full-life page metrics for the previous navigation.
 
 As soft navigations can only be seen after they have occurred, some metrics will need to be finalized upon this event, and then reported for the previous URL, as the current URL will now reflect the updated URL for the new page.
 
-The `navigationID` attribute of the appropriate `PerformanceEntry` can be used to tie the event back to the correct URL. This can be looked up with the [`PerformanceEntry` API](https://developer.mozilla.org/docs/Web/API/PerformanceEntry):
+The `navigationId` attribute of the appropriate `PerformanceEntry` can be used to tie the event back to the correct URL. This can be looked up with the [`PerformanceEntry` API](https://developer.mozilla.org/docs/Web/API/PerformanceEntry):
 
 ```js
 const softNavEntry =
@@ -144,6 +126,41 @@ const startTime = navEntry?.startTime;
 The `startTime` is the time of the initial interaction (for example, a button click) that initiated the soft navigation.
 
 All performance timings, including those for soft navigations, are reported as a time from the initial "hard" page navigation time. Therefore, the soft navigation start time is needed to baseline the soft navigation loading metric times (for example LCP), relative to this soft navigation time instead.
+
+### Measuring Core Web Vitals per soft navigation
+
+To include soft navigation metric entries, you need to include `includeSoftNavigationObservations: true` in your performance observer's `observe` call.
+
+```js
+new PerformanceObserver((entryList) => {
+  for (const entry of entryList.getEntries()) {
+    console.log('Layout Shift time:', entry);
+  }
+}).observe({type: 'layout-shift', buffered: true, includeSoftNavigationObservations: true});
+```
+
+The extra `includeSoftNavigationObservations` flag on the `observe` method is needed in addition to [enabling the soft navigation functionality in Chrome](#how-do-i-enable-soft-navigations-in-chrome). This explicit opt-in at the performance observer level is to [ensure existing performance observers aren't surprised by these extra entries](https://github.com/WICG/soft-navigations/issues/11) as some additional considerations need to be taken into account when attempting to measure Core Web Vitals for soft navigations.
+
+Timings will still be returned in respect of the original "hard" navigation start time. So to calculate LCP for a soft navigation for example, you will need to take the LCP timing and subtract the appropriate soft navigation start time as detailed above to get a timing relative to the soft navigation. For example, for LCP:
+
+```js
+new PerformanceObserver((entryList) => {
+  for (const entry of entryList.getEntries()) {
+    const softNavEntry =
+      performance.getEntriesByType('soft-navigation').filter(
+        (navEntry) => navEntry.navigationId === entry.navigationId
+      )[0];
+    const hardNavEntry = performance.getEntriesByType('navigation')[0];
+    const navEntry = softNavEntry || hardNavEntry;
+    const startTime = navEntry?.startTime;
+    console.log('LCP time:', entry.startTime - startTime);
+  }
+}).observe({type: 'largest-contentful-paint', buffered: true, includeSoftNavigationObservations: true});
+```
+
+Some metrics have traditionally been measured throughout the life of the page: LCP, for example, can change until an interaction occurs. CLS, FID and INP can be updated until the page is navigated away from. Therefore each "navigation" (including the original navigation) may need to finalize the previous page's metrics as each new soft navigation occurs. This means the initial "hard" navigation metrics may be finalised earlier that usual.
+
+Similarly, when starting to measure the metrics for the new soft navigation of these long-lived metrics, metrics will need to be "reset" or "reinitialized" and treated as new metrics, with no memory of the values that were set for previous "pages".
 
 ### How should content that remains the same between navigations be treated?
 
