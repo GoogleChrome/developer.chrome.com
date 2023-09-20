@@ -48,8 +48,8 @@ However, they likely won't be consistently observable for all organizations
 that use the API.
 
 These numbers are aggregated and measured for the set of sites that were running an origin
-trial. They differ across sites and are likely to change as more organizations have used the API in an
-origin trial since this writing and use different parameters.
+trial (which is now closed). They differ across sites and are likely to change as more organizations have used the API in an
+origin trial since these metrics were collected and use different parameters.
 {% endAside %}
 
 **Multiple factors influence these numbers:**
