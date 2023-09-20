@@ -38,7 +38,7 @@ Extensions use match patterns in a variety of use cases, including the following
 : Allows your extension to run on local files. This pattern requires the user to manually [grant access][permissions]. Note that this case requires three slashes, not two.
 
 Localhost URLs and IP addresses
-: To match any localhost port during development, use `http://localhost:*/*`. Specify a port using the port number, as in `http://localhost:8080`.  For IP addresses, specify the address plus a wildcard in the path, as in `http://127.0.0.1/*`. You can also use `http://*:*/*` to match localhost, IP addresses, and any port.
+: To match any localhost port during development, use `http://localhost:*/*`. Specify a port using the port number, as in `http://localhost:8080/*`.  For IP addresses, specify the address plus a wildcard in the path, as in `http://127.0.0.1/*`. You can also use `http://*:*/*` to match localhost, IP addresses, and any port.
 
 Top Level domain match patterns
 : Chrome doesn't support match patterns for [top Level domains (TLD)][mdn-tld]. Specify your match patterns within individual TLDs, as in `http://google.es/*` and `http://google.fr/*`.
