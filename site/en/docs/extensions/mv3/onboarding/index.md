@@ -58,7 +58,7 @@ If your extension needs to access local files loaded on the browser or run in in
 
 Another fun way to explain your extension is through an interactive walkthrough or short video that showcases the main features. Don't forget to offer a way to opt out for users who want to start using it right away.
 
-### Build trust
+### Build trust {: #trust }
 
 The following are some ways to build trust with your users during onboarding:
 
@@ -94,7 +94,7 @@ chrome.runtime.onInstalled.addListener(({reason}) => {
 });
 ```
 
-## Ask for feedback upon removal {: #uninstall }
+## Ask for feedback upon removal {: #remove }
 
 If a user decides to uninstall the extension, you can find out why by opening a survey page when
 they remove the extension. This way, you can collect valuable feedback to continue improving the
