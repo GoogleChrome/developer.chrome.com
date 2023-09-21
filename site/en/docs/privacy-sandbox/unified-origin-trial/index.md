@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Relevance and measurement unified origin trial'
+title: 'Relevance and measurement unified origin trial - concluded'
 subhead: >
    Run unified experiments across Attribution Reporting, Protected Audience API,
    Topics, Fenced Frames, and Shared Storage.
@@ -17,7 +17,7 @@ authors:
 
 {% Partial 'privacy-sandbox/ot-end.njk' %}
 
-The Privacy Sandbox includes a selection of proposals to enable advertising use
+The Privacy Sandbox includes a selection of APIs to enable advertising use
 cases without the need for cross-site tracking. [Origin
 trials](/blog/origin-trials/) provide an opportunity for developers to evaluate
 and provide feedback on new web technologies through real-world testing. The
