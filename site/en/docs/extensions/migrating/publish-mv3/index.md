@@ -7,21 +7,19 @@ date: 2023-09-04
 # updated: 2023-05-10
 ---
 
-After [converting your extension][migration-checklist] to Manifest Version 3, the next step is to release
-it on the [Chrome Web Store][cws]. Depending on the extent of the changes during conversion, it can be advisable to perform a gradual release to ensure your MV3 extension works as
-expected by testing it with a limited audience first. 
+After [converting your extension][migration-checklist] to Manifest Version 3, the next step is to
+release it on the [Chrome Web Store][cws]. Depending on the extent of the changes you had to make,
+it can be advisable to perform a step-wise roll out to ensure your MV3 extension works as expected
+by testing it with a limited audience first. 
 
-There are a few ways to release your extension gradually. This article explores different approaches such as releasing a beta version and slowly increasing the number of testers, gradually
-rolling out to your user base, and monitoring your extension review status to quickly publish any
-fixes if needed.
+This article discusses a few ways to publish your new release in stages. For example, releasing a
+beta version to testers and gradually rolling out to your user base. We also recommend monitoring
+your extension review status and keeping an eye on user feedback to quickly publish any bug fixes if
+needed.
 
 ## Publish a beta testing version {: #publish-beta }
 
-Publishing a beta release allows you to gather feedback and identify any issues with a select group of testers before releasing it to the rest of your user base. 
-
-{% Aside %}
-Beta releases also go through the [Chrome Web Store review process][cws-review], so make sure you plan for that.
-{% endAside %}
+Publishing a beta release allows you to gather feedback and identify any issues with a group of testers before releasing it to the rest of your user base. Beta releases also go through the [Chrome Web Store review process][cws-review].
 
 ### Label your beta version {: #label-beta }
 
@@ -50,9 +48,16 @@ Follow these steps to distribute to a small number of testers:
         </figcaption>
     </figure>
 1. Save changes at the bottom of the page.
-1. Upload the beta version of your extension
+1. [Upload][cws-upload] the beta version of your extension
 1. Go to the Distribution tab
 1. Set the Visibility to **Private**. 
+
+<figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/EfL45p0rsDFExxbjMp0B.png", alt="Setting the Visibility as Private in the Distribution tab", width="500", height="612", class='screenshot' %}
+    <figcaption>
+    Visibility set to Private in the Distribution tab. 
+    </figcaption>
+</figure>
 
 ### Distribute to members of a Google group {: #dist-group }
 
@@ -69,11 +74,11 @@ Go to the Distribution tab, set the Visibility to **Private**, and choose your b
 
 ### Distribute to testers with a direct link {: #dist-link }
 
-Another alternative is to set the Visibility as **Unlisted**. This way, only users who have the direct link can install the extension.
+Another alternative is to set the visibility to **Unlisted**. This way, only users who have the direct link can install the extension.
 
 ## Gradually roll-out your release {: #gradual-rollout }
 
-The Chrome Web Store allows you to roll out a new version gradually. This ensures that any unexpected problems will have minimal impact. This is only available for extensions with more than 10,000 active users. To start rolling out your extension partially, follow these steps:
+To ensure that any unexpected problems will have minimal impact, you can roll out your update gradually by following these steps. This is only available for extensions with more than 10,000 active users.
 
 1. [Upload][cws-upload] your new version.
 2. Go to the Distribution tab.
@@ -140,9 +145,9 @@ If your extension has been pending review for over two weeks, [contact developer
 
 ## Additional tips {: #learn-more }
 
-There are other ways to make your extension more robust as you transition to Manifest Version 3. See [Engineering resilient extensions](TBD) for best practices for building a reliable extension.
+To stay on top of user feedback you can add a link to a [dedicated support site][support-site] under the Support tab of your extension listing.
 
-Additionally, get user feedback as quickly as possible by adding a link to a [dedicated support site][support-site] under the Support tab of your extension listing.
+There are other ways to make your extension more robust as you transition to Manifest Version 3. See [Engineering resilient extensions](TBD) for best practices for building a reliable extension.
 
 [cws]: https://chrome.google.com/webstore
 [cws-review]: /docs/webstore/review-process/
