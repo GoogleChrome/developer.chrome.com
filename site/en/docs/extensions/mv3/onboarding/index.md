@@ -1,22 +1,21 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Extension user journey'
-seoTitle: 'User journey of extensions users'
+title: 'Onboarding users and beyond'
+seoTitle: 'Designing an onboarding experience for extensions users'
 date: 2023-09-11
 description: >
-  Guidance on providing a successful onboarding user experience.
+  Guidance on providing a successful onboarding user experience and more.
 ---
 
-A well-designed extension user journey can prevent users from uninstalling your extension because "It doesn't do anything". This article describes how to provide clear instructions and a sense of what to expect during the onboarding process. It also includes a few tips for launching new features and collecting useful feedback when users uninstall your extension. 
+A well-designed extension onboarding can reduce the number of users abandoning your extension because "It doesn't do anything". This article includes guidance for designing the best user experience. From setting clear expectations before installation to effectively onboarding users. It also describes how you can promote new features and collect useful feedback when users remove the extension.
 
 ## Set expectations before installation {: #before-install }
 
-Make sure the description, screenshots, and promo video of your store listing demonstrates what your extension does, how it works and what service it provides. See [Creating a great listing][cws-great-listing] for best practices.
+Ensure the description, screenshots, and promo video of your store listing demonstrate what your extension does and how it works. See [Creating a great listing][cws-great-listing] for best practices.
 
 ## Minimize initial permissions {: #minimal-perms }
 
-Some users can become wary when bombarded with too many confusing permissions right away. We recommend requesting the most essential permissions first and during onboarding [explain why you need certain permissions](#explain-perms).
-
+Some users can become wary when bombarded with too many confusing permissions right away. We recommend requesting the most essential permissions first and later during onboarding [explain why you need certain permissions](#explain-perms).
 
 <figure>
   {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VVyazEJTquUP7aa6OZn0.png", alt="Extension permission warnings on installation", height="269", width="386" %}
@@ -25,11 +24,13 @@ Some users can become wary when bombarded with too many confusing permissions ri
   </figcaption>
 </figure>
 
-When you locally loaded an extension it doesn't display warnings. [View warning][view-warning] explains how to test these warnings.
+When you load an extension locally it doesn't display any warnings. See [View warning][view-warning] to learn how to preview the warnings that are shown to the user when they install your extension.
 
-## Onboarding {: #onboarding }
+## Onboard users {: #onboarding }
 
-### Opening an onboarding page {: #onboarding-open }
+This section includes how to set the onboarding page and some ideas on what items to include in your onboarding flow. 
+
+### Opening the onboarding page {: #onboarding-open }
 
 When the user first installs your extension, listen for the [`runtime.onInstalled()`][runtime-oninstalled] event and open a new page to begin the onboarding flow.
 
@@ -45,48 +46,41 @@ chrome.runtime.onInstalled.addListener(({reason}) => {
 });
 ```
 
-### Welcome users 
+### Welcome users {: #welcome }
 
 Start with a friendly welcome page that explains the extension's purpose. Design it in a way that matches the icons and colors used in the store listing to help users become familiar with your brand.
 
-### How-to guidance
+### Explain how it works {: #works }
 
-Provide clear guidance on how to use your extension. Such as, opening the side panel, pinning the extension, locating the popup, or refreshing tabs that are already opened to ensure the extension runs on those pages.
+The next step is to describe to users how to use your extension. For example, how to open the side panel, pin the extension, locate the popup, or refresh tabs that are already opened so the extension can run on those pages.
 
-If your extension needs to access local files loaded on the browser or run on incognito mode, provide users guidance on how to manually grant the [extension access][allow-access]. 
+If your extension needs to access local files loaded on the browser or run in incognito mode, this is a good time to show users how to manually grant the [extension access][allow-access]. 
 
-Another approach is an interactive walkthrough or short video that showcases the main features. Don't forget to offer a way to opt out for users that want to start using it right away.
+Another fun way to explain your extension is through an interactive walkthrough or short video that showcases the main features. Don't forget to offer a way to opt out for users who want to start using it right away.
 
-### Personalize the extension {: #explain-perms }
+### Build trust
 
-A way to customize the extension. This can include granting permissions gradually to enable additional features or showing where to find the settings page. 
+The following are some ways to build trust with your users during onboarding:
 
-The [permissions API][api-perms] allows you to request permissions gradually. This way, you can explain in user-friendly terms why the extension needs to run on specific sites or require further access. 
+- **Explain permissions**&mdash; The [permissions API][api-perms] allows you to request permission
+  at runtime. By explaining why certain permissions are necessary to use your extension, you can
+  help your users understand the reasons behind each request and build trust.
 
+- **Allow exploration without account creation**&mdash; Another way to build trust is to let users
+  test your extension immediately without the need for account creation. Once they recognize its
+  value, you can introduce additional features that require an account.
 
+### Allow customization {: #customize }
 
-Allow users to explore your extension without requiring an account. And later guide them to create an account if required for advanced features.
+Users will want to customize their extension experience. You can let users pick their preferences
+during onboarding and show them where to find the settings page to make adjustments later. Make sure
+this page is easy to find and intuitive.
 
+## Promote new features {: #upgrade }
 
-
-
-
-Once the user understands, they can accept all permissions or customize the sites they want the extension to run on.
-
-{% Aside %}
-This is not available for the host permissions declared under [content scripts][cs-manifest] in the manifest.
-{% endAside %}
-
-
-## Promoting new features {: #upgrade }
-
-<!-- What -->
-Announce new features to your users
-<!-- Why -->
-Remind them of your extension
-Increase engagement, adoption of new features
-<!-- How -->
-The following code demonstrates how to open a new page when you release an update. This way, you can showcase new features to your users:
+When launching a new feature, you can to inform your users about the latest updates through the
+extension. This way, you can encourage them to explore and adopt new features. The following code
+demonstrates how to open a new page when you release an update:
 
 {% Label %}service-worker.js:{% endLabel %}
 
@@ -100,9 +94,12 @@ chrome.runtime.onInstalled.addListener(({reason}) => {
 });
 ```
 
-## Asking for feedback upon removal {: #uninstall }
+## Ask for feedback upon removal {: #uninstall }
 
-If a user decides to uninstall the extension, you can find out why by opening a page with a survey when they uninstall. The following code uses [`runtime.setUninstallURL()`][runtime-uninstall] to set this URL on install.
+If a user decides to uninstall the extension, you can find out why by opening a survey page when
+they remove the extension. This way, you can collect valuable feedback to continue improving the
+user experience. The following code uses [`runtime.setUninstallURL()`][runtime-uninstall] to set
+this URL on install.
 
 {% Label %}service-worker.js:{% endLabel %}
 
