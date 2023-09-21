@@ -46,7 +46,7 @@ In 2020, we launched [Core Web Vitals](web.dev/web-vitals) that have proven to b
 
 We also kicked off [Project Aurora](/aurora/) two years ago, which was an important collaboration between the Chrome team and open source frameworks to bring Core Web Vitals improvements directly to the tools that developers use the most. To help developers debug the code they write and not what gets compiled due to the framework, we launched the [Modern Web Debugging](/blog/devtools-modern-web-debugging/) initiative that has already built in support for many frameworks in Chrome DevTools.  
 
-Finally, cross-browser testing and automation is yet another challenge that developers have to tackle We're actively working with all major browsers on [Web Driver BiDi](/blog/webdriver-bidi-2023/), a new standard that uses the best of the WebDriver Classic and the Chrome DevTools Protocol to make cross-browser automation significantly better for developers.
+Finally, cross-browser testing and automation is yet another challenge that developers have to tackle. To this end, we launched [Chrome for Testing](/blog/chrome-for-testing/), ensuring developers access to reliable downloads for browser automation. At the ecosystem level, we're actively working with all major browsers on [WebDriver BiDi](/blog/webdriver-bidi-2023/), a new standard that uses the best of the WebDriver Classic and the Chrome DevTools Protocol to make cross-browser automation significantly better for developers.
 
 ## Partnering to safeguard the openness of the web
 
