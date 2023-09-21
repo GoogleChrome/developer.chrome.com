@@ -301,7 +301,7 @@ User-Agent string.
 
 ## Engage and share feedback
 
-*  **Origin trial**: [Share your feedback](https://github.com/miketaylr/user-agent-reduction/issues).
+*  **Origin trial**: [Share your feedback on previous origin trials](https://github.com/miketaylr/user-agent-reduction/issues).
 *  **Demo**: Try our [demo of User-Agent reduction](https://uar-ot.glitch.me/).
 *  **GitHub**: Read the [UA-CH explainer](https://github.com/WICG/ua-client-hints),
    [raise questions and follow discussion](https://github.com/WICG/ua-client-hints/issues).

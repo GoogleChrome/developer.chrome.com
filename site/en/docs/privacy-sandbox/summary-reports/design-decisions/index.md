@@ -506,7 +506,7 @@ assess and compare noise management strategies. Use it to:
   values of epsilon and noise parameters work for you, which don't? Where are
   the inflection points?
 
-Think of this as a preparation step before running an origin trial. Noise Lab
+Think of this as a preparation step. Noise Lab
 generates measurement data to simulate summary report outputs based on your
 input. It does not persist or share any data.
 
