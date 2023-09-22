@@ -33,24 +33,11 @@ a phone or a tablet.
 AppleWebKit/{WebKit Rev} (KHTML, like Gecko)
 Chrome/{Chrome Rev} <mark>Mobile</mark> Safari/{WebKit Rev}</code></pre>
 
-fully reduced:
-
-<pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) 
-AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 
-Mobile/15E148 Safari/604.1</pre>
-
 **Tablet UA:**
 
 <pre><code>Mozilla/5.0 (Linux; {Android Version}; {Build Tag etc.}) 
 AppleWebKit/{WebKit Rev} (KHTML, like Gecko) 
 Chrome/{Chrome Rev} Safari/{WebKit Rev}</code></pre>
-
-fully reduced:
-
-<pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) 
-AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 
-Mobile/15E148 Safari/604.1</pre>
-
 
 Here's an example of the Chrome user agent string on a Galaxy Nexus:
 
