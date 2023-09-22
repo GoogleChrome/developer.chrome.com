@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Onboarding users and beyond'
+title: 'Onboarding users'
 seoTitle: 'Designing an onboarding experience for extensions users'
 date: 2023-09-11
 description: >
@@ -28,23 +28,10 @@ When you load an extension locally it doesn't display any warnings. See [View wa
 
 ## Onboard users {: #onboarding }
 
-This section includes how to set the onboarding page and some ideas on what items to include in your onboarding flow. 
+When the user first installs your extension, listen for the
+[`runtime.onInstalled()`][runtime-oninstalled] event and open a new page to begin the onboarding
+flow. The following are some ideas on what to include in your onboarding flow. 
 
-### Opening the onboarding page {: #onboarding-open }
-
-When the user first installs your extension, listen for the [`runtime.onInstalled()`][runtime-oninstalled] event and open a new page to begin the onboarding flow.
-
-{% Label %}service-worker.js:{% endLabel %}
-
-```javascript
-chrome.runtime.onInstalled.addListener(({reason}) => {
-  if (reason === 'install') {
-    chrome.tabs.create({
-      url: "onboarding.html"
-    });
-  }
-});
-```
 
 ### Welcome users {: #welcome }
 
@@ -72,51 +59,30 @@ The following are some ways to build trust with your users during onboarding:
 
 ### Allow customization {: #customize }
 
-Users will want to customize their extension experience. You can let users pick their preferences
-during onboarding and show them where to find the settings page to make adjustments later. Make sure
-this page is easy to find and intuitive.
+Provide a way for your users to customize their experience during the onboarding process, and guide them to the settings page where they can modify their preferences later on. Ensure that this page is both easy to locate and user-friendly.
 
 ## Promote new features {: #upgrade }
 
-When launching a new feature, you can to inform your users about the latest updates through the
-extension. This way, you can encourage them to explore and adopt new features. The following code
-demonstrates how to open a new page when you release an update:
-
-{% Label %}service-worker.js:{% endLabel %}
-
-```javascript
-chrome.runtime.onInstalled.addListener(({reason}) => {
-  if (reason === 'update') {
-    chrome.tabs.create({
-      url: "new-features.html"
-    });
-  }
-});
-```
+You can continue helping users understand your product by continuing the onboarding throughout the
+development of your extension. When launching a new feature or fixing a critical bug, you can to inform your users about the
+latest updates through the extension. This way, you can encourage users to reengage and adopt new
+features. You can do this through the [Runtime API][api-runtime]. See a [code example here][runtime-update-example].
 
 ## Ask for feedback upon removal {: #remove }
 
 If a user decides to uninstall the extension, you can find out why by opening a survey page when
 they remove the extension. This way, you can collect valuable feedback to continue improving the
-user experience. The following code uses [`runtime.setUninstallURL()`][runtime-uninstall] to set
-this URL on install.
-
-{% Label %}service-worker.js:{% endLabel %}
-
-```javascript
-chrome.runtime.onInstalled.addListener({reason} => {
-  if (reason === 'install' ) {
-    chrome.runtime.setUninstallURL('https://example.com/extension-survey');
-  }
-});
-```
+user experience.  See [Runtime API usage][runtime-remove-example] for a code example.
 
 [access-local-incognito]: /docs/extensions/mv3/declare_permissions/#allow_access
 [allow-access]: /docs/extensions/mv3/declare_permissions/#allow_access
 [api-perms]: /docs/extensions/reference/permissions
+[api-runtime]: /docs/extensions/reference/runtime/
 [cs-manifest]: /docs/extensions/mv3/manifest/content_scripts/
 [cws-great-listing]: /docs/webstore/best_listing/
 [perm-warn]: https://developer.chrome.com/docs/extensions/mv3/permission_warnings/
-[runtime-oninstalled]: /docs/extensions/reference/runtime/#event-onInstalled
+[runtime-install-example]: /docs/extensions/reference/runtime/#example-install
+[runtime-remove-example]: /docs/extensions/reference/runtime/#example-uninstall-url
 [runtime-uninstall]: /docs/extensions/reference/runtime/#method-setUninstallURL
+[runtime-update-example]: /docs/extensions/reference/runtime/#example-update
 [view-warning]: /docs/extensions/mv3/permission_warnings/#view_warnings

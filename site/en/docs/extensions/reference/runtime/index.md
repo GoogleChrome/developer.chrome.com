@@ -85,14 +85,14 @@ The following example shows how to declare the `nativeMessaging` permission in t
 ### Add an image to a web page {: #example-get-url }
 
 For a web page to access an asset hosted on another domain, it must specify the resource's full URL
-(e.g. `<img src="https://example.com/logo.png">`). The same is true to include an extension asset on
+(e.g. `<img src="https://example.com/logo.png">`). The same is true when accessing an extension asset on
 a web page. The two differences are that the extension's assets must be exposed as [web
 accessible resources][doc-war] and that typically content scripts are responsible for injecting
 extension assets.
 
 In this example, the extension will add `logo.png` to the page that the [content
 script][doc-content] is being [injected][content-inject] into by using `runtime.getURL()` to create a
-fully-qualified URL. But first, the asset must be declared as a web accessible resource in the manifest.
+fully-qualified URL. But first, the asset must be declared as a web-accessible resource in the manifest.
 
 {% Label %}manifest.json:{% endLabel %}
 
@@ -121,12 +121,12 @@ fully-qualified URL. But first, the asset must be declared as a web accessible r
 
 ### Send data from the service worker to a content script {: #example-content-msg }
 
-Its common for an extension's content scripts to need data managed by another part of the extension,
-like the service worker. Much like two browser windows opened to the same web page, these
-two contexts cannot directly access each other's values. Instead, the extension can use [message
-passing][doc-messages] to coordinate across these different contexts.
+It's common for an extension's content scripts to need data from the service worker. Much like two
+browser windows opened to the same web page, these two contexts cannot directly access each other's
+values. Instead, the extension can use [message passing][doc-messages] to coordinate across these
+different contexts.
 
-In this example, the content script needs some data from the extension's service worker to
+In this example, the content script needs some data from the service worker to
 initialize its UI. To get this data, it passes a `get-user-data` message to the service worker, and
 it responds with a copy of the user's information.
 
@@ -141,7 +141,7 @@ chrome.runtime.sendMessage('get-user-data', (response) => {
 });
 ```
 
-{% Label %}background.js:{% endLabel %}
+{% Label %}service-worker.js:{% endLabel %}
 
 ```js
 // Example of a simple user data object
@@ -157,16 +157,48 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-### Gather feedback on uninstall {: #example-uninstall-url }
+### Open an onboarding page on installation {: #example-install }
+
+The following example shows how to open an onboarding page when the user first installs the extension:
+
+{% Label %}service-worker.js:{% endLabel %}
+
+```js
+chrome.runtime.onInstalled.addListener(({reason}) => {
+  if (reason === 'install') {
+    chrome.tabs.create({
+      url: "onboarding.html"
+    });
+  }
+});
+```
+
+### Open a page to promote a new version update {: #example-update }
+
+You can also promote new features when your extension publishes a new version, by listening for the `'update'` reason:
+
+{% Label %}service-worker.js:{% endLabel %}
+
+```js
+chrome.runtime.onInstalled.addListener(({reason}) => {
+  if (reason === 'update') {
+    chrome.tabs.create({
+      url: 'new-features.html'
+    });
+  }
+});
+```
+
+### Gather feedback upon removal {: #example-uninstall-url }
 
 Many extensions use post-uninstall surveys to understand how the extension could better serve its
 users and improve retention. The following example shows how to add this functionality.
 
-{% Label %}background.js:{% endLabel %}
+{% Label %}service-worker.js:{% endLabel %}
 
-```js
-chrome.runtime.onInstalled.addListener(details => {
-  if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
+```javascript
+chrome.runtime.onInstalled.addListener({reason} => {
+  if (reason === 'install' ) {
     chrome.runtime.setUninstallURL('https://example.com/extension-survey');
   }
 });
