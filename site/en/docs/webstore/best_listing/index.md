@@ -12,7 +12,7 @@ The Chrome Web Store works hard to help users discover and install quality items
 is a "quality item" can help ensure its prominence in the store, potentially increasing your
 user base.
 
-Our focus on surfacing quality items to users encompases the entire user experience&mdash;this
+Our focus on surfacing quality items to users encompasses the entire user experience&mdash;this
 includes the store listing page. Build trust with users by making a strong first impression, with a
 compelling and accurate store listing page.  A quality listing page clearly communicates what your
 item will offer, using the item description, images, and other listing metadata.  You can build and
