@@ -31,10 +31,10 @@ Test for `initial-letter` support with:
 ## Current solutions
 How might you style a drop cap in CSS today?
 
-The `:first-letter` pseudo-class gets us part of the way.
+The `::first-letter` pseudo-element gets us part of the way.
 
 ``` css
-p:first-letter {
+p::first-letter {
   color: hsl(220, 94%, 51%);
   font-weight: bold;
   font-size: 4rem;
@@ -51,7 +51,7 @@ p:first-letter {
 But then you likely need to reach for properties like "float" whilst calculating a size for that first letter.
 
 ```css
-p:first-letter {
+p::first-letter {
   color: hsl(220, 94%, 51%);
   font-weight: bold;
   font-size: 4rem;
@@ -71,7 +71,7 @@ p:first-letter {
 The introduction of new CSS units like `lh` could ease some of this pain. But, these have limited support too (`lh` is currently only supported in Chrome).
 
 ```css
-p:first-letter {
+p::first-letter {
   color: hsl(220, 94%, 51%);
   font-weight: bold;
   font-size: 3lh;
@@ -93,12 +93,12 @@ p:first-letter {
 The `initial-letter` property gives you finer control over this drop cap styling. It takes two space separated values:
 
 ```css
-p:first-letter {
+p::first-letter {
   initial-letter: 3.5 3;
 }
 ```
 
-- The first argument defines the size of the letter and how many lines it will occupy. The letter will scale up whilst maintaining its aspect ratio.You can’t use a negative value but you can use decimal values.
+- The first argument defines the size of the letter and how many lines it will occupy. The letter will scale up whilst maintaining its aspect ratio. You can’t use a negative value but you can use decimal values.
 - The second argument defines the letter sink. This can be thought of as the offset for where the letter will sit. The second value is optional and can’t be negative. If it isn’t present, it assumes the value for the letter size floored to the nearest integer. This is equivalent to using the keyword “drop”. The sink also accepts another keyword value, “raise” which is equivalent to a sink of 1.
 
 Check out this demo where you can change the values to see how it affects the drop cap styling.
@@ -118,15 +118,15 @@ Check out this demo where you can change the values to see how it affects the dr
   }
 %}
 
-Combine it with `:first-line` and you could have something like this
+Combine it with `::first-line` and you could have something like this
 
 ```css
-p:first-line {
+p::first-line {
   font-variant: small-caps;
   font-weight: bold;
   font-size: 1.25rem;
 }
-p:first-letter {
+p::first-letter {
   font-family: "Merriweather", serif;
   initial-letter: 3.5 3;
   font-weight: bold;
@@ -148,7 +148,7 @@ p:first-letter {
 
 Or perhaps, give it a `border`. Note how the following example uses the “drop” keyword which would be the default if omitted and equates to 3:
 ```css
-p:first-letter {
+p::first-letter {
   font-family: "Merriweather", serif;
   initial-letter: 3.5 drop;
   font-weight: bold;
@@ -172,7 +172,7 @@ p:first-letter {
 Maybe add a `background` or some `box-shadow`:
 
 ```css
-p:first-letter {
+p::first-letter {
   font-family: "Merriweather", serif;
   initial-letter: 3.5 3;
   font-weight: bold;
@@ -197,7 +197,7 @@ p:first-letter {
 Or clip the background to the text:
 
 ```css
-p:first-letter {
+p::first-letter {
   background: linear-gradient(to bottom right,#1f005c,#5b0060,#870160,#ac255e,#ca485c,#e16b5c,#f39060,#ffb56b);
   font-family: "Merriweather", serif;
   initial-letter: 3.5 3;
