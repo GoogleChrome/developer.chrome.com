@@ -18,7 +18,6 @@ Many organizations have related sites with different domain names, such as `bran
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png", alt="Diagram showing brandx.com, fly-brandx.com and drive-brandx.com as one group and example.com, example.rs, example.co.uk as another group.", width="800", height="348" %}
 
-
 Imagine a company that helps you book a vacation. The company has two related sites: `fly-brandx.com` and `drive-brandx.com` to separate flights and car hire. Over the course of booking one journey, you can go between these sites to select their different options and you'd expect your shopping cart to remember your choices across these sites.
 
 Related sites like these often rely on cookies to keep you signed in or show you personalized content.
