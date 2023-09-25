@@ -128,7 +128,7 @@ We expect FedCM to be useful to you only if **all** these conditions apply:
 1. Your RPs are third-parties. If your RPs are 
    [SameParty](/blog/first-party-sets-sameparty/), you may be better served
    by [First-Party
-   Sets](/docs/privacy-sandbox/first-party-sets/).
+   Sets](/docs/privacy-sandbox/related-website-sets/).
 
 ### You're an IdP {: #idp }
 
@@ -156,12 +156,12 @@ that the phase-out is expected to affect.
 ### Your RPs are third-party
 
 If you're an identity provider whose RPs are within the [same
-party](/blog/first-party-sets-sameparty/#first-party-sets-policy) as your IdP, we expect [First-Party Sets](/docs/privacy-sandbox/first-party-sets/)
-may be a better option. First-Party Sets allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first-party. This allows the same party's third-party cookies to work, even after third-party cookie phase-out.
+party](/blog/first-party-sets-sameparty/#first-party-sets-policy) as your IdP, we expect [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) (formerly called First-Party Sets) 
+may be a better option. Related Website Sets allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first-party. This allows the same party's third-party cookies to work, even after third-party cookie phase-out.
 
-First-Party Sets can't always be used. However, if your RPs are
+Related Website Sets can't always be used. However, if your RPs are
 [SameParty](/blog/first-party-sets-sameparty/#first-party-sets-policy),
-consider using First-Party Sets.
+consider using Related Website Sets.
 
 ## How will users interact with FedCM? {: #use-cases}
 
