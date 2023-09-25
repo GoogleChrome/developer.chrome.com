@@ -17,6 +17,7 @@ date: 2022-08-25
 updated: 2023-09-23
 tags:
   - privacy
+is_outdated: true
 ---
 
 {% Aside 'warning'%}
