@@ -167,7 +167,7 @@ Cars
 : Themes relating to cars, such as current and classic cars.
 
 Colors
-: Themes that skin your brwoser in custom colors.
+: Themes that skin your browser in custom colors.
 
 Dark & Black
 : Themes that feature dark colors and imagry.
