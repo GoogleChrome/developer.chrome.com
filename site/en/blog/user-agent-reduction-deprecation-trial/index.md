@@ -16,6 +16,7 @@ tags:
   - privacy
   - origin-trials
   - chrome-101
+is_outdated: true
 ---
 
  {% Aside 'important' %}
