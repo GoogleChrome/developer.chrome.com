@@ -18,7 +18,7 @@ tags:
   - chrome-95
 is_outdated: true
 ---
- {% Aside 'important' %}
+ {% Aside 'warning' %}
  The User-Agent Reduction origin trial ended March 7, 2023. The User-Agent UA string is now fully reduced.
 
  To replace functionality that relied on the User Agent string, you can implement the [User Agent client hints API](https://developer.mozilla.org/docs/Web/API/User-Agent_Client_Hints_API#browser_compatibility).
