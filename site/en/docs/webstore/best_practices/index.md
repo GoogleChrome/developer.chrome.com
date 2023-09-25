@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: Best Practices
 seoTitle: Best Practices for Chrome extensions
 date: 2017-08-30
-updated: 2023-08-29
+updated: 2023-09-29
 description: >
   How to create a high-quality extension and Chrome Web store listing.
 ---
