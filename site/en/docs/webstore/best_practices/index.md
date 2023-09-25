@@ -176,7 +176,7 @@ Entertainment
 : Themes inspired by popular entertainment, such as television and film franchises.
 
 Games & Anime
-: Themes that feature popular video games and anime.
+: Themes inspired by video games and anime.
 
 Minimalist
 : Themes that simplify the look of your browser.
