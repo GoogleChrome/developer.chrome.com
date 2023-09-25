@@ -8,13 +8,13 @@ description: >
 ---
 
 A well-designed extension onboarding can reduce the number of users abandoning your extension
-because "It doesn't do anything". In this article we provide guidance for designing an
-onboarding experience that will increase user retention. It also describes how you can onboard existing users to new features and collect useful
-feedback when users remove the extension.
+because "It doesn't do anything". In this article we provide guidance for designing an onboarding
+experience that will increase user retention. It also describes how you can onboard existing users
+to new features and collect useful feedback when users remove the extension.
 
 ## Set expectations before installation {: #before-install }
 
-Help users know if your extension is a right fit for them, before they even install the extension. A great way to communicate this is through an detailed description, accurate screenshots, a short demo video and other listing metadata. For more tips on this, see [Creating a great listing][cws-great-listing].
+Help users know if your extension is a right fit for them even before installing your extension. A great way to communicate this is by including a detailed description, accurate screenshots, and a short demo video. For more tips on optimizing your store listing, see [Creating a great listing][cws-great-listing].
 
 ## Minimize initial permissions {: #minimal-perms }
 
@@ -33,7 +33,7 @@ When you load an extension locally it doesn't display any warnings. See [View wa
 
 When the user first installs your extension you can listen for the [`runtime.onInstalled()`][runtime-oninstalled] event and open a new page to begin the onboarding flow. See an [sample code here][runtime-install-example].
 
-The following are some ideas on what to include in your onboarding flow. 
+Here are some ideas on what to include in your onboarding flow. 
 
 ### Welcome users {: #welcome }
 
@@ -41,34 +41,34 @@ Start with a friendly welcome page that explains the extension's purpose. Design
 
 ### Customization {: #customize }
 
-Gather just enough information to customize their extension experience. They can always go later to the settings page where they can update their preferences. Ensure that this page is both easy to find and user-friendly.
+- Ask a few questions to customize their extension and onboarding experience. This way, you can demonstrate the value of your extension and how it can solve their specific problem.
+
+They can always go later to the settings page where they can update their preferences. Ensure that this page is both easy to find and user-friendly.
 
 ### Explain how it works {: #works }
 
-Educate users on how to use your extension. For example, show them how to open the side panel, pin the extension, or locate the popup.
+Educate users on how to use your extension by helping them become familiar with a new interface. For example, show them how to open the side panel, pin the extension, or locate the popup.
 
-Another fun way to explain your extension is through an interactive walkthrough or short video that showcases the main features. Don't forget to offer a way to opt out for users who want to start using it right away.
+Another fun way to explain key functionalities is through an interactive walkthrough or guided tour. Don't forget to offer a way to opt out for users who want to start using it right away.
 
 ### Build trust {: #trust }
 
-You can build trust with your users during onboarding by:
+Building trust helps users stick around long enough to find out what's great about your extension. Here's a few practical ways to accomplish this:
 
-- **Explaining permissions**&mdash; The [permissions API][api-perms] allows you to request permission
-  at runtime. By explaining why certain permissions are necessary to use your extension, you can
-  help your users understand the reasons behind each request and build trust.
+- **Explain permissions**&mdash; The [permissions API][api-perms] allows you to request permission
+at runtime. By explaining why certain permissions are necessary to use your extension, you can
+help your users understand the reasons behind each request and build trust.
 
-- **Allowing exploration without account creation**&mdash; Another way to build trust is to let users
-  test your extension immediately without the need for account creation. Once they recognize its
-  value, you can introduce additional features that require an account.
+- **Allow exploration without account creation**&mdash; Another way to build trust is to let users
+test your extension immediately without the need for account creation. Once they recognize its
+value, you can introduce additional features that require an account.
 
-- 
+- **Be transparent about user data usage**&mdash; Transparency is key in building trust with your users. Clearly communicate how user data is collected, stored, and used by your extension both in your [privacy policy][cws-privacy-policy] and in the [Data Usage][cws-data-usage] declaration in the developer dashboard. Ensure that your privacy policy is accurate and up-to-date outlining all the ways the data is handled.
 
 ## New feature onboarding {: #upgrade }
 
-You can continue helping users understand your product by continuing the onboarding throughout the
-development of your extension. When a new feature is released, you can to inform your users about the
-latest updates through the extension. This way, you can encourage users to reengage and adopt new
-features. You can do this through the [Runtime API][api-runtime]. See a [code example here][runtime-update-example].
+Onboarding existing users to new features can encourage users to reengage and adopt new
+features. When a new feature is released, you can inform users about the latest updates through the extension listen for the reason `"update"` in [runtime.onInstalled()][api-runtime]. See a [code example here][runtime-update-example].
 
 ## Follow-up upon removal {: #removal }
 
@@ -88,3 +88,5 @@ extension. See [Runtime API usage][runtime-remove-example] for a code example.
 [runtime-uninstall]: /docs/extensions/reference/runtime/#method-setUninstallURL
 [runtime-update-example]: /docs/extensions/reference/runtime/#example-update
 [view-warning]: /docs/extensions/mv3/permission_warnings/#view_warnings
+[cws-data-usage]: /docs/webstore/cws-dashboard-privacy/#certify-your-data-use-practices
+[cws-privacy-policy]: /docs/webstore/publish/#setup-a-developer-account
