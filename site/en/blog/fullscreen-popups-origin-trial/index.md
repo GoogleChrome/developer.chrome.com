@@ -14,7 +14,7 @@ Imagine you want to open a popup window in fullscreen mode. Until now, opening a
 fullscreen popup window consisted of two steps:
 
 1. From the main app window, calling the
-    [`window.open()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open)
+    [`window.open()`](https://developer.mozilla.org/docs/Web/API/Window/open)
     method that requires a user gesture like the click on an **Open popup
     window** button.
 1. From the popup window, calling the
@@ -23,7 +23,7 @@ fullscreen popup window consisted of two steps:
     fullscreen mode** button.
 
 There's now a new
-[origin trial](https://developer.chrome.com/en/docs/web-platform/origin-trials/)
+[origin trial](/docs/web-platform/origin-trials/)
 available running from Chrome 119 (stable date): {% ChromeDate 119 %} to Chrome
 122 (stable date): {% ChromeDate 122 %} for opening popup windows in fullscreen
 mode with just one step. Apart from the origin trial, you can also test locally
@@ -32,7 +32,7 @@ by setting the `chrome://flags/#fullscreen-popup-windows` flag to **Enabled**.
 ## Opening fullscreen popup windows on the current screen
 
 This new feature is gated behind the
-[`window-management`](https://developer.chrome.com/articles/window-management/#the-window-management-permission)
+[`window-management`](/articles/window-management/#the-window-management-permission)
 permission. Once the user has granted the permission, you can open a fullscreen
 popup window as in the following example.
 
@@ -48,15 +48,15 @@ document.querySelector('.fullscreen-popoup-button').addEventListener('click', (e
 ```
 
 In the last line of the code sample, the first parameter is the
-[`url`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open#url) to
+[`url`](https://developer.mozilla.org/docs/Web/API/Window/open#url) to
 open in the popup window. The second parameter is the
-[`target`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open#target),
+[`target`](https://developer.mozilla.org/docs/Web/API/Window/open#target),
 with the special value of
-`_[blank](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target)`.
+[`_blank`](https://developer.mozilla.org/docs/Web/HTML/Element/a#target).
 The third parameter is for the
-[`windowFeatures`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open#windowfeatures),
+[`windowFeatures`](https://developer.mozilla.org/docs/Web/API/Window/open#windowfeatures),
 a comma-separated string with the value
-[`popup`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) for
+[`popup`](https://developer.mozilla.org/docs/Web/API/Window/open) for
 opening a popup window and the new value `fullscreen` for opening the popup
 window in fullscreen mode. This works with just one user gesture, therefore can
 be activated with a single click on a button.
@@ -64,11 +64,11 @@ be activated with a single click on a button.
 ## Opening fullscreen popup windows on other screens
 
 This feature really shines in combination with the
-[Window Management API](https://developer.chrome.com/articles/window-management/)
+[Window Management API](/articles/window-management/)
 which lets you obtain information about all the screens the user has connected
 to their computer. For example, to open a fullscreen popup window on another
 screen than the user's current screen, you need to first
-[find the other screen](https://developer.chrome.com/articles/window-management/#the-getscreendetails-method)
+[find the other screen](/articles/window-management/#the-getscreendetails-method)
 and then pass its `availLeft`, `availTop`, `availWidth`, and `availHeight`
 values to the corresponding `left`, `top`, `width`, and `height` values of the
 `windowFeatures` string.
