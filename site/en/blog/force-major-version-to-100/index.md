@@ -18,7 +18,7 @@ tags:
 ---
 
 {% Aside 'warning'%}
-This article is outdated. Read the latest about version numbers in user-agent strings in [User-Agent reduction](/docs/privacy-sandbox/user-agent/). 
+This article is outdated. Read the latest about version numbers in User-Agent strings in [User-Agent reduction](/docs/privacy-sandbox/user-agent/). 
 {% endAside %}
 
 In the first half of 2022, Chrome will reach a three-digit major version number:
