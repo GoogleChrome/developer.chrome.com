@@ -182,7 +182,7 @@ Minimalist
 : Themes that simplify the look of your browser.
 
 Nature & Landscapes
-: Themes that feature the great outdoors.
+: Themes inspired by the great outdoors.
 
 Space
 : Themes that show images of outer space.
