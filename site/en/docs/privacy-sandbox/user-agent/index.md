@@ -11,13 +11,6 @@ authors:
   - alexandrawhite
 ---
 
-<!-- ## Implementation status
-
-The following list indicates previous stages in the gradual User-Agent string reduction. The reduction is now complete and the origin and deprecation trials are closed.
-
-{% Partial 'privacy-sandbox/timeline/ua-ch.njk' %}
--->
-
 ## What is User-Agent reduction?
 
 User-Agent (UA) reduction minimizes the identifying information
