@@ -1,12 +1,12 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "User-Agent Reduction deprecation trial has now ended"
+title: "User-Agent Reduction deprecation trial"
 subhead: >
   The User-Agent Reduction deprecation trial allowed sites to continue receiving the full User-Agent string after UA string reduction. The trial ended September 23, 2023.
 description: >
-  Starting with Chrome 101, the information available in the User-Agent string was reduced.
-  Sites that hadn’t had time to migrate away from using the reduced User-Agent string were able to take
-  part in a deprecation trial to continue receiving the full User-Agent string. However, that trial is now closed.
+  Starting from Chrome 101, the information available in the User-Agent string will be reduced.
+  Sites that haven’t had time to migrate away from using the reduced User-Agent string can take
+  part in a deprecation trial to continue receiving the full User-Agent string.
 authors:
   - abeyad
   - victortan
