@@ -144,7 +144,7 @@ Chrome has a limit of maximum 180 cookies per partition that cannot exceed 10 KB
 
 #### Related Website Sets and cookie partitioning
 
-[Related Website Sets (FPS)](/first-party-sets-integration) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
+[Related Website Sets (RWS)](/related-website-sets-integration) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
 The current Related Website Sets design relies on Storage Access API and does not integrate with CHIPS partitioning.
 

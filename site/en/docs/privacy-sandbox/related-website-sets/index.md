@@ -51,7 +51,7 @@ An organization may have different top-level domains for:
 
 ## Find out more
 
--   [First-Party developer guide](/docs/first-party-sets-integration/)
+-   [First-Party developer guide](/docs/related-website-sets-integration/)
 -   [Related Website Sets technical explainer](https://github.com/WICG/first-party-sets#introduction)
 -   [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)
 -   [Chromium Projects](https://www.chromium.org/updates/first-party-sets)
