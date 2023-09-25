@@ -7,7 +7,7 @@ subhead: >
   Chrome is continuing to reduce the information shared in its user-agent string to help protect user's privacy.
 date: 2023-02-27
 # updated: 2021-02-27
-# is_outdated: true
+is_outdated: true
 # new_available_content_url: /docs/privacy-sandbox/user-agent/
 authors:
   - rowan_m
