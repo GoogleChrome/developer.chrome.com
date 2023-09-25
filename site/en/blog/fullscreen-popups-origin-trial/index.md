@@ -98,7 +98,7 @@ Try fullscreen popup windows in the
 Be sure to check the **fullscreen** checkbox, and, if you have the opportunity,
 play with the demo with multiple screens attached to your device.
 
-<iframe src="https://michaelwasserman.github.io/window-placement-demo/" allow="window-management"></iframe>
+<iframe src="https://michaelwasserman.github.io/window-placement-demo/" style="width: 100%; height: 800px;" allow="window-management"></iframe>
 
 ## Related links
 
