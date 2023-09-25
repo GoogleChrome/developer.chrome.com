@@ -15,6 +15,7 @@ authors:
 date: 2021-11-01
 tags:
   - chrome-96
+is_outdated: true
 ---
 
 {% Aside 'warning'%}
