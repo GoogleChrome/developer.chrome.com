@@ -164,7 +164,7 @@ Art & Design
 : Themes build merely to make your browser look pretty.
 
 Cars
-: Themes featuring current and classic cars.
+: Themes relating to cars, such as current and classic cars.
 
 Colors
 : Themes that skin your brwoser in custom colors.
