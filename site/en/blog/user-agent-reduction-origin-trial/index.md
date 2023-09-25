@@ -16,6 +16,7 @@ tags:
   - privacy
   - origin-trials
   - chrome-95
+is_outdated: true
 ---
  {% Aside 'important' %}
  The User-Agent Reduction origin trial ended March 7, 2023. The User-Agent UA string is now fully reduced.
