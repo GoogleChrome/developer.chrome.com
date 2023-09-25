@@ -12,6 +12,7 @@ authors:
   - mihajlija
 ---
 
+
 {% Partial 'privacy-sandbox/fps-rename.njk' %}
 
 Many organizations have related sites with different domain names, such as `brandx.com` and `fly-brandx.com`—or domains for different countries such as `example.com`, `example.rs`, `example.co.uk` and so on.

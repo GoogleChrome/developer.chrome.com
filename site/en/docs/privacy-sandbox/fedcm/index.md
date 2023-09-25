@@ -127,7 +127,7 @@ We expect FedCM to be useful to you only if **all** these conditions apply:
 1. You're affected by the third-party cookie phase out.
 1. Your RPs are third-parties. If your RPs are 
    [SameParty](/blog/first-party-sets-sameparty/), you may be better served
-   by [First-Party
+   by [Related Website
    Sets](/docs/privacy-sandbox/related-website-sets/).
 
 ### You're an IdP {: #idp }

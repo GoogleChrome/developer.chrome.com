@@ -11,7 +11,7 @@ alt: A diagram showing First-Party Sets. One set contains domains example.com,
   example.rs, and example.co.uk. The other set contains brandx.site,
   fly-brandx.site, and drive-brandx.site.
 is_outdated: true
-new_available_content_url: /docs/privacy-sandbox/first-party-sets-integration/
+new_available_content_url: /docs/privacy-sandbox/related-website-sets-integration/
 tags: 
   - privacy
 authors:
