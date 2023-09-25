@@ -185,7 +185,7 @@ Nature & Landscapes
 : Themes inspired by the great outdoors.
 
 Space
-: Themes that show images of outer space.
+: Themes inspired by space.
 
 Other
 : A category for themes that don't have a home anywhere else.
