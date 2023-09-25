@@ -14,12 +14,13 @@ alt: "Timeline of User-Agent Reduction changes."
 authors:
   - jney
 date: 2022-08-25
+updated: 2023-09-23
 tags:
   - privacy
 ---
 
 {% Aside 'warning'%}
-This article is outdated as user-agent reduction is complete. Learn how to [migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) and read about why this change was made in [User-Agent reduction](/docs/privacy-sandbox/user-agent/). 
+This article is outdated as User-Agent reduction is complete. Learn how to [migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) and read about why this change was made in [User-Agent reduction](/docs/privacy-sandbox/user-agent/). 
 {% endAside %}
 
 In October, Chrome will take the next step in reducing the information
