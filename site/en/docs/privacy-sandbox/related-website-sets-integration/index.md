@@ -15,14 +15,13 @@ authors:
 
 {% Partial 'privacy-sandbox/fps-rename.njk' %}
 
-
 [Related Website Sets (RWS)](docs/privacy-sandbox/related-website-sets/) is a web platform mechanism which helps browsers to understand the relationships amongst a collection of domains. This allows browsers to make key decisions to enable certain site functions (such as whether to allow access to cross-site cookies) and to present this information to users.
 
 As Chrome deprecates third-party cookies, its goal is to maintain key use cases on the web while improving privacy for users. For example, many sites rely on multiple domains to serve a single user experience. Organizations may want to maintain different top-level domains for multiple use cases like country specific domains or service domains for hosting images or video. Related Website Sets allows sites to share data across domains, with specific controls.
 
 ## What is a Related Website Set?
 
-At a high level, a Related Website Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members".
+At a high level, a Related Website Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members."
 
 In the example below, `primary` lists the primary domain, and `associatedSites` lists domains that meet the requirements of the [associated subset](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements).
 
@@ -35,7 +34,7 @@ In the example below, `primary` lists the primary domain, and `associatedSites` 
 
 The canonical Related Website Sets list is a publicly viewable list in a JSON file format hosted in the [Related Website Sets GitHub repository](https://github.com/googlechrome/first-party-sets), which serves as the source-of-truth for all sets. Chrome consumes this file to apply to its behavior.
 
-Only those with administrative control over a domain can create a set with that domain. Submitters are required to declare the relationship between each "set member" to its "set primary". Set members could include a range of different domain types and must be part of a [subset based on a use case](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements).
+Only those with administrative control over a domain can create a set with that domain. Submitters are required to declare the relationship between each "set member" to its "set primary." Set members could include a range of different domain types and must be part of a [subset based on a use case](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements).
 
 If your application depends on access to cross-site cookies (also called third-party cookies) across sites within the same Related Website Set, you can use [Storage Access API (SAA)](https://privacycg.github.io/storage-access/) and the [requestStorageAccessFor API](https://privacycg.github.io/requestStorageAccessFor/) to request access to those cookies. Depending on the subset that each site is part of, the browser may handle the request differently.
 
