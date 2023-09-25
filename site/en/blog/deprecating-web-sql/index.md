@@ -81,9 +81,9 @@ and outperforms Web SQL in many cases.
 - [🔮 In the future.] Web SQL access in **all contexts** is no longer available
   in **Chromium&nbsp;119** ({% ChromeDate '119' %})
 - [🔮 In the future.] A
-  [deprecation trial](/docs/web-platform/origin-trials/#deprecation-trials) to
+  [deprecation trial](/origintrials/#/view_trial/494270059103911937) to
   keep using Web SQL is available from **Chromium&nbsp;117**
-  ({% ChromeDate '117' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
+  ({% ChromeDate '117' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}). To learn more about deprecation trials, see [get started with origin trials](/docs/web-platform/origin-trials/#deprecation-trials).  
 
 ## Where to go from here
 
