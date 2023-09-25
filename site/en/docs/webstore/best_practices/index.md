@@ -158,7 +158,7 @@ Artist Series
 : Themes in collections curated by Google.
 
 Animals
-: Themes featuring your favorite animals.
+: Themes inspired by animals.
 
 Art & Design
 : Themes build merely to make your browser look pretty.
