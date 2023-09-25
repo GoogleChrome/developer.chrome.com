@@ -1,7 +1,7 @@
 ---
 title: プライバシーサンドボックステストの拡大
 description: >
-  プライバシーサンドボックスのタイムラインの変更に伴い、プライバシーサンドボックスの関連性と測定オリジントライアルの範囲拡大と期間延長、および API の今後の展開を形作るためのテスト方法とフィードバックの提供方法について学びます。
+  プライバシーサンドボックスのタイムラインの変更に伴い、プライバシーサンドボックスの広告関連オリジントライアルの範囲拡大と期間延長、および API の今後の展開を形作るためのテスト方法とフィードバックの提供方法について学びます。
 layout: 'layouts/blog-post.njk'
 date: 2022-07-27
 authors:
@@ -14,7 +14,7 @@ tags:
   - privacy
 ---
 
-今日、[ウェブのプライバシーサンドボックスとサードパーティ Cookie の段階的廃止過程に関する最新の計画とタイムライン](https://blog.google/products/chrome/update-testing-privacy-sandbox-web/)が公開されました。 **ウェブ開発者やサイト所有者からのフィードバック**は、提案の整理に時間をかけ、新しいソリューションをテスト、統合、最適化する十分な機会を確保することの重要性を示すうえで有益です。 この記事では、プライバシーサンドボックスの関連性と測定の統合オリジントライアルの 8 月のテスト計画について、トラフィック量を増やし、トライアル期間を延長する意図を含め、詳しく説明します。
+今日、[ウェブのプライバシーサンドボックスとサードパーティ Cookie の段階的廃止過程に関する最新の計画とタイムライン](https://blog.google/products/chrome/update-testing-privacy-sandbox-web/)が公開されました。 **ウェブ開発者やサイト所有者からのフィードバック**は、提案の整理に時間をかけ、新しいソリューションをテスト、統合、最適化する十分な機会を確保することの重要性を示すうえで有益です。 この記事では、プライバシーサンドボックスの広告関連の統合オリジントライアルの 8 月のテスト計画について、トラフィック量を増やし、トライアル期間を延長する意図を含め、詳しく説明します。
 
 {% Aside %}
 
@@ -29,9 +29,9 @@ tags:
 
 現在の状況を細かく見ながら、引き続きテストを行い、フィードバックを提供し、機能の公開に向けた準備を進める上で必要となる情報を確認しましょう。
 
-## プライバシーサンドボックスの関連性と測定のオリジントライアルの拡大
+## プライバシーサンドボックスの広告関連のオリジントライアルの拡大
 
-[プライバシーサンドボックスの関連性と測定のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)では、[アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/)、[FLEDGE](/docs/privacy-sandbox/fledge/)、 [Topics](/docs/privacy-sandbox/topics/)、[Fenced Frame](/docs/privacy-sandbox/fenced-frame/) を統合してそれらの技術的安定性と開発者エクスペリエンスをエコシステムでテストできます。[共有ストレージ](/docs/privacy-sandbox/shared-storage/)については、まもなく追加される予定です。 このトライアルは、現在、[Chrome ベータユーザーの 50% で有効](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/NTItmgLMAQAJ)になっているため、ユーザーを混乱させ過ぎることなく、初期の開発者からのフィードバックやイシューに積極的に取り組むのに役立っています。
+[プライバシーサンドボックスの広告関連のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)では、[アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/)、[FLEDGE](/docs/privacy-sandbox/fledge/)、 [Topics](/docs/privacy-sandbox/topics/)、[Fenced Frame](/docs/privacy-sandbox/fenced-frame/) を統合してそれらの技術的安定性と開発者エクスペリエンスをエコシステムでテストできます。[共有ストレージ](/docs/privacy-sandbox/shared-storage/)については、まもなく追加される予定です。 このトライアルは、現在、[Chrome ベータユーザーの 50% で有効](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/NTItmgLMAQAJ)になっているため、ユーザーを混乱させ過ぎることなく、初期の開発者からのフィードバックやイシューに積極的に取り組むのに役立っています。
 
 オリジントライアルが進むにつれて、実際のトラフィックの有意義な割合で、API の有用性と有効性をテストする機会を開発者に提供したいと考えています。 [8 月初めの Chrome 104 安定版 のリリース](https://chromiumdash.appspot.com/schedule)により、**トライアルを Chrome 安定版 を使用するデスクトップユーザーに拡大** する予定です。 モバイルユーザーにおいては、Android 版の [Chrome 105 安定版](https://chromiumdash.appspot.com/schedule) からトライアルが拡大される予定です。 現在オリジントライアルは、104 安定版 期間終了時にの終わる予定です。そこで、それ以降でもテストを続けられるように、[Chrome 107（10 月後半）](https://chromiumdash.appspot.com/schedule) までの **[延長を申請](https://groups.google.com/a/chromium.org/g/blink-dev/c/SD8Ot2gpz4g/m/Cc0TGPhoAAAJ)しています。** これは、3 マイルストーンごとのオリジントライアルの延長の申請に関する標準手続きに従うものです。  Google は、API の一般公開まで、テストをサポートすることを約束しています。
 
@@ -39,7 +39,7 @@ tags:
 
 {% Aside %}
 
-*   [はじめに: プライバシーサンドボックスの関連性と測定のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)
+*   [はじめに: プライバシーサンドボックスの広告関連のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)
 *   [開発者ガイド: アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting-experiment/)
 *   [開発者ガイド: FLEDGE](/docs/privacy-sandbox/fledge-experiment/)
 *   [開発者ガイド: Topics API](/docs/privacy-sandbox/topics-experiment/)
