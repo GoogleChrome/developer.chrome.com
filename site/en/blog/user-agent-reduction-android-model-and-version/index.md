@@ -7,7 +7,7 @@ subhead: >
   Chrome is continuing to reduce the information shared in its user-agent string to help protect user's privacy.
 date: 2023-02-27
 # updated: 2021-02-27
-# is_outdated: true
+is_outdated: true
 # new_available_content_url: /docs/privacy-sandbox/user-agent/
 authors:
   - rowan_m
@@ -19,6 +19,10 @@ alt: >
   Starting in Chrome 110 we are gradually introducing a fixed value for Android version and device model. Instead of seeing something like `Android 13` on `Pixel 7` the default value will always be `Android 10` on model `K`.
 sharing_image: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/3VrRwYpBizX3JQA93uzg.png'
 ---
+
+{% Aside 'warning'%}
+This article is outdated as User-Agent reduction is complete. Learn how to [migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) and read about why this change was made in [User-Agent reduction](/docs/privacy-sandbox/user-agent/). 
+{% endAside %}
 
 Starting in Chrome 110 (February 2023) we are gradually introducing a _fixed value for Android version and device model_—the default value will always be `Android 10` on a model `K`.
 If you rely on the user-agent to detect a visitor's operating system version, Android device model, or detailed browser version then you may need to take action—read on for the details.

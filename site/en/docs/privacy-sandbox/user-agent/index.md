@@ -2,18 +2,14 @@
 layout: 'layouts/doc-post.njk'
 title: 'User-Agent reduction'
 subhead: >
-  Limit passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting.
+  User-Agent reduction limits passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting. The reduction is now complete.
 description: >
-  Limit passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting.
+  User-Agent reduction limits passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting. The reduction is now complete.
 date: 2021-11-09
-updated: 2023-08-01
+updated: 2023-09-23
 authors:
   - alexandrawhite
 ---
-
-## Implementation status
-
-{% Partial 'privacy-sandbox/timeline/ua-ch.njk' %}
 
 ## What is User-Agent reduction?
 
@@ -21,19 +17,16 @@ User-Agent (UA) reduction minimizes the identifying information
 shared in the User-Agent string, which may be [used for passive
 fingerprinting](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control).
 Now that these changes have been rolled
-out for scaled availability, all resource requests have a reduced `User-Agent` header. As a result,
+out for general availability, all resource requests have a reduced `User-Agent` header. As a result,
 the return values from certain `Navigator` interfaces are reduced,
 including: `navigator.userAgent`, `navigator.appVersion`, and
 `navigator.platform`.
 
-Web developers should review their site code for instances and uses
+Web developers should review their site code for usage
 of the User-Agent string. If your site relies on parsing the User-Agent string
 to read the device model, platform version, or full browser version, you'll
 need to [implement the User-Agent Client Hints
 API](https://web.dev/migrate-to-ua-ch/).
-
-[Review the latest timeline](https://www.chromium.org/updates/ua-reduction) for
-User-Agent reduction.
 
 {% Aside 'key-term' %}
 The [`User-Agent` string](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)

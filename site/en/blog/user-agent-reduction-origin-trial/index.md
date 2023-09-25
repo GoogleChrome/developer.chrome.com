@@ -3,7 +3,7 @@ layout: "layouts/blog-post.njk"
 title: "User-Agent Reduction origin trial"
 subhead: >
 description: >
-  Starting in Chrome 95 Beta, an origin trial allows
+  Starting in Chrome 95 Beta, an origin trial allowed
   sites to opt into receiving the reduced user agent string, which will
   contain only the browser's brand and significant version, its desktop or mobile
   distinction, and the platform it's running on.
@@ -11,13 +11,23 @@ authors:
   - arichiv
   - abeyad
 date: 2021-09-14
-updated: 2022-01-07
+updated: 2023-09-23
 tags:
   - privacy
   - origin-trials
   - chrome-95
+is_outdated: true
 ---
+ {% Aside 'warning' %}
+ The User-Agent Reduction origin trial ended March 7, 2023. The User-Agent UA string is now fully reduced.
 
+ To replace functionality that relied on the User Agent string, you can implement the [User Agent client hints API](https://developer.mozilla.org/docs/Web/API/User-Agent_Client_Hints_API#browser_compatibility).
+
+ The [User-Agent Client Hints page](https://web.dev/migrate-to-ua-ch/) provides some background.
+
+ The remainder of this blog post should be considered deprecated.
+ {% endAside %}
+ 
 User-Agent Reduction is an effort to reduce passive fingerprinting surfaces by
 reducing the information in the
 [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
