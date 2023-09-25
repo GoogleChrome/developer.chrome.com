@@ -173,7 +173,7 @@ Dark & Black
 : Themes that feature dark colors and imagery.
 
 Entertainment
-: Themes with images of popular television and film franchises.
+: Themes inspired by popular entertainment, such as television and film franchises.
 
 Games & Anime
 : Themes that feature popular video games and anime.
