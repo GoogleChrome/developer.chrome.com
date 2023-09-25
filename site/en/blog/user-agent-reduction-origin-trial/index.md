@@ -18,7 +18,7 @@ tags:
   - chrome-95
 ---
  {% Aside 'important' %}
- The User-Agent Reduction deprecation trial ended September 23, 2023. The information available in the User-Agent string was reduced beginning in Chrome 101. During the deprecation trial, sites were able to continue receiving parts of the UA string, but will now have to rely on other methods.
+ The User-Agent Reduction origin trial ended March 7, 2023. The User-Agent UA string is now fully reduced.
 
  To replace functionality that relied on the User Agent string, you can implement the [User Agent client hints API](https://developer.mozilla.org/docs/Web/API/User-Agent_Client_Hints_API#browser_compatibility).
 
