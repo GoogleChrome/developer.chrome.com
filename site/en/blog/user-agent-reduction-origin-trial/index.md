@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "User-Agent Reduction origin trial- complete"
+title: "User-Agent Reduction origin trial"
 subhead: >
 description: >
   Starting in Chrome 95 Beta, an origin trial allowed
