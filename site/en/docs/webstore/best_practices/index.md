@@ -170,7 +170,7 @@ Colors
 : Themes that skin your browser in custom colors.
 
 Dark & Black
-: Themes that feature dark colors and imagry.
+: Themes that feature dark colors and imagery.
 
 Entertainment
 : Themes with images of popular television and film franchises.
