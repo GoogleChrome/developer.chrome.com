@@ -56,7 +56,7 @@ Several key proposals are listed below.
 
 * [**CHIPS**](/docs/privacy-sandbox/chips/) (released): Allow developers to opt-in a
   cookie to partitioned storage, with a separate cookie jar per top-level site.
-* [**Related Website Sets**](/docs/privacy-sandbox/related-website-sets) (Formerly called First-Party Sets. Released.): Allow related
+* [**Related Website Sets**](/docs/privacy-sandbox/related-website-sets) ([Formerly called First-Party Sets](/blog/related-website-sets/). Released.): Allow related
   domain names owned by the same entity to declare themselves as belonging to
   the same first party.
 * [**Shared Storage**](/docs/privacy-sandbox/shared-storage/) (released): Create a
