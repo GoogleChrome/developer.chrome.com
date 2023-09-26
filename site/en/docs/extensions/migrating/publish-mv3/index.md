@@ -8,8 +8,8 @@ date: 2023-09-04
 ---
 
 After [converting your extension][migration-checklist] to Manifest Version 3, the next step is to
-release it on the [Chrome Web Store][cws]. Depending on the extent of the changes you had to make,
-it can be advisable to perform a step-wise roll out to ensure your MV3 extension works as expected
+release it on the [Chrome Web Store][cws]. Depending on the extent of the changes you made,
+it can be advisable to perform a step-wise roll out to ensure your Manifest V3 extension works as expected
 by testing it with a limited audience first. 
 
 This article discusses a few ways to publish your new release in stages. For example, releasing a
@@ -19,7 +19,7 @@ needed.
 
 ## Publish a beta testing version {: #publish-beta }
 
-Publishing a beta release allows you to gather feedback and identify any issues with a group of testers before releasing it to the rest of your user base. Beta releases also go through the [Chrome Web Store review process][cws-review].
+Publishing a beta release allows you to gather feedback and identify any issues with a group of testers before releasing your extension to the rest of your users. Beta releases also go through the [Chrome Web Store review process][cws-review].
 
 ### Label your beta version {: #label-beta }
 
@@ -32,7 +32,7 @@ First, you must label the beta release as a testing version by following these s
 Skipping this step may result in your extension being rejected for [repetitive content][spam-policy]. 
 {% endAside %}
 
-Now that your beta version is clearly labeled, you can either distribute it to specified email addresses, to members of a Google group or share it as a direct link.
+Now that your beta version is clearly labeled, you can either distribute it to specified email addresses, to members of a Google group, or share it as a direct link.
 
 ### Distribute to testers by email {: #dist-email }
 
@@ -63,12 +63,12 @@ Follow these steps to distribute to a small number of testers:
 
 Once you've received enough feedback from your beta testers, you can expand distribution to members of a [Google group][google-group] that you own or manage. 
 
-Go to the Distribution tab, set the Visibility to **Private**, and choose your beta tester Google group from the dropdown menu. 
+Go to the **Distribution** tab, set the **Visibility** to Private, and choose your beta tester Google group from the **dropdown menu**. 
 
 <figure>
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/eW95QyUHVYrQw0eThSNc.png", alt="ALT_TEXT_HERE", width="600", height="445" %}
     <figcaption>
-        Distributing to Members of a Google Group
+        Distributing to Members of a Google Group.
     </figcaption>
 </figure>
 
@@ -96,7 +96,7 @@ To continue rolling out gradually, navigate to the **Package** tab of your item 
 <figure>
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/UA8vDp8aG89exqqjzY55.png", alt="Screenshot of the Chrome Web Store update percent rollout field", width="800", height="395", class='screenshot' %}
     <figcaption>
-        Updating the rollout percentage
+        Updating the rollout percentage.
     </figcaption>
 </figure>
 
@@ -117,7 +117,7 @@ You can do this by unchecking the "Publish automatically" checkbox when you subm
     </figcaption>
 </figure>
 
-Or you can do it later by choosing "Defer publish" in the three-dot menu on the top right.
+Or you can do it later by choosing **Defer publish** in the three-dot menu on the top right.
 
 <figure>
     {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png", alt="Screenshot showing the 'more' menu's defer publish option", width="286", height="184", class='screenshot' %}
@@ -132,7 +132,7 @@ Once your item is approved, you have up to 30 days to publish. After that period
 
 ### Check your item status {: #check-status }
 
-Most extensions are reviewed within three days. When your item has passed or if a violation has been found, you will receive a notification email. If you have not received an email in a week, check your item's status in the Published section of the **Status** tab.
+Most extensions are reviewed within three days. When your item has passed or if a violation has been found, you will receive a notification email. If you have not received an email in a week, check your item's status in the **Published** section of the **Status** tab.
 
 <figure>
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/C4wpnEeMriI9YeDAMDIr.png", alt="The Chrome Web Store Status Tab", width="700", height="276", class='screenshot' %}

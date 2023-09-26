@@ -26,9 +26,9 @@ We also have an [Extension Manifest Converter](https://github.com/GoogleChromeLa
 To reduce the chances of unexpected issues or bugs, we recommend not adding new functionality when migrating. For instance, adding a feature that requires new permissions may [trigger a permission warning][perm-warn], which will disable your extension until the user accepts the new permissions.
 
 <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/tQgKKMKbzmCzwBEAoatX.gif", alt="Example of extension that is disabled until the user accepts new permission.", width="496", height="388" %}
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/tQgKKMKbzmCzwBEAoatX.gif", alt="Example of an extension that is disabled until the user accepts the new permission.", width="496", height="388" %}
     <figcaption>
-    Extension disabled until user accepts new permission.
+    An extension that is disabled until the user accepts the new permission.
     </figcaption>
 </figure>
 
