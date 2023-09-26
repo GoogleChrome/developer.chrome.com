@@ -23,10 +23,10 @@ Publishing a beta release allows you to gather feedback and identify any issues 
 
 ### Label your beta version {: #label-beta }
 
-First, you must label the beta release as a testing version by following these steps:
+First, you must label the beta release as a testing version by following these steps in the [manifest.json][manifest]:
 
-1. Add the label “BETA” at the end of the name of your extension.
-2. Add "THIS EXTENSION IS FOR BETA TESTING" to the description.
+1. Add the label “BETA” at the end of the [name][manifest-name] of your extension.
+2. Add "THIS EXTENSION IS FOR BETA TESTING" to the [description][manifest-desc].
 
 {% Aside 'caution' %}
 Skipping this step may result in your extension being rejected for [repetitive content][spam-policy]. 
@@ -149,11 +149,14 @@ To stay on top of user feedback you can add a link to a [dedicated support site]
 
 There are other ways to make your extension more robust as you transition to Manifest Version 3. See [Engineering resilient extensions](TBD) for best practices for building a reliable extension.
 
-[cws]: https://chrome.google.com/webstore
 [cws-review]: /docs/webstore/review-process/
 [cws-support]: /docs/webstore/review-process/#support
 [cws-upload]: /docs/webstore/upload
+[cws]: https://chrome.google.com/webstore
 [google-group]: https://groups.google.com/my-groups
+[manifest-desc]: /docs/extensions/mv3/manifest/description/
+[manifest-name]: /docs/extensions/mv3/manifest/name/
+[manifest]: /docs/extensions/mv3/manifest/
 [migration-checklist]: /docs/extensions/migrating/checklist/
 [review-factors]: /docs/webstore/review-process/#review-time-factors
 [spam-policy]: /docs/webstore/troubleshooting/#spam
