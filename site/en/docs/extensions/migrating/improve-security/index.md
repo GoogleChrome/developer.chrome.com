@@ -118,7 +118,7 @@ In the background service worker.
 {% endCompare %}
 </div>
 
-The [Chrome Extension Samples repo](https://github.com/GoogleChrome/chrome-extensions-samples.git) contains a [function injection example](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/reference/mv3/intro/mv3-migration/content-scripts/popup.js) you can step through. An example of `getCurrentTab()` is in the [reference](/docs/extensions/reference/tabs/#get-the-current-tab) for that function.
+The [Chrome Extension Samples repo](https://github.com/GoogleChrome/chrome-extensions-samples.git) contains a [function injection example](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/functional-samples/reference.mv3-content-scripts/popup.js) you can step through. An example of `getCurrentTab()` is in the [reference](/docs/extensions/reference/tabs/#get-the-current-tab) for that function.
 
 ### Look for other workarounds {: #look-for-workarounds }
 
