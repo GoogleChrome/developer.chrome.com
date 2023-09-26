@@ -122,7 +122,7 @@ The [Chrome Extension Samples repo](https://github.com/GoogleChrome/chrome-exten
 
 ### Look for other workarounds {: #look-for-workarounds }
 
-If the previous approaches don’t help with your use case you might have to either find an alternative solution (i.e. migrate to a different library) or find other ways to use the library's functionality. For example, in the case of Google Analytics, you can switch to the Google measurement protocol instead of using the official remote hosted JavaScript version as described in our [Google Analytics 4 guide][google-analytics].
+If the previous approaches don’t help with your use case you might have to either find an alternative solution (i.e. migrate to a different library) or find other ways to use the library's functionality. For example, in the case of Google Analytics, you can switch to the Google measurement protocol instead of using the official remotely-hosted JavaScript version as described in our [Google Analytics 4 guide][google-analytics].
 
 ## Update the content security policy {: #update-csp }
 
