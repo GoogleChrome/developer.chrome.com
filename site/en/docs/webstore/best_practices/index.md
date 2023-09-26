@@ -161,7 +161,7 @@ Animals
 : Themes inspired by animals.
 
 Art & Design
-: Themes build merely to make your browser look pretty.
+: Themes built merely to make your browser look pretty.
 
 Cars
 : Themes relating to cars, such as current and classic cars.
