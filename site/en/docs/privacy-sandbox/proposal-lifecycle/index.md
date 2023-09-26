@@ -209,7 +209,7 @@ come. The following technologies are now available:
 * [CHIPS](/docs/privacy-sandbox/chips/): Allow developers to opt-in a cookie to
   partitioned storage, with a separate cookie jar per top-level site. CHIPS
   became available in Stable in February 2023.
-* [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) (formerly called First-Party Sets): Declare
+* [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) ([formerly called First-Party Sets](/blog/related-website-sets/)): Declare
   relationships among sites to allow for limited cross-site cookie access using
   the Storage Access API. Related Website Sets is slowly rolling out with Chrome
   Stable version 113, this week.
