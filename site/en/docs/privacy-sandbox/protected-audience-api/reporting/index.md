@@ -25,7 +25,7 @@ We recommend you read the documentation on [Private Aggregation](/docs/privacy-s
 
 {% endAside %}
 
-# Protected Audience API reporting overview
+## Protected Audience API reporting overview
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/R35UFscm9XdMmtco0BYH.png", alt="Protected Audience workflow", width="800", height="414" %}
 
@@ -33,7 +33,7 @@ There are three main time periods where data from the Protected Audience API auc
 
 During auction time, you can report the auction data using reporting worklets. During render time, you can report engagement data from an iframe or a fenced frame. During conversion time, you can report attribution data from the destination page using the Attribution Reporting API. 
 
-## Reporting locations
+### Reporting locations
 
 Within an auction, the buyers are able to report signals available in `generateBid()` and `reportWin()` worklets, and the sellers are able to report signals available in `scoreAd()` and `reportResult()`. Outside of an auction, the buyers and sellers can report data from a frame that rendered the ad, and from the site that the conversion was made from. 
 
@@ -120,11 +120,11 @@ Ads Reporting API
 
 During each of the time periods listed, buyers and sellers will have access to various reporting APIs available to report data such as auction signals, event-level data, and conversion data. 
 
-## Data available within a Protected Audience API auction
+### Data available within a Protected Audience API auction
 
 The following data are available to be reported from a Protected Audience API worklet during the auction. 
 
-### Signals
+#### Signals
 
 _Signals_ are the auction contextual data, user data, real-time data, and browser data available to the buyers and sellers within a worklet to generate a bid, score an ad, and report the results of an auction. 
 
@@ -250,12 +250,12 @@ reportResult
 
 The [auction config](/docs/privacy-sandbox/protected-audience-api/ad-auction/#auctionconfig-properties) object is the primary source of data supplied to become available as signals in worklets. The publisher and seller can supply contextual data and first-party data in the auction config, and these signals can be enriched with the interest group data from the buyer, event-level data from the ad rendering frame, and attribution data from the clickthrough page. The data reported can be used for buyer/seller reporting, billing, budgeting, ML model training, and more. 
 
-### Other available data
+#### Other available data
 
 *   _Results data_ that relates to auction win and loss data such as winning bid price and bid rejection reason.  
 *   _Performance data_ that contains latency information, such as how long it took to fetch and execute the bidding worklet.
 
-## Data available outside a Protected Audience API auction
+### Data available outside a Protected Audience API auction
 
 Outside of a Protected Audience API auction, there are two time periods where data is available to be reported. 
 
@@ -263,11 +263,11 @@ During render time, when the ad is rendered on the publisher site, the event-lev
 
 During conversion time, when a user conducts some action on the clickthrough page that is attributed back to the auction, the event-level data from the conversion page can be associated with Protected Audience API auction data, and reported to your server. 
 
-# Event-level reporting
+## Event-level reporting
 
 Event-level reports detail information from one or more events. An event can be an auction win, ad impression, or a conversion. [Until at least 2026](/docs/privacy-sandbox/fledge-api/feature-status/), event-level auction win reporting will remain in place, fenced frames will not be required to render a Protected Audience ad, and an iframe with unconstrained network access can be used for event-level reporting. Also, the [Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md) is available in fenced frames and iframes for you to associate auction and conversion data with event-level data from the frame. This is designed to let the ecosystem have an easier path to migration, since you can continue to use your existing reporting infrastructure until at least 2026 while you migrate your system to Protected Audience.
 
-## Event-level auction win reporting with `sendReportTo()`
+### Event-level auction win reporting with `sendReportTo()`
 
 A mechanism available for reporting event-level data inside a Protected Audience auction is the <code>[sendReportTo() function](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md#reporting)</code> on an auction win. The function is available in the buyer and seller reporting worklets, and the browser makes a <code>GET</code> request to the supplied URL string when the ad rendering begins.  You can encode any signal available in your worklets as query params of the URL. 
 
@@ -283,13 +283,13 @@ function reportWin(auctionSignals, perBuyerSignals, sellerSignals, browserSignal
 The `sendReportTo()` function can be used to generate a win report for the seller when called from `reportResult()`, and a win report for the buyer when called from `reportWin()`. The `sendReportTo()` function is [available until at least 2026](/docs/privacy-sandbox/protected-audience-api/feature-status/#event-level-auction-win-reporting),
 
 
-## Engagement report
+### Engagement report
 
 An _engagement report_ contains event-level data from an ad creative such as impression or click data that is associated with the _signals_ of the Protected Audience API auction that rendered the ad. Since the ad is rendered after the auction has concluded, the auction signals are not available inside the frame that renders the ad. To associate these data from different time periods, we provide you with two transition mechanisms to generate engagement reports. 
 
 The `sendReportTo()` function described above can be used to associate auction data with event-level data from an iframe, but it does not work for a fenced frame since a unique ID cannot be passed in from the embedder because the communication between the embedder and the fenced frame is limited. For associating auction data with event-level data from a fenced frame ad, the [Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md) can be used.
 
-### Ads Reporting API for fenced frames and iframes
+#### Ads Reporting API for fenced frames and iframes
 
 The [Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md) for fenced frames and iframes provides a mechanism for you to associate user event-level data from an ad frame with signals within a Protected Audience auction. 
 
@@ -320,7 +320,7 @@ The Fenced Frames Ads Reporting API will also be available until at least 2026 f
 
 For a deeper dive, see the [explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md).
 
-### Unconstrained network access
+#### Unconstrained network access
 
 Fenced frames will allow loading network resources the same way as an iframe would, and you can send event-level data within fenced frames to your server. You can generate event-level reports on the server-side later by associating the event-level data from a fenced frame with the auction data that was sent with `sendReportTo()` that was discussed in the [auction event-level reporting mechanism](#event-level-auction-win-reporting-with-sendreportto) section above. 
 
@@ -328,13 +328,13 @@ Network access will be constrained sometime after third-party cookie deprecation
 
 The event-level reporting mechanisms that exist in Protected Audience API today are transition mechanisms, and an alternative solution will be designed to better support existing use cases. 
 
-## Attribution report
+### Attribution report
 
 An _attribution report_ allows you to associate a conversion on a website with an ad that was chosen from a Protected Audience API auction. For example, a user may click on a product ad you serve, redirected to the advertiser’s site, make a purchase there, and you are interested in attributing the purchase to the ad that was shown. The [Attribution Reporting API](https://github.com/WICG/attribution-reporting-api/tree/main) will be integrated with Protected Audience API to combine the auction data from the publisher site and the conversion data from the advertiser site. 
 
 While we design a more permanent solution, you can use the [Ads Reporting API](#bookmark=kix.bf7i1c40kape) for fenced frames as a transitional mechanism for generating an event-level and aggregatable report with Attribution Reporting. Note that these reports are for measuring conversion, and are separate from the event-level and aggregatable engagement reports generated from the auction and the ad frame. We will publish an explainer for a more permanent solution when ready. 
 
-### Transitional mechanism
+#### Transitional mechanism
 
 When registering an ad beacon, you can use the keyword `reserved.top_navigation` which will automatically add the `Attribution-Reporting-Eligible` header for the beacon to become eligible to [register as an attribution source](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#registering-attribution-sources). 
 
@@ -357,7 +357,7 @@ window.fence.setReportEventDataForAutomaticBeacons({
 See the [Attribution Reporting section of the Ads Reporting API explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#support-for-attribution-reporting) to learn more. 
 
 
-## Engagement and conversion reporting example
+### Engagement and conversion reporting example
 
 In this example, we'll look at it from the buyer perspective who is interested in associating the data from the auction, ad frame, and conversion site together. 
 
@@ -379,7 +379,7 @@ After the above process, the buyer will have an auction report, engagement repor
 
 Similar workflow applies to a seller if it needs access to attribution data, and the seller can also use a unique ID to send with `registerAdBeacon()`. From the frame, the `reportEvent()` call contains a destination property that can be used to send the report to both the buyer and the seller. Note that the SSP must be also present on the landing page for the trigger to be attributed to the source. 
 
-# Aggregating Protected Audience data
+## Aggregating Protected Audience data
 
 The Private Aggregation API is the mechanism used to report Protected Audience data to generate a [summary report](/docs/privacy-sandbox/summary-reports/), which is a noisy, aggregated report of data collected in buckets. A bucket is represented by an aggregation key, and some information can be encoded into the key. 
 
@@ -440,15 +440,15 @@ Then, at a later time, from the ad frame, you can trigger the report submission 
 
 Learn more about triggering Private Aggregation contributions from a frame from the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md#triggering-reports). 
 
-## Reporting auction results and performance
+### Reporting auction results and performance
 
 You can also aggregate auction results when triggered by an auction win or loss event with `contributeToHistogramOnEvent(eventType, contribution)` when you pass in a reserved event type keywords (`reserved.win, reserved.loss`, and `reserved.always`).  
 
-Private Aggregation provides [a list of base values ](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md#reporting-api-informal-specification)you can calculate the bucket and value of your contribution from. The available base values for auction results are the bid value of the winning ad, the bid value that was scored as second highest, and the reason a bid was rejected from the auction.
+Private Aggregation provides [a list of base values](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md#reporting-api-informal-specification) you can calculate the bucket and value of your contribution from. The available base values for auction results are the bid value of the winning ad, the bid value that was scored as second highest, and the reason a bid was rejected from the auction.
 
 When some base value is provided, like the winning bid amount, you can set how much to add or subtract from that value, then report the final value. For example, if the winning bid of $5 is provided as the base value, you can subtract your bid of $2 to calculate the actual value of $3 of how much you lost your auction by. 
 
-### Auction results reporting
+#### Auction results reporting
 
 Let’s look at an example where you have lost an auction, and you want to learn how far off your bid was from the auction clearing price. 
 
@@ -471,7 +471,7 @@ function generateBid() {
 
 When the report is submitted, the actual reported value will be the scaled `baseValue` shifted by the `offset` value. To learn more, see the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md). 
 
-### Performance reporting
+#### Performance reporting
 
 Buyers and sellers can report how long a script has taken to execute, and how long it has taken to fetch the trusted signals. Sellers can collect the bid generation time and trusted bidding signal time of each buyer with their permission. 
 
@@ -511,7 +511,5 @@ register('send-report', SendReachReport);
 ```
 
 To learn more about Shared Storage, see the shared storage section of the Protected Audience API reporting developer guide, [explainer](https://github.com/WICG/shared-storage), [live demo](https://shared-storage-demo.web.app/), and the [demo code on GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo).
-
-# Engage and share feedback
 
 {% Partial 'privacy-sandbox/fledge-api-next.njk' %}
