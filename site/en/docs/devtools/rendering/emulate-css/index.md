@@ -26,7 +26,7 @@ The [`prefers-color-scheme` CSS media feature][7] indicates if the user prefers 
 To emulate this condition:
 
 1. On the [prefers-color-scheme](https://web.dev/prefers-color-scheme/) page, [open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
-1. Under the **Emulate CSS media feature `prefers-color-scheme`**, select one of the following from the dropdown list:
+1. Under the **Emulate CSS media feature `prefers-color-scheme`**, select one of the following from the drop-down list:
 
    - No emulation
    - `prefers-color-scheme:light`
@@ -55,7 +55,7 @@ The [`forced-colors` CSS media feature][5] indicates if the user agent enabled a
 To emulate this condition:
 
 1. [Open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
-1. Under the **Emulate CSS media feature `forced-colors`**, select one of the following from the dropdown list:
+1. Under the **Emulate CSS media feature `forced-colors`**, select one of the following from the drop-down list:
 
    - No emulation
    - `forced-colors:active`
@@ -72,7 +72,7 @@ The [`prefers-contrast` CSS media feature][6] indicates if the user requested th
 To emulate this condition:
 
 1. [Open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
-1. Under the **Emulate CSS media feature `prefers-contrast`**, select one of the following from the dropdown list:
+1. Under the **Emulate CSS media feature `prefers-contrast`**, select one of the following from the drop-down list:
 
    - No emulation
    - `prefers-contrast:more`
@@ -89,6 +89,20 @@ To emulate this condition:
 1. Under the **Emulate CSS media feature `prefers-reduced-motion`**, select `prefers-reduced-motion:reduce`.
 1. Try scrolling again.
 
+## Emulate CSS media feature `prefers-reduced-transparency` {: #reduced-transparency }
+
+The [`prefers-reduced-transparency` CSS media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) indicates if the user requested to reduce the transparent or translucent layer effects used on the device.
+
+The `prefers-reduced-transparency` feature is [available from Chrome 118](/blog/chrome-118-beta/#media-queries-prefers-reduced-transparency-feature) and lets you adapt web content to user-selected preference for reduced transparency in the OS, such as the **Reduce transparency** setting on macOS.
+
+To emulate this condition:
+
+1. [Open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
+1. Under the **Emulate CSS media feature `prefers-reduced-transparency`**, select `prefers-reduced-transparency: reduce`.
+1. Check if your page displays correctly.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
+
 ## Emulate CSS media feature `color-gamut`
 
 The [`color-gamut` CSS media feature][9] indicates which range of colors the user agent and the output device support.
@@ -96,7 +110,7 @@ The [`color-gamut` CSS media feature][9] indicates which range of colors the use
 To emulate this condition:
 
 1. [Open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
-1. Under the **Emulate CSS media feature `color-gamut`**, select one of the following from the dropdown list:
+1. Under the **Emulate CSS media feature `color-gamut`**, select one of the following from the drop-down list:
 
    - No emulation
    - `color-gamut:srgb`—approximately [sRGB](https://en.wikipedia.org/wiki/SRGB) gamut or more
