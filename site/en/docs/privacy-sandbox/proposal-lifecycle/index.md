@@ -8,7 +8,7 @@ description: >
   How we collaborate with stakeholders to discuss, test, and adopt
   privacy-preserving technologies.
 date: 2022-03-30
-updated: 2023-09-18
+updated: 2023-09-26
 authors:
   - alexandrawhite
 ---
@@ -211,8 +211,7 @@ come. The following technologies are now available:
   became available in Stable in February 2023.
 * [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) ([formerly called First-Party Sets](/blog/related-website-sets/)): Declare
   relationships among sites to allow for limited cross-site cookie access using
-  the Storage Access API. Related Website Sets is slowly rolling out with Chrome
-  Stable version 113, this week.
+  the Storage Access API. Related Website Sets is now in general availability.
 * [Federated Credential Management (FedCM)](/docs/privacy-sandbox/fedcm/):
   Support federated identity without sharing the user's email address or other
   identifying information with a third-party service or website, unless the
