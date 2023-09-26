@@ -49,7 +49,7 @@ Your extension calls a remote web service. This lets you keep code private and c
 
 ### Embed remotely hosted code in a sandboxed iframe {: #embed-in-sandbox }
 
-Remotely hosted code [is supported in sandboxed iframes][sandbox-eval]. Unfortunately, this approach does not work if the code requires access to the embedding page's DOM.
+Remotely hosted code [is supported in sandboxed iframes][sandbox-eval]. Please note that this approach does not work if the code requires access to the embedding page's DOM.
 
 ### Bundle third-party libraries {: #bundle-third-party }
 
