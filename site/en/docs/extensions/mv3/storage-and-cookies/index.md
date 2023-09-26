@@ -81,8 +81,7 @@ required:
 ### Partitioning {: #cookies-partitioning }
 
 {% Aside %}
-See [https://crbug.com/1463991](https://crbug.com/1463991) which tracks possible changes to the
-behaviour when an extension with host permissions embeds a third-party site.
+When an extension embeds a third-party site, that site will use the extension origin as the partition key. This means the site will not be able access the same cookies as if it was navigated to directly. See [https://crbug.com/1463991](https://crbug.com/1463991).
 {% endAside %}
 
 Cookies set on chrome-extension:// pages always use [`SameSite=Lax`][same-site]. Consequently, they
