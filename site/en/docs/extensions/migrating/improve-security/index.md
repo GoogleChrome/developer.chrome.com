@@ -4,7 +4,7 @@ title: Improve extension security
 subhead: 'Improving security in Manifest V3'
 description: 'The last of three sections describing changes needed for code that is not part of the extension service worker.'
 date: 2023-03-08
-updated: 2023-09-06
+updated: 2023-09-26
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
@@ -34,8 +34,7 @@ In Manifest V3, all of your extension's logic must be part of the extension pack
 
 - JavaScript files pulled from the developer's server.
 - Any library hosted on a [CDN][mdn-cdn].
-- Some third-party libraries.
-- How third-party libraries are used by your code.
+- Bundled third-party libraries that dynamically fetch remote hosted code.
 
 Alternative approaches are available, depending on your use case and the reason for remote hosting. This section describes approaches to consider.
 
