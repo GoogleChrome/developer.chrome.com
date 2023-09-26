@@ -27,7 +27,7 @@ tags:
 
 Cookies Having Independent Partitioned State (CHIPS) allows developers to opt a cookie into partitioned storage, with separate cookie jars per top-level site, improving user privacy and security.
 
-Browsers are well under way in phasing out unpartitioned third-party cookies, so CHIPS and [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) (formerly called First-Party Sets) will be the only way to read and write cookies from cross-site contexts, such as iframes, when third-party cookies are blocked.
+Browsers are well under way in phasing out unpartitioned third-party cookies, so CHIPS and [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) ([formerly called First-Party Sets](/blog/related-website-sets/)) will be the only way to read and write cookies from cross-site contexts, such as iframes, when third-party cookies are blocked.
 
 Without partitioning, third-party cookies can enable services to track users and join their information from across many unrelated top-level sites. This is known as cross-site tracking.
 
