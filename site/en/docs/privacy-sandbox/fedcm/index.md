@@ -128,7 +128,7 @@ We expect FedCM to be useful to you only if **all** these conditions apply:
 1. Your RPs are third-parties. If your RPs are 
    [SameParty](/blog/first-party-sets-sameparty/), you may be better served
    by [Related Website
-   Sets](/docs/privacy-sandbox/related-website-sets/).
+   Sets](/docs/privacy-sandbox/related-website-sets/), [formerly called First-Party Sets](/blog/related-website-sets/).
 
 ### You're an IdP {: #idp }
 
