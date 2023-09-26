@@ -85,14 +85,21 @@ See [https://crbug.com/1463991](https://crbug.com/1463991) which tracks possible
 behaviour when an extension with host permissions embeds a third-party site.
 {% endAside %}
 
-As mentioned [above](#secure-cookies), extensions cannot create partitioned cookies, and cookies
-are not currently partitioned by default (see the Privacy Sandbox
-[timeline][privacy-sandbox-timeline] for related work). Consequently, `chrome-extension://` pages
-embedded in other websites can access cookies associated with the extension origin as normal.
+Cookies set on chrome-extension:// pages always use [`SameSite=Lax`][same-site]. Consequently, they
+can never be accessed in iframes and partitioning is not relevant.
 
-If a `chrome-extension://` page contains an iframe, any sites it embeds will use the extension
-origin as the partitioning key. This means that they will **not** be able to access partitioned
-cookies associated with other partitions.
+When an extension embeds a third-party website inside of a chrome://extension page, the behavior
+depends on the choices on Chrome's Privacy and security settings page:
+
+- If third-party cookies are enabled, the site can access cookies from a partition keyed based on
+its origin.
+- If third-party cookies are blocked, Chrome will use the extension origin as the partitioning key
+for the third-party site's cookies. This means that the site will **not** be able to access
+partitioned cookies associated with other partitions such as the cookies it could access if it was
+navigated to directly.
+
+This setting is part of the Privacy Sandbox work and is being adjusted according to this
+[timeline][privacy-sandbox-timeline].
 
 The [`chrome.cookies`][chrome-cookies] API currently operates on cookies from all partitions. For
 more information, see the [API reference][chrome-cookies-partitioning].
