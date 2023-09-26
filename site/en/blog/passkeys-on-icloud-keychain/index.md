@@ -137,6 +137,9 @@ the [Chrome profile](https://support.google.com/chrome/a/answer/9025411) locally
 by default and they are not synchronized across devices. The stored passkeys are
 visible to the user from `chrome://settings/passkeys`.
 
+Even on macOS 13.5 or later, passkeys are stored to Chrome profile if the user
+is not signed into iCloud Drive.
+
 {% endAside %}
 
 ## Distinguishing the origin of a passkey
