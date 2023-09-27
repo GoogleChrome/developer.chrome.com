@@ -7,8 +7,18 @@ description: A reference for extension-specific information about web platform A
 date: 2023-08-28
 ---
 
-Virtually any Web platform APIs may be used in extensions. Some APIs have extension specific limitations or differences. The pages below describe those limitations and differences.
+Many web platform APIs may be used in extensions, but some APIs have extension-specific requirements. The requirements might be as simple as a permission in the manifest file. Some are more complicated, requiring a specific minimum Chrome version, or other other detailed extensions usage guidance.
+
+If the web platform API merely requires a permission, this list says so. If its requirements are more complicated, it links to a dedicated reference page.
+
+Launch Handler API
+: TBD
 
 [`PushManager.subscribe()`](/docs/extensions/reference/web/pushmanager-subscribe)
 : Subscribes an extension to a push service.
 
+WebHID
+: TBD
+
+WebUSB
+: TBD
