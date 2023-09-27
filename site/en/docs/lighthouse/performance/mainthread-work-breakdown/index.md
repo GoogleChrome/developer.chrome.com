@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: Minimize main thread work
 description: |
   Learn about the browser's main thread and how you can optimize your web page
-  to reduce the main thread load and improve performance.
+  to reduce the main thread's load and improve performance.
 date: 2019-05-02
 updated: 2019-10-04
 ---
@@ -13,7 +13,7 @@ is what turns your code into a web page that your users can interact with.
 By default, the [main thread](https://developer.mozilla.org/docs/Glossary/Main_thread)
 of the renderer process typically handles most code:
 it parses the HTML and builds the DOM, parses the CSS and applies the specified styles,
-and parses, evaluates and executes the JavaScript.
+and parses, evaluates, and executes the JavaScript.
 
 The main thread also processes user events.
 So, any time the main thread is busy doing something else,
@@ -23,7 +23,7 @@ leading to a bad experience.
 ## How the Lighthouse main thread work audit fails
 
 [Lighthouse](/docs/lighthouse/overview/)
-flags pages that keep the main thread busy for longer than 4&nbsp; seconds
+flags pages that keep the main thread busy for longer than 4 seconds
 during load:
 
 <figure>
