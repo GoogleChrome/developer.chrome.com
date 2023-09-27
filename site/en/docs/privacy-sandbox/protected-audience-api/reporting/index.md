@@ -27,7 +27,12 @@ We recommend you read the documentation on [Private Aggregation](/docs/privacy-s
 
 ## Protected Audience API reporting overview
 
-{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/R35UFscm9XdMmtco0BYH.png", alt="Protected Audience workflow", width="800", height="414" %}
+<figure>
+  {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/R35UFscm9XdMmtco0BYH.png", alt="Protected Audience overall workflow", width="800", height="414" %}
+  <figcaption>
+    Protected Audience overall workflow
+  </figcaption>
+</figure>
 
 There are three main time periods where data from the Protected Audience API auction flow can be reported to your server: auction time when the auction is executed from the publisher site, render time when the ad is rendered into a fenced frame or an iframe on the publisher site, and conversion time when the user conducts some action on the another site that can be attributed to the auction. 
 
@@ -265,7 +270,7 @@ During conversion time, when a user conducts some action on the clickthrough pag
 
 ## Event-level reporting
 
-Event-level reports detail information from one or more events. An event can be an auction win, ad impression, or a conversion. [Until at least 2026](/docs/privacy-sandbox/fledge-api/feature-status/), event-level auction win reporting will remain in place, fenced frames will not be required to render a Protected Audience ad, and an iframe with unconstrained network access can be used for event-level reporting. Also, the [Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md) is available in fenced frames and iframes for you to associate auction and conversion data with event-level data from the frame. This is designed to let the ecosystem have an easier path to migration, since you can continue to use your existing reporting infrastructure until at least 2026 while you migrate your system to Protected Audience.
+Event-level reports detail information from one or more events. An event can be an auction win, ad impression, or a conversion. [Until at least 2026](/docs/privacy-sandbox/protected-audience-api/feature-status/), event-level auction win reporting will remain in place, fenced frames will not be required to render a Protected Audience ad, and an iframe with unconstrained network access can be used for event-level reporting. Also, the [Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md) is available in fenced frames and iframes for you to associate auction and conversion data with event-level data from the frame. This is designed to let the ecosystem have an easier path to migration, since you can continue to use your existing reporting infrastructure until at least 2026 while you migrate your system to Protected Audience.
 
 ### Event-level auction win reporting with `sendReportTo()`
 
@@ -316,7 +321,7 @@ window.fence.reportEvent({
 });
 ```
 
-The Fenced Frames Ads Reporting API will also be available until at least 2026 for [the same reasons as win reporting](/docs/privacy-sandbox/fledge-api/feature-status/#event-level-auction-win-reporting). 
+The Fenced Frames Ads Reporting API will also be available until at least 2026 for [the same reasons as win reporting](/docs/privacy-sandbox/protected-audience-api/feature-status/#event-level-auction-win-reporting). 
 
 For a deeper dive, see the [explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md).
 
@@ -332,7 +337,7 @@ The event-level reporting mechanisms that exist in Protected Audience API today 
 
 An _attribution report_ allows you to associate a conversion on a website with an ad that was chosen from a Protected Audience API auction. For example, a user may click on a product ad you serve, redirected to the advertiser’s site, make a purchase there, and you are interested in attributing the purchase to the ad that was shown. The [Attribution Reporting API](https://github.com/WICG/attribution-reporting-api/tree/main) will be integrated with Protected Audience API to combine the auction data from the publisher site and the conversion data from the advertiser site. 
 
-While we design a more permanent solution, you can use the [Ads Reporting API](#bookmark=kix.bf7i1c40kape) for fenced frames as a transitional mechanism for generating an event-level and aggregatable report with Attribution Reporting. Note that these reports are for measuring conversion, and are separate from the event-level and aggregatable engagement reports generated from the auction and the ad frame. We will publish an explainer for a more permanent solution when ready. 
+While we design a more permanent solution, you can use the [Ads Reporting API](#ads-reporting-api-for-fenced-frames-and-iframes) for fenced frames as a transitional mechanism for generating an event-level and aggregatable report with Attribution Reporting. Note that these reports are for measuring conversion, and are separate from the event-level and aggregatable engagement reports generated from the auction and the ad frame. We will publish an explainer for a more permanent solution when ready. 
 
 #### Transitional mechanism
 
