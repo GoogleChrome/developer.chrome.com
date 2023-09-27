@@ -30,6 +30,19 @@ sections:
     - url: /docs/privacy-sandbox/attribution-reporting/custom-report-windows/
     - url: /docs/privacy-sandbox/attribution-reporting/multiple-reporters/
     - url: /docs/privacy-sandbox/attribution-reporting/report-schedules/
+  tools_demos:
+    - url: https://arapi-home.web.app/
+      title: Attribution Reporting API demo
+      description: In this demo an advertiser uses an ad-tech provider to run their ads on a publisher site. See how the API generates event-level and aggregatable reports.
+    - url: https://noise-lab.uc.r.appspot.com/?mode=simple
+      title: Noise lab
+      description: Use Noiselab to experiment with different values to see the impact of noise.
+    - url: https://wicg.github.io/attribution-reporting-api/validate-headers
+      title: Attribution Reporting Header Validator
+      description: Test out your headers to make sure you have the right fields for the right reports.
+    - url: https://github.com/privacysandbox/measurement-simulation/blob/main/OVERVIEW.md
+      title: Measurement Simulation Library
+      description: Use previous data to see how it would look with the Attribution Reporting API.
 ---
 
 {% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
@@ -97,6 +110,25 @@ sections:
   "right",
   true,
   "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg",
+  "People icon.",
+  429,
+  278,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg"
+  )
+}}
+
+{{ landingSectionUseCases(
+  "Tools and Demos",
+  "These tools and demos will help you test and understand the API.",
+  "",
+  sections.tools_demos,
+  "",
+  "",
+  "",
+  "red",
+  "right",
+  true,
+  "image/RtQlPaM9wdhEJGVKR8boMPkWf443/CDrmaiLPS4jpwuRRmtdn.svg",
   "People icon.",
   429,
   278,
