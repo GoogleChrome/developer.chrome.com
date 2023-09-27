@@ -486,6 +486,14 @@ and membership is removed when users clear their site data.
 
 {% endDetails %}
 
+{% Details %}
+{% DetailsSummary %}
+### Are the Protected Audience worklets cached by the browser?
+{% endDetailsSummary %}
+
+The resources that contain the Protected Audience worklets - the buyer bid generation worklet, seller ad scoring worklet, buyer reporting worklet, and seller scoring worklet - are cached by the browser. You can use the `Cache-Control` header to control the caching behavior.
+{% endDetails %}
+
 {: #engage}
  
 ## Engage and share feedback
