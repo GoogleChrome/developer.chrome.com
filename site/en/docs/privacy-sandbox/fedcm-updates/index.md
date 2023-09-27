@@ -44,7 +44,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 ### Chrome 116 (Aug 2023)
 
 - Added support for following three new features in Chrome 116
-  - Login Hint API: Specify a preferred user account to be signed in.
+  - **Login Hint API**: Specify a preferred user account to be signed in.
   - User Info API: Fetch the information of the returning user so that the identity provider (IdP) can render a personalized sign-in button within an iframe.
   - RP Context API: Use a title different from 'Sign in' in the FedCM dialog.
 - Origin Trial for IdP Sign-In Status API is starting.
