@@ -13,58 +13,6 @@ The Storage API provides an extension-specific way to persist user data and stat
 - Stored settings persist even when using [split incognito][incognito].
 - Includes an exclusive read-only [managed storage area][manifest-storage] for enterprise policies.
 
-{% Details %}
-{% DetailsSummary %}
-Can extensions use web storage APIs?
-{% endDetailsSummary %}
-
-Even though extensions can use the [`Storage`][mdn-storage] interface (accessible from `window.localStorage`) in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
-
-- Extension's service worker cannot access `Storage`.
-- Content scripts share storage with the host page.
-- Data saved using the `Storage` interface is lost when the user clears their browsing history.
-
-To move data from web storage APIs to extension storage APIs from a service worker:
-
-1. Create an offscreen document with a conversion routine and an [`onMessage`][on-message] handler.
-1. Add a conversion routine to an offscreen document.
-1. In the extension service worker check `chrome.storage` for your data.
-1. If your data isn't found, [create][create-offscreen] an offscreen document and call [`sendMessage()`][send-message] to start the conversion routine.
-1. Inside the offscreen document's `onMessage` handler, call the conversion routine.
-
-There are also some nuances with how web storage APIs work in extensions. Learn more in the
-[Storage and Cookies][storage-and-cookies] article.
-
-{% endDetails %}
-
-### Storage areas
-
-The Storage API is divided into the following four buckets ("storage areas"):
-
-[`storage.local`][prop-local]
-: Data is stored locally, which is cleared when the extension is removed. The quota limitation is approximately 10 MB, but can be increased by requesting the `"unlimitedStorage"` permission. Consider using it to store larger amounts of data.
-
-{% Aside 'caution' %}
-Before Chrome 114, the quota was approximately 5 MB.
-{% endAside %}
-
-[`storage.sync`][prop-sync]
-: If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item. Consider using it to preserve user settings across synced browsers.
-
-{% Aside 'warning' %}
-Local and sync storage areas should not store confidential user data because they are not encrypted. When working with sensitive data, consider using the `session` storage area to hold values in memory until the browser is shut down.
-{% endAside %}
-
-[storage.session][prop-session]
-: Holds data in memory for the duration of a browser session. By default, it's not exposed to content scripts, but this behavior can be changed by setting [`chrome.storage.session.setAccessLevel()`][method-access-level]. The quota limitation is approximately 10 MB. Consider using it to store global variables across service worker runs.
-
-{% Aside 'warning' %}
-Before Chrome 112, the quota was approximately 1 MB.
-{% endAside %}
-
-[storage.managed][prop-managed]
-: Administrators can use a [schema][manifest-storage] and enterprise policies to configure a supporting extension's settings in a managed environment. This storage area is read-only.
-
 ## Manifest {: #manifest}
 
 To use the storage API, declare the `"storage"` permission in the extension
@@ -81,7 +29,48 @@ To use the storage API, declare the `"storage"` permission in the extension
 }
 ```
 
-## Usage {: #usage }
+## Concepts and usage {: #usage }
+
+{% Details %}
+{% DetailsSummary %}
+Can extensions use web storage APIs?
+{% endDetailsSummary %}
+
+While extensions can use the [`Storage`][mdn-storage] interface (accessible from `window.localStorage`) in some contexts (popup and other HTML pages), we don't recommend it for the following reasons:
+
+- Extension's service worker can't access `Storage`.
+- Content scripts share storage with the host page.
+- Data saved using the `Storage` interface is lost when the user clears their browsing history.
+
+To move data from web storage APIs to extension storage APIs from a service worker:
+
+1. Create an offscreen document with a conversion routine and an [`onMessage`][on-message] handler.
+2. Add a conversion routine to an offscreen document. <!--Is 2 an alternative to 1? If so, I'd like to combine them and present them as options.-->
+3. In the extension service worker, check `chrome.storage` for your data.
+4. If your data isn't found, [create][create-offscreen] an offscreen document and call [`sendMessage()`][send-message] to start the conversion routine.
+5. Inside the offscreen document's `onMessage` handler, call the conversion routine.
+
+There are also some nuances to how web storage APIs work in extensions. Learn more in the
+[Storage and Cookies][storage-and-cookies] article.
+
+{% endDetails %}
+
+### Storage areas
+
+The Storage API is divided into the following *storage areas*:
+
+[`storage.local`][prop-local]
+: Data is stored locally and cleared when the extension is removed. The storage limit is 10 MB (5&nbsp;MB in Chrome 113 and earlier), but can be increased by requesting the `"unlimitedStorage"` permission. We recommend using `storage.local` using it to store larger amounts of data.
+<--I think we removed unlimitedStorage from the permissions list. How does that affect this?-->
+
+[`storage.sync`][prop-sync]
+: If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item. We recommend using `storage.sync` to preserve user settings across synced browsers. If you're working with sensitive user data, instead use `storage.session`.
+
+[`storage.session`][prop-session]
+: Holds data in memory for the duration of a browser session. By default, it's not exposed to content scripts, but this behavior can be changed by setting [`chrome.storage.session.setAccessLevel()`][method-access-level]. The storage limit is 10 MB (1&nbsp;MB in Chrome 111 and earlier). We recommend using `storage.session` to store global variables across service worker runs.
+
+[`storage.managed`][prop-managed]
+: Administrators can use a [schema][manifest-storage] and enterprise policies to configure a supporting extension's settings in a managed environment. This storage area is read-only.
 
 The following samples demonstrate the `local`, `sync`, and
 `session` storage areas:
@@ -132,22 +121,22 @@ The following samples demonstrate the `local`, `sync`, and
 To learn more about the `managed` storage area, see [Manifest for storage areas][manifest-storage].
 
 
-## Storage and throttling limits {: #storage-and-throttling-limits}
+### Storage and throttling limits {: #storage-and-throttling-limits}
 
 Don't think of adding to the Storage API as putting things in a big truck. Think of adding to
 storage as being like putting something in a pipe. The pipe may have material in it already, and it
 may even be filled. Always assume a delay between when you add to storage and when it is actually
-recorded.
+recorded. <!--I'd like to understand the truck metaphor better, and maybe come up with something more accessible. What are we assuming about how a truck on a road behaves differently from fluid in a pipe?-->
 
 For details on storage area limitations and what happens when they are exceeded, see the quota information for [`sync`][prop-sync], [`local`][prop-local], and [`session`][prop-session].
 
-## Use cases {: #examples}
+## Use cases {: #use-cases}
 
 The following sections demonstrate common use cases for the Storage API.
 
 ### Synchronous response to storage updates
 
-To track changes made to storage, you can add a listener to its `onChanged` event. When anything changes in storage, that event fires. The sample code listens for these changes:
+To track changes made to storage, add a listener to its `onChanged` event. When anything changes in storage, that event fires. The sample code listens for these changes:
 
 
 {% Label %}background.js:{% endLabel %}
@@ -215,7 +204,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 
 ### Asynchronous preload from storage {: #asynchronous-preload-from-storage}
 
-Since service workers are not always running, Manifest V3 extensions sometimes need to
+Because service workers don't run all the time, Manifest V3 extensions sometimes need to
 asynchronously load data from storage before they execute their event handlers. To do this, the
 following snippet uses an async `action.onClicked` event handler that waits for the `storageCache`
 global to be populated before executing its logic.
