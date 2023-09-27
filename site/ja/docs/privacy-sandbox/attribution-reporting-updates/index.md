@@ -29,7 +29,7 @@ authors:
 - **2022 年 6 月 23 日**: [2022 年 6 月に発行された「アトリビューション レポートの更新」ブログ記事](/blog/attribution-reporting-updates-june-2022)に、いくつかの更新の詳細が記載されています。また、以下の変更があります。
     - [API ハンドブック](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit)が更新されました。
     - 要約レポートに関する [アトリビューション レポートの実験:戦略とヒント](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing)を公開しました。
-- **2022 年 3 月 31 日**: [広告の関連性と測定 API のオリジン トライアル](/blog/privacy-sandbox-unified-origin-trial/)を新規公開。これには Attribution Reporting API が含まれます。
+- **2022 年 3 月 31 日**: [広告関連 API のオリジン トライアル](/blog/privacy-sandbox-unified-origin-trial/)を新規公開。これには Attribution Reporting API が含まれます。
 - **2022 年 2 月 7 日**: [ヘッダー トリガー リダイレクト](/blog/attribution-reporting-jan-2022-updates/#header-trigger-redirect)のドキュメントが追加されました。
 - **2022 年 1 月 27 日**: [API 更新の移行](/blog/attribution-reporting-jan-2022-updates/)が公開されました。以下の内容が含まれます。
     - [API の仕組みの変更](/blog/attribution-reporting-jan-2022-updates/#mechanism-changes)

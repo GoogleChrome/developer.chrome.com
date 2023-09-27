@@ -41,7 +41,7 @@ These tips will help you work successfully with the contribution budget.
 - Ensure your values are strictly within the contribution budget to not lose any information, since the budget is a hard cap. 
 - Allocate the contribution budget across metrics. Because the budget is common to all metrics for a given source, if more than one metric is tracked, you should share the budget across these metrics.
 
-- If you're tracking two metrics—for example, the purchase value and the purchase count—you would split the contribution budget across these two metrics. More details can be found [in the example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/view#heading=h.i6ovl4dm1npa).
+- If you're tracking two metrics—for example, the purchase value and the purchase count—you would split the contribution budget across these two metrics. More details can be found [in this example](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/#main-example).
 
 - Adjust aggregatable values to minimize the impact of noise. Because the contribution budget impacts noise, adjusting the aggregatable values to this budget will allow you to improve signal-to-noise ratio. Read the details in [Scale up to contribution budget](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#scale-up-to-contribution-budget). <!-- working with noise -->
 

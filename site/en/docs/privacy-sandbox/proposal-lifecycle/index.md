@@ -8,7 +8,7 @@ description: >
   How we collaborate with stakeholders to discuss, test, and adopt
   privacy-preserving technologies.
 date: 2022-03-30
-updated: 2023-05-18
+updated: 2023-09-18
 authors:
   - alexandrawhite
 ---
@@ -130,11 +130,8 @@ developers can register to opt in your site or service. This provides you an
 opportunity to try the feature on production traffic and provide feedback on
 real-world experience.
 
-The Privacy Sandbox has been running a
-[unified origin trial](/docs/privacy-sandbox/unified-origin-trial/) for the
-relevance and measurement APIs, which is still open for sign ups. We anticipate
-this origin trial will close when these
-[APIs enter general availability](/blog/shipping-privacy-sandbox/). 
+The Privacy Sandbox ran a unified origin trial for the
+relevance and measurement APIs, which is now complete. 
 
 When a feature is initially made available for testing, the focus is generally
 on **functional or technical testing**. With new code, there is an expectation
@@ -221,12 +218,12 @@ come. The following technologies are now available:
   identifying information with a third-party service or website, unless the
   user explicitly agrees to do so. FedCM shipped in November 2022.
 
-In July 2023, the relevance and measurement APIs will be
+In July 2023, the relevance and measurement APIs became
 [available for scaled adoption](/blog/shipping-privacy-sandbox/). This means
-these APIs will be available by default in Chrome. Developers will be able to
+these APIs became available by default in Chrome. Developers can now
 use these technologies without browser flags or participation in origin trials.
 
-In short, these APIs will be ready for use, at-scale, in a production
+In short, these APIs are ready for 99 percent of users, at-scale, in a production
 environment.
 
 #### Phased launches

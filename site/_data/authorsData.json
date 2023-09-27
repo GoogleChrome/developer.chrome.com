@@ -1866,6 +1866,10 @@
     "country": "FR",
     "github": "hemeryar"
   },
+    "paulrossman": {
+    "country": "US",
+    "github": "paulrossman"
+  },
   "nrosenthal": {
     "country": "IL",
     "github": "noamr",
@@ -1880,6 +1884,13 @@
     "glitch": "snugug",
     "homepage": "https://snugug.com",
     "image": "image/admin/5kuER6QRWs54zbYIJ4zS.jpg"
+  },
+  "xuezhoudai": {
+    "country": "CN",
+    "twitter": "imdaidr",
+    "github": "daidr",
+    "homepage": "https://im.daidr.me",
+    "image": "image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/40TNtORm0BtUUR2IeF8Z.jpg"
   },
   "hadrijau": {
     "country": "DE",
@@ -1910,5 +1921,17 @@
   "ferreiram": {
     "twitter": "charca",
     "image": "image/1L2RBhCLSnXjCnSlevaDjy3vba73/2nczWyIuJperJ2qSEpA3.jpg"
+  },
+  "silviaeremia7": {
+    "country": "DE",
+    "github": "silviaeremia7",
+    "linkedin": "silvia-eremia-432248234",
+    "image": "image/5eDxoIGI8JgwfKolhnOVPEVCaGu2/mBEutpRe3fn0X3FDAq3B.png"
+  },
+  "iforfota7": {
+    "country": "DE",
+    "github": "iforfota7",
+    "linkedin": "ioana-forfota-41116b260",
+    "image": "image/5eDxoIGI8JgwfKolhnOVPEVCaGu2/ld1F0IaoJE3rFI2jlILo.png"
   }
 }

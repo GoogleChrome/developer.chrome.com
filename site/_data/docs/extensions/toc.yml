@@ -44,7 +44,6 @@
     - url: /docs/extensions/mv3/service_workers
     - url: /docs/extensions/mv3/user_interface
     - url: /docs/extensions/mv3/tut_debugging
-    - url: /docs/extensions/mv3/samples
 - title: i18n.docs.extensions.service_workers
   sections:
     - url: /docs/extensions/mv3/service_workers

@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-08-23
+updated: 2023-09-15
 tags:
   - extensions-news
 
@@ -14,6 +14,12 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Chrome 118: Changes to opening file: scheme URLs {: #changes-to-file-scheme }
+
+<p class="color-secondary-text type--caption">Posted on <time>September 15, 2023</time></p>
+
+Beginning in Chrome 118, extensions will need the "Allow access to file URLs" setting enabled from the `chrome://extensions` page to open file:// scheme URLs using the [Tabs](/docs/extensions/reference/tabs/) or [Windows](/docs/extensions/reference/windows/) APIs. You can programmatically check for this access by calling [`chrome.extension.isAllowedFileSchemeAccess()`](/docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess). Firefox already restricts file URLs, and Safari supports the change. For more information, read the [post in the extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/ZtCvVISQU54/m/tOjjlzkfAgAJ).
 
 ### Chrome 117: Expanded URL protections on extension API navigations {: #expanded-kill-url }
 

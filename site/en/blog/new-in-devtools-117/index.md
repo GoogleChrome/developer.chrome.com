@@ -5,7 +5,7 @@ authors:
   - sofiayem
 date: 2023-08-22
 description: "Override XHR/fetch requests and hide extension requests from the Network panel, see changes in fetch priority in the Performance panel, experience multiple UI improvements, check out new colors and experimental features, and more."
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oM7ywmnxgVDuegxueVbK.png'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/aUS2cyTsoXaIdbnbpSe1.png'
 alt: 'Override XHR/fetch requests and hide extension requests from the Network panel, see changes in fetch priority in the Performance panel, experience multiple UI improvements, check out new colors and experimental features, and more.'
 tags:
   - new-in-devtools
@@ -16,9 +16,7 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
-
-{% YouTube id='e8tl_yp5BQg' %}
+{% YouTube id='oMRpODeXzho' %}
 
 <!-- $contentStart -->
 
@@ -141,10 +139,12 @@ In an effort to help build a [more private web](https://blog.google/products/chr
 
 You can already test how Chrome behaves *after* the third-party cookie phaseout. To do this, run [Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the `--test-third-party-cookies-phaseout` flag. To learn what this flag does, see [Debugging cookies](/docs/privacy-sandbox/third-party-cookie-phase-out/#debugging-cookies).
 
-Regardless of the way you run Chrome (with or without the flag), the **Issues** tab now has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default and, as a result, reports:
+Regardless of the way you run Chrome (with or without the flag), the **Issues** tab now has the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** checkbox enabled by default for all new Chrome users and, as a result, reports:
 
 - A breaking change warning about the upcoming phaseout.
 - Issues related to third-party cookies.
+
+If want to see cookie warnings about the upcoming phaseout as an existing Chrome user, make sure to check this checkbox.
 
 To test this, inspect cookies at [this demo page](https://samesite-sandbox.glitch.me/).
 

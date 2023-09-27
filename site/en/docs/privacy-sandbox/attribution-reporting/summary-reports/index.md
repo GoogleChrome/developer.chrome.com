@@ -8,7 +8,7 @@ description: >
   Measure ad conversions aggregated across users, without revealing
   individual data. Formerly known as aggregate reports.
 date: 2022-02-16
-updated: 2022-06-06
+updated: 2023-09-18
 authors:
   - alexandrawhite
 ---
@@ -16,7 +16,6 @@ authors:
 ## Implementation status
 
 *  [Chrome platform status](https://chromestatus.com/feature/5762222527610880)
-*  This API is available in the [ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
 *  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
 *  Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
 
@@ -99,7 +98,7 @@ They detail cross-site user behavior and
 by ad tech providers.
 {% endAside %}
 
-The proposed process to create a summary report is as follows:
+The process to create a summary report is as follows:
 
 1. Aggregatable reports are sent to the _reporting origin_, operated by an
    ad tech provider.
@@ -125,7 +124,7 @@ The proposed process to create a summary report is as follows:
 {% Img
    class="screehshot",
    src="image/VbsHyyQopiec0718rMq2kTE1hke2/hoRtQVV2b2MCXIKi1okK.jpg", 
-   alt="The proposed process to create a summary report is represented by encrypted reports sent to a collector server. The collector server sends the data to a secure aggregation service, which has a key to decrypt the data and create the summary report. The report is then sent back to the ad tech provider.",
+   alt="The process to create a summary report is represented by encrypted reports sent to a collector server. The collector server sends the data to a secure aggregation service, which has a key to decrypt the data and create the summary report. The report is then sent back to the ad tech provider.",
    width="800", height="168"
 %}
   <figcaption>
@@ -160,17 +159,14 @@ does—nothing more or less.
 {% endAside %}
 
 [The initial
-proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
+design](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
 asks each ad tech provider to operate their own instance of the aggregation
 service, in a trusted execution environment (TEE) deployed on a cloud service
 that supports needed security features.
 
 {% Aside %}
 
-You can [participate in an origin trial](/docs/privacy-sandbox/attribution-reporting-experiment/)
-for Attribution Reporting with the aggregation service, which will initially
-support local testing or testing in TEEs provided by Amazon Web Services. Read
-detailed [setup instructions for the aggregation
+Read detailed [setup instructions for the aggregation
 service](https://github.com/google/trusted-execution-aggregation-service/#set-up-aggregation-service-for-aggregatable-reports).
 
 In the future, we intend to add support for other cloud providers that meet the
@@ -197,8 +193,8 @@ The coordinator has several responsibilities:
 *  Track the aggregatable reports to prevent reuse in aggregation for summary
    reports, as reuse may reveal personal identifying information (PII).
 
-To make testing of the aggregation service available in an origin trial,
-Google will play the role of the coordinator. Longer term, we are working to
+To make testing of the aggregation service available in the now-complete origin trial,
+Google played the role of the coordinator. Longer term, we are working to
 identify one or more independent entities who can share this role.
 
 ### What information is captured?
@@ -276,7 +272,7 @@ taken:
 The ad tech can use the summary report to inform bidding and to offer
 reporting  to its own customers. A [JSON-encoded
 scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)
-is the proposed format for summary reports.
+is the format for summary reports.
 
 {% Partial 'privacy-sandbox/ar-engage.njk' %}
 

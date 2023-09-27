@@ -8,7 +8,7 @@ description: >
 authors:
  - agektmr
 date: 2022-11-09
-updated: 2023-07-10
+updated: 2023-09-18
 ---
 
 The Federated Credential Management API is
@@ -21,7 +21,7 @@ These updates are for you if:
 
 -   You are an IdP using the Federated Credential Management API—for
     example,
-    [you have run an origin trial](/blog/fedcm-origin-trial/).
+    [you've run an origin trial](/blog/fedcm-origin-trial/).
 -   You are an IdP or RP and interested in extending the API to fit your use
     case – e.g. you've been observing or participating in
     [the discussions on the FedID CG repository](https://github.com/fedidcg/FedCM/issues)

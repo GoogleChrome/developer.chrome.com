@@ -7,11 +7,11 @@
   </thead>
   <tr>
     <td>Event-level reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/EVENT.md">Explainer</a></td>
-    <td>Available in Chrome for origin trial</td>
+    <td>Now in general availability</td>
   </tr>
   <tr>
     <td>Aggregatable reports for clicks and views<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md">Explainer</a></td>
-    <td>Available in Chrome for origin trial</td>
+    <td>Now in general availability</td>
   </tr>
   <tr>
     <td>Conversion journey: app-to-web<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md">Web explainer</a> and <a href="https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web">Android explainer</a><br><a href="https://groups.google.com/u/0/a/chromium.org/g/attribution-reporting-api-dev/c/7cXZ4x62CmE">Mailing list announcement</a></td>
@@ -35,15 +35,15 @@
   </tr>
   <tr>
     <td>Support for filter-based deduplication keys for aggregatable reports<br><a href="https://groups.google.com/a/chromium.org/g/attribution-reporting-api-dev/c/U-XsiJrxbRQ/">Mailing list announcement</a></td>
-    <td>Available in Chrome for origin trial in Q1 2023</td>
+    <td>Now in general availability</td>
   </tr>
   <tr>
     <td>Support for source registration success reports in verbose debugging<br><a href="/docs/privacy-sandbox/attribution-reporting-debugging/part-3/#verbose-debug-report-of-type-source-success">Debugging cookbook</a></td>
-    <td>Available in Chrome for origin trial in Q1 2023</td>
+    <td>Now in general availability</td>
   </tr>
   <tr>
     <td>Reducing delays for aggregatable reports<br><a href="https://github.com/WICG/attribution-reporting-api/issues/738">Github issue</a> | <a href="https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#aggregatable-reports">Updated Explainer</a></td>
-    <td>Available in Chrome for origin trial in Q2 2023</td>
+    <td>Now in general availability</td>
   </tr>
   <tr>
     <td>Phase 1 Lite Flexible Event-Level<br><a href="https://github.com/WICG/attribution-reporting-api/blob/main/flexible_event_config.md#phase-1-lite-flexible-event-level">Flexible event-level configurations explainer</a></td>

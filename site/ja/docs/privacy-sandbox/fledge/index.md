@@ -92,7 +92,7 @@ FLEDGE の機能は、徐々に追加される予定です。[オリジントラ
 
 ## FLEDGE を試すには {: #try-fledge}
 
-- [FLEDGE API 開発者ガイド](/docs/privacy-sandbox/fledge-api#try-fledge)では、プライバシーサンドボックスの関連性と測定に関するオリジントライアルに参加する方法と、Chrome のフラグを設定して単一ユーザー向けに FLEDGE を試す方法について説明しています。
+- [FLEDGE API 開発者ガイド](/docs/privacy-sandbox/fledge-api#try-fledge)では、プライバシーサンドボックスの広告関連に関するオリジントライアルに参加する方法と、Chrome のフラグを設定して単一ユーザー向けに FLEDGE を試す方法について説明しています。
 
 - [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) には、広告主とサイト運営者サイトにまたがる基本的な FLEDGE デプロイメントのウォークスルーが提供されています。
 

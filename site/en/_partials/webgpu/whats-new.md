@@ -2,6 +2,16 @@
 
 A list of everything that has been covered in the [What's New in WebGPU](/tags/new-in-webgpu/) series.
 
+### Chrome 117 {: #chrome117 }
+
+* [Unset vertex buffer](/blog/new-in-webgpu-117/#unset-vertex-buffer)
+* [Unset bind group](/blog/new-in-webgpu-117/#unset-bind-group)
+* [Silence errors from async pipeline creation when device is lost](/blog/new-in-webgpu-117/#silence-errors-from-async-pipeline-creation-when-device-is-lost)
+* [SPIR-V shader module creation updates](/blog/new-in-webgpu-117/#spir-v-shader-module-creation-updates)
+* [Improving developer experience](/blog/new-in-webgpu-117/#improving-developer-experience)
+* [Caching pipelines with automatically generated layout](/blog/new-in-webgpu-117/#caching-pipelines-with-automatically-generated-layout)
+* [Dawn updates](/blog/new-in-webgpu-117/#dawn-updates)
+
 ### Chrome 116 {: #chrome116 }
 
 * [WebCodecs integration](/blog/new-in-webgpu-116/#webcodecs-integration)

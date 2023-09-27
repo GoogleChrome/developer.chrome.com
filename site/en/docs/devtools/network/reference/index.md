@@ -255,9 +255,45 @@ shown.
 [Data URLs][12] are small files embedded into other documents. Any request that you see in the
 **Requests** table that starts with `data:` is a data URL.
 
-Check the **Hide data URLs** checkbox to hide these requests.
+To hide these requests, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide data URLs**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Y3TDa8EhT6gARFcLFwKf.png", alt="The Hide Data URLs checkbox.", width="800", height="514" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/y3wTmRMS9Y5JlM0Z9wBF.png", alt="Data URLs hidden from the Requests table.", width="800", height="567" %}
+
+The status bar at the bottom displays the number of the shown requests out of the total.
+
+### Hide extension URLs {: #hide-extension-urls }
+
+To focus on the code you author, you can filter out irrelevant requests sent by extensions you may have installed in Chrome. Extension requests have URLs that start with `chrome-extension://`.
+
+To hide extension requests, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide extension URLs**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/07CwNEuofVPa8jp3LFfm.png", alt="Extension URLs hidden from the Requests table.", width="800", height="478" %}
+
+The status bar at the bottom displays the number of the shown requests out of the total.
+
+### Show only the requests with blocked response cookies {: #show-blocked-cookies }
+
+To filter out everything except the requests with response cookies blocked for any reason, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked response cookies**. Try it on this [demo page](https://samesite-sandbox.glitch.me/).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/owWZhGDXayLxFQdo20vO.png", alt="The Requests table shows only the requests with blocked response cookies.", width="800", height="550" %}
+
+The status bar at the bottom displays the number of the shown requests out of the total.
+
+To find out the reason why a response cookie was blocked, select the request, open its **Cookies** tab, and hover over the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qruVplg26sPV7Ryl8fHg.svg", alt="", width="24", height="24" %} information icon.
+
+### Show only blocked requests {: #show-blocked }
+
+To filter out everything except blocked requests, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked requests**. To test this, you can use the [**Network request blocking**](/docs/devtools/network/#block) drawer tab.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MWJci8DFgTzlOI18Wlqz.png", alt="The Requests table shows only blocked requests.", width="800", height="517" %}
+
+The **Requests** table highlights blocked requests in red. The status bar at the bottom displays the number of the shown requests out of the total.
+
+### Show only third-party requests {: #third-party }
+
+To filter out everything except the requests with with origin that differs from page origin, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **3rd-party requests**. Try it on this [demo page](https://samesite-sandbox.glitch.me/).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/K6waxv6tB2anAbECE4pK.png", alt="The Requests table shows only the third-party requests.", width="800", height="455" %}
 
 The status bar at the bottom displays the number of the shown requests out of the total.
 
@@ -340,7 +376,7 @@ To add a custom column to the **Requests** table:
 
 ### Group requests by inline frames {: #group-by-frames }
 
-If inline frames on a page initiate a lot of requests, you can make the request log frendlier by grouping them.
+If inline frames on a page initiate a lot of requests, you can make the request log friendlier by grouping them.
 
 To group requests by iframes, open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} inside the **Network** panel and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group by frame**.
 
@@ -407,12 +443,16 @@ To view the response body to a request:
 
 ### View HTTP headers {: #headers }
 
-To view HTTP header data about a request:
+To view HTTP header data of a request:
 
-1.  Click on the URL of the request, under the **Name** column of the Requests table.
-2.  Click the **Headers** tab.
+1. Click a request in the **Requests** table.
+1. Open the **Headers** tab and scroll down to **General**, **Response Headers**, or **Request Headers** sections.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0l9iRxK3yvrnha53NiKH.png", alt="The Headers tab.", width="800", height="469" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/j67jfFC4iJveVZhMVFwg.png", alt="The Headers tab of a request selected from the Requests table.", width="800", height="683" %}
+
+In the **General** section, DevTools shows you human-readable status message next to the received HTTP status code.
+
+In the **Response Headers** section, you can hover over a header value and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} **Edit** button to [override the response header locally](/docs/devtools/overrides/#override-headers).
 
 #### View HTTP header source {: #header-source }
 
@@ -421,7 +461,6 @@ order they were received:
 
 1.  Open the **Headers** tab for the request you're interested in. See [View HTTP headers][15].
 2.  Click **view source**, next to the **Request Header** or **Response Header** section.
-
 
 #### Provisional headers warning {: #provisional-headers }
 

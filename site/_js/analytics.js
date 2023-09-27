@@ -391,9 +391,10 @@ export function setConfig() {
 }
 
 async function initAnalytics() {
-  setConfig();
   // If prerendering then only init once the page is activated
   await whenPageActivated;
+
+  setConfig();
 
   addClickEventListener();
   addPageShowEventListener();

@@ -2,10 +2,10 @@
 layout: 'layouts/doc-post.njk'
 title: 'Content selection with Shared Storage'
 subhead: >
-  Select a URL based on data collected in Shared Storage render the
+  Select a URL based on data collected in Shared Storage, and render the
   content in a fenced frame.
 description: >
-  Select a URL based on data collected in Shared Storage render the
+  Select a URL based on data collected in Shared Storage, and render the
   content in a fenced frame.
 date: 2023-04-14
 authors:
@@ -43,11 +43,11 @@ When a user first observes a winning ad space, you can store an ID and click sta
   width="800", height="354" %}
 </figure>
 
-Your JavaScript runs in a worklet to retrieve this information, but your code
+Your JavaScript runs in a [worklet](/docs/privacy-sandbox/glossary/#worklet) to retrieve this information, but your code
 cannot interact with or communicate outside of the iframe or fenced frame on
 the parent page.
 
-Let's take another example. Let's say you're interested in testing what article
+Let's take another example. Let's say you're interested in testing which article
 would perform better in an embedded context. You can assign a user to an
 experiment group when you see that user on your site, then store that group ID
 in Shared Storage to be accessed in a cross-site context. On another site, your
@@ -97,7 +97,7 @@ To test, you must enable the **Privacy Sandbox Ads APIs experiment** flag at
 A [demo is available](https://shared-storage-demo.web.app/), and you can review
 the code on [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo).
 
-This demo is constructed from the perspective of an advertiser, adtech, content
+This demo is constructed from the perspective of an advertiser, ad tech, content
 distributor or other third-party service that wants to store information across
 different publishers' sites. In the demo, the same third-party code runs on
 both Publisher A and Publisher B sites for each use case. Visit each
