@@ -92,9 +92,9 @@ depends on the choices on Chrome's Privacy and security settings page:
 
 - If third-party cookies are enabled, the site can access cookies from a partition keyed based on
 its origin.
-- If third-party cookies are blocked, Chrome will use the extension origin as the partitioning key
+- If third-party cookies are blocked, Chrome uses the extension origin as the partitioning key
 for the third-party site's cookies. This means that the site will **not** be able to access
-partitioned cookies associated with other partitions such as the cookies it could access if it was
+partitioned cookies associated with other partitions such as the cookies it could access if it were
 navigated to directly.
 
 This setting is part of the Privacy Sandbox work and is being adjusted according to this
