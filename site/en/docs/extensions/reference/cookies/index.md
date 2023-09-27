@@ -22,6 +22,19 @@ to access. For example:
 }
 ```
 
+## Partitioning {: #partitioning }
+
+[Partitioned cookies][chips] allow a site to mark that certain cookies should be keyed against the
+origin of the top level frame. This means that if site A is embedded using an iframe in site B
+and site C, a partitioned cookie can have a different value in each.
+
+`chrome.cookies` does not support partitioning, which means that all methods
+read and write cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in
+the default partition.
+
+For details on the general impact of partitioning for extensions, see
+[Storage and Cookies][cookie-partitioning].
+
 ## Examples
 
 You can find a simple example of using the cookies API in the
@@ -30,4 +43,7 @@ the source code, see [Samples][3].
 
 [1]: /docs/extensions/mv3/declare_permissions
 [2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/cookies/cookie-clearer
-[3]: /docs/extensions/samples/
+[3]: /docs/extensions/samples
+[chips]: /docs/privacy-sandbox/chips
+[partitioning-api-proposal]: https://docs.google.com/document/d/1iZKjdUft0x3m6pTH8hnppF5VHinCy0Wlprk7bUwV-XY/edit?usp=sharing
+[cookie-partitioning]: /docs/extensions/mv3/storage-and-cookies/#cookies-partitioning

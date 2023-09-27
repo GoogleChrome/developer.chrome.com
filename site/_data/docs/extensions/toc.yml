@@ -58,6 +58,7 @@
     - url: /docs/extensions/mv3/match_patterns
     - url: /docs/extensions/mv3/promises
     - url: /docs/extensions/mv3/cross-origin-isolation
+    - url: /docs/extensions/mv3/storage-and-cookies
 - title: i18n.docs.extensions.indepth-security
   sections:
     - url: /docs/extensions/mv3/xhr

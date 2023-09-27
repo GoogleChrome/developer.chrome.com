@@ -15,7 +15,7 @@ The Storage API provides an extension-specific way to persist user data and stat
 
 {% Details %}
 {% DetailsSummary %}
-💡 Can extensions use the Storage API?
+Can extensions use web storage APIs?
 {% endDetailsSummary %}
 
 Even though extensions can use the [`Storage`][mdn-storage] interface (accessible from `window.localStorage`) in some contexts (popup and other HTML pages), it is not recommended for the following reasons:
@@ -24,12 +24,16 @@ Even though extensions can use the [`Storage`][mdn-storage] interface (accessibl
 - Content scripts share storage with the host page.
 - Data saved using the `Storage` interface is lost when the user clears their browsing history.
 
+To move data from web storage APIs to extension storage APIs from a service worker:
 
 1. Create an offscreen document with a conversion routine and an [`onMessage`][on-message] handler.
 1. Add a conversion routine to an offscreen document.
 1. In the extension service worker check `chrome.storage` for your data.
 1. If your data isn't found, [create][create-offscreen] an offscreen document and call [`sendMessage()`][send-message] to start the conversion routine.
 1. Inside the offscreen document's `onMessage` handler, call the conversion routine.
+
+There are also some nuances with how web storage APIs work in extensions. Learn more in the
+[Storage and Cookies][storage-and-cookies] article.
 
 {% endDetails %}
 
@@ -265,3 +269,4 @@ To see other demos of the Storage API, explore any of the following examples:
 [prop-session]: #property-session
 [prop-managed]: #property-managed
 [send-message]: /docs/extensions/reference/runtime/#method-sendMessage
+[storage-and-cookies]: /docs/extensions/mv3/storage-and-cookies
