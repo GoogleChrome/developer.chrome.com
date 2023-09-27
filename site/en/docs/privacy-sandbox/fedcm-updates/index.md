@@ -39,7 +39,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 
 ### Chrome 117 (Sep 2023)
 
-- Idp Sign-In Status API is now supported on Android Chrome 117 as well. Learn more from [FedCM updates](/blog/fedcm-chrome-116-updates/#idp-signin-status).
+- Origin trial for Idp Sign-In Status API has started on Android Chrome 117 as well. Learn more from [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/#idp-signin-status).
 
 ### Chrome 116 (Aug 2023)
 
