@@ -438,9 +438,9 @@ The following table lists the currently available permissions. See the [Permissi
     </tr>
     <tr id="unlimitedStorage">
       <td><code>"unlimitedStorage"</code></td>
-      <td>Provides an unlimited quota for [chrome.storage][api-storage], [IndexedDB][indexeddb],
-      [Cache Storage][cache-storage] and [Origin Private File System][opfs]. For more information,
-      see [Storage and cookies][storage-and-cookies].</td>
+      <td>Provides an unlimited quota for <a href="/docs/extensions/reference/storage">chrome.storage</a>, <a href="https://developer.mozilla.org/docs/Web/API/IndexedDB_API">IndexedDB</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache Storage</a> and <a href="https://web.dev/origin-private-file-system/">Origin Private File System</a>. For more information,
+      see <a href="/docs/extensions/mv3/storage-and-cookies">Storage and cookies</a>.</td>
     </tr>
     <tr id="vpnProvider">
       <td><code>"vpnProvider"</code></td>
