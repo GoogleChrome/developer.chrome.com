@@ -89,6 +89,58 @@ alt="Clicked Disabled extension", width="252", height="180", class="screenshot" 
   </figcaption>
 </figure>
 
+### Action badge {: #badge }
+
+Badges display a colored banner on top of the action icon. They can only be used when the `"action"`
+is declared in the manifest. 
+
+Use badges to indicate the state of the extension. The [Drink Water][sample-drink] sample extension
+displays a badge with "ON" to show the user they have successfully set an alarm and displays nothing when
+the extension is idle. Badges can contain up to 4 characters.
+
+{% Columns %}
+
+{% Column %}
+
+<figure>
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png", alt="Badge On",
+       height="72", width="72" %}  
+<figcaption>
+    An action icon with a badge.
+  </figcaption>
+</figure>
+
+
+
+{% endColumn %}
+
+{% Column %} 
+
+<figure>
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png", alt="Badge Off",
+       height="72", width="72" %}  
+<figcaption>
+    An action icon without a badge.
+  </figcaption>
+</figure>
+
+
+
+{% endColumn %}
+
+{% endColumns %}
+
+You can set the text of the badge by calling [`chrome.action.setBadgeText()`][action-setbadgetext] and
+the banner color by calling
+[`chrome.action.setBadgeBackgroundColor()`][action-setbadgebackgroundcolor].
+
+{% Label %}service-worker.js:{% endLabel %}
+
+```js
+chrome.action.setBadgeText({text: 'ON'});
+chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
+```
+
 ## Provide the extension icons
 
 An extension requires at least one icon to represent it. Provide icons in PNG format for the best
@@ -159,58 +211,6 @@ Register icons in the manifest under the `"icons"` field.
 ```
 
 ## Additional user interface features {: #additional_features }
-
-### Action badge {: #badge }
-
-Badges display a colored banner on top of the action icon. They can only be used when the `"action"`
-is declared in the manifest. 
-
-Use badges to indicate the state of the extension. The [Drink Water][sample-drink] sample extension
-displays a badge with "ON" to show the user they have successfully set an alarm and displays nothing when
-the extension is idle. Badges can contain up to 4 characters.
-
-{% Columns %}
-
-{% Column %}
-
-<figure>
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png", alt="Badge On",
-       height="72", width="72" %}  
-<figcaption>
-    An action icon with a badge.
-  </figcaption>
-</figure>
-
-
-
-{% endColumn %}
-
-{% Column %} 
-
-<figure>
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png", alt="Badge Off",
-       height="72", width="72" %}  
-<figcaption>
-    An action icon without a badge.
-  </figcaption>
-</figure>
-
-
-
-{% endColumn %}
-
-{% endColumns %}
-
-You can set the text of the badge by calling [`chrome.action.setBadgeText()`][action-setbadgetext] and
-the banner color by calling
-[`chrome.action.setBadgeBackgroundColor()`][action-setbadgebackgroundcolor].
-
-{% Label %}service-worker.js:{% endLabel %}
-
-```js
-chrome.action.setBadgeText({text: 'ON'});
-chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
-```
 
 ### Popup {: #popup }
 
