@@ -37,10 +37,10 @@ permission. Once the user has granted the permission, you can open a fullscreen
 popup window as in the following example.
 
 ```js
-document.querySelector('.fullscreen-popoup-button').addEventListener('click', (e) => {
+document.querySelector('.fullscreen-popoup-button').addEventListener('click', async (e) => {
   if ((await navigator.permissions.query({name: 'window-management'})).state !== 'granted') {
     // Permission not granted. Call `window.getScreenDetails()` to prompt.
-    return await window.getScreenDetails();
+    await window.getScreenDetails();
   }
   // Permission granted. Open the fullscreen popup window.
   window.open('https://example.com/popup.html', '_blank', 'popup,fullscreen');
@@ -74,7 +74,7 @@ values to the corresponding `left`, `top`, `width`, and `height` values of the
 `windowFeatures` string.
 
 ```js
-document.querySelector('.fullscreen-popoup-button-other-screen').addEventListener('click', (e) => {
+document.querySelector('.fullscreen-popoup-button-other-screen').addEventListener('click', async (e) => {
   const screenDetails = await window.getScreenDetails();
   ​​const otherScreen = screenDetails.screens.find(s => s !== screenDetails.currentScreen);
   window.open('https://example.com/popup.html', '_blank', `left=${otherScreen.availLeft},` +
@@ -93,16 +93,17 @@ implicitly assumed when any of `left`, `top`, `width`, or `height` is defined.
 ## Demo
 
 Try fullscreen popup windows in the
-[demo](https://michaelwasserman.github.io/window-placement-demo/) on Glitch and
+[demo](https://michaelwasserman.github.io/window-placement-demo/) and
 [view the source code](https://github.com/michaelwasserman/window-placement-demo/).
-Be sure to check the **fullscreen** checkbox, and, if you have the opportunity,
-play with the demo with multiple screens attached to your device.
+Be sure to check the **fullscreen** checkbox and **Fullscreen popup** button, and,
+if you have the opportunity, play with the demo with multiple screens attached to
+your device.
 
-<iframe src="https://michaelwasserman.github.io/window-placement-demo/" style="width: 100%; height: 800px;" allow="window-management"></iframe>
+<iframe src="https://michaelwasserman.github.io/window-placement-demo/" style="width: 100%; height: 800px;" allow="window-management;fullscreen"></iframe>
 
 ## Related links
 
-- [Public explainer](https://github.com/bradtriebwasser/fullscreen-popup/blob/main/EXPLAINER.md)
+- [Public explainer](https://github.com/w3c/window-management/blob/main/EXPLAINER_fullscreen_popups.md)
 - [ChromeStatus entry](https://chromestatus.com/feature/6002307972464640)
 - [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1142516)
 - [TAG review](https://github.com/w3ctag/design-reviews/issues/840)
