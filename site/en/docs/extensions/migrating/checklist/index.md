@@ -98,7 +98,7 @@ Changes are required to improve the security of extensions. This includes removi
 ## Publish your Manifest V3 extension
 {% endDetailsSummary %}
 
-After converting to Manifest Version 3, it's time to release your extension on the Chrome Web Store. Depending on the changes made, consider a step-wise rollout. This approach allows you to ensure your extension works as expected with a limited audience first, before releasing it to the entire user base.
+After converting to Manifest Version 3, it's time to release your extension on the Chrome Web Store. Depending on the changes made, consider a step-wise roll out. This approach allows you to ensure your extension works as expected with a limited audience first, before releasing it to the entire user base.
 
 * [Publish a beta testing version](/docs/extensions/migrating/publish-mv3/#publish-beta).
 * [Gradually roll out your release](/docs/extensions/migrating/publish-mv3/#gradual-rollout).
