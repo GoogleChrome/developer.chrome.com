@@ -114,5 +114,6 @@ your device.
 
 This article was reviewed by [Brad
 Triebwasser](https://www.linkedin.com/in/bradtriebwasser), [Hakan
-Isbiliroglu](https://www.linkedin.com/in/hakan-isbiliroglu), and [Rachel
+Isbiliroglu](https://www.linkedin.com/in/hakan-isbiliroglu),
+[Mike Wasserman](https://www.linkedin.com/in/mike-wasserman), and [Rachel
 Andrew](https://rachelandrew.co.uk/).
