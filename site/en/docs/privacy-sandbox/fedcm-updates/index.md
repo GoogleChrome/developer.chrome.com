@@ -39,16 +39,15 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 
 ### Chrome 117 (Sep 2023)
 
-- Origin trial for Idp Sign-In Status API has started on Android Chrome 117 as well. Learn more from [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/#idp-signin-status).
+- Origin trial for Idp Sign-In Status API is available on Android from Chrome 117. Learn more about it in [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/#idp-signin-status).
 
 ### Chrome 116 (Aug 2023)
 
-- Added support for following three new features in Chrome 116
+- Added support for following three features in Chrome 116:
   - **Login Hint API**: Specify a preferred user account to be signed in.
   - **User Info API**: Fetch the information of the returning user so that the identity provider (IdP) can render a personalized sign-in button within an iframe.
   - **RP Context API**: Use a title different from 'Sign in' in the FedCM dialog.
-- Origin Trial for IdP Sign-In Status API is starting.
-- Learn more from [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/).
+- Origin Trial for IdP Sign-In Status API is available. Learn more about it in [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/).
 
 ### Chrome 115 (June 2023)
 
