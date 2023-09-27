@@ -28,7 +28,7 @@ Topics API のデモは [topics-demo.glitch.me](https://topics-demo.glitch.me/) 
 
 ### オリジントライアルで Topics をテストする {: #origin-trial}
 
-Topics、[FLEDGE](/docs/privacy-sandbox/unified-origin-trial/)、および [アトリビューション レポート](/docs/privacy-sandbox/fledge/)の API に関するプライバシーサンドボックスの関連性と測定の[オリジントライアル](/docs/privacy-sandbox/attribution-reporting/)が、デスクトップ版 Chrome Beta 101.0.4951.26 以降で利用できるようになりました。
+Topics、[FLEDGE](/docs/privacy-sandbox/unified-origin-trial/)、および [アトリビューション レポート](/docs/privacy-sandbox/fledge/)の API に関するプライバシーサンドボックスの広告関連の[オリジントライアル](/docs/privacy-sandbox/attribution-reporting/)が、デスクトップ版 Chrome Beta 101.0.4951.26 以降で利用できるようになりました。
 
 ## トピックの取得と設定 {: #epoch}
 
