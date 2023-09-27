@@ -95,7 +95,7 @@ implicitly assumed when any of `left`, `top`, `width`, or `height` is defined.
 Try fullscreen popup windows in the
 [demo](https://michaelwasserman.github.io/window-placement-demo/) and
 [view the source code](https://github.com/michaelwasserman/window-placement-demo/).
-Be sure to check the **fullscreen** checkbox and **Fullscreen popup** button, and,
+Be sure to check the **fullscreen** checkbox and the **Fullscreen popup** button, and,
 if you have the opportunity, play with the demo with multiple screens attached to
 your device.
 
