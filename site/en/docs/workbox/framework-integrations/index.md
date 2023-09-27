@@ -32,3 +32,4 @@ Frameworks make web development more enjoyable through an improved developer exp
 - [hexo-offline](https://github.com/JLHwung/hexo-offline)
 - [create-lwc-app](https://github.com/muenzpraeger/create-lwc-app)
 - [eleventy-plugin-pwa](https://github.com/okitavera/eleventy-plugin-pwa)
+- [Vite](https://vite-pwa-org.netlify.app)
