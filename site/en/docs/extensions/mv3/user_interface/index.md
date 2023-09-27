@@ -9,7 +9,7 @@ description: User interface and design guidelines for Chrome Extensions.
 
 Like Chrome's user interface, an extension user interface should be purposeful and minimal. Extensions
 should allow users to customize or enhance the user's browsing experience without distracting
-from it. 
+from it.
 
 This guide explores required and optional user interface features. Use it to understand how and when
 to implement different user interface elements within an extension.
@@ -17,10 +17,10 @@ to implement different user interface elements within an extension.
 ## The extension action {: #action }
 
 The [Action API][api-action] controls the extension's action (toolbar icon). It can either open a
-[popup][section-popup] or trigger some functionality when it's [clicked][section-onclick]. 
+[popup][section-popup] or trigger some functionality when it's [clicked][section-onclick].
 
 Users can trigger an extension's action by expanding the extension menu and selecting the desired
-extension. 
+extension.
 
 To make it easier to access an extension, the user may choose to pin the extension's action to the
 toolbar. Once pinned, the extension's action will appear to the left of the extension menu. Users
@@ -29,7 +29,7 @@ order.
 
 {% Columns %}
 
-{% Column %} 
+{% Column %}
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", alt="Unpinned extension",
@@ -39,7 +39,7 @@ width="400", height="374", class="screenshot" %}
 
 {% endColumn %}
 
-{% Column %} 
+{% Column %}
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", alt="Pinned extension",
@@ -81,18 +81,31 @@ When an extension is disabled, the icon is grayed out. If the user clicks the di
 the extension's context menu will appear.
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hlYsQJPFsF7WBAjJZ6DS.png", 
-alt="Clicked Disabled extension", width="252", height="180", class="screenshot" %}  
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hlYsQJPFsF7WBAjJZ6DS.png",
+alt="Clicked Disabled extension", width="252", height="180", class="screenshot" %}
 
 <figcaption>
     Disabled extension.
   </figcaption>
 </figure>
 
+### Respond to the action {: #click}
+
+It's possible to register an [`OnClicked` handler][action-onclicked] for when the user clicks the action
+item. However, this won't fire if the action has a popup (default or otherwise).
+
+{% Label %}service-worker.js:{% endLabel %}
+
+```js
+chrome.action.onClicked.addListener((tab) => {
+  chrome.action.setTitle({tabId: tab.id, title: `You are on tab: ${tab.id}`});
+});
+```
+
 ### Action badge {: #badge }
 
 Badges display a colored banner on top of the action icon. They can only be used when the `"action"`
-is declared in the manifest. 
+is declared in the manifest.
 
 Use badges to indicate the state of the extension. The [Drink Water][sample-drink] sample extension
 displays a badge with "ON" to show the user they have successfully set an alarm and displays nothing when
@@ -104,7 +117,7 @@ the extension is idle. Badges can contain up to 4 characters.
 
 <figure>
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png", alt="Badge On",
-       height="72", width="72" %}  
+       height="72", width="72" %}
 <figcaption>
     An action icon with a badge.
   </figcaption>
@@ -114,11 +127,11 @@ the extension is idle. Badges can contain up to 4 characters.
 
 {% endColumn %}
 
-{% Column %} 
+{% Column %}
 
 <figure>
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png", alt="Badge Off",
-       height="72", width="72" %}  
+       height="72", width="72" %}
 <figcaption>
     An action icon without a badge.
   </figcaption>
@@ -178,7 +191,7 @@ Icons specific to the toolbar are registered in the `"default_icon"` field under
 ```
 
 All icons should be square or they may be distorted. If no icons are supplied, Chrome will add a
-generic one to the toolbar with the first letter of the extension name. 
+generic one to the toolbar with the first letter of the extension name.
 
 ### Create and register additional icons {: #icon_size }
 
@@ -222,7 +235,7 @@ The [Drink Water Event][sample-drink] example popup displays available timer opt
 alarm by clicking one of the provided buttons.
 
 <figure>
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", alt="The Drink Water popup", height="361", width="213", class="screenshot" %}  
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", alt="The Drink Water popup", height="361", width="213", class="screenshot" %}
 <figcaption>
     The Drink Water popup.
   </figcaption>
@@ -275,7 +288,7 @@ chrome.storage.local.get('signed_in', (data) => {
 });
 ```
 
-### Side panel {: #side-panel } 
+### Side panel {: #side-panel }
 
 An extension side panel is an HTML file that provides additional functionality alongside the main content of a web page. The [Dictionary side panel][sample-dictionary-sidepanel] example allows users to right-click on a word and see the definition in the side panel.
 
@@ -324,19 +337,6 @@ Tooltips are registered in the `"default_title"` field under the `"action"` key 
 ```
 
 Tooltips can also be set or updated by calling [`action.setTitle()`][action-settitle].
-
-### Click Event {: #click}
-
-It's possible to register an [`OnClicked` handler][action-onclicked] for when the user clicks the action
-item. However, this won't fire if the action has a popup (default or otherwise).
-
-{% Label %}service-worker.js:{% endLabel %}
-
-```js
-chrome.action.onClicked.addListener((tab) => {
-  chrome.action.setTitle({tabId: tab.id, title: `You are on tab: ${tab.id}`});
-});
-```
 
 ### Omnibox {: #omnibox }
 
@@ -575,7 +575,7 @@ permission in the manifest.
 {% Label %}manifest.json:{% endLabel %}
 
 ```json/5
-{ 
+{
   "name": "Drink Water Event Popup",
 ...
   "permissions": [
@@ -608,7 +608,7 @@ function showStayHydratedNotification() {
 ```
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e5S112AtwfnA5o64JrGg.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e5S112AtwfnA5o64JrGg.png",
 alt="Mac OS notification", width="500", height="150", class="screenshot" %}
   <figcaption>
     Notification on macOS.
