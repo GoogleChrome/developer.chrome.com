@@ -302,7 +302,7 @@ Permissions-Policy: browsing-topics=(self "https://example.com")
 ## Next steps
 
 - Learn more about [what topics are and how they work](/docs/privacy-sandbox/topics/topic-classification). <!-- topic classification page and demo and trial links needed-->
-- Try out the [demo](/docs/privacy-sandbox/topics/demo) or join an [origin trial](/docs/web-platform/origin-trials/).
+- Try out the [demo](/docs/privacy-sandbox/topics/demo).
 
 ## Find out more
 
