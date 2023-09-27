@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Relevance and measurement unified origin trial - concluded'
+title: 'Relevance and measurement unified origin trial'
 subhead: >
    Run unified experiments across Attribution Reporting, Protected Audience API,
    Topics, Fenced Frames, and Shared Storage.
