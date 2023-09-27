@@ -46,7 +46,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 - Added support for following three new features in Chrome 116
   - **Login Hint API**: Specify a preferred user account to be signed in.
   - **User Info API**: Fetch the information of the returning user so that the identity provider (IdP) can render a personalized sign-in button within an iframe.
-  - RP Context API: Use a title different from 'Sign in' in the FedCM dialog.
+  - **RP Context API**: Use a title different from 'Sign in' in the FedCM dialog.
 - Origin Trial for IdP Sign-In Status API is starting.
 - Learn more from [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/).
 
