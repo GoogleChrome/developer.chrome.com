@@ -90,7 +90,7 @@ ignored.
 
 ## Long-lived connections {: #connect }
 
-To create a reusable long-lived message passing channel, use [runtime.connect][runtime-connect]
+To create a reusable long-lived message passing channel, call [`runtime.connect()`][runtime-connect]
 to pass messages from a content script to an extension page, or [tabs.connect][tabs-connect]
 to pass messages from an extension page to a content script. You can name your channel to
 distinguish between different types of connections.
