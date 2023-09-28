@@ -295,8 +295,10 @@ scripts.
 
 When receiving a message from a content script or another extension, make sure to protect
 your scripts against [cross-site scripting][wiki-cross-site]. This advice applies to scripts running inside the
-extension background page as well as to content scripts running in other web origins. Use APIs that don't run
-scripts whenever possible:
+extension background page as well as to content scripts running in other web origins.
+
+{% Compare 'better', 'Safer methods' %}
+Use APIs that don't run scripts whenever possible:
 
 {% Label %}service-worker.js{% endLabel %}
 
@@ -315,7 +317,9 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
   document.getElementById("resp").innerText = response.farewell;
 });
 ```
+{% endCompare %}
 
+{% Compare 'worse', 'Unsafe methods' %}
 Avoid using the following methods that make your extension vulnerable:
 
 {% Label %}service-worker.js{% endLabel %}
@@ -335,6 +339,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
   document.getElementById("resp").innerHTML = response.farewell;
 });
 ```
+{% endCompare %}
 
 [doc-promises]: /docs/extensions/mv3/promises/#compare-to-callback
 [mdn-promise]: https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Promises
