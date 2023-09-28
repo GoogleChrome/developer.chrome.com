@@ -151,7 +151,7 @@ send messages using [`postMessage()`][runtime-post-msg].
 
 If there are multiple frames in a tab, calling [`tabs.connect()`][tabs-connect] invokes
 the [`runtime.onConnect`][runtime-on-connect] event once for each frame in the tab. Similarly, if
-[runtime.connect()][runtime-connect] is called, then the onConnect event can fire  once for every
+[`runtime.connect()`][runtime-connect] is called, then the `onConnect` event can fire  once for every
 frame in the extension process.
 
 You might want to find out when a connection is closed, for example if you're maintaining separate
