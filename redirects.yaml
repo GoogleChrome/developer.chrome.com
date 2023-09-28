@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /docs/privacy-sandbox/user-agent/snippets/
+  to: /docs/privacy-sandbox/user-agent/
+
 - from: /docs/privacy-sandbox/trust-tokens/
   to: /docs/privacy-sandbox/private-state-tokens/
 

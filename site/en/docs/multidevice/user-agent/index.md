@@ -8,11 +8,6 @@ description: >
   Android, iOS, and WebView contexts.
 ---
 
-{% Aside 'caution' %}
-With Privacy Sandbox, an origin trial is in progress for
-[reduced User-Agent strings](/docs/privacy-sandbox/user-agent/), designed to
-remove sensitive information which may be used for fingerprinting.
-{% endAside %}
 
 A browser's User-Agent string (UA) helps identify which browser is being used, what version, and on
 which operating system. When feature detection APIs are not available, use the UA to customize
@@ -29,15 +24,10 @@ a phone or a tablet.
 
 **Phone UA:**
 
-<pre><code>Mozilla/5.0 (Linux; {Android Version}; {Build Tag etc.}) 
-AppleWebKit/{WebKit Rev} (KHTML, like Gecko)
-Chrome/{Chrome Rev} <mark>Mobile</mark> Safari/{WebKit Rev}</code></pre>
+<pre>Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36
+</pre>
 
-fully reduced:
 
-<pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) 
-AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 
-Mobile/15E148 Safari/604.1</pre>
 
 **Tablet UA:**
 
@@ -73,9 +63,9 @@ instead of `Version/<VersionNum>`.
 
 Here's an example of the **Chrome** UA on iPhone:
 
-<pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) 
-AppleWebKit/602.1.50 (KHTML, like Gecko) <mark>CriOS/56.0.2924.75</mark>
-Mobile/14E5239e Safari/602.1</code></pre>
+<pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) 
+AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 
+Mobile/15E148 Safari/604.1</pre>
 
 For comparison, the **Mobile Safari** UA:
 
@@ -145,7 +135,14 @@ Version/4.0 Chrome/95.0.4638.50 Mobile Safari/537.36 OPR/60.0.2254.59405</code><
 [1]: https://play.google.com/store/apps/details?id=com.android.chrome
 [2]: /docs/multidevice/webview/
 
-{% Aside 'caution' %} With Privacy Sandbox, an origin trial is in progress for
-[reduced User-Agent strings](/docs/privacy-sandbox/user-agent/), designed to
-remove sensitive information which may be used for fingerprinting.
-{% endAside %}
+## General formats
+
+Chrome on desktop
+
+<pre>Mozilla/5.0 (<unifiedPlatform>) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/<majorVersion>.0.0.0 Safari/537.36</pre>
+
+Chrome on mobile and tablet
+
+<pre>Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/<majorVersion>.0.0.0 <deviceCompat> Safari/537.36</pre>

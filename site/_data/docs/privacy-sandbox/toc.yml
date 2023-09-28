@@ -52,7 +52,6 @@
     - title: i18n.docs.privacy-sandbox.limit-passive-fingerprint
       sections:
         - url: /docs/privacy-sandbox/user-agent
-        - url: /docs/privacy-sandbox/user-agent/snippets
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
     - title: i18n.docs.privacy-sandbox.interest-ads
