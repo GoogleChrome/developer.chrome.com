@@ -148,8 +148,8 @@ Again, there are no changes required from developers to align their passkey
 implementation with iCloud Keychain. The API behavior between Chrome profile and
 iCloud Keychain are already identical.
 
-However, relying parties can distinguish the origin of a passkey whether it's
-created on iCloud Keychain or on Chrome profile if they wish, by looking at the
+Relying parties can find out the origin of a passkey and distinguish whether it's
+been created on iCloud Keychain or on Chrome profile, by looking at the
 [AAGUID](https://www.w3.org/TR/webauthn/#aaguid) (an identifier indicating the
 type of the authenticator) in [the credential's authenticator
 data](https://www.w3.org/TR/webauthn-3/#sctn-attestation).
