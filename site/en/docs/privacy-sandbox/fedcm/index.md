@@ -156,8 +156,8 @@ that the phase-out is expected to affect.
 ### Your RPs are third-party
 
 If you're an identity provider whose RPs are within the [same
-party](/blog/first-party-sets-sameparty/#first-party-sets-policy) as your IdP, we expect [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) (formerly called First-Party Sets) 
-may be a better option. Related Website Sets allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first-party. This allows the same party's third-party cookies to work, even after third-party cookie phase-out.
+party](/blog/first-party-sets-sameparty/#first-party-sets-policy) as your IdP, we expect [Related Website Sets](/docs/privacy-sandbox/related-website-sets/)
+ may be a better option. Related Website Sets allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first-party. This allows the same party's third-party cookies to work, even after third-party cookie phase-out.
 
 Related Website Sets can't always be used. However, if your RPs are
 [SameParty](/blog/first-party-sets-sameparty/#first-party-sets-policy),
