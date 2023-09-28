@@ -123,7 +123,7 @@ To send a request from the extension to a content script, replace the call to `r
 in the previous example with [`tabs.connect()`][tabs-connect].
 
 To handle incoming connections for either a content script or an extension page, set
-up a [runtime.onConnect()][runtime-on-connect] event listener. When another part of your
+up a [`runtime.onConnect`][runtime-on-connect] event listener. When another part of your
 extension calls `connect()`, it activates this event and the [`runtime.Port`][runtime-port]
 object. The code for responding to incoming connections looks like this:
 
