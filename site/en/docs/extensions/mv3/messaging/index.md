@@ -119,7 +119,7 @@ port.onMessage.addListener(function(msg) {
 });
 ```
 
-To send a request from the extension to a content script, replace the call to `connect()`
+To send a request from the extension to a content script, replace the call to `runtime.connect()`
 in the previous example with [`tabs.connect()`][tabs-connect].
 
 To handle incoming connections for either a content script or an extension page, set
