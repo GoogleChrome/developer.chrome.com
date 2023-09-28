@@ -241,7 +241,7 @@ connectable"`][43]. For example:
 This exposes the messaging API to any page that matches the URL patterns you specify. The URL
 pattern must contain at least a [second-level domain][wiki-second-level]; that is, hostname patterns such as "\*",
 "\*.com", "\*.co.uk", and "\*.appspot.com" are prohibited. <!--Find a way to say this positively. Listing things to not do confuses readers.--> From the web page, use the
-[runtime.sendMessage()][runtime-send-msg] or [runtime.connect()][runtime-connect] APIs to send
+[`runtime.sendMessage()`][runtime-send-msg] or [`runtime.connect()`][runtime-connect] APIs to send
 a message to a specific app or extension. For example:
 
 {% Label %}webpage.js{% endLabel %}
