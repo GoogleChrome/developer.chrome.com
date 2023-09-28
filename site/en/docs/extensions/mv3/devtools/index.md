@@ -256,7 +256,7 @@ extensionPanel.onShown.addListener(function (extPanelWindow) {
 Use the service worker to send messages between the DevTools page and content scripts.
 
 To send a message _to_ a content script, the service worker calls
-[`tabs.sendMessage()`][api-scripting-sendmessage] method, which directs a message to the content
+[`tabs.sendMessage()`][api-scripting-sendmessage], which directs a message to the content
 scripts in a specific tab, as shown in [Injecting a Content Script][header-injecting].
 
 To send a message from a content script, you'll need to establish a connection between the DevTools
