@@ -162,7 +162,7 @@ event fires when there are no valid ports at the other end of the channel, which
 - The tab containing the port is unloaded (for example, if the tab is navigated).
 - The frame where `connect()` was called has unloaded.
 - All frames that received the port (via [runtime.onConnect][runtime-on-connect]) have unloaded.
-- [runtime.Port.disconnect()][runtime-port-disconnect] is called by _the other end_.
+- [`runtime.Port.disconnect()`][runtime-port-disconnect] is called by _the other end_.
   - If a `connect()` call results in multiple ports at the receiver's end, and `disconnect()`
     is called on any of these ports, then the `onDisconnect` event only fires at the sending port,
     not at the other ports.
