@@ -98,7 +98,7 @@ Chrome profile is available, it will be used to authenticate the user.
   <figcaption>Chrome's passkey dialog to sign in with a passkey saved to Chrome profile.</figcaption>
 </figure>
 
-If authentication is requested using form autofill (Conditional UI), passkeys
+If authentication is requested using form autofill ([conditional UI](/blog/webauthn-conditional-ui/#conditional-ui)), passkeys
 from iCloud Keychain are listed as part of the autofill suggestions if the user
 has granted Chrome the necessary permission. If there are passkeys stored in the
 Chrome profile, they are suggested too.
