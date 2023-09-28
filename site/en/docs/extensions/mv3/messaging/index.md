@@ -64,7 +64,7 @@ applies to, as in the following example:
 })();
 ```
 
-To receive the message, set up an [`runtime.onMessage`][runtime-on-msg] event listener. These
+To receive the message, set up a [`runtime.onMessage`][runtime-on-msg] event listener. These
 use the same code in both extensions and content scripts:
 
 {% Label %}content-script.js or service-worker.js:{% endLabel %}
