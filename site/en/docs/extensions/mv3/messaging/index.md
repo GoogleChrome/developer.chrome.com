@@ -147,7 +147,7 @@ chrome.runtime.onConnect.addListener(function(port) {
 
 Ports are designed as a two-way communication method between different parts of the extension. A top-level frame is the smallest part of an extension that can use a port.
 When part of an extension calls [`tabs.connect()][tabs-connect`], [`runtime.connect()`][runtime-connect] or [`runtime.connectNative()`][runtime-connect-native], it creates a [Port][runtime-port] that can immediately
-send messages using [postMessage()][runtime-post-msg].
+send messages using [`postMessage()`][runtime-post-msg].
 
 If there are multiple frames in a tab, calling [tabs.connect()][tabs-connect] invokes
 the [runtime.onConnect][runtime-on-connect] event once for each frame in the tab. Similarly, if
