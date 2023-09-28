@@ -154,11 +154,10 @@ created on iCloud Keychain or on Chrome profile if they wish, by looking at the
 type of the authenticator) in [the credential's authenticator
 data](https://www.w3.org/TR/webauthn-3/#sctn-attestation).
 
-The AAGUID of a passkey created in the Chrome profile is:
-`adce0002-35bc-c60a-648b-0b25f1f05503`. Ones in iCloud Keychain are:
+The AAGUID of a passkey created in Chrome profile is:
+`adce0002-35bc-c60a-648b-0b25f1f05503`. In iCloud Keychain it is:
 `00000000-0000-0000-0000-000000000000` as of September 2023. You can find known
-AAGUIDs in a crowd sourced repository at
-[https://github.com/passkeydeveloper/passkey-authenticator-aaguids](https://github.com/passkeydeveloper/passkey-authenticator-aaguids)
+AAGUIDs in the [crowd sourced AAGUID repository](https://github.com/passkeydeveloper/passkey-authenticator-aaguids).
 
 ## iCloud Keychain activation
 
