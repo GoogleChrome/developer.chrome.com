@@ -16,7 +16,7 @@ This communication uses message passing, which allows both extensions and conten
 listen for each other's messages and respond on the same channel. A message can
 contain any valid JSON object (null, boolean, number, string, array, or object). There are
 two message passing APIs: one for [one-time requests][section-one-time], and a more complex one
-for [long-lived connections][section-long] that allows multiple messages to be sent. For information
+for [long-lived connections][section-long] that allow multiple messages to be sent. For information
 about sending messages between extensions, see the [cross-extension messages][section-external] section.
 
 ## One-time requests {: #simple }
