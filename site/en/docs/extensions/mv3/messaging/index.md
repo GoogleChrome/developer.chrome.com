@@ -174,7 +174,7 @@ messaging API to communicate with other extensions. This lets you expose a publi
 extensions to use.
 
 To listen for incoming requests and connections from other extensions, use the
-[runtime.onMessageExternal][runtime-on-msg-ext]
+[`runtime.onMessageExternal`][runtime-on-msg-ext]
 or [runtime.onConnectExternal][runtime-on-connect-ext] methods. Here's an example of
 each:
 
