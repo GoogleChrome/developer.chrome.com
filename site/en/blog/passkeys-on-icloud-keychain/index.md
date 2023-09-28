@@ -161,7 +161,10 @@ AAGUIDs in the [crowd sourced AAGUID repository](https://github.com/passkeydevel
 
 ## iCloud Keychain activation
 
-If a user tries to use iCloud Keychain passkeys but is not signed into iCloud,
+Users must grant Chrome the permission to use iCloud Keychain on macOS the
+first time they try.
+
+If a user tries to use iCloud Keychain passkeys but is not signed into iCloud
 or does not have iCloud Keychain syncing enabled, they are directed to System
 Settings.
 
@@ -169,9 +172,6 @@ Settings.
   {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/1Gj5VCqfoLza5K3zRXDq.png", alt="A dialog shown when iCloud Keychain is not enabled on the user's macOS.", width="800", height="649" %}
   <figcaption>A dialog shown when iCloud Keychain is not enabled on the user's macOS.</figcaption>
 </figure>
-
-Also, users must grant Chrome permission to use iCloud Keychain on macOS the
-first time that they try.
 
 ## Learn more
 
