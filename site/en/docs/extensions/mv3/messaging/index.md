@@ -149,7 +149,7 @@ Ports are designed as a two-way communication method between different parts of 
 When part of an extension calls [`tabs.connect()][tabs-connect`], [`runtime.connect()`][runtime-connect] or [`runtime.connectNative()`][runtime-connect-native], it creates a [Port][runtime-port] that can immediately
 send messages using [`postMessage()`][runtime-post-msg].
 
-If there are multiple frames in a tab, calling [tabs.connect()][tabs-connect] invokes
+If there are multiple frames in a tab, calling [`tabs.connect()`][tabs-connect] invokes
 the [runtime.onConnect][runtime-on-connect] event once for each frame in the tab. Similarly, if
 [runtime.connect()][runtime-connect] is called, then the onConnect event can fire  once for every
 frame in the extension process.
