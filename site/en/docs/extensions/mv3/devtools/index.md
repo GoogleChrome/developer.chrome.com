@@ -194,7 +194,7 @@ For more information, see [`inspectedWindow`][api-inspectedwindow].
 By default, the expression is evaluated in the context of the main frame of the page.
 `inspectedWindow.eval()` uses the same script execution context and options as code
 entered in the DevTools console, which allows access to DevTools [Console Utilities
-API][doc-utilities] features within the eval. For example, [SOAK][gh-soak] uses it for inspecting an element:
+API][doc-utilities] features when using `eval()`. For example, [SOAK][gh-soak] uses it for inspecting an element:
 
 ```js
 chrome.devtools.inspectedWindow.eval(
