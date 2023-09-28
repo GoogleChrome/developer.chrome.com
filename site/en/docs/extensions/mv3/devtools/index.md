@@ -204,8 +204,7 @@ chrome.devtools.inspectedWindow.eval(
 ```
 
 You can also set the `useContentScriptContext` to `true` when calling `inspectedWindow.eval()` to
-evaluate the expression in the same context as the content scripts. To use this option, you must load a
-context script before calling `eval`, either by calling `executeScript` or by specifying a content
+evaluate the expression in the same context as the content scripts. To use this option, use a [static content script declaration][static-declaration] before calling `eval`, either by calling `executeScript` or by specifying a content
 script in the `manifest.json` file. After the context script context loads, you can also use this option to
 inject additional content scripts.
 
@@ -471,4 +470,4 @@ You can find examples that use DevTools APIs in [Samples][doc-samples].
 [header-selected-element]: #selected-element
 [mdn-postmessage]: https://developer.mozilla.org/docs/Web/API/Window.postMessage
 [mdn-web-apis]: https://developer.mozilla.org/docs/Web/API
-
+[static-declaration]: https://developer.chrome.com/docs/extensions/mv3/content_scripts/#static-declarative
