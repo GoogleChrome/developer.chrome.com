@@ -26,7 +26,7 @@ response, call [`runtime.sendMessage()`][runtime-send-msg] or [`tabs.sendMessage
 These methods let you send a one-time JSON-serializable message from a content script to the
 extension, or from the extension to a content script. To handle the response, use the returned
 promise. For backward compatibility with older extensions, you can instead pass a callback as
-the last argument. You can't use a promise and a callback in the same call. <!--Different use cases for these two methods?-->
+the last argument. You can't use a promise and a callback in the same call.
 
 {% Aside 'caution' %}
 If you use callbacks, the `sendResponse()` callback is only valid if used synchronously,
