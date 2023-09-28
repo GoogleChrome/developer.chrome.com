@@ -150,7 +150,7 @@ When part of an extension calls [`tabs.connect()][tabs-connect`], [`runtime.conn
 send messages using [`postMessage()`][runtime-post-msg].
 
 If there are multiple frames in a tab, calling [`tabs.connect()`][tabs-connect] invokes
-the [runtime.onConnect][runtime-on-connect] event once for each frame in the tab. Similarly, if
+the [`runtime.onConnect`][runtime-on-connect] event once for each frame in the tab. Similarly, if
 [runtime.connect()][runtime-connect] is called, then the onConnect event can fire  once for every
 frame in the extension process.
 
