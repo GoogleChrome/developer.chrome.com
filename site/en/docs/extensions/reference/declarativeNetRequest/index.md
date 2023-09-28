@@ -226,7 +226,7 @@ All types of rules can use regular expressions; however, the total number of reg
 Additionally, each rule must be less than 2KB once compiled. This roughly correlates with the complexity of the rule. If you try to load a rule that exceeds this limit, you will see a warning like the one below and the rule will be ignored.
 
 ```bash
-rules_1.json: Rule with id 1 specified a more complext regex than allowed
+rules_1.json: Rule with id 1 specified a more complex regex than allowed
 as part of the "regexFilter" key.
 ```
 
