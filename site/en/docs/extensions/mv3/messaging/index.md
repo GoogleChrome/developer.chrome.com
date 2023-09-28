@@ -337,7 +337,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 ``` -->
 <!--Removing the don'ts to reduce reader confusion. These don'ts were listed *before* the dos, which causes even more trouble.-->
 
-[doc-promises]: /docs/extensions/mv3/promises/
+[doc-promises]: /docs/extensions/mv3/promises/#compare-to-callback
 [mdn-promise]: https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Promises
 [native-client]: /docs/extensions/mv3/nativeMessaging/#native-messaging-client
 [native-host]: /docs/extensions/mv3/nativeMessaging/#native-messaging-host
