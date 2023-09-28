@@ -203,7 +203,7 @@ chrome.devtools.inspectedWindow.eval(
 );
 ```
 
-You can also use the `useContentScriptContext: true` option for `inspectedWindow.eval()` to
+You can also set the `useContentScriptContext` to `true` when calling `inspectedWindow.eval()` to
 evaluate the expression in the same context as the content scripts. To use this option, you must load a
 context script before calling `eval`, either by calling `executeScript` or by specifying a content
 script in the `manifest.json` file. After the context script context loads, you can also use this option to
