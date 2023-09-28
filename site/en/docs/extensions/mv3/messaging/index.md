@@ -175,7 +175,7 @@ extensions to use.
 
 To listen for incoming requests and connections from other extensions, use the
 [`runtime.onMessageExternal`][runtime-on-msg-ext]
-or [runtime.onConnectExternal][runtime-on-connect-ext] methods. Here's an example of
+or [`runtime.onConnectExternal`][runtime-on-connect-ext] methods. Here's an example of
 each:
 
 {% Label %}service-worker.js{% endLabel %}
