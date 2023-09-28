@@ -10,7 +10,7 @@ description: How to pass messages between extensions and content scripts.
 Because content scripts run in the context of a web page, not the extension that runs them,
 they often need ways to communicate with the rest of the extension. For example, an RSS
 reader extension might use content scripts to detect the presence of an RSS feed on a page,
-then notify the background page to display a page action icon for that page.
+then notify the service worker to display an action icon for that page.
 
 This communication uses message passing, which allows both extensions and content scripts to
 listen for each other's messages and respond on the same channel. A message can
