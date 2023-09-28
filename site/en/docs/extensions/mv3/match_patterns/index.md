@@ -13,9 +13,22 @@ A match pattern is a URL with the following structure, used to specify a group o
 &lt;scheme&gt;://&lt;host&gt;/&lt;path&gt;
 ```
 
-**scheme**: Must be one of `'http'`, `'https'`, `'file'`, `'ftp'`, or `'urn'`. The wildcard `*` only matches `http` or `https`.
-  - For information on injecting content scripts into unsupported schemes, such as `about:` and `data:`, see [Injecting in related frames][cs-frames].
-  - The scheme must be separated from the rest of the pattern using a double slash (`//`).
+**scheme**: Must be one of the following, separated from the rest of the pattern using a double slash (`//`):
+
+- `'http'`
+- `'https'`
+- A wildcard `*`, which matches only `http` or `https`
+- `'file'`
+- `'ftp'`
+- `'chromeui'`
+- `'extension'`
+- `'filesystem'`
+- `'ws'`
+- `'wss'`
+- `'data'`
+- `'uuid_in_package'`
+
+For information on injecting content scripts into unsupported schemes, such as `about:` and `data:`, see [Injecting in related frames][cs-frames].
 
 **host**: A hostname (`www.example.com`). A `*` before the hostname to match subdomains (`*.example.com`), or just a wildcard `*`.
   - If you use a wildcard in the host pattern, it must be the first or only character, and it must be followed by a period (`.`) or forward slash (`/`).
@@ -65,9 +78,6 @@ Top Level domain match patterns
 
 `*://mail.google.com/` or `*://mail.google.com/*`
 : Matches any URL that starts with `http://mail.google.com` or `https://mail.google.com`.
-
-`urn:*`
-: Matches any URL that starts with `urn:`. Examples of matches include `rn:uuid:54723bea-c94e-480e-80c8-a69846c3f582`.
 
 [content-scripts]: /docs/extensions/mv3/content_scripts
 [cs-frames]: /docs/extensions/mv3/content_scripts/#injecting-in-related-frames
