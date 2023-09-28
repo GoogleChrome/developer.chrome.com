@@ -155,7 +155,7 @@ the [`runtime.onConnect`][runtime-on-connect] event once for each frame in the t
 frame in the extension process.
 
 You might want to find out when a connection is closed, for example if you're maintaining separate
-states for each open port. For this listen to the [runtime.Port.onDisconnect][runtime-on-disconnect] event. This
+states for each open port. For this listen to the [`runtime.Port.onDisconnect`][runtime-on-disconnect] event. This
 event fires when there are no valid ports at the other end of the channel, which can have any of the following causes:
 
 - There are no listeners for [runtime.onConnect][runtime-on-connect] at the other end.
