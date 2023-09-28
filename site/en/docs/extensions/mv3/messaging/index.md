@@ -259,7 +259,7 @@ chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: url},
 ```
 
 From your extension, listen to messages from web pages using the
-[runtime.onMessageExternal][runtime-on-msg-ext] or [runtime.onConnectExternal][runtime-on-connect-ext]
+[`runtime.onMessageExternal`][runtime-on-msg-ext] or [`runtime.onConnectExternal`][runtime-on-connect-ext]
 APIs as in [cross-extension messaging][section-external]. Here's an example:
 
 {% Label %}service-worker.js{% endLabel %}
