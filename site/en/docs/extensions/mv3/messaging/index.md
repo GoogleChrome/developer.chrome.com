@@ -298,7 +298,7 @@ your scripts against [cross-site scripting][wiki-cross-site]. This advice applie
 extension background page as well as to content scripts running in other web origins. Use APIs that don't run
 scripts whenever possible:
 
-{% Label %}content-script.js or service-worker.js{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
@@ -307,7 +307,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 });
 ```
 
-{% Label %}content-script.js or service-worker.js{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
@@ -316,26 +316,25 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 });
 ```
 
-<!-- Specifically, avoid using dangerous APIs such as the ones below:
+Avoid using the following methods that make your extension vulnerable:
 
-{% Label %}content-script.js or service-worker.js{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
-  // WARNING! Might be evaluating an evil script!
+  // WARNING! Might be evaluating a malicious script!
   var resp = eval("(" + response.farewell + ")");
 });
 ```
 
-{% Label %}content-script.js or service-worker.js{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
   // WARNING! Might be injecting a malicious script!
   document.getElementById("resp").innerHTML = response.farewell;
 });
-``` -->
-<!--Removing the don'ts to reduce reader confusion. These don'ts were listed *before* the dos, which causes even more trouble.-->
+```
 
 [doc-promises]: /docs/extensions/mv3/promises/#compare-to-callback
 [mdn-promise]: https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Promises
