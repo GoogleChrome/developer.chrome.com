@@ -88,11 +88,17 @@ tutorials do not include a popup.
 
 ## Developing your extension {: #development }
 
-{% YouTube id='kVwX3Ci1SxU' %}
-
 Even though web applications and extensions share many of the same technologies, the extension development
 experience is different. Check out [Development Basics][doc-dev-basics] to create a "Hello,
 Extensions" example and familiarize yourself with the extension development workflow.
+
+
+## Debugging your extension {: #debugging }
+
+{% YouTube id='kVwX3Ci1SxU' %}
+
+Extensions can access the same Chrome DevTools as web pages. To become an expert in debugging extensions, you will need to know how to locate logs and errors of the different extension components. Check out [Debugging extensions](/docs/extensions/mv3/tut_debugging/) to learn thes fundamental techniques for debugging your extension.
+
 
 ## Designing your extension features {: #quality }
 
