@@ -45,10 +45,9 @@ While extensions can use the [`Storage`][mdn-storage] interface (accessible from
 To move data from web storage APIs to extension storage APIs from a service worker:
 
 1. Create an offscreen document with a conversion routine and an [`onMessage`][on-message] handler.
-2. Add a conversion routine to an offscreen document. <!--Is 2 an alternative to 1? If so, I'd like to combine them and present them as options.-->
-3. In the extension service worker, check `chrome.storage` for your data.
-4. If your data isn't found, [create][create-offscreen] an offscreen document and call [`sendMessage()`][send-message] to start the conversion routine.
-5. Inside the offscreen document's `onMessage` handler, call the conversion routine.
+1. In the extension service worker, check `chrome.storage` for your data.
+1. If your data isn't found, [create][create-offscreen] an offscreen document and call [`sendMessage()`][send-message] to start the conversion routine.
+1. Inside the offscreen document's `onMessage` handler, call the conversion routine.
 
 There are also some nuances to how web storage APIs work in extensions. Learn more in the
 [Storage and Cookies][storage-and-cookies] article.
