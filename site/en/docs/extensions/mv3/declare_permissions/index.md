@@ -333,6 +333,11 @@ including <a href="/docs/extensions/reference/tabs">chrome.tabs</a> and <a href=
 `"ttsEngine"`
 : Gives access to the <a href="/docs/extensions/reference/ttsEngine/">chrome.ttsEngine</a> API.
 
+`"unlimitedStorage"`
+: Provides an unlimited quota for <a href="/docs/extensions/reference/storage">chrome.storage</a>, <a href="https://developer.mozilla.org/docs/Web/API/IndexedDB_API">IndexedDB</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache Storage</a> and <a href="https://web.dev/origin-private-file-system/">Origin Private File System</a>. For more information,
+      see <a href="/docs/extensions/mv3/storage-and-cookies">Storage and cookies</a>.
+
 `"vpnProvider"`
 : Gives access to the <a href="/docs/extensions/reference/vpnProvider/">chrome.vpnProvider</a> API.
 
