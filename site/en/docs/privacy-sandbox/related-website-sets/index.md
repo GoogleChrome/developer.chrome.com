@@ -33,7 +33,7 @@ Cookies set by the site you visit—the one shown in the URL bar—are first-par
 
 Related Website Sets is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific [purposes](#related-website-sets-use-cases). Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
-At a high level, a Related Website Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members".
+At a high level, a Related Website Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members."
 
 Site authors need to [submit their domains to a set](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md). Set members can include a range of different domain types with [subsets based on use cases](https://github.com/WICG/first-party-sets#defining-a-set-through-use-case-based-subsets).
 
