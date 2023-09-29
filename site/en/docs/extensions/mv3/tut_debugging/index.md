@@ -7,11 +7,9 @@ updated: 2023-08-09
 description: Instructions for debugging Chrome Extensions.
 ---
 
-{% YouTube id='Ta-YTDhiBIQ' %}
-
-## Overview {: #overview }
-
 Extensions can access the same [Chrome DevTools][chrome-devtools] as web pages. To become an expert in debugging extensions, you will need to know how to locate logs and errors of the different extension components. This tutorial provides fundamental techniques for debugging your extension.
+
+{% YouTube id='Ta-YTDhiBIQ' %}
 
 ## Before you begin {: #prereq }
 
