@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: 'Privacy Sandbox testing FAQs'
 subhead: >
-   Answers to frequently asked questions about testing the Privacy Sandbox.
+   Answers to frequently asked questions related to Privacy Sandbox testing.
 description: >
-   Answers to frequently asked questions about testing the Privacy Sandbox.
+   Answers to frequently asked questions related to Privacy Sandbox testing.
 date: 2023-10-02
 ---
 
