@@ -60,7 +60,6 @@ The Storage API is divided into the following storage areas:
 
 [`storage.local`][prop-local]
 : Data is stored locally and cleared when the extension is removed. The storage limit is 10 MB (5&nbsp;MB in Chrome 113 and earlier), but can be increased by requesting the `"unlimitedStorage"` permission. We recommend using `storage.local` to store larger amounts of data.
-<--I think we removed unlimitedStorage from the permissions list. How does that affect this?-->
 
 [`storage.sync`][prop-sync]
 : If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item. We recommend using `storage.sync` to preserve user settings across synced browsers. If you're working with sensitive user data, instead use `storage.session`.
