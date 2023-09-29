@@ -1,17 +1,17 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: The extension service worker lifecycle
-subhead: 
+subhead:
 description: Extension service workers respond to both standard service worker events and events in extension namespaces. They are presented together because often one type follows another during an extension's use.
 date: 2023-05-02
-updated: 2023-06-27
+updated: 2023-09-27
 ---
 
 Extension service workers respond to both the [standard service worker events](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope#events) and to events in extension namespaces. They are presented together because often one type follows another during an extension's use.
 
 ## Installation
 
-Installation occurs when the user installs or updates a service worker from the Chrome Web Store or when they [load or update an unpacked extension](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked) using the `chrome://extensions` page. Three events occur in the order below. 
+Installation occurs when the user installs or updates a service worker from the Chrome Web Store or when they [load or update an unpacked extension](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked) using the `chrome://extensions` page. Three events occur in the order below.
 
 ### ServiceWorkerRegistration.install {: #install }
 
@@ -68,6 +68,10 @@ Any global variables you set will be lost if the service worker shuts down. Inst
 ### Choose a minimum Chrome version {: #timeouts }
 
 Since the release of Manifest V3, we've made several improvements to service worker lifetimes. This means that if your Manifest V3 extension supports earlier versions of Chrome, there are conditions you will need to be aware of. If these conditions do not affect your extension, you can move on from this section. If they do, consider specifying a [minimum Chrome version](/docs/extensions/mv3/manifest/minimum_chrome_version/) in your manifest.
+
+#### Chrome 118
+
+Active debugger sessions created using the [`chrome.debugger`](/docs/extensions/reference/debugger/) API now keep the service worker alive. This prevents service workers from timing out during calls for this API.
 
 #### Chrome 116
 
