@@ -20,7 +20,7 @@ Navigation preload is a service worker feature that solves the delay caused by s
 
 This isn't ideal, but you can fix it by enabling navigation preload, which ensures that service worker bootup and the navigation request occurs concurrently:
 
-{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/dmuAkLpqiB8AkvIgcRm2.png", alt="Two bars stacked upon one another and left-aligned, representing two concurrent actions. The yellow bar is labeled 'SW boot', and the blue one is labeled 'Navigation request'.", width="800", height="171" %}
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/WAiYKZYRuErxcouXoFd3.png", alt="Two bars stacked upon one another and left-aligned, representing two concurrent actions. The yellow bar is labeled 'SW boot', and the blue one is labeled 'Navigation request'.", width="800", height="139" %}
 
 While navigation preload is a great performance optimization for sites that use service workers, it's not a feature you should enable in all situations. In particular, sites that use a precached app shell don't need navigation preload, as the cache serves the navigation request for the app shell markup without any navigation latency. In these cases, the preloaded response will go to waste, which isn't great.
 
