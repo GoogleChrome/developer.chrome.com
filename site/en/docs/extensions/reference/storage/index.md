@@ -40,7 +40,7 @@ While extensions can use the [`Storage`][mdn-storage] interface (accessible from
 
 - Extension service workers can't use the Web Storage API.
 - Content scripts share storage with the host page.
-- Data saved using the `Storage` interface is lost when the user clears their browsing history.
+- Data saved using the Web Storage API is lost when the user clears their browsing history.
 
 To move data from web storage APIs to extension storage APIs from a service worker:
 
