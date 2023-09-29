@@ -108,9 +108,11 @@ CyberAgent had considered using CSS animations or using a framework to implement
 
 CyberAgent implemented view transitions between the blog list and the blog page. Here, notice how they added the element transition to the hero image. You can [visit their site](https://about.ameba.jp/ameyoko/) and experience it live today.
 
-<figure>
-  {% Video src="video/kheDArv5csY6rvQUJDbWRscckLr1/dtTlLXCs6iQFHqStt9Is.mp4", controls="true", playsinline="true", width="600", height="1299" %}
-</figure>
+<div style="width:400px;margin: 0 auto;">
+
+{% Video src="video/kheDArv5csY6rvQUJDbWRscckLr1/dtTlLXCs6iQFHqStt9Is.mp4", controls="true", playsinline="true", width="400", height="866" %}
+
+</div>
 
 They also used media queries to design different animation experiences for different devices. For mobile pages they included element transitions, but this effect had too much movement for desktop. 
 
@@ -122,11 +124,7 @@ They also used media queries to design different animation experiences for diffe
 }
 ```
 
-<div style="width:400px;margin: 0 auto;">
-
 {% Video src="video/kheDArv5csY6rvQUJDbWRscckLr1/KUmW2vQJyUeJ4bc0wtg1.mp4", controls="true", playsinline="true", width="800", height="421" %}
-
-</div>
 
 ### Technical details of implementation
 
