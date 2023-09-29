@@ -56,7 +56,7 @@ There are also some nuances to how web storage APIs work in extensions. Learn mo
 
 ### Storage areas
 
-The Storage API is divided into the following *storage areas*:
+The Storage API is divided into the following storage areas:
 
 [`storage.local`][prop-local]
 : Data is stored locally and cleared when the extension is removed. The storage limit is 10 MB (5&nbsp;MB in Chrome 113 and earlier), but can be increased by requesting the `"unlimitedStorage"` permission. We recommend using `storage.local` using it to store larger amounts of data.
