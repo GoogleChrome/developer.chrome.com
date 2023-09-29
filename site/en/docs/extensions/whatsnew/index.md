@@ -19,7 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>September 29, 2023</time></p>
 
-We recently created a page that let's you [search Chrome extension samples](/docs/extensions/samples/). This is part of our ongoing effort to provide better answers and make them easier to find. The search page has multiple options. A search box lets you search for text in sample titles. You can restrict the search by permission or extension API. An additional filter lets you restrict search to either API or functional (use case) samples.
+We recently created a page that lets you [search Chrome extension samples](/docs/extensions/samples/). The search page has multiple options. A search box lets you search for text in sample titles. You can restrict the search by permission or extension API. An additional filter lets you restrict search to either API or functional (use case) samples.
 
 This new sample page was built by a Google Summer of Code participant, Xuezhou Dai, who also contributed several new samples. You can read about their experiences this past summer in [their post on our blog](/blog/google-summer-of-code-and-chrome-extensions/).
 
