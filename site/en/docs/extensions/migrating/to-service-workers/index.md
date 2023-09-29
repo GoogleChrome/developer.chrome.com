@@ -111,7 +111,7 @@ Communicate between offscreen documents and extension service workers using [mes
 
 The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a service worker. To address this do one of two things. First, you can replace it with calls to another storage mechanism. The [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace will serve most use cases, but [other options](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#persist-data) are available.
 
-You can also move its calls to an [offscreen document](/docs/extensions/reference/offscreen/).
+You can also move its calls to an [offscreen document](/docs/extensions/reference/offscreen/). For example, to migrate data previously stored in `localStorage` to another mechanism:
 
 1. Create an offscreen document with a conversion routine and a [`runtime.onMessage`](/docs/extensions/reference/runtime/#event-onMessage) handler.
 1. Add a conversion routine to the offscreen document.
