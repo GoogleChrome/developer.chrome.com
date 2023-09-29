@@ -7,7 +7,7 @@ updated: 2023-08-09
 description: Instructions for debugging Chrome Extensions.
 ---
 
-{% YouTube id='kVwX3Ci1SxU' %}
+{% YouTube id='Ta-YTDhiBIQ' %}
 
 ## Overview {: #overview }
 
