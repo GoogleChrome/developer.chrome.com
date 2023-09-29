@@ -12,19 +12,19 @@ date: 2023-10-02
 
 Below are the key aspects that require alignment:
 
--   **Creative audit** – Does the SSP have a creative pre-registration endpoint for scanning, and will DSP support that workflow? If not, discuss with the SSP what they require from the DSP to implement creative audit for publisher controls.
+-   **Creative audit**: Does the SSP have a creative pre-registration endpoint for scanning, and will DSP support that workflow? If not, discuss with the SSP what they require from the DSP to implement creative audit for publisher controls.
 -   **DSP's `renderURL` methodology**. Context: Some SSPs may require the `renderURL` to include metadata such as `seatID` to support scoring and billing. How the DSP structures `renderURL` has implications for critical SSP use cases.
 -   **ORTB**
-    -   ORTB 2.X bid request - how the SSP will signal PA-eligible auction to the DSP.
-    -   ORTB 2.X bid response - how the DSP will respond to the SSP for PA auction.
--   **PA on-device bidding data**: SSP -> DSP
-    -   `auctionSignals` - data the SSP includes in the `auctionConfig` that is made available to all DSP bidding functions.
--   **PA on-device scoring data**: DSP -> SSP
-    -   bid - how to handle multi-currencies. Each SSP may have different requirements.
-    -   ad object (returned from `generateBid()`) - The SSP may use this for scoring and publisher controls. DSPs and SSPs need to align on what data is included and on a data structure.
--   **PA win reporting**: SSP -> DSP
+    -   ORTB 2.X bid request: How the SSP will signal PA-eligible auction to the DSP.
+    -   ORTB 2.X bid response: How the DSP will respond to the SSP for PA auction.
+-   **PA on-device bidding data**: SSP to DSP
+    -   `auctionSignals`: Data the SSP includes in the `auctionConfig` that is made available to all DSP bidding functions.
+-   **PA on-device scoring data**: DSP to SSP
+    -   Bid: How to handle multi-currencies. Each SSP may have different requirements.
+    -   Ad object (returned from `generateBid()`): The SSP may use this for scoring and publisher controls. DSPs and SSPs need to align on what data is included and on a data structure.
+-   **PA win reporting**: SSP to DSP
     -   What SSP's `reportResult()` will make available to the DSP's `reportWin()`.
--   **Post-auction reporting**: DSP -> SSP. Context: The DSP must capture and delegate post-auction reports to the SSP. If the SSP needs clicks, views, viewability metrics, the DSP must enable them to receive these events.
+-   **Post-auction reporting**: DSP to SSP. Context: The DSP must capture and delegate post-auction reports to the SSP. If the SSP needs clicks, views, viewability metrics, the DSP must enable them to receive these events.
     -   What reports the SSP will need.
     -   The methodology for measuring that event (such as, viewability definition).
     -   DSP implementation of the `reportEvent()` call to support the SSP requirements.
@@ -38,7 +38,7 @@ The Attribution Reporting API will be generally available and ramp-up is already
 
 There are no geographic requirements. It's up to each tester to determine geographic considerations as part of their test.
 
-**How does the CMA guidance align with Chrome-facilitated testing? (q10)**
+**How does the CMA guidance align with Chrome-facilitated testing?**
 
 Chrome facilitated testing modes are aligned with the CMA's guidance for quantitative testing of Privacy Sandbox. In the CMA's guidance the treatment group relies on Privacy Sandbox technologies without third-party cookies. Control group 1 uses third-party cookies and not Privacy Sandbox, and Control group 2 uses neither Privacy Sandbox nor third-party cookies. With general availability, the Privacy Sandbox technologies will be available on all Chrome traffic, and the ad tech can choose to use Privacy Sandbox technologies in certain population groups and not in others. Additionally, ad techs can leverage the Mode A Chrome-facilitated testing traffic to coordinate these population groups across multiple parties. 
 
@@ -65,3 +65,4 @@ We understand that other companies' integration decisions could impact the types
 **How will Google ensure participating DSP platforms are ready for the end-to-end test by January 1, 2024?   How will Google facilitate connecting the committed DSPs, when they are ready, with us (partner)?**
 
 The Market Testing Grants program has both a DSP and SSP track, designed to accelerate both sides of the ecosystem. Participants will be [publicly listed on GitHub](https://github.com/WICG/turtledove/blob/main/fledge-tester-list.md) with contact information for coordination. The Privacy Sandbox team can also make introductions and attend joint meetings with coordinating ad techs. For example, we have had several joint meetings with multiple Privacy Sandbox partners to discuss Protected Audience and Topics integration.
+
