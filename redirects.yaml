@@ -21,6 +21,12 @@ redirects:
 
 # Simple redirects
 
+- from: /docs/privacy-sandbox/first-party-sets/
+  to: /docs/privacy-sandbox/related-website-sets/
+
+- from: /docs/privacy-sandbox/first-party-sets-integration/
+  to: /docs/privacy-sandbox/related-website-sets-integration/
+
 - from: /docs/privacy-sandbox/trust-tokens/
   to: /docs/privacy-sandbox/private-state-tokens/
 
