@@ -23,8 +23,8 @@
     - url: /docs/privacy-sandbox/status
     - title: i18n.docs.privacy-sandbox.faq
       sections:
-        - url: /docs/privacy-sandbox/faq/privacy-compliance-faq
         - url: /docs/privacy-sandbox/faq/testing-faq/
+        - url: /docs/privacy-sandbox/faq/privacy-compliance-faq
     - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
