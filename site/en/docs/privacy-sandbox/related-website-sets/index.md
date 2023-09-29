@@ -31,7 +31,7 @@ Cookies set by the site you visit—the one shown in the URL bar—are first-par
 
 ## Defining related sites with Related Website Sets
 
-Related Website Sets is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific [purposes](#first-party-sets-use-cases). Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
+Related Website Sets is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific [purposes](#related-website-sets-use-cases). Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
 At a high level, a Related Website Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members".
 
