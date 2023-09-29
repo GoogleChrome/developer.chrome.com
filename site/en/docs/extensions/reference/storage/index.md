@@ -66,7 +66,7 @@ The Storage API is divided into the following storage areas:
 : If syncing is enabled, the data is synced to any Chrome browser that the user is logged into. If disabled, it behaves like `storage.local`. Chrome stores the data locally when the browser is offline and resumes syncing when it's back online. The quota limitation is approximately 100 KB, 8 KB per item. We recommend using `storage.sync` to preserve user settings across synced browsers. If you're working with sensitive user data, instead use `storage.session`.
 
 [`storage.session`][prop-session]
-: Holds data in memory for the duration of a browser session. By default, it's not exposed to content scripts, but this behavior can be changed by setting [`chrome.storage.session.setAccessLevel()`][method-access-level]. The storage limit is 10 MB (1&nbsp;MB in Chrome 111 and earlier). We recommend using `storage.session` to store global variables across service worker runs.
+: Holds data in memory for the duration of a browser session. By default, it's not exposed to content scripts, but this behavior can be changed by setting [`chrome.storage.session.setAccessLevel()`][method-access-level]. The storage limit is 10 MB (1&nbsp;MB in Chrome 111 and earlier). The`storage.session` interface is one of several [we recommend for service workers](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#persist-data).
 
 [`storage.managed`][prop-managed]
 : Administrators can use a [schema][manifest-storage] and enterprise policies to configure a supporting extension's settings in a managed environment. This storage area is read-only.
