@@ -21,7 +21,10 @@
     - url: /docs/privacy-sandbox/enroll
       title: i18n.docs.privacy-sandbox.enroll
     - url: /docs/privacy-sandbox/status
-    - url: /docs/privacy-sandbox/privacy-compliance-faq
+    - title: i18n.docs.privacy-sandbox.faq
+      sections:
+        - url: /docs/privacy-sandbox/privacy-compliance-faq
+        - url: /docs/privacy-sandbox/faq/testing-faq/
     - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
