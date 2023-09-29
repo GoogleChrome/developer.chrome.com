@@ -87,7 +87,7 @@ When an extension embeds a third-party site, that site will use the extension or
 Cookies set on chrome-extension:// pages always use [`SameSite=Lax`][same-site]. Consequently, they
 can never be accessed in iframes and partitioning is not relevant.
 
-When an extension embeds a third-party website inside of a chrome-extension:// page, the behavior
+When an extension embeds a third-party website inside one of its pages, the behavior
 depends on the choices on Chrome's Privacy and security settings page:
 
 - If third-party cookies are enabled, the site can access cookies from a partition keyed based on
