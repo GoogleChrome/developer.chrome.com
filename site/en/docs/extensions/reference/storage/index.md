@@ -38,7 +38,7 @@ Can extensions use web storage APIs?
 
 While extensions can use the [`Storage`][mdn-storage] interface (accessible from `window.localStorage`) in some contexts (popup and other HTML pages), we don't recommend it for the following reasons:
 
-- Extension's service worker can't access `Storage`.
+- Extension service workers can't use the Web Storage API.
 - Content scripts share storage with the host page.
 - Data saved using the `Storage` interface is lost when the user clears their browsing history.
 
