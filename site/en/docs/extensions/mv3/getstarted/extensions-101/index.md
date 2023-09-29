@@ -94,7 +94,7 @@ Extensions" example and familiarize yourself with the extension development work
 
 ## Debugging your extension {: #debugging }
 
-Extensions can access the same Chrome DevTools as web pages. To become an expert in debugging extensions, you will need to know how to locate logs and errors of the different extension components. Check out [Debugging extensions](/docs/extensions/mv3/tut_debugging/) to learn thes fundamental techniques for debugging your extension.
+Extensions can access the same Chrome DevTools as web pages. To become an expert in debugging extensions, you will need to know how to locate logs and errors of the different extension components. Check out [Debugging extensions](/docs/extensions/mv3/tut_debugging/) to learn techniques for debugging your extension.
 
 {% YouTube id='Ta-YTDhiBIQ' %}
 
