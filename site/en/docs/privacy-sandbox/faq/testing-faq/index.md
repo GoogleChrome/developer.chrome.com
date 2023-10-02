@@ -46,7 +46,7 @@ Starting in Q1 2024, Chrome will deprecate third-party cookies on 1% of traffic 
 
 **Is there a contact at the CMA we could connect with to better understand what is required for the submitted final report?**
 
-You can email the CMA case team at <a href="mailto:privacysandbox@cma.gov.uk">privacysandbox@cma.gov.uk</a> and read more about their testing proposal guidance [here](https://assets.publishing.service.gov.uk/media/649d6a5f45b6a2000c3d455f/20230629_CMA_industry_testing_update_B.pdf). (For additional reference, the CMA lists all their contacts at the bottom of their [Privacy Sandbox page](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes)).
+You can email the CMA case team at <a href="mailto:privacysandbox@cma.gov.uk">privacysandbox@cma.gov.uk</a> and read more about their [testing proposal guidance](https://assets.publishing.service.gov.uk/media/649d6a5f45b6a2000c3d455f/20230629_CMA_industry_testing_update_B.pdf). For additional reference, the CMA lists all their contacts at the bottom of their [Privacy Sandbox page](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes).
 
 **Can you clarify the quantitative testing success metrics?**
 
