@@ -156,8 +156,6 @@ If your extension has been pending review for over two weeks, [contact developer
 
 To stay on top of user feedback you can add a link to a [dedicated support site][support-site] under the Support tab of your extension listing.
 
-There are other ways to make your extension more robust as you transition to Manifest Version 3. See [Engineering resilient extensions](TBD) for best practices for building a reliable extension.
-
 [cws-review]: /docs/webstore/review-process/
 [cws-support]: /docs/webstore/review-process/#support
 [cws-upload]: /docs/webstore/upload
