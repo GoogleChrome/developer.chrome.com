@@ -54,7 +54,7 @@ Grant participants can define and share as many additional KPIs as they want, be
 
 **Is there a volume threshold for testing, for example, control group ratios versus modes ratios? Do you have additional guidance on valuable KPIs to test beyond the CMA's testing guidance?**
 
-You can draft these volume/scale requirements in your Integration Plan; we will work with you to align on the scale required given your business model. You can include specific metrics and tests in your Testing Plan. Please keep in mind that the Testing Plan should take into account Mode A and Mode B of Chrome-facilitated testing. We can provide feedback on these once you submit them.
+You can draft these volume / scale requirements in your integration plan. We will work with you to align on the scale required given your business model. You can include specific metrics and tests in your testing plan. Please keep in mind that the testing plan should take into account Mode A and Mode B of Chrome-facilitated testing. We can provide feedback on these once you submit them.
 
 **What types of publisher inventory integrations are supported by Protected Audience and TOPICS testing?**
 
