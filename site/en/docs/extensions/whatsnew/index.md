@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-09-29
+updated: 2023-10-02
 tags:
   - extensions-news
 
@@ -14,6 +14,14 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Documentation on cookies and web storage APIs {: #storage-and-cookies-guide }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 2, 2023</time></p>
+
+We published [a new guide](/docs/extensions/mv3/storage-and-cookies/) on how cookies and web storage
+APIs work in Chrome extensions. It includes all you need to know about
+[Privacy Sandbox](/docs/privacy-sandbox/) as an extension developer.
 
 ### Extension samples now searchable {: #extension-samples-searchable }
 
