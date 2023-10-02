@@ -39,7 +39,7 @@ Each part can use wildcards `*`. Below is a detailed description:
 : Allows your extension to run on local files. It has no host and requires the user to manually [grant access][permissions-allow-access].
 
 Localhost URLs and IP addresses
-: To match any localhost port during development, use `http://localhost:*/*`. For example, it will match any paths under `http://localhost:8080` or `http://localhost:3000`.  For IP addresses, specify the address plus a wildcard in the path. For example: `http://127.0.0.1/*`. Another approach is to use `http://*:*/*` which will match localhost, IP addresses and any port.
+: To match any localhost port during development, use `http://localhost/*`. For example, it will match any paths under `http://localhost:8080` or `http://localhost:3000`.  For IP addresses, specify the address plus a wildcard in the path. For example: `http://127.0.0.1/*`. Another approach is to use `http://*:*/*` which will match localhost, IP addresses and any port.
 
 Top Level domain match patterns
 : [Top Level domain][mdn-tld] match patterns like `http://google.*/*` are not supported. They should be listed individually. For example: `http://google.es/*` and `http://google.fr/*`.
@@ -83,7 +83,7 @@ Top Level domain match patterns
       <tr>
          <td><code>http://127.0.0.1/*</code></td>
          <td>Matches any URL that uses the <code>http</code> scheme and is on the host 127.0.0.1</td>
-         <td>http://127.0.0.1/<br>http://127.0.0.1/foo/bar.html</td>
+         <td>http://127.0.0.1/<br>http://127.0.0.1:9000/<br>http://127.0.0.1/foo/bar.html</td>
       </tr>
       <tr>
          <td><code>http://localhost/*</code></td>
