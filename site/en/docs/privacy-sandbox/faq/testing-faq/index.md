@@ -52,7 +52,7 @@ You can email the CMA case team at <a href="mailto:privacysandbox@cma.gov.uk">pr
 
 Grant participants can define and share as many additional KPIs as they want, beyond those specified in the SOW. The minimum test results that need to be shared are listed in the [CMA Guidance](https://assets.publishing.service.gov.uk/media/649d6a5f45b6a2000c3d455f/20230629_CMA_industry_testing_update_B.pdf). This guidance is purposefully "light" and broad so the CMA can compare many results from different ad techs.
 
-**Is there a volume threshold for testing? (Control group ratios vs. Modes ratios, etc.) Do you have additional guidance on valuable KPIs to test beyond the CMA's testing guidance?**
+**Is there a volume threshold for testing, for example, control group ratios versus modes ratios? Do you have additional guidance on valuable KPIs to test beyond the CMA's testing guidance?**
 
 You can draft these volume/scale requirements in your Integration Plan; we will work with you to align on the scale required given your business model. You can include specific metrics and tests in your Testing Plan. Please keep in mind that the Testing Plan should take into account Mode A and Mode B of Chrome-facilitated testing. We can provide feedback on these once you submit them.
 
