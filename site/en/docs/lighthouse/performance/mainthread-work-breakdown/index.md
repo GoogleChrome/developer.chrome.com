@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: Minimize main thread work
 description: |
   Learn about the browser's main thread and how you can optimize your web page
-  to reduce main thread load and improve performance.
+  to reduce the main thread's load and improve performance.
 date: 2019-05-02
 updated: 2019-10-04
 ---
@@ -23,7 +23,7 @@ leading to a bad experience.
 ## How the Lighthouse main thread work audit fails
 
 [Lighthouse](/docs/lighthouse/overview/)
-flags pages that keep the main thread busy for longer than 4&nbsp;seconds
+flags pages that keep the main thread busy for longer than 4 seconds
 during load:
 
 <figure>
@@ -59,7 +59,7 @@ as the page loads.
 
 ### Rendering
 
-- [Stick to compositor only properties and manage layer count](https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count/)
+- [Stick to compositor-only properties and manage layer count](https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count/)
 - [Simplify paint complexity and reduce paint areas](https://web.dev/simplify-paint-complexity-and-reduce-paint-areas/)
 
 ### Parsing HTML and CSS
