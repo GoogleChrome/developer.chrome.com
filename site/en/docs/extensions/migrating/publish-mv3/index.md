@@ -9,7 +9,7 @@ date: 2023-09-04
 
 After [converting your extension][migration-checklist] to Manifest Version 3, the next step is to
 release it on the [Chrome Web Store][cws]. Depending on the extent of the changes you made,
-it can be advisable to perform a step-wise rollout to ensure your Manifest V3 extension works as expected
+it can be advisable to perform a step-wise roll out to ensure your Manifest V3 extension works as expected
 by testing it with a limited audience first. 
 
 This article discusses a few ways to publish your new release in stages. For example, releasing a
@@ -85,7 +85,7 @@ To ensure that any unexpected problems will have minimal impact, you can roll ou
 3. Enter a percentage in **Percentage rollout** field.
 
 <figure>
-    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png", alt="Screenshot showing the 'more' menu's defer publish option", width="286", height="184", class='screenshot' %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oZxWW5oMsh7fUSzwvRNp.png", alt="Screenshot of the Chrome Web Store fractional rollout field", height="488", width="800", class='screenshot' %}
     <figcaption>
         Setting the initial rollout percentage.
     </figcaption>
