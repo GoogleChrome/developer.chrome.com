@@ -74,6 +74,7 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 16_6_1 like Mac OS X)
 AppleWebKit/605.1.15 (KHTML, like Gecko)
 Version/16.6 Mobile/15E148 Safari/604.1
 ```
+---above two from my phone/website --
 
 Up to Chrome 84, when the Request Desktop Site feature is enabled, the **Desktop Safari** UA is
 sent:
@@ -91,6 +92,17 @@ Starting from Chrome 85, when the Request Desktop Site feature is enabled, the U
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5)
 AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/85
 Version/11.1.1 Safari/605.1.15
+```
+
+mine from chrome macbook desktop:
+
+```text
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36
+```
+
+mine from safari deskop on mac
+```text
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15
 ```
 
 ## WebView on Android
@@ -141,6 +153,11 @@ Chrome on desktop
 
 <pre>Mozilla/5.0 (<unifiedPlatform>) AppleWebKit/537.36 (KHTML, like Gecko)
 Chrome/<majorVersion>.0.0.0 Safari/537.36</pre>
+
+Chrome on Windows desktop
+<!-- mine -->
+
+<pre>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36</pre>
 
 Chrome on mobile and tablet
 
