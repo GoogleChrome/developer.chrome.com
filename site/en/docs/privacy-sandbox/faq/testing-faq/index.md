@@ -30,7 +30,7 @@ Below are the key aspects that require alignment:
     -   DSP implementation of the `reportEvent()` call to support the SSP requirements.
     -   SSP implementation of the `registerAdBeacon()` lining up the event naming with what the DSP will trigger in the creative.
 
-**Are the Attribution Reporting API and the Aggregation Service ready and available for testing?**
+**Is the Attribution Reporting API ready and available for testing?**
 
 The Attribution Reporting API will be generally available and ramp-up is already in progress. With that, Attribution Reporting will soon be available for use on 100% of traffic. Note that Attribution Reporting can be used with all ads, not just those served by Protected Audience.
 
