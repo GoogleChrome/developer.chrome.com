@@ -24,18 +24,18 @@ PIN, or a pattern. With passkeys, users no longer need to remember and manage
 passwords. Passkeys are already supported in Chrome across [many operating
 systems](https://developers.google.com/identity/passkeys/supported-environments).
 
-Until today, passkeys created on MacOS were only stored locally in [the user's
+Until today, passkeys created on macOS were only stored locally in [the user's
 Chrome profile](https://support.google.com/chrome/a/answer/9025411). They were
 not synchronized, even when they were discoverable credentials.
-
-Starting in Chrome 118, on macOS 13.5 or later, users will have the option
-to save passkeys in, and use them from, iCloud Keychain. Passkeys stored in
-iCloud Keychain are synchronized across the Apple ecosystem.
 
 <figure>
   {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/z6MiKx76ZC0xQm4lVipE.png", alt="Chrome's passkey dialog to create a new passkey. The passkey will be saved to Chrome profile locally.", width="800", height="602" %}
   <figcaption>Chrome's passkey dialog to create a new passkey. The passkey will be saved to Chrome profile locally.</figcaption>
 </figure>
+
+Starting in Chrome 118, on macOS 13.5 or later, users will have the option
+to save passkeys in, and use them from, iCloud Keychain. Passkeys stored in
+iCloud Keychain are synchronized across the Apple ecosystem.
 
 ## How iCloud Keychain is supported in Chrome
 
