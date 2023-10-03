@@ -48,7 +48,15 @@ The **Issues** tab now reports issues with invalid declarations in `@property` r
 
 Chromium issue: [1473283](https://crbug.com/1473283).
 
-##  {: #devices }
+## Updated list of devices to emulate {: #devices }
+
+The user agent strings in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Devices**](/docs/devtools/settings/devices/) has been updated to reflect the average usage of browsers and operating systems. You can now emulate more of the up-to-date devices in [device mode](/docs/devtools/device-mode/).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EaLfaHSw1q7wGH5C1HQ6.png", alt="The before and after updating the device list.", width="800", height="503" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/d86bfdc7c2178324e2717afe5b19d2ba1cd8744d #}
+
+Chromium issue: [1479733](https://crbug.com/1479733).
 
 ##  {: #sources }
 
