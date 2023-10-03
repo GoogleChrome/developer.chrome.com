@@ -5,7 +5,7 @@ description: >
   Chrome on macOS starts supporting passkeys on iCloud Keychain. This lets users create passkeys on iCloud Keychain and synchronize them across Apple devices.
 subhead: >
   Chrome supports passkeys on iCloud Keychain starting in Chrome 118, on macOS 13.5 or later.
-date: 2023-09-28
+date: 2023-10-03
 authors:
   - agektmr
 tags:
