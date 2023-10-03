@@ -15,6 +15,8 @@ tags:
   - chrome-118
 ---
 
+{% BrowserCompat 'css.at-rules.scope' %}
+
 ## The delicate art of writing CSS selectors
 
 When writing selectors you may find yourself torn between two worlds. On the one hand you want to be pretty specific about which elements you select. On the other hand, you want your selectors to remain easy to override and not be tightly coupled to the DOM structure.
