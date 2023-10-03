@@ -63,16 +63,16 @@ instead of `Version/<VersionNum>`.
 
 Here's an example of the **Chrome** UA on iPhone:
 
-<pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) 
-AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 
+<pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) 
+AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/117.0.5938.117 
 Mobile/15E148 Safari/604.1</pre>
 
 For comparison, the **Mobile Safari** UA:
 
 ```text
-Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X)
-AppleWebKit/603.1.23 (KHTML, like Gecko)
-Version/10.0 Mobile/14E5239e Safari/602.1
+Mozilla/5.0 (iPhone; CPU iPhone OS 16_6_1 like Mac OS X)
+AppleWebKit/605.1.15 (KHTML, like Gecko)
+Version/16.6 Mobile/15E148 Safari/604.1
 ```
 
 Up to Chrome 84, when the Request Desktop Site feature is enabled, the **Desktop Safari** UA is
