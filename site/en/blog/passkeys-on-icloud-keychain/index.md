@@ -33,23 +33,18 @@ the user can decrypt the passkey by entering the original device's PIN or
 pattern and use the synced passkey to authenticate with the corresponding
 websites and apps.
 
-On macOS, passkeys created on Chrome have been only stored locally to the user's
-[Chrome profile](https://support.google.com/chrome/a/answer/9025411) and haven't
-been synchronized even when they were discoverable credentials. Chrome's passkey
-synchronization support plan is described in [Google's
-documentation](https://developers.google.com/identity/passkeys/supported-environments),
-and there we stated that we were planning to support storing passkeys in iCloud
-Keychain on macOS so that passkeys can be synchronized across the Apple
-ecosystem.
+Passkeys created on MacOS were only stored locally in [the user's Chrome
+profile](https://support.google.com/chrome/a/answer/9025411). They were not
+synchronized, even when they were discoverable credentials.
+
+Starting in Chrome 118, on macOS 13.5 or later, users will have the option
+to save passkeys in, and use them from, iCloud Keychain. Passkeys stored in
+iCloud Keychain are synchronized across the Apple ecosystem.
 
 <figure>
   {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/z6MiKx76ZC0xQm4lVipE.png", alt="Chrome's passkey dialog to create a new passkey. The passkey will be saved to Chrome profile locally.", width="800", height="602" %}
   <figcaption>Chrome's passkey dialog to create a new passkey. The passkey will be saved to Chrome profile locally.</figcaption>
 </figure>
-
-In line with that plan, starting with Chrome 118, on macOS 13.5 or later, users
-will have the option to save passkeys in, and use passkeys from, iCloud
-Keychain.
 
 ## How iCloud Keychain is supported in Chrome
 
@@ -89,9 +84,10 @@ Users can also sign in to your website using the passkey stored in iCloud Keycha
   <figcaption>macOS's system user verification dialog that asks for Touch ID to sign in with a passkey saved to iCloud Keychain.</figcaption>
 </figure>
 
-Note that passkeys stored to Chrome profile previously continue to be available,
-but ones stored to iCloud Keychain are prioritized. If only a passkey from
-Chrome profile is available, it will be used to authenticate the user.
+Note that passkeys stored to the Chrome profile previously continue to be
+available, but ones stored to iCloud Keychain are prioritized. If only a
+passkey from Chrome profile is available, it will be used to authenticate the
+user.
 
 <figure>
   {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/FWFHutWv84m8EYJtyCTa.png", alt="Chrome's passkey dialog to sign in with a passkey saved to Chrome profile.", width="800", height="602" %}
