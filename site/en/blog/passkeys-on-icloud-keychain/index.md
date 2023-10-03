@@ -24,18 +24,9 @@ PIN, or a pattern. With passkeys, users no longer need to remember and manage
 passwords. Passkeys are already supported in Chrome across [many operating
 systems](https://developers.google.com/identity/passkeys/supported-environments).
 
-Passkeys that are created on Android (as [discoverable
-credentials](https://www.w3.org/TR/webauthn-2/#discoverable-credential)) can be
-stored in the [Google Password Manager](https://passwords.google/), encrypted
-using the device's PIN or pattern and synchronized across Android devices where
-the user is signed in with the same Google account. On another Android device,
-the user can decrypt the passkey by entering the original device's PIN or
-pattern and use the synced passkey to authenticate with the corresponding
-websites and apps.
-
-Passkeys created on MacOS were only stored locally in [the user's Chrome
-profile](https://support.google.com/chrome/a/answer/9025411). They were not
-synchronized, even when they were discoverable credentials.
+Until today, passkeys created on MacOS were only stored locally in [the user's
+Chrome profile](https://support.google.com/chrome/a/answer/9025411). They were
+not synchronized, even when they were discoverable credentials.
 
 Starting in Chrome 118, on macOS 13.5 or later, users will have the option
 to save passkeys in, and use them from, iCloud Keychain. Passkeys stored in
