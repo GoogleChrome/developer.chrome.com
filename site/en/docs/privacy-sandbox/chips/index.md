@@ -150,7 +150,7 @@ The current Related Website Sets design relies on Storage Access API and does no
 
 Consider Related Website Sets in situations where you need the same cookie to be available to a service that's embedded in multiple related sites.
 
-CHIPS provides the functionality for a service to act as an isolated component across multiple sites. If the service that's a member of a First-Party Set sets a partitioned cookie, its partition key will be the top-level site and that cookie will not be available to other set members.
+CHIPS provides the functionality for a service to act as an isolated component across multiple sites. If the service that's a member of a Related Website Set sets a partitioned cookie, its partition key will be the top-level site and that cookie will not be available to other set members.
 
 If you have a use case that relies on a shared cookie partition across sites within a FPS you can [provide examples and feedback on the GitHub issue](https://github.com/WICG/first-party-sets/issues/94).
 
