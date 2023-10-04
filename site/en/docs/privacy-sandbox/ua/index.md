@@ -17,64 +17,105 @@ Like all other browsers, Chrome for Android sends this information in the `User-
 every time it makes a request to any site. It's also available in the client through JavaScript
 using the `navigator.userAgent` call.
 
-This page shows some examples. You can also go to the [User Agent string demo](https://get-some-ua-strings.glitch.me) using any device and get the UA string.
+This page shows some examples of userAgent strings in Chrome. You can also go to the [User Agent string demo](https://get-some-ua-strings.glitch.me) using any device/platform and get the UA string for that device.
+
+### Chrome user agents
+
+This table shows how [Chrome for Android][1] reports its UA, depending on whether the device is a phone or a tablet.
+
+The UA in Chrome for iOS is the same as the Mobile Safari user agent, with `CriOS/<ChromeRevision>`
+instead of `Version/<VersionNum>`.
 
 <table>
   <thead>
     <tr>
       <th>Platform</th>
       <th>Device</th>
-      <th>UA string</th>
+      <th style="text-align: left;">UA string</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="vertical-align: top;">Android</td>
       <td style="vertical-align: top;">Phone</td>
-      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW)
-AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Linux; Android 8.0.0;
+SM-G955U Build/R16NW)
+AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/87.0.4280.141
 Mobile Safari/537.36
 </pre></td>
     </tr>
+      <tr>
+        <td style="vertical-align: top;">Android</td>
+        <td style="vertical-align: top;">Tablet</td>
+        <td style="vertical-align: top;"><pre>Mozilla/5.0 (Linux; Android 7.1.1;
+SM-T550)
+AppleWebKit/537.36 KHTML, like Gecko)
+Chrome/93.0.4577.62
+Safari/537.36</pre></td>
+      </tr>
+            <tr>
+      <td id="galaxy" style="vertical-align: top;">Android (Galaxy S5) (request desktop)</td>
+      <td style="vertical-align: top;">Phone</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (X11; Linux x_86_64) 
+AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/67.0.3396.87 
+Safari/537.36
+</pre></td>
+      </tr>
+      <tr>
+      <td style="vertical-align: top;">iOS</td>
+      <td style="vertical-align: top;">Phone</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (iPhone; CPU iPhone OS 16_6
+like Mac OS X)
+AppleWebKit/605.1.15 (KHTML, like Gecko)
+CriOS/117.0.5938.117 Mobile/15E148 Safari/604.1</pre></td>
+      </tr>
+      <tr>
+      <td style="vertical-align: top;">iOS</td>
+      <td style="vertical-align: top;">Tablet (iPad)</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (iPad; CPU OS 16_3
+like Mac OS X)
+AppleWebKit/605.1.15 (KHTML, like Gecko)
+CriOS/117.0.5938.117
+Mobile/15E148 Safari/604.1</pre></td>
+      </tr>
+            <tr>
+      <td id="iphone" style="vertical-align: top;">iOS (request desktop)</td>
+      <td style="vertical-align: top;">Phone</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Macintosh;
+Intel Mac OS X 10_13_5)
+AppleWebKit/605.1.15 (KHTML, like Gecko)
+CriOS/117 Version/11.1.1
+Safari/605.1.15</pre></td>
+      </tr>
+      <tr>
+      <td style="vertical-align: top;">iOS (request desktop)</td>
+      <td style="vertical-align: top;">Tablet (iPad)</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Macintosh;
+Intel Mac OS X 10_13_5)
+AppleWebKit/605.1.15 (KHTML, like Gecko)
+CriOS/117 
+Version/11.1.1 Safari/605.1.15</pre></td>
+      </tr>
+      <tr>
+      <td style="vertical-align: top;">Mac</td>
+      <td style="vertical-align: top;">Desktop</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/117.0.0.0 Safari/537.36</pre></td>
+      </tr>
+      <tr>
+      <td style="vertical-align: top;">Windows</td>
+      <td style="vertical-align: top;">Desktop</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/116.0.0.0
+Safari/537.36</pre></td>
+      </tr>
+
     </tbody>
     </table>
-## Chrome for Android
-
-[Chrome for Android][1] reports its UA in the following formats, depending on whether the device is
-a phone or a tablet.
-
-**Phone UA (Android):**
-
-<pre>Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW)
-AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141
-Mobile Safari/537.36
-</pre>
-
-
-
-**Tablet UA:**
-
-iPad
-
-<pre>Mozilla/5.0 (iPhone; CPU iPad OS 16_3 like Mac OS X) 
-AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/117.0.5938.117 
-Mobile/15E148 Safari/604.1</pre>
-
-
-
-Here's an example of the Chrome user agent string on a Galaxy Nexus:
-
-```text
-Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) 
-AppleWebKit/535.19 (KHTML, like Gecko) 
-Chrome/18.0.1025.133 Mobile Safari/535.19
-```
-
-Here's an example of the Chrome user agent string on a Galaxy S8
-
-<pre>Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) 
-AppleWebKit/537.36 (KHTML, like Gecko) 
-Chrome/87.0.4280.141 Mobile Safari/537.36</pre>
 
 
 If you are parsing user agent strings using regular expressions, the following can be used to check
@@ -83,16 +124,7 @@ against Chrome on Android phones and tablets:
 - **Phone pattern:** `'Android' + 'Chrome/[.0-9]* Mobile'`
 - **Tablet pattern:** `'Android' + 'Chrome/[.0-9]* (?!Mobile)'`
 
-## Chrome for iOS
-
-The UA in Chrome for iOS is the same as the Mobile Safari user agent, with `CriOS/<ChromeRevision>`
-instead of `Version/<VersionNum>`.
-
-Here's an example of the **Chrome** UA on iPhone:
-
-<pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) 
-AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/117.0.5938.117 
-Mobile/15E148 Safari/604.1</pre>
+### Comparing mobile Safari user-agent strings
 
 For comparison, the **Mobile Safari** UA:
 
@@ -101,10 +133,8 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
 AppleWebKit/605.1.15 (KHTML, like Gecko)
 Version/16.6 Safari/605.1.15
 ```
----above two from my phone/website --
 
-Up to Chrome 84, when the Request Desktop Site feature is enabled, the **Desktop Safari** UA is
-sent:
+Up to Chrome 84, when the Request Desktop Site feature is enabled, the **Desktop Safari** UA is sent:
 
 ```text
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4)
@@ -112,8 +142,7 @@ AppleWebKit/600.7.12 (KHTML, like Gecko)
 Version/8.0.7 Safari/600.7.12
 ```
 
-Starting from Chrome 85, when the Request Desktop Site feature is enabled, the UA is the same as the
-**Desktop Safari** UA with `CriOS/<ChromeMajorRevision>` being added:
+Starting from Chrome 85, when the [Request Desktop Site feature is enabled](#iphone), the UA is the same as the **Desktop Safari** UA with `CriOS/<ChromeMajorRevision>` being added:
 
 ```text
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5)
@@ -121,15 +150,7 @@ AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/85
 Version/11.1.1 Safari/605.1.15
 ```
 
-From Chrome Macbook desktop:
-
-```text
-Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
-AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/117.0.0.0 Safari/537.36
-```
-
-From Safari deskop on Macbook
+Safari deskop on Macbook example:
 
 ```text
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
