@@ -1,6 +1,6 @@
 ---
 layout: layouts/blog-post.njk
-title: プライバシーサンドボックスの関連性と測定 API の出荷の準備
+title: プライバシーサンドボックスの広告関連 API の出荷の準備
 authors:
   - rowan_m
   - alexandrawhite
@@ -14,11 +14,11 @@ tags:
   - origin-trials
 ---
 
-プライバシーサンドボックスプロジェクトは、関連性と測定 API を Chrome 安全版に出荷する準備を進めています。[ウェブのプロジェクトタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)では、Chrome での提供が 2023 年第 3 四半期に始まることが示されています。具体的には、 [Chrome 安定版 115](https://chromiumdash.appspot.com/schedule) をターゲットにする予定です。つまり、2023 年 7 月下旬から API の提供を開始することになります。
+プライバシーサンドボックスプロジェクトは、広告関連 API を Chrome 安全版に出荷する準備を進めています。[ウェブのプロジェクトタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)では、Chrome での提供が 2023 年第 3 四半期に始まることが示されています。具体的には、 [Chrome 安定版 115](https://chromiumdash.appspot.com/schedule) をターゲットにする予定です。つまり、2023 年 7 月下旬から API の提供を開始することになります。
 
 この記事では、今回のリリースに関わる次の内容について確認します。
 
-- **出荷内容**。公開予定の関連性と測定 API は、Topics、Protected Audience、アトリビューション レポート、Private Aggregation、共有ストレージ、および Fenced Frames です。これらの API は、潜在的なイシューを監視するために段階的に利用可能になる予定です。
+- **出荷内容**。公開予定の広告関連 API は、Topics、Protected Audience、アトリビューション レポート、Private Aggregation、共有ストレージ、および Fenced Frames です。これらの API は、潜在的なイシューを監視するために段階的に利用可能になる予定です。
 - **正式な公開プロセス**。各 API は標準の Chrome 公開プロセスをたどります。このプロセスには、blink-dev メーリングリストに承認を得る目的で公開される個別の「Intent to Ship」メッセージが含まれます。
 - **ユーザーコントロールの更新**。ユーザーは、API を管理するための広告プライバシーコントロールを利用できます。
 - **オリジントライアルのステータス**。オリジントライアルは安定版リリースまで引き続き利用可能です。
@@ -32,13 +32,13 @@ Chrome での提供が近づきましたら、改めてお知らせいたしま�
 <figure class="screenshot">
   <p data-md-type="paragraph"><a href="https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline"> {% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ywbyok1JNTBh5B9Xb8xP.png", alt="プライバシーサンドボックスのウェブのタイムライン。", width="800", height="562" %} </a></p></figure>
 
-これらは、[関連性と測定のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)でテスト用に提供されている API と同じセットです。テスト中にエコシステムから受け取ったフィードバックは、重要なユースケースに合わせてこの機能を形成する上で不可欠でした。テストの実施、イシューの報告、関係者との結果の共有にご協力いただいた皆さんに感謝します。これこそが共同の取り組みです。
+これらは、[広告関連のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)でテスト用に提供されている API と同じセットです。テスト中にエコシステムから受け取ったフィードバックは、重要なユースケースに合わせてこの機能を形成する上で不可欠でした。テストの実施、イシューの報告、関係者との結果の共有にご協力いただいた皆さんに感謝します。これこそが共同の取り組みです。
 
 {: #include-apis }
 
 ## 出荷内容
 
-関連性と測定 API には次のものが含まれます。
+広告関連 API には次のものが含まれます。
 
 - [Topics](/docs/privacy-sandbox/topics/): サイト全体で個人をトラッキングするサードパーティ Cookie やその他のユーザー識別子を使用せずに、インタレストベース広告のシグナルを生成します。
 - [Protected Audience](/docs/privacy-sandbox/fledge/): リマーケティングやカスタムオーディエンスのユースケースに対応する広告を選択します。サイト間でのサードパーティのトラッキングを軽減するように設計されています。（この API は以前は FLEDGE という名前でした。リリースに向けて、機能をより適切に反映するように名前を更新しました。）
@@ -61,7 +61,7 @@ API は、安定版リリースを使用するすべてのブラウザインス�
 
 ### 出荷済み {: #shipped }
 
-関連性と測定 API は、プライバシーサンドボックスプロジェクトの重要な部分です。ただし、すでに達成した重要なマイルストーンもいくつかあり、今後さらに多くのマイルストーンが達成されます。
+広告関連 API は、プライバシーサンドボックスプロジェクトの重要な部分です。ただし、すでに達成した重要なマイルストーンもいくつかあり、今後さらに多くのマイルストーンが達成されます。
 
 - [User-Agent の情報量削減](/docs/privacy-sandbox/user-agent/): パッシブに共有されるブラウザデータを制限して、フィンガープリンティングにつながる機密情報の量を削減すると同時に、データをアクティブに要求するための User-Agent Client Hints を提供します。これらの値の削減は 2022 年 5 月に開始され、2023 年 5 月に完了しました。
 - [CHIPS](/docs/privacy-sandbox/chips/): トップレベル サイトごとに個別の Cookie ジャーを使用して、開発者がパーティション化されたストレージに Cookie をオプトインできるようにします。CHIPS は 2023 年 2 月に Chrome 安定版で利用可能になりました。
@@ -78,13 +78,13 @@ API は、安定版リリースを使用するすべてのブラウザインス�
 
 ## オリジントライアル
 
-[プライバシーサンドボックスの関連性と測定のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)では、アトリビューション レポート、Protected Audience、Topics、Fenced Frames、および共有ストレージをサイトで総合的に実験することができます。このオリジントライアルは Chrome 安定版 115 まで継続される予定です。オリジントライアルに参加しているテスターは、安定版の展開に伴い、可用性や API からのデータにギャップを体験する可能性があります。テスターがこの移行を管理するのに役立つ追加のガイダンスと詳細を提供します。
+[プライバシーサンドボックスの広告関連のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)では、アトリビューション レポート、Protected Audience、Topics、Fenced Frames、および共有ストレージをサイトで総合的に実験することができます。このオリジントライアルは Chrome 安定版 115 まで継続される予定です。オリジントライアルに参加しているテスターは、安定版の展開に伴い、可用性や API からのデータにギャップを体験する可能性があります。テスターがこの移行を管理するのに役立つ追加のガイダンスと詳細を提供します。
 
 進捗に合わせて[ドキュメント](/docs/privacy-sandbox/unified-origin-trial/)を更新する予定です。
 
 ## 登録と次のステップ {: #enrollment }
 
-Chrome での提供と並行して、これらの API が意図どおりに透明性をもって使用されるようにしたいと考えています。 Chrome と Android にわたるプライバシー サンドボックスの関連性と測定 API のための新しい[開発者登録プロセス](/blog/announce-enrollment-privacy-sandbox/)を発表しました。更新情報と手順については、[登録ドキュメント](/docs/privacy-sandbox/enroll/)で共有します。
+Chrome での提供と並行して、これらの API が意図どおりに透明性をもって使用されるようにしたいと考えています。 Chrome と Android にわたるプライバシー サンドボックスの広告関連 API のための新しい[開発者登録プロセス](/blog/announce-enrollment-privacy-sandbox/)を発表しました。更新情報と手順については、[登録ドキュメント](/docs/privacy-sandbox/enroll/)で共有します。
 
 ## Chrome が提供するテスト モード {: #testing }
 
@@ -121,13 +121,13 @@ Chrome は最大 1% のブラウザに対してサードパーティ Cookie を�
 
 私たちは、この段階でユーザーエクスペリエンスに影響を与えるイシューを検出し、対処し、サイト所有者に積極的に警告するための緩和策に取り組んでいます。
 
-さらに、プライバシーサンドボックスの関連性と測定 API が無効になっているモード B 内のトラフィックのごく一部を提供する予定です。First-Party Sets、CHIPS、FedCM などの他の API は無効になりません。この組み合わせは、サードパーティ Cookie を使用しないパフォーマンスのベースラインを確立するのに役立つと予想されており、このサブセットのテストに充てるトラフィックの適切な部分に関する[フィードバック](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/labels/chrome-testing)を求めています。
+さらに、プライバシーサンドボックスの広告関連 API が無効になっているモード B 内のトラフィックのごく一部を提供する予定です。First-Party Sets、CHIPS、FedCM などの他の API は無効になりません。この組み合わせは、サードパーティ Cookie を使用しないパフォーマンスのベースラインを確立するのに役立つと予想されており、このサブセットのテストに充てるトラフィックの適切な部分に関する[フィードバック](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/labels/chrome-testing)を求めています。
 
 2024 年第 1 四半期にサードパーティ Cookie の 1% を廃止する予定であり、CMA と緊密な連携を通じて、廃止範囲を拡大するためのさらなる措置を講じていく予定です。
 
 ## 貢献とフィードバックの共有 {: #feedback}
 
-関連性と測定のオリジントライアルにまだ参加していない場合でも、[登録してこれらの API を試す](/docs/privacy-sandbox/unified-origin-trial/)ことができます。今すぐ登録すると、これらの API が実際にどのように機能するかをより詳しく知り、広範に提供される前にさまざまな手法を試すことができます。
+広告関連のオリジントライアルにまだ参加していない場合でも、[登録してこれらの API を試す](/docs/privacy-sandbox/unified-origin-trial/)ことができます。今すぐ登録すると、これらの API が実際にどのように機能するかをより詳しく知り、広範に提供される前にさまざまな手法を試すことができます。
 
 ウェブエコシステム全体の多様な関係者からのフィードバックは、プライバシーサンドボックスイニシアチブにとって非常に重要です。専用の[フィードバックセクション](/docs/privacy-sandbox/feedback/)には、フォローしたりディスカッションに参加したりできる既存の公開チャンネルの概要と、いつでも Chrome チームに直接連絡できるフィードバックフォームが用意されています。
 

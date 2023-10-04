@@ -28,7 +28,16 @@ display a warning. Other permissions trigger a warning that users have to allow.
 
 When a new permission that [triggers a warning](#permissions_with_warnings) is added, the extension
 will be disabled until the user accepts the new permission. See [Updating
-permissions](#update_permissions) to learn how to test this behavior. Some permissions may not display warnings when paired
+permissions](#update_permissions) to learn how to test this behavior. 
+
+<figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/tQgKKMKbzmCzwBEAoatX.gif", alt="Example of an extension that is disabled until the user accepts the new permission.", width="396", height="288" %}
+    <figcaption>
+    An extension that is disabled until the user accepts the new permission.
+    </figcaption>
+</figure>
+
+Some permissions may not display warnings when paired
 with other permissions. For example, the `"tabs"` warning will not show if the extension also
 requests `"<all_urls>"`.
 

@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "First-Party Sets: developer guide"
+title: "Related Website Sets: developer guide"
 date: 2023-01-12
 updated: 2023-05-10
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/SV7SXAQRcVnBZEgjgxYc.png'
@@ -13,14 +13,15 @@ authors:
   - sarino
 ---
 
+{% Partial 'privacy-sandbox/fps-rename.njk' %}
 
-[First-Party Sets (FPS)](docs/privacy-sandbox/first-party-sets/) is a web platform mechanism which helps browsers to understand the relationships amongst a collection of domains. This allows browsers to make key decisions to enable certain site functions (such as whether to allow access to cross-site cookies) and to present this information to users.
+[Related Website Sets (RWS)](docs/privacy-sandbox/related-website-sets/) is a web platform mechanism which helps browsers to understand the relationships amongst a collection of domains. This allows browsers to make key decisions to enable certain site functions (such as whether to allow access to cross-site cookies) and to present this information to users.
 
-As Chrome deprecates third-party cookies, its goal is to maintain key use cases on the web while improving privacy for users. For example, many sites rely on multiple domains to serve a single user experience. Organizations may want to maintain different top-level domains for multiple use cases like country specific domains or service domains for hosting images or video. FPS allows sites to share data across domains, with specific controls.
+As Chrome deprecates third-party cookies, its goal is to maintain key use cases on the web while improving privacy for users. For example, many sites rely on multiple domains to serve a single user experience. Organizations may want to maintain different top-level domains for multiple use cases like country specific domains or service domains for hosting images or video. Related Website Sets allows sites to share data across domains, with specific controls.
 
-## What is a First-Party Set
+## What is a Related Website Set?
 
-At a high level, a First-Party Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members".
+At a high level, a Related Website Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members."
 
 In the example below, `primary` lists the primary domain, and `associatedSites` lists domains that meet the requirements of the [associated subset](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements).
 
@@ -31,19 +32,19 @@ In the example below, `primary` lists the primary domain, and `associatedSites` 
 }
 ```
 
-The canonical FPS list is a publicly viewable list in a JSON file format hosted in the [FPS GitHub repository](https://github.com/googlechrome/first-party-sets), which serves as the source-of-truth for all sets. Chrome consumes this file to apply to its behavior.
+The canonical Related Website Sets list is a publicly viewable list in a JSON file format hosted in the [Related Website Sets GitHub repository](https://github.com/googlechrome/first-party-sets), which serves as the source-of-truth for all sets. Chrome consumes this file to apply to its behavior.
 
-Only those with administrative control over a domain can create a set with that domain. Submitters are required to declare the relationship between each "set member" to its "set primary". Set members could include a range of different domain types and must be part of a [subset based on a use case](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements).
+Only those with administrative control over a domain can create a set with that domain. Submitters are required to declare the relationship between each "set member" to its "set primary." Set members could include a range of different domain types and must be part of a [subset based on a use case](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements).
 
-If your application depends on access to cross-site cookies (also called third-party cookies) across sites within the same First-Party Set, you can use [Storage Access API (SAA)](https://privacycg.github.io/storage-access/) and the [requestStorageAccessFor API](https://privacycg.github.io/requestStorageAccessFor/) to request access to those cookies. Depending on the subset that each site is part of, the browser may handle the request differently.
+If your application depends on access to cross-site cookies (also called third-party cookies) across sites within the same Related Website Set, you can use [Storage Access API (SAA)](https://privacycg.github.io/storage-access/) and the [requestStorageAccessFor API](https://privacycg.github.io/requestStorageAccessFor/) to request access to those cookies. Depending on the subset that each site is part of, the browser may handle the request differently.
 
 To learn more about the process and requirements for submitting sets, check out the [submission guidelines](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md). Submitted sets will go through various technical checks to validate the submissions.
 
-## FPS use cases
+## Related Website Sets use cases
 
-First-Party Sets are a good match for cases when an organization needs a form of shared identity across different top-level sites.
+Related Website Sets are a good match for cases when an organization needs a form of shared identity across different top-level sites.
 
-Some of the use cases for FPS are:
+Some of the use cases for Related Website Sets are:
 
 -   **Country customization**. Leveraging localized sites while relying on shared infrastructure (example.co.uk may rely on a service hosted by example.ca).
 -   **Service domain integration**. Leveraging service domains that users never directly interact with, but provide services across the same organization's sites (example-cdn.com).
@@ -53,7 +54,7 @@ Some of the use cases for FPS are:
 -   **Analytics**. Deploying analytics and measurement of user journeys across affiliated properties to improve quality of services.
 
 
-## FPS integration details
+## Related Website Sets integration details
 
 ### Storage Access API
 
@@ -61,7 +62,7 @@ The [Storage Access API (SAA)](https://privacycg.github.io/storage-access/) prov
 
 Embedded resources can use SAA methods to check whether they currently have access to storage, and to request access from the user agent.
 
-When third-party cookies are blocked, but First-Party Sets are allowed, Chrome will automatically grant that permission for sites within the set and deny it for sites outside the set.
+When third-party cookies are blocked, but Related Website Sets are allowed, Chrome will automatically grant that permission for sites within the set and deny it for sites outside the set.
 
 {% Aside %}
 SAA is shipping in several browsers, however there are [differences between browser implementations](https://developer.mozilla.org/docs/Web/API/Storage_Access_API#safari_implementation_differences) in the rules of handling storage access.
@@ -202,7 +203,7 @@ function rSA() {
 }
 ```
 
-Subsequent requests from within the frame, navigations or subresources, will automatically have permission for accessing cross-site cookies. `hasStorageAccess()` returns true and cross-site cookies from the same First-Party Set will be sent on those requests without any additional JavaScript calls.
+Subsequent requests from within the frame, navigations or subresources, will automatically have permission for accessing cross-site cookies. `hasStorageAccess()` returns true and cross-site cookies from the same Related Website Set will be sent on those requests without any additional JavaScript calls.
 
 
 ### Top-level sites requesting cookie access on behalf of cross-origin sites
@@ -275,17 +276,17 @@ function checkCookie() {
 
 ### Prerequisites
 
-To test FPS locally, use Chrome 113 or higher launched from the command line.
+To test Related Website Sets locally, use Chrome 113 or higher launched from the command line.
 
 To preview upcoming Chrome features before they're released, download the Beta or Canary version of Chrome.
 
 ### Example
 
 {% Aside %}
-To see a FPS demo in action, visit [https://first-party-sets.glitch.me/](https://first-party-sets.glitch.me/).
+To see a Related Website Sets demo in action, visit [https://first-party-sets.glitch.me/](https://first-party-sets.glitch.me/).
 {% endAside %}
 
-To enable FPS locally, you need to use Chrome's `--enable-features` option with a comma-separated list of flags that are explained in this section.
+To enable Related Website Sets locally, you need to use Chrome's `--enable-features` option with a comma-separated list of flags that are explained in this section.
 
 Learn more about how to [run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/).
 
@@ -295,11 +296,11 @@ Learn more about how to [run Chromium with flags](https://www.chromium.org/devel
 https://first-party-sets.glitch.me/
 ```
 
-- `FirstPartySets` enables FPS in Chrome.`
+- `FirstPartySets` enables Related Website Sets in Chrome.`
 StorageAccessAPI` enables Storage Access API.
 - `StorageAccessAPIForOriginExtension` enables top-level sites to use requestStorageAccessFor() to request storage access on behalf of specific origins.
-- `PageInfoCookiesSubpage` enables showing FPS in the PageInfo section accessible from the URL bar.
-- `PrivacySandboxFirstPartySetsUI` enables FPS UI "Allow related sites to see your activity in the group" option in Chrome settings, under Privacy and Security → Cookies and other site data (chrome://settings/cookies).
+- `PageInfoCookiesSubpage` enables showing Related Website Sets in the PageInfo section accessible from the URL bar.
+- `PrivacySandboxFirstPartySetsUI` enables Related Website Sets UI "Allow related sites to see your activity in the group" option in Chrome settings, under Privacy and Security → Cookies and other site data (chrome://settings/cookies).
 
 ### Declare a set locally
 
@@ -324,19 +325,19 @@ Call the APIs (rSA or rSAFor) from the sites that are being tested and validate 
 
 ### Reseting permissions to the default
 
-If you want to remove all FPS-mediated permissions and reset to the default state, there are currently two ways to do so:
+If you want to remove all Related Website Sets-mediated permissions and reset to the default state, there are currently two ways to do so:
 
 - Restart the browser, for example by visiting `chrome://restart`. (Any recent Chrome version.)
 - Visit `chrome://settings/cookies`, set the "Default behavior" setting to "Block third-party cookies", and toggle the "Allow related sites to see your activity in the group" option off and then on again. Be sure to refresh the page you're testing on as well. (Chrome 116.0.5845.42 or later.)
 
-## FPS submission process
+## Related Website Sets submission process
 
 To declare the relationship amongst the domains and specify which subset they are part of, follow the steps below:
 
-1.  Identify the relevant domains, this includes the **set primary** and **set members**, that will be part of the FPS. Also identify which **subset type** each set member belongs to.
+1.  Identify the relevant domains, this includes the **set primary** and **set members**, that will be part of the Related Website Set. Also identify which **subset type** each set member belongs to.
 1.  Ensure the [set formation requirements](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements) and [set validation requirements](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-validation-requirements) are in place.
-1.  Declare the FPS in the correct [JSON format](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-submissions).
-1.  Submit the First Party Set by creating a [pull request (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to the [`first_party_sets.JSON`](https://github.com/GoogleChrome/first-party-sets/blob/main/first_party_sets.JSON) where Chrome will host the canonical FPS list. (A GitHub account is required to create PRs, and you will need to sign a [Contributor's License Agreement (CLA)](https://cla.developers.google.com/about) to contribute to the list.)
+1.  Declare the Related Website Set in the correct [JSON format](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-submissions).
+1.  Submit the First Party Set by creating a [pull request (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to the [`first_party_sets.JSON`](https://github.com/GoogleChrome/first-party-sets/blob/main/first_party_sets.JSON) where Chrome will host the canonical Related Website Set list. (A GitHub account is required to create PRs, and you will need to sign a [Contributor's License Agreement (CLA)](https://cla.developers.google.com/about) to contribute to the list.)
 
 Once the PR is created, a series of checks will happen to validate that the requirements from step 2 are in place.
 
@@ -344,7 +345,7 @@ Once the PR is created, a series of checks will happen to validate that the requ
 Before creating a PR, you can [test your submission locally](https://github.com/GoogleChrome/first-party-sets/blob/main/Getting-Started.md#testing-your-submission-locally) to see if it passes the checks.
 {% endAside %}
 
-If successful, the PR will indicate that checks have been passed. Approved PRs will be manually merged in batches to the canonical FPS list once per week (Tuesdays at 12pm Eastern Time).
+If successful, the PR will indicate that checks have been passed. Approved PRs will be manually merged in batches to the canonical Related Website Set list once per week (Tuesdays at 12pm Eastern Time).
 
 If any of the checks fails, the submitter will be notified through a PR failure on GitHub. The submitter can fix the errors and update the PR, and keep in mind that:
 
@@ -355,14 +356,14 @@ If any of the checks fails, the submitter will be notified through a PR failure 
 
 To meet the needs of enterprise users Chrome has a couple of enterprise policies in place:
 
--   Systems that might not be able to integrate with First-Party Sets can disable the First-Party Sets feature in all enterprise instances of Chrome with the [`FirstPartySetsEnabled` policy](https://chromeenterprise.google/policies/#FirstPartySetsEnabled).
--   Some enterprise systems have internal only sites (such as an intranet) with registrable domains that differ from the domains in their First-Party Set. If they need to treat these sites as part of their First-Party Sets without exposing them publicly (as the domains may be confidential) they can augment or override their public First-Party Sets list with the [`FirstPartySetsOverrides` policy](https://chromeenterprise.google/policies/#FirstPartySetsOverrides).
+-   Systems that might not be able to integrate with Related Website Sets can disable the Related Website Sets feature in all enterprise instances of Chrome with the [`FirstPartySetsEnabled` policy](https://chromeenterprise.google/policies/#FirstPartySetsEnabled).
+-   Some enterprise systems have internal only sites (such as an intranet) with registrable domains that differ from the domains in their Related Website Set. If they need to treat these sites as part of their Related Website Set without exposing them publicly (as the domains may be confidential) they can augment or override their public Related Website Sets list with the [`FirstPartySetsOverrides` policy](https://chromeenterprise.google/policies/#FirstPartySetsOverrides).
 
 ## Share feedback
 
 Submitting a set on GitHub and working with the Storage Access API and the `requestStorageAccessFor` API are opportunities to share your experience with the process and any issues you run into.
 
-To join discussions about the First Party Sets:
+To join discussions about Related Website Sets:
 
--   Join the First-Party Sets [public mailing list](https://groups.google.com/u/2/a/chromium.org/g/first-party-sets-discuss).
--   Raise issues and follow the discussion on [First-Party Sets GitHub repo](https://github.com/WICG/first-party-sets).
+-   Join the Related Website Sets [public mailing list](https://groups.google.com/u/2/a/chromium.org/g/first-party-sets-discuss).
+-   Raise issues and follow the discussion on [Related Website Sets GitHub repo](https://github.com/WICG/first-party-sets).

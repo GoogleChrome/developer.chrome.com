@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-09-15
+updated: 2023-09-29
 tags:
   - extensions-news
 
@@ -15,7 +15,19 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
+### Extension samples now searchable {: #extension-samples-searchable }
+
+<p class="color-secondary-text type--caption">Posted on <time>September 29, 2023</time></p>
+
+We recently created a page that lets you [search Chrome extension samples](/docs/extensions/samples/). The search page has multiple options. A search box lets you search for text in sample titles. You can restrict the search by permission or extension API. An additional filter lets you restrict search to either API or functional (use case) samples.
+
+This new sample page was built by a Google Summer of Code participant, Xuezhou Dai, who also contributed several new samples. You can read about their experiences this past summer in [their post on our blog](/blog/google-summer-of-code-and-chrome-extensions/).
+
+As before, [our code samples](https://github.com/GoogleChrome/chrome-extensions-samples) are still available on GitHub for cloning or forking.
+
 ### Chrome 118: Changes to opening file: scheme URLs {: #changes-to-file-scheme }
+
+<p class="color-secondary-text type--caption">Posted on <time>September 15, 2023</time></p>
 
 Beginning in Chrome 118, extensions will need the "Allow access to file URLs" setting enabled from the `chrome://extensions` page to open file:// scheme URLs using the [Tabs](/docs/extensions/reference/tabs/) or [Windows](/docs/extensions/reference/windows/) APIs. You can programmatically check for this access by calling [`chrome.extension.isAllowedFileSchemeAccess()`](/docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess). Firefox already restricts file URLs, and Safari supports the change. For more information, read the [post in the extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/ZtCvVISQU54/m/tOjjlzkfAgAJ).
 

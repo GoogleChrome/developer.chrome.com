@@ -56,7 +56,7 @@ returned stream ID can be used:
 
 - If `consumerTabId` is specified, the ID can be used by a `getUserMedia()` call in any frame in the
 given tab which has the same security origin.
-- When this is not specified, begininning in Chrome 116, the ID can be used in any frame with the
+- When this is not specified, beginning in Chrome 116, the ID can be used in any frame with the
 same security origin in the same render process as the caller. This means that a stream ID obtained
 in a service worker can be used in an [offscreen document][offscreen-document].
 

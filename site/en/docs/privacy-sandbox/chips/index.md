@@ -27,7 +27,7 @@ tags:
 
 Cookies Having Independent Partitioned State (CHIPS) allows developers to opt a cookie into partitioned storage, with separate cookie jars per top-level site, improving user privacy and security.
 
-Browsers are well under way in phasing out unpartitioned third-party cookies, so CHIPS and [First-Party Sets](/first-party-sets) will be the only way to read and write cookies from cross-site contexts, such as iframes, when third-party cookies are blocked.
+Browsers are well under way in phasing out unpartitioned third-party cookies, so CHIPS and [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) ([formerly called First-Party Sets](/blog/related-website-sets/)) will be the only way to read and write cookies from cross-site contexts, such as iframes, when third-party cookies are blocked.
 
 Without partitioning, third-party cookies can enable services to track users and join their information from across many unrelated top-level sites. This is known as cross-site tracking.
 
@@ -142,15 +142,15 @@ key={("https", "retail.example"),
 Chrome has a limit of maximum 180 cookies per partition that cannot exceed 10 KB per-embedded-site.
 {% endAside %}
 
-#### First-Party Sets and cookie partitioning
+#### Related Website Sets and cookie partitioning
 
-[First-Party Sets (FPS)](/first-party-sets-integration) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
+[Related Website Sets (RWS)](/docs/privacy-sandbox/related-website-sets-integration/) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
-The current First-Party Sets design relies on Storage Access API and does not integrate with CHIPS partitioning.
+The current Related Website Sets design relies on Storage Access API and does not integrate with CHIPS partitioning.
 
-Consider First-Party Sets in situations where you need the same cookie to be available to a service that's embedded in multiple related sites.
+Consider Related Website Sets in situations where you need the same cookie to be available to a service that's embedded in multiple related sites.
 
-CHIPS provides the functionality for a service to act as an isolated component across multiple sites. If the service that's a member of a First-Party Set sets a partitioned cookie, its partition key will be the top-level site and that cookie will not be available to other set members.
+CHIPS provides the functionality for a service to act as an isolated component across multiple sites. If the service that's a member of a Related Website Set sets a partitioned cookie, its partition key will be the top-level site and that cookie will not be available to other set members.
 
 If you have a use case that relies on a shared cookie partition across sites within a FPS you can [provide examples and feedback on the GitHub issue](https://github.com/WICG/first-party-sets/issues/94).
 

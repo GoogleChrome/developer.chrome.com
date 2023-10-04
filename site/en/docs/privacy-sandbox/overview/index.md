@@ -56,7 +56,7 @@ Several key proposals are listed below.
 
 * [**CHIPS**](/docs/privacy-sandbox/chips/) (released): Allow developers to opt-in a
   cookie to partitioned storage, with a separate cookie jar per top-level site.
-* [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets) (released): Allow related
+* [**Related Website Sets**](/docs/privacy-sandbox/related-website-sets/) ([Formerly called First-Party Sets](/blog/related-website-sets/). Released.): Allow related
   domain names owned by the same entity to declare themselves as belonging to
   the same first party.
 * [**Shared Storage**](/docs/privacy-sandbox/shared-storage/) (released): Create a
@@ -67,7 +67,7 @@ Several key proposals are listed below.
   such as `localStorage` or cookies, to be double-keyed: by the top-level site
   as well as the origin of the resource being loaded, rather than a single
   origin or site.
-* [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame) (released): Securely embed
+* [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame/) (released): Securely embed
   content onto a page without sharing cross-site data.
 * [**Network State Partitioning**](https://github.com/MattMenke2/Explainer---Partition-Network-State):
   Prevent browser network resources being shared across first-party contexts,
@@ -83,7 +83,7 @@ Several key proposals are listed below.
 * [**Topics API**](/docs/privacy-sandbox/topics) (released): Enable interest-based
   advertising without use of third-party cookies or tracking user behavior
   across sites.
-* [**Protected Audience API**](/docs/privacy-sandbox/protected-audience) (released): Ad selection to serve remarketing
+* [**Protected Audience API**](/docs/privacy-sandbox/protected-audience/) (released): Ad selection to serve remarketing
   and custom audience use cases, designed so that it cannot be used by third
   parties to track user browsing behavior across sites. The Protected Audience API is the first
   experiment to be implemented in Chromium from the
@@ -91,9 +91,9 @@ Several key proposals are listed below.
 
 ### Measure digital ads
 
-* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting) (released):
+* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting/) (released):
   Correlate ad clicks or ad views with conversions. Ad techs can generate
-  event-level or [summary reports](/docs/privacy-sandbox/summary-reports).
+  event-level or [summary reports](/docs/privacy-sandbox/summary-reports/).
 * [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/) (released):
   Generate noisy summary reports with cross-site data.
 
@@ -114,7 +114,7 @@ Several key proposals are listed below.
 
 ### Fight spam and fraud on the web
 
-* [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens) (released): Allow
+* [**Private State Tokens**](/docs/privacy-sandbox/private-state-tokens/) (released): Allow
   websites to convey a limited amount of information from one browsing context
   to another (for example, across sites) to help combat fraud, without passive
   tracking.
@@ -194,7 +194,7 @@ turned on.
 
 The exception is cookies that are modified by either the
 [CHIPS](/docs/privacy-sandbox/chips/) or
-[First-Party Sets](/docs/privacy-sandbox/first-party-sets/).
+[Related Website Sets](/docs/privacy-sandbox/related-website-sets/).
 These allow for a subset of cross-site use cases. As these features and APIs are
 under active discussion, the final formats and functionality may change.
 

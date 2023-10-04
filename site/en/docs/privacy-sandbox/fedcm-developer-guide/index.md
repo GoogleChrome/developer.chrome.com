@@ -103,10 +103,12 @@ The config file's URL is determined by the values provided to the
 ```javascript
 const credential = await navigator.credentials.get({
   identity: {
+    context: 'signup',
     providers: [{
       configURL: 'https://accounts.idp.example/config.json',
       clientId: '********',
-      nonce: '******'
+      nonce: '******',
+      loginHint: 'demo1@example.com'
     }]
   }
 });
@@ -189,8 +191,10 @@ following properties:
   </tr>
 </table>
 
+RP could modify the string in the FedCM dialog UI via `identity.context` value for `navigator.credentials.get()` to accommodate predefined authentication contexts. Optional property can be one of `"signin"` (default), `"signup"`, `"use"` or `"continue"`.
+
 {% Img
-   src="image/VbsHyyQopiec0718rMq2kTE1hke2/rFrfrCL0awt5zmyqvaM9.jpg", alt="How branding is applied to the FedCM dialog", width="600", height="332", class="screenshot"
+   src="image/PV7xjXdOKHP8LWt9XhstsToJeK82/RZwmFnyJChjlki8QsnBB.png", alt="How branding is applied to the FedCM dialog", width="487", height="244"
 %}
 
 Here's an example response body from the IdP:
@@ -293,6 +297,7 @@ Example response body:
    "email": "john_doe@idp.example",
    "picture": "https://idp.example/profile/123",
    "approved_clients": ["123", "456", "789"],
+   "login_hints": ["demo1", "demo1@example.com"],
   }, {
    "id": "5678",
    "given_name": "Johnny",
@@ -300,6 +305,7 @@ Example response body:
    "email": "johnny@idp.example",
    "picture": "https://idp.example/profile/456"
    "approved_clients": ["abc", "def", "ghi"],
+   "login_hints": ["demo2", "demo2@example.com"],
   }]
 }
 ```
@@ -308,6 +314,8 @@ If the user is not signed in, respond with HTTP 401 (Unauthorized).
 
 The returned accounts list is consumed by the browser and will not be
 available to the RP.
+
+By passing login_hints in the accounts list, the RP can invoke `navigator.credentials.get()` with the `loginHint` property to selectively show the specified account.
 
 #### Client metadata endpoint {: #client-metadata-endpoint }
 
@@ -401,6 +409,7 @@ Origin: https://rp.example/
 Content-Type: application/x-www-form-urlencoded
 Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
+
 account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true
 ```
 

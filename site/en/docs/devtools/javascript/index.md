@@ -38,7 +38,7 @@ DevTools provides a lot of different tools for different tasks, such as changing
 load performance, and monitoring network requests. The **Sources** panel is where you debug
 JavaScript.
 
-1.  Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This
+1.  Open DevTools by pressing Command+Option+J (Mac) or Control+Shift+J (Windows, Linux). This
     shortcut opens the **Console** panel.
 
     {% Img src="image/admin/JS6A41j5zLtT1J0xqjqL.png", alt="The Console panel.", width="800", height="494" %}

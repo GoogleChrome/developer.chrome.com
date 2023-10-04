@@ -29,6 +29,7 @@
     - url: /docs/extensions/migrating/api-calls
     - url: /docs/extensions/migrating/blocking-web-requests
     - url: /docs/extensions/migrating/improve-security
+    - url: /docs/extensions/migrating/publish-mv3
     - url: /docs/extensions/migrating/mv2-sunset
     - url: /docs/extensions/migrating/known-issues
 - url: /docs/extensions/reference
@@ -44,7 +45,6 @@
     - url: /docs/extensions/mv3/service_workers
     - url: /docs/extensions/mv3/user_interface
     - url: /docs/extensions/mv3/tut_debugging
-    - url: /docs/extensions/mv3/samples
 - title: i18n.docs.extensions.service_workers
   sections:
     - url: /docs/extensions/mv3/service_workers
@@ -59,6 +59,7 @@
     - url: /docs/extensions/mv3/match_patterns
     - url: /docs/extensions/mv3/promises
     - url: /docs/extensions/mv3/cross-origin-isolation
+    - url: /docs/extensions/mv3/storage-and-cookies
 - title: i18n.docs.extensions.indepth-security
   sections:
     - url: /docs/extensions/mv3/xhr

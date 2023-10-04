@@ -21,8 +21,15 @@ redirects:
 
 # Simple redirects
 
+
 - from: /docs/privacy-sandbox/user-agent/snippets/
   to: /docs/privacy-sandbox/user-agent/
+
+- from: /docs/privacy-sandbox/first-party-sets/
+  to: /docs/privacy-sandbox/related-website-sets/
+
+- from: /docs/privacy-sandbox/first-party-sets-integration/
+  to: /docs/privacy-sandbox/related-website-sets-integration/
 
 - from: /docs/privacy-sandbox/trust-tokens/
   to: /docs/privacy-sandbox/private-state-tokens/
@@ -650,6 +657,10 @@ redirects:
 
 - from: /docs/extensions/mv3/known-issues/
   to: /docs/extensions/migrating/known-issues/
+
+# Extension samples
+- from: /docs/extensions/mv3/samples/
+  to: /docs/extensions/samples/
 
 # Redirects for docs now on MDN
 

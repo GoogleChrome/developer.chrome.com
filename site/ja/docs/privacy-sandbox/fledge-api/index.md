@@ -41,7 +41,7 @@ FLEDGE は、[TURTLEDOVE](https://github.com/WICG/turtledove) ファミリの提
 
 ### オリジントライアルに参加する {: #origin-trial}
 
-[プライバシーサンドボックスの関連性と測定のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial)は、FLEDGE、[Topics](/docs/privacy-sandbox/topics/)、および [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) API について、デスクトップの Chrome ベータ版 101.0.4951.26 以降で公開されています。
+[プライバシーサンドボックスの広告関連のオリジントライアル](/docs/privacy-sandbox/unified-origin-trial)は、FLEDGE、[Topics](/docs/privacy-sandbox/topics/)、および [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) API について、デスクトップの Chrome ベータ版 101.0.4951.26 以降で公開されています。
 
 参加するには、[オリジントライアルトークンに登録](/origintrials/#/view_trial/771241436187197441)してください。
 
@@ -76,9 +76,9 @@ document.head.append(otMeta);
 
 {% Aside 'caution' %}
 
-有効なトライアルトークンを提供するページであっても、すべてのユーザーがプライバシーサンドボックスの関連性と測定のオリジントライアルの対象となるわけではありません。
+有効なトライアルトークンを提供するページであっても、すべてのユーザーがプライバシーサンドボックスの広告関連のオリジントライアルの対象となるわけではありません。
 
-[関連性と測定の統一オリジントライアルの概要](/docs/privacy-sandbox/unified-origin-trial#eligible-users)にはその理由が説明されており、オリジントライアル機能を使用する前に使用可能かどうかを検出する方法（検出する必要があります）が示されています。
+[広告関連の統一オリジントライアルの概要](/docs/privacy-sandbox/unified-origin-trial#eligible-users)にはその理由が説明されており、オリジントライアル機能を使用する前に使用可能かどうかを検出する方法（検出する必要があります）が示されています。
 
 {% endAside %}
 

@@ -2,7 +2,7 @@
 layout: "layouts/blog-post.njk"
 title: "User-Agent Reduction deprecation trial"
 subhead: >
-  Register to continue receiving the full User-Agent string.
+  The User-Agent Reduction deprecation trial allowed sites to continue receiving the full User-Agent string after UA string reduction. The trial ended September 23, 2023.
 description: >
   Starting from Chrome 101, the information available in the User-Agent string will be reduced.
   Sites that haven’t had time to migrate away from using the reduced User-Agent string can take
@@ -11,12 +11,23 @@ authors:
   - abeyad
   - victortan
 date: 2022-02-24
+updated: 2023-09-23
 tags:
   - privacy
   - origin-trials
   - chrome-101
+is_outdated: true
 ---
 
+ {% Aside 'warning' %}
+ The User-Agent Reduction deprecation trial ended September 23, 2023. The information available in the User-Agent string was reduced beginning in Chrome 101. During the deprecation trial, sites were able to continue receiving parts of the UA string, but will now have to rely on other methods.
+
+ To replace functionality that relied on the User Agent string, you can implement the [User Agent client hints API](https://developer.mozilla.org/docs/Web/API/User-Agent_Client_Hints_API#browser_compatibility).
+
+ The [User-Agent Client Hints page](https://web.dev/migrate-to-ua-ch/) provides some background.
+
+ The remainder of this blog post should be considered deprecated.
+ {% endAside %}
 
 Starting from Chrome 101, the information available in the User-Agent (UA) string will be reduced [using a phased approach](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html). Sites that haven't had time to migrate away from using the reduced User-Agent string and [move toward User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) can take part in a deprecation trial to continue receiving the full User-Agent string.
 
@@ -100,3 +111,5 @@ The User-Agent Reduction deprecation trial will run from Chrome 100 to Chrome 11
 ## How do I share feedback for the User-Agent Reduction depreciation trial?
 
 Submit any issues or feedback to the [User-Agent Reduction GitHub repository](https://github.com/miketaylr/user-agent-reduction/issues).
+
+
