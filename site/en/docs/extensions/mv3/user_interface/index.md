@@ -154,20 +154,6 @@ chrome.action.setBadgeText({text: 'ON'});
 chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
 ```
 
-## Provide the extension icons
-
-An extension requires at least one icon to represent it. Provide icons in PNG format for the best
-visual results, although any raster format supported by Chrome is accepted. This includes BMP,
-GIF, ICO, and JPEG.
-
-{% Aside 'caution' %}
-
-SVG files are not supported for any icons declared in the manifest.
-
-{% endAside %}
-
-Ensure your icon follows the [extension icon best practices][docs-icon-guidelines].
-
 ### Designate action icons {: #icons }
 
 Icons specific to the toolbar are registered in the `"default_icon"` field under
@@ -189,13 +175,25 @@ Icons specific to the toolbar are registered in the `"default_icon"` field under
   ...
 }
 ```
+## Provide the extension icons
+
+An extension requires at least one icon to represent it. Provide icons in PNG format for the best
+visual results, although any raster format supported by Chrome is accepted. This includes BMP,
+GIF, ICO, and JPEG.
+
+{% Aside 'caution' %}
+
+SVG files are not supported for any icons declared in the manifest.
+
+{% endAside %}
+
+Ensure your icon follows the [extension icon best practices][docs-icon-guidelines].
+
 
 All icons should be square or they may be distorted. If no icons are supplied, Chrome will add a
 generic one to the toolbar with the first letter of the extension name.
 
-### Create and register additional icons {: #icon_size }
-
-Include additional icons in the following sizes for uses outside of the toolbar.
+Include additional icons in the following sizes for uses outside of the toolbar. {: #icon_size }
 
 | Icon Size | Icon Use                                               |
 |-----------|--------------------------------------------------------|
