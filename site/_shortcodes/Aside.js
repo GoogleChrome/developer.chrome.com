@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const {i18n} = require('../_filters/i18n');
+const md = require('../_filters/md');
 
 const defaultLocale = 'en';
 
@@ -46,6 +47,39 @@ function Aside(content, type = 'note') {
 
   if (type !== 'note') {
     text = i18n(`i18n.common.${type}`, locale);
+  }
+
+  if (this.ctx.export) {
+    const altAsides = {
+      important: {
+        className: 'key-point',
+        title: 'Key point',
+      },
+      'key-term': {
+        className: 'key-term',
+        title: 'Key term',
+      },
+      codelab: {
+        className: 'beta',
+        title: 'Try it',
+      },
+      celebration: {
+        className: 'success',
+        title: 'Celebration',
+      },
+      update: {
+        className: 'note',
+        title: 'Update',
+      },
+    };
+    const {className, title} = altAsides[type] || {
+      className: type,
+      title: type[0].toUpperCase() + type.slice(1), // Capitalize
+    };
+    const altAsideHTML =
+      `<aside class="${className}">` +
+      `${title ? `<b>${title}:</b>` : ''}${md.renderInline(content)}</aside>`;
+    return `${altAsideHTML}`;
   }
 
   // prettier-ignore

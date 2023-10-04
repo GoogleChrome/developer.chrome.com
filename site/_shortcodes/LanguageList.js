@@ -26,6 +26,10 @@ const languageNames = {
  * @param {string} locale current locale
  */
 function LanguageList(url, site, collections, locale = 'en') {
+  if (this.ctx.export) {
+    return '';
+  }
+
   if (!url) {
     return;
   }

@@ -13,14 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 const {Video: BuildVideoShortcode} = require('webdev-infra/shortcodes/Video');
+
 const {bucket, imgixDomain} = require('../_data/site.json');
+
+const Video = BuildVideoShortcode(bucket, imgixDomain);
 
 /**
  * @param {import('webdev-infra/types').VideoArgs} args Named arguments
  * @returns {string}
  */
-const Video = BuildVideoShortcode(bucket, imgixDomain);
+function VideoAlt(args) {
+  let html = Video.call(this, args);
+  if (this.ctx.export) {
+    // Replace double spaces in html with single spaces, as otherwise
+    // it looks weird in generated markdown
+    html = html.replace(/\s\s+/g, ' ');
+  }
 
-module.exports = {Video};
+  return html;
+}
+
+module.exports = {Video: VideoAlt};

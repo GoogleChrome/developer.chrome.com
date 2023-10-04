@@ -2,6 +2,8 @@ const path = require('path');
 
 const {findByFilePath} = require('../_data/lib/find');
 const {defaultLocale} = require('../_data/site.json');
+const {exportFile} = require('../_export/utils/exportFile');
+const {renderTemplate} = require('../_export/shortcodes/Export');
 
 const basePath = '_partials';
 
@@ -34,6 +36,21 @@ async function Partial(partialPath) {
   // before it has done all it's business
   const template = partial.template;
   template.wrapWithLayouts = false;
+
+  if (this.ctx.export) {
+    const ext = partial.template.parsed.ext;
+    const transformedTemplate = await renderTemplate(
+      partial.template.inputContent,
+      Object.assign({}, this.ctx, {export: true})
+    );
+
+    await exportFile(
+      this.ctx,
+      transformedTemplate || 'Failed to render partial.',
+      `${partialPath}${ext}`
+    );
+    return `{% include '/_partials/${partialPath}.${ext}'}`;
+  }
 
   // @ts-ignore: `this` has type of `any`
   const templateContent = await template.render(this.ctx);

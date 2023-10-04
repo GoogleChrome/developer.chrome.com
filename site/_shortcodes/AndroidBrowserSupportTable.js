@@ -84,7 +84,11 @@ const COMPAT = {
   },
 };
 
-const AndroidBrowserSupportTable = args => {
+function AndroidBrowserSupportTable(args) {
+  if (this.ctx.export) {
+    return '{# AndroidBrowserSupportTable #}';
+  }
+
   const {_method} = args;
   const browsers = Object.entries(args).filter(a => !a[0].startsWith('_'));
 

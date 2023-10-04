@@ -19,6 +19,17 @@
  */
 
 const md = require('markdown-it')();
+const mdDevSite = require('markdown-it')({
+  html: true,
+  highlight: function (str, lang) {
+    // Some code snippets have line-highlights that are not supported on DevSite,
+    // they need to be removed.
+    const cleanLang = lang.split('/')[0];
+    return `<pre class="prettyprint lang-${cleanLang}">${
+      cleanLang === 'html' ? '{% htmlescape %}' : ''
+    }${str}${cleanLang === 'html' ? '{% endhtmlescape %}' : ''}</pre>`;
+  },
+});
 
 /**
  * Render content as markdown.
@@ -42,4 +53,12 @@ function renderInline(content) {
   return content && md.renderInline(content);
 }
 
-module.exports = {render, renderInline};
+function renderDevSite(content) {
+  return content && mdDevSite.render(content);
+}
+
+function renderDevSiteInline(content) {
+  return content && mdDevSite.renderInline(content);
+}
+
+module.exports = {render, renderInline, renderDevSite, renderDevSiteInline};

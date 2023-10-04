@@ -9,6 +9,10 @@ const {getLocalizedPaths} = require('../_filters/urls');
  * @param {EleventyCollectionObject} collections Eleventy collections object
  */
 function Hreflang(url, site, collections) {
+  if (this.ctx.export) {
+    return '';
+  }
+
   if (!url) {
     return;
   }

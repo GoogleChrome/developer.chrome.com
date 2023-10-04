@@ -15,6 +15,7 @@
  */
 
 const {i18n} = require('../_filters/i18n');
+const md = require('../_filters/md');
 
 /**
  * @param {string} content
@@ -48,6 +49,17 @@ function Compare(content, type, labelOverride) {
     label = i18n(`i18n.common.compare_${type}`, locale);
   }
 
+  if (this.ctx.export) {
+    // Compare is often used in switcher divs, where DevSite wouldn't render Markdown - so statify it
+    // and wrap it in a parent div for the column layout to work. Pluck out
+    const mdContent = md.renderDevSite(content.trim());
+
+    return `<div class="dcc-compare">
+  <div class="compare-${type}">${label}</div>
+  ${mdContent}
+</div>`;
+  }
+
   // The funky whitespace here is intentional.
   // We need to have newlines between the ${content} so the markdown parser
   // will kick in again.
@@ -68,6 +80,11 @@ ${content}
  * @param {string} content
  */
 function CompareCaption(content) {
+  if (this.ctx.export) {
+    const mdContent = md.renderDevSite(content.trim());
+    return `<div class="dcc-caption">${mdContent}</div>`;
+  }
+
   return `<div class="compare__caption">
 
 ${content}

@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +14,17 @@
  * limitations under the License.
  */
 
+const {BrowserCompat} = require('webdev-infra/shortcodes/BrowserCompat');
+
 /**
- * This is an emoty shortcode. It can be used as a substitute for missing
- * (uncritical) components when moving external content to dcc.
- *
- * @return {string}
+ * @this {{env: Environment, ctx: Object}}
  */
-function Empty() {
-  if (this.ctx.export) {
-    return '';
+function BrowserCompatAlt(id) {
+  if (!this.ctx.export) {
+    return BrowserCompat.call(this, id);
   }
 
-  return '<p>This shortcode is not supported</p>';
-};
+  return `{{ macros.BrowserCompat('${id}') }}`;
+}
 
-module.exports = {Empty};
+module.exports = {BrowserCompat: BrowserCompatAlt};

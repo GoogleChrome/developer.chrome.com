@@ -14,12 +14,19 @@
  * limitations under the License.
  */
 
+const md = require('../_filters/md');
+
 /**
  * Renders a wrapper element around whatever is passed in and places each
  * item into their own column.
  * @param {string} content A string of markdown
  */
-const Columns = content => {
+function Columns(content) {
+  if (this.ctx.export) {
+    const renderedContent = md.renderDevSite(content);
+    return `<div class="dcc-columns">${renderedContent}</div>`;
+  }
+
   // prettier-ignore
   // The funky whitespace here is intentional.
   // We need to have newlines between the ${content} so the markdown parser
@@ -33,7 +40,12 @@ ${content}
 </div>`;
 };
 
-const Column = content => {
+function Column(content) {
+  if (this.ctx.export) {
+    const renderedContent = md.renderDevSite(content);
+    return `<div class="dcc-columns__column">${renderedContent}</div>`;
+  }
+
   return `<div class="columns__column">${content}</div>`;
 };
 

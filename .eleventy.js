@@ -27,7 +27,7 @@ const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {Empty} = require('./site/_shortcodes/Empty');
 const {IFrame} = require('./site/_shortcodes/IFrame');
-const {Glitch} = require('./site/_shortcodes/Glitch');
+const Glitch = require('./site/_shortcodes/Glitch');
 const {AndroidBrowserSupportTable} = require('./site/_shortcodes/AndroidBrowserSupportTable');
 const {Hreflang} = require('./site/_shortcodes/Hreflang');
 const {Img} = require('./site/_shortcodes/Img');
@@ -41,26 +41,20 @@ const includeRaw = require('./site/_shortcodes/includeRaw');
 const {LanguageList} = require('./site/_shortcodes/LanguageList');
 const {Partial} = require('./site/_shortcodes/Partial');
 const {ChromeDate} = require('./site/_shortcodes/ChromeDate');
-const {BrowserCompat} = require('webdev-infra/shortcodes/BrowserCompat');
+const {BrowserCompat} = require('./site/_shortcodes/BrowserCompat');
+const {Export} = require('./site/_export/shortcodes/Export');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
-const {InlineCssTransform} = require('webdev-infra/transforms/inlineCss');
-const {MinifyHtmlTransform} = require('webdev-infra/transforms/minifyHtml');
 
 // Plugins
 const md = require('./site/_plugins/markdown');
-const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 // Supported locales
 const locales = require('./site/_data/site.json').locales;
 
 // Collections
-const algoliaCollection = require('./site/_collections/algolia');
-const authors = require('./site/_collections/authors');
-const feedsCollection = require('./site/_collections/feeds');
-const tagsCollection = require('./site/_collections/tags');
 const directoryCollection = require('./site/_collections/directory');
 const extensionsReferenceCollection = require('./site/_collections/reference');
 const { pastEvents, currentEvents, eventTags } = require('./site/_collections/events');
@@ -94,7 +88,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.setLibrary('md', md);
 
   // Add plugins
-  eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // Add collections
@@ -102,10 +95,6 @@ module.exports = eleventyConfig => {
     directoryCollection.add(eleventyConfig, locale, 'blog');
     directoryCollection.add(eleventyConfig, locale, 'articles');
   });
-  eleventyConfig.addCollection('algolia', algoliaCollection);
-  eleventyConfig.addCollection('authors', authors);
-  eleventyConfig.addCollection('feeds', feedsCollection);
-  eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
   eleventyConfig.addCollection('partials', (collections) => {
     return collections
@@ -140,7 +129,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
   eleventyConfig.addShortcode('Hreflang', Hreflang);
-  eleventyConfig.addShortcode('Img', Img);
+  eleventyConfig.addNunjucksAsyncShortcode('Img', Img);
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);
   eleventyConfig.addShortcode('includeRaw', includeRaw);
@@ -157,6 +146,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('BrowserCompat', BrowserCompat);
   eleventyConfig.addNunjucksAsyncShortcode('Partial', Partial);
   eleventyConfig.addShortcode('ChromeDate', ChromeDate);
+  eleventyConfig.addNunjucksAsyncShortcode('Export', Export);
 
   // Empty shortcodes. They are added for backward compatibility with web.dev.
   // They will not render any html, but will prevent the build from failing.
@@ -165,29 +155,6 @@ module.exports = eleventyConfig => {
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);
-
-  // Only minify HTML and inline CSS if we are in production because it slows
-  // builds _right_ down.
-  //
-  // !!! Important !!!
-  // These transforms should _always_ go last because they look at the final
-  // HTML for the page and inline CSS / minify.
-  if (isProduction) {
-    eleventyConfig.addTransform('inlineCss', (new InlineCssTransform()).configure({
-      cssBasePath: path.join(__dirname, 'dist'),
-      jsPaths: [
-        // split forces forward slashes on Windows which are necessary
-        // for fast-glob.
-        path.join(__dirname, 'dist/js/**/*.js').split(path.sep).join('/')
-      ],
-      pool: true,
-      insert: (content, result) => {
-        return content.replace('</head>', `<style>${result}</style></head>`)
-      }
-    }));
-
-    eleventyConfig.addTransform('minifyHtml', (new MinifyHtmlTransform()).configure({}));
-  }
 
   return {
     markdownTemplateEngine: 'njk',

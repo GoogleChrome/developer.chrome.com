@@ -23,6 +23,7 @@ node_modules
 dist
 ./dist
 **/_includes/css
+.tmp
 
 # Eleventy
 # We generate our own .eleventyignore file dynamically during builds
