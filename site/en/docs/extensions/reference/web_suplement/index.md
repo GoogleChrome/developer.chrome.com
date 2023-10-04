@@ -14,7 +14,7 @@ If the web platform API merely requires a permission, this list says so. If its 
 Launch Handler API
 : TBD
 
-[`PushManager.subscribe()`](/docs/extensions/reference/web/pushmanager-subscribe)
+[`PushManager.subscribe()`](/docs/extensions/reference/web/pushmanager_subscribe)
 : Subscribes an extension to a push service.
 
 WebHID
