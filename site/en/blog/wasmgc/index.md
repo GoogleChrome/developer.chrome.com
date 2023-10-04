@@ -10,7 +10,7 @@ date: 2023-10-31
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/gc5UyHFm1C4tPAQC6D1o.png
 alt: Pictogram of a person throwing something in a trash can.
 tags:
-  - webassembly
+  - wasm
 ---
 
 There are two types of programming languages: garbage-collected programming languages and programming languages that require manual memory management. Examples of the former, among many more, are Kotlin, PHP, or Java. Examples of the latter are C, C++, or Rust. As a general rule, higher-level programming languages are more likely to have garbage collection as a standard feature. In this blog post, the focus is on such garbage-collected programming languages and how they can be compiled to WebAssembly (Wasm). But what is garbage collection (often referred to as GC) to begin with?
