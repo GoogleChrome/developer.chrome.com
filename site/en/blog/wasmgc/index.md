@@ -108,6 +108,8 @@ To see the demo, you need to set the browser flags as per the instructions on th
 
 Now you may be wondering what the point is, since the Kotlin code above basically consists of the [JavaScript OM APIs converted to Kotlin](https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/). It starts to make more sense in combination with [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/), which allows developers to build upon the UI they may already have created for their Android Kotlin apps. Check out an early exploration of this with the [Kotlin/Wasm image viewer](https://kotlin-wasm-image-viewer.glitch.me/) demo and explore its [source code](https://github.com/Kotlin/kotlin-wasm-examples/tree/main/compose-imageviewer), likewise courtesy of the Kotlin team.
 
+{% Glitch id="kotlin-wasm-image-viewer" %}
+
 {% Aside 'warning' %}
 The [Kotlin/Wasm image viewer](https://kotlin-wasm-image-viewer.glitch.me/) demo is fully rendered onto a `canvas` with no meaningful DOM tree that could be used to create an [accessibility tree](https://developer.mozilla.org/docs/Glossary/Accessibility_tree). This means it's completely inaccessible to non-sighted users and breaks important browser features like find on page, translation, text selection, extensions, zooming, and link to text fragment.
 {% endAside %}
