@@ -17,6 +17,8 @@ Like all other browsers, Chrome for Android sends this information in the `User-
 every time it makes a request to any site. It's also available in the client through JavaScript
 using the `navigator.userAgent` call.
 
+This page shows some examples. You can also go to the [User Agent string demo](https://get-some-ua-strings.glitch.me) using any device and get the UA string.
+
 ## Chrome for Android
 
 [Chrome for Android][1] reports its UA in the following formats, depending on whether the device is
