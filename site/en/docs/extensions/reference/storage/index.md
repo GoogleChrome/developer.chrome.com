@@ -121,12 +121,11 @@ To learn more about the `managed` storage area, see [Manifest for storage areas]
 
 ### Storage and throttling limits {: #storage-and-throttling-limits}
 
-Don't think of adding to the Storage API as putting things in a big truck. Think of adding to
-storage as being like putting something in a pipe. The pipe may have material in it already, and it
-may even be filled. Always assume a delay between when you add to storage and when it is actually
-recorded. <!--I'd like to understand the truck metaphor better, and maybe come up with something more accessible. What are we assuming about how a truck on a road behaves differently from fluid in a pipe?-->
+The Storage API has the following usage limitations:
+- Storing data often comes with performance costs, and the API includes storage quotas. We recommend being careful about what data you store so that you don't lose the ability to store data.
+- Storage can take time to complete. Make sure to structure your code to account for that time.
 
-For details on storage area limitations and what happens when they are exceeded, see the quota information for [`sync`][prop-sync], [`local`][prop-local], and [`session`][prop-session].
+For details on storage area limitations and what happens when they're exceeded, see the quota information for [`sync`][prop-sync], [`local`][prop-local], and [`session`][prop-session].
 
 ## Use cases {: #use-cases}
 
