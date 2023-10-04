@@ -176,66 +176,6 @@ Icons specific to the toolbar are registered in the `"default_icon"` field under
 }
 ```
 
-### Tooltip {: #tooltip }
-
-Use a tooltip to give short descriptions or instructions to users when they hover over the action
-icon. By default, the tootip displays the name of the extension.
-
-<figure>
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="An
-example tooltip", height="157", width="419", class="screenshot" %}
-  <figcaption>
-    An example tooltip.
-  </figcaption>
-</figure>
-
-## Provide the extension icons
-
-An extension requires at least one icon to represent it. Provide icons in PNG format for the best
-visual results, although any raster format supported by Chrome is accepted. This includes BMP,
-GIF, ICO, and JPEG.
-
-{% Aside 'caution' %}
-
-SVG files are not supported for any icons declared in the manifest.
-
-{% endAside %}
-
-Ensure your icon follows the [extension icon best practices][docs-icon-guidelines].
-
-
-All icons should be square or they may be distorted. If no icons are supplied, Chrome will add a
-generic one to the toolbar with the first letter of the extension name.
-
-Include additional icons in the following sizes for uses outside of the toolbar. {: #icon_size }
-
-| Icon Size | Icon Use                                               |
-|-----------|--------------------------------------------------------|
-| 16x16     | Favicon on the extension's pages and context menu icon.|
-| 32x32     | Windows computers often require this size.             |
-| 48x48     | Displays on the extension management page.             |
-| 128x128   | Displays on installation and in the Chrome Web Store.  |
-
-
-Register icons in the manifest under the `"icons"` field.
-
-{% Label %}manifest.json:{% endLabel %}
-
-```json
-{
-  "name": "My Awesome Extension",
-  ...
-  "icons": {
-    "16": "extension_icon16.png",
-    "32": "extension_icon32.png",
-    "48": "extension_icon48.png",
-    "128": "extension_icon128.png"
-  }
-  ...
-}
-```
-
-## Additional user interface features {: #additional_features }
 
 ### Popup {: #popup }
 
@@ -299,6 +239,67 @@ chrome.storage.local.get('signed_in', (data) => {
   }
 });
 ```
+
+### Tooltip {: #tooltip }
+
+Use a tooltip to give short descriptions or instructions to users when they hover over the action
+icon. By default, the tootip displays the name of the extension.
+
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="An
+example tooltip", height="157", width="419", class="screenshot" %}
+  <figcaption>
+    An example tooltip.
+  </figcaption>
+</figure>
+
+## Provide the extension icons
+
+An extension requires at least one icon to represent it. Provide icons in PNG format for the best
+visual results, although any raster format supported by Chrome is accepted. This includes BMP,
+GIF, ICO, and JPEG.
+
+{% Aside 'caution' %}
+
+SVG files are not supported for any icons declared in the manifest.
+
+{% endAside %}
+
+Ensure your icon follows the [extension icon best practices][docs-icon-guidelines].
+
+
+All icons should be square or they may be distorted. If no icons are supplied, Chrome will add a
+generic one to the toolbar with the first letter of the extension name.
+
+Include additional icons in the following sizes for uses outside of the toolbar. {: #icon_size }
+
+| Icon Size | Icon Use                                               |
+|-----------|--------------------------------------------------------|
+| 16x16     | Favicon on the extension's pages and context menu icon.|
+| 32x32     | Windows computers often require this size.             |
+| 48x48     | Displays on the extension management page.             |
+| 128x128   | Displays on installation and in the Chrome Web Store.  |
+
+
+Register icons in the manifest under the `"icons"` field.
+
+{% Label %}manifest.json:{% endLabel %}
+
+```json
+{
+  "name": "My Awesome Extension",
+  ...
+  "icons": {
+    "16": "extension_icon16.png",
+    "32": "extension_icon32.png",
+    "48": "extension_icon48.png",
+    "128": "extension_icon128.png"
+  }
+  ...
+}
+```
+
+## Additional user interface features {: #additional_features }
 
 ### Side panel {: #side-panel }
 
