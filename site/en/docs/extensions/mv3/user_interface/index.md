@@ -175,6 +175,20 @@ Icons specific to the toolbar are registered in the `"default_icon"` field under
   ...
 }
 ```
+
+### Tooltip {: #tooltip }
+
+Use a tooltip to give short descriptions or instructions to users when they hover over the action
+icon. By default, the tootip displays the name of the extension.
+
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="An
+example tooltip", height="157", width="419", class="screenshot" %}
+  <figcaption>
+    An example tooltip.
+  </figcaption>
+</figure>
+
 ## Provide the extension icons
 
 An extension requires at least one icon to represent it. Provide icons in PNG format for the best
@@ -305,19 +319,6 @@ An extension side panel is an HTML file that provides additional functionality a
 </figure>
 
 For more samples and use cases, see the [Side Panel API][api-sidepanel] reference page.
-
-### Tooltip {: #tooltip }
-
-Use a tooltip to give short descriptions or instructions to users when they hover over the action
-icon. By default, the tootip displays the name of the extension.
-
-<figure>
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="An
-example tooltip", height="157", width="419", class="screenshot" %}
-  <figcaption>
-    An example tooltip.
-  </figcaption>
-</figure>
 
 Tooltips are registered in the `"default_title"` field under the `"action"` key in the manifest.
 
