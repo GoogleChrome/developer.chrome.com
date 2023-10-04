@@ -141,7 +141,7 @@ These timestamps allow the long animation frame to be divided into timings:
     </tr>
     <tr>
       <td>Render duration</td>
-      <td><code>syleAndLayoutStart - renderStart</code></td>
+      <td><code>styleAndLayoutStart - renderStart</code></td>
     </tr>
     <tr>
       <td>Work duration</td>
