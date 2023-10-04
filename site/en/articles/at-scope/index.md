@@ -4,9 +4,9 @@ title: Limit the reach of your selectors with the CSS `@scope` at-rule
 authors:
   - bramus
 subhead: >
-  Learn how to use `@scope` to select elements only within a limited subtree of your DOM.
+  Learn how to use @scope to select elements only within a limited subtree of your DOM.
 description: >
-  Learn how to use `@scope` to select elements only within a limited subtree of your DOM.
+  Learn how to use @scope to select elements only within a limited subtree of your DOM.
 date: 2023-10-04
 hero: image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/DP7MSi8WT7a2syzdBfiK.jpg
 alt: "A street sign to indicate the road is narrowing."
