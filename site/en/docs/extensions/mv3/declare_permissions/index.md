@@ -219,6 +219,9 @@ for details.
 `"enterprise.platformKeys"`
 : Gives access to the <a href="/docs/extensions/reference/enterprise_platformKeys/">chrome.enterprise.platformKeys</a> API.
 
+`"favicon"`
+: Grants access to the [Favicon](https://developer.chrome.com/docs/extensions/mv3/favicon/) API.
+
 `"fileBrowserHandler"`
 : Gives access to the <a href="/docs/extensions/reference/fileBrowserHandler/">chrome.fileBrowserHandler</a> API.
 
