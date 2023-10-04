@@ -293,9 +293,7 @@ scripts.
 
 ### Cross-site scripting {: #cross-site-scripting }
 
-When receiving a message from a content script or another extension, make sure to protect
-your scripts against [cross-site scripting][wiki-cross-site]. This advice applies to scripts running inside the
-extension service worker as well as content scripts running in other web origins.
+Make sure to protect your scripts against [cross-site scripting][wiki-cross-site]. When receiving data from an untrusted source such as user input, other websites through a content script, or an API, take care to avoid interpreting this as HTML or using it in a way which could allow unexpected code to run.
 
 {% Compare 'better', 'Safer methods' %}
 Use APIs that don't run scripts whenever possible:
