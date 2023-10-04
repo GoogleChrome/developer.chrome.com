@@ -31,15 +31,12 @@ a phone or a tablet.
 
 **Tablet UA:**
 
-<pre><code>Mozilla/5.0 (Linux; {Android Version}; {Build Tag etc.}) 
-AppleWebKit/{WebKit Rev} (KHTML, like Gecko) 
-Chrome/{Chrome Rev} Safari/{WebKit Rev}</code></pre>
+iPad
 
-fully reduced:
-
-<pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) 
-AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 
+<pre>Mozilla/5.0 (iPhone; CPU iPad OS 16_3 like Mac OS X) 
+AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/117.0.5938.117 
 Mobile/15E148 Safari/604.1</pre>
+
 
 
 Here's an example of the Chrome user agent string on a Galaxy Nexus:
@@ -49,6 +46,13 @@ Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B)
 AppleWebKit/535.19 (KHTML, like Gecko) 
 Chrome/18.0.1025.133 Mobile Safari/535.19
 ```
+
+Here's an example of the Chrome user agent string on a Galaxy S8
+
+<pre>Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) 
+AppleWebKit/537.36 (KHTML, like Gecko) 
+Chrome/87.0.4280.141 Mobile Safari/537.36</pre>
+
 
 If you are parsing user agent strings using regular expressions, the following can be used to check
 against Chrome on Android phones and tablets:
@@ -70,9 +74,9 @@ Mobile/15E148 Safari/604.1</pre>
 For comparison, the **Mobile Safari** UA:
 
 ```text
-Mozilla/5.0 (iPhone; CPU iPhone OS 16_6_1 like Mac OS X)
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
 AppleWebKit/605.1.15 (KHTML, like Gecko)
-Version/16.6 Mobile/15E148 Safari/604.1
+Version/16.6 Safari/605.1.15
 ```
 ---above two from my phone/website --
 
