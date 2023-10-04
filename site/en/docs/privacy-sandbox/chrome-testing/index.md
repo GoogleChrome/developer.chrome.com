@@ -74,13 +74,13 @@ opt-in for this mode, as it will be applied globally. There is, of
 course, the possibility that some site features may be impacted if the site
 hasn't yet adopted an alternative solution, such as
 [CHIPS](/docs/privacy-sandbox/chips/) or
-[First-Party Sets](/docs/privacy-sandbox/first-party-sets/). 
+[Related Website Sets](/docs/privacy-sandbox/related-website-sets/). 
 
 {% Aside %}
 
 If you rely on third-party cookie data for site functionality, read our
 [guide to prepare for third-party cookie phase-out](/docs/privacy-sandbox/third-party-cookie-phase-out/)
-to understand if CHIPS or First-Party Sets can address your needs. We've
+to understand if CHIPS or Related Website Sets can address your needs. We've
 launched a [public issue tracker](https://goo.gle/report-3pc-broken), where you
 can report site issues resulting from third-party cookie deprecation. 
 
@@ -91,7 +91,7 @@ owners of issues that impact user experience during this phase.
 
 Additionally, we plan to provide a small fraction of traffic within Mode B that also
 has Privacy Sandbox relevance and measurement APIs disabled. Other APIs, like
-First-Party Sets, CHIPS, FedCM, and so on, will not be disabled. We anticipate
+Related Website Sets, CHIPS, FedCM, and so on, will not be disabled. We anticipate
 that this combination will be helpful to establish a baseline of
 performance without third-party cookies, and we're seeking
 [feedback](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/labels/chrome-testing) on
