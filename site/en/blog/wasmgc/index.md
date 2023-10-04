@@ -100,7 +100,7 @@ fun main() {
 fun greet() = "world"
 ```
 
-{% Glitch name="kotlin-wasm-hello-world" %}
+{% Glitch "kotlin-wasm-hello-world" %}
 
 {% Aside %}
 To see the demo, you need to set the browser flags as per the instructions on the screen.
