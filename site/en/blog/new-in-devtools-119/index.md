@@ -68,6 +68,16 @@ The **Sources** panel now supports pretty-printing inline JSON in `<script>` HTM
 
 Chromium issues: [406900](https://crbug.com/406900), [1473875](https://crbug.com/1473875).
 
+## Autocomplete private fields in Console {: #autocomplete-console }
+
+You can now autocomplete [private class fields](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes/Public_class_fields) when evaluating them outside the class scope in the **Console**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5yG7PmRn2TmVGOz0N1ne.png", alt="The before and after supporting autocompletion for private class field outside of class scope.", width="800", height="408" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/7eb2770f7ff2395c817725e77df1ca07d48fe872 #}
+
+Chromium issues: [1483848](https://crbug.com/1483848), [1381806](https://crbug.com/1381806).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
