@@ -5,7 +5,8 @@ api: offscreen
 Service workers don't have DOM access, and many websites have content security policies that
 limit the functionality of content scripts. The Offscreen API allows the extension to use DOM
 APIs in a hidden document without interrupting the user experience by opening new windows or
-tabs. This is the only Chrome API that offscreen documents support. <!--What does DOM stand for?-->
+tabs. The [`runtime`](/docs/extensions/reference/runtime/) API is the only extensions API
+supported by offscreen documents.
 
 ## Manifest
 
