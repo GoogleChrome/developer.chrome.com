@@ -37,7 +37,8 @@ The following are other ways offscreen documents behave differently from normal 
 * Offscreen documents can't be focused.
 * Offscreen documents can't have their `opener` property set using the [`chrome.windows` API][api-windows]
   method `windows.setSelfAsOpener()`.
-* An extension can only have one offscreen document open at a time. If the extension is running
+* Though an extension package can contain multiple offscreen documents, an installed extension can only
+  have one open at a time. If the extension is running
   in split mode with an active incognito profile, the normal and incognito profiles can each
   have one offscreen document. 
 
