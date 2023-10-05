@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Fill out the privacy fields
 date: 2020-06-12
-updated: 2023-05-01
+updated: 2023-10-06
 description: >
   Use the privacy practices tab to help the Chrome Web Store team review your extension as quickly
   as possible.
@@ -83,6 +83,12 @@ group of checkboxes to certify that you comply with each of the disclosure state
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/PwmNuP356TsVi80bxWAj.png",
   alt="Screenshot of data use certification fields", width="800", height="495" %}
 
+## Set a privacy policy {: #set-privacy-policy }
+
+Add a link to the privacy policy for all your extensions. The policy should include how data is collected, used, and disclosed. See the [User Data FAQ][user-data] for more details.
+
+{% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/BB2ziYwins4YpyJ7aETj.png", alt="Screenshot of the privacy policy box", width="674", height="178" %}
+
 ## You are almost ready to publish this item!
 
 If you haven't done so yet, complete your listing by
@@ -96,3 +102,4 @@ If you haven't done so yet, complete your listing by
 [remote-code]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code
 [setup-account]: /docs/webstore/publish#setup-a-developer-account
 [upload-item]: /docs/webstore/publish/#upload-your-item
+[user-data]: /docs/webstore/user_data/

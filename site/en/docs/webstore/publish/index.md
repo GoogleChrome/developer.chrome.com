@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2023-05-01
+updated: 2023-10-06
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -33,7 +33,7 @@ We'll go into detail about each step below.
 
 ## Create your item's zip file {: #create-your-items-zip-file }
 
-To upload your item, you need to create a ZIP file that contains the 
+To upload your item, you need to create a ZIP file that contains the
 manifest file located in the **root directory** and the files for your extension. The manifest file must specify at least the following fields:
 
 - `"name":`—This [name][name] appears in the Chrome Web Store and in the Chrome browser
@@ -65,17 +65,21 @@ If you already host your item in Google Play and you want your Chrome Web Store 
 
 After registering, finish setting up your developer account on the Account page. (To access the Account page click the link in the left menu.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/lBcTQm6QF1FBzOmLEfG1.png", alt="Chrome Web Store Account page", width="800", height="404" %}
+{% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/3TbrDEevyQgXd6sgvf9Y.png", alt="Chrome Web Store Account page", width="800", height="274" %}
 
-Here you can provide your developer profile information, configure management settings and enable email notifications, among other things. The page itself provides instruction; however, there a few fields worth calling out. 
+Here you can provide your developer profile information, configure management settings and enable email notifications, among other things. The page itself provides instruction; however, there a few fields worth calling out.
 
-| Field                | Description                                                                                                                                                        |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Publisher name**   | (Required) Appears under the title of each of your extensions. If you are a [verified publisher][verified-publisher], you can display an official publisher URL instead. |
-| **Add email**    | (Required) Only displayed under your extensions' contact information. Any notifications will be sent to your Chrome Web Store developer account email.                       |
-| **Privacy policy**   | (Required) A link to the privacy policy for all your extensions. The policy should include how data is collected, used, and disclosed. See the [User Data FAQ][user-data] for more details. |
-| **Physical address** | (Required) Only items that offer functionality to purchase items, additional features, or subscriptions must include a physical address.                                     |
-| **Trusted tester accounts** | (Optional) A comma-separated list of individuals' email addresses to make your extension available to them for testing. |
+Publisher name (Required)
+: Appears under the title of each of your extensions. If you are a [verified publisher][verified-publisher], you can display an official publisher URL instead.
+
+Add email (Required)
+: Only displayed under your extensions' contact information. Any notifications will be sent to your Chrome Web Store developer account email.
+
+Physical address (Required)
+: Only items that offer functionality to purchase items, additional features, or subscriptions must include a physical address.
+
+Trusted tester accounts (Optional)
+: A comma-separated list of individuals' email addresses to make your extension available to them for testing.
 
 {% Aside 'important' %}
 The Trusted tester accounts field does *not* support using group email addresses such as those used for posting to Google groups or other forums. If you need to test with a group, do so using the item level visibility setting. Click **Items** in the menu at left. Scroll to **Visibility**. Then select **Private** and **Only trusted testers from the current publisher settings**.
@@ -173,7 +177,7 @@ if you simply want to change your rollout time.
 
 Once the review is complete, you will have up to **30 days** to publish. After that
 period expires, the staged submission will revert to a draft which will have to be submitted again for
-review. You can check when your staged submission will expire under the status of your item. 
+review. You can check when your staged submission will expire under the status of your item.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/sYCH3lvreW0bUWznlOsE.png", alt="Chrome Web Store
 staged item
