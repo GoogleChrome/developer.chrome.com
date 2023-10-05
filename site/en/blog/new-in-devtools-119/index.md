@@ -58,7 +58,15 @@ The user agent strings in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTY
 
 Chromium issue: [1479733](https://crbug.com/1479733).
 
-##  {: #sources }
+## Pretty-print inline JSON in script tags in Sources {: #sources }
+
+The **Sources** panel now supports pretty-printing inline JSON in `<script>` HTML tags for easier debugging.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/EdE39X771gyHJLTGmPj8.png", alt="The before and after pretty-printing inline JSON in the script tag.", width="800", height="648" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/84ca000f76aa74165674247374b0e0802c3f8a89 #}
+
+Chromium issues: [406900](https://crbug.com/406900), [1473875](https://crbug.com/1473875).
 
 ## Miscellaneous highlights {: #misc }
 
