@@ -85,7 +85,7 @@ group of checkboxes to certify that you comply with each of the disclosure state
 
 ## Set a privacy policy {: #set-privacy-policy }
 
-Add a link to the privacy policy for all your extensions. The policy should include how data is collected, used, and disclosed. See the [User Data FAQ][user-data] for more details.
+Add a link to the privacy policy for your extension. The policy should include how data is collected, used, and disclosed. See the [User Data FAQ][user-data] for details.
 
 {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/BB2ziYwins4YpyJ7aETj.png", alt="Screenshot of the privacy policy box", width="674", height="178" %}
 
