@@ -123,15 +123,15 @@ Chrome, use [`clients.matchAll()`](https://developer.mozilla.org/docs/Web/API/Cl
 to check for an existing offscreen document:
 
 ```js
-async function hasOffscreenDocument(offscreenUrl) {
-    const matchedClients = await clients.matchAll();
-
-    for (const client of matchedClients) {
-      if (client.url === offscreenUrl) {
-        return true;
-      }
+async function hasOffscreenDocument() {
+    if (getContexts in chrome.runtime) {
+        return chrome.runtime.getContexts();
+    } else {
+        const matchedClients = await clients.matchAll();
+        return await matchedClients.some(client => {
+            client.url.includes(chrome.runtime.id);
+        });
     }
-    return false;
 }
 ```
 
