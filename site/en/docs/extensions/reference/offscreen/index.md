@@ -35,7 +35,7 @@ The following are other ways offscreen documents behave differently from normal 
 
 * An offscreen document's URL must be a static HTML file bundled with the extension.
 * Offscreen documents can't be focused.
-* Though an offscreen document is an instance of [`window`](https://developer.mozilla.org/docs/Web/API/Window), the value of it's `opener` property is always `null`.
+* An offscreen document is an instance of [`window`](https://developer.mozilla.org/docs/Web/API/Window), but the value of its `opener` property is always `null`.
 * Though an extension package can contain multiple offscreen documents, an installed extension can only
   have one open at a time. If the extension is running
   in split mode with an active incognito profile, the normal and incognito profiles can each
