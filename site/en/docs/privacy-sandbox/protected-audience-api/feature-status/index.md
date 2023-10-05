@@ -191,12 +191,11 @@ aggregatable reports, and we will publish a proposal once it is ready.
 
 ## K-anonymity
 
-We will soon publish an explainer with more details on how [k-anonymity](https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md) will be enforced using the Protected Audience API framework.
+For a creative to be considered k-anonymous, the tuple of interest group owner, bidding script URL, creative URL, and creative size must meet the threshold of a crowd of 50 users per creative (`k=50`) within the past 30 days before the ad can be served. The creative is available to be served as soon as it hits the 50 users threshold and does not need to wait for 30 days. 
 
-For rendering a creative, we will require _a crowd of 50 users per creative within the past 7 days_ to pass the k-anonymity threshold before the ad can be served. The creative is available to be served as soon as it hits the 50 ads threshold and does not need to wait for 7 days. 
+The k-anonymity enforcement will be ramped up gradually. Later in 2023, we will begin to check the render URL for k-anonymity. Later in Q1 2025, we will begin to check the ad size in addition to the URL for k-anonymity. 
 
-K-anonymity requirements will be available for testing and will be enforced
-later in 2023. We encourage feedback from ad tech on this parameter.
+We will publish an [in-depth k-anonymity enforcement in Protected Audience explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md) at a later date.
 
 ## Bidding and Auction Services
 
