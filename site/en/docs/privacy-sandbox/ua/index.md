@@ -20,6 +20,7 @@ Chrome has reduced the amount of data returned in the user agent string. This pa
 
 If you need data that's no longer in the UA string, the [User Agent Client Hints API](https://web.dev/migrate-to-ua-ch/) provides some.
 
+
 This page shows some examples of userAgent strings in Chrome. You can also go to the [User Agent string demo](https://get-some-ua-strings.glitch.me) using any device/platform and get the UA string for that device.
 
 ### Chrome user agents
