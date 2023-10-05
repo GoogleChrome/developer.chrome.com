@@ -26,8 +26,9 @@ To use the Offscreen API, declare the `"offscreen"` permission in the [extension
 
 Pages loaded as offscreen documents are handled differently from other types of extension pages.
 The extension's permissions carry over to offscreen documents, but with limits on extension API
-access. An offscreen document can use only the [`chrome.runtime`][api-runtime] APIs to send and
-receive messages. 
+access. For example, because the [`chrome.runtime`][api-runtime] API is the only
+extensions API supported by offscreen documents, messaging must be handled
+using members of that API.
 
 The following are other ways offscreen documents behave differently from normal pages:
 
