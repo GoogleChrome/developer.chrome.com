@@ -78,6 +78,16 @@ You can now autocomplete [private class fields](https://developer.mozilla.org/do
 
 Chromium issues: [1483848](https://crbug.com/1483848), [1381806](https://crbug.com/1381806).
 
+## Lighthouse 11.1.0 {: #lighthouse }
+
+The **Lighthouse** panel now runs Lighthouse 11.1.0.
+
+See the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.1.0). To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/65643d2c71a7fa41038525f125eeff743964af59 #}
+
+Chromium issues: [772558](https://crbug.com/772558).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
