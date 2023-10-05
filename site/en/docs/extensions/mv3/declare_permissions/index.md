@@ -235,11 +235,11 @@ for details.
 : Gives access to the <a href="/docs/extensions/reference/gcm/"><code>chrome.gcm</code></a> and <a href="https://developer.chrome.com/docs/extensions/reference/instanceID/"><code>chrome.instanceID</code></a> APIs.
 
 `"geolocation"`
-:Allows the extension to use the <a
+: Allows the extension to use the <a
           href="https://developer.mozilla.org/docs/Web/API/Geolocation_API">geolocation API</a> without prompting the user for permission.
 
 `"history"`
-:Gives access to the <a href="/docs/extensions/reference/history/">chrome.history</a> API.
+: Gives access to the <a href="/docs/extensions/reference/history/">chrome.history</a> API.
 
 `"identity"`
 : Gives access to the <a href="/docs/extensions/reference/identity/">chrome.identity</a> API.
