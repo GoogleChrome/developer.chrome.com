@@ -75,7 +75,7 @@ Publisher name (Required)
 Add email (Required)
 : Only displayed under your extensions' contact information. Any notifications will be sent to your Chrome Web Store developer account email.
 
-Physical address (Required)
+Physical address (Required in some circumstances)
 : Only items that offer functionality to purchase items, additional features, or subscriptions must include a physical address.
 
 Trusted tester accounts (Optional)
