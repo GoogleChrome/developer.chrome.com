@@ -16,8 +16,6 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-{% YouTube id='Ta-YTDhiBIQ' %}
-
 <!-- $contentStart -->
 
 ## Improved `@property` section in Elements > Styles {: #css }
@@ -87,6 +85,34 @@ See the [full list of changes](https://github.com/GoogleChrome/lighthouse/releas
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/65643d2c71a7fa41038525f125eeff743964af59 #}
 
 Chromium issues: [772558](https://crbug.com/772558).
+
+## Accessibility improvements {: #accessibility }
+
+Screen readers will now read out the following:
+
+- Warnings and errors in the **Console**.
+- The text in the **Do you trust this code?** dialog when pasting code to **Console** or **Sources**.
+
+Additionally, the **Application** panel fixed contrast issues with links in high contrast mode.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/7fa46cca30a1d164c60e359b10cd97b1be541d4e #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/6f843ded7a69f3a2b5817c8b1e01ab828e178c8e #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/85a958fb910c0c2c0e5c1b206d52e3708b30bebe #}
+
+Chromium issues: [1485257](https://crbug.com/1485257), [1486643](https://crbug.com/1486643), [1485263](https://crbug.com/1485263).
+
+## Web SQL deprecation {: #web-sql }
+
+The **Application** > **Web SQL** section will be removed in Chrome 123 because the [Web SQL Database API](https://www.w3.org/TR/webdatabase/) [isn't maintained](https://www.w3.org/TR/webdatabase/#status-of-this-document) anymore. This version adds a warning to the section about the upcoming removal.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NuJgh7FznQ2jlgG0pq9w.png", alt="The Web SQL deprecation warning.", width="800", height="472" %}
+
+For more information, see [Deprecating and removing Web SQL](https://developer.chrome.com/blog/deprecating-web-sql/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/087d06b98e6fdd264fde7d16895a1c3cec4d0766 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/712c7996d8c9a492e073f75b26d92ae76f959719 #}
+
+Chromium issues: [1485966](https://crbug.com/1485966).
 
 ## Miscellaneous highlights {: #misc }
 
