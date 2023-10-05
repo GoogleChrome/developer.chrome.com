@@ -9,9 +9,7 @@ tabs. This is the only Chrome API that offscreen documents support. <!--What doe
 
 ## Manifest
 
-You must declare the `"offscreen"` permission in the [extension manifest][doc-manifest] to use
-the Offscreen API. For example: 
-<!--I'd like to make the standard phrasing "To use the Foo API, declare the `foo` permission in the [extension manifest][doc-manifest]. For example:" This would require updating this section in all the docs.-->
+To use the Offscreen API, declare the `"offscreen"` permission in the [extension manifest][doc-manifest]. For example:
 
 ```json
 {
