@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Fill out the privacy fields
 date: 2020-06-12
-updated: 2023-10-06
+updated: 2023-10-05
 description: >
   Use the privacy practices tab to help the Chrome Web Store team review your extension as quickly
   as possible.
