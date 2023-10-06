@@ -28,7 +28,10 @@ alt="Hello extension", width="206", height="130", class="screenshot" %}
 Start by creating a new directory to store extension files. If you prefer, you can download the full
 source code from [GitHub][sample-hello-world].
 
-Next, create a new file in this directory called `manifest.json` and add the following code:
+Next, create a new file in this directory called `manifest.json`. This JSON object describes the extension's
+capabilities and configuration. For example, most manifest files contain an `"action"` key which declares
+the image Chrome should use as the extension's action icon and the HTML page to show in a popup when the
+extension's action icon is clicked.
 
 ```json
 {
@@ -43,8 +46,7 @@ Next, create a new file in this directory called `manifest.json` and add the fol
 }
 ```
 
-This JSON object describes the extension's capabilities and configuration. For example, the `"action"` key 
-declares the image Chrome should use as the extension's action icon and the HTML page to show in a popup when the extension's action icon is clicked. [Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
+[Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
 
 For the popup, create a file named `hello.html`, and add the following code:
 
