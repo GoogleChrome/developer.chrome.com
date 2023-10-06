@@ -6,7 +6,7 @@ date: 2023-11-29
 description: Use PushManager.subscribe() in extensions.
 ---
 
-The [subscribe()](https://developer.mozilla.org/docs/Web/API/PushManager/subscribe) method of the [PushManager](https://developer.mozilla.org/docs/Web/API/PushManager) interface subscribes to a push service. Refer to MDN for complete details of the [Push API](https://developer.mozilla.org/docs/Web/API/Push_API).
+The [subscribe()](https://developer.mozilla.org/docs/Web/API/PushManager/subscribe) method of the [PushManager](https://developer.mozilla.org/docs/Web/API/PushManager) interface subscribes to a push service. This page describes aspects of the method that are particular to extensions. Refer to MDN for complete details of the [Push API](https://developer.mozilla.org/docs/Web/API/Push_API).
 
 ## Permissions
 
