@@ -58,25 +58,30 @@ Feature support on the current page isn't a guarantee that an API is usable: the
 
 ### Access topics with the JavaScript API {: #access-topics}
 
-Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
+Here is a basic example of possible API usage to access topics for the current user. 
 
 ```javascript
-// Get the array of top topics for this user.
-const topics = await document.browsingTopics();
+try {
+  // Get the array of top topics for this user.
+  const topics = await document.browsingTopics();
+  
+  // Request an ad creative.
+  const response = await fetch('https://ads.example/get-creative', {
+   method: 'POST',
+   headers: {
+     'Content-Type': 'application/json',
+   },
+   body: JSON.stringify(topics)
+  })
+  
+  // Get the JSON from the response.
+  const creative = await response.json();
+  
+  // Display ad.
 
-// Request an ad creative.
-const response = await fetch('https://ads.example/get-creative', {
- method: 'POST',
- headers: {
-   'Content-Type': 'application/json',
- },
- body: JSON.stringify(topics)
-})
-
-// Get the JSON from the response.
-const creative = await response.json();
-
-// Display ad.
+} catch (error) {
+  // Handle error.
+}
 ```
 
 ### Access topics without modifying state {: #skipobservation}
