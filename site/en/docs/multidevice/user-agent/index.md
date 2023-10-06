@@ -39,33 +39,19 @@ instead of `Version/<VersionNum>`.
     </tr>
   </thead>
   <tbody>
-    <tr>
+        <tr>
       <td style="vertical-align: top;">Android</td>
       <td style="vertical-align: top;">Phone</td>
-      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Linux; Android 8.0.0;
-SM-G955U Build/R16NW)
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Linux; Android 10; K)
 AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/87.0.4280.141
-Mobile Safari/537.36
-</pre></td>
-    </tr>
-      <tr>
-        <td style="vertical-align: top;">Android</td>
-        <td style="vertical-align: top;">Tablet</td>
-        <td style="vertical-align: top;"><pre>Mozilla/5.0 (Linux; Android 7.1.1;
-SM-T550)
-AppleWebKit/537.36 KHTML, like Gecko)
-Chrome/93.0.4577.62
-Safari/537.36</pre></td>
+Chrome/93.0.0.0 Mobile Safari/537.36</pre></td>
       </tr>
-            <tr>
-      <td id="galaxy" style="vertical-align: top;">Android (Galaxy S5) (request desktop)</td>
-      <td style="vertical-align: top;">Phone</td>
-      <td style="vertical-align: top;"><pre>Mozilla/5.0 (X11; Linux x86_64) 
+        <tr>
+      <td style="vertical-align: top;">Android</td>
+      <td style="vertical-align: top;">Tablet</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Linux; Android 10; K)
 AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/67.0.3396.87 
-Safari/537.36
-</pre></td>
+Chrome/93.0.0.0 Safari/537.36</pre></td>
       </tr>
       <tr>
       <td style="vertical-align: top;">iOS</td>
@@ -117,7 +103,6 @@ AppleWebKit/537.36 (KHTML, like Gecko)
 Chrome/116.0.0.0
 Safari/537.36</pre></td>
       </tr>
-
     </tbody>
     </table>
 
@@ -161,6 +146,12 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
 AppleWebKit/605.1.15 (KHTML, like Gecko)
 Version/16.6 Safari/605.1.15
 ```
+Android (Galaxy S5) (request desktop)
+
+<pre>Mozilla/5.0 (X11; Linux x86_64) 
+AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/67.0.3396.87 
+Safari/537.36</pre>
 
 ## WebView on Android
 
@@ -220,3 +211,45 @@ Chrome/116.0.0.0 Safari/537.36</pre>
 
 <pre>Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko)
 Chrome/&lt;majorVersion>.0.0.0 &lt;deviceCompat> Safari/537.36</pre>
+
+## UA strings on Chrome versions before reduction
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Device</th>
+      <th style="text-align: left;">UA string</th>
+    </tr>
+  </thead>
+  <tbody>
+ <tr>
+      <td id="galaxy" style="vertical-align: top;">Android (Galaxy S5) (request desktop)</td>
+      <td style="vertical-align: top;">Phone</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (X11; Linux x86_64) 
+AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/67.0.3396.87 
+Safari/537.36
+</pre></td>
+      </tr>
+<tr>
+      <td style="vertical-align: top;">Android</td>
+      <td style="vertical-align: top;">Phone</td>
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (Linux; Android 8.0.0;
+SM-G955U Build/R16NW)
+AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/87.0.4280.141
+Mobile Safari/537.36
+</pre></td>
+    </tr>
+      <tr>
+        <td style="vertical-align: top;">Android</td>
+        <td style="vertical-align: top;">Tablet</td>
+        <td style="vertical-align: top;"><pre>Mozilla/5.0 (Linux; Android 7.1.1;
+SM-T550)
+AppleWebKit/537.36 KHTML, like Gecko)
+Chrome/93.0.4577.62
+Safari/537.36</pre></td>
+      </tr>
+      </tbody>
+    </table> 
