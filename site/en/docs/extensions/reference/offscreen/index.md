@@ -124,14 +124,18 @@ to check for an existing offscreen document:
 
 ```js
 async function hasOffscreenDocument() {
-    if (getContexts in chrome.runtime) {
-        return chrome.runtime.getContexts();
-    } else {
-        const matchedClients = await clients.matchAll();
-        return await matchedClients.some(client => {
-            client.url.includes(chrome.runtime.id);
-        });
-    }
+  if (chrome.runtime.getContexts) {
+    const contexts = await chrome.runtime.getContexts({
+      contextTypes: ['OFFSCREEN_DOCUMENT'],
+      documentUrls: [OFFSCREEN_DOCUMENT_PATH]
+    });
+    return Boolean(contexts.length);
+  } else {
+    const matchedClients = await clients.matchAll();
+    return await matchedClients.some(client => {
+        client.url.includes(chrome.runtime.id);
+    });
+  }
 }
 ```
 
