@@ -480,7 +480,7 @@ redirects:
   # MV2 docs that have been removed, but their MV3 version still exists
 
 - from: /docs/extensions/mv2/single_purpose
-  to: /docs/extensions/mv3/single_purpose/
+  to: /docs/extensions/mv3/quality_guidelines/
 
   # Group redirects
 
@@ -773,6 +773,9 @@ redirects:
 
 - from: /docs/privacy-sandbox/fledge/...
   to: /docs/privacy-sandbox/protected-audience/...
+
+- from: docs/extensions/mv3/single_purpose/
+  to: docs/extensions/mv3/quality_guidelines/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

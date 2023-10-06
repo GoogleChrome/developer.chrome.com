@@ -172,7 +172,6 @@ Social & Communications
 [privacy-tab]: /docs/webstore/cws-dashboard-privacy/#certify-your-data-use-practices
 [program-policies]: /docs/webstore/program-policies/
 [puppeteer]: https://pptr.dev/guides/chrome-extensions
-[single-purpose]: /docs/extensions/mv3/single_purpose/
 [stay-secure]: /docs/extensions/mv3/security/
 [supplying-images]: /docs/webstore/images/
 [user-data]: /docs/webstore/user_data/
