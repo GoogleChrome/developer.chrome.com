@@ -61,7 +61,7 @@ Safari/537.36</pre></td>
             <tr>
       <td id="galaxy" style="vertical-align: top;">Android (Galaxy S5) (request desktop)</td>
       <td style="vertical-align: top;">Phone</td>
-      <td style="vertical-align: top;"><pre>Mozilla/5.0 (X11; Linux x_86_64) 
+      <td style="vertical-align: top;"><pre>Mozilla/5.0 (X11; Linux x86_64) 
 AppleWebKit/537.36 (KHTML, like Gecko)
 Chrome/67.0.3396.87 
 Safari/537.36
@@ -164,7 +164,7 @@ Version/16.6 Safari/605.1.15
 
 ## WebView on Android
 
-The Android 4.4 (KitKat) [Chromium-based WebView][2] adds **Chrome/\_version\_** to the user agent
+The Android 4.4 (KitKat) [Chromium-based WebView][2] adds **<code>Chrome/<i>version</i></code>** to the user agent
 string.
 
 Old WebView UA:
@@ -177,7 +177,7 @@ Version/4.0 Safari/534.30
 
 **WebView UA in KitKat to Lollipop**
 
-<pre>Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/_BuildID_) 
+<pre>Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/<i>BuildID</i>) 
 AppleWebKit/537.36 (KHTML, like Gecko) 
 Version/4.0 <mark>Chrome/30.0.0.0</mark> Mobile Safari/537.36</pre>
 
