@@ -93,7 +93,7 @@ In the following CSS, `slide-to-right`, `slide-to-left`, `slide-from-right`, and
 
 redBus chose to implement view transitions along with INP improvement efforts across their site, which led to [7% more sales](https://web.dev/redbus-inp/). [Amit Kumar](https://amitkumar-v.medium.com/), Senior Engineering Manager at redBus, said that view transitions are really awesome for those who genuinely want better user experience and desire less maintenance overhead. 
 
-<blockquote><p>"We have conducted comprehensive user feedback sessions, incorporating valuable insights from a diverse group of users. Our deep understanding of our user base (bus and rail) and their needs, combined with our expertise, has led us to believe that this feature will provide significant value right from the start, without the need for A/B testing. View transitions are a step towards bridging the gap between app and web  with a smooth navigation experience."</p>
+<blockquote><p>We have conducted comprehensive user feedback sessions, incorporating valuable insights from a diverse group of users. Our deep understanding of our user base (bus and rail) and their needs, combined with our expertise, has led us to believe that this feature will provide significant value right from the start, without the need for A/B testing. View transitions are a step towards bridging the gap between app and web  with a smooth navigation experience.</p>
 
 <cite>Anoop Menon, CTO redBus</cite>
 </blockquote>
@@ -374,7 +374,7 @@ toggleWidgetAnimation() {
 
 Rishabh Mehrotra, their head of Design (Life BU), said that view transitions played a significant role in enhancing the website experience for their users by improving usability, engagement, and overall satisfaction. It helped in providing smooth navigation, guided interaction, reduced cognitive load, modern aesthetics and much more.
 
-<blockquote><p>Elevating the web experience stands as a paramount objective for PB, and VT has proven to be an instrumental tool in achieving this with remarkable seamlessness. Its widespread appeal among both our developer community and user base has imbued our team with a sense of enthusiasm. As we contemplate its integration across diverse PODs, we anticipate a far-reaching positive impact on satisfaction levels and operational excellence."</p>
+<blockquote><p>Elevating the web experience stands as a paramount objective for PB, and VT has proven to be an instrumental tool in achieving this with remarkable seamlessness. Its widespread appeal among both our developer community and user base has imbued our team with a sense of enthusiasm. As we contemplate its integration across diverse PODs, we anticipate a far-reaching positive impact on satisfaction levels and operational excellence.</p>
 
 <cite>Saurabh Tiwari (CTO, PolicyBazaar)</cite>
 </blockquote>
