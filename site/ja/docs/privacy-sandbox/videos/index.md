@@ -30,7 +30,7 @@ Chrome はサードパーティ Cookie を段階的に廃止する方向に向�
 
 ### その他のプライバシーサンドボックス関連動画
 
-{% Columns %} {% Column %} {% YouTube id='VVgtGkRtVPU' %} 最新の詳細については、ドキュメントをご覧ください: <a href="/docs/privacy-sandbox/overview/">プライバシーサンドボックスとは？</a> {% endColumn %} {% Column %} <strong>2022 年 5 月 12 日。再生時間: 16 分 16 秒</strong>
+{% endDetailsSummary %} {% Columns %} {% Column %} {% YouTube id='VVgtGkRtVPU' %} 最新の詳細については、ドキュメントをご覧ください: <a href="/docs/privacy-sandbox/overview/">プライバシーサンドボックスとは？</a> {% endColumn %} {% Column %} <strong>2022 年 5 月 12 日。再生時間: 16 分 16 秒</strong>
 
 <strong>最新のドキュメント:</strong> [プライバシーサンドボックスとは？](/docs/privacy-sandbox/overview/)
 
@@ -54,7 +54,7 @@ Chrome と Android にわたるアトリビューション レポートについ
 
 ### その他のアトリビューション レポート関連動画
 
-{% Columns %} {% Column %} {% YouTube id='UGA74CIcom8' %} 最新の詳細については、ドキュメントをご覧ください: <a href="/docs/privacy-sandbox/attribution-reporting/">アトリビューション レポート</a>{% endColumn %} {% Column %} <strong>2021 年 8 月 25 日。再生時間: 6 分 15 秒</strong>
+{% endDetailsSummary %} {% Columns %} {% Column %} {% YouTube id='UGA74CIcom8' %} 最新の詳細については、ドキュメントをご覧ください: <a href="/docs/privacy-sandbox/attribution-reporting/">アトリビューション レポート</a>{% endColumn %} {% Column %} <strong>2021 年 8 月 25 日。再生時間: 6 分 15 秒</strong>
 
 Chrome チームの [Sam Dutton](/authors/samdutton/) が、Attribution Reporting API に関する概要を説明します。API のイベントレベルレポートと要約レポートの 2 種類のレポートについて、および報告されるデータとその方法がカバーされています。 {% endColumn %} {% endColumns %}
 
