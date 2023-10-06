@@ -12,10 +12,10 @@ authors:
 
 ## 実装ステータス {: #status}
 
-このドキュメントでは、[バウンストラッキング対策に関する新しい提案](https://github.com/wanderview/bounce-tracking-mitigations)の概要を説明します。
+このドキュメントでは、[バウンストラッキング対策に関する新しい提案](https://github.com/privacycg/nav-tracking-mitigations/blob/main/bounce-tracking-explainer.md)の概要を説明します。
 
-- [バウンス トラッキング対策の提案](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md)が[公開ディスカッション](https://github.com/wanderview/bounce-tracking-mitigations/issues)に進みました。
-- この提案は[どのブラウザにも実装されていません](https://chromestatus.com/feature/5705149616488448?context=myfeatures)。
+{% Partial 'privacy-sandbox/timeline/bounce-tracking.njk' %}
+
 - [プライバシーサンドボックスのタイムライン](http://privacysandbox.com/timeline)には、バウンストラッキング対策やその他のプライバシーサンドボックスの提案の実装タイミングに関する情報が提供されています。
 
 ## この提案が必要とされる理由 {: #proposal-reason}
@@ -41,7 +41,7 @@ authors:
 
 ### 範囲外のユースケース
 
-範囲外のリダイレクトフローには、ID 連携認証、SSO、および決済が含まれます。これは、こういったフローはバウンストラッキングのシナリオに似ているものの、直接的なユーザー操作を伴うものであるためです。[詳細については、Explainer を参照](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md)してください。
+範囲外のリダイレクトフローには、ID 連携認証、SSO、および決済が含まれます。これは、こういったフローはバウンストラッキングのシナリオに似ているものの、直接的なユーザー操作を伴うものであるためです。[詳細については、Explainer を参照](https://github.com/privacycg/nav-tracking-mitigations/blob/main/bounce-tracking-explainer.md)してください。
 
 - **ID 連携認証**: [ID 連携認証](/docs/privacy-sandbox/fedcm/)は、ユーザーがウェブで **ID プロバイダーでログイン**（Facebook、GitHub、Google など）ボタンをクリックすると発生します。
 - **シングル サインオン**: サイトでシングル サインオン（SSO）が使用されている場合、ユーザーは、ID プロバイダーで 1 回ログインしておけば、他のサイトへのすべてのアクセスでも自動的にログインされることを期待しています。
@@ -58,11 +58,11 @@ authors:
 
 これらの定義を明確にすることが、バウンストラッキング対策の取り組みにおいて重要となります。
 
-バウンストラッキング対策の実施については、まだ[議論中](https://github.com/wanderview/bounce-tracking-mitigations/issues)です。
+バウンストラッキング対策の実施については、まだ[議論中](https://github.com/privacycg/nav-tracking-mitigations/issues)です。
 
 ### セキュリティに関する考慮事項
 
-[この提案には、バウンストラッキング対策の Explainer で概説されているセキュリティ上の考慮事項](https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md#privacy-and-security-considerations)がいくつかあります。
+[この提案には、バウンストラッキング対策の Explainer で概説されているセキュリティ上の考慮事項](https://github.com/privacycg/nav-tracking-mitigations/blob/main/bounce-tracking-explainer.md#privacy-and-security-considerations)がいくつかあります。
 
 ## バウンス トラッキング対策の公開時期 {: #availability}
 
@@ -72,5 +72,5 @@ authors:
 
 バウンストラッキング対策の提案は現在も検討中であるため、今後変更される可能性があります。フィードバックがある場合は、ぜひお聞かせください。
 
-- **GitHub**: [提案](https://github.com/wanderview/bounce-tracking-mitigations)を読み、[質問を投稿したり、ディスカッションに参加](https://github.com/wanderview/bounce-tracking-mitigations/issues)したりできます。
+- **GitHub**: [提案](https://github.com/privacycg/nav-tracking-mitigations/blob/main/bounce-tracking-explainer.md)を読み、[質問を投稿したり、ディスカッションに参加](https://github.com/privacycg/proposals/issues/6)したりできます。
 - **開発者サポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したりできます。
