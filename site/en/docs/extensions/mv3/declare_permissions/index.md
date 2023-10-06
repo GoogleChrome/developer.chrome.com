@@ -206,8 +206,7 @@ for details.
 : Allows the use of <a href="/docs/extensions/reference/downloads/#method-setUiOptions">chrome.downloads.setUiOptions()</a>.
 
 `"enterprise.deviceAttributes"`
-: Gives access to the <a
-          href="/docs/extensions/reference/enterprise_deviceAttributes/">chrome.enterprise.deviceAttributes</a> API.
+: Gives access to the <a href="/docs/extensions/reference/enterprise_deviceAttributes/">chrome.enterprise.deviceAttributes</a> API.
 
 `"enterprise.hardwarePlatform"`
 : Gives access to the <a
