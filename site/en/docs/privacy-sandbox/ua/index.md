@@ -177,13 +177,13 @@ Version/4.0 Safari/534.30
 
 **WebView UA in KitKat to Lollipop**
 
-<pre><code>Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/_BuildID_) 
+<pre>Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/_BuildID_) 
 AppleWebKit/537.36 (KHTML, like Gecko) 
-Version/4.0 <mark>Chrome/30.0.0.0</mark> Mobile Safari/537.36</code></pre>
+Version/4.0 <mark>Chrome/30.0.0.0</mark> Mobile Safari/537.36</pre>
 
 If you're attempting to differentiate between the WebView and Chrome for Android, you should look
-for the presence of the **Version/\_X.X\_** string in the WebView user-agent string. Don't rely on
-the specific Chrome version number (for example, 30.0.0.0) as the version numbers changes with each
+for the presence of the **<code>Version/_X.X_</code>** string in the WebView user-agent string. Don't rely on
+the specific Chrome version number (for example, 30.0.0.0) as the version numbers change with each
 release.
 
 **WebView UA in Lollipop to Android 10**
@@ -208,14 +208,15 @@ Version/4.0 Chrome/95.0.4638.50 Mobile Safari/537.36 OPR/60.0.2254.59405</code><
 
 ### Chrome on desktop
 
-<pre>Mozilla/5.0 (<unifiedPlatform>) AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/<majorVersion>.0.0.0 Safari/537.36</pre>
+<pre>Mozilla/5.0 (&lt;unifiedPlatform>) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/&lt;majorVersion>.0.0.0 Safari/537.36</pre>
 
 ### Chrome on Windows desktop
 
-<pre>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36</pre>
+<pre>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/116.0.0.0 Safari/537.36</pre>
 
 ### Chrome on mobile and tablet
 
 <pre>Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/<majorVersion>.0.0.0 <deviceCompat> Safari/537.36</pre>
+Chrome/&lt;majorVersion>.0.0.0 &lt;deviceCompat> Safari/537.36</pre>
