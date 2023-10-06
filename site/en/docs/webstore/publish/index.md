@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2023-10-06
+updated: 2023-10-05
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
