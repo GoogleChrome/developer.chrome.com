@@ -234,7 +234,7 @@ batching frequency is how often you process aggregatable reports.
 A report that is scheduled for aggregation more frequently (e.g. each hour) will
 have fewer conversion events included than the same report with a less frequent
 aggregation schedule (e.g. each week). As a result, the hourly report will have
-a higher signal-to-noise ratio than the weekly report, all else being equal. **Experiment with reporting requirements at various frequencies, and assess signal-to-noise ratios for each.**
+a lower signal-to-noise ratio than the weekly report, all else being equal. **Experiment with reporting requirements at various frequencies, and assess signal-to-noise ratios for each.**
 
 Learn more in
 [Batching](/docs/privacy-sandbox/summary-reports/#batching)
@@ -276,7 +276,7 @@ single-touch attributable conversions to the closest power of 10: 10, 100,
 1. Click **Simulate**.
 1. Observe that the noise ratios are now higher: this is because when you
    have fewer conversions per bucket, signal-to-noise ratios are likely to be
-   higher.
+   lower.
 
 {% endDetails %}
 {% endAside %}
