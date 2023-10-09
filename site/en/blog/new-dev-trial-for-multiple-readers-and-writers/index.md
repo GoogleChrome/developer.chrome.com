@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: New dev trial for multiple readers and writers for FileSystemSyncAccessHandle and exclusive writer for FileSystemWritableFileStream
+title: API Improvements for working with files in the browser
 subhead: >
-  Learn about API improvements when working with files in the browser.
+  New dev trial for multiple readers and writers for FileSystemSyncAccessHandle and exclusive writer for FileSystemWritableFileStream.
 date: 2023-10-09
 updated: 2023-10-09
 authors:
