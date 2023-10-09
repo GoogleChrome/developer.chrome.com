@@ -13,7 +13,7 @@ tags:
 
 ## Multiple readers and writers for FileSystemSyncAccessHandle
 
-The [origin private file system](https://web.dev/opfs) (sometimes also referred to as the bucket file system) allows developers to access files that are optimized for maximum reading and writing performance. This happens via [`FileSystemSyncAccessHandle`](https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSyncAccessHandle) objects. Currently, trying to open multiple `FileSystemSyncAccessHandle` objects for the same file entry fails with a `NoModificationAllowedError`. Since there are use cases where this constraint is limiting, the new origin trial introduces a new `mode` parameter for the [`FileSystemFileHandle.createSyncAccessHandle()`](https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileHandle/createSyncAccessHandle) method with the following allowed string values:
+The [origin private file system](https://web.dev/opfs) (sometimes also referred to as the bucket file system) allows developers to access files that are optimized for maximum reading and writing performance. This happens via [`FileSystemSyncAccessHandle`](https://developer.mozilla.org/docs/Web/API/FileSystemSyncAccessHandle) objects. Currently, trying to open multiple `FileSystemSyncAccessHandle` objects for the same file entry fails with a `NoModificationAllowedError`. Since there are use cases where this constraint is limiting, the new origin trial introduces a new `mode` parameter for the [`FileSystemFileHandle.createSyncAccessHandle()`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle/createSyncAccessHandle) method with the following allowed string values:
 
 - `"readwrite"`: This is the current default. Once open, any methods on `FileSystemSyncAccessHandle` are allowed. Only one instance of `FileSystemSyncAccessHandle` is allowed.
 - `"read-only"` : Allows multiple readers. Once open, only read-like methods on `FileSystemSyncAccessHandle` are allowed: `read()`, `getSize()`, and `close()`. Multiple instances of `FileSystemSyncAccessHandle` may be created as long as all of them are in read-only mode.
@@ -29,7 +29,7 @@ const handle2 = await handle.createSyncAccessHandle({mode: 'readwrite-unsafe'});
 
 ## Exclusive writer for FileSystemWritableFileStream
 
-Unlike with `FileSystemSyncAccessHandle`, multiple instances of [`FileSystemWritableFileStream`](https://developer.mozilla.org/en-US/docs/Web/API/FileSystemWritableFileStream) can be created per file entry today. What's missing is a way to provide an option for an exclusive writer. The new dev trial adds an optional `mode` parameter to the [`FileSystemAccessFileHandle.createWritable()`](https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileHandle/createWritable) method that has the following values:
+Unlike with `FileSystemSyncAccessHandle`, multiple instances of [`FileSystemWritableFileStream`](https://developer.mozilla.org/docs/Web/API/FileSystemWritableFileStream) can be created per file entry today. What's missing is a way to provide an option for an exclusive writer. The new dev trial adds an optional `mode` parameter to the [`FileSystemAccessFileHandle.createWritable()`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle/createWritable) method that has the following values:
 
 - `"exclusive"` mode: Only one writer can exist at a time.
 - `"siloed"` mode: This is the current default. Each created writer will have its own swap file.
