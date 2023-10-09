@@ -146,7 +146,7 @@ Find ways to improve load and runtime performance.
 
 ### Application panel {: #application }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zVZBef8kCIP6uEm9em9y.png", alt="Application Panel", width="800", height="500" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Mt5cwUg90P4CkF8i3w3V.png", alt="The Application panel with the Service workers section opened.", width="800", height="630" %}
 
 Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session
 storage, cookies, Application Cache, images, fonts, and stylesheets.
