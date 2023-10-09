@@ -1,16 +1,14 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: 'Starting the cookie countdown'
+title: 'Preparing for the end of third-party cookies'
 authors:
   - rowan_m
 description: >
   If your site uses third-party cookies it's time to take action as we approach their deprecation. Chrome plans to disable third-party cookies for 1% of users from Q1 2024 and then ramp up to 100% of users from Q3 2024. In this "cookie countdown" series, we'll guide you through the timeline and immediate actions you can take to ensure your sites are prepared.
-subhead: >
-  If your site uses third-party cookies it's time to take action as we approach their deprecation. Chrome plans to disable third-party cookies for 1% of users from Q1 2024 and then ramp up to 100% of users from Q3 2024. In this "cookie countdown" series, we'll guide you through the timeline and immediate actions you can take to ensure your sites are prepared.
-date: 2023-10-09
+date: 2023-10-10
 thumbnail: 'image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png'
 alt: >
-  Shipping the Privacy Sandbox relevance and measurement APIs
+  Privacy Sandbox
 tags:
   - privacy
   - cookie-countdown
@@ -22,14 +20,14 @@ Our goal on the Privacy Sandbox is to reduce cross-site tracking while still ena
 
 In our previous major milestone, we launched a range of APIs providing a privacy-focused alternative to today’s status quo for use cases like identity, advertising, and fraud detection. With alternatives in place, we can now move on to beginning to phase out third-party cookies.
 
-In this "cookie countdown" series we will take you through the timeline and immediate actions you can take to ensure your sites are prepared.
+In this [Cookie Countdown series](/tags/cookie-countdown/) we will take you through the timeline and immediate actions you can take to ensure your sites are prepared.
 
 
 ## 1% third-party cookie deprecation and Chrome-facilitated testing {: #chrome-testing }
 
 On the [privacysandbox.com timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) you can see two milestones approaching in Q4 2023 and Q1 2024 as part of [Chrome-facilitated testing](/docs/privacy-sandbox/chrome-testing/) modes. This testing is primarily for organizations testing the Privacy Sandbox relevance and measurement APIs, however as part of this we will be disabling third-party cookies for 1% of Chrome Stable users.
 
-**TODO: INSERT IMAGE**
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/Fl3J3HIW22U710lVSgtu.png", alt="Timeline for third-party cookie depraction. As part of Chrome-facilitated testing, the opt-in testing with labels mode starts in Q4 2023 and the 1% 3PC deprecation mode starts in Q1 2024. Both continue through to mid-Q3 2024 when the third-party cookie phaseout starts.", width="800", height="276" %}
 
 This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing.
 
@@ -75,8 +73,7 @@ From Chrome 118, the [DevTools Issues tab](/docs/devtools/issues/) shows the bre
 
 {% Aside %}
 
-We are building a DevTools extension to facilitate analysis of cookie usage during browsing sessions. This will provide debugging pathways for cookies, and Privacy Sandbox features, with access points to learn and understand the different aspects of the Privacy Sandbox initiative.
-
+We are building a DevTools extension to facilitate analysis of cookie usage during browsing sessions. This will provide debugging pathways for cookies, and Privacy Sandbox features, with access points to learn and understand the different aspects of the Privacy Sandbox initiative.  
 **Look out for our preview launch in November 2023!**
 
 {% endAside %}
@@ -99,7 +96,7 @@ Once you have identified the cookies with issues and understand the use cases fo
 
 Where your third-party cookie is being used in a 1:1 embedded context with the top-level site, then you may consider using the `Partitioned` attribute as part of Cookies Having Independent Partitioned State (CHIPS) to allow cross-site access with a separate cookie used per site.
 
-**TODO: INSERT IMAGE**
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/5JLh0cCChr0bKOzp6XxP.png", alt="The Partitioned attribute enables a seperate fav_store cookie to be set per top-level site.", width="800", height="359" %}
 
 To implement CHIPS, you add the `Partitioned` attribute to your `Set-Cookie` header:
 
@@ -118,7 +115,7 @@ Where your third-party cookie is only used across a small number of related site
 
 To implement RWS, you will need to [define and submit](https://github.com/GoogleChrome/first-party-sets/blob/main/RWS-Submission_Guidelines.md) the group of sites for the set. To ensure that the sites are meaningfully related, the policy for a valid set requires grouping those sites by: associated sites with a visible relation to each other (e.g. variants of a company’s product offering), service domains (e.g. APIs, CDNs), or country-code domains (e.g. \*.uk, \*.jp).
 
-**TODO: INSERT IMAGE**
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/es7ld9MfMP8sowe7PZzC.png", alt="Related Website Sets allows cookie access within the context of the declared sites, but not across other third-party sites.", width="800", height="359" %}
 
 Sites can use the Storage Access API to either request cross-site cookie access using `requestStorageAccess()` or delegate access using `requestStorageAccessFor()`. When sites are within the same set, the browser will automatically grant access and cross-site cookies will be available.
 
