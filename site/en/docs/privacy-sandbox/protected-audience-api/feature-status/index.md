@@ -138,20 +138,23 @@ find a list of the scoped Protected Audience API features and when they'll be su
     <td>Expected in Chrome in Q4 2023.</td>
   </tr> 
       <tr>
-      <th>Secure Propagation of Auction Signals without WebBundles<br>
-<a href="https://github.com/WICG/turtledove/issues/119">Github Issue</a></th>
-      <th>Expected in Chrome in Q4 2023</th>
+      <td>Secure Propagation of Auction Signals without WebBundles<br>
+<a href="https://github.com/WICG/turtledove/issues/119">Github Issue</a></td>
+ <td>Later in 2023</td>
+      <td>Expected in Chrome in Q4 2023</td>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Bulk Interest Group Deletion<br>
 <a href="https://github.com/WICG/turtledove/issues/475">Github Issue</a></td>
+ <td>Later in 2023</td>
       <td>Expected in Chrome in Q4 2023</td>
     </tr>
     <tr>
       <td>Increase Interest Group Cap from 1K to 2K<br>
 <a href="https://github.com/WICG/turtledove/issues/798">Github Issue</a></td>
+ <td>Later in 2023</td>
       <td>Expected in Chrome in Q4 2023</td>
     </tr>
   </table>

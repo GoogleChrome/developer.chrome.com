@@ -10,8 +10,8 @@
     <td>Available until at least 2026</td>
   </tr>
   <tr>
-      <th>Per-site budgeting<br>
-<a href="https://github.com/WICG/shared-storage#outside-the-worklet">Explainer</a></th>
+      <td>Per-site budgeting<br>
+<a href="https://github.com/WICG/shared-storage#outside-the-worklet">Explainer</a></td>
       <th>Expected in Chrome Q4 2023</th>
     </tr>
   </thead>

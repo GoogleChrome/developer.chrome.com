@@ -42,12 +42,10 @@
     <td>Expected in Chrome in Q34 2023</td>
   </tr>
     <tr>
-      <th>Secure Propagation of Auction Signals without WebBundles<br>
-<a href="https://github.com/WICG/turtledove/issues/119">Github Issue</a></th>
+      <td>Secure Propagation of Auction Signals without WebBundles<br>
+<a href="https://github.com/WICG/turtledove/issues/119">Github Issue</a></td>
       <th>Expected in Chrome in Q4 2023</th>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td>Bulk Interest Group Deletion<br>
 <a href="https://github.com/WICG/turtledove/issues/475">Github Issue</a></td>
