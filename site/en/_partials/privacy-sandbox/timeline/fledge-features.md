@@ -44,7 +44,7 @@
     <tr>
       <td>Secure Propagation of Auction Signals without WebBundles<br>
 <a href="https://github.com/WICG/turtledove/issues/119">Github Issue</a></td>
-      <th>Expected in Chrome in Q4 2023</th>
+      <td>Expected in Chrome in Q4 2023</td>
     </tr>
     <tr>
       <td>Bulk Interest Group Deletion<br>

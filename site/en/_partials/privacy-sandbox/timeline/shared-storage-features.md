@@ -12,10 +12,8 @@
   <tr>
       <td>Per-site budgeting<br>
 <a href="https://github.com/WICG/shared-storage#outside-the-worklet">Explainer</a></td>
-      <th>Expected in Chrome Q4 2023</th>
+      <td>Expected in Chrome Q4 2023</td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td>Allow writing from response headers<br>
 <a href="https://github.com/WICG/shared-storage/blob/main/README.md#from-response-headers">Explainer</a></td>

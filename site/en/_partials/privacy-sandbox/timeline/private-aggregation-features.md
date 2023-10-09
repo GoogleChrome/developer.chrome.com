@@ -22,12 +22,10 @@
     <td>Expected in Chrome in Q4 2023</td>
   </tr>
     <tr>
-      <th>Reducing report delay<br>
-<a href="https://github.com/patcg-individual-drafts/private-aggregation-api/blob/main/report_verification.md#reduced-delay">Explainer</a></th>
-      <th>Expected in Chrome Q4 2023</th>
+      <td>Reducing report delay<br>
+<a href="https://github.com/patcg-individual-drafts/private-aggregation-api/blob/main/report_verification.md#reduced-delay">Explainer</a></td>
+      <td>Expected in Chrome Q4 2023</td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td>Support for Private Aggregation API and Aggregation Service for Google Cloud<br>
 <a href="https://github.com/patcg-individual-drafts/private-aggregation-api#aggregation-coordinator-choice">Explainer</a></td>
