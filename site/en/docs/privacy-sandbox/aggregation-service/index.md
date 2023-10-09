@@ -30,6 +30,10 @@ The explainer outlines
 [key terms](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms),
 useful for understanding the Aggregation Service.
 
+### Availability
+
+{% Partial 'privacy-sandbox/timeline/aggregation-service.njk' %}
+
 ## Secure data processing
 
 The Aggregation Service decrypts and combines the collected data from the aggregatable reports, [adds noise](#noise-scale), and returns the final summary report. This service runs in a trusted execution environment (TEE), which is deployed on a cloud service that supports necessary security measures to protect this data.

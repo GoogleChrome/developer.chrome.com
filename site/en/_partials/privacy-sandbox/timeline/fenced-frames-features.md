@@ -29,4 +29,24 @@
     <td>Deprecate `src` attribute for the config attribute<br><a href="https://github.com/WICG/fenced-frame/blob/master/explainer/fenced_frame_config.md">Github Issue</a></td>
     <td>Now in general availability. </td>
   </tr>
+    <tr>
+      <td>Send Automatic Beacons Once<br>
+<a href="https://github.com/WICG/turtledove/pull/718">GitHub Issue</a></td>
+      <td>Available in Chrome in Q3 2023</td>
+    </tr>
+    <tr>
+      <td>Serializable Fenced Frames Configs<br>
+<a href="https://github.com/WICG/fenced-frame/pull/111">GitHub Issue</a> </td>
+      <td>Available in Chrome in Q3 2023</td>
+    </tr>
+    <tr>
+      <td>Additional Fortmat Option for Protected Audience Ad Size Macros<br>
+<a href="https://github.com/WICG/turtledove/pull/417">GitHub Issue</a></td>
+      <td>Available in Chrome in Q4 2023</td>
+    </tr>
+    <tr>
+      <td>Automatic beacons sending to all registered URLs<br>
+<a href="https://github.com/WICG/fenced-frame/pull/122">GitHub Issue</a>,   <a href="https://github.com/WICG/turtledove/pull/808">GitHub Issue</a></td>
+      <td>Available in Chrome in Q4 2023</td>
+    </tr>
 </table>

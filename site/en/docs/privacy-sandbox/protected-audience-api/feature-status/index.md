@@ -214,4 +214,9 @@ Auction Services is not required unless it fits your use cases.
 
 More details can be found in the [blog post](/blog/bidding-and-auction-services-availability/).
 
+### Availability
+
+{% Partial 'privacy-sandbox/timeline/bidding-auction.njk' %}
+
+
 {% Partial 'privacy-sandbox/fledge-api-next.njk' %}
