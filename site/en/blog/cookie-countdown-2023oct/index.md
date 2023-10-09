@@ -69,7 +69,7 @@ Third-party cookies can be identified by their `SameSite=None` value. You should
 
 The Chrome DevTools Network panel shows cookies set and sent on requests. In the Application panel you can see the Cookies heading under Storage. You can browse the cookies stored for each site accessed as part of the page load. You can sort by the `SameSite` column to group all the `None` cookies.
 
-**TODO: INSERT IMAGE**
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/12pyCsDUVQ0ecWreeAwn.png", alt="DevTools Issues tab showing a warning for SameSite=None cookies.", width="800", height="403" %}
 
 From Chrome 118, the [DevTools Issues tab](/docs/devtools/issues/) shows the breaking change issue, "Cookie sent in cross-site context will be blocked in future Chrome versions." The issue lists potentially affected cookies for the current page.
 
