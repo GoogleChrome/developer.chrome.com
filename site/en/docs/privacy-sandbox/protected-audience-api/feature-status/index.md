@@ -8,7 +8,7 @@ description: >
   Learn more about Protected Audience API auction features as we approach third-party
   cookie deprecation.
 date: 2023-02-09
-updated: 2023-06-01
+updated: 2023-10-09
 authors:
   - tristramsouthey
   - kevinkiklee
@@ -91,52 +91,69 @@ find a list of the scoped Protected Audience API features and when they'll be su
   </thead>
     <tr>
     <td>Event-level user bidding signals for modeling (<a href="https://github.com/WICG/turtledove/issues/435">Github Issue</a>)</td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q2 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q2 2023.</td>
   </tr>
     <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/299">Per-Buyer Latency Reporting</a></td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q1 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q1 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/293">Per-buyer wall-time timeout</a></td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q1 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q1 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/165">Buyer reporting ID for custom breakdowns</a></td>
-    <td>Later in 2023</td>
-    <td>Expected in Chrome for origin trial in Q3 2023.</td>
+    <td>2023</td>
+    <td>Expected in Chrome in Q3 2023.</td>
   </tr>
     <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/441">Direct seller destination support</a></td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q1 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q1 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/356">Accuracy-limited ad cost for cost-per-click billing</a></td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q2 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q2 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/166">Currency for highest bid and highest other scoring bid</a>
     </td>
-    <td>Later in 2023</td>
-    <td>Expected in Chrome for origin trial in Q3 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q3 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/477">Macro Support for Third-party Ad Trackers (3PAT)</a>
     </td>
-    <td>Later in 2023</td>
-    <td>Expected in Chrome in Q3 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q3 2023.</td>
   </tr> 
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/319">Support for Negative Interest Group Targeting</a>
     </td>
     <td>Later in 2023</td>
-    <td>Expected in Chrome in Q3 2023.</td>
+    <td>Expected in Chrome in Q4 2023.</td>
   </tr> 
+      <tr>
+      <th>Secure Propagation of Auction Signals without WebBundles<br>
+<a href="https://github.com/WICG/turtledove/issues/119">Github Issue</a></th>
+      <th>Expected in Chrome in Q4 2023</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bulk Interest Group Deletion<br>
+<a href="https://github.com/WICG/turtledove/issues/475">Github Issue</a></td>
+      <td>Expected in Chrome in Q4 2023</td>
+    </tr>
+    <tr>
+      <td>Increase Interest Group Cap from 1K to 2K<br>
+<a href="https://github.com/WICG/turtledove/issues/798">Github Issue</a></td>
+      <td>Expected in Chrome in Q4 2023</td>
+    </tr>
   </table>
 
 ## Event-level auction win reporting
