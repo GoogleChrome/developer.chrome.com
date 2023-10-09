@@ -63,14 +63,14 @@ The scoped style rule `img { … }` can effectively only select `<img>` elements
 To prevent the `<img>` elements inside the card’s content area (`.card__content`) from being selected you could make the `img` selector more specific. Another way to do this is to use the fact that the `@scope` at-rule also accepts a _scoping limit_ which determines the lower boundary.
 
 ```css
-@scope (.card) to (.content) {
+@scope (.card) to (.card__content) {
     img {
         border-color: green;
     }
 }
 ```
 
-This scoped style rule only targets `<img>` elements that are placed between `.card` and `.content` elements in the ancestor tree. This type of scoping–with an upper and lower boundary–is often referred to as a _donut scope_
+This scoped style rule only targets `<img>` elements that are placed between `.card` and `.card__content` elements in the ancestor tree. This type of scoping–with an upper and lower boundary–is often referred to as a _donut scope_
 
 {% Codepen {
   user: 'web-dot-dev',
