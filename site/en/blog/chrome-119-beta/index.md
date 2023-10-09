@@ -91,7 +91,7 @@ Make Chrome's handling of URL host punctuation characters compliant with the [UR
 Before:
 
 ```bash
-> const url = new URL("http://exa(mple.com";);
+> const url = new URL("http://exa(mple.com;");
 > url.href
 'http://exa%28mple.com/&apos;
 ```
@@ -101,7 +101,7 @@ Before:
 After:
 
 ```bash
-> const url = new URL("http://exa(mple.com";);
+> const url = new URL("http://exa(mple.com;");
 > => throws TypeError: Invalid URL.
 ```
 
