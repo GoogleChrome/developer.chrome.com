@@ -17,7 +17,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 ### Documentation on cookies and web storage APIs {: #storage-and-cookies-guide }
 
-<p class="color-secondary-text type--caption">Posted on <time>October 2, 2023</time></p>
+<p class="color-secondary-text type--caption">Posted on <time>October 9, 2023</time></p>
 
 We published a new guide on [how cookies and web storage APIs work](/docs/extensions/mv3/storage-and-cookies/) in Chrome extensions. It includes all you need to know about
 [Privacy Sandbox](/docs/privacy-sandbox/) as an extension developer.
