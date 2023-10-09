@@ -8,7 +8,7 @@ description: >
   Deploy and manage this service to produce summary reports for the
   Attribution Reporting API or the Private Aggregation API.
 date: 2022-11-29
-updated: 2023-09-18
+updated: 2023-10-09
 authors:
   - alexandrawhite
 ---
