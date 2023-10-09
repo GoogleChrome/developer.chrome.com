@@ -6,7 +6,7 @@ subhead: >
 description: >
   Test your sites with third-party cookies disabled.
 date: 2023-05-18
-updated: 2023-10-05
+updated: 2023-10-09
 authors:
   - alexandrawhite
   - rowan_m
