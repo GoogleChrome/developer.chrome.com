@@ -218,5 +218,4 @@ More details can be found in the [blog post](/blog/bidding-and-auction-services-
 
 {% Partial 'privacy-sandbox/timeline/bidding-auction.njk' %}
 
-
 {% Partial 'privacy-sandbox/fledge-api-next.njk' %}
