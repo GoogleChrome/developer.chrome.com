@@ -5,7 +5,7 @@ description: >
 authors:
   - thomassteiner
 layout: 'layouts/blog-post.njk'
-date: 2023-09-25
+date: 2023-10-09
 tags:
   - capabilities
 ---
@@ -27,7 +27,7 @@ There's now a new
 available running from Chrome 119 (stable date): {% ChromeDate 119 %} to Chrome
 122 (stable date): {% ChromeDate 122 %} for opening popup windows in fullscreen
 mode with just one step. Click **Register** on the
-[Open popups as fullscreen windows](🎉🎉🎉🎉🎉TODO🎉🎉🎉🎉🎉🎉)
+[Open popups as fullscreen windows](https://developer.chrome.com/origintrials/#/view_trial/106960491150049281)
 origin trial landing page to sign up.
 Apart from the origin trial, you can also test locally
 by setting the `chrome://flags/#fullscreen-popup-windows` flag to **Enabled**.
