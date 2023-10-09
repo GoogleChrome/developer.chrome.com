@@ -128,7 +128,7 @@ In Chrome 119 you can opt into the following new [origin trial](/docs/web-platfo
 
 ### Open popups as fullscreen windows
 
-This feature adds a `fullscreen` windowFeatures parameter to the `window.open()` JavaScript API. This allows the caller to open a popup directly to full-screen on the display that would contain the popup (based on screenX and screenY). This eliminates the need for the developer to manually transition a popup into full-screen, which could require a new user activation signal. 
+This [new origin trial](https://developer.chrome.com/origintrials/#/view_trial/106960491150049281) adds a `fullscreen` windowFeatures parameter to the `window.open()` JavaScript API. This allows the caller to open a popup directly to full-screen on the display that would contain the popup (based on screenX and screenY). This eliminates the need for the developer to manually transition a popup into full-screen, which could require a new user activation signal. 
 
 ## Deprecations and removals
 
@@ -138,7 +138,7 @@ This release of Chrome removes four features.
 
 ### Remove Web SQL
 
-We previously announced the [deprecation and removal of WebSQL](/blog/deprecating-web-sql/). The feature is fully removed as of Chrome 119. [A reverse origin trial](/origintrials/#/view_trial/494270059103911937) allows developers to continue to use WebSQL until Chrome 123.
+We previously announced the [deprecation and removal of Web SQL](/blog/deprecating-web-sql/). The feature is fully removed as of Chrome 119. [A reverse origin trial](/origintrials/#/view_trial/494270059103911937) allows developers to continue to use WebSQL until Chrome 123.
 
 ### Remove Sanitizer API
 
