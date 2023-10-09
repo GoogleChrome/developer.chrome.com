@@ -20,7 +20,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 <p class="color-secondary-text type--caption">Posted on <time>October 9, 2023</time></p>
 
 We published a new guide on [how cookies and web storage APIs work in Chrome extensions](/docs/extensions/mv3/storage-and-cookies/).
-It includes details on how cookie and storage partitioning changes in
+It includes details on cookie and storage partitioning changes in
 [Privacy Sandbox](/docs/privacy-sandbox/), an ongoing project to deprecate third-party cookies
 through the creation of a series of new APIs, work in extensions.
 
