@@ -114,6 +114,16 @@ For more information, see [Deprecating and removing Web SQL](/blog/deprecating-w
 
 Chromium issues: [1485966](https://crbug.com/1485966).
 
+## Screenshot aspect ratio validation in Application > Manifest {: #manifest-aspect-ratio }
+
+The **Application** > **Manifest** section now checks if your web app's [screenshots](https://web.dev/add-manifest/#screenshots) with the same form factor (`wide` or `narrow`) have the same aspect ratio.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/krHlVOBrMa0p4SvlhGOJ.png", alt="A warning on the incorrect aspect ratio of screenshots with the same form factor.", width="800", height="370" %}
+
+For more information, see [Debug Progressive Web Apps](/docs/devtools/progressive-web-apps/) and [Add a web app manifest](https://web.dev/add-manifest/).
+
+The DevTools team expresses gratitude to [Alexey Rodionov](https://chromium.googlesource.com/devtools/devtools-frontend/+/f95f715656086cbd9daef3302b7691403bed12c6) for landing this change and other [manifest warning improvements](https://chromium.googlesource.com/devtools/devtools-frontend/+/ead65e6c528a1a8efe7808a51e3f3db06406b9f7) in the previous version.
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
