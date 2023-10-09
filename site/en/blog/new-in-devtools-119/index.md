@@ -126,7 +126,7 @@ These are some noteworthy fixes and improvements in this release:
 - **Performance**: The color parsing error during performance recording has been fixed ([1480205](https://crbug.com/1480205)).
 - **Network**: The **Set cookies** column now shows the correct number of cookies that are set, excluding blocked ([1486903](https://crbug.com/1486903)).
 - DevTools extensions now load after navigation to a non-blocked host ([1476264](https://crbug.com/1476264)).
-- Fixed the bug with incorrect script execution context for extensions [1275331](https://crbug.com/1275331).
+- Fixed the bug with incorrect script execution context for extensions ([1275331](https://crbug.com/1275331)).
 
 <!-- $contentEnd -->
 
