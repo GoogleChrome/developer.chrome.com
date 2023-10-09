@@ -107,7 +107,7 @@ The **Application** > **Web SQL** section will be removed in Chrome 123 because 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NuJgh7FznQ2jlgG0pq9w.png", alt="The Web SQL deprecation warning.", width="800", height="472" %}
 
-For more information, see [Deprecating and removing Web SQL](https://developer.chrome.com/blog/deprecating-web-sql/).
+For more information, see [Deprecating and removing Web SQL](/blog/deprecating-web-sql/).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/087d06b98e6fdd264fde7d16895a1c3cec4d0766 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/712c7996d8c9a492e073f75b26d92ae76f959719 #}
@@ -118,7 +118,15 @@ Chromium issues: [1485966](https://crbug.com/1485966).
 
 These are some noteworthy fixes and improvements in this release:
 
-
+- **Elements**:
+  - Longhand CSS properties under the [expandable shorthand](/docs/devtools/css/issues/#shorthand) ones are now non-editable as they should be ([1149182](https://crbug.com/1149182)).
+  - The autocomplete for `contain-intrinsic-*` now doesn't provide the incorrect single `auto` value because it should be `auto <length>` ([1480415](https://crbug.com/1480415)).
+  - Support for deprecated and invalid `-webkit-*` properties has been removed ([1086089](https://crbug.com/1086089), [1030765](https://crbug.com/1030765)).
+- **Breakpoints**: Fixed the bug with disappearing breakpoint editing dialog when the breakpoint type is changed ([1485782](https://crbug.com/1485782)).
+- **Performance**: The color parsing error during performance recording has been fixed ([1480205](https://crbug.com/1480205)).
+- **Network**: The **Set cookies** column now shows the correct number of cookies that are set, excluding blocked ([1486903](https://crbug.com/1486903)).
+- DevTools extensions now load after navigation to a non-blocked host ([1476264](https://crbug.com/1476264)).
+- Fixed the bug with incorrect script execution context for extensions [1275331](https://crbug.com/1275331).
 
 <!-- $contentEnd -->
 
