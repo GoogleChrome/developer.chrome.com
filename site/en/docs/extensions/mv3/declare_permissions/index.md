@@ -288,6 +288,9 @@ for details.
 `"proxy"`
 : Gives access to the <a href="/docs/extensions/reference/proxy/">chrome.proxy</a> API.
 
+`"runtime"`
+: Gives access to <a href="/docs/extensions/reference/runtime/#method-connectNative"><code>runtime.conntectNative()</code></a> and <a href="/docs/extensions/reference/runtime/#method-sendNativeMessage"><code>runtime.sendNatriceMessage()</code></a>. For all other features of the <code>runtime</code> namespace, no permission is required.
+
 `"scripting"`
 : Gives access to the <a href="/docs/extensions/reference/scripting/">chrome.scripting</a> API.
 
