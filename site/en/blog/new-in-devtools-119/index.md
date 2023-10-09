@@ -124,6 +124,10 @@ For more information, see [Debug Progressive Web Apps](/docs/devtools/progressiv
 
 The DevTools team expresses gratitude to [Alexey Rodionov](https://chromium.googlesource.com/devtools/devtools-frontend/+/f95f715656086cbd9daef3302b7691403bed12c6) for landing this change and other [manifest warning improvements](https://chromium.googlesource.com/devtools/devtools-frontend/+/ead65e6c528a1a8efe7808a51e3f3db06406b9f7) in the previous version.
 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/f95f715656086cbd9daef3302b7691403bed12c6 #}
+
+Chromium issue: [1476656](https://crbug.com/1476656).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
