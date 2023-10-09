@@ -39,7 +39,7 @@
   </tr>
   <tr>
     <td>Support for Negative Interest Group Targeting<br><a href="https://github.com/WICG/turtledove/issues/319">Github Issue</a></td>
-    <td>Expected in Chrome in Q34 2023</td>
+    <td>Expected in Chrome in Q4 2023</td>
   </tr>
     <tr>
       <td>Secure Propagation of Auction Signals without WebBundles<br>

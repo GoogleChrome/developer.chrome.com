@@ -143,8 +143,6 @@ find a list of the scoped Protected Audience API features and when they'll be su
  <td>Later in 2023</td>
       <td>Expected in Chrome in Q4 2023</td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td>Bulk Interest Group Deletion<br>
 <a href="https://github.com/WICG/turtledove/issues/475">Github Issue</a></td>

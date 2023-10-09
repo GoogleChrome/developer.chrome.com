@@ -6,7 +6,7 @@ subhead: >
   third-party cookies or other tracking mechanisms.
 description: "What's in it, what's it for, and how to get involved."
 date: 2021-05-18
-updated: 2023-10-09
+updated: 2023-09-18
 authors:
   - samdutton
   - alexandrawhite
