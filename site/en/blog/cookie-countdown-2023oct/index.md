@@ -32,7 +32,7 @@ On the [privacysandbox.com timeline](https://privacysandbox.com/open-web/#the-pr
 This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing.
 
 *<span id="cma-consultation">Consultation with the CMA</span>*  
-This testing period continues through to Q3 2024 when, after [consultation with the CMA](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes), we plan to begin disabling third-party cookies for all Chrome users. The ramp up to 100% of users is subject to addressing any remaining competition concerns of the CMA.
+This testing period continues through to Q3 2024 when, after [consultation with the UK Competition and Markets Authority (CMA)](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes), we plan to begin disabling third-party cookies for all Chrome users. The ramp up to 100% of users is subject to addressing any remaining competition concerns of the CMA.
 
 
 ## Prepare for the third-party cookie phase out
@@ -41,7 +41,7 @@ We've broken the process down into these key steps, with detail below, to ensure
 
 1. [Audit your third-party cookie usage](#audit).
 2. [Test for breakage](#test).
-3. For cross-site cookies which store data on a per site basis, like an embed, consider <code> [Partitioned with CHIPS](#partitioned)</code>.
+3. For cross-site cookies which store data on a per site basis, like an embed, consider [`Partitioned` with CHIPS](#partitioned).
 4. For cross-site cookies across a small group of meaningfully linked sites, consider [Related Website Sets](#rws).
 5. For other third-party cookie use cases, [migrate to the relevant web APIs](#migrate).
 
