@@ -78,9 +78,9 @@ Chromium issues: [1483848](https://crbug.com/1483848), [1381806](https://crbug.c
 
 ## Lighthouse 11.1.0 {: #lighthouse }
 
-The **Lighthouse** panel now runs Lighthouse 11.1.0.
+The **Lighthouse** panel now runs Lighthouse 11.1.0. See the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.1.0).
 
-See the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.1.0). To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
+To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/65643d2c71a7fa41038525f125eeff743964af59 #}
 
@@ -137,7 +137,7 @@ These are some noteworthy fixes and improvements in this release:
   - The autocomplete for `contain-intrinsic-*` now doesn't provide the incorrect single `auto` value because it should be `auto <length>` ([1480415](https://crbug.com/1480415)).
   - Support for deprecated and invalid `-webkit-*` properties has been removed ([1086089](https://crbug.com/1086089), [1030765](https://crbug.com/1030765)).
 - **Breakpoints**: Fixed the bug with disappearing breakpoint editing dialog when the breakpoint type is changed ([1485782](https://crbug.com/1485782)).
-- **Performance**: 
+- **Performance**:
   - The color parsing error during performance recording has been fixed ([1480205](https://crbug.com/1480205)).
   - Fixed the bug with [LCP](https://web.dev/lcp/) not showing in the **Timings** track ([1487136](https://crbug.com/1487136)).
 - **Network**: The **Set cookies** column now shows the correct number of cookies that are set, excluding blocked ([1486903](https://crbug.com/1486903)).
