@@ -32,7 +32,11 @@
     - url: /docs/extensions/migrating/publish-mv3
     - url: /docs/extensions/migrating/mv2-sunset
     - url: /docs/extensions/migrating/known-issues
-- url: /docs/extensions/reference
+- title: i18n.docs.extensions.reference
+  sections:
+    - url: /docs/extensions/reference
+    - url: /docs/extensions/mv3/manifest
+    - url: docs/extensions/reference/web_suplement
 - url: /docs/extensions/samples
   title: i18n.docs.extensions.samples
   description: i18n.docs.extensions.samples_description
