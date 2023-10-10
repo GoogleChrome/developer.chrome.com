@@ -4,8 +4,8 @@ api: cookies
 
 ## Manifest
 
-To use the cookies API, you must declare the "cookies" permission in your
-manifest, along with [host permissions][1] for any hosts whose cookies you want
+To use the cookies API, declare the `"cookies"` permission in your
+manifest along with [host permissions][1] for any hosts whose cookies you want
 to access. For example:
 
 ```json
@@ -25,12 +25,12 @@ to access. For example:
 ## Partitioning {: #partitioning }
 
 [Partitioned cookies][chips] allow a site to mark that certain cookies should be keyed against the
-origin of the top level frame. This means that if site A is embedded using an iframe in site B
-and site C, a partitioned cookie can have a different value in each.
+origin of the top-level frame. This means that, for example, if site A is embedded using an iframe in site B
+and site C, a partitioned cookie can have a different value on each site. <!--does that mean all 3, or just B and C?-->
 
-`chrome.cookies` does not support partitioning, which means that all methods
+Because `chrome.cookies` doesn't support partitioning, all of its methods
 read and write cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in
-the default partition.
+the default partition. <!--So cookies can be partitioned, but not using the cookies API. Am I understanding that right?-->
 
 For details on the general impact of partitioning for extensions, see
 [Storage and Cookies][cookie-partitioning].
