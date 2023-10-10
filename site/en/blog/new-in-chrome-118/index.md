@@ -49,7 +49,7 @@ without scope, the style applied is the last one declared.
 ```
 {% endCompare %}
 
-{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/N1ZbDIild8BHXJ3GjIey.jpg", alt="Two links, the first one reads &#39; I'm lightpink!' the second one reads 'Different pink', both links are actually light pink, under the links text reads sources order declaration style", width="800", height="700" %}
+{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/N1ZbDIild8BHXJ3GjIey.jpg", alt="Two links, the first one reads &#39; I'm lightpink!' the second one reads 'Different pink', both links are actually light pink, under the links text reads sources order declaration style.", width="800", height="700" %}
 
 With scope you can have nested elements and the style that applies is the one for the nearest ancestor.
 
