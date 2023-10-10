@@ -173,6 +173,8 @@ Scaled availability for User-Agent reduction means the fully reduced UA string
 shipped on all Chrome devices. Reduction began with a Chrome
 minor release in Q2 of 2022.
 
+Refer to [User-Agent Strings](/docs/multidevice/user-agent/) for examples of new User-Agent strings.
+
 ### Test the string locally {: #test-locally}
 
 There are a couple of methods to test the reduced User-Agent locally:
