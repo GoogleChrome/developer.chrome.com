@@ -4,7 +4,7 @@ title: 'Preparing for the end of third-party cookies'
 authors:
   - rowan_m
 description: >
-  If your site uses third-party cookies it's time to take action as we approach their deprecation. Chrome plans to disable third-party cookies for 1% of users from Q1 2024 and then ramp up to 100% of users from Q3 2024. In this "cookie countdown" series, we'll guide you through the timeline and immediate actions you can take to ensure your sites are prepared.
+  If your site uses third-party cookies it's time to take action as we approach their deprecation. Chrome plans to disable third-party cookies for 1% of users from Q1 2024 to facilitate testing and then ramp up to 100% of users from Q3 2024. In this Cookie Countdown series, we'll guide you through the timeline and immediate actions you can take to ensure your sites are prepared.
 date: 2023-10-10
 thumbnail: 'image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png'
 alt: >
@@ -29,7 +29,7 @@ On the [privacysandbox.com timeline](https://privacysandbox.com/open-web/#the-pr
 
 {% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/Fl3J3HIW22U710lVSgtu.png", alt="Timeline for third-party cookie depraction. As part of Chrome-facilitated testing, the opt-in testing with labels mode starts in Q4 2023 and the 1% 3PC deprecation mode starts in Q1 2024. Both continue through to mid-Q3 2024 when the third-party cookie phaseout starts.", width="800", height="276" %}
 
-This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing. This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing. This testing period continues through to Q3 2024 when we plan to begin disabling third-party cookies for all Chrome users[<sup>1</sup>](#cma-consultation).
+This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing. This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing. This testing period continues through to Q3 2024 when, after [consultation with the Competition and Markets Authority (CMA)](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes), we plan to begin disabling third-party cookies for all Chrome users[<sup>1</sup>](#cma-consultation).
 
 ## Prepare for the third-party cookie phase out
 
