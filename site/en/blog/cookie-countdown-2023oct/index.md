@@ -14,7 +14,7 @@ tags:
   - cookie-countdown
 ---
 
-If your site uses third-party cookies it's time to take action as we approach their deprecation. Chrome plans to disable third-party cookies for 1% of users from Q1 2024 to [facilitate testing](#chrome-testing) and then ramp up to 100% of users [from Q3 2024](#cma-consultation).
+If your site uses third-party cookies it's time to take action as we approach their deprecation. Chrome plans to disable third-party cookies for 1% of users from Q1 2024 to [facilitate testing](#chrome-testing) and then ramp up to 100% of users from Q3 2024[<sup>1</sup>](#cma-consultation).
 
 Our goal on the Privacy Sandbox is to reduce cross-site tracking while still enabling the functionality that keeps online content and services freely accessible by everyone. Deprecating and removing third-party cookies encapsulates the challenge, as they enable critical functionality across sign-in, fraud protection, advertising, and generally the ability to embed rich, third-party content in your sites—but at the same time they're also the key enabler of cross-site tracking.
 
@@ -29,11 +29,7 @@ On the [privacysandbox.com timeline](https://privacysandbox.com/open-web/#the-pr
 
 {% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/Fl3J3HIW22U710lVSgtu.png", alt="Timeline for third-party cookie depraction. As part of Chrome-facilitated testing, the opt-in testing with labels mode starts in Q4 2023 and the 1% 3PC deprecation mode starts in Q1 2024. Both continue through to mid-Q3 2024 when the third-party cookie phaseout starts.", width="800", height="276" %}
 
-This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing.
-
-*<span id="cma-consultation">Consultation with the CMA</span>*  
-This testing period continues through to Q3 2024 when, after [consultation with the UK Competition and Markets Authority (CMA)](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes), we plan to begin disabling third-party cookies for all Chrome users. The ramp up to 100% of users is subject to addressing any remaining competition concerns of the CMA.
-
+This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing. This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing. This testing period continues through to Q3 2024 when we plan to begin disabling third-party cookies for all Chrome users[<sup>1</sup>](#cma-consultation).
 
 ## Prepare for the third-party cookie phase out
 
@@ -52,7 +48,7 @@ Third-party cookies can be identified by their `SameSite=None` value. You should
 
 The Chrome DevTools Network panel shows cookies set and sent on requests. In the Application panel you can see the Cookies heading under Storage. You can browse the cookies stored for each site accessed as part of the page load. You can sort by the `SameSite` column to group all the `None` cookies.
 
-{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/12pyCsDUVQ0ecWreeAwn.png", alt="DevTools Issues tab showing a warning for SameSite=None cookies.", width="800", height="403" %}
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/xYNwixxMkPfMmlMmKY4L.png", alt="DevTools Issues tab showing a warning for SameSite=None cookies.", width="800", height="403" %}
 
 From Chrome 118, the [DevTools Issues tab](/docs/devtools/issues/) shows the breaking change issue, "Cookie sent in cross-site context will be blocked in future Chrome versions." The issue lists potentially affected cookies for the current page.
 
@@ -176,3 +172,14 @@ Primarily these are authentication or payment flows where a top-level site eithe
 We want to ensure we are capturing the various scenarios where sites break without third-party cookies to ensure that we have provided guidance, tooling, and functionality to allow sites to migrate away from their third-party cookie dependencies. If your site or a service you depend on is breaking with third-party cookies disabled, you can submit it to our breakage tracker at [goo.gle/report-3pc-broken](https://goo.gle/report-3pc-broken).
 
 If you have questions around the deprecation process and Chrome's plan, you can raise a new issue using the "third-party cookie deprecation" tag in our developer support repo.
+
+{% Details %}
+{% DetailsSummary %}
+
+Reference
+
+{% endDetailsSummary %}
+
+<span id="cma-consultation">1.<span> The ramp up to 100% of users is subject to addressing any remaining competition concerns of the UK Competition and Markets Authority (CMA).
+
+{% endDetails %}
