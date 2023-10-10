@@ -134,7 +134,7 @@ As with the majority of Chrome experiments, most enterprise end users will be ex
 
 We also intend to provide further reporting and tooling to help identify third-party cookie usage on enterprise sites. We have less visibility of enterprise browsers in Chrome's usage metrics which means it is especially important for enterprises to [test for breakage](#test) and [report issues to us](#report-issues).
 
-Enterprise SaaS integrations can use the third-party deprecation trial described below.
+Enterprise SaaS integrations will be able to use the third-party deprecation trial described below.
 
 
 ## Request additional time with the third-party deprecation trial for non-advertising use cases
