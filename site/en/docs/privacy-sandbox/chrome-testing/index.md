@@ -25,7 +25,7 @@ We will offer two distinct modes:
 *   **Mode A:** In Q4 2023 organizations testing the PS R&M APIs can opt in to receive consistent labels on a subset of Chrome browsers to allow for coordinated testing across different testers.
 *   **Mode B:** In Q1 2024 Chrome will globally disable third-party cookies for a portion of Chrome browsers.
 
-Both modes will continue through to at least Q2 2024 and where third-party cookies are disabled in Mode B, they will remain disabled through the full phase out of third-party cookies.
+Both modes will continue through to at least Q2 2024. Where third-party cookies are disabled in Mode B, they will remain disabled through the full phase out of third-party cookies.
 
 We have worked with the [CMA](https://www.gov.uk/government/organisations/competition-and-markets-authority) to ensure that these testing modes align with the testing framework (and timeline) for third parties as laid out in its [guidance on industry testing](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes#industry-testing). As a result, the CMA anticipates that the results from testing in these modes can be used in its assessment of the Privacy Sandbox.
 
