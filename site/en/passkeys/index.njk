@@ -1,0 +1,117 @@
+---
+title: 'Passkeys on the web'
+description: >
+  Passkeys are an easier and more secure replacement for passwords, enabling users to sign in to their account by unlocking their device screen!
+layout: 'layouts/landing.njk'
+collection_tag: 'passkeys'
+sections:
+  implementation:
+    - url: https://web.dev/passkey-registration/
+      title: Create a passkey
+      description: Learn how to add the functionality for users to create passkeys in your web app.
+    - url: https://web.dev/passkey-form-autofill/
+      title: Sign-in with a passkey
+      description: Learn how to add a passwordless sign-in with passkeys while accommodating existing password users.
+    - url: https://developers.google.com/codelabs/passkey-form-autofill
+      title: Codelab
+      description: A step by step codelab on how to implement passkeys with form autofill in a web app to create a simpler and safer sign-in.
+  blog:
+    - url: /blog/passkeys-on-icloud-keychain/
+      title: Chrome passkeys and iCloud keychain
+      description: Chrome supports passkeys on iCloud Keychain starting in Chrome 118, on macOS 13.5 or later.
+    - url: /blog/webauthn-conditional-ui/
+      title: What is Conditional UI
+      description: Conditional UI leverages browser's form autofill functionality to let users sign in with a passkey seamlessly in the traditional password based flow.
+  resources:
+    - url: https://passkeys.dev/docs/tools-libraries/libraries
+      title: Passkeys libraries
+      description: A list of open source libraries that support passkeys integration in different languages on client and server side. 
+    - url: https://fidoalliance.org/passkeys
+      title: FIDO Alliance
+      description: Passkeys resources from FIDO allience, an open industry association with a mission to develop and standardize technical specifications that reduce the reliance on passwords to authenticate users.
+---
+
+{% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
+{% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/cards/hero-card.njk' import heroCard with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-section.njk' import landingSection with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/cards/featured-card.njk' import featuredCard with context %}
+
+{{ heroCard(
+  title,
+  description,
+  "Documentation",
+  "https://developers.google.com/identity/passkeys",
+  "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/mByuqDmTsv2N0feKU8qg.png",
+  "",
+  "blue",
+  ""
+  )
+}}
+
+{{ landingSectionExpanded(
+  "Add passkeys to your web app",
+  "",
+  sections.implementation,
+  "blue",
+  "right",
+  true,
+  "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/st1my2XghXG2cCRQLrak.png",
+  "Passkeys illustration",
+  800,
+  451,
+  "image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/l3ZibRgYJPkeOyRDcpin.png",
+  ""
+  )
+}}
+
+{{ landingSection(
+  'More news about passkeys',
+  'Learn about the latest developements in passkeys land.',
+  sections.blog,
+  'blue',
+  'left',
+  true,
+  'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/x0TjlTjrxHRcAEcCaglq.png',
+  'Waving hand icon',
+  333,
+  165,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+<div class="landing-section landing-section--boxes rounded-lg width-full display-grid gap-top-500">
+  {{ landingDeco(
+    'Additional resources',
+    'Learn more about passkeys',
+    'yellow',
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
+    'alt',
+    291,
+    251,
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg'
+    )
+  }}
+  {% for item in sections.resources %}
+    <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+      <h2 class="type--h4">
+        <a class="surface display-inline-flex color-text" href="{{item.url}}">
+          {{ item.title }}
+        </a>
+      </h2>
+      <p class="flex-1">{{ item.description }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{{ featuredCard({
+  title: 'Understand passkeys in 4 minutes',
+  description: 'Learn how passkeys work and how they make your users’ online experiences easier and more secure!',
+  imgSrc: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/iaeKjHAuY5z7IGxJWsYk.png',
+  imgAlt: 'passkeys illustration',
+  actionUrl: 'https://www.youtube.com/watch?v=2xdV-xut7EQ&ab_channel=ChromeforDevelopers',
+  actionText: 'Check out the video'
+}) }}
