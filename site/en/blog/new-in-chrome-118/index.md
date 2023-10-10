@@ -69,7 +69,7 @@ With scope you can have nested elements and the style that applies is the one fo
 ```
 {% endCompare %}
 
-{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/9svylwmK9QHQJUgAMNkj.jpg", alt="Two links, the first one reads ''I''m lightpink!'' the second one reads 'Different pink', second link is a darker pink, under the links text nearest ancestor style and has a green checkmark next to it", width="800", height="694" %}
+{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/9svylwmK9QHQJUgAMNkj.jpg", alt="Two links, the first one reads ''I''m lightpink!'' the second one reads 'Different pink', second link is a darker pink, under the links text nearest ancestor style and has a green checkmark next to it.", width="800", height="694" %}
 
 Scope also saves you from writing long, convoluted class names, and makes it easy to manage larger projects and avoid naming conflicts.
 
