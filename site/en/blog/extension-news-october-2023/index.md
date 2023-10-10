@@ -8,7 +8,7 @@ authors:
   - amysteam
 tags:
   - extensions-news
-hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/jzaO8VCyWJRXKgeIe68T.png'
+hero: 'image/BhuKGJaIeLNPW9ehns59NfwqKxF2/zHJnWcckEKIRCdXOGYNo.png'
 alt: >
   What's happening in Chrome extensions?
 ---
@@ -40,7 +40,6 @@ Service Worker related stability issues have been resolved. In Chrome 116, we ad
 
 Check out our updated [Service Worker guidance](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#timeouts) for more details. If your users still encounter service worker-related stability issues in Chrome > 119, [please let us know](/docs/extensions/support-feedback/).  
 
-
 #### Increased security {: #security-increase }
 
 Previously, navigating to some chrome:// URLs using [`tabs.update`](/docs/extensions/reference/tabs/#method-update), [`tabs.create`](/docs/extensions/reference/tabs/#method-create), and [`windows.create`](/docs/extensions/reference/windows/#method-create) emitted an error or would crash. Also, [`tabs.update`](/docs/extensions/reference/tabs/#method-update) couldn't open a Javascript URL. In Chrome 117, the list of chrome:// URLs we check for has been expanded, and the Javascript URL blocking now also applies to all extension API methods.
@@ -48,7 +47,6 @@ Previously, navigating to some chrome:// URLs using [`tabs.update`](/docs/extens
 In Chrome 117, users will receive proactive notifications on the Chrome Extensions page if an extension they've installed is no longer available on the Chrome Web Store. This can happen if the developer unpublishes the extension, it's taken down for policy violations, or it's identified as malware. For a deep dive, see [Bringing Safety Check to the chrome://extensions page](/en/blog/extension-safety-hub/).
 
 In Chrome 118, extensions will not be allowed to navigate to file:// URLs using the `chrome.tabs` and `chrome.windows` APIs, unless the “Allow access to file URLs” option is enabled on the extension’s details page. See the [WECG discussion](https://github.com/w3c/webextensions/issues/426).
-
 
 ### More API launches {: #apis-others }
 
@@ -63,7 +61,7 @@ Upcoming Chrome versions will release features that will complete the remaining 
 
 - The **UserScripts API** will allow user script managers to coordinate how and when to inject a collection of user scripts into web pages. Currently available in Canary 119. See the [WECG proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) and follow the [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1472902) for updates on availability.  
 - The **ReadingList API** will allow developers to create, read, update, and delete metadata located in the Reading List panel of the side panel. See the [ReadingList API proposal](https://docs.google.com/document/d/1f1wW2955nY5Rp3vfS0JGuo1kACOAmsjZupvLYknWKII/) and [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1421058) for details.
-- The number of **DeclarativeNetRequest API** static and enabled rulesets will increase in Chrome 120, available now in Canary.
+- The number of **DeclarativeNetRequest API** static and enabled rulesets will be increased. Currently availablein Canary.
 - The **File Handling API:** is will be available for ChromeOS extensions starting in ChromeOS 120, which lets extensions open files with specified MIME types and file extensions. To implement file handling add a [set of rules](https://github.com/WICG/file-handling/blob/main/explainer.md#example-manifest) to the manifest.json. This feature works the same as for progressive web apps. For more information, see [this article](/articles/file-handling/).
 - Extensions will be able to use the web [Push API](https://developer.mozilla.org/docs/Web/API/Push_API) via [self.registration.pushManager.subscribe()](https://developer.mozilla.org/docs/Web/API/PushManager/subscribe) without showing a user-visible notification by setting userVisibleOnly to false. This will make push notifications a more seamless alternative to WebSockets in service workers (MV3) for asynchronous client-server communication. See [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1319986) and [WECG discussion](https://github.com/w3c/webextensions/issues/208) for details.
 
@@ -78,13 +76,14 @@ We've also been improving and adding to our documentation. Please continue to as
 - We've revamped the [Samples landing page](/docs/extensions/samples/). You can now filter by API, permission, and type, making it easier to locate specific samples. This enhancement was a collaborative effort with our Summer of Code intern, Xuezhou Dai. Read about his experience in [this blog post](/blog/google-summer-of-code-and-chrome-extensions/).
 - [Using your Google Analytics account with the Chrome Web Store](/docs/webstore/google-analytics/) describes how to view Google Analytics 4 for your Chrome Web Store listing, complementing the data provided by the Developer Dashboard. This guide provides steps to opt into Google Analytics, monitor ad performance, track conversions, and grant other accounts access to Google Analytics data.
 - We published a new guide on [how cookies and web storage APIs](/docs/extensions/mv3/storage-and-cookies/) work in Chrome extensions. It includes all you need to know about [Privacy Sandbox](/docs/privacy-sandbox/) as an extension developer. 
-- We write two articles on how to integrate testing in your extension projects: [Testing extensions](/docs/extensions/mv3/automated-testing/) covers general guidance and best practices across a number of popular frameworks and [Using Puppeteer](/docs/extensions/mv3/tut_puppeteer-testing/) demonstrates how to write end-to-end tests for your extension.
+- We launched new articles on how to integrate testing in your extension projects: [Testing extensions](/docs/extensions/mv3/automated-testing/) covers general guidance and best practices across a number of popular frameworks and [Using Puppeteer](/docs/extensions/mv3/tut_puppeteer-testing/) demonstrates how to write end-to-end tests for your extension.
 
 ### More updates {: #doc-others }
 
 - We've rewritten the [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/) guidance in a way that paints a clearer picture of how to implement declarative rulesets.
-- We added more guidance for [migrating remotely hosted code to Manifest V3](/docs/extensions/migrating/improve-security/). Plus, to minimize the risk of encountering issues during the release, we offer strategies [Publishing your Manifest V3 extension](/docs/extensions/migrating/publish-mv3/) in stages.
+- We added more guidance for [migrating remotely hosted code to Manifest V3](/docs/extensions/migrating/improve-security/). Plus, to minimize the risk of encountering issues during the release, we offer strategies for [Publishing your Manifest V3 extension](/docs/extensions/migrating/publish-mv3/) in stages.
 - Learn how to connect to a [WebSocket in your extension's service worker](/docs/extensions/mv3/tut_websockets/).
+- We expanded our [Get Help guide](/docs/extensions/support-feedback/) to include more detailed instructions on how to file a bug, keep track of existing issues, request new features, and more. 
 
 ### Coming soon... {: #coming-soon-docs }
 
@@ -93,6 +92,13 @@ We've also been improving and adding to our documentation. Please continue to as
 - ReadingList API reference.
 
 ## Redesigning the Chrome Web store 🌈 {: #cws-redesign }
+
+<figure>
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/Hl9EIC00L5beXdmY1t07.png", alt="Screenshot of the Chrome Web Store home page.", width="800", height="536", class='screenshot' %}.
+  <figcaption>
+    The new Chrome Web Store home page
+  </figcaption>
+</figure>
 
 Earlier this month, we announced an early preview of the revamped Chrome Web Store, as we hinted at Google I/O. Check it out for yourself! [https://chromewebstore.google.com/](https://chromewebstore.google.com/). A few noteworthy changes are:
 
@@ -114,14 +120,21 @@ Additionally, you can [submit a self-nomination form](https://docs.google.com/fo
 - You can now add one privacy policy per extension. Previously, you could only add one privacy policy per developer account, but it was awkward if you had a few extensions under one developer account. This new interface is available in the **Privacy Tab** of your item in the developer dashboard.
 - You can add a localized promotional video (YouTube URL) to your store listing.
 
-## Reaching out 🙌 {: #connecting }
+## Developer outreach 🙌 {: #connecting }
 
 We've continued reaching out to the extension developer community through 1:1's, launching new programs, and attending summits. Here are a few highlights: 
 
-- The extensions Google Developer Experts program was launched in August. We have over a dozen extension GDEs from around the world providing us with great feedback. It's a very exciting time for the program! Learn more about it here.
+- The Extension Google Developer Experts program was launched in August. We have over a dozen extension GDEs from around the world providing us with great feedback. It's a very exciting time for the program! Learn more about it here.
 - FOCUS GROUPS: blurb needed from Patrick?
 - We attended [TPAC](https://www.w3.org/2023/09/TPAC/) (W3C's annual conference) as part of the [Web Extensions Community Group](https://github.com/w3c/webextensions) and met with representatives from Firefox and Safari along with several members of the community. We made significant progress on several topics, including moving towards more consistent extension APIs, working on a specification, and building on top of Web Platform Tests to create a new testing suite. Read the full minutes in the [WECG repository](https://github.com/w3c/webextensions).
 - Last week, the extension's team participated in the Ad-Filtering Dev Summit in Amsterdam. They met several of you at a coffee chat they hosted before the summit week and the open office hours on Friday.
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/COTXAD1zVCub7rQxf8cL.png", alt="Extension team in Ad-filtering Dev Summit", width="800", height="533" %}
+  <figcaption>
+    Extension team in Ad-filtering Dev Summit
+  </figcaption>
+</figure>
 
 Even if you were unable to attend any of these events, you can continue getting involved by asking questions on the [chromium-groups](https://groups.google.com/a/chromium.org/g/chromium-extensions), following browser partner discussions on the [WECG](https://github.com/w3c/webextensions/issues), and reporting any documentation issues.
 
