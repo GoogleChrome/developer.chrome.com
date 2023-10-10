@@ -50,7 +50,7 @@ In Chrome 118, extensions will not be allowed to navigate to file:// URLs using 
 
 ### More API launches {: #apis-others }
 
-- **Runtime API:** Starting in Chrome 116, you can use `[runtime.getContexts()`](/docs/extensions/reference/runtime/#method-getContexts) to retrieve information about active contexts. For example, you can check if there's an [active offscreen document](/docs/extensions/reference/offscreen/#example-maintaining-the-lifecycle-of-an-offscreen-document).
+- **Runtime API:** Starting in Chrome 116, you can use [`runtime.getContexts()`](/docs/extensions/reference/runtime/#method-getContexts) to retrieve information about active contexts. For example, you can check if there's an [active offscreen document](/docs/extensions/reference/offscreen/#example-maintaining-the-lifecycle-of-an-offscreen-document).
 - **Side Panel API** In [Chrome 116](https://chromiumdash.appspot.com/commit/8e7430446eaa0b80964b0ab1fd816ac6f33fd4cd) you can use [`sidepanel.open()`](/docs/extensions/reference/sidepanel/#method-open), to open the extension side panel programmatically in response to a user gesture, such as a context menu click. See an extension sample here
 - **TabCapture API** Added the ability to call `getMediaStreamId()` from the extension service worker and obtain a MediaStream from a stream ID in an offscreen document in Chrome 116. See [Audio recording and screen capture](/docs/extensions/mv3/screen_capture/) for examples.
 - **DeclarativeNetRequest API:** The default value for the [isUrlFilterCaseSensitive](/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-isUrlFilterCaseSensitive) property was changed to `false` in [Chrome 118](https://chromiumdash.appspot.com/commit/d90e6a56d0e77ce5d278a5b070098c5d8f7081fd).
