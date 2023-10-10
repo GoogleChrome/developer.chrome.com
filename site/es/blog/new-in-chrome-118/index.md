@@ -70,7 +70,7 @@ Con `@scope` puedes tener elementos anidados y el estilo que se aplica es el del
 ```
 {% endCompare %}
 
-{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/9svylwmK9QHQJUgAMNkj.jpg", alt="Dos enlaces, el primero dice '¡Soy rosa claro!', el segundo dice 'Rosa diferente', el segundo enlace es de un rosa más oscuro, debajo de los vinculos hay texto que dice con el estilo ancestro más cercano y tiene una marca de verificación verde al lado (en inglés)", width="800", height="694" %}
+{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/9svylwmK9QHQJUgAMNkj.jpg", alt="Dos enlaces, el primero dice '¡Soy rosa claro!', el segundo dice 'Rosa diferente', el segundo enlace es de un rosa más oscuro, debajo de los vinculos hay texto que dice con el estilo ancestro más cercano y tiene una marca de verificación verde al lado (en inglés).", width="800", height="694" %}
 
 Scope también le evita tener que escribir nombres de clases largos y complicados, y facilita la gestión de proyectos más grandes al evitar conflictos de nombres.
 
