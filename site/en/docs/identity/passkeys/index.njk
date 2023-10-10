@@ -52,6 +52,10 @@ sections:
   )
 }}
 
+<div class="landing-section rounded-lg width-full display-grid">
+{% YouTube id='2xdV-xut7EQ' %}
+</div>
+
 {{ landingSectionExpanded(
   "Add passkeys to your web app",
   "",
@@ -89,7 +93,7 @@ sections:
     'Learn more about passkeys',
     'yellow',
     'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
-    'alt',
+    'link icon',
     291,
     251,
     'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg'
@@ -106,12 +110,3 @@ sections:
     </div>
   {% endfor %}
 </div>
-
-{{ featuredCard({
-  title: 'Understand passkeys in 4 minutes',
-  description: 'Learn how passkeys work and how they make your users’ online experiences easier and more secure!',
-  imgSrc: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/iaeKjHAuY5z7IGxJWsYk.png',
-  imgAlt: 'passkeys illustration',
-  actionUrl: 'https://www.youtube.com/watch?v=2xdV-xut7EQ&ab_channel=ChromeforDevelopers',
-  actionText: 'Check out the video'
-}) }}
