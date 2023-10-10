@@ -5,7 +5,7 @@ seoTitle: 'Chrome Extensions 101'
 subhead: 'Explore basic concepts of Chrome extension development.'
 description: 'Explore basic concepts of Chrome extension development.'
 date: 2022-10-04
-updated: 2023-10-04
+updated: 2023-10-10
 ---
 
 This page describes what an extension is and provides a brief introduction to Chrome extension development. It also includes links to [beginner tutorials][section-tutorials].
@@ -24,15 +24,11 @@ Store][chrome-web-store] to see thousands of examples of published extensions.
 
 ## Web technologies {: #web-tech }
 
-Extensions are written with the same web technologies used to create web applications. At a minimum, you'll need to know the following:
+Extensions are written with the same web technologies used to create web applications. You don't need to be an expert, but you should have at least a little knowledge about the following:
 
 - [HTML][web-dev-html] is used as a content markup language.
 - [CSS][web-dev-css] is used for styling.
 - [JavaScript][mdn-js] is used for scripting and logic.
-
-Additionally, knowing something about the following technologies is helpful, but not required.
-
-- [Web platform APIs][web-apis] let you use virtually any feature available to a standard web page.
 - [JSON][mdn-json] is used for configuring an extension and storing internationalization strings.
 
 ## Chrome extension APIs {: #chrome-apis }
