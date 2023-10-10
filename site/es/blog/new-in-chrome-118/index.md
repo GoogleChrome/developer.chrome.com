@@ -50,7 +50,7 @@ sin`@scope`, el estilo aplicado es el último declarado.
 ```
 {% endCompare %}
 
-{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/N1ZbDIild8BHXJ3GjIey.jpg", alt="Dos enlaces, el primero dice '¡Soy rosa claro!', el segundo dice 'Rosa diferente', ambos enlaces son en realidad rosa claro, debajo del el texto del enlace lee las fuentes estilo aplicadas según el orden de declaración (en inglés)", width="800", height="700" %}
+{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/N1ZbDIild8BHXJ3GjIey.jpg", alt="Dos enlaces, el primero dice '¡Soy rosa claro!', el segundo dice 'Rosa diferente', ambos enlaces son en realidad rosa claro, debajo del el texto del enlace lee las fuentes estilo aplicadas según el orden de declaración (en inglés).", width="800", height="700" %}
 
 Con `@scope` puedes tener elementos anidados y el estilo que se aplica es el del ancestro más cercano.
 
