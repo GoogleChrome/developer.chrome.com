@@ -183,7 +183,7 @@ Labels are tied to the presence of the cookie, so if the cookie is deleted, bloc
 
 ### Accessing the cookieDeprecationLabel JavaScript API {: #cookie-deprecation-js}
 
-The `Cookie-Deprecation` value can also be accessed via the `navigator.cookieDeprecationLabel.getValue()` JavaScript API. This will return a promise which resolves to a string containing the applicable group label. For example, if the browser was in the `example_label_1 `group:
+The `Cookie-Deprecation` value can also be accessed via the `navigator.cookieDeprecationLabel.getValue()` JavaScript API. This will return a promise which resolves to a string containing the applicable group label. For example, if the browser was in the `example_label_1` group:
 
 ```js
 // Feature detect temporary API first
