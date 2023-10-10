@@ -133,11 +133,13 @@ Chromium issue: [1476656](https://crbug.com/1476656).
 These are some noteworthy fixes and improvements in this release:
 
 - **Elements**:
-  - Longhand CSS properties under the [expandable shorthand](/docs/devtools/css/issues/#shorthand) ones are now non-editable as they should be ([1149182](https://crbug.com/1149182)).
+  - Animation timing function swatches are not shown for longhand CSS properties under the [expandable shorthand](/docs/devtools/css/issues/#shorthand) ones ([1149182](https://crbug.com/1149182)).
   - The autocomplete for `contain-intrinsic-*` now doesn't provide the incorrect single `auto` value because it should be `auto <length>` ([1480415](https://crbug.com/1480415)).
   - Support for deprecated and invalid `-webkit-*` properties has been removed ([1086089](https://crbug.com/1086089), [1030765](https://crbug.com/1030765)).
 - **Breakpoints**: Fixed the bug with disappearing breakpoint editing dialog when the breakpoint type is changed ([1485782](https://crbug.com/1485782)).
-- **Performance**: The color parsing error during performance recording has been fixed ([1480205](https://crbug.com/1480205)).
+- **Performance**: 
+  - The color parsing error during performance recording has been fixed ([1480205](https://crbug.com/1480205)).
+  - Fixed the bug with [LCP](https://web.dev/lcp/) not showing in the **Timings** track ([1487136](https://crbug.com/1487136)).
 - **Network**: The **Set cookies** column now shows the correct number of cookies that are set, excluding blocked ([1486903](https://crbug.com/1486903)).
 - DevTools extensions now load after navigation to a non-blocked host ([1476264](https://crbug.com/1476264)).
 - Fixed the bug with incorrect script execution context for extensions ([1275331](https://crbug.com/1275331)).
