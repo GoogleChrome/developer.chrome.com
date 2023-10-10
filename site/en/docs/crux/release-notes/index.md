@@ -45,13 +45,14 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 
 ## 202309
 
-[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/??????)
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/w48sCWw8IfA)
 
 Publication date
  : October 10, 2023
 
 What's new
  : - We're again seeing continual improvements across most of the metrics despite the fact that FCP and TTFB actually had slight downturns. This suggests that the [front end improvements to LCP mentioned last month](#202308) which were still rolling out during September, likely more than counter acted these downturns.
+ : - One thing not mentioned last month until we saw the impact, was that WordPress had [a number of improvements](https://make.wordpress.org/core/2023/08/07/wordpress-6-3-performance-improvements/) in the latest release, in particular [for LCP images](https://make.wordpress.org/core/2023/07/13/image-performance-enhancements-in-wordpress-6-3/). This looks to have resulted in a [measurable boost for WordPress sites compared to the web as a whole](https://lookerstudio.google.com/reporting/55bc8fad-44c2-4280-aa0b-5f3f0cd3d2be/page/M6ZPC?params=%7B%22df33%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580ALL%22,%22df46%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580mobile%22%7D) and, given it is used on about a third of the sites in the CrUX dataset, also would help explain the further improvement in LCP.
  : - While on the subject of LCP, Chrome 117 had [a bug whereby LCP may have been incorrect for some SPA applications when observed via Web APIs](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_10_lcp.md). This bug did not affect CrUX, nor Google Search Console data which is fed from CrUX. It has been fixed for Chrome 118 which started rolling out last week. If you noticed a large increase in LCP in your RUM solutions then this may have been the reason why.
 
 Notable stats
