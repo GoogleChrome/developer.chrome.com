@@ -4,6 +4,20 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 {# $content #}
 
+### Chrome 119 {: #chrome119 }
+
+* [Improved @property section in Elements > Styles](/blog/new-in-devtools-119/#css)
+* [Editable @property rule](/blog/new-in-devtools-119/#edit-property)
+* [Issues with invalid @property rules are reported](/blog/new-in-devtools-119/#property-issues)
+* [Updated list of devices to emulate](/blog/new-in-devtools-119/#devices)
+* [Pretty-print inline JSON in script tags in Sources](/blog/new-in-devtools-119/#sources)
+* [Autocomplete private fields in Console](/blog/new-in-devtools-119/#autocomplete-console)
+* [Lighthouse 11.1.0](/blog/new-in-devtools-119/#lighthouse)
+* [Accessibility improvements](/blog/new-in-devtools-119/#accessibility)
+* [Web SQL deprecation](/blog/new-in-devtools-119/#web-sql)
+* [Screenshot aspect ratio validation in Application > Manifest](/blog/new-in-devtools-119/#manifest-aspect-ratio)
+* [Miscellaneous highlights](/blog/new-in-devtools-119/#misc)
+
 ### Chrome 118 {: #chrome118 }
 
 * [New section for custom properties in Elements > Styles](/blog/new-in-devtools-118/#css)
