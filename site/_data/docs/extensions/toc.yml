@@ -79,6 +79,7 @@
     - url: /docs/extensions/mv3/nativeMessaging
     - url: /docs/extensions/mv3/screen_capture
     - url: /docs/extensions/mv3/geolocation
+    - url: /docs/extensions/mv3/file_handling
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv3/user_privacy
