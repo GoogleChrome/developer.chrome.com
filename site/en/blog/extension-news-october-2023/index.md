@@ -112,7 +112,7 @@ Earlier this month, we announced an early preview of the revamped Chrome Web Sto
 Thanks for everyone's input so far on the [chromium-google group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/9lc7Prf9vLk/m/3trCFBWYAQAJ). Feel free to join in the discussion or send your feedback directly to the CWS team using the **Give feedback** menu item:
 
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ERwUa61uGIFQ65VUgsVn.png", alt="Give feedback in the Chrome Web Store page", width="800", height="323", class='screenshot' %}
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ERwUa61uGIFQ65VUgsVn.png", alt="Give feedback in the Chrome Web Store page", width="400", height="323", class='screenshot' %}
   <figcaption>
     Giving feedback on the Chrome Web Store page
   </figcaption>
