@@ -5,7 +5,7 @@ authors:
   - rowan_m
 description: >
   If your site uses third-party cookies it's time to take action as we approach their deprecation. Chrome plans to disable third-party cookies for 1% of users from Q1 2024 to facilitate testing and then ramp up to 100% of users from Q3 2024. In this Cookie Countdown series, we'll guide you through the timeline and immediate actions you can take to ensure your sites are prepared.
-date: 2023-10-10
+date: 2023-10-11
 thumbnail: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/XeTqWn3za0aUZVGb2kUM.jpg'
 alt: >
   Preparing for the end of third-party cookies
