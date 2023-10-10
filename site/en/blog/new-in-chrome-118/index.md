@@ -20,7 +20,7 @@ Here's what you need to know:
 
 * Declare specific styles within a component with the [`@scope` css rule](#css-scope).
 * There are two new media features: [`scripting` and `prefers-reduced-transparency`](#new-media-queries).
-* DevTools has improvements in the [**Sources** panel](#sources-panel-devtools)
+* DevTools has improvements in the [**Sources** panel](#sources-panel-devtools).
 
 * And there's plenty [more](#more).
 
