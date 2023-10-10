@@ -127,7 +127,7 @@ Con `@scope` también puedes diseñar un componente sin aplicar el estilo a cier
 
 Como en el siguiente ejemplo, podríamos aplicar estilo al texto y excluir controles o viceversa.
 
-{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/2OcZt7BEhhMH2dW9earg.jpg", alt="representación del html anterior, con las palabras dentro del scope junto al primer y tercer div y la palabra excluida junto al segundo y cuarto div", width="800", height="648" %}
+{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/2OcZt7BEhhMH2dW9earg.jpg", alt="representación del html anterior, con las palabras dentro del scope junto al primer y tercer div y la palabra excluida junto al segundo y cuarto div.", width="800", height="648" %}
 
 ```html
 <div class="component">
