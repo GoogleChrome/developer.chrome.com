@@ -20,7 +20,7 @@ Esto es lo que necesitas saber:
 
 * Declarar estilos específicos dentro de un componente con la [regla css `@scope`](#css-scope).
 * Hay dos nuevas funciones de medios: [`scripting` y `prefers-reduced-transparency`](#new-media-queries).
-* DevTools tiene mejoras en el [panel **Fuentes**](#sources-panel-devtools)
+* DevTools tiene mejoras en el [panel **Fuentes**](#sources-panel-devtools).
 
 * Y hay mucho [más](#more).
 
