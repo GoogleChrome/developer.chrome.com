@@ -124,7 +124,7 @@ With scope you can also style a component without styling certain things that ar
 
 Like in the following example, we could apply style to the text and exclude controls or vice versa.
 
-{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/2OcZt7BEhhMH2dW9earg.jpg", alt="representation of the html above, with the words in scope next to the first and third div and the word excluded next to the second and fourth div", width="800", height="648" %}
+{% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/2OcZt7BEhhMH2dW9earg.jpg", alt="representation of the html above, with the words in scope next to the first and third div and the word excluded next to the second and fourth div.", width="800", height="648" %}
 
 ```html
 <div class="component">
