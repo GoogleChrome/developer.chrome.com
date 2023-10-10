@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "What's New in DevTools (Chrome 119)"
 authors:
   - sofiayem
-date: 2023-10-05
+date: 2023-10-10
 description: "Improved @property section in Styles, updated devices list, enhanced pretty-printing in Sources and autocompletion in the Console."
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/C5z0hHEPjBwgsXg2WG0t.png'
 alt: 'Improved @property section in Styles, updated devices list, enhanced pretty-printing in Sources and autocompletion in the Console.'
