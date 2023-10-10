@@ -76,6 +76,10 @@ also much easier to read the intent of the styles and system.
 This post will help you [learn the syntax](#syntax-overview) and [demonstrate
 common color manipulations](#use-cases-and-demonstrations).
 
+If you prefer video, nearly all of the following article is covered in this GUI Challenge.
+
+{% YouTube "1z_ViBjdnSw" %}
+
 ## Syntax overview
 
 The goal of relative color syntax is to allow deriving a color from another
