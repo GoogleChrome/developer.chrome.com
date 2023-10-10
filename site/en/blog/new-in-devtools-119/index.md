@@ -4,9 +4,9 @@ title: "What's New in DevTools (Chrome 119)"
 authors:
   - sofiayem
 date: 2023-10-05
-description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/r8TZKv9wtqFJvjYbyBeb.png'
-alt: ''
+description: "Improved @property section in Styles, updated devices list, enhanced pretty-printing in Sources and autocompletion in the Console."
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/C5z0hHEPjBwgsXg2WG0t.png'
+alt: 'Improved @property section in Styles, updated devices list, enhanced pretty-printing in Sources and autocompletion in the Console.'
 tags:
   - new-in-devtools
   - devtools
