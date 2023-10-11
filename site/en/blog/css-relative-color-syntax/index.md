@@ -5,7 +5,7 @@ description: >
   Create new colors based on another color's channels and values.
 subhead: >
   Create new colors based on another color's channels and values.
-date: 2023-10-09
+date: 2023-10-11
 authors:
   - argyle
 tags:
