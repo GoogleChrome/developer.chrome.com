@@ -138,7 +138,7 @@ in a single client, the last one in multiple clients if multiple files are being
 
 {% Aside %} For this declaration to have any effect, the application must be installed. You can
 learn more in an article series on this very site on
-[making your app installable](https://web.dev/articles/progressive-web-apps#make_it_installable). {% endAside %}
+[making your app installable](https://web.dev/explore/progressive-web-apps#make-it-installable). {% endAside %}
 
 ### The imperative part of the File Handling API
 

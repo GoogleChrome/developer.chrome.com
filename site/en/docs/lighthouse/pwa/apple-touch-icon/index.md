@@ -9,7 +9,7 @@ updated: 2023-03-24
 is_outdated: true
 ---
 
-When iOS Safari users add [Progressive Web Apps (PWAs)](https://web.dev/articles/progressive-web-apps#make_it_installable) to
+When iOS Safari users add [Progressive Web Apps (PWAs)](https://web.dev/explore/progressive-web-apps#make-it-installable) to
 their home screens, the icon that appears is called the *Apple touch icon*.
 You can specify what icon your app should use by including a
 `<link rel="apple-touch-icon" href="/example.png">` tag in the `<head>` of your

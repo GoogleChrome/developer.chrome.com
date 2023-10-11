@@ -9,7 +9,7 @@ updated: 2022-12-03
 ---
 
 Registering a [service worker](https://web.dev/articles/service-workers-cache-storage)
-is the first step towards enabling key [Progressive Web App (PWA)](https://web.dev/articles/progressive-web-apps#make_it_installable) features:
+is the first step towards enabling key [Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps#make-it-installable) features:
 
 - Works offline
 - Supports push notifications

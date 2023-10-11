@@ -8,7 +8,7 @@ updated: 2020-12-03
 ---
 
 Theming the browser's address bar to match the brand colors
-of your [Progressive Web App (PWA)](https://web.dev/articles/progressive-web-apps#make_it_installable) provides a more immersive user experience.
+of your [Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps#make-it-installable) provides a more immersive user experience.
 
 ## Browser compatibility
 

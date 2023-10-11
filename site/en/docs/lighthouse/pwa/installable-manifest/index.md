@@ -9,7 +9,7 @@ date: 2019-05-04
 updated: 2022-01-25
 ---
 
-Installability is a core requirement of [Progressive Web Apps (PWAs)](https://web.dev/articles/progressive-web-apps#make_it_installable).
+Installability is a core requirement of [Progressive Web Apps (PWAs)](https://web.dev/explore/progressive-web-apps#make-it-installable).
 By prompting users to install your PWA, you allow them to add it to their home screens.
 Users who add apps to home screens engage with those apps more frequently.
 
@@ -42,7 +42,7 @@ it will fail the audit:
 A web app manifest is _necessary_ for your app to be installable,
 but it isn't _sufficient_. To learn how to meet all the requirements
 for installability, see the
-[Discover what it takes to be installable](https://web.dev/articles/progressive-web-apps#make_it_installable) post.
+[Discover what it takes to be installable](https://web.dev/explore/progressive-web-apps#make-it-installable) post.
 {% endAside %}
 
 {% Partial 'lighthouse-pwa/scoring.njk' %}
@@ -79,6 +79,6 @@ Check their respective sites for full details:
 
 - [Source code for **Web app manifest does not meet the installability requirements** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/installable-manifest.js)
 - [Add a web app manifest](https://web.dev/articles/add-manifest)
-- [Discover what it takes to be installable](https://web.dev/articles/progressive-web-apps#make_it_installable)
+- [Discover what it takes to be installable](https://web.dev/explore/progressive-web-apps#make-it-installable)
 - [Web App Manifest](https://developer.mozilla.org/docs/Web/Manifest)
 - [Does not use HTTPS](/docs/lighthouse/pwa/is-on-https/)

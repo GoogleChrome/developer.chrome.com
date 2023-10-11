@@ -11,7 +11,7 @@ All websites should be protected with HTTPS, even ones that don't handle
 sensitive data. HTTPS prevents intruders from tampering with or passively
 listening in on the communications between your site and your users.
 
-A page can't qualify as a [Progressive Web App (PWA)](https://web.dev/articles/progressive-web-apps#make_it_installable) if it doesn't run on HTTPS;
+A page can't qualify as a [Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps#make-it-installable) if it doesn't run on HTTPS;
 many core PWA technologies, such as service workers, require HTTPS.
 
 For more information about why all sites should be protected with HTTPS, see

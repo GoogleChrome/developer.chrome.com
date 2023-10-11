@@ -14,7 +14,7 @@ To reach the most users, sites should work on every major browser.
 Test your site in Chrome, Edge, Firefox, and Safari, and
 fix any issues that appear in each browser.
 
-If your page is a [Progressive Web App](https://web.dev/articles/progressive-web-apps#make_it_installable),
+If your page is a [Progressive Web App](https://web.dev/explore/progressive-web-apps#make-it-installable),
 consider using [Workbox](/docs/workbox/),
 a high-level [service worker](https://web.dev/articles/service-workers-cache-storage) toolkit.
 Workbox is developed against a cross-browser test suite, and when possible,

@@ -9,7 +9,7 @@ updated: 2019-09-19
 ---
 
 Quick page transitions are key to how users perceive the performance of your
-[Progressive Web App (PWA)](https://web.dev/articles/progressive-web-apps#make_it_installable).
+[Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps#make-it-installable).
 Transitions should feel snappy, even on a slow network.
 
 ## Recommendations

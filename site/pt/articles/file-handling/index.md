@@ -109,7 +109,7 @@ O exemplo abaixo, mostrando apenas o trecho relevante do manifesto do aplicativo
 
 Isso é para um aplicativo hipotético que processa arquivos `.csv` de valores separados por vírgula em `/open-csv` , arquivos de gráficos vetoriais escaláveis ( `.svg` em `/open-svg` e um formato de arquivo Grafr inventado com `.grafr` , `.graf` ou `.graph` como a extensão em `/open-graf` .
 
-{% Aside %} Para que esta declaração tenha efeito, o aplicativo deve estar instalado. Você pode aprender mais em uma série de artigos neste mesmo site sobre como [tornar seu aplicativo instalável](https://web.dev/progressive-web-apps/#installable) . {% endAside %}
+{% Aside %} Para que esta declaração tenha efeito, o aplicativo deve estar instalado. Você pode aprender mais em uma série de artigos neste mesmo site sobre como [tornar seu aplicativo instalável](https://web.dev/explore/progressive-web-apps#make-it-installable) . {% endAside %}
 
 ### A parte fundamental da API de gerenciamento de arquivos
 

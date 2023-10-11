@@ -530,7 +530,7 @@ help with debugging why things aren't as you'd expect.
 
 In addition, a common mistake developers make when first using service worker is
 to register a service worker in the
-[wrong scope](https://web.dev/articles/learn/pwa/service-workers#registering_a_service_worker).
+[wrong scope](https://web.dev/learn/pwa/service-workers#registering_a_service_worker).
 
 To help prevent this from happening, the `Workbox` class will warn you if the
 page registering the service worker is not in that service worker's scope. It'll

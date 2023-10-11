@@ -109,7 +109,7 @@ El siguiente ejemplo, que muestra solo el fragmento correspondiente del manifies
 
 Esto se utiliza para una aplicación hipotética que administra archivos de valores separados por comas (`.csv`) en `/open-csv`, gráficos vectoriales escalables (`. svg`) en `/open-svg`, y un formato de archivo Grafr formado por `.grafr`, `.graf`, o `.graph` como extensión en `/open-graf`.
 
-{% Aside %} Para que esta declaración tenga algún efecto, la aplicación debe estar instalada. Puede obtener más información en una serie de artículos de este mismo sitio sobre [cómo hacer que su aplicación se pueda instalar](https://web.dev/articles/progressive-web-apps#make_it_installable). {% endAside %}
+{% Aside %} Para que esta declaración tenga algún efecto, la aplicación debe estar instalada. Puede obtener más información en una serie de artículos de este mismo sitio sobre [cómo hacer que su aplicación se pueda instalar](https://web.dev/explore/progressive-web-apps#make-it-installable). {% endAside %}
 
 ### La parte imperativa de la API de administración de archivos
 

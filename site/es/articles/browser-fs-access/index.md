@@ -168,7 +168,7 @@ Puedes ver el código anterior en acción en una [demostración](https://browser
 
 ## La biblioteca browser-fs-access en lo salvaje
 
-En mi tiempo libre, contribuyo un poco a una [PWA instalable](https://web.dev/progressive-web-apps/#installable) llamada [Excalidraw](https://excalidraw.com/), una herramienta de pizarra que te permite dibujar diagramas fácilmente con una sensación de dibujo a mano. Es totalmente responsiva y funciona bien en una variedad de dispositivos, desde pequeños teléfonos móviles hasta computadoras con pantallas grandes. Esto significa que debes manejar archivos en todas las diversas plataformas, ya sea que admitan o no la API de File System Access. Esto la convierte en una gran candidata para la biblioteca browser-fs-access.
+En mi tiempo libre, contribuyo un poco a una [PWA instalable](https://web.dev/explore/progressive-web-apps#make-it-installable) llamada [Excalidraw](https://excalidraw.com/), una herramienta de pizarra que te permite dibujar diagramas fácilmente con una sensación de dibujo a mano. Es totalmente responsiva y funciona bien en una variedad de dispositivos, desde pequeños teléfonos móviles hasta computadoras con pantallas grandes. Esto significa que debes manejar archivos en todas las diversas plataformas, ya sea que admitan o no la API de File System Access. Esto la convierte en una gran candidata para la biblioteca browser-fs-access.
 
 Puedo, por ejemplo, iniciar un dibujo en mi iPhone, guardarlo (técnicamente: descargarlo, ya que Safari no es compatible con la API de File System Access) en la carpeta Descargas de mi iPhone, abrir el archivo en mi escritorio (después de transferirlo desde mi teléfono), modificar el archivo y sobrescribirlo con mis cambios, o incluso guardarlo como un archivo nuevo.
 
