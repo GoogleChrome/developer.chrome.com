@@ -24,6 +24,8 @@ If you need data that's no longer in the UA string, the [User Agent Client Hints
 - `Sec-CH-UA-Mobile`: boolean value indicating a mobile device
 - `Sec-CH-UA-Platform`: operating system name
 
+Try the [User Agent Client Hints demo](https://user-agent-client-hints.glitch.me/) to get a feel for how the API works.
+
 This page shows some examples of User-Agent strings in Chrome. You can also go to the [User-Agent string demo](https://get-some-ua-strings.glitch.me) using any device/platform and get the UA string for that device.
 
 ### Chrome user agents
