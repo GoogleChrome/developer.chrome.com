@@ -21,12 +21,7 @@ To use the `chrome.userScripts` API, you need to specify a `"manifest_version"` 
 ```json/9-15
 {
   "name": "User script test extension",
-  "version": "0.1",
   "manifest_version": 3,
-  "description": "Tests a variety of user scripts API calls for registering an user script.",
-  "background": {
-    "service_worker": "service-worker.js"
-  },
   "minimum_chrome_version": "118",
   "permissions": [
     "userScripts"
