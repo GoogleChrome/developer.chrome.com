@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-09-29
+updated: 2023-10-09
 tags:
   - extensions-news
 
@@ -26,6 +26,15 @@ your declarativeNetRequest rules.
 
 This follows [discussions](https://github.com/w3c/webextensions/issues/269) in the Web Extensions
 Community Group. Firefox and Safari have already implemented a similar change.
+
+### Documentation on cookies and web storage APIs {: #storage-and-cookies-guide }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 9, 2023</time></p>
+
+We published a new guide on [how cookies and web storage APIs work in Chrome extensions](/docs/extensions/mv3/storage-and-cookies/).
+It includes details on cookie and storage partitioning changes in
+[Privacy Sandbox](/docs/privacy-sandbox/), an ongoing project to deprecate third-party cookies
+through the creation of a series of new web platform APIs, and details on how they work in extensions.
 
 ### Extension samples now searchable {: #extension-samples-searchable }
 
