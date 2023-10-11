@@ -45,7 +45,7 @@ Declare enlaces de precarga en su HTML para indicar al navegador que descargue l
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/tJLJXH2qXcrDBUfsSAK5.png", alt="Con enlaces de precarga, styles.css y ui.js se solicitan al mismo tiempo que app.js.", width="800", height="478" %} <figcaption> Con los enlaces de precarga, <code>styles.css</code> y <code>ui.js</code> se solicitan al mismo tiempo que <code>app.js</code></figcaption></figure>
 
-Consulte también [Precarga de archivos críticos para mejorar la velocidad de carga](https://web.dev/preload-critical-assets/) para obtener más orientación.
+Consulte también [Precarga de archivos críticos para mejorar la velocidad de carga](https://web.dev/articles/preload-critical-assets) para obtener más orientación.
 
 ### Compatibilidad del navegador
 
@@ -59,7 +59,7 @@ Consulte la página de [Precargando archivos (Preloading Assets) de Tooling.Repo
 
 ### Angular
 
-[Precargue las rutas](https://web.dev/route-preloading-in-angular/) con anticipación para acelerar la navegación.
+[Precargue las rutas](https://web.dev/articles/route-preloading-in-angular) con anticipación para acelerar la navegación.
 
 ### Magento
 

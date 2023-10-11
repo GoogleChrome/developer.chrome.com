@@ -57,7 +57,7 @@ This emphasizes that passing all the automated audits and scoring a 100 in acces
 
 ### Interaction to Next Paint (INP)
 
-INP is [no longer experimental](https://web.dev/inp-cwv/), so the metric has been moved from `experimental-interaction-to-next-paint` to `interaction-to-next-paint`.
+INP is [no longer experimental](https://web.dev/articles/inp-cwv), so the metric has been moved from `experimental-interaction-to-next-paint` to `interaction-to-next-paint`.
 
 ### Service workers
 

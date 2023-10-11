@@ -164,9 +164,9 @@ Settings.
 
 * [Passwordless login with passkeys | Authentication | Google for
   Developers](https://developers.google.com/identity/passkeys/)
-* [Create a passkey for passwordless logins](https://web.dev/passkey-registration/)
+* [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration)
 * [Sign in with a passkey through form
-  autofill](https://web.dev/passkey-form-autofill/)
+  autofill](https://web.dev/articles/passkey-form-autofill)
 * [Implement passkeys with form autofill in a web
   app](https://developers.google.com/codelabs/passkey-form-autofill#0)
 

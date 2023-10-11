@@ -32,7 +32,7 @@ Puppeteer is used to script page loads and trigger synthetic user interactions, 
 
 {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/SpZcfNnbmKnbub3l8FWe.png", alt="A Lighthouse user-flow report, which includes multiple steps of loading and interacting with a website, and Lighthouse audit results for each step", width="800", height="450", class="screenshot" %}
 
-For more information, see the [Lighthouse user flows tutorial and code samples](https://web.dev/lighthouse-user-flows/).
+For more information, see the [Lighthouse user flows tutorial and code samples](https://web.dev/articles/lighthouse-user-flows).
 
 ## Report refresh {: #report-refresh }
 
@@ -50,7 +50,7 @@ To see the new report in action, try out Lighthouse 9.0 or visit this [example r
 
 ## Related accessibility elements {: #related-accessibility-elements }
 
-A common accessibility problem is when things that are supposed to be unique in a page are not, for instance if the id referenced in a `aria-labelledby` attribute is [used on multiple elements](https://web.dev/duplicate-id-aria/).
+A common accessibility problem is when things that are supposed to be unique in a page are not, for instance if the id referenced in a `aria-labelledby` attribute is [used on multiple elements](https://web.dev/articles/duplicate-id-aria).
 
 Lighthouse has always warned about this situation, but would only list the _first_ instance of an element with a repeated ID, which often caused confusion because some users would assume it was showing _all_ elements causing an issue. Since Lighthouse was only showing a single element, they'd assume it was a bug that the single element was being flagged as a duplicate.
 
@@ -64,7 +64,7 @@ For more information, see the [issue collecting user reports](https://github.com
 
 ## Running Lighthouse {: #running-lighthouse }
 
-Lighthouse is available in Chrome DevTools, [npm](https://www.npmjs.com/package/lighthouse) (as a Node module and a CLI), and as a browser extension (in [Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/google-lighthouse/)). It powers many Google services, including [web.dev/measure](https://web.dev/measure/) and [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights).
+Lighthouse is available in Chrome DevTools, [npm](https://www.npmjs.com/package/lighthouse) (as a Node module and a CLI), and as a browser extension (in [Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/google-lighthouse/)). It powers many Google services, including [web.dev/measure](https://web.dev/articles/measure) and [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights).
 
 To try the Lighthouse Node CLI, use the following commands:
 

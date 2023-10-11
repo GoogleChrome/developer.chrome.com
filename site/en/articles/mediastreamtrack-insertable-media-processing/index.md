@@ -30,7 +30,7 @@ stereo audio track.
 ## What is insertable streams for `MediaStreamTrack`?
 
 The core idea behind insertable streams for `MediaStreamTrack` is to expose the content of a
-`MediaStreamTrack` as a collection of [streams](https://web.dev/streams/) (as defined by the WHATWG
+`MediaStreamTrack` as a collection of [streams](https://web.dev/articles/streams) (as defined by the WHATWG
 [Streams API](https://streams.spec.whatwg.org/)). These streams can be manipulated to introduce new
 components.
 

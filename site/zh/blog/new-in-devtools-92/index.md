@@ -159,7 +159,7 @@ Chromium 议题: [622660](https://crbug.com/622660)
 
 ## 在**性能**面板中添加"计算相交部分" {: #computed-intersections }
 
-DevTools 现在会在火焰图中显示**计算相交部分**了。这项更新可以帮助您发现 [intersection observers](https://web.dev/intersectionobserver-v2/) 事件，并调试这些事件潜在的性能开销。
+DevTools 现在会在火焰图中显示**计算相交部分**了。这项更新可以帮助您发现 [intersection observers](https://web.dev/articles/intersectionobserver-v2) 事件，并调试这些事件潜在的性能开销。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Nx3K0Lpst0lICGbtpzsW.png", alt="性能面板中的计算相交部分", width="800", height="496" %}
 
@@ -208,7 +208,7 @@ Chrome DevTools 使用 [Chrome DevTools 协议 (CDP)](https://chromedevtools.git
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mRVrHC9WEet7cwA7QAeV.png", alt="协议监视器", width="800", height="496" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/40fcb9a9aae81ac1df2c19dee467ab3a4cf4088b #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/40fcb9a9aae81ac1df2c19dee467ab3a4cf4088b #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/006e20c4226a7b2e5fde4026191b1eaf05bf8b8e #}
 
 Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.com/1204466)
@@ -230,7 +230,7 @@ Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.c
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kh1Z4jcWxbO6rYCSoIPn.png", alt="Puppeteer Recorder", width="800", height="557" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b36b600405ef18131b89edf85cca816c955c1590 #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b36b600405ef18131b89edf85cca816c955c1590 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ffe4a8d202e56d640c2f8744c905354e2bca8e #}
 
 Chromium 议题: [1199787](https://crbug.com/1199787)

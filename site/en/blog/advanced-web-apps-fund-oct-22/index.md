@@ -60,7 +60,7 @@ interested in submitting ideas for our next round, check out the
 via our [submission form](https://forms.gle/GnTuCvDW3YhzSnBQ8).
 
 As a reminder, we recently also expanded Chrome's sponsorship efforts to
-include a new [CSS & UI Fund](https://web.dev/ui-fund/) and the
+include a new [CSS & UI Fund](https://web.dev/articles/ui-fund) and the
 [Web Frameworks and Tools Performance Fund](https://blog.opencollective.com/chromes-framework-of-open-source-investment/).
 If you are interested in submitting sponsorship requests to these efforts,
 they are still open to reviewing entries.

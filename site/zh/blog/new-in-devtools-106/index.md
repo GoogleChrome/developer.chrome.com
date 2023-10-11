@@ -200,7 +200,7 @@ Chromium 议题: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## 性能洞察面板中的LCP时序分解 {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/articles/optimize-lcp#lcp_breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 **性能洞察**面板现在显示了[时间表分类](web.dev/optimize-lcp/#lcp-breakdown)中的[Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint)。 并使用这些时间信息来了解和提高 LCP 性能的机会。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="LCP timings breakdown in the Performance Insights panel", width="800", height="523" %} -->
@@ -235,8 +235,8 @@ Chromium 议题: [1351383](https://crbug.com/1351383)
 - 之前，[Recorder 扩展] (/docs/devtools/recorder/reference/#extension-troubleshooting)不时会在 **Recorder** 面板上不被显示出来。
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
 - **样式**边栏现在显示 [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) 元素的 `stop-color` 属性显示一个颜色选择器。([1351096](https://crbug.com/1351096))
-<!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
-- 在 **Performance Insights** 面板中，识别导致[布局](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/)的脚本是布局转变的潜在根源。([1343019](https://crbug.com/1343019))
+<!-- - Identify script causing [layout](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
+- 在 **Performance Insights** 面板中，识别导致[布局](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing)的脚本是布局转变的潜在根源。([1343019](https://crbug.com/1343019))
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 - 在 **Performance Insights** 面板中显示 LCP 网页字体的关键路径。 ([1350390](https://crbug.com/1350390))
 

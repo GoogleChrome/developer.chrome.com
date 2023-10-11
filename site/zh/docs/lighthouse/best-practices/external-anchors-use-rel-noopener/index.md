@@ -45,10 +45,10 @@ Lighthouse 使用以下过程将链接识别为不安全：
 - `rel="noopener"` 阻止新页面访问 `window.opener` 属性，并确保它在单独的进程中运行。
 - `rel="noreferrer"` 具有相同的效果，但还会阻止将 `Referer` 标头发送到新页面。请参阅[链接类型“noreferrer”](https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer) 。
 
-有关更多信息，请参阅[安全地共享跨源资源](https://web.dev/cross-origin-resource-sharing/)帖文。
+有关更多信息，请参阅[安全地共享跨源资源](https://web.dev/articles/cross-origin-resource-sharing)帖文。
 
 ## 资源
 
 - [**指向跨源目的地的链接不安全**审计源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js)
-- [安全地共享跨源资源](https://web.dev/cross-origin-resource-sharing/)
+- [安全地共享跨源资源](https://web.dev/articles/cross-origin-resource-sharing)
 - [面向 Web 开发人员的站点隔离](https://developers.google.com/web/updates/2018/07/site-isolation)

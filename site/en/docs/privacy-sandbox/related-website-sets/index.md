@@ -26,7 +26,7 @@ Related sites like these often rely on cookies to keep you signed in or show you
 As [Chrome moves towards blocking third-party cookies](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html) to improve privacy on the web, new mechanisms are needed to enable these experiences to work.
 
 {% Aside %}
-Cookies set by the site you visit—the one shown in the URL bar—are first-party cookies. A site you visit can embed content from other sites, for example, images, ads, and text. Cookies coming from sites other than the current site are [third-party cookies](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies).
+Cookies set by the site you visit—the one shown in the URL bar—are first-party cookies. A site you visit can embed content from other sites, for example, images, ads, and text. Cookies coming from sites other than the current site are [third-party cookies](https://web.dev/articles/samesite-cookie-recipes#use_cases_for_cross_site_or_third_party_cookies).
 {% endAside %}
 
 ## Defining related sites with Related Website Sets

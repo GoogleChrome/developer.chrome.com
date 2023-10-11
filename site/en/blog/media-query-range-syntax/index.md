@@ -15,11 +15,11 @@ hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/iEJSP53ORdmspFCpJBIJ.jpg'
 alt: >
   Three measures.
 ---
-Media Queries enabled [responsive design](https://web.dev/learn/design/), and the range features that enable testing the minimum and maximum size of the viewport are used [by around 80% of sites](https://almanac.httparchive.org/en/2021/css#media-features-in-use) that use media queries. The Media Queries Level 4 specification includes a new syntax for these range queries.
+Media Queries enabled [responsive design](https://web.dev/learn/design), and the range features that enable testing the minimum and maximum size of the viewport are used [by around 80% of sites](https://almanac.httparchive.org/en/2021/css#media-features-in-use) that use media queries. The Media Queries Level 4 specification includes a new syntax for these range queries.
 
 {% BrowserCompat 'css.at-rules.media.range_syntax' %}
 
-The new syntax has been available in Firefox since Firefox 63, and will be available in Chrome from 104. Let’s take a look at how it can streamline your queries. 
+The new syntax has been available in Firefox since Firefox 63, and will be available in Chrome from 104. Let’s take a look at how it can streamline your queries.
 
 A typical media query testing for a minimum viewport width, would be written as follows:
 

@@ -48,7 +48,7 @@ Hoje, a medição de conversão de anúncios geralmente depende de [cookies de t
 
 A API Attribution Reporting permite a medição de dois eventos vinculados: um evento no site de um editor, como um usuário visualizando ou clicando num anúncio, com uma conversão subsequente no site de um anunciante.
 
-Esta API suporta a medição de atribuição de conversão do tipo click-through (disponível na primeira implementação desta API, atualmente em [ensaio de origem](https://web.dev/conversion-measurement/#browser-support)) e medição de atribuição do tipo view-through ([veja a explicação pública](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
+Esta API suporta a medição de atribuição de conversão do tipo click-through (disponível na primeira implementação desta API, atualmente em [ensaio de origem](/docs/privacy-sandbox/attribution-reporting/#browser-support)) e medição de atribuição do tipo view-through ([veja a explicação pública](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
 
 A API oferece dois tipos de relatórios de atribuição que podem ser usados para diferentes casos de uso:
 
@@ -67,8 +67,8 @@ A API oferece dois tipos de relatórios de atribuição que podem ser usados par
 
 - [Introdução aos relatórios de atribuição (mensuração de conversão)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [Explicações técnicas da API](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ obsoleto) [Uma forma de medir as conversões de anúncios com mais privacidade](https://web.dev/conversion-measurement/): visão geral da primeira iteração desta API para desenvolvedores web
+- (⚠️ obsoleto) [Uma forma de medir as conversões de anúncios com mais privacidade](/docs/privacy-sandbox/attribution-reporting/): visão geral da primeira iteração desta API para desenvolvedores web
 - (⚠️ obsoleto) [Uma forma de medir as conversões de anúncios com mais privacidade](https://www.youtube.com/watch?v=jcDfOoWwZcM) - Vídeo: demonstração da primeira iteração desta API (apenas cliques)
-- (⚠️ obsoleto) [Usando a API Event Conversion Measurement](https://web.dev/using-conversion-measurement/): como experimentar a primeira iteração desta API para desenvolvedores web
+- (⚠️ obsoleto) [Usando a API Event Conversion Measurement](/docs/privacy-sandbox/attribution-reporting/): como experimentar a primeira iteração desta API para desenvolvedores web
 - [Explorando a Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 - [Depure a API com Chrome DevTools](/blog/new-in-devtools-93/#attribution-reporting)

@@ -20,9 +20,9 @@ This audit fails when the browser waits more than 600&nbsp;ms for the server to 
 When users navigate to a URL in their web browser, the browser makes a network request to fetch that content. Your server receives the request and returns the page content.
 
 {% Aside 'important' %}
-Server response time is only part of the full [Time to First Byte (TTFB)](https://web.dev/ttfb/). As well as including the server response time, TTFB can often include DNS lookups and redirects (for example, if the final slash or the www subdomain or https protocol is omitted then the server might redirect to the correct URL, or for URL shorteners or Ads that redirect via several domains). Many Lighthouse tests will test the end URL, missing the redirect time, but even when this is not the case, the server response time will exclude these parts.
+Server response time is only part of the full [Time to First Byte (TTFB)](https://web.dev/articles/ttfb). As well as including the server response time, TTFB can often include DNS lookups and redirects (for example, if the final slash or the www subdomain or https protocol is omitted then the server might redirect to the correct URL, or for URL shorteners or Ads that redirect via several domains). Many Lighthouse tests will test the end URL, missing the redirect time, but even when this is not the case, the server response time will exclude these parts.
 
-For this reason, Lighthouse has a smaller limit (600&nbsp;ms) to the [Core Web Vitals TTFB recommended time](https://web.dev/ttfb/#what-is-a-good-ttfb-score) (800&nbsp;ms).
+For this reason, Lighthouse has a smaller limit (600&nbsp;ms) to the [Core Web Vitals TTFB recommended time](https://web.dev/articles/ttfb#what_is_a_good_ttfb_score) (800&nbsp;ms).
 {% endAside %}
 
 The server may need to do a lot of work in order to return a page with all of the content that users want. For example, if users are looking at their order history, the server needs to fetch each user's history from a database, and then insert that content into the page. Optimizing the server to do work like this as quickly as possible is one way to reduce the time that users spend waiting for pages to load.
@@ -41,7 +41,7 @@ There are many possible causes of slow server responses, and therefore many poss
 
 Use a CDN to reduce network latency. This is particularly effective if the document can be cached at the CDN edge node.
 
-See the [Optimize TTFB](https://web.dev/optimize-ttfb/) guide for more details.
+See the [Optimize TTFB](https://web.dev/articles/optimize-ttfb) guide for more details.
 
 ## Stack-specific guidance
 
@@ -64,5 +64,5 @@ Themes, plugins, and server specifications all contribute to server response tim
 ## Resources
 
 - [Source code for **Reduce server response times (TTFB)** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/server-response-time.js)
-- [Time to First Byte documentation](https://web.dev/ttfb/)
-- [Optimizing TTFB guide](https://web.dev/optimize-ttfb/)
+- [Time to First Byte documentation](https://web.dev/articles/ttfb)
+- [Optimizing TTFB guide](https://web.dev/articles/optimize-ttfb)

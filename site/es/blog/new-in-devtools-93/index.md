@@ -23,7 +23,7 @@ tags:
 
 ## Consultas de contenedores CSS editables en el panel de Estilos {: #container-queries }
 
-Ahora puedes ver y editar las [consultas de contenedores CSS](https://web.dev/new-responsive/#responsive-to-the-container) en el panel de **Estilos**.
+Ahora puedes ver y editar las [consultas de contenedores CSS](https://web.dev/articles/new-responsive#responsive_to_the_container) en el panel de **Estilos**.
 
 
 Las consultas de contenedor (*container queries*) ofrecen una manera mucho más dinámica de realizar diseños adaptables. La regla `@container` funciona de una forma similar a las consultas de medios (*media queries*). Sin embargo, en lugar de consultar el tamaño de la ventana y la información del agente del usuario, `@container` consulta el contenedor ascendiente que cumple cierto criterio.
@@ -43,7 +43,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 ## Previsualización de paquetes Web en el panel de Red {: #web-bundle }
 
-[Un paquete Web](https://web.dev/web-bundles/) es un formato de encapsulación de uno o más recursos HTTP en un sólo fichero. Ahora puedes previsualizar el contenido de tu paquete web en el panel de **Red**.
+[Un paquete Web](https://web.dev/articles/web-bundles) es un formato de encapsulación de uno o más recursos HTTP en un sólo fichero. Ahora puedes previsualizar el contenido de tu paquete web en el panel de **Red**.
 
 Actualmente la característica de paquete web es experimental. Por favor, activa la opción `#enable-experimental-web-platform-features` en `chrome://flags` para probarlo.
 

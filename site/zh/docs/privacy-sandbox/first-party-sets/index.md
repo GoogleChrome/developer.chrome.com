@@ -13,7 +13,7 @@ authors:
 
 ## 实现状态
 
-- [源站试用](https://web.dev/origin-trials/)：Chrome 89 到 93。
+- [源站试用](/docs/web-platform/origin-trials/)：Chrome 89 到 93。
 - [注册源站试用](/origintrials/#/view_trial/988540118207823873)。
 - [Chrome 平台状态](https://chromestatus.com/feature/5640066519007232)。
 - [Chromium 项目](https://www.chromium.org/updates/first-party-sets)。

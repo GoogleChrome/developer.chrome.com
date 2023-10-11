@@ -121,7 +121,7 @@ another selector.
 ```
 
 In this example, the `.child` [class
-selector](https://web.dev/learn/css/selectors/#class-selector) is nested within
+selector](https://web.dev/learn/css/selectors#class_selector) is nested within
 the `.parent` class selector. This means that the nested `.child` selector will
 only apply to elements that are children of elements with a `.parent` class.
 
@@ -201,7 +201,7 @@ blurred out and nearly invisible:
 #### Selecting any triangles and squares
 
 This task requires selecting multiple nested elements, also called a [group
-selector](https://web.dev/learn/css/selectors/#grouping-selectors).
+selector](https://web.dev/learn/css/selectors#grouping_selectors).
 
 **Without nesting**, CSS today, there are two ways:
 
@@ -276,7 +276,7 @@ Both nesting options will use `:is()` under the hood as follows.
 #### Selecting large triangles and circles
 
 This task requires a [compound
-selector](https://web.dev/learn/css/selectors/#compound-selectors), where
+selector](https://web.dev/learn/css/selectors#compound_selectors), where
 elements must have both classes present in order to be selected.
 
 **Without nesting**, CSS today:
@@ -362,7 +362,7 @@ While a valid way to nest, the results won't match the elements you may expect.
 The reason is that without `&` to specify the desired outcome of `.lg.triangle,
 .lg.circle` compounded together, the actual result would be `.lg .triangle, .lg
 .circle`; [descendant
-selectors](https://web.dev/learn/css/selectors/#descendant-combinator).
+selectors](https://web.dev/learn/css/selectors#descendant_combinator).
 
 {% Aside 'key-term' %}
 Nesting classes without `&` will always result in descendant selectors.

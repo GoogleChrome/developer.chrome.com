@@ -22,7 +22,7 @@ tags:
 
 ### Editable `@property` rule {: #edit-property }
 
-You can now edit the [`@property` CSS at-rule](https://web.dev/at-property/) in the corresponding section in the **Elements** > **Styles** pane.
+You can now edit the [`@property` CSS at-rule](https://web.dev/articles/at-property) in the corresponding section in the **Elements** > **Styles** pane.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/J6OXQJK3RRuCvAR1Yai9.png", alt="The before and after making the property rule editable.", width="800", height="526" %}
 
@@ -120,7 +120,7 @@ The **Application** > **Manifest** section now checks if your web app's [screens
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/krHlVOBrMa0p4SvlhGOJ.png", alt="A warning on the incorrect aspect ratio of screenshots with the same form factor.", width="800", height="370" %}
 
-For more information, see [Debug Progressive Web Apps](/docs/devtools/progressive-web-apps/) and [Add a web app manifest](https://web.dev/add-manifest/).
+For more information, see [Debug Progressive Web Apps](/docs/devtools/progressive-web-apps/) and [Add a web app manifest](https://web.dev/articles/add-manifest).
 
 The DevTools team expresses gratitude to [Alexey Rodionov](https://chromium.googlesource.com/devtools/devtools-frontend/+/f95f715656086cbd9daef3302b7691403bed12c6) for landing this change and other [manifest warning improvements](https://chromium.googlesource.com/devtools/devtools-frontend/+/ead65e6c528a1a8efe7808a51e3f3db06406b9f7) in the previous version.
 
@@ -139,7 +139,7 @@ These are some noteworthy fixes and improvements in this release:
 - **Breakpoints**: Fixed the bug with disappearing breakpoint editing dialog when the breakpoint type is changed ([1485782](https://crbug.com/1485782)).
 - **Performance**:
   - The color parsing error during performance recording has been fixed ([1480205](https://crbug.com/1480205)).
-  - Fixed the bug with [LCP](https://web.dev/lcp/) not showing in the **Timings** track ([1487136](https://crbug.com/1487136)).
+  - Fixed the bug with [LCP](https://web.dev/articles/lcp) not showing in the **Timings** track ([1487136](https://crbug.com/1487136)).
 - **Network**: The **Set cookies** column now shows the correct number of cookies that are set, excluding blocked ([1486903](https://crbug.com/1486903)).
 - DevTools extensions now load after navigation to a non-blocked host ([1476264](https://crbug.com/1476264)).
 - Fixed the bug with incorrect script execution context for extensions ([1275331](https://crbug.com/1275331)).

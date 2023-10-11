@@ -153,7 +153,7 @@ And of course there's plenty more.
   tab-napping attacks.
 * Most operating systems enable mouse acceleration by default, but that can be
   a problem for some games. In Chrome 88, the Pointer Lock API allows you to
-  [disable mouse acceleration](https://web.dev/disable-mouse-acceleration/).
+  [disable mouse acceleration](https://web.dev/articles/disable-mouse-acceleration).
   That means the same physical motion, slow or fast, results in the same
   rotation, providing a better gaming experience and higher accuracy.
 * And [`addEventListener` now takes an Abort Signal as an option](https://www.chromestatus.com/feature/5658622220566528).

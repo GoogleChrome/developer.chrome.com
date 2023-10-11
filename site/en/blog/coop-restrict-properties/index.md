@@ -4,7 +4,7 @@ title: "Secure popup interactions with `restrict-properties`"
 subhead: >
   Get cross-origin isolation and cross-site leaks protection while interacting with popups.
 description: >
-  Get cross-origin isolation and cross-site leaks protection while interacting with popups. 
+  Get cross-origin isolation and cross-site leaks protection while interacting with popups.
 date: 2023-08-09
 origin_trial:
   url: /origintrials/#/view_trial/1827335548805578753
@@ -22,7 +22,7 @@ tags:
 A new value for
 [Cross-Origin Opener Policy (COOP)](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)
 is available: `restrict-properties`. It brings in security benefits and makes
-it easier to adopt [cross-origin isolation](https://web.dev/coop-coep/) while
+it easier to adopt [cross-origin isolation](https://web.dev/articles/coop-coep) while
 allowing your site to interact with third-party popups for payments,
 authentication, or other use cases.
 
@@ -31,10 +31,10 @@ trial](#origin-trial) starting in [Chrome 116](https://chromiumdash.appspot.com/
 
 ## Why use `restrict-properties`
 
-`restrict-properties` has two main use cases: 
+`restrict-properties` has two main use cases:
 
 - Preventing [cross-site leaks](https://xsleaks.dev/) without breakage.
-- Making your site [cross-origin isolated](https://web.dev/why-coop-coep/).
+- Making your site [cross-origin isolated](https://web.dev/articles/why-coop-coep).
 
 ### Prevent cross-site leaks without breakage
 
@@ -47,7 +47,7 @@ To mitigate this risk, you can use the `Cross-Origin-Opener-Policy` (COOP) heade
 
 Up until now, your options for `Cross-Origin-Opener-Policy` were limited. You
 could either:
-* Set `same-origin,` which blocks all cross-origin interactions with popups. 
+* Set `same-origin,` which blocks all cross-origin interactions with popups.
 * Set `same-origin-allow-popups`, which blocks all cross-origin interactions
 that open your site in a popup.
 * Set `unsafe-none`, which allows all cross-origin interactions with popups.
@@ -81,10 +81,10 @@ granted.
 Some web APIs increase the risk of side-channel attacks like
 [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To
 mitigate that risk, browsers offer an opt-in-based isolated environment called
-[cross-origin isolation](https://web.dev/coop-coep/). With a cross-origin
+[cross-origin isolation](https://web.dev/articles/coop-coep). With a cross-origin
 isolated state, the webpage can use privileged features including
 [SharedArrayBuffer](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer),
-[performance.measureUserAgentSpecificMemory()](https://web.dev/monitor-total-page-memory-usage/)
+[performance.measureUserAgentSpecificMemory()](https://web.dev/articles/monitor-total-page-memory-usage)
 and
 [high-precision timers](/blog/cross-origin-isolated-hr-timers/)
 with better resolution, while isolating the origin from others unless they are
@@ -128,7 +128,7 @@ To experiment with `Cross-Origin-Opener-Policy: restrict-properties`, opt
 into the
 [origin trial](/origintrials/#/view_trial/1827335548805578753).
 
-{% Aside %} 
+{% Aside %}
 Review
 [instructions](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial)
 on how to participate in an origin trial.
@@ -150,7 +150,7 @@ page will prevent any access to properties other than `postMessage` and `closed`
 across the opener, even if they are same-origin.
 
 ### Is the set of allowed properties fixed?
-Based on the feedback so far, `window.postMessage` and `window.closed` are suspected 
+Based on the feedback so far, `window.postMessage` and `window.closed` are suspected
 to be enough for the majority of workflows, but we're still
 considering opening it to other properties. If you have a use case that cannot
 be solved using only `postMessage` and `closed` leave your feedback
@@ -158,9 +158,9 @@ be solved using only `postMessage` and `closed` leave your feedback
 
 ## Resources
 
-- [Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/coop-coep/)
-- [Why you need "cross-origin isolated" for powerful features](https://web.dev/why-coop-coep/)
-- [A guide to enable cross-origin isolation](https://web.dev/cross-origin-isolation-guide/)
+- [Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/articles/coop-coep)
+- [Why you need "cross-origin isolated" for powerful features](https://web.dev/articles/why-coop-coep)
+- [A guide to enable cross-origin isolation](https://web.dev/articles/cross-origin-isolation-guide)
 - [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](/blog/enabling-shared-array-buffer/)
 - [Load cross-origin resources without CORP headers using `COEP: credentialless` - Chrome Developers](/blog/coep-credentialless-origin-trial/)
 - [Anonymous iframe origin trial: Easily embed iframes in COEP environments - Chrome Developers](/blog/anonymous-iframe-origin-trial/)

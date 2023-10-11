@@ -586,7 +586,7 @@ at a time.
 
 Both [Manifest V2](/docs/extensions/mv2/cross-origin-isolation/) and [Manifest
 V3](/docs/extensions/mv3/cross-origin-isolation/) extensions can now opt into [cross origin
-isolation](https://web.dev/cross-origin-isolation-guide/). This feature limits which cross-origin
+isolation](https://web.dev/articles/cross-origin-isolation-guide). This feature limits which cross-origin
 resources can load an extension's pages and enables the use of low level web platform features like
 [`SharedArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer). Opt in will be required starting in Chrome 95.
 

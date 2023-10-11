@@ -46,13 +46,13 @@ updated: 2020-08-11
 
 ## Как избавиться от таблиц стилей, блокирующих рендеринг
 
-Используйте прием, аналогичный переносу критического кода во встроенный тег `<script>`, встройте критические стили, необходимые для первой отрисовки, в блок `<style>` элемента `head` HTML-страницы. Затем асинхронно загрузите остальные стили, используя ссылку `preload` (см. статью [«Отложите загрузку неиспользуемого CSS»](https://web.dev/defer-non-critical-css/)).
+Используйте прием, аналогичный переносу критического кода во встроенный тег `<script>`, встройте критические стили, необходимые для первой отрисовки, в блок `<style>` элемента `head` HTML-страницы. Затем асинхронно загрузите остальные стили, используя ссылку `preload` (см. статью [«Отложите загрузку неиспользуемого CSS»](https://web.dev/articles/defer-non-critical-css)).
 
 Подумайте об автоматизации процесса извлечения и встраивания CSS верхней половины полосы с помощью [инструмента Critical](https://github.com/addyosmani/critical/blob/master/README.md).
 
 Другой подход к устранению стилей, блокирующих рендеринг, — это разделить эти стили на разные файлы, организованные по медиа-запросам. Затем добавьте атрибут media к каждой ссылке таблицы стилей. При загрузке страницы браузер блокирует только первую отрисовку, чтобы получить таблицы стилей, соответствующие устройству пользователя (см. статью [«Блокирующий рендеринг CSS»](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)).
 
-Наконец, вы захотите выполнить минификацию CSS-кода, чтобы удалить лишние пробелы или символы (см. статью [«Выполните минификацию CSS-кода»](https://web.dev/minify-css/)). Это гарантирует, что вы отправите пользователям минимально возможный бандл.
+Наконец, вы захотите выполнить минификацию CSS-кода, чтобы удалить лишние пробелы или символы (см. статью [«Выполните минификацию CSS-кода»](https://web.dev/articles/minify-css)). Это гарантирует, что вы отправите пользователям минимально возможный бандл.
 
 ## Рекомендации по стекам
 
@@ -75,6 +75,6 @@ updated: 2020-08-11
 ## Ресурсы
 
 - [Исходный код проверки **Eliminate render-blocking resources** (Устраните ресурсы, блокирующие рендеринг)](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/render-blocking-resources.js).
-- [Сократите полезную нагрузку JavaScript за счет разделения кода](https://web.dev/reduce-javascript-payloads-with-code-splitting/).
-- [Удалите неиспользуемый код (codelab)](https://web.dev/codelab-remove-unused-code//).
+- [Сократите полезную нагрузку JavaScript за счет разделения кода](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting).
+- [Удалите неиспользуемый код (codelab)](https://web.dev/articles/codelab-remove-unused-code/).
 - [Оптимизация загрузки JavaScript](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/).

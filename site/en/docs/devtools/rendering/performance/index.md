@@ -34,7 +34,7 @@ If, on another page, you see the whole screen flash green or areas of the screen
 
 ## Highlight layout shift regions {: #layout-shift-regions }
 
-[Layout shifts](https://web.dev/cls/) cause unexpected repaints and can be not only annoying but harmful.
+[Layout shifts](https://web.dev/articles/cls) cause unexpected repaints and can be not only annoying but harmful.
 
 <figure>
   <video autoplay controls loop muted
@@ -110,16 +110,16 @@ To view the potentially problematic elements:
 
 ## View Core Web Vitals
 
-[Web Vitals](https://web.dev/vitals/) is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web.
+[Web Vitals](https://web.dev/articles/vitals) is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web.
 
 Core Web Vitals are the subset of Web Vitals that apply to all web pages. Each of the Core Web Vitals represents a distinct facet of the user experience, is measurable in the field, and reflects the real-world experience of a critical user-centric outcome. The Core Web Vitals are:
 
-- **[Largest Contentful Paint (LCP)](https://web.dev/lcp/)**: measures _loading_ performance.
+- **[Largest Contentful Paint (LCP)](https://web.dev/articles/lcp)**: measures _loading_ performance.
   To provide a good user experience, LCP should occur within **2.5 seconds** of
   when the page first starts loading.
-- **[First Input Delay (FID)](https://web.dev/fid/)**: measures _interactivity_. To provide a
+- **[First Input Delay (FID)](https://web.dev/articles/fid)**: measures _interactivity_. To provide a
   good user experience, pages should have a FID of **100 milliseconds** or less.
-- **[Cumulative Layout Shift (CLS)](https://web.dev/cls/)**: measures _visual stability_. To
+- **[Cumulative Layout Shift (CLS)](https://web.dev/articles/cls)**: measures _visual stability_. To
   provide a good user experience, pages should maintain a CLS of **0.1.** or
   less.
 

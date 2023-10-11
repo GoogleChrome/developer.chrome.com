@@ -1,6 +1,6 @@
 ---
 title: Chrome 111 beta
-description: > 
+description: >
   New CSS color types and color spaces, CSS trigonometric functions, and the View Transitions API.
 subhead: >
   New CSS color types and color spaces, CSS trigonometric functions, and the View Transitions API.
@@ -21,7 +21,7 @@ Unless otherwise noted, the following changes apply to the newest Chrome beta ch
 
 ### New CSS color types and spaces
 
-All features described in [CSS Color Level 4](https://www.w3.org/TR/css-color-4/) are now enabled. This includes four device-independent color types (lab, Oklab, lch and Oklch), the [`color()`](https://developer.mozilla.org/docs/Web/CSS/color_value/color) function, and user-defined color spaces for gradients and animations. 
+All features described in [CSS Color Level 4](https://www.w3.org/TR/css-color-4/) are now enabled. This includes four device-independent color types (lab, Oklab, lch and Oklch), the [`color()`](https://developer.mozilla.org/docs/Web/CSS/color_value/color) function, and user-defined color spaces for gradients and animations.
 
 Read the [High definition CSS color guide](/articles/high-definition-css-color-guide/) to learn about these new color types and spaces.
 
@@ -45,11 +45,11 @@ Adds root font units:  `rex`, `rch`, `ric`, and `rlh` to the existing root font 
 
 ### CSS trigonometric functions
 
-The [trigonometric functions](https://developer.mozilla.org/docs/Web/CSS/CSS_Functions#trigonometric_functions) `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()` have been added to CSS math expressions. 
+The [trigonometric functions](https://developer.mozilla.org/docs/Web/CSS/CSS_Functions#trigonometric_functions) `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()` have been added to CSS math expressions.
 
 ### Style Container Queries for CSS Custom Properties
 
-Adds the `style()` function to `@container` rules to make it possible to apply styles based on the computed values of custom properties of an ancestor element. 
+Adds the `style()` function to `@container` rules to make it possible to apply styles based on the computed values of custom properties of an ancestor element.
 
 ### The `baseline-source` property
 
@@ -59,15 +59,15 @@ The `baseline-source` property allows web developers to specify if an inline-lev
 
 ### The `window-management` permission and permission policy string
 
-Chrome 111 adds `window-management` as an alias for `window-placement` permission and permission-policy strings. This is part of a larger effort to rename the strings by eventually deprecating and removing `window-placement`. The terminology change improves the longevity of the descriptor as the Window Management API evolves over time. 
+Chrome 111 adds `window-management` as an alias for `window-placement` permission and permission-policy strings. This is part of a larger effort to rename the strings by eventually deprecating and removing `window-placement`. The terminology change improves the longevity of the descriptor as the Window Management API evolves over time.
 
 ### Media Session API: Presenting slides actions
 
-Adds `previousslide` and `nextslide` actions to the existing Media Session API. 
+Adds `previousslide` and `nextslide` actions to the existing Media Session API.
 
 ### Resizable `ArrayBuffer` and growable `SharedArrayBuffer`
 
-Extend the `ArrayBuffer` constructors to take an additional maximum length that allows in-place growth and shrinking of buffers. Similarly, `SharedArrayBuffer` is extended to take an additional maximum length that allows in-place growth. 
+Extend the `ArrayBuffer` constructors to take an additional maximum length that allows in-place growth and shrinking of buffers. Similarly, `SharedArrayBuffer` is extended to take an additional maximum length that allows in-place growth.
 
 ### Speculation rules: referrer policy key
 
@@ -81,7 +81,7 @@ This adds support for streaming, by attaching the shadow root on the opening, ra
 
 Enables the creation of polished transitions in Single-Page Applications (SPAs) by snapshotting views and allowing the DOM to change without any overlap between states. Use View Transitions to build custom transitions, or use a simple crossfade default to improve user experience.
 
-Check out the [Chrome Developers article](/docs/web-platform/view-transitions/) for more information and example transitions to help you get started. 
+Check out the [Chrome Developers article](/docs/web-platform/view-transitions/) for more information and example transitions to help you get started.
 
 ### WebRTC Scalable Video Coding extensions
 
@@ -89,16 +89,16 @@ This extension defines a standard method for picking between possible Scalable V
 
 ### WebXR `enabledFeatures` attribute
 
-Returns the set of features that were enabled for this `XRSession` as specified by `XRSessionInit` and the Implied Features required by the spec for the given mode and features. For a granted Session, this will contain all `requiredFeatures`, but may be a subset of `optionalFeatures`. Most features have alternate ways to detect if they were granted; however, for some features the signal of whether or not a feature was enabled may tie closely with data for a feature just not being available right now, rather than data not being available ever. By querying `enabledFeatures`, you can determine if any helpful hints (for example, to improve or start tracking) should be shown, or if a feature will never be supported in the current session. 
+Returns the set of features that were enabled for this `XRSession` as specified by `XRSessionInit` and the Implied Features required by the spec for the given mode and features. For a granted Session, this will contain all `requiredFeatures`, but may be a subset of `optionalFeatures`. Most features have alternate ways to detect if they were granted; however, for some features the signal of whether or not a feature was enabled may tie closely with data for a feature just not being available right now, rather than data not being available ever. By querying `enabledFeatures`, you can determine if any helpful hints (for example, to improve or start tracking) should be shown, or if a feature will never be supported in the current session.
 
 
 ## Origin trials in progress
 
-In Chrome 111 you can opt into the following new [origin trials](/docs/web-platform/origin-trials/). 
+In Chrome 111 you can opt into the following new [origin trials](/docs/web-platform/origin-trials/).
 
 ### Deprecation trial for removal of the `connect-src` CSP bypass in Web Payment API
 
-Deprecate the ability for Web Payment API to bypass the connect-src CSP policy when fetching the manifest. After this deprecation, a site's connect-src CSP policy will need to allow for the payment method URL specified in a PaymentRequest call, as well as any other URLs that the method chains to fetch its manifest. 
+Deprecate the ability for Web Payment API to bypass the connect-src CSP policy when fetching the manifest. After this deprecation, a site's connect-src CSP policy will need to allow for the payment method URL specified in a PaymentRequest call, as well as any other URLs that the method chains to fetch its manifest.
 
 This bypass ability is removed in Chrome 111 with a reverse origin trial from 111 to 113 for those developers that need to temporarily re-enable the bypass. To opt into this, register for the [reverse deprecation trial for the `connect-src` CSP bypass](/origintrials/#/register_trial/3804415785221226497).
 
@@ -118,7 +118,7 @@ This release of Chrome removes three features.
 
 ### Remove PaymentInstruments
 
-PaymentInstruments is the Web API that backs non-JIT install of payment apps (see https://w3c.github.io/payment-handler/). It was designed with the assumption that the browser would store the actual payment instrument details, which has not turned out to be true, and has some privacy leaks. It also has not shipped on any other browser, not have we seen any interest from other browser vendors. As such, [this API has been deprecated and removed](https://web.dev/registering-a-web-based-payment-app/).
+PaymentInstruments is the Web API that backs non-JIT install of payment apps (see https://w3c.github.io/payment-handler/). It was designed with the assumption that the browser would store the actual payment instrument details, which has not turned out to be true, and has some privacy leaks. It also has not shipped on any other browser, not have we seen any interest from other browser vendors. As such, [this API has been deprecated and removed](https://web.dev/articles/registering-a-web-based-payment-app).
 
 ### Remove `connect-src` CSP bypass in Web Payment API
 

@@ -40,7 +40,7 @@ Chromium issue: [1400243](https://crbug.com/1400243).
 
 In addition to [custom, CSS, ARIA, text, and XPath selectors](/docs/devtools/recorder/reference/#selector), you can now record using [pierce selectors](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce). These selectors behave like CSS ones but can also pierce through shadow roots.
 
-Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step.
+Start a new recording on a page with [shadow DOM](https://web.dev/articles/shadowdom-v1) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Spqbf2DG3Fr0D2sc1kgC.png", alt="Setting the Recorder to use pierce selectors; Pierce selector in action.", width="800", height="534" %}
 
@@ -135,7 +135,7 @@ Chromium issue: [1027458](https://crbug.com/1027458).
 
 To help you focus on the most important parts of your code, you can now add irrelevant scripts to the **Ignore List** right from the file tree on the **Sources** > **Page** pane.
 
-Right-click any script or folder and select one of the ignore-related options. You may see options to add or remove the script or folder to and from the list. The [Debugger ignores scripts](/docs/devtools/javascript/reference/#show-ignore-listed-frames) added to the list and omits them in the call stack. 
+Right-click any script or folder and select one of the ignore-related options. You may see options to add or remove the script or folder to and from the list. The [Debugger ignores scripts](/docs/devtools/javascript/reference/#show-ignore-listed-frames) added to the list and omits them in the call stack.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RrL7ZmzMjfhtH4gUW3ST.png", alt="Context menus of a folder and script with ignore-related options.", width="800", height="521" %}
 
@@ -143,7 +143,7 @@ All ignore-listed scripts and folders are grayed out in the file tree.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DRI11RoakrLnwLZPOJPO.png", alt="Ignore-listed scripts and folders are grayed out, you can hide them with an experimental option in the More options drop-down menu.", width="800", height="542" %}
 
-If you select an ignored script, the **Configure** button takes you to 
+If you select an ignored script, the **Configure** button takes you to
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/). You can also hide ignored sources from the file tree with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > [**Hide ignore-listed sources**](/docs/devtools/javascript/reference/#hide-ignore-listed) {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e95d2f3fd27301945a1a095bae4bbcad57326cd8 #}
@@ -162,7 +162,7 @@ This DevTools version (112) starts the [four-phase **JavaScript Profiler** depre
 
 Instead of the **Profiler**, use the [**Performance**](/docs/devtools/performance/reference/#main) panel to profile CPU.
 
-Learn more and provide feedback in the corresponding [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) and [crbug.com/1354548](https://crbug.com/1354548). 
+Learn more and provide feedback in the corresponding [RFC](https://github.com/ChromeDevTools/rfcs/discussions/2) and [crbug.com/1354548](https://crbug.com/1354548).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/71244f613a27289936b979fe515346137d0190f8 #}
 
@@ -206,7 +206,7 @@ Chromium issue: [772558](https://crbug.com/772558).
 
 ## A Console warning to remove your no-op service worker fetch handler {: #no-op-fetch-warning }
 
-Chrome 112 [skips no-op (no operation) service worker fetch handlers](/blog/chrome-112-beta/#skip-service-worker-no-op-fetch-handler) because they may slow down navigation but don't serve a purpose. Such handlers are no longer required for your website to quialify as a [Progressive Web App](https://web.dev/learn/pwa/).
+Chrome 112 [skips no-op (no operation) service worker fetch handlers](/blog/chrome-112-beta/#skip-service-worker-no-op-fetch-handler) because they may slow down navigation but don't serve a purpose. Such handlers are no longer required for your website to quialify as a [Progressive Web App](https://web.dev/learn/pwa).
 
 The **Console** now shows a warning if it finds a no-op fetch handler on your website. Consider removing it.
 

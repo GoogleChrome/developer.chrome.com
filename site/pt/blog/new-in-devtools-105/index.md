@@ -59,8 +59,8 @@ Issue relacionada: [1257499](https://crbug.com/1257499)
 
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
 ## Largest Contentful Paint (LCP) no painel de insights de desempenho {: #lcp }
-<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-O LCP é uma métrica importante e centrada no usuário para medir a [velocidade de carga percebida](https://web.dev/user-centric-performance-metrics/#types-of-metrics). Agora você pode descobrir os caminhos críticos e as causas-raiz de uma [Largest Contentful Paint (LCP)](https://web.dev/lcp/).
+<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp). -->
+O LCP é uma métrica importante e centrada no usuário para medir a [velocidade de carga percebida](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics). Agora você pode descobrir os caminhos críticos e as causas-raiz de uma [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp).
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 Em uma [gravação de desempenho](/docs/devtools/performance-insights/#record), clique no selo do LCP na **Linha do tempo**. No painel **Detalhes**, você pode ver a pontuação do LCP, saber como corrigir recursos que tornam o LCP mais lento e ver o caminho crítico para o recurso do LCP.
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
@@ -72,12 +72,12 @@ Issue relacionada: [1326481](https://crbug.com/1326481)
 
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
 ## Identificação de flashes de texto (FOIT, FOUT) como possíveis causas-raiz para mudanças de layout {: #foit-fout }
-<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
-O painel **Performance Insights** agora detecta [flash de texto invisível (FOIT) e flash de texto sem estilo (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) como raiz potencial causas para mudanças de layout.
+<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering) as potential root causes for layout shifts. -->
+O painel **Performance Insights** agora detecta [flash de texto invisível (FOIT) e flash de texto sem estilo (FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering) como raiz potencial causas para mudanças de layout.
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
 Para ver as possíveis causas principais de uma mudança de layout, clique em uma captura de tela na faixa **Mudanças de layout**.
-<!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
-Consulte [Otimizar carregamento e renderização de WebFont](https://web.dev/optimize-webfont-loading/) para aprender a técnica para evitar mudanças de layout.
+<!-- See [Optimize WebFont loading and rendering](https://web.dev/articles/optimize-webfont-loading) to learn the technique to prevent layout shifts.  -->
+Consulte [Otimizar carregamento e renderização de WebFont](https://web.dev/articles/optimize-webfont-loading) para aprender a técnica para evitar mudanças de layout.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT no painel de insights de desempenho", width="800", height="497" %}
 
@@ -86,8 +86,8 @@ Issue relacionadas: [1334628](https://crbug.com/1334628), [1328873](https://crbu
 
 <!-- ## Protocol handlers in the Manifest pane {: #manifest } -->
 ## Handlers de protocolo no painel Manifesto {: #manifest }
-<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/url-protocol-handler/) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/). -->
-Agora você pode usar o DevTools para testar o [registro do handler do  protocolo da URL](https://web.dev/url-protocol-handler/) para [Progressive Web Apps (PWA)](https://web.dev/learn/ pwa/).
+<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/articles/url-protocol-handler) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa). -->
+Agora você pode usar o DevTools para testar o [registro do handler do  protocolo da URL](https://web.dev/articles/url-protocol-handler) para [Progressive Web Apps (PWA)](https://web.dev/learn/ pwa).
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
 O registro do handler de protocolo de URL permite que os PWAs instalados manipulem links que usam um protocolo específico (por exemplo, [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) para uma experiência mais integrada.
 <!-- Navigate to the **Protocol Handlers** section via the **Application** > **Manifest** pane. You can view and test all the available protocols here. -->
@@ -107,8 +107,8 @@ Issue relacionadas: [1300613](https://crbug.com/1300613)
 ## Selo da camada superior no painel Elementos {: #top-layer }
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
 Use o [emblema da camada superior](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) para entender o conceito da camada superior e visualizar como o conteúdo da camada superior muda.
-<!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
-O elemento [`<dialog>`](https://web.dev/building-a-dialog-component/) tornou-se recentemente estável nos navegadores. Quando você abre uma caixa de diálogo, ela é colocada em uma [camada superior](/blog/top-layer-devtools/). O conteúdo de nível superior é renderizado em cima de todo o outro conteúdo.
+<!-- The [`<dialog>` element](https://web.dev/articles/building-a-dialog-component) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
+O elemento [`<dialog>`](https://web.dev/articles/building-a-dialog-component) tornou-se recentemente estável nos navegadores. Quando você abre uma caixa de diálogo, ela é colocada em uma [camada superior](/blog/top-layer-devtools/). O conteúdo de nível superior é renderizado em cima de todo o outro conteúdo.
 <!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
 Nesta [demonstração](https://jec.fish/demo/dialog), clique em **Abrir caixa de diálogo**.
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->

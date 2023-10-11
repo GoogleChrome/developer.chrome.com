@@ -170,7 +170,7 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 
 - 이전에는 [기록 확장 프로그램들](/docs/devtools/recorder/reference/#extension-troubleshooting)이 **기록** 패널에서 종종 표시되지 않았습니다. ([1351416](https://crbug.com/1351416))
 - **스타일** 창은 이제 [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) 요소의 `stop-color` 속성에 대한 색상 선택기를 표시해줍니다. ([1351096](https://crbug.com/1351096))
-- **Performance Insights** 패널에서 레이아웃 변경의 근본적 잠재원인인 [레이아웃](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/)을 유발하는 스크립트를 식별합니다. ([1343019](https://crbug.com/1343019))
+- **Performance Insights** 패널에서 레이아웃 변경의 근본적 잠재원인인 [레이아웃](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing)을 유발하는 스크립트를 식별합니다. ([1343019](https://crbug.com/1343019))
 - **Performance Insights** 패널에서 LCP 웹 글꼴의 주요 경로를 표시합니다. ([1350390](https://crbug.com/1350390))
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/50a84ca8e5b556e27bb285477f21a99f0ccb7050 #}

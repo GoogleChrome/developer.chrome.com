@@ -70,7 +70,7 @@ https://developer.chrome.com/chrome-ux-report-looker-studio-dashboard/
 
 ### Core Web Vitalsの概要
 
-最初のページは、オリジンの毎月の[Core WebVitals](https://web.dev/vitals/)パフォーマンスの概要です。これらは、Googleが注目するよう勧めている最も重要なUX指標です。
+最初のページは、オリジンの毎月の[Core WebVitals](https://web.dev/articles/vitals)パフォーマンスの概要です。これらは、Googleが注目するよう勧めている最も重要なUX指標です。
 
 {% Img src="image/admin/h8iCTgvmG4DS2zScvatc.png", alt="CrUX DashboardのCore Web Vitalsの概要", width="800", height="906" %}
 
@@ -88,7 +88,7 @@ Core Web Vitalsページの次に、CrUXデータセットのあるあらゆる[
 
 各ページの上部には**Device**フィルターがあり、エクスペリエンスデータに含まれるフォームファクターを絞り込むために使用できます。たとえば、具体的に携帯電話でのエクスペリエンスに絞り込むことができます。この設定はページ全体に適用されます。
 
-これらのページの主な可視化は、「Good（良い）」、「Needs Improvement（改善が必要）」、「Poor（悪い）」に分類されたエクスペリエンスの月次分布です。グラフの下の色分けされた凡例は、カテゴリに含まれるエクスペリエンスの範囲を示しています。たとえば、上のスクリーンショットでは、「Good」[Largest Contentful Paint](https://web.dev/lcp/#what-is-a-good-lcp-score)（LCP: 最大視覚コンテンツの表示時間）エクスペリエンスの割合が変動しており、ここ数か月でわずかに悪化していることがわかります。
+これらのページの主な可視化は、「Good（良い）」、「Needs Improvement（改善が必要）」、「Poor（悪い）」に分類されたエクスペリエンスの月次分布です。グラフの下の色分けされた凡例は、カテゴリに含まれるエクスペリエンスの範囲を示しています。たとえば、上のスクリーンショットでは、「Good」[Largest Contentful Paint](https://web.dev/articles/lcp#what_is_a_good_lcp_score)（LCP: 最大視覚コンテンツの表示時間）エクスペリエンスの割合が変動しており、ここ数か月でわずかに悪化していることがわかります。
 
 直近の月には「Good」と「Poor」のエクスペリエンスの割合は、前月との差の指標とともにチャートの上に表示されます。このオリジンでは、「Good」LCPエクスペリエンスは、前月比で3.2％減少して56.04％になっています。
 
@@ -116,7 +116,7 @@ PageSpeed Insightsなどのツールの対応するP75値は、公開されて�
 
 {% Aside 'key-term' %}有効な接続タイプは、ユーザーのデバイスの帯域幅測定に基づいており、使用されている特定のテクノロジーについては言及していないため、*有効*とみなされます。たとえば、高速Wi-Fiを使用しているデスクトップユーザーは4Gとラベル付けされますが、低速のモバイル接続は2Gとラベル付けされる場合があります。 {% endAside %}
 
-これらの次元の分布は、[First Contentful Paint](https://web.dev/fcp/)（FCP: 視覚コンテンツの初期表示時間）ヒストグラムデータのセグメントを使って計算されます。
+これらの次元の分布は、[First Contentful Paint](https://web.dev/articles/fcp)（FCP: 視覚コンテンツの初期表示時間）ヒストグラムデータのセグメントを使って計算されます。
 
 ## よくある質問
 

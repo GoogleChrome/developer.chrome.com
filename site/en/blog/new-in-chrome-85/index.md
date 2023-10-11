@@ -71,7 +71,7 @@ that have children with contained layouts of their own.
 By chunking content and adding `content-visibility: auto;`, this page went
 from a rendering time of 232ms to only 30ms.
 
-Check out the [content visibility](https://web.dev/content-visibility/) to see
+Check out the [content visibility](https://web.dev/articles/content-visibility) to see
 how you can use it to improve your rendering performance.
 
 ## `@property` and CSS variables {: #css-properties }
@@ -95,7 +95,7 @@ semantic meaning,  fallback values, and even enables CSS testing.
 ```
 
 Una has a great post
-[`@property`: giving superpowers to CSS variables](https://web.dev/at-property/)
+[`@property`: giving superpowers to CSS variables](https://web.dev/articles/at-property)
 that shows you how you can use them.
 
 ## Get installed related apps {: #gira }
@@ -121,7 +121,7 @@ relatedApps.forEach((app) => {
 ```
 
 Check out my article
-[Is your app installed? `getInstalledRelatedApps()` will tell you!](https://web.dev/get-installed-related-apps/)
+[Is your app installed? `getInstalledRelatedApps()` will tell you!](https://web.dev/articles/get-installed-related-apps)
 on web.dev to see how it works, and how to sign your apps to prove they're
 yours.
 
@@ -155,7 +155,7 @@ both Chrome and Edge.
 ]
 ```
 
-Check out the [App Icon Shortcuts](https://web.dev/app-shortcuts/) article on
+Check out the [App Icon Shortcuts](https://web.dev/articles/app-shortcuts) article on
 web.dev for complete details, and I'm sorry for the confusion I caused.
 
 ## Origin Trial: Streaming requests with `fetch()` {: #fetch-stream }
@@ -178,7 +178,7 @@ For example, use it to warm up the server, or stream audio or video as it's
 captured from the microphone or camera.
 
 Jake has an in-depth look in
-[Streaming requests with the fetch API](https://web.dev/fetch-upload-streaming/)
+[Streaming requests with the fetch API](https://web.dev/articles/fetch-upload-streaming)
 on web.dev, and also covered it in the latest
 [HTTP203 - Streaming requests with fetch](https://www.youtube.com/watch?v=G9PpImUEeUA)
 video.
@@ -217,7 +217,7 @@ compression gains vs. JPEG and WebP, with a recent
 [Netflix study](https://netflixtechblog.com/avif-for-next-generation-image-coding-b1d75675fe4)
 showing 50% savings vs. standard JPEG and > 60% savings on 4:4:4 content.
 
-And [AppCache removal has begun](https://web.dev/appcache-removal/).
+And [AppCache removal has begun](https://web.dev/articles/appcache-removal).
 
 ## Further reading
 

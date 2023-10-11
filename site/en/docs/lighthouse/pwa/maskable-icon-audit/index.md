@@ -57,7 +57,7 @@ In order to pass the audit:
    ```
 
 3. Use Chrome DevTools to verify that the maskable icon is displaying correctly.
-   See [Are my current icons ready?](https://web.dev/maskable-icon/#are-my-current-icons-ready)
+   See [Are my current icons ready?](https://web.dev/articles/maskable-icon#are_my_current_icons_ready)
 
 ## Resources
 

@@ -10,9 +10,9 @@ updated: 2020-04-29
 
 Todos os sites devem ser protegidos com HTTPS, mesmo aqueles que não lidam com dados confidenciais. O HTTPS evita que intrusos adulterem ou escutem passivamente as comunicações entre o seu site e seus usuários.
 
-Uma página não pode ser qualificada como um [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/) se não for executada em HTTPS; muitas tecnologias principais de PWA, como service workers, exigem HTTPS.
+Uma página não pode ser qualificada como um [Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps) se não for executada em HTTPS; muitas tecnologias principais de PWA, como service workers, exigem HTTPS.
 
-Para obter mais informações sobre por que todos os sites devem ser protegidos com HTTPS, consulte [Por que o HTTPS é importante](https://web.dev/why-https-matters/).
+Para obter mais informações sobre por que todos os sites devem ser protegidos com HTTPS, consulte [Por que o HTTPS é importante](https://web.dev/articles/why-https-matters).
 
 ## Como a auditoria Lighthouse HTTPS falha
 

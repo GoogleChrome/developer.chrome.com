@@ -62,7 +62,7 @@ Private State Token API を使用すると、ウェブサイトは信頼でき�
 12. ニュースサイトに広告が表示されます。
 13. 広告ビューのインプレッションがカウントされます。
 
-{% Aside %} この例の JavaScript 呼び出しの詳細については、[API の使用例](https://web.dev/trust-tokens/#sample-api-usage)をご覧ください。 {% endAside %}
+{% Aside %} この例の JavaScript 呼び出しの詳細については、[API の使用例](https://web.dev/articles/trust-tokens#sample_api_usage)をご覧ください。 {% endAside %}
 
 ## プライバシー状態トークン用のツールはありますか？
 
@@ -89,6 +89,6 @@ Chrome DevTools では、[ネットワーク] タブと [アプリケーショ�
 ## 詳細について
 
 - [Private State Token API の技術的 Explainer](https://github.com/dvorak42/trust-token-api)
-- [Private State Tokens の基礎](https://web.dev/trust-tokens/): ウェブ開発者向けの概要
+- [Private State Tokens の基礎](https://web.dev/articles/trust-tokens): ウェブ開発者向けの概要
 - [Chrome のオリジントライアル入門](https://web.dev/origin-trials)
 - [プライバシーサンドボックスを掘り下げる](https://web.dev/digging-into-the-privacy-sandbox)

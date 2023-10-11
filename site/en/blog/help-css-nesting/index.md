@@ -81,7 +81,7 @@ nesting workflows. This would be disruptive and inconsiderate to those
 ecosystems and communities.
 <br>
 
-1. <b>Waiting for [`:is()`](https://web.dev/css-is-and-where/)</b>
+1. <b>Waiting for [`:is()`](https://web.dev/articles/css-is-and-where)</b>
 <br>
 Basic nesting doesn't need `:is()` but more complex nesting does. See [Example
 #3](#example-3-selector-lists-and-nesting) for a light introduction to selector

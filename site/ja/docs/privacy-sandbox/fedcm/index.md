@@ -177,7 +177,7 @@ FedCM を使用するには、Chrome の IdP と RP の両方で安全なコン�
 
 ### well-known ファイルを作成する {: #well-known-file }
 
-[トラッカーによる API の悪用](https://github.com/fedidcg/FedCM/issues/230)を防ぐには、IdP の [eTLD+1](https://web.dev/same-site-same-origin/#same-site-cross-site) の `/.well-known/web-identity` から well-known ファイルを提供する必要があります。
+[トラッカーによる API の悪用](https://github.com/fedidcg/FedCM/issues/230)を防ぐには、IdP の [eTLD+1](https://web.dev/articles/same-site-same-origin#same_site_cross_site) の `/.well-known/web-identity` から well-known ファイルを提供する必要があります。
 
 たとえば、IdP エンドポイントが `https://accounts.idp.example/` で配信されている場合、`https://idp.example/.well-known/web-identity` の well-known ファイルと [IdP 設定ファイル](#idp-config-file)を配信する必要があります。以下は、well-known ファイルの例です。
 

@@ -28,7 +28,7 @@ Lighthouseは、レンダリングをブロックする重要なリソースを�
 - 重要なバイト数を最適化して、ダウンロード時間 (ラウンドトリップ数) を減らします。
 - 残りの重要なリソースが読み込まれる順序を最適化します。クリティカルパスの長さを短くするために、すべてのクリティカルアセットをできるだけ早くダウンロードします。
 
-[画像](https://web.dev/use-imagemin-to-compress-images/)、[JavaScript](https://web.dev/apply-instant-loading-with-prpl/)、[CSS](https://web.dev/defer-non-critical-css/)、および[Webフォント](https://web.dev/avoid-invisible-text/)の最適化の詳細をご覧ください。
+[画像](https://web.dev/articles/use-imagemin-to-compress-images)、[JavaScript](https://web.dev/articles/apply-instant-loading-with-prpl)、[CSS](https://web.dev/articles/defer-non-critical-css)、および[Webフォント](https://web.dev/articles/avoid-invisible-text)の最適化の詳細をご覧ください。
 
 ## スタック固有のガイダンス
 

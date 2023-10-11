@@ -45,7 +45,7 @@ We expect other browsers to eventually deprecate and remove this functionality. 
 [`document.domain`](https://developer.mozilla.org/docs/Web/API/Document/domain)
 was designed to get or set the origin's hostname. Many websites set
 `document.domain` to allow communication between [same-site but
-cross-origin](https://web.dev/same-site-same-origin/) pages. 
+cross-origin](https://web.dev/articles/same-site-same-origin) pages.
 
 While this is a
 convenient technique, it introduces a security risk, because it
@@ -61,7 +61,7 @@ specification that [warns users to avoid using it](https://html.spec.whatwg.org/
 #### How `document.domain` is used today
 
 Many websites set `document.domain` to allow communication between [same-site
-but cross-origin](https://web.dev/same-site-same-origin/) pages.
+but cross-origin](https://web.dev/articles/same-site-same-origin) pages.
 
 Same-site but cross-origin sites have the same
 [eTLD+1](https://web.dev/same-site-same-origin/#:~:text=the%20whole%20site%20name%20is%20known%20as%20the%20etld%2B1)
@@ -137,7 +137,7 @@ read the ["Document.domain" page on MDN](https://developer.mozilla.org/docs/Web/
 
 {% Aside 'warning' %}
 
-Note that starting in Chrome 115, using the `document.domain` setter will not throw an exception, as per the [specification](https://html.spec.whatwg.org/multipage/browsers.html#dom-document-domain). It will only cease to have an effect. 
+Note that starting in Chrome 115, using the `document.domain` setter will not throw an exception, as per the [specification](https://html.spec.whatwg.org/multipage/browsers.html#dom-document-domain). It will only cease to have an effect.
 
 {% endAside %}
 
@@ -147,11 +147,11 @@ Notice the yellow flag in the upper right of DevTools.
 
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/HIqzEZLIDAIPgY9y39X1.png", alt="Screenshot of the issue warning in DevTools", width="800", height="255" %}
 
-You can also run your site through the [LightHouse deprecated API audit](https://web.dev/deprecations/) to find all APIs that are scheduled to be removed from Chrome.
+You can also run your site through the [LightHouse deprecated API audit](https://web.dev/articles/deprecations) to find all APIs that are scheduled to be removed from Chrome.
 
 If you have set up the Reporting API, Chrome has sent you deprecation reports
 to notify you of this upcoming deprecation. Learn more about [how to use the
-Reporting API](https://web.dev/reporting-api/) with either existing report
+Reporting API](https://web.dev/articles/reporting-api) with either existing report
 collection services or by building your own in-house solution.
 
 ## How do I see this change in action?
@@ -173,7 +173,7 @@ cross-origin accesses.
 
 ### Use `postMessage()` or Channel Messaging API instead of `document.domain`
 
-In most use cases, cross-origin 
+In most use cases, cross-origin
 [`postMessage()`](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
 or [Channel Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API)
 can replace `document.domain`.
@@ -237,7 +237,7 @@ Origin-Agent-Cluster: ?0
 The `Origin-Agent-Cluster` header instructs the browser whether the document
 should be handled by the origin-keyed agent cluster or not. To learn more about
 `Origin-Agent-Cluster`, read [Requesting performance isolation with the
-`Origin-Agent-Cluster` header](https://web.dev/origin-agent-cluster/).
+`Origin-Agent-Cluster` header](https://web.dev/articles/origin-agent-cluster).
 
 When you send this header, your document can continue to set `document.domain`
 even after it becomes immutable by default.

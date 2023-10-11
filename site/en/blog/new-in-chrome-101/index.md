@@ -49,12 +49,12 @@ In the example below, a low priority image is indicated with `fetchpriority="low
 <img src="/images/in_viewport_but_not_important.svg" fetchpriority="low" alt="I'm an unimportant image!">
 ```
 
-Read more about the various use cases in [Optimize resource loading with the Fetch Priority API](https://web.dev/fetch-priority/).
+Read more about the various use cases in [Optimize resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority).
 
 ### Also in this release
 
 There is a new method of [`forget()`](
-https://web.dev/usb/#revoke-access) for [`USBDevice`](https://developer.mozilla.org/docs/Web/API/USBDevice) objects. This enables the forgetting of a device that previously had permission granted. For example, if this is an application used on a shared computer with many devices.
+https://web.dev/articles/usb#revoke_access) for [`USBDevice`](https://developer.mozilla.org/docs/Web/API/USBDevice) objects. This enables the forgetting of a device that previously had permission granted. For example, if this is an application used on a shared computer with many devices.
 
 Also for Web USB, a fix to support [`SameObject`] for related attributes within `USBDevice`. The specification change can be found [in a PR to the draft spec](https://github.com/WICG/webusb/pull/212).
 

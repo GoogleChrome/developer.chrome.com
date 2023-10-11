@@ -36,10 +36,10 @@ Registering a trigger is similar to
 1. **Initiate the trigger registration.** Use a pixel or a `fetch()` call to make
     a request.
 1. **Complete the trigger registration** by responding with the trigger
-    registration header. 
+    registration header.
       <br><br>
 
-   
+
     Upon receiving the pixel request—sent either to the
     endpoint defined in the usual `src` attribute, or to the endpoint defined
     in `attributionsrc` if you've chosen to use `attributionsrc` and given it
@@ -51,7 +51,7 @@ Registering a trigger is similar to
     response to a request made from a site that matches the `destination`,
     sources will be matched. When the header is received, the
     browser looks for matching sources and schedules a report.
-    
+
     **Example for event-level reports:**
 
      ```json
@@ -65,7 +65,7 @@ Registering a trigger is similar to
     ```
 
     **Example for summary reports:**
-    
+
     ```json
     {
       ... // existing fields, such as "event_trigger_data"
@@ -91,7 +91,7 @@ Registering a trigger is similar to
     {% Aside %}
     When the browser receives an attribution trigger response from an attributionsrc URL on a given page, a local storage lookup is done to find a source that matches both the attributionsrc origin and that page URL's eTLD+1.
     <br>
-    If multiple sources are found, the browser picks the one that was stored most recently—unless sources have different priorities, in which the browser picks the one with the greatest priority. 
+    If multiple sources are found, the browser picks the one that was stored most recently—unless sources have different priorities, in which the browser picks the one with the greatest priority.
     {% endAside %}
 
 ### Dealing with subdomains
@@ -113,21 +113,21 @@ required.
 When `attributionsrc` is **optional**, using it indicates that the request is eligible for Attribution Reporting. If you use
 `attributionsrc`, the browser sends the
 `Attribution-Reporting-Eligible` header. It's also useful for app-to-web
-measurement: if `attributionsrc` is present, the browser sends the 
+measurement: if `attributionsrc` is present, the browser sends the
 `Attribution-Reporting-Support` header.
 
 <table>
   <thead>
     <tr>
       <th>Registration method</th>
-     
+
       <th><strong>Trigger</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>&lt;a></code> tag</td>
-      <td><em>N/A</em> 
+      <td><em>N/A</em>
 <em>Anchors cannot register a trigger.</em></td>
     </tr>
     <tr>
@@ -142,19 +142,19 @@ is sufficient to register a trigger.</td>
     </tr>
     <tr>
       <td><code>fetch</code> call</td>
-      <td>The <code>attributionReporting</code> option is 
+      <td>The <code>attributionReporting</code> option is
 <strong>required</strong>.</td>
     </tr>
     <tr>
       <td><code>XMLHttpRequest</code>
       </td>
-      <td>The <code>attributionReporting</code> option is 
+      <td>The <code>attributionReporting</code> option is
 <strong>required</strong>.</td>
     </tr>
     <tr>
       <td><code>window.open()</code>
       </td>
-      <td><em>N/A</em> 
+      <td><em>N/A</em>
 <em><code>window.open</code> cannot register a trigger.</em></td>
     </tr>
   </tbody>
@@ -172,8 +172,8 @@ You can register a trigger using a pixel (`<img>` tag) or script tag.
 ```
 
 {% Aside 'important' %}
-*   The origin for `src` must match the origin that performed the source registration. 
-*   An attribution can only be triggered on a page whose [eTLD+1](https://web.dev/same-site-same-origin/#%22schemeful-same-site%22) matches the site that was provided in destination upon source registration. 
+*   The origin for `src` must match the origin that performed the source registration.
+*   An attribution can only be triggered on a page whose [eTLD+1](https://web.dev/articles/same-site-same-origin#%22schemeful_same_site%22) matches the site that was provided in destination upon source registration.
 {% endAside %}
 
 #### Using a script tag
@@ -190,7 +190,7 @@ const attributionReporting = {
 };
 
 // Optionally set keepalive to ensure the request outlives the page.
-window.fetch("https://adtech.example/attribution_source?my_ad_id=123", 
+window.fetch("https://adtech.example/attribution_source?my_ad_id=123",
   { keepalive: true, attributionReporting });
 ```
 
@@ -210,7 +210,7 @@ const req = new XMLHttpRequest();
 
 {% Aside 'important' %}
 - The origin for <code>src</code> must match the origin that performed
-source registration. 
+source registration.
 - An attribution can only be triggered on a page whose <a
 href="https://web.dev/same-site-same-origin/#%22schemeful-same-site%22">eTLD+1</a>
 matches the site that was provided in <code>destination</code> upon source
@@ -229,14 +229,14 @@ You can add `attributionsrc` either with or without a value.
 <img src="..." width="1" height="1" attributionsrc="https://...">
 ```
 
-If you set a value for `attributionsrc`, it should be a single URL. 
+If you set a value for `attributionsrc`, it should be a single URL.
 
 Using a URL causes the browser to initiate a **separate** keepalive fetch request—one
 for each URL—which includes the `Attribution-Reporting-Eligible` request
 header.
 
 This is useful if you want to make the source registration by responding to a
-request that is separate from the element's main request.  
+request that is separate from the element's main request.
 
 For example, if you need to register sources for clicks on an anchor element,
 you may not actually be in control of the destination; in this case, you'll want
@@ -246,7 +246,7 @@ specifying an explicit value for `attributionsrc`, you're instructing the
 browser to make that extra request and configuring its destination.
 
 
-### Step 2: Respond with a header 
+### Step 2: Respond with a header
 
 Upon receiving the browser request, respond and include in your response the `Attribution-Reporting-Register-Trigger` header:
 

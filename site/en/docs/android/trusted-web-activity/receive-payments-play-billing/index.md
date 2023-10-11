@@ -107,7 +107,7 @@ if ('getDigitalGoodsService' in window) {
     const service =
         await window.getDigitalGoodsService('https://play.google.com/billing');
     // Google Play Billing is supported!
-   
+
   } catch (error) {
     // Google Play Billing is not available. Use another payment flow.
     return;
@@ -296,7 +296,7 @@ const service =
 const existingPurchases = await service.listPurchases();
 for (const p of existingPurchases) {
     await verifyOrAcknowledgePurchaseOnBackend(p.purchaseToken, p.itemId);
-    
+
     // Update the UI with items the user is already entitled to.
     console.log(`Users has entitlement for ${p.itemId}`);
 }
@@ -352,7 +352,7 @@ by the Digital Goods API, and server-side components.
 [2]: /docs/android/trusted-web-activity/
 [3]: https://developers.google.com/web/fundamentals/payments
 [4]: https://github.com/WICG/digital-goods/blob/master/explainer.md
-[5]: https://web.dev/origin-trials/
+[5]: https://developer.chrome.com/docs/web-platform/origin-trials/
 [6]: https://github.com/WICG/digital-goods/issues
 [7]: https://developer.android.com/distribute/best-practices/earn/in-app-purchases
 [8]: https://developer.android.com/distribute/best-practices/earn/subscriptions

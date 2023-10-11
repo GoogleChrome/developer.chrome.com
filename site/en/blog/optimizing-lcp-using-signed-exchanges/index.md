@@ -13,7 +13,7 @@ tags:
   - performance
 ---
 
-Signed exchanges (SXGs) are a means to improve your page speed—mainly [Largest Contentful Paint (LCP)](https://web.dev/lcp/). When referring sites (currently Google Search) link to a page, they can [prefetch it](https://developers.google.com/search/docs/advanced/experience/signed-exchange) into the browser cache before the user clicks on the link.
+Signed exchanges (SXGs) are a means to improve your page speed—mainly [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp). When referring sites (currently Google Search) link to a page, they can [prefetch it](https://developers.google.com/search/docs/advanced/experience/signed-exchange) into the browser cache before the user clicks on the link.
 
 It's possible to make web pages that, when prefetched, require no network on the [critical path to rendering the page](https://developer.mozilla.org/docs/Web/Performance/Critical_rendering_path)! On a 4G connection, this page load [goes from 2.8s to 0.9s](https://www.webpagetest.org/video/compare.php?tests=220422_AiDcJ6_54R-l:Before,220329_BiDc1V_FJG-l:After&medianMetric=LCP) (the remaining 0.9s being mostly by CPU usage):
 
@@ -61,7 +61,7 @@ SXGs are potentially useful for other use cases not covered in this article. For
 To see the benefit of SXGs, start by using a lab tool to analyze SXG performance in repeatable conditions. You can use [WebPageTest](https://www.webpagetest.org/) to compare waterfalls—and LCP—with and without SXG prefetch.
 
 {% Aside 'caution' %}
-[Lab results may differ](https://web.dev/lab-and-field-data-differences/) from real user experiences, but they are a useful tool to diagnose where to optimize and to iterate quickly. We'll cover how to measure the resultant real user metrics in the [Measure section](#measure).
+[Lab results may differ](https://web.dev/articles/lab-and-field-data-differences) from real user experiences, but they are a useful tool to diagnose where to optimize and to iterate quickly. We'll cover how to measure the resultant real user metrics in the [Measure section](#measure).
 {% endAside %}
 
 Generate a test without SXG as follows:
@@ -317,7 +317,7 @@ If it's working, you'll see additional prefetches from Google Search:
   {% Img src="image/rULxC7pPw3PFS4o9xr7v8isFmCv1/e09y5ZGYE93zgPi2pyFk.png", alt="Google Search results with DevTools Network tab, showing a prefetch of /sub/…/image.jpg", width="800", height="493" %}
 </figure>
 
-To optimize for LCP, look closely at your waterfall, and figure out which resources are on the critical path to rendering the largest element. If they can't be prefetched, consider if they can be [taken off the critical path](https://web.dev/render-blocking-resources/#how-to-eliminate-render-blocking-scripts). Be on the lookout for scripts that hide the page until they are done loading.
+To optimize for LCP, look closely at your waterfall, and figure out which resources are on the critical path to rendering the largest element. If they can't be prefetched, consider if they can be [taken off the critical path](https://web.dev/articles/render-blocking-resources#how_to_eliminate_render_blocking_scripts). Be on the lookout for scripts that hide the page until they are done loading.
 
 The Google SXG Cache allows [up to 20](https://github.com/google/webpackager/blob/main/docs/cache_requirements.md#:~:text=There%20may%20be%20no%20more%20than%2020%20rel%3Dpreloads.) subresource preloads and ASX [ensures](https://github.com/google/sxg-rs/blob/33fa49bbd1f156ce92de0e3b6af9e352b1ba8d9f/sxg_rs/src/link.rs#L60) that this limit isn't exceeded. However, there is a risk in adding too many subresource preloads. The browser will only use preloaded subresources [if all of them have finished fetching](https://github.com/WICG/webpackage/blob/main/explainers/signed-exchange-subresource-substitution.md#:~:text=If%20every%20member,their%20original%20URLs.), in order to [prevent cross-site tracking](https://wicg.github.io/webpackage/loading.html#:~:text=This%20is%20intended%20to%20prevent%20the%20referrer%20page%20from%20encoding%20a%20tracking%20ID%20into%20the%20set%20of%20subresources%20it%20prefetches.). The more subresources there are, the less likely all of them will have finished prefetching before the user clicks through to your page.
 
@@ -333,7 +333,7 @@ After optimizing the LCP improvement under WebPageTest, it's useful to measure t
 
 ### Server-side metrics
 
-When measuring server-side metrics such as [Time to First Byte (TTFB)](https://web.dev/ttfb/), it's important to note that your site only serves SXGs to crawlers that accept the format. Limit your measurement of TTFB to requests coming from real users, and not bots. You may find that generating SXGs increases the TTFB for crawler requests, but this has no impact on your visitors' experience.
+When measuring server-side metrics such as [Time to First Byte (TTFB)](https://web.dev/articles/ttfb), it's important to note that your site only serves SXGs to crawlers that accept the format. Limit your measurement of TTFB to requests coming from real users, and not bots. You may find that generating SXGs increases the TTFB for crawler requests, but this has no impact on your visitors' experience.
 
 ### Client-side metrics
 
@@ -468,5 +468,5 @@ Phew! That was a lot. Hopefully it paints a more complete picture of how to test
 
 If you have additional advice on how to capture SXG performance, please let us know! [File a bug against developer.chrome.com](https://github.com/GoogleChrome/developer.chrome.com) with your suggested improvements.
 
-For more information on signed exchanges, take a look at the [web.dev documentation](https://web.dev/signed-exchanges/) and the [Google Search documentation](https://developers.google.com/search/docs/advanced/experience/signed-exchange).
+For more information on signed exchanges, take a look at the [web.dev documentation](https://web.dev/articles/signed-exchanges) and the [Google Search documentation](https://developers.google.com/search/docs/advanced/experience/signed-exchange).
 

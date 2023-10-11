@@ -13,7 +13,7 @@ hero: image/admin/tf0sUZX6G7AM8PvU1t0B.jpg
 alt: Binders in many colors.
 ---
 
-Now that web apps are [capable of reading and writing files](https://web.dev/file-system-access/), the next logical
+Now that web apps are [capable of reading and writing files](https://web.dev/articles/file-system-access), the next logical
 step is to let developers declare these very web apps as file handlers for the files their apps can
 create and process. The File Handling API allows you to do exactly this. After registering a text
 editor app as a file handler and after installing it, you can right-click a `.txt` file on macOS and
@@ -38,7 +38,7 @@ app, however, can be achieved through two other means:
 
 - The [Web Share Target API](/articles/web-share-target/) lets developers specify their app as a share target
   so files can be opened from the operating system's share sheet.
-- The [File System Access API](https://web.dev/file-system-access/) can be integrated with file drag and drop, so
+- The [File System Access API](https://web.dev/articles/file-system-access) can be integrated with file drag and drop, so
   developers can handle dropped files in the already opened app.
 
 ### Browser support
@@ -59,7 +59,7 @@ if ('launchQueue' in window && 'files' in LaunchParams.prototype) {
 
 ### The declarative part of the File Handling API
 
-As a first step, web apps need to declaratively describe in their [web app manifest](https://web.dev/add-manifest/)
+As a first step, web apps need to declaratively describe in their [web app manifest](https://web.dev/articles/add-manifest)
 what kind of files they can handle. The File Handling API extends web app manifest with a new
 property called `"file_handlers"` that accepts an array of, well, file handlers. A file handler is
 an object with these properties:
@@ -138,7 +138,7 @@ in a single client, the last one in multiple clients if multiple files are being
 
 {% Aside %} For this declaration to have any effect, the application must be installed. You can
 learn more in an article series on this very site on
-[making your app installable](https://web.dev/progressive-web-apps/#make-it-installable). {% endAside %}
+[making your app installable](https://web.dev/explore/progressive-web-apps#make-it-installable). {% endAside %}
 
 ### The imperative part of the File Handling API
 
@@ -215,7 +215,7 @@ will be reset.
 
 There is a large category of attack vectors that are opened by allowing websites access to files.
 These are outlined in the
-[article on the File System Access API](https://web.dev/file-system-access/#security-considerations). The
+[article on the File System Access API](https://web.dev/articles/file-system-access#security_considerations). The
 additional security-pertinent capability that the File Handling API provides over the File System
 Access API is the ability to grant access to certain files through the operating system's built-in
 UI, as opposed to through a file picker shown by a web application.
