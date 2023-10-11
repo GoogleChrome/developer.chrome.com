@@ -21,7 +21,7 @@ While developing an extension, you may find behavior that does not match the ext
     -   Add a link to your test extension.
     -   Add screenshots, if appropriate.
     -   If your bug relates to service worker lifetime behavior, include the section of the chrome://extensions-internals page relating to your extension
-    -   If your bug relates to a crash, make sure it is uploaded at chrome://crashes and share the crash ID
+    -   If your bug relates to a crash, upload it at `chrome://crashes` and share the crash ID.
 
 1.  Wait for the bug to be updated. Most extension bugs are triaged within a week, although it can sometimes take longer. *Please do not reply to the bug requesting an update*. If your bug has not been modified after two weeks, please post a message to the [Google group](https://groups.google.com/a/chromium.org/group/chromium-extensions/topics) with a link to your bug.
 1.  If you originally reported your bug in the discussion group and were directed here, post a link to the issue you created or found in the discussion group thread. This makes it easier for others who encounter the same issue.
