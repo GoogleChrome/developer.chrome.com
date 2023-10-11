@@ -13,7 +13,7 @@ While developing an extension, you may find behavior that does not match the ext
 
 1.  Before filing a bug, [search the Chromium issue tracker](/docs/extensions/support-feedback/find-a-bug) to verify that your issue has not been reported.
 1.  Build a *minimal* test extension to demonstrate the issue to us. It should have as little code as possible—generally 100 lines or fewer— to demonstrate the bug. If you can't reproduce the bug in this space, it may indicate that the bug is in your own code. Consider searching for a solution or posting a question in the [Extensions Google Group](https://groups.google.com/a/chromium.org/group/chromium-extensions/topics).
-1.  File an issue in [the issue tracker][https://crbug.com]. Be as explicit as possible when filling out the bug. The easier it is to reproduce the issue, the greater the chance it will be fixed promptly.
+1.  File an issue in [the issue tracker](https://crbug.com). Be as explicit as possible when filling out the bug. The easier it is to reproduce the issue, the greater the chance it will be fixed promptly.
     -   Choose a descriptive title.
     -   Specify the Chrome version and platform where you see the behavior.
     -   Explain the steps needed to reproduce the bug.
