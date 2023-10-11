@@ -18,7 +18,7 @@ While developing an extension, you may find behavior that does not match the ext
     -   Specify the Chrome version and platform where you see the behavior.
     -   Explain the steps needed to reproduce the bug.
     -   Describe the expected and actual behavior.
-    -   Link to your test extension.
+    -   Add a link to your test extension.
     -   Add screenshots, if appropriate.
     -   If your bug relates to service worker lifetime behavior, include the section of the chrome://extensions-internals page relating to your extension
     -   If your bug relates to a crash, make sure it is uploaded at chrome://crashes and share the crash ID
