@@ -12,7 +12,7 @@ To enable it from a command line, use the following flag with the appropriate [c
 
 ## More information and feedback
 
-You can find more information about this [feature in the explainer](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md). If you have feedback on the feature or find something that doesn't work, file a bug.
+You can find more information about this [feature in the explainer](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md). If you have any feedback or find something that doesn't work, let us know by filing a bug.
 
 ## Manifest
 
