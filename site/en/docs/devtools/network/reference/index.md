@@ -538,12 +538,12 @@ hovering.
 
 Here's more information about each of the phases you may see in the **Timing** tab:
 
-- **Queueing**. The browser queues requests when:
+- **Queueing**. The browser queues requests before connection start and when:
   - There are higher priority requests.
   - There are already six TCP connections open for this origin, which is the limit. Applies to
     HTTP/1.0 and HTTP/1.1 only.
-  - The browser is briefly allocating space in the disk cache
-- **Stalled**. The request could be stalled for any of the reasons described in **Queueing**.
+  - The browser is briefly allocating space in the disk cache.
+- **Stalled**. The request could be stalled after connection start for any of the reasons described in **Queueing**.
 - **DNS Lookup**. The browser is resolving the request's IP address.
 - **Initial connection**. The browser is establishing a connection, including TCP handshakes/retries
   and negotiating an SSL.
