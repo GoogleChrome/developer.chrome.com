@@ -15,6 +15,18 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
+### Chrome 118: isUrlFilterCaseSensitive now defaults to false {: #118-url-filter-case-sensitive }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 11, 2023</time></p>
+
+Starting in Chrome 118, the [`isUrlFilterCaseSensitive`](/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-isUrlFilterCaseSensitive)
+property in the [chrome.declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest/)
+API has been changed to default to `false`. If you wish to keep the old behavior, you can explicitly set `isUrlFilterCaseSensitive` to `true` in
+your declarativeNetRequest rules.
+
+This follows [discussions](https://github.com/w3c/webextensions/issues/269) in the Web Extensions
+Community Group. Firefox and Safari have already implemented a similar change.
+
 ### Documentation on cookies and web storage APIs {: #storage-and-cookies-guide }
 
 <p class="color-secondary-text type--caption">Posted on <time>October 9, 2023</time></p>
