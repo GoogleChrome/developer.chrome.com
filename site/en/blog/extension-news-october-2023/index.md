@@ -135,7 +135,7 @@ We've continued reaching out to the extension developer community through 1:1's,
 - We attended [TPAC](https://www.w3.org/2023/09/TPAC/) (W3C's annual conference) as part of the [Web Extensions Community Group](https://github.com/w3c/webextensions) and met with representatives from Firefox and Safari along with several members of the community. We made significant progress on several topics, including moving towards more consistent extension APIs, working on a specification, and building on top of Web Platform Tests to create a new testing suite. Read the full minutes in the [WECG repository](https://github.com/w3c/webextensions).
 - Last week, the extension's team participated in the Ad-Filtering Dev Summit in Amsterdam. They met several of you at a coffee chat they hosted before the summit week and the open office hours on Friday.
     <figure>
-      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/COTXAD1zVCub7rQxf8cL.png", alt="Extension team in Ad-filtering Dev Summit", width="800", height="533" %}
+      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Dc2jNjuo21hkCq4cZBiI.jpg", alt="Extension team in Ad-filtering Dev Summit", width="600", height="533" %}
       <figcaption>
         Extension team in Ad-filtering Dev Summit
       </figcaption>
@@ -144,4 +144,3 @@ We've continued reaching out to the extension developer community through 1:1's,
 Even if you were unable to attend any of these events, you can continue getting involved by asking questions on the [chromium-groups](https://groups.google.com/a/chromium.org/g/chromium-extensions), following browser partner discussions on the [WECG](https://github.com/w3c/webextensions/issues), and reporting any documentation issues.
 
 Thanks again for being a part of the extension developer community!
-
