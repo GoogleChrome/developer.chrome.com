@@ -17,7 +17,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 ### Chrome 118: isUrlFilterCaseSensitive now defaults to false {: #118-url-filter-case-sensitive }
 
-<p class="color-secondary-text type--caption">Posted on <time>October 10, 2023</time></p>
+<p class="color-secondary-text type--caption">Posted on <time>October 11, 2023</time></p>
 
 Starting in Chrome 118, the [`isUrlFilterCaseSensitive`](/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-isUrlFilterCaseSensitive)
 property in the [chrome.declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest/)
