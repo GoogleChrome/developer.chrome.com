@@ -9,7 +9,7 @@ tags:
 
 ## Find and follow a bug
 
-Before filing a bug or submitting a feature request for extensions you should check whether either has already been done by checking open Chromium issues. These issues are kept in [the Chromium issue tracker][https://crbug.com]. This database lets you search for and follow any issue that's been reported for Chromium.
+Before filing a bug or submitting a feature request for extensions, you should check whether either has already been reported by checking open Chromium issues. These issues are kept in [the Chromium issue tracker](https://crbug.com). This database lets you search for and follow any issue that's been reported for Chromium.
 
 1.  Open the [the issue tracker][https://crbug.com] and use the search box at the top to see whether the issue has already been reported. Most extensions issues are filed under `component=Platform>Extensions`. for example, a search for `component=Platform>Extensions Type=Bug chrome.scripting.executeScript` gives you [this list of results](https://bugs.chromium.org/p/chromium/issues/list?can=2&q=component%3DPlatform>Extensions+Type%3DBug+chrome.scripting.executeScript).
 1.  If you find a ticket that matches your bug or feature request, click the star icon to express your interest and to be notified when the bug is updated.
