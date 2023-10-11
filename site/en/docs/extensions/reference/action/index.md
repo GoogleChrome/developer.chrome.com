@@ -76,7 +76,7 @@ Unpacked extensions must use PNG images.
 
 #### Tooltip (title)
 
-The tooltip, or title, appears when the user holds their cursor over the extension's icon in the
+The tooltip, or title, appears when the user holds their mouse pointer over the extension's icon in the
 toolbar. It's also included in the accessible text spoken by screenreaders when the button gets
 focus.
 
