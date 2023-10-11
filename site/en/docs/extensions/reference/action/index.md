@@ -30,7 +30,7 @@ and include the `"action"` key in your [manifest file][doc-manifest]:
 }
 ```
 
-<!--I want to say something like "while the dictionary values are all optional, we recommend that you include at least $these." What are the these?-->
+The `"action"` key (along with its children) is optional. When it isn't included, your extension is still shown in the toolbar to provide access to the extension's menu. For this reason, we recommend that you always include at least the `"action"` and `"default_icon"` keys.
 
 ## Concepts and Usage
 
