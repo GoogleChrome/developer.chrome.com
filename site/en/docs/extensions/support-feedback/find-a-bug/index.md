@@ -15,4 +15,4 @@ Before filing a bug or submitting a feature request for extensions, you should c
 1.  If you find a ticket that matches your bug or feature request, click the star icon to express your interest and to be notified when the bug is updated.
 1.  If you're not signed in, you will be prompted to do so. If you do not have an account in the issue tracker you may create one by clicking **Create account** on the sign-in prompt and following the on-screen instructions.
 
-Please do not respond to any bugs or feature requests by saying "me too" or by asking, "when will this be fixed?". However, if you have valuable information, such as a better test case or a suggested fix, please add a comment.
+Please do not respond to any bugs or feature requests by saying "me too", and prefer using the [Google group](https://groups.google.com/a/chromium.org/group/chromium-extensions/topics) for updates on when a bug will be fixed. However, if you have valuable information, such as a better test case or a suggested fix, please add a comment.
