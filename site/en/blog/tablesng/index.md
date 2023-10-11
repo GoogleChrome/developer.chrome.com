@@ -18,7 +18,7 @@ TablesNG launches in Chromium 91, and fixes a [ton of
 bugs](https://bugs.chromium.org/p/chromium/issues/list?q=label%3ATarget-TablesNG&can=2)
 that have been a part of the web platform for years. These updates will improve
 browser compatibility as a part of the
-[#Compat2021](https://web.dev/compat2021/) effort, and improve using tables on
+[#Compat2021](https://web.dev/blog/compat2021) effort, and improve using tables on
 the web platform overall. Some of the most-starred issues include [`position:
 sticky` in
 rows](https://bugs.chromium.org/p/chromium/issues/detail?id=702927&q=label%3ATarget-TablesNG&can=2&sort=pri),
@@ -32,16 +32,16 @@ and proper
 TablesNG is a multi-year effort, led by Chrome developer Aleks Totic, to
 completely re-architect how tables are rendered on the web. Tables are a
 particular area of friction in web development, in part because of their
-history. 
+history.
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/bfUfXYeGsTklMOz8J1Kt.png",
 alt="Parts of a table", width="800", height="420" %}
 
 Tables were added to HTML in 1994, then used as the [primary
 method](https://codeburst.io/a-brief-history-of-trends-in-web-design-845b6acb35bc)
-to create complex page layouts for many years. They are still found all over the web, 
+to create complex page layouts for many years. They are still found all over the web,
 although modern usage is generally to display tabular data.
-However, there are big differences in table behavior across browsers, 
+However, there are big differences in table behavior across browsers,
 many of which came about due to the tables specification being incomplete and lacking detail.
 Tables were also implemented in browsers before many CSS features:
 orthogonal writing modes, `position:relative`, `box-sizing`, flexbox containers,
@@ -83,7 +83,7 @@ was specified well after HTML tables came out. Before this fix, headers with an
 intended `position: sticky` were just [converted
 into](https://github.com/w3c/csswg-drafts/issues/3136) `position: static`, but
 now, you can use `position: sticky` anywhere in the tables: on headers (`<thead>`) or
-vertical axis labels. 
+vertical axis labels.
 
 <figure>
 {% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/SZc6cN9UeFhPZ1q2BRyq.mp4", autoplay="true", muted="true", loop="true"  %}
@@ -93,7 +93,7 @@ Codepen</a>.
 </figcaption>
 </figure>
 
-{% Aside 'warning' %} 
+{% Aside 'warning' %}
 If you're using `position: sticky` on a table, make sure
 it doesn't have borders. Border painting is currently an open cross-browser
 compatibility issue, as borders belong to the table, not the header row itself.
@@ -118,7 +118,7 @@ where the first cell in the table is the top-most.
 alt="z-index order of tables", width="800", height="434" %}
 
 So the issue here is that borders belong to the table, not the cell, in the old
-way that tables were painted. Collapsed borders are painted when table paints its foreground. 
+way that tables were painted. Collapsed borders are painted when table paints its foreground.
 This means that a single table cell could not have
 multiple borders:
 
@@ -144,7 +144,7 @@ with TablesNG. Previously, the older engine always rounded graphics values to
 the pixel. This meant that as you zoom in and out of the page, things would
 shift, causing alignment problems. TablesNG fixes these alignment issues.
 
-{% Aside 'warning' %} 
+{% Aside 'warning' %}
 There is a [known bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1201762) with table zoom and how borders are
 repainted. If you are testing this out, you may run into that. {% endAside %}
 
@@ -157,12 +157,12 @@ projects that this team has taken on over the past eight years. Others, though
 not all of the projects, include:
 
 - LayoutNG: a ground-up rewrite of all layout algorithms, for greatly improved
-reliability and more predictable performance. 
+reliability and more predictable performance.
 - BlinkNG: a systematic cleanup and
 refactoring of the Blink rendering engine into cleanly separated pipeline
 phases. This allows for better caching, higher reliability, and re-entrant /
 delayed-rendering features such as [content-visibility](/content-visibility/)
-and [container queries](/new-responsive/). 
+and [container queries](/new-responsive/).
 - GPU Raster Everywhere: a long-term
 effort to roll out GPU rasterization on all platforms, whenever possible.
 - Threaded scrolling and animations: a long-term effort to move all scrolling and

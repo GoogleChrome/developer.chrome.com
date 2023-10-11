@@ -97,7 +97,7 @@ With [Auto Dark Theme](/blog/auto-dark-theme/) enabled, the [**Emulate CSS media
 
 Everyone should be able to access and enjoy the web. [Google is committed to making that a reality](https://www.google.com/accessibility/).
 
-With Chrome DevTools, you can see how people with [vision deficiencies](https://web.dev/learn/accessibility/color-contrast/) see your site, so you can make it better for them. For more information, see [Simulating color vision deficiencies](/blog/cvd/).
+With Chrome DevTools, you can see how people with [vision deficiencies](https://web.dev/learn/accessibility/color-contrast) see your site, so you can make it better for them. For more information, see [Simulating color vision deficiencies](/blog/cvd/).
 
 To emulate vision deficiencies:
 
@@ -106,7 +106,7 @@ To emulate vision deficiencies:
 
    - **No emulation**.
    - **Blurred vision**.
-   - **Reduced contrast**. 
+   - **Reduced contrast**.
    - **Protanopia (no red)**. Low perception of red; confusion of greens, reds, and yellows.
    - **Deuteranopia (no green)**. Low perception of green; confusion of greens, reds, and yellows.
    - **Tritanopia (no blue)**. Low perception of blue; confusion of greens and blues.
@@ -118,7 +118,7 @@ To emulate vision deficiencies:
 
 These emulations make it easier for developers to test different image loading scenarios without having to switch browsers.
 
-Suppose you have the following HTML code to serve an image in [AVIF](https://web.dev/compress-images-avif/) and [WebP](https://web.dev/serve-images-webp/) formats for newer browsers, with a fallback PNG image for older browsers.
+Suppose you have the following HTML code to serve an image in [AVIF](https://web.dev/articles/compress-images-avif) and [WebP](https://web.dev/articles/serve-images-webp) formats for newer browsers, with a fallback PNG image for older browsers.
 
 ```html
 <picture>
@@ -136,8 +136,8 @@ To disable all AVIF images on a page (or, similarly, WebP images):
 
 {% Img src="image/admin/WHyF0XexaaWPCp07vJRj.png", alt="Emulate image types", width="800", height="480" %}
 
-Similarly, you can disable WebP images. 
+Similarly, you can disable WebP images.
 
 {% Aside 'important' %}
-These options disable image caching automatically. 
+These options disable image caching automatically.
 {% endAside %}

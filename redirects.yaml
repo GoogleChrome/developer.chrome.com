@@ -21,6 +21,12 @@ redirects:
 
 # Simple redirects
 
+- from: /docs/privacy-sandbox/first-party-sets/
+  to: /docs/privacy-sandbox/related-website-sets/
+
+- from: /docs/privacy-sandbox/first-party-sets-integration/
+  to: /docs/privacy-sandbox/related-website-sets-integration/
+
 - from: /docs/privacy-sandbox/trust-tokens/
   to: /docs/privacy-sandbox/private-state-tokens/
 
@@ -80,6 +86,9 @@ redirects:
 
 - from: /docs/privacy-sandbox/status
   to: https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline
+
+- from: /docs/privacy-sandbox/use-shared-storage/
+  to: /docs/privacy-sandbox/shared-storage/
 
 - from: /android
   to: /docs/android
@@ -471,7 +480,7 @@ redirects:
   # MV2 docs that have been removed, but their MV3 version still exists
 
 - from: /docs/extensions/mv2/single_purpose
-  to: /docs/extensions/mv3/single_purpose/
+  to: /docs/extensions/mv3/quality_guidelines/
 
   # Group redirects
 
@@ -645,6 +654,10 @@ redirects:
 - from: /docs/extensions/mv3/known-issues/
   to: /docs/extensions/migrating/known-issues/
 
+# Extension samples
+- from: /docs/extensions/mv3/samples/
+  to: /docs/extensions/samples/
+
 # Redirects for docs now on MDN
 
 - from: /docs/web-platform/popover-api/backdrop-pseudo-element
@@ -763,6 +776,8 @@ redirects:
 
 - from: /docs/extensions/gethelp
   to: /docs/extensions/support-feedback
+- from: docs/extensions/mv3/single_purpose/
+  to: docs/extensions/mv3/quality_guidelines/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

@@ -62,17 +62,13 @@ Here are the minimum steps to follow to generate event-level reports:
 
      Refer to the [example code in adtech.js](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L309) to see the `post` method. More information on [.well-known](https://en.wikipedia.org/wiki/Well-known_URI) is here.
 
-1. **Complete the source registration**. Upon receiving the request, respond with the header [`Attribution-Reporting-Register-Source`](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views). In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
-
-    Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) for the instructions.
-
 More details on [event-level reports](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md) here.
 
 ### Summary report generation
 
-To generate reports, follow these high-level steps:
+To generate summary reports, follow these high-level steps:
 
-1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for the instructions. Note that [the steps](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-1-initiate-source-registration) are different for clicks and views.
+1. **Register a source**. Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source) for the instructions. Note that [the steps](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-1-initiate-source-registration) are different for clicks and views. Additional details can be found in [Attribution source registration](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-source-registration).
 
 1. **Register a trigger**. Refer to [Register attribution triggers](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger) for the instructions. {: #summary-endpoint }
 
@@ -81,15 +77,12 @@ To generate reports, follow these high-level steps:
 
         Refer to the [example code in adtech.js](https://github.com/GoogleChromeLabs/trust-safety-demo/blob/8f3d874b79ab0c8a15822fbcd09e94042aee7dcd/conversion-measurement/functions/apps/adtech.js#L334) to see the `post` method. More information on [.well-known](https://en.wikipedia.org/wiki/Well-known_URI) is here.
 
-1. **Complete the source registration**: Upon receiving the request, respond with the header [`Attribution-Reporting-Register-Source`](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views). In that header, specify the desired Attribution Reporting configuration. This step is the same for both clicks and views.
-
-    Refer to [Register attribution sources](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/#step-2-respond-with-header-clicks-and-views) for the instructions.
-    
-1. **Set up debug reports**: Learn how in the [Attribution reporting debugging series](/docs/privacy-sandbox/attribution-reporting-debugging/).
-
+  
 1. **Batch and send the reports** for further processing by the [Aggregation Service](/docs/privacy-sandbox/aggregation-service/) which will produce summary reports. Refer to [batched aggregatable reports](/docs/privacy-sandbox/attribution-reporting/system-overview/#batched-aggregatable-reports).
 
 More details on [summary reports](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md) here.
+
+Learn how to set up debug reports in the [Attribution reporting debugging series](/docs/privacy-sandbox/attribution-reporting-debugging/).
 
 #### Summary reports additional concepts
 
@@ -105,8 +98,8 @@ In addition to understanding the implementation steps here, the following concep
     1. Follow the instructions in
         [Define custom rules using filters](/docs/privacy-sandbox/attribution-reporting/define-filters/).
     1. Review details specific to filters for aggregatable reports in
-        the
-        [explainer](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md).
+        the triggers section of the 
+        [explainer](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-trigger-registration).
 
 ### Don't forget feature detection
 
@@ -127,8 +120,8 @@ Note that this check alone isn't a guarantee that the API is usable on that page
 
 If you're ready to begin implementation, check out these docs:
 - Setup:
-  - [Register an attribution trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
   - [Register an attribution source](/docs/privacy-sandbox/attribution-reporting/register-attribution-source)
+  - [Register an attribution trigger](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger)
   - [Prioritize specific clicks, views, or conversions](/docs/privacy-sandbox/attribution-reporting/change-attribution-logic/)
   - [Debugging Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-debugging/)
   - [Aggregation keys](/docs/privacy-sandbox/attribution-reporting/aggregation-keys)

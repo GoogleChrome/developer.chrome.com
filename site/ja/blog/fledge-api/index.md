@@ -50,7 +50,7 @@ FLEDGE は、[TURTLEDOVE](https://github.com/WICG/turtledove) ファミリの提
 
 ### FLEDGE オリジントライアルに参加する {: #origin-trial}
 
-プライバシーサンドボックスの関連性と測定の[オリジントライアル](/blog/origin-trials/)は、FLEDGE、[Topics](/docs/privacy-sandbox/topics/)、および[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) API について、デスクトップの Chrome ベータ版 101.0.4951.26 以降で公開されています。
+プライバシーサンドボックスの広告関連の[オリジントライアル](/blog/origin-trials/)は、FLEDGE、[Topics](/docs/privacy-sandbox/topics/)、および[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) API について、デスクトップの Chrome ベータ版 101.0.4951.26 以降で公開されています。
 
 参加するには、[オリジントライアル トークンに登録](/origintrials/#/view_trial/771241436187197441)してください。
 
@@ -83,9 +83,9 @@ FLEDGE API コードを実行するすべてのページにトライアルトー
 
 {% Aside 'caution' %}
 
-有効なトライアルトークンを提供するページであっても、すべてのユーザーがプライバシーサンドボックスの関連性と測定のオリジントライアルの対象となるわけではありません。
+有効なトライアルトークンを提供するページであっても、すべてのユーザーがプライバシーサンドボックスの広告関連のオリジントライアルの対象となるわけではありません。
 
-[プライバシーサンドボックス広告の関連性と測定 API をテストする](/blog/privacy-sandbox-unified-origin-trial#eligible-users)にはその理由が説明されており、オリジントライアル機能を使用する前に使用可能かどうかを検出する方法（検出する必要があります）が示されています。
+[プライバシーサンドボックス広告関連 API をテストする](/blog/privacy-sandbox-unified-origin-trial#eligible-users)にはその理由が説明されており、オリジントライアル機能を使用する前に使用可能かどうかを検出する方法（検出する必要があります）が示されています。
 
 {% endAside %}
 
@@ -325,7 +325,7 @@ navigator.joinAdInterestGroup(interestGroup, 7 * kSecsPerDay);
 
 {% Aside 'gotchas' %}
 
-FLEDGE API メソッドのパラメーターとして使用されるすべての URL は、安全なオリジンからのものである必要があります。すべてのリソースは、HTTPS URL 経由で提供される必要があります。[ローカル開発での HTTPS の使用方法](https://web.dev/how-to-use-local-https/)には、FLEDGE をローカルで実行するときにこれをどのように行うかが説明されています。
+FLEDGE API メソッドのパラメーターとして使用されるすべての URL は、安全なオリジンからのものである必要があります。すべてのリソースは、HTTPS URL 経由で提供される必要があります。[ローカル開発での HTTPS の使用方法](https://web.dev/articles/how-to-use-local-https)には、FLEDGE をローカルで実行するときにこれをどのように行うかが説明されています。
 
 さらに、`biddingLogicUrl`、`decisionLogicUrl`、`trustedBiddingSignals` にはすべて、`X-Allow-FLEDGE: true` HTTP レスポンスヘッダーが必要です。
 

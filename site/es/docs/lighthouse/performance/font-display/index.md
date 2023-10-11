@@ -6,7 +6,7 @@ date: 2019-05-02
 updated: 2020-04-29
 ---
 
-Con frecuencia, las fuentes son archivos grandes que tardan en cargarse. En algunos navegadores se oculta el texto hasta que se carga la fuente, lo que provoca un [destello de texto invisible (FOIT)](https://web.dev/avoid-invisible-text/).
+Con frecuencia, las fuentes son archivos grandes que tardan en cargarse. En algunos navegadores se oculta el texto hasta que se carga la fuente, lo que provoca un [destello de texto invisible (FOIT)](https://web.dev/articles/avoid-invisible-text).
 
 ## Cómo falla la auditoría de visualización para fuentes de Lighthouse
 
@@ -32,14 +32,14 @@ El modo más sencillo de evitar que se visualice el texto invisible mientras se 
 }
 ```
 
-En la [API de visualización de las fuentes](https://developer.mozilla.org/docs/Web/CSS/@font-face/font-display) se especifica cómo se muestra una fuente. `swap` permite que el navegador muestre inmediatamente el texto que utiliza la fuente con una fuente del sistema. Una vez que la fuente personalizada está lista, reemplaza a la fuente del sistema. (Consulte la publicación [Evitar el texto invisible durante la carga](https://web.dev/avoid-invisible-text/) para obtener más información).
+En la [API de visualización de las fuentes](https://developer.mozilla.org/docs/Web/CSS/@font-face/font-display) se especifica cómo se muestra una fuente. `swap` permite que el navegador muestre inmediatamente el texto que utiliza la fuente con una fuente del sistema. Una vez que la fuente personalizada está lista, reemplaza a la fuente del sistema. (Consulte la publicación [Evitar el texto invisible durante la carga](https://web.dev/articles/avoid-invisible-text) para obtener más información).
 
 ### Precargar fuentes web
 
 Utilice `<link rel="preload" as="font">` para recuperar los archivos de sus fuentes con antelación. Obtenga más información:
 
-- [Precargue fuentes web para mejorar la velocidad de carga (codelab)](https://web.dev/codelab-preload-web-fonts/)<a></a>
-- [Evite el cambio de diseño y los destellos de texto invisible (FOIT) mediante la precarga de fuentes opcionales](https://web.dev/preload-optional-fonts/)
+- [Precargue fuentes web para mejorar la velocidad de carga (codelab)](https://web.dev/articles/codelab-preload-web-fonts)<a></a>
+- [Evite el cambio de diseño y los destellos de texto invisible (FOIT) mediante la precarga de fuentes opcionales](https://web.dev/articles/preload-optional-fonts)
 
 ### Fuentes de Google
 
@@ -71,7 +71,7 @@ Especifique `@font-display` al [definir fuentes personalizadas](https://devdocs.
 ## Recursos
 
 - [Código fuente para **Asegurar que el texto permanezca visible durante la auditoría de carga para fuentes web**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/font-display.js)
-- [Evitar el texto invisible durante la carga](https://web.dev/avoid-invisible-text/)
+- [Evitar el texto invisible durante la carga](https://web.dev/articles/avoid-invisible-text)
 - [Controlar el rendimiento de las fuentes con visualizadores para fuentes](https://developers.google.com/web/updates/2016/02/font-display)
-- [Precargar fuentes web para mejorar la velocidad de carga (codelab)](https://web.dev/codelab-preload-web-fonts/)<a></a>
-- [Evitar el cambio de diseño y los destellos de texto invisible (FOIT) mediante la precarga de fuentes opcionales](https://web.dev/preload-optional-fonts/)
+- [Precargar fuentes web para mejorar la velocidad de carga (codelab)](https://web.dev/articles/codelab-preload-web-fonts)<a></a>
+- [Evitar el cambio de diseño y los destellos de texto invisible (FOIT) mediante la precarga de fuentes opcionales](https://web.dev/articles/preload-optional-fonts)

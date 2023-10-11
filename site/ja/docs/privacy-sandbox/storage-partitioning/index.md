@@ -34,14 +34,14 @@ tags:
 
 ### パーティション ストレージ有効前
 
-<figure>  {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png", alt="パーティション化のないストレージ API の図。", width="793", height="415" %}    <figcaption>      ストレージ パーティション有効前は a.com と b.com でデータを共有可能。<br><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png">拡大表示</a>。    </figcaption> </figure>  
+<figure>  {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png", alt="パーティション化のないストレージ API の図。", width="793", height="415" %}    <figcaption>      ストレージ パーティション有効前は a.com と b.com でデータを共有可能。<br><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/wOagNNjLO8LHJUn6p1iM.png">拡大表示</a>。    </figcaption> </figure>
 {% endColumn %}
 
 {% Column %}
 
 ### パーティション ストレージ後
 
-<figure>   {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png", alt="パーティション化によるストレージ API の図。", width="800", height="553" %}     <figcaption>       ストレージ パーティション有効後は b.com は a.com のストレージにアクセスできなくなる。<br><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png">拡大表示</a>。     </figcaption> </figure>  
+<figure>   {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png", alt="パーティション化によるストレージ API の図。", width="800", height="553" %}     <figcaption>       ストレージ パーティション有効後は b.com は a.com のストレージにアクセスできなくなる。<br><a href="https://wd.imgix.net/image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/X8tExxdcoVSE4P1bUKQJ.png">拡大表示</a>。     </figcaption> </figure>
 {% endColumn %}
 
 {% endColumns %}
@@ -60,11 +60,11 @@ tags:
 
 ### ストレージ API
 
-[クォータ システム](https://web.dev/storage-for-the-web/#how-much) :   クォータ システムは、ストレージに割り当てられるディスク容量を決定するために使用されます。各パーティションはクォータ システムによって個別のバケットとして管理され、許可される容量と、クリアされる時期が決定されます。 :   `navigator.storage.estimate()` はパーティションの情報を返します。`window.webkitStorageInfo` や `navigator.webkitTemporaryStorage` などの Chrome 専用 API は使用廃止になります。 :   [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) と [キャッシュ ストレージ](https://web.dev/cache-api-quick-guide)は、新しいパーティション クォータ システムを使用します。
+[クォータ システム](https://web.dev/articles/storage-for-the-web#how_much) :   クォータ システムは、ストレージに割り当てられるディスク容量を決定するために使用されます。各パーティションはクォータ システムによって個別のバケットとして管理され、許可される容量と、クリアされる時期が決定されます。 :   `navigator.storage.estimate()` はパーティションの情報を返します。`window.webkitStorageInfo` や `navigator.webkitTemporaryStorage` などの Chrome 専用 API は使用廃止になります。 :   [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API) と [キャッシュ ストレージ](https://web.dev/cache-api-quick-guide)は、新しいパーティション クォータ システムを使用します。
 
 [Web Storage API](https://developer.mozilla.org/docs/Web/API/Web_Storage_API) :   Web Storage API は、ブラウザがキーと値のペアを保存できる [Local Storage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) と [Session Storage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage) の 2 つの仕組みを提供します。これらは現在クォータで管理されていませんが、引き続きパーティション化されます。
 
-[Origin Private File System](https://web.dev/file-system-access/#accessing-the-origin-private-file-system) :   [File System Access API](https://web.dev/file-system-access)を使用すると、ユーザーがアクセスを許可した後、サイトはデバイス上のファイルやフォルダの変更を直接読み取ったり保存したりできます。Origin Private File System を使用すると、オリジンは、ユーザーが簡単にアクセスできるディスクに非公開コンテンツを保存でき、パーティション化されます。
+[Origin Private File System](https://web.dev/articles/file-system-access#accessing_the_origin_private_file_system) :   [File System Access API](https://web.dev/file-system-access)を使用すると、ユーザーがアクセスを許可した後、サイトはデバイス上のファイルやフォルダの変更を直接読み取ったり保存したりできます。Origin Private File System を使用すると、オリジンは、ユーザーが簡単にアクセスできるディスクに非公開コンテンツを保存でき、パーティション化されます。
 
 [Storage Bucket API](https://wicg.github.io/storage-buckets/explainer.html) :   Storage Bucket API は、バケットと呼ばれる新しい概念を使用して、IndexedDB や localStorage などのさまざまなストレージ API を統合する [Storage Standard](https://storage.spec.whatwg.org/) 用に開発されています。バケットに格納されたデータとバケットに関連付けられたメタデータはパーティションされます。
 

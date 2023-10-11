@@ -79,7 +79,7 @@ bundling](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/themes/js-b
 ### React
 
 If you are not server-side rendering, [split your JavaScript
-bundles](https://web.dev/code-splitting-suspense/) with `React.lazy()`.
+bundles](https://web.dev/articles/code-splitting-suspense) with `React.lazy()`.
 Otherwise, code-split using a third-party library such as
 [loadable-components](https://www.smooth-code.com/open-source/loadable-components/docs/getting-started/).
 
@@ -95,7 +95,7 @@ plugins](https://wordpress.org/plugins/) loading unused JavaScript in your page.
 ## Resources
 
 - [Source code for the **Remove unused code** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/unused-javascript.js)
-- [Remove unused code](https://web.dev/remove-unused-code/)
+- [Remove unused code](https://web.dev/articles/remove-unused-code)
 - [Adding interactivity with JavaScript][crp]
 - [Code Splitting][split]
 - [Dead Code Elimination][eliminate]

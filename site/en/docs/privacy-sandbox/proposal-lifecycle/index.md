@@ -8,7 +8,7 @@ description: >
   How we collaborate with stakeholders to discuss, test, and adopt
   privacy-preserving technologies.
 date: 2022-03-30
-updated: 2023-05-18
+updated: 2023-09-26
 authors:
   - alexandrawhite
 ---
@@ -130,11 +130,8 @@ developers can register to opt in your site or service. This provides you an
 opportunity to try the feature on production traffic and provide feedback on
 real-world experience.
 
-The Privacy Sandbox has been running a
-[unified origin trial](/docs/privacy-sandbox/unified-origin-trial/) for the
-relevance and measurement APIs, which is still open for sign ups. We anticipate
-this origin trial will close when these
-[APIs enter general availability](/blog/shipping-privacy-sandbox/). 
+The Privacy Sandbox ran a unified origin trial for the
+relevance and measurement APIs, which is now complete. 
 
 When a feature is initially made available for testing, the focus is generally
 on **functional or technical testing**. With new code, there is an expectation
@@ -212,21 +209,20 @@ come. The following technologies are now available:
 * [CHIPS](/docs/privacy-sandbox/chips/): Allow developers to opt-in a cookie to
   partitioned storage, with a separate cookie jar per top-level site. CHIPS
   became available in Stable in February 2023.
-* [First-Party Sets](/docs/privacy-sandbox/first-party-sets/): Declare
+* [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) ([formerly called First-Party Sets](/blog/related-website-sets/)): Declare
   relationships among sites to allow for limited cross-site cookie access using
-  the Storage Access API. First-Party Sets is slowly rolling out with Chrome
-  Stable version 113, this week.
+  the Storage Access API. Related Website Sets is now in general availability.
 * [Federated Credential Management (FedCM)](/docs/privacy-sandbox/fedcm/):
   Support federated identity without sharing the user's email address or other
   identifying information with a third-party service or website, unless the
   user explicitly agrees to do so. FedCM shipped in November 2022.
 
-In July 2023, the relevance and measurement APIs will be
+In July 2023, the relevance and measurement APIs became
 [available for scaled adoption](/blog/shipping-privacy-sandbox/). This means
-these APIs will be available by default in Chrome. Developers will be able to
+these APIs became available by default in Chrome. Developers can now
 use these technologies without browser flags or participation in origin trials.
 
-In short, these APIs will be ready for use, at-scale, in a production
+In short, these APIs are ready for 99 percent of users, at-scale, in a production
 environment.
 
 #### Phased launches

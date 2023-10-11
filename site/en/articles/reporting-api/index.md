@@ -307,7 +307,7 @@ Here's the data you can find in each of these reports:
 
 #### Credentialed reports
 
-Reporting endpoints that have the [same origin](https://web.dev/same-site-same-origin/#same-origin-and-cross-origin) as the page that generates the report receive the credentials
+Reporting endpoints that have the [same origin](https://web.dev/articles/same-site-same-origin#same_origin_and_cross_origin) as the page that generates the report receive the credentials
 (cookies) in the requests that contain the reports.
 
 Credentials may give useful additional context about the report; for
@@ -315,7 +315,7 @@ example, whether a given user’s account is triggering errors consistently, or 
 of actions taken on other pages is triggering a report on this page.
 
 {% Aside %}
-[Cross-origin](https://web.dev/same-site-same-origin/#same-origin-and-cross-origin) endpoints
+[Cross-origin](https://web.dev/articles/same-site-same-origin#same_origin_and_cross_origin) endpoints
 don't receive credentials. This is a security measure and can't be changed.
 {% endAside %}
 

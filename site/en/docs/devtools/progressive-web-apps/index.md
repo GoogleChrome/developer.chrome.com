@@ -70,7 +70,7 @@ In addition, if DevTools encounters an error, such as an icon that cannot be loa
 
 ### View and check maskable icons {: #icons }
 
-The **Icons** section of the **Manifest** pane displays all the icons of your application. In this section, you can also check safe areas for [maskable icons](https://web.dev/maskable-icon/), the format of icons that adapt to platforms.
+The **Icons** section of the **Manifest** pane displays all the icons of your application. In this section, you can also check safe areas for [maskable icons](https://web.dev/articles/maskable-icon), the format of icons that adapt to platforms.
 
 To trim the icons so that only the minimum safe area is visible, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show only the minimum safe area for maskable icons**.
 
@@ -108,9 +108,9 @@ DevTools via [remote debugging][6]. To trigger the installation on the connected
 
 ### Inspect shortcuts {: #shortcut }
 
-[App shortcuts](https://web.dev/app-shortcuts/) let you to provide quick access to a handful of common actions that users need frequently.
+[App shortcuts](https://web.dev/articles/app-shortcuts) let you to provide quick access to a handful of common actions that users need frequently.
 
-To inspect the shortcuts you defined in your [manifest file](https://web.dev/app-shortcuts/#define-app-shortcuts-in-the-web-app-manifest), scroll to the **Shortcut #N** sections of the **Manifest** pane.
+To inspect the shortcuts you defined in your [manifest file](https://web.dev/articles/app-shortcuts#define_app_shortcuts_in_the_web_app_manifest), scroll to the **Shortcut #N** sections of the **Manifest** pane.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/q3uzqiM5Psp7ggEAn3Y0.png", alt="Shortcut section in the Manifest pane.", width="800", height="452" %}
 
@@ -129,7 +129,7 @@ To inspect the screenshots, scroll to the **Screenshot #N** sections of the **Ma
 ### Test URL protocol handler registration {: #test-protocol-handler }
 
 PWAs can handle links that use a specific protocol for a more integrated experience.
-To learn how to create a handler, see [URL protocol handler registration for PWAs](https://web.dev/url-protocol-handler/).
+To learn how to create a handler, see [URL protocol handler registration for PWAs](https://web.dev/articles/url-protocol-handler).
 
 To test your handler:
 
@@ -170,7 +170,7 @@ and debug service workers.
 - The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Update on reload** checkbox forces the service worker to update on every page load.
 - The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Bypass for network** checkbox bypasses the service worker and forces the browser to go to
   the network for requested resources.
-- The **Network requests** link takes you to the **Network** panel with a list of intercepted requests related to the service worker (`is:service-worker-intercepted` filter). 
+- The **Network requests** link takes you to the **Network** panel with a list of intercepted requests related to the service worker (`is:service-worker-intercepted` filter).
 - The **Update** link performs a one-time update of the specified service worker.
 - The **Push** button emulates a push notification without a payload (also known as a [tickle][10]).
 - The **Sync** button emulates a background sync event.
@@ -195,8 +195,8 @@ and debug service workers.
   To see the exact timestamp of each activity, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bJ1ZWs8NN8S0NaZnCHyQ.svg", alt="Expand.", width="20", height="20" %} **Expand** buttons.
 
   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Zm0jydouqxuO3erPfBN.png", alt="Activities and their timestamps.", width="400", height="587" %}
-  
-  For more information, see [The service worker lifecycle](https://web.dev/service-worker-lifecycle/).
+
+  For more information, see [The service worker lifecycle](https://web.dev/articles/service-worker-lifecycle).
 
 If the service worker causes any errors, the **Service Workers** pane shows an {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/99Zk6gIDdtxuEzPABtiy.png", alt="Error.", width="22", height="24" %} **Error** icon with the number of errors next to the **Source** line.
 The link with the number takes you to the **Console** with all the logged errors.

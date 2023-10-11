@@ -23,9 +23,9 @@ tags:
 
 The [Chrome UX Report](/docs/crux/) (CrUX) dataset represents how real-world Chrome users experience popular destinations on the web. Since 2017, when the queryable dataset was first released on [BigQuery](./chrome-ux-report-bigquery/), field data from CrUX has been integrated into developer tools like [PageSpeed Insights](./chrome-ux-report-pagespeed-insights/), the [CrUX Dashboard](./chrome-ux-report-looker-studio-dashboard/), and Search Console's [Core Web Vitals report](https://support.google.com/webmasters/answer/9205520), enabling developers to easily measure and monitor real-user experiences. The piece that has been missing all this time has been a tool that provides free and RESTful access to CrUX data programmatically. To help bridge that gap, we're excited to announce the release of the all new [Chrome UX Report API](/docs/crux/api/)!
 
-This API has been built with the goal of providing developers with simple, fast, and comprehensive access to CrUX data. The CrUX API only reports [_field_](https://web.dev/how-to-measure-speed/#lab-data-vs-field-data) user experience data, unlike the existing [PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v5/get-started), which also reports _lab_ data from the Lighthouse performance audits. The CrUX API is streamlined and can quickly serve user experience data, making it ideally suited for real-time auditing applications.
+This API has been built with the goal of providing developers with simple, fast, and comprehensive access to CrUX data. The CrUX API only reports [_field_](https://web.dev/articles/how-to-measure-speed#lab_data_vs_field_data) user experience data, unlike the existing [PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v5/get-started), which also reports _lab_ data from the Lighthouse performance audits. The CrUX API is streamlined and can quickly serve user experience data, making it ideally suited for real-time auditing applications.
 
-To ensure that developers have access to all of the metrics that matter the most—the [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)—the CrUX API audits and monitors [Largest Contentful Paint](https://web.dev/lcp/) (LCP), [First Input Delay](https://web.dev/fid/) (FID), and [Cumulative Layout Shift](https://web.dev/cls/) (CLS) at both the origin and URL level.
+To ensure that developers have access to all of the metrics that matter the most—the [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)—the CrUX API audits and monitors [Largest Contentful Paint](https://web.dev/articles/lcp) (LCP), [First Input Delay](https://web.dev/articles/fid) (FID), and [Cumulative Layout Shift](https://web.dev/articles/cls) (CLS) at both the origin and URL level.
 
 So let's dive in and see how to use it!
 
@@ -121,7 +121,7 @@ If data exists for this origin, the API response is a JSON-encoded object contai
 }
 ```
 
-The `start` and `end` properties of the `histogram` object represent the range of values users experience for the given metric. The `density` property represents the proportion of user experiences within that range. In this example, 79% of LCP user experiences across all web.dev pages are under 2,500 milliseconds, which is the "[good](https://web.dev/lcp/#what-is-lcp)" LCP threshold. The `percentiles.p75` value means that 75% of user experiences in this distribution are less than 2,216 milliseconds. Learn more about the response structure in the [response body](/docs/crux/api/#response-body) documentation.
+The `start` and `end` properties of the `histogram` object represent the range of values users experience for the given metric. The `density` property represents the proportion of user experiences within that range. In this example, 79% of LCP user experiences across all web.dev pages are under 2,500 milliseconds, which is the "[good](https://web.dev/articles/lcp#what_is_lcp)" LCP threshold. The `percentiles.p75` value means that 75% of user experiences in this distribution are less than 2,216 milliseconds. Learn more about the response structure in the [response body](/docs/crux/api/#response-body) documentation.
 
 ### Errors
 
@@ -320,7 +320,7 @@ Recall from the previous section that 85% of user experiences on this page had "
 
 ## Assessing Core Web Vitals performance
 
-The [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) program defines targets that help determine whether a user experience or a distribution of experiences can be considered "good". In the following example, we use the CrUX API and the [`CrUXApiUtil.query`](#crux-api-util) function to assess whether a web page's distribution of Core Web Vitals metrics (LCP, FID, CLS) are "good".
+The [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals) program defines targets that help determine whether a user experience or a distribution of experiences can be considered "good". In the following example, we use the CrUX API and the [`CrUXApiUtil.query`](#crux-api-util) function to assess whether a web page's distribution of Core Web Vitals metrics (LCP, FID, CLS) are "good".
 
 ```js/1
 CrUXApiUtil.query({

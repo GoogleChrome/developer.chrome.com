@@ -22,7 +22,7 @@ User-Agent 文字列には、ブラウザとユーザーが使用しているデ
 
 とは言え、UA 文字列は最新の Web プライバシーの期待を満たしていません。デフォルトでは、User-Agent 文字列から、Web 中のユーザーの識別とトラッキングに使用できる情報を得られます。また、すべての Web サイトやサービスが UA 文字列が提供する情報を必要とするわけではありません。
 
-そのため、Chrome では UA 文字列でデフォルトで共有される情報を削減し、サイトやサービスが必要な情報のみをリクエストできるようにうする User-Agent Client Hints（UA-CH）という[新しい API](https://web.dev/user-agent-client-hints/) を導入しています。この計画を最初に[発表](https://groups.google.com/a/chromium.org/g/blink-dev/c/-2JIRNMWJ7s/m/yHe4tQNLCgAJ)したのは 2020 年 1 月で、 [段階的なロードマップ](https://blog.chromium.org/2021/05/update-on-user-agent-string-reduction.html)を 2021 年 5 月に共有しました。この変更により、UA 文字列の情報の制限において、Chrome と他のブラウザの機能が同調されます。
+そのため、Chrome では UA 文字列でデフォルトで共有される情報を削減し、サイトやサービスが必要な情報のみをリクエストできるようにうする User-Agent Client Hints（UA-CH）という[新しい API](https://web.dev/articles/user-agent-client-hints) を導入しています。この計画を最初に[発表](https://groups.google.com/a/chromium.org/g/blink-dev/c/-2JIRNMWJ7s/m/yHe4tQNLCgAJ)したのは 2020 年 1 月で、 [段階的なロードマップ](https://blog.chromium.org/2021/05/update-on-user-agent-string-reduction.html)を 2021 年 5 月に共有しました。この変更により、UA 文字列の情報の制限において、Chrome と他のブラウザの機能が同調されます。
 
 ## 段階的アプローチ
 

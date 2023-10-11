@@ -80,7 +80,7 @@ const blocking =   res.filter(({renderBlockingStatus}) =>
       renderBlockingStatus === 'blocking');
 ```
 
-Optimizing how you load your resources helps with [Core Web Vitals](https://web.dev/vitals/) and with providing a better user experience, Check out the MDN documentation to learn more about the [Performance API](https://developer.mozilla.org/docs/Web/API/Performance_API), look for those render blocking resources and optimize away.
+Optimizing how you load your resources helps with [Core Web Vitals](https://web.dev/articles/vitals) and with providing a better user experience, Check out the MDN documentation to learn more about the [Performance API](https://developer.mozilla.org/docs/Web/API/Performance_API), look for those render blocking resources and optimize away.
 
 
 ## PendingBeacon API origin trial {: #pending-beacon }
@@ -99,7 +99,7 @@ Of course there’s plenty more.
 
 * The `expect-ct` http header is deprecated.
 * The `rel` attribute is now supported on `<form>` elements.
-* Last time I mentioned [`grid-template` interpolation](https://web.dev/css-animated-grid-layouts/), this time it should be included.
+* Last time I mentioned [`grid-template` interpolation](https://web.dev/articles/css-animated-grid-layouts), this time it should be included.
 
 ## Further reading
 

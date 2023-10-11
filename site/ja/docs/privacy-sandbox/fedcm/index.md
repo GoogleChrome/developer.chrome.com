@@ -177,7 +177,7 @@ FedCM を使用するには、Chrome の IdP と RP の両方で安全なコン�
 
 ### well-known ファイルを作成する {: #well-known-file }
 
-[トラッカーによる API の悪用](https://github.com/fedidcg/FedCM/issues/230)を防ぐには、IdP の [eTLD+1](https://web.dev/same-site-same-origin/#same-site-cross-site) の `/.well-known/web-identity` から well-known ファイルを提供する必要があります。
+[トラッカーによる API の悪用](https://github.com/fedidcg/FedCM/issues/230)を防ぐには、IdP の [eTLD+1](https://web.dev/articles/same-site-same-origin#same_site_cross_site) の `/.well-known/web-identity` から well-known ファイルを提供する必要があります。
 
 たとえば、IdP エンドポイントが `https://accounts.idp.example/` で配信されている場合、`https://idp.example/.well-known/web-identity` の well-known ファイルと [IdP 設定ファイル](#idp-config-file)を配信する必要があります。以下は、well-known ファイルの例です。
 
@@ -208,7 +208,7 @@ const credential = await navigator.credentials.get({
 const { token } = credential;
 ```
 
-IdP 設定ファイルの場所の完全な URL を `configURL` として指定します。[`navigator.credentials.get()` が RP で呼び出される](#sign-into-rp)と、ブラウザは `Referer` ヘッダーなしで `GET` リクエストを使用して設定ファイルをフェッチします。リクエストには Cookie がなく、リダイレクトに従いません。これにより、誰がリクエストを行い、どの RP が接続を試みているかを IdP が知ることを効果的に防ぎます。次に例を示します。
+IdP 設定ファイルの場所の完全な URL を `configURL` として指定します。[`navigator.credentials.get()` が RP で呼び出される](#sign-into-rp)と、ブラウザは `Origin` ヘッダーや `Referer` ヘッダーなしで `GET` リクエストを使用して設定ファイルをフェッチします。リクエストには Cookie がなく、リダイレクトに従いません。これにより、誰がリクエストを行い、どの RP が接続を試みているかを IdP が知ることを効果的に防ぎます。次に例を示します。
 
 ```http
 GET /config.json HTTP/1.1
@@ -310,7 +310,7 @@ RP が[Content Security Policy（CSP）](https://developer.mozilla.org/docs/Web/
 
 IdP のアカウントリストエンドポイントは、ユーザーが現在 IdP にサインインしているアカウントのリストを返します。 IdP が複数のアカウントをサポートしている場合、このエンドポイントはサインインしているすべてのアカウントを返します。
 
-ブラウザは、cookie を含む `GET` リクエストを送信しますが、`client_id`パラメーターまたは `Referer` ヘッダーは使用しません。これにより、ユーザーがサインインしようとしている RP を IdP が知ることを効果的に防止します。次に例を示します。
+ブラウザは、cookie を含む `GET` リクエストを送信しますが、`client_id`パラメーター、 `Origin` ヘッダーや `Referer` ヘッダーは使用しません。これにより、ユーザーがサインインしようとしている RP を IdP が知ることを効果的に防止します。次に例を示します。
 
 ```http
 GET /accounts.php HTTP/1.1
@@ -396,7 +396,7 @@ IdP のクライアントメタデータエンドポイントは、RP のプラ�
 ```http
 GET /client_metadata.php?client_id=1234 HTTP/1.1
 Host: accounts.idp.example
-Referer: https://rp.example/
+Origin: https://rp.example/
 Accept: application/json
 Sec-Fetch-Dest: webidentity
 ```
@@ -471,21 +471,22 @@ HTTP ヘッダーの例:
 ```http
 POST /assertion.php HTTP/1.1
 Host: accounts.idp.example
-Referer: https://rp.example/
+Origin: https://rp.example/
 Content-Type: application/x-www-form-urlencoded
 Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
+
 account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true
 ```
 
 サーバー上で、IdP は次のことを確認する必要があります。
 
 1. 要求されたアカウント ID が、既にサインインしているアカウントの ID と一致していること。
-2. `Referer` ヘッダーが、所定のクライアント ID に対して事前に登録された RP のオリジンと一致すること。
+2. `Origin` ヘッダーが、所定のクライアント ID に対して事前に登録された RP のオリジンと一致すること。
 
 {% Aside 'warning' %}
 
-OAuth または OpenID Connect でのドメイン検証はブラウザのリダイレクトに依存しているため、FedCM では、 `Referer` ヘッダー値が RP の登録済みオリジンと一致することを IdP サーバーがチェックすることが重要です。
+OAuth または OpenID Connect でのドメイン検証はブラウザのリダイレクトに依存しているため、FedCM では、 `Origin` ヘッダー値が RP の登録済みオリジンと一致することを IdP サーバーがチェックすることが重要です。
 
 {% endAside %}
 

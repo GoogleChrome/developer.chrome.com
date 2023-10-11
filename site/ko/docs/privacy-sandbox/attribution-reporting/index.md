@@ -48,7 +48,7 @@ authors:
 
 Attribution Reporting API를 사용하면 함께 연결된 두 이벤트, 즉 사용자가 광고를 보거나 클릭하는 것과 같은 게시자 웹사이트의 이벤트와 이후 광고주 사이트에서 전환을 측정할 수 있습니다.
 
-이 API는 클릭 후 전환 기여 측정(현재 [최초 평가판](https://web.dev/conversion-measurement/#browser-support) 상태인 이 API의 첫 구현에서 사용 가능) 및 조회 후 전환 기여 측정([공개 설명자 참조](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md))을 지원합니다.
+이 API는 클릭 후 전환 기여 측정(현재 [최초 평가판](/docs/privacy-sandbox/attribution-reporting/#browser-support) 상태인 이 API의 첫 구현에서 사용 가능) 및 조회 후 전환 기여 측정([공개 설명자 참조](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md))을 지원합니다.
 
 API는 다양한 사용 사례에 사용할 수 있는 두 가지 유형의 기여 보고서를 제공합니다.
 
@@ -67,8 +67,8 @@ API는 다양한 사용 사례에 사용할 수 있는 두 가지 유형의 기�
 
 - [기여 보고(전환 측정) 소개](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [API 기술 설명자](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ 사용되지 않음) [광고 전환을 측정하는 보다 안전한 방법](https://web.dev/conversion-measurement/): 웹 개발자를 위한 이 API의 첫 버전의 개요
+- (⚠️ 사용되지 않음) [광고 전환을 측정하는 보다 안전한 방법](/docs/privacy-sandbox/attribution-reporting/): 웹 개발자를 위한 이 API의 첫 버전의 개요
 - (⚠️ 사용되지 않음) [광고 전환을 측정하는 보다 안전한 방법 - 비디오](https://www.youtube.com/watch?v=jcDfOoWwZcM): 이 API 첫 버전의 데모(클릭만)
-- (⚠️ 사용되지 않음) [이벤트 전환 측정 API 사용](https://web.dev/using-conversion-measurement/): 웹 개발자가 이 API의 첫 버전으로 실험하는 방법
+- (⚠️ 사용되지 않음) [이벤트 전환 측정 API 사용](/docs/privacy-sandbox/attribution-reporting/): 웹 개발자가 이 API의 첫 버전으로 실험하는 방법
 - [개인정보 보호 샌드박스 자세히 알아보기](https://web.dev/digging-into-the-privacy-sandbox)
 - [Chrome DevTools로 API 디버그](/blog/new-in-devtools-93/#attribution-reporting)

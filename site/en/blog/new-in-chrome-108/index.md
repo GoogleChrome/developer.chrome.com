@@ -39,7 +39,7 @@ The value will be anything within the limits of the large unit (the maximum) and
 
 {% Img src="image/RYmV5NPuMZRoF3PVwIXTUpdYeQ23/JUvvIgXen1zmHFH53CBS.png", alt="The different parts of the viewport for each type of viewport unit.", width="800", height="664" %}
 
-Check out [this article](https://web.dev/viewport-units/) for more details.  Also checkout the change on [Android viewport resizing behavior](/blog/viewport-resize-behavior/) to handle your viewport appropriately .
+Check out [this article](https://web.dev/articles/viewport-units) for more details.  Also checkout the change on [Android viewport resizing behavior](/blog/viewport-resize-behavior/) to handle your viewport appropriately .
 
 ## Variable fonts now supported in COLRv1. {: #colrv1-support }
 
@@ -82,7 +82,7 @@ Of course there’s plenty more.
 
 * A change [in the behavior for `overflow`](/blog/overflow-replaced-elements/) on replaced elements is being rolled out.
 * If you are an identity provider check out the [Federated Credential Management API](/docs/privacy-sandbox/fedcm/).
-* The [Media Source Extensions API](https://web.dev/media-mse-basics/) is now available in the worker context.
+* The [Media Source Extensions API](https://web.dev/articles/media-mse-basics) is now available in the worker context.
 
 ## Further reading
 

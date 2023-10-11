@@ -1,7 +1,7 @@
 ---
 title: プライバシーサンドボックスの進捗状況（2022 年 5 月 ～ 6 月）
 description: >
-  アトリビューション レポート、FLEDGE、Topics、Fenced Frames、共有ストレージに関するプライバシーサンドボックスの関連性と測定の拡張トライアルを含む更新情報。 2022 年第 1 四半期のフィードバック要約レポートを公開し、さらに多くの開発者オフィスアワーを開催しました。
+  アトリビューション レポート、FLEDGE、Topics、Fenced Frames、共有ストレージに関するプライバシーサンドボックスの広告関連の拡張トライアルを含む更新情報。 2022 年第 1 四半期のフィードバック要約レポートを公開し、さらに多くの開発者オフィスアワーを開催しました。
 layout: 'layouts/blog-post.njk'
 date: 2022-07-08
 authors:
@@ -17,7 +17,7 @@ tags:
 このエディションの「**[プライバシーサンドボックスの進捗状況](/tags/progress-in-the-privacy-sandbox/)**」へようこそ。Chrome におけるサードパーティ Cookie の段階的廃止とよりプライベートなウェブに向けた取り組みについて、2022 年 5 月と 6 月のマイルストーンの達成状況をお知らせします。 各エディションでは、[プライバシー サンドボックス](https://privacysandbox.com/open-web/)全体の更新情報とニュースをまとめてお届けしています。
 
 
-## プライバシーサンドボックスの関連性と測定のオリジントライアル
+## プライバシーサンドボックスの広告関連のオリジントライアル
 
 **アトリビューション レポート**、**FLEDGE**、および **Topics** の複合オリジントライアルを継続して実行するとともに、**Fenced Frames** と**共有ストレージ**にもこのトライアルを拡張しています。 Fenced Frames は、コンテンツを表示するための制限付きコンテナで、FLEDGE が広告を表示するために使用するフレームです。 共有ストレージは、パーティション化されていないストレージを慎重にゲート化し、そこに保管されたデータへのアクセスを広告選択プロセスの一環として許可することで、Fenced Frames の補完的機能を果たします。
 
@@ -63,7 +63,7 @@ Cookie 関連の提案が進展するにつれて、自社サイトの `SameSite
 
 共有ストレージを使用すると、サイトは分割されていないデータを保存できますが、慎重に構築された出力ゲートを備えた安全な環境でのみそのデータを読み取ることができます。 共有ストレージは、安全な環境を提供する Fenced Frames と組み合わせることで、キャンペーンに対する A/B テストなどのユースケースを可能にします。
 
-**[共有ストレージの I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/jDx8z5a6ovk)** では、より広範な[プライバシーサンドボックスの関連性と測定のオリジントライアル](/origintrials/#/view_trial/771241436187197441)の一環としてテストすることが可能です。 **[開発者向けのドキュメント](/docs/privacy-sandbox/shared-storage/)** には、ユースケースとテストが含まれています。
+**[共有ストレージの I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/jDx8z5a6ovk)** では、より広範な[プライバシーサンドボックスの広告関連のオリジントライアル](/origintrials/#/view_trial/771241436187197441)の一環としてテストすることが可能です。 **[開発者向けのドキュメント](/docs/privacy-sandbox/shared-storage/)** には、ユースケースとテストが含まれています。
 
 
 ## 隠されたトラッキングの防止
@@ -106,7 +106,7 @@ Variants: Accept-Language=(de en fr)
 
 Fenced Frame（`<fencedframe>`）は、埋め込みコンテンツ用に提案されている HTML 要素で、iframe に似ています。 ただし、Fenced Frame は、埋め込みコンテキストとの 通信を制限して、フレームが埋め込みコンテキストと共有せずにクロスサイトデータにアクセスできるようにする点で、iframe とは異なります。 たとえば、FLEDGE では、Fenced Frame 内に広告を表示することを意図しています。
 
-[新しい開発者向けの概要コンテンツ](/docs/privacy-sandbox/fenced-frame/)をお読みください。 **[Fenced Frames の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/y6G3cvKXjlg)** は公開済みであり、より広範な[プライバシーサンドボックスの関連性と測定のオリジントライアル](/origintrials/#/view_trial/771241436187197441)の一環として登録できるようになっています。
+[新しい開発者向けの概要コンテンツ](/docs/privacy-sandbox/fenced-frame/)をお読みください。 **[Fenced Frames の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/y6G3cvKXjlg)** は公開済みであり、より広範な[プライバシーサンドボックスの広告関連のオリジントライアル](/origintrials/#/view_trial/771241436187197441)の一環として登録できるようになっています。
 
 
 ## 関連するコンテンツと広告の表示
@@ -116,14 +116,14 @@ Fenced Frame（`<fencedframe>`）は、埋め込みコンテンツ用に提案�
 
 ### Topics
 
-[Topics API](/docs/privacy-sandbox/topics/) は、クロスサイトトラッキングを使用せずに、インタレストベース広告を可能にする提案です。 プライバシーサンドボックスの関連性と測定のオリジントライアルの一環として [Topics を含める I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs) を送信しました。 また、オリジントライアル中には、[Topics のテストとフィードバックの提供に関する新しい開発者ガイド](/docs/privacy-sandbox/topics-experiment/)もご利用いただけます。
+[Topics API](/docs/privacy-sandbox/topics/) は、クロスサイトトラッキングを使用せずに、インタレストベース広告を可能にする提案です。 プライバシーサンドボックスの広告関連のオリジントライアルの一環として [Topics を含める I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs) を送信しました。 また、オリジントライアル中には、[Topics のテストとフィードバックの提供に関する新しい開発者ガイド](/docs/privacy-sandbox/topics-experiment/)もご利用いただけます。
 
 これは早期のテスト段階であるため、コード内にイシューが見つかるたびに、それらを積極的に調査して対処しています。 Topics では、[クラッシュバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=1321140)が見つかったため、ユーザーエクスペリエンスに過度な影響を与えないよう、オリジントライアルに修正が公開されるまで、API を一時的に無効化しました。 その修正が完了したため、Topics API は現在では総合的なオリジントライアルの一環として [Chrome Beta ユーザーの 50% を対象に公開](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs)されています。
 
 
 ### FLEDGE
 
-[FLEDGE](/docs/privacy-sandbox/fledge/) は、個人の識別子に依存することなく、以前にアクセスしたサイトまたは製品を利用できる広告を実行することで、リマーケティングとカスタムオーディエンスのユースケースを実現します。 より広範なプライバシーサンドボックスの関連性と測定のオリジントライアルの一環として有効にするために、[FLEDGE の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg) をもう一度送信しました。 同様に、これに対応する[実験用の開発者ドキュメントも提供](/docs/privacy-sandbox/fledge-experiment/)されています。
+[FLEDGE](/docs/privacy-sandbox/fledge/) は、個人の識別子に依存することなく、以前にアクセスしたサイトまたは製品を利用できる広告を実行することで、リマーケティングとカスタムオーディエンスのユースケースを実現します。 より広範なプライバシーサンドボックスの広告関連のオリジントライアルの一環として有効にするために、[FLEDGE の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg) をもう一度送信しました。 同様に、これに対応する[実験用の開発者ドキュメントも提供](/docs/privacy-sandbox/fledge-experiment/)されています。
 
 
 ## デジタル広告の測定
@@ -133,7 +133,7 @@ Fenced Frame（`<fencedframe>`）は、埋め込みコンテンツ用に提案�
 
 ### Attribution Reporting API
 
-**[Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/)** を使うと、アドテクや広告主は、広告のクリックや閲覧といった、別のサイトでのコンバージョンにつながるイベントを、クロスサイトトラッキングを有効にせずに測定できるようになります。 これについても、プライバシーサンドボックスの関連性と測定のオリジントライアルの一環としてテストを拡張し続けるための、[アトリビューションレポート の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/jEnNpideO1Y) を提出しました。
+**[Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/)** を使うと、アドテクや広告主は、広告のクリックや閲覧といった、別のサイトでのコンバージョンにつながるイベントを、クロスサイトトラッキングを有効にせずに測定できるようになります。 これについても、プライバシーサンドボックスの広告関連のオリジントライアルの一環としてテストを拡張し続けるための、[アトリビューションレポート の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/jEnNpideO1Y) を提出しました。
 
 オリジントライアルの初期フェーズでは、[デバッグ](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#debugging)など、開発者のエクスペリエンスと統合に関するフィードバックに焦点を当てていますが、これは、イベントレベルレポートと要約レポート全体のエンドツーエンドテストを網羅するように拡張されます。
 

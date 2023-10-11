@@ -19,7 +19,7 @@ scripts starting in Chrome 78.
 ## tl;dr
 
 Starting in Chrome 68, HTTP requests that check for updates to the service worker script will no
-longer be fulfilled by the [HTTP cache](https://web.dev/http-cache/)
+longer be fulfilled by the [HTTP cache](https://web.dev/articles/http-cache)
 by default. This works around a [common developer pain point](https://developers.google.com/web/tools/workbox/guides/service-worker-checklist#cache-control_of_your_service_worker_file),
 in which setting an inadvertent `Cache-Control` header on your service worker script could lead
 to delayed updates.

@@ -58,7 +58,7 @@ All the elements that impact noise rely on two primary concepts.
 
     This has a few important practical implications that are outlined in the next section. This mechanism is part of the API design, and the practical implications are long-term. They will continue to play an important role when ad techs design and evaluate various aggregation strategies.
 
-1. While the noise is drawn from the same distribution regardless of the summary value, that distribution depends on several parameters. One of these parameters, [epsilon](https://en.wikipedia.org/wiki/Differential_privacy#%CE%B5-differential_privacy), can be altered by ad techs during the origin trial to evaluate various utility/privacy adjustments. Consider the ability to tweak epsilon as temporary. We welcome your feedback on your use-cases and the values of epsilon that work well.
+1. While the noise is drawn from the same distribution regardless of the summary value, that distribution depends on several parameters. One of these parameters, [epsilon](https://en.wikipedia.org/wiki/Differential_privacy#%CE%B5-differential_privacy), could be altered by ad techs during the concluded origin trial to evaluate various utility/privacy adjustments. However, consider the ability to tweak epsilon as temporary. We welcome your feedback on your use-cases and the values of epsilon that work well.
 
 While an ad tech company is not in direct control of the ways noise is added, it can influence the impact of noise on its measurement data. In the next sections, we'll dive into how noise can be influenced in practice. 
 

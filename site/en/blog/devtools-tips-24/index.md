@@ -15,7 +15,7 @@ tags:
   - devtools-tips
 ---
 
-[Source maps](https://web.dev/source-maps/) let you keep your code readable and debuggable even after you've combined and minified it, without impacting performance. To learn how source maps work, see the [previous DevTools Tips video](https://www.youtube.com/watch?v=FIYkjjFYvoI).
+[Source maps](https://web.dev/articles/source-maps) let you keep your code readable and debuggable even after you've combined and minified it, without impacting performance. To learn how source maps work, see the [previous DevTools Tips video](https://www.youtube.com/watch?v=FIYkjjFYvoI).
 
 {% YouTube id='SkUcO4ML5U0' %}
 
@@ -29,6 +29,6 @@ Watch this video to learn how to work with source maps in DevTools:
 
 To learn more, see:
 
-- [What are source maps?](https://web.dev/source-maps/)
+- [What are source maps?](https://web.dev/articles/source-maps)
 - [Debug your original code instead of deployed with source maps](/docs/devtools/javascript/source-maps/)
 - [Developer Resources: View and manually load source maps](/docs/devtools/developer-resources/)

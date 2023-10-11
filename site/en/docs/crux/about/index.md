@@ -37,7 +37,7 @@ tags:
   - crux
 ---
 
-CrUX is the official dataset of the [Web Vitals](https://web.dev/vitals/) program. All user-centric Core Web Vitals metrics will be represented in the dataset.
+CrUX is the official dataset of the [Web Vitals](https://web.dev/articles/vitals) program. All user-centric Core Web Vitals metrics will be represented in the dataset.
 
 CrUX data is collected from real browsers around the world, based on certain browser options which determine [user eligibility](/docs/crux/methodology/#user-eligibility). A set of [dimensions](/docs/crux/methodology/#dimensions) and [metrics](/docs/crux/methodology/#metrics) are collected which allow site owners to determine how users experience their sites.
 

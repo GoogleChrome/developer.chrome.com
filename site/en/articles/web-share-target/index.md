@@ -33,7 +33,7 @@ as a share target to receive shared content.
 {% Aside %}
 The Web Share Target API is only half of the magic. Web apps can share data,
 files, links, or text using the Web Share API. See
-[Web Share API](https://web.dev/web-share/) for details.
+[Web Share API](https://web.dev/articles/web-share) for details.
 {% endAside %}
 
 <figure data-float="right">
@@ -205,10 +205,10 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 ```
 
-Be sure to use a service worker to [precache](https://web.dev/learn/pwa/caching/) the `action`
+Be sure to use a service worker to [precache](https://web.dev/learn/pwa/caching) the `action`
 page so that it loads quickly and works reliably, even if the user is offline.
 [Workbox](/docs/workbox/) is a tool that can help you
-[implement precaching](https://web.dev/precache-with-workbox/) in your service worker.
+[implement precaching](https://web.dev/articles/precache-with-workbox) in your service worker.
 
 ### Processing POST shares
 

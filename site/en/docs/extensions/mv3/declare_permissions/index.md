@@ -438,12 +438,9 @@ The following table lists the currently available permissions. See the [Permissi
     </tr>
     <tr id="unlimitedStorage">
       <td><code>"unlimitedStorage"</code></td>
-      <td>Provides an unlimited quota for storing client-side data, such as databases and local storage files.
-        Without this permission, the extension is limited to 10 MB of local storage.<div
-          class="aside aside--note"><b>Note:</b> This permission applies only to Web SQL Database and application cache
-          (see issue <a href="http://crbug.com/58985">58985</a>). Also, it doesn't currently work with wildcard
-          subdomains such as <code>http://*.example.com</code>.</div>
-      </td>
+      <td>Provides an unlimited quota for <a href="/docs/extensions/reference/storage">chrome.storage</a>, <a href="https://developer.mozilla.org/docs/Web/API/IndexedDB_API">IndexedDB</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache Storage</a> and <a href="https://web.dev/origin-private-file-system/">Origin Private File System</a>. For more information,
+      see <a href="/docs/extensions/mv3/storage-and-cookies">Storage and cookies</a>.</td>
     </tr>
     <tr id="vpnProvider">
       <td><code>"vpnProvider"</code></td>
@@ -492,3 +489,7 @@ The following table lists the currently available permissions. See the [Permissi
 [vision-optperms]: /docs/extensions/mv3/intro/platform-vision/#improved-user-visibility-and-control
 [file-scheme-allow]: /docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess
 [incognito-allow]: /docs/extensions/reference/extension/#method-isAllowedIncognitoAccess
+[indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
+[cache-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
+[opfs]: https://web.dev/origin-private-file-system/
+[storage-and-cookies]: /docs/extensions/mv3/storage-and-cookies

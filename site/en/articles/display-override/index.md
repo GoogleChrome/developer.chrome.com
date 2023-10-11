@@ -15,7 +15,7 @@ tags:
   - web-app-manifest
 ---
 
-A [web app manifest](https://web.dev/add-manifest/) is a JSON file that tells the browser about your Progressive
+A [web app manifest](https://web.dev/articles/add-manifest) is a JSON file that tells the browser about your Progressive
 Web App and how it should behave when installed on the user's desktop or mobile device.
 Via the [`display`](https://web.dev/add-manifest/#display) property, you can customize what browser UI is shown when your app is launched. For example, you can hide the
 address bar and browser chrome. Games can even be made to launch full screen.

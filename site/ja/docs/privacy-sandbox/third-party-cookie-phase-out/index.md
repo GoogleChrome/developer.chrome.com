@@ -59,14 +59,14 @@ SameSite=Lax
 
 ### サードパーティ Cookie
 
-iframe やサブリソースリクエストなど、クロスサイトのコンテキストで送信される Cookie は通常、サードパーティ Cookie と呼ばれます。{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NJLl1qG9AN8tD9GwR2jp.png", alt="サードパーティ Cookie を示す図。", width="800", height="646" %} [サードパーティ Cookie のユースケース](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies)には次のようなものがあります。
+iframe やサブリソースリクエストなど、クロスサイトのコンテキストで送信される Cookie は通常、サードパーティ Cookie と呼ばれます。{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NJLl1qG9AN8tD9GwR2jp.png", alt="サードパーティ Cookie を示す図。", width="800", height="646" %} [サードパーティ Cookie のユースケース](https://web.dev/articles/samesite-cookie-recipes#use_cases_for_cross_site_or_third_party_cookies)には次のようなものがあります。
 
 - 動画、地図、コードサンプル、ソーシャルメディア投稿など、他のサイトから共有される埋め込みコンテンツ。
 - ペイメント、カレンダー、予約、予約機能などの外部サービスのウィジェット。
 - ソーシャルボタンや詐欺対策サービスなどのウィジェット。
 - リクエストとともに送信される Cookie に依存する `<img>` や `<script>` タグなどのページ上のリモートリソース（通常、ピクセルのトラッキングやコンテンツのパーソナライズに使用されます）。
 
-[2019 年には、ブラウザの Cookie の動作が変更され、デフォルトでファーストパーティのアクセスに制限されました](https://web.dev/samesite-cookies-explained/#changes-to-the-default-behavior-without-samesite)。現在、クロスサイトコンテキストで使用されるすべての Cookie は、`SameSite=None` 属性で設定されている必要があります。
+[2019 年には、ブラウザの Cookie の動作が変更され、デフォルトでファーストパーティのアクセスに制限されました](https://web.dev/articles/samesite-cookies-explained#changes_to_the_default_behavior_without_samesite)。現在、クロスサイトコンテキストで使用されるすべての Cookie は、`SameSite=None` 属性で設定されている必要があります。
 
 ```text
 Set-Cookie: cookie-name=value; SameSite=None; Secure

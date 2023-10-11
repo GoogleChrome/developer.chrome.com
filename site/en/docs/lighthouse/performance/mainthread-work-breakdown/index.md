@@ -48,34 +48,34 @@ as the page loads.
 
 ### Script evaluation
 
-- [Optimize third-party JavaScript](https://web.dev/fast/#optimize-your-third-party-resources)
-- [Debounce your input handlers](https://web.dev/debounce-your-input-handlers/)
-- [Use web workers](https://web.dev/off-main-thread/)
+- [Optimize third-party JavaScript](https://web.dev/articles/fast#optimize_your_third_party_resources)
+- [Debounce your input handlers](https://web.dev/articles/debounce-your-input-handlers)
+- [Use web workers](https://web.dev/articles/off-main-thread)
 
 ### Style and layout
 
-- [Reduce the scope and complexity of style calculations](https://web.dev/reduce-the-scope-and-complexity-of-style-calculations/)
-- [Avoid large, complex layouts and layout thrashing](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/)
+- [Reduce the scope and complexity of style calculations](https://web.dev/articles/reduce-the-scope-and-complexity-of-style-calculations)
+- [Avoid large, complex layouts and layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing)
 
 ### Rendering
 
-- [Stick to compositor only properties and manage layer count](https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count/)
-- [Simplify paint complexity and reduce paint areas](https://web.dev/simplify-paint-complexity-and-reduce-paint-areas/)
+- [Stick to compositor only properties and manage layer count](https://web.dev/articles/stick-to-compositor-only-properties-and-manage-layer-count)
+- [Simplify paint complexity and reduce paint areas](https://web.dev/articles/simplify-paint-complexity-and-reduce-paint-areas)
 
 ### Parsing HTML and CSS
 
-- [Extract critical CSS](https://web.dev/extract-critical-css/)
-- [Minify CSS](https://web.dev/minify-css/)
-- [Defer non-critical CSS](https://web.dev/defer-non-critical-css/)
+- [Extract critical CSS](https://web.dev/articles/extract-critical-css)
+- [Minify CSS](https://web.dev/articles/minify-css)
+- [Defer non-critical CSS](https://web.dev/articles/defer-non-critical-css)
 
 ### Script parsing and compilation
 
-- [Reduce JavaScript payloads with code splitting](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
-- [Remove unused code](https://web.dev/remove-unused-code/)
+- [Reduce JavaScript payloads with code splitting](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)
+- [Remove unused code](https://web.dev/articles/remove-unused-code)
 
 ### Garbage collection
 
-- [Monitor your web page's total memory usage with `measureMemory()`](https://web.dev/monitor-total-page-memory-usage/)
+- [Monitor your web page's total memory usage with `measureMemory()`](https://web.dev/articles/monitor-total-page-memory-usage)
 
 ## Resources
 

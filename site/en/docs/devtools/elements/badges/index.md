@@ -85,13 +85,13 @@ Toggle the overlay on the following preview:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MmkJORNp3sOKHHK1CI4h.png", alt="Flex overlay.", width="800", height="646" %}
 
-The overlay shows child element positions. 
+The overlay shows child element positions.
 
 To learn how to debug flex layouts, see [Inspect and debug CSS flexbox](/docs/devtools/css/flexbox/).
 
 ## Ad
 
-DevTools can detect some [ad frames and tag them](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md). Such frames have `ad` badges next to them. 
+DevTools can detect some [ad frames and tag them](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md). Such frames have `ad` badges next to them.
 
 Discover an ad in the following preview:
 
@@ -185,7 +185,7 @@ Discover the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix
 
 ## Top layer
 
-This badge helps you understand the concept of the [top layer](/blog/what-is-the-top-layer/) and visualize it. The top layer renders content on top of all other layers, regardless of [`z-index`][2]. When you open a [`<dialog>` element](https://web.dev/building-a-dialog-component/) using the [`.showModal()` method][3], the browser puts it into the top layer.
+This badge helps you understand the concept of the [top layer](/blog/what-is-the-top-layer/) and visualize it. The top layer renders content on top of all other layers, regardless of [`z-index`][2]. When you open a [`<dialog>` element](https://web.dev/articles/building-a-dialog-component) using the [`.showModal()` method][3], the browser puts it into the top layer.
 
 To help you visualize top layer elements, the **Elements** panel adds a `#top-layer` container to the DOM tree after the closing `</html>` tag.
 

@@ -32,7 +32,7 @@ Lighthouse 使用网络优先级作为识别阻塞呈现的关键资源的代理
 - 优化关键字节数以减少下载时间（往返次数）。
 - 优化剩余关键资源的加载顺序：尽早下载所有关键资产，缩短关键路径长度。
 
-了解有关优化[图像](https://web.dev/use-imagemin-to-compress-images/)、[JavaScript](https://web.dev/apply-instant-loading-with-prpl/)、[CSS](https://web.dev/defer-non-critical-css/) 和 [Web 字体的更多信息](https://web.dev/avoid-invisible-text/)。
+了解有关优化[图像](https://web.dev/articles/use-imagemin-to-compress-images)、[JavaScript](https://web.dev/articles/apply-instant-loading-with-prpl)、[CSS](https://web.dev/articles/defer-non-critical-css) 和 [Web 字体的更多信息](https://web.dev/articles/avoid-invisible-text)。
 
 ## 特定于堆栈的指南
 

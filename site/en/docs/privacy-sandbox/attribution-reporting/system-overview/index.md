@@ -35,23 +35,16 @@ You should read this article if:
 
 *  You're an ad tech or advertiser's **technical decision-maker**. You may work
    in operations, DevOps, data science, IT, marketing, or another role where
-   you make technical implementation decisions. You're wondering how the many
-   proposals for Attribution Reporting systems work together to build a tool
-   for privacy-preserving measurement.
+   you make technical implementation decisions. You're wondering how the APIs work for privacy-preserving measurement.
 *  You're a **technical practitioner** (such as a developer, system operator,
    system architect, or data scientist) who will be setting up experiments with
    this API and Aggregation Service environment.
-
-{% Aside %}
-Right now, publishers don't have to take any action with this API. If this changes, this article will be updated accordingly.
-{% endAside %}
 
 In this article, you'll read a high-level, end-to-end explanation of how the
 services work for the Attribution Reporting API. If you're a technical
 practitioner, you can
 [experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/)
-locally or in production with the
-[unified Privacy Sandbox Relevance and Measurement Origin Trial](/blog/privacy-sandbox-unified-origin-trial/).
+locally.
 
 ## Overview
 
@@ -290,7 +283,7 @@ works for everyone.
 
 ### Discuss the API
 
-Like other Privacy Sandbox proposals, this API is documented and
+Like other Privacy Sandbox APIs, this API is documented and
 [discussed publicly](/docs/privacy-sandbox/attribution-reporting-experiment/#join-the-discussion).
 
 ### Experiment with the API

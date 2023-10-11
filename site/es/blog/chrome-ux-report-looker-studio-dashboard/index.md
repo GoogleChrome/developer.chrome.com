@@ -74,7 +74,7 @@ Los conjuntos de datos mensuales se publican el segundo martes de cada mes. Por 
 
 ### Descripción general de Core Web Vitals
 
-La primera página es una descripción general del rendimiento [mensual de Core Web Vitals del origen.](https://web.dev/vitals/) Estas son las métricas de UX más importantes, por lo que Google recomienda que se concentre en estas.
+La primera página es una descripción general del rendimiento [mensual de Core Web Vitals del origen.](https://web.dev/articles/vitals) Estas son las métricas de UX más importantes, por lo que Google recomienda que se concentre en estas.
 
 {% Img src="image/admin/h8iCTgvmG4DS2zScvatc.png", alt="Descripción general del Panel CrUX Core Web Vitals", width="800", height="906" %}
 
@@ -92,7 +92,7 @@ Después de la página Core Web Vitals, encontrará páginas independientes para
 
 En la parte superior de cada página se encuentra el filtro **Dispositivos**, que puede usarse para restringir los factores de forma incluidos en los datos de experiencia. Por ejemplo, puede profundizar específicamente en las experiencias telefónicas. Esta configuración persiste en todas las páginas.
 
-Las visualizaciones principales en estas páginas son las distribuciones mensuales de experiencias categorizadas como "Buena", "Necesita mejorar" y "Deficiente". La leyenda codificada por colores debajo del gráfico indica las diversas experiencias incluidas en la categoría. Por ejemplo, en la captura de pantalla anterior, puede ver que el porcentaje de experiencias "buenas" de [Largest Contentful Paint](https://web.dev/lcp/#what-is-a-good-lcp-score) (LCP) fluctúa y empeora ligeramente en los últimos meses.
+Las visualizaciones principales en estas páginas son las distribuciones mensuales de experiencias categorizadas como "Buena", "Necesita mejorar" y "Deficiente". La leyenda codificada por colores debajo del gráfico indica las diversas experiencias incluidas en la categoría. Por ejemplo, en la captura de pantalla anterior, puede ver que el porcentaje de experiencias "buenas" de [Largest Contentful Paint](https://web.dev/articles/lcp#what_is_a_good_lcp_score) (LCP) fluctúa y empeora ligeramente en los últimos meses.
 
 Los porcentajes de experiencias "buenas" y "malas" del mes más reciente se muestran encima del gráfico junto con un indicador de la diferencia porcentual con respecto al mes anterior. Para este origen, las experiencias "buenas" de LCP cayeron un 3.2% llegando a 56.04% mes a mes.
 
@@ -120,7 +120,7 @@ De manera similar, la página de distribución de ECT muestra el desglose de 4G,
 
 {% Aside 'key-term' %} Los tipos de conexión efectivos se consideran *efectivos* porque se basan en mediciones de ancho de banda en los dispositivos de los usuarios y no implican el uso de ninguna tecnología específica. Por ejemplo, un usuario de escritorio con Wi-Fi rápido puede etiquetarse como 4G, mientras que una conexión móvil más lenta puede etiquetarse como 2G. {% endAside %}
 
-Las distribuciones para estas dimensiones se calculan utilizando segmentos de los datos del histograma [First Contentful Paint](https://web.dev/fcp/) (FCP).
+Las distribuciones para estas dimensiones se calculan utilizando segmentos de los datos del histograma [First Contentful Paint](https://web.dev/articles/fcp) (FCP).
 
 ## Preguntas frecuentes
 

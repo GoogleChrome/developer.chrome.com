@@ -43,7 +43,7 @@ Watch the video to learn how the **Elements** > **Styles** pane highlights vario
 - *Non-editable property*
 - <s><em>Overridden non-editable property</em></s>
 
-More debugging tips: 
+More debugging tips:
 
 - Use the filter in the **Styles** pane to focus on the one property that interests you.
 - Use the **Computed** pane to see all the [Cascade](https://developer.mozilla.org/docs/Web/CSS/Cascade) winners and their computed values.
@@ -51,6 +51,6 @@ More debugging tips:
 
 To learn more about all the ways DevTools highlights CSS issues, see [Find invalid, overridden, inactive, and other CSS](/docs/devtools/css/issues/).
 
-To level up your CSS expertise, see [Learn CSS](https://web.dev/learn/css/).
+To level up your CSS expertise, see [Learn CSS](https://web.dev/learn/css).
 
-To learn how to create websites that look great and work well for everyone, see [Learn Responsive Design](https://web.dev/learn/design/).
+To learn how to create websites that look great and work well for everyone, see [Learn Responsive Design](https://web.dev/learn/design).

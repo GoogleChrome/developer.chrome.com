@@ -44,7 +44,7 @@ Let's walk through the authentication flow:
       authentication flow.
 4. The merchant invokes SPC. The browser displays a confirmation dialog.
    *  If there are no credential IDs passed from the RP, fall back to the
-      existing authentication flow.  
+      existing authentication flow.
       After a successful authentication, **consider using [SPC registration](/articles/register-secure-payment-confirmation)
 	to streamline future authentications**.
 5. The user confirms and authenticates the amount and the destination of the
@@ -70,7 +70,7 @@ aspects of the API.
 ## Feature detection
 
 To detect whether SPC is supported on the browser, you can send a fake call to
-[`canMakePayment()`](https://web.dev/how-payment-request-api-works/#check-whether-the-payment-method-is-available).
+[`canMakePayment()`](https://web.dev/articles/how-payment-request-api-works#check_whether_the_payment_method_is_available).
 
 Copy and paste the following code to feature detect SPC on a merchant's website.
 
@@ -132,7 +132,7 @@ isSecurePaymentConfirmationSupported().then(result => {
 ## Authenticate the user
 
 To authenticate the user, invoke the `PaymentRequest.show()` method with
-`secure-payment-confirmation` and WebAuthn parameters: 
+`secure-payment-confirmation` and WebAuthn parameters:
 
 *  [`PublicKeyCredentialRequestOptions`](https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions)
 *  Other [payment specific parameters](https://w3c.github.io/secure-payment-confirmation/#sctn-securepaymentconfirmationrequest-dictionary) on the merchant's platform.

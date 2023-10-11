@@ -14,7 +14,7 @@ should provide a custom offline page. The [Optimial Progressive Web App checklis
 says that a PWA should provide an offline experience where the PWA works the same offline as
 it does online (wherever network connectivity isn't strictly required).
 
-Learn more in the [What is network reliability and how do you measure it?](https://web.dev/network-connections-unreliable/) post.
+Learn more in the [What is network reliability and how do you measure it?](https://web.dev/articles/network-connections-unreliable) post.
 
 ## How the Lighthouse offline audit fails
 
@@ -48,5 +48,5 @@ with the [Working with service workers](https://web.dev/codelab-service-workers)
 
 ## Resources
 
-- [What is network reliability and how do you measure it?](https://web.dev/network-connections-unreliable/)
+- [What is network reliability and how do you measure it?](https://web.dev/articles/network-connections-unreliable)
 - [Service Workers: an Introduction](/docs/workbox/service-worker-overview/)

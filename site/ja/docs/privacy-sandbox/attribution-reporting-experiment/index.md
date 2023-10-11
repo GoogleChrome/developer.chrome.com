@@ -24,7 +24,7 @@ authors:
 4. [要約レポート](/docs/privacy-sandbox/summary-reports)の実験を行えます。
     - アドテックは[集計サービス](/docs/privacy-sandbox/aggregation-service)で要約レポートを生成できます。[ローカルテスト](https://github.com/google/trusted-execution-aggregation-service/#set-up-local-testing)をセットアップするか、[Amazon Web Services（AWS）の本番環境でテスト](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports)することができます。
         - [AWS アカウント](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) を作る、または用意する。
-        - プライバシーサンドボックスの関連性と測定オリジン トライアルに[登録します](/origintrials/#/view_trial/771241436187197441)。
+        - プライバシーサンドボックスの広告関連オリジン トライアルに[登録します](/origintrials/#/view_trial/771241436187197441)。
         - 集計サービスの[オンボーディング フォーム](https://forms.gle/EHoecersGKhpcLPNA)を完了します。フォームが提出されたら、確認メールと手順書をお送りします。
     - [要約レポートのストラテジーとコツ](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing) を参照してください。
 

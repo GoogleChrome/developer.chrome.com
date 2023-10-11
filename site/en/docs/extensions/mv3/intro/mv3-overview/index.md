@@ -35,7 +35,7 @@ There are a number of new features and functional changes for extensions using M
 * [Service workers](#service-workers) replace background pages.
 * [Network request modification](#network-request-modification) is now handled with the new [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest) API.
 * [Remotely hosted code](#remotely-hosted-code) is no longer allowed; an extension can only execute JavaScript that is included within its package.
-* [Promise](#promises) support has been added to many methods, though callbacks are still supported as an alternative. (We will eventually support promises on all appropriate methods.)
+* [Promise](#promises) support has been added to most methods, though callbacks are still supported as an alternative. (We will eventually support promises on all appropriate methods.)
 * A number of other, relatively [minor feature changes](#other-features) are also introduced in
   Manifest V3.
 
@@ -111,7 +111,7 @@ for more information.
 
 ### Promises {: #promises }
 
-Manifest V3 provides first-class support for promises. Many popular APIs support
+Manifest V3 provides first-class support for promises. Most APIs support
 promises now, and we will eventually support promises on all appropriate
 methods. Promise chains, async, and await are also supported. Some API features,
 such as event listeners, continue to require callbacks.

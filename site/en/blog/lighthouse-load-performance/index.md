@@ -99,7 +99,7 @@ evaluation, parsing, and compiling time for scripts on a page.</figcaption>
 </figure>
 
 When you run this audit, you can also [enable third party badges in the network
-panel](https://web.dev/optimizing-content-efficiency-loading-third-party-javascript/#chrome-devtools-third-party-script-badging)
+panel](https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript#chrome_devtools_third_party_script_badging)
 and filter the list to identify third party script resources. With the data from
 this audit, you'll be better equipped to find sources of excessive JavaScript
 activity that turn pages from snappy to laggy. For scripts specific to your
@@ -170,7 +170,7 @@ the `lighthouse:full` configuration profile.
 
 While much performance advice tends to focus on boosting the speed of a website
 for first time users, it's also important to [use
-caching](https://web.dev/http-cache/)
+caching](https://web.dev/articles/http-cache)
 to improve loading performance for returning users. [**The Uses Inefficient
 Cache Policy on Static Assets**](/docs/lighthouse/performance/uses-long-cache-ttl)
 audit inspects caching headers for network resources, and notifies you if cache
@@ -253,7 +253,7 @@ If Lighthouse finds web fonts in your application that are delaying text
 rendering, there's a few potential remedies. You can control text rendering with
 the [`font-display` CSS property](https://css-tricks.com/font-display-masses/),
 and/or [the Font Loading
-API](https://web.dev/fast/#optimize-webfonts).
+API](https://web.dev/articles/fast#optimize_webfonts).
 If you want to dig deeper, consider reading [_A Comprehensive Guide to Font
 Loading Strategies_](https://www.zachleat.com/web/comprehensive-webfonts/), an
 excellent guide by [Zach Leatherman](https://www.zachleat.com/web/) which is an
@@ -261,7 +261,7 @@ excellent resource for optimal font loading.
 
 ## Unminified CSS & JavaScript
 
-[Minification](https://web.dev/decrease-frontend-size/#enable-minification)
+[Minification](https://web.dev/articles/decrease-frontend-size#enable_minification)
 has been a suggested technique since web performance has been a thing, and for
 good reason. It significantly reduces the size of text-based resources, which in
 turn is good for loading performance. However, it's easy to overlook this

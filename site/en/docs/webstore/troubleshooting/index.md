@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
 date: 2020-11-16
-updated: 2023-08-08
+updated: 2023-10-05
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
@@ -350,8 +350,9 @@ that users are aware of what data is collected, and how it is collected, used, a
 
 - Add a valid, working and accessible link to your privacy policy [in the designated
   field][docs-publish-setup].
-    - Visit the Chrome Web Store item listing for your extension to verify that a privacy policy
-      link appears in the "Additional Information" box and that the link works as expected.
+    - Visit the Privacy tab for your extension to verify that a privacy policy link appears
+      in the "Privacy Policy" box (located at the bottom of the Privacy tab) and that the
+      link works as expected.
 - Ensure the privacy policy talks about data collection, usage, handling, and sharing.
 - If you have done the above but are still encountering review issues, [contact developer
   support][dev-support] to request clarification or appeal the verdict.
@@ -1309,9 +1310,9 @@ Store
 [docs-override-page]: /docs/extensions/mv3/override/
 [docs-override-settings]: /docs/extensions/mv3/settings_override/
 [docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
-[docs-publish-setup]: /docs/webstore/publish/#setup-a-developer-account
+[docs-publish-setup]: /docs/webstore/cws-dashboard-privacy/#set-privacy-policy
 [docs-service-workers]: /docs/extensions/mv3/service_workers/
-[docs-single-purpose-faq]: /docs/extensions/mv3/single_purpose/
+[docs-single-purpose-faq]: /docs/extensions/mv3/quality_guidelines#single-purpose
 [lie-fi]: https://web.dev/performance-poor-connectivity/#what-is-lie-fi
 [mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content
 [mdn-cookie-store]: https://developer.mozilla.org/docs/Web/API/Cookie_Store_API

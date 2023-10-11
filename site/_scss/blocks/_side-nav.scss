@@ -1,5 +1,6 @@
 $side-nav-transition-speed: 0.2s;
 $side-nav-transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+$devsite-text-link: #3982f7;
 
 // We always want the entirety of the side-nav.scss to be inlined in the page
 // so we tell purgecss to "ignore" it—in other words "don't purge it".
@@ -96,6 +97,24 @@ side-nav[animating] {
   }
 }
 
+side-nav .navigation-rail {
+  &__close {
+    border: 0;
+    color: var(--color-secondary-text);
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    color: var(--color-secondary-text);
+    font-weight: 500;
+
+    &[data-state='active'] {
+      color: $devsite-text-link;
+    }
+  }
+}
+
 side-nav[view='project'] {
   navigation-rail {
     opacity: 0;
@@ -113,6 +132,22 @@ side-nav[view='site'] {
   navigation-rail {
     opacity: 1;
     transform: translate(0, 0);
+
+    &__close {
+      border: 0;
+      color: var(--color-secondary-text);
+      margin: 0;
+      padding: 0;
+    }
+  
+    &__link {
+      color: var(--color-secondary-text);
+      font-weight: 500;
+    }
+
+    &__link[data-state='active'] {
+      color: $devsite-text-link;
+    }
   }
 
   navigation-tree {

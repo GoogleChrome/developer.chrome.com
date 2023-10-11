@@ -6,6 +6,7 @@ subhead: >
 description: >
   Seller API guide and references for the Protected Audience API ad auction.
 date: 2022-11-01
+updated: 2023-09-18
 authors:
   - samdutton
   - alexandrawhite
@@ -16,7 +17,7 @@ authors:
 In this article, you'll find a technical reference for the ad auction, as used in the current iteration of the experimental Protected Audience API.
 
 Read the [developer guide](/docs/privacy-sandbox/protected-audience-api) for the full life
-cycle of Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of
+cycle of Protected Audience API, and refer to the Protected Audience API explainer for an in-depth discussion of
 how [sellers run on-device auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions).
 
 Not a developer? Refer to the [Protected Audience API overview](/docs/privacy-sandbox/protected-audience).
@@ -41,9 +42,7 @@ outside world.
 title="View a larger version of image." target="_blank">view a larger version</a>.</figcaption>
 </figure>
 
-1. A user visits a site which displays ads. While the Protected Audience API is in an origin trial,
-   the site must have an available and valid origin trial token. The user must
-   be in an experimental group (such as Finch).
+1. A user visits a site which displays ads.
 2. The seller's code executes `navigator.runAdAuction()`. This specifies which
    ad space is for sale and who can bid. Sellers must also include a script
    that scores each bid, `scoreAd()`.
@@ -143,7 +142,11 @@ const auctionConfig = {
   ]
 };
 
-const auctionResultPromise = navigator.runAdAuction(auctionConfig);
+try {
+  const auctionResultPromise = navigator.runAdAuction(auctionConfig);
+} catch (error) {
+  // Handle error.
+}
 ```
 
 `runAdAuction()` returns a promise that resolves to a [URN](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns) (`urn:uuid:<something>`) that represents the
