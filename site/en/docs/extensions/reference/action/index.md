@@ -132,8 +132,6 @@ show on click on the current tab.
 
 ## Use cases
 
-<!--Is this a reasonable place to put Use Cases?-->
-
 ### Per-tab state
 
 Extension actions can have different states for each tab. To set a value for an individual
