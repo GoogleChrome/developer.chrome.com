@@ -18,7 +18,7 @@ If your site uses third-party cookies it's time to take action as we approach th
 
 Our goal on the Privacy Sandbox is to reduce cross-site tracking while still enabling the functionality that keeps online content and services freely accessible by everyone. Deprecating and removing third-party cookies encapsulates the challenge, as they enable critical functionality across sign-in, fraud protection, advertising, and generally the ability to embed rich, third-party content in your sites—but at the same time they're also the key enabler of cross-site tracking.
 
-In our previous major milestone, we launched a range of APIs providing a privacy-focused alternative to today’s status quo for use cases like identity, advertising, and fraud detection. With alternatives in place, we can now move on to beginning to phase out third-party cookies.
+In our previous major milestone, we launched a range of APIs providing a privacy-focused alternative to today’s status quo for use cases like identity, advertising, and fraud detection. With alternatives in place, we can now move on to begin phasing out third-party cookies.
 
 In this [Cookie Countdown series](/tags/cookie-countdown/) we will take you through the timeline and immediate actions you can take to ensure your sites are prepared.
 
