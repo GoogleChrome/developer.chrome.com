@@ -8,7 +8,8 @@ description: How to write end-to-end tests for extensions.
 
 End-to-end testing involves an extension package being built and loaded into a browser. A testing
 tool communicates with the browser to automate interactions and test the same flows that a user
-would go through.
+would go through. A library that supports end-to-end testing will generally provide ways of
+controlling the browser, simulating user input and observing the current state of any open pages.
 
 See [Testing Chrome Extensions with Puppeteer][tutorial] for a tutorial.
 
