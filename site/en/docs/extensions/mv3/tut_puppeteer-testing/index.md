@@ -10,7 +10,7 @@ _For general advice on testing extensions, see
 [Automated testing for Chrome Extensions][automated-testing]._
 
 [Puppeteer][puppeteer] provides a framework for building automated tests of websites, which also
-includes the ability to test Chrome Extensions. These are high-level integration tests that test the
+includes the ability to test Chrome Extensions. These are high-level end-to-end tests that test the
 functionality of a website or extension once it has been built into the final product. In this
 tutorial, we demonstrate how to write a basic test for an extension from our samples repository.
 
