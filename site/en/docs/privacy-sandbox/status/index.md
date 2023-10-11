@@ -47,7 +47,7 @@ To review the latest information on any proposal or API, visit the respective ov
 
 {% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
 
-## First-Party Sets
+## Related Website Sets (formerly First-Party Sets)
 
 {% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
 
