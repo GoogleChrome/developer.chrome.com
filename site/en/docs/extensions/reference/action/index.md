@@ -41,7 +41,7 @@ and include the `action` key in your [manifest file][doc-manifest]:
 The icon is the main image on the toolbar for your extension, and is set by the `"default_icon"` key in
 your manifest's `action` entry. Icons must be 16 device-independent pixels (DIPs) wide and tall. 
 
-The `default_icon` key is a dictionary of sizes to image paths. Chrome uses these icons
+The `"default_icon"` key is a dictionary of sizes to image paths. Chrome uses these icons
 to choose which image scale to use. If an exact match is not found, Chrome selects the closest
 available and scales it to fit the image, which might affect image quality.
 
@@ -80,7 +80,7 @@ The tooltip, or title, appears when the user holds their cursor over the extensi
 toolbar. It's also included in the accessible text spoken by screenreaders when the button gets
 focus.
 
-The default tooltip is set using the `default_title` field of the `action` object in `manifest.json`.
+The default tooltip is set using the `"default_title"` field of the `action` object in `manifest.json`.
 You can also set it programmatically using the `action.setTitle()` method.
 
 #### Badge
@@ -118,7 +118,7 @@ An action's popup is shown when the user clicks on the extension's action button
 toolbar. The popup can contain any HTML contents you like, and will be automatically sized to fit
 its contents. The popup's size must be between 25x25 and 800x600 pixels. <!--Are these the DIPs from earlier?-->
 
-The popup is initially set by the `default_popup` property in the `action` key in the
+The popup is initially set by the `"default_popup"` property in the `action` key in the
 `manifest.json` file. This property should point to a relative path within the extension
 directory. It can also be updated dynamically to point to a different relative path using the
 `action.setPopup()` method.
