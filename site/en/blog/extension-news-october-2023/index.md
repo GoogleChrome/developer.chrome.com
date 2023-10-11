@@ -107,7 +107,7 @@ Earlier this month, we announced an early preview of the revamped Chrome Web Sto
 - Screenshots are now being displayed at significantly higher quality. If you haven't already, you can upload 1280x800 screenshots.
 - Replies to questions on the Support tab now show newlines.
 - When replying to user reviews and support questions, your response will now include a “Developer” badge beside your name.
-- You can provide users with a direct link to the reviews page by adding "/reviews" at the end of your store item URL For example: https://chromewebstore.google.com/detail/_EXTENSION_ID_/reviews
+- You can provide users with a direct link to the reviews page by adding "/reviews" at the end of your store item URL For example: `https://chromewebstore.google.com/detail/_EXTENSION_ID_/reviews`.
 
 Thanks for everyone's input so far on the [chromium-google group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/9lc7Prf9vLk/m/3trCFBWYAQAJ). Feel free to join in the discussion or send your feedback directly to the CWS team using the **Give feedback** menu item:
 
