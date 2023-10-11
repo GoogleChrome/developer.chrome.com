@@ -119,7 +119,7 @@ toolbar. The popup can contain any HTML contents you like, and will be automatic
 its contents. The popup's size must be between 25x25 and 800x600 pixels. <!--Are these the DIPs from earlier?-->
 
 The popup is initially set by the `"default_popup"` property in the `action` key in the
-`manifest.json` file. This property should point to a relative path within the extension
+`manifest.json` file. If present, this property should point to a relative path within the extension
 directory. It can also be updated dynamically to point to a different relative path using the
 `action.setPopup()` method.
 
