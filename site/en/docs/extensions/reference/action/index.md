@@ -81,7 +81,7 @@ toolbar. It's also included in the accessible text spoken by screen readers when
 focus.
 
 The default tooltip is set using the `"default_title"` field of the `action` key in `manifest.json`.
-You can also set it programmatically using the `action.setTitle()` method.
+You can also set it programmatically by calling `action.setTitle()`.
 
 #### Badge
 
