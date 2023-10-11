@@ -147,7 +147,7 @@ AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/85
 Version/11.1.1 Safari/605.1.15
 ```
 
-Safari deskop on Macbook example:
+Safari desktop on Macbook example:
 
 ```text
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
