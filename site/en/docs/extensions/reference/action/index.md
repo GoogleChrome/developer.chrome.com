@@ -49,7 +49,7 @@ Because devices with less-common scale factors like 1.5x or 1.2x are becoming mo
 common, we encourage you to provide multiple sizes for your icons. This also
 futureproofs your extension against potential icon display size changes.
 
-You can also use the `action.setIcon()` method to set your extension's icon programmatically
+You can also call `action.setIcon()` to set your extension's icon programmatically
 by specifying a different image path or providing a dynamically-generated icon using the [HTML canvas
 element][html-canvas], or, if setting from an extension service worker, the [offscreen
 canvas][html-offscreencanvas] API.
