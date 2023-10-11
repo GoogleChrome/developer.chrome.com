@@ -1,21 +1,35 @@
 ---
-layout: 'layouts/doc-post.njk'
-title: 'Prepare for phasing out third-party cookies'
-subhead: >
-  Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
-description: >
-  Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
-date: 2023-05-17
-updated: 2023-10-11
+layout: 'layouts/blog-post.njk'
+title: 'Preparing for the end of third-party cookies'
 authors:
-  - mihajlija
+  - rowan_m
+description: >
+  If your site uses third-party cookies it's time to take action as we approach their deprecation. Chrome plans to disable third-party cookies for 1% of users from Q1 2024 to facilitate testing and then ramp up to 100% of users from Q3 2024. In this Cookie Countdown series, we'll guide you through the timeline and immediate actions you can take to ensure your sites are prepared.
+date: 2023-10-11
+thumbnail: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/XeTqWn3za0aUZVGb2kUM.jpg'
+alt: >
+  Preparing for the end of third-party cookies
+tags:
+  - privacy
+  - cookie-countdown
 ---
 
-Third-party cookies are the main mechanism that enables cross-site tracking and several major browsers either already placed restrictions on third-party cookies in some way or are planning to. Third-party cookies also enable many valid use cases such as managing state in embedded content or enabling user sessions across multiple sites.
+If your site uses third-party cookies it's time to take action as we approach their deprecation. Chrome plans to disable third-party cookies for 1% of users from Q1 2024 to facilitate testing, and then ramp up to 100% of users from Q3 2024. The ramp up to 100% of users is subject to addressing any remaining competition concerns of the [UK’s Competition and Markets Authority (CMA)](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes).
 
-As part of the [Privacy Sandbox](https://privacysandbox.com/) project, Chrome is phasing out support for third-party cookies and proposing new functionality for cookies along with purpose-built APIs to continue supporting legitimate use cases while preserving user privacy. The phase out will be gradual, [starting from midway through 2024](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline).
+Our goal with the Privacy Sandbox is to reduce cross-site tracking while still enabling the functionality that keeps online content and services freely accessible by everyone. Deprecating and removing third-party cookies encapsulates the challenge, as they enable critical functionality across sign-in, fraud protection, advertising, and generally the ability to embed rich, third-party content in your sites—but at the same time they're also the key enablers of cross-site tracking.
 
-To get ready for the future without cross-site tracking, audit your use of cookies and plan the actions needed if your site is impacted.
+In our previous major milestone, we launched a range of APIs providing a privacy-focused alternative to today’s status quo for use cases like identity, advertising, and fraud detection. With alternatives in place, we can now move on to begin phasing out third-party cookies.
+
+In this [Cookie Countdown series](/tags/cookie-countdown/) we will take you through the timeline and immediate actions you can take to ensure your sites are prepared.
+
+
+## 1% third-party cookie deprecation and Chrome-facilitated testing {: #chrome-testing }
+
+On the [privacysandbox.com timeline](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) you can see two milestones approaching in Q4 2023 and Q1 2024 as part of [Chrome-facilitated testing](/docs/privacy-sandbox/chrome-testing/) modes. This testing is primarily for organizations testing the Privacy Sandbox relevance and measurement APIs, however as part of this we will be disabling third-party cookies for 1% of Chrome Stable users.
+
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/Fl3J3HIW22U710lVSgtu.png", alt="Timeline for third-party cookie depraction. As part of Chrome-facilitated testing, the opt-in testing with labels mode starts in Q4 2023 and the 1% 3PC deprecation mode starts in Q1 2024. Both continue through to mid-Q3 2024 when the third-party cookie phaseout starts.", width="800", height="276" %}
+
+This means that from the start of 2024, you can expect to see an increased portion of Chrome users on your site with third-party cookies disabled even if you are not actively participating in the Chrome-facilitated testing. This testing period continues through to Q3 2024 when, after [consultation with the CMA](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes) and subject to resolving any competition concerns, we plan to begin disabling third-party cookies for all Chrome users
 
 ## Prepare for the third-party cookie phase out
 
@@ -47,59 +61,6 @@ We are building a DevTools extension to facilitate analysis of cookie usage duri
 
 If you identify cookies set by third parties, you should check with those providers to see if they have plans for the third-party cookie phase out. For instance, you may need to upgrade a version of a library you are using, change a configuration option in the service, or take no action if the third party is handling the necessary changes themselves.
 
-### Improve your first-party cookies
-
-If your cookie is never used on a third-party site, for example if you set a cookie to manage the session on your site and it's never used in a cross-site iframe, that cookie is always used in a first-party context.
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ArhVqaVr6O2X0mE0YYxp.png", alt="Diagram showing a first-party cookie.", width="800", height="653" %}
-To identify your first-party or same-site cookies, look for:
-
--   Cookies set without any `SameSite` attribute.
-    -   `Set-Cookie: cookie-name=value;`
--   Cookies with `SameSite` set to `Lax` or `Strict`.
-    -   `Set-Cookie: cookie-name=value; SameSite=Lax;`
-    -   `Set-Cookie: cookie-name=value; SameSite=Strict;`
-
-{% Aside 'important' %}
-In this case, your cookie should not be affected by third-party cookie phase out.
-
-If you have not explicitly set the `SameSite` attribute with an appropriate value on your first-party cookie, you should do that to ensure consistent behavior across browsers.
-
-{% endAside %}
-
-There are a number of other sensible defaults for other first-party cookie attributes in the best practice recipe:
-
-```text
-Set-Cookie:
-__Host-cookiename=value;
-Secure;
-Path=/;
-HttpOnly;
-Max-Age=7776000;
-SameSite=Lax
-```
-
-For more details, check out [Recipes for first-party cookies](https://web.dev/first-party-cookie-recipes).
-
-### Understand your third-party cookies
-
-Cookies that are sent in cross-site contexts, like iframes or subresource requests, are generally referred to as third-party cookies.
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NJLl1qG9AN8tD9GwR2jp.png", alt="Diagram showing a third-party cookie.", width="800", height="646" %}
-[Some use cases for third-party cookies](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies) include:
-
--   Embedded content shared from other sites, such as videos, maps, code samples, and social posts.
--   Widgets from external services such as payments, calendars, booking, and reservation functionality.
--   Widgets such as social buttons or anti-fraud services.
--   Remote resources on a page such as `<img>` or `<script>` tags, that rely on cookies to be sent with a request (commonly used for tracking pixels and personalizing content).
-
-[In 2019, browsers changed the cookie behavior, restricting them to first-party access by default](https://web.dev/samesite-cookies-explained/#changes-to-the-default-behavior-without-samesite). Any cookies used in cross-site contexts today must be set with `SameSite=None` attribute.
-
-```text
-Set-Cookie: cookie-name=value; SameSite=None; Secure
-```
-
-{% Aside 'important' %}
-Make sure to review your cookies and have a list of those set with the `SameSite=None`. These are the cookies for which you will need to take action to ensure they keep functioning properly.
-{% endAside %}
 
 ## 2. Test for breakage {: #test }
 
@@ -203,7 +164,7 @@ Cross-site cookies have been a critical part of the web for over a quarter of a 
 
 Primarily these are authentication or payment flows where a top-level site either opens a pop-up window or redirects to a third-party site for an operation and then returns to the top-level site, making use of a cookie either on that return journey or in the embedded context. We intend to provide a temporary set of heuristics to identify these scenarios and allow third-party cookies for a limited amount of time, giving sites a longer window to implement the necessary changes.
 
-**Next step:** We will publish an [Intent](https://goo.gle/blink-intents) to the [blink-dev mailing list](https://groups.google.com/a/chromium.org/g/blink-dev) with further details in this month and continue to update documentation here.
+**Next step:** We will publish an Intent to the blink-dev mailing list with further details in this month and continue to update documentation here.
 
 
 ## Reporting issues with third-party cookies and getting help
