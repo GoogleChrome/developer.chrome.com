@@ -77,7 +77,7 @@ Unpacked extensions must use PNG images.
 #### Tooltip (title)
 
 The tooltip, or title, appears when the user holds their mouse pointer over the extension's icon in the
-toolbar. It's also included in the accessible text spoken by screenreaders when the button gets
+toolbar. It's also included in the accessible text spoken by screen readers when the button gets
 focus.
 
 The default tooltip is set using the `"default_title"` field of the `action` object in `manifest.json`.
