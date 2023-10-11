@@ -80,7 +80,7 @@ The tooltip, or title, appears when the user holds their mouse pointer over the 
 toolbar. It's also included in the accessible text spoken by screen readers when the button gets
 focus.
 
-The default tooltip is set using the `"default_title"` field of the `action` object in `manifest.json`.
+The default tooltip is set using the `"default_title"` field of the `action` key in `manifest.json`.
 You can also set it programmatically using the `action.setTitle()` method.
 
 #### Badge
