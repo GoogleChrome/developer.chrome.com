@@ -18,7 +18,7 @@ tags:
   - capabilities
 ---
 
-Until now, the [Async Clipboard API](https://web.dev/async-clipboard/) supported a limited set of
+Until now, the [Async Clipboard API](https://web.dev/articles/async-clipboard) supported a limited set of
 MIME types to be copied to and pasted from the system clipboard, specifically: `text/plain`,
 `text/html`, and `image/png`. The browser typically sanitizes this to, for example, remove embedded
 `script` elements or `javascript:` links from an HTML string, or to prevent PNG

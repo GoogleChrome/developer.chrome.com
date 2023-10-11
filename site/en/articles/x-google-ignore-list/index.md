@@ -19,7 +19,7 @@ alt: >
 
 {% YouTube id='FIYkjjFYvoI', startTime='256' %}
 
-Chrome DevTools parses the `x_google_ignoreList` field in [source maps](https://web.dev/source-maps/) to help improve developer debugging experience. Take a look at the following stack trace in the **Console**. DevTools automatically hides all the third party frames, and shows only the frames that are relevant to your code.
+Chrome DevTools parses the `x_google_ignoreList` field in [source maps](https://web.dev/articles/source-maps) to help improve developer debugging experience. Take a look at the following stack trace in the **Console**. DevTools automatically hides all the third party frames, and shows only the frames that are relevant to your code.
 
 <figure>
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4Q6lH52avZS6Om6UV3Dl.png", alt="A comparison of stack trace results.", width="800", height="439" %}
@@ -39,7 +39,7 @@ Chrome DevTools uses the `x_google_ignoreList` field (if provided), to filter ou
 
 {
   "version": 3,
-  "mappings": "AAAAA, ..." 
+  "mappings": "AAAAA, ..."
   "sources": [
     "app.js",
     "components/Button.ts",
@@ -54,7 +54,7 @@ Chrome DevTools uses the `x_google_ignoreList` field (if provided), to filter ou
 
 The `sources` field shows a list of original sources used by the `mappings` entry. Watch [What are source maps?](https://youtu.be/FIYkjjFYvoI) to learn how the mappings work.
 
-Given that the two files `node_modules/…/frameworks.js` and `node_modules/.../library.js` are third party scripts, you can specify the `x_google_ignoreList` field to indicate their positions in the `sources` field. Chrome DevTools will apply this information to hide frames from those ignored files. 
+Given that the two files `node_modules/…/frameworks.js` and `node_modules/.../library.js` are third party scripts, you can specify the `x_google_ignoreList` field to indicate their positions in the `sources` field. Chrome DevTools will apply this information to hide frames from those ignored files.
 
 <figure>
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yw7xc5vBlBrCloYwFioA.png", alt="A comparison of collapsed and expanded stack trace.", width="800", height="467" %}
@@ -63,7 +63,7 @@ Given that the two files `node_modules/…/frameworks.js` and `node_modules/.../
   </figcaption>
 </figure>
 
-This also applies to the [**Call Stack**](/docs/devtools/javascript/reference/#show-ignore-listed-frames) in the **Sources** panel during breakpoint debugging.  
+This also applies to the [**Call Stack**](/docs/devtools/javascript/reference/#show-ignore-listed-frames) in the **Sources** panel during breakpoint debugging.
 
 Behind the scenes, DevTools has an extra setting enabled by default: [Automatically add known third-party scripts to ignore list](/docs/devtools/settings/ignore-list/#skip-third-party). You can find it in DevTools > **Settings** > **Ignore List**.
 
@@ -79,7 +79,7 @@ On the other hand, build tools like [Vite](https://vitejs.dev/config/server-opti
 
 If you are a framework or library maintainer, it's essential to understand how to implement these settings to improve your users debugging experience. See the following section to see how Angular and Nuxt did it behind the scenes.
 
-### What if your favorite framework and build tool doesn’t support it yet? 
+### What if your favorite framework and build tool doesn’t support it yet?
 
 We actively work with frameworks and build tools to land these new settings. You can also help by notifying maintainers about this feature. For example, you can file an issue in their repository.
 

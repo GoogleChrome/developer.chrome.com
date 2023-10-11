@@ -3,7 +3,7 @@
 layout: 'layouts/blog-post.njk'
 
 # Required
-title: A new default Referrer-Policy for Chrome - strict-origin-when-cross-origin 
+title: A new default Referrer-Policy for Chrome - strict-origin-when-cross-origin
 
 # Required
 description: >
@@ -36,7 +36,7 @@ tags:
 Before we start:
 
 - If you're unsure of the difference between "site" and "origin", check out [Understanding
-  "same-site" and "same-origin"](https://web.dev/same-site-same-origin/).
+  "same-site" and "same-origin"](https://web.dev/articles/same-site-same-origin).
 - The `Referer` header is missing an R, due to an original misspelling in the spec. The
   `Referrer-Policy` header and `referrer` in JavaScript and the DOM are spelled correctly.
 
@@ -84,7 +84,7 @@ Up until recently,
 [`no-referrer-when-downgrade`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Referrer-Policy)
 has been a widespread default policy across browsers. But now many browsers are in some stage of
 [moving to more privacy-enhancing
-defaults](https://web.dev/referrer-best-practices/#default-referrer-policies-in-browsers).
+defaults](https://web.dev/articles/referrer-best-practices#default_referrer_policies_in_browsers).
 
 Chrome plans to switch its default policy from `no-referrer-when-downgrade` to
 `strict-origin-when-cross-origin`, [starting in version 85](https://blog.chromium.org/2020/07/chrome-85-upload-streaming-human.html).
@@ -96,7 +96,7 @@ this change will only have an effect on websites that have no policy set.
 {% Aside %}
 This step to help reduce silent cross-site user tracking is part of a larger initiative: the
 Privacy Sandbox. Check [Digging into the Privacy
-Sandbox](https://web.dev/digging-into-the-privacy-sandbox/) for more details.
+Sandbox](https://web.dev/articles/digging-into-the-privacy-sandbox) for more details.
 {% endAside %}
 
 ### What does this change mean?
@@ -110,7 +110,7 @@ the path and query string.
 
 <figure>
  {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/pZd2hVwvPWuPz4gK3uJh.png", alt="Diagram: Referer sent
-      depending on the policy, for a cross-origin request.", width="800", height="464" %} 
+      depending on the policy, for a cross-origin request.", width="800", height="464" %}
  <figcaption>
    <em>Referer sent (and document.referrer) for a cross-origin request, depending on the
    policy.</em>
@@ -130,13 +130,13 @@ https://site-two.example/…:
 - Like `no-referrer-when-downgrade`, `strict-origin-when-cross-origin` is **secure**: no referrer
   (`Referer` header and `document.referrer`) is present when the request is made from an HTTPS
   origin (secure) to an HTTP one (insecure). This way, if your website uses HTTPS ([if not, make it
-  a priority](https://web.dev/why-https-matters/)), your website's URLs won't leak in non-HTTPS
+  a priority](https://web.dev/articles/why-https-matters)), your website's URLs won't leak in non-HTTPS
   requests—because anyone on the network can see these, so this would expose your users to
   man-in-the-middle-attacks.
 - Within the same origin, the `Referer` header value is the full URL.
 
 For example:
-Same-origin request, sent from https://site-one.example/**stuff/detail?tag=red** to 
+Same-origin request, sent from https://site-one.example/**stuff/detail?tag=red** to
 https://site-one.example/…:
 
  - With `strict-origin-when-cross-origin`: Referer: https://site-one.example/**stuff/detail?tag=red**
@@ -202,7 +202,7 @@ have a few options:
 
 Note that most browsers are moving in a similar direction when it comes to the referrer (see browser
 defaults and their evolutions in [Referer and Referrer-Policy: best
-practices](https://web.dev/referrer-best-practices/#default-referrer-policies-in-browsers).
+practices](https://web.dev/articles/referrer-best-practices#default_referrer_policies_in_browsers).
 
 ### Implement an explicit, privacy-enhancing policy across your site
 
@@ -224,7 +224,7 @@ The Chrome enterprise policy
 [`ForceLegacyDefaultReferrerPolicy`](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ForceLegacyDefaultReferrerPolicy)
 is available to IT administrators who would like to force the previous default referrer policy of
 `no-referrer-when-downgrade` in enterprise environments. This allows enterprises additional time to
-test and update their applications. 
+test and update their applications.
 
 This policy will be removed in Chrome 88.
 
@@ -241,7 +241,7 @@ David Van Cleve, Mike West, Sam Dutton, Rowan Merewood, Jxck and Kayce Basques._
 ## Resources
 
 - [Referer and Referrer-Policy: best practices](web.dev/referrer-best-practices)
-- [Understanding "same-site" and "same-origin"](https://web.dev/same-site-same-origin/)
+- [Understanding "same-site" and "same-origin"](https://web.dev/articles/same-site-same-origin)
 - [Chrome status entry](https://www.chromestatus.com/feature/6251880185331712)
 - [Chrome 85 beta blog post](https://blog.chromium.org/2020/07/chrome-85-upload-streaming-human.html)
 - [Blink intent to

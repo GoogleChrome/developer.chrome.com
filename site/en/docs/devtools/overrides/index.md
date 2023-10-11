@@ -97,7 +97,7 @@ With response header overrides, you can locally prototype fixes for various head
 
 - [Cross-Origin Resource Sharing (CORS) Headers](https://developer.mozilla.org/docs/Web/HTTP/CORS)
 - [Permissions-Policy Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Permissions-Policy)
-- [Cross-Origin Isolation Headers](https://web.dev/coop-coep/)
+- [Cross-Origin Isolation Headers](https://web.dev/articles/coop-coep)
 
 To override a response header:
 
@@ -112,7 +112,7 @@ To override a response header:
 1. Modify or add a new header.
 
    {% Aside %}
-   This example adds the `Access-Control-Allow-Origin: *` header to get rid of a [CORS error](https://web.dev/cross-origin-resource-sharing/).
+   This example adds the `Access-Control-Allow-Origin: *` header to get rid of a [CORS error](https://web.dev/articles/cross-origin-resource-sharing).
    {% endAside %}
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IhXa4zihNp5Gsi9eBPhN.png", alt="Modifying an existing header value, adding a new one, and removing an override.", width="800", height="653" %}
@@ -120,7 +120,7 @@ To override a response header:
    - To edit a header value, click it.
    - To add a new header, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/eY8MaTQqlXF3oiT6STmy.svg", alt="Add.", width="20", height="20" %} **Add header**.
    - To remove a header override, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Bg5rfKrzHBaF621Ag9IN.svg", alt="Delete.", width="20", height="20" %} next to it. This removes the headers you added or reverts modified values back to original values.
-   
+
    DevTools highlights modified headers <span style="background-color:#e9f2ec;">in green</span> and removed overrides <span style="background-color:#ffeff0;text-decoration-line: line-through;">in red</span>.
 
 1. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Refresh.", width="20", height="20" %} Refresh the page to apply the changes.

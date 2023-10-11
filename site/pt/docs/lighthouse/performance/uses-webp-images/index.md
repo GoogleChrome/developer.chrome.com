@@ -62,6 +62,6 @@ Considere o uso de um [plugin](https://wordpress.org/plugins/search/convert+webp
 ## Recursos
 
 - [Código-fonte para a auditoria **Sirva imagens em formatos modernos**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/modern-image-formats.js)
-- [Use imagens WebP](https://web.dev/serve-images-webp/)
+- [Use imagens WebP](https://web.dev/articles/serve-images-webp)
 
 <!-- https://www.reddit.com/r/webdev/comments/gspjwe/serve_images_in_nextgen_formats/ -->

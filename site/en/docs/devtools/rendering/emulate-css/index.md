@@ -25,7 +25,7 @@ The [`prefers-color-scheme` CSS media feature][7] indicates if the user prefers 
 
 To emulate this condition:
 
-1. On the [prefers-color-scheme](https://web.dev/prefers-color-scheme/) page, [open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
+1. On the [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme) page, [open the **Rendering** tab](/docs/devtools/rendering#open-rendering).
 1. Under the **Emulate CSS media feature `prefers-color-scheme`**, select one of the following from the drop-down list:
 
    - No emulation

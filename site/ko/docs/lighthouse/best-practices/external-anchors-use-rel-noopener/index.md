@@ -43,10 +43,10 @@ Lighthouse 보고서에서 식별된 각 링크에 `rel="noopener"` 또는 `rel=
 - `rel="noopener"`는 새 페이지가 `window.opener` 속성에 액세스할 수 없도록 하고 별도의 프로세스에서 실행되도록 합니다.
 - `rel="noreferrer"`는 동일한 효과를 갖지만 `Referer` 헤더가 새 페이지로 전송되는 것을 방지합니다. [링크 유형 "noreferrer"](https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer)를 참조하세요.
 
-자세한 내용은 [교차 출처 리소스를 안전하게 공유](https://web.dev/cross-origin-resource-sharing/) 게시물을 참조하세요.
+자세한 내용은 [교차 출처 리소스를 안전하게 공유](https://web.dev/articles/cross-origin-resource-sharing) 게시물을 참조하세요.
 
 ## 리소스
 
 - [**교차 출처 대상에 대한 링크가 안전하지 않음** 감사의 소스 코드](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js)
-- [교차 출처 리소스를 안전하게 공유](https://web.dev/cross-origin-resource-sharing/)
+- [교차 출처 리소스를 안전하게 공유](https://web.dev/articles/cross-origin-resource-sharing)
 - [웹 개발자를 위한 사이트 격리](https://developers.google.com/web/updates/2018/07/site-isolation)

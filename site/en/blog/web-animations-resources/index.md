@@ -28,7 +28,7 @@ It's [also natively available](http://caniuse.com/#feat=web-animation) in Opera,
 This is a powerful primitive that deserves a place in your toolbox.
 
 {% Aside %}
-For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on web.dev](https://web.dev/animations/).
+For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on web.dev](https://web.dev/explore/animations).
 {% endAside%}
 
 ## Codelabs

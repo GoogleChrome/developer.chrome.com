@@ -13,7 +13,7 @@ authors:
 
 ## Status de implementação
 
-- [Em ensaio de origem](https://web.dev/origin-trials/) no Chrome 89 a 93.
+- [Em ensaio de origem](/docs/web-platform/origin-trials/) no Chrome 89 a 93.
 - [Cadastre-se para o ensaio de origem](/origintrials/#/view_trial/988540118207823873).
 - [Status da plataforma Chrome](https://chromestatus.com/feature/5640066519007232).
 - [Projetos Chromium](https://www.chromium.org/updates/first-party-sets) .

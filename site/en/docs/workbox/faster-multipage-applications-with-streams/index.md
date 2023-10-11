@@ -373,9 +373,9 @@ Browsers excel when it comes to dealing with responses to navigation requests, e
 
 This works to our advantage when we use a streaming service worker pattern. Whenever you respond to a request from the service worker cache from the get-go, the start of the response arrives almost instantaneously. When you stitch together precached header and footer markup with a response from the network, you get some notable performance advantages:
 
-- [Time to First Byte (TTFB)](https://web.dev/ttfb/) will often be greatly reduced, as the first byte of the response to a navigation request is instant.
-- [First Contentful Paint (FCP)](https://web.dev/fcp/) will be _very_ fast, as the precached header markup will contain a reference to a cached style sheet, meaning that the page will paint very, very quickly.
-- In some cases, [Largest Contentful Paint (LCP)](https://web.dev/lcp/) can be faster as well, particularly if the largest onscreen element is provided by the precached header partial. Even so, just serving _something_ out of the service worker cache as soon as possible in tandem with smaller markup payloads may result in a better LCP.
+- [Time to First Byte (TTFB)](https://web.dev/articles/ttfb) will often be greatly reduced, as the first byte of the response to a navigation request is instant.
+- [First Contentful Paint (FCP)](https://web.dev/articles/fcp) will be _very_ fast, as the precached header markup will contain a reference to a cached style sheet, meaning that the page will paint very, very quickly.
+- In some cases, [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp) can be faster as well, particularly if the largest onscreen element is provided by the precached header partial. Even so, just serving _something_ out of the service worker cache as soon as possible in tandem with smaller markup payloads may result in a better LCP.
 
 Streaming multipage architectures can be a bit tricky to set up and iterate on, but the complexity involved is often no more onerous than SPAs in theory. The main benefit is that you're not replacing the browser's default navigation scheme&mdash;you're _enhancing_ it.
 

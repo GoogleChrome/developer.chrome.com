@@ -179,7 +179,7 @@ ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 <div style="border:solid 1px #ccc;">
   {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/ddoRhRRV8AuTy1Z82yEj.png", alt="A blank canvas.", width="500", height="500" %}
-</div>  
+</div>
 
 Perfect! A nice blank canvas. Now let's start drawing a nice horizontal line:
 
@@ -267,7 +267,7 @@ Easy as pie! Try it and play with the parameters
 
 {% Aside %} The app [SVGcode](https://svgco.de/), a PWA for converting raster images to SVGs, uses a
 dynamically created <code>CanvasFilter</code> for the task of posterization (more background in the
-[accompanying article](https://web.dev/svgcode/)). Be sure to check out the app and the related
+[accompanying article](https://web.dev/articles/svgcode)). Be sure to check out the app and the related
 [source code](https://github.com/tomayac/SVGcode/blob/ef037e33d05b17f43b32cfb2cf039145aeee6104/src/js/preprocessworker.js#L89-L113).
 {% endAside %}
 

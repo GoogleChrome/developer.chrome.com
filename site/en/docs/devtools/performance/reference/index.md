@@ -383,8 +383,8 @@ activities from those categories.
 On the **Timings** track, view important markers such as:
 
 - [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint)
-- [First Contentful Paint (FCP)](https://web.dev/fcp/)
-- [Largest Contentful Paint (LCP)](https://web.dev/lcp/)
+- [First Contentful Paint (FCP)](https://web.dev/articles/fcp)
+- [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp)
 - [DOMContentLoaded Event (DCL)](https://developer.mozilla.org/docs/Web/API/Window/DOMContentLoaded_event)
 - [Onload Event (L)](https://developer.mozilla.org/docs/Web/API/Window/load_event)
 - Your custom [`performance.mark()`](https://developer.mozilla.org/docs/Web/API/Performance/mark) calls
@@ -408,7 +408,7 @@ To view interactions:
 
 In the example above, the **Interactions** track shows two interactions. Both have the same IDs, indicating that the interactions are triggered by the same user action.
 
-The **Interactions** track also shows [Interaction to Next Paint (INP)](https://web.dev/inp/) warnings for interactions longer than 200 milliseconds in the **Summary** tab:
+The **Interactions** track also shows [Interaction to Next Paint (INP)](https://web.dev/articles/inp) warnings for interactions longer than 200 milliseconds in the **Summary** tab:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wrFaZ26nYCuprtCSNB5C.png", alt="The INP warning.", width="800", height="685" %}
 
@@ -491,7 +491,7 @@ A darker-blue square in the top-left of a request means it's a higher-priority r
 lighter-blue square means lower-priority. In the example above, the selected request is of
 high priority, and the blue one above it is highest-priority.
 
-The **Summary** section includes **Initial Priority** and (final) **Priority** fields. If their values differ, the fetch priority of the request has changed during the recording. For more information, see [Optimizing resource loading with the Fetch Priority API](https://web.dev/fetch-priority/).
+The **Summary** section includes **Initial Priority** and (final) **Priority** fields. If their values differ, the fetch priority of the request has changed during the recording. For more information, see [Optimizing resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority).
 
 In the example above, the request for `www.google.com` is represented by a line on the left, a bar in the
 middle with a dark portion and a light portion, and a line on the right. The screenshot below shows the

@@ -86,7 +86,7 @@ Depending on which browser and OS combination a visitor uses, one of the behavio
 
 ## Mapping the various resize behaviors
 
-In the [Viewport Investigation Effort](https://github.com/web-platform-tests/interop-2022-viewport)-part of [Interop 2022](https://web.dev/interop-2022/)-various viewport-related aspects were investigated, for every major browser and OS combination.
+In the [Viewport Investigation Effort](https://github.com/web-platform-tests/interop-2022-viewport)-part of [Interop 2022](https://web.dev/blog/interop-2022)-various viewport-related aspects were investigated, for every major browser and OS combination.
 
 One of the tested aspects is the resize behavior when the OSK is shown. This led to the following classification:
 
@@ -124,13 +124,13 @@ This difference in how the various viewports get resized when the OSK is shown l
 
 In the browsers from [group 1](#group-one), with the OSK shown:
 
-  - The computed values for [viewport-relative units](https://web.dev/learn/css/sizing/#viewport-relative-units) remain the same.
+  - The computed values for [viewport-relative units](https://web.dev/articles/learn/css/sizing#viewport_relative_units) remain the same.
   - Elements that were designed to take up the full visual space keep their size.
   - Elements that use `position: fixed` remain in place and can be obscured by the OSK.
 
 In the browsers from [group 2](#group-two), with the OSK shown:
 
-  - The computed values for [viewport-relative units](https://web.dev/learn/css/sizing/#viewport-relative-units) shrink.
+  - The computed values for [viewport-relative units](https://web.dev/articles/learn/css/sizing#viewport_relative_units) shrink.
   - Elements that were designed to take up the full visual space shrink.
   - Elements that use `position: fixed` can end up elsewhere in the layout.
 
@@ -157,7 +157,7 @@ These changes do not affect [WebView](/docs/multidevice/webview/)
 
 ## Opting in to a different behavior
 
-If you want your website to use the pre-108 resize behavior, fear not. Also shipping in Chrome 108 is an extension to the [viewport meta tag](https://web.dev/viewport/).
+If you want your website to use the pre-108 resize behavior, fear not. Also shipping in Chrome 108 is an extension to the [viewport meta tag](https://web.dev/articles/viewport).
 
 Through [the `interactive-widget` key](https://drafts.csswg.org/css-viewport/#interactive-widget-section), you can tell Chrome which resize behavior you want.
 
@@ -194,7 +194,7 @@ Note that this meta tag extension is only supported by Chrome 108 and up at the 
 
 We expect some minor differences to existing sites, but expect these to be non-blocking as Chrome 108 on Android will now behave similarly to Safari on iOS. Therefore, websites that work fine on Safari on iOS should also work fine on Chrome 108 on Android.
 
-However, we do encourage website authors to actively test their websites in Chrome 108, which is in beta from October 27th 2022. Specifically look out for elements that use `position: fixed` and/or rely on [Viewport-relative units](https://web.dev/learn/css/sizing/#viewport-relative-units).
+However, we do encourage website authors to actively test their websites in Chrome 108, which is in beta from October 27th 2022. Specifically look out for elements that use `position: fixed` and/or rely on [Viewport-relative units](https://web.dev/articles/learn/css/sizing#viewport_relative_units).
 
 Feedback can be reported over at [crbug.com](https://crbug.com/). Be sure to include “on-screen keyboard” in the report’s title.
 

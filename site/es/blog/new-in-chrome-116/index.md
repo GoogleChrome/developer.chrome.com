@@ -69,7 +69,7 @@ Consulte [Picture in Picture para cualquier elemento](/docs/web-platform/documen
 
 ## Propiedad `notRestoredReasons`. {: #not-restored-reasons }
 
-Los navegadores modernos proporcionan una función de optimización para la navegación del historial llamada [caché de retroceso/adelante] (https://web.dev/bfcache/) o bfcache. Permite una experiencia de carga instantánea cuando los usuarios regresan a una página que ya han visitado.
+Los navegadores modernos proporcionan una función de optimización para la navegación del historial llamada [caché de retroceso/adelante] (https://web.dev/articles/bfcache) o bfcache. Permite una experiencia de carga instantánea cuando los usuarios regresan a una página que ya han visitado.
 
 Mire este video de bfcache en acción para comprender la velocidad que puede aportar a las navegaciones:
 

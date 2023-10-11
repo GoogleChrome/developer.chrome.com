@@ -70,7 +70,7 @@ https://developer.chrome.com/chrome-ux-report-looker-studio-dashboard/
 
 ### Core Web Vitals 概述
 
-第一页显示了源的 [Core Web Vitals](https://web.dev/vitals/) 月度表现概览。这些是 Google 建议关注的最重要的用户体验指标。
+第一页显示了源的 [Core Web Vitals](https://web.dev/articles/vitals) 月度表现概览。这些是 Google 建议关注的最重要的用户体验指标。
 
 {% Img src="image/admin/h8iCTgvmG4DS2zScvatc.png", alt="CrUX Dashboard Core Web Vitals 概览", width="800", height="906" %}
 
@@ -88,7 +88,7 @@ https://developer.chrome.com/chrome-ux-report-looker-studio-dashboard/
 
 每个页面顶部都设有**设备**过滤器，您可以用它来限制体验数据中的窗体因子。例如，您可以专门深入研究电话用户体验。此设置支持跨页面调用。
 
-这些页面上的主要可视化内容各种体验的月度分布图，其类别有“良好”、“需要改进”和“差”。图表下方的颜色编码图例表示该类别包含的体验范围。例如，在上面的截图中，您可以看到[Largest Contentful Paint（最大内容绘制，LCP）](https://web.dev/lcp/#what-is-a-good-lcp-score)“良好”体验的百分比在最近几个月波动并稍有恶化。
+这些页面上的主要可视化内容各种体验的月度分布图，其类别有“良好”、“需要改进”和“差”。图表下方的颜色编码图例表示该类别包含的体验范围。例如，在上面的截图中，您可以看到[Largest Contentful Paint（最大内容绘制，LCP）](https://web.dev/articles/lcp#what_is_a_good_lcp_score)“良好”体验的百分比在最近几个月波动并稍有恶化。
 
 最近一个月的“良好”和“差”体验百分比显示在图表上方，以及与上个月的百分比差异指标。对于这个源，“良好”的 LCP 体验环比下跌了 3.2%，现在是 56.04%。
 
@@ -116,7 +116,7 @@ PageSpeed Insights 等工具中对应的 P75 值并非基于公共 BigQuery 数�
 
 {% Aside 'key-term' %}有效的连接类型之所以被认为是*有效的*，是因为它们基于用户设备上的带宽测量值，并不暗示使用了任何特定技术。例如，使用快速 WiFi 的桌面用户可能被标记为 4G，而较慢的移动连接可能被标记为 2G。 {% endAside %}
 
-这些维度的分布是使用 [First Contentful Paint](https://web.dev/fcp/) (FCP) 直方图数据的分段计算的。
+这些维度的分布是使用 [First Contentful Paint](https://web.dev/articles/fcp) (FCP) 直方图数据的分段计算的。
 
 ## 常问问题
 

@@ -6,13 +6,13 @@ date: 2019-05-04
 updated: 2020-06-10
 ---
 
-注册[服务工作进程](https://web.dev/service-workers-cache-storage/)是启用以下关键[渐进式 Web 应用程序 (PWA)](https://web.dev/progressive-web-apps/) 特性的第一步：
+注册[服务工作进程](https://web.dev/articles/service-workers-cache-storage)是启用以下关键[渐进式 Web 应用程序 (PWA)](https://web.dev/explore/progressive-web-apps) 特性的第一步：
 
 - 离线工作
 - 支持推送通知
 - 可以安装到设备
 
-有关更多信息，请参阅文章[服务工作进程和缓存存储 API](https://web.dev/service-workers-cache-storage/)。
+有关更多信息，请参阅文章[服务工作进程和缓存存储 API](https://web.dev/articles/service-workers-cache-storage)。
 
 ## 浏览器兼容性
 
@@ -34,15 +34,15 @@ Lighthouse 检查 [Chrome 远程调试协议](https://github.com/ChromeDevTools/
 
 注册服务工作进程只需几行代码，但使用服务工作进程的唯一原因是可以实现上述 PWA 特性之一。实际上，实现这些特性需要更多工作：
 
-- 要了解如何缓存文件以供离线使用，请参阅文章[什么是网络可靠性以及如何进行测量？](https://web.dev/network-connections-unreliable/)。
-- 要了解如何使应用程序可安装，请参阅[使其可安装](https://web.dev/codelab-make-installable/) codelab。
+- 要了解如何缓存文件以供离线使用，请参阅文章[什么是网络可靠性以及如何进行测量？](https://web.dev/articles/network-connections-unreliable)。
+- 要了解如何使应用程序可安装，请参阅[使其可安装](https://web.dev/articles/codelab-make-installable) codelab。
 - 要了解如何启用推送通知，请参阅 Google 的[向 Web 应用程序添加推送通知](https://codelabs.developers.google.com/codelabs/push-notifications)。
 
 ## 资源
 
 - [**不注册可控制页面和 `start_url` 的服务工作进程**审计的源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/service-worker.js)
 - [服务工作进程：简介](https://developers.google.com/web/fundamentals/primers/service-workers)
-- [服务工作进程和缓存存储 API](https://web.dev/service-workers-cache-storage/)
-- [什么是网络可靠性以及如何进行测量？](https://web.dev/network-connections-unreliable/)
-- [使其可安装](https://web.dev/codelab-make-installable/)
+- [服务工作进程和缓存存储 API](https://web.dev/articles/service-workers-cache-storage)
+- [什么是网络可靠性以及如何进行测量？](https://web.dev/articles/network-connections-unreliable)
+- [使其可安装](https://web.dev/articles/codelab-make-installable)
 - [向 Web 应用程序添加推送通知](https://codelabs.developers.google.com/codelabs/push-notifications)

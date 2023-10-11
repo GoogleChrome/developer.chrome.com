@@ -40,7 +40,7 @@ From Chrome 118, the [DevTools Issues tab](/docs/devtools/issues/) shows the bre
 
 {% Aside %}
 
-We are building a DevTools extension to facilitate analysis of cookie usage during browsing sessions. This will provide debugging pathways for cookies, and Privacy Sandbox features, with access points to learn and understand the different aspects of the Privacy Sandbox initiative.  
+We are building a DevTools extension to facilitate analysis of cookie usage during browsing sessions. This will provide debugging pathways for cookies, and Privacy Sandbox features, with access points to learn and understand the different aspects of the Privacy Sandbox initiative.
 **Look out for our preview launch in November 2023!**
 
 {% endAside %}
@@ -84,14 +84,14 @@ For more details, check out [Recipes for first-party cookies](https://web.dev/fi
 
 Cookies that are sent in cross-site contexts, like iframes or subresource requests, are generally referred to as third-party cookies.
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NJLl1qG9AN8tD9GwR2jp.png", alt="Diagram showing a third-party cookie.", width="800", height="646" %}
-[Some use cases for third-party cookies](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies) include:
+[Some use cases for third-party cookies](https://web.dev/articles/samesite-cookie-recipes#use_cases_for_cross_site_or_third_party_cookies) include:
 
 -   Embedded content shared from other sites, such as videos, maps, code samples, and social posts.
 -   Widgets from external services such as payments, calendars, booking, and reservation functionality.
 -   Widgets such as social buttons or anti-fraud services.
 -   Remote resources on a page such as `<img>` or `<script>` tags, that rely on cookies to be sent with a request (commonly used for tracking pixels and personalizing content).
 
-[In 2019, browsers changed the cookie behavior, restricting them to first-party access by default](https://web.dev/samesite-cookies-explained/#changes-to-the-default-behavior-without-samesite). Any cookies used in cross-site contexts today must be set with `SameSite=None` attribute.
+[In 2019, browsers changed the cookie behavior, restricting them to first-party access by default](https://web.dev/articles/samesite-cookies-explained#changes_to_the_default_behavior_without_samesite). Any cookies used in cross-site contexts today must be set with `SameSite=None` attribute.
 
 ```text
 Set-Cookie: cookie-name=value; SameSite=None; Secure

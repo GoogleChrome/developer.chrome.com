@@ -66,7 +66,7 @@ Uma grande desvantagem da *abordagem de download* é que não há como fazer um 
 
 A API de acesso ao sistema de arquivos torna ambas as operações, abrir e salvar, muito mais simples. Também possibilita *o salvamento real*, ou seja, você não só pode escolher onde salvar um arquivo, mas também sobrescrever um arquivo existente.
 
-{% Aside %} Para obter uma introdução mais completa à API de acesso ao sistema de arquivos, consulte o artigo [A API de acesso ao sistema de arquivos: simplificando o acesso a arquivos locais](https://web.dev/file-system-access/). {% endAside %}
+{% Aside %} Para obter uma introdução mais completa à API de acesso ao sistema de arquivos, consulte o artigo [A API de acesso ao sistema de arquivos: simplificando o acesso a arquivos locais](https://web.dev/articles/file-system-access). {% endAside %}
 
 ### Abrindo arquivos
 
@@ -168,7 +168,7 @@ Você pode ver o código acima em ação em uma [demonstração](https://browser
 
 ## A biblioteca browser-fs-access em liberdade
 
-Em meu tempo livre, contribuo um pouquinho para um [PWA instalável](https://web.dev/progressive-web-apps/#make-it-installable) chamado [Excalidraw](https://excalidraw.com/), uma ferramenta de quadro branco que permite esboçar diagramas facilmente com uma sensação de desenho à mão. É totalmente responsivo e funciona bem em uma variedade de dispositivos, desde pequenos telefones celulares a computadores com telas grandes. Isso significa que ele precisa lidar com arquivos em todas as várias plataformas, independentemente de serem ou não compatíveis com a API de acesso ao sistema de arquivos. Isso o torna um ótimo candidato para a biblioteca browser-fs-access.
+Em meu tempo livre, contribuo um pouquinho para um [PWA instalável](https://web.dev/articles/progressive-web-apps#make_it_installable) chamado [Excalidraw](https://excalidraw.com/), uma ferramenta de quadro branco que permite esboçar diagramas facilmente com uma sensação de desenho à mão. É totalmente responsivo e funciona bem em uma variedade de dispositivos, desde pequenos telefones celulares a computadores com telas grandes. Isso significa que ele precisa lidar com arquivos em todas as várias plataformas, independentemente de serem ou não compatíveis com a API de acesso ao sistema de arquivos. Isso o torna um ótimo candidato para a biblioteca browser-fs-access.
 
 Posso, por exemplo, iniciar um desenho no meu iPhone, salvá-lo (tecnicamente: baixe-o, pois o Safari não oferece suporte à API de acesso ao sistema de arquivos) na pasta Downloads do meu iPhone, abra o arquivo no meu desktop (após transferi-lo do meu telefone), modifique o arquivo e substitua-o com minhas alterações ou mesmo salve-o como um novo arquivo.
 

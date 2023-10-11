@@ -65,7 +65,7 @@ header, as will all other documents that require that behavior (note that
 ## Why make `document.domain` immutable?
 
 Many websites set `document.domain` to allow communication between [same-site
-but cross-origin](https://web.dev/same-site-same-origin/) pages. 
+but cross-origin](https://web.dev/articles/same-site-same-origin) pages.
 
 {% Aside 'key-term' %}
 
@@ -150,11 +150,11 @@ panel.", width="800", height="472" %}
 
 If you have a reporting endpoint set up, you will also be sent deprecation
 reports. Learn more about [how to use the Reporting
-API](https://web.dev/reporting-api/) with either existing report collection
+API](https://web.dev/articles/reporting-api) with either existing report collection
 services or by building your own in-house solution.
 
 You can run your site through the [LightHouse deprecated API
-audit](https://web.dev/deprecations/) to find all APIs that are scheduled to
+audit](https://web.dev/articles/deprecations) to find all APIs that are scheduled to
 be removed from Chrome.
 
 ## Alternative cross-origin communication
@@ -163,7 +163,7 @@ At this time, you have three options to replace `document.domain` for your websi
 
 ### Use `postMessage()` or Channel Messaging API
 
-In most use cases, cross-origin 
+In most use cases, cross-origin
 [`postMessage()`](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
 or [Channel Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API)
 can replace `document.domain`.
@@ -227,7 +227,7 @@ Origin-Agent-Cluster: ?0
 The `Origin-Agent-Cluster` header instructs the browser whether the document
 should be handled by the origin-keyed agent cluster or not. To learn more about
 `Origin-Agent-Cluster`, read [Requesting performance isolation with the
-`Origin-Agent-Cluster` header](https://web.dev/origin-agent-cluster/).
+`Origin-Agent-Cluster` header](https://web.dev/articles/origin-agent-cluster).
 
 When you send this header, your document can continue to set `document.domain`
 even after it becomes immutable by default.

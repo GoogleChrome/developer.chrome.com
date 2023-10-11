@@ -180,7 +180,7 @@ Issue do Chromium: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Detalhamento de tempos de LCP no painel de Performance Insights {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/articles/optimize-lcp#lcp_breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Detalhamento de tempos de LCP no painel de Performance Insights", width="800", height="523" %}
 
@@ -209,8 +209,8 @@ Issue do Chromium: [1351383](https://crbug.com/1351383)
 - Anteriormente, [Extensões do Gravador](/docs/devtools/recorder/reference/#extension-troubleshooting) não eram mostradas no painel do mesmo de tempos em tempos ([1351416](https://crbug.com/1351416))
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
 - O painel **Estilos** agora mostra um seletor de cores para a propriedade `stop-color` da tag [`<stop>` do SVG](https://developer.mozilla.org/docs/Web/SVG/Element/stop). ([1351096](https://crbug.com/1351096))
-<!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
-- Identifique scripts causando [layout thrashing](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) como uma potencial causa para mudanças de layout no painel de **Performance Insights**. ([1343019](https://crbug.com/1343019))
+<!-- - Identify script causing [layout](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
+- Identifique scripts causando [layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) como uma potencial causa para mudanças de layout no painel de **Performance Insights**. ([1343019](https://crbug.com/1343019))
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 - O caminho crítico para fontes LCP agora é mostrado no painel **Performance Insights**. ([1350390](https://crbug.com/1350390))
 

@@ -21,9 +21,9 @@ tags:
 The Soft Navigations origin trial has entered a [second origin trial from Chrome 117](/origintrials/#/view_trial/21392098230009857) after taking feedback on board from the initial trial.
 {% endAside %}
 
-Since its launch, the [Core Web Vitals initiative](https://web.dev/vitals/) has sought to measure the actual user experience of a website, rather than technical details behind how a website is created or loaded. The three Core Web Vitals metrics were created as [user-centric metrics](https://web.dev/user-centric-performance-metrics/)—an evolution over existing technical metrics such as[`DOMContentLoaded`](https://developer.mozilla.org/docs/Web/API/Document/DOMContentLoaded_event) or [`load`](https://developer.mozilla.org/docs/Web/API/Window/load_event) that measured timings that were often unrelated to how users perceived the performance of the page. Because of this, the technology used to build the site should not impact the scoring providing the site performs well.
+Since its launch, the [Core Web Vitals initiative](https://web.dev/articles/vitals) has sought to measure the actual user experience of a website, rather than technical details behind how a website is created or loaded. The three Core Web Vitals metrics were created as [user-centric metrics](https://web.dev/articles/user-centric-performance-metrics)—an evolution over existing technical metrics such as[`DOMContentLoaded`](https://developer.mozilla.org/docs/Web/API/Document/DOMContentLoaded_event) or [`load`](https://developer.mozilla.org/docs/Web/API/Window/load_event) that measured timings that were often unrelated to how users perceived the performance of the page. Because of this, the technology used to build the site should not impact the scoring providing the site performs well.
 
-The reality is always a little trickier than the ideal, and the popular Single Page Application architecture has [never been fully supported by the Core Web Vitals metrics](https://web.dev/vitals-spa-faq/). Rather than loading distinct, individual web pages as the user navigates about the site, these web applications use so-called "soft navigations", where the page content is instead changed by JavaScript. In these applications, the illusion of a traditional webpage architecture is maintained by altering the URL and pushing previous URLs in the browser's history to allow the back and forward buttons to work as the user would expect.
+The reality is always a little trickier than the ideal, and the popular Single Page Application architecture has [never been fully supported by the Core Web Vitals metrics](https://web.dev/articles/vitals-spa-faq). Rather than loading distinct, individual web pages as the user navigates about the site, these web applications use so-called "soft navigations", where the page content is instead changed by JavaScript. In these applications, the illusion of a traditional webpage architecture is maintained by altering the URL and pushing previous URLs in the browser's history to allow the back and forward buttons to work as the user would expect.
 
 Many JavaScript frameworks use this model, but each in a different way. Since this is outside of what the browser traditionally understands as a "page", measuring this has always been difficult: where is the line to be drawn between an interaction on the _current_ page, versus considering this as a _new_ page?
 
@@ -45,9 +45,9 @@ Once the soft navigation heuristics are enabled (more on this in the next sectio
 
 - A `soft-navigation` [`PerformanceTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceTiming) event will be emitted after each soft navigation is detected.
 - The performance API will provide access to a `soft-navigation` timing entry, as emitted by the above `PerformanceTiming` event.
-- The [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint), [First Contentful Paint (FCP)](https://web.dev/fcp/), [Largest Contentful Paint (LCP)](https://web.dev/lcp/) metrics will be reset, and re-emitted on the next appropriate occurrences of these. (Note: FP, and FCP are not yet implemented.)
-- The [First Input Delay (FID)](https://web.dev/fcp/) will be reset, and re-emitted on the first input (note: this is not yet implemented).
-- A `navigationId` attribute will be added to each of performance timings (`first-paint`, `first-contentful-paint`, `largest-contentful-paint`, `first-input-delay`, `event`, and `layout-shift`) corresponding to the navigation entry the event was related to, allowing [Cumulative Layout Shift (CLS)](https://web.dev/cls/) and [Interaction to Next Paint (INP)](https://web.dev/inp/) to be calculated.
+- The [First Paint (FP)](https://developer.mozilla.org/docs/Glossary/First_paint), [First Contentful Paint (FCP)](https://web.dev/articles/fcp), [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp) metrics will be reset, and re-emitted on the next appropriate occurrences of these. (Note: FP, and FCP are not yet implemented.)
+- The [First Input Delay (FID)](https://web.dev/articles/fcp) will be reset, and re-emitted on the first input (note: this is not yet implemented).
+- A `navigationId` attribute will be added to each of performance timings (`first-paint`, `first-contentful-paint`, `largest-contentful-paint`, `first-input-delay`, `event`, and `layout-shift`) corresponding to the navigation entry the event was related to, allowing [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls) and [Interaction to Next Paint (INP)](https://web.dev/articles/inp) to be calculated.
 
 These changes will allow the Core Web Vitals—and some of the associated diagnostic metrics—to be measured per page navigation, though there are some nuances that need to be considered.
 
@@ -172,11 +172,11 @@ As this example shows, the LCP element for the soft navigation can be reported d
 
 ### How to measure TTFB?
 
-[Time to First Byte (TTFB)](https://web.dev/ttfb/) for a traditional page load represents the time that the first bytes of the original request are returned.
+[Time to First Byte (TTFB)](https://web.dev/articles/ttfb) for a traditional page load represents the time that the first bytes of the original request are returned.
 
 For a soft navigation this is a more tricky question. Should we measure the first request made for the new page? What if all the content already exists in the app and there are no additional requests? What if that request is made in advance with a prefetch? What if a request unrelated to the soft navigation from a user perspective (for example, it's an analytics request)?
 
-A simpler method is to report TTFB of 0 for soft navigations—in a similar manner as we recommend for [back/forward cache](https://web.dev/bfcache/) restores. This is the method the [`web-vitals` library](#using-the-web-vitals-library-to-measure-core-web-vitals-for-soft-navigations) currently uses for soft navigations.
+A simpler method is to report TTFB of 0 for soft navigations—in a similar manner as we recommend for [back/forward cache](https://web.dev/articles/bfcache) restores. This is the method the [`web-vitals` library](#using-the-web-vitals-library-to-measure-core-web-vitals-for-soft-navigations) currently uses for soft navigations.
 
 In the future, we may support more precise ways of knowing which request is the soft navigation's "navigation request" and will be able to have more precise TTFB measurements. But that's not part of the current experiment.
 

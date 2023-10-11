@@ -15,7 +15,7 @@ alt: Fichários em várias cores.
 
 {% Aside %} A API de Gerenciamento de Arquivos faz parte do [projeto de recursos](/blog/fugu-status/) e está atualmente em desenvolvimento. Esta postagem será atualizada conforme o andamento da implementação. {% endAside %}
 
-Agora que os aplicativos da web são [capazes de ler e gravar arquivos](https://web.dev/file-system-access/) , a próxima etapa lógica é permitir que os desenvolvedores declarem esses mesmos aplicativos da web como gerenciadores de arquivos para os arquivos que seus aplicativos podem criar e processar. A API de gerenciamento de arquivos permite que você faça exatamente isso. Depois de registrar um aplicativo de editor de texto como um gerenciador de arquivos e depois de instalá-lo, você pode clicar com o botão direito em um arquivo `.txt` no macOS e selecionar "Obter informações" para instruir o sistema operacional de que ele deve sempre abrir arquivos `.txt` com este aplicativo como padrão .
+Agora que os aplicativos da web são [capazes de ler e gravar arquivos](https://web.dev/articles/file-system-access) , a próxima etapa lógica é permitir que os desenvolvedores declarem esses mesmos aplicativos da web como gerenciadores de arquivos para os arquivos que seus aplicativos podem criar e processar. A API de gerenciamento de arquivos permite que você faça exatamente isso. Depois de registrar um aplicativo de editor de texto como um gerenciador de arquivos e depois de instalá-lo, você pode clicar com o botão direito em um arquivo `.txt` no macOS e selecionar "Obter informações" para instruir o sistema operacional de que ele deve sempre abrir arquivos `.txt` com este aplicativo como padrão .
 
 ## Casos de uso sugeridos para a API de gerenciamento de arquivos {: # use-cases}
 
@@ -35,8 +35,8 @@ Para testar a API de gerenciamento de arquivos localmente, sem um token de teste
 
 A API de gerenciamento de arquivos por si só não permite polyfill. A funcionalidade de abrir arquivos com um aplicativo da web, no entanto, pode ser obtida por dois outros meios:
 
-- A [API de destino de compartilhamento da web](https://web.dev/web-share-target/) permite que os desenvolvedores especifiquem seu aplicativo como um destino de compartilhamento para que os arquivos possam ser abertos a partir da planilha de compartilhamento do sistema operacional.
-- A [API de acesso ao sistema de arquivos](https://web.dev/file-system-access/) pode ser integrada à função de arrastar e soltar arquivos, para que os desenvolvedores possam processar arquivos soltos no aplicativo já aberto.
+- A [API de destino de compartilhamento da web](https://web.dev/articles/web-share-target) permite que os desenvolvedores especifiquem seu aplicativo como um destino de compartilhamento para que os arquivos possam ser abertos a partir da planilha de compartilhamento do sistema operacional.
+- A [API de acesso ao sistema de arquivos](https://web.dev/articles/file-system-access) pode ser integrada à função de arrastar e soltar arquivos, para que os desenvolvedores possam processar arquivos soltos no aplicativo já aberto.
 
 ### Detecção de recursos
 
@@ -52,7 +52,7 @@ if ('launchQueue' in window && 'files' in LaunchParams.prototype) {
 
 ### A parte declarativa da API de gerenciamento de arquivos
 
-Como uma primeira etapa, os aplicativos da web precisam descrever declarativamente em seu [manifesto do aplicativo da web](https://web.dev/add-manifest/) que tipo de arquivos eles podem gerenciar. A API de gerenciamento de arquivos estende o manifesto do aplicativo da web com uma nova propriedade chamada `"file_handlers"` que aceita uma matriz de, bem, gerenciadores de arquivo. Um gerenciador de arquivo é um objeto com duas propriedades:
+Como uma primeira etapa, os aplicativos da web precisam descrever declarativamente em seu [manifesto do aplicativo da web](https://web.dev/articles/add-manifest) que tipo de arquivos eles podem gerenciar. A API de gerenciamento de arquivos estende o manifesto do aplicativo da web com uma nova propriedade chamada `"file_handlers"` que aceita uma matriz de, bem, gerenciadores de arquivo. Um gerenciador de arquivo é um objeto com duas propriedades:
 
 - Uma propriedade `"action"` que aponta para um URL dentro do escopo do aplicativo como seu valor.
 - Uma propriedade `"accept"` com um objeto de tipo MIME como chaves e listas de extensões de arquivo como seus valores.
@@ -155,7 +155,7 @@ Quando atualizações e mudanças de manifesto na seção `"file_handlers"` fore
 
 ### Desafios relacionados a arquivos
 
-Há uma grande categoria de vetores de ataque que se abrem ao permitir que sites acessem arquivos. Eles são descritos no [artigo sobre API de acesso ao sistema de arquivos](https://web.dev/file-system-access/#security-considerations) . O recurso adicional relacionado à segurança que a API de gerenciamento de arquivos proporciona para a API de acesso ao sistema de arquivos é a capacidade de conceder acesso a determinados arquivos por meio da IU integrada do sistema operacional, em vez de por meio de um seletor de arquivos exibido por um aplicativo da web.
+Há uma grande categoria de vetores de ataque que se abrem ao permitir que sites acessem arquivos. Eles são descritos no [artigo sobre API de acesso ao sistema de arquivos](https://web.dev/articles/file-system-access#security_considerations) . O recurso adicional relacionado à segurança que a API de gerenciamento de arquivos proporciona para a API de acesso ao sistema de arquivos é a capacidade de conceder acesso a determinados arquivos por meio da IU integrada do sistema operacional, em vez de por meio de um seletor de arquivos exibido por um aplicativo da web.
 
 Ainda existe o risco de que os usuários possam conceder acidentalmente o acesso a um aplicativo da Web para um arquivo, ao abri-lo. No entanto, geralmente se entende que a abertura de um arquivo permite que o aplicativo com o qual foi aberto leia e / ou gerencie esse arquivo. Portanto, a escolha explícita do usuário de abrir um arquivo em um aplicativo instalado, como por meio de um menu de contexto "Abrir com …", pode ser lida como um sinal suficiente de confiança no aplicativo.
 

@@ -147,7 +147,7 @@ then dive into the [full proposal](https://wicg.github.io/ua-client-hints/).
 
 {% Aside %}
 Client Hints are **only sent over secure connections**, so make sure you have
-[migrated your site to HTTPS](https://web.dev/why-https-matters/).
+[migrated your site to HTTPS](https://web.dev/articles/why-https-matters).
 {% endAside %}
 
 ## User-Agent Client Hints from Chromium 89

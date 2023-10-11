@@ -17,7 +17,7 @@ tags:
 
 ## The `:nth-child()` and `:nth-last-child()` pseudo-class selectors
 
-With [the `:nth-child()` pseudo-class selector](https://web.dev/learn/css/pseudo-classes/#nth-child-and-nth-of-type) it is possible to select Elements in the DOM by their index. Using the [`An+B` microsyntax](https://www.w3.org/TR/css-syntax-3/#anb-microsyntax) you get fine control over which elements you want to select.
+With [the `:nth-child()` pseudo-class selector](https://web.dev/articles/learn/css/pseudo-classes#nth_child_and_nth_of_type) it is possible to select Elements in the DOM by their index. Using the [`An+B` microsyntax](https://www.w3.org/TR/css-syntax-3/#anb-microsyntax) you get fine control over which elements you want to select.
 
 - `:nth-child(2)`: Select the 2nd child.
 - `:nth-child(2n)`: Select all even children _(2nd, 4th, 6th, 8th, and so on)_.

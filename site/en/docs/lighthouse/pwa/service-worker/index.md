@@ -8,14 +8,14 @@ date: 2019-05-04
 updated: 2022-12-03
 ---
 
-Registering a [service worker](https://web.dev/service-workers-cache-storage/)
-is the first step towards enabling key [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/#make-it-installable) features:
+Registering a [service worker](https://web.dev/articles/service-workers-cache-storage)
+is the first step towards enabling key [Progressive Web App (PWA)](https://web.dev/articles/progressive-web-apps#make_it_installable) features:
 
 - Works offline
 - Supports push notifications
 - Can be installed to the device
 
-Learn more in the [Service workers and the Cache Storage API](https://web.dev/service-workers-cache-storage/) post.
+Learn more in the [Service workers and the Cache Storage API](https://web.dev/articles/service-workers-cache-storage) post.
 
 ## Browser compatibility
 
@@ -46,8 +46,8 @@ is to make it possible to implement one of the PWA features outlined above.
 Actually implementing those features requires more work:
 
 - To learn how to cache files for offline use, see the
-[What is network reliability and how do you measure it?](https://web.dev/network-connections-unreliable/) post.
-- To learn how to make your app installable, see the [Make it installable](https://web.dev/codelab-make-installable/) codelab.
+[What is network reliability and how do you measure it?](https://web.dev/articles/network-connections-unreliable) post.
+- To learn how to make your app installable, see the [Make it installable](https://web.dev/articles/codelab-make-installable) codelab.
 - To learn how to enable push notifications, see Google's
   [Adding Push Notifications to a Web App](https://codelabs.developers.google.com/codelabs/push-notifications).
 
@@ -55,7 +55,7 @@ Actually implementing those features requires more work:
 
 - [Source code for **Does not register a service worker that controls page and `start_url`** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/service-worker.js)
 - [Service Workers: an Introduction](/docs/workbox/service-worker-overview/)
-- [Service workers and the Cache Storage API](https://web.dev/service-workers-cache-storage/)
-- [What is network reliability and how do you measure it?](https://web.dev/network-connections-unreliable/)
-- [Make it installable](https://web.dev/codelab-make-installable/)
+- [Service workers and the Cache Storage API](https://web.dev/articles/service-workers-cache-storage)
+- [What is network reliability and how do you measure it?](https://web.dev/articles/network-connections-unreliable)
+- [Make it installable](https://web.dev/articles/codelab-make-installable)
 - [Adding Push Notifications to a Web App](https://codelabs.developers.google.com/codelabs/push-notifications)

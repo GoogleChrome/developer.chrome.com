@@ -66,7 +66,7 @@ Una desventaja masiva del enfoque de *descarga* es que no hay forma de hacer que
 
 La API de File System Access hace que ambas operaciones, abrir y guardar, sean mucho más simples. También permite un *verdadero guardado*, es decir, no solo puedes elegir dónde guardar un archivo, sino también sobrescribir un archivo existente.
 
-{% Aside %} Para obtener una introducción más detallada a la API de File System Access, consulta el artículo [La API de File System Access: simplificación del acceso a archivos locales](https://web.dev/file-system-access/). {% endAside %}
+{% Aside %} Para obtener una introducción más detallada a la API de File System Access, consulta el artículo [La API de File System Access: simplificación del acceso a archivos locales](https://web.dev/articles/file-system-access). {% endAside %}
 
 ### Abrir archivos
 

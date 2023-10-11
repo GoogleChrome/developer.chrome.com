@@ -46,7 +46,7 @@ Similar al código en línea en una etiqueta de`<script>`, se requieren estilos 
 
 Considera la posibilidad de automatizar el proceso de extracción e inserción de CSS "Above the Fold" utilizando la [Critical tool (Herramienta critica)](https://github.com/addyosmani/critical/blob/master/README.md).
 
-Obten más información en [Aplazar CSS no crítico](https://web.dev/defer-non-critical-css/).
+Obten más información en [Aplazar CSS no crítico](https://web.dev/articles/defer-non-critical-css).
 
 ## Orientación de recursos tecnológicos específicos
 

@@ -242,7 +242,7 @@ the demo cannot be embedded in this article.
 ## The browser-fs-access library in the wild
 
 In my free time, I contribute a tiny bit to an
-[installable PWA](https://web.dev/progressive-web-apps/#make-it-installable)
+[installable PWA](https://web.dev/articles/progressive-web-apps#make_it_installable)
 called [Excalidraw](https://excalidraw.com/),
 a whiteboard tool that lets you easily sketch diagrams with a hand-drawn feel.
 It is fully responsive and works well on a range of devices from small mobile phones to computers with large screens.

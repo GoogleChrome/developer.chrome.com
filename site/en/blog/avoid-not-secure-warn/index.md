@@ -46,7 +46,7 @@ has been added to the URL bar.`
 To ensure that the Not Secure warning is not displayed for your pages, you must
 ensure that all forms containing `<input type=password>` elements and any inputs
 detected as [credit card
-fields](https://web.dev/learn/forms/autofill/#help-users-fill-in-their-credit-card-information) are present _only_
+fields](https://web.dev/articles/learn/forms/autofill#help_users_fill_in_their_credit_card_information) are present _only_
 on secure origins. This means that the top-level page must be HTTPS and, if the
 `input` is in an iframe, that iframe must also be served over HTTPS.
 

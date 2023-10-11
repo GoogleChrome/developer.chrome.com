@@ -67,5 +67,5 @@ Chrome DevTools' [Disable JavaScript](/docs/devtools/javascript/disable/) featur
 
 - [Source code for **Does not provide fallback content when JavaScript is not available** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/without-javascript.js)
 - [Progressive Enhancement: What It Is, And How To Use It](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)
-- [Critical Rendering Path](https://web.dev/critical-rendering-path/)
+- [Critical Rendering Path](https://web.dev/articles/critical-rendering-path)
 - [Disable JavaScript With Chrome DevTools](/docs/devtools/javascript/disable/)

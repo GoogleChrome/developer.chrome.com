@@ -55,7 +55,7 @@ You can disable it via the **Settings** > **Experiments** > **Enable CSS length 
 
 Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
 
-## Rendering tab updates 
+## Rendering tab updates
 ### Emulate the CSS prefers-contrast media feature {: #prefers-contrast }
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/47fsHvVLiVC9J0eWY9wD.png", alt="Emulate the CSS prefers-contrast media feature", width="800", height="483" %}
@@ -73,7 +73,7 @@ Chromium issue: [1139777](https://crbug.com/1139777)
 
 Use DevTools to emulate auto dark theme to easily see how your page looks when Chrome’s [Auto Dark Theme](/blog/auto-dark-theme/) is enabled.
 
-Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System. 
+Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System.
 
 Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate auto dark mode** dropdown.
 
@@ -120,7 +120,7 @@ Together with the **Properties** pane [enhancements](/blog/new-in-devtools-95/#p
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1574e9b550317c481a943fec059d84bfb863564 #}
 
-Chromium issue: [1226262](https://crbug.com/1226262) 
+Chromium issue: [1226262](https://crbug.com/1226262)
 
 
 ## Console updates
@@ -150,7 +150,7 @@ Chromium issue: [1073804](https://crbug.com/1073804)
 
 ### Consistent async stack traces {: #async }
 
-The Console now reports `async` stack traces for `async` functions to be consistent with other async tasks, and consistent with what's shown in the Call Stack.. 
+The Console now reports `async` stack traces for `async` functions to be consistent with other async tasks, and consistent with what's shown in the Call Stack..
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="async stack traces", width="800", height="427" %}
 
@@ -174,11 +174,11 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 ## Deprecated Application cache pane in the Application panel {: #app-cache }
 
-The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers.
+The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/articles/appcache-removal) is removed from Chrome and other Chromium-based browsers.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
-Chromium issue: [1084190](https://crbug.com/1084190) 
+Chromium issue: [1084190](https://crbug.com/1084190)
 
 
 ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api }
@@ -187,13 +187,13 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**.
 {% endAside %}
 
-The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more. 
+The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.
 
-With this experiment enabled, you can now view the reports status in the new **Reporting API** pane in the **Application** panel. 
+With this experiment enabled, you can now view the reports status in the new **Reporting API** pane in the **Application** panel.
 
-Please note that the **Endpoints** section is currently still under active development (showing no reporting endpoints for now). 
+Please note that the **Endpoints** section is currently still under active development (showing no reporting endpoints for now).
 
-Learn more about the **Reporting API** with [this article](https://web.dev/reporting-api/).
+Learn more about the **Reporting API** with [this article](https://web.dev/articles/reporting-api).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Reporting API pane in the Application panel", width="800", height="476" %}
 
