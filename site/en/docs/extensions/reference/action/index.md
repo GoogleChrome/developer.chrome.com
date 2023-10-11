@@ -10,7 +10,7 @@ Every extension has an icon in the Chrome toolbar, even if the `action` key isn'
 
 ## Manifest
 
-To use the `chrome.action` API, specify a `"manifest_version"` of `3` or higher
+To use the `chrome.action` API, specify a `"manifest_version"` of `3`
 and include the `action` key in your [manifest file][doc-manifest]:
 
 ```json
