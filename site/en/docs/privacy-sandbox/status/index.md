@@ -47,10 +47,6 @@ To review the latest information on any proposal or API, visit the respective ov
 
 {% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
 
-## Related Website Sets (formerly First-Party Sets)
-
-{% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
-
 ## IP Protection
 
 {% Partial 'privacy-sandbox/timeline/ip-protection.njk' %}
@@ -73,6 +69,10 @@ named FLEDGE.
 {% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
 {% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
+
+## Related Website Sets (formerly First-Party Sets)
+
+{% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
 
 ## Shared Storage
 
