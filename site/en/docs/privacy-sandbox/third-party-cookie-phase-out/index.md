@@ -210,4 +210,4 @@ Primarily these are authentication or payment flows where a top-level site eithe
 
 We want to ensure we are capturing the various scenarios where sites break without third-party cookies to ensure that we have provided guidance, tooling, and functionality to allow sites to migrate away from their third-party cookie dependencies. If your site or a service you depend on is breaking with third-party cookies disabled, you can submit it to our breakage tracker at [goo.gle/report-3pc-broken](https://goo.gle/report-3pc-broken).
 
-If you have questions around the deprecation process and Chrome's plan, you can raise a new issue using the "third-party cookie deprecation" tag in our developer support repo.
+If you have questions around the deprecation process and Chrome's plan, you can [raise a new issue using the "third-party cookie deprecation" tag](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose) in our developer support repo.
