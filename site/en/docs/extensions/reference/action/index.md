@@ -90,7 +90,7 @@ easy to update the action to display a small amount of information about the sta
 such as a counter. The badge has a text component and a background color. Because space is limited,
 we recommend that badge text use four or fewer characters.
 
-To create a badge, set it programmatically using `action.setBadgeBackgroundColor()` and
+To create a badge, set it programmatically by calling `action.setBadgeBackgroundColor()` and
 `action.setBadgeText()`. There isn't a default badge setting in the manifest. Badge color values
 can be either an array of four integers between 0 and 255 that make up the RGBA color of the
 badge or a string with a [CSS color][css-color] value.
