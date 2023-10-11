@@ -156,7 +156,7 @@ settings take priority over global settings.
 
 ### Enabled state
 
-By default, toolbar actions are clickable on every tab. You can control this using the
+By default, toolbar actions are enabled (clickable) on every tab. You can control this using the
 `action.enable()` and `action.disable()` methods. This only affects whether the popup (if any) or
 `action.onClicked` event is sent to your extension; it doesn't affect the action's presence
 in the toolbar.
