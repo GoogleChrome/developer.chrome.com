@@ -7,13 +7,14 @@ description: How to write automated tests for extensions.
 ---
 
 Automated testing tools provide a great way to regularly test a large amount of your extension's
-functionality. This can be useful to ensure key functionality is working and as a way to avoid
-regressions between releases.
+functionality. This can be useful to ensure key functionality is working and avoids regressions
+between releases.
 
-## Unit testing
+## Unit testing Chrome Extensions
 
 [Unit testing][unit-testing] allows small sections of code to be tested in isolation from the rest
-of your extension, and outside of the browser.
+of your extension, and outside of the browser. For example, you could write a unit test to ensure
+that a helper method correctly writes a value to storage when called.
 
 Code written without using extension APIs can be tested as normal, using a framework such as
 [Jest][jest]. To make code easier to test this way, consider using techniques such as
@@ -42,7 +43,7 @@ global.chrome = {
 };
 ```
 
-Then, use jest.spy to mock a return value in a test:
+Then, use `jest.spy` to mock a return value in a test:
 
 ```js
 test("getActiveTabId returns active tab ID", async () => {
@@ -55,7 +56,7 @@ test("getActiveTabId returns active tab ID", async () => {
 });
 ```
 
-## Integration testing
+## Integration testing Chrome Extensions
 
 [Integration testing][integration-testing] involves an extension package being built and loaded into
 a browser. A testing tool communicates with the browser to automate interactions and test the same
@@ -63,7 +64,7 @@ flows that a user would go through.
 
 See [Testing Chrome Extensions with Puppeteer][tutorial] for a tutorial.
 
-### Libraries
+### Using browser testing libraries
 
 Extensions are supported by a range of integration testing libraries.
 
@@ -73,7 +74,7 @@ Extensions are supported by a range of integration testing libraries.
 | Selenium               | Use the [ChromeOptions][selenium-chromeoptions] object to load extensions. More information is available [here][selenium-extensions]. |
 | WebDriverIO            | See [Web Extension Testing][webdriverio-testing].                                                                                     |
 
-### Headless Chrome
+### Running tests in headless Chrome
 
 When running tests as part of an automated workflow, it is often necessary to load your extension on a machine that does not have a screen. Chrome's [new headless][new-headless] mode allows Chrome to be run in an unattended environment like this. Simply start Chrome with the `--headless=new` flag (headless currently defaults to "old", which does not support loading extensions). Depending on the automation tool you choose there may be a setting which adds the flag for you automatically.
 
@@ -109,7 +110,10 @@ async function getActiveTab() {
 
 ### Inspecting extension state
 
-It is generally best practice to avoid accessing internal state in an integration test, and instead you should base your tests on what is visible to the user. However, it can sometimes be desirable to directly access data from the extension. In these cases, consider executing code in the context of an extension page.
+To avoid test failures when you change the internal behavior of your extension, it is generally best
+practice to avoid accessing internal state in an integration test. Instead, you should base your
+tests on what is visible to the user. However, it can sometimes be desirable to directly access data
+from the extension. In these cases, consider executing code in the context of an extension page.
 
 In Puppeteer:
 

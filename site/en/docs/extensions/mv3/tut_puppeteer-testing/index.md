@@ -11,7 +11,8 @@ _For general advice on testing extensions, see
 
 [Puppeteer][puppeteer] provides a framework for building automated tests of websites, which also
 includes the ability to test Chrome Extensions. These are high-level integration tests that test the
-functionality of a website or extension once it has been built into the final product.
+functionality of a website or extension once it has been built into the final product. In this
+tutorial, we demonstrate how to write a basic test for an extension from our samples repository.
 
 ## Before you start
 
@@ -42,6 +43,12 @@ Run `npm install puppeteer` to add Puppeteer as a dependency. It will be automat
 `package.json` file.
 
 ### Step 3: Create an entry point
+
+{% Aside %}
+In this example, `headless` is set to `false`. This causes the browser window to be visible while
+the tests are running which can be helpful during development. Outside of development, consider
+setting it to `'new'` which uses Chrome's [new headless mode][new-headless].
+{% endAside %}
 
 In a new file called `index.js`, add the following:
 
@@ -134,6 +141,7 @@ After mastering the basics, try building a test suite for your own extension. Th
 [puppeteer]: https://github.com/puppeteer/puppeteer
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
 [node]: https://nodejs.org/
+[new-headless]: https://developer.chrome.com/articles/new-headless/
 [mocha]: https://www.npmjs.com/package/mocha
 [assert]: https://www.npmjs.com/package/assert
 [full-project]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.puppeteer
