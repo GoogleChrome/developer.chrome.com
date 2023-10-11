@@ -280,7 +280,7 @@ experience by anticipating this possibility and checking for collisions at insta
 
 ```js
 chrome.runtime.onInstalled.addListener(({reason}) => {
-  if (reason === 'install') {
+  if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
     checkCommandShortcuts();
   }
 });
