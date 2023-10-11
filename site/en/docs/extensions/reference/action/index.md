@@ -6,7 +6,7 @@ To control your extension's toolbar button in Chrome's UI, use the `chrome.actio
 The action icons are displayed in the browser toolbar next to the [omnibox](https://en.wiktionary.org/wiki/omnibox). After installation, these appear in the extensions menu (the puzzle piece icon).
 Users can pin your extension icon to the toolbar.
 
-Every extension has an icon in the Chrome toolbar, even if the `action` key isn't specified.
+Every extension has an icon in the Chrome toolbar, even if the `action` key isn't added to the manifest.
 
 ## Manifest
 
