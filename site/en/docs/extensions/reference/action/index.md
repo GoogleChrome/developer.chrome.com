@@ -38,7 +38,7 @@ and include the `action` key in your [manifest file][doc-manifest]:
 
 #### Icon
 
-The icon is the main image on the toolbar button for your extension, set by the `default_icon` key in
+The icon is the main image on the toolbar for your extension, and is set by the `"default_icon"` key in
 your manifest's `action` entry. Icons must be 16 device-independent pixels (DIPs) wide and tall. 
 
 The `default_icon` key is a dictionary of sizes to image paths. Chrome uses these icons
