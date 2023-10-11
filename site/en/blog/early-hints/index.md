@@ -7,7 +7,7 @@ description: >
 subhead: >
   Find out how your server can send hints to the browser about critical sub-resources.
 date: 2022-06-23
-updated: 2023-08-02
+updated: 2023-10-11
 authors:
   - kenjibaheux
   - tunetheweb
@@ -39,7 +39,7 @@ Early Hints is an HTTP status code (`103 Early Hints`) used to send a preliminar
 <figcaption>With Early Hints: the server can serve a partial response with resource hints while it determines the final response</figcaption>
 </figure>
 
-In some cases, the performance improvement to the [Largest Contentful Paint](http://web.dev/lcp) can go from several hundred milliseconds, as observed by [Shopify](https://twitter.com/colinbendell/status/1539322190541295616) and [by Cloudflare](http://blog.cloudflare.com/early-hints-performance), and up to a second faster, as seen in this before/after comparison:
+In some cases, the performance improvement to the [Largest Contentful Paint](http://web.dev/articles/lcp) can go from several hundred milliseconds, as observed by [Shopify](https://twitter.com/colinbendell/status/1539322190541295616) and [by Cloudflare](http://blog.cloudflare.com/early-hints-performance), and up to a second faster, as seen in this before/after comparison:
 
 
 <figure>
@@ -52,20 +52,22 @@ In some cases, the performance improvement to the [Largest Contentful Paint](htt
 
 {% BrowserCompat 'http.status.103' %}
 
-Early Hints is available from Chrome version 103, as a response to navigation requests, or user interactions that change the url in the status bar, with support for both preconnect and preload hints. Other browsers are adding support for preconnect.
+Early Hints is available from Chrome version 103, as a response to navigation requests, or user interactions that change the url in the status bar, with support for both preconnect and preload hints. Safari has support for preconnect hints from Safari 17, and Firefox is working on support for preconnect.
 
 Before going deep into the topic, please note that Early Hints are not useful if your server can send a 200 (or other final responses) right away. Instead, consider using the regular `link rel=preload` or `link rel=preconnect` on the main response ([Link rel HTTP header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Link)), or in the main response (`<link>` elements), in such situations. For the cases where your server needs a little time to generate the main response, read on!
 
 The first step to take advantage of Early Hints consists of identifying the top landing pages, that is, the pages where your users typically start when they visit your website. This could be the homepage, or popular product listing pages if you have lots of users coming from other websites. The reason these entry points matter more than other pages is because Early Hints' usefulness decreases as the user navigates around your website (that is, the browser is more likely to have all the sub-resources it needs on the second or third subsequent navigation). It's also always a good idea to deliver a great first impression!
 
-Now that you have this prioritized list of landing pages, the next step consists of identifying which origins or sub-resources would be good candidates for [preconnect](https://web.dev/uses-rel-preconnect) or [preload](https://web.dev/preload-critical-assets/) hints, as a first approximation. Typically, those would be origins and sub-resources that contribute the most to key user metrics such as [Largest Contentful Paint](https://web.dev/lcp/), or [First Contentful Paint](https://web.dev/first-contentful-paint/). More concretely, look for render-blocking sub-resources such as synchronous JavaScript, stylesheets, or even web fonts. Similarly, look for origins that host sub-resources that contribute a lot to key user metrics. Note: if your main resources are already using `<link rel=preconnect>` or `<link rel=preload>`, you may consider these origins or resources among the candidates for Early Hints. See [this article](https://web.dev/lcp/#how-to-improve-lcp) for more details.
+Now that you have this prioritized list of landing pages, the next step consists of identifying which origins or sub-resources would be good candidates for [preconnect](https://web.dev/articles/uses-rel-preconnect) or [preload](https://web.dev/articles/preload-critical-assets) hints, as a first approximation. Typically, those would be origins and sub-resources that contribute the most to key user metrics such as [Largest Contentful Paint](https://web.dev/articles/lcp), or [First Contentful Paint](https://web.dev/articles/fcp). More concretely, look for render-blocking sub-resources such as synchronous JavaScript, stylesheets, or even web fonts. Similarly, look for origins that host sub-resources that contribute a lot to key user metrics. Note: if your main resources are already using `<link rel=preconnect>` or `<link rel=preload>`, you may consider these origins or resources among the candidates for Early Hints. See [this article](https://web.dev/articles/lcp/#how-to-improve-lcp) for more details.
 
 {% Aside 'important' %}
 What you decide to `preconnect` or `preload` as Early Hints may differ from what you have traditionally used these directives for in your HTML.
 
-When using these in HTML you typically want to `preconnect` or `preload` resources that the [Preload Scanner](https://web.dev/preload-scanner/) will not discover in the HTML—for example, fonts, or background images that would otherwise be discovered late. For Early Hints you will not have the HTML and so you may want to instead `preconnect` to critical domains or `preload` critical resources that perhaps _would_ otherwise be discovered early in the HTML—for example, preloading `main.css` or `app.js`.
+When using these in HTML you typically want to `preconnect` or `preload` resources that the [Preload Scanner](https://web.dev/articles/preload-scanner) will not discover in the HTML—for example, fonts, or background images that would otherwise be discovered late. For Early Hints you will not have the HTML and so you may want to instead `preconnect` to critical domains or `preload` critical resources that perhaps _would_ otherwise be discovered early in the HTML—for example, preloading `main.css` or `app.js`.
 
 Niavely copying the `preconnect` and `preload` directives from HTML to Early Hints [may not be optimal](https://www.youtube.com/watch?v=0kKdMqIhvZs&t=2285s).
+
+Additionally only Chrome supports `preload` for Early Hints.
 {% endAside %}
 
 The second step consists of minimizing the risk of using Early Hints on resources or origins that might be obsolete, or no longer used by the main resource. For instance, resources that are frequently updated and versioned (for example, `example.com/css/main.fa231e9c.css`) may not be the best choice. Note that this concern isn't specific to Early Hints, it applies to any link `rel=preload` or `rel=preconnect` wherever they might be present. This is the sort of detail that's best dealt with automation or templating (for example, a manual process is more likely to lead to mismatched hash or version urls between `link rel=preload` and the actual HTML tag using the resource).
@@ -154,6 +156,7 @@ If you are using one of the following CDNs or platforms, you may not need to man
 
 - [Early Hints at Cloudflare](https://developers.cloudflare.com/cache/about/early-hints/)
 - [Early Hints at Fastly](https://www.fastly.com/blog/beyond-server-push-experimenting-with-the-103-early-hints-status-code#:~:text=about%20this%20feature.-,Sending%20103%20Early%20Hints,in%20VCL%2C%20like%20this%3A).
+- [Early Hints at Akamai](https://www.akamai.com/blog/performance/akamai-103-early-hints-prototype-the-results-are-in).
 
 ## Avoiding issues for clients that do not support Early Hints
 
@@ -176,6 +179,8 @@ Here are the limitations of Early Hints as implemented in Chrome 103 and future 
 - Only available for navigation requests (that is, the main resource for the top level document).
 - Only supports preconnect and preload (that is, prefetch isn't supported).
 - Early Hint followed by a cross-origin redirect on the final response will result in Chrome dropping the resources and connections it obtained via Early Hints.
+
+Other browsers have similar limitations, and further restrict 103 early hints to preconnect only.
 
 ## What's next?
 
