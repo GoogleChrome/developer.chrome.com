@@ -19,6 +19,10 @@ different expected availability.
 
 To review the latest information on any proposal or API, visit the respective overview documentation and the [Privacy Sandbox timeline](https://privacysandbox.com/open-web/).
 
+## Aggregation Service
+
+{% Partial 'privacy-sandbox/timeline/aggregation-service.njk' %}
+
 ## Attribution Reporting
 
 {% Partial 'privacy-sandbox/timeline/attribution-reporting.njk' %}
