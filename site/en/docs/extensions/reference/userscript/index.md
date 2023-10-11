@@ -1,5 +1,5 @@
 ---
-api: userScript
+api: userScripts
 ---
 
 ## Using now
