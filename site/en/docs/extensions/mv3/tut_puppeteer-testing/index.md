@@ -2,8 +2,8 @@
 layout: "layouts/doc-post.njk"
 title: "Tutorial: Testing Chrome Extensions with Puppeteer"
 seoTitle: "Tutorial: Testing Chrome Extensions with Puppeteer"
-date: 2023-10-09
-description: How to write an automated test for Chrome Etensions in Puppeteer.
+date: 2023-10-12
+description: How to write an automated test for Chrome Extensions using Puppeteer.
 ---
 
 _For general advice on testing extensions, see

@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Unit testing Chrome Extensions"
 seoTitle: "Unit testing Chrome Extensions"
-date: 2023-10-09
+date: 2023-10-12
 description: How to write unit tests for extensions.
 ---
 

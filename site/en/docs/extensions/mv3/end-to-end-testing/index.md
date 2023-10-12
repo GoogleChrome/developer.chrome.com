@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "End-to-end testing for Chrome Extensions"
 seoTitle: "End-to-end testing Chrome Extensions"
-date: 2023-10-09
+date: 2023-10-12
 description: How to write end-to-end tests for extensions.
 ---
 
