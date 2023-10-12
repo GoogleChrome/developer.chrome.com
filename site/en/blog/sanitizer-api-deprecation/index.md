@@ -7,7 +7,7 @@ date: 2023-10-14
 authors:
   - jxck
 tags:
-  - sanitizer-api
+  - security
   - chrome-119
 ---
 
