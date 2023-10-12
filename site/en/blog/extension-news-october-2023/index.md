@@ -120,7 +120,7 @@ Thanks for everyone's input so far on the [chromium-google group](https://groups
 
 Additionally, you can [submit a self-nomination form](https://docs.google.com/forms/d/e/1FAIpQLSf4goBOeJDSVwp7xGCZw5vORovPOBhCv_kWM-VXWDhSA0NUQg/viewform) to be featured in the Editors’ Picks collection. Stay tuned for improvements coming soon to the developer dashboard as well!
 
-## Did you know? {: #tips }
+## 💡 Did you know? {: #tips }
 
 - There's a new video on Debugging Chrome extensions. It covers many topics you may already be familiar with, but it also shares a few neat tricks for using the Devtools in extensions.
     {% YouTube id='Ta-YTDhiBIQ' %}
