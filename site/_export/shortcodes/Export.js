@@ -209,6 +209,12 @@ async function Export() {
     frontMatter.description = description.trim();
   }
 
+  let api = page?.template?.frontMatter?.data.api;
+  if (api) {
+    frontMatter.api = api;
+    frontMatter.layout = page?.template?.frontMatter?.data.layout;
+  }
+
   let transformedSource = source;
 
   // Raw shortcodes gone from the rendered template, but their content would still infer with DevSite.
