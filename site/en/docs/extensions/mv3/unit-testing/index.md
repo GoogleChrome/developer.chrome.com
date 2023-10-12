@@ -8,7 +8,7 @@ description: How to write unit tests for extensions.
 
 [Unit testing][unit-testing] allows small sections of code to be tested in isolation from the rest
 of your extension, and outside of the browser. For example, you could write a unit test to ensure
-that a helper method correctly writes a value to storage when called.
+that a helper method correctly writes a value to storage.
 
 Code written without using extension APIs can be tested as normal, using a framework such as
 [Jest][jest]. To make code easier to test this way, consider using techniques such as
@@ -17,9 +17,11 @@ namespace in your lower level implementation.
 
 If you need to test code which includes extension APIs, consider using mocks.
 
-## Example: Using mocks with Jest
+## Example: Using mocks with Jest {: #using-mocks }
 
 Create a `jest.config.js` file, which declares a setup file that will run before all tests:
+
+{% Label %}jest.config.js:{% endLabel %}
 
 ```js
 module.exports = {
@@ -28,6 +30,8 @@ module.exports = {
 ```
 
 In `mock-extension-apis.js`, add implementations for the specific functions you expect to call:
+
+{% Label %}mock-extension-apis.js:{% endLabel %}
 
 ```js
 global.chrome = {

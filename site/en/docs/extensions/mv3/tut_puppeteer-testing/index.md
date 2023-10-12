@@ -14,19 +14,21 @@ includes the ability to test Chrome Extensions. These are high-level end-to-end 
 functionality of a website or extension once it has been built into the final product. In this
 tutorial, we demonstrate how to write a basic test for an extension from our samples repository.
 
-## Before you start
+## Before you start {: #prereq }
 
 Clone or download the [chrome-extensions-samples][samples-repo] repository. We'll use the history
 API demo in `api-samples/history/showHistory` as our test extension.
 
 You'll also need to install [Node.JS][node] which is the runtime Puppeteer is built on.
 
-## Writing your test
+## Writing your test {: #write-test }
 
-### Step 1: Start your Node.JS project
+### Step 1: Start your Node.JS project {: #step-1 }
 
 We need to set up a basic Node.JS project. In a new folder, create a `package.json` file with the
 following:
+
+{% Label %}pacakge.json:{% endLabel %}
 
 ```js
 {
@@ -35,9 +37,9 @@ following:
 }
 ```
 
-Similar to an extension's manifest.json file, this file is required by all Node projects.
+Similar to an extension's `manifest.json` file, this file is required by all Node projects.
 
-### Step 2: Install Puppeteer and Jest
+### Step 2: Install Puppeteer and Jest {: #step-2 }
 
 Run `npm install puppeteer jest` to add Puppeteer and Jest as dependencies. They will be
 automatically added to your `package.json` file.
@@ -45,15 +47,17 @@ automatically added to your `package.json` file.
 It is possible to write standalone Puppeteer tests, but we'll use Jest as a test runner to provide
 some additional structure to our code.
 
-### Step 3: Create an entry point
+### Step 3: Create an entry point {: #step-3 }
 
-In a new file called `index.test.js`, add the following:
+Create a new file called `index.test.js` and add the following code:
 
 {% Aside %}
 Jest adds `beforeEach` and `afterEach` to our environment when running the tests, so we do not need
 to import them. However, you may need to configure [ESLint][eslint] or [TypeScript][typescript]
 accordingly.
 {% endAside %}
+
+{% Label %}index.test.js:{% endLabel %}
 
 ```js
 const puppeteer = require('puppeteer');
@@ -72,7 +76,7 @@ afterEach(async () => {
 });
 ```
 
-### Step 4: Launch the browser
+### Step 4: Launch the browser {: #step-4 }
 
 {% Aside %}
 In this example, `headless` is set to `false`. This causes the browser window to be visible while
@@ -83,6 +87,8 @@ setting it to `'new'` which uses Chrome's [new headless mode][new-headless].
 Update `beforeEach` and `afterEach` to launch and close the browser. When running many tests, you
 may wish to consider using the same browser. However, this is generally discouraged as it reduces
 the isolation between your tests and may cause one test to impact the outcome of another.
+
+{% Label %}index.test.js:{% endLabel %}
 
 ```js
 beforeEach(async () => {
@@ -101,9 +107,11 @@ afterEach(async () => {
 });
 ```
 
-### Step 5: Add an alias
+### Step 5: Add an alias {: #step-5 }
 
 To make running the tests easier, add an alias to your `package.json` file:
+
+{% Label %}package.json:{% endLabel %}
 
 ```js
 {
@@ -120,10 +128,12 @@ To make running the tests easier, add an alias to your `package.json` file:
 
 This will run all files ending in `.test.js` in the current directory.
 
-### Step 6: Open the popup
+### Step 6: Open the popup {: #step-6 }
 
 Let's add a basic test that opens the popup in a new page. We need to do this because Puppeteer
 does not support accessing an extension popup from the popup window. Add the following code:
+
+{% Label %}index.test.js:{% endLabel %}
 
 ```js
 test('popup renders correctly', async () => {
@@ -132,14 +142,12 @@ test('popup renders correctly', async () => {
 });
 ```
 
-The method `browser.newPage()` actually supports an optional URL parameter, but unfortunately this
-does not support URLs with the `chrome-extension://` scheme. Consequently, we first open a page and
-then call `page.goto()` to navigate.
-
-### Step 7: Assert the current state
+### Step 7: Assert the current state {: #step-7 }
 
 Let's assert something, so that our test can fail if the extension isn't behaving as expected. We
 know that our popup should show recently visited pages, so let's check that we see one:
+
+{% Label %}index.test.js:{% endLabel %}
 
 ```js
 test('popup renders correctly', async () => {
@@ -153,13 +161,13 @@ test('popup renders correctly', async () => {
 });
 ```
 
-### Step 8: Run your test
+### Step 8: Run your test {: #step-8 }
 
 To run the test, use `npm start`. You should see output indicating that your test passed.
 
 You can see the [full project][full-project] in our chrome-extensions-samples repository.
 
-## Next Steps
+## Next Steps {: #next-steps }
 
 After mastering the basics, try building a test suite for your own extension. The Puppeteer
 [API reference][api-reference] contains more information about what's possible - there are many

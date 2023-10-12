@@ -13,7 +13,7 @@ controlling the browser, simulating user input and observing the current state o
 
 See [Testing Chrome Extensions with Puppeteer][tutorial] for a tutorial.
 
-## Using browser testing libraries
+## Using browser testing libraries {: #libraries }
 
 Extensions are supported by a range of testing libraries.
 
@@ -23,19 +23,23 @@ Extensions are supported by a range of testing libraries.
 | Selenium               | Use the [ChromeOptions][selenium-chromeoptions] object to load extensions. More information is available [here][selenium-extensions]. |
 | WebDriverIO            | See [Web Extension Testing][webdriverio-testing].                                                                                     |
 
-## Running tests in headless Chrome
+## Running tests in headless Chrome {: #headless }
 
-When running tests as part of an automated workflow, it is often necessary to load your extension on a machine that does not have a screen. Chrome's [new headless][new-headless] mode allows Chrome to be run in an unattended environment like this. Simply start Chrome with the `--headless=new` flag (headless currently defaults to "old", which does not support loading extensions). Depending on the automation tool you choose there may be a setting which adds the flag for you automatically.
+When running tests as part of an automated workflow, it is often necessary to load your extension on
+a machine that does not have a screen. Chrome's [new headless][new-headless] mode allows Chrome to
+be run in an unattended environment like this. Start Chrome using the `--headless=new` flag
+(headless currently defaults to "old", which does not support loading extensions). Depending on the
+automation tool you choose, there may be a setting that adds the flag for you automatically.
 
-## Setting an extension ID
+## Setting an extension ID {: #set-extension-id }
 
-It is often desirable to have a fixed extension ID in tests. This makes a number of common tasks easier such as allow-listing the extension's origin on a server it needs to communicate with, or opening extension pages within tests. To do this, follow the steps under [Keeping a consistent extension ID][consistent-id].
+It is often desirable to have a fixed extension ID in tests. This makes many common tasks easier such as allow-listing the extension's origin on a server it needs to communicate with, or opening extension pages within tests. To do this, follow the steps under [Keeping a consistent extension ID][consistent-id].
 
-## Testing extension pages
+## Testing extension pages {: #extension-pages }
 
 Extension pages can be accessed using their corresponding URL, e.g `chrome-extension://<id>/index.html`. Use the normal navigation methods available in your automation tool of choice to navigate to these URLs.
 
-## Testing an extension popup
+## Testing an extension popup {: #extension-popup }
 
 Opening an extension popup in the context of another page is not currently possible. Instead, open the popup's URL in a new tab. If your popup uses the active tab, consider implementing an override where a tab ID can be passed explicitly to your popup. For example:
 
@@ -57,7 +61,7 @@ async function getActiveTab() {
 }
 ```
 
-## Inspecting extension state
+## Inspecting extension state {: #inspect-state }
 
 To avoid test failures when you change the internal behavior of your extension, it is generally best
 practice to avoid accessing internal state in an integration test. Instead, you should base your
@@ -80,7 +84,7 @@ const value = await worker.evaluate(() => {
 In Selenium:
 
 ```js
-// Selenium doesn't allow us to access the background page, so we need to open an extension page we can execute the code in
+// Selenium doesn't allow us to access the service worker, so we need to open an extension page where we can execute the code
 await driver.get('chrome-extension://<id>/popup.html');
 await driver.executeAsyncScript(
   'const callback = arguments[arguments.length - 1];' +
