@@ -30,7 +30,7 @@ and site C, a partitioned cookie can have a different value on each site. <!--do
 
 Because `chrome.cookies` doesn't support partitioning, all of its methods
 read and write cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in
-the default partition. <!--So cookies can be partitioned, but not using the cookies API. Am I understanding that right?-->
+the default partition.
 
 For details on the general impact of partitioning for extensions, see
 [Storage and Cookies][cookie-partitioning].
