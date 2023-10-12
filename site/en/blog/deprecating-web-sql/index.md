@@ -118,7 +118,7 @@ own database to the web.
 
 What's more, we're hoping that this example will help a new ecosystem of
 open-source databases to flourish! The release of
-[file system access handles](https://web.dev/file-system-access/#accessing-files-optimized-for-performance-from-the-origin-private-file-system)
+[file system access handles](https://web.dev/articles/file-system-access#accessing_files_optimized_for_performance_from_the_origin_private_file_system)
 finally provides the new primitive on which custom storage solutions can be
 built.
 

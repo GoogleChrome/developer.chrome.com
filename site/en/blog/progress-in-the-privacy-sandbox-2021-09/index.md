@@ -78,7 +78,7 @@ here](https://www.chromium.org/updates/ua-reduction).
 
 {% Aside %}
 If you rely on any of these values, you will need to [migrate to user-agent
-client hints](https://web.dev/migrate-to-ua-ch/) to request that additional
+client hints](https://web.dev/articles/migrate-to-ua-ch) to request that additional
 information.
 {% endAside %}
 

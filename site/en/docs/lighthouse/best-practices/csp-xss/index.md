@@ -7,7 +7,7 @@ date: 2021-06-16
 #updated: 2021-06-02
 ---
 
-A Content Security Policy (CSP) helps to ensure any content loaded in the page is trusted by the site owner. CSPs mitigate cross-site scripting (XSS) attacks because they can block unsafe scripts injected by attackers. However, the CSP can easily be bypassed if it is not strict enough. Check out [Mitigate cross-site scripting (XSS) with a strict Content Security Policy (CSP)](https://web.dev/strict-csp/) for more information. Lighthouse collects CSPs enforced on the main document, and reports issues from [CSP Evaluator](https://csp-evaluator.withgoogle.com/) if they can be bypassed.
+A Content Security Policy (CSP) helps to ensure any content loaded in the page is trusted by the site owner. CSPs mitigate cross-site scripting (XSS) attacks because they can block unsafe scripts injected by attackers. However, the CSP can easily be bypassed if it is not strict enough. Check out [Mitigate cross-site scripting (XSS) with a strict Content Security Policy (CSP)](https://web.dev/articles/strict-csp) for more information. Lighthouse collects CSPs enforced on the main document, and reports issues from [CSP Evaluator](https://csp-evaluator.withgoogle.com/) if they can be bypassed.
 
 <figure>
 {% Img src="image/9B7J9oWjgsWbuE84mmxDaY37Wpw2/EFTWlPiCrPOn6ETCRiGr.png",
@@ -32,7 +32,7 @@ To target XSS, a CSP should include the `script-src`, `object-src`, and `base-ur
 
 A CSP that configures an allowlist for `script-src` relies on the assumption that all responses coming from a trusted domain are safe, and can be executed as scripts. However, this assumption does not hold for modern applications; some common, benign patterns such as exposing [JSONP interfaces](https://lcamtuf.blogspot.ch/2011/08/subtle-deadly-problem-with-csp.html) and [hosting copies of the AngularJS library](https://github.com/cure53/XSSChallengeWiki/wiki/H5SC-Minichallenge-3:-%22Sh*t,-it's-CSP!%22) allow attackers to escape the confines of CSP.
 
-In practice, while it may not be obvious to application authors, [the majority of `script-src` allowlists can be circumvented](https://research.google.com/pubs/pub45542.html) by an attacker with an XSS bug, and provide little protection against script injection. In contrast, the [nonce-based and hash-based approaches](https://web.dev/strict-csp/#what-is-a-strict-content-security-policy) do not suffer from these problems and make it easier to adopt and maintain a more secure policy.
+In practice, while it may not be obvious to application authors, [the majority of `script-src` allowlists can be circumvented](https://research.google.com/pubs/pub45542.html) by an attacker with an XSS bug, and provide little protection against script injection. In contrast, the [nonce-based and hash-based approaches](https://web.dev/articles/strict-csp#what_is_a_strict_content_security_policy) do not suffer from these problems and make it easier to adopt and maintain a more secure policy.
 
 For example, this code uses a JSONP endpoint hosted on a trusted domain to inject an attacker controlled script:
 
@@ -95,6 +95,6 @@ HTML:
 <script nonce="random123" src="https://trusted.example.com/trusted_script.js"></script>
 ```
 
-`random123` would be any base64 string generated server-side every time the page loads. `unsafe-inline` and `https:` are ignored in modern browsers because of the nonce and `strict-dynamic`. For more information about adopting a strict CSP, check out the [Strict CSP guide](https://web.dev/strict-csp/#adopting-a-strict-csp).
+`random123` would be any base64 string generated server-side every time the page loads. `unsafe-inline` and `https:` are ignored in modern browsers because of the nonce and `strict-dynamic`. For more information about adopting a strict CSP, check out the [Strict CSP guide](https://web.dev/articles/strict-csp#adopting_a_strict_csp).
 
 You can check a CSP for potential bypasses using Lighthouse and [CSP Evaluator](https://csp-evaluator.withgoogle.com/). If you want to test a new CSP without the risk of breaking existing pages, define the CSP in report-only mode by using `Content-Security-Policy-Report-Only` as the header name. This will send CSP violations to any reporting destinations you have configured with `report-to` and `report-uri`, but it will not actually enforce the CSP.

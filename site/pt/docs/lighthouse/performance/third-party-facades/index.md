@@ -5,7 +5,7 @@ description: Aprenda sobre as oportunidades de carregamento lazy de recursos de 
 date: 2020-12-01
 ---
 
-[Recursos de terceiros](https://web.dev/third-party-javascript/) costumam ser usados para exibir anúncios ou vídeos e integrar-se a mídias socias. A abordagem default é carregar recursos de terceiros assim que a página for carregada, mas isto pode retardar desnecessariamente o carregamento da página. Se o conteúdo de terceiros não for crítico, esse custo de desempenho pode ser reduzido usando [carregamento lazy](https://web.dev/fast/#lazy-load-images-and-video).
+[Recursos de terceiros](https://web.dev/articles/third-party-javascript) costumam ser usados para exibir anúncios ou vídeos e integrar-se a mídias socias. A abordagem default é carregar recursos de terceiros assim que a página for carregada, mas isto pode retardar desnecessariamente o carregamento da página. Se o conteúdo de terceiros não for crítico, esse custo de desempenho pode ser reduzido usando [carregamento lazy](https://web.dev/articles/fast#lazy_load_images_and_video).
 
 Esta auditoria destaca incorporações de terceiros que podem ser carregadas de forma lazy durante a interação. Nesse caso, uma *fachada* é usada no lugar do conteúdo de terceiros até que o usuário interaja com ele.
 

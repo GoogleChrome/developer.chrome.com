@@ -14,7 +14,7 @@ Custom interactive controls should be focusable.
 If you use JavaScript to turn a `<div`> into a fancy dropdown,
 it won't automatically be inserted into the tab order.
 You need to manually check that all custom controls are keyboard focusable.
-See also [Keyboard access fundamentals](https://web.dev/keyboard-access/).
+See also [Keyboard access fundamentals](https://web.dev/articles/keyboard-access).
 
 ## How to manually test
 
@@ -29,7 +29,7 @@ press the `TAB` key to navigate through the site:
 
 Are you able to reach all of the interactive controls on the page?
 If not, you may need to use `tabindex` to improve the focusability of those controls.
-See also [Control focus with tabindex](https://web.dev/control-focus-with-tabindex/).
+See also [Control focus with tabindex](https://web.dev/articles/control-focus-with-tabindex).
 
 ## How to fix
 
@@ -48,7 +48,7 @@ keyboard navigation is the primary means of reaching everything on a screen.
 Good keyboarding experiences depend on a logical tab order and easily discernible focus styles.
 If a keyboard user can't see what's focused, they have no way of interacting with the page.
 
-Learn more in [How to do an Accessibility Review](https://web.dev/how-to-review/#try-it-with-a-screen-reader).
+Learn more in [How to do an Accessibility Review](https://web.dev/articles/how-to-review#try_it_with_a_screen_reader).
 
 ## Resources
 

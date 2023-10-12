@@ -26,6 +26,6 @@ Watch the video to learn how to:
 - Toggle the flexbox overlay in the viewport to see the changes you make right away.
 - Use the **Elements** > **Layout** > **Flexbox** section to see a list of all elements and locate them in the DOM tree. Additionally, you can customize the overlay colors here.
 
-To learn more about CSS flexbox in general, see [Learn CSS > Flexbox](https://web.dev/learn/css/flexbox/).
+To learn more about CSS flexbox in general, see [Learn CSS > Flexbox](https://web.dev/learn/css/flexbox).
 
 For a more hands-on debugging experience in DevTools, follow the [Inspect and debug CSS flexbox layouts](/docs/devtools/css/flexbox/) tutorial.

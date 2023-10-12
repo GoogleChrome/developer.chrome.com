@@ -20,7 +20,7 @@ En el momento de redactar este artículo, el uso de temas para la barra de direc
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/YadFSuw8denjl1hhnvFs.png", alt="La auditoría de Lighthouse que muestra que la barra de direcciones no está relacionada con los colores de la página", width="800", height="98" %}</figure>
 
-La auditoría falla si Lighthouse no encuentra una meta tag `theme-color` en el HTML de la página y una propiedad `theme_color` en el [manifiesto de la aplicación web](https://web.dev/add-manifest/).
+La auditoría falla si Lighthouse no encuentra una meta tag `theme-color` en el HTML de la página y una propiedad `theme_color` en el [manifiesto de la aplicación web](https://web.dev/articles/add-manifest).
 
 Tenga en cuenta que Lighthouse no verifica si los valores son valores de color CSS válidos.
 
@@ -47,7 +47,7 @@ Obtenga más información sobre la meta tag `theme-color` en <a href="https://de
 
 ### Paso 2: Agregue la propiedad `theme_color` al manifiesto de su aplicación web
 
-La propiedad `theme_color` en el manifiesto de su aplicación web garantiza que la barra de direcciones presente la marca cuando un usuario inicia su PWA desde la pantalla de inicio. A diferencia de la meta-tag `theme-color`, solo necesita definir esto una vez, en el [manifiesto](https://web.dev/add-manifest/). Establezca la propiedad en cualquier valor de color CSS válido:
+La propiedad `theme_color` en el manifiesto de su aplicación web garantiza que la barra de direcciones presente la marca cuando un usuario inicia su PWA desde la pantalla de inicio. A diferencia de la meta-tag `theme-color`, solo necesita definir esto una vez, en el [manifiesto](https://web.dev/articles/add-manifest). Establezca la propiedad en cualquier valor de color CSS válido:
 
 ```html/1
 {
@@ -61,5 +61,5 @@ El navegador establecerá el color de la barra de direcciones de cada página de
 ## Recursos
 
 - [Código fuente para la auditoría **No establece un color de tema para la barra de direcciones**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/themed-omnibox.js)
-- [Agregar un manifiesto de aplicación web](https://web.dev/add-manifest/)
+- [Agregar un manifiesto de aplicación web](https://web.dev/articles/add-manifest)
 - [Support for <code>theme-color</code> in Chrome 39 for Android](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android)

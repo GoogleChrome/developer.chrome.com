@@ -56,7 +56,7 @@ Chromium issue: [887173](https://crbug.com/887173)
 
 
 <!-- ## More precise changes in the Changes tab {: #changes }  -->
-## Changes タブで変更点のよりわかりやすい表示 {: #changes } 
+## Changes タブで変更点のよりわかりやすい表示 {: #changes }
 
 <!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->
 **Changes** タブのコード変更点は、自動的にプリティプリントされます。
@@ -86,7 +86,7 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
 **Replay settings** の中ですべてのステップの **Timeout** を調整することができます。 **Replay settings** を展開し、 **Timeout** の値を編集します。
- 
+
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="timeout settings for user flow recording", width="800", height="530" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="ユーザーフロー記録のタイムアウト設定", width="800", height="530" %}
 
@@ -96,8 +96,8 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache } -->
 ## Back/forward cache タブでページがキャッシュ可能であることを確認する {: #bfcache }
 
-<!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
-[Back/forward cache (または bfcache)](https://web.dev/bfcache/) は、高速な戻る、進むを可能にするブラウザの最適化です。
+<!-- [Back/forward cache (or bfcache)](https://web.dev/articles/bfcache) is a browser optimization that enables instant back and forward navigation.  -->
+[Back/forward cache (または bfcache)](https://web.dev/articles/bfcache) は、高速な戻る、進むを可能にするブラウザの最適化です。
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
 新しい **Back/forward cache** タブは、ページが bfcache に最適化されているかどうかをテストし、対象外となる可能性がある問題を特定するのに役立ちます。
@@ -131,8 +131,8 @@ Chromium issue: [1110752](https://crbug.com/1110752)
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="Properties pane filter", width="800", height="505" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="Properties ペインフィルター", width="800", height="505" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}  
-  
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}
+
 Chromium issue: [1269674](https://crbug.com/1269674)
 
 
@@ -200,7 +200,7 @@ Chromium issue: [1263866](https://crbug.com/1263866)
 
 Chromium issue: [1050021](https://crbug.com/1050021)
 
- 
+
 <!-- ### Keyboard shortcut to expand all search results {: #toggle-search-result } -->
 ### 検索結果をすべて展開するキーボードショートカット {: #toggle-search-result }
 
@@ -229,8 +229,8 @@ Chromium issue: [1255073](https://crbug.com/1255073)
 <!-- The **Lighthouse** panel is now running Lighthouse 9. Lighthouse will now list all the elements sharing the same id. -->
 **Lighthouse** パネルで Lighthouse 9が動作するようになりました。 Lighthouse は、同じ id を共有するすべての要素をリストアップするようになりました。
 
-<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
-要素の id が一意でないことはよくあるアクセシビリティ上の問題です。例えば、 `aria-labelledby` 属性で参照される id が[複数の要素](https://web.dev/duplicate-id-aria/)で使用されていることがあります。
+<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/articles/duplicate-id-aria).  -->
+要素の id が一意でないことはよくあるアクセシビリティ上の問題です。例えば、 `aria-labelledby` 属性で参照される id が[複数の要素](https://web.dev/articles/duplicate-id-aria)で使用されていることがあります。
 
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 アップデートの詳細は、 [What's new in Lighthouse 9.0](/blog/lighthouse-9-0/) をご確認ください。
@@ -253,11 +253,11 @@ Chromium issue: [772558](https://crbug.com/772558)
 - Improved auto-complete suggestions for editable sources (e.g. snippets, local override)  -->
 - 大きなファイル（WASM 、 JavaScript など）を開く際の大幅な高速化
 - コードを読み進める際のランダムなスクロールを解消
-- 編集可能なソース（スニペット、ローカルオーバーライドなど）に対するオートコンプリートの候補を改善 
+- 編集可能なソース（スニペット、ローカルオーバーライドなど）に対するオートコンプリートの候補を改善
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c1ab112d9002d5c3b3bb70cf2839bac182f0cdb5 #}
 
-Chromium issue: [1241848](https://crbug.com/1241848) 
+Chromium issue: [1241848](https://crbug.com/1241848)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
 ## その他のハイライト {: #misc }
@@ -267,12 +267,12 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 
 <!-- - Properly displaying the waterfall diagram of network requests. Previously, the style was broken. ([1275501](https://crbug.com/1275501))
 - The code highlight was broken when searching in documents with very long lines in the **Sources** panel. It’s now fixed. ([1275496](https://crbug.com/1275496))
-- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972)) 
+- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972))
 - Fixed the missing layout shifts details in the **Summary** section of the **Performance** panel. ([1259606](https://crbug.com/1259606))
 - Support arbitrary characters (e.g. `,`, `.`),  in **Network Search** queries. ([1267196](https://crbug.com/1267196)) -->
 - ネットワークリクエストのウォーターフォール図を正しく表示するようにしました。以前は、スタイルが崩れていました ([1275501](https://crbug.com/1275501))
 - **Source** パネルで非常に長い行のドキュメントで検索すると、コードハイライトが壊れていました。これは現在修正されています ([1275496](https://crbug.com/1275496))
-- ネットワークリクエストで、 **Payload** タブが重複しないようになりました ([1273972](https://crbug.com/1273972)) 
+- ネットワークリクエストで、 **Payload** タブが重複しないようになりました ([1273972](https://crbug.com/1273972))
 - **Performance** パネルの **Summary** セクションのレイアウトシフトの詳細が欠落していたのを修正しました ([1259606](https://crbug.com/1259606))
 - **Network Search** のクエリで、任意の文字（例：`,`や`.`）をサポートしました ([1267196](https://crbug.com/1267196))
 
@@ -291,13 +291,13 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 <!-- The **Endpoints** section is now available. It gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header. -->
 **Endpoints** セクションが利用可能になりました。これは `Reporting-Endpoints` ヘッダで設定されたすべてのエンドポイントの概要を提供します。
 
-<!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
-[Reporting API](https://web.dev/reporting-api/) を使用してセキュリティ違反や非推奨の API コールなどを監視する方法を学びましょう。
+<!-- Learn to use the [Reporting API](https://web.dev/articles/reporting-api) to monitor security violations, deprecated API calls, and more. -->
+[Reporting API](https://web.dev/articles/reporting-api) を使用してセキュリティ違反や非推奨の API コールなどを監視する方法を学びましょう。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Reporting API pane", width="800", height="560" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Reporting API ペイン", width="800", height="560" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #}
 
 Chromium issue: [1200732](https://crbug.com/1200732)
 

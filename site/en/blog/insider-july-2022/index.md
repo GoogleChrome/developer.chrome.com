@@ -13,7 +13,7 @@ authors:
 
 tags:
   - insider
- 
+
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/5pfwyFL3CsjaWdvjG7DM.png'
 
 thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/FEhZwqV3W5kVUciPDV29.png'
@@ -24,15 +24,15 @@ alt: >
 
 Welcome to the second edition of Chrome Dev Insider where we share updates on what's new and exciting in the community and here at Chrome. This is a new episode of insider stories on how we approach our work, and a quick glance at some of the most important updates that you should pay attention to.
 
-I'm Rachel Andrew, the Content Lead for [web.dev](https://web.dev) and [developer.chrome.com](/), as part of the Chrome Developer Relations team. I've been working on the web for over twenty years, with a focus on open web standards and CSS, and am a member of the CSS Working Group. 
+I'm Rachel Andrew, the Content Lead for [web.dev](https://web.dev) and [developer.chrome.com](/), as part of the Chrome Developer Relations team. I've been working on the web for over twenty years, with a focus on open web standards and CSS, and am a member of the CSS Working Group.
 
 Two months ago, we wrapped up [Google I/O](https://io.google/2022/products/web/) where we [shared](https://www.youtube.com/watch?v=qBkyU1TJKDg&t=1452s) some of the most important updates about how we're supporting developers in making the web faster and more powerful while keeping user information safe and private.
 
-One of the things that stood out (and we're glad that the [community took notice](https://twitter.com/marvinhagemeist/status/1525798010587865088)!) is the huge amount of work the team is doing to support more [CSS and UI features](https://web.dev/state-of-css-2022/) on the web. In this edition of Chrome Dev Insider, we will take you behind the scenes on who's behind this work, how we work towards supporting CSS and UI developers and what lies ahead. That's why I'm thrilled to be hosting this edition of the Insider.
+One of the things that stood out (and we're glad that the [community took notice](https://twitter.com/marvinhagemeist/status/1525798010587865088)!) is the huge amount of work the team is doing to support more [CSS and UI features](https://web.dev/articles/state-of-css-2022) on the web. In this edition of Chrome Dev Insider, we will take you behind the scenes on who's behind this work, how we work towards supporting CSS and UI developers and what lies ahead. That's why I'm thrilled to be hosting this edition of the Insider.
 
 ## In the news
 
-In the first [Chrome Dev Insider](/blog/insider-april-2022/), we shared some updates on [Compat 2021](https://web.dev/compat2021/) and [Interop 2022](https://github.com/web-platform-tests/interop-2022/) initiatives where browser vendors and ecosystem players have been partnering to bring more features to the web that are supported across all browsers. The initiative has a strong focus on CSS because [browser incompatibility is one of the biggest challenges for CSS developers](https://2021.stateofcss.com/en-US/opinions/#css_pain_points_wins).
+In the first [Chrome Dev Insider](/blog/insider-april-2022/), we shared some updates on [Compat 2021](https://web.dev/blog/compat2021) and [Interop 2022](https://github.com/web-platform-tests/interop-2022/) initiatives where browser vendors and ecosystem players have been partnering to bring more features to the web that are supported across all browsers. The initiative has a strong focus on CSS because [browser incompatibility is one of the biggest challenges for CSS developers](https://2021.stateofcss.com/en-US/opinions/#css_pain_points_wins).
 
 While this may not be news to most, it's exciting to see the progress we've already made across browsers.
 
@@ -56,21 +56,21 @@ While this may not be news to most, it's exciting to see the progress we've alre
 
 {% endColumns %}
 
-Earlier last month, we saw Safari [announce a bumper release](https://webkit.org/blog/12824/news-from-wwdc-webkit-features-in-safari-16-beta/) with Safari 16.0 Beta that includes exciting features like [Container Queries](https://developer.mozilla.org/docs/Web/CSS/CSS_Container_Queries), [subgrid](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout/Subgrid), and a [flexbox inspector](https://webkit.org/blog/12824/news-from-wwdc-webkit-features-in-safari-16-beta/#flexbox-inspector). Recent releases of Firefox and Chrome have included a number of exciting features and fixes—I'm covering the key things in stable and beta browsers each month in my [new to the web platform](https://web.dev/tags/new-to-the-web/) series of posts.
+Earlier last month, we saw Safari [announce a bumper release](https://webkit.org/blog/12824/news-from-wwdc-webkit-features-in-safari-16-beta/) with Safari 16.0 Beta that includes exciting features like [Container Queries](https://developer.mozilla.org/docs/Web/CSS/CSS_Container_Queries), [subgrid](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout/Subgrid), and a [flexbox inspector](https://webkit.org/blog/12824/news-from-wwdc-webkit-features-in-safari-16-beta/#flexbox-inspector). Recent releases of Firefox and Chrome have included a number of exciting features and fixes—I'm covering the key things in stable and beta browsers each month in my [new to the web platform](https://web.dev/articles/tags/new-to-the-web) series of posts.
 
 ## Insider scoop: Supporting CSS and UI developers
 
-With 2022 turning out to be an exciting year for CSS features, we thought it a good time to take you behind the scenes. I sat down with [Una Kravets,](https://twitter.com/Una) DevRel lead for Web UI and Devtools and [Nicole Sullivan](https://twitter.com/stubbornella), our Product Manager for Web UI who focuses on CSS and HTML APIs, to talk about Chrome's journey to supporting UI developers. 
+With 2022 turning out to be an exciting year for CSS features, we thought it a good time to take you behind the scenes. I sat down with [Una Kravets,](https://twitter.com/Una) DevRel lead for Web UI and Devtools and [Nicole Sullivan](https://twitter.com/stubbornella), our Product Manager for Web UI who focuses on CSS and HTML APIs, to talk about Chrome's journey to supporting UI developers.
 
 _Let's start with you both. Tell us a bit more about yourselves?_
 
-**Nicole:** I'm the product manager for Web UI on Chrome. I focus specifically on new CSS and HTML APIs and on developers and designers who build UI. It's an exciting space with some really important APIs coming out like [Container Queries](https://web.dev/new-responsive/#responsive-to-the-container), [Scope](https://developer.mozilla.org/docs/Web/CSS/:scope), and (hopefully!) [vertical rhythm](https://developer.mozilla.org/docs/Learn/CSS/Styling_text/Styling_lists#handling_list_spacing).
+**Nicole:** I'm the product manager for Web UI on Chrome. I focus specifically on new CSS and HTML APIs and on developers and designers who build UI. It's an exciting space with some really important APIs coming out like [Container Queries](https://web.dev/articles/new-responsive#responsive_to_the_container), [Scope](https://developer.mozilla.org/docs/Web/CSS/:scope), and (hopefully!) [vertical rhythm](https://developer.mozilla.org/docs/Learn/CSS/Styling_text/Styling_lists#handling_list_spacing).
 
 **Una:** I lead the Web UI and DevTools DevRel teams. We focus on supporting UI engineers on the web platform and make sure they have the tools they need to be successful. This includes CSS APIs and HTML components along with DevTools features to see active changes and feedback.
 
 _Chrome's support for UI developers has gathered pace in the last few years. Why do you think it took so long to get here? What were the biggest challenges?_
 
-**Una:** We needed to do some work to demonstrate how important this work was, and why it should be a priority. We started with the [MDN DNA survey in 2019](https://insights.developer.mozilla.org/), which identified UI as some of the top pain points on the platform. And since then, we've continued to use data as our guide through the MDN and our own internal developer satisfaction surveys. The result of all this is we were able to get deeper leadership buy-in and were able to prioritize engineering work around some of the most highly requested developer features in the UI space that also form the majority of the focus for initiatives like [Compat 2021](https://web.dev/compat2021/) and [Interop 2022](https://github.com/web-platform-tests/interop-2022/).
+**Una:** We needed to do some work to demonstrate how important this work was, and why it should be a priority. We started with the [MDN DNA survey in 2019](https://insights.developer.mozilla.org/), which identified UI as some of the top pain points on the platform. And since then, we've continued to use data as our guide through the MDN and our own internal developer satisfaction surveys. The result of all this is we were able to get deeper leadership buy-in and were able to prioritize engineering work around some of the most highly requested developer features in the UI space that also form the majority of the focus for initiatives like [Compat 2021](https://web.dev/blog/compat2021) and [Interop 2022](https://github.com/web-platform-tests/interop-2022/).
 
 **Nicole:** In addition to getting leadership buy-in, we had to also find the right way to get these APIs to developers. When I first joined Chrome, I messed this up in a project called [Layered APIs](https://github.com/drufball/layered-apis) (or LAPIs for short). LAPIs aimed to give developers a drop-in component experience. I still think this was a great outcome to shoot for, but we made a lot of mistakes! We focused first on [Toast Notifications](https://developer.android.com/guide/topics/ui/notifiers/toasts) and a [Virtual List](https://groups.google.com/a/chromium.org/g/blink-dev/c/5411pauM9e8/m/aX4K4wz6DgAJ). Toasts are nearly impossible to make accessible and a virtual list is one of the hardest components to get right. Our intentions were good but it wasn't helping developers, so we sunsetted the project. It's difficult to learn the hard way, but every mistake is fueling the renaissance for CSS and HTML that is happening now.
 
@@ -94,13 +94,13 @@ _Speaking of cross-browser support, initiatives like Interop 2022 and Open UI se
 
 _Working with the ecosystem has proven to be critical to any success we've had in making developers' lives easier. I know that your team has been doing a lot of work there. Care to share some details?_
 
-**Nicole:** First, I'm constantly in awe of the projects developers build on the web. From the tiniest library to full on frameworks, developers are building amazing things. It's a fantastic community of makers. And Chrome is taking a bunch of steps to be more connected to these projects. 
+**Nicole:** First, I'm constantly in awe of the projects developers build on the web. From the tiniest library to full on frameworks, developers are building amazing things. It's a fantastic community of makers. And Chrome is taking a bunch of steps to be more connected to these projects.
 
 For instance, a few years ago we started working with JavaScript Frameworks such as React and Angular. And metaframeworks—for example Next, Nuxt, and Gatsby. Last year, we started to do the same with UI tools and frameworks such as Sass, Bootstrap, and Material. I hope this coming year we can collaborate with GreenSock and other tools that make developers' lives easier. I just saw Cassie Evans from GreenSock speak at Smashing Conference and it got me really excited about working with folks in the animation space.
 
 _So where do we see the biggest opportunity for the Web UI ecosystem?_
 
-**Una:** In terms of big opportunities, I feel like we're just scratching the surface of what's possible for customizable web experiences. New APIs such as [container queries](https://web.dev/new-responsive/#responsive-to-the-container) and the CSS [user preference media features](https://web.dev/user-preference-media-features-headers/) are redefining the way that developers view responsive design. I'm also excited about the collaborative design experiences that are enabling developers and designers to be able to work in unison with the users that visit their websites.
+**Una:** In terms of big opportunities, I feel like we're just scratching the surface of what's possible for customizable web experiences. New APIs such as [container queries](https://web.dev/articles/new-responsive#responsive_to_the_container) and the CSS [user preference media features](https://web.dev/articles/user-preference-media-features-headers) are redefining the way that developers view responsive design. I'm also excited about the collaborative design experiences that are enabling developers and designers to be able to work in unison with the users that visit their websites.
 
 _And Nicole, what's next on the roadmap for your team?_
 
@@ -108,11 +108,11 @@ _And Nicole, what's next on the roadmap for your team?_
 
 Una touched on the first thing, we're enabling responsive, component-based design. It includes tools for designing color systems so designers can respond to user preferences like dark mode. For example, [OKLCH](https://developer.mozilla.org/docs/Web/CSS/color_value/oklch) color space keeps brightness consistent across hues. Designers can move from choosing colors to designing relationships between colors, without ending up with muddy-looking palettes!
 
-We're also working on some of the most requested APIs, like [container queries](https://web.dev/new-responsive/#responsive-to-the-container), [cascade layers](/blog/cascade-layers/), parent selector ([:has](https://developer.mozilla.org/docs/Web/CSS/:has)), [scoped styles](https://css-tricks.com/saving-the-day-with-scoped-css/), and [nesting](https://css-tricks.com/css-nesting-specificity-and-you/). Developers need these so they can build flexible design systems full of reusable components.
+We're also working on some of the most requested APIs, like [container queries](https://web.dev/articles/new-responsive#responsive_to_the_container), [cascade layers](/blog/cascade-layers/), parent selector ([:has](https://developer.mozilla.org/docs/Web/CSS/:has)), [scoped styles](https://css-tricks.com/saving-the-day-with-scoped-css/), and [nesting](https://css-tricks.com/css-nesting-specificity-and-you/). Developers need these so they can build flexible design systems full of reusable components.
 
 Scroll linked animations is another fun area. I really like Steve Gardner's [demo](https://codepen.io/ste-vg/pen/GRooLza). He has buttery smooth scrolling and cool airplane animations triggered on scroll. While these are fun, it can be tricky to get them right, especially with accessibility in mind. So we're running user testing for accessibility on the feature now.
 
-The thing I'm personally most excited about is built-in web UI controls. Developers keep building the same tabset over and over again, I think the browser can help. Over at [Open UI](https://open-ui.org/), we're working on components like selectmenu, popup, tooltip, tabs, nav, accordion, and toggle. We are exploring what it would look like to bake accessibility into these browser primitives so the web could, over time, become accessible by default. Developers can then focus on the more complex and nuanced problems, while the basics such as how do tabs tab, can be supported by the browser. This probably needs its own post, so I'll stop there for now!  
+The thing I'm personally most excited about is built-in web UI controls. Developers keep building the same tabset over and over again, I think the browser can help. Over at [Open UI](https://open-ui.org/), we're working on components like selectmenu, popup, tooltip, tabs, nav, accordion, and toggle. We are exploring what it would look like to bake accessibility into these browser primitives so the web could, over time, become accessible by default. Developers can then focus on the more complex and nuanced problems, while the basics such as how do tabs tab, can be supported by the browser. This probably needs its own post, so I'll stop there for now!
 
 Finally, we'll continue to invest in **interop** between browsers. It's been great working with folks at WebKit and Gecko to bring consistency to the developer experience. We heard developers loud and clear that they want this!
 
@@ -122,7 +122,7 @@ We might, if standards go well, even look at vertical rhythm this year! We're ab
 
 _Thanks both. I'm sure the whole community, like us, is excited to see the renewed pace of improvements and features coming to the Web UI world. There's still a lot to grok, so where would you say one should start their journey?_
 
-**Una:** Our [What's new for the web platform](https://www.youtube.com/watch?v=5b4YcLB4DVI&t=38s) session at I/O covers the highlights of many of the features landing this year. Adam Argyle also wrote up a [great article](https://web.dev/state-of-css-2022/) on all the new and upcoming CSS landings. On an ongoing basis, I would focus on stable releases for now and just be aware of the other work coming down the pipeline. Your awesome [New to the web platform](https://web.dev/tags/new-to-the-web/) series is a great one to follow for that. Subscribing for the web.dev newsletter will also bring this content to developers' inbox. And for developers looking to get involved and help with all of this, [joining Open UI](https://open-ui.org/get-involved#getting-involved) is one of the best ways you can support this work.  
+**Una:** Our [What's new for the web platform](https://www.youtube.com/watch?v=5b4YcLB4DVI&t=38s) session at I/O covers the highlights of many of the features landing this year. Adam Argyle also wrote up a [great article](https://web.dev/articles/state-of-css-2022) on all the new and upcoming CSS landings. On an ongoing basis, I would focus on stable releases for now and just be aware of the other work coming down the pipeline. Your awesome [New to the web platform](https://web.dev/articles/tags/new-to-the-web) series is a great one to follow for that. Subscribing for the web.dev newsletter will also bring this content to developers' inbox. And for developers looking to get involved and help with all of this, [joining Open UI](https://open-ui.org/get-involved#getting-involved) is one of the best ways you can support this work.
 
 ## Key upcoming updates
 

@@ -23,7 +23,7 @@ When writing selectors you may find yourself torn between two worlds. On the one
 
 For example, when you want to select “the hero image in the content area of the card component”–which is a rather specific element selection–you most likely don’t want to write a selector like `.card > .content > img.hero`.
 
-- This selector has a pretty high [specificity](https://web.dev/learn/css/specificity/) of `(0,3,1)` which makes it hard to override as your code grows.
+- This selector has a pretty high [specificity](https://web.dev/learn/css/specificity) of `(0,3,1)` which makes it hard to override as your code grows.
 - By relying on the direct child combinator it is tightly coupled to the DOM structure. Should the markup ever change, you need to change your CSS as well.
 
 But, you also don’t want to write just `img` as the selector for that element, as that would select all image elements across your page.
@@ -222,7 +222,7 @@ In the example above, the scoped rules only target elements inside the `div` wit
 
 ## @scope in the cascade
 
-Inside of the [CSS Cascade](https://web.dev/learn/css/the-cascade/), `@scope` also adds a new criterion: _scoping proximity_. The step comes after specificity but before order of appearance.
+Inside of the [CSS Cascade](https://web.dev/learn/css/the-cascade), `@scope` also adds a new criterion: _scoping proximity_. The step comes after specificity but before order of appearance.
 
 {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/SqOlwVfRjOpeRzzbz9L7.svg", alt="Visualization of the CSS Cascade.", width="1920", height="1080" %}
 

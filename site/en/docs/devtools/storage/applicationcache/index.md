@@ -13,7 +13,7 @@ tags:
 [mdn]: https://developer.mozilla.org/docs/Web/API/Window/applicationCache
 
 {% Aside 'warning' %}
-Support for [AppCache][mdn] will be removed from Chrome and other Chromium-based browsers. We encourage developers to migrate off of AppCache now, rather than waiting any longer. Read [more](https://web.dev/appcache-removal/).
+Support for [AppCache][mdn] will be removed from Chrome and other Chromium-based browsers. We encourage developers to migrate off of AppCache now, rather than waiting any longer. Read [more](https://web.dev/articles/appcache-removal).
 {% endAside %}
 
 This guide shows you how to use [Chrome DevTools](/docs/devtools/) to inspect

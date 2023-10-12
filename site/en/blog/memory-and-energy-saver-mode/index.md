@@ -140,7 +140,7 @@ The main scenario where this mode _could_ be problematic is if your site uses Ja
 
 For example, if your site uses `requestAnimationFrame()` loops and assumes that exactly 16.67 milliseconds will have elapsed between callbacks, your animations will run twice as slow when Energy Saver mode is enabled.
 
-Note that it has [always been problematic](https://web.dev/speed-rendering/#timing-is-everything-requestanimationframe) for developers to assume a default refresh rate of 60 Hz for all users, since that is not true for many current devices.
+Note that it has [always been problematic](https://web.dev/articles/speed-rendering#timing_is_everything_requestanimationframe) for developers to assume a default refresh rate of 60 Hz for all users, since that is not true for many current devices.
 
 ### Measuring display refresh rate
 

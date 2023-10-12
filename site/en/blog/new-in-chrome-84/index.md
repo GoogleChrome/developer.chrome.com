@@ -73,7 +73,7 @@ app manifest, describe the shortcut, and add your icons.
 ]
 ```
 
-Check out [Getting things done quickly with app shortcuts](https://web.dev/app-shortcuts/)
+Check out [Getting things done quickly with app shortcuts](https://web.dev/articles/app-shortcuts)
 for complete details.
 
 ## Web animations API {: #web-animations }
@@ -89,7 +89,7 @@ Animations API.
 
 I simply **can't** do justice to all the improvements or offer good examples
 here, so check out
-[Web Animations API improvements in Chromium 84](https://web.dev/web-animations/)
+[Web Animations API improvements in Chromium 84](https://web.dev/articles/web-animations)
 for complete details.
 
 ## Content indexing API {: #content-indexing }
@@ -143,7 +143,7 @@ for (const entry of entries) {
 ```
 
 See
-[Indexing your offline-capable pages with the Content Indexing API](https://web.dev/content-indexing-api/)
+[Indexing your offline-capable pages with the Content Indexing API](https://web.dev/articles/content-indexing-api)
 for complete details.
 
 ## Wake lock API {: #wake-lock }
@@ -161,7 +161,7 @@ from its origin trial in Chrome 84, sites can request a wake lock to prevent
 the screen from dimming and locking.
 
 In fact, the Betty Crocker website is using this today, and published a
-[case study](https://web.dev/betty-crocker/) on web.dev showing a 300%
+[case study](https://web.dev/articles/betty-crocker) on web.dev showing a 300%
 increase in purchase intent indicators.
 
 To get a wake lock, call `navigator.wakeLock.request()`, it returns a
@@ -178,14 +178,14 @@ wl.release();
 ```
 
 Of course, there's a little more to it then that, so check out
-[Stay awake with the Screen Wake Lock API](https://web.dev/wakelock/), but at
+[Stay awake with the Screen Wake Lock API](https://web.dev/articles/wakelock), but at
 least my screen won't be covered in flour any more!
 
 ## Origin trials
 
 There are two new origin trials I want to call out. If you're new to origin
 trials, check out
-[Getting started with Chrome's origin trials](https://web.dev/origin-trials/).
+[Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/).
 
 ### Idle detection {: #idle-detection }
 
@@ -212,7 +212,7 @@ await idleDetector.start({
 });
 ```
 
-See [Detect inactive users with the Idle Detection API](https://web.dev/idle-detection/)
+See [Detect inactive users with the Idle Detection API](https://web.dev/articles/idle-detection)
 to learn more about the API, and how you can start experimenting with it today.
 
 ### Web Assembly SIMD {: #wasm-simd }
@@ -238,7 +238,7 @@ out.
 * We're resuming the gradual rollout of [SameSite cookie changes][cr-blog-sscookie].
 * Sites with abusive permission requests, or abusive notifications, will
   automatically be enrolled in our [quieter notifications UI][cr-blog-quieter].
-* There's a new origin trial for [QuicTransport](https://web.dev/quictransport/).
+* There's a new origin trial for [QuicTransport](https://web.dev/articles/quictransport).
 
 ## Further reading
 

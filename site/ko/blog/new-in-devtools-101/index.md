@@ -31,7 +31,7 @@ tags:
 그 외에도 녹화물을 내보낼 수도 있습니다. [유저 플로우를 녹화](/docs/devtools/recorder/#record) 한 뒤에 export 버튼을 클릭하세요. 다음과 같은 3가지 옵션이 있습니다:
 
 - **JSON 파일로 내보내기**. 녹화본을 JSON 파일로 다운로드합니다.
-- **@puppeteer/replay 스크립트로 내보내기**. 녹화본을 [Puppeteer 다시보기](https://github.com/puppeteer/replay) 스크립트로 다운로드합니다. 
+- **@puppeteer/replay 스크립트로 내보내기**. 녹화본을 [Puppeteer 다시보기](https://github.com/puppeteer/replay) 스크립트로 다운로드합니다.
 - **Puppeteer 스크립트로 내보내기** . 녹화본을 [Puppeteer](https://pptr.dev/) 스크립트로 다운로드합니다.
 
 이러한 옵션들 사이의 차이점에 대해 더 자세히 알고자 한다면 [문서](/docs/devtools/recorder/#export-flows) 를 참고하세요.
@@ -84,13 +84,13 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 이번 릴리스에서 주목할만한 수정 사항들입니다:
 
-- [뒤로/앞으로 캐쉬(혹은 bfcache)](/blog/new-in-devtools-98/#bfcache) 에서 블락된 [bfcache](https://web.dev/bfcache/) 익스텐션 ID를 표시합니다. ( [1284548](https://crbug.com/1284548))
+- [뒤로/앞으로 캐쉬(혹은 bfcache)](/blog/new-in-devtools-98/#bfcache) 에서 블락된 [bfcache](https://web.dev/articles/bfcache) 익스텐션 ID를 표시합니다. ( [1284548](https://crbug.com/1284548))
 - 유사 배열 객체, CSS 클래스 이름, `map.get` 과 HTML 태그에 대한 자동 완성 지원이 수정되었습니다. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983))
 - 단어를 더블 클릭하거나 자동 완성을 취소할 때 잘못된 하이라이트를 수정하였습니다. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667))
 - **소스** 패널에서 주석 키보드 단축키를 수정하였습니다. ([1296535](https://crbug.com/1296535))
 - **소스** 패널에서 **Alt** (Options) 키를 사용해 여러 곳을 선택하는 기능을 다시 지원합니다. ([1304070](https://crbug.com/1304070))
 
- 
+
 ## [실험실 기능] Lighthouse 패널의 새로운 시간 범위 (timespan) 및 스냅샷 (snapshot) 모드 {: #lighthouse }
 
 {% Aside %}
@@ -99,7 +99,7 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 
 기존 **navigation** 모드와 별개로 **Lighthouse** 패널에서 유저 플로우를 측정하기 위한 **timespan**, **snapshot** 모드를 추가로 지원합니다.
 
-예를 들어, **timespan** 보고서를 유저 인터렉션을 측정하기 위해 사용할 수 있습니다. [데모](https://coffee-cart.netlify.app/) 페이지를 열어 **Timespan** 모드를 선택한 뒤 **Start timespan** 을 클릭하세요. 페이지에서 커피를 선택한 뒤 timespan을 종료하세요. 보고서를 읽어보면 인터렉션으로 인해 발생한 [총 차단 시간](https://web.dev/tbt/)과 [누적 레이아웃 이동](https://web.dev/cls/) 을 찾을 수 있습니다.
+예를 들어, **timespan** 보고서를 유저 인터렉션을 측정하기 위해 사용할 수 있습니다. [데모](https://coffee-cart.netlify.app/) 페이지를 열어 **Timespan** 모드를 선택한 뒤 **Start timespan** 을 클릭하세요. 페이지에서 커피를 선택한 뒤 timespan을 종료하세요. 보고서를 읽어보면 인터렉션으로 인해 발생한 [총 차단 시간](https://web.dev/articles/tbt)과 [누적 레이아웃 이동](https://web.dev/articles/cls) 을 찾을 수 있습니다.
 
 각 모드에는 고유한 사용 사례, 이점, 제한 사항이 있습니다. 더 상세한 정보는 [Lighthouse 문서](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) 를 살펴보세요.
 

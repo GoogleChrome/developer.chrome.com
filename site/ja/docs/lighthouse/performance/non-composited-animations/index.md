@@ -5,7 +5,7 @@ description: "「合成されていないアニメーションを避ける」灯
 date: 2020-08-12
 ---
 
-合成されていないアニメーションは、ローエンドの電話で、またはパフォーマンスの高いタスクがメインスレッドで実行されている場合に、ぎくしゃくした（つまりスムーズではない）ように見えることがあります。[ぎこちないアニメーションは、ページの累積レイアウトシフト](https://web.dev/cls/)（CLS）を増やす可能性があります。 CLSを減らすと、LighthousePerformanceスコアが向上します。
+合成されていないアニメーションは、ローエンドの電話で、またはパフォーマンスの高いタスクがメインスレッドで実行されている場合に、ぎくしゃくした（つまりスムーズではない）ように見えることがあります。[ぎこちないアニメーションは、ページの累積レイアウトシフト](https://web.dev/articles/cls)（CLS）を増やす可能性があります。 CLSを減らすと、LighthousePerformanceスコアが向上します。
 
 ## バックグラウンド
 
@@ -27,12 +27,12 @@ HTML、CSS、およびJavaScriptをピクセルに変換するためのブラウ
 
 ## アニメーションを確実に合成する方法
 
-[コンポジターのみのプロパティに固執し、レイヤー数](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)と[高性能アニメーション](https://web.dev/animations-guide/)を管理するを参照してください。
+[コンポジターのみのプロパティに固執し、レイヤー数](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)と[高性能アニメーション](https://web.dev/articles/animations-guide)を管理するを参照してください。
 
 ## 資力
 
 - [合成されてい*ないアニメーションを回避する*監査のソースコード](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/non-composited-animations.js)
 - [コンポジターのみのプロパティに固執し、レイヤー数を管理します](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
-- [高性能アニメーション](https://web.dev/animations-guide/)
+- [高性能アニメーション](https://web.dev/articles/animations-guide)
 - [ペイントの複雑さを簡素化し、ペイント領域を減らします](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas)
 - [最新のWebブラウザの内部を見る（パート3）](https://developers.google.com/web/updates/2018/09/inside-browser-part3)

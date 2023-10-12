@@ -92,7 +92,7 @@ long time.
 Finally, remember that if you are using long tasks in the background, your application
 can be throttled for a very long period of time (up to 100 times the duration of your task).
 Split your work in to chunks of 50ms or less per
-[the performance guidelines](https://web.dev/rail/)
+[the performance guidelines](https://web.dev/articles/rail)
 and use the `visibilityChange` listener to avoid doing unnecessary work in background.
 
 ### Opt-outs

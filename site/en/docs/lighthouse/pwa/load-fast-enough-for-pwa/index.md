@@ -29,7 +29,7 @@ flags pages that don't load fast enough on mobile:
 Two main metrics affect how users perceive load time:
 
 - [First Meaningful Paint (FMP)](/docs/lighthouse/performance/first-meaningful-paint), which measures when the primary content of the page appears visually complete
-- [Time to Interactive (TTI)](https://web.dev/tti/), which measures when the page is fully interactive
+- [Time to Interactive (TTI)](https://web.dev/articles/tti), which measures when the page is fully interactive
 
 For example, if a page appears visually complete after 1&nbsp;second,
 but the user can't interact with it for 10&nbsp;seconds,
@@ -46,8 +46,8 @@ If the time to interactive is more than 10&nbsp;seconds, the audit fails.
 
 - [Source code for **Page load is not fast enough on mobile networks** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/load-fast-enough-for-pwa.js)
 - [Baseline Progressive Web App Checklist](https://web.dev/pwa-checklist/#core)
-- [Critical Rendering Path](https://web.dev/critical-rendering-path/)
+- [Critical Rendering Path](https://web.dev/articles/critical-rendering-path)
 - [Get Started With Analyzing Runtime Performance](/docs/devtools/evaluate-performance/)
 - [Record load performance](/docs/devtools/evaluate-performance/reference/#record-load)
-- [Optimizing Content Efficiency](https://web.dev/performance-optimizing-content-efficiency/)
-- [Rendering Performance](https://web.dev/rendering-performance/)
+- [Optimizing Content Efficiency](https://web.dev/articles/performance-optimizing-content-efficiency)
+- [Rendering Performance](https://web.dev/articles/rendering-performance)

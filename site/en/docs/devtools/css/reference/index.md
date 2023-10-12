@@ -6,7 +6,7 @@ authors:
   - jecelynyeen
   - sofiayem
 date: 2017-06-09
-updated: 2022-06-21
+updated: 2023-09-20
 description: "Discover new workflows for viewing and changing CSS in Chrome DevTools."
 tags:
   - css
@@ -126,6 +126,14 @@ applied to an element][6].
 Alternatively, scroll down the **Styles** pane and find sections named `Inherited from <element_name>`.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TuWZmbeQlHR6Qp6pUHVP.png", alt="View the Inherited from... section of the Styles pane.", width="800", height="361" %}
+
+### View `@property` at-rules {: #property }
+
+The [`@property` CSS at-rule](https://web.dev/articles/at-property) lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
+
+Hover over the name of such property in the **Styles** pane, to see a tooltip with the property's value, descriptors, and a link to its registration in the collapsible `@property` section at the bottom of the **Styles** pane.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/vDfXTULIyNIJXVw6lKvf.mp4", width="800", height="511", autoplay="false", loop="true", muted="true", controls="true", class="screenshot" %}
 
 ### View `@supports` at-rules {: #supports }
 

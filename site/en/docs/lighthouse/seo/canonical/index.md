@@ -83,7 +83,7 @@ page.
 ### General guidelines
 
 - Make sure that the canonical URL is valid.
-- Use secure [HTTPS](https://web.dev/why-https-matters/) canonical URLs rather than HTTP whenever possible.
+- Use secure [HTTPS](https://web.dev/articles/why-https-matters) canonical URLs rather than HTTP whenever possible.
 - If you use [`hreflang` links](/docs/lighthouse/seo/hreflang/) to serve different versions of a page
   depending on a user's language or country, make sure that the canonical URL
   points to the proper page for that respective language or country.

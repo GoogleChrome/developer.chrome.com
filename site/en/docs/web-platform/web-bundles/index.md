@@ -190,7 +190,7 @@ You could also try out other sample web bundles:
 - [web.dev.wbn](https://storage.googleapis.com/web-dev-assets/web-bundles/web.dev.wbn) is a
   snapshot of the entire web.dev site, as of 2019 October 15.
 - [proxx.wbn](https://storage.googleapis.com/web-dev-assets/web-bundles/proxx.wbn):
-  [PROXX](https://web.dev/proxx-announce/) is a Minesweeper clone that works offline.
+  [PROXX](https://web.dev/articles/proxx-announce) is a Minesweeper clone that works offline.
 - [squoosh.wbn](https://storage.googleapis.com/web-dev-assets/web-bundles/squoosh.wbn):
   [Squoosh](https://squoosh.app) is a convenient and fast image optimization tool that
   lets you do side-by-side comparisons of various image compression formats, with support for

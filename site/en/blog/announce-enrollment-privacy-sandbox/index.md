@@ -18,7 +18,7 @@ tags:
   - privacy
 ---
 
-As we make plans for general availability of the Privacy Sandbox relevance and measurement APIs, including Attribution Reporting, FLEDGE, Topics, Private Aggregation and Shared Storage, we want to make sure these technologies are used as intended and with transparency.  Today, we are announcing a new Developer Enrollment process for Privacy Sandbox relevance and measurement APIs, across Chrome and Android. This will replace the current Privacy Sandbox Android enrollment process. 
+As we make plans for general availability of the Privacy Sandbox relevance and measurement APIs, including Attribution Reporting, FLEDGE, Topics, Private Aggregation and Shared Storage, we want to make sure these technologies are used as intended and with transparency.  Today, we are announcing a new Developer Enrollment process for Privacy Sandbox relevance and measurement APIs, across Chrome and Android. This will replace the current Privacy Sandbox Android enrollment process.
 
 The enrollment process will verify the entities calling the APIs, and gather data needed to properly configure and use these APIs.
 
@@ -32,11 +32,11 @@ the new enrollment process goes live in June 2023.
 
 ## Why are we asking you to enroll?
 
-It is of paramount importance to the Privacy Sandbox that we protect user privacy. This enrollment process adds an additional layer of protections on top of the structural restrictions enforced within each API, by adding transparency to who is collecting data, and mitigating attempts to misuse the APIs to gather more data than intended. 
+It is of paramount importance to the Privacy Sandbox that we protect user privacy. This enrollment process adds an additional layer of protections on top of the structural restrictions enforced within each API, by adding transparency to who is collecting data, and mitigating attempts to misuse the APIs to gather more data than intended.
 
-To provide auditable transparency, enrollment information about the company will be made public. We will provide further details in a later update on how the public will be able to access this information. 
+To provide auditable transparency, enrollment information about the company will be made public. We will provide further details in a later update on how the public will be able to access this information.
 
-To limit how much data an API caller can receive, we've already incorporated rate limits for each developer into the relevance and measurement APIs. Enrollment allows us to better enforce those rate limits by using an independent, third party verification service. We will use Dun & Bradstreet to verify your corporate identity and any potential corporate linkages. 
+To limit how much data an API caller can receive, we've already incorporated rate limits for each developer into the relevance and measurement APIs. Enrollment allows us to better enforce those rate limits by using an independent, third party verification service. We will use Dun & Bradstreet to verify your corporate identity and any potential corporate linkages.
 
 This verification process will also help ensure that one developer can't impersonate another developer and limit their usage of the APIs. Lastly, this effort brings the Privacy Sandbox Chrome and Android ecosystems to a shared enrollment process, which ensures you won't have to duplicate verification efforts across platforms.
 
@@ -53,12 +53,12 @@ To enroll, we will ask you to provide the following information:
 * Other inputs necessary for API or server configurations (such as sites and/or SDKs used to call the APIs, etc.)
 * List of requested APIs
 
-We intend for this process to be lightweight, so that developers can easily set up and begin testing the Privacy Sandbox APIs. Extra assistance in transitioning to the new enrollment process will be provided for currently enrolled Android testers, and Google support channels will be available to address any enrollment related questions. 
+We intend for this process to be lightweight, so that developers can easily set up and begin testing the Privacy Sandbox APIs. Extra assistance in transitioning to the new enrollment process will be provided for currently enrolled Android testers, and Google support channels will be available to address any enrollment related questions.
 
 ### Site-based enrollment
 
 All API callers will need to enroll their
-[site](https://web.dev/same-site-same-origin/#public-suffix-list-and-etld). A
+[site](https://web.dev/articles/same-site-same-origin#public_suffix_list_and_etld). A
 site provides a boundary that informs the Privacy Sandbox API's privacy
 protections.
 
@@ -81,7 +81,7 @@ tracking.
 Additionally, attestations help improve public transparency on data collected
 and used with the Privacy Sandbox APIs. The attestations will be written to be
 understandable by users, focused on outcomes rather than implementation
-details. 
+details.
 
 We'll provide details about the attestations before the unified enrollment
 period is available so developers can review the full process. Developers will

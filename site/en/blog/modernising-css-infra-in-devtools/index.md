@@ -28,7 +28,7 @@ DevTools implemented CSS in two different ways: one for CSS files used in the [l
 
 The CSS implementation in DevTools was defined many years ago and is now outdated. DevTools has stuck to using the [`module.json` pattern](/blog/migrating-to-js-modules/#beginning ) and there has been a huge effort in removing these files. The last blocker for removal of these files is the `resources` section, which is used to load in CSS files.
 
-We wanted to spend time exploring different potential solutions that could eventually morph into [CSS Module Scripts](https://web.dev/css-module-scripts/). The aim was to remove technical debt caused by the legacy system but also make the migration process to CSS Module Scripts easier.
+We wanted to spend time exploring different potential solutions that could eventually morph into [CSS Module Scripts](https://web.dev/articles/css-module-scripts). The aim was to remove technical debt caused by the legacy system but also make the migration process to CSS Module Scripts easier.
 
 Any CSS files that were in DevTools were considered to be ‘legacy’ as they were loaded using a `module.json` file, which is in the process of being removed. All CSS files had to be listed under `resources` in a `module.json` file in the same directory as the CSS file.
 
@@ -107,7 +107,7 @@ const output = LitHtml.html`
 ```
 Potential solutions using `@import` or `<link>`.
 
-Instead we opted to find a way to import the CSS file as a [`CSSStyleSheet`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet) object so that we can add it to the [Shadow Dom](https://web.dev/shadowdom-v1) (DevTools uses Shadow DOM for a couple of years now) using its [`adoptedStyleSheets`](https://web.dev/constructable-stylesheets/#using-constructed-stylesheets) property.
+Instead we opted to find a way to import the CSS file as a [`CSSStyleSheet`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet) object so that we can add it to the [Shadow Dom](https://web.dev/shadowdom-v1) (DevTools uses Shadow DOM for a couple of years now) using its [`adoptedStyleSheets`](https://web.dev/articles/constructable-stylesheets#using_constructed_stylesheets) property.
 
 ### Bundler options {: #bundler-options }
 

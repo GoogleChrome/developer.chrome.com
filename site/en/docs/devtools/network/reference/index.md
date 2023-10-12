@@ -196,6 +196,7 @@ Below is a complete list of supported properties.
   to include multiple domains. For example, `*.com` displays resources from all domain names ending
   in `.com`. DevTools shows a populates the autocomplete drop-down menu with all of the domains it
   has encountered.
+- `has-overrides`. Show requests that have overridden `content`, `headers`, any overrides (`yes`), or no overrides (`no`). You can add the corresponding [**Has overrides** column](#columns) to the request table.
 - `has-response-header`. Show the resources that contain the specified HTTP response header.
   DevTools populates the autocomplete drop-down with all of the response headers that it has
   encountered.
@@ -364,6 +365,8 @@ Right-click the header of the **Requests** table and select an option to hide or
 displayed options have check marks next to them.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zgkV5JsQ7MDYgkWL889O.png", alt="Adding a column to the Requests table.", width="800", height="684" %}
+
+You can add or remove the following additional columns: **Path**, URL, Method, Protocol, Scheme, Domain, Remote address, Remote address space, Initiator address space, Cookies, Set cookies, Priority, Connection ID, and Has overrides.
 
 #### Add custom columns {: #custom-columns }
 
@@ -535,12 +538,12 @@ hovering.
 
 Here's more information about each of the phases you may see in the **Timing** tab:
 
-- **Queueing**. The browser queues requests when:
+- **Queueing**. The browser queues requests before connection start and when:
   - There are higher priority requests.
   - There are already six TCP connections open for this origin, which is the limit. Applies to
     HTTP/1.0 and HTTP/1.1 only.
-  - The browser is briefly allocating space in the disk cache
-- **Stalled**. The request could be stalled for any of the reasons described in **Queueing**.
+  - The browser is briefly allocating space in the disk cache.
+- **Stalled**. The request could be stalled after connection start for any of the reasons described in **Queueing**.
 - **DNS Lookup**. The browser is resolving the request's IP address.
 - **Initial connection**. The browser is establishing a connection, including TCP handshakes/retries
   and negotiating an SSL.

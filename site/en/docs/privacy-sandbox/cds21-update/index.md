@@ -19,7 +19,7 @@ Here's what you need to know:
 *  Monitor and [engage in conversation](#discussion) around
    [privacy proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
 *  [Prepare for User-Agent reduction](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
-   and migrate to [UA Client Hints](https://web.dev/migrate-to-ua-ch/)
+   and migrate to [UA Client Hints](https://web.dev/articles/migrate-to-ua-ch)
 *  Share your feedback with [@ChromiumDev on Twitter](https://twitter.com/ChromiumDev)
 
 This update on the Privacy Sandbox was announced at the
@@ -71,7 +71,7 @@ width="485", height="659"
 
 Many of the common web functions described above weren't built into the web
 platform, but instead have been layered over it with general-purpose
-technologies such as third-party cookies. 
+technologies such as third-party cookies.
 
 When we design APIs for each specific use case, we can ensure appropriate
 privacy protections, give people more useful controls, and ideally improve each
@@ -100,7 +100,7 @@ There have been dozens of
 [privacy-preserving proposals](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo)
 offered by Chrome and others over the last couple of years. You can read these
 proposals, ask questions, offer ideas to improve them and see what others are
-saying. 
+saying.
 
 To find conversations where the proposed solutions are being discussed and
 debated together, there are a number of W3C groups you can join or monitor,
@@ -129,7 +129,7 @@ width="800", height="169" %}
 
 There have also been more than half a dozen other proposals offered by other
 companies, in the same solution space. Through continued collaboration, we hope
-to define a path forward. 
+to define a path forward.
 
 At the same time, we're starting [developer testing](/docs/privacy-sandbox/protected-audience/) for the
 initial version of the Protected Audience API behind a flag in Chrome so developers can get their
@@ -172,7 +172,7 @@ which has now been added to the API.
 {% endAside %}
 
 We also hope to see companies talking about their approach to testing and how
-they expect to use an API. 
+they expect to use an API.
 
 In the origin trial for the first version of [FLoC](https://github.com/WICG/floc)
 &ndash; a proposal to support interest-based advertising and content &ndash;
@@ -181,7 +181,7 @@ we saw companies like CafeMedia publishing their
 so that others could review what they'd learned.
 
 Chrome tests aren't the only way to explore how new technologies might work.
-Some companies are also building simulations based on Privacy Sandbox concepts. 
+Some companies are also building simulations based on Privacy Sandbox concepts.
 
 {% Aside %}
 Advertising platform Criteo recently
@@ -202,7 +202,7 @@ Once an API is tested and ready for general use in Chrome, we'll announce the
 launch and make sure public documentation is ready for scaled ecosystem
 adoption.
 
-[User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (UA-CH)
+[User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) (UA-CH)
 launched in Chrome earlier this year and is now ready to scale. It's part of
 the Privacy Sandbox work stream to reduce covert tracking such as browser
 fingerprinting.
@@ -221,7 +221,7 @@ width="800", height="464" %}
 To get this information in the future, you'll need to transition to UA-CH.
 The User-Agent string will give you some information by default, which may
 cover most of your use cases, but more detailed information is available only
-on request in a straightforward format. 
+on request in a straightforward format.
 
 We were happy to make this ergonomic improvement for developers while moving
 the majority of UA information from an "available by default" model to an "on

@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Seamless navigation made possible with view transitions
 description: >
-    An in-depth walkthrough of how and why CyberAgent, RedBus, Nykaa, and PolicyBazaar implemented view transitions. 
+    An in-depth walkthrough of how and why CyberAgent, RedBus, Nykaa, and PolicyBazaar implemented view transitions.
 hero: image/kheDArv5csY6rvQUJDbWRscckLr1/n1NuTA2jvVGsNzbJdNDv.png
 thumbnail: image/kheDArv5csY6rvQUJDbWRscckLr1/I0szC9KECv6eSWbggsnh.png
 alt: ''
@@ -20,15 +20,15 @@ Launched in Chrome 111, the [View Transitions API](https://developer.mozilla.org
 
 You might wonder, how easy is it to implement? What kind of use cases are there? How are other developers using view transitions?
 
-This article takes you through the implementation of view transitions in 4 different websites: [RedBus](#redbus) (travel), [CyberAgent](#cyberagent) (news/blog publisher), [Nykaa](#nykaa) (eCommerce), and [PolicyBazaar](#policybazaar) (insurance) and how their websites benefited in different ways by using the View Transitions API. 
+This article takes you through the implementation of view transitions in 4 different websites: [RedBus](#redbus) (travel), [CyberAgent](#cyberagent) (news/blog publisher), [Nykaa](#nykaa) (eCommerce), and [PolicyBazaar](#policybazaar) (insurance) and how their websites benefited in different ways by using the View Transitions API.
 
 ## redBus {: #redbus }
 
-redBus, part of MakeMyTrip group, is a bus booking and ticketing website headquartered in Bangalore, India with presence across different geographies globally. It was one of the first websites to implement an experience using the View Transitions API. 
+redBus, part of MakeMyTrip group, is a bus booking and ticketing website headquartered in Bangalore, India with presence across different geographies globally. It was one of the first websites to implement an experience using the View Transitions API.
 
 ### Why did Redbus implement view transitions?
 
-The team at redBus are firm believers in providing a unified, app-like web experience, one that is as close as possible to their native apps. In fact, they had implemented multiple customized solutions over the years. For example, they rolled out customized JavaScript and CSS based animations for the page transitions even before the View Transitions API was developed. However, that meant they had to deal with performance management in lower segments of network and devices, occasionally leading to differential experience with an [adaptive loading](https://web.dev/adaptive-loading-cds-2019/) strategy in place.
+The team at redBus are firm believers in providing a unified, app-like web experience, one that is as close as possible to their native apps. In fact, they had implemented multiple customized solutions over the years. For example, they rolled out customized JavaScript and CSS based animations for the page transitions even before the View Transitions API was developed. However, that meant they had to deal with performance management in lower segments of network and devices, occasionally leading to differential experience with an [adaptive loading](https://web.dev/articles/adaptive-loading-cds-2019) strategy in place.
 
 redBus used view transitions for multiple user journeys. For example, in their self-help section within their mobile app which opened web pages in Custom Chrome Tabs, and in their bus ticket booking funnel where users go from inventory listing page to payments page. In the latter case, view transitions made page to page navigation smoother and resulted in an increase to their conversion rate. This was a result of a better user experience and better [perceived performance](https://developer.mozilla.org/docs/Learn/Performance/Perceived_performance) while the heavy operations—such as fetching the most updated available inventory—were executed.
 
@@ -91,7 +91,7 @@ In the following CSS, `slide-to-right`, `slide-to-left`, `slide-from-right`, and
 
 ## Business impact
 
-redBus chose to implement view transitions along with INP improvement efforts across their site, which led to [7% more sales](https://web.dev/redbus-inp/). [Amit Kumar](https://amitkumar-v.medium.com/), Senior Engineering Manager at redBus, said that view transitions are really awesome for those who genuinely want better user experience and desire less maintenance overhead. 
+redBus chose to implement view transitions along with INP improvement efforts across their site, which led to [7% more sales](https://web.dev/articles/redbus-inp). [Amit Kumar](https://amitkumar-v.medium.com/), Senior Engineering Manager at redBus, said that view transitions are really awesome for those who genuinely want better user experience and desire less maintenance overhead.
 
 <blockquote><p>We have conducted comprehensive user feedback sessions, incorporating valuable insights from a diverse group of users. Our deep understanding of our user base (bus and rail) and their needs, combined with our expertise, has led us to believe that this feature will provide significant value right from the start, without the need for A/B testing. View transitions are a step towards bridging the gap between app and web  with a smooth navigation experience.</p>
 
@@ -100,7 +100,7 @@ redBus chose to implement view transitions along with INP improvement efforts ac
 
 ## CyberAgent {: #cyberagent }
 
-CyberAgent is a Japan-based IT company that provides many online services, including blog and news publishing. 
+CyberAgent is a Japan-based IT company that provides many online services, including blog and news publishing.
 
 ### Why did CyberAgent implement view transitions?
 
@@ -114,7 +114,7 @@ CyberAgent implemented view transitions between the blog list and the blog page.
 
 </div>
 
-They also used media queries to design different animation experiences for different devices. For mobile pages they included element transitions, but this effect had too much movement for desktop. 
+They also used media queries to design different animation experiences for different devices. For mobile pages they included element transitions, but this effect had too much movement for desktop.
 
 ```css
 @media screen and (min-width: 769px) {
@@ -166,7 +166,7 @@ View some more [sample Next.js code](https://github.com/noamr/use-view-transitio
 
 ### View Transitions for MPA with prerendering technology
 
-CyberAgent also tried out our new [View Transitions API for Multiple Page Apps (MPA)](https://github.com/WICG/view-transitions/blob/main/cross-doc-explainer.md) (currently under the flag `chrome://flags/#view-transition-on-navigation`) on a service called [Ameba News](https://news.ameba.jp/), which is a news portal site. 
+CyberAgent also tried out our new [View Transitions API for Multiple Page Apps (MPA)](https://github.com/WICG/view-transitions/blob/main/cross-doc-explainer.md) (currently under the flag `chrome://flags/#view-transition-on-navigation`) on a service called [Ameba News](https://news.ameba.jp/), which is a news portal site.
 
 View transitions were used in two places: The first is when changing the categories of the news, shown in the following video.
 
@@ -186,14 +186,14 @@ The interesting point is that they only added animation to the part that will ch
 
 </div>
 
-Here's how they did this: they assigned a different `view-transition-name` to the different parts of the page. For example, they assigned one `view-transition-name` to the top part of the article, another for the bottom part, and added no animation to the top part. 
+Here's how they did this: they assigned a different `view-transition-name` to the different parts of the page. For example, they assigned one `view-transition-name` to the top part of the article, another for the bottom part, and added no animation to the top part.
 
 ```css
 ::view-transition-old(root) {
   animation:
     var(--animation-disappear-duration) var(--animation-disappear-easing) both fade-out;
   }
-  
+
 ::view-transition-new(root) {
   animation:
     var(--animation-appear-in-duration) var(--animation-appear-in-easing) both fade-in;
@@ -219,11 +219,11 @@ You can read more about their quicklink implementation from [this article](https
 
 ### Testimonial
 
-Kazunari Hara, the Tech Lead of the Ameba service in CyberAgent, said that the view transitions could have significant impact on the business for two reasons. 
+Kazunari Hara, the Tech Lead of the Ameba service in CyberAgent, said that the view transitions could have significant impact on the business for two reasons.
 
 Firstly, they guide users on the page. View transitions make it possible to visually focus users on the most important message, and helps them get the most out of the web page. Also,  they enhance and emphasize the brand with animation. CyberAgent has a [designated animation design](https://spindle.ameba.design/styles/animation/) to communicate their brand. With view transitions they are able to implement this branded experience without adding the cost of maintaining external libraries.
 
-<blockquote><p>View Transitions is one of my favorite APIs. The ability to add animations as a standard browser feature makes view transitions easier to implement and maintain compared to other solutions dependent on libraries. We are looking forward to implementing view transitions to more services to communicate our brand.</p>  
+<blockquote><p>View Transitions is one of my favorite APIs. The ability to add animations as a standard browser feature makes view transitions easier to implement and maintain compared to other solutions dependent on libraries. We are looking forward to implementing view transitions to more services to communicate our brand.</p>
 <cite>Kazunari Hara, CTO of Ameba</cite>
 </blockquote>
 
@@ -307,23 +307,23 @@ CSS for side drawer animation:
 
 ### Testimonial
 
-[Sunit Jindal](https://github.com/sunitJindal), the head of apps at Nykaa, said that the biggest benefit of the view transition was the "Perception of speed". Nykaa used the [shimmer effects](https://www.geeksforgeeks.org/shimmer-effect-using-css/) to wait for the contents to load from the backend, but found that showing the shimmer effect did not provide the users with how long they would need to wait for the content to load. 
-With view transitions, the transition itself provided  users the sense that "something is about to happen", which made the wait less painful. 
+[Sunit Jindal](https://github.com/sunitJindal), the head of apps at Nykaa, said that the biggest benefit of the view transition was the "Perception of speed". Nykaa used the [shimmer effects](https://www.geeksforgeeks.org/shimmer-effect-using-css/) to wait for the contents to load from the backend, but found that showing the shimmer effect did not provide the users with how long they would need to wait for the content to load.
+With view transitions, the transition itself provided  users the sense that "something is about to happen", which made the wait less painful.
 
 Nykaa was very excited with the newly enhanced UX of their web page with view transitions, and is ready to implement view transitions on additional pages as well. Here's what their VP of Design  said:
 
-<blockquote><p>We are softly-committed to implement view transitions in all the upcoming features where it makes sense. Some areas have already been identified and the team is actively investing in those.</p> 
+<blockquote><p>We are softly-committed to implement view transitions in all the upcoming features where it makes sense. Some areas have already been identified and the team is actively investing in those.</p>
 
 <cite>Krishna R V, VP of Design</cite>
 </blockquote>
 
 ## PolicyBazaar {: #policybazaar }
 
-Headquartered in Gurgaon, PolicyBazaar is India's largest insurance aggregator and multinational financial technology company. 
+Headquartered in Gurgaon, PolicyBazaar is India's largest insurance aggregator and multinational financial technology company.
 
 ### Why did PolicyBazaar implement view transitions?
 
-Being a web-first company, PolicyBazaar team has always aimed at providing the best possible user experience across their critical user journeys. It was common practice to implement custom transitions using JavaScript and CSS even prior to the launch of the View Transitions API, as they enhanced the user experience, created a seamless navigation flow, and improved the overall visual appeal of their websites. 
+Being a web-first company, PolicyBazaar team has always aimed at providing the best possible user experience across their critical user journeys. It was common practice to implement custom transitions using JavaScript and CSS even prior to the launch of the View Transitions API, as they enhanced the user experience, created a seamless navigation flow, and improved the overall visual appeal of their websites.
 
 However, these custom implementations came at a cost of occasional performance-based delays, code maintenance complexities and suboptimal compatibility with the frameworks used. The View Transitions API helped them overcome most of these challenges by providing an easy-to-use interface with performance benefits available natively.
 
@@ -379,11 +379,11 @@ Rishabh Mehrotra, their head of Design (Life BU), said that view transitions pla
 <cite>Saurabh Tiwari (CTO, PolicyBazaar)</cite>
 </blockquote>
 
-## Next steps 
+## Next steps
 
 Are you interested in trying out view transitions? Here's are some resources you can follow up to learn more:
 
 -  [developer.chrome.com documentation for view transitions](/docs/web-platform/view-transitions/)
--  [View transitions for MPA explainer](https://github.com/WICG/view-transitions/blob/main/cross-doc-explainer.md) 
--  [Interop proposals to make view transitions available across browsers](https://github.com/web-platform-tests/interop/issues/437) 
- 
+-  [View transitions for MPA explainer](https://github.com/WICG/view-transitions/blob/main/cross-doc-explainer.md)
+-  [Interop proposals to make view transitions available across browsers](https://github.com/web-platform-tests/interop/issues/437)
+

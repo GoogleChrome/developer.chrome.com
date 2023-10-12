@@ -66,7 +66,7 @@ Content-Encoding: br
 3. 큰 요청 행을 활성화합니다. [큰 요청 행 사용](https://developers.google.com/web/tools/chrome-devtools/network/reference#request-rows)을 참조하십시오.
 4. 관심 있는 응답의 **크기** 열을 확인하십시오. 최상위 값은 압축된 크기입니다. 하단 값은 압축 해제된 크기입니다.
 
-[네트워크 페이로드 축소 및 압축](https://web.dev/reduce-network-payloads-using-text-compression/)도 참조하십시오.
+[네트워크 페이로드 축소 및 압축](https://web.dev/articles/reduce-network-payloads-using-text-compression)도 참조하십시오.
 
 ## 스택별 지침
 

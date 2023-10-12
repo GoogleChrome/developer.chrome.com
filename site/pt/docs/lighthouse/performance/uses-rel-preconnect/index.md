@@ -59,5 +59,5 @@ Use [um módulo que ofereça suporte a dicas de recursos do agente do usuário](
 
 - [Código-fonte para **pré-conexão à** auditoria de origens exigida](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect)
 - [Priorização de recursos - Obtendo o navegador para ajudá-lo](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect)
-- [Estabeleça conexões de rede com antecedência para melhorar a velocidade percebida da página](https://web.dev/preconnect-and-dns-prefetch/)
+- [Estabeleça conexões de rede com antecedência para melhorar a velocidade percebida da página](https://web.dev/articles/preconnect-and-dns-prefetch)
 - [Tipos de link: pré-conexão](https://developer.mozilla.org/docs/Web/HTML/Link_types/preconnect#Browser_compatibility)

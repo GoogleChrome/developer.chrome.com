@@ -4,7 +4,7 @@ title: "Override web content and HTTP response headers locally"
 authors:
   - sofiayem
 date: 2023-04-12
-updated: 2023-08-21
+updated: 2023-09-20
 description: "Use local overrides to mock remote resources and keep the changes you make in DevTools across page loads."
 tags:
   - prototype-fixes
@@ -52,6 +52,8 @@ You can override web content or response headers right away in the **Network** p
 
 To temporarily disable local overrides or delete all the override files, navigate to **Sources** > **Overrides** and clear the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Enable Local Overrides** checkbox or click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mMGdymtMmpYX2j3PRSfa.svg", alt="Clear.", width="24", height="24" %} **Clear** respectively.
 
+To delete a single override file or all overrides in a folder, right-click the file or folder in **Sources** > **Overrides**, select **Delete**, then click **OK** in the dialog. This action can't be undone and you will have to manually recreate the deleted overrides.
+
 To quickly see all overrides, in the **Network** panel, right-click a request and select **Show all overrides**. DevTools will take you to **Sources** > **Overrides**.
 
 ## Override web content {: #make-changes }
@@ -59,6 +61,10 @@ To quickly see all overrides, in the **Network** panel, right-click a request an
 To override web content:
 1. [Set up local overrides](#set-up).
 1. Make changes to files and save them in DevTools.
+
+{% Aside 'note' %}
+You can't override [source-mapped](/docs/devtools/javascript/source-maps/) files. If you right-click a request in the **Network** panel and select **Override content** DevTools shows you a dialog that takes you to the original source files instead.
+{% endAside %}
 
 For example, you can edit [files in **Sources**](/docs/devtools/javascript/reference/#edit) or [CSS in **Elements** > **Styles**](/docs/devtools/css/reference/#change-declaration), unless the CSS lives in [HTML files](#limitations).
 
@@ -91,7 +97,7 @@ With response header overrides, you can locally prototype fixes for various head
 
 - [Cross-Origin Resource Sharing (CORS) Headers](https://developer.mozilla.org/docs/Web/HTTP/CORS)
 - [Permissions-Policy Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Permissions-Policy)
-- [Cross-Origin Isolation Headers](https://web.dev/coop-coep/)
+- [Cross-Origin Isolation Headers](https://web.dev/articles/coop-coep)
 
 To override a response header:
 
@@ -106,7 +112,7 @@ To override a response header:
 1. Modify or add a new header.
 
    {% Aside %}
-   This example adds the `Access-Control-Allow-Origin: *` header to get rid of a [CORS error](https://web.dev/cross-origin-resource-sharing/).
+   This example adds the `Access-Control-Allow-Origin: *` header to get rid of a [CORS error](https://web.dev/articles/cross-origin-resource-sharing).
    {% endAside %}
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IhXa4zihNp5Gsi9eBPhN.png", alt="Modifying an existing header value, adding a new one, and removing an override.", width="800", height="653" %}
@@ -114,7 +120,7 @@ To override a response header:
    - To edit a header value, click it.
    - To add a new header, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/eY8MaTQqlXF3oiT6STmy.svg", alt="Add.", width="20", height="20" %} **Add header**.
    - To remove a header override, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Bg5rfKrzHBaF621Ag9IN.svg", alt="Delete.", width="20", height="20" %} next to it. This removes the headers you added or reverts modified values back to original values.
-   
+
    DevTools highlights modified headers <span style="background-color:#e9f2ec;">in green</span> and removed overrides <span style="background-color:#ffeff0;text-decoration-line: line-through;">in red</span>.
 
 1. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Refresh.", width="20", height="20" %} Refresh the page to apply the changes.

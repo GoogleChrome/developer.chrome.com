@@ -6,7 +6,7 @@ date: 2019-05-04
 updated: 2020-06-17
 ---
 
-通过设置浏览器地址栏的主题，来匹配您的[渐进式 Web 应用 (PWA)](https://web.dev/progressive-web-apps/) 的品牌颜色，提供更加身临其境的用户体验。
+通过设置浏览器地址栏的主题，来匹配您的[渐进式 Web 应用 (PWA)](https://web.dev/explore/progressive-web-apps) 的品牌颜色，提供更加身临其境的用户体验。
 
 ## 浏览器兼容性
 
@@ -18,7 +18,7 @@ updated: 2020-06-17
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/YadFSuw8denjl1hhnvFs.png", alt="Lighthouse 审计显示地址栏的颜色与页面颜色不匹配", width="800", height="98" %}</figure>
 
-如果 Lighthouse 没有找到页面的 HTML 中的`theme-color`元标记和 [web 应用清单中的](https://web.dev/add-manifest/)`theme_color`属性，则审计将失败。
+如果 Lighthouse 没有找到页面的 HTML 中的`theme-color`元标记和 [web 应用清单中的](https://web.dev/articles/add-manifest)`theme_color`属性，则审计将失败。
 
 请注意，Lighthouse 不会测试这些值是否为有效的 CSS 颜色值。
 
@@ -45,7 +45,7 @@ updated: 2020-06-17
 
 ### 第 2 步：将`theme_color`属性添加到您的 web 应用清单
 
-Web 应用清单中的`theme_color`属性，可确保在用户从主屏幕启动您的 PWA 时对地址栏进行品牌化。与`theme-color`元标记不同，您只需要在[清单](https://web.dev/add-manifest/)中定义一次。将该属性设置为任何有效的 CSS 颜色值：
+Web 应用清单中的`theme_color`属性，可确保在用户从主屏幕启动您的 PWA 时对地址栏进行品牌化。与`theme-color`元标记不同，您只需要在[清单](https://web.dev/articles/add-manifest)中定义一次。将该属性设置为任何有效的 CSS 颜色值：
 
 ```html/1
 {
@@ -59,5 +59,5 @@ Web 应用清单中的`theme_color`属性，可确保在用户从主屏幕启动
 ## 资源
 
 - [**没有为地址栏设置主题颜色**审计的源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/themed-omnibox.js)
-- [添加 web 应用清单](https://web.dev/add-manifest/)
+- [添加 web 应用清单](https://web.dev/articles/add-manifest)
 - [对 Android 版 Chrome 39 中的`theme-color`](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android) 的支持

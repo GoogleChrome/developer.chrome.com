@@ -51,11 +51,11 @@ Se você não puder evitar uma grande árvore DOM, outra abordagem para melhorar
 
 ### Angular
 
-Se você estiver renderizando listas grandes, use a [rolagem virtual](https://web.dev/virtualize-lists-with-angular-cdk/) com o Component Dev Kit (CDK).
+Se você estiver renderizando listas grandes, use a [rolagem virtual](https://web.dev/articles/virtualize-lists-with-angular-cdk) com o Component Dev Kit (CDK).
 
 ### React
 
-- Use uma biblioteca de "janelas", como [`react-window`](https://web.dev/virtualize-long-lists-react-window/), para minimizar o número de nós DOM criados se você estiver renderizando muitos elementos repetidos na página.
+- Use uma biblioteca de "janelas", como [`react-window`](https://web.dev/articles/virtualize-long-lists-react-window), para minimizar o número de nós DOM criados se você estiver renderizando muitos elementos repetidos na página.
 - Minimize a renderização desnecessária usando [`shouldComponentUpdate`](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action), [`PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent) ou [`React.memo`](https://reactjs.org/docs/react-api.html#reactmemo).
 - [Ignore os efeitos](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects) apenas até que certas dependências tenham mudado se você estiver usando `Effect` para melhorar o desempenho em tempo de execução.
 

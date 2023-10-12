@@ -56,9 +56,9 @@ Chromium issue: [423246](https://crbug.com/423246)
 
 新しく追加された **Reporting API** ペインを使用すると、そのページで生成されるレポートやそれらの状況を監視できます。
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
 
-[Reporting API](https://web.dev/reporting-api/) はセキュリティ違反や廃止されるAPIの呼び出しなどを監視できるように設計されています。
+[Reporting API](https://web.dev/articles/reporting-api) はセキュリティ違反や廃止されるAPIの呼び出しなどを監視できるように設計されています。
 
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 
@@ -211,9 +211,9 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 
 ### Sources パネルにワーカーのソースファイルを表示 {: #worker-sourcemap }
 
-<!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
+<!-- [Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
 
-相対 SourceURL を持つ [Worker](https://web.dev/workers-overview/)（例、Web Worker、Service Worker）のソースファイルが **Source** パネルに表示されるようになりました。これまでは、ワーカーのソースファイルは正しく扱われませんでした。
+相対 SourceURL を持つ [Worker](https://web.dev/articles/workers-overview)（例、Web Worker、Service Worker）のソースファイルが **Source** パネルに表示されるようになりました。これまでは、ワーカーのソースファイルは正しく扱われませんでした。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="ALT_TEXT_HERE", width="800", height="509" %} -->
 
@@ -281,10 +281,10 @@ Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - **Cookies** ペインの [Cookie 編集](/docs/devtools/storage/cookies/#edit)に関する問題が修正されました。 ([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - [コマンドメニュー](/docs/devtools/command-menu/)で `Shift` + `Tab` を使用して以前のコマンドを選択できます。 ([1278743](https://crbug.com/1278743))
-<!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
-- [CORS プリフライトリクエスト](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls)の問題が [Issues](/docs/devtools/issues/) タブでレポートされるようになりました。 ([1272445](https://crbug.com/1272445)).
-<!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
-- [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) の問題が [Issues](/docs/devtools/issues/) タブでレポートされるようになりました。 ([1272445](https://crbug.com/1272445)).
+<!-- - Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
+- [CORS プリフライトリクエスト](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls)の問題が [Issues](/docs/devtools/issues/) タブでレポートされるようになりました。 ([1272445](https://crbug.com/1272445)).
+<!-- - Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
+- [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) の問題が [Issues](/docs/devtools/issues/) タブでレポートされるようになりました。 ([1272445](https://crbug.com/1272445)).
 <!-- - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662)) -->
 - **Sources** パネルと **Console** パネルでの `Shift` + `Delete` と `Page up` / `Page down` の動作が修正されました。 ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->

@@ -216,7 +216,7 @@ The **changes to the string are intended to be backwards-compatible**, so if you
 do not need those specific values then you will not be affected. However, if you
 do parse the user-agent string to extract the browser minor/build version,
 OS/platform version, or device model then you will need to [migrate to
-User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/).
+User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch).
 
 ## Storage partitioning
 

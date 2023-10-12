@@ -13,7 +13,7 @@ tags:
   - capabilities
 ---
 
-The cross-company Capabilities Project (code name [Project Fugu](/capabilities/)) at Google has the objective of making it possible for web apps to do anything platform-specific apps can. Apart from Google, project partners include Microsoft, Intel, Samsung, and others. The project enables amazing web applications like [Photoshop](https://web.dev/ps-on-the-web/) by exposing the capabilities of the underlying operating systems to the web platform, while maintaining user security, privacy, trust, and other core tenets of the web.
+The cross-company Capabilities Project (code name [Project Fugu](/capabilities/)) at Google has the objective of making it possible for web apps to do anything platform-specific apps can. Apart from Google, project partners include Microsoft, Intel, Samsung, and others. The project enables amazing web applications like [Photoshop](https://web.dev/articles/ps-on-the-web) by exposing the capabilities of the underlying operating systems to the web platform, while maintaining user security, privacy, trust, and other core tenets of the web.
 
 But what are examples of apps that make use of these capabilities? Our answer to this question is the [Project Fugu API Showcase](/fugu-showcase/). It is sourced by community submissions, and contains a filterable list of apps that make use of one or more of the Fugu APIs.
 

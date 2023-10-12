@@ -1,7 +1,7 @@
 ---
 title: New in Chrome 113
-description: > 
-  Chrome 113 is rolling out now! WebGPU is here, it allows high-performance 3D graphics and data-parallel computation on the web, devtools can now override network response headers, First Party Sets, part of the Privacy Sandbox, that allows organizations to declare related sites is starting to roll out, and there's plenty more. 
+description: >
+  Chrome 113 is rolling out now! WebGPU is here, it allows high-performance 3D graphics and data-parallel computation on the web, devtools can now override network response headers, First Party Sets, part of the Privacy Sandbox, that allows organizations to declare related sites is starting to roll out, and there's plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2023-05-03
 authors:
@@ -18,21 +18,21 @@ tags:
 
 Here's what you need to know:
 
-* [WebGPU](#webgpu) is here, it allows high-performance 3D graphics and data-parallel computation on the web. 
+* [WebGPU](#webgpu) is here, it allows high-performance 3D graphics and data-parallel computation on the web.
 * Devtools can now override network [response headers](#override-headers).
 * [First Party Sets](#first-party-sets), part of the [Privacy Sandbox](https://privacysandbox.com/), that allows organizations to declare related sites is starting to roll out.
 * And there's plenty [more](#more).
 
 I'm Adriana Jara. Let's dive in and see what's new for developers in Chrome 113.
 ## WebGPU is here. {: #webgpu}
-[WebGPU is a new API](/blog/webgpu-release/) for the web, which exposes modern hardware capabilities and allows rendering and computation operations on a GPU, similar to [Direct3D 12](https://learn.microsoft.com/en-us/windows/win32/direct3d12/what-is-directx-12-), [Metal](https://developer.apple.com/metal/), and [Vulkan](https://developer.nvidia.com/vulkan). 
+[WebGPU is a new API](/blog/webgpu-release/) for the web, which exposes modern hardware capabilities and allows rendering and computation operations on a GPU, similar to [Direct3D 12](https://learn.microsoft.com/en-us/windows/win32/direct3d12/what-is-directx-12-), [Metal](https://developer.apple.com/metal/), and [Vulkan](https://developer.nvidia.com/vulkan).
 
-Unlike the [WebGL](https://www.khronos.org/webgl/wiki/Getting_Started) family of APIs, WebGPU offers access to more advanced GPU features and provides first-class support for general computations on the GPU. 
+Unlike the [WebGL](https://www.khronos.org/webgl/wiki/Getting_Started) family of APIs, WebGPU offers access to more advanced GPU features and provides first-class support for general computations on the GPU.
 
 The API is designed with the web platform in mind. It features:
-An idiomatic JavaScript API. 
-Integration with promises. 
-Support for importing videos. 
+An idiomatic JavaScript API.
+Integration with promises.
+Support for importing videos.
 A polished developer experience with great error messages.
 
 Many widely used WebGL libraries are already working on implementing WebGPU support or have already done so. This means that using WebGPU may only require making a single line change, for example:
@@ -55,7 +55,7 @@ With response header overrides, you can locally prototype fixes for various head
 
 - [Cross-Origin Resource Sharing (CORS) Headers](https://developer.mozilla.org/docs/Web/HTTP/CORS)
 - [Permissions-Policy Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Permissions-Policy)
-- [Cross-Origin Isolation Headers](https://web.dev/coop-coep/)
+- [Cross-Origin Isolation Headers](https://web.dev/articles/coop-coep)
 
 To override a header, navigate to **Network** > **Headers** > **Response Headers**,
 hover over a header's value, click **Edit** and edit it.
@@ -79,8 +79,8 @@ Check out [this article](/blog/new-in-devtools-113/) for instructions on how to 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png", alt="Diagram showing brandx.com, fly-brandx.com and drive-brandx.com as one group and example.com, example.rs, example.co.uk as another group.", width="800", height="348" %}
 
  As part of the work on First-Party Sets, Chrome is implementing and extending the Storage Access API allowing a site to request access to their cookies in a third-party context.
-With it, organizations with related sites (for example, using different domain names, or country-specific domains) can still provide services like single sign-on or shared sessions. 
-Remember! This API will be rolled out slowly to users over a number of weeks to enable testing and evaluation. 
+With it, organizations with related sites (for example, using different domain names, or country-specific domains) can still provide services like single sign-on or shared sessions.
+Remember! This API will be rolled out slowly to users over a number of weeks to enable testing and evaluation.
 
 ## And more! {: #more }
 

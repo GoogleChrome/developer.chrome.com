@@ -48,7 +48,7 @@ authors:
 
 Attribution Reporting API позволяет измерять два связанных между собой события: событие на сайте издателя, такое как просмотр объявления или нажатие на него пользователем, и последующую конверсию на сайте рекламодателя.
 
-Этот API поддерживает измерение атрибуции конверсий по кликам (доступно в первой реализации этого API в виде [пробной версии источника](https://web.dev/conversion-measurement/#browser-support)) и измерение атрибуции по просмотрам (см. [объяснение для всех](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
+Этот API поддерживает измерение атрибуции конверсий по кликам (доступно в первой реализации этого API в виде [пробной версии источника](/docs/privacy-sandbox/attribution-reporting/#browser-support)) и измерение атрибуции по просмотрам (см. [объяснение для всех](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
 
 API предлагает два типа отчетов об атрибуции в зависимости от сценария использования:
 
@@ -67,8 +67,8 @@ API предлагает два типа отчетов об атрибуции 
 
 - [Введение в отчеты по атрибуции (измерение конверсий)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [Технические описания API](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ устарело) [Более конфиденциальный способ измерения конверсии рекламы](https://web.dev/conversion-measurement/): обзор первой версии этого API для веб-разработчиков
+- (⚠️ устарело) [Более конфиденциальный способ измерения конверсии рекламы](/docs/privacy-sandbox/attribution-reporting/): обзор первой версии этого API для веб-разработчиков
 - (⚠️ устарело) [Более конфиденциальный способ измерения конверсии рекламы-видео](https://www.youtube.com/watch?v=jcDfOoWwZcM): демонстрация первой версии этого API для веб-разработчиков (только клики)
-- (⚠️ устарело) [Использование Event Conversion Measurement API](https://web.dev/using-conversion-measurement/): как экспериментировать с первой версией этого API для веб-разработчиков
+- (⚠️ устарело) [Использование Event Conversion Measurement API](/docs/privacy-sandbox/attribution-reporting/): как экспериментировать с первой версией этого API для веб-разработчиков
 - [Погружение в Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 - [Отладка API с помощью Chrome DevTools](/blog/new-in-devtools-93/#attribution-reporting)

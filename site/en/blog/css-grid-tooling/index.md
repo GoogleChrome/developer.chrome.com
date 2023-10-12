@@ -19,7 +19,7 @@ tags:
 
 ## Why did we make CSS Grid Tooling?
 
-[CSS Grid](https://web.dev/learn/css/grid/) is a very powerful CSS layout system that allows web developers to build a complex two-dimensional layout and set out rules about how each and every child item in a grid is sized, aligned, and ordered. CSS Grid was introduced after [Flexbox](https://web.dev/learn/css/flexbox/) became popular, and together, they can help developers achieve better responsive design without complicated alignment hacks or JavaScript-assisted layout.
+[CSS Grid](https://web.dev/learn/css/grid) is a very powerful CSS layout system that allows web developers to build a complex two-dimensional layout and set out rules about how each and every child item in a grid is sized, aligned, and ordered. CSS Grid was introduced after [Flexbox](https://web.dev/learn/css/flexbox) became popular, and together, they can help developers achieve better responsive design without complicated alignment hacks or JavaScript-assisted layout.
 
 As a relatively new layout system, CSS Grid is also hard to get right. Its syntax is quite versatile (just search *grid cheatsheet*), there are many ways to achieve the same layout, and flexible sizing and implicit tracks make it harder to reason about why the layout *is* or *isn’t* behaving as it should. This is why we set out to provide dedicated CSS Grid tooling in DevTools, so that developers can have a better understanding of what their CSS code is doing, and how to get to the right layout.
 

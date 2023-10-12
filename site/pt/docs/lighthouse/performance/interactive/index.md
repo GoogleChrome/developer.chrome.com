@@ -18,7 +18,7 @@ O Lighthouse apresenta a métrica TTI em segundos:
 
 O TTI mede quanto tempo leva para uma página se tornar *totalmente* interativa. Uma página é considerada totalmente interativa quando:
 
-- A página exibe conteúdo útil, que é medido pela métrica [First Contentful Paint](https://web.dev/fcp/),
+- A página exibe conteúdo útil, que é medido pela métrica [First Contentful Paint](https://web.dev/articles/fcp),
 - Os handlers de eventos estão registrados para a maioria dos elementos visíveis da página e
 - A página responde às interações do usuário dentro de 50 milissegundos.
 
@@ -59,7 +59,7 @@ A tabela abaixo mostra como interpretar sua pontuação TTI:
 
 ## Como melhorar sua pontuação TTI
 
-Uma melhoria que pode ter um efeito particularmente grande na TTI é adiar ou remover o trabalho desnecessário do JavaScript. Procure oportunidades para [otimizar seu JavaScript](https://web.dev/fast/#optimize-your-javascript). Em particular, considere [reduzir as payloads do JavaScript com divisão de código](https://web.dev/reduce-javascript-payloads-with-code-splitting/) e [aplicação do padrão PRPL](https://web.dev/apply-instant-loading-with-prpl/). [Otimizar o JavaScript de terceiros](https://web.dev/fast/#optimize-your-third-party-resources) também produz melhorias significativas para alguns sites.
+Uma melhoria que pode ter um efeito particularmente grande na TTI é adiar ou remover o trabalho desnecessário do JavaScript. Procure oportunidades para [otimizar seu JavaScript](https://web.dev/articles/fast#optimize_your_javascript). Em particular, considere [reduzir as payloads do JavaScript com divisão de código](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting) e [aplicação do padrão PRPL](https://web.dev/articles/apply-instant-loading-with-prpl). [Otimizar o JavaScript de terceiros](https://web.dev/articles/fast#optimize_your_third_party_resources) também produz melhorias significativas para alguns sites.
 
 Essas duas auditorias de diagnóstico fornecem oportunidades adicionais para reduzir o trabalho do JavaScript:
 
@@ -68,7 +68,7 @@ Essas duas auditorias de diagnóstico fornecem oportunidades adicionais para red
 
 ## Rastreando a TTI em dispositivos de usuários reais
 
-Para saber como medir quando a TTI ocorre nos dispositivos dos seus usuários, consulte a página Google [Métricas de desempenho centradas no usuário](https://web.dev/user-centric-performance-metrics/). A [seção Tracking TTI](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti) descreve como acessar programaticamente os dados do TTI e enviá-los ao Google Analytics.
+Para saber como medir quando a TTI ocorre nos dispositivos dos seus usuários, consulte a página Google [Métricas de desempenho centradas no usuário](https://web.dev/articles/user-centric-performance-metrics). A [seção Tracking TTI](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti) descreve como acessar programaticamente os dados do TTI e enviá-los ao Google Analytics.
 
 {% Aside %} TTI pode ser difícil de rastrear em campo. Rastrear o [First Input Delay](https://developers.google.com/web/updates/2018/05/first-input-delay) pode ser um bom proxy para TTI. {% endAside %}
 
@@ -81,4 +81,4 @@ Para saber como medir quando a TTI ocorre nos dispositivos dos seus usuários, c
 - [First Interactive And Consistently Interactive](https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c/edit)
 - [Otimização de inicialização de JavaScript](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)
 - [Reduza payloads JavaScript com tree shaking](https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/)
-- [Otimize recursos de terceiros](https://web.dev/fast/#optimize-your-third-party-resources)
+- [Otimize recursos de terceiros](https://web.dev/articles/fast#optimize_your_third_party_resources)

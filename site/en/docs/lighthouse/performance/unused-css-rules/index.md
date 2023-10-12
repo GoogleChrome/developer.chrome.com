@@ -44,7 +44,7 @@ These extra network trips can significantly increase the time
 that users must wait before they see any content on their screens.
 
 Unused CSS also slows down a browser's construction of the
-[render tree](https://web.dev/critical-rendering-path-render-tree-construction/).
+[render tree](https://web.dev/articles/critical-rendering-path-render-tree-construction).
 The render tree is like the DOM tree, except that it also includes the styles for each node.
 To construct the render tree, a browser must walk the entire DOM tree, and check which CSS rules apply to each node.
 The more unused CSS there is,
@@ -75,7 +75,7 @@ Then load the rest of the styles asynchronously using the `preload` link.
 Consider automating the process of extracting and inlining "Above the Fold" CSS
 using the [Critical tool](https://github.com/addyosmani/critical/blob/master/README.md).
 
-Learn more in [Defer non-critical CSS](https://web.dev/defer-non-critical-css/).
+Learn more in [Defer non-critical CSS](https://web.dev/articles/defer-non-critical-css).
 
 ## Stack-specific guidance
 

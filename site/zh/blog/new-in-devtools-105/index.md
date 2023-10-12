@@ -58,8 +58,8 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
 ## Performance insights 面板中的最大内容绘制 (LCP) {: #lcp }
-<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-最大内容绘制 (LCP) 是测量[感知加载速度](https://web.dev/user-centric-performance-metrics/#types-of-metrics)的一个以用户为中心的重要指标。 您现在可以找出 [最大内容绘制 (LCP)](https://web.dev/lcp/) 的关键路径和根本原因。
+<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp). -->
+最大内容绘制 (LCP) 是测量[感知加载速度](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics)的一个以用户为中心的重要指标。 您现在可以找出 [最大内容绘制 (LCP)](https://web.dev/articles/lcp) 的关键路径和根本原因。
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 在 [性能录制](/docs/devtools/performance-insights/#record) 中，单击 **时间线** 中的 LCP 徽章。 在 **细节** 边栏中，您可以查看 LCP 分数，了解如何修复降低 LCP 速度的资源并查看 LCP 资源的关键路径。
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
@@ -71,12 +71,12 @@ Chromium 议题: [1326481](https://crbug.com/1326481)
 
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
 ## 识别闪烁的文本（FOIT、FOUT）为布局偏移的潜在根本原因 {: #foit-fout }
-<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
-**Performance insights**面板现在可以检测 [flash of invisible text (FOIT) 和 flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) 作为布局偏移的根本原因。
+<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering) as potential root causes for layout shifts. -->
+**Performance insights**面板现在可以检测 [flash of invisible text (FOIT) 和 flash of unstyled text (FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering) 作为布局偏移的根本原因。
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
 单击 **Layout shifts** 轨道中的屏幕截图，以便查看布局偏移的潜在根本原因。
-<!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
-请参阅 [优化 WebFont 加载和渲染](https://web.dev/optimize-webfont-loading/) 以了解防止布局偏移的技术。
+<!-- See [Optimize WebFont loading and rendering](https://web.dev/articles/optimize-webfont-loading) to learn the technique to prevent layout shifts.  -->
+请参阅 [优化 WebFont 加载和渲染](https://web.dev/articles/optimize-webfont-loading) 以了解防止布局偏移的技术。
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT in the Performance insights panel", width="800", height="497" %}
 
 Chromium 议题: [1334628](https://crbug.com/1334628), [1328873](https://crbug.com/1328873)
@@ -84,8 +84,8 @@ Chromium 议题: [1334628](https://crbug.com/1334628), [1328873](https://crbug.c
 
 <!-- ## Protocol handlers in the Manifest pane {: #manifest } -->
 ## Manifest 窗格中的协议处理程序 {: #manifest }
-<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/url-protocol-handler/) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/). -->
-您现在可以使用 DevTools 测试[渐进式网络应用 (PWA)](https://web.dev/learn/pwa/) 的 [URL 协议处理程序注册](https://web.dev/url-protocol-handler/)。
+<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/articles/url-protocol-handler) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa). -->
+您现在可以使用 DevTools 测试[渐进式网络应用 (PWA)](https://web.dev/learn/pwa) 的 [URL 协议处理程序注册](https://web.dev/articles/url-protocol-handler)。
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
 URL 协议处理程序注册允许已安装的 PWA 处理使用特定协议的链接（例如 [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme)、`web+example`）以获得更集成的体验。
 <!-- Navigate to the **Protocol Handlers** section via the **Application** > **Manifest** pane. You can view and test all the available protocols here. -->
@@ -104,8 +104,8 @@ Chromium 议题: [1300613](https://crbug.com/1300613)
 ## 元素面板中的顶层徽章 {: #top-layer }
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
 使用【顶层徽章】(/blog/top-layer-devtools/#top-layer-support-design-in-devtools) 了解顶层的概念，可视化顶层内容的变化。
-<!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
-[`<dialog>` 元素](https://web.dev/building-a-dialog-component/) 最近在浏览器中变得稳定。 当您打开一个对话框时，它会被放入一个 [top layer](/blog/top-layer-devtools/)。 顶层内容呈现在所有其他内容之上。
+<!-- The [`<dialog>` element](https://web.dev/articles/building-a-dialog-component) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
+[`<dialog>` 元素](https://web.dev/articles/building-a-dialog-component) 最近在浏览器中变得稳定。 当您打开一个对话框时，它会被放入一个 [top layer](/blog/top-layer-devtools/)。 顶层内容呈现在所有其他内容之上。
 <!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
 在此 [演示](https://jec.fish/demo/dialog) 中，单击 **Open dialog**。
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->

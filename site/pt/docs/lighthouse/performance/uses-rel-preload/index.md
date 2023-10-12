@@ -46,7 +46,7 @@ Declare links de pré-carregamento em seu HTML para instruir o navegador a fazer
 
 <figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/tJLJXH2qXcrDBUfsSAK5.png", alt="Com links de pré-carregamento, styles.css e ui.js são solicitados ao mesmo tempo que app.js.", width="800", height="478" %}   <figcaption>Com links de pré-carregamento, <code>styles.css</code> e <code>ui.js</code> são solicitados ao mesmo tempo que <code>app.js</code> </figcaption></figure>
 
-Veja também [Pré-carregue ativos importantes para melhorar a velocidade de carregamento](https://web.dev/preload-critical-assets/) para mais orientações.
+Veja também [Pré-carregue ativos importantes para melhorar a velocidade de carregamento](https://web.dev/articles/preload-critical-assets) para mais orientações.
 
 ### Compatibilidade de navegadores
 
@@ -60,7 +60,7 @@ Veja a página [Preloading Assets da Tooling.Report](https://bundlers.tooling.re
 
 ### Angular
 
-[Pré-carregue as rotas](https://web.dev/route-preloading-in-angular/) com antecedência para acelerar a navegação.
+[Pré-carregue as rotas](https://web.dev/articles/route-preloading-in-angular) com antecedência para acelerar a navegação.
 
 ### Magento
 

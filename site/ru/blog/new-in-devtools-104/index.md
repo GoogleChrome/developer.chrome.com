@@ -101,8 +101,8 @@ tags:
 <!-- Visualize `performance.measure()` marks in your recording with the new **User Timings** track in the **Performance insights** panel. -->
 Визуализируйте метки `performance.measure()` в вашей записи с новым треком **User Timings** во вкладке **Performance insights**.
 
-<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
-Например, на [этой странице](https://jec.fish/demo/perf-measure) используется метод [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) для подсчёта времени, затраченного на загрузку текста.
+<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/articles/usertiming#calculating_measurements_with_measure()) method to calculate the elapsed time of text loading. -->
+Например, на [этой странице](https://jec.fish/demo/perf-measure) используется метод [`performance.measure()`](https://web.dev/articles/usertiming#calculating_measurements_with_measure()) для подсчёта времени, затраченного на загрузку текста.
 
 <!-- When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane. -->
 Когда вы запускаете [измерение загрузки страницы](/docs/devtools/performance-insights/#record), трек **User Timings** отображается в записи. Кликните на элемент хронометража, чтообы увидеть подробности о нём в боковой панели.

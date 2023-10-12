@@ -13,7 +13,7 @@ tags:
   - chrome-101
 ---
 
-Chrome 101 以降、User-Agent（UA）文字列で利用できる情報量は、[段階的なアプローチに沿って](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)削減されます。削減された User-Agent 文字列の使用から [User-Agent Client Hints に移行](https://web.dev/migrate-to-ua-ch/)する時間がないサイトは、デプリケーション トライアルに参加すると、完全な User-Agent 文字列を引き続き受け取ることができます。
+Chrome 101 以降、User-Agent（UA）文字列で利用できる情報量は、[段階的なアプローチに沿って](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)削減されます。削減された User-Agent 文字列の使用から [User-Agent Client Hints に移行](https://web.dev/articles/migrate-to-ua-ch)する時間がないサイトは、デプリケーション トライアルに参加すると、完全な User-Agent 文字列を引き続き受け取ることができます。
 
 デプリケーション トライアルへの登録は、[Chrome 100](https://chromiumdash.appspot.com/schedule) ベータ版から開始されます。これにより、マイナーバージョン文字列が削減される Chrome 101 リリースの前に、サイトは完全な User-Agent 文字列を受け取れるようになります。安定版チャンネルにリリースされる前に Chrome 100 ベータ版でオリジン トライアルをテストしたい場合は、必ず Chrome 100 のリリース日（[現時点では 2022 年 3 月 31 日を予定](https://chromiumdash.appspot.com/schedule)）までに登録を済ませてテストしてください。
 
@@ -28,7 +28,7 @@ Chrome 101 以降、User-Agent（UA）文字列で利用できる情報量は、
 - `navigator.platform` Javascript ゲッター
 - `navigator.appVersion` Javascript ゲッター
 
-サイトは引き続き User-Agent ヘッダーと関連する API の使用状況を監査し、必要に応じてデプリケーション トライアルが終了する前に [User-Agent Client Hints に移行](https://web.dev/migrate-to-ua-ch/)する準備をする必要があります。[User-Agent 削減のロールアウト](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)が完了したら、このデプリケーション トライアルを終了することが目的です。
+サイトは引き続き User-Agent ヘッダーと関連する API の使用状況を監査し、必要に応じてデプリケーション トライアルが終了する前に [User-Agent Client Hints に移行](https://web.dev/articles/migrate-to-ua-ch)する準備をする必要があります。[User-Agent 削減のロールアウト](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)が完了したら、このデプリケーション トライアルを終了することが目的です。
 
 ## User-Agent 削減デプリケーション トライアルへの参加方法
 

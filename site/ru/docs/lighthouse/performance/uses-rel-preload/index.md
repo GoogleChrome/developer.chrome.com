@@ -46,7 +46,7 @@ index.html
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/tJLJXH2qXcrDBUfsSAK5.png", alt="Если предварительная загрузка настроена, styles.css и ui.js запрашиваются одновременно с app.js.", width="800", height="478" %} <figcaption> Если предварительная загрузка настроена, <code>styles.css</code> и <code>ui.js</code> запрашиваются одновременно с <code>app.js</code>. </figcaption></figure>
 
-Более подробная информация приведена в статье [«Настройте предварительную загрузку критически важных ресурсов для повышения скорости загрузки»](https://web.dev/preload-critical-assets/).
+Более подробная информация приведена в статье [«Настройте предварительную загрузку критически важных ресурсов для повышения скорости загрузки»](https://web.dev/articles/preload-critical-assets).
 
 ### Совместимость с браузером
 
@@ -60,7 +60,7 @@ index.html
 
 ### Angular
 
-[Предварительно загружайте маршруты](https://web.dev/route-preloading-in-angular/), чтобы ускорить навигацию.
+[Предварительно загружайте маршруты](https://web.dev/articles/route-preloading-in-angular), чтобы ускорить навигацию.
 
 ### Magento
 

@@ -325,7 +325,7 @@ navigator.joinAdInterestGroup(interestGroup, 7 * kSecsPerDay);
 
 {% Aside 'gotchas' %}
 
-FLEDGE API メソッドのパラメーターとして使用されるすべての URL は、安全なオリジンからのものである必要があります。すべてのリソースは、HTTPS URL 経由で提供される必要があります。[ローカル開発での HTTPS の使用方法](https://web.dev/how-to-use-local-https/)には、FLEDGE をローカルで実行するときにこれをどのように行うかが説明されています。
+FLEDGE API メソッドのパラメーターとして使用されるすべての URL は、安全なオリジンからのものである必要があります。すべてのリソースは、HTTPS URL 経由で提供される必要があります。[ローカル開発での HTTPS の使用方法](https://web.dev/articles/how-to-use-local-https)には、FLEDGE をローカルで実行するときにこれをどのように行うかが説明されています。
 
 さらに、`biddingLogicUrl`、`decisionLogicUrl`、`trustedBiddingSignals` にはすべて、`X-Allow-FLEDGE: true` HTTP レスポンスヘッダーが必要です。
 

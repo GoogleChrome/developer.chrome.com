@@ -58,6 +58,6 @@ Sponsoring these projects not only help support their mission to enable develope
 
 As always, we remain open to considering sponsoring more efforts towards the fund's goals in the future. If you are interested in submitting ideas for future funding, feel free to send over your ideas via our [submission form](https://forms.gle/BbshCNVaDFK7NJoU6) and we'll consider them.
 
-As a reminder, we recently also expanded Chrome's sponsorship efforts to include a new [CSS & UI Fund](https://web.dev/ui-fund/) and an [Advanced Web Apps fund](/blog/advanced-web-apps-fund/) If you are interested in submitting sponsorship requests to these efforts, they are still open to reviewing entries.
+As a reminder, we recently also expanded Chrome's sponsorship efforts to include a new [CSS & UI Fund](https://web.dev/articles/ui-fund) and an [Advanced Web Apps fund](/blog/advanced-web-apps-fund/) If you are interested in submitting sponsorship requests to these efforts, they are still open to reviewing entries.
 
 Thanks once again to the projects receiving sponsorship for everything they do to move the web forward!

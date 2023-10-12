@@ -32,7 +32,7 @@ Notice any jumps in navigation that seem jarring.
 Also notice any offscreen jumps,
 where tabbing brings you to content that's not meant to be visible.
 
-Learn more in [Keyboard access fundamentals](https://web.dev/keyboard-access/).
+Learn more in [Keyboard access fundamentals](https://web.dev/articles/keyboard-access).
 
 ## How to fix
 
@@ -47,7 +47,7 @@ move the element to an earlier position in the DOM.
 If offscreen content is still accessible to keyboard controls,
 consider removing it using `tabindex="-1"`.
 
-Learn more in [Control focus with tabindex](https://web.dev/control-focus-with-tabindex/).
+Learn more in [Control focus with tabindex](https://web.dev/articles/control-focus-with-tabindex).
 
 ## Resources
 
