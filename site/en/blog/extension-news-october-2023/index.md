@@ -127,7 +127,7 @@ Additionally, you can [submit a self-nomination form](https://docs.google.com/fo
 - You can now add one privacy policy per extension. Previously, you could only add one privacy policy per developer account, but it was awkward if you had a few extensions under one developer account. This new interface is available in the **Privacy Tab** of your item in the developer dashboard.
   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/BB2ziYwins4YpyJ7aETj.png", alt="Screenshot of the privacy policy box", width="674", height="178" %}
 
-## Developer outreach 🙌 {: #connecting }
+## Reaching out 🙌 {: #connecting }
 
 We've continued reaching out to the extension developer community through 1:1's, launching new programs, and attending summits. Here are a few highlights: 
 
