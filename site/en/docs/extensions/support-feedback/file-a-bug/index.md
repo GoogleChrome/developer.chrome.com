@@ -9,7 +9,7 @@ tags:
 
 ## File a bug
 
-While developing an extension, you may find behavior that does not match the extension's documentation or is otherwise unexpected. This may be the result of a Chrome bug. Regardless, please let us know by filing an appropriate issue report. Please provide enough information to reproduce the issue by following these steps:
+While developing an extension, you may find behavior that does not match the extension's documentation or is otherwise unexpected. This may be the result of a Chrome bug, or it may be something we should add to documentation. Regardless, please let us know by filing an appropriate issue report. Please provide enough information to reproduce the issue by following these steps:
 
 1.  Before filing a bug, [search the Chromium issue tracker](/docs/extensions/support-feedback/find-a-bug) to verify that your issue hasn't already been reported.
 1.  Build a *minimal* test extension to demonstrate the issue to us. It should have as little code as possible—generally 100 lines or fewer— to demonstrate the bug. If you can't reproduce the bug in this space, it may indicate it is in your own code. Consider searching for a solution or posting a question in the [Extensions Google Group](https://groups.google.com/a/chromium.org/group/chromium-extensions/topics).
