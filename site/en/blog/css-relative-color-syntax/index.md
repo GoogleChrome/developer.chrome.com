@@ -29,7 +29,7 @@ authors and designers to:
 - [Chroma boost](#chroma-boost-a-color)
 - [Adjust opacity](#adjust-opacity-a-color)
 - [Invert](#invert-a-color)
-- [Compliment](#compliment-a-color)
+- [Complement](#complement-a-color)
 - [Convert](#color-conversion)
 - [Contrast](#contrast-a-color)
 - [Color palettes](#color-palettes)
@@ -473,7 +473,7 @@ channel's value from 1.
   tab: 'result'
 } %}
 
-### Compliment a color
+### Complement a color
 
 If your goal wasn't to invert a color but rather complement it, then hue
 rotation is likely what you're looking for. Pick a color space which offers the
@@ -482,7 +482,7 @@ Finding a color's complement is done by rotating by half a turn, in this case
 you can add or subtract from the `h` channel by `180` to achieve the result.
 
 ```css
-.complimentary-color {
+.complementary-color {
   background: hsl(from blue calc(h + 180) s l);
 }
 ```
@@ -627,7 +627,7 @@ and watch new palettes get built by the browser.
 
 #### Triadic palettes
 
-Similar to complimentary colors, [triadic color
+Similar to complementary colors, [triadic color
 palettes](https://www.studiobinder.com/blog/what-is-a-triadic-color-scheme-definition/)
 are opposing but harmonious hue rotations given a base color. Where a
 complementary color is on the opposite side of a color, like a straight line
