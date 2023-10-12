@@ -64,7 +64,7 @@ To review the latest information on any proposal or API, visit the respective ov
 ## Protected Audience
 
 Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove). Formerly
-named FLEDGE.
+named FLEDGE. Also refer to [Status of pending Protected Audience API capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/) for more information.
 
 {% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
