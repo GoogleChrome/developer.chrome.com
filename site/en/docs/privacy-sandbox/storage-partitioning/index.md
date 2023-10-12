@@ -16,17 +16,11 @@ tags:
 
 ## Implementation status
 
-- Full implementation is available for testing in Chrome Beta 113 and later.
-- The initial implementation has been [available behind a flag since Chrome 105](/blog/storage-partitioning-dev-trial/).
+- The feature has shipped in Chrome 115 and later.
 - [Storage Partitioning proposal](https://github.com/privacycg/storage-partitioning) is open for discussion.
 - [Chrome Platform Status](https://chromestatus.com/feature/5723617717387264)
 
-
-The feature is rolling out to a small percentage of users starting in Chrome 113.
-Depending on the stability and compatibility, it will be made fully available in
-Chrome Stable mid-year 2023. Testing third-party storage partitioning now
-and filing bugs will help uncover any potential issues and resolve them before
-the full rollout.
+The feature has been enabled for all users on Chrome 115 and later.
 
 ## What is storage partitioning?
 
@@ -87,7 +81,7 @@ To try it out:
 
 1.  Use Chrome Canary version 113 or higher.
 1.  Visit `chrome://flags/#third-party-storage-partitioning`.
-1.  Enable the "Experimental Third-party Storage Partitioning" flag.
+1.  Enable the "Third-party Storage Partitioning" flag.
 
 Participate in testing and
 [report bugs](https://bugs.chromium.org/p/chromium/issues/entry?labels=StoragePartitioning-trial-bugs&components=Blink%3EStorage)
@@ -207,11 +201,10 @@ For more information, see the [extension docs](/docs/extensions/mv3/storage-and-
 
 ## Engage and share feedback
 
-The shared storage proposal is under active discussion and subject to change in
-the future. If you try these APIs and have feedback, we'd love to hear it.
-
 -   **GitHub**: Read the
    [proposal](https://github.com/wanderview/quota-storage-partitioning/blob/main/explainer.md),
    [raise questions and participate in discussion](https://github.com/wanderview/quota-storage-partitioning/issues).
 -   **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+-   **File bugs**: File a bug in the [Chromium tracker](https://bugs.chromium.org/p/chromium/issues/entry?labels=StoragePartitioning-trial-bugs&components=Blink%3EStorage)
+    if you believe something is not working as expected.
