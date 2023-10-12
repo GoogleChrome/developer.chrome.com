@@ -159,7 +159,7 @@ Like in the following example, we could apply style to the text and exclude cont
 }
 ```
 
-Checkout the [`@scope` documentation](https://developer.mozilla.org/docs/Web/CSS/:scope) for more information.
+Checkout the article [Limit the reach of your selectors with the CSS @scope at-rule](/articles/at-scope/) for more information.
 
 ## `scripting` and `prefers-reduced-transparency` media features {: #new-media-queries }
 
