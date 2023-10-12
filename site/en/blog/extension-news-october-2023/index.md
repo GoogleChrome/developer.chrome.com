@@ -15,7 +15,7 @@ alt: >
 
 Back in July, we launched [a new blog series](/blog/extension-news-july-2023/) to keep you up-to-date on extension developments. Thanks to your valuable feedback and our ongoing collaboration with fellow browser vendors in the WebExtensions Community Group, we continue to enhance extension APIs and work towards greater consistency across browsers.
 
-Welcome to the October edition! In this post, we will look at some of the changes the Chrome extension team has made in the past few months, as well as some new features that will come out later this year. Let's get started!
+Welcome to the October edition! In this post, we'll look at some of the changes the Chrome extension team has made in the past few months, as well as some new features that'll come out later this year. Let's get started!
 
 {% Aside %}
 
@@ -38,38 +38,38 @@ The extension team has been actively working to resolve Manifest V3 stability is
 
 Service worker-related stability issues have been resolved. In Chrome 116, we added strong keep-alives to extension APIs that [display a user prompt](/blog/chrome-116-beta-whats-new-for-extensions/#sw-keepalive) and improved support for WebSockets (see the [Using WebSockets in extensions](/docs/extensions/mv3/tut_websockets/) tutorial). From Chrome 118 onward, a service worker will stay alive during an [active Debugger API session](/docs/extensions/reference/debugger/).
 
-Check out our updated [Service Worker guidance](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#timeouts) for more details. If your users still encounter service worker-related stability issues in Chrome > 119, [please let us know](/docs/extensions/support-feedback/).  
+Check out our updated [Service Worker guidance](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#timeouts) for more details. If your users still encounter service worker-related stability issues in Chrome versions after 119, [please let us know](/docs/extensions/support-feedback/).  
 
 #### Increased security {: #security-increase }
 
-Previously, navigating to some chrome:// URLs using [`tabs.update`](/docs/extensions/reference/tabs/#method-update), [`tabs.create`](/docs/extensions/reference/tabs/#method-create), and [`windows.create`](/docs/extensions/reference/windows/#method-create) emitted an error or would crash. Also, [`tabs.update`](/docs/extensions/reference/tabs/#method-update) couldn't open a Javascript URL. In Chrome 117, the list of chrome:// URLs we check for has been expanded, and the Javascript URL blocking now also applies to all extension API methods.
+Previously, navigating to some chrome:// URLs using [`tabs.update()`](/docs/extensions/reference/tabs/#method-update), [`tabs.create`](/docs/extensions/reference/tabs/#method-create), and [`windows.create()`](/docs/extensions/reference/windows/#method-create) emitted an error or would crash Chrome. Also, [`tabs.update()`](/docs/extensions/reference/tabs/#method-update) couldn't open a Javascript URL. In Chrome 117, we expanded the number of supported chrome:// URLs, and the Javascript URL blocking now also applies to all extension API methods.
 
 In Chrome 117, users will receive proactive notifications on the Chrome Extensions page if an extension they've installed is no longer available on the Chrome Web Store. This can happen if the developer unpublishes the extension, it's taken down for policy violations, or it's identified as malware. For a deep dive, see [Bringing Safety Check to the chrome://extensions page](/en/blog/extension-safety-hub/).
 
-In Chrome 118, extensions will not be allowed to navigate to file:// URLs using the `chrome.tabs` and `chrome.windows` APIs, unless the “Allow access to file URLs” option is enabled on the extension’s details page. See the [WECG discussion](https://github.com/w3c/webextensions/issues/426).
+In Chrome 118, extensions will not be allowed to navigate to file:// URLs using the `chrome.tabs` and `chrome.windows` APIs unless the “Allow access to file URLs” option is enabled on the extension’s details page. See the [WECG discussion](https://github.com/w3c/webextensions/issues/426).
 
 ### More API launches {: #apis-others }
 
 - **Runtime API:** Starting in Chrome 116, you can use [`runtime.getContexts()`](/docs/extensions/reference/runtime/#method-getContexts) to retrieve information about active contexts. For example, you can check if there's an [active offscreen document](/docs/extensions/reference/offscreen/#example-maintaining-the-lifecycle-of-an-offscreen-document).
 - **Side Panel API** In [Chrome 116](https://chromiumdash.appspot.com/commit/8e7430446eaa0b80964b0ab1fd816ac6f33fd4cd) you can use [`sidepanel.open()`](/docs/extensions/reference/sidepanel/#method-open), to open the extension side panel programmatically in response to a user gesture, such as a context menu click. See an extension sample here
-- **TabCapture API** Added the ability to call `getMediaStreamId()` from the extension service worker and obtain a MediaStream from a stream ID in an offscreen document in Chrome 116. See [Audio recording and screen capture](/docs/extensions/mv3/screen_capture/) for examples.
-- **DeclarativeNetRequest API:** The default value for the [isUrlFilterCaseSensitive](/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-isUrlFilterCaseSensitive) property was changed to `false` in [Chrome 118](https://chromiumdash.appspot.com/commit/d90e6a56d0e77ce5d278a5b070098c5d8f7081fd).
+- **TabCapture API** Added the ability to call `getMediaStreamId()` from the extension service worker and obtain a [`MediaStream`](https://developer.mozilla.org/docs/Web/API/MediaStream) object from a stream ID in an offscreen document in Chrome 116. See [Audio recording and screen capture](/docs/extensions/mv3/screen_capture/) for examples.
+- **DeclarativeNetRequest API:** The default value for the [`isUrlFilterCaseSensitive`](/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-isUrlFilterCaseSensitive) property was changed to `false` in [Chrome 118](https://chromiumdash.appspot.com/commit/d90e6a56d0e77ce5d278a5b070098c5d8f7081fd).
 
 ### Coming soon... {: #coming-soon-apis }
 
 Upcoming Chrome versions will release features that will complete the remaining items on the [known issues page](/docs/extensions/migrating/known-issues/#closing-the-platform-gap). Additionally, we plan to add the following features:
 
 - The **UserScripts API** will allow user script managers to coordinate how and when to inject a collection of user scripts into web pages. Currently available in Canary [behind a flag](/docs/extensions/reference/userscripts). See the [WECG proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details. 
-- The **ReadingList API** will allow developers to create, read, update, and delete metadata located in the Reading List panel of the side panel. See the [ReadingList API proposal](https://docs.google.com/document/d/1f1wW2955nY5Rp3vfS0JGuo1kACOAmsjZupvLYknWKII/) and [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1421058) for details.
+- The **ReadingList API** will allow developers to create, read, update, and delete metadata located in the Reading List panel of the side panel. Watch [What's new in Chrome extensions](/docs/extensions/whatsnew/) for the announcement.
 - The number of **DeclarativeNetRequest API** static and enabled rulesets will be increased in Chrome 120. Currently available in Canary.
-- The **File Handling API:** is will be available for ChromeOS extensions starting in ChromeOS 120, which lets extensions open files with specified MIME types and file extensions. To implement file handling add a [set of rules](https://github.com/WICG/file-handling/blob/main/explainer.md#example-manifest) to the manifest.json. This feature works the same as for progressive web apps. For more information, see [this file handling article](/articles/file-handling/).
-- Extensions will be able to use the web [Push API](https://developer.mozilla.org/docs/Web/API/Push_API) via [self.registration.pushManager.subscribe()](https://developer.mozilla.org/docs/Web/API/PushManager/subscribe) without showing a user-visible notification by setting userVisibleOnly to false. This will make push notifications a more seamless alternative to WebSockets in service workers (MV3) for asynchronous client-server communication. See [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1319986) and [WECG discussion](https://github.com/w3c/webextensions/issues/208) for details.
+- The **File Handling API:** is will be available for ChromeOS extensions starting in ChromeOS 120, which lets extensions open files with specified MIME types and file extensions in a similar manner to web platform file handling.
+- Extensions will be able to use the web [Push API](https://developer.mozilla.org/docs/Web/API/Push_API) via [self.registration.pushManager.subscribe()](https://developer.mozilla.org/docs/Web/API/PushManager/subscribe) without showing a user-visible notification by setting `userVisibleOnly` to `false`. This will make push notifications a more seamless alternative to WebSockets in service workers (MV3) for asynchronous client-server communication. See [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1319986) and [WECG discussion](https://github.com/w3c/webextensions/issues/208) for details.
 
-Stay tuned to the [What's new in extensions](/docs/extensions/whatsnew) page for these announcements as soon as they are made available in [Chrome Beta](https://chromestatus.com/roadmap).
+Stay tuned to the [What's new in extensions](/docs/extensions/whatsnew) page for announcements as soon as these features are available in [Chrome Beta](https://chromestatus.com/roadmap).
 
 ## Documentation upgrades {: #new-docs }
 
-We've also been improving and adding to our documentation. Please continue to ask questions on the [chromium-group](https://groups.google.com/a/chromium.org/g/chromium-extensions) and report documentation issues.
+We've also been improving and adding to our documentation. Please continue to ask questions on the [chromium-group](https://groups.google.com/a/chromium.org/g/chromium-extensions) and [report documentation issues](/docs/extensions/support-feedback/file-a-bug/).
 
 ### Highlights {: #doc-highlights }
 
@@ -102,7 +102,7 @@ We've also been improving and adding to our documentation. Please continue to as
 
 Earlier this month, we announced an early preview of the revamped Chrome Web Store, as we hinted at Google I/O. Check it out for yourself! [https://chromewebstore.google.com/](https://chromewebstore.google.com/). A few noteworthy changes are:
 
-- Increased the list of categories from a list of eleven to a new list of [seventeen in three](/docs/webstore/best_practices/#category-revisions) subcategories.
+- Increased the list of categories from a list of eleven to a new list of [seventeen in three](/docs/webstore/best_practices/#category-revisions) category groups.
 - Improved autocomplete in the search.
 - Screenshots are now being displayed at significantly higher quality. If you haven't already, you can upload 1280x800 screenshots.
 - Replies to questions on the Support tab now show newlines.
@@ -122,9 +122,9 @@ Additionally, you can [submit a self-nomination form](https://docs.google.com/fo
 
 ## 💡 Did you know? {: #tips }
 
-- There's a new video on Debugging Chrome extensions. It covers many topics you may already be familiar with, but it also shares a few neat tricks for using the Devtools in extensions.
+- There's a new video on Debugging Chrome extensions. It covers many topics you may already be familiar with, but it also shares a few neat tricks for using DevTools in extensions.
     {% YouTube id='Ta-YTDhiBIQ' %}
-- You can now add one privacy policy per extension. Previously, you could only add one privacy policy per developer account, but it was awkward if you had a few extensions under one developer account. This new interface is available in the **Privacy Tab** of your item in the developer dashboard.
+- You are now required to provide a privacy policy for each extension. Previously, you could only add one privacy policy per developer account, but it was awkward if you had a few extensions under one developer account. This new interface is available in the **Privacy Tab** of your item in the developer dashboard. Account-level privacy policies are no longer supported.
   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/BB2ziYwins4YpyJ7aETj.png", alt="Screenshot of the privacy policy box", width="674", height="178" %}
 
 ## Reaching out 🙌 {: #connecting }
