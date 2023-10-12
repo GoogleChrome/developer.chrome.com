@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "End-to-end testing Chrome Extensions"
+title: "End-to-end testing for Chrome Extensions"
 seoTitle: "End-to-end testing Chrome Extensions"
 date: 2023-10-09
 description: How to write end-to-end tests for extensions.
@@ -18,7 +18,7 @@ See [Testing Chrome Extensions with Puppeteer][tutorial] for a tutorial and [Uni
 Extensions are supported by a range of testing libraries.
 
 | Library                | Guidance                                                                                                                              |
-|------------------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+|:------------------------|:-------------------------------------------------------------------------------------------------------------------------------------|
 | Puppeteer / Playwright | See Chrome Extensions ([Puppeteer][puppeteer-testing] / [Playwright][playwright-testing]).                                            |
 | Selenium               | Use the [ChromeOptions][selenium-chromeoptions] object to load extensions. More information is available [here][selenium-extensions]. |
 | WebDriverIO            | See [Web Extension Testing][webdriverio-testing].                                                                                     |

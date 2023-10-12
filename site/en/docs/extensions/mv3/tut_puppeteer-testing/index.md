@@ -7,7 +7,7 @@ description: How to write an automated test for Chrome Etensions in Puppeteer.
 ---
 
 _For general advice on testing extensions, see
-[Automated testing for Chrome Extensions][automated-testing] and [Unit testing in Chrome Extensions][unit-testing]._
+[End-to-end testing of Chrome Extensions][automated-testing] and [Unit testing in Chrome Extensions][unit-testing]._
 
 [Puppeteer][puppeteer] provides a framework for building automated tests of websites, which also
 includes the ability to test Chrome Extensions. These are high-level end-to-end tests that test the
@@ -173,7 +173,7 @@ After mastering the basics, try building a test suite for your own extension. Th
 [API reference][api-reference] contains more information about what's possible - there are many
 capabilities not described here.
 
-[automated-testing]: /docs/extensions/mv3/automated-testing
+[automated-testing]: /docs/extensions/mv3/end-to-end-testing/
 [puppeteer]: https://github.com/puppeteer/puppeteer
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
 [node]: https://nodejs.org/
