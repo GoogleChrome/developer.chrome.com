@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Support and feedback
-description: 'TBD'
+description: 'Give us feedback to help us improve the platform and fix its bugs.'
 date: 2023-10-11
 tags:
   - extensions
