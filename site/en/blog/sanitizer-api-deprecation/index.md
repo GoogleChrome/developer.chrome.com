@@ -1,7 +1,7 @@
 ---
 title: Sanitizer API deprecation
 description: >
-  Chrome 119 will deprecate current Sanitizer API implementation to catch up with future specification updates.
+  The current Sanitizer API implementation is deprecated from Chrome 119 to catch up with future specification updates.
 layout: 'layouts/blog-post.njk'
 date: 2023-10-14
 authors:
