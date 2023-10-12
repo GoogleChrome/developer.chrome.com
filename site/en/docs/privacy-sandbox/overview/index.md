@@ -163,7 +163,7 @@ Chrome on MacOS supports the Privacy Sandbox APIs, but Safari on MacOS (which us
 
 [WebView](https://developer.android.com/reference/android/webkit/WebView) allows you to display web content in an app, but lacks some of the features of 
 fully developed browsers. We do not currently include WebView at this stage of third-party 
-cookie deprecation or Privacy Sandbox API rollout and testing, beyond enabling Cross App and Web Attribution Measurement (more on [measurement with WebView](https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web#register-attribution)). Third-party cookies have been off by default in WebView since Android 5 - Lollipop, but in practice many apps enable them for web content. If we do make announcements in the future, these will be communicated through both Android and Chrome channels.
+cookie deprecation or Privacy Sandbox API rollout and testing, beyond enabling Cross App and Web Attribution Measurement (more on [measurement with WebView](https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web#register-attribution)). Third-party cookies have been off by default in WebView since Android 5 - Lollipop, but in practice many apps enable them for web content. If we do make announcements in the future, these will be communicated through both Android and Chrome channels. For individual APIs and features, support in WebView will be shown on the feature's Chrome Status entry.
 
 ### Custom Tabs
 
