@@ -48,7 +48,7 @@ For example:
 <button class="remove-me">Can't reach me with the TAB key!</button>
 ```
 
-See also [Correctly set the visibility of offscreen content](https://web.dev/keyboard-access/#correctly-set-the-visibility-of-offscreen-content).
+See also [Correctly set the visibility of offscreen content](https://web.dev/articles/keyboard-access#correctly_set_the_visibility_of_offscreen_content).
 
 ## Resources
 

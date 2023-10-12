@@ -126,8 +126,8 @@ To save the changes you made in DevTools:
 
 Learn more:
 
-- [Learn Accessibility](https://web.dev/learn/accessibility/) in general
-- [Color and contrast](https://web.dev/learn/accessibility/color-contrast/) accessibility in particular
+- [Learn Accessibility](https://web.dev/learn/accessibility) in general
+- [Color and contrast](https://web.dev/learn/accessibility/color-contrast) accessibility in particular
 
 [1]: https://web.dev/accessibility/
 [2]: /docs/devtools/accessibility/navigation

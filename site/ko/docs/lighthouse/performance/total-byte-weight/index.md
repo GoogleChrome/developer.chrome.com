@@ -22,22 +22,22 @@ updated: 2020-05-29
 
 ## 페이로드 크기를 줄이는 방법
 
-전체 바이트 크기를 1,600KiB 미만으로 유지하는 것을 목표로 하십시오. 이 목표는 10초 이하의 [Interactive 시간](https://web.dev/tti/)을 달성하면서 이론적으로 3G 연결에서 다운로드할 수 있는 데이터의 양을 기반으로 합니다.
+전체 바이트 크기를 1,600KiB 미만으로 유지하는 것을 목표로 하십시오. 이 목표는 10초 이하의 [Interactive 시간](https://web.dev/articles/tti)을 달성하면서 이론적으로 3G 연결에서 다운로드할 수 있는 데이터의 양을 기반으로 합니다.
 
 다음은 페이로드 크기를 줄이는 몇 가지 방법입니다.
 
-- 페이로드가 필요할 때까지 요청을 연기합니다. 한 가지 가능한 접근 방식은 [PRPL 패턴](https://web.dev/apply-instant-loading-with-prpl/)을 참조하십시오.
+- 페이로드가 필요할 때까지 요청을 연기합니다. 한 가지 가능한 접근 방식은 [PRPL 패턴](https://web.dev/articles/apply-instant-loading-with-prpl)을 참조하십시오.
 - 요청을 최대한 작게 최적화합니다. 가능한 기술은 다음과 같습니다.
-    - [네트워크 페이로드를 최소화하고 압축합니다](https://web.dev/reduce-network-payloads-using-text-compression/).
-    - [이미지에 대해 JPEG 또는 PNG 대신 WebP를 사용합니다](https://web.dev/serve-images-webp/).
-    - [JPEG 이미지의 압축 수준을 85로 설정합니다](https://web.dev/use-imagemin-to-compress-images/).
-- 페이지가 반복 방문 시 리소스를 다시 다운로드하지 않도록 요청을 캐시합니다. (캐싱의 작동 방식과 구현 방법을 알아 보려면 [네트워크 안정성 랜딩 페이지)](https://web.dev/reliable/)를 참조하십시오.
+    - [네트워크 페이로드를 최소화하고 압축합니다](https://web.dev/articles/reduce-network-payloads-using-text-compression).
+    - [이미지에 대해 JPEG 또는 PNG 대신 WebP를 사용합니다](https://web.dev/articles/serve-images-webp).
+    - [JPEG 이미지의 압축 수준을 85로 설정합니다](https://web.dev/articles/use-imagemin-to-compress-images).
+- 페이지가 반복 방문 시 리소스를 다시 다운로드하지 않도록 요청을 캐시합니다. (캐싱의 작동 방식과 구현 방법을 알아 보려면 [네트워크 안정성 랜딩 페이지)](https://web.dev/explore/reliable)를 참조하십시오.
 
 ## 스택별 지침
 
 ### Angular
 
-JavaScript 번들 크기를 최소화하려면 [경로 수준 코드 분할](https://web.dev/route-level-code-splitting-in-angular/)을 적용하십시오. 또한 [Angular 서비스 작업자](https://web.dev/precaching-with-the-angular-service-worker/)로 자산을 미리 캐싱하는 것을 고려하십시오.
+JavaScript 번들 크기를 최소화하려면 [경로 수준 코드 분할](https://web.dev/articles/route-level-code-splitting-in-angular)을 적용하십시오. 또한 [Angular 서비스 작업자](https://web.dev/articles/precaching-with-the-angular-service-worker)로 자산을 미리 캐싱하는 것을 고려하십시오.
 
 ### Drupal
 

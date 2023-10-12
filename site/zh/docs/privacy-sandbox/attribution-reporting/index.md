@@ -48,7 +48,7 @@ authors:
 
 归因报告 API 可以测量两个联系在一起的事件：发布商网站上的事件（例如用户浏览或点击广告）与随后在广告商网站上发生的转化。
 
-该 API 支持点击型转化归因测量（在 API 的第一次实现中即可使用，该 API 目前处于[原始试验](https://web.dev/conversion-measurement/#browser-support)阶段）和浏览型归因测量（[请参阅公开详细说明](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)）。
+该 API 支持点击型转化归因测量（在 API 的第一次实现中即可使用，该 API 目前处于[原始试验](/docs/privacy-sandbox/attribution-reporting/#browser-support)阶段）和浏览型归因测量（[请参阅公开详细说明](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)）。
 
 该 API 提供两种类型的归因报告，可用于不同的用例：
 
@@ -67,8 +67,8 @@ authors:
 
 - [归因报告介绍（转化测量）](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [API 技术详细说明](https://github.com/WICG/conversion-measurement-api/)
-- （⚠️ 已过时）[一种测量广告转化更私密的方式](https://web.dev/conversion-measurement/)：此 API 第一次迭代的概述（面向网络开发者）
+- （⚠️ 已过时）[一种测量广告转化更私密的方式](/docs/privacy-sandbox/attribution-reporting/)：此 API 第一次迭代的概述（面向网络开发者）
 - （⚠️ 过时）[一种衡量广告转化的更私密方式 - 视频](https://www.youtube.com/watch?v=jcDfOoWwZcM)：此 API 第一次迭代的演示（仅限点击）
-- （⚠️ 已过时）[使用事件转化测量 API](https://web.dev/using-conversion-measurement/)：如何使用此 API 的第一次迭代进行实验（面向网络开发者）
+- （⚠️ 已过时）[使用事件转化测量 API](/docs/privacy-sandbox/attribution-reporting/)：如何使用此 API 的第一次迭代进行实验（面向网络开发者）
 - [深入挖掘隐私沙盒](https://web.dev/digging-into-the-privacy-sandbox)
 - [使用 Chrome DevTools 调试 API](/blog/new-in-devtools-93/#attribution-reporting)

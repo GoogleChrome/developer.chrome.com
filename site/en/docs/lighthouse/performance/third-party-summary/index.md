@@ -10,7 +10,7 @@ updated: 2019-10-04
 
 To add an advertising network, social media button, A/B test, or analytics service to your page,
 you usually need to add a third-party script to your HTML. These [third-party scripts can
-significantly affect your page load performance](https://web.dev/third-party-javascript/).
+significantly affect your page load performance](https://web.dev/articles/third-party-javascript).
 
 ## How the Lighthouse audit for third-party code fails
 
@@ -28,14 +28,14 @@ the audit fails.
 
 ## How to reduce the impact of third-party code
 
-See [Identify slow third-party scripts](https://web.dev/identify-slow-third-party-javascript/) to learn how to use
+See [Identify slow third-party scripts](https://web.dev/articles/identify-slow-third-party-javascript) to learn how to use
 Chrome DevTools and other Lighthouse audits to detect problematic third-party code, and
-see [Efficiently load third-party JavaScript](https://web.dev/efficiently-load-third-party-javascript/) for
+see [Efficiently load third-party JavaScript](https://web.dev/articles/efficiently-load-third-party-javascript) for
 optimization strategies.
 
 ## Resources
 
 - [Source code for **Reduce the impact of third-party code** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/third-party-summary.js)
-- [Loading Third-party JavaScript](https://web.dev/optimizing-content-efficiency-loading-third-party-javascript/)
+- [Loading Third-party JavaScript](https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript)
 
 [main thread]: https://developer.mozilla.org/docs/Glossary/Main_thread

@@ -6,7 +6,7 @@ description: >
 subhead: >
   Cross-origin resources served by third-parties often do not include adequate CORP
   headers. If they can be requested without credentials, now you can enable cross-origin
-  isolation by marking them as such. 
+  isolation by marking them as such.
 date: 2021-07-29
 updated: 2022-05-13
 authors:
@@ -38,10 +38,10 @@ isolation more easily.
 Some web APIs increase the risk of side-channel attacks such as
 [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To
 mitigate that risk, browsers offer an opt-in-based isolated environment called
-[cross-origin isolation](https://web.dev/coop-coep/). With a cross-origin
+[cross-origin isolation](https://web.dev/articles/coop-coep). With a cross-origin
 isolated state, the webpage can use privileged features including
 [`SharedArrayBuffer`](/blog/enabling-shared-array-buffer/),
-[`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/)
+[`performance.measureUserAgentSpecificMemory()`](https://web.dev/articles/monitor-total-page-memory-usage)
 and [high-precision timers with better
 resolution](/blog/cross-origin-isolated-hr-timers/)
 while isolating the origin from others unless they are opted in.
@@ -63,7 +63,7 @@ alt="", width="800", height="372" %}
 
 While cross-origin isolation brings webpages better security and the ability to
 enable powerful features, deploying it can be
-[difficult](https://web.dev/cross-origin-isolation-guide/). One of the biggest
+[difficult](https://web.dev/articles/cross-origin-isolation-guide). One of the biggest
 challenges is the requirement to enable CORS or CORP for all cross-origin
 resources. Resources without those headers will not be loaded by the browser on
 a cross-origin isolated page.
@@ -170,11 +170,11 @@ postpone this to Chrome 106.
 ## Resources
 
 * [Making your website "cross-origin isolated" using COOP and
-  COEP](https://web.dev/coop-coep/)
+  COEP](https://web.dev/articles/coop-coep)
 * [Why you need "cross-origin isolated" for powerful
-  features](https://web.dev/why-coop-coep/)
+  features](https://web.dev/articles/why-coop-coep)
 * [A guide to enable cross-origin
-  isolation](https://web.dev/cross-origin-isolation-guide/)
+  isolation](https://web.dev/articles/cross-origin-isolation-guide)
 * [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome
   92](/blog/enabling-shared-array-buffer/)
 

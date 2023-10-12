@@ -20,7 +20,7 @@ extracting detailed timing data that you can use to optimize your code.
 You can access those data from JavaScript using the API
 or by viewing them on your [Chrome DevTools Timeline Recordings](/docs/devtools/evaluate-performance/performance-reference/).
 
-Check out the [page about the User Timing API](https://web.dev/usertiming/)
+Check out the [page about the User Timing API](https://web.dev/articles/usertiming)
 for a quick introduction to using it.
 
 ## How Lighthouse reports User Timing data
@@ -55,4 +55,4 @@ your components.
 
 - [Source code for **User Timing marks and measures** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/user-timings.js)
 - [User Timing API (MDN)](https://developer.mozilla.org/docs/Web/API/User_Timing_API)
-- [User Timing API (web.dev)](https://web.dev/usertiming/)
+- [User Timing API (web.dev)](https://web.dev/articles/usertiming)

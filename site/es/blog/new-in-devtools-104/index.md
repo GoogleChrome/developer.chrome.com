@@ -106,8 +106,8 @@ Chromium issue: [960909](https://crbug.com/960909)
 <!-- Visualize `performance.measure()` marks in your recording with the new **User Timings** track in the **Performance insights** panel. -->
 Visualice las marcas `performance.measure()` en su grabación con la nueva pista **User Timings** en el panel **Performance insights**.
 
-<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
-Por ejemplo, esta [página web](https://jec.fish/demo/perf-measure) utiliza [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements- with-measure()) método para calcular el tiempo transcurrido de carga de texto.
+<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/articles/usertiming#calculating_measurements_with_measure()) method to calculate the elapsed time of text loading. -->
+Por ejemplo, esta [página web](https://jec.fish/demo/perf-measure) utiliza [`performance.measure()`](https://web.dev/articles/usertiming#calculating_measurements_ with_measure()) método para calcular el tiempo transcurrido de carga de texto.
 
 <!-- When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane. -->
 Cuando comienzas a [medir la carga de la página](/docs/devtools/performance-insights/#record), la pista **Tiempos de usuario** se muestra en la grabación. Haga clic en el elemento de tiempos para ver sus detalles en el panel lateral.

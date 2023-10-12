@@ -54,8 +54,8 @@ tags:
 <!-- ## New shortcuts to emulate light and dark themes {: #emulation } -->
 ## Новые горячие клавиши для эмуляции светлой и тёмной темы {: #emulation }
 
-<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
-Теперь вы можете быстро переключать светлую и тёмную темы (CSS медиафункция [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) при помощи горячих клавиш в панели **Стили** (Styles).
+<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) with the new shortcuts in the **Styles** pane. -->
+Теперь вы можете быстро переключать светлую и тёмную темы (CSS медиафункция [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) при помощи горячих клавиш в панели **Стили** (Styles).
 
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
 До этого требовалось больше действий для [эмуляции темы](/docs/devtools/rendering/emulate-css/) во вкладке **Отрисовка** (Rendering).
@@ -73,8 +73,8 @@ tags:
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
 DevTools теперь применяет политику безопасности содержимого (CSP) на вкладке **Предварительный просмотр** (Preview) внутри вкладки **Сеть** (Network).
 
-<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
-Например, на первом скриншоте показана страница, содержащая [смешанный контент](https://web.dev/what-is-mixed-content/). Страница загружается через безопасное соединение HTTPS, но таблица стилей загружается через небезопасное соединение HTTP.
+<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/articles/what-is-mixed-content). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
+Например, на первом скриншоте показана страница, содержащая [смешанный контент](https://web.dev/articles/what-is-mixed-content). Страница загружается через безопасное соединение HTTPS, но таблица стилей загружается через небезопасное соединение HTTP.
 
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
 Браузер по умолчанию блокирует запрос таблицы стилей. Однако, когда вы открывали страницу через вкладку **Предварительный просмотр** (Preview) во вкладке **Сеть** (Network), таблица стилей ранее не блокировалась (поэтому фон становился красным). Теперь запрос блокируется, как и следовало ожидать (второй скриншот).
@@ -152,7 +152,7 @@ DevTools теперь применяет политику безопасност
 ## Отображение наследуемых псевдоэлементов выделения в панели Стили (Styles) {: #pseudo }
 
 <!-- View the inherited highlight pseudo-elements  (e.g. `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`) in the **Styles** pane. Previously, these rules were not displayed. -->
-Просматривайте наследуемые псевдоэлементы выделения (`::selection`, `::spelling-error`, `::grammar-error` и `::highlight`) в панели **Стили** (Styles). Раньше эти правила не отображались. 
+Просматривайте наследуемые псевдоэлементы выделения (`::selection`, `::spelling-error`, `::grammar-error` и `::highlight`) в панели **Стили** (Styles). Раньше эти правила не отображались.
 
 <!-- As mentioned in the [specification](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), when multiple styles conflict, cascade determines the winning style. This new feature helps you understand the inheritance and priority of the rules. -->
 Как указано в [спецификации](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), когда несколько стилей конфликтуют, каскад определяет победивший стиль. Эта новая функция помогает понять наследование и приоритет правил.
@@ -212,7 +212,7 @@ DevTools теперь применяет политику безопасност
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/afe5698f1cd20304d2763574ef8e9faf6a4a6db1 #}
 {# ​​https://chromium.googlesource.com/devtools/devtools-frontend/+/5de1d6140cad945783f3ca54055134f4a7db42a1 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #}
 
 Задача в трекере Chromium: [1268754](https://crbug.com/1268754)
 

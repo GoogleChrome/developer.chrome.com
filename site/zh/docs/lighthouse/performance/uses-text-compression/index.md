@@ -64,7 +64,7 @@ Content-Encoding: br
 3. 启用大请求行。请参阅[使用大请求行](https://developers.google.com/web/tools/chrome-devtools/network/reference#request-rows)。
 4. 查看您感兴趣的响应的 **Size** 列。上面的值是压缩大小，下面的值是解压缩大小。
 
-另请参阅[缩小和压缩网络有效负载](https://web.dev/reduce-network-payloads-using-text-compression/)。
+另请参阅[缩小和压缩网络有效负载](https://web.dev/articles/reduce-network-payloads-using-text-compression)。
 
 ## 程序栈特定的指南
 

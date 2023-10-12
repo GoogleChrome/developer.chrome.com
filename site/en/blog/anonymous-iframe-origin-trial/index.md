@@ -17,7 +17,7 @@ tags:
 {% Aside %}
 Anonymous iframe has been renamed to iframe credentialless. It is enabled by default starting from Chrome version 110.
 You can see the [announcement](/blog/iframe-credentialless) for further details.
- 
+
 `<iframe anonymous></iframe>` is renamed `<iframe credentialless></iframe>`.
 `window.isAnonymouslyFramed` is renamed `window.credentialless`.
 {% endAside %}
@@ -27,11 +27,11 @@ You can see the [announcement](/blog/iframe-credentialless) for further details.
 Some web APIs increase the risk of side-channel attacks such as
 [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To
 mitigate that risk, browsers offer an opt-in-based isolated environment called
-[cross-origin isolation](https://web.dev/coop-coep/), which, among other things,
+[cross-origin isolation](https://web.dev/articles/coop-coep), which, among other things,
 requires deploying COEP. This allows websites to use privileged features
 including
 [`SharedArrayBuffer`](/blog/enabling-shared-array-buffer/),
-[`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/),
+[`performance.measureUserAgentSpecificMemory()`](https://web.dev/articles/monitor-total-page-memory-usage),
 and
 [high-precision timers with better resolution](/blog/cross-origin-isolated-hr-timers/).
 
@@ -54,7 +54,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 While cross-origin isolation brings webpages better security and the ability to
 enable powerful features, deploying COEP can be
-[difficult](https://web.dev/cross-origin-isolation-guide/). One of the biggest
+[difficult](https://web.dev/articles/cross-origin-isolation-guide). One of the biggest
 challenges is that all cross-origin iframes must also deploy COEP and CORP.
 Iframes without those headers will not be loaded by the browser.
 
@@ -105,7 +105,7 @@ iframes:
 1.  [Request a token](/origintrials/#/view_trial/2518638091606949889)
     for your origin.
 1.  Use the token in one of the following ways:
-    -  In your HTML:      
+    -  In your HTML:
         ```html
         <meta http-equiv="Origin-Trial" content="TOKEN_GOES_HERE">
         ```
@@ -161,8 +161,8 @@ anonymous iframe.
 
 ## Resources
 
--   [Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/coop-coep/)
--   [Why you need "cross-origin isolated" for powerful features](https://web.dev/why-coop-coep/)
--   [A guide to enable cross-origin isolation](https://web.dev/cross-origin-isolation-guide/)
+-   [Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/articles/coop-coep)
+-   [Why you need "cross-origin isolated" for powerful features](https://web.dev/articles/why-coop-coep)
+-   [A guide to enable cross-origin isolation](https://web.dev/articles/cross-origin-isolation-guide)
 -   [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](/blog/enabling-shared-array-buffer/)
 -   [Load cross-origin resources without CORP headers using `COEP: credentialless`](/blog/coep-credentialless-origin-trial/)

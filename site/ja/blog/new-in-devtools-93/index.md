@@ -27,9 +27,9 @@ tags:
 -->
 ## Styles ペインで CSS コンテナクエリを編集 {: #container-queries }
 <!--
-You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
+You can now view and edit [CSS container queries](https://web.dev/articles/new-responsive#responsive_to_the_container) in the **Styles** pane.
 -->
-**Styles** ペインで[CSS コンテナクエリ](https://web.dev/new-responsive/#responsive-to-the-container)を確認して編集できるようになりました。
+**Styles** ペインで[CSS コンテナクエリ](https://web.dev/articles/new-responsive#responsive_to_the_container)を確認して編集できるようになりました。
 
 <!--
 Container queries provide a much more dynamic approach to responsive design. The `@container` at-rule works in a similar way to a media query with `@media`. However, instead of querying the viewport and user agent for information, `@container` queries the ancestor container that matches certain criteria.
@@ -60,9 +60,9 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 -->
 ## NetworkパネルでWeb Bundleをプレビュー {: #web-bundle }
 <!--
-[Web bundle](https://web.dev/web-bundles/) is a file format for encapsulating one or more HTTP resources in a single file. You can now preview the web bundle content in the **Network** panel.
+[Web bundle](https://web.dev/articles/web-bundles) is a file format for encapsulating one or more HTTP resources in a single file. You can now preview the web bundle content in the **Network** panel.
 -->
-[Web Bundle](https://web.dev/web-bundles/) はひとつ以上の HTTP リソースを単一のファイルにカプセル化するためのファイルフォーマットです。**Network** パネルでこの Web Bundle のコンテンツをプレビューできるようになりました。
+[Web Bundle](https://web.dev/articles/web-bundles) はひとつ以上の HTTP リソースを単一のファイルにカプセル化するためのファイルフォーマットです。**Network** パネルでこの Web Bundle のコンテンツをプレビューできるようになりました。
 
 <!--
 The web bundle feature is experimental currently. Please enable `#enable-experimental-web-platform-features` flag under `chrome://flags` to test it.

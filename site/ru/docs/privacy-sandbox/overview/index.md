@@ -35,7 +35,7 @@ authors:
 
 ### Защита собственных ресурсов
 
-- [**Изменения в работе файлов cookie с атрибутом SameSite**](https://web.dev/samesite-cookies-explained/): защита сайтов путем явной пометки межсайтовых файлов cookie.
+- [**Изменения в работе файлов cookie с атрибутом SameSite**](https://web.dev/articles/samesite-cookies-explained): защита сайтов путем явной пометки межсайтовых файлов cookie.
 - [**Наборы собственных доменов**](/docs/privacy-sandbox/first-party-sets): позволяют связанным доменным именам, имеющим общего владельца, объявлять принадлежность к одному и тому же источнику.
 
 ### Обнаружение мошенничества
@@ -45,7 +45,7 @@ authors:
 ### Ограничение сбора данных
 
 - [**Бюджет конфиденциальности**](https://www.youtube.com/watch?v=0STgfjSA6T8): механизм, дающий сайтам возможность получать информацию об используемом браузере или устройстве, но при этом позволяющий браузеру ограничивать общий объем доступной сайту информации, чтобы не дать ему идентифицировать пользователя.
-- [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/): строка [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) (UA)—одна из важных пассивных поверхностей [фингерпринтинга](https://w3c.github.io/fingerprinting-guidance/#passive) и вдобавок ее сложно анализировать. С помощью Client Hints (клиентских подсказок) разработчики могут активно запрашивать только ту информацию об устройстве или настройках пользователя, которая им необходима, вместо того чтобы извлекать эти данные из строки User-Agent.
+- [**User-Agent Client Hints**](https://web.dev/articles/user-agent-client-hints): строка [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) (UA)—одна из важных пассивных поверхностей [фингерпринтинга](https://w3c.github.io/fingerprinting-guidance/#passive) и вдобавок ее сложно анализировать. С помощью Client Hints (клиентских подсказок) разработчики могут активно запрашивать только ту информацию об устройстве или настройках пользователя, которая им необходима, вместо того чтобы извлекать эти данные из строки User-Agent.
 - [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): позволяет ограничить возможность идентификации конкретных пользователей по IP-адресу. Предложение состоит из двух частей: [<strong data-md="">добровольный отказ от обработки IP-адресов</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) позволяет сайтам сообщать браузеру, что они не идентифицируют пользователей по IP-адресу, в то время как <a href="https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md"><strong>Near-path NAT</strong></a> позволяет группам пользователей направлять свой трафик через один и тот же анонимизирующий сервер, фактически скрывая свои IP-адреса от владельцев сайтов. Gnatcatcher также предоставляет сайтам возможность получать доступ к IP-адресам в легитимных целях, таких как предотвращение злоупотребления, при условии прохождения сертификации и аудита.
 
 ### Идентификация
@@ -90,10 +90,10 @@ authors:
 ### Статьи и видео для веб-разработчиков
 
 - [Погружение в Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
-- [Объяснение SameSite—атрибута файлов cookie](https://web.dev/samesite-cookies-explained/)
+- [Объяснение SameSite—атрибута файлов cookie](https://web.dev/articles/samesite-cookies-explained)
 - [Знакомство с токенами доверия](https://web.dev/trust-tokens)
-- [Более конфиденциальный способ измерения конверсий рекламы](https://web.dev/conversion-measurement/)
-- [Что такое FLoC?](https://web.dev/floc/)
+- [Более конфиденциальный способ измерения конверсий рекламы](/docs/privacy-sandbox/attribution-reporting/)
+- [Что такое FLoC?](https://web.dev/articles/floc)
 - [Знакомьтесь: бюджет конфиденциальности](https://www.youtube.com/watch?v=0STgfjSA6T8)
 
 ### Принципы и концепции, на которых основаны предложения

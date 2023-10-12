@@ -24,12 +24,12 @@ is_outdated: true
 
  To replace functionality that relied on the User Agent string, you can implement the [User Agent client hints API](https://developer.mozilla.org/docs/Web/API/User-Agent_Client_Hints_API#browser_compatibility).
 
- The [User-Agent Client Hints page](https://web.dev/migrate-to-ua-ch/) provides some background.
+ The [User-Agent Client Hints page](https://web.dev/articles/migrate-to-ua-ch) provides some background.
 
  The remainder of this blog post should be considered deprecated.
  {% endAside %}
 
-Starting from Chrome 101, the information available in the User-Agent (UA) string will be reduced [using a phased approach](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html). Sites that haven't had time to migrate away from using the reduced User-Agent string and [move toward User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) can take part in a deprecation trial to continue receiving the full User-Agent string.
+Starting from Chrome 101, the information available in the User-Agent (UA) string will be reduced [using a phased approach](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html). Sites that haven't had time to migrate away from using the reduced User-Agent string and [move toward User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch) can take part in a deprecation trial to continue receiving the full User-Agent string.
 
 The registration for the deprecation trial will begin with the [Chrome 100](https://chromiumdash.appspot.com/schedule) Beta. It will allow sites to receive the full User-Agent string ahead of the Chrome 101 release, where the minor version string will be reduced. If you would like to test the origin trial on Chrome 100 Beta before it launches to the stable channel, be sure to register and test before the release date for Chrome 100 ([currently scheduled for March 31st, 2022](https://chromiumdash.appspot.com/schedule)).
 
@@ -44,7 +44,7 @@ By enrolling in the deprecation trial, sites will continue to receive the full U
 -   The `navigator.platform` Javascript getter
 -   The `navigator.appVersion` Javascript getter
 
-Sites should still audit their usage of the User-Agent header and related APIs, and if needed prepare to [migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) before the deprecation trial expires. The intent is to expire this deprecation trial once the [User-Agent Reduction rollout](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html) is complete.
+Sites should still audit their usage of the User-Agent header and related APIs, and if needed prepare to [migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch) before the deprecation trial expires. The intent is to expire this deprecation trial once the [User-Agent Reduction rollout](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html) is complete.
 
 ## How do I participate in the User-Agent Reduction deprecation  trial?
 

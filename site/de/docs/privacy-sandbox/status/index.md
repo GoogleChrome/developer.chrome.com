@@ -15,7 +15,7 @@ authors:
 
 *Früher bekannt als Conversion-Messung.*
 
-- [Aktuelle Origin-Trial](https://web.dev/origin-trials/): seit Chrome 86, [jetzt ausgeweitet](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) bis auf Chrome 93.
+- [Aktuelle Origin-Trial](/docs/web-platform/origin-trials/): seit Chrome 86, [jetzt ausgeweitet](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) bis auf Chrome 93.
 - [Registrieren Sie sich für die Origin-Trial](/origintrials/#/view_trial/3411476717733150721).
 - [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
 - [Chrome-Plattformstatus](https://www.chromestatus.com/features/6412002824028160).
@@ -31,25 +31,25 @@ Siehe [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status)
 - [Attributionsberichte (Konversionsmessung)](/docs/privacy-sandbox/attribution-reporting)
 - [Einführung in Attributionsberichte (Konversionsmessung)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [Technische API-Erklärer](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ veraltet) [Eine datenschutzfreundlichere Methode zur Messung von Werbekonversionen](https://web.dev/conversion-measurement/): Überblick über die erste Iteration dieses APIs für Webentwickler
+- (⚠️ veraltet) [Eine datenschutzfreundlichere Methode zur Messung von Werbekonversionen](/docs/privacy-sandbox/attribution-reporting/): Überblick über die erste Iteration dieses APIs für Webentwickler
 - (⚠️ veraltet) [Eine datenschutzfreundlichere Methode zur Messung von Werbekonversionen – Video](https://www.youtube.com/watch?v=jcDfOoWwZcM): Demo der ersten Iteration dieses APIs (nur Klicks)
-- (⚠️ veraltet) [Verwenden des Event Conversion Measurement APIs](https://web.dev/using-conversion-measurement/): Wie experimentiert man mit der ersten Iteration dieses APIs für Webentwickler
+- (⚠️ veraltet) [Verwenden des Event Conversion Measurement APIs](/docs/privacy-sandbox/attribution-reporting/): Wie experimentiert man mit der ersten Iteration dieses APIs für Webentwickler
 - [Mehr über die Privacy Sandbox erfahren](https://web.dev/digging-into-the-privacy-sandbox)
 
 ## Vertrauenstoken (Trust Tokens)
 
-- [Aktuelle Origin-Trial](https://web.dev/origin-trials/): seit Chrome 84, [jetzt ausgeweitet](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ) bis auf Chrome 94.
+- [Aktuelle Origin-Trial](/docs/web-platform/origin-trials/): seit Chrome 84, [jetzt ausgeweitet](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ) bis auf Chrome 94.
 - [Registrieren Sie sich für die Origin-Trial](/origintrials/#/view_trial/2479231594867458049).
 - [Demo](https://trust-token-demo.glitch.me/).
 - [Chrome-Plattformstatus](https://www.chromestatus.com/feature/5078049450098688).
 - [Blink-Status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
 - [GitHub](https://github.com/WICG/trust-token-api): siehe [Issues](https://github.com/WICG/trust-token-api/issues) für Fragen und Diskussionen zum API
 - [Chrome-Entwicklertools-Integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
-- Erfahren Sie mehr: [Erste Schritte mit Vertrauenstoken](https://web.dev/trust-tokens/)
+- Erfahren Sie mehr: [Erste Schritte mit Vertrauenstoken](https://web.dev/articles/trust-tokens)
 
 ## Erstanbieter-Sets
 
-- [Aktuelle Origin-Trial](https://web.dev/origin-trials/): Chrome 89 bis 93.
+- [Aktuelle Origin-Trial](/docs/web-platform/origin-trials/): Chrome 89 bis 93.
 - [Registrieren Sie sich für die Origin-Trial](/origintrials/#/view_trial/988540118207823873).
 - [Chrome-Plattformstatus](https://chromestatus.com/feature/5640066519007232).
 - [Blink-Status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
@@ -64,7 +64,7 @@ Siehe [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status)
 - [Der API-Vorschlag](https://github.com/WICG/floc) wird derzeit von der [WICG](https://www.w3.org/community/wicg/) und Interessengruppen erörtert.
 - [GitHub](https://github.com/WICG/floc): siehe [Issues](https://github.com/WICG/floc/issues) für Fragen und Diskussionen zum API
 - [Chrome-Plattformstatus](https://www.chromestatus.com/features/5710139774468096).
-- Erfahren Sie mehr: [Was ist FLoC?](https://web.dev/floc/)
+- Erfahren Sie mehr: [Was ist FLoC?](https://web.dev/articles/floc)
 
 ## FLEDGE
 
@@ -91,7 +91,7 @@ Nachfolger von [TURTLEDOVE](https://github.com/WICG/turtledove).
 
 ### Origin-Trials
 
-- [Erste Schritte für Origin-Trials mit Chrome](https://web.dev/origin-trials/)
+- [Erste Schritte für Origin-Trials mit Chrome](/docs/web-platform/origin-trials/)
 - [Was sind von Dritten durchgeführte Origin-Trials?](https://web.dev/third-party-origin-trials)
 - [Fehlerbehebung bei mit Chrome durchgeführten Origin-Trials](/blog/origin-trial-troubleshooting/)
 - [Origin-Trial-Ratgeber für Webentwickler](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)

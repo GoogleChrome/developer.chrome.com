@@ -57,7 +57,7 @@ Embora qualquer coisa que você faça para melhorar a velocidade de carregamento
 
 - [Minimize o trabalho do thread principal](/docs/lighthouse/performance/mainthread-work-breakdown/)
 - [Reduza o tempo de execução do JavaScript](/docs/lighthouse/performance/bootup-time/)
-- [Garanta que o texto permanece visível durante o carregamento das fontes web](https://web.dev/font-display/)
+- [Garanta que o texto permanece visível durante o carregamento das fontes web](https://web.dev/articles/font-display)
 
 {% Partial 'lighthouse-performance/improve.njk' %}
 

@@ -33,7 +33,7 @@ browser-internal settings or features. You can see the full list by putting
 
 ## Setting browser flags
 
-For some [new APIs](https://web.dev/tags/capabilities/) in Chromium, you need to set a browser
+For some [new APIs](https://web.dev/articles/tags/capabilities) in Chromium, you need to set a browser
 flag for experimentation. You guessed it, `chrome://flags` is where this happens. The most popular flag we
 ask you to set is `chrome://flags/#enable-experimental-web-platform-features`, which, as the name
 suggests, enables experimental web platform features.

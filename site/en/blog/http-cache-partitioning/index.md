@@ -67,7 +67,7 @@ cached using `https://x.example/doge.png` as the key.
 </figure>
 
 The same user visits another page (`https://b.example`), which requests the same
-image (`https://x.example/doge.png`).  
+image (`https://x.example/doge.png`).
 The browser checks its HTTP Cache to see
 if it already has this resource cached, using the image URL as the key. The
 browser finds a match in its Cache, so it uses the cached version of the
@@ -113,11 +113,11 @@ Isolation Key" in addition to the resource URL. The Network Isolation Key is
 composed of the top-level site and the current-frame site.
 
 {% Aside %}
-The "site" is recognized using "[scheme://eTLD+1](https://web.dev/same-site-same-origin/)" so if requests are from
+The "site" is recognized using "[scheme://eTLD+1](https://web.dev/articles/same-site-same-origin)" so if requests are from
 different pages, but they have the same scheme and effective top-level domain+1
 they will use the same cache partition. To learn more about this, read
 [Understanding "same-site" and
-"same-origin"](https://web.dev/same-site-same-origin/).
+"same-origin"](https://web.dev/articles/same-site-same-origin).
 {% endAside %}
 
 Look again at the previous example to see how cache partitioning works in
@@ -227,7 +227,7 @@ already supports it:
 3. Browse the web on Chrome for a minute.
 4. Go back to `chrome://net-export/` and press **Stop Logging**.
 5. Go to `https://netlog-viewer.appspot.com/#import`.
-6. Press **Choose File** and pass the log file you saved. 
+6. Press **Choose File** and pass the log file you saved.
 
 You will see the output of the log file.
 

@@ -774,6 +774,8 @@ redirects:
 - from: /docs/privacy-sandbox/fledge/...
   to: /docs/privacy-sandbox/protected-audience/...
 
+- from: /docs/extensions/gethelp
+  to: /docs/extensions/support-feedback
 - from: docs/extensions/mv3/single_purpose/
   to: docs/extensions/mv3/quality_guidelines/
 

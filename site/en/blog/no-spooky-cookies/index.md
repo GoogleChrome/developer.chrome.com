@@ -109,7 +109,7 @@ goes stale, and (of course!) is only allowed in same-site contexts.
 {% Aside %}
 **Read more:** There's plenty of tweaking you can do to suit your taste and
 we've got all the details in our [first-party cookie
-recipes](https://web.dev/first-party-cookie-recipes/).
+recipes](https://web.dev/articles/first-party-cookie-recipes).
 {% endAside %}
 
 ## Cookies taste better with CHIPS!
@@ -188,7 +188,7 @@ midway through 2024. There's time to prepare, but you should start planning now.
    that will require updates.
 2. If you don't have any third-party cookies, make sure your same-site cookies
    are using the best [First-party cookies
-   recipes](https://web.dev/first-party-cookie-recipes/)
+   recipes](https://web.dev/articles/first-party-cookie-recipes)
 3. If you use those cookies in a fully contained, embedded context then
    investigate and test the [CHIPS proposal](/docs/privacy-sandbox/chips/).
 4. If you need those cookies across multiple sites that form one cohesive group,

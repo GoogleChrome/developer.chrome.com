@@ -15,7 +15,7 @@ description: |
 considering our options, we have decided to continue working on the features proposed by this API in
 the context of the origin private file system of the File System Access API instead. For more
 information on present use, read
-[Accessing files optimized for performance from the origin private file system](https://web.dev/file-system-access/#accessing-files-optimized-for-performance-from-the-origin-private-file-system).
+[Accessing files optimized for performance from the origin private file system](https://web.dev/articles/file-system-access#accessing_files_optimized_for_performance_from_the_origin_private_file_system).
 {% endAside %}
 
 The web platform increasingly offers developers the tools they need to build fined-tuned

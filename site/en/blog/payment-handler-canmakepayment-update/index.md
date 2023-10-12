@@ -10,15 +10,15 @@ authors:
 date: 2022-10-27
 updated: 2023-02-07
 ---
- 
-[The Payment Handler API](https://web.dev/web-based-payment-apps-overview/)
+
+[The Payment Handler API](https://web.dev/articles/web-based-payment-apps-overview)
 allows payment providers to make their custom payment experience available for
 merchants, along with [the Payment Request
-API](https://web.dev/how-payment-request-api-works/). When [the Payment Request
-API](https://web.dev/how-payment-request-api-works/) is initialized via the
+API](https://web.dev/articles/how-payment-request-api-works). When [the Payment Request
+API](https://web.dev/articles/how-payment-request-api-works) is initialized via the
 `new PaymentRequest()` constructor, it silently fires a `canmakepayment` event with
 the merchant's origin and arbitrary data to
-[a service worker that is registered for the Payment Handler API](https://web.dev/orchestrating-payment-transactions/).
+[a service worker that is registered for the Payment Handler API](https://web.dev/articles/orchestrating-payment-transactions).
 This cross-origin communication does not require a user gesture and does not
 show any user interface.
 
@@ -69,7 +69,7 @@ To enable the change locally for development purposes:
 
 By enabling the flag, the identity fields in the `canmakepayment` event will be
 emptied-out (and
-[the Android `IS_READY_TO_PAY` Intent](https://web.dev/android-payment-apps-developers-guide/#step-2-let-a-merchant-know-if-a-customer-has-an-enrolled-instrument-that-is-ready-to-pay)).
+[the Android `IS_READY_TO_PAY` Intent](https://web.dev/articles/android-payment-apps-developers-guide#step_2_let_a_merchant_know_if_a_customer_has_an_enrolled_instrument_that_is_ready_to_pay)).
 
 ## Enable the change in production
 

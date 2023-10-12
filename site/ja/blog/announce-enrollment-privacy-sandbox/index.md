@@ -45,7 +45,7 @@ API 呼び出し元が受け取ることができるデータの量を制限す�
 
 ### サイト単位の登録
 
-すべての API 呼び出し元は、[サイト](https://web.dev/same-site-same-origin/#public-suffix-list-and-etld)を登録する必要があります。サイトは、プライバシーサンドボックス API のプライバシー保護を通知する境界を提供します。
+すべての API 呼び出し元は、[サイト](https://web.dev/articles/same-site-same-origin#public_suffix_list_and_etld)を登録する必要があります。サイトは、プライバシーサンドボックス API のプライバシー保護を通知する境界を提供します。
 
 {% Aside %} この登録は、1 つ以上のプライバシーサンドボックスの広告関連 API を呼び出す企業にのみ適用されます。アドテックの顧客であるサイト運営者やその他の企業は、登録する必要はありません。 {% endAside %}
 

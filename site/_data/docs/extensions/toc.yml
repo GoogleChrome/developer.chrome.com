@@ -1,6 +1,13 @@
 - url: /docs/extensions/mv3
 - url: /docs/extensions/whatsnew
-- url: /docs/extensions/gethelp
+- url:
+- title: i18n.docs.extensions.support
+  sections:
+  - url: /docs/extensions/support-feedback/
+  - url: /docs/extensions/support-feedback/getHelp
+  - url: /docs/extensions/support-feedback/file-a-bug
+  - url: /docs/extensions/support-feedback/submit-a-feature-request
+  - url: /docs/extensions/support-feedback/find-a-bug
 - title: i18n.docs.extensions.get-started
   sections:
   - url: /docs/extensions/mv3/getstarted/
@@ -75,6 +82,9 @@
     - url: /docs/extensions/mv3/nativeMessaging
     - url: /docs/extensions/mv3/screen_capture
     - url: /docs/extensions/mv3/geolocation
+    - url: /docs/extensions/mv3/unit-testing
+    - url: /docs/extensions/mv3/end-to-end-testing
+    - url: /docs/extensions/mv3/tut_puppeteer-testing
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv3/user_privacy

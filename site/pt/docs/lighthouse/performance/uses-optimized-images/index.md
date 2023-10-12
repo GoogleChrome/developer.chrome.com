@@ -20,13 +20,13 @@ O Lighthouse coleta todas as imagens JPEG ou BMP da página, define o nível de 
 
 Existem várias etapas que você pode seguir para otimizar suas imagens, incluindo:
 
-- [Usar CDNs de imagem](https://web.dev/image-cdns/)
-- [Compactar imagens](https://web.dev/use-imagemin-to-compress-images/)
-- [Substituir GIFs animados por vídeo](https://web.dev/replace-gifs-with-videos/)
-- [Remover imagens de carregamento lento](https://web.dev/use-lazysizes-to-lazyload-images/)
-- [Veicular imagens responsivas](https://web.dev/serve-responsive-images/)
-- [Veicular imagens com dimensões corretas](https://web.dev/serve-images-with-correct-dimensions/)
-- [Usar imagens WebP](https://web.dev/serve-images-webp/)
+- [Usar CDNs de imagem](https://web.dev/articles/image-cdns)
+- [Compactar imagens](https://web.dev/articles/use-imagemin-to-compress-images)
+- [Substituir GIFs animados por vídeo](https://web.dev/articles/replace-gifs-with-videos)
+- [Remover imagens de carregamento lento](https://web.dev/articles/use-lazysizes-to-lazyload-images)
+- [Veicular imagens responsivas](https://web.dev/articles/serve-responsive-images)
+- [Veicular imagens com dimensões corretas](https://web.dev/articles/serve-images-with-correct-dimensions)
+- [Usar imagens WebP](https://web.dev/articles/serve-images-webp)
 
 ## Otimize imagens usando ferramentas de GUI
 

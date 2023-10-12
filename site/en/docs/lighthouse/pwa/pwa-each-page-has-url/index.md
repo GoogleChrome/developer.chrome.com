@@ -8,7 +8,7 @@ updated: 2019-09-19
 ---
 
 Ensure individual pages and views in your
-[Progressive Web App (PWA)](https://web.dev/progressive-web-apps/#make-it-installable)
+[Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps#make-it-installable)
 are deep linkable via URL and that each URL is unique
 to make them easily shareable on social media.
 

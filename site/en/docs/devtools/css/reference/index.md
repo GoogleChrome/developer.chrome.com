@@ -129,7 +129,7 @@ Alternatively, scroll down the **Styles** pane and find sections named `Inherite
 
 ### View `@property` at-rules {: #property }
 
-The [`@property` CSS at-rule](https://web.dev/at-property/) lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
+The [`@property` CSS at-rule](https://web.dev/articles/at-property) lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
 
 Hover over the name of such property in the **Styles** pane, to see a tooltip with the property's value, descriptors, and a link to its registration in the collapsible `@property` section at the bottom of the **Styles** pane.
 

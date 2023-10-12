@@ -50,7 +50,7 @@ Aujourd'hui, la mesure des conversions publicitaires repose souvent sur des [coo
 
 L'API Attribution Reporting permet de mesurer deux événements associés entre eux : un événement sur le site web d'un éditeur, tel qu'un internaute qui consulte ou clique sur une annonce, avec une conversion ultérieure sur le site d'un annonceur.
 
-Cette API prend en charge la mesure de l'attribution des conversions après clic (disponible dans la première implémentation de cette API, actuellement en [phase d'évaluation](https://web.dev/conversion-measurement/#browser-support)) et la mesure de l'attribution après affichage ([voir l'explication publique](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md)).
+Cette API prend en charge la mesure de l'attribution des conversions après clic (disponible dans la première implémentation de cette API, actuellement en [phase d'évaluation](/docs/privacy-sandbox/attribution-reporting/#browser-support)) et la mesure de l'attribution après affichage ([voir l'explication publique](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md)).
 
 L'API propose deux types de rapports d'attribution pouvant être utilisés pour différents cas d'utilisation :
 
@@ -69,8 +69,8 @@ L'API propose deux types de rapports d'attribution pouvant être utilisés pour 
 
 - [Introduction à la création de rapports sur l'attribution (mesure des conversions)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [Explications techniques de l'API](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ obsolète) [Un moyen plus privé de mesurer les conversions publicitaires](https://web.dev/conversion-measurement/) : aperçu de la première itération de cette API pour les développeurs web
+- (⚠️ obsolète) [Un moyen plus privé de mesurer les conversions publicitaires](/docs/privacy-sandbox/attribution-reporting/) : aperçu de la première itération de cette API pour les développeurs web
 - (⚠️ obsolète) [Un moyen plus privé de mesurer les conversions publicitaires - Vidéo](https://www.youtube.com/watch?v=jcDfOoWwZcM) : démo de la première itération de cette API (clics uniquement)
-- (⚠️ obsolète) [Utilisation de l'API Event Conversion Measurement](https://web.dev/using-conversion-measurement/) : comment expérimenter la première itération de cette API pour les développeurs web
+- (⚠️ obsolète) [Utilisation de l'API Event Conversion Measurement](/docs/privacy-sandbox/attribution-reporting/) : comment expérimenter la première itération de cette API pour les développeurs web
 - [Explications détaillées de Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 - [Déboguer l'API avec les outils pour les développeurs Chrome](/blog/new-in-devtools-93/#attribution-reporting)

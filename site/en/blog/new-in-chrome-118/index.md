@@ -6,7 +6,7 @@ layout: 'layouts/blog-post.njk'
 date: 2023-10-10
 authors:
   - ajara
-hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/My3ZVJzsSh1BmVasr2sZ.png'
+hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/Fykb6HbizvuTjzhXB8IW.png'
 alt: >
   New in Chrome hero logo
 tags:
@@ -159,7 +159,7 @@ Like in the following example, we could apply style to the text and exclude cont
 }
 ```
 
-Checkout the [`@scope` documentation](https://developer.mozilla.org/docs/Web/CSS/:scope) for more information.
+Checkout the article [Limit the reach of your selectors with the CSS @scope at-rule](/articles/at-scope/) for more information.
 
 ## `scripting` and `prefers-reduced-transparency` media features {: #new-media-queries }
 

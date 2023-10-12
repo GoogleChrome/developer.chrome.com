@@ -16,15 +16,15 @@ tags:
   - javascript
 ---
 
-Building websites that respond quickly to user input has been one of the most challenging aspects of web performance—one that the Chrome Team has been working hard to help web developers meet. Just this year, [it was announced](https://web.dev/inp-cwv/) that the [Interaction to Next Paint (INP) metric](https://web.dev/inp/) would graduate from experimental to pending status. It is now poised to replace [First Input Delay (FID)](https://web.dev/fid/) as a Core Web Vital in March of 2024.
+Building websites that respond quickly to user input has been one of the most challenging aspects of web performance—one that the Chrome Team has been working hard to help web developers meet. Just this year, [it was announced](https://web.dev/articles/inp-cwv) that the [Interaction to Next Paint (INP) metric](https://web.dev/articles/inp) would graduate from experimental to pending status. It is now poised to replace [First Input Delay (FID)](https://web.dev/articles/fid) as a Core Web Vital in March of 2024.
 
-In a continued effort to deliver new APIs that help web developers make their websites as snappy as they can be, the Chrome Team is currently running an [origin trial for `scheduler.yield`](/origintrials/#/view_trial/836543630784069633) starting in version 115 of Chrome. `scheduler.yield` is a proposed new addition to the scheduler API that allows for both an easier and better way to yield control back to the main thread than [the methods that have been traditionally relied upon](https://web.dev/optimize-long-tasks/#manually-defer-code-execution).
+In a continued effort to deliver new APIs that help web developers make their websites as snappy as they can be, the Chrome Team is currently running an [origin trial for `scheduler.yield`](/origintrials/#/view_trial/836543630784069633) starting in version 115 of Chrome. `scheduler.yield` is a proposed new addition to the scheduler API that allows for both an easier and better way to yield control back to the main thread than [the methods that have been traditionally relied upon](https://web.dev/articles/optimize-long-tasks#manually_defer_code_execution).
 
 ## On yielding
 
 JavaScript uses the run-to-completion model to deal with tasks. This means that, when a task runs on the main thread, that task runs as long as necessary in order to complete. Upon a task's completion, control is _yielded_ back to the main thread, which allows the main thread to process the next task in the queue.
 
-Aside from extreme cases when a task never finishes—such as an infinite loop, for example—yielding is an inevitable aspect of JavaScript's task scheduling logic. It _will_ happen, it's just a matter of _when_, and sooner is better than later. When tasks take too long to run—greater than 50 milliseconds, to be exact—they are considered to be [long tasks](https://web.dev/long-tasks-devtools/#what-are-long-tasks).
+Aside from extreme cases when a task never finishes—such as an infinite loop, for example—yielding is an inevitable aspect of JavaScript's task scheduling logic. It _will_ happen, it's just a matter of _when_, and sooner is better than later. When tasks take too long to run—greater than 50 milliseconds, to be exact—they are considered to be [long tasks](https://web.dev/articles/long-tasks-devtools#what_are_long_tasks).
 
 Long tasks are a source of poor page responsiveness, because they delay the browser's ability to respond to user input. The more often long tasks occur—and the longer they run—the more likely it is that users may get the impression that the page is sluggish, or even feel that it's altogether broken.
 
@@ -45,7 +45,7 @@ When you explicitly yield, you're telling the browser "hey, I understand that th
 If you're already familiar with current yielding methods—such as using `setTimeout`—you can jump [straight to the section about `scheduler.yield`](#enter-scheduleryield).
 {% endAside %}
 
-A common method of yielding [uses `setTimeout` with a timeout value of `0`](https://web.dev/optimize-long-tasks/#use-asyncawait-to-create-yield-points). This works because the callback passed to `setTimeout` will move the remaining work to a separate task that will be queued for subsequent execution. Rather than waiting for the browser to yield on its own, you're saying "let's break this big chunk of work up into smaller bits".
+A common method of yielding [uses `setTimeout` with a timeout value of `0`](https://web.dev/articles/optimize-long-tasks#use_asyncawait_to_create_yield_points). This works because the callback passed to `setTimeout` will move the remaining work to a separate task that will be queued for subsequent execution. Rather than waiting for the browser to yield on its own, you're saying "let's break this big chunk of work up into smaller bits".
 
 However, yielding with `setTimeout` carries a potentially undesirable side effect: the work that comes _after_ the yield point will go to the back of the task queue. Tasks scheduled by user interactions will still go to the front of the queue as they should—but the remaining work you wanted to do after explicitly yielding could end up being further delayed by other tasks from competing sources that were queued ahead of it.
 

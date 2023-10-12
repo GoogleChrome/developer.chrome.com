@@ -13,7 +13,7 @@ authors:
 
 ## 구현 현황
 
-- [최초 평가판](https://web.dev/origin-trials/) Chrome 89 ~ 93
+- [최초 평가판](/docs/web-platform/origin-trials/) Chrome 89 ~ 93
 - [최초 평가판에 등록](/origintrials/#/view_trial/988540118207823873)
 - [Chrome 플랫폼 현황](https://chromestatus.com/feature/5640066519007232)
 - [Chromium 프로젝트](https://www.chromium.org/updates/first-party-sets)

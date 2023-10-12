@@ -26,7 +26,7 @@ tags:
 ## Редактируемые выражения от контейнера в панели Styles {: #container-queries }
 
 Теперь вы можете просматривать и редактировать [выражения от
-контейнера](https://web.dev/new-responsive/#responsive-to-the-container) в
+контейнера](https://web.dev/articles/new-responsive#responsive_to_the_container) в
 панели **Styles**.
 
 
@@ -63,7 +63,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/ef157dab2ccf32194
 
 ## Предварительный просмотр веб-бандлов во вкладке Network {: #web-bundle }
 
-[Веб-бандлы](https://web.dev/web-bundles/) — это способ инкапсуляции одного или
+[Веб-бандлы](https://web.dev/articles/web-bundles) — это способ инкапсуляции одного или
 нескольких HTTP-ресурсов в один файл. Теперь вы можете просмотреть содержимое
 веб-бандла во вкладке **Network**.
 

@@ -7,9 +7,9 @@ date: 2020-12-01
 #updated: 2020-12-01
 ---
 
-[Third-party resources](https://web.dev/third-party-javascript/) are often used for displaying ads or videos and integrating with social media.
+[Third-party resources](https://web.dev/articles/third-party-javascript) are often used for displaying ads or videos and integrating with social media.
 The default approach is to load third-party resources as soon as the page loads, but this can unnecessarily slow the page load. If the third-party
-content is not critical, this performance cost can be reduced by [lazy loading](https://web.dev/fast/#lazy-load-images-and-video) it.
+content is not critical, this performance cost can be reduced by [lazy loading](https://web.dev/articles/fast#lazy_load_images_and_video) it.
 
 This audit highlights third-party embeds which can be lazily loaded on interaction. In that case, a _facade_ is used in place of the third-party
 content until the user interacts with it.

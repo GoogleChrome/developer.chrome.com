@@ -66,9 +66,9 @@ When the page loads, it will have what it needs to handle the page's core functi
 If there's code in a render-blocking URL that's not critical,
 you can keep it in the URL,
 and then mark the URL with `async` or `defer` attributes
-(see also [Adding Interactivity with JavaScript](https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/)).
+(see also [Adding Interactivity with JavaScript](https://web.dev/articles/critical-rendering-path-adding-interactivity-with-javascript)).
 
-Code that isn't being used at all should be removed (see [Remove unused code](https://web.dev/remove-unused-code/)).
+Code that isn't being used at all should be removed (see [Remove unused code](https://web.dev/articles/remove-unused-code)).
 
 ## How to eliminate render-blocking stylesheets
 
@@ -76,7 +76,7 @@ Similar to inlining code in a `<script>` tag,
 inline critical styles required for the first paint
 inside a `<style>` block at the `head` of the HTML page.
 Then load the rest of the styles asynchronously using the `preload` link
-(see [Defer unused CSS](https://web.dev/defer-non-critical-css/)).
+(see [Defer unused CSS](https://web.dev/articles/defer-non-critical-css)).
 
 Consider automating the process of extracting and inlining "Above the Fold" CSS
 using the [Critical tool](https://github.com/addyosmani/critical/blob/master/README.md).
@@ -86,10 +86,10 @@ to split up those styles into different files, organized by media query.
 Then add a media attribute to each stylesheet link.
 When loading a page,
 the browser only blocks the first paint to retrieve the stylesheets that match the user's device
-(see [Render-Blocking CSS](https://web.dev/critical-rendering-path-render-blocking-css/)).
+(see [Render-Blocking CSS](https://web.dev/articles/critical-rendering-path-render-blocking-css)).
 
 Finally, you'll want to minify your CSS to remove any extra whitespace or
-characters (see [Minify CSS](https://web.dev/minify-css/)).
+characters (see [Minify CSS](https://web.dev/articles/minify-css)).
 This ensures that you're sending the smallest possible bundle to your users.
 
 ## Stack-specific guidance
@@ -122,6 +122,6 @@ resources](https://wordpress.org/plugins/search/defer+css+javascript/).
 ## Resources
 
 - [Source code for **Eliminate render-blocking resources** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/render-blocking-resources.js)
-- [Reduce JavaScript payloads with code splitting](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
+- [Reduce JavaScript payloads with code splitting](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)
 - [Remove unused code codelab](https://web.dev/codelab-remove-unused-code)
-- [JavaScript Start-up Optimization](https://web.dev/optimizing-content-efficiency-javascript-startup-optimization/)
+- [JavaScript Start-up Optimization](https://web.dev/articles/optimizing-content-efficiency-javascript-startup-optimization)

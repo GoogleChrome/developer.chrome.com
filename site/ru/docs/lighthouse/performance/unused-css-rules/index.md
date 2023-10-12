@@ -44,7 +44,7 @@ updated: 2020-05-29
 
 Подумайте об автоматизации процесса извлечения и встраивания CSS-кода верхней половины полосы с помощью [инструмента Critical](https://github.com/addyosmani/critical/blob/master/README.md).
 
-Дополнительные сведения см. в статье [«Отложите некритичный CSS-код»](https://web.dev/defer-non-critical-css/).
+Дополнительные сведения см. в статье [«Отложите некритичный CSS-код»](https://web.dev/articles/defer-non-critical-css).
 
 ## Рекомендации по стекам
 

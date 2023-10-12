@@ -61,10 +61,10 @@ temporarily re-enabled. These are known as **deprecation trials**, and in some c
 referred to as "reverse" origin trials. -->
 すべてのオリジントライアルが新しい API のテスト向けであるとは限りません。一部のトライアルでは、廃止された機能を一時的に再度有効にすることができます。これらは **デプリケーショントライアル** として知られており、一部のコンテキストでは「リバース」オリジントライアルと呼ばれています。
 
-<!-- For example, [from Chrome 85](https://web.dev/appcache-removal/#origin-trial) AppCache is no longer
+<!-- For example, [from Chrome 85](https://web.dev/articles/appcache-removal#origin_trial) AppCache is no longer
 available in Chrome by default. Sites needing extra time to migrate off AppCache could register for
 the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/1776670052997660673) until Chrome 93. -->
-例えば、 [Chrome 85 から](https://web.dev/appcache-removal/#origin-trial) AppCache は初期状態で Chrome で使用できなくなりました。 AppCache から移行するために追加の時間が必要なサイトは、Chrome 93 まで [deprecation trial to continue using AppCache](/origintrials/#/view_trial/1776670052997660673) に登録することができました。
+例えば、 [Chrome 85 から](https://web.dev/articles/appcache-removal#origin_trial) AppCache は初期状態で Chrome で使用できなくなりました。 AppCache から移行するために追加の時間が必要なサイトは、Chrome 93 まで [deprecation trial to continue using AppCache](/origintrials/#/view_trial/1776670052997660673) に登録することができました。
 
 
 <!-- ## How to register for an origin trial -->

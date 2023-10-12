@@ -82,7 +82,7 @@ but additional measures can be taken if necessary.
 Sometimes a previously installed service worker's URL is unknown.
 This might be because it is versioned (for example contains a hash in its file name).
 In this case it can be a challenge to deploy a no-op service worker that matches the URL of each old service worker that might be registered.
-[This goes against best practices](https://web.dev/service-worker-lifecycle/#avoid-url-change),
+[This goes against best practices](https://web.dev/articles/service-worker-lifecycle#avoid_url_change),
 as developers likely won't remember every hash for every service worker version that was deployed.
 
 Fortunately, a helpful HTTP request header is sent with a request for a service worker script:

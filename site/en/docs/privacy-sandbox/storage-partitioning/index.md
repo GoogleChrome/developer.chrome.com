@@ -20,7 +20,6 @@ tags:
 - [Storage Partitioning proposal](https://github.com/privacycg/storage-partitioning) is open for discussion.
 - [Chrome Platform Status](https://chromestatus.com/feature/5723617717387264)
 
-
 The feature has been enabled for all users on Chrome 115 and later.
 
 ## What is storage partitioning?
@@ -93,7 +92,7 @@ stable launch.
 
 ### Storage APIs
 
-   [Quota system](https://web.dev/storage-for-the-web/#how-much)
+   [Quota system](https://web.dev/articles/storage-for-the-web#how_much)
    :   The quota system is used to determine how much disk space is
        allocated for storage. The quota system will manage each partition as a
        separate bucket to determine how much space is permitted, and when it
@@ -113,7 +112,7 @@ stable launch.
        [Session Storage](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage).
        They are not currently quota-managed, but will still be partitioned.
 
-   [Origin Private File System](https://web.dev/file-system-access/#accessing-the-origin-private-file-system)
+   [Origin Private File System](https://web.dev/articles/file-system-access#accessing_the_origin_private_file_system)
    :   The [File System Access
        API](https://web.dev/file-system-access) allows a site to read or save
        changes directly to files and folders on the device after the user
