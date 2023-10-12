@@ -155,6 +155,12 @@ find a list of the scoped Protected Audience API features and when they'll be su
  <td>Later in 2023</td>
       <td>Expected in Chrome in Q4 2023</td>
     </tr>
+    <tr>
+      <td>Support for Bidding and Auction Beta 1 <br>
+<a href="https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md#beta-1-november-2023">Explainer</a></td>
+ <td>Origin Trial, later in 2023</td>
+      <td>Expected in Chrome (via Origin Trial) in Q4 2023</td>
+    </tr>
   </table>
 
 ## Event-level auction win reporting
