@@ -167,7 +167,7 @@ Primarily these are authentication or payment flows where a top-level site eithe
 **Next step:** We will publish an Intent to the blink-dev mailing list with further details in this month and continue to update documentation here.
 
 
-## Reporting issues with third-party cookies and getting help
+## Reporting issues with third-party cookies and getting help {: #report-issues }
 
 We want to ensure we are capturing the various scenarios where sites break without third-party cookies to ensure that we have provided guidance, tooling, and functionality to allow sites to migrate away from their third-party cookie dependencies. If your site or a service you depend on is breaking with third-party cookies disabled, you can submit it to our breakage tracker at [goo.gle/report-3pc-broken](https://goo.gle/report-3pc-broken).
 
