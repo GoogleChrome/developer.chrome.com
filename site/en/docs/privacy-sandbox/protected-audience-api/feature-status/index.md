@@ -107,7 +107,7 @@ find a list of the scoped Protected Audience API features and when they'll be su
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/165">Buyer reporting ID for custom breakdowns</a></td>
     <td>2023</td>
-    <td>Expected in Chrome in Q3 2023.</td>
+    <td>Available in Chrome in Q3 2023.</td>
   </tr>
     <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/441">Direct seller destination support</a></td>
