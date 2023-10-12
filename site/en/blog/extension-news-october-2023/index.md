@@ -124,8 +124,13 @@ Additionally, you can [submit a self-nomination form](https://docs.google.com/fo
 
 - There's a new video on Debugging Chrome extensions. It covers many topics you may already be familiar with, but it also shares a few neat tricks for using DevTools in extensions.
     {% YouTube id='Ta-YTDhiBIQ' %}
-- You are now required to provide a privacy policy for each extension. Previously, you could only add one privacy policy per developer account, but it was awkward if you had a few extensions under one developer account. This new interface is available in the **Privacy Tab** of your item in the developer dashboard. Account-level privacy policies are no longer supported.
-  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/BB2ziYwins4YpyJ7aETj.png", alt="Screenshot of the privacy policy box", width="674", height="178" %}
+- You are now required to provide a privacy policy for each extension. Previously, you could only add one privacy policy per developer account, but it was awkward if you had a few extensions under one developer account. This new interface is available in the **Privacy Tab** of your item in the developer dashboard. This means that account-level privacy policies are no longer supported.
+<figure>
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/BB2ziYwins4YpyJ7aETj.png", alt="Screenshot of the privacy policy box", width="474", height="178" %}
+  <figcaption>
+    Screenshot of the privacy policy box
+  </figcaption>
+</figure>
 
 ## Reaching out 🙌 {: #connecting }
 
@@ -141,6 +146,6 @@ We've continued reaching out to the extension developer community through 1:1's,
       </figcaption>
     </figure>
 
-Even if you were unable to attend any of these events, you can continue getting involved by asking questions on the [chromium-groups](https://groups.google.com/a/chromium.org/g/chromium-extensions), following browser partner discussions on the [WECG](https://github.com/w3c/webextensions/issues), and reporting any documentation issues.
+Even if you were unable to attend any of these events, you can continue getting involved by asking questions on the [chromium-extensions](https://groups.google.com/a/chromium.org/g/chromium-extensions) Google group, following browser partner discussions on the [WECG](https://github.com/w3c/webextensions/issues), and reporting any documentation issues.
 
 Thanks again for being a part of the extension developer community!
