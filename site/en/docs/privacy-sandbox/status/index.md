@@ -8,7 +8,7 @@ description: >
   Review Chrome platform status, resources, and feature release
   timelines.
 date: 2021-05-18
-updated: 2023-07-03
+updated: 2023-10-09
 authors:
   - alexandrawhite
 ---
@@ -18,6 +18,10 @@ process. Within each proposal, there are individual features that have
 different expected availability.
 
 To review the latest information on any proposal or API, visit the respective overview documentation and the [Privacy Sandbox timeline](https://privacysandbox.com/open-web/).
+
+## Aggregation Service
+
+{% Partial 'privacy-sandbox/timeline/aggregation-service.njk' %}
 
 ## Attribution Reporting
 
@@ -43,10 +47,6 @@ To review the latest information on any proposal or API, visit the respective ov
 
 {% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
 
-## First-Party Sets
-
-{% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
-
 ## IP Protection
 
 {% Partial 'privacy-sandbox/timeline/ip-protection.njk' %}
@@ -64,11 +64,15 @@ To review the latest information on any proposal or API, visit the respective ov
 ## Protected Audience
 
 Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove). Formerly
-named FLEDGE.
+named FLEDGE. Also refer to [Status of pending Protected Audience API capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/) for more information.
 
 {% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
 {% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
+
+## Related Website Sets (formerly First-Party Sets)
+
+{% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
 
 ## Shared Storage
 

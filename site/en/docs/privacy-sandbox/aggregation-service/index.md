@@ -8,7 +8,7 @@ description: >
   Deploy and manage this service to produce summary reports for the
   Attribution Reporting API or the Private Aggregation API.
 date: 2022-11-29
-updated: 2023-09-18
+updated: 2023-10-09
 authors:
   - alexandrawhite
 ---
@@ -29,6 +29,10 @@ create a [summary report](/docs/privacy-sandbox/summary-report/).
 The explainer outlines
 [key terms](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms),
 useful for understanding the Aggregation Service.
+
+### Availability
+
+{% Partial 'privacy-sandbox/timeline/aggregation-service.njk' %}
 
 ## Secure data processing
 
