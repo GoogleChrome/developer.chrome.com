@@ -7,7 +7,7 @@ description: How to write an automated test for Chrome Etensions in Puppeteer.
 ---
 
 _For general advice on testing extensions, see
-[Automated testing for Chrome Extensions][automated-testing]._
+[Automated testing for Chrome Extensions][automated-testing] and [Unit testing in Chrome Extensions][unit-testing]._
 
 [Puppeteer][puppeteer] provides a framework for building automated tests of websites, which also
 includes the ability to test Chrome Extensions. These are high-level end-to-end tests that test the
@@ -183,3 +183,5 @@ capabilities not described here.
 [consistent-id]: /docs/extensions/mv3/automated-testing/#setting-an-extension-id
 [eslint]: https://www.npmjs.com/package/eslint-plugin-jest
 [typescript]: https://jestjs.io/docs/getting-started#type-definitions
+[unit-testing]: /docs/extensions/mv3/unit-testing
+

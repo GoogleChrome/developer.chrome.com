@@ -54,6 +54,13 @@ test("getActiveTabId returns active tab ID", async () => {
 });
 ```
 
+## Next steps {: #continue }
+
+To ensure your extension functions as expected, we recommend adding [end-to-end tests][end-to-end]. See [Testing Chrome Extensions with Puppeteer][pupeteer-tutorial] for a complete tutorial.
+
 [unit-testing]: https://wikipedia.org/wiki/Unit_testing
 [jest]: https://jestjs.io/
 [dependency-injection]: https://wikipedia.org/wiki/Dependency_injection
+[pupeteer-tutorial]: /docs/extensions/mv3/tut_puppeteer-testing/
+[end-to-end]: /docs/extensions/mv3/end-to-end-testing/
+

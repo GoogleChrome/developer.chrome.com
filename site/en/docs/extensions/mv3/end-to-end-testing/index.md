@@ -11,14 +11,14 @@ tool communicates with the browser to automate interactions and test the same fl
 would go through. A library that supports end-to-end testing will generally provide ways of
 controlling the browser, simulating user input and observing the current state of any open pages.
 
-See [Testing Chrome Extensions with Puppeteer][tutorial] for a tutorial.
+See [Testing Chrome Extensions with Puppeteer][tutorial] for a tutorial and [Unit testing][unit-testing] for details on writing unit tests for Chrome extensions.
 
 ## Using browser testing libraries {: #libraries }
 
 Extensions are supported by a range of testing libraries.
 
 | Library                | Guidance                                                                                                                              |
-|------------------------|:-------------------------------------------------------------------------------------------------------------------------------------:|
+|------------------------|:-------------------------------------------------------------------------------------------------------------------------------------|
 | Puppeteer / Playwright | See Chrome Extensions ([Puppeteer][puppeteer-testing] / [Playwright][playwright-testing]).                                            |
 | Selenium               | Use the [ChromeOptions][selenium-chromeoptions] object to load extensions. More information is available [here][selenium-extensions]. |
 | WebDriverIO            | See [Web Extension Testing][webdriverio-testing].                                                                                     |
@@ -100,3 +100,5 @@ await driver.executeAsyncScript(
 [new-headless]: /articles/new-headless/
 [consistent-id]: /docs/extensions/mv3/manifest/key/#keep-consistent-id
 [tutorial]: /docs/extensions/mv3/tut_puppeteer-testing/
+[unit-testing]: /docs/extensions/mv3/unit-testing
+
