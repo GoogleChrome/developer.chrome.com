@@ -41,7 +41,7 @@ that matches the already installed PWA, it will treat that as the installed PWA.
 
 Support for the `id` property landed in Chrome 96.
 
-## What should I do if I have an app without id?
+## What should I do if I have an app without an `id`?
 
 There is **nothing you need to do**, and nothing will break if you
 don't add an `id` to your web app manifest (as long as the `start_url` and
