@@ -4,6 +4,7 @@ title: Uniquely identifying PWAs with the web app manifest id property
 authors:
   - petelepage
 date: 2021-09-16
+updated: 2023-10-12
 description: |
   There's a new optional `id` property as part of the web app manifest spec,
   that allows you to explicitly define the identifier used for your PWA.
@@ -38,13 +39,11 @@ that matches the already installed PWA, it will treat that as the installed PWA.
 
 ## Browser support
 
-Support for the `id` property is expected to land in desktop Chromium-based
-browsers starting with version 96. Support for mobile (which currently uses
-the manifest url as the unique id) should land in the first half of 2022.
+Support for the `id` property landed in Chrome 96.
 
-## What should I do today?
+## What should I do if I have an app without id?
 
-Today, there is **nothing you need to do**, and nothing will break if you
+There is **nothing you need to do**, and nothing will break if you
 don't add an `id` to your web app manifest (as long as the `start_url` and
 the manifest path remains the same). To future-proof your PWA, you can add
 an `id` property to your web app manifest.
@@ -54,7 +53,7 @@ an `id` property to your web app manifest.
 The safest, and the most accurate, way to determine the `id` for a PWA
 is to check the value calculated by Chrome.
 
-1. Using Chrome 96 or higher (currently available as Chrome Canary), open the
+1. Using Chrome 96 or higher, open the
    **Manifest** pane of the **Application** panel in DevTools.
 1. Hover your mouse over the `(!)` icon next to the **App Id** property. The
    `(!)` tooltip icon will only appear when the `id` is **not** specified in
@@ -82,22 +81,22 @@ DevTools.
 
 ## What if I don't set an `id`?
 
-**Don't worry, nothing will break**. Starting in Chrome 96 on desktop, the
-browser will generate an `id` if there is not one in the manifest. On desktop,
-it will be calculated based on the `start_url` in the web app manifest.
+**Don't worry, nothing will break**. Starting in Chrome 96, the
+browser will generate an `id` if there is not one in the manifest
+based on the `start_url` in the web app manifest.
 
-In the future, adding an `id`  to the web app manifest will make it possible
-to change the `start_url` and the manifest path, because the browser will
+Adding an `id`  to the web app manifest makes it possible
+to change the `start_url` and the manifest path (if and only if their particular
+[origin](https://developer.mozilla.org/docs/Glossary/Origin) stays the same!),
+because the browser will
 identify the PWA based on the specified `id`, rather than the `start_url` or
 manifest path.
 
-## How do I test this today?
+## How do I test this?
 
-To test the behaviour before Chrome 96 is available as stable, follow
+To test the behavior, follow
 these steps:
 
-1. Using Chrome 96 or later (currently Chrome Canary), enable the
-   `#enable-desktop-pwas-manifest-id` flag, then restart the browser.
 1. Install the PWA.
 1. Open `about://web-app-internals/` and check the `unhashed_app_id` and
    `start_url` property for the installed PWA.
