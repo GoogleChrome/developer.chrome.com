@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Submit a feature request
-description: 'TBD'
+description: 'Submit a request for a feature that you believe could improve the extension platform.'
 date: 2023-10-11
 tags:
   - extensions
@@ -9,7 +9,7 @@ tags:
 
 ## Submit a feature request
 
-If you identify a feature that you believe could improve the extension's platform, file a request as described below.
+If you identify a feature that you believe could improve the extension platform, file a request as described below.
 
 1.  Before submitting a feature request, [search the Chromium issue tracker](/docs/extensions/support-feedback/find-a-bug) to verify that your feature has not already been proposed.
 1.  File an issue in [the issue tracker](https://crbug.com). Be as explicit as possible when filling out a feature request. The easier it is to understand the use case, the greater the chance it will be taken into consideration.

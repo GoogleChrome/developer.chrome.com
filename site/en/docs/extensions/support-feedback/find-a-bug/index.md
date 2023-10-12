@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Find and follow a bug
-description: 'TBD'
+description: 'Check whether a bug or feature request has already been reported.'
 date: 2023-10-11
 tags:
   - extensions
