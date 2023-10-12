@@ -5,7 +5,7 @@ description: >
 layout: 'layouts/blog-post.njk'
 date: 2023-10-14
 authors:
-  - jxck
+  - jackjey
 tags:
   - security
   - chrome-119
