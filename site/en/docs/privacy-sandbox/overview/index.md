@@ -145,7 +145,7 @@ as well as [CHIPS](/docs/privacy-sandbox/chips/) and
 are now available for all users for all Chrome channels on Android and desktop. As with all technologies, use feature detection to check for support and availability before accessing a Privacy Sandbox feature.
 
 [Chrome Platform Status](chromestatus.com) details browser and implementation status on desktop, Android, iOS, and Android WebView, for individual APIs:
-* [All features](https://chromestatus.com/features) provide shipping  milestones, standardization signals, relevant [Blink](https://www.youtube.com/watch?v=CVRLeOX-TGI) 
+* [All features](https://chromestatus.com/features) provides shipping  milestones, standardization signals, relevant [Blink](https://www.youtube.com/watch?v=CVRLeOX-TGI) 
   components, and other information for an individual feature. You can star a feature to be notified of  updates,  and view your starred features from [My features](https://chromestatus.com/myfeatures).
 * [HTML & JavaScript usage metrics](https://chromestatus.com/metrics/feature/popularity) 
 shows the percentage of page loads in Chrome that use a feature across all channels and 
