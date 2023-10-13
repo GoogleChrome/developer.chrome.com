@@ -6,7 +6,7 @@ authors:
 date: 2021-09-16
 updated: 2023-10-12
 description: |
-  There's a new optional `id` property as part of the web app manifest spec,
+  The optional `id` property is part of the web app manifest spec,
   and allows you to explicitly define the identifier used for your PWA.
   Adding the `id` property to the manifest removes the dependency on the
   `start_url` or the location of the manifest, and makes it possible for
