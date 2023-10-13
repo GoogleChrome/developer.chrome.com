@@ -12,6 +12,8 @@
 - title: i18n.docs.webstore.publish
   sections:
     - url: /docs/webstore/register/
+    - url: /docs/webstore/set-up-account/
+    - url: /docs/webstore/zip-item/
     - url: /docs/webstore/publish/
     - url: /docs/webstore/manage/
     - url: /docs/webstore/update/
