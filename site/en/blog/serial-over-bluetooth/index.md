@@ -4,7 +4,7 @@ title: "Serial over Bluetooth on the web"
 description: "The Web Serial API added support for Bluetooth RFCOMM services."
 hero: "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/uabT6SZieVHZgpYLsnF2.jpg"
 alt: "A human hand holding Google Pixel Buds Pro charging case."
-date: 2023-10-12
+date: 2023-10-13
 #updated: YYYY-MM-DD
 authors:
   - beaufortfrancois
