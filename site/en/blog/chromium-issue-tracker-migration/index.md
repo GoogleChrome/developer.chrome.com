@@ -2,9 +2,9 @@
 layout: 'layouts/blog-post.njk'
 title: "Chromium issue tracker migration"
 description: >
-  Chromium is migrating to a tool powered by the Google Issue tracker in January 2024.
+  Chromium issue tracking is migrating to a tool powered by the Google Issue tracker in January 2024.
 subhead: >
-  Chromium is migrating to a tool powered by the Google Issue tracker in January 2024.
+  Chromium issue tracking is migrating to a tool powered by the Google Issue tracker in January 2024.
 date: 2023-10-16
 ---
 
