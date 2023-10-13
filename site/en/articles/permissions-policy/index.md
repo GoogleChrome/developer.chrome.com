@@ -8,6 +8,9 @@ description: >
 date: 2022-04-20
 authors:
   - kevinkiklee
+tags:
+  - monitoring
+  - security
 ---
 
 Permissions Policy, formerly known as Feature Policy, allows the developer to
