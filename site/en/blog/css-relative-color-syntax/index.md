@@ -17,7 +17,7 @@ alt: >
 ---
 
 In Chrome 119 is a very powerful color feature from [CSS Color Level
-4](https://www.w3.org/TR/css-color-5/#relative-colors). Relative color syntax
+5](https://www.w3.org/TR/css-color-5/#relative-colors). Relative color syntax
 creates a smooth path for color manipulation within CSS, offering ways for
 authors and designers to:
 
