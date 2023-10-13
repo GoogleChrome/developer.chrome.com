@@ -149,7 +149,7 @@ are now available for all users for all Chrome channels on Android and desktop. 
   components, and other information for an individual feature. You can star a feature to be notified of  updates,  and view your starred features from [My features](https://chromestatus.com/myfeatures).
 * [HTML & JavaScript usage metrics](https://chromestatus.com/metrics/feature/popularity) 
 shows the percentage of page loads in Chrome that use a feature across all channels and 
-platforms. Note: this reflects how often the API is being called from pages, not how many users 
+platforms. Note that this reflects how often the API is being called from pages, not how many users 
 have a feature enabled on their browser.
 
 Chrome Status metrics charts for Privacy Sandbox ads APIs are collated on [pscs.glitch.me](https://pscs.glitch.me).
