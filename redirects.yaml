@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /blog/pwa-manifest-id/
+  to: /articles/pwa-manifest-id/
+
 - from: /docs/privacy-sandbox/first-party-sets/
   to: /docs/privacy-sandbox/related-website-sets/
 
