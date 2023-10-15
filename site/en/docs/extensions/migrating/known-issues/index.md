@@ -32,9 +32,9 @@ The following issues have recently been addressed:
 
 1. **User Script support:** Allow registering content scripts with arbitrary code with the new [userScripts API](/docs/extensions/reference/userscripts/). (See [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details.) [Chrome 120]
 1. Additional **strong service worker keepalives** for certain operations taking longer than five minutes.
-    * Added in Chrome 116 for `permissions.request()`, `desktopCapture.chooseDesktopMedia()`, `identity.launchWebAuthFlow()` and `management.uninstall()`.
+    * Added in Chrome 116 for `permissions.request()`, `desktopCapture.chooseDesktopMedia`, `identity.launchWebAuthFlow()` and `management.uninstall()`.
     * Added in Chrome 118 for `chrome.debugger`
-1. **Increase the number of static and enabled rulesets** for Declarative Net Request (DNR) to XXXXXX  [Chrome 120].
+1. **Increase the number of static and enabled rulesets** for Declarative Net Request (DNR). Enabled static rulesets increased to 50 and total static rulesets to 100 [Chrome 120].
 1. Extend **[Offscreen document](/docs/extensions/reference/offscreen/) functionality** to support more reasons for using an offscreen document. Added [`GEOLOCATION`](/docs/extensions/mv3/geolocation/) in Chrome 116.
 1. Improving **support for the [`chrome.tabCapture`](/docs/extensions/reference/tabCapture/) API** [Chrome 116]:
     * Support calling `getMediaStreamId()` from a service worker.
