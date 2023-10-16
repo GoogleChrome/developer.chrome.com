@@ -35,7 +35,7 @@ The following are all available transition types:
 : The user got to this page by clicking a link on another page.
 
 `"typed"`
-: The user got this page by typing the URL in the address bar. Also used for other explicit navigation actions. <!--okay, what else is there?-->
+: The user got this page by typing the URL in the address bar. This is also used for other explicit navigation actions. 
 
 `"auto_bookmark"`
 : The user got to this page through a suggestion in the UI, for example, through a menu item.
