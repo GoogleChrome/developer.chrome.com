@@ -18,7 +18,7 @@ example, load the extension locally, locate logs, and explore other recommendati
 This extension will display “Hello Extensions” when the user clicks on the extension toolbar icon.
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png",
 alt="Hello extension", width="206", height="130", class="screenshot" %}
   <figcaption>
   Hello Extension popup
@@ -46,7 +46,7 @@ extension's action icon is clicked.
 }
 ```
 
-[Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
+[Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key.
 
 For the popup, create a file named `hello.html`, and add the following code:
 
@@ -71,7 +71,7 @@ To load an unpacked extension in developer mode:
 2. Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3. Click the **Load unpacked** button and select the extension directory.
     <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BzVElZpUtNE4dueVPSp3.png", alt="Extensions page", 
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/BzVElZpUtNE4dueVPSp3.png", alt="Extensions page",
     width="400", height="183",  class="screenshot" %}
 
       <figcaption>
@@ -86,11 +86,10 @@ the manifest, a generic icon will be created for the extension.
 
 By default, when you load your extension locally, it will appear in the extensions menu {% Img
 src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/f5i7AgfauCfoQJxnn3kU.png", alt="Puzzle", width="24",
-height="24" %}. Pin your extension to the toolbar to quickly access your extension during
-development.
+height="24" %}. Users can pin your extension to the toolbar to access it quickly, but you can do the same thing during development.
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/LahIugYHQW3QpHM0z1qZ.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/LahIugYHQW3QpHM0z1qZ.png",
 alt="Pinning the extension", width="358", height="248", class="screenshot" %}
   <figcaption>
   Pinning the extension
@@ -100,7 +99,7 @@ alt="Pinning the extension", width="358", height="248", class="screenshot" %}
 Click on the extension’s action icon (toolbar icon); you should see a popup.
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png",
 alt="hello world extension", width="206", height="130", class="screenshot" %}
   <figcaption>
   Hello World extension
@@ -168,22 +167,22 @@ To see this message logged in the Console:
 
   1. Open the popup.
   2. Right-click on the popup.
-  3. Select **Inspect**. 
-      <figure> 
-      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vHGHW1o4J0kZgUkAteRQ.png", 
+  3. Select **Inspect**.
+      <figure>
+      {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vHGHW1o4J0kZgUkAteRQ.png",
       alt="Inspecting the popup.", width="322", height="262", class="screenshot" %}
         <figcaption>
-        Inspecting a popup. 
+        Inspecting a popup.
         </figcaption>
       </figure>
   4. In the [DevTools][dev-tools], navigate to the **Console** panel.
     <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/1ZrcBEYcbMxW1c9UvBy9.png", 
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/1ZrcBEYcbMxW1c9UvBy9.png",
     alt="DevTools Code Panel", width="400", height="374", class="screenshot" %}
       <figcaption>
-      Inspecting a popup 
+      Inspecting a popup
       </figcaption>
-    </figure>   
+    </figure>
 
 ### Error logs {: #errors }
 
@@ -195,12 +194,12 @@ console.log("This is a popup!) // ❌ broken code
 
 Go to the Extensions page and open the popup. An **Errors** button will appear.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/a9lAHCJZZrebOSKrkPRD.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/a9lAHCJZZrebOSKrkPRD.png",
 alt="Extensions page with error button", width="300", height="226", class="screenshot" %}
 
 Click the **Errors** button to learn more about the error:
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GrorLyaC6nRAyqc1qULC.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GrorLyaC6nRAyqc1qULC.png",
 alt="Extension error details", width="400", height="281", class="screenshot" %}
 
 To learn more about debugging the service worker, options page, and content scripts, see [Debugging
@@ -228,7 +227,7 @@ Update this npm package frequently to work with the latest Chromium version.
 
 ## 🚀 Ready to start building? {: #building }
 
-Choose any of the following tutorials to begin your extension learning journey. 
+Choose any of the following tutorials to begin your extension learning journey.
 
 | Extension                        | What you will learn                                                     |
 |----------------------------------|-------------------------------------------------------------------------|
