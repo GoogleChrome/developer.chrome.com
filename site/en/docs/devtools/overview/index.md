@@ -20,7 +20,7 @@ prototyping CSS, debugging JavaScript, and analyzing load performance.
 There are many ways to open DevTools, because different users want quick access to different parts
 of the DevTools UI.
 
-- When you want to work with the DOM or CSS, right-click an element on the page and select
+- To work with the DOM or CSS, right-click an element on the page and select
   **Inspect** to jump into the **Elements** panel. Or press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd> (Mac) or
   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux, ChromeOS).
 - When you want to see logged messages or run JavaScript, press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac) or
