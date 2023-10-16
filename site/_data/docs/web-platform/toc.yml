@@ -3,6 +3,9 @@
     - url: /docs/web-platform/chrome-release-channels
     - url: /docs/web-platform/chrome-flags
     - url: /docs/web-platform/chrome-variations
+    - url: /docs/web-platform/origin-trials
+    - url: /docs/web-platform/third-party-origin-trials
+    - url: /docs/web-platform/origin-trial-troubleshooting
 
 - title: i18n.docs.web-platform.shipped
   sections:
@@ -21,14 +24,14 @@
 
 - title: i18n.docs.web-platform.origin-trials
   sections:
-    - url: /docs/web-platform/origin-trials
-    - url: /docs/web-platform/third-party-origin-trials
-    - url: /docs/web-platform/origin-trial-troubleshooting
     - url: /docs/web-platform/launch-handler
     - url: /docs/web-platform/popup-api
     - url: /docs/web-platform/bfcache-notrestoredreasons
     - url: /blog/soft-navigations-experiment/
     - url: /docs/web-platform/compute-pressure
+
+- title: i18n.docs.web-platform.developer-trials
+  sections:
 
 - title: i18n.docs.web-platform.not-pursuing
   sections:
