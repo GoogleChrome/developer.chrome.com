@@ -51,7 +51,7 @@ Click the **Verify email** link to send the verification link to your email.
 
 ## Next steps
 
-- Prepare to publish by [zipping your extension][zip] 
+- [Prepare your extension][prepare]. 
 - [Publish your extension][publish].
 
 
@@ -64,6 +64,7 @@ Click the **Verify email** link to send the verification link to your email.
 [register]: /docs/webstore/register
 [review-times]: /docs/webstore/review-process/#review-time
 [update]: /docs/webstore/update
+[prepare]: /docs/webstore/prepare
 [user-data]: /docs/webstore/user_data/
 [verified-publisher]: /docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status
 [version]: /docs/extensions/mv3/manifest/version

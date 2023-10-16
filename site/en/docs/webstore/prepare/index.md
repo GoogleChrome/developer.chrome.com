@@ -3,10 +3,10 @@ layout: "layouts/doc-post.njk"
 title: "Prepare your extension"
 seoTitle: "Preparing and zipping your Chrome extension for the Chrome Web Store"
 date: 2023-10-16
-description: Create a zip file with your extension files.
+description: Prepare your extension files.
 ---
 
-After [registering][register] and [setting up][setup-account] your developer account, you can submit your extension to the Chrome Web Store. But before you do so, there are a few ways to prepare your extension and other content before your submit your item.
+After [registering][register] and [setting up][setup-account] your developer account, you can submit your extension to the Chrome Web Store. But before you do so, there are a few ways to prepare your extension and other content before submitting your item.
 
 ## Test your extension in production {: #test }
 
@@ -29,13 +29,13 @@ previous version.
 
 ## Zip your extension files {: #zip }
 
-To upload your extension, you need to submit a ZIP file that contains all extension files. Make sure you place the manifest file in the **root directory**.
+To upload your extension, you need to submit a ZIP file that contains all extension files. Make sure you place the manifest file in the **root directory**, not in a folder.
 
 ## Additional store listing content  {: #listing }
 
 Besides the metadata in your manifest, you will also need to provide content, images, and URLs that
 will help your users understand what value your extension offers. See [Creating a great listing
-page][best-listing] for details on how to create a high-quality listing page that clearly
+page][best-listing] for details on creating a high-quality listing page that clearly
 communicates what your item will offer, using the item description, images, and other listing
 metadata. 
 

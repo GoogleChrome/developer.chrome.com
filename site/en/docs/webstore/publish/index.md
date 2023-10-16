@@ -6,22 +6,25 @@ updated: 2023-10-05
 description: How to publish a new extension or theme to the Chrome Web Store.
 ---
 
-After [registering][register], [setting up][setup-account] your developer account, and [zipping your extension][zip] you can follow the steps provided in this article to publish your extension for the first time.
+After [registering][register] your developer account, [setting it up][setup-account], and [preparing your extension][prepare] follow the steps in this article to publish your extension for the first time.
 
 ## Upload your item {: #upload-your-item }
 
 Use the following steps to upload your item:
 
 1. Go to the [Chrome Developer Dashboard][dev-dashboard].
-1. Sign in to the developer account you chose in Step 1.
+1. Sign in to the developer account.
 1. Click the **Add new item** button.
-1. Click **Choose file** > your zip file > **Upload**. If your item's manifest and ZIP file are
-    valid, you can edit your item on the next page.
+1. Click **Choose file** > your zip file > **Upload**. If your item's manifest and ZIP file are valid, you can edit your item on the next page.
 
 Once you've uploaded your extension, you will see it as an item in the dashboard.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/g06GNVoineSSnxt4N6Fy.png",
-       alt="Screenshot of the Chrome Web Store item listing page", height="472", width="800" %}
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xky1FZXklZRMH4UUB1az.png", alt="Screenshot of the Developer dashboard item listing page", width="800", height="499" %}
+  <figcaption>
+    Developer dashboard item listing page
+  </figcaption>
+</figure>
 
 {% Aside %}
 You cannot have more than 20 _extensions_ published on the Chrome Web Store. There is no such limit on the number of themes.
@@ -33,19 +36,24 @@ Now you can fill out additional listing details in the left-hand menu. Here is a
 
 - The Package tab displays details of your uploaded item. This page isn't editable when you first
   create an item.
-- The [Store Listing][listing] tab contains details of your listing and how it will be displayed in the Chrome Web
-  Store.
+- The [Store Listing][listing] tab contains details of your listing and how it will be displayed in the Chrome Web Store.
 - The [Privacy][privacy] tab is where you declare your extension's single purpose and how your extension is handling user data.
-- The [Distribution][distribution] tab lets you control which countries will list your item and
-  which set of users will see it.
+- The [Distribution][distribution] tab lets declare if your extension is a paid item, which countries will list your item and the set of users that will see it.
 
 ## Submit your item {: #publish-item }
 
 After [filling out the information](#info) about your item, you are ready to submit your item. When you click the **Submit for Review** button the following dialog appears, letting you confirm that you want to submit the item for review.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BiZituXHHZ74SIkwc3q7.png",
+
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BiZituXHHZ74SIkwc3q7.png",
        alt="Screenshot of the Chrome Web Store confirm submission dialog",
        height="388", width="800" %}
+  <figcaption>
+    Screenshot of the Chrome Web Store confirm submission dialog
+  </figcaption>
+</figure>
+
 
 ### Deferred publishing option {: #deferred-publishing }
 
@@ -57,8 +65,8 @@ is complete.
 If you submit your item to publish automatically after review, you can still choose deferred publishing by selecting the **Defer publish** option located in the item's menu.
 
 <figure>
-    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png",
-    alt="Screenshot of defer publish option in the 'more' menu", width="286", height="184" %}
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/s58dN9mMogWe5W900eD4.png",
+    alt="Screenshot of defer publish option in the 'more' menu", width="286", height="184", class='screenshot' %}
   <figcaption>
     Deferred publishing option in the items menu 
   </figcaption>
@@ -75,21 +83,23 @@ review.
 
 You can check when your staged submission will expire under the status of your item.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/sYCH3lvreW0bUWznlOsE.png", alt="Chrome Web Store
-staged item
-status", width="700", height="84" %}
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/sYCH3lvreW0bUWznlOsE.png", alt="Chrome Web Store staged item status", width="700", height="84", class='screenshot' %}
+  <figcaption>
+    Chrome Web Store staged item status
+  </figcaption>
+</figure>
 
 ## The review process {: #review-of-submitted-items }
 
-After you submit the item for review, it will undergo a review process. The time for this review
-depends on the nature of your item. See [review times][review-times] for more details.
+After you submit the item for review, it will undergo a review process. The time for this review depends on the nature of your item. See [Understanding the review process][cws-review] for more details.
 
 There are important emails like take down or rejection notifications that are enabled by default. To receive an email notification when your item is published or staged, you can enable notifications on the **Account page**.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/l27aRFGCN4MJURmpoCQN.png", alt="Screenshot of enable
 staged and reviewed items", width="709", height="238" %}
 
-## Additional resources
+## Additional resources {: #next-steps }
 
 - [Update your Chrome Web Store Item][update].
 - Understand the [Chrome Web Store Review Process][cws-review].
@@ -106,7 +116,7 @@ staged and reviewed items", width="709", height="238" %}
 [review-times]: /docs/webstore/review-process/#review-time
 [update]: /docs/webstore/update
 [verified-publisher]: /docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status
-[zip]: /docs/webstore/zip
+[prepare]: /docs/webstore/prepare
 
 
 
