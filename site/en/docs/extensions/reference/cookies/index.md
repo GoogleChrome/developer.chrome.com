@@ -26,7 +26,7 @@ to access. For example:
 
 [Partitioned cookies][chips] allow a site to mark that certain cookies should be keyed against the
 origin of the top-level frame. This means that, for example, if site A is embedded using an iframe in site B
-and site C, a partitioned cookie can have a different value on each site. <!--does that mean all 3, or just B and C?-->
+and site C, the embedded versions of a partitioned cookie from A can have different values on B and C.
 
 Because `chrome.cookies` doesn't support partitioning, all of its methods
 read and write cookies from all partitions. The [`cookies.set()`](#method-set) method stores cookies in
