@@ -508,6 +508,12 @@
       </span>
     {% endif %}
 
+    {% if feature.requiresPolicyInstall %}
+      <span class="aside--important tag-pill type--label rounded-lg" title="Only available to policy installed extensions">
+        Requires policy
+      </span>
+    {% endif %}
+
     {% if feature.deprecated %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         Deprecated
