@@ -22,15 +22,20 @@
 - title: i18n.docs.web-platform.origin-trials
   sections:
     - title: i18n.docs.web-platform.ot-concepts
-      sections:
+
         - url: /docs/web-platform/origin-trials
         - url: /docs/web-platform/third-party-origin-trials
         - url: /docs/web-platform/origin-trial-troubleshooting
-    - url: /docs/web-platform/launch-handler
-    - url: /docs/web-platform/popup-api
-    - url: /docs/web-platform/bfcache-notrestoredreasons
-    - url: /blog/soft-navigations-experiment/
-    - url: /docs/web-platform/compute-pressure
+    - title: i18n.docs.web-platform.ot-current
+      sections:
+        - url: /docs/web-platform/launch-handler
+        - url: /docs/web-platform/popup-api
+        - url: /docs/web-platform/bfcache-notrestoredreasons
+        - url: /blog/soft-navigations-experiment/
+        - url: /docs/web-platform/compute-pressure
+        - url: /origintrials
+          title: i18n.docs.web-platform.activate-origin-trials
+        
 
 - title: i18n.docs.web-platform.developer-trials
   sections:

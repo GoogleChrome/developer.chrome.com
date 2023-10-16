@@ -18,3 +18,9 @@ not-pursuing:
 
 ot-concepts:
   en: 'How origin trials work'
+
+ot-current:
+  en: 'Current origin trials'
+
+activate-origin-trials:
+  en: 'Activate an origin trial'
