@@ -113,7 +113,7 @@ View and debug network activity.
 
 ### Recorder panel {: #recorder }
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XKjlKjhuoccuFPCQqQ05.png", alt="Recorder panel.", width="800", height="606" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fpZHfKigjAf3PB8cNQsL.png", alt="Recorder panel.", width="800", height="646" %}
 
 Record, replay, and measure user flows.
 
