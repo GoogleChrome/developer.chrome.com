@@ -59,7 +59,7 @@ In Chrome 118, extensions will not be allowed to navigate to file:// URLs using 
 
 Upcoming Chrome versions will release features that will complete the remaining items on the [known issues page](/docs/extensions/migrating/known-issues/#closing-the-platform-gap). Additionally, we plan to add the following features:
 
-- The **UserScripts API** will allow user script managers to coordinate how and when to inject a collection of user scripts into web pages. Currently available in Canary [behind a flag](/docs/extensions/reference/userscripts). See the [WECG proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details. 
+- The **UserScripts API** will allow user script managers to coordinate how and when to inject a collection of user scripts into web pages. See the [WECG proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details.
 - The **ReadingList API** will allow developers to create, read, update, and delete metadata located in the Reading List panel of the side panel. Watch [What's new in Chrome extensions](/docs/extensions/whatsnew/) for the announcement.
 - The number of **DeclarativeNetRequest API** static and enabled rulesets will be increased in Chrome 120. Currently available in Canary.
 - The **File Handling API:** is will be available for ChromeOS extensions starting in ChromeOS 120, which lets extensions open files with specified MIME types and file extensions in a similar manner to web platform file handling.
