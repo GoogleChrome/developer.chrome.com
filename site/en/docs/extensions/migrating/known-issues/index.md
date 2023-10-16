@@ -25,16 +25,16 @@ Recently, we announced changes to the Manifest V2 deprecation timeline, and whil
 We are committed to closing the following gaps before announcing a new Manifest V2 deprecation timeline:
 
 1. **Support File Handling API on ChromeOS** as a replacement for [`chrome.fileBrowserHandler`](/docs/extensions/reference/fileBrowserHandler/).
+1. **User Script support:** Allow registering content scripts with arbitrary code with the new [userScripts API](/docs/extensions/reference/userscripts/). (See [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details.)
 
 These issues have been collected based on feedback from partners, bug reports, and developers. In addition to these, we will continue our ongoing work to address stability issues and improve overall performance. 
 
 The following issues have recently been addressed:
 
-1. **User Script support:** Allow registering content scripts with arbitrary code with the new [userScripts API](/docs/extensions/reference/userscripts/). (See [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details.) [Chrome 120]
 1. Additional **strong service worker keepalives** for certain operations taking longer than five minutes.
     * Added in Chrome 116 for `permissions.request()`, `desktopCapture.chooseDesktopMedia`, `identity.launchWebAuthFlow()` and `management.uninstall()`.
     * Added in Chrome 118 for `chrome.debugger`
-1. **Increase the number of static and enabled rulesets** for Declarative Net Request (DNR). Enabled static rulesets increased to 50 and total static rulesets to 100 [Chrome 120].
+1. **Increase the number of static and enabled rulesets** for Declarative Net Request (DNR). Enabled static rulesets increased from 10 to 50 and total static rulesets from 50 to 100 [Chrome 120].
 1. Extend **[Offscreen document](/docs/extensions/reference/offscreen/) functionality** to support more reasons for using an offscreen document. Added [`GEOLOCATION`](/docs/extensions/mv3/geolocation/) in Chrome 116.
 1. Improving **support for the [`chrome.tabCapture`](/docs/extensions/reference/tabCapture/) API** [Chrome 116]:
     * Support calling `getMediaStreamId()` from a service worker.
