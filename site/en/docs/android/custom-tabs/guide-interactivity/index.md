@@ -192,6 +192,21 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
     .setSecondaryToolbarViews(secondaryToolbarViews, clickableIds, toolbarPendingIntent)
     .build();
 ```
+## Add an action button to the toolbar
+
+To add an additional action button to the toolbar, use the intent extra `EXTRA_SHOW_ON_TOOLBAR`:
+
+`actionIntent.putExtra(ActionBroadcastReceiver.EXTRA_SHOW_ON_TOOLBAR, true);`
+
+If the action icon doesn't fit on the toolbar, it will display on the second toolbar.
+
+## Disable bookmarks and download buttons
+
+To disable the bookmarks and download buttons from the three dot menu, use the following intent extras:
+
+`actionIntent.putExtra(ActionBroadcastReceiver.EXTRA_DISABLE_BOOKMARKS_BUTTON, true);`
+
+`actionIntent.putExtra(ActionBroadcastReceiver.EXTRA_DISABLE_DOWNLOAD_BUTTON, true);`
 
 
 Next up: [Learn how to speed up loading web content in a Custom Tab](/docs/android/custom-tabs/guide-warmup-prefetch/).
