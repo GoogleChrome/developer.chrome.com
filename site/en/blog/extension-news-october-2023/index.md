@@ -32,7 +32,7 @@ In this section, we share some significant API launches, briefly review other AP
 
 #### Resolved known issues {: #closing-gap }
 
-The extension team has been actively working to resolve Manifest V3 stability issues. [Chrome 116 launched many improvements](/blog/chrome-116-beta-whats-new-for-extensions/) that helped us make significant progress toward closing the feature gap between Manifest V2 and V3. In Chrome 120, we will have finished addressing all our prioritized platform gaps and closed all critical bugs that are documented on the [known issues page](/docs/extensions/migrating/known-issues/). All features are currently available in Chrome 120 Canary, except fileHandler support for ChromeOS Lacros, which will land later this month. For more details, check out the updated [known issues page](/docs/extensions/migrating/known-issues/).
+The extension team has been actively working to resolve Manifest V3 stability issues. [Chrome 116 launched many improvements](/blog/chrome-116-beta-whats-new-for-extensions/) that helped us make significant progress toward closing the feature gap between Manifest V2 and V3. In Chrome 120, we will have finished addressing all our prioritized platform gaps and closed all critical bugs that are documented on the [known issues page](/docs/extensions/migrating/known-issues/). All features are currently available in Chrome 120 Canary, except fileHandler support for ChromeOS Lacros, and the userScripts API which will land later this month. Check out the updated [known issues page](/docs/extensions/migrating/known-issues/) for more details.
 
 #### Improved Service Worker stability {: #stable-sw }
 
