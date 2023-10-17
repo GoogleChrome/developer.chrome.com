@@ -56,8 +56,6 @@ Click the **Verify email** link to send the verification link to your email.
 
 
 [group-publishers]: /docs/webstore/group-publishers
-[hello-extension]: /docs/extensions/mv3/overview/#hello-extensions
-[icons]: /docs/extensions/mv3/manifest/icons
 [listing]: /docs/webstore/cws-dashboard-listing
 [name]: /docs/extensions/mv3/manifest/name
 [privacy]: /docs/webstore/cws-dashboard-privacy

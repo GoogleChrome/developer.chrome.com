@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Register your developer account"
 seoTitle: "Register as a Chrome Web Store developer"
 date: 2020-08-19
-updated: 2021-08-02
+updated: 2023-08-02
 description: How to register as a Chrome Web Store developer.
 ---
 
@@ -29,13 +29,14 @@ Once you pay the registration fee and agree to the terms, you will not see this 
 
 ## Next steps {: #next-steps }
 
-1.  [Continue setting up your developer account][4]
-1.  [Upload your item to the Chrome Web Store][5]
-1.  If you want to share the ownership of your extension [set up a group publisher][6] 
+1.  [Continue setting up your developer account][setup]
+1.  [Prepare your extension][prepare]
+1.  [Publish to the Chrome Web Store][publish]
 
 [1]: /docs/webstore/account-deletion/
 [2]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [3]: https://chrome.google.com/webstore/devconsole
 [4]: /docs/webstore/publish#setup-a-developer-account
-[5]: /docs/webstore/publish/#upload-your-item
-[6]: /docs/webstore/group-publishers/
+[publish]: /docs/webstore/publish/
+[prepare]: /docs/webstore/publish/
+[setup]: /docs/webstore/set-up-account/
