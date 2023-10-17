@@ -15,6 +15,21 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
+### Blog post: What's happening in Chrome Extensions - October 2023 {: #whats-happening-10-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+We've just published the second edition of [What’s Happening in Chrome Extensions](/blog/extension-news-october-2023/). The post discusses what the extension team has been working on for the past few months, including, addressing service worker stability issues, and making good progress on closing all MV3 platform gaps. We also share exciting upcoming API releases like the ReadlingList API and the userScripts API.
+
+### Increased static ruleset limits DeclarativeNetRequest API {: #canary-dnr-rules-increase }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+Following [feedback](https://github.com/w3c/webextensions/issues/318) in the Web Extensions
+Community Group, we are significantly increasing the limit on enabled static rulesets from 10 to 50.
+Additionally, we are increasing the total number of allowed static rulesets from 50 to 100. This is
+currently available in Canary.
+
 ### Improved guidance around remotely-hosted code {: #remotely-hosted-code }
 
 <p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
