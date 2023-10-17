@@ -62,6 +62,7 @@ Click the **Verify email** link to send the verification link to your email.
 [register]: /docs/webstore/register
 [review-times]: /docs/webstore/review-process/#review-time
 [update]: /docs/webstore/update
+[publish]: /docs/webstore/publish
 [prepare]: /docs/webstore/prepare
 [user-data]: /docs/webstore/user_data/
 [verified-publisher]: /docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status
