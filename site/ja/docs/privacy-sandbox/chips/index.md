@@ -97,7 +97,7 @@ Firefox は、ETP Strict モードとプライベート ブラウジングモー
 
 CHIPS では、パーティション化にオプトインしている Cookie には、ホストキーと *パーティション キーの 2* つが設定されるようになります。
 
-Cookie のパーティション キーは、Cookie を設定したエンドポイントへのリクエストの開始時にブラウザがアクセスしていたトップレベル URL のサイト（[スキームと登録可能なドメイン](https://web.dev/same-site-same-origin/#%22schemeful-same-site%22)）になります。
+Cookie のパーティション キーは、Cookie を設定したエンドポイントへのリクエストの開始時にブラウザがアクセスしていたトップレベル URL のサイト（[スキームと登録可能なドメイン](https://web.dev/articles/same-site-same-origin#%22schemeful_same_site%22)）になります。
 
 `https://support.chat.example` が `https://retail.example` に埋め込まれた上記の例の場合、トップレベル URL は `https://retail.example` となります。
 

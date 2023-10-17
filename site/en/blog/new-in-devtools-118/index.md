@@ -5,7 +5,7 @@ authors:
   - sofiayem
 date: 2023-09-15
 description: "New section for custom properties in Elements > Styles, more local overrides improvements, enhanced search, streamlined workspace in Sources, and more."
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/r8TZKv9wtqFJvjYbyBeb.png'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/U10xEiELqdXKVetm7feV.png'
 alt: 'New section for custom properties in Elements > Styles, more local overrides improvements, enhanced search, streamlined workspace in Sources, and more.'
 tags:
   - new-in-devtools
@@ -16,15 +16,13 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
-
-{% YouTube id='e8tl_yp5BQg' %}
+{% YouTube id='-dOYxJnRhxQ' %}
 
 <!-- $contentStart -->
 
 ## New section for custom properties in Elements > Styles {: #css }
 
-The **Elements** panel now supports the [@property CSS at-rule](https://web.dev/at-property/). It lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
+The **Elements** panel now supports the [@property CSS at-rule](https://web.dev/articles/at-property). It lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
 
 To inspect your registered custom properties, in **Elements** > **Styles**, hover over the property name and see its descriptors in a tooltip. In the tooltip, click the link to view the registered property in the collapsible `@property` section.
 

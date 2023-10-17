@@ -7,7 +7,7 @@ description: |2-
 date: 2020-05-06
 ---
 
-[Маскируемые значки](https://web.dev/maskable-icon/) — это новый формат значков, благодаря которому значки прогрессивных веб-приложений (PWA) отлично выглядят на всех устройствах с ОС Android. На новых устройствах с ОС Android значки прогрессивных веб-приложений, которые не соответствуют формату маскируемых значков, имеют белый фон. При использовании маскируемого значка он занимает все пространство, отведенное для него ОС Android.
+[Маскируемые значки](https://web.dev/articles/maskable-icon) — это новый формат значков, благодаря которому значки прогрессивных веб-приложений (PWA) отлично выглядят на всех устройствах с ОС Android. На новых устройствах с ОС Android значки прогрессивных веб-приложений, которые не соответствуют формату маскируемых значков, имеют белый фон. При использовании маскируемого значка он занимает все пространство, отведенное для него ОС Android.
 
 ## Почему не удается пройти аудит маскируемых значков в Lighthouse
 
@@ -29,7 +29,7 @@ date: 2020-05-06
 
 1. Преобразуйте существующий значок в маскируемый значок с помощью [редактора Maskable.app](https://maskable.app/editor).
 
-2. Добавьте свойство `purpose` в один из объектов `icons` в [манифесте веб-приложения](https://web.dev/add-manifest/). Задайте для свойства `purpose` значение `maskable` или `any maskable`. См. раздел «[Значения](https://developer.mozilla.org/docs/Web/Manifest/icons#Values)».
+2. Добавьте свойство `purpose` в один из объектов `icons` в [манифесте веб-приложения](https://web.dev/articles/add-manifest). Задайте для свойства `purpose` значение `maskable` или `any maskable`. См. раздел «[Значения](https://developer.mozilla.org/docs/Web/Manifest/icons#Values)».
 
    ```json/8
    {
@@ -47,12 +47,12 @@ date: 2020-05-06
    }
    ```
 
-3. С помощью Chrome DevTools проверьте, правильно ли отображается маскируемый значок. См. раздел «[Готовы ли мои текущие значки?](https://web.dev/maskable-icon/#are-my-current-icons-ready)».
+3. С помощью Chrome DevTools проверьте, правильно ли отображается маскируемый значок. См. раздел «[Готовы ли мои текущие значки?](https://web.dev/articles/maskable-icon#are_my_current_icons_ready)».
 
 ## Ресурсы
 
 - [Исходный код аудита **Manifest doesn't have a maskable icon**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/maskable-icon.js)
-- [Поддержка адаптивных значков в прогрессивных веб-приложениях (PWA) с маскируемыми значками](https://web.dev/maskable-icon/)
+- [Поддержка адаптивных значков в прогрессивных веб-приложениях (PWA) с маскируемыми значками](https://web.dev/articles/maskable-icon)
 - [Редактор Maskable.app](https://maskable.app/editor)
-- [Добавление манифеста веб-приложения](https://web.dev/add-manifest/)
+- [Добавление манифеста веб-приложения](https://web.dev/articles/add-manifest)
 - [Свойство `icons` в MDN](https://developer.mozilla.org/docs/Web/Manifest/icons)

@@ -12,7 +12,7 @@ tags:
   - css
 ---
 
-CSS [media queries](https://web.dev/learn/design/media-queries/) are a powerful
+CSS [media queries](https://web.dev/learn/design/media-queries) are a powerful
 tool that allow you to control the appearance of your website or web app based
 on the device it is being viewed on. With media queries, you can create
 different layouts for different screen sizes, orientations, and other factors.

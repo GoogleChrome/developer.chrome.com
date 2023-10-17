@@ -51,4 +51,4 @@ Temas, plug-ins e especificações de servidor contribuem para o tempo de respos
 ## Recursos
 
 - [Código-fonte da auditoria **Reduza tempos de resposta do servidor (TTFB)**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/server-response-time.js)
-- [Adaptive Serving com o Network Information API](https://web.dev/adaptive-serving-based-on-network-quality/)
+- [Adaptive Serving com o Network Information API](https://web.dev/articles/adaptive-serving-based-on-network-quality)

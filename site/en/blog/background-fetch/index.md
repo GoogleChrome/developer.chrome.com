@@ -27,7 +27,7 @@ updated: 2022-07-28
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 #tags:
-  
+
 
 ---
 
@@ -42,7 +42,7 @@ too long the browser will kill the service worker, otherwise it's a risk to the 
 battery.
 
 So, what if you need to download something that might take a long time, like a movie, podcasts, or
-levels of a game. That's what [Background Fetch](https://developer.mozilla.org/docs/Web/API/Background_Fetch_API) is for. 
+levels of a game. That's what [Background Fetch](https://developer.mozilla.org/docs/Web/API/Background_Fetch_API) is for.
 
 Background Fetch is available by default since Chrome 74.
 
@@ -52,7 +52,7 @@ Here's a quick two minute demo showing the traditional state of things, vs using
 
 
 [Try the demo yourself](https://bgfetch-http203.glitch.me/) and [browse the
-code](https://glitch.com/edit/#!/bgfetch-http203?path=public/client.js). 
+code](https://glitch.com/edit/#!/bgfetch-http203?path=public/client.js).
 
 ## How it works
 
@@ -108,7 +108,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 
 {% Aside %}
 Many examples in this article use async functions. If you aren't familiar with them, [check
-out the guide](https://web.dev/async-functions/).
+out the guide](https://web.dev/articles/async-functions).
 {% endAside %}
 
 `backgroundFetch.fetch` takes three arguments:

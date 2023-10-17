@@ -46,7 +46,7 @@ Para sites pequenos que você não atualiza com frequência, provavelmente você
 
 Para desenvolvedores profissionais, você provavelmente deseja configurar um fluxo de trabalho automatizado que minifica seu CSS automaticamente antes de implantar o código atualizado. Isso geralmente é feito com uma ferramenta de construção como Gulp ou Webpack.
 
-Aprenda como minificar seu código CSS em [Minificar CSS](https://web.dev/minify-css/).
+Aprenda como minificar seu código CSS em [Minificar CSS](https://web.dev/articles/minify-css).
 
 ## Orientação específica de pilha
 
@@ -73,5 +73,5 @@ Vários [plug-ins do WordPress](https://wordpress.org/plugins/search/minify+css/
 ## Recursos
 
 - [Código-fonte para auditoria **Minify CSS**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unminified-css.js)
-- [Minificar CSS](https://web.dev/minify-css/)
-- [Minificar e comprimir payloads de rede](https://web.dev/reduce-network-payloads-using-text-compression/)
+- [Minificar CSS](https://web.dev/articles/minify-css)
+- [Minificar e comprimir payloads de rede](https://web.dev/articles/reduce-network-payloads-using-text-compression)

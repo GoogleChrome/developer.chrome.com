@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Signed Exchanges launched for desktop sites 
+title: Signed Exchanges launched for desktop sites
 description: >
   Announcing Signed Exchanges support for Chromium browsers on desktop along with other recent feature launches.
 date: 2022-07-08
@@ -9,17 +9,17 @@ authors:
   - twifkak
 ---
 
-[Signed Exchanges (SXG)](https://web.dev/signed-exchanges/) is a delivery mechanism that can help speed up your site and improve [Largest Contentful Paint (LCP)](https://web.dev/lcp/) by enabling privacy-preserving cross-origin prefetch. At [I/O 2022](https://www.youtube.com/watch?v=bxc-Gc8KmF4), the SXG working group at Google previewed plans to add new SXG features and support site navigations on additional surfaces. Today, we are announcing the first set of these features, with more to come over the next few months:
+[Signed Exchanges (SXG)](https://web.dev/articles/signed-exchanges) is a delivery mechanism that can help speed up your site and improve [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp) by enabling privacy-preserving cross-origin prefetch. At [I/O 2022](https://www.youtube.com/watch?v=bxc-Gc8KmF4), the SXG working group at Google previewed plans to add new SXG features and support site navigations on additional surfaces. Today, we are announcing the first set of these features, with more to come over the next few months:
 
-- Support for desktop site navigations 
-- Google Search support for SXG from Top Stories and News 
-- Support for server side personalization 
+- Support for desktop site navigations
+- Google Search support for SXG from Top Stories and News
+- Support for server side personalization
 
 Read on to learn more about these features and how you can leverage them to improve the user experience on your site.
 
 ## Support for desktop navigations
 
-With this release, Signed Exchanges will now be available for desktop cross-origin navigations on Chromium browsers. This builds on the existing support for Android mobile and means that now you can use SXG to also cache and prefetch the desktop version of your site. 
+With this release, Signed Exchanges will now be available for desktop cross-origin navigations on Chromium browsers. This builds on the existing support for Android mobile and means that now you can use SXG to also cache and prefetch the desktop version of your site.
 
 We estimate<sup><a href="#footnote-1">1</a></sup> that this release will, on average, double SXG's coverage of your site's visits, enabling improved loading and performance for more users. Today on mobile, this speed improvement is between 300 and 400 ms of LCP reduction on average for navigations from Google Search.
 
@@ -68,7 +68,7 @@ Cloudflare, a leading Content Distribution Network (CDNs), [ran an experiment](h
 
 ## Google Search support for Top Stories and News
 
-Google Search is an early adopter of Signed Exchanges' privacy-preserving cross-origin prefetch, which to-date has been available for site navigations from Search's Web Page Results. Starting in July 2022, Search is expanding this support to also include navigations from Top Stories and News. Note that while SXG does not impact ranking or selection criteria on Google Search, it does have the ability to improve your site's [Core Web Vitals](https://web.dev/vitals/), LCP in specific.
+Google Search is an early adopter of Signed Exchanges' privacy-preserving cross-origin prefetch, which to-date has been available for site navigations from Search's Web Page Results. Starting in July 2022, Search is expanding this support to also include navigations from Top Stories and News. Note that while SXG does not impact ranking or selection criteria on Google Search, it does have the ability to improve your site's [Core Web Vitals](https://web.dev/articles/vitals), LCP in specific.
 
 This feature requires no additional work on your part to enable and will be available automatically to both existing and new adopters.
 
@@ -78,11 +78,11 @@ This feature requires no additional work on your part to enable and will be avai
 
 ## Support for server-side personalization
 
-Signed Exchanges uses a cache to prefetch and serve content that has been cryptographically signed by the origin. Cached content can be sent to multiple different users or to the same user multiple times. In the past, this has meant that SXG has not been compatible with sites that use server side personalization&mdash;that is, different HTML for logged in users. 
+Signed Exchanges uses a cache to prefetch and serve content that has been cryptographically signed by the origin. Cached content can be sent to multiple different users or to the same user multiple times. In the past, this has meant that SXG has not been compatible with sites that use server side personalization&mdash;that is, different HTML for logged in users.
 
-**Today, we're adding Dynamic SXG**&mdash;a new feature that allows you to selectively enable SXG for visits from cookieless users only on Chromium. Logged in navigations, with server-side personalization, will continue to serve non-SXG versions of your site. 
+**Today, we're adding Dynamic SXG**&mdash;a new feature that allows you to selectively enable SXG for visits from cookieless users only on Chromium. Logged in navigations, with server-side personalization, will continue to serve non-SXG versions of your site.
 
-This is especially impactful for sites that dynamically compute a unique web page for each logged-in user and hence often tend to have higher [TTFB](https://web.dev/ttfb/) and LCP stemming from database lookups. Dynamic SXG gives you the option and flexibility to leverage SXG to speed up visits to your site for certain users without impacting your ability to provide a personalized experience to others.
+This is especially impactful for sites that dynamically compute a unique web page for each logged-in user and hence often tend to have higher [TTFB](https://web.dev/articles/ttfb) and LCP stemming from database lookups. Dynamic SXG gives you the option and flexibility to leverage SXG to speed up visits to your site for certain users without impacting your ability to provide a personalized experience to others.
 
 ### How to enable this feature
 

@@ -23,7 +23,7 @@ tags:
 
 ## Consultas de contêiner CSS editáveis no painel Styles {: #container-queries }
 
-Agora você pode visualizar e editar [Consultas de contêiner CSS](https://web.dev/new-responsive/#responsive-to-the-container) no painel **Styles**.
+Agora você pode visualizar e editar [Consultas de contêiner CSS](https://web.dev/articles/new-responsive#responsive_to_the_container) no painel **Styles**.
 
 As consultas de contêiner fornecem uma abordagem muito mais dinâmica para design responsivo. A regra `@container` funciona de maneira semelhante a uma consulta de mídia com `@media`. No entanto, em vez de consultar a viewport e o agente do usuário em busca de informações, `@container` consulta o container antecessor que corresponde a certos critérios.
 
@@ -41,7 +41,7 @@ Issue relacionada: [1146422](https://crbug.com/1146422)
 
 ## Prévia do web-bundle no painel Network  {: #web-bundle }
 
-[Web bundle](https://web.dev/web-bundles/) é um formato de arquivo para encapsular um ou mais recursos HTTP em um único arquivo. Agora você pode visualizar o conteúdo do web bundle no painel **Network**.
+[Web bundle](https://web.dev/articles/web-bundles) é um formato de arquivo para encapsular um ou mais recursos HTTP em um único arquivo. Agora você pode visualizar o conteúdo do web bundle no painel **Network**.
 
 O recurso de web-bundle é atualmente experimental. Habilite a sinalização `#enable-experimental-web-platform-features` em `chrome://flags` para testá-la.
 

@@ -21,7 +21,7 @@ tags:
 
 ## Preview feature: Full-page accessibility tree {: #a11y-tree }
 
-The new **Full-page accessibility tree** makes it easier for you to get an overview of the full-page [accessibility tree](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) and help you better understand how your web content is exposed to assistive technology. 
+The new **Full-page accessibility tree** makes it easier for you to get an overview of the full-page [accessibility tree](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) and help you better understand how your web content is exposed to assistive technology.
 
 In the **Elements** panel, open the **Accessibility** pane and select **Enable full-page accessibility tree** checkbox. Then, reload DevTools and you will see a new accessibility button in the **Elements** panel.
 
@@ -40,11 +40,11 @@ Our team is still actively working on this preview feature. We are looking for y
 Chromium issue: [887173](https://crbug.com/887173)
 
 
-## More precise changes in the Changes tab {: #changes } 
+## More precise changes in the Changes tab {: #changes }
 
-The code changes in the **Changes** tab is pretty-printed automatically. 
+The code changes in the **Changes** tab is pretty-printed automatically.
 
-Previously, it was hard to trace the actual changes of minified source code because all the code is shown in a single line. 
+Previously, it was hard to trace the actual changes of minified source code because all the code is shown in a single line.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aup2bT490dkvuBu3o4DS.png", alt="Changes tab", width="800", height="450" %}
 
@@ -61,8 +61,8 @@ For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [
 
 We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s).
 
-Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value. 
- 
+Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.
+
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="timeout settings for user flow recording", width="800", height="530" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
@@ -70,13 +70,13 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache }
 
-[Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation. 
+[Back/forward cache (or bfcache)](https://web.dev/articles/bfcache) is a browser optimization that enables instant back and forward navigation.
 
 The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible.
 
 To test a particular page, navigate to it in Chrome and then in DevTools go to **Application** > **Back-forward Cache**. Next, click the **Test back/forward cache** button and DevTools will attempt to navigate away and back to determine whether the page could be restored from bfcache.
 
-As web developers, it's critical to know how to optimize your pages for bfcache across all browsers because it will significantly improve the browsing experience for users—especially those with slower networks or devices. 
+As web developers, it's critical to know how to optimize your pages for bfcache across all browsers because it will significantly improve the browsing experience for users—especially those with slower networks or devices.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="Back/forward cache tab", width="800", height="516" %}
 
@@ -87,22 +87,22 @@ Chromium issue: [1110752](https://crbug.com/1110752)
 
 ## New Properties pane filter {: #properties }
 
-If you want to focus on a specific property in the **Properties** pane, you can now type that property name or value in the new **Filter** textbox. 
+If you want to focus on a specific property in the **Properties** pane, you can now type that property name or value in the new **Filter** textbox.
 
-By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all** checkbox to view all properties. 
+By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all** checkbox to view all properties.
 
 These enhancements allow you to get to the properties you care for quicker and thus improve your productivity!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="Properties pane filter", width="800", height="505" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}  
-  
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}
+
 Chromium issue: [1269674](https://crbug.com/1269674)
 
 
 ## Emulate the CSS forced-colors media feature {: #forced-colors }
 
-The [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) CSS media feature is used to detect if the user agent has enabled a forced colors mode (e.g. Windows High Contrast mode) where it enforces a user-chosen limited color palette on the page. 
+The [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) CSS media feature is used to detect if the user agent has enabled a forced colors mode (e.g. Windows High Contrast mode) where it enforces a user-chosen limited color palette on the page.
 
 Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature forced-colors** dropdown.
 
@@ -127,7 +127,7 @@ Chromium issue: [1270562](https://crbug.com/1270562)
 
 ## Support `row-reverse` and `column-reverse` in the Flexbox editor {: #flexbox-editor }
 
-The [Flexbox editor](/blog/new-in-devtools-90/#flexbox) added two new buttons to support `row-reverse` and `column-reverse` in `flex-direction`. 
+The [Flexbox editor](/blog/new-in-devtools-90/#flexbox) added two new buttons to support `row-reverse` and `column-reverse` in `flex-direction`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHI4frP4MqaydXk19sq2.png", alt="Flexbox editor", width="800", height="546" %}
 
@@ -148,7 +148,7 @@ Select a XHR request in the **Network** panel and press **R** on the keyboard to
 
 Chromium issue: [1050021](https://crbug.com/1050021)
 
- 
+
 ### Keyboard shortcut to expand all search results {: #toggle-search-result }
 
 A new shortcut is added in the **Search** tab allowing you to expand and collapse all the search results. Previously, you could only expand and collapse the search results by clicking on one file at a time.
@@ -171,7 +171,7 @@ Chromium issue: [1255073](https://crbug.com/1255073)
 
 The **Lighthouse** panel is now running Lighthouse 9. Lighthouse will now list all the elements sharing the same id.
 
-Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/). 
+Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/articles/duplicate-id-aria).
 
 Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates.
 
@@ -187,11 +187,11 @@ Loads of stability improvements in the **Sources** panel as we upgraded it to us
 
 - Significantly faster when opening large files (e.g. WASM, JavaScript)
 - No more random scrolling when stepping through code
-- Improved auto-complete suggestions for editable sources (e.g. snippets, local override) 
+- Improved auto-complete suggestions for editable sources (e.g. snippets, local override)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c1ab112d9002d5c3b3bb70cf2839bac182f0cdb5 #}
 
-Chromium issue: [1241848](https://crbug.com/1241848) 
+Chromium issue: [1241848](https://crbug.com/1241848)
 
 ## Miscellaneous highlights {: #misc }
 
@@ -199,7 +199,7 @@ These are some noteworthy fixes in this release:
 
 - Properly displaying the waterfall diagram of network requests. Previously, the style was broken. ([1275501](https://crbug.com/1275501))
 - The code highlight was broken when searching in documents with very long lines in the **Sources** panel. It’s now fixed. ([1275496](https://crbug.com/1275496))
-- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972)) 
+- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972))
 - Fixed the missing layout shifts details in the **Summary** section of the **Performance** panel. ([1259606](https://crbug.com/1259606))
 - Support arbitrary characters (e.g. `,`, `.`),  in **Network Search** queries. ([1267196](https://crbug.com/1267196))
 
@@ -214,11 +214,11 @@ The experimental **Reporting API** pane was introduced in [Chrome 96](/blog/new-
 
 The **Endpoints** section is now available. It gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header.
 
-Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more.
+Learn to use the [Reporting API](https://web.dev/articles/reporting-api) to monitor security violations, deprecated API calls, and more.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Reporting API pane", width="800", height="560" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #}
 
 Chromium issue: [1200732](https://crbug.com/1200732)
 

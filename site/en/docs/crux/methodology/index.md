@@ -70,7 +70,7 @@ An [**origin**](https://developer.mozilla.org/docs/Glossary/Origin) represents a
 1. [Publicly discoverable](#discoverability-eligibility)
 2. [Sufficiently popular](#popularity-eligibility)
 
-You can verify that your origin is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+You can verify that your origin is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your site is not discoverable if your root page fails the [_Page is blocked from indexing_](https://web.dev/articles/is-crawable) or [_Page has unsuccessful HTTP status code_](https://web.dev/articles/http-status-code) audits.
 
 If an origin is determined to be publicly discoverable, eligible user experiences on _all_ of that origin's pages are aggregated at the origin-level, regardless of individual page discoverability. All of these experiences count towards the origin's popularity requirement.
 
@@ -83,13 +83,13 @@ The requirements for a **page** to be included in the CrUX dataset are the same 
 1. [Publicly discoverable](#discoverability-eligibility)
 2. [Sufficiently popular](#popularity-eligibility)
 
-You can verify that a page is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/is-crawable/) or [_Page has unsuccessful HTTP status code_](https://web.dev/http-status-code/) audits.
+You can verify that a page is discoverable by running a [Lighthouse audit](https://pagespeed.web.dev/) and looking at the SEO category results. Your page is not discoverable if it fails the [_Page is blocked from indexing_](https://web.dev/articles/is-crawable) or [_Page has unsuccessful HTTP status code_](https://web.dev/articles/http-status-code) audits.
 
 Pages commonly have additional identifiers in their URL including query string parameters like `?utm_medium=email` and fragments like `#main`. These identifiers are stripped from the URL in the CrUX dataset so that all user experiences on the page are aggregated together. This is useful for pages that would otherwise not meet the popularity threshold if there were many disjointed URL variations for the same page. Note that in rare cases this may unexpectedly group experiences for distinct pages together; for example if parameters `?productID=101` and `?productID=102` represent different pages.
 
 Pages in CrUX are measured based on the top-level page. Pages included as iframes are not reported on separately in CrUX, but do contribute to the metrics of the top-level page. For example, if `https://www.example.com/page.html` embeds `https://www.example.com/frame.html` in an iframe, then `page.html` _will be_ represented in CrUX (subject to the other eligibility criteria) but `frame.html` _will not_. And if `frame.html` has poor [CLS](#cls-metric) then the CLS will be included when measuring the CLS for `page.html`. CrUX is the Chrome _User Experience_ Report and a user may not even be aware this is an iframe. Therefore, the experience is measured at the top level page—as per how the user sees this.
 
-A website's architecture may complicate how its data is represented in CrUX. For example, single page apps (SPAs) may use a JavaScript-based _route transition_ scheme to move between pages, as opposed to traditional anchor-based page navigations. These transitions appear as new page views to the user, but to Chrome and the underlying platform APIs the entire experience is attributed to the initial page view. This is a limitation of the native web platform APIs on which CrUX is built, see [How SPA architectures affect Core Web Vitals](https://web.dev/vitals-spa-faq/) on web.dev for more information.
+A website's architecture may complicate how its data is represented in CrUX. For example, single page apps (SPAs) may use a JavaScript-based _route transition_ scheme to move between pages, as opposed to traditional anchor-based page navigations. These transitions appear as new page views to the user, but to Chrome and the underlying platform APIs the entire experience is attributed to the initial page view. This is a limitation of the native web platform APIs on which CrUX is built, see [How SPA architectures affect Core Web Vitals](https://web.dev/articles/vitals-spa-faq) on web.dev for more information.
 
 ### User {: #user-eligibility}
 
@@ -103,7 +103,7 @@ For a **user** to have their experiences aggregated in the CrUX dataset, they mu
 The current supported platforms are:
 
 - Desktop versions of Chrome including Windows, MacOS, ChromeOS, and Linux operating systems.
-- Android versions of Chrome, including native apps using [Custom Tabs](/docs/android/custom-tabs/) and [WebAPKs](https://web.dev/webapks/).
+- Android versions of Chrome, including native apps using [Custom Tabs](/docs/android/custom-tabs/) and [WebAPKs](https://web.dev/articles/webapks).
 
 There are a few notable exceptions that do not provide data to the CrUX dataset:
 
@@ -226,7 +226,7 @@ The CrUX Dashboard does not support the country dimension, so all global data is
 
 The [CrUX API](/docs/crux/api/) provides programmatic access to CrUX data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
 
-The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window. Historical data is available via the separate [History API](#tool-crux-history-api).
+The API provides [Web Vitals](https://web.dev/articles/vitals) metrics both by origin and at page-level and the data is updated daily. The only values provided for metrics are calculated from the previous 28 days as a rolling window. Historical data is available via the separate [History API](#tool-crux-history-api).
 
 The CrUX API returns more quickly than the [PageSpeed Insights API](#tool-psi-api) but does not include the additional [Lighthouse data](https://developers.google.com/search/blog/2018/11/pagespeed-insights-now-powered-by) provided by PageSpeed Insights.
 
@@ -236,7 +236,7 @@ The CrUX API returns more quickly than the [PageSpeed Insights API](#tool-psi-ap
 
 The [CrUX History API](/docs/crux/history-api/) provides programmatic access to CrUX historical data by page or origin, and can be further filtered by form factor, effective connection type and metrics.
 
-The API provides [Web Vitals](https://web.dev/vitals/) metrics both by origin and at page-level and the data is updated weekly. The only values provided for metrics are calculated from the past 25 weekly collection periods of 28 days as a rolling window.
+The API provides [Web Vitals](https://web.dev/articles/vitals) metrics both by origin and at page-level and the data is updated weekly. The only values provided for metrics are calculated from the past 25 weekly collection periods of 28 days as a rolling window.
 
 [Read more in the History API documentation](/docs/crux/history-api/).
 
@@ -329,7 +329,7 @@ Most metrics are represented as a histogram aggregation, allowing visualization 
 ### Interaction to Next Paint {: #inp-metric}
 
 {% Aside %}
-"Interaction to Next Paint (INP) is a field metric that assesses [responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
+"Interaction to Next Paint (INP) is a field metric that assesses [responsiveness](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics). INP logs the latency of all interactions throughout the entire page lifecycle. The highest value of those interactions—or close to the highest for pages with many interactions—is recorded as the page's INP. A low INP ensures that the page will be reliably responsive at all times."
 
 <cite><a href="https://web.dev/inp/">web.dev/inp/</a></cite>
 {% endAside %}

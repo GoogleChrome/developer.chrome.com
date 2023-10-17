@@ -134,7 +134,7 @@ Web Vitals. The `importance` attribute allows you to specify the priority
 for resource types such as CSS, fonts, scripts, images, and iframes.
 
 {% Aside 'warning' %}
-The `importance` attribute has been renamed `fetchpriority`. Read [Optimizing resource loading with the Fetch Priority API](https://web.dev/fetch-priority/) for the latest on this feature.
+The `importance` attribute has been renamed `fetchpriority`. Read [Optimizing resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority) for the latest on this feature.
 {% endAside %}
 
 ```html

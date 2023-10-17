@@ -134,7 +134,7 @@ Some examples:
 - If you need to know when an element enters in the viewport, use
   [`IntersectionObserver`](https://developer.mozilla.org/docs/Web/API/Intersection_Observer_API).
 - If you need to know when an element changes size, use
-  [`ResizeObserver`](https://web.dev/resize-observer/).
+  [`ResizeObserver`](https://web.dev/articles/resize-observer).
 - If you need to know when the DOM changes, use
   [`MutationObserver`](https://developer.mozilla.org/docs/Web/API/MutationObserver),
   or maybe [custom element lifecycle
@@ -145,14 +145,14 @@ Some examples:
   events](https://developer.mozilla.org/docs/Web/API/EventSource), [push
   messages](https://developer.mozilla.org/docs/Web/API/Push_API), or
   [fetch
-  streams](https://web.dev/fetch-upload-streaming/#previously-on-the-exciting-adventures-of-fetch-streams).
+  streams](https://web.dev/articles/fetch-upload-streaming#previously_on_the_exciting_adventures_of_fetch_streams).
 - If you need to react to stage changes in audio/video, [use events like
   `timeupdate` and
   `ended`](https://html.spec.whatwg.org/multipage/media.html#mediaevents), or
-  [`requestVideoFrameCallback`](https://web.dev/requestvideoframecallback-rvfc/)
+  [`requestVideoFrameCallback`](https://web.dev/articles/requestvideoframecallback-rvfc)
   if you need to do something with each frame.
 
-There's also [notification triggers](https://web.dev/notification-triggers/) if
+There's also [notification triggers](https://web.dev/articles/notification-triggers) if
 you want to show a notification at a particular time.
 
 ### Animation

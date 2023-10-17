@@ -18,7 +18,7 @@ that goal.
 
 {% Aside %}
 Chrome 68 is out of beta. See the
-[Add to Home Screen](https://web.dev/customize-install/) docs for the
+[Add to Home Screen](https://web.dev/articles/customize-install) docs for the
 current behavior.
 {% endAside %}
 
@@ -27,7 +27,7 @@ current behavior.
 
 Starting in Chrome 68 on Android (Stable in July 2018), Chrome will no longer
 show the add to home screen banner. If the site meets the
-[add to home screen criteria](https://web.dev/install-criteria/),
+[add to home screen criteria](https://web.dev/articles/install-criteria),
 Chrome will show the mini-infobar. Then, if the user clicks on the
 mini-infobar, or you call `prompt()` on the `beforeinstallprompt` event from
 within a user gesture, Chrome will show a modal add to home screen dialog.
@@ -116,7 +116,7 @@ The mini-infobar is a Chrome UI component and is not controllable by the site,
 but can be easily dismissed by the user. Once dismissed by the user, it will
 not appear again until a sufficient amount of time has passed
 (currently 3 months). The mini-infobar will appear when the site meets the
-[add to home screen criteria](https://web.dev/install-criteria/),
+[add to home screen criteria](https://web.dev/articles/install-criteria),
 regardless of whether you `preventDefault()` on the `beforeinstallprompt` event
 or not.
 
@@ -156,7 +156,7 @@ tomorrow, or whenever they’re ready to install.
 ### Listening for the `beforeinstallprompt` event
 
 If your site meets the
-[add to home screen criteria](https://web.dev/install-criteria/),
+[add to home screen criteria](https://web.dev/articles/install-criteria),
 Chrome will fire a `beforeinstallprompt` event, save a reference to the event,
 and update your user interface to indicate that the user can add your app to
 their home screen.
@@ -176,13 +176,13 @@ window.addEventListener('beforeinstallprompt', event => {
 
 {% Aside %}
 Your site must meet the
-[add to home screen criteria](https://web.dev/install-criteria/)
+[add to home screen criteria](https://web.dev/articles/install-criteria)
 in order for the `beforeinstallprompt` event to be fired and your app installed.
 {% endAside %}
 
 The `beforeinstallprompt` event will not be fired if the app is already
 installed (see the
-[add to home screen criteria](https://web.dev/install-criteria/)).
+[add to home screen criteria](https://web.dev/articles/install-criteria)).
 But if the user later uninstalls the app, the `beforeinstallprompt` event will
 again be fired on each page navigation.
 

@@ -16,7 +16,7 @@ tags:
   - chrome-117
 ---
 
-Speculation rules can be used to prefetch and prerender next page navigations as detailed in [the previous blog post](/blog/prerender-pages/). This can allow for much quicker—or even instant—page loads, greatly improving [Core Web Vitals](https://web.dev/vitals/) for these additional page navigations.
+Speculation rules can be used to prefetch and prerender next page navigations as detailed in [the previous blog post](/blog/prerender-pages/). This can allow for much quicker—or even instant—page loads, greatly improving [Core Web Vitals](https://web.dev/articles/vitals) for these additional page navigations.
 
 Debugging speculation rules can be tricky. This is particularly true for prerendered pages, as these pages are rendered in a separate renderer—kind of like a hidden background tab that replaces the current tab when activated. Therefore, the usual DevTools options cannot always be used to debug issues.
 
@@ -29,7 +29,7 @@ There's a lot of "pre-" terms that are easily confused, so let's start with an e
 - **Prefetch**: fetching a resource or document in advance to improve future performance. This post covers prefetching documents using the Speculation Rules API, rather than the similar, but older `<link rel="prefetch">` option often used for prefetching subresources.
 - **Prerender**: this goes a step beyond prefetching and actually renders the whole page as if the user had navigated to it, but keeps it in a hidden background renderer process ready to be used if the user actually navigates there. Again, this document is concerned with the newer Speculation Rules API version of this, rather than the older `<link rel="prerender">` option (which [no longer does a full prerender](/blog/nostate-prefetch/)).
 - **Navigational preloading**: the collective term for the new prefetch and prerender options triggered by speculation rules.
-- **Preloading**: an overloaded term that can refer to a number of technologies and processes including `<link rel="preload">`, the [preload scanner](https://web.dev/preload-scanner/), and [service worker navigation preloads](https://web.dev/navigation-preload/). These items will not be covered here, but the term is included to clearly differentiate those from the "navigational preloading" term above.
+- **Preloading**: an overloaded term that can refer to a number of technologies and processes including `<link rel="preload">`, the [preload scanner](https://web.dev/articles/preload-scanner), and [service worker navigation preloads](https://web.dev/articles/navigation-preload). These items will not be covered here, but the term is included to clearly differentiate those from the "navigational preloading" term above.
 
 {% Aside %}
 For more details see [this preloading tech landscape](https://docs.google.com/document/d/1FNLyXW0Q5Fi5-kEOtjfOdmtoDxRtUR_wX4dl5Fz9c7o/edit) document.

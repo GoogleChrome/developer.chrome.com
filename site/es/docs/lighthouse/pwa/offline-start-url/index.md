@@ -6,7 +6,7 @@ date: 2019-05-04
 updated: 2020-04-29
 ---
 
-El [manifiesto](https://web.dev/add-manifest/) de una [Aplicación web progresiva](https://web.dev/what-are-pwas/) (PWA) debe incluir un `start_url` que indica la URL que se cargará cuando el usuario inicie la aplicación.
+El [manifiesto](https://web.dev/articles/add-manifest) de una [Aplicación web progresiva](https://web.dev/articles/what-are-pwas) (PWA) debe incluir un `start_url` que indica la URL que se cargará cuando el usuario inicie la aplicación.
 
 Si el navegador no recibe una [respuesta HTTP 200](https://developer.mozilla.org/docs/Web/HTTP/Status#Successful_responses) al acceder a una aplicación desde el `start_url`, la `start_url` no es correcta o la página no es accesible sin conexión. Esto causa problemas a los usuarios que han instalado la aplicación en sus dispositivos.
 
@@ -22,7 +22,7 @@ Si el navegador no recibe una [respuesta HTTP 200](https://developer.mozilla.org
 
 {% Partial 'reliable/workbox.njk' %}
 
-1. Si aún no tienes uno, [agrega un manifiesto de aplicación web](https://web.dev/add-manifest/).
+1. Si aún no tienes uno, [agrega un manifiesto de aplicación web](https://web.dev/articles/add-manifest).
 2. Verifica que el `start_url` en tu manifiesto esté correcto.
 3. Agrega un service worker a tu aplicación.
 4. Utiliza el service worker para almacenar en caché los archivos localmente.
@@ -32,6 +32,6 @@ Consulta [la página actual no responde con un 200 cuando está sin conexión](/
 
 ## Recursos
 
-- [¿Qué es la confiabilidad de la red y cómo se mide?](https://web.dev/network-connections-unreliable/)
-- [Agregar un manifiesto de aplicación web](https://web.dev/add-manifest/)
+- [¿Qué es la confiabilidad de la red y cómo se mide?](https://web.dev/articles/network-connections-unreliable)
+- [Agregar un manifiesto de aplicación web](https://web.dev/articles/add-manifest)
 - [Workbox: Tu kit de herramientas para service workers de alto nivel](/docs/workbox/)

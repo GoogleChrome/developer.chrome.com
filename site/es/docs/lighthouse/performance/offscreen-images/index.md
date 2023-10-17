@@ -8,7 +8,7 @@ date: 2019-05-02
 updated: 2020-05-29
 ---
 
-La sección de Oportunidades del informe Lighthouse enumera todas las imágenes ocultas o fuera de la pantalla en tu página junto con los ahorros potenciales en [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte). Considera la posibilidad de cargar de forma diferida estas imágenes después de que todos los recursos críticos hayan terminado de cargarse para reducir el [Time to Interactive (TTI): Tiempo para interactuar](https://web.dev/tti/):
+La sección de Oportunidades del informe Lighthouse enumera todas las imágenes ocultas o fuera de la pantalla en tu página junto con los ahorros potenciales en [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte). Considera la posibilidad de cargar de forma diferida estas imágenes después de que todos los recursos críticos hayan terminado de cargarse para reducir el [Time to Interactive (TTI): Tiempo para interactuar](https://web.dev/articles/tti):
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/agMyJtIarLruD8iuz0Mt.png", alt="Una captura de pantalla de la auditoría de aplazar imágenes fuera de pantalla de Lighthouse", width="800", height="416" %}</figure>
 
@@ -30,7 +30,7 @@ Instala un [complemento de Joomla de carga diferida](https://extensions.joomla.o
 
 ### Magento
 
-Considera modificar las plantillas de tu producto y catálogo para hacer uso de la función de [carga diferida](https://web.dev/browser-level-image-lazy-loading/) de la plataforma web.
+Considera modificar las plantillas de tu producto y catálogo para hacer uso de la función de [carga diferida](https://web.dev/articles/browser-level-image-lazy-loading) de la plataforma web.
 
 ### WordPress
 

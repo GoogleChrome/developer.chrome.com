@@ -105,9 +105,9 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 ## Asegúrese de que sus páginas se puedan almacenar en caché con la pestaña de caché Atrás/adelante {: #bfcache }
 
-<!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
+<!-- [Back/forward cache (or bfcache)](https://web.dev/articles/bfcache) is a browser optimization that enables instant back and forward navigation.  -->
 
-[Caché Atrás/adelante (o bfcache)](https://web.dev/bfcache/) es una optimización del navegador que permite la navegación instantánea hacia atrás y hacia adelante.
+[Caché Atrás/adelante (o bfcache)](https://web.dev/articles/bfcache) es una optimización del navegador que permite la navegación instantánea hacia atrás y hacia adelante.
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
 
@@ -244,9 +244,9 @@ Vaya a los [atajos de teclado](/docs/devtools/shortcuts/) para consultar los ata
 
 El panel **Lighthouse** ahora ejecuta Lighthouse 9. Lighthouse ahora enumerará todos los elementos que comparten la misma identificación.
 
-<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
+<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/articles/duplicate-id-aria).  -->
 
-La identificación de elemento no único es un problema de accesibilidad común. Por ejemplo, la identificación a la que se hace referencia en un atributo `aria-labelledby` se usa en [múltiples elementos](https://web.dev/duplicate-id-aria/).
+La identificación de elemento no único es un problema de accesibilidad común. Por ejemplo, la identificación a la que se hace referencia en un atributo `aria-labelledby` se usa en [múltiples elementos](https://web.dev/articles/duplicate-id-aria).
 
 <!-- Check out the [What's new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 
@@ -314,9 +314,9 @@ El panel experimental **API Reporting** se introdujo en [Chrome 96](/blog/new-in
 
 La sección **Endpoints** ya está disponible. Le brinda una descripción general de todos los `endpoints` configurados en el encabezado `Reporting-Endpoints`.
 
-<!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
+<!-- Learn to use the [Reporting API](https://web.dev/articles/reporting-api) to monitor security violations, deprecated API calls, and more. -->
 
-Aprenda a usar la [API de informes](https://web.dev/reporting-api/) para monitorear violaciones de seguridad, llamadas a API obsoletas y más.
+Aprenda a usar la [API de informes](https://web.dev/articles/reporting-api) para monitorear violaciones de seguridad, llamadas a API obsoletas y más.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Panel de informes de API", width="800", height="560" %}
 

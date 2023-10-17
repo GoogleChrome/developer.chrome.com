@@ -93,6 +93,9 @@ cws:
 cookies:
   en: Cookies
 
+cookie-countdown:
+  en: Cookie Countdown
+
 deprecations-removals:
   en: Deprecations and Removals
 

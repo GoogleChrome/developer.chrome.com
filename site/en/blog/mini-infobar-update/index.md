@@ -18,7 +18,7 @@ updated: 2019-07-25
 
 ## Background on Progressive Web Apps and the mini-infobar
 
-[Progressive Web Apps (PWA)](https://web.dev/progressive-web-apps/) are a pattern for
+[Progressive Web Apps (PWA)](https://web.dev/explore/progressive-web-apps) are a pattern for
 creating app-like, instant loading, reliable and installable websites.
 
 When your PWA passes the

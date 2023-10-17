@@ -126,7 +126,7 @@ self.addEventListener('install', event => {
 
 ### Page cache
 
-The page cache recipe allows your service worker to respond to a request for an HTML page (through URL navigation) with a [network first](/docs/workbox/modules/workbox-strategies/#network-first-network-falling-back-to-cache) caching strategy, optimized to, ideally, allow for the cache fallback to arrive quick enough for for a [largest contentful paint](https://web.dev/vitals/) score of less than 4.0 seconds.
+The page cache recipe allows your service worker to respond to a request for an HTML page (through URL navigation) with a [network first](/docs/workbox/modules/workbox-strategies/#network-first-network-falling-back-to-cache) caching strategy, optimized to, ideally, allow for the cache fallback to arrive quick enough for for a [largest contentful paint](https://web.dev/articles/vitals) score of less than 4.0 seconds.
 
 This recipe, by default, assumes the network timeout should be 3 seconds and supports [cache warming](#warm-strategy-cache) through the `warmCache` option. See the [page cache options](/docs/workbox/reference/workbox-recipes/#method-pageCache) for a list of all configuration options.
 

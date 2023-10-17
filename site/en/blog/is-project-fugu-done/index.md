@@ -110,7 +110,7 @@ of the
 [`navigator.storage.getDirectory()`](https://fs.spec.whatwg.org/#dom-storagemanager-getdirectory)
 method, used as an entry point to the origin private file system (OPFS). This method is used, for
 example, for
-[Photoshop's high performance storage](https://web.dev/ps-on-the-web/#high-performance-storage)
+[Photoshop's high performance storage](https://web.dev/articles/ps-on-the-web#high_performance_storage)
 needs, and which the storage community is
 [highly interested in](/blog/deprecating-web-sql/#rationale-for-leaving-storage-to-web-developers)
 since the started deprecation of Web SQL and even before.
@@ -125,9 +125,9 @@ a Wasm context, and since this is happening in a worker, the main thread can't b
 
 ## Privacy improvements for the hardware APIs
 
-Another example are the [hardware APIs](https://web.dev/tags/devices/) that allow you to connect to
-[HID](https://web.dev/hid/), [serial](https://web.dev/serial/), [USB](https://web.dev/usb/),
-[Bluetooth](https://web.dev/bluetooth/), and [NFC](https://web.dev/nfc/) devices. While some of
+Another example are the [hardware APIs](https://web.dev/articles/tags/devices) that allow you to connect to
+[HID](https://web.dev/articles/hid), [serial](https://web.dev/articles/serial), [USB](https://web.dev/articles/usb),
+[Bluetooth](https://web.dev/articles/bluetooth), and [NFC](https://web.dev/articles/nfc) devices. While some of
 these APIs have been around for a while, until recently there was no way to forget a device that you
 had previously connected to. Now there is thanks to the
 [`forget()`](https://wicg.github.io/serial/#forget-method) methods for some of the APIs. For
@@ -144,7 +144,7 @@ await port.forget();
 ## Refinements for the Multi-Screen Window Placement API
 
 A final example is the
-[Multi-Screen Window Placement API](https://web.dev/multi-screen-window-placement/), where, based on
+[Multi-Screen Window Placement API](https://web.dev/articles/multi-screen-window-placement), where, based on
 developer feedback, the previously generic screen labels like `"Internal Display 1"` were replaced
 with more meaningful labels like `"Built-in Retina Display"` so users can more easily associate
 these labels with the screens of their multi-screen setup.
@@ -160,7 +160,7 @@ as you can and provide simple instructions for reproducing.
 
 And, if you are concerned about browser support, many Fugu APIs make for great progressive
 enhancements. See my article
-[SVGcode: a PWA to convert raster images to SVG vector graphics](https://web.dev/svgcode/) for
+[SVGcode: a PWA to convert raster images to SVG vector graphics](https://web.dev/articles/svgcode) for
 inspiration. We also don't consider our job done until these APIs are interoperable, and we will
 continue to push for further standardization, testing, and adoption by other browsers.
 

@@ -47,23 +47,23 @@ while still achieving a [Time to Interactive](http://web.dev/tti/) of 10&nbsp;se
 Here are some ways to keep payload size down:
 
 - Defer requests until they're needed.
-  See the [PRPL Pattern](https://web.dev/apply-instant-loading-with-prpl/) for one possible approach.
+  See the [PRPL Pattern](https://web.dev/articles/apply-instant-loading-with-prpl) for one possible approach.
 - Optimize requests to be as small as possible. Possible techniques include:
-  - [Minify and compress network payloads](https://web.dev/reduce-network-payloads-using-text-compression/).
-  - [Use WebP instead of JPEG or PNG for your images](https://web.dev/serve-images-webp/).
-  - [Set the compression level of JPEG images to 85](https://web.dev/use-imagemin-to-compress-images/).
+  - [Minify and compress network payloads](https://web.dev/articles/reduce-network-payloads-using-text-compression).
+  - [Use WebP instead of JPEG or PNG for your images](https://web.dev/articles/serve-images-webp).
+  - [Set the compression level of JPEG images to 85](https://web.dev/articles/use-imagemin-to-compress-images).
 - Cache requests so that the page doesn't re-download the resources
-  on repeat visits. (See the [Network reliability landing page](https://web.dev/reliable/)
+  on repeat visits. (See the [Network reliability landing page](https://web.dev/explore/reliable)
   to learn how caching works and how to implement it.)
 
 ## Stack-specific guidance
 
 ### Angular
 
-Apply [route-level code splitting](https://web.dev/route-level-code-splitting-in-angular/) to
+Apply [route-level code splitting](https://web.dev/articles/route-level-code-splitting-in-angular) to
 minimize the size of your JavaScript bundles. Also, consider precaching assets
 with the [Angular service
-worker](https://web.dev/precaching-with-the-angular-service-worker/).
+worker](https://web.dev/articles/precaching-with-the-angular-service-worker).
 
 ### Drupal
 

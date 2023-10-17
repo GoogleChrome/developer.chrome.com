@@ -18,13 +18,13 @@ Lighthouseは、ページ上のすべてのJPEGまたはBMP画像を収集し、
 
 画像を最適化するためのステップは、以下を含め、実践できることがたくさんあります。
 
-- [画像CDNを使用する](https://web.dev/image-cdns/)
-- [画像を圧縮する](https://web.dev/use-imagemin-to-compress-images/)
-- [アニメーションGIFを動画に置き換える](https://web.dev/replace-gifs-with-videos/)
-- [画像を遅延読みする](https://web.dev/use-lazysizes-to-lazyload-images/)
-- [レスポンシブ画像を提供する](https://web.dev/serve-responsive-images/)
-- [正しいサイズの画像を提供する](https://web.dev/serve-images-with-correct-dimensions/)
-- [WebP画像を使用する](https://web.dev/serve-images-webp/)
+- [画像CDNを使用する](https://web.dev/articles/image-cdns)
+- [画像を圧縮する](https://web.dev/articles/use-imagemin-to-compress-images)
+- [アニメーションGIFを動画に置き換える](https://web.dev/articles/replace-gifs-with-videos)
+- [画像を遅延読みする](https://web.dev/articles/use-lazysizes-to-lazyload-images)
+- [レスポンシブ画像を提供する](https://web.dev/articles/serve-responsive-images)
+- [正しいサイズの画像を提供する](https://web.dev/articles/serve-images-with-correct-dimensions)
+- [WebP画像を使用する](https://web.dev/articles/serve-images-webp)
 
 ## GUIツールを使用して画像を最適化する
 

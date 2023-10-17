@@ -125,7 +125,7 @@ Chromium issue: [1429191](https://crbug.com/1429191).
 
 ### Warning for slow user interactions {: #slow-interaction-warning }
 
-User interactions longer than 200 milliseconds get an [Interaction to Next Paint (INP)](https://web.dev/inp/) warning in the **Performance** > **Summary** tab.
+User interactions longer than 200 milliseconds get an [Interaction to Next Paint (INP)](https://web.dev/articles/inp) warning in the **Performance** > **Summary** tab.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wrFaZ26nYCuprtCSNB5C.png", alt="The INP warning.", width="800", height="685" %}
 
@@ -149,7 +149,7 @@ Both the **Web Vitals** and **Long Tasks** tracks contained information duplicat
 
 Additionally, the **Experiences** track was renamed to **Layout Shifts** to more accurately reflect its usage.
 
-Learn more about [Web Vitals](https://web.dev/vitals/).
+Learn more about [Web Vitals](https://web.dev/articles/vitals).
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/41b7043de413b2a87f6a8dc8a90ac1a744912400 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/26306da9622791b255b12c9c0deeac0a0d4a07b8 #}

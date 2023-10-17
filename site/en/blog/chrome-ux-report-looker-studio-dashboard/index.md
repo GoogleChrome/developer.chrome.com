@@ -26,7 +26,7 @@ The CrUX Dashboard is built with a Looker Studio feature called [Community Conne
 
 ## Using the default CrUX dashboard
 
-CrUX has a [default dashboard](/docs/crux/dashboard/), which is maintained by the CrUX team. New metrics (for example [INP](https://web.dev/inp/)) are added by the team and available the next time the dashboard is loaded.
+CrUX has a [default dashboard](/docs/crux/dashboard/), which is maintained by the CrUX team. New metrics (for example [INP](https://web.dev/articles/inp)) are added by the team and available the next time the dashboard is loaded.
 
 The default dashboard is recommended as a quick, no maintaince way of visualizing a site's CrUX data. However, some users may wish to customize the dashboard.
 
@@ -76,7 +76,7 @@ The monthly datasets are released on the second Tuesday of every month. For exam
 
 ### Core Web Vitals overview
 
-The first page is an overview of the origin's monthly [Core Web Vitals](https://web.dev/vitals/) performance. These are the most important UX metrics that Google recommends you focus on.
+The first page is an overview of the origin's monthly [Core Web Vitals](https://web.dev/articles/vitals) performance. These are the most important UX metrics that Google recommends you focus on.
 
 {% Img src="image/admin/h8iCTgvmG4DS2zScvatc.png", alt="CrUX Dashboard Core Web Vitals overview", width="800", height="906" %}
 
@@ -94,7 +94,7 @@ After the Core Web Vitals page, you'll find standalone pages for all [metrics](/
 
 Atop each page is the **Device** filter, which you can use to restrict the form factors included in the experience data. For example, you can drill down specifically into phone experiences. This setting persists across pages.
 
-The primary visualizations on these pages are the monthly distributions of experiences categorized as "Good", "Needs Improvement", and "Poor". The color-coded legend below the chart indicates the range of experiences included in the category. For example, in the screenshot above, you can see the percent of "good" [Largest Contentful Paint](https://web.dev/lcp/#what-is-a-good-lcp-score) (LCP) experiences fluctuating and getting slightly worse in recent months.
+The primary visualizations on these pages are the monthly distributions of experiences categorized as "Good", "Needs Improvement", and "Poor". The color-coded legend below the chart indicates the range of experiences included in the category. For example, in the screenshot above, you can see the percent of "good" [Largest Contentful Paint](https://web.dev/articles/lcp#what_is_a_good_lcp_score) (LCP) experiences fluctuating and getting slightly worse in recent months.
 
 The most recent month's percentages of "good" and "poor" experiences are shown above the chart along with an indicator of the percent difference from the previous month. For this origin, "good" LCP experiences fell by 3.2% to 56.04% month-over-month.
 
@@ -127,7 +127,7 @@ Effective connection types are considered _effective_ because they're based on b
 {% endAside %}
 
 The distributions for these dimensions are calculated using segments of the
-[First Contentful Paint](https://web.dev/fcp/) (FCP) histogram data.
+[First Contentful Paint](https://web.dev/articles/fcp) (FCP) histogram data.
 
 ## FAQ
 

@@ -46,7 +46,7 @@ enforced at **authoring time**. This breaks down into the following 3 principles
 
 {% Aside %}
 Conformance in this article focuses on coding best practices to achieve predictable loading
-performance & [Core Web Vital](https://web.dev/vitals/) scores, but the principles apply equally to
+performance & [Core Web Vital](https://web.dev/articles/vitals) scores, but the principles apply equally to
 other aspects such as security, accessibility, and so forth.
 {% endAside %}
 

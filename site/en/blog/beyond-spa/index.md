@@ -75,7 +75,7 @@ the context of a multi-page app.
 You've heard me (and countless others) use the phrase "progressive web
 app", or PWA. You might already be familiar with some of the background
 material, [elsewhere on this
-site](https://web.dev/progressive-web-apps/).
+site](https://web.dev/explore/progressive-web-apps).
 
 You can think of a PWA as a web app that provides a first-class user experience,
 and that truly earns a place on the user's home screen. The acronym "**FIRE**",
@@ -107,7 +107,7 @@ PWAs introduce a high bar for speed and resilience. Fortunately, the web
 platform offers some building blocks to make that type of performance a reality.
 I'm referring to [service workers](/docs/workbox/service-worker-overview)
 and the [Cache Storage
-API](https://web.dev/cache-api-quick-guide/).
+API](https://web.dev/articles/cache-api-quick-guide).
 
 You can build a service worker that listens for incoming requests, passing some
 on to the network, and storing a copy of the response for future use, via the
@@ -352,8 +352,8 @@ and just like my server did, it uses a combination of routing and
 templating logic to figure out how to respond.
 
 The approach is the same as before, but with different low-level primitives,
-like [`fetch()`](https://web.dev/introduction-to-fetch/) and the [Cache
-Storage API](https://web.dev/cache-api-quick-guide/). I use
+like [`fetch()`](https://web.dev/articles/introduction-to-fetch) and the [Cache
+Storage API](https://web.dev/articles/cache-api-quick-guide). I use
 those data sources to construct the HTML response, which the service worker
 passes back to the web app.
 

@@ -55,7 +55,7 @@ Prerendering allows a near-instant page load as shown in the Video below when pr
 %}
 </figure>
 
-The [web.dev](https://web.dev/) site is already a fast site, but even with this you can see how prerendering improves the user experience. This can therefore also have a direct impact on a site's [Core Web Vitals](https://web.dev/vitals/), with near zero LCP, reduced CLS (since any load CLS happens before the initial view), and improved FID (since the load should be completed before the user interacts).
+The [web.dev](https://web.dev/) site is already a fast site, but even with this you can see how prerendering improves the user experience. This can therefore also have a direct impact on a site's [Core Web Vitals](https://web.dev/articles/vitals), with near zero LCP, reduced CLS (since any load CLS happens before the initial view), and improved FID (since the load should be completed before the user interacts).
 
 Even when a page activates before it is fully loaded, having a head start to the page load, should improve the loading experience. When a link is activated while prerendering is still happening, the prerendering page will move to the main frame and continue loading.
 
@@ -257,7 +257,7 @@ Removing speculation rules will result in the prerender being cancelled but, by 
 
 ### Speculation rules and Content Security Policy
 
-As speculation rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/csp/) if the site uses this—either using a hash or nonce.
+As speculation rules use a `<script>` element, even though they only contain JSON, they need to be included in the `script-src` [Content-Security-Policy](https://web.dev/articles/csp) if the site uses this—either using a hash or nonce.
 
 A new `inline-speculation-rules` can be added to `script-src` allowing `<script type="speculationrules">` elements injected from hash/nonced scripts to be supported. At present, this only supports injected rules and does not [yet support rules includes in the initial HTML](https://bugs.chromium.org/p/chromium/issues/detail?id=1433616).
 
@@ -372,7 +372,7 @@ gtag('set', { 'dimension1': pagePrerendered() });
 gtag('config', 'UA-12345678-1');
 ```
 
-This will allow your analytics to show how many navigation are prerendered compared to other types of navigation, and also allow you to correlation any performance metrics or business metrics to these different navigation types. Faster pages means happier users, which can often have real impact on business measures as our [case studies](https://web.dev/tags/case-study/) show.
+This will allow your analytics to show how many navigation are prerendered compared to other types of navigation, and also allow you to correlation any performance metrics or business metrics to these different navigation types. Faster pages means happier users, which can often have real impact on business measures as our [case studies](https://web.dev/articles/tags/case-study) show.
 
 As you measure the business impact of prerendering pages for instant navigations, you can decide whether it is worth investing more effort in using this technology to allow more navigations to be prerendered, or to investigate why pages are not being prerendered.
 
@@ -388,7 +388,7 @@ The "successful hit rate" can then be approximated by looking at the difference 
 
 Be aware that some prerendering may be taking place due to the address bar prerendering and not just your speculation rules. You can check the `document.referrer` (which will be blank for address bar navigation including prerendered address bar navigations) if you wish to differentiate these.
 
-Remember to also look at pages which have no prerenders, as that could indicate these pages are not eligible for prerendering, even from the address bar. That may mean you are not benefiting from this performance enhancement. The Chrome team is looking to add extra tooling to test for Prerender eligibility perhaps [similar to the bfcache testing tool](https://web.dev/bfcache/#test-to-ensure-your-pages-are-cacheable), and also potentially add an API to expose why a prerender failed.
+Remember to also look at pages which have no prerenders, as that could indicate these pages are not eligible for prerendering, even from the address bar. That may mean you are not benefiting from this performance enhancement. The Chrome team is looking to add extra tooling to test for Prerender eligibility perhaps [similar to the bfcache testing tool](https://web.dev/articles/bfcache#test_to_ensure_your_pages_are_cacheable), and also potentially add an API to expose why a prerender failed.
 
 ## Impact on extensions
 

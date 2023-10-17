@@ -26,7 +26,7 @@ Web developers should review their site code for usage
 of the User-Agent string. If your site relies on parsing the User-Agent string
 to read the device model, platform version, or full browser version, you'll
 need to [implement the User-Agent Client Hints
-API](https://web.dev/migrate-to-ua-ch/).
+API](https://web.dev/articles/migrate-to-ua-ch).
 
 {% Aside 'key-term' %}
 The [`User-Agent` string](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
@@ -60,20 +60,20 @@ Reduced UA and UA-CH improve user privacy by sharing only basic information by d
 The reduced User-Agent includes the browser's brand and a significant version,
 where the request came from (desktop or mobile), and the platform. To access
 more data, User-Agent Client Hints allow you to request specific information
-about the user's device or conditions. 
+about the user's device or conditions.
 
 Further, over time the `User-Agent` string grew longer and more complex, which led
 to error-prone string parsing. UA-CH provides structured and reliable data that
 is easier to interpret. Existing code that parses the UA string shouldn't
 break (though it will return less data), and you'll need to migrate to UA-CH
-if your site [needs specific client 
+if your site [needs specific client
 information](https://wicg.github.io/ua-client-hints/#use-cases).
 
 ## How does the reduced UA and UA-CH work?
 
 Here is a brief example of how the reduced User-Agent string and UA-CH work.
 For a more in-depth example, review [Improving user privacy and developer
-experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/#example-exchange).
+experience with User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints#example_exchange).
 
 A user opens the browser and enters `example.com` into the address bar:
 
@@ -159,11 +159,11 @@ the high-entropy `Sec-CH-UA-Model` hint.
 ## How do I use and test reduced UA? {: #prepare-and-test}
 
 To begin, [review your site
-code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
+code](https://web.dev/articles/migrate-to-ua-ch#audit_collection_and_use_of_user_agent_data)
 for instances and uses of the User-Agent string. If your site relies on parsing
 the User-Agent string to read the device model, platform version, or full
 browser version, you'll need to
-[implement the UA-CH API](https://web.dev/migrate-to-ua-ch/).
+[implement the UA-CH API](https://web.dev/articles/migrate-to-ua-ch).
 
 Once you've updated to the UA-CH API, you should test to ensure you get the
 data you expect from the User-Agent. There are three ways to test, each
@@ -183,11 +183,11 @@ There are a couple of methods to test the reduced User-Agent locally:
 * Configure an emulated device in DevTools with the right `user-agent` string
   and client hints.
     * In the top right of DevTools, click
-      {% Img src="image/admin/CBHNS0GIpZlOcDkO1D7F.png", alt="", width="28", height="28" %} 
+      {% Img src="image/admin/CBHNS0GIpZlOcDkO1D7F.png", alt="", width="28", height="28" %}
       **Settings** > **Devices** > **Add custom device...** to configure an
       emulated device with any combination of `user-agent` string and
-      User-Agent Client Hints values you need. 
-    * In the top left of DevTools, click 
+      User-Agent Client Hints values you need.
+    * In the top left of DevTools, click
       {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="", width="30", height="32" %}
       **Toggle Device Toolbar** to open the DevTools UI to emulate a device.
 * Launch Chrome with the `--user-agent="Custom string here"`.
@@ -206,7 +206,7 @@ expressions.
 
 ## Support for Client Hints and critical hints
 
-There are three [default Client Hints](https://web.dev/migrate-to-ua-ch/#are-you-only-using-basic-user-agent-data)
+There are three [default Client Hints](https://web.dev/articles/migrate-to-ua-ch#are_you_only_using_basic_user_agent_data)
 returned to the server, including browser name and major version, a boolean
 that indicates if the browser is on a mobile device, and the operating system
 name. These are sent after the Transport Layer Security protocol (TLS) handshake. These are already available and
@@ -303,9 +303,9 @@ User-Agent string.
 
 ## Find out more
 
-*  [Improving user privacy and developer experience](https://web.dev/user-agent-client-hints/):
+*  [Improving user privacy and developer experience](https://web.dev/articles/user-agent-client-hints):
    an overview for web developers
-*  [Migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/): a
+*  [Migrate from UA string to UA-CH](https://web.dev/articles/migrate-to-ua-ch): a
    tutorial for web developers
 *  [User-Agent snippets](/docs/privacy-sandbox/user-agent/snippets/): code
   snippets to transform the current User-Agent string to the reduced format for

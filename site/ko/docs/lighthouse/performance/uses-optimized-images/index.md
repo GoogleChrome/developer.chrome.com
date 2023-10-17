@@ -20,13 +20,13 @@ Lighthouse는 페이지의 모든 JPEG 또는 BMP 이미지를 수집하고 각 
 
 다음을 포함하여 이미지를 최적화하기 위해 취할 수 있는 여러 단계가 있습니다.
 
-- [이미지 CDN 사용](https://web.dev/image-cdns/)
-- [이미지 압축](https://web.dev/use-imagemin-to-compress-images/)
-- [애니메이션 GIF를 비디오로 대체](https://web.dev/replace-gifs-with-videos/)
-- [이미지 로딩 지연](https://web.dev/use-lazysizes-to-lazyload-images/)
-- [반응형 이미지 제공](https://web.dev/serve-responsive-images/)
-- [올바른 크기의 이미지 제공](https://web.dev/serve-images-with-correct-dimensions/)
-- [WebP 이미지 사용](https://web.dev/serve-images-webp/)
+- [이미지 CDN 사용](https://web.dev/articles/image-cdns)
+- [이미지 압축](https://web.dev/articles/use-imagemin-to-compress-images)
+- [애니메이션 GIF를 비디오로 대체](https://web.dev/articles/replace-gifs-with-videos)
+- [이미지 로딩 지연](https://web.dev/articles/use-lazysizes-to-lazyload-images)
+- [반응형 이미지 제공](https://web.dev/articles/serve-responsive-images)
+- [올바른 크기의 이미지 제공](https://web.dev/articles/serve-images-with-correct-dimensions)
+- [WebP 이미지 사용](https://web.dev/articles/serve-images-webp)
 
 ## GUI 도구를 사용하여 이미지 최적화
 

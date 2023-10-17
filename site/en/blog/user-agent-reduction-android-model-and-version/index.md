@@ -21,7 +21,7 @@ sharing_image: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/3VrRwYpBizX3JQA93uzg.png'
 ---
 
 {% Aside 'warning'%}
-This article is outdated as User-Agent reduction is complete. Learn how to [migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) and read about why this change was made in [User-Agent reduction](/docs/privacy-sandbox/user-agent/). 
+This article is outdated as User-Agent reduction is complete. Learn how to [migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch) and read about why this change was made in [User-Agent reduction](/docs/privacy-sandbox/user-agent/).
 {% endAside %}
 
 Starting in Chrome 110 (February 2023) we are gradually introducing a _fixed value for Android version and device model_—the default value will always be `Android 10` on a model `K`.
@@ -136,7 +136,7 @@ navigator.userAgentData
 
 ## Cross-origin or initial requests
 
-If you have [cross-origin resources on your page that need these values you can allow access](https://web.dev/migrate-to-ua-ch/#strategy-delegating-hints-to-cross-origin-requests) via the `Permissions-Policy` HTTP header or using the `Delegate-CH` meta tag in your HTML.
+If you have [cross-origin resources on your page that need these values you can allow access](https://web.dev/articles/migrate-to-ua-ch#strategy_delegating_hints_to_cross_origin_requests) via the `Permissions-Policy` HTTP header or using the `Delegate-CH` meta tag in your HTML.
 
 If it’s necessary for your site to have these sensitive values on the very first top-level request, you can use the [`Critical-CH` HTTP header](/docs/privacy-sandbox/user-agent/#critical-client-hints) which will tell the browser to retry its initial request with those extra hints added.
 This may be helpful for legacy systems that are hard to update, but ideally you should not be relying on these sensitive values to serve your initial HTML.
@@ -153,7 +153,7 @@ If you need more time to prepare,  [sign up for the deprecation trial](/origintr
 
 To see the reduced user-agent string in action, check out the following:
 
-*   See the reduced user-agent string for _your_ device on [goo.gle/reduced-ua-demo](https://goo.gle/reduced-ua-demo) 
+*   See the reduced user-agent string for _your_ device on [goo.gle/reduced-ua-demo](https://goo.gle/reduced-ua-demo)
 *   See all the JavaScript and HTTP header User-Agent Client Hints for _your_ device on [goo.gle/ua-ch-demo](https://goo.gle/ua-ch-demo)
 *   Send the reduced user-agent string in _your_ browser by enabling the `#reduce-user-agent` [Chrome flag](/docs/web-platform/chrome-flags/).
 

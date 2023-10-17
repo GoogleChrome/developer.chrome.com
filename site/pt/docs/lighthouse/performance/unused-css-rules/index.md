@@ -44,7 +44,7 @@ De forma semelhante ao código incorporado em `<script>`, insira estilos crític
 
 Considere automatizar o processo de extração e incorporação de CSS "Acima da Dobra" usando a [ferramenta crítica](https://github.com/addyosmani/critical/blob/master/README.md).
 
-Saiba mais em [Adie CSS não crítico](https://web.dev/defer-non-critical-css/).
+Saiba mais em [Adie CSS não crítico](https://web.dev/articles/defer-non-critical-css).
 
 ## Orientações para pilhas específicas
 

@@ -71,8 +71,8 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
 ## Performance insight パネルに Largest Contentful Paint (LCP) を追加 {: #lcp }
 
-<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-LCP は[認識される読み込み速度](https://web.dev/user-centric-performance-metrics/#types-of-metrics)を測定する重要なユーザー中心メトリクスのひとつです。これからはクリティカルパスと [Largest Contentful Paint (LCP)](https://web.dev/lcp/) の主な要因を見つけることができます。
+<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp). -->
+LCP は[認識される読み込み速度](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics)を測定する重要なユーザー中心メトリクスのひとつです。これからはクリティカルパスと [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp) の主な要因を見つけることができます。
 
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 [performance recording](/docs/devtools/performance-insights/#record)で、**Timeline** にある LCP バッジをクリックしてください。**Details** ペインで、LCP スコアを見て、LCP を遅滞させているリソースをどのように修正すればいいかを学び、LCP リソースのクリティカルパスを確認できます。
@@ -89,14 +89,14 @@ Chromium issue: [1326481](https://crbug.com/1326481)
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
 ## レイアウトシフトの潜在的な主要因であるテキストのフラッシュ（FOIT、FOUT）を識別 {: #foit-fout }
 
-<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
-**Performance insights** パネルはレイアウトシフトの潜在的な主要因として [flash of invisible text (FOIT) と flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) を検出できるようになりました。
+<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering) as potential root causes for layout shifts. -->
+**Performance insights** パネルはレイアウトシフトの潜在的な主要因として [flash of invisible text (FOIT) と flash of unstyled text (FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering) を検出できるようになりました。
 
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
 レイアウトシフトの潜在的な主要因を確認するには、**Layout shifts** トラックにあるスクリーンショットをクリックしてください。
 
-<!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
-レイアウトシフトを避けるテクニックについて学ぶには [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) を参照してください。
+<!-- See [Optimize WebFont loading and rendering](https://web.dev/articles/optimize-webfont-loading) to learn the technique to prevent layout shifts.  -->
+レイアウトシフトを避けるテクニックについて学ぶには [Optimize WebFont loading and rendering](https://web.dev/articles/optimize-webfont-loading) を参照してください。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT in the Performance insights panel", width="800", height="497" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="Performance insights パネルの FOUT", width="800", height="497" %}
@@ -107,8 +107,8 @@ Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.c
 <!-- ## Protocol handlers in the Manifest pane {: #manifest } -->
 ## Manifest ペインの Protocol ハンドラ {: #manifest }
 
-<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/url-protocol-handler/) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/). -->
-DevTools を使用して [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/) のための [URL protocol handler registration](https://web.dev/url-protocol-handler/) をテストできるようになりました。
+<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/articles/url-protocol-handler) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa). -->
+DevTools を使用して [Progressive Web Apps (PWA)](https://web.dev/learn/pwa) のための [URL protocol handler registration](https://web.dev/articles/url-protocol-handler) をテストできるようになりました。
 
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
 URL protocol handler registration を使用するとインストールされた PWA が特定のプロトコル（例、[`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme)、`web+example`）が使用されたリンクを処理して、より統一感のある体験を提供できます。
@@ -134,8 +134,8 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
 トップレイヤのコンセプトと、トップレイヤ内容の変更がどのように可視化されるかを理解するには [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) を確認してください。
 
-<!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
-[`<dialog>` 要素](https://web.dev/building-a-dialog-component/)は最近ブラウザで安定版になりました。ダイアログを開くと、その内容が [top layer](/blog/top-layer-devtools/) に配置されます。トップレベルコンテンツはその他すべてのコンテンツの上に描画されます。
+<!-- The [`<dialog>` element](https://web.dev/articles/building-a-dialog-component) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
+[`<dialog>` 要素](https://web.dev/articles/building-a-dialog-component)は最近ブラウザで安定版になりました。ダイアログを開くと、その内容が [top layer](/blog/top-layer-devtools/) に配置されます。トップレベルコンテンツはその他すべてのコンテンツの上に描画されます。
 
 <!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
 この[デモ](https://jec.fish/demo/dialog)で、**Open dialog** をクリックしてください。

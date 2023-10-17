@@ -188,5 +188,5 @@ related to DevTools:
 
 * [Learn Forms](https://web.dev/learn/forms): A course about HTML forms to help you improve
     your web developer expertise. Ideal for anyone new to forms and Autofill.
-* [web.dev/tags/forms](https://web.dev/tags/forms/): Guidance, best practice and codelabs, for
+* [web.dev/tags/forms](https://web.dev/articles/tags/forms): Guidance, best practice and codelabs, for
     payment, login, and address forms.

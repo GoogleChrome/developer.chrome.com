@@ -46,8 +46,8 @@ Issue relacionada: [423246](https://crbug.com/423246)
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 Use o novo painel **API de relatórios** para monitorar os relatórios gerados em sua página e o status deles.
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-A [API de relatórios](https://web.dev/reporting-api/) foi desenvolvida para ajudar você a monitorar violações de segurança de sua página, chamadas de API obsoletas e muito mais.
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+A [API de relatórios](https://web.dev/articles/reporting-api) foi desenvolvida para ajudar você a monitorar violações de segurança de sua página, chamadas de API obsoletas e muito mais.
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 Abra uma página que usa a API de relatórios (por exemplo, [página de demonstração](https://reporting-api-demo.glitch.me/)). No painel **Aplicativo**, role para baixo até a seção **Serviços em segundo plano** e selecione o painel **API de relatórios**.
 <!-- The **Reports** section shows you a list of reports generated on your page and their status. Click on it to view the report’s details. -->
@@ -149,8 +149,8 @@ Issue relacionada: [1284737](https://crbug.com/1284737)
 
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
 ### Exibição arquivos fontes de workers no painel Origens {: #worker-sourcemap }
-<!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
-[Worker](https://web.dev/workers-overview/) (por exemplo, web worker, service worker) arquivos fontes com SourceURL relativo agora são exibidos no painel **Fontes**. Anteriormente, os arquivos fontes do worker não eram tratados corretamente.
+<!-- [Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
+[Worker](https://web.dev/articles/workers-overview) (por exemplo, web worker, service worker) arquivos fontes com SourceURL relativo agora são exibidos no painel **Fontes**. Anteriormente, os arquivos fontes do worker não eram tratados corretamente.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="Exibição arquivos fontes de workers no painel Origens", width="800", height="509" %}
 
@@ -199,10 +199,10 @@ Estas são algumas correções dignas de nota nesta versão:
 - Corrigido o problema de [editar cookies](/docs/devtools/storage/cookies/#edit) no painel **Cookies**. ([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - Use `Shift` + `Tab` para selecionar o comando anterior no [menu Comando](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743))
-<!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
-- Informe os problemas de [solicitação de simulação do CORS](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) na aba [Problemas](/docs/devtools/issues/ ). ([1272445](https://crbug.com/1272445)).
-<!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
-- Relate problemas de [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) na guia [Problemas](/docs/devtools/issues/).(https://crbug.com/1219359)).
+<!-- - Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
+- Informe os problemas de [solicitação de simulação do CORS](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) na aba [Problemas](/docs/devtools/issues/ ). ([1272445](https://crbug.com/1272445)).
+<!-- - Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
+- Relate problemas de [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) na guia [Problemas](/docs/devtools/issues/).(https://crbug.com/1219359)).
 <!-- - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662)) -->
 - Corrigidos os comportamentos `Shift` + `Delete` e `Page up` / `Page down` no painel **Sources** e **Console**. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->

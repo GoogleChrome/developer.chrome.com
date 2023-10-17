@@ -105,7 +105,7 @@ WHERE experimental.popularity.rank <= 10000
 
 To touch on the potential of our new popularity metric, let’s see how popularity
 segments of the web differ with respect to the [first contentful paint metric
-(FCP)](https://web.dev/first-contentful-paint/). For the purpose of this query,
+(FCP)](https://web.dev/articles/first-contentful-paint). For the purpose of this query,
 we consider 1 second a fast user experience.
 
 ```sql

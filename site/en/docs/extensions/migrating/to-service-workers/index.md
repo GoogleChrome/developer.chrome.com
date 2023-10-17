@@ -9,7 +9,7 @@ updated: 2023-05-19
 
 {% Partial 'extensions/mv3-support.md' %}
 
-A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources. 
+A service worker replaces the extension's background or event page to ensure that background code stays off the main thread. This enables extensions to run only when needed, saving resources.
 
 Background pages have been a fundamental component of extensions since their introduction. To put it simply, background pages provide an environment that lives independent of any other window or tab. This allows extensions to observe and act in response to events.
 
@@ -40,7 +40,7 @@ This page describes these tasks in detail.
 
 ## Update the "background" field in the manifest {: #update-bg-field }
 
-In Manifest V3, background pages are replaced by a *service worker*. The manifest changes are listed below. 
+In Manifest V3, background pages are replaced by a *service worker*. The manifest changes are listed below.
 
 - Replace `"background.scripts"` with `"background.service_worker"` in the `manifest.json`. Note that the `"service_worker"` field takes a string, not an array of strings.
 - Remove `"background.persistent"` from the `manifest.json`.
@@ -80,7 +80,7 @@ Migrating to a service worker (in other words, replacing the `"background.page"`
 {% endCompare %}
 </div>
 
-The `"service_worker"` field takes a single string. You will only need the `"type"` field if you use [ES modules](https://web.dev/es-modules-in-sw/#static-imports-only) (using the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword). Its value will always be `"module"`. For more information, see [Extension service worker basics](/docs/extensions/mv3/service_workers/basics/#import-scripts)
+The `"service_worker"` field takes a single string. You will only need the `"type"` field if you use [ES modules](https://web.dev/articles/es-modules-in-sw#static_imports_only) (using the [`import`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) keyword). Its value will always be `"module"`. For more information, see [Extension service worker basics](/docs/extensions/mv3/service_workers/basics/#import-scripts)
 
 ## Move DOM and window calls to an offscreen document {: #move-dom-and-window }
 
@@ -123,7 +123,7 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.browserAction.setBadgeText({ text: badgeText });
   chrome.browserAction.onClicked.addListener(handleActionClick);
 });
-``` 
+```
 
 This works with a persistent background page because the page is constantly running and never reinitialized. In Manifest V3, the service worker will be reinitialized when the event is dispatched. This means that when the event fires, the listeners will not be registered (since they are added asynchronously), and the event will be missed.
 
@@ -139,12 +139,12 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
 
 ## Replace XMLHttpRequest() with global fetch() {: #replace-xmlhttprequest }
 
-`XMLHttpRequest()` can't be called from a service worker, extension or otherwise. Replace calls from your background script to `XMLHttpRequest()` with calls to [global `fetch()`](https://developer.mozilla.org/docs/Web/API/fetch). 
+`XMLHttpRequest()` can't be called from a service worker, extension or otherwise. Replace calls from your background script to `XMLHttpRequest()` with calls to [global `fetch()`](https://developer.mozilla.org/docs/Web/API/fetch).
 
 {% Compare 'worse', 'XMLHttpRequest()' %}
 ```javascript
 const xhr = new XMLHttpRequest();
-console.log('UNSENT', xhr.readyState); 
+console.log('UNSENT', xhr.readyState);
 
 xhr.open('GET', '/api', true);
 console.log('OPENED', xhr.readyState);
@@ -189,7 +189,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
 ```
 {% endCompare %}
 
-For Manifest V3, replace the global variable with a call to [Storage API](/docs/extensions/reference/storage/). 
+For Manifest V3, replace the global variable with a call to [Storage API](/docs/extensions/reference/storage/).
 
 {% Compare 'better', 'Manifest V3 service worker' %}
 ```js
@@ -213,7 +213,7 @@ It's common to use delayed or periodic operations using the `setTimeout()` or `s
 {% Compare 'worse', 'Manifest V2 background script' %}
 ```js
 // 3 minutes in milliseconds
-const TIMEOUT = 3 * 60 * 1000; 
+const TIMEOUT = 3 * 60 * 1000;
 setTimeout(() => {
   chrome.action.setIcon({
     path: getRandomIconPath(),

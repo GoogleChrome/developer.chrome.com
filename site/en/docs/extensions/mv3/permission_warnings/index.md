@@ -15,20 +15,29 @@ anchorRedirects:
 
 Chrome extensions enhance the user's browser experience. To do this extensions use [Chrome
 APIs][doc-apis] that require certain permissions. Some permissions are less intrusive and do not
-display a warning. Other permissions trigger a warning that users have to allow. 
+display a warning. Other permissions trigger a warning that users have to allow.
 
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/NcPZYfAhQMtpW78sT26K.png", 
-  alt="Example of permission warnings are displayed when the user adds a new extension", 
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/NcPZYfAhQMtpW78sT26K.png",
+  alt="Example of permission warnings are displayed when the user adds a new extension",
   width="333", height="179", class='screenshot'%}
   <figcaption>
-    Permission warnings dialog displayed on installation. 
+    Permission warnings dialog displayed on installation.
   </figcaption>
 </figure>
 
 When a new permission that [triggers a warning](#permissions_with_warnings) is added, the extension
 will be disabled until the user accepts the new permission. See [Updating
-permissions](#update_permissions) to learn how to test this behavior. Some permissions may not display warnings when paired
+permissions](#update_permissions) to learn how to test this behavior.
+
+<figure>
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/tQgKKMKbzmCzwBEAoatX.gif", alt="Example of an extension that is disabled until the user accepts the new permission.", width="396", height="288" %}
+    <figcaption>
+    An extension that is disabled until the user accepts the new permission.
+    </figcaption>
+</figure>
+
+Some permissions may not display warnings when paired
 with other permissions. For example, the `"tabs"` warning will not show if the extension also
 requests `"<all_urls>"`.
 
@@ -39,7 +48,7 @@ harder to understand than others. Users are more likely to install extensions th
 guidelines:
 
 Request relevant permissions
-: Extensions are required to fulfill a [single purpose](/docs/extensions/mv3/single_purpose/) and
+: Extensions are required to fulfill a [single purpose](/docs/extensions/mv3/quality_guidelines#single-purpose) and
 comply with the [Use of permissions](/docs/webstore/program-policies/permissions/) policy. Ensure you only
 request permissions that support the extension's main functionality.
 
@@ -94,7 +103,7 @@ To view an extension's permission warnings, you have the following options:
     <figure>
       {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/u6HOe2mbOK4O133iLrlP.png", alt="Pack extension", width="800", height="589", class='screenshot' %}
       <figcaption>
-      Developer mode enabled in the Extension management page  
+      Developer mode enabled in the Extension management page
       </figcaption>
     </figure>
 4. Specify the path to the extension's folder in the extension root directory field. Ignore the **Private key** field for a first-time package.
@@ -112,7 +121,7 @@ To view an extension's permission warnings, you have the following options:
 
     <figure>
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GLrVd51VTUF86K8gUxu8.png",
-          alt="Packaged Extension Files", height="288", width="521" %}  
+          alt="Packaged Extension Files", height="288", width="521" %}
       <figcaption>
         Packaged Extension Files
       </figcaption>
@@ -184,7 +193,7 @@ These steps assume you followed the [Using the Extension Update Testing Tool](#v
 1. Go to `chrome://extensions`. **Do not remove the previously installed package**.
 1. Pack the extension again, but this time add the pem file in the second input.
     <figure>
-     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Z9V6Q2TOabWTEUTEI6bo.png", 
+     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Z9V6Q2TOabWTEUTEI6bo.png",
      alt="Pem file added when packing extension", width="800", height="456", class='screenshot' %}
       <figcaption>
         Packing extension dialog with pem file included.
@@ -195,7 +204,7 @@ These steps assume you followed the [Using the Extension Update Testing Tool](#v
     <figure>
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/usZSh31pGiJxhhuKmM8B.png",
       alt="Extension has been disabled", height="398", width="297" %}
-      
+
       <figcaption>
         Disabled extension warning
       </figcaption>

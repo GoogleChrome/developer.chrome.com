@@ -23,19 +23,19 @@ alt: A collection of padlocks.
 
 To secure more time to reliably relax the requirement to enable cross-origin
 isolation, the deprecation trial of `SharedArrayBuffer`
-on desktop will be extended until Chrome 121. 
+on desktop will be extended until Chrome 121.
 
 **Update, Nov 2022**
 
 To secure more time to reliably relax the requirement to enable cross-origin
 isolation, the deprecation trial of `SharedArrayBuffer`
-on desktop will be extended until Chrome 113. 
+on desktop will be extended until Chrome 113.
 
 **Update, Aug 2022**
 
 To secure more time to reliably relax the requirement to enable cross-origin
 isolation, the deprecation trial of `SharedArrayBuffer`
-on desktop will be extended until Chrome 109. 
+on desktop will be extended until Chrome 109.
 
 **Update, May 2022**
 
@@ -63,7 +63,7 @@ web, but things are settling down. Here's what you need to know:
   `SharedArrayBuffer` evaluate the impact this will have on other cross-origin
   elements on your website, such as ad placements. Check if `SharedArrayBuffer`
   is used by any of your third-party resources to understand impact and
-  guidance. 
+  guidance.
 
 
 ## Cross-origin isolation overview {: #cross-origin-isolation }
@@ -82,7 +82,7 @@ header or [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS) headers
 (`Access-Control-Allow-*` and so forth).
 
 There's also a [reporting
-API](https://web.dev/coop-coep/#observe-issues-using-the-reporting-api), so you
+API](https://web.dev/articles/coop-coep#observe_issues_using_the_reporting_api), so you
 can gather data on requests that failed as a result of
 `Cross-Origin-Embedder-Policy` and `Cross-Origin-Opener-Policy`.
 
@@ -184,7 +184,7 @@ contain private data.
 Web standards folks got together to come up with a more complete cross-browser
 solution. The solution was to give pages a way to say "I hereby relinquish my
 ability to bring other-origin content into this process without their opt-in".
-This declaration is done via [COOP and COEP headers](https://web.dev/coop-coep/)
+This declaration is done via [COOP and COEP headers](https://web.dev/articles/coop-coep)
 served with the page. The browser enforces that, and in exchange the page gains
 access to `SharedArrayBuffer` and other APIs with similar powers. Other origins
 can opt-in to content embedding via
@@ -215,8 +215,8 @@ Chrome.
 
 - [A guide to enable cross-origin
   isolation](https://web.dev/cross-origin-isolation-guide)
-- [How to cross-origin isolate your pages](https://web.dev/coop-coep/)
-- [Why cross-origin isolation is needed](https://web.dev/why-coop-coep/)
+- [How to cross-origin isolate your pages](https://web.dev/articles/coop-coep)
+- [Why cross-origin isolation is needed](https://web.dev/articles/why-coop-coep)
 
 Banner photo by <a
 href="https://unsplash.com/@yeeeeeeha?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Daniel

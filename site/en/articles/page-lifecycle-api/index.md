@@ -931,7 +931,7 @@ freeze or discard the page but still show changes to the tab title or favicon.
 
 <strong id="back-forward-cache">What is the back/forward cache?<strong>
 
-The [back/forward cache](https://web.dev/bfcache/) is a term used to describe a
+The [back/forward cache](https://web.dev/articles/bfcache) is a term used to describe a
 navigation optimization some browsers implement that makes using the back and
 forward buttons faster.
 

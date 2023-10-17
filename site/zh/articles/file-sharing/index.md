@@ -13,9 +13,9 @@ hero: image/admin/tf0sUZX6G7AM8PvU1t0B.jpg
 alt: 多种颜色的绑定器。
 ---
 
-{% Aside %} 文件处理 API 是[功能项目的](https://web.dev/blog/fugu-status/)一部分，目前正在开发中。本博文将根据实施进展随时更新。{% endAside %}
+{% Aside %} 文件处理 API 是[功能项目的](https://web.dev/articles/blog/fugu-status)一部分，目前正在开发中。本博文将根据实施进展随时更新。{% endAside %}
 
-现在，Web 应用程序[能够读写文件](https://web.dev/file-system-access/)，下一个逻辑步骤是让开发人员将这些 Web 应用程序声明为他们的应用程序可以创建和处理的文件的文件处理程序。利用文件处理 API 即可实现。将文本编辑器应用程序注册为文件处理程序并安装后，您可以在 macOS 上右键单击 `.txt` 文件并选择“获取信息”，然后指示操作系统始终将该应用程序作为打开 `.txt` 文件的默认应用程序。
+现在，Web 应用程序[能够读写文件](https://web.dev/articles/file-system-access)，下一个逻辑步骤是让开发人员将这些 Web 应用程序声明为他们的应用程序可以创建和处理的文件的文件处理程序。利用文件处理 API 即可实现。将文本编辑器应用程序注册为文件处理程序并安装后，您可以在 macOS 上右键单击 `.txt` 文件并选择“获取信息”，然后指示操作系统始终将该应用程序作为打开 `.txt` 文件的默认应用程序。
 
 ## 文件处理 API 的建议用例 {: #use-cases }
 
@@ -35,8 +35,8 @@ alt: 多种颜色的绑定器。
 
 文件处理 API 本身不能实施填充代码 (Polyfill)。但是，使用 Web 应用程序打开文件的功能可通过另外两种方式实现：
 
-- [Web 共享目标 API](https://web.dev/web-share-target/) 支持开发人员将应用程序指定为共享目标，以便从操作系统的共享表中打开文件。
-- [文件系统访问 API](https://web.dev/file-system-access/) 可以集成文件拖放操作，因此，开发人员可以在打开的应用程序中处理拖放文件。
+- [Web 共享目标 API](https://web.dev/articles/web-share-target) 支持开发人员将应用程序指定为共享目标，以便从操作系统的共享表中打开文件。
+- [文件系统访问 API](https://web.dev/articles/file-system-access) 可以集成文件拖放操作，因此，开发人员可以在打开的应用程序中处理拖放文件。
 
 ### 功能检测
 
@@ -52,7 +52,7 @@ if ('launchQueue' in window && 'files' in LaunchParams.prototype) {
 
 ### 文件处理 API 的声明部分
 
-第一步，Web 应用程序需要在 [Web 应用程序清单](https://web.dev/add-manifest/)中以声明方式描述可处理的文件类型。该文件处理 API 使用一个称为 `"file_handlers"` 的新属性扩展了 Web 应用程序清单，该属性可接受一组文件处理程序。文件处理程序是具有两个属性的对象：
+第一步，Web 应用程序需要在 [Web 应用程序清单](https://web.dev/articles/add-manifest)中以声明方式描述可处理的文件类型。该文件处理 API 使用一个称为 `"file_handlers"` 的新属性扩展了 Web 应用程序清单，该属性可接受一组文件处理程序。文件处理程序是具有两个属性的对象：
 
 - 其一是 `"action"` 属性，它指向应用程序范围内的 URL，将其作为值
 - 其二是 `"accept"` 属性，它以 MIME 类型的对象作为键，并将文件扩展名列表作为值。

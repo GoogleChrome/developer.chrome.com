@@ -13,12 +13,12 @@ Building for the web gives you unparalleled reach. Your web application is a
 click away and available on almost every connected device-smartphone, tablet,
 laptop and desktop, TV, and more-regardless of the brand or the platform. To
 deliver the best experience you've built a
-[responsive site](https://web.dev/responsive-web-design-basics/) that
+[responsive site](https://web.dev/articles/responsive-web-design-basics) that
 adapts the presentation and functionality for each form-factor, and now you're
 running down your performance checklist to ensure that the application loads as
 quickly as possible: you've optimized your
-[critical rendering path](https://web.dev/critical-rendering-path/),
-you've [compressed and cached](https://web.dev/performance-optimizing-content-efficiency/)
+[critical rendering path](https://web.dev/articles/critical-rendering-path),
+you've [compressed and cached](https://web.dev/articles/performance-optimizing-content-efficiency)
 your text resources, and now you're looking at your image resources, which often
 account for the majority of transferred bytes. Problem is, **image optimization
 is hard**:
@@ -31,7 +31,7 @@ is hard**:
 * ...
 * Account for user's network type, speed, and preferences
 
-Individually, these are [well-understood problems](https://web.dev/fast/#optimize-your-images).
+Individually, these are [well-understood problems](https://web.dev/articles/fast#optimize_your_images).
 Collectively, they create a large optimization space that we (the developers)
 often overlook or neglect. Humans do a poor
 job of exploring the same search space repetitively, especially when many steps

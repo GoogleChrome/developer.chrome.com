@@ -21,12 +21,12 @@ tags:
 The new **Performance insights** panel in DevTools is an experiment that addresses your pain points when analysing the performance of your website.
 
 {% Aside %}
-This is a preview feature from Chrome 102. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/perf-insights-feedback) for further enhancements. 
+This is a preview feature from Chrome 102. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/perf-insights-feedback) for further enhancements.
 {% endAside %}
 
 The new **Performance insights** panel does the following:
 
-- Streamlines performance data and focuses on three key metrics: [Core Web Vitals](https://web.dev/vitals/).
+- Streamlines performance data and focuses on three key metrics: [Core Web Vitals](https://web.dev/articles/vitals).
 - Supports use-case-driven analysis.
 - Identifies issues and suggests actionable insights.
 - Doesn't require deep browser expertise to use.
@@ -39,6 +39,6 @@ With the **Performance insights** panel, boost the performance of your website i
 
 Watch the video above to learn how to record the performance, navigate the overview, and get insights.
 
-To understand the three key metrics, see [Core Web Vitals](https://web.dev/vitals/).
+To understand the three key metrics, see [Core Web Vitals](https://web.dev/articles/vitals).
 
 For a more hands-on learning experience, follow the [Get actionable insights on your website's performance](/docs/devtools/performance-insights/) tutorial.

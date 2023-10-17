@@ -101,8 +101,8 @@ Chromium issue: [960909](https://crbug.com/960909)
 <!-- Visualize `performance.measure()` marks in your recording with the new **User Timings** track in the **Performance insights** panel. -->
 **Performance insights** パネルの新しい **User Timings** トラックで、 計測中の `performance.measure()` マークを視覚化します。
 
-<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) method to calculate the elapsed time of text loading. -->
-たとえば、この [Web ページ](https://jec.fish/demo/perf-measure)では、 [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()) メソッドを用いて、テキストの読み込み経過時間を算出しています。
+<!-- For example, this [web page](https://jec.fish/demo/perf-measure) uses the [`performance.measure()`](https://web.dev/articles/usertiming#calculating_measurements_with_measure()) method to calculate the elapsed time of text loading. -->
+たとえば、この [Web ページ](https://jec.fish/demo/perf-measure)では、 [`performance.measure()`](https://web.dev/articles/usertiming#calculating_measurements_with_measure()) メソッドを用いて、テキストの読み込み経過時間を算出しています。
 
 <!-- When you start [measuring the page load](/docs/devtools/performance-insights/#record), the **User Timings** track shows in the recording. Click on the timings item to view its details on the side pane. -->
 [ページ読み込みの計測](/docs/devtools/performance-insights/#record)を開始すると、 **User Timings** トラックが計測結果に表示されるようになります。タイミング項目をクリックすると、サイドペインにその詳細が表示されます。

@@ -16,16 +16,16 @@ tags:
   - aurora-project
 ---
 
-In May 2022, the [Aurora](https://web.dev/introducing-aurora/) and Angular teams announced that they would collaborate on an [image directive](https://angular.io/guide/roadmap#improve-image-performance) for Angular. The directive was recently released for developer preview as part of Angular v14.2. This post talks about how the new image directive, `NgOptimizedImage`, supports image optimization in Angular.
+In May 2022, the [Aurora](https://web.dev/articles/introducing-aurora) and Angular teams announced that they would collaborate on an [image directive](https://angular.io/guide/roadmap#improve-image-performance) for Angular. The directive was recently released for developer preview as part of Angular v14.2. This post talks about how the new image directive, `NgOptimizedImage`, supports image optimization in Angular.
 
 
 ## Background
 
 Images are a common and crucial component of web user experience, with [99.9%](https://almanac.httparchive.org/en/2021/media#images) of web pages generating requests for one or more images. Images are also the most significant contributors to page weight, constituting a median of [982 kilobytes](https://almanac.httparchive.org/en/2021/page-weight#fig-2) per page.
 
-Due to their growing number and size, images can hinder the performance of web pages and affect [Core Web Vitals](https://web.dev/vitals/) metrics. For [79.4% of desktop pages](https://almanac.httparchive.org/en/2021/media#fig-4), an image was the Largest Contentful Paint ([LCP](https://web.dev/lcp/)) element in 2021. The pursuit of optimized images has thus become a constant endeavor for many of us.
+Due to their growing number and size, images can hinder the performance of web pages and affect [Core Web Vitals](https://web.dev/articles/vitals) metrics. For [79.4% of desktop pages](https://almanac.httparchive.org/en/2021/media#fig-4), an image was the Largest Contentful Paint ([LCP](https://web.dev/articles/lcp)) element in 2021. The pursuit of optimized images has thus become a constant endeavor for many of us.
 
-The Aurora team believes in leveraging the power of frameworks to provide baked-in solutions to common developer challenges. Their first foray into the image optimization space was the [Next.js image component](https://web.dev/image-component/). They considered this component to be a  testing ground for whether improving the developer experience (DX) of image optimization could lead to performance wins for more apps using frameworks.
+The Aurora team believes in leveraging the power of frameworks to provide baked-in solutions to common developer challenges. Their first foray into the image optimization space was the [Next.js image component](https://web.dev/articles/image-component). They considered this component to be a  testing ground for whether improving the developer experience (DX) of image optimization could lead to performance wins for more apps using frameworks.
 
 The first set of results from Next.js user [Leboncoin](https://medium.com/leboncoin-engineering-blog/how-we-are-improving-our-web-performance-9f850d59d810) was encouraging. Leboncoin saw a significant LCP improvement (from 2.4s to 1.7s) after they started using `next/image`. The subsequent adoption of `next/image` in the community played a role in the increase of Next.js origins meeting LCP thresholds. Soon there were [requests](https://github.com/angular/angular/issues/42765) for similar features in other frameworks, one of them being [Angular](https://angular.io/).
 
@@ -58,19 +58,19 @@ The highlights of the design are as follows:
 
 1. **Intelligent lazy loading**
 
-    Images that are invisible to the user on page load (for example, below-the-fold images or hidden carousel images) should ideally be [lazy-loaded](https://web.dev/lazy-loading-images/). Lazy loading frees up browser resources to load other critical text, media, or scripts. Most images are non-critical and should be lazy-loaded, but only [7.8% of pages](https://almanac.httparchive.org/en/2021/resource-hints#fig-16) used native lazy loading in 2021.
+    Images that are invisible to the user on page load (for example, below-the-fold images or hidden carousel images) should ideally be [lazy-loaded](https://web.dev/articles/lazy-loading-images). Lazy loading frees up browser resources to load other critical text, media, or scripts. Most images are non-critical and should be lazy-loaded, but only [7.8% of pages](https://almanac.httparchive.org/en/2021/resource-hints#fig-16) used native lazy loading in 2021.
 
     The Angular image directive lazy loads non-critical images by default and only eagerly loads images specially marked as `priority`. This ensures that most images exhibit optimal loading behavior.
 
 
 2. **Prioritization of critical images**
 
-    Adding resource hints (e.g., <code>[preload](https://web.dev/preload-critical-assets/)</code> or <code>[preconnect](https://web.dev/uses-rel-preconnect/)</code>) to prioritize the loading of critical images is a [recommended best practice](https://web.dev/preload-critical-assets/). However, most apps are not using them. According to the 2021 Web Almanac, only [12.7% of mobile pages](https://almanac.httparchive.org/en/2021/resource-hints#fig-2) use preconnect hints and [only 22.1% of mobile pages](https://almanac.httparchive.org/en/2021/resource-hints#fig-2) use preload hints.
+    Adding resource hints (e.g., <code>[preload](https://web.dev/articles/preload-critical-assets)</code> or <code>[preconnect](https://web.dev/articles/uses-rel-preconnect)</code>) to prioritize the loading of critical images is a [recommended best practice](https://web.dev/articles/preload-critical-assets). However, most apps are not using them. According to the 2021 Web Almanac, only [12.7% of mobile pages](https://almanac.httparchive.org/en/2021/resource-hints#fig-2) use preconnect hints and [only 22.1% of mobile pages](https://almanac.httparchive.org/en/2021/resource-hints#fig-2) use preload hints.
 
 
 	The image directive acts on two fronts when images are marked as priority.
 
-    * It sets the [fetchpriority](https://web.dev/fetch-priority/#increase-the-priority-of-the-lcp-image) of the image to `"high"` so that the browser knows that it should download the image with a high priority.
+    * It sets the [fetchpriority](https://web.dev/articles/fetch-priority#increase_the_priority_of_the_lcp_image) of the image to `"high"` so that the browser knows that it should download the image with a high priority.
     * In development mode, a runtime check confirms that a `preconnect` resource hint has been included corresponding to the image's origin.
 
     In development mode, the directive also uses the [PerformanceObserver API](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) to verify that the [LCP image](https://developer.mozilla.org/en-US/docs/Web/API/LargestContentfulPaint/element) has been marked `priority` as expected. If it's not marked `priority`, an error is thrown, instructing the developer to add the `priority` attribute to the LCP image.
@@ -81,7 +81,7 @@ The highlights of the design are as follows:
 
 3. **Optimized configuration for popular image tooling**
 
-    It's recommended that Angular applications [use image CDNs](https://web.dev/image-cdns/), which often provide optimization services by default.
+    It's recommended that Angular applications [use image CDNs](https://web.dev/articles/image-cdns), which often provide optimization services by default.
 
 
     The directive encourages using image CDNs by providing an especially appealing developer experience (DX) to configure them in the app. It supports a loader API that allows you to define the CDN provider and your base URL in your configuration. Once configured, you only have to define the asset name in the markup. For example,
@@ -110,7 +110,7 @@ The highlights of the design are as follows:
 
     In addition to the above built-in optimizations, the directive also has built-in checks to ensure that developers have followed the recommended best practices in the image markup. The image directive performs the following checks.
 
-    1. **Unsized images:** The image directive throws an error if the image markup does not have defined an explicit width and height. Unsized images can cause [layout shifts](https://web.dev/optimize-cls/#images-without-dimensions), affecting the page's Cumulative Layout Shift ([CLS](https://web.dev/cls/)) metric. The recommended best practice to prevent this is that images should have `width` and `height` attributes specified.
+    1. **Unsized images:** The image directive throws an error if the image markup does not have defined an explicit width and height. Unsized images can cause [layout shifts](https://web.dev/articles/optimize-cls#images_without_dimensions), affecting the page's Cumulative Layout Shift ([CLS](https://web.dev/articles/cls)) metric. The recommended best practice to prevent this is that images should have `width` and `height` attributes specified.
 
     2. **Aspect ratio:** The image directive throws an error to let developers know if the aspect ratio of the `width`:`height` defined in the HTML is not close to the actual aspect ratio of the rendered image. This can cause the image to look distorted on screen. This can happen if
         1. You have defined the wrong dimensions (width or height) by mistake or
@@ -131,7 +131,7 @@ Some of the challenges encountered are as follows:
 
 1. **Supporting resource hints**
 
-    [Preloading critical assets](https://web.dev/preload-critical-assets/) helps the browser discover them earlier. However, including resource hints in Angular apps is complicated because:
+    [Preloading critical assets](https://web.dev/articles/preload-critical-assets) helps the browser discover them earlier. However, including resource hints in Angular apps is complicated because:
 
 
     **Manual Addition**: It's difficult for developers to add the `preload` resource hint manually. Angular uses one shared index.html file for the entire project or for all routes in the website. Thus, the `<head>` of the document is the same for every route (at least at serve time). Adding any `preload` hint to the `<head>` would mean that the resource would be preloaded for all routes even where it is not required. Thus, the manual addition of `preload` hints is not recommended.
@@ -144,7 +144,7 @@ Some of the challenges encountered are as follows:
 
 2. **Optimizing image size and format on the server**
 
-    As Angular apps are typically client-side rendered, images on the file system cannot be compressed at request time and are served as is. For this reason, using image CDNs is recommended to compress images and convert them into [modern formats like WebP](https://web.dev/serve-images-webp/) or AVIF on demand.
+    As Angular apps are typically client-side rendered, images on the file system cannot be compressed at request time and are served as is. For this reason, using image CDNs is recommended to compress images and convert them into [modern formats like WebP](https://web.dev/articles/serve-images-webp) or AVIF on demand.
 
 
     While the directive does not enforce the use of image CDN’s, it's strongly encouraged to use them with the directive and its built-in loaders ensure that the correct configuration options are used.
@@ -177,7 +177,7 @@ One of these partners was [Land's End](https://www.landsend.com/). It was expect
 [Lighthouse lab testing](https://philipwalton.com/articles/my-challenge-to-the-web-performance-community/) was performed on their QA environment before and after using the image directive. On desktop, their median LCP decreased from 12.0s to 3.0s, a 75% improvement in LCP. On mobile, the median LCP decreased from 20.2s to 12.0s (40.6% improvement).
 
 {% Aside %}
-It's important to note that the lab testing above is only intended as a general demonstration of the potential of the directive. [Field data](https://web.dev/lab-and-field-data-differences/#field-data) is much preferred to validate performance impact. The Aurora team is currently working with a few production partners to attain this data, and the blog post will be updated as soon as it's available.
+It's important to note that the lab testing above is only intended as a general demonstration of the potential of the directive. [Field data](https://web.dev/articles/lab-and-field-data-differences#field_data) is much preferred to validate performance impact. The Aurora team is currently working with a few production partners to attain this data, and the blog post will be updated as soon as it's available.
 {% endAside %}
 
 
