@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: What's happening in Chrome Extensions?
 description: >
  An overview of the recent changes in Chrome Extensions, plus exciting upcoming extension features developers can look forward to.
-date: 2023-10-13
+date: 2023-10-17
 authors:
   - amysteam
 tags:
