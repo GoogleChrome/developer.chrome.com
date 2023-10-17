@@ -72,7 +72,7 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
 .build();
 ```
 
-## Further customizations: Title, Autohide AppBar, custom close icon, and Referrer
+## Further customizations: title, autohide AppBar, and custom close icon
 
 <figure>
 {% Video src="video/6hHqS5auVgWhN0cQNQztaJx5w4M2/6VwbdckaWUVq9sNZAosC.mp4", preload=true, loop=true, playsinline=true, autoplay=true, width="320", height="692", class="screenshot" %}
