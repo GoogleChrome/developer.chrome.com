@@ -32,7 +32,7 @@ These issues have been collected based on feedback from partners, bug reports, a
 The following issues have recently been addressed:
 
 1. Additional **strong service worker keepalives** for certain operations taking longer than five minutes.
-    * Added in Chrome 116 for `permissions.request()`, `desktopCapture.chooseDesktopMedia`, `identity.launchWebAuthFlow()` and `management.uninstall()`.
+    * Added in Chrome 116 for `permissions.request()`, `desktopCapture.chooseDesktopMedia()`, `identity.launchWebAuthFlow()` and `management.uninstall()`.
     * Added in Chrome 118 for `chrome.debugger`
 1. **Increase the number of static and enabled rulesets** for Declarative Net Request (DNR). Enabled static rulesets increased from 10 to 50 and total static rulesets from 50 to 100 [Chrome 120].
 1. Extend **[Offscreen document](/docs/extensions/reference/offscreen/) functionality** to support more reasons for using an offscreen document. Added [`GEOLOCATION`](/docs/extensions/mv3/geolocation/) in Chrome 116.
