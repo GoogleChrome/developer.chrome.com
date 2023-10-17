@@ -65,9 +65,3 @@ The following issues have recently been addressed:
 
 **Did we miss something?** [Please let us know](https://groups.google.com/a/chromium.org/g/chromium-extensions).
 
-
-
-
-Preview
-
-
