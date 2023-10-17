@@ -15,6 +15,14 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
+### Improved guidance around remotely-hosted code {: #remotely-hosted-code }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+A requirement for Manifest V3 is that extensions may no longer use remotely-hosted code. Although this has been [part of our migration guide](/docs/extensions/migrating/improve-security/#remove-remote-code) from the beginning, we thought it was worth improving the guidance around this issue. An [addition to the migration guide]() provides more information, describing what's still possible in Manifest V3 and provide more inforamtion on strategies for upgrading.
+
+There is a related addition to the [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/). A new section describes common reasons that extensions with remotely-hosted code are rejected.
+
 ### Chrome 118: isUrlFilterCaseSensitive now defaults to false {: #118-url-filter-case-sensitive }
 
 <p class="color-secondary-text type--caption">Posted on <time>October 11, 2023</time></p>
