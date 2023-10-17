@@ -1,6 +1,6 @@
 ---
 title: "Design a superior user experience with the new Side Panel API"
-description: "Introducing the new Side Panel API for Chrome extensions."  
+description: "Introducing the new Side Panel API for Chrome extensions."
 layout: "layouts/blog-post.njk"
 authors:
   - oliverdunk
@@ -119,7 +119,7 @@ You can keep up with Chrome extension news by visiting our [What's new page][wha
 ---
 
 _Photo by [Vardan Papikyan][unsplash-vardan] on [Unsplash][unsplash]_
-  
+
 [api-sidepanel]: /docs/extensions/reference/sidepanel
 [chromium-groups]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [cws-best-practices]: /docs/webstore/program-policies/best-practices/
@@ -130,7 +130,7 @@ _Photo by [Vardan Papikyan][unsplash-vardan] on [Unsplash][unsplash]_
 [gh-sidepanel-dictionary]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.sidepanel-dictionary
 [gh-sidepanel-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/
 [manifest-icon]: /docs/extensions/mv3/manifest/icons/
-[policy-single-purpose]: /docs/extensions/mv3/single_purpose/
+[policy-single-purpose]: /docs/extensions/mv3/quality_guidelines#single-purpose
 [sp-by-site]: https://developer.chrome.com/docs/extensions/reference/sidePanel/#by-site
 [unsplash-vardan]: https://unsplash.com/@timberfoster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 [unsplash]: https://unsplash.com/photos/lSegRSDBMLw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

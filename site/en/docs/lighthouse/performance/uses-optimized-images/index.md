@@ -26,13 +26,13 @@ If the potential savings are 4KiB or greater, Lighthouse flags the image as opti
 
 There are many steps you can take to optimize your images, including:
 
-- [Using image CDNs](https://web.dev/image-cdns/)
-- [Compressing images](https://web.dev/use-imagemin-to-compress-images/)
-- [Replacing animated GIFs with video](https://web.dev/replace-gifs-with-videos/)
-- [Lazy loading images](https://web.dev/use-lazysizes-to-lazyload-images/)
-- [Serving responsive images](https://web.dev/serve-responsive-images/)
-- [Serving images with correct dimensions](https://web.dev/serve-images-with-correct-dimensions/)
-- [Using WebP images](https://web.dev/serve-images-webp/)
+- [Using image CDNs](https://web.dev/articles/image-cdns)
+- [Compressing images](https://web.dev/articles/use-imagemin-to-compress-images)
+- [Replacing animated GIFs with video](https://web.dev/articles/replace-gifs-with-videos)
+- [Lazy loading images](https://web.dev/articles/use-lazysizes-to-lazyload-images)
+- [Serving responsive images](https://web.dev/articles/serve-responsive-images)
+- [Serving images with correct dimensions](https://web.dev/articles/serve-images-with-correct-dimensions)
+- [Using WebP images](https://web.dev/articles/serve-images-webp)
 
 ## Optimize images using GUI tools
 

@@ -32,7 +32,7 @@ origin trial within a separate "experimental" namespace.
 ## How FID is measured
 
 So what exactly is FID? Here’s how it’s defined in the
-[First Input Delay](https://web.dev/fid/)
+[First Input Delay](https://web.dev/articles/fid)
 announcement blog post:
 
 > First Input Delay (FID) measures the time from when a user first interacts
@@ -63,7 +63,7 @@ demonstrate how to extract these insights from the Chrome UX Report on BigQuery.
 
 Let’s start by querying for the percent of fast FID experiences for [developers.google.com](/).
 We can define a fast experience as one in which FID is less than 100 ms.
-Per [RAIL recommendations](https://web.dev/rail/#focus-on-the-user),
+Per [RAIL recommendations](https://web.dev/articles/rail#focus_on_the_user),
 if the delay is 100 ms or better, it should feel instantaneous to the user.
 
 ```sql

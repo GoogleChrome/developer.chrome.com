@@ -20,7 +20,7 @@ authors:
 
 ウェブのプライバシーを改善するために、[Chrome はサードパーティ Cookie をブロックする方向に転換している](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html)ため、こういったエクスペリエンスの機能には新しいメカニズムが必要です。
 
-{% Aside %} アクセスしたサイト（URL バーに表示されるサイト）によって設定される Cookie は、ファースト パーティ Cookie です。アクセスしたサイトには、他のサイトのコンテンツ（画像、広告、テキストなど）を埋め込むことができます。現在のサイト以外のサイトからの Cookie は[サードパーティ Cookie](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies) です。 {% endAside %}
+{% Aside %} アクセスしたサイト（URL バーに表示されるサイト）によって設定される Cookie は、ファースト パーティ Cookie です。アクセスしたサイトには、他のサイトのコンテンツ（画像、広告、テキストなど）を埋め込むことができます。現在のサイト以外のサイトからの Cookie は[サードパーティ Cookie](https://web.dev/articles/samesite-cookie-recipes#use_cases_for_cross_site_or_third_party_cookies) です。 {% endAside %}
 
 ## First-Party Sets で関連サイトを定義する
 

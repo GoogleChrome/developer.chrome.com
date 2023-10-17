@@ -20,7 +20,7 @@ Starting from version 91, following a [specification change](https://github.com/
 Chrome will be restricting the resolution of explicit [timers](https://www.w3.org/TR/hr-time/)
 (`performance.now()`, `performance.timeOrigin`,
 and other performance APIs that expose `DOMHighResTimestamps`) to 100 microseconds across platforms.
-By enabling [cross-origin isolation](https://web.dev/coop-coep/),
+By enabling [cross-origin isolation](https://web.dev/articles/coop-coep),
 websites can relax the restriction to 5 microseconds regardless of platform.
 
 {% Aside %}
@@ -73,7 +73,7 @@ we can now allow pages to access high-resolution timers,
 and other APIs that are unsafe to expose in processes that can read arbitrary cross-origin data.
 
 To learn more about the background behind this change, read
-[Why you need "cross-origin isolated" for powerful features](https://web.dev/why-coop-coep/).
+[Why you need "cross-origin isolated" for powerful features](https://web.dev/articles/why-coop-coep).
 
 Cover photo by [Linda Perez Johannessen](https://unsplash.com/@linper?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 on [Unsplash](https://unsplash.com/s/photos/stopwatch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).

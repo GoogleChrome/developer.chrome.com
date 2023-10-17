@@ -30,7 +30,7 @@ The `:focus` pseudo-class lets you apply a uniform style to an element.
 That style is applied any time the element is focused,
 regardless of the input device or method used to focus it.
 
-Learn more in [Style focus](https://web.dev/style-focus/).
+Learn more in [Style focus](https://web.dev/articles/style-focus).
 
 ## How to manually test with a screen reader
 
@@ -47,7 +47,7 @@ Users of screen readers and other assistive technologies
 rely on labels to understand the context of that element.
 Vague labels are common,
 and they are non-helpful for navigating content.
-Learn how to improve [Labels and text alternatives](https://web.dev/labels-and-text-alternatives/).
+Learn how to improve [Labels and text alternatives](https://web.dev/articles/labels-and-text-alternatives).
 
 ## Why this matters
 

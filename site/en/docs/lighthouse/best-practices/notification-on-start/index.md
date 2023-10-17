@@ -8,7 +8,7 @@ date: 2019-05-02
 updated: 2019-08-28
 ---
 
-Good notifications are [timely, relevant, and precise](https://web.dev/notifications/).
+Good notifications are [timely, relevant, and precise](https://web.dev/articles/notifications).
 If your page asks for permission to send notifications on page load,
 those notifications may not be relevant to your users or their needs.
 
@@ -45,4 +45,4 @@ To provide a better user experience:
 ## Resources
 
 - [Source code for **Requests the notification permission on page load** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/notification-on-start.js)
-- [Web Push Notifications: Timely, Relevant, and Precise](https://web.dev/notifications/)
+- [Web Push Notifications: Timely, Relevant, and Precise](https://web.dev/articles/notifications)

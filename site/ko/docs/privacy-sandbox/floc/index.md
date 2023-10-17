@@ -37,7 +37,7 @@ FLoC는 관심 기반 광고 및 기타 콘텐츠 선택에서 개인정보 보�
 
 ## FLoC는 어떻게 작동합니까?
 
-[FLoC란 무엇입니까?](https://web.dev/floc/#how-does-floc-work)에서 FloC 작동 방식에 대한 간단한 단계별 설명을 제공합니다.
+[FLoC란 무엇입니까?](https://web.dev/articles/floc#how_does_floc_work)에서 FloC 작동 방식에 대한 간단한 단계별 설명을 제공합니다.
 
 아래 다이어그램은 FLoC를 사용하여 관련 광고를 선택하고 전달하는 다양한 역할의 예를 보여줍니다.
 

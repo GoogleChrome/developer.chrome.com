@@ -22,7 +22,7 @@ A large DOM tree can slow down your page performance in multiple ways:
 
   As users and scripts interact with your page,
   the browser must constantly
-  [recompute the position and styling of nodes](https://web.dev/reduce-the-scope-and-complexity-of-style-calculations/).
+  [recompute the position and styling of nodes](https://web.dev/articles/reduce-the-scope-and-complexity-of-style-calculations).
   A large DOM tree in combination with complicated style rules can severely slow down rendering.
 
 - **Memory performance**
@@ -72,12 +72,12 @@ for more information.
 
 ### Angular
 
-If you're rendering large lists, use [virtual scrolling](https://web.dev/virtualize-lists-with-angular-cdk/) with the Component Dev Kit (CDK).
+If you're rendering large lists, use [virtual scrolling](https://web.dev/articles/virtualize-lists-with-angular-cdk) with the Component Dev Kit (CDK).
 
 ### React
 
 - Use a "windowing" library like
-  [`react-window`](https://web.dev/virtualize-long-lists-react-window/) to minimize the number
+  [`react-window`](https://web.dev/articles/virtualize-long-lists-react-window) to minimize the number
   of DOM nodes created if you are rendering many repeated elements on the page.
 - Minimize unnecessary re-renders using
   [`shouldComponentUpdate`](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action),
@@ -90,4 +90,4 @@ If you're rendering large lists, use [virtual scrolling](https://web.dev/virtual
 ## Resources
 
 - [Source code for **Avoid an excessive DOM size** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/dom-size.js)
-- [Reduce the Scope and Complexity of Style Calculations](https://web.dev/reduce-the-scope-and-complexity-of-style-calculations/)
+- [Reduce the Scope and Complexity of Style Calculations](https://web.dev/articles/reduce-the-scope-and-complexity-of-style-calculations)

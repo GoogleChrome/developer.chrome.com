@@ -36,7 +36,7 @@ Initial letters are large, decorative letters that have been used to start new s
 
 The [`:picture-in-picture`](https://developer.mozilla.org/docs/Web/CSS/:picture-in-picture) pseudo-class helps web developers customize the media player when videos enter and exit [Picture-in-Picture](https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API).
 
-[Try a demo of the :picture-in-picture pseudo-class](https://googlechrome.github.io/samples/picture-in-picture/css-pseudo-class). 
+[Try a demo of the :picture-in-picture pseudo-class](https://googlechrome.github.io/samples/picture-in-picture/css-pseudo-class).
 
 ## Web APIs
 
@@ -52,13 +52,13 @@ Adds cross-origin iframe support for the FedCM API via a permissions policy. It 
 
 ### IFrame credentialless
 
-[IFrame credentialless](https://developer.mozilla.org/docs/Web/Security/IFrame_credentialless) gives developers a way to load documents in third party iframes using new and ephemeral contexts. Iframe credentialless are a generalization of [COEP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) credentialless to support third-party iframes that may not deploy COEP. This removes the constraint that third-party iframes must support COEP in order to be embedded in a COEP page and will unblock developers looking to adopt cross-origin-isolation. 
+[IFrame credentialless](https://developer.mozilla.org/docs/Web/Security/IFrame_credentialless) gives developers a way to load documents in third party iframes using new and ephemeral contexts. Iframe credentialless are a generalization of [COEP](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) credentialless to support third-party iframes that may not deploy COEP. This removes the constraint that third-party iframes must support COEP in order to be embedded in a COEP page and will unblock developers looking to adopt cross-origin-isolation.
 
 Learn more about [iframe credentialless](/blog/iframe-credentialless).
 
 ### `FileSystemHandle::remove()` method
 
-The [`remove()`](/articles/file-system-access/#deleting-a-file-or-folder-directly) method of `FileSystemHandle` enables the common use case where you obtain a file handle from `showSaveFilePicker()`, but then decide you don't want to save after all, and delete the file. Before the addition of this method it was impossible to remove a file or directory given its handle. You had to obtain the handle of the parent directory and call [`FileSystemDirectoryHandle::removeEntry()`](/articles/file-system-access/#deleting-files-and-folders-in-a-directory). 
+The [`remove()`](/articles/file-system-access/#deleting-a-file-or-folder-directly) method of `FileSystemHandle` enables the common use case where you obtain a file handle from `showSaveFilePicker()`, but then decide you don't want to save after all, and delete the file. Before the addition of this method it was impossible to remove a file or directory given its handle. You had to obtain the handle of the parent directory and call [`FileSystemDirectoryHandle::removeEntry()`](/articles/file-system-access/#deleting-files-and-folders-in-a-directory).
 
 ### Prefetching triggered by the speculation rules API
 
@@ -70,25 +70,25 @@ Enable IDNA 2008 in Non-Transitional Mode for URL processing, aligning Chrome's 
 
 ### Web app launch handler
 
-Add a [`launch_handler`](/docs/web-platform/launch-handler/) web app manifest member that enables web apps to customize their launch behavior across all types of app launch triggers. For example, the following will cause all launches of the Example app to focus an existing app window and navigate it (if it exists) instead of always launching a new app window. 
+Add a [`launch_handler`](/docs/web-platform/launch-handler/) web app manifest member that enables web apps to customize their launch behavior across all types of app launch triggers. For example, the following will cause all launches of the Example app to focus an existing app window and navigate it (if it exists) instead of always launching a new app window.
 
 ```js
-{ 
-    "name": "Example app", 
-    "start_url": "/index.html", 
+{
+    "name": "Example app",
+    "start_url": "/index.html",
     "launch_handler": {
-        "client_mode": "navigate-existing" 
-    } 
-} 
+        "client_mode": "navigate-existing"
+    }
+}
 ```
 
 ### web-share permission policy
 
-Controls access to [`navigator.share()`](https://web.dev/web-share/). By default, third-party iframes do not have permission to use the Web Share API.
+Controls access to [`navigator.share()`](https://web.dev/articles/web-share). By default, third-party iframes do not have permission to use the Web Share API.
 
 ## Origin trials in progress
 
-In Chrome 110 you can opt into the following new [origin trials](/docs/web-platform/origin-trials/). 
+In Chrome 110 you can opt into the following new [origin trials](/docs/web-platform/origin-trials/).
 
 ### No-Vary-Search support in navigation prefetch cache
 
@@ -98,7 +98,7 @@ Enables prefetch to match even if URL query parameters change. The `No-Vary-Sear
 
 ### PerformanceResourceTiming.deliveryType
 
-Expose information about how a resource was delivered. For example, resources which were delivered from the cache (currently exposed through `transferSize`) and navigations which were prefetched by the previous page are useful to identify. 
+Expose information about how a resource was delivered. For example, resources which were delivered from the cache (currently exposed through `transferSize`) and navigations which were prefetched by the previous page are useful to identify.
 
 ### SoftNavigation performance entry
 
@@ -108,7 +108,7 @@ Exposes the (experimental) [soft navigation heuristics](https://github.com/WICG/
 
 ### Speculation rules: delivery via Speculation-Rules header
 
-Currently developers can only specify speculation rules using inline script tags. The proposed feature provides an alternative through the "Speculation-Rules" header. Its value must be a URL to a text resource with `application/speculationrules+json` MIME type. The resource's rules will be added to the document's rule set. 
+Currently developers can only specify speculation rules using inline script tags. The proposed feature provides an alternative through the "Speculation-Rules" header. Its value must be a URL to a text resource with `application/speculationrules+json` MIME type. The resource's rules will be added to the document's rule set.
 
 ### Speculation rules: document-sourced rules
 
@@ -116,7 +116,7 @@ An extension to speculation rules syntax that lets the browser obtain URLs for s
 
 ### X-Requested-With in WebView
 
-Deprecation trial to retain legacy behavior of the `X-Requested-Header` on Android WebView. This header is currently set with the package name of the embedding app as the value, but this behavior will be removed in a slow roll-out. During the deprecation this trial will allow site owners to continue to receive the header while migrating away from using it. 
+Deprecation trial to retain legacy behavior of the `X-Requested-Header` on Android WebView. This header is currently set with the package name of the embedding app as the value, but this behavior will be removed in a slow roll-out. During the deprecation this trial will allow site owners to continue to receive the header while migrating away from using it.
 
 More information about this deprecation will follow in a separate blog post. [Register for the X-Requested-With deprecation trial here](/origintrials/#/view_trial/1390486384950640641).
 

@@ -7,7 +7,7 @@ date: 2019-05-04
 updated: 2023-03-16
 ---
 
-A custom splash screen makes your [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/#make-it-installable) feel more like an
+A custom splash screen makes your [Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps#make-it-installable) feel more like an
 app built for that device. By default, when a user launches your PWA from the home screen,
 Android displays a white screen until the PWA is ready.
 The user may see this blank, white screen for up to 200&nbsp;ms.
@@ -29,7 +29,7 @@ flags pages that don't have a custom splash screen:
 ## How to create a custom splash screen
 
 Chrome for Android automatically shows your custom splash screen as long as
-you meet the following requirements in your [web app manifest](https://web.dev/add-manifest/):
+you meet the following requirements in your [web app manifest](https://web.dev/articles/add-manifest):
 
 - The `name` property is set to the name of your PWA.
 - The `background_color` property is set to a valid CSS color value.
@@ -37,7 +37,7 @@ you meet the following requirements in your [web app manifest](https://web.dev/a
 - The `icons` array specifies an icon that is at least 512x512&nbsp;px.
 - The specified icon exists and is a PNG.
 
-See [Adding a Splash Screen for Installed Web Apps in Chrome 47](https://web.dev/add-manifest/#splash-screen)
+See [Adding a Splash Screen for Installed Web Apps in Chrome 47](https://web.dev/articles/add-manifest#splash_screen)
 for more information.
 
 {% Aside %}

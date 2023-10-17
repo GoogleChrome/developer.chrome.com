@@ -17,7 +17,7 @@ TL;DR: The Extensions API has been updated to support back/forward cache,
 preloading navigations. See below for details.
 
 Chrome has been working hard at making navigation fast. Instant Navigation
-technologies such as [Back/Forward Cache](https://web.dev/bfcache/)
+technologies such as [Back/Forward Cache](https://web.dev/articles/bfcache)
 ([shipped](https://chromestatus.com/feature/6279906713403392) on desktop in
 Chrome 96) and [Speculation Rules](/blog/prerender-pages/)
 ([shipped](https://chromestatus.com/feature/5740655424831488) in Chrome 103) improve both the going back and going forward
@@ -123,7 +123,7 @@ frame. However, for prerendered frames the `frameId` will be
 non-zero for the outermost frame. So using `frameId == 0` as a signal for
 determining if it is the outermost frame is incorrect.
 
-To help with this, we introduced a new type called 
+To help with this, we introduced a new type called
 [`FrameType`](/docs/extensions/reference/extensionTypes/#type-FrameType)
 so determining if the frame is indeed the outermost frame is now easy.
 `FrameType` has the following values:

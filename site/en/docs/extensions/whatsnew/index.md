@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-09-29
+updated: 2023-10-17
 tags:
   - extensions-news
 
@@ -14,6 +14,35 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Improved guidance around remotely-hosted code {: #remotely-hosted-code }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+A requirement for Manifest V3 is that extensions may no longer use remotely-hosted code. Although this has been [part of our migration guide](/docs/extensions/migrating/improve-security/#remove-remote-code) from the beginning, we thought it was worth improving the guidance around this issue. That page now provides more information, describing what's still possible in Manifest V3 and providing more information on strategies for upgrading.
+
+There is a related addition to the [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/). A new section describes common reasons that extensions with remotely-hosted code are rejected.
+
+### Chrome 118: isUrlFilterCaseSensitive now defaults to false {: #118-url-filter-case-sensitive }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 11, 2023</time></p>
+
+Starting in Chrome 118, the [`isUrlFilterCaseSensitive`](/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-isUrlFilterCaseSensitive)
+property in the [chrome.declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest/)
+API has been changed to default to `false`. If you wish to keep the old behavior, you can explicitly set `isUrlFilterCaseSensitive` to `true` in
+your declarativeNetRequest rules.
+
+This follows [discussions](https://github.com/w3c/webextensions/issues/269) in the Web Extensions
+Community Group. Firefox and Safari have already implemented a similar change.
+
+### Documentation on cookies and web storage APIs {: #storage-and-cookies-guide }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 9, 2023</time></p>
+
+We published a new guide on [how cookies and web storage APIs work in Chrome extensions](/docs/extensions/mv3/storage-and-cookies/).
+It includes details on cookie and storage partitioning changes in
+[Privacy Sandbox](/docs/privacy-sandbox/), an ongoing project to deprecate third-party cookies
+through the creation of a series of new web platform APIs, and details on how they work in extensions.
 
 ### Extension samples now searchable {: #extension-samples-searchable }
 
@@ -565,7 +594,7 @@ at a time.
 
 Both [Manifest V2](/docs/extensions/mv2/cross-origin-isolation/) and [Manifest
 V3](/docs/extensions/mv3/cross-origin-isolation/) extensions can now opt into [cross origin
-isolation](https://web.dev/cross-origin-isolation-guide/). This feature limits which cross-origin
+isolation](https://web.dev/articles/cross-origin-isolation-guide). This feature limits which cross-origin
 resources can load an extension's pages and enables the use of low level web platform features like
 [`SharedArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer). Opt in will be required starting in Chrome 95.
 

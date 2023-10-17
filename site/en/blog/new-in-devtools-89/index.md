@@ -419,7 +419,7 @@ To enable the experiment, check the **Show CSP Violations view** checkbox under 
 
 {% endAside %}
 
-View all [Content Security Policy (CSP)](https://web.dev/strict-csp/) violations at a glance in the new **CSP Violations** tab.
+View all [Content Security Policy (CSP)](https://web.dev/articles/strict-csp) violations at a glance in the new **CSP Violations** tab.
 This new tab is an experiment that should make it easier to work with web pages with a large amount
 of CSP and Trusted Type violations.
 
@@ -447,7 +447,7 @@ background), and context (ambient light, surroundings, intended purpose of the t
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gYQKfU4hyzKlrK9w7wBr.png", alt="APCA in Color Picker", width="800", height="537" %}
 
-The example show the APCA threshold is **38%**. The contrast ratio must meet or exceed the listed value. This value is calculated based on font weight and size, referring to this [APCA lookup table](https://bugs.chromium.org/p/chromium/issues/attachmentText?aid=486485). 
+The example show the APCA threshold is **38%**. The contrast ratio must meet or exceed the listed value. This value is calculated based on font weight and size, referring to this [APCA lookup table](https://bugs.chromium.org/p/chromium/issues/attachmentText?aid=486485).
 
 Chromium issue: [1121900][50]
 

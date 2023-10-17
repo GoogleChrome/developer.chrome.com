@@ -18,31 +18,31 @@ Unless otherwise noted, changes described below apply to the newest Chrome beta 
 
 ## CSS `grid-template` properties interpolation
 
-In CSS Grid, the `grid-template-columns` and `grid-template-rows` properties allow developers to define line names and track sizing of grid columns and rows, respectively. Thanks to our contributors at Microsoft, we now [support interpolation](https://www.chromestatus.com/feature/6037871692611584) for these properties. Grid layouts can now smoothly transition between states, instead of snapping at the halfway point of an animation or transition. 
+In CSS Grid, the `grid-template-columns` and `grid-template-rows` properties allow developers to define line names and track sizing of grid columns and rows, respectively. Thanks to our contributors at Microsoft, we now [support interpolation](https://www.chromestatus.com/feature/6037871692611584) for these properties. Grid layouts can now smoothly transition between states, instead of snapping at the halfway point of an animation or transition.
 
 ## Privacy preserving screen sharing controls
 
 The [Screen Capture API](https://w3c.github.io/mediacapture-screen-share/) introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network. In this beta some new features are added to this API.
 
-{% Aside %}  
-Learn more about the Screen Capture API in the MDN guide to [Using the Screen Capture API](https://developer.mozilla.org/docs/Web/API/Screen_Capture_API/Using_Screen_Capture).   
+{% Aside %}
+Learn more about the Screen Capture API in the MDN guide to [Using the Screen Capture API](https://developer.mozilla.org/docs/Web/API/Screen_Capture_API/Using_Screen_Capture).
 {% endAside %}
 
 ### DisplayMediaStreamConstraints.selfBrowserSurface
 
-Hint allowing Web applications to instruct the browser whether, upon calling `getDisplayMedia()`, the current tab should be excluded from the list of tabs offered to the user. 
+Hint allowing Web applications to instruct the browser whether, upon calling `getDisplayMedia()`, the current tab should be excluded from the list of tabs offered to the user.
 
 This helps prevent accidental self-capture, when users accidentally choose the tab in which the app is running, a Hall-of-Mirrors effect is produced, confusing users and derailing discussions with remote users.
 
 ### DisplayMediaStreamConstraints.surfaceSwitching
 
-Adds an option to programmatically control whether Chrome shows a button for switching tabs while screen-shared. This option will be passed to `navigator.mediaDevices.getDisplayMedia()`. 
+Adds an option to programmatically control whether Chrome shows a button for switching tabs while screen-shared. This option will be passed to `navigator.mediaDevices.getDisplayMedia()`.
 
-The Share this tab instead button allows users to seamlessly switch which tab they're sharing, without having to select the video-conferencing tab again, click a button to initiate `getDisplayMedia()` again, or selecting a new tab out of a long list of tabs. This behavior is exposed conditionally because not all Web applications are able to handle this behavior. 
+The Share this tab instead button allows users to seamlessly switch which tab they're sharing, without having to select the video-conferencing tab again, click a button to initiate `getDisplayMedia()` again, or selecting a new tab out of a long list of tabs. This behavior is exposed conditionally because not all Web applications are able to handle this behavior.
 
 ### MediaTrackConstraintSet.displaySurface
 
-When `getDisplayMedia()` is called, the browser offers the user a choice of display surfaces: tabs, windows, or monitors. Using the displaySurface constraint, the Web application may now hint to the browser if it prefers that a certain surface type be more prominently offered to the user. 
+When `getDisplayMedia()` is called, the browser offers the user a choice of display surfaces: tabs, windows, or monitors. Using the displaySurface constraint, the Web application may now hint to the browser if it prefers that a certain surface type be more prominently offered to the user.
 
 [Find out more about how these features will help to avoid accidental oversharing.](/blog/avoiding-oversharing-when-screen-sharing/)
 
@@ -52,16 +52,16 @@ Adds a field to [`PerfomanceResourceTiming`](https://developer.mozilla.org/docs/
 
 ## Wildcards in permissions policy origins
 
-This feature adds support for wildcards in permissions policy structured like `SCHEME://*.HOST:PORT` (for example, https://*.foo.com/) where a valid Origin could be constructed from `SCHEME://HOST:PORT` (for example, https://foo.com/). This requires that HOST is at least eTLD+1 (a registrable domain). This means that `https://*.bar.foo.com/` works but `https://*.com/` won't. Wildcards in the scheme and port section will be unsupported and `https://*.foo.com/` does not delegate to `https://foo.com/`. Before, a permissions policy might need to look like: 
+This feature adds support for wildcards in permissions policy structured like `SCHEME://*.HOST:PORT` (for example, https://*.foo.com/) where a valid Origin could be constructed from `SCHEME://HOST:PORT` (for example, https://foo.com/). This requires that HOST is at least eTLD+1 (a registrable domain). This means that `https://*.bar.foo.com/` works but `https://*.com/` won't. Wildcards in the scheme and port section will be unsupported and `https://*.foo.com/` does not delegate to `https://foo.com/`. Before, a permissions policy might need to look like:
 
 ```txt
-permissions-policy: ch-ua-platform-version=(self "https://foo.com" "https://cdn1.foo.com" "https://cdn2.foo.com")   
+permissions-policy: ch-ua-platform-version=(self "https://foo.com" "https://cdn1.foo.com" "https://cdn2.foo.com")
 ```
 
-With this feature, you can use: 
+With this feature, you can use:
 
-```txt 
-permissions-policy: ch-ua-platform-version=(self "https://foo.com" "https://*.foo.com")   
+```txt
+permissions-policy: ch-ua-platform-version=(self "https://foo.com" "https://*.foo.com")
 ```
 
 ## Support the `rel` attribute on `<form>` elements
@@ -80,7 +80,7 @@ This trial is expected to run until Chrome 109. [Register for the trial here](/o
 
 ### Permissions-Policy: unload
 
-This feature allows pages to disable the running of unload event handlers. The goal is to allow sites that have removed all unload handlers to ensure they do not accidentally add new ones. This will help sites migrate off unload event handlers and thereby [improve BFCache hit-rate](https://web.dev/bfcache/#never-use-the-unload-event).
+This feature allows pages to disable the running of unload event handlers. The goal is to allow sites that have removed all unload handlers to ensure they do not accidentally add new ones. This will help sites migrate off unload event handlers and thereby [improve BFCache hit-rate](https://web.dev/articles/bfcache#never_use_the_unload_event).
 
 This trial is expected to run until Chrome 109. [Register for the trial here](/origintrials/#/view_trial/1012184016251518977).
 

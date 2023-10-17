@@ -164,7 +164,7 @@ Materialized tables are provided for easy access to summary data by a number of 
 </tbody>
 </table></div>
 
-This shows that in the 202204 dataset, 90.56% of real-user experiences on `https://example.com` met the criteria for [good LCP](https://web.dev/defining-core-web-vitals-thresholds/#refresher:-core-web-vitals-metrics-and-thresholds), and that the coarse 75th percentile LCP value was 1,600ms. This is slightly slower than previous months.
+This shows that in the 202204 dataset, 90.56% of real-user experiences on `https://example.com` met the criteria for [good LCP](https://web.dev/articles/defining-core-web-vitals-thresholds#refresher:_core_web_vitals_metrics_and_thresholds), and that the coarse 75th percentile LCP value was 1,600ms. This is slightly slower than previous months.
 
 Four materialized tables are provided:
 

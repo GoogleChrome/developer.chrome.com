@@ -9,7 +9,7 @@ description: User interface and design guidelines for Chrome Extensions.
 
 Like Chrome's user interface, an extension user interface should be purposeful and minimal. Extensions
 should allow users to customize or enhance the user's browsing experience without distracting
-from it. 
+from it.
 
 This guide explores required and optional user interface features. Use it to understand how and when
 to implement different user interface elements within an extension.
@@ -17,10 +17,10 @@ to implement different user interface elements within an extension.
 ## The extension action {: #action }
 
 The [Action API][api-action] controls the extension's action (toolbar icon). It can either open a
-[popup][section-popup] or trigger some functionality when it's [clicked][section-onclick]. 
+[popup][section-popup] or trigger some functionality when it's [clicked][section-onclick].
 
 Users can trigger an extension's action by expanding the extension menu and selecting the desired
-extension. 
+extension.
 
 To make it easier to access an extension, the user may choose to pin the extension's action to the
 toolbar. Once pinned, the extension's action will appear to the left of the extension menu. Users
@@ -29,7 +29,7 @@ order.
 
 {% Columns %}
 
-{% Column %} 
+{% Column %}
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/iouvm1a3lsQWGyg6fSMS.png", alt="Unpinned extension",
@@ -39,7 +39,7 @@ width="400", height="374", class="screenshot" %}
 
 {% endColumn %}
 
-{% Column %} 
+{% Column %}
 
 <figure>
   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KS09fVoCj3YWuIoH5EFn.png", alt="Pinned extension",
@@ -81,27 +81,78 @@ When an extension is disabled, the icon is grayed out. If the user clicks the di
 the extension's context menu will appear.
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hlYsQJPFsF7WBAjJZ6DS.png", 
-alt="Clicked Disabled extension", width="252", height="180", class="screenshot" %}  
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hlYsQJPFsF7WBAjJZ6DS.png",
+alt="Clicked Disabled extension", width="252", height="180", class="screenshot" %}
 
 <figcaption>
     Disabled extension.
   </figcaption>
 </figure>
 
-## Provide the extension icons
+### Respond to the action {: #click}
 
-An extension requires at least one icon to represent it. Provide icons in PNG format for the best
-visual results, although any raster format supported by Chrome is accepted. This includes BMP,
-GIF, ICO, and JPEG.
+It's possible to register an [`OnClicked` handler][action-onclicked] for when the user clicks the action
+item. However, this won't fire if the action has a popup (default or otherwise).
 
-{% Aside 'caution' %}
+{% Label %}service-worker.js:{% endLabel %}
 
-SVG files are not supported for any icons declared in the manifest.
+```js
+chrome.action.onClicked.addListener((tab) => {
+  chrome.action.setTitle({tabId: tab.id, title: `You are on tab: ${tab.id}`});
+});
+```
 
-{% endAside %}
+### Action badge {: #badge }
 
-Ensure your icon follows the [extension icon best practices][docs-icon-guidelines].
+Badges display a colored banner on top of the action icon. They can only be used when the `"action"`
+is declared in the manifest.
+
+Use badges to indicate the state of the extension. The [Drink Water][sample-drink] sample extension
+displays a badge with "ON" to show the user they have successfully set an alarm and displays nothing when
+the extension is idle. Badges can contain up to 4 characters.
+
+{% Columns %}
+
+{% Column %}
+
+<figure>
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png", alt="Badge On",
+       height="72", width="72" %}
+<figcaption>
+    An action icon with a badge.
+  </figcaption>
+</figure>
+
+
+
+{% endColumn %}
+
+{% Column %}
+
+<figure>
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png", alt="Badge Off",
+       height="72", width="72" %}
+<figcaption>
+    An action icon without a badge.
+  </figcaption>
+</figure>
+
+
+
+{% endColumn %}
+
+{% endColumns %}
+
+You can set the text of the badge by calling [`chrome.action.setBadgeText()`][action-setbadgetext] and
+the banner color by calling
+[`chrome.action.setBadgeBackgroundColor()`][action-setbadgebackgroundcolor].
+
+{% Label %}service-worker.js:{% endLabel %}
+
+```js
+chrome.action.setBadgeText({text: 'ON'});
+chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
+```
 
 ### Designate action icons {: #icons }
 
@@ -125,92 +176,6 @@ Icons specific to the toolbar are registered in the `"default_icon"` field under
 }
 ```
 
-All icons should be square or they may be distorted. If no icons are supplied, Chrome will add a
-generic one to the toolbar with the first letter of the extension name. 
-
-### Create and register additional icons {: #icon_size }
-
-Include additional icons in the following sizes for uses outside of the toolbar.
-
-| Icon Size | Icon Use                                               |
-|-----------|--------------------------------------------------------|
-| 16x16     | Favicon on the extension's pages and context menu icon.|
-| 32x32     | Windows computers often require this size.             |
-| 48x48     | Displays on the extension management page.             |
-| 128x128   | Displays on installation and in the Chrome Web Store.  |
-
-
-Register icons in the manifest under the `"icons"` field.
-
-{% Label %}manifest.json:{% endLabel %}
-
-```json
-{
-  "name": "My Awesome Extension",
-  ...
-  "icons": {
-    "16": "extension_icon16.png",
-    "32": "extension_icon32.png",
-    "48": "extension_icon48.png",
-    "128": "extension_icon128.png"
-  }
-  ...
-}
-```
-
-## Additional user interface features {: #additional_features }
-
-### Action badge {: #badge }
-
-Badges display a colored banner on top of the action icon. They can only be used when the `"action"`
-is declared in the manifest. 
-
-Use badges to indicate the state of the extension. The [Drink Water][sample-drink] sample extension
-displays a badge with "ON" to show the user they have successfully set an alarm and displays nothing when
-the extension is idle. Badges can contain up to 4 characters.
-
-{% Columns %}
-
-{% Column %}
-
-<figure>
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png", alt="Badge On",
-       height="72", width="72" %}  
-<figcaption>
-    An action icon with a badge.
-  </figcaption>
-</figure>
-
-
-
-{% endColumn %}
-
-{% Column %} 
-
-<figure>
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png", alt="Badge Off",
-       height="72", width="72" %}  
-<figcaption>
-    An action icon without a badge.
-  </figcaption>
-</figure>
-
-
-
-{% endColumn %}
-
-{% endColumns %}
-
-You can set the text of the badge by calling [`chrome.action.setBadgeText()`][action-setbadgetext] and
-the banner color by calling
-[`chrome.action.setBadgeBackgroundColor()`][action-setbadgebackgroundcolor].
-
-{% Label %}service-worker.js:{% endLabel %}
-
-```js
-chrome.action.setBadgeText({text: 'ON'});
-chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
-```
 
 ### Popup {: #popup }
 
@@ -222,7 +187,7 @@ The [Drink Water Event][sample-drink] example popup displays available timer opt
 alarm by clicking one of the provided buttons.
 
 <figure>
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", alt="The Drink Water popup", height="361", width="213", class="screenshot" %}  
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png", alt="The Drink Water popup", height="361", width="213", class="screenshot" %}
 <figcaption>
     The Drink Water popup.
   </figcaption>
@@ -275,7 +240,68 @@ chrome.storage.local.get('signed_in', (data) => {
 });
 ```
 
-### Side panel {: #side-panel } 
+### Tooltip {: #tooltip }
+
+Use a tooltip to give short descriptions or instructions to users when they hover over the action
+icon. By default, the tootip displays the name of the extension.
+
+<figure>
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="An
+example tooltip", height="157", width="419", class="screenshot" %}
+  <figcaption>
+    An example tooltip.
+  </figcaption>
+</figure>
+
+## Provide the extension icons
+
+An extension requires at least one icon to represent it. Provide icons in PNG format for the best
+visual results, although any raster format supported by Chrome is accepted. This includes BMP,
+GIF, ICO, and JPEG.
+
+{% Aside 'caution' %}
+
+SVG files are not supported for any icons declared in the manifest.
+
+{% endAside %}
+
+Ensure your icon follows the [extension icon best practices][docs-icon-guidelines].
+
+
+All icons should be square or they may be distorted. If no icons are supplied, Chrome will add a
+generic one to the toolbar with the first letter of the extension name.
+
+Include additional icons in the following sizes for uses outside of the toolbar. {: #icon_size }
+
+| Icon Size | Icon Use                                               |
+|-----------|--------------------------------------------------------|
+| 16x16     | Favicon on the extension's pages and context menu icon.|
+| 32x32     | Windows computers often require this size.             |
+| 48x48     | Displays on the extension management page.             |
+| 128x128   | Displays on installation and in the Chrome Web Store.  |
+
+
+Register icons in the manifest under the `"icons"` field.
+
+{% Label %}manifest.json:{% endLabel %}
+
+```json
+{
+  "name": "My Awesome Extension",
+  ...
+  "icons": {
+    "16": "extension_icon16.png",
+    "32": "extension_icon32.png",
+    "48": "extension_icon48.png",
+    "128": "extension_icon128.png"
+  }
+  ...
+}
+```
+
+## Additional user interface features {: #additional_features }
+
+### Side panel {: #side-panel }
 
 An extension side panel is an HTML file that provides additional functionality alongside the main content of a web page. The [Dictionary side panel][sample-dictionary-sidepanel] example allows users to right-click on a word and see the definition in the side panel.
 
@@ -295,19 +321,6 @@ An extension side panel is an HTML file that provides additional functionality a
 
 For more samples and use cases, see the [Side Panel API][api-sidepanel] reference page.
 
-### Tooltip {: #tooltip }
-
-Use a tooltip to give short descriptions or instructions to users when they hover over the action
-icon. By default, the tootip displays the name of the extension.
-
-<figure>
-  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png", alt="An
-example tooltip", height="157", width="419", class="screenshot" %}
-  <figcaption>
-    An example tooltip.
-  </figcaption>
-</figure>
-
 Tooltips are registered in the `"default_title"` field under the `"action"` key in the manifest.
 
 {% Label %}manifest.json:{% endLabel %}
@@ -324,19 +337,6 @@ Tooltips are registered in the `"default_title"` field under the `"action"` key 
 ```
 
 Tooltips can also be set or updated by calling [`action.setTitle()`][action-settitle].
-
-### Click Event {: #click}
-
-It's possible to register an [`OnClicked` handler][action-onclicked] for when the user clicks the action
-item. However, this won't fire if the action has a popup (default or otherwise).
-
-{% Label %}service-worker.js:{% endLabel %}
-
-```js
-chrome.action.onClicked.addListener((tab) => {
-  chrome.action.setTitle({tabId: tab.id, title: `You are on tab: ${tab.id}`});
-});
-```
 
 ### Omnibox {: #omnibox }
 
@@ -575,7 +575,7 @@ permission in the manifest.
 {% Label %}manifest.json:{% endLabel %}
 
 ```json/5
-{ 
+{
   "name": "Drink Water Event Popup",
 ...
   "permissions": [
@@ -608,7 +608,7 @@ function showStayHydratedNotification() {
 ```
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e5S112AtwfnA5o64JrGg.png", 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/e5S112AtwfnA5o64JrGg.png",
 alt="Mac OS notification", width="500", height="150", class="screenshot" %}
   <figcaption>
     Notification on macOS.

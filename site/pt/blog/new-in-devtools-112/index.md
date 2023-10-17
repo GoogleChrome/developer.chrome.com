@@ -27,7 +27,7 @@ tags:
 
 
 <!-- ## Recorder updates {: #recorder }  -->
-## Atualizações do Gravador {: #recorder } 
+## Atualizações do Gravador {: #recorder }
 <!-- ### Replay extensions support {: #replay-extensions } -->
 ### Suporte para extensões de replay {: #replay-extensions }
 <!-- The **Recorder** introduces support for custom replay options that you can embed into DevTools with an extension. -->
@@ -50,8 +50,8 @@ Issue relacionada: [1400243](https://crbug.com/1400243).
 <!-- In addition to [custom, CSS, ARIA, text, and XPath selectors](/docs/devtools/recorder/reference/#selector), you can now record using [pierce selectors](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce). These selectors behave like CSS ones but can also pierce through shadow roots. -->
 Além dos [seletores personalizados, CSS, ARIA, texto e XPath](/docs/devtools/recorder/reference/#selector), agora você pode gravar usando [seletores pierce](https://pptr.dev/guides/ query-selectors#pierce-selectors-pierce). Esses seletores se comportam como os CSS, mas também podem penetrar shadow roots.
 
-<!-- Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step. -->
-Inicie uma nova gravação em uma página com [shadow DOM](https://web.dev/shadowdom-v1/) e marque {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** em **Selecione o tipo de Gravação**. Registre sua interação com elementos no shadow DOM e inspecione a etapa correspondente.
+<!-- Start a new recording on a page with [shadow DOM](https://web.dev/articles/shadowdom-v1) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step. -->
+Inicie uma nova gravação em uma página com [shadow DOM](https://web.dev/articles/shadowdom-v1) e marque {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** em **Selecione o tipo de Gravação**. Registre sua interação com elementos no shadow DOM e inspecione a etapa correspondente.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Spqbf2DG3Fr0D2sc1kgC.png", alt="Configurando o gravador para usar seletores pierce; Seletor pierce em ação.", width="800", height="534" %}
 
@@ -76,7 +76,7 @@ Abra sua gravação, clique em {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4d
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fcaf72d9134e54140cab41c011b7520dd168a340 #}
 
 <!-- ### Get extensions {: #get-extensions } -->
-### Obter extensões {: #get-extensions } 
+### Obter extensões {: #get-extensions }
 <!-- Explore options to customize your recorder experience, for example, with custom export options. Get extensions for the **Recorder** by clicking the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Export** > **Get extensions** in a recording. -->
 Explore as opções para personalizar sua experiência de gravação, por exemplo, com opções de exportação personalizadas. Obtenha extensões para o **Gravador** clicando em {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4dU9UXvsinS4zbgjd8rK.svg", alt="Export.", width="20", height="20" %} **Exportar** > **Obter extensões** em uma gravação.
 
@@ -129,7 +129,7 @@ O painel **Elementos** > **Estilos** agora reconhece a sintaxe [CSS Nesting](/ar
 Issue relacionada: [1172985](https://crbug.com/1172985).
 
 <!-- ## Marking logpoints and conditional breakpoints in the Console {: #logpoint } -->
-## Destaque de logpoints e breakpoints condicionais no Console {: #logpoint } 
+## Destaque de logpoints e breakpoints condicionais no Console {: #logpoint }
 <!-- Further improving the [enhanced breakpoint UX](/blog/new-in-devtools-111/#breakpoint-redesign), the **Console** now marks messages triggered by breakpoints: -->
 Nós melhoramos ainda mais a [UX do breakpoint](/blog/new-in-devtools-111/#breakpoint-redesign), o **Console** agora destaca mensagens acionadas por breakpoints:
 <!-- - `console.*` calls in [conditional breakpoints](/docs/devtools/javascript/breakpoints/#conditional-loc) with an orange question mark `?` -->
@@ -178,7 +178,7 @@ Se você selecionar um script ignorado, o botão **Configurar** o levará para
 Issue relacionada: [883325](https://crbug.com/883325).
 
 <!-- ## JavaScript Profiler deprecation started {: #js-profiler-deprecation } -->
-## Início da descontinuação do JavaScript Profiler {: #js-profiler-deprecation } 
+## Início da descontinuação do JavaScript Profiler {: #js-profiler-deprecation }
 <!-- As early as [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), the DevTools team planned to eventually deprecate the **JavaScript Profiler** and have Node.js and Deno developers use the **Performance** panel for profiling JavaScript CPU performance. -->
 Já no [Chrome 58](/blog/devtools-javascript-cpu-profile-migration-2/), a equipe do DevTools planejava eventualmente descontinuar o **JavaScript Profiler** e fazer com que os desenvolvedores Node.js e Deno usassem o Painel **Desempenho** para criação de perfil de desempenho da CPU do JavaScript.
 <!-- This DevTools version (112) starts the [four-phase **JavaScript Profiler** deprecation](https://github.com/ChromeDevTools/rfcs/discussions/2#discussioncomment-5189668). The **JavaScript Profiler** panel now shows the corresponding warning banner. -->
@@ -196,7 +196,7 @@ Saiba mais e forneça feedback no [RFC](https://github.com/ChromeDevTools/rfcs/d
 Issue relacionada: [1417647](https://crbug.com/1417647).
 
 <!-- ## Emulate reduced contrast {: #reduced-contrast } -->
-## Emulação de contraste reduzido {: #reduced-contrast } 
+## Emulação de contraste reduzido {: #reduced-contrast }
 <!-- The [**Rendering**](/docs/devtools/rendering/#open-rendering) tab adds a new option to the [Emulate vision deficiencies](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) list—**Reduced contrast**. With this option, you can discover how your website looks to people with reduced contrast sensitivity. -->
 A guia [**Renderização**](/docs/devtools/rendering/#open-rendering) adiciona uma nova opção para a lista de [emulação deficiências de visão](/docs/devtools/rendering/apply-effects/#emulate-vision-deficiencies) — **Contraste reduzido**. Com esta opção, você pode descobrir a aparência do seu site para pessoas com sensibilidade reduzida ao contraste.
 
@@ -213,7 +213,7 @@ Com o DevTools, você pode encontrar e corrigir todos os problemas de contraste 
 Issues relacionadas: [1412719](https://crbug.com/1412719), [1412721](https://crbug.com/1412721).
 
 <!-- ## Lighthouse 10 {: #lighthouse } -->
-## Lighthouse 10 {: #lighthouse } 
+## Lighthouse 10 {: #lighthouse }
 <!-- The **Lighthouse** panel now runs [Lighthouse 10.0.1](/blog/lighthouse-10-0/). For more details, see [What's new in Lighthouse 10.0.1](/blog/lighthouse-10-0/). -->
 O painel **Lighthouse** agora executa [Lighthouse 10.0.1](/blog/lighthouse-10-0/). Para obter mais detalhes, consulte [O que há de novo no Lighthouse 10.0.1](/blog/lighthouse-10-0/).
 <!-- **Lighthouse** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Legacy navigation** is now disabled by default. This option uses legacy [Lighthouse configuration](https://github.com/GoogleChrome/lighthouse/blob/main/docs/configuration.md) in navigation mode. -->
@@ -238,7 +238,7 @@ Issue relacionada: [772558](https://crbug.com/772558).
 <!-- These are some noteworthy fixes in this release: -->
 Mais algumas novidades dignas de atenção nessa versão:
 <!-- - The [**Sources** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) pane now shows differentiating file paths next to ambiguous file names ([1403924](crbug.com/1403924)). -->
-- O painel [**Código Fonte** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) agora mostra caminhos de arquivo diferenciados ao lado de nomes de arquivo ambíguos 
+- O painel [**Código Fonte** > **Breakpoints**](/docs/devtools/javascript/breakpoints/#manage-loc) agora mostra caminhos de arquivo diferenciados ao lado de nomes de arquivo ambíguos
 ([1403924](crbug.com/1403924)).
 <!-- - The [**Main** section](/docs/devtools/performance/reference/#main) in the flame chart of the **Performance** panel now designates `CpuProfiler::StartProfiling` as `Profiler Overhead` ([1358602](https://crbug.com/1358602)). -->
 - A [seção **Principal**](/docs/devtools/performance/reference/#main) no diagrama de chamas do painel **Performance** agora designa `CpuProfiler::StartProfiling` como `Profiler Overhead` ([1358602](https://crbug.com/1358602)).

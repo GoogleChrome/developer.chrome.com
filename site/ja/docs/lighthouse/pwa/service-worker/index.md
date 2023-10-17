@@ -6,13 +6,13 @@ date: 2019-05-04
 updated: 2020-06-10
 ---
 
-[Service Worker](https://web.dev/service-workers-cache-storage/) の登録は、[Progressive Web App (PWA) (プログレッシブウェブアプリ)](/docs/lighthouse/pwa/) が提供する主な機能を有効化する最初のステップです。
+[Service Worker](https://web.dev/articles/service-workers-cache-storage) の登録は、[Progressive Web App (PWA) (プログレッシブウェブアプリ)](/docs/lighthouse/pwa/) が提供する主な機能を有効化する最初のステップです。
 
 - オフラインで稼働する
 - プッシュ通知をサポートする
 - デバイスにインストールできる
 
-詳細は、[Service workers and the Cache Storage API (サービスワーカーと Cache Storage API)](https://web.dev/service-workers-cache-storage/) と題した記事をお読みください。
+詳細は、[Service workers and the Cache Storage API (サービスワーカーと Cache Storage API)](https://web.dev/articles/service-workers-cache-storage) と題した記事をお読みください。
 
 ## ブラウザの互換性
 
@@ -34,15 +34,15 @@ Lighthouse は、[Chrome Remote Debugging Protocol (Chrome リモートデバッ
 
 サービスワーカーは、わずか数行のコードで登録できますが、サービスワーカーを使用する唯一の理由は、上述した PWA の機能の 1 つを実装できるようにするためです。実際にそうした機能を実装するには、さらに多くの作業が必要になります。
 
-- ファイルをキャッシュしてオフラインで使用する方法は、[What is network reliability and how do you measure it? (ネットワークの信頼性とは、またその評価方法とは？)](https://web.dev/network-connections-unreliable/) と題した記事をお読みください。
-- アプリをインストール可能にする方法については、コードラボ [Make it installable (インストール可能にする)](https://web.dev/codelab-make-installable/) を参照してください。
+- ファイルをキャッシュしてオフラインで使用する方法は、[What is network reliability and how do you measure it? (ネットワークの信頼性とは、またその評価方法とは？)](https://web.dev/articles/network-connections-unreliable) と題した記事をお読みください。
+- アプリをインストール可能にする方法については、コードラボ [Make it installable (インストール可能にする)](https://web.dev/articles/codelab-make-installable) を参照してください。
 - プッシュ通知を有効にする方法については、Google の[Adding Push Notifications to a Web App (プッシュ通知のウェブアプリへの追加)](https://codelabs.developers.google.com/codelabs/push-notifications) を参照してください。
 
 ## リソース
 
 - [**Does not register a service worker that controls page and `start_url (ページと `start_url` を制御するサービスワーカーが登録されない)`** 監査のソースコード](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/service-worker.js)
 - [Service Workers: an Introduction (サービスワーカー: はじめに)](https://developers.google.com/web/fundamentals/primers/service-workers)
-- [Service workers and the Cache Storage API (サービスワーカーと Cache Storage API)](https://web.dev/service-workers-cache-storage/)
-- [What is network reliability and how do you measure it? (ネットワークの信頼性とは、またその評価方法とは？)](https://web.dev/network-connections-unreliable/)
-- [Make it installable (インストール可能にする)](https://web.dev/codelab-make-installable/)
+- [Service workers and the Cache Storage API (サービスワーカーと Cache Storage API)](https://web.dev/articles/service-workers-cache-storage)
+- [What is network reliability and how do you measure it? (ネットワークの信頼性とは、またその評価方法とは？)](https://web.dev/articles/network-connections-unreliable)
+- [Make it installable (インストール可能にする)](https://web.dev/articles/codelab-make-installable)
 - [Adding Push Notifications to a Web App (プッシュ通知のウェブアプリへの追加)](https://codelabs.developers.google.com/codelabs/push-notifications)

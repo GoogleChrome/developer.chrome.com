@@ -30,7 +30,7 @@ will opt the extension's origin into cross-origin isolation.
 
 Opting into cross-origin isolation allows the extension to use powerful APIs like SharedArrayBuffers
 in its cross-origin isolated contexts. However, it does also come with certain side-effects. See
-[Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/coop-coep/) for
+[Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/articles/coop-coep) for
 more information on this.
 
 {% Aside 'caution' %}

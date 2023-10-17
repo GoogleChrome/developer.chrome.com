@@ -80,7 +80,7 @@ For the rest of the screenshots in this tutorial, DevTools is shown in a [separa
 The baseline is a record of how the site performed before you made any performance improvements.
 
 1.  Open the **Lighthouse** panel. It may be hidden behind {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/V93Xxk8HvmByCBGzMdW4.svg", alt="More panels.", width="20", height="20" %} **More panels**.
-   
+
     {% Aside %}
     This panel is powered by its namesake—[**Lighthouse**](/docs/lighthouse), an automated tool for improving the quality of your web apps.
     {% endAside %}
@@ -212,7 +212,7 @@ of lines of code:
    ```js/2-4
    ...
    const fs = require('fs');
-   const compression = require('compression'); 
+   const compression = require('compression');
 
    app.use(compression());
    app.use(express.static('build'));
@@ -495,7 +495,7 @@ Reduce JavaScript activity by removing the call to `mineBitcoin`:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Ug3mIDzuacvZwGSt6StX.png", alt="A Lighthouse report after removing unnecessary JavaScript work.", width="800", height="692" %}
 
-As always, there still are things to do, for example, reduce the [Largest Contentful Paint](/docs/lighthouse/performance/lighthouse-largest-contentful-paint/) and [Cumulative Layout Shift](https://web.dev/cls/) metrics.
+As always, there still are things to do, for example, reduce the [Largest Contentful Paint](/docs/lighthouse/performance/lighthouse-largest-contentful-paint/) and [Cumulative Layout Shift](https://web.dev/articles/cls) metrics.
 
 {% Aside 'success' %}
 But it looks like the last change caused a massive jump in performance!

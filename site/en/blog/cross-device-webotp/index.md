@@ -124,7 +124,7 @@ browser automatically forwards the OTP to the site and resolves the
 the verification process.
 
 Learn more at [Verify phone numbers on the web with the WebOTP
-API](https://web.dev/web-otp/).
+API](https://web.dev/articles/web-otp).
 
 {% Aside 'gotchas' %}
 

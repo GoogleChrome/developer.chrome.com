@@ -11,7 +11,7 @@ authors:
 
 ## Implementierungsstatus
 
-- [In der Origin-Trial](https://web.dev/origin-trials/) von Chrome 84 bis 94.
+- [In der Origin-Trial](/docs/web-platform/origin-trials/) von Chrome 84 bis 94.
 - [Registrieren Sie sich für die Origin-Trial](/origintrials/#/view_trial/2479231594867458049).
 - [Demo](https://trust-token-demo.glitch.me/).
 - [Chrome-Entwicklertools-Integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
@@ -62,7 +62,7 @@ In diesem Beispiel möchte eine Betreiberwebsite vor dem Schalten einer Werbeanz
 12. Die Betreibersite zeigt die Anzeige an.
 13. Eine Anzeigenaufrufsimpression wird gezählt.
 
-{% Aside %} Weitere Informationen zu den JavaScript-Aufrufen in diesem Beispiel finden Sie unter [Beispiel für die API-Verwendung](https://web.dev/trust-tokens/#sample-api-usage). {% endAside %}
+{% Aside %} Weitere Informationen zu den JavaScript-Aufrufen in diesem Beispiel finden Sie unter [Beispiel für die API-Verwendung](https://web.dev/articles/trust-tokens#sample_api_usage). {% endAside %}
 
 ---
 
@@ -78,6 +78,6 @@ In diesem Beispiel möchte eine Betreiberwebsite vor dem Schalten einer Werbeanz
 ## Erfahren Sie mehr
 
 - [Technische Erläuterung zum Vertrauenstoken-API](https://github.com/dvorak42/trust-token-api)
-- [Erste Schritte mit Vertrauenstoken](https://web.dev/trust-tokens/): ein Überblick für Webentwickler
+- [Erste Schritte mit Vertrauenstoken](https://web.dev/articles/trust-tokens): ein Überblick für Webentwickler
 - [Erste Schritte mit Origin-Trials von Chrome](https://web.dev/origin-trials)
 - [Mehr über die Privacy Sandbox erfahren](https://web.dev/digging-into-the-privacy-sandbox)

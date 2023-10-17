@@ -134,7 +134,7 @@ speakers, to start or end calls,  mute the audio, and more.
 Of course, powerful APIs like this, can only interact with devices when the
 user explicitly chooses to allow it.
 
-Check out [Connecting to uncommon HID devices](https://web.dev/hid/)
+Check out [Connecting to uncommon HID devices](https://web.dev/articles/hid)
 for more details, examples, how you can get started, and a cool demo.
 
 <br style="clear:both;">

@@ -16,13 +16,13 @@ tags:
   - origin-trials
 ---
 
-{% YouTube 
-  id='v_gI8wcsPUA' 
+{% YouTube
+  id='v_gI8wcsPUA'
 %}
 
 Origin trials give you access to a new or experimental feature, to build
 functionality your users can try out for a limited time before the feature
-is made available to everyone. 
+is made available to everyone.
 
 When Chrome offers an origin trial for a feature, you can register for the trial to enable
 the feature for all users on your [origin](https://web.dev/same-site-same-origin/#origin),
@@ -56,12 +56,12 @@ Find out more: [What are third-party origin trials?](/docs/web-platform/third-pa
 
 ## Deprecation trials
 
-Not all origin trials are for testing new APIs. Some trials enable a deprecated feature to be 
-temporarily re-enabled. These are known as **deprecation trials**, and in some contexts have been 
+Not all origin trials are for testing new APIs. Some trials enable a deprecated feature to be
+temporarily re-enabled. These are known as **deprecation trials**, and in some contexts have been
 referred to as "reverse" origin trials.
 
-For example, [from Chrome 85](https://web.dev/appcache-removal/#origin-trial) AppCache is no longer 
-available in Chrome by default. Sites needing extra time to migrate off AppCache could register for 
+For example, [from Chrome 85](https://web.dev/articles/appcache-removal#origin_trial) AppCache is no longer
+available in Chrome by default. Sites needing extra time to migrate off AppCache could register for
 the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/1776670052997660673) until Chrome 93.
 
 
@@ -86,9 +86,9 @@ the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/17
 
 {: #multiple}
 
-You can register for the same origin trial multiple times, for different origins, and include 
-multiple tokens in the same page. This can be useful if you need to provide tokens 
-that are valid for resources served from different origins, such as code included on multiple 
+You can register for the same origin trial multiple times, for different origins, and include
+multiple tokens in the same page. This can be useful if you need to provide tokens
+that are valid for resources served from different origins, such as code included on multiple
 sites that you own.
 
 The origin trials framework looks for the first valid token and then ignores all other tokens. You

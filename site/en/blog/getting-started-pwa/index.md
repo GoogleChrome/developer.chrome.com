@@ -81,7 +81,7 @@ The Manifest for Web applications is a simple JSON file that gives you, the deve
 
 The manifest enables your web app to have a more native-like presence on the user's home screen. It allows the app to be
 launched in full-screen mode (without a URL bar being present), provides control over the screen orientation and in recent
-versions of Chrome on Android supports defining a [Splash Screen](https://web.dev/add-manifest/#splash-screen) and
+versions of Chrome on Android supports defining a [Splash Screen](https://web.dev/articles/add-manifest#splash_screen) and
 [theme color](/blog/support-for-theme-color-in-chrome-39-for-android) for the address bar. It is also used to define a set of
 icons by size and density used for the aforementioned Splash screen and home screen icon.
 

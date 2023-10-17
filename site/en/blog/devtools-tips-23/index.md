@@ -15,7 +15,7 @@ tags:
   - devtools-tips
 ---
 
-[Source maps](https://web.dev/source-maps/) let you keep your code readable and debuggable even after you've combined and minified it, without impacting performance.
+[Source maps](https://web.dev/articles/source-maps) let you keep your code readable and debuggable even after you've combined and minified it, without impacting performance.
 
 {% YouTube id='FIYkjjFYvoI' %}
 
@@ -38,5 +38,5 @@ Additionally, source maps can have [extensions](https://sourcemaps.info/spec.htm
 To learn more, see:
 
 - [Introduction to JavaScript Source Maps](/blog/sourcemaps/)
-- [What are source maps?](https://web.dev/source-maps/)
+- [What are source maps?](https://web.dev/articles/source-maps)
 - [Debug your original code instead of deployed with source maps](/docs/devtools/javascript/source-maps/)

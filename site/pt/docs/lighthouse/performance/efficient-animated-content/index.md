@@ -53,7 +53,7 @@ Felizmente, você pode recriar esses comportamentos usando o elemento `<video>`
 
 ## Use um serviço que converte GIFs em vídeos HTML5
 
-Muitos [CDNs de imagem](https://web.dev/image-cdns/) oferecem suporte à conversão de vídeo de GIF para HTML5. Você carrega um GIF para o CDN da imagem, e o CDN da imagem retorna um vídeo HTML5.
+Muitos [CDNs de imagem](https://web.dev/articles/image-cdns) oferecem suporte à conversão de vídeo de GIF para HTML5. Você carrega um GIF para o CDN da imagem, e o CDN da imagem retorna um vídeo HTML5.
 
 ## Orientação específica para pilhas
 
@@ -64,5 +64,5 @@ Para conteúdo animado, use [`amp-anim`](https://amp.dev/documentation/component
 ## Recursos
 
 - [Código-fonte para a auditoria **Use formatos de vídeo conteúdo animado**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/efficient-animated-content.js)
-- [Substitua GIFs animados por vídeo para carregamentos de página mais rápidos](https://web.dev/replace-gifs-with-videos/)
+- [Substitua GIFs animados por vídeo para carregamentos de página mais rápidos](https://web.dev/articles/replace-gifs-with-videos)
 - [Codelab Substitua GIFs por vídeo](https://web.dev/codelab-replace-gifs-with-video)

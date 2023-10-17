@@ -169,7 +169,7 @@ function shouldNotIntercept(navigationEvent) {
 When your code calls `intercept({ handler })` from within its `"navigate"` listener, it informs the browser that it's now preparing the page for the new, updated state, and that the navigation may take some time.
 
 The browser begins by capturing the scroll position for the current state, so it can be optionally restored later, then it calls your `handler` callback.
-If your `handler` returns a promise (which happens automatically with [async functions](https://web.dev/async-functions/)), that promise tells the browser how long the navigation takes, and whether it's successful.
+If your `handler` returns a promise (which happens automatically with [async functions](https://web.dev/articles/async-functions)), that promise tells the browser how long the navigation takes, and whether it's successful.
 
 ```js
 navigation.addEventListener('navigate', navigateEvent => {

@@ -49,11 +49,11 @@ The [WebAssembly.Module()](https://developer.mozilla.org/docs/WebAssembly/JavaSc
 
 ### FedCM: Support credential management mediation requirements for auto re-authentication
 
-Supports [Credential Management Mediation Requirements](https://w3c.github.io/webappsec-credential-management/#mediation-requirements) to provide streamlined re-authentication UX for users who have created federated accounts on websites with the FedCM API. 
+Supports [Credential Management Mediation Requirements](https://w3c.github.io/webappsec-credential-management/#mediation-requirements) to provide streamlined re-authentication UX for users who have created federated accounts on websites with the FedCM API.
 
 ### HTTPS upgrades
 
-Automatically and optimistically upgrade all main-frame navigations to HTTPS, with fast fallback to HTTP. 
+Automatically and optimistically upgrade all main-frame navigations to HTTPS, with fast fallback to HTTP.
 
 ### Partitioning the Storage, Service Worker, and Communication APIs
 
@@ -62,28 +62,28 @@ To prevent certain types of side-channel cross-site tracking, Chrome is partitio
 
 ### Resource Timing: Expose interim response times
 
-Expose `PerformanceResourceTiming.firstInterimResponseStart` in cases where a navigation or subresource fetch encounters an interim 1xx response. For example with 100 continue or 103 early hints, `firstInterimResponseStart` now corresponds to the time of that first interim response, while `responseStart` corresponds to the final response, for example with 200 status. 
+Expose `PerformanceResourceTiming.firstInterimResponseStart` in cases where a navigation or subresource fetch encounters an interim 1xx response. For example with 100 continue or 103 early hints, `firstInterimResponseStart` now corresponds to the time of that first interim response, while `responseStart` corresponds to the final response, for example with 200 status.
 
 ### Update of "xml" prefix handling in `lookupNamespaceURI()` and `createNSResolver()`
 
-`Node.lookupNamespaceURI()` supports "xml" and "xmlns" prefixes by default. The function returns fixed namespace strings for them. `Document.createNSResolver()` and `XPathEvaluator.createNSResolver()` stops to wrap the specified node to add "xml" prefix handling. They return the specified node as is. Web developers can now use an element as an `XPathNSResolver` without wrapping it with `createNSResolver()`. 
+`Node.lookupNamespaceURI()` supports "xml" and "xmlns" prefixes by default. The function returns fixed namespace strings for them. `Document.createNSResolver()` and `XPathEvaluator.createNSResolver()` stops to wrap the specified node to add "xml" prefix handling. They return the specified node as is. Web developers can now use an element as an `XPathNSResolver` without wrapping it with `createNSResolver()`.
 
 ### VisibilityStateEntry
 
-Exposes visibility state (visible or hidden) in the performance timeline. The timeline will always have an entry with a `startTime` of 0 and the initial visibility state, plus entries corresponding to any visibility state change. 
+Exposes visibility state (visible or hidden) in the performance timeline. The timeline will always have an entry with a `startTime` of 0 and the initial visibility state, plus entries corresponding to any visibility state change.
 
 ### WGSLLanguageFeatures for WebGPU
 
-Adds the `wgslLanguageFeatures` getter on the GPU object for WebGPU, and its corresponding `WGSLLanguageFeatures` type. 
+Adds the `wgslLanguageFeatures` getter on the GPU object for WebGPU, and its corresponding `WGSLLanguageFeatures` type.
 
 ### WebDriver commands for interacting with FedCM dialogs
 
-This exposes several WebDriver commands to enable browser automation, such as automated testing, to interact with FedCM dialogs. 
+This exposes several WebDriver commands to enable browser automation, such as automated testing, to interact with FedCM dialogs.
 
 
 ## Origin trials in progress
 
-In Chrome 115 you can opt into the following new [origin trials](/docs/web-platform/origin-trials/). 
+In Chrome 115 you can opt into the following new [origin trials](/docs/web-platform/origin-trials/).
 
 ### Compute Pressure
 
@@ -99,13 +99,13 @@ Allow attaching information about which functions should be eager parsed and com
 
 ### Long Animation Frames API
 
-This is an extension of the [Long Tasks API](https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming). It measures the task together with its subsequent rendering update, adding information such as long running scripts, rendering time, and time spent in forced layout and style known as layout thrashing. Developers can use this as a diagnostic for "sluggishness", which is measured by [Interaction to Next Paint (INP)](https://web.dev/inp/), by finding the causes for main-thread congestion which is often the cause for bad INP.
+This is an extension of the [Long Tasks API](https://developer.mozilla.org/docs/Web/API/PerformanceLongTaskTiming). It measures the task together with its subsequent rendering update, adding information such as long running scripts, rendering time, and time spent in forced layout and style known as layout thrashing. Developers can use this as a diagnostic for "sluggishness", which is measured by [Interaction to Next Paint (INP)](https://web.dev/articles/inp), by finding the causes for main-thread congestion which is often the cause for bad INP.
 
 [Register for the Long Animation Frames origin trial](/origintrials/#/view_trial/3935020174414970881).
 
 ### Storage Buckets API
 
-Storage Buckets allows sites the ability to create multiple storage buckets to organize their data, allowing user agents to delete each bucket independently of other buckets. Each storage bucket can store data associated with established storage APIs such as IndexedDB and CacheStorage. 
+Storage Buckets allows sites the ability to create multiple storage buckets to organize their data, allowing user agents to delete each bucket independently of other buckets. Each storage bucket can store data associated with established storage APIs such as IndexedDB and CacheStorage.
 [Register for the Storage Buckets API origin trial](/origintrials/#/register_trial/2674012278751232001).
 
 ## Deprecations and removals
@@ -116,7 +116,7 @@ This release of Chrome deprecates two features.
 
 ### Deprecate the `document.domain` setter
 
-The `document.domain` setter is being deprecated because it allows developers to relax the same-origin policy—and as such it complicates the fundamental security boundary we aim to maintain, and puts roadblocks in the way of post-Spectre changes to Chromium's process model. 
+The `document.domain` setter is being deprecated because it allows developers to relax the same-origin policy—and as such it complicates the fundamental security boundary we aim to maintain, and puts roadblocks in the way of post-Spectre changes to Chromium's process model.
 Visit [Chrome disables modifying document.domain](/blog/document-domain-setter-deprecation/) for alternatives to using document.domain. In most use cases, cross-origin `postMessage()` or Channel Messaging API can replace document.domain. As a last resort, you can opt into document-domain via [Origin-keyed agent clusters](https://chromestatus.com/features/5683766104162304). The setter will remain, but the origin remains unchanged.
 
 ### Deprecate mutation events

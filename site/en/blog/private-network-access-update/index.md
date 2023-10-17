@@ -69,7 +69,7 @@ strategies:
 
 ## Timeline
 
-* November 2020: [Call for feedback](https://web.dev/cors-rfc1918-feedback/)
+* November 2020: [Call for feedback](https://web.dev/articles/cors-rfc1918-feedback)
   about the upcoming changes.
 * March 2021: After reviewing feedback and doing outreach, upcoming changes are
   announced. The specification is renamed from CORS-RFC1918 to Private Network
@@ -96,7 +96,7 @@ strategies:
 * September 2023: Chrome 117 rolls out to Stable, ending the deprecation trial.
   Chrome blocks all private network requests from public, non-secure contexts.
 
-## What is Private Network Access 
+## What is Private Network Access
 
 [Private Network Access](https://wicg.github.io/private-network-access/)
 (formerly known as CORS-RFC1918) restricts the ability of websites to send
@@ -121,7 +121,7 @@ Access (CORS-RFC1918). ", width="800", height="512" %}
 </figure>
 
 Learn more at [Feedback wanted: CORS for private networks
-(RFC1918)](https://web.dev/cors-rfc1918-feedback/).
+(RFC1918)](https://web.dev/articles/cors-rfc1918-feedback).
 
 ## What's a deprecation trial {: #whats-deprecation-trial}
 
@@ -219,7 +219,7 @@ article](https://support.google.com/chrome/a/answer/9037717).
 ### Accessing localhost
 
 If your website needs to issue requests to localhost, then you just need to
-[upgrade your website to HTTPS](https://web.dev/why-https-matters/).
+[upgrade your website to HTTPS](https://web.dev/articles/why-https-matters).
 
 Requests targeting `http://localhost` (or `http://127.*.*.*`, `http://[::1]`)
 are not blocked by Mixed Content, even when issued from secure contexts.
@@ -255,13 +255,13 @@ infrastructure certificate authorities (PKI CA) only provide TLS certificates to
 websites with public domain names. To work around this:
 
 1. Register a public domain name (for example, `intranet.example`) and publish
-   DNS records pointing that domain name to a public server of your choosing. 
-2. Obtain a TLS certificate for `intranet.example`. 
+   DNS records pointing that domain name to a public server of your choosing.
+2. Obtain a TLS certificate for `intranet.example`.
 3. Inside your private network, configure DNS to resolve `intranet.example` to
-   the target server's private IP address. 
+   the target server's private IP address.
 4. Configure your private server to use the TLS certificate for
    `intranet.example`. This allows your users to access the private server at
-   `https://intranet.example`. 
+   `https://intranet.example`.
 
 You can then upgrade the website that initiates the requests to HTTPS and
 continue making the requests as before.
@@ -340,11 +340,11 @@ or localhost. The Private Network Access specification also classifies requests 
 too. This presents a slightly different set of challenges however, as many private
 websites do not have domain names, complicating the use of deprecation trial tokens.
 
-### CORS preflight requests 
+### CORS preflight requests
 
 The second part of Private Network Access is to gate private network requests
 initiated from secure contexts with [CORS preflight
-requests](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls).
+requests](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls).
 The idea is that even when the request was initiated from a secure context, the
 target server is asked to provide an explicit grant to the initiator. The
 request is only sent if the grant is successful.

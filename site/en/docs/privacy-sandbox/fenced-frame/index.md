@@ -10,7 +10,7 @@ authors:
   - alexandrawhite
   - kevinkiklee
 date: 2022-03-07
-updated: 2023-09-18
+updated: 2023-10-09
 ---
 
 ## Implementation status
@@ -39,12 +39,12 @@ the `shoes.example` ad, and `shoes.example` cannot learn first-party data from
 
 ### Strengthen cross-site privacy with storage partitioning
 
-While browsing the web, you've probably looked at products on one site, and then 
+While browsing the web, you've probably looked at products on one site, and then
 you've seen them appear again in an ad on a completely different site.
 
-Today, this advertising technique is achieved primarily through tracking 
-technology that uses third-party cookies to share information across sites. This 
-is technology which [Chrome has committed to phase 
+Today, this advertising technique is achieved primarily through tracking
+technology that uses third-party cookies to share information across sites. This
+is technology which [Chrome has committed to phase
 out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)
 and replace with more privacy-preserving variants.
 
@@ -56,7 +56,7 @@ then that value can be read from the `shoes.example` site. When storage has been
 partitioned, cross-site iframes will no longer share storage, therefore
 `shoes.example` will not be able to access information stored by the iframe. If
 the iframe is served from `*.shoes.example` and embedded on
-`*.shoes.example`, browser storage will be shared as these are considered [same-site](https://web.dev/same-site-same-origin/). 
+`*.shoes.example`, browser storage will be shared as these are considered [same-site](https://web.dev/articles/same-site-same-origin).
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/ss7wjBshEJcwdQXcXGov.png", alt="A comparison of before and after state of storage partitinoing.", width="800", height="613" %}
 
@@ -165,7 +165,7 @@ to existing iframe features.
       <td>Yes (dependent on use case)</td>
    </tr>
 </tbody></table>
-  
+
 
 Fenced frames support fewer external communication options to preserve privacy.
 
@@ -275,7 +275,7 @@ const frameData = {
 await window.sharedStorage.worklet.addModule('reporting-worklet.js');
 
 await window.sharedStorage.run('send-report', {
-  data: { 
+  data: {
     frameData
   },
 });
@@ -305,7 +305,7 @@ class ReportingOperation {
 register('send-report', ReportingOperation);
 ```
 
-To learn more about the embedder’s context in a fenced frame config object, see the [explainer](https://github.com/WICG/fenced-frame/blob/master/explainer/fenced_frame_config_context.md). 
+To learn more about the embedder’s context in a fenced frame config object, see the [explainer](https://github.com/WICG/fenced-frame/blob/master/explainer/fenced_frame_config_context.md).
 
 ## Try fenced frames
 
@@ -358,15 +358,15 @@ browsers](https://chromestatus.com/feature/5699388062040064#consensus).
 Fenced Frames are under active discussion and subject to change in
 the future. If you try this API and have feedback, we'd love to hear it.
 
-*  **GitHub**: Read the [explainer](https://github.com/shivanigithub/fenced-frame), 
-   [raise questions, and follow 
+*  **GitHub**: Read the [explainer](https://github.com/shivanigithub/fenced-frame),
+   [raise questions, and follow
    discussion](https://github.com/shivanigithub/fenced-frame/issues).
 *  **Developer support**: Ask questions and join discussions on the
-   [Privacy Sandbox Developer Support 
+   [Privacy Sandbox Developer Support
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Find out more
 
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064)
-*  [Blink Intent to 
+*  [Blink Intent to
    Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/Ko9UXQYPgUE/m/URRsB-qvAAAJ)

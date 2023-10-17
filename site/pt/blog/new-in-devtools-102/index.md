@@ -53,8 +53,8 @@ Issue relacionada: [1270700](https://crbug.com/1270700)
 <!-- ## New shortcuts to emulate light and dark themes {: #emulation } -->
 ## Novos atalhos para emular temas claros e escuros {: #emulation }
 
-<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
-Você pode agora emular temas claros e escuros mais facilmente (veja a media query CSS chamada [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) com os novos atalhos no painel **Estilos**.
+<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) with the new shortcuts in the **Styles** pane. -->
+Você pode agora emular temas claros e escuros mais facilmente (veja a media query CSS chamada [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) com os novos atalhos no painel **Estilos**.
 
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
 Anteriormente, eram necessários mais passos para [emular temas](/docs/devtools/rendering/emulate-css/) na aba de **Renderização**.
@@ -72,8 +72,8 @@ Issue relacionada: [1314299](https://crbug.com/1314299)
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
 O DevTools agora aplica o *Content Security Policy (CSP)* na aba **Preview** no painel **Rede**
 
-<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
-Por exemplo, a primeira imagem mostra uma página que contém [conteúdo misto](https://web.dev/what-is-mixed-content/). A página carrega em uma conexão HTTPS segura, mas o CSS é lido a partir de uma conexão HTTP insegura.
+<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/articles/what-is-mixed-content). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
+Por exemplo, a primeira imagem mostra uma página que contém [conteúdo misto](https://web.dev/articles/what-is-mixed-content). A página carrega em uma conexão HTTPS segura, mas o CSS é lido a partir de uma conexão HTTP insegura.
 
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
 O browser bloqueia essa requisição para o CSS por padrão. No entanto, quando você abria a página através da aba **Preview** no painel **Rede**, o CSS não estava bloqueado antes (por isso o fundo fica vermelho). Agora está bloqueado, como é de se esperar (segunda imagem).
@@ -207,7 +207,7 @@ Um novo botão **Copiar** foi adicionado à aba de [Mudanças](/docs/devtools/ch
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/afe5698f1cd20304d2763574ef8e9faf6a4a6db1 #}
 {# ​​https://chromium.googlesource.com/devtools/devtools-frontend/+/5de1d6140cad945783f3ca54055134f4a7db42a1 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #}
 
 Issue relacionada: [1268754](https://crbug.com/1268754)
 

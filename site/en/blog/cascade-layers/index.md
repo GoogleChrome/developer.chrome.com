@@ -19,7 +19,7 @@ Layering your CSS in a clear way prevents unexpected style overrides and promote
 
 ## CSS specificity and the cascade
 
-[CSS specificity](https://web.dev/learn/css/specificity/) is how CSS decides which styles to apply to which elements. The different selectors you can use  determine the specificity of any style rule. For example, elements are less specific than classes or attributes, which are in turn less specific than IDs. This is an elemental part of learning CSS.
+[CSS specificity](https://web.dev/learn/css/specificity) is how CSS decides which styles to apply to which elements. The different selectors you can use  determine the specificity of any style rule. For example, elements are less specific than classes or attributes, which are in turn less specific than IDs. This is an elemental part of learning CSS.
 
 Folks turn to CSS naming conventions like BEM to prevent overriding specificity unintentionally. By giving everything a single classname, everything is placed on the same specificity plane. However, it’s not always possible to maintain such organized styles, especially when working with third-party code and design systems.
 

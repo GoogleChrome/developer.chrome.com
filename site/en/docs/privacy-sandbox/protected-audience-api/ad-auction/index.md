@@ -142,7 +142,11 @@ const auctionConfig = {
   ]
 };
 
-const auctionResultPromise = navigator.runAdAuction(auctionConfig);
+try {
+  const auctionResultPromise = navigator.runAdAuction(auctionConfig);
+} catch (error) {
+  // Handle error.
+}
 ```
 
 `runAdAuction()` returns a promise that resolves to a [URN](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns) (`urn:uuid:<something>`) that represents the

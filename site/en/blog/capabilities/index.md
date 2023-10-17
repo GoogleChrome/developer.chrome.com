@@ -35,7 +35,7 @@ trust, and other core tenets of the web.
 
 {% Aside %}
 To see a list of all the APIs that are currently in development, check
-out [https://web.dev/fugu-status/](https://web.dev/fugu-status/)
+out [https://web.dev/articles/fugu-status/](https://web.dev/fugu-status)
 {% endAside %}
 
 ## How will we design & implement these new capabilities?

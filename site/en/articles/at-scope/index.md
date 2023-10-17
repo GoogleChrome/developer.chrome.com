@@ -23,7 +23,7 @@ When writing selectors you may find yourself torn between two worlds. On the one
 
 For example, when you want to select “the hero image in the content area of the card component”–which is a rather specific element selection–you most likely don’t want to write a selector like `.card > .content > img.hero`.
 
-- This selector has a pretty high [specificity](https://web.dev/learn/css/specificity/) of `(0,3,1)` which makes it hard to override as your code grows.
+- This selector has a pretty high [specificity](https://web.dev/learn/css/specificity) of `(0,3,1)` which makes it hard to override as your code grows.
 - By relying on the direct child combinator it is tightly coupled to the DOM structure. Should the markup ever change, you need to change your CSS as well.
 
 But, you also don’t want to write just `img` as the selector for that element, as that would select all image elements across your page.
@@ -63,14 +63,14 @@ The scoped style rule `img { … }` can effectively only select `<img>` elements
 To prevent the `<img>` elements inside the card’s content area (`.card__content`) from being selected you could make the `img` selector more specific. Another way to do this is to use the fact that the `@scope` at-rule also accepts a _scoping limit_ which determines the lower boundary.
 
 ```css
-@scope (.card) to (.content) {
+@scope (.card) to (.card__content) {
     img {
         border-color: green;
     }
 }
 ```
 
-This scoped style rule only targets `<img>` elements that are placed between `.card` and `.content` elements in the ancestor tree. This type of scoping–with an upper and lower boundary–is often referred to as a _donut scope_
+This scoped style rule only targets `<img>` elements that are placed between `.card` and `.card__content` elements in the ancestor tree. This type of scoping–with an upper and lower boundary–is often referred to as a _donut scope_
 
 {% Codepen {
   user: 'web-dot-dev',
@@ -222,7 +222,7 @@ In the example above, the scoped rules only target elements inside the `div` wit
 
 ## @scope in the cascade
 
-Inside of the [CSS Cascade](https://web.dev/learn/css/the-cascade/), `@scope` also adds a new criterion: _scoping proximity_. The step comes after specificity but before order of appearance.
+Inside of the [CSS Cascade](https://web.dev/learn/css/the-cascade), `@scope` also adds a new criterion: _scoping proximity_. The step comes after specificity but before order of appearance.
 
 {% Img src="image/AeNB0cHNDkYPUYzDuv8gInYA9rY2/SqOlwVfRjOpeRzzbz9L7.svg", alt="Visualization of the CSS Cascade.", width="1920", height="1080" %}
 

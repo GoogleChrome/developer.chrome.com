@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Storage partitioning deprecation trial extended
 description: >
-  Sites that haven't had time to adapt their sites for third-party storage partitioning can take part in a deprecation trial to temporarily unpartition and restore prior behavior of storage, service workers, and communication APIs in content embedded on their site. 
+  Sites that haven't had time to adapt their sites for third-party storage partitioning can take part in a deprecation trial to temporarily unpartition and restore prior behavior of storage, service workers, and communication APIs in content embedded on their site.
 subhead: >
   The deprecation trial will now be available until the release of Chrome 127, scheduled for September 3, 2024.
 date: 2023-06-09
@@ -14,7 +14,8 @@ tags:
 ---
 
 To prevent certain types of side-channel cross-site tracking,
-[Chrome is partitioning storage and communications APIs in third-party contexts](/docs/privacy-sandbox/storage-partitioning/).
+[Chrome has partitioned storage and communications APIs in third-party contexts](/docs/privacy-sandbox/storage-partitioning/)
+in Chrome 115 and above.
 
 Sites that haven't had time to adapt their sites for third-party storage
 partitioning can take part in a deprecation trial to temporarily unpartition and
