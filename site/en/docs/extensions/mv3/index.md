@@ -5,10 +5,12 @@ seoTitle: Welcome to Chrome Extensions
 subhead: 'Learn about developing extensions for Chrome.'
 description: 'Documentation for Chrome extensions developers.'
 date: 2020-11-09
-updated: 2023-02-21
+updated: 2023-10-18
 ---
 
-These pages contain guides and reference information for developers who want to
+Google Chrome Extensions are applications that run inside the Chrome browser and provide additional
+functionality, integration with third party websites or services, and customized browsing
+experiences. These pages contain guides and reference information for developers who want to
 create extensions for the Chrome browser.
 
 If you're not sure where to begin, have a look at the following starting pages:
