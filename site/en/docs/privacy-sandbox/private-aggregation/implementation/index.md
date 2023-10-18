@@ -330,7 +330,7 @@ the aggregation service.
 The browser will also limit the contributions a site can make to an output
 query. Specifically, it will limit the total value sum of all reports from a
 single site for a given browser in a given time window across all buckets to a
-[contribution budget](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation-fundamentals/#contribution-budget).
+[contribution budget](/docs/privacy-sandbox/private-aggregation-fundamentals/#contribution-budget).
 If the current budget is exceeded, a report will not be generated.
 
 ```javascript
@@ -407,7 +407,7 @@ privateAggregation.enableDebugMode({debugKey: 1234n});
 
 Shared Storage returns a generic error message. You can debug Shared Storage
 wrapping the call with
-[try-catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+[try-catch](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch)
 blocks.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/ANAyi8xjMVRH4DVpHpNR.png", alt="ALT_TEXT_HERE", width="800", height="58" %}
@@ -444,7 +444,7 @@ the `api` field as "shared-storage".
 #### Debug Cleartext Payload
 
 The `debug_cleartext_payload` is
-[Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64)
+[Base64](https://developer.mozilla.org/docs/Glossary/Base64)
 [CBOR](https://en.wikipedia.org/wiki/CBOR) encoded. You can view the bucket and
 value using the [decoder](https://shared-storage-demo.web.app/decoder/) or use
 the JavaScript code found in the
@@ -481,9 +481,9 @@ You can share your feedback with the APIs and documentations via Github.
 
 The following pages explain important aspects of the Shared Storage and Private Aggregation APIs.
 
-- [Introduction to Shared Storage (Developer Chrome)](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)
-- [Shared Storage Use Cases (Developer Chrome)](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/#use-cases)
-- [Introduction to Private Aggregation (Developer Chrome)](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/)
+- [Introduction to Shared Storage (Developer Chrome)](/docs/privacy-sandbox/shared-storage/)
+- [Shared Storage Use Cases (Developer Chrome)](/docs/privacy-sandbox/shared-storage/#use-cases)
+- [Introduction to Private Aggregation (Developer Chrome)](/docs/privacy-sandbox/private-aggregation/)
 - [Shared Storage Explainer (Github)](https://github.com/WICG/shared-storage)
 - [Private Aggregation Explainer (Github)](https://github.com/patcg-individual-drafts/private-aggregation-api)
 - [Shared Storage and Private Aggregation Demo](https://shared-storage-demo.web.app/)
