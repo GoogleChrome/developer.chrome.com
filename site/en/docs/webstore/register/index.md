@@ -12,7 +12,7 @@ account; here are some tips about which email to choose:
 
 - Because you will receive important emails about your extension or you may want to delete one of your accounts, we suggest using a new email account just for publishing your Chrome Web Store items. 
 - Make sure this is an email that you check frequently since it's where you will receive important alerts or announcements.
-- If you already host your item in Google Play and you want your Chrome Web Store listing to show an "Available for Android" link, your item must have the same name as your Google Play listing, and both items must be owned by the same developer account. To transfer your Chrome Web Store item to a different developer, submit this [form][cws-support].
+- If you already host your item in Google Play and you want your Chrome Web Store listing to show an "Available for Android" link, your item must have the same name as your Google Play listing, and both items must be owned by the same developer account. To transfer your Chrome Web Store item to a different developer, submit this [form][one-stop].
 - If you recently [deleted your Chrome Web Store developer account][delete-account], you can't reuse its associated
   email identity to create a new one. 
   {% Aside 'warning' %}
@@ -36,6 +36,6 @@ Once you pay the registration fee and agree to the terms, you will not see this 
 [console]: https://chrome.google.com/webstore/devconsole
 [delete-account]: /docs/webstore/account-deletion/
 [one-stop]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[prepare]: /docs/webstore/publish/
+[prepare]: /docs/webstore/prepare/
 [publish]: /docs/webstore/publish/
 [setup]: /docs/webstore/set-up-account/

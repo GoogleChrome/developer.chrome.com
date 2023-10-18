@@ -14,7 +14,7 @@ After [registering][register] and [setting up][setup-account] your developer acc
 
 ## Review your manifest {: #manifest }
 
-After uploading your item, you won't have the ability to edit the metadata of your manifest in the developer dashboard. This means, that if you notice a typo, you will have to edit the manifest, increase the version number, and zip the files all over again.
+After uploading your item, you won't be able to edit the metadata of your manifest in the developer dashboard. This means, that if you notice a typo, you will have to edit the manifest, increase the version number, and zip the files all over again.
 
 Make sure you check and include the following fields: 
 
@@ -56,7 +56,7 @@ metadata.
 [locally]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
 [name]: /docs/extensions/mv3/manifest/name
 [publish]: /docs/webstore/publish
-[publish]: /docs/webstore/upload
+[upload]: /docs/webstore/upload
 [register]: /docs/webstore/register
 [setup-account]: /docs/webstore/set-up-account
 [version]: /docs/extensions/mv3/manifest/version
