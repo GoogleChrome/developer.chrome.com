@@ -100,13 +100,13 @@ This chromium.org page [maps tokens to User Agent Client Hints](https://www.chro
 
 ### Chrome on desktop
 
-#### Format: 
+#### Format 
 
 <pre>Mozilla/5.0 (&lt;unifiedPlatform>) AppleWebKit/537.36
 (KHTML, like Gecko)
 Chrome/&lt;majorVersion>.0.0.0 Safari/537.36</pre>
 
-#### Examples:
+#### Examples
 
 **Mac desktop**
 
@@ -126,12 +126,12 @@ For user-agent examples from Chrome 107 and earlier, visit [chromium.org updates
 
 ### Chrome on Android
 
-#### Format:
+#### Format
 
 <pre>Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko)
 Chrome/&lt;majorVersion>.0.0.0 &lt;deviceCompat> Safari/537.36</pre>
 
-**Example**:
+**Example**
 
 <pre>
 Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko)
