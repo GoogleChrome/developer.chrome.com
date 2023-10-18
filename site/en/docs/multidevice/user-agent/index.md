@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: User-Agent Strings
 date: 2014-02-28
-updated: 2023-10-06
+updated: 2023-10-18
 description: >
   Reference information about the User-Agent string that Chrome sends in
   Android, iOS, and WebView contexts.
@@ -12,18 +12,20 @@ A browser's User-Agent string (UA) helps identify which browser is being used, w
 
 Like all other browsers, Chrome for Android sends this information in the `User-Agent` HTTP header every time it makes a request to any site. It's also available in the client through JavaScript using the `navigator.userAgent` call.
 
-Chrome has reduced the amount of data returned in the User-Agent string. The new strings follow this general format: 
+Chrome has reduced the amount of data returned in the User-Agent string. However, Chrome reduced the strings in [stages](#user-agent-reduction-stages), so you will see different strings retured for any users running versions of Chrome older than 113.
 
-{% Aside %}
-For information on the rationale behind user-agent reduction in Chrome and the introduction of the User Agent Client Hints API, read the [explainer on GitHub](https://github.com/WICG/ua-client-hints).
-{% endAside %}
+The new strings follow this general format: 
 
 <pre>
 Mozilla/5.0 (<strong>&lt;unifiedPlatform></strong>) AppleWebKit/537.36 (KHTML, like Gecko)
 Chrome/<strong>&lt;majorVersion>.0.0.0 &lt;deviceCompat></strong> Safari/537.36
 </pre>
 
-The following table explains each of the tokens in the new user-agent string.
+{% Aside %}
+For information on the rationale behind User-Agent reduction in Chrome and the introduction of the User Agent Client Hints API, read the [explainer on GitHub](https://github.com/WICG/ua-client-hints).
+{% endAside %}
+
+The following table explains each of the tokens in the new User-Agent string.
 
 <table>
 <tr>
@@ -136,7 +138,7 @@ Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko)
 Chrome/117.0.0.0. Mobile Safari/537.36
 </pre> 
 
-If you are parsing user agent strings using regular expressions, the following can be used to check against Chrome on Android phones and tablets:
+If you are parsing User-Agent strings using regular expressions, the following can be used to check against Chrome on Android phones and tablets:
 
 - **Phone pattern:** `'Android' + 'Chrome/[.0-9]* Mobile'`
 - **Tablet pattern:** `'Android' + 'Chrome/[.0-9]* (?!Mobile)'`
@@ -154,8 +156,7 @@ Safari/604.1
 
 ## WebView on Android
 
-The Android 4.4 (KitKat) [Chromium-based WebView][2] adds **<code>Chrome/<i>version</i></code>** to the user agent
-string.
+The Android 4.4 (KitKat) [Chromium-based WebView][2] adds **<code>Chrome/<i>version</i></code>** to the User-Agent string.
 
 Old WebView UA:
 
@@ -172,9 +173,7 @@ AppleWebKit/537.36 (KHTML, like Gecko)
 Version/4.0 <mark>Chrome/30.0.0.0</mark> Mobile Safari/537.36</pre>
 
 If you're attempting to differentiate between the WebView and Chrome for Android, you should look
-for the presence of the **<code>Version/_X.X_</code>** string in the WebView user-agent string. Don't rely on
-the specific Chrome version number (for example, 30.0.0.0) as the version numbers change with each
-release.
+for the presence of the **<code>Version/_X.X_</code>** string in the WebView User-Agent string. Don't rely on the specific Chrome version number (for example, 30.0.0.0) as the version numbers change with each release.
 
 **WebView UA in Lollipop to Android 10**
 
@@ -184,8 +183,7 @@ Version/4.0 <mark>Chrome/43.0.2357.65</mark> Mobile Safari/537.36</code></pre>
 
 **WebView UA in Android 10 and above**
 
-In the newer versions of WebView, you can differentiate the WebView by looking for the `wv` field as
-highlighted in the following string.
+In the newer versions of WebView, you can differentiate the WebView by looking for the `wv` field as highlighted in the following string.
 
 <pre><code>Mozilla/5.0 (Linux; U; Android 10; SM-G960F Build/QP1A.190711.020; <mark>wv</mark>)
 AppleWebKit/537.36 (KHTML, like Gecko) 
@@ -194,6 +192,19 @@ Version/4.0 Chrome/95.0.4638.50 Mobile Safari/537.36 OPR/60.0.2254.59405</code><
 [1]: https://play.google.com/store/apps/details?id=com.android.chrome
 [2]: /docs/multidevice/webview/
 
+## User-Agent reduction stages
+
+If a user is on a version of Chrome from 101 and up to 113, you'll see a partially reduced User-Agent string.
+
+- Chrome 101 shipped reduced Chrome MINOR.BUILD.PATCH version numbers (“0.0.0”), which applies to all page loads on desktop and mobile OSes.
+
+- Chrome 107 began rollout of reduced Desktop UA string and related JavaScript APIs (`navigator.userAgent`, `navigator.appVersion`, `navigator.platform`). The reduced UA string applies to all page loads on desktop OSes.
+
+- Chrome 110 began rollout of reduced Android Mobile (and Tablet) UA string and related JavaScript APIs. The reduced UA string applies to all page loads on Android.
+
+- Chrome 113 and newer return the fully reduced User-Agent string and all page loads receive the reduced string and related JavaScript APIs.
+
+[User-Agent Reduction](https://www.chromium.org/updates/ua-reduction/) provides more detail.
 <!-- ## General formats
 
 

@@ -6,7 +6,7 @@ subhead: >
 description: >
   User-Agent reduction limits passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting. The reduction is now complete.
 date: 2021-11-09
-updated: 2023-09-23
+updated: 2023-10-18
 authors:
   - alexandrawhite
 ---
