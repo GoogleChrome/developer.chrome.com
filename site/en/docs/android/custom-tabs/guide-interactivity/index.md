@@ -73,7 +73,7 @@ CustomTabsIntent intentBuilder = new CustomTabsIntent.Builder()
     .build();
 ```
 
-## Add an action button to the toolbar
+### Add another action button to the toolbar
 
 To add an additional action button to the toolbar, use the intent extra `EXTRA_SHOW_ON_TOOLBAR`:
 
@@ -83,6 +83,7 @@ CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
 customTabsIntent.intent.putExtra(ActionBroadcastReceiver.EXTRA_SHOW_ON_TOOLBAR, true);
 ```
 
+<!--Get more info from Kevin-->
 If the action icon doesn't fit on the toolbar, it will display on the second toolbar.
 
 ## Add custom menu items
@@ -205,20 +206,20 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
     .build();
 ```
 
-## Disable bookmarks and download buttons
+## Enable bookmarks and download buttons
 
-To disable the bookmarks and download buttons from the three dot menu, use the following intent extras:
-
-```
-CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-        .build();
-customTabsIntent.intent.putExtra(ActionBroadcastReceiver.EXTRA_DISABLE_BOOKMARKS_BUTTON, true);
-```
+Enable the bookmarks and download buttons from the three dot menu in the custom tabs builder as follows:
 
 ```
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
         .build();
-customTabsIntent.intent.putExtra(ActionBroadcastReceiver.EXTRA_DISABLE_DOWNLOAD_BUTTON, true);
+customTabsIntent.Builder#setBookmarksButtonEnabled;
+```
+
+```
+CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
+        .build();
+customTabsIntent.Builder#setDownloadButtonEnabled;
 ```
 
 
