@@ -54,7 +54,6 @@ Click the **Verify email** link to send the verification link to your email.
 - [Prepare your extension][prepare]. 
 - [Publish your extension][publish].
 
-
 [group-publishers]: /docs/webstore/group-publishers
 [listing]: /docs/webstore/cws-dashboard-listing
 [name]: /docs/extensions/mv3/manifest/name

@@ -18,10 +18,17 @@ After uploading your item, you won't have the ability to edit the metadata of yo
 
 Make sure you check and include the following fields: 
 
-- `"name":`—This [name][name] appears in the Chrome Web Store and the Chrome browser.
-- `"version":`—The [version][version] number of this extension release.
-- `"icons":`—An array specifying the [icons][icons] of your extension.
-- `"description":`—A string of no more than 132 characters that [describes][description] your extension.
+`"name"`
+: This [name][name] appears in the Chrome Web Store and the Chrome browser.
+
+`"version"`
+: The [version][version] number of this extension release.
+
+`"icons"`
+: An array specifying the [icons][icons] of your extension.
+
+`"description"`
+: A string of no more than 132 characters that [describes][description] your extension.
 
 Set the initial [version number][version] in the manifest to a low value, such as 0.0.0.1. That way, you have room to increase the version number when you [upload new versions][upload] of your item. Each new
 version that you upload to the Chrome Web Store must have a larger version number than the
