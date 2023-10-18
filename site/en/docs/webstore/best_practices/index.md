@@ -154,9 +154,6 @@ Social & Communications
 
 The developer console also asks you specify a category for your theme. Choose the most appropriate category:
 
-Artist Series
-: Themes in collections curated by Google.
-
 Animals
 : Themes inspired by animals.
 
