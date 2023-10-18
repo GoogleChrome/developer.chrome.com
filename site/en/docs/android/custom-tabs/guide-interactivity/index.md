@@ -73,19 +73,6 @@ CustomTabsIntent intentBuilder = new CustomTabsIntent.Builder()
     .build();
 ```
 
-### Add another action button to the toolbar
-
-To add an additional action button to the toolbar, use the intent extra `EXTRA_SHOW_ON_TOOLBAR`:
-
-```
-CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-        .build();
-customTabsIntent.intent.putExtra(ActionBroadcastReceiver.EXTRA_SHOW_ON_TOOLBAR, true);
-```
-
-<!--Get more info from Kevin-->
-If the action icon doesn't fit on the toolbar, it will display on the second toolbar.
-
 ## Add custom menu items
 
 A Custom Tab has as many as five default actions provided by the browser: "Forward", "Page Info", "Refresh", "Find in Page" and "Open in Browser". Additionally, you can add up to seven more. These menu items will be inserted between the icon row and the browser-provided items. (See the image below.) The actual number depends on the underlying browser implementation. (For example, with version 117 Chrome increased the number of menu items from five to seven.) So it is best to add the most important items first. 
@@ -213,13 +200,13 @@ Enable the bookmarks and download buttons from the three dot menu in the custom 
 ```
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
         .build();
-customTabsIntent.Builder#setBookmarksButtonEnabled;
+customTabsIntent.Builder#setBookmarksButtonEnabled(true);
 ```
 
 ```
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
         .build();
-customTabsIntent.Builder#setDownloadButtonEnabled;
+customTabsIntent.Builder#setDownloadButtonEnabled(true);
 ```
 
 
