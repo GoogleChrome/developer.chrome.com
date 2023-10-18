@@ -8,7 +8,7 @@ description: How to set up your Chrome Web Store developer account.
 
 After [registering your developer account][register], you can proceed to fill out additional information about your account. 
 
-## Set up your account {: #setup-a-developer-account }
+## Fill out your account information
 
 To set up your account go to the **Account page** in the developer dashboard, located on the left menu.
 
@@ -24,8 +24,8 @@ Here you can provide your developer profile information, configure management se
 Publisher name (Required)
 : Appears under the title of each of your extensions. If you are a [verified publisher][verified-publisher], you can display an official publisher URL instead.
 
-Add email (Required)
-: Only displayed under your extensions' contact information. Any notifications will be sent to your Chrome Web Store developer account email.
+Verify your email (Required)
+: Only displayed under your extensions' contact information. Any notifications will be sent to your Chrome Web Store developer account email. See [Verify your email address](#verify-contact-email) for details
 
 Physical address (Required in some circumstances)
 : Only items that offer functionality to purchase items, additional features, or subscriptions must include a physical address.
