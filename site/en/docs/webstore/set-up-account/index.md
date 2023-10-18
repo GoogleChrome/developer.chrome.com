@@ -58,12 +58,12 @@ Click the **Verify email** link to send the verification link to your email.
 [group-publishers]: /docs/webstore/group-publishers
 [listing]: /docs/webstore/cws-dashboard-listing
 [name]: /docs/extensions/mv3/manifest/name
+[prepare]: /docs/webstore/prepare
 [privacy]: /docs/webstore/cws-dashboard-privacy
+[publish]: /docs/webstore/publish
 [register]: /docs/webstore/register
 [review-times]: /docs/webstore/review-process/#review-time
 [update]: /docs/webstore/update
-[publish]: /docs/webstore/publish
-[prepare]: /docs/webstore/prepare
 [user-data]: /docs/webstore/user_data/
 [verified-publisher]: /docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status
 [version]: /docs/extensions/mv3/manifest/version

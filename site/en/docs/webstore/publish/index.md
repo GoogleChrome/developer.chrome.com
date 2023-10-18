@@ -99,7 +99,7 @@ There are important emails like take down or rejection notifications that are en
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/l27aRFGCN4MJURmpoCQN.png", alt="Screenshot of enable
 staged and reviewed items", width="709", height="238" %}
 
-## Additional resources {: #next-steps }
+## Additional resources
 
 - [Update your Chrome Web Store Item][update].
 - Understand the [Chrome Web Store Review Process][cws-review].
@@ -110,13 +110,13 @@ staged and reviewed items", width="709", height="238" %}
 [distribution]: /docs/webstore/cws-dashboard-distribution
 [group-publishers]: /docs/webstore/group-publishers
 [listing]: /docs/webstore/cws-dashboard-listing
+[prepare]: /docs/webstore/prepare
 [privacy]: /docs/webstore/cws-dashboard-privacy
 [register]: /docs/webstore/register
-[setup-account]: /docs/webstore/set-up-account
 [review-times]: /docs/webstore/review-process/#review-time
+[setup-account]: /docs/webstore/set-up-account
 [update]: /docs/webstore/update
 [verified-publisher]: /docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status
-[prepare]: /docs/webstore/prepare
 
 
 
