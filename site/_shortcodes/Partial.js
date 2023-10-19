@@ -49,7 +49,7 @@ async function Partial(partialPath) {
       transformedTemplate || 'Failed to render partial.',
       `${partialPath}${ext}`
     );
-    return `{% include '/_partials/${partialPath}.${ext}'}`;
+    return `{% include '${partialPath}${ext}'}`;
   }
 
   // @ts-ignore: `this` has type of `any`
