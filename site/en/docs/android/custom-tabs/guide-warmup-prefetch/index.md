@@ -109,4 +109,17 @@ A Custom Tabs service connection might fail while your activity is running. If y
 
 {% endAside %}
 
+## Open webpages in native apps
+
+On Android, URLs can be handled by native applications. For example, if the user has the Facebook app installed and clicks on a link to a Facebook post, they usually prefer the link opening in the Facebook app instead of in the browser.
+
+For an improved user experience, we recommend allowing users to open webpages in native applications using the following code:
+
+```
+CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
+    .setSendToExternalDefaultHandlerEnabled(true)
+    .setBookmarksButtonEnabled(true)
+    .build();
+```
+
 Next up: [Learn how to resize the Custom Tabs experience](/docs/android/custom-tabs/guide-partial-custom-tabs/).
