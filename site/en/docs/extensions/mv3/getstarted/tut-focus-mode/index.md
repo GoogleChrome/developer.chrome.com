@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Inject scripts into the active tab'
-seoTitle: 'Chrome Extensions Tutorial: Focus Mode'
+seoTitle: 'Chrome Extensions Tutorial: Inject scripts into the active tab'
 subhead: 'Simplify the styling of the current page by clicking the extension toolbar icon.'
 description: 'Learn how to simplify the style of the current page.'
 date: 2022-10-04
