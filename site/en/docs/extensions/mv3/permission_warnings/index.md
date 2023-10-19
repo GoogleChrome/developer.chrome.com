@@ -11,8 +11,6 @@ anchorRedirects:
   understanding_permissions: /docs/extensions/mv3/declare_permissions
 ---
 
-## Overview {: overview }
-
 Chrome extensions enhance the user's browser experience. To do this extensions use [Chrome
 APIs][doc-apis] that require certain permissions. Some permissions are less intrusive and do not
 display a warning. Other permissions trigger a warning that users have to allow.
