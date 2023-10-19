@@ -187,6 +187,22 @@ async function Export() {
     book_path: '/_book.yaml',
   };
 
+  if (inputPath.includes('privacy-sandbox')) {
+    frontMatter = {
+      project_path: '/privacy-sandbox/_project.yaml',
+      book_path: '/privacy-sandbox/_book.yaml',
+    };
+  }
+
+  let tags = page?.template?.frontMatter?.data.tags || [];
+  if (inputPath.includes('blog') && tags.includes('privacy')) {
+    pageUrl = pageUrl.replace('/blog/', '/privacy-sandbox/blog/');
+    frontMatter = {
+      project_path: '/privacy-sandbox/_project.yaml',
+      book_path: '/privacy-sandbox/_book.yaml',
+    };
+  }
+
   if (authors) {
     frontMatter.author_name = authorValues[authors[0]].title.en;
   }
