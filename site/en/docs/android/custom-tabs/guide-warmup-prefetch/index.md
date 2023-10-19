@@ -113,7 +113,7 @@ A Custom Tabs service connection might fail while your activity is running. If y
 
 On Android, URLs can be handled by native applications. For example, if the user has the Facebook app installed and clicks on a link to a Facebook post, they usually prefer the link opening in the Facebook app instead of in the browser.
 
-For an improved user experience, we recommend allowing users to open webpages in native applications using the following code:
+By default, Custom Tabs will open links in the respective native application if installed. However, once a `CustomTabsServiceConnection` has been established, this behavior stops working and all URLs will open a Custom Tab instead.  For an improved user experience, we recommend re-enabling this behavior using the following code:
 
 ```
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
