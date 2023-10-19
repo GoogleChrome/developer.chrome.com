@@ -78,7 +78,7 @@ function Aside(content, type = 'note') {
     };
     const altAsideHTML =
       `<aside class="${className}">` +
-      `${title ? `<b>${title}:</b>` : ''}${md.renderInline(content)}</aside>`;
+      `${title ? `<b>${title}:</b>` : ''}${md.renderInline(content.trim())}</aside>`;
     return `${altAsideHTML}`;
   }
 
