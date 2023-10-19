@@ -24,14 +24,18 @@ const TMP_PATH_IMAGE_MIN = path.join(__dirname, '../../..', '.tmp', 'images');
 let queue = null;
 
 async function getFileFromCache(url) {
+  console.log('Trying to get', url, 'from cache');
   const parsedUrl = new URL(url, 'https://web-dev.imgix.net/');
   const src = parsedUrl.pathname;
 
+  console.log('-- Looking for', path.join(TMP_PATH, src));
   if (fse.existsSync(path.join(TMP_PATH, src))) {
     const file = await fse.readFile(path.join(TMP_PATH, src));
-    return file;
+    console.log('-- Found, returning', src);
+  return file;
   }
 
+  console.log('-- Not in cache', src);
   return;
 }
 
@@ -42,28 +46,29 @@ async function getFileFromCache(url) {
  * @returns
  */
 async function getImageFromRemote(url) {
-  let file = getFileFromCache(url);
-  if (file) {
-    return file;
-  }
 
   const parsedUrl = new URL(url, 'https://web-dev.imgix.net/');
   const src = parsedUrl.pathname;
+
+  console.log('-- -- Fetching from remote', src);
 
   file = await fetch(parsedUrl.toString());
   console.log(`Downloading ${url}`);
   file = await file.buffer();
   if (!file) {
-    console.log('Failed to fetch', url);
+  console.log('-- -- Failed to fetch', src);
+  console.log('Failed to fetch', url);
     return;
   }
 
   await fse.outputFile(path.join(TMP_PATH, src), file);
+  console.log('-- -- Wrote and returning', src);
   return file;
 }
 
 async function getFile(url) {
-  const file = getFileFromCache(url);
+  console.log('Trying to get', url);
+  const file = await getFileFromCache(url);
   if (file) {
     return file;
   }
@@ -114,15 +119,15 @@ async function getImage(url) {
   }
 
   let file = await getFile(url);
-  // if (file) {
-  //   file = await imagemin(file);
-  //   try {
-  //     await fse.outputFile(path.join(TMP_PATH_IMAGE_MIN, src), file);
-  //   } catch(e) {
-  //     console.error('Failed to write image after minification', src);
-  //   }
-  //   return file;
-  // }
+  if (file && !url.endsWith('.svg')) {
+    file = await imagemin(file);
+    try {
+      await fse.outputFile(path.join(TMP_PATH_IMAGE_MIN, src), file);
+    } catch(e) {
+      console.error('Failed to write image after minification', src);
+    }
+    return file;
+  }
 
   return file;
 }
