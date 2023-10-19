@@ -18,7 +18,7 @@ Shared Storage and Private Aggregation. You'll need an understanding of both API
 ## Try the demo
 
 Try out the live [demo](https://shared-storage-demo.web.app/). Follow the steps in the demo instructions to enable the Privacy Sandbox
-APIs. Opening Chrome DevTools will help you visualize the results of different use
+APIs. Opening Chrome DevTools helps you visualize the results of different use
 cases.
 
 Use cases available in the demo:
@@ -43,7 +43,7 @@ be found in `Application -> Shared Storage`.
 
 To view the aggregatable reports sent, navigate to
 `chrome://private-aggregation-internals`. When debug mode is enabled, a report
-will be sent immediately (without a delay) to
+is sent immediately (without a delay) to
 `[[YOUR_ORIGIN]]/.well-known/private-aggregation/debug/report-shared-storage`
 along with the time-delayed report to be sent to
 `[[YOUR_ORIGIN]]/.well-known/private-aggregation/report-shared-storage`.
@@ -61,7 +61,7 @@ Shared Storage is restricted to the context origin (the caller of
 `sharedStorage`).
 
 Shared Storage has a capacity limit per origin, with each entry limited to a
-maximum number of characters. If the limit is reached, no further inputs will be
+maximum number of characters. If the limit is reached, no further inputs are
 stored. The data storage limits are outlined in the
 [Shared Storage explainer](https://github.com/WICG/shared-storage#data-storage-limits).
 
@@ -75,47 +75,47 @@ a worklet.
 {% Partial 'privacy-sandbox/glossary-entries/worklet.njk' %}
 {% endAside %}
 
-**Using JavaScript**
+- **Using JavaScript**
 
-Ad techs can perform specific Shared Storage functions such as setting, appending,
-and deleting values outside of a JavaScript worklet. However, specific functions
-such as reading Shared Storage and performing private aggregation have to be
-completed through a JavaScript worklet.
+    Ad techs can perform specific Shared Storage functions such as setting, appending,
+    and deleting values outside of a JavaScript worklet. However, specific functions
+    such as reading Shared Storage and performing Private Aggregation have to be
+    completed through a JavaScript worklet.
 
-Methods that can be used outside of a JavaScript worklet can be found in the
-[Proposed API Surface - Outside the worklet](https://github.com/WICG/shared-storage#outside-the-worklet).
+    Methods that can be used outside of a JavaScript worklet can be found in the
+    [Proposed API Surface - Outside the worklet](https://github.com/WICG/shared-storage#outside-the-worklet).
 
-Methods that are used in the worklet during an operation can be found in
-[Proposed API Surface - In the worklet](https://github.com/WICG/shared-storage#in-the-worklet-during-an-operation).
+    Methods that are used in the worklet during an operation can be found in
+    [Proposed API Surface - In the worklet](https://github.com/WICG/shared-storage#in-the-worklet-during-an-operation).
 
-**Using response headers** (available soon! (~M117))
+- **Using response headers** (available soon! (~M117))
 
-Similar to JavaScript, only specific functions such as setting, appending, and
-deleting values in Shared Storage can be done using response headers. To work with
-Shared Storage in a response header, `Shared-Storage-Writable: ?1` will have to be
-included in the request header.
+    Similar to JavaScript, only specific functions such as setting, appending, and
+    deleting values in Shared Storage can be done using response headers. To work with
+    Shared Storage in a response header, `Shared-Storage-Writable: ?1` has to be
+    included in the request header.
 
-To initiate a request from the client, run the following code, depending on your chosen method:
+    To initiate a request from the client, run the following code, depending on your chosen method:
 
--  Using `fetch()`
+    -  Using `fetch()`
 
-    ```javascript
-    fetch("https://a.example/path/for/updates", {sharedStorageWritable: true});
-    ```
+        ```javascript
+        fetch("https://a.example/path/for/updates", {sharedStorageWritable: true});
+        ```
 
--  Using an `iframe` or `img` tag
+    -  Using an `iframe` or `img` tag
 
-    ```html
-    <iframe src="https://a.example/path/for/updates" sharedstoragewritable></iframe>
-    ```
+        ```html
+        <iframe src="https://a.example/path/for/updates" sharedstoragewritable></iframe>
+        ```
 
--  Using an IDL attribute with an `iframe` or `img` tag
+    -  Using an IDL attribute with an `iframe` or `img` tag
 
-    ```javascript
-    let iframe = document.getElementById("my-iframe");
-    iframe.sharedStorageWritable = true;
-    iframe.src = "https://a.example/path/for/updates";
-    ```
+        ```javascript
+        let iframe = document.getElementById("my-iframe");
+        iframe.sharedStorageWritable = true;
+        iframe.src = "https://a.example/path/for/updates";
+        ```
 
 Further information can be found in
 [Shared Storage: Response Headers](https://github.com/WICG/shared-storage#from-response-headers).
@@ -123,160 +123,152 @@ Further information can be found in
 ### Writing to Shared Storage
 
 To write to Shared Storage, call `sharedStorage.set()` from inside or
-outside a JavaScript worklet. If called from outside the worklet, the data will
-be written to the origin of the browsing context that the call was made from. If
-called from inside the worklet, the data will be written to the origin of the
-browsing context that loaded the worklet.  The keys that are set will have an
+outside a JavaScript worklet. If called from outside the worklet, the data is written to the origin of the browsing context that the call was made from. If
+called from inside the worklet, the data is written to the origin of the
+browsing context that loaded the worklet.  The keys that are set have an
 expiration date of 30 days from last update.
 
 The `ignoreIfPresent` field is optional. If present and set to `true`, the key
-will not be updated if it already exists. Key expiration is renewed to 30 days
+is not updated if it already exists. Key expiration is renewed to 30 days
 from the `set()` call even if the key is not updated.
 
 If Shared Storage is accessed multiple times in the same page load with the
-same key, the value for the key will be overwritten. It is advised to use the
+same key, the value for the key is overwritten. It's a good idea to use
 `sharedStorage.append()` if the key needs to maintain the previous value.
 
-**Using JavaScript**
+- **Using JavaScript**
 
-Outside the worklet:
+    Outside the worklet:
 
-```javascript
-window.sharedStorage.set('myKey', 'myValue1', { ignoreIfPresent: true });
-// Shared Storage: {'myKey': 'myValue1'}
+    ```javascript
+    window.sharedStorage.set('myKey', 'myValue1', { ignoreIfPresent: true });
+    // Shared Storage: {'myKey': 'myValue1'}
 
-window.sharedStorage.set('myKey', 'myValue2', { ignoreIfPresent: true });
-// Shared Storage: {'myKey': 'myValue1'}
+    window.sharedStorage.set('myKey', 'myValue2', { ignoreIfPresent: true });
+    // Shared Storage: {'myKey': 'myValue1'}
 
-window.sharedStorage.set('myKey', 'myValue2', { ignoreIfPresent: false });
-// Shared Storage: {'myKey': 'myValue2'}
-```
+    window.sharedStorage.set('myKey', 'myValue2', { ignoreIfPresent: false });
+    // Shared Storage: {'myKey': 'myValue2'}
+    ```
 
-Similarly, inside the worklet:
+    Similarly, inside the worklet:
 
-```javascript
-sharedStorage.set('myKey', 'myValue1', { ignoreIfPresent: true });
-```
+    ```javascript
+    sharedStorage.set('myKey', 'myValue1', { ignoreIfPresent: true });
+    ```
 
-**Using response headers**
+- **Using response headers**
 
-You can also write to Shared Storage using response headers. To
-do so, use `Shared-Storage-Write` in the response header along
-with the following commands:
+    You can also write to Shared Storage using response headers. To
+    do so, use `Shared-Storage-Write` in the response header along
+    with the following commands:
 
-```javascript
-Shared-Storage-Write : set;key="myKey";value="myValue";ignore_if_present
-```
+    ```javascript
+    Shared-Storage-Write : set;key="myKey";value="myValue";ignore_if_present
+    ```
 
-```javascript
-Shared-Storage-Write : set;key="myKey";value="myValue";ignore_if_present=?0
-```
+    ```javascript
+    Shared-Storage-Write : set;key="myKey";value="myValue";ignore_if_present=?0
+    ```
 
-Multiple items can be comma-separated and can combine `set`, `append`,
-`delete`, and `clear`.
+    Multiple items can be comma-separated and can combine `set`, `append`,
+    `delete`, and `clear`.
 
-```javascript
-Shared-Storage-Write : 
-set;key="hello";value="world";ignore_if_present, set;key="good";value="bye"
-```
+    ```javascript
+    Shared-Storage-Write : 
+    set;key="hello";value="world";ignore_if_present, set;key="good";value="bye"
+    ```
 
 ### Appending a value
 
 You can append a value to an existing key using the append method. If the
-key does not exist, this will create the key and set the value. This can be
-accomplished using JavaScript or response headers.
+key does not exist, calling `append()` creates the key and sets the value. This can be accomplished using JavaScript or response headers.
 
-**Using JavaScript**
+- **Using JavaScript**
 
-To update values of existing keys, `sharedStorage.append()` can be used. The
-`sharedStorage.append()` call can also be used inside or outside of the
-worklet.
+    To update values of existing keys, use `sharedStorage.append()` from either inside or outside the worklet.
 
-```javascript
-window.sharedStorage.append('myKey', 'myValue1');
-// Shared Storage: {'myKey': 'myValue1'}
+    ```javascript
+    window.sharedStorage.append('myKey', 'myValue1');
+    // Shared Storage: {'myKey': 'myValue1'}
 
-window.sharedStorage.append('myKey', 'myValue2');
-// Shared Storage: {'myKey': 'myValue1myValue2'}
+    window.sharedStorage.append('myKey', 'myValue2');
+    // Shared Storage: {'myKey': 'myValue1myValue2'}
 
-window.sharedStorage.append('anotherKey', 'hello');
-// Shared Storage: {'myKey': 'myValue1myValue2', 'anotherKey': 'hello'}
-```
+    window.sharedStorage.append('anotherKey', 'hello');
+    // Shared Storage: {'myKey': 'myValue1myValue2', 'anotherKey': 'hello'}
+    ```
 
-To append inside the worklet:
+    To append inside the worklet:
 
-```javascript
-sharedStorage.append('myKey', 'myValue1');
-```
+    ```javascript
+    sharedStorage.append('myKey', 'myValue1');
+    ```
 
-**Using response headers**
+- **Using response headers**
 
-Similar to setting a value in Shared Storage, you can use the
-`Shared-Storage-Write` in the response header to pass in the key/value pair.
+    Similar to setting a value in Shared Storage, you can use the
+    `Shared-Storage-Write` in the response header to pass in the key/value pair.
 
-```javascript
-Shared-Storage-Write : append;key="myKey";value="myValue2"
-```
+    ```javascript
+    Shared-Storage-Write : append;key="myKey";value="myValue2"
+    ```
 
 ### Reading from Shared Storage
 
-To read from Shared Storage, you will need to perform this inside a worklet.
+You can read from Shared Storage only from within a worklet.
 
 ```javascript
 await sharedStorage.get('mykey');
 ```
 
-You can read from Shared Storage only from inside the worklet. The
-origin of the browsing context that the worklet module was loaded from
+The origin of the browsing context that the worklet module was loaded from
 determines whose Shared Storage is read.
 
 ### Deleting from Shared Storage
 
-You can peferm deletes from Shared Storage using JavaScript both inside and
-outside the worklet and by using response headers with `delete()`.
+You can perform deletes from Shared Storage using JavaScript from either inside or
+outside the worklet or by using response headers with `delete()`. To delete all keys at once, use `clear()` from either.
 
-To delete all keys at once, use `clear()`.
+- **Using JavaScript**
 
-**Using JavaScript**
+    To delete from Shared Storage from outside the worklet:
 
-To delete from Shared Storage from outside the worklet:
+    ```javascript
+    window.sharedStorage.delete('myKey');
+    ```
 
-```javascript
-window.sharedStorage.delete('myKey');
-```
+    To delete from Shared Storage from inside the worklet:
 
-To delete from Shared Storage from inside the worklet:
+    ```javascript
+    sharedStorage.delete('myKey');
+    ```
 
-```javascript
-sharedStorage.delete('myKey');
-```
+    To delete all keys at once from outside the worklet:
 
-To delete all keys at once from outside the worklet:
+    ```javascript
+    window.sharedStorage.clear();
+    ```
 
-```javascript
-window.sharedStorage.clear();
-```
+    To delete all keys at once from inside the worklet:
 
-To delete all keys at once from inside the Shared Storage worklet:
+    ```javascript
+    sharedStorage.clear();
+    ```
 
-```javascript
-sharedStorage.clear();
-```
+- **Using response headers**
 
-**Using response headers**
+    To delete values using response headers, you can also use `Shared-Storage-Write` in the response header to pass the key to be deleted.
 
-To delete values using response headers, you can also use the
-`Shared-Storage-Write `in the response header to pass the key to be deleted.
+    ```javascript
+    delete;key="myKey"
+    ```
 
-```javascript
-delete;key="myKey"
-```
+    To delete all keys using response headers:
 
-To delete all keys using response headers:
-
-```javascript
-clear;
-```
+    ```javascript
+    clear;
+    ```
 
 ### Context switching
 
@@ -285,25 +277,25 @@ Shared Storage data is written to the
 (for example, https://example.adtech.com) of the browsing context that the call
 originated from.
 
-When you load the third-party code with a `<script>` tag, the code will be
+When you load the third-party code using a `<script>` tag, the code is
 executed in the browsing context of the embedder. Therefore, when the
-third-party code calls `sharedStorage.set()`, the data will be written to the
+third-party code calls `sharedStorage.set()`, the data is written to the
 embedder's Shared Storage. When you load the third-party code within an iframe,
-the code will receive a new browsing context, and its origin will be the origin
+the code receives a new browsing context, and its origin is the origin
 of the iframe. Therefore, the `sharedStorage.set()` call made from the iframe
-will store the data into the Shared Storage of the iframe origin.
+stores the data into the Shared Storage of the iframe origin.
 
 #### First-party context
 
 If a first-party page has embedded third-party JavaScript code that
-calls `sharedStorage.set()` or `sharedStorage.delete()`, the key-value
-pair will be stored in the first-party context.
+calls `sharedStorage.set()` or `sharedStorage.delete()`, the key/value
+pair is stored in the first-party context.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cjt7jPToJIEPjZ4aB4pL.png", alt="ALT_TEXT_HERE", width="800", height="240" %}
 
 #### Third-party context
 
-The key-value pair can be stored in the ad tech or third-party context by creating
+The key/value pair can be stored in the ad-tech or third-party context by creating
 an iframe and calling `set()` or `delete()` in the JavaScript code from within the
 iframe.
 
@@ -311,15 +303,15 @@ iframe.
 
 ## Private Aggregation API
 
-To be able to measure aggregatable data stored in Shared Storage, you can use the Private Aggregation API.
+To measure aggregatable data stored in Shared Storage, you can use the Private Aggregation API.
 
-To create a report, you can call `contributeToHistogram()` inside a worklet
+To create a report, call `contributeToHistogram()` inside a worklet
 with a bucket and value. The bucket is represented by an unsigned 128-bit
 integer which must be passed into the function as a `BigInt`. The value is a
 positive integer.
 
 To protect privacy, the report's payload, which contains the bucket and value,
-will be encrypted in transit, and it can only be decrypted and aggregated using
+is encrypted in transit, and it can only be decrypted and aggregated using
 the Aggregation Service.
 
 The browser will also limit the contributions a site can make to an output
@@ -375,7 +367,7 @@ register('shared-storage-report',
 
 ## Debugging
 
-To enable debugging, call the `enableDebugMode()` JavaScript method in the same context where Shared Storage and Private Aggregation will be used. This will be applied for future reports in the same context.
+To enable debugging, call the `enableDebugMode()` JavaScript method in the same context where Shared Storage and Private Aggregation is used. This will be applied for future reports in the same context.
 
 ```javascript
 privateAggregation.enableDebugMode();
@@ -410,7 +402,7 @@ try {
 Reports are sent to `/.well-known/private-aggregation/report-shared-storage`
 and `/.well-known/private-aggregation/debug/report-shared-storage`.
 
-Debug reports will receive a payload similar to the following JSON. This payload defines the `api` field as "shared-storage".
+Debug reports receive a payload similar to the following JSON. This payload defines the `api` field as "shared-storage".
 
 ```javascript
 {
