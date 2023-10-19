@@ -41,13 +41,15 @@ async function exportFile(ctx, data = undefined, customFilePath = undefined) {
         if (fse.existsSync(`${path.join(BASE_PATH, filePathStub)}.md`)) {
           try {
             await fse.move(
-              path.join(BASE_PATH, `${filePath}.md`),
-              path.join(BASE_PATH, `${filePath}/index.md`)
+              path.join(BASE_PATH, `${filePathStub}.md`),
+              path.join(BASE_PATH, `${filePathStub}/index.md`)
             );
           } catch (e) {
             console.info(
               'Could not move',
-              path.join(BASE_PATH, `${filePath}.md`)
+              `${filePathStub}.md`,
+              'to',
+              `${filePathStub}/index.md`
             );
           }
         }
