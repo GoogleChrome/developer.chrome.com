@@ -12,6 +12,7 @@
     "clean": "rimraf dist",
     "cloud-secrets": "node ./cloud-secrets.js",
     "dev": "npm-run-all setup eleventy --parallel start watch",
+    "export": "npm-run-all setup eleventy",
     "watch": "npm-run-all --parallel --race gulp:watch rollup:watch eleventy:watch",
     "eleventy:debug": "node --inspect ./node_modules/.bin/eleventy",
     "eleventy:watch": "eleventy --quiet --watch --incremental",
