@@ -17,7 +17,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 ### New guidance on testing extensions {: #testing-guidance-oct-23 }
 
-<p class="color-secondary-text type--caption">Posted on <time>October 19, 2023</time></p>
+<p class="color-secondary-text type--caption">Posted on <time>October 23, 2023</time></p>
 
 We've just published new guidance on how to write automated tests for extensions, including [how
 to write unit tests](/docs/extensions/mv3/unit-testing/) and both
