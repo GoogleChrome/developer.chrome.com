@@ -195,18 +195,13 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
 
 ## Enable bookmarks and download buttons
 
-Enable the bookmarks and download buttons from the three dot menu in the custom tabs builder as follows:
+Enable the bookmarks and download buttons from the three dot menu in the custom tabs builder using the following code:
 
 ```
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-        .build();
-customTabsIntent.Builder#setBookmarksButtonEnabled(true);
-```
-
-```
-CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-        .build();
-customTabsIntent.Builder#setDownloadButtonEnabled(true);
+    .setBookmarksButtonEnabled(true)
+    .setDownloadButtonEnabled(true)
+    .build();
 ```
 
 
