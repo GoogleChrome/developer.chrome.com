@@ -88,7 +88,9 @@ a worklet.
     Methods that are used in the worklet during an operation can be found in
     [Proposed API Surface - In the worklet](https://github.com/WICG/shared-storage#in-the-worklet-during-an-operation).
 
-- **Using response headers** (available soon! (~M117))
+- **Using response headers** 
+
+    Note that response headerers are available in Chrome M119 beta/canary and it will be available in Stable shortly.
 
     Similar to JavaScript, only specific functions such as setting, appending, and
     deleting values in Shared Storage can be done using response headers. To work with
