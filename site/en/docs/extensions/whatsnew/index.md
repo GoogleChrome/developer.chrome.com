@@ -15,6 +15,15 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
+### New guidance on testing extensions {: #testing-guidance-oct-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 19, 2023</time></p>
+
+We've just published new guidance on how to write automated tests for extensions, including [how
+to write unit tests](/docs/extensions/mv3/unit-testing/) and both
+[general guidance](/docs/extensions/mv3/end-to-end-testing/) and a
+[tutorial](/docs/extensions/mv3/tut_puppeteer-testing/) on end-to-end testing.
+
 ### Blog post: What's happening in Chrome Extensions - October 2023 {: #whats-happening-10-23 }
 
 <p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
