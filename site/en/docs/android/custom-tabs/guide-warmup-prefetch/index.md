@@ -118,7 +118,6 @@ For an improved user experience, we recommend allowing users to open webpages in
 ```
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
     .setSendToExternalDefaultHandlerEnabled(true)
-    .setBookmarksButtonEnabled(true)
     .build();
 ```
 
