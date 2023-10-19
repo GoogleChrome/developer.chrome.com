@@ -785,6 +785,11 @@ redirects:
 - from: /docs/privacy-sandbox/permissions-policy/
   to: /articles/permissions-policy/
 
+# PR 7600 replacing Custom Tabs native apps how-to with external handler section in warmup/prefetch guide
+
+- from: /docs/android/custom-tabs/howto-custom-tab-native-apps/
+  to: /docs/android/custom-tabs/guide-warmup-prefetch/#open-webpages-in-native-apps
+
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.
 - from: /...
