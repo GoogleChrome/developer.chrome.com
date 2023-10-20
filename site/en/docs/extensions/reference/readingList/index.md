@@ -85,8 +85,7 @@ To remove an item, use [`chrome.readingList.removeEntry`][remove-entry]:
 
 ```js
 chrome.readingList.removeEntry({
-  url: "https://developer.chrome.com/",
-  hasBeenRead: true
+  url: "https://developer.chrome.com/"
 });
 ```
 
