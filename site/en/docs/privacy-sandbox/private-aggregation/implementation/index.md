@@ -5,21 +5,23 @@ subhead: >
   Learn how to integrate Shared Storage and Private Aggregation and how they work together to produce aggregatable reports.
 description: >
   Learn how to integrate Shared Storage and Private Aggregation and how they work together to produce aggregatable reports.
-updated: 2023-10-19
+updated: 2023-10-23
 authors:
   - kevinkiklee
 ---
 
 This document is a quickstart guide for using
-Shared Storage and Private Aggregation. You'll need an understanding of both APIs because Shared Storage stores the values and Private Aggregation creates the aggregatable reports.
+Shared Storage and Private Aggregation. You'll need an understanding of both
+APIs because Shared Storage stores the values and Private Aggregation creates
+the aggregatable reports.
 
 **Target Audience:** Ad techs and measurement providers
 
 ## Try the demo
 
-Try out the live [demo](https://shared-storage-demo.web.app/). Follow the steps in the demo instructions to enable the Privacy Sandbox
-APIs. Opening Chrome DevTools helps you visualize the results of different use
-cases.
+Try out the [live demo](https://shared-storage-demo.web.app/). Follow the steps
+in the demo instructions to enable the Privacy Sandbox APIs. Opening Chrome
+DevTools helps you visualize the results of different use cases.
 
 Use cases available in the demo:
 
@@ -29,15 +31,16 @@ Use cases available in the demo:
     -   K+ frequency measurement
 -   General Usage
     -   Measure hover-over event inside fenced frames
-    -   Top level navigation
-    -   Controlling where 3rd party can write
+    -   Top-level navigation
+    -   Controlling where third parties can write
 
 ### How to view Shared Storage
 
 To view what is stored in Shared Storage, use Chrome DevTools. Stored data can
 be found in `Application -> Shared Storage`.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/wDOc1Bt5ClCICP0Pm98S.png", alt="ALT_TEXT_HERE", width="800", height="462" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/wDOc1Bt5ClCICP0Pm98S.png",
+alt="ALT_TEXT_HERE", width="800", height="462" %}
 
 ### View reports for Private Aggregation
 
@@ -48,15 +51,20 @@ is sent immediately (without a delay) to
 along with the time-delayed report to be sent to
 `[[YOUR_ORIGIN]]/.well-known/private-aggregation/report-shared-storage`.
 
-To enable debugging, follow debugging instructions in the [Enable
-debugging](#enable-debugging) section.
+To enable debugging, follow the debugging instructions in the
+[Enable debugging](#enable-debugging) section.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/HWcqZEDSbHeun6qqaQQD.png", alt="ALT_TEXT_HERE", width="800", height="366" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/HWcqZEDSbHeun6qqaQQD.png",
+alt="ALT_TEXT_HERE", width="800", height="366" %}
 
 ## Shared Storage API
 
 To prevent cross-site tracking, browsers have started partitioning all forms of
-storage, including local storage, cookies, and so forth. But there are use cases where unpartitioned storage is required. The Shared Storage API provides unlimited write access across different top-level sites with privacy-preserving read access.
+storage, including local storage, cookies, and so forth. But there are use
+cases where unpartitioned storage is required. The Shared Storage API provides
+unlimited write access across different top-level sites with privacy-preserving
+read access.
+
 Shared Storage is restricted to the context origin (the caller of
 `sharedStorage`).
 
@@ -67,9 +75,9 @@ stored. The data storage limits are outlined in the
 
 ### Invoking Shared Storage
 
-Ad techs can write to Shared Storage using JavaScript or response headers. Reading
-from Shared Storage only occurs within an isolated JavaScript environment called
-a worklet.
+Ad techs can write to Shared Storage using JavaScript or response headers.
+Reading from Shared Storage only occurs within an isolated JavaScript
+environment called a worklet.
 
 {% Aside 'key-term' %}
 {% Partial 'privacy-sandbox/glossary-entries/worklet.njk' %}
@@ -77,12 +85,12 @@ a worklet.
 
 - **Using JavaScript**
 
-    Ad techs can perform specific Shared Storage functions such as setting, appending,
-    and deleting values outside of a JavaScript worklet. However, specific functions
-    such as reading Shared Storage and performing Private Aggregation have to be
-    completed through a JavaScript worklet.
+    Ad techs can perform specific Shared Storage functions such as setting,
+    appending, and deleting values outside of a JavaScript worklet. However,
+    functions such as reading Shared Storage and performing Private
+    Aggregation have to be completed through a JavaScript worklet.
 
-    Methods that can be used outside of a JavaScript worklet can be found in the
+    Methods that can be used outside of a JavaScript worklet can be found in
     [Proposed API Surface - Outside the worklet](https://github.com/WICG/shared-storage#outside-the-worklet).
 
     Methods that are used in the worklet during an operation can be found in
@@ -90,14 +98,16 @@ a worklet.
 
 - **Using response headers** 
 
-    Note that response headers are available in Chrome M119 beta/canary and it will be available in Stable shortly.
+    Note that response headers are available in Chrome M119 beta/canary and
+    will be available in Stable shortly.
 
-    Similar to JavaScript, only specific functions such as setting, appending, and
-    deleting values in Shared Storage can be done using response headers. To work with
-    Shared Storage in a response header, `Shared-Storage-Writable: ?1` has to be
-    included in the request header.
+    Similar to JavaScript, only specific functions such as setting, appending,
+    and deleting values in Shared Storage can be done using response headers.
+    To work with Shared Storage in a response header,
+    `Shared-Storage-Writable: ?1` has to be included in the request header.
 
-    To initiate a request from the client, run the following code, depending on your chosen method:
+    To initiate a request from the client, run the following code, depending on
+    your chosen method:
 
     -  Using `fetch()`
 
@@ -124,11 +134,12 @@ Further information can be found in
 
 ### Writing to Shared Storage
 
-To write to Shared Storage, call `sharedStorage.set()` from inside or
-outside a JavaScript worklet. If called from outside the worklet, the data is written to the origin of the browsing context that the call was made from. If
-called from inside the worklet, the data is written to the origin of the
-browsing context that loaded the worklet.  The keys that are set have an
-expiration date of 30 days from last update.
+To write to Shared Storage, call `sharedStorage.set()` from inside or outside a
+JavaScript worklet. If called from outside the worklet, the data is written to
+the origin of the browsing context that the call was made from. If called from
+inside the worklet, the data is written to the origin of the browsing context
+that loaded the worklet. The keys that are set have an expiration date of 30
+days from last update.
 
 The `ignoreIfPresent` field is optional. If present and set to `true`, the key
 is not updated if it already exists. Key expiration is renewed to 30 days
@@ -184,11 +195,13 @@ same key, the value for the key is overwritten. It's a good idea to use
 ### Appending a value
 
 You can append a value to an existing key using the append method. If the
-key does not exist, calling `append()` creates the key and sets the value. This can be accomplished using JavaScript or response headers.
+key does not exist, calling `append()` creates the key and sets the value. This
+can be accomplished using JavaScript or response headers.
 
 - **Using JavaScript**
 
-    To update values of existing keys, use `sharedStorage.append()` from either inside or outside the worklet.
+    To update values of existing keys, use `sharedStorage.append()` from either
+    inside or outside the worklet.
 
     ```javascript
     window.sharedStorage.append('myKey', 'myValue1');
@@ -210,7 +223,8 @@ key does not exist, calling `append()` creates the key and sets the value. This 
 - **Using response headers**
 
     Similar to setting a value in Shared Storage, you can use the
-    `Shared-Storage-Write` in the response header to pass in the key/value pair.
+    `Shared-Storage-Write` in the response header to pass in the key/value
+    pair.
 
     ```javascript
     Shared-Storage-Write : append;key="myKey";value="myValue2"
@@ -229,8 +243,9 @@ determines whose Shared Storage is read.
 
 ### Deleting from Shared Storage
 
-You can perform deletes from Shared Storage using JavaScript from either inside or
-outside the worklet or by using response headers with `delete()`. To delete all keys at once, use `clear()` from either.
+You can perform deletes from Shared Storage using JavaScript from either
+inside or outside the worklet or by using response headers with `delete()`.
+To delete all keys at once, use `clear()` from either.
 
 - **Using JavaScript**
 
@@ -260,7 +275,9 @@ outside the worklet or by using response headers with `delete()`. To delete all 
 
 - **Using response headers**
 
-    To delete values using response headers, you can also use `Shared-Storage-Write` in the response header to pass the key to be deleted.
+    To delete values using response headers, you can also use
+    `Shared-Storage-Write` in the response header to pass the key to be
+    deleted.
 
     ```javascript
     delete;key="myKey"
@@ -293,19 +310,22 @@ If a first-party page has embedded third-party JavaScript code that
 calls `sharedStorage.set()` or `sharedStorage.delete()`, the key/value
 pair is stored in the first-party context.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cjt7jPToJIEPjZ4aB4pL.png", alt="ALT_TEXT_HERE", width="800", height="240" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cjt7jPToJIEPjZ4aB4pL.png",
+alt="ALT_TEXT_HERE", width="800", height="240" %}
 
 #### Third-party context
 
-The key/value pair can be stored in the ad-tech or third-party context by creating
-an iframe and calling `set()` or `delete()` in the JavaScript code from within the
-iframe.
+The key/value pair can be stored in the ad-tech or third-party context by
+creating an iframe and calling `set()` or `delete()` in the JavaScript code
+from within the iframe.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cT7Lec8I04vlWl4iqbYv.png", alt="ALT_TEXT_HERE", width="800", height="222" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cT7Lec8I04vlWl4iqbYv.png",
+alt="ALT_TEXT_HERE", width="800", height="222" %}
 
 ## Private Aggregation API
 
-To measure aggregatable data stored in Shared Storage, you can use the Private Aggregation API.
+To measure aggregatable data stored in Shared Storage, you can use the Private
+Aggregation API.
 
 To create a report, call `contributeToHistogram()` inside a worklet
 with a bucket and value. The bucket is represented by an unsigned 128-bit
@@ -317,7 +337,11 @@ is encrypted in transit, and it can only be decrypted and aggregated using
 the Aggregation Service.
 
 The browser will also limit the contributions a site can make to an output
-query. Specifically, the [contribution budget](/docs/privacy-sandbox/private-aggregation-fundamentals/#contribution-budget) limits the total of all reports from a single site for a given browser in a given time window across all buckets. If the current budget is exceeded, a report will not be generated.
+query. Specifically, the
+[contribution budget](/docs/privacy-sandbox/private-aggregation-fundamentals/#contribution-budget)
+limits the total of all reports from a single site for a given browser in a
+given time window across all buckets. If the current budget is exceeded, a
+report will not be generated.
 
 ```javascript
 privateAggregation.contributeToHistogram({
@@ -369,7 +393,9 @@ register('shared-storage-report',
 
 ## Debugging
 
-To enable debugging, call the `enableDebugMode()` JavaScript method in the same context where Shared Storage and Private Aggregation is used. This will be applied for future reports in the same context.
+To enable debugging, call the `enableDebugMode()` JavaScript method in the same
+context where Shared Storage and Private Aggregation is used. This will be
+applied for future reports in the same context.
 
 ```javascript
 privateAggregation.enableDebugMode();
@@ -387,9 +413,11 @@ privateAggregation.enableDebugMode({debugKey: 1234});
 
 Shared Storage returns a generic error message. You can debug Shared Storage by
 wrapping the calls with
-[try-catch](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch) blocks.
+[try-catch](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/try...catch)
+blocks.
 
-{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/ANAyi8xjMVRH4DVpHpNR.png", alt="ALT_TEXT_HERE", width="800", height="58" %}
+{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/ANAyi8xjMVRH4DVpHpNR.png",
+alt="ALT_TEXT_HERE", width="800", height="58" %}
 
 ```javascript
 try {
@@ -404,7 +432,8 @@ try {
 Reports are sent to `/.well-known/private-aggregation/report-shared-storage`
 and `/.well-known/private-aggregation/debug/report-shared-storage`.
 
-Debug reports receive a payload similar to the following JSON. This payload defines the `api` field as "shared-storage".
+Debug reports receive a payload similar to the following JSON. This payload
+defines the `api` field as "shared-storage".
 
 ```javascript
 {
@@ -430,18 +459,19 @@ the JavaScript code found in the
 
 ## Next steps
 
-The following pages explain important aspects of the Shared Storage and Private Aggregation APIs.
+The following pages explain important aspects of the Shared Storage and Private
+Aggregation APIs.
 
 - [Introduction to Shared Storage (Developer Chrome)](/docs/privacy-sandbox/shared-storage/)
 - [Shared Storage Use Cases (Developer Chrome)](/docs/privacy-sandbox/shared-storage/#use-cases)
 - [Introduction to Private Aggregation (Developer Chrome)](/docs/privacy-sandbox/private-aggregation/)
-- [Shared Storage Explainer (Github)](https://github.com/WICG/shared-storage)
-- [Private Aggregation Explainer (Github)](https://github.com/patcg-individual-drafts/private-aggregation-api)
+- [Shared Storage Explainer (GitHub)](https://github.com/WICG/shared-storage)
+- [Private Aggregation Explainer (GitHub)](https://github.com/patcg-individual-drafts/private-aggregation-api)
 - [Shared Storage and Private Aggregation Demo](https://shared-storage-demo.web.app/)
 
-Once you are acquainted with the APIs, you can start collecting
-the reports, which are sent as a POST request
-to the following endpoints as JSON in the request body.
+Once you are acquainted with the APIs, you can start collecting the reports,
+which are sent as a POST request to the following endpoints as JSON in the
+request body.
 
 -   Debug Reports -
     `context-origin/.well-known/private-aggregation/debug/report-shared-storage`
@@ -460,4 +490,3 @@ You can share your feedback on the APIs and documentation on GitHub.
 
 -   [Shared Storage](https://github.com/WICG/shared-storage/issues)
 -   [Private Aggregation](https://github.com/patcg-individual-drafts/private-aggregation-api/issues)
-
