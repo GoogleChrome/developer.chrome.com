@@ -5,7 +5,7 @@ description: "Learn how expanded select element capabilities enable visual horiz
 authors:
   - unakravets
 tags:
-  - css
+  - html
   - chrome-119
 date: 2023-10-23
 ---
