@@ -7,6 +7,7 @@ subhead: >
   Scrollers without tabindex value set and without any focusable children are now keyboard focusable.
 date: 2023-10-20
 thumbnail: image/kheDArv5csY6rvQUJDbWRscckLr1/syCUeFoHRAmGHWtfuGsX.jpg
+alt: ""
 authors:
     - dizhang
 ---
