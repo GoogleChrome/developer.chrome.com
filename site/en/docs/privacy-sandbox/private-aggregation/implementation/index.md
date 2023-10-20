@@ -100,8 +100,10 @@ environment called a worklet.
 
 - **Using response headers** 
 
-    Note that response headers are available in Chrome M119 beta/canary and
-    will be available in Stable shortly.
+    {% Aside %}
+    This feature will be available in M119, which will move to Stable by the
+    end of October 2023.
+    {% endAside %}
 
     Similar to JavaScript, only specific functions such as setting, appending,
     and deleting values in Shared Storage can be done using response headers.
