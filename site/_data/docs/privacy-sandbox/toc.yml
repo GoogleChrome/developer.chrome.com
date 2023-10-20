@@ -44,6 +44,7 @@
     - url: /docs/privacy-sandbox/shared-storage
     - url: https://goo.gle/shared-storage-walkthrough
       title: i18n.docs.privacy-sandbox.shared-storage-walkthrough
+    - url: /docs/privacy-sandbox/shared-storage/shared-storage-private-aggregation/
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/ip-protection
