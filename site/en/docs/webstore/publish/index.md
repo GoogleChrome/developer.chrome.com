@@ -65,9 +65,9 @@ is complete.
 If you submit your item to publish automatically after review, you can still choose deferred publishing by selecting the **Defer publish** option located in the item's menu.
 
 <figure>
-    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/s58dN9mMogWe5W900eD4.png",
-    alt="Screenshot of defer publish option in the 'more' menu", width="286", height="184", class='screenshot' %}
-  <figcaption>
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png",
+       alt="Screenshot showing the 'more' menu's defer publish option", width="286", height="184", class='screenshot' %}
+   <figcaption>
     Deferred publishing option in the items menu 
   </figcaption>
 </figure>
