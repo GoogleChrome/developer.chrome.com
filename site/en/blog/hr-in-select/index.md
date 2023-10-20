@@ -7,7 +7,7 @@ authors:
 tags:
   - css
   - chrome-119
-date: 2023-10-20
+date: 2023-10-23
 ---
 The select element gets a small but mighty upgrade in Chrome 119, with a feature that also landed in [Safari 17](https://webkit.org/blog/14445/webkit-features-in-safari-17-0/). Now, you can add `<hr>` (horizontal rule) elements into the list of select options and they will appear as separators to help visually break up the options for a better user experience.
 
