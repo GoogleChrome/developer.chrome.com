@@ -15,7 +15,7 @@ Shared Storage and Private Aggregation. You'll need an understanding of both
 APIs because Shared Storage stores the values and Private Aggregation creates
 the aggregatable reports.
 
-**Target Audience:** Ad techs and measurement providers
+**Target Audience:** Ad techs and measurement providers.
 
 ## Try the demo
 
@@ -40,7 +40,8 @@ To view what is stored in Shared Storage, use Chrome DevTools. Stored data can
 be found in `Application -> Shared Storage`.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/wDOc1Bt5ClCICP0Pm98S.png",
-alt="ALT_TEXT_HERE", width="800", height="462" %}
+alt="View data stored in Shared Storage using Chrome DevTools.",
+width="800", height="462" %}
 
 ### View reports for Private Aggregation
 
@@ -55,7 +56,8 @@ To enable debugging, follow the debugging instructions in the
 [Enable debugging](#enable-debugging) section.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/HWcqZEDSbHeun6qqaQQD.png",
-alt="ALT_TEXT_HERE", width="800", height="366" %}
+alt="Viewing reports in chrome://private-aggregation-internals.",
+width="800", height="366" %}
 
 ## Shared Storage API
 
@@ -311,7 +313,8 @@ calls `sharedStorage.set()` or `sharedStorage.delete()`, the key/value
 pair is stored in the first-party context.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cjt7jPToJIEPjZ4aB4pL.png",
-alt="ALT_TEXT_HERE", width="800", height="240" %}
+alt="Data stored in a first-party page with embedded third-party JavaScript.",
+width="800", height="240" %}
 
 #### Third-party context
 
@@ -320,7 +323,8 @@ creating an iframe and calling `set()` or `delete()` in the JavaScript code
 from within the iframe.
 
 {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/cT7Lec8I04vlWl4iqbYv.png",
-alt="ALT_TEXT_HERE", width="800", height="222" %}
+alt="Data stored in the ad-tech or third-party context.", width="800",
+height="222" %}
 
 ## Private Aggregation API
 
