@@ -193,5 +193,16 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
     .build();
 ```
 
+## Enable bookmarks and download buttons
+
+Enable the bookmarks and download buttons from the three dot menu in `CustomTabsIntent.Builder` using the following code:
+
+```java
+CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
+    .setBookmarksButtonEnabled(true)
+    .setDownloadButtonEnabled(true)
+    .build();
+```
+
 
 Next up: [Learn how to speed up loading web content in a Custom Tab](/docs/android/custom-tabs/guide-warmup-prefetch/).
