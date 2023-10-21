@@ -62,3 +62,6 @@ For example, to toggle [light and dark theme preference](/docs/devtools/renderin
 To bring back defaults, click **Restore default shortcuts** in the bottom-right corner of the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %}  **Settings** > **Shortcuts** tab.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/nQK0bSoeOzjAzWnmC3AY.png", alt="Restore default shortcuts.", width="800", height="463" %}
+
+
+**There is no Shortcut setting on win10 version of Chrome, is there alternative solution?**
