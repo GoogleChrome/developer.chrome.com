@@ -42,4 +42,4 @@ To achieve this, add `<hr>` elements into the options list as shown in the follo
   tab: 'result'
 } %}
 
-Small changes can make a difference to your users. For more information on the future of form controls, including how to make them fully stylable, learn about the [popover API](/blog/introducing-popover-api/) and keep and eye out for the future [selectlist](https://open-ui.org/components/selectlist/) element.
+Small changes can make a difference to your users. For more information on the future of form controls, including how to make them fully stylable, learn about the [popover API](/blog/introducing-popover-api/) and keep an eye out for the future [selectlist](https://open-ui.org/components/selectlist/) element.
