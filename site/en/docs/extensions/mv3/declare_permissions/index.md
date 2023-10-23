@@ -91,7 +91,7 @@ Adding or changing match patterns in the `"host_permissions"` and `"content_scri
 
 ## Allow access {: #allow_access }
  
-If your extension needs to run on `file://` URLs or operate in incognito mode, users must give the extension access on its details page. 
+If your extension needs to run on `file://` URLs or operate in incognito mode, users must give the extension access on its details page. You can find instructions for opening the details page under [Manage your extensions](https://support.google.com/chrome_webstore/answer/2664769?hl=en#:~:text=Manage%20your%20extensions).
 
 {% Details %}
 {% DetailsSummary %}
