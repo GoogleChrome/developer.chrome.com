@@ -56,8 +56,8 @@ The following is an example of the permissions section of a [manifest][doc-manif
     "https://www.developer.chrome.com/*"
   ],
   "optional_host_permissions":[
-    "https://*/*", 
-    "http://*/*" 
+    "https://*/*",
+    "http://*/*"
   ],
   ...
   "manifest_version": 3
@@ -69,7 +69,7 @@ The following is an example of the permissions section of a [manifest][doc-manif
 Host permissions allow extensions to interact with the URL's [matching patterns][doc-match]. Some [Chrome APIs][api-ref] require host permissions in addition to their own API permissions, which are documented on each reference page. Here are some examples:
 
 - Make [`fetch()`][mdn-fetch] requests from the extension service worker and extension pages.
-- Read and query the sensitive [tab properties][api-tabs-tab] (url, title, and favIconUrl) using the [`chrome.tabs`][api-tabs] API. 
+- Read and query the sensitive [tab properties][api-tabs-tab] (url, title, and favIconUrl) using the [`chrome.tabs`][api-tabs] API.
 - Inject a [content script programmatically][cs-prog].
 - Monitor and control the network requests with the [`chrome.webRequest`][api-webrequest] API.
 - Access cookies with the [`chrome.cookies`][api-cookies] API.
@@ -90,7 +90,7 @@ warnings. For a complete list of best practices, see [Permission warnings guidel
 Adding or changing match patterns in the `"host_permissions"` and `"content_scripts.matches"` fields will also trigger a [warning](#warnings). To learn more, see [Updating permissions][perm-update].
 
 ## Allow access {: #allow_access }
- 
+
 If your extension needs to run on `file://` URLs or operate in incognito mode, users must give the extension access on its details page. You can find instructions for opening the details page under [Manage your extensions](https://support.google.com/chrome_webstore/answer/2664769?hl=en#:~:text=Manage%20your%20extensions).
 
 {% Details %}
@@ -122,7 +122,7 @@ If your extension needs to run on `file://` URLs or operate in incognito mode, u
 
 {% endDetails %}
 
-To detect whether the user has allowed access, you can call [`extension.isAllowedIncognitoAccess()`][incognito-allow] or 
+To detect whether the user has allowed access, you can call [`extension.isAllowedIncognitoAccess()`][incognito-allow] or
 [`extension.isAllowedFileSchemeAccess()`][file-scheme-allow].
 
 ## Permissions list {: #permissions }
@@ -173,22 +173,17 @@ for details.
 : Gives access to the <a href="/docs/extensions/reference/declarativeContent/">chrome.declarativeContent</a> API.
 
 `"declarativeNetRequest"`
-: Gives access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API. 
+: Gives access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API.
 
 `"declarativeNetRequestWithHostAccess"`
 : Gives access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API when host permissions are required.
 
 `"declarativeNetRequestFeedback"`
 : Gives permission to write errors and warnings to the DevTools console when using the <a
-          href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API. This permission is for use with [unpacked extensions](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked) and is ignored for extensions installed from the Chrome Web Store.
-<!-- No corresponding reference entry
-    `"displaySource"`
-    : Gives access to the <a href="/docs/extensions/reference/displaySource/">chrome.displaySource</a> API.
+          href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API. This permission is for use with [unpacked extensions](/docs/extensions/mv3/getstarted/development-basics/#load-unpacked) and is ignored for extensions installed from the Chrome Web Store.
 
-    `"dns"`
-    : Gives access to the <a href="/docs/extensions/reference/dns/">chrome.dns</a> API.
--->
-<!--Do these still need to be commented out?-->
+`"dns"`
+: Gives access to the <a href="/docs/extensions/reference/dns/">chrome.dns</a> API.
 
 `"desktopCapture"`
 : Gives access to the <a href="/docs/extensions/reference/desktopCapture/">chrome.desktopCapture</a> API.
@@ -219,7 +214,7 @@ for details.
 : Gives access to the <a href="/docs/extensions/reference/enterprise_platformKeys/">chrome.enterprise.platformKeys</a> API.
 
 `"favicon"`
-: Grants access to the [Favicon](https://developer.chrome.com/docs/extensions/mv3/favicon/) API.
+: Grants access to the [Favicon](/docs/extensions/mv3/favicon/) API.
 
 `"fileBrowserHandler"`
 : Gives access to the <a href="/docs/extensions/reference/fileBrowserHandler/">chrome.fileBrowserHandler</a> API.
@@ -259,7 +254,7 @@ for details.
 : Gives access to the <a href="/docs/extensions/reference/notifications/">chrome.notifications</a> API.
 
 `"offscreen"`
-: Gives access to the <a href="/docs/extensions/reference/offscreen/"><code>chrome.offscreen</code></a> API. 
+: Gives access to the <a href="/docs/extensions/reference/offscreen/"><code>chrome.offscreen</code></a> API.
 
 `"pageCapture"`
 : Gives access to the <a href="/docs/extensions/reference/pageCapture/">chrome.pageCapture</a> API.
@@ -271,7 +266,7 @@ for details.
 : Gives access to the <a href="/docs/extensions/reference/power/">chrome.power</a> API.
 
 `"printerProvider"`
-:Gives access to the <a href="/docs/extensions/reference/printerProvider/">chrome.printerProvider</a> API.
+: Gives access to the <a href="/docs/extensions/reference/printerProvider/">chrome.printerProvider</a> API.
 
 `"printing"`
 : Gives access to the <a href="/docs/extensions/reference/printing/">chrome.printing</a> API.
@@ -339,8 +334,8 @@ including <a href="/docs/extensions/reference/tabs">chrome.tabs</a> and <a href=
 : Gives access to the <a href="/docs/extensions/reference/ttsEngine/">chrome.ttsEngine</a> API.
 
 `"unlimitedStorage"`
-: Provides an unlimited quota for <a href="/docs/extensions/reference/storage">chrome.storage</a>, <a href="https://developer.mozilla.org/docs/Web/API/IndexedDB_API">IndexedDB</a>,
-      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache Storage</a> and <a href="https://web.dev/origin-private-file-system/">Origin Private File System</a>. For more information,
+: Provides an unlimited quota for <a href="/docs/extensions/reference/storage#property-local">chrome.storage.local</a>, <a href="https://developer.mozilla.org/docs/Web/API/IndexedDB_API">IndexedDB</a>,
+      <a href="https://developer.mozilla.org/docs/Web/API/Cache">Cache Storage</a> and <a href="https://web.dev/origin-private-file-system/">Origin Private File System</a>. For more information,
       see <a href="/docs/extensions/mv3/storage-and-cookies">Storage and cookies</a>.
 
 `"vpnProvider"`
