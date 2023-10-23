@@ -5,7 +5,7 @@ description: >
   Opt-in optimized text wrapping, for beauty over speed.
 subhead: >
   Opt-in optimized text wrapping, for beauty over speed.
-date: 2023-10-18
+date: 2023-10-23
 authors:
   - argyle
 tags:
