@@ -193,14 +193,15 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
     .build();
 ```
 
-## Enable bookmarks and download buttons
+## Bookmarks and download buttons
 
-Enable the bookmarks and download buttons from the three dot menu in `CustomTabsIntent.Builder` using the following code:
+The bookmarks and download buttons in the three dot menu are enabled by default. To disable them, use the following
+code in `CustomTabsIntent.Builder`:
 
 ```java
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-    .setBookmarksButtonEnabled(true)
-    .setDownloadButtonEnabled(true)
+    .setBookmarksButtonEnabled(false)
+    .setDownloadButtonEnabled(false)
     .build();
 ```
 
