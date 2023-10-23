@@ -325,7 +325,7 @@ Avoid using the following methods that make your extension vulnerable:
 ```js
 chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
   // WARNING! Might be evaluating a malicious script!
-  var resp = eval("(" + response.farewell + ")");
+  var resp = eval(`(${response.farewell})`);
 });
 ```
 
