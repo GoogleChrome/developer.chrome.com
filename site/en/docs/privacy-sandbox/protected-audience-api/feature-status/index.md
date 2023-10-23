@@ -195,7 +195,7 @@ For a creative to be considered k-anonymous, the tuple of interest group owner, 
 
 The k-anonymity enforcement will be ramped up gradually. Later in 2023, we will begin to check the render URL for k-anonymity. Later in Q1 2025, we will begin to check the ad size in addition to the URL for k-anonymity. 
 
-We will publish an [in-depth k-anonymity enforcement in Protected Audience explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md) at a later date.
+You can learn more about the parameters from the [k-anonymity explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_differential_privacy.md).
 
 ## Bidding and Auction Services
 
