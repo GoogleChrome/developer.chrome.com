@@ -16,7 +16,7 @@ alt: >
   A tall building's windows are shown wrapping in a harmonious curve.
 ---
 
-Set to release in Chrome 117 is a new text wrapping feature—`text-wrap: pretty`
+From Chrome 117 you can use a new text wrapping feature—`text-wrap: pretty`
 from [CSS Text Level 4](https://www.w3.org/TR/css-text-4/#text-wrap).
 
 ```css
@@ -60,7 +60,7 @@ prevent them.
   %}
 
   <figcaption>
-    Image sourced from <a href="https://fonts.google.com/knowledge/glossary/widows_orphans">Google Fonts - Widows & Orphans</a>
+    Image sourced from <a href="https://fonts.google.com/knowledge/glossary/widows_orphans">Google Fonts—Widows & Orphans</a>
   </figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ In the future, `text-wrap: pretty` may offer more improvements.
   %}
 
   <figcaption>
-    Image sourced from <a href="https://uxmovement.com/content/why-you-should-remove-orphans-from-your-body-text/">Why you should remove orphans from your body text</a>
+    Image sourced from <a href="https://uxmovement.com/content/why-you-should-remove-orphans-from-your-body-text/">Why you should remove orphans from your body text.</a>
   </figcaption>
 </figure>
 
@@ -104,5 +104,5 @@ engineer](https://docs.google.com/document/d/1jJFD8nAUuiUX6ArFZQqQo8yTsvg8IuAq7o
 behind the feature, [Koji Ishii](/authors/kojiishi/).
 
 If you have other line breaking improvements or suggestions, we'd love to hear
-them! File an issue in the Chromium bug tracker with the details, examples of
+them! File an issue in the [Chromium bug tracker](https://bugs.chromium.org/p/chromium/issues/entry) with the details, examples of
 good and bad line breaks, and we'll get back to you.
