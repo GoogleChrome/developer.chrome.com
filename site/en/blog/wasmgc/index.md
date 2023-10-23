@@ -89,7 +89,7 @@ To verify the real-world impact of this improvement, Chrome's Wasm team has comp
 
 ## Seeing a WasmGC-ported programming language in action
 
-One of the first programming languages that has been ported to Wasm thanks to WasmGC is [Kotlin](https://kotlinlang.org/) in the form of [Kotlin/Wasm](https://kotlinlang.org/docs/wasm-overview.html). The [demo](https://kotlin-wasm-hello-world.glitch.me/), with [source code](https://github.com/Kotlin/kotlin-wasm-examples/tree/main/browser-example) courtesy of the Kotlin team, is shown in the following listing.
+One of the first programming languages that has been ported to Wasm thanks to WasmGC is [Kotlin](https://kotlinlang.org/) in the form of [Kotlin/Wasm](https://kotl.in/wasmgc). The [demo](https://kotlin-wasm-hello-world.glitch.me/), with [source code](https://github.com/Kotlin/kotlin-wasm-examples/tree/main/browser-example) courtesy of the Kotlin team, is shown in the following listing.
 
 ```kotlin
 import kotlinx.browser.document
