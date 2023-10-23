@@ -277,8 +277,8 @@ single-touch attributable conversions to the closest power of 10: 10, 100,
    conversion count PER BUCKET**.
 1. Click **Simulate**.
 1. Observe that the noise ratios are now higher: this is because when you
-   have fewer conversions per bucket, signal-to-noise ratios are likely to be
-   lower.
+   have fewer conversions per bucket, more noise is applied to maintain
+   privacy.
 
 {% endDetails %}
 {% endAside %}
