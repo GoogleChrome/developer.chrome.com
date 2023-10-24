@@ -5,7 +5,7 @@ description: >
   Scrollers without tabindex value set and without any focusable children are now keyboard focusable.
 subhead: >
   Scrollers without tabindex value set and without any focusable children are now keyboard focusable.
-date: 2023-10-20
+date: 2023-10-24
 thumbnail: image/kheDArv5csY6rvQUJDbWRscckLr1/syCUeFoHRAmGHWtfuGsX.jpg
 alt: ""
 authors:
@@ -13,6 +13,10 @@ authors:
 ---
 
 From Chrome 120, scrollers are keyboard focusable by default if they have no keyboard focusable children.
+
+{% Aside %}
+This change will be rolled out slowly to Chrome users from Chrome 119, by Chrome 120 it should be available to all users.
+{% endAside %}
 
 ## Background
 
@@ -61,7 +65,7 @@ div.long {
 <button>End</button>
 ```
 
-<figure>
+<figure style="max-width: 300px; margin: 1em auto;">
 {% Video
   src="video/kheDArv5csY6rvQUJDbWRscckLr1/tHnEyxfzYBbx9D8I1LuB.mp4",
   autoplay="true",
@@ -84,7 +88,7 @@ Using a negative tabindex as in the following HTML, the scroller will be skipped
 <button>End</button>
 ```
 
-<figure>
+<figure style="max-width: 300px; margin: 1em auto;">
 {% Video
   src="video/kheDArv5csY6rvQUJDbWRscckLr1/NCYssAUl1Ne9wl2A7tr4.mp4",
   autoplay="true",
@@ -107,7 +111,7 @@ If you do not set a tabindex value, it can be difficult for the user to use sequ
 <button>End</button>
 ```
 
-<figure>
+<figure style="max-width: 300px; margin: 1em auto;">
 {% Video
   src="video/kheDArv5csY6rvQUJDbWRscckLr1/2TMGev8CQxXpGl7Psm4c.mp4",
   autoplay="true",
@@ -130,7 +134,7 @@ Note that a scroller that contains focusable children, as in the following HTML,
 <button>End</button>
 ```
 
-<figure>
+<figure style="max-width: 300px; margin: 1em auto;">
 {% Video
   src="video/kheDArv5csY6rvQUJDbWRscckLr1/9ZRpUnXqYJo3IHbyNLo1.mp4",
   autoplay="true",
@@ -155,7 +159,7 @@ This feature allows scrollers without tabindex value set and without any focusab
 <button>End</button>
 ```
 
-<figure>
+<figure style="max-width: 300px; margin: 1em auto;">
 {% Video
   src="video/kheDArv5csY6rvQUJDbWRscckLr1/LmjDOeeHrW0QEcmXW8MG.mp4",
   autoplay="true",
@@ -178,7 +182,7 @@ Note that this behavior only happens if the scroller has no focusable children. 
 <button>End</button>
 ```
 
-<figure>
+<figure style="max-width: 300px; margin: 1em auto;">
 {% Video
   src="video/kheDArv5csY6rvQUJDbWRscckLr1/K3brWZ9DimwKOXWRo5xw.mp4",
   autoplay="true",
