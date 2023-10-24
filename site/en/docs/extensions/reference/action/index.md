@@ -116,7 +116,7 @@ chrome.action.setBadgeBackgroundColor(
 
 An action's popup is shown when the user clicks on the extension's action button in the
 toolbar. The popup can contain any HTML contents you like, and will be automatically sized to fit
-its contents. The popup's size must be between 25x25 and 800x600 pixels. <!--Are these the DIPs from earlier?-->
+its contents. The popup's size must be between 25x25 and 800x600 pixels. 
 
 The popup is initially set by the `"default_popup"` property in the `action` key in the
 `manifest.json` file. If present, this property should point to a relative path within the extension
