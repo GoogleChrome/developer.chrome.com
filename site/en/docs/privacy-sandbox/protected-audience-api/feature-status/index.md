@@ -66,9 +66,9 @@ find a list of the scoped Protected Audience API features and when they'll be su
  <tr>
     <td><a href="#k-anonymity">K-anonymity</a>
    </td>
-    <td>Later in 2023 Q3
+    <td>Later in 2023 Q4
    </td>
-    <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 7 days” must be met. 
+    <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 30 days” must be met. 
    </td>
   </tr>
     <tr>
