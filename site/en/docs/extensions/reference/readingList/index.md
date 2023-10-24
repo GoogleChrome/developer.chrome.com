@@ -91,12 +91,11 @@ chrome.readingList.removeEntry({
 
 ## Extension samples {: #examples }
 
-For more Reading List API extensions demos, explore any of the following extensions:
-
-- Coming soon.
+For more Reading List API extensions demos, see the [Reading List API sample][sample].
 
 [doc-manifest]: /docs/extensions/mv3/manifest/
 [query]: #method-query
 [add-entry]: #method-addEntry
 [update-entry]: #method-updateEntry
 [remove-entry]: #method-removeEntry
+[sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/readingList
