@@ -17,7 +17,7 @@ Since Stadia shut down, many feared that the controller would end up as a useles
 
 ## The Stadia controller as a standard gamepad
 
-After flashing, the controller appears as a [standard gamepad](https://w3c.github.io/gamepad/#dfn-standard-gamepad) to the operating system. See the following screenshot for a common button and axis arrangement on a standard gamepad. As defined in the [Gamepad API](https://web.dev/gamepad/) spec, standard gamepads have buttons from 0 to 16, so 17 in total (the d-pad counts as four buttons). If you try the Stadia controller on the [gamepad tester demo](https://gamepad-demo.glitch.me/), you will notice that it works like a charm.
+After flashing, the controller appears as a [standard gamepad](https://w3c.github.io/gamepad/#dfn-standard-gamepad) to the operating system. See the following screenshot for a common button and axis arrangement on a standard gamepad. As defined in the [Gamepad API](https://web.dev/articles/gamepad) spec, standard gamepads have buttons from 0 to 16, so 17 in total (the d-pad counts as four buttons). If you try the Stadia controller on the [gamepad tester demo](https://gamepad-demo.glitch.me/), you will notice that it works like a charm.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/ujZz8e9qFPk9YVTROqZX.png", alt="A schema of a standard gamepad with the various axes and buttons labeled.", width="800", height="566" %}
 

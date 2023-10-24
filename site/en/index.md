@@ -1,4 +1,4 @@
 ---
-title: Chrome Developers
-layout: 'layouts/home.njk'
+title: Chrome for Developers
+layout: 'layouts/devsite-home.njk'
 ---

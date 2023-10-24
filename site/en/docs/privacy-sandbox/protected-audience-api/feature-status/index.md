@@ -8,7 +8,7 @@ description: >
   Learn more about Protected Audience API auction features as we approach third-party
   cookie deprecation.
 date: 2023-02-09
-updated: 2023-06-01
+updated: 2023-10-09
 authors:
   - tristramsouthey
   - kevinkiklee
@@ -32,7 +32,7 @@ find a list of the scoped Protected Audience API features and when they'll be su
     </tr>
   </thead>
   <tr>
-    <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now">Event-level auction win reporting</a>
+    <td><a href="#event-level-auction-win-reporting">Event-level auction win reporting</a>
    </td>
     <td>Now</td>
     <td><p>Supported until at least 2026.</p>
@@ -40,39 +40,39 @@ find a list of the scoped Protected Audience API features and when they'll be su
     </td>
   </tr>
   <tr>
-    <td><a href="/docs/privacy-sandbox/private-aggregation/#contributetohistogramonevent">Trigger-based aggregation</a>
+    <td><a href="#trigger-based-aggregate-reporting">Trigger-based aggregation</a>
    </td>
     <td>Now</td>
     <td><p>Available for testing in Chrome Canary/Dev M113+ and Beta/Stable M115+.</p>
     </td>
   </tr>
   <tr>
-    <td><a href="https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment">Trusted Execution Environment (TEE)</a> usage for Key/Value service</td>
+    <td><a href="#trusted-execution-environment-usage-for-keyvalue-service">Trusted Execution Environment (TEE)</a> usage for Key/Value service</td>
     <td>Now</td>
     <td>Required no sooner than Q3 2025.</td>
   </tr>
   <tr>
-    <td><a href="/docs/privacy-sandbox/fenced-frame/">Fenced frames</a>
+    <td><a href="#fenced-frames">Fenced frames</a>
    </td>
     <td>Now
    </td>
     <td>Required no sooner than 2026.</td>
   </tr>
   <tr>
-    <td>Improved Protected Audience API + <a href="/docs/privacy-sandbox/attribution-reporting/">Attribution Reporting</a> integration.</td>
+    <td><a href="#improved-protected-audience-api-and-attribution-reporting-integration">Improved Protected Audience API + Attribution Reporting integration</a></td>
     <td>2023 Q2</td>
     <td>Available for testing in Chrome Stable M112+.</td>
   </tr>
  <tr>
-    <td><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md">K-anonymity</a>
+    <td><a href="#k-anonymity">K-anonymity</a>
    </td>
-    <td>Later in 2023 Q3
+    <td>Later in 2023 Q4
    </td>
-    <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 7 days” must be met. 
+    <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 30 days” must be met. 
    </td>
   </tr>
     <tr>
-    <td><a href="/blog/fledge-service-overview/#bidding-auction-service">Bidding and Auction services</a>
+    <td><a href="#bidding-and-auction-services">Bidding and Auction services</a>
    </td>
     <td>Targeted for testing in H2 2023.</td>
     <td>In development.</td>
@@ -91,52 +91,76 @@ find a list of the scoped Protected Audience API features and when they'll be su
   </thead>
     <tr>
     <td>Event-level user bidding signals for modeling (<a href="https://github.com/WICG/turtledove/issues/435">Github Issue</a>)</td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q2 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q2 2023.</td>
   </tr>
     <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/299">Per-Buyer Latency Reporting</a></td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q1 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q1 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/293">Per-buyer wall-time timeout</a></td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q1 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q1 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/165">Buyer reporting ID for custom breakdowns</a></td>
-    <td>Later in 2023</td>
-    <td>Expected in Chrome for origin trial in Q3 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q3 2023.</td>
   </tr>
     <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/441">Direct seller destination support</a></td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q1 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q1 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/356">Accuracy-limited ad cost for cost-per-click billing</a></td>
-    <td>Later in 2023</td>
-    <td>Available in Chrome for origin trial in Q2 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q2 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/166">Currency for highest bid and highest other scoring bid</a>
     </td>
-    <td>Later in 2023</td>
-    <td>Expected in Chrome for origin trial in Q3 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q3 2023.</td>
   </tr>
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/477">Macro Support for Third-party Ad Trackers (3PAT)</a>
     </td>
-    <td>Later in 2023</td>
-    <td>Expected in Chrome in Q3 2023.</td>
+    <td>2023</td>
+    <td>Available in Chrome in Q3 2023.</td>
   </tr> 
   <tr>
     <td><a href="https://github.com/WICG/turtledove/issues/319">Support for Negative Interest Group Targeting</a>
     </td>
     <td>Later in 2023</td>
-    <td>Expected in Chrome in Q3 2023.</td>
+    <td>Expected in Chrome in Q4 2023.</td>
   </tr> 
+      <tr>
+      <td>Secure Propagation of Auction Signals without WebBundles<br>
+<a href="https://github.com/WICG/turtledove/issues/119">Github Issue</a></td>
+ <td>Later in 2023</td>
+      <td>Expected in Chrome in Q4 2023</td>
+    </tr>
+    <tr>
+      <td>Bulk Interest Group Deletion<br>
+<a href="https://github.com/WICG/turtledove/issues/475">Github Issue</a></td>
+ <td>Later in 2023</td>
+      <td>Expected in Chrome in Q4 2023</td>
+    </tr>
+    <tr>
+      <td>Increase Interest Group Cap from 1K to 2K<br>
+<a href="https://github.com/WICG/turtledove/issues/798">Github Issue</a></td>
+ <td>Later in 2023</td>
+      <td>Expected in Chrome in Q4 2023</td>
+    </tr>
+    <tr>
+      <td>Support for Bidding and Auction Beta 1 <br>
+<a href="https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md#beta-1-november-2023">Explainer</a></td>
+ <td>Origin Trial, later in 2023</td>
+      <td>Expected in Chrome (via Origin Trial) in Q4 2023</td>
+    </tr>
   </table>
 
 ## Event-level auction win reporting
@@ -191,12 +215,11 @@ aggregatable reports, and we will publish a proposal once it is ready.
 
 ## K-anonymity
 
-We will soon publish an explainer with more details on how [k-anonymity](https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md) will be enforced using the Protected Audience API framework.
+For a creative to be considered k-anonymous, the tuple of interest group owner, bidding script URL, creative URL, and creative size must meet the threshold of a crowd of 50 users per creative (`k=50`) within the past 30 days before the ad can be served. The creative is available to be served as soon as it hits the 50 users threshold and does not need to wait for 30 days. 
 
-For rendering a creative, we will require _a crowd of 50 users per creative within the past 7 days_ to pass the k-anonymity threshold before the ad can be served. The creative is available to be served as soon as it hits the 50 ads threshold and does not need to wait for 7 days. 
+The k-anonymity enforcement will be ramped up gradually. Later in 2023, we will begin to check the render URL for k-anonymity. Later in Q1 2025, we will begin to check the ad size in addition to the URL for k-anonymity. 
 
-K-anonymity requirements will be available for testing and will be enforced
-later in 2023. We encourage feedback from ad tech on this parameter.
+You can learn more about the parameters from the [k-anonymity explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_differential_privacy.md).
 
 ## Bidding and Auction Services
 

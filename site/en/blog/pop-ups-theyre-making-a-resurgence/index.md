@@ -10,8 +10,9 @@ tags:
   - css
   - html
 date: 2022-09-13
-last_updated: 2023-01-25
+last_updated: 2023-10-03
 is_outdated: true
+new_available_content_url: /blog/introducing-popover-api/
 ---
 
 {% Aside 'caution' %}

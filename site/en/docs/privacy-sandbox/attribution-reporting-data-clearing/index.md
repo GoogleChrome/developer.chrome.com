@@ -6,7 +6,7 @@ subhead: >
 description: >
   How does user-initiated data clearing impact attribution reports? How does that compare with cookie-based measurement?
 date: 2021-10-19
-updated: 2021-10-19
+updated: 2023-09-18
 authors:
   - maudn
 ---
@@ -23,8 +23,8 @@ Instead, it works as follows: attribution reports that link an ad click with a c
 generated and stored on the user's device; later, the browser sends these reports to a predefined
 endpoint.
 
-Sites have experimented with the Attribution Reporting API in Chrome, via an [origin
-trial](/docs/privacy-sandbox/attribution-reporting/#status).
+Sites have experimented with the Attribution Reporting API in Chrome, via an origin
+trial, which has now concluded.
 
 One of the insights
 provided by these early experiments is the impact of **user-initiated data clearing, such as browser history clearing,** on the data advertisers and ad tech companies get from the API. [Aggregate Chrome statistics](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)
@@ -48,8 +48,8 @@ However, they likely won't be consistently observable for all organizations
 that use the API.
 
 These numbers are aggregated and measured for the set of sites that were running an origin
-trial. They differ across sites and are likely to change as more organizations use the API in an
-origin trial and use different parameters.
+trial (which is now closed). They differ across sites and are likely to change as more organizations have used the API in an
+origin trial since these metrics were collected and use different parameters.
 {% endAside %}
 
 **Multiple factors influence these numbers:**
@@ -167,7 +167,7 @@ measurement—whether it's based on the Attribution Reporting API or on cookies.
 Organizations that have experimented with the API via an origin trial may have observed a
 **discrepancy between cookie-based measurement and Attribution Reporting based measurement**: less
 conversions may have been reported for Attribution Reporting. User-initiated data clearing
-may account for observed loss, but the discrepancy must be monitored in future origin trials in
+may account for observed loss, but the discrepancy must be monitored in the future in
 order to answer this question with certainty.
 
 Two elements are known to have played a role in the discrepancy between cookie-based measurement and

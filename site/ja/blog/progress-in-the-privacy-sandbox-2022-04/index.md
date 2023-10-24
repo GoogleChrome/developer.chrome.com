@@ -1,7 +1,7 @@
 ---
 title: プライバシーサンドボックスの進捗状況（2022 年 3 月～4 月）
 description: >
-  オリジントライアルで利用可能な多数の API を含む更新: プライバシーサンドボックスの関連性と測定の複合トライアルの一環としての分割した Cookie の CHIPS と アトリビューション レポート、FLEDGE、および Topics。
+  オリジントライアルで利用可能な多数の API を含む更新: プライバシーサンドボックスの広告関連の複合トライアルの一環としての分割した Cookie の CHIPS と アトリビューション レポート、FLEDGE、および Topics。
 layout: 'layouts/blog-post.njk'
 date: 2022-05-17
 authors:
@@ -17,7 +17,7 @@ tags:
 今年最初の「**[プライバシーサンドボックスの進捗状況](/tags/progress-in-the-privacy-sandbox/)**」へようこそ。Chrome におけるサードパーティ Cookie の段階的廃止とよりプライベートなウェブに向けた取り組みについて、2022 年 3 月と 4 月のマイルストーンの達成状況をお知らせします。 各エディションでは、[プライバシーサンドボックスのタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)の更新の概要を、プロジェクト全体の最新情報とともに提供しています。
 
 
-## プライバシーサンドボックスの関連性と測定のオリジントライアル
+## プライバシーサンドボックスの広告関連のオリジントライアル
 
 引き続き、初期の開発者フィードバックとそのフィードバックに基づいて提案を発展させる能力を最優先事項としています。 **アトリビューション レポート、FLEDGE、および Topics を合わせた複合オリジントライアル**を開始することで、実際の環境でこれらの API に関する初期フィードバックを得られるようにしました。
 
@@ -92,7 +92,7 @@ User-Agent Client Hints においても、[GREASE の動作を更新する I2S](
 
 Fenced Frame（`<fencedframe>`）は、埋め込みコンテンツ用に提案されている HTML 要素で、iframe に似ています。 ただし、Fenced Frame は、埋め込みコンテキストとの 通信を制限して、フレームが埋め込みコンテキストと共有せずにクロスサイトデータにアクセスできるようにする点で、iframe とは異なります。 たとえば、FLEDGE では、Fenced Frame 内に広告を表示することを意図しています。
 
-[新しい開発者概要の内容](/docs/privacy-sandbox/fenced-frame/)をお読みください。また、Chrome 102 Beta より、より広範なプライバシーサンドボックスの関連性と測定のオリジントライアルの一環として [Fenced Frames を利用できるようにする I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/y6G3cvKXjlg)を送信しました。
+[新しい開発者概要の内容](/docs/privacy-sandbox/fenced-frame/)をお読みください。また、Chrome 102 Beta より、より広範なプライバシーサンドボックスの広告関連のオリジントライアルの一環として [Fenced Frames を利用できるようにする I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/y6G3cvKXjlg)を送信しました。
 
 
 ## 関連するコンテンツと広告の表示
@@ -102,14 +102,14 @@ Fenced Frame（`<fencedframe>`）は、埋め込みコンテンツ用に提案�
 
 ### Topics
 
-[Topics API](/docs/privacy-sandbox/topics/) は、クロスサイトトラッキングを使用せずに、インタレストベース広告を可能にする提案です。 プライバシーサンドボックスの関連性と測定のオリジントライアルの一環として [Topics を含める I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs) を送信しました。 また、オリジントライアル中には、[Topics のテストとフィードバックの提供に関する新しい開発者ガイド](/docs/privacy-sandbox/topics-experiment/)もご利用いただけます。
+[Topics API](/docs/privacy-sandbox/topics/) は、クロスサイトトラッキングを使用せずに、インタレストベース広告を可能にする提案です。 プライバシーサンドボックスの広告関連のオリジントライアルの一環として [Topics を含める I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/oTwd6VwCwqs) を送信しました。 また、オリジントライアル中には、[Topics のテストとフィードバックの提供に関する新しい開発者ガイド](/docs/privacy-sandbox/topics-experiment/)もご利用いただけます。
 
 これは早期のテスト段階であるため、コード内にイシューが見つかるたびに、それらを積極的に調査して対処しています。 Topics では、クラッシュするバグが発見されたため、オリジントライアル内で API を一時的に無効にし、ユーザーエクスペリエンスに過大な影響を与えることなく、修正をロールアウトしています。
 
 
 ### FLEDGE
 
-[FLEDGE](/docs/privacy-sandbox/fledge/) は、個人の識別子に依存することなく、以前にアクセスしたサイトまたは製品を利用できる広告を実行することで、リマーケティングとカスタムオーディエンスのユースケースを実現します。 より広範なプライバシーサンドボックスの関連性と測定のオリジントライアルの一環として有効にするために、[FLEDGE の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg) をもう一度送信しました。 同様に、これに対応する[実験用の開発者ドキュメントも提供](/docs/privacy-sandbox/fledge-experiment/)されています。
+[FLEDGE](/docs/privacy-sandbox/fledge/) は、個人の識別子に依存することなく、以前にアクセスしたサイトまたは製品を利用できる広告を実行することで、リマーケティングとカスタムオーディエンスのユースケースを実現します。 より広範なプライバシーサンドボックスの広告関連のオリジントライアルの一環として有効にするために、[FLEDGE の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/0VmMSsDWsFg) をもう一度送信しました。 同様に、これに対応する[実験用の開発者ドキュメントも提供](/docs/privacy-sandbox/fledge-experiment/)されています。
 
 
 ## デジタル広告の測定
@@ -119,7 +119,7 @@ Fenced Frame（`<fencedframe>`）は、埋め込みコンテンツ用に提案�
 
 ### Attribution Reporting API
 
-**[Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/)** は、広告のクリックや閲覧といった、別のサイトでのコンバージョンにつながるイベントを、クロスサイトトラッキングを有効にせずに測定できる機能を有効にします。 これについても、プライバシーサンドボックスの関連性と測定のオリジントライアルの一環としてテストを拡張し続けるための、[アトリビューション レポート の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/jEnNpideO1Y) を送信しました。
+**[Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/)** は、広告のクリックや閲覧といった、別のサイトでのコンバージョンにつながるイベントを、クロスサイトトラッキングを有効にせずに測定できる機能を有効にします。 これについても、プライバシーサンドボックスの広告関連のオリジントライアルの一環としてテストを拡張し続けるための、[アトリビューション レポート の I2E](https://groups.google.com/a/chromium.org/g/blink-dev/c/jEnNpideO1Y) を送信しました。
 
 オリジントライアルの初期段階では、[デバッグ](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/#debugging)など、開発者のエクスペリエンスと統合に関するフィードバックに焦点を当てていますが、これは、イベントレベルレポートと要約レポート全体のエンドツーエンドテストを網羅するように拡張されます。
 

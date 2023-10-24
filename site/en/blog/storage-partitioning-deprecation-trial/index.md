@@ -12,11 +12,11 @@ tags:
   - privacy
 ---
 
-Beginning gradually in [Chrome 115](https://chromiumdash.appspot.com/schedule),
-storage, service workers, and communication APIs will be
+As of [Chrome 115](https://chromiumdash.appspot.com/schedule), storage,
+service workers, and communication APIs are be
 [partitioned in third-party contexts](/docs/privacy-sandbox/storage-partitioning/).
 In addition to being isolated by the same-origin policy, the affected APIs used
-in third-party contexts would also be separated by the site of the top-level
+in third-party contexts are also be separated by the site of the top-level
 context. Sites that haven't had time to implement support for third-party
 storage partitioning can take part in a deprecation trial to temporarily
 **unpartition** (continue isolation by same-origin policy but remove isolation
@@ -104,8 +104,7 @@ on its pages, top-level sites need to register for one or both of the
 deprecation trials and add the corresponding trial token(s) to their HTTP
 response headers (see detailed example below).
 
-Each deprecation trial is available on Windows, Mac, Linux, Chrome OS, Android,
-and Android WebView.
+Each deprecation trial is available on Windows, Mac, Linux, Chrome OS, and Android.
 
 ## Participate in the deprecation trials
 
@@ -128,12 +127,12 @@ deprecation trials. For more detailed instructions, visit
         navigations:
         [`DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning`](/origintrials/#/view_trial/3444127815031586817)
 1.  Add an origin trial token to your page:
-    1. For the `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning` trial you may add an `Origin-Trial: <DEPRECATION TRIAL TOKEN>` to         your top-level site’s HTTP response header, where `<DEPRECATION TRIAL TOKEN>` contains the token you got when registering for the deprecation             trial. You can also do this via HTML `<meta> tag.
-    1. For the `DisableThirdPartyStoragePartitioning` trial, the token must be given via an HTML `<meta>` tag. The HTTP header method is not supported.
+    1. For the `DisableThirdPartySessionStoragePartitioningAfterGeneralPartitioning` trial you may add an `Origin-Trial: <DEPRECATION TRIAL TOKEN>` to your top-level site’s HTTP response header, where `<DEPRECATION TRIAL TOKEN>` contains the token you got when registering for the deprecation trial. You can also do this via HTML `<meta> tag.
+    1. For the `DisableThirdPartyStoragePartitioning` trial, the token must be given via an HTML `<meta>` tag injected via JavaScript. The HTTP header method is not supported.
 1.  Load your website in Chrome 115 (or later) with
     `ThirdPartyStoragePartitioning` still enabled and verify that any
     partitioning related issues have been properly mitigated.
-1.  To stop participating in the deprecation trial simply remove the header
+1.  To stop participating in the deprecation trial simply remove the token
     you added in step 2.
 
 The `DisableThirdPartyStoragePartitioning` deprecation trial does support the

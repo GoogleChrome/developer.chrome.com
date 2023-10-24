@@ -80,6 +80,14 @@ The following example shows how to declare the `nativeMessaging` permission in t
 }
 ```
 
+## Concepts and usage {: #concepts }
+
+### Unpacked extension behavior {: #unpacked }
+
+When an [unpacked][unpacked] extension is [reloaded][reload], this is treated as an update. This means that the
+[`chrome.runtime.onInstalled`][method-oninstalled] event will fire with the `"update"` reason. This
+includes when the extension is reloaded with [`chrome.runtime.reload()`][method-reload].
+
 ## Use cases {: #examples}
 
 ### Add an image to a web page {: #example-get-url }
@@ -204,3 +212,5 @@ See the [Manifest V3 - Web Accessible Resources demo][github-war-sample] for mor
 [method-sendmessage]: #method-sendMessage
 [method-sendnativemessage]: #method-sendNativeMessage
 [method-setuninstallurl]: #method-setUninstallURL
+[unpacked]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
+[reload]: /docs/extensions/mv3/getstarted/development-basics/#reload

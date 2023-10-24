@@ -102,7 +102,7 @@ To compare the compressed and de-compressed sizes of a response:
    top value is the compressed size. The bottom value is the de-compressed
    size.
 
-See also [Minify and compress network payloads](https://web.dev/reduce-network-payloads-using-text-compression/).
+See also [Minify and compress network payloads](https://web.dev/articles/reduce-network-payloads-using-text-compression).
 
 ## Stack-specific guidance
 

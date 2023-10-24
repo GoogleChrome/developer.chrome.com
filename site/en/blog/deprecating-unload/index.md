@@ -35,7 +35,7 @@ Scenarios where this event was most commonly used include:
 
 However the `unload` event [is extremely unreliable](/articles/page-lifecycle-api/#the-unload-event).
 
-On desktop Chrome and Firefox, `unload` is reasonably reliable but it has a negative impact on a site's performance by preventing the usage of [bfcache (back/forward cache)](https://web.dev/bfcache/#never-use-the-unload-event).
+On desktop Chrome and Firefox, `unload` is reasonably reliable but it has a negative impact on a site's performance by preventing the usage of [bfcache (back/forward cache)](https://web.dev/articles/bfcache#never_use_the_unload_event).
 
 On mobile browsers `unload` often doesn't run as tabs are frequently backgrounded and then killed. For this reason browsers choose to prioritize the bfcache on mobile over `unload`, making them even more unreliable. Safari also uses this behaviour on desktop.
 
@@ -96,7 +96,7 @@ For more details see [usUsing Reporting API to find unloads](https://github.com/
 
 ### Bfcache `notRestoredReasons` API
 
-The [`notRestoredReasons` property](/docs/web-platform/bfcache-notrestoredreasons/)—added to the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class—reports information on whether documents were blocked from using the [bfcache](https://web.dev/bfcache/) on navigation, and why. Usage instructions can be found [here](/docs/web-platform/bfcache-notrestoredreasons/). This is an example of how the response object warning of an existing `unload` listener looks like:
+The [`notRestoredReasons` property](/docs/web-platform/bfcache-notrestoredreasons/)—added to the [`PerformanceNavigationTiming`](https://developer.mozilla.org/docs/Web/API/PerformanceNavigationTiming) class—reports information on whether documents were blocked from using the [bfcache](https://web.dev/articles/bfcache) on navigation, and why. Usage instructions can be found [here](/docs/web-platform/bfcache-notrestoredreasons/). This is an example of how the response object warning of an existing `unload` listener looks like:
 
 ```js
 {
@@ -181,7 +181,7 @@ The following table summarizes the different uses of the options discussed previ
 
 ## Conclusion
 
-`unload` handlers are being deprecated. They have been unreliable for a long time and are not guaranteed to be fired on all cases where a document gets destroyed. Additionally, `unload` handlers are incompatible with [bfcache](https://web.dev/bfcache/).
+`unload` handlers are being deprecated. They have been unreliable for a long time and are not guaranteed to be fired on all cases where a document gets destroyed. Additionally, `unload` handlers are incompatible with [bfcache](https://web.dev/articles/bfcache).
 
 Sites that currently make use of `unload` handlers should prepare for this upcoming deprecation by testing for any existing `unload` handlers, removing or migrating them or, as a last resort, delaying the deprecation if more time is needed.
 

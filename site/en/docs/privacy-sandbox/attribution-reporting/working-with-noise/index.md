@@ -52,7 +52,7 @@ If you have several measurement goals&mdash;for example, purchase count and purc
 
 In this case, your scaling factors will be different for different aggregatable values, depending on the expected maximum of a given aggregatable value.
 
-Read details in the [complete example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/view#heading=h.duini3m1xb4y).
+Read details in the [Understanding aggregation keys](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/).
 
 {% Aside %}
 You may decide to allocate the budget equally between two measurement goals, or you can choose to prioritize different measurement goals by allocating more budget to certain goals and less to others.
@@ -133,9 +133,7 @@ An important part of allocating budget between different keys is understanding h
 
 ### Experimenting with epsilon 
 
-Lower values of epsilon provide greater privacy protection.
-
-During the origin trial, ad tech companies can choose epsilon within a given range. We recommend you start with epsilon=10. Epsilon can be set to any value between 0 and 64: 0 < epsilon ≤ 64. This range is wide enough to allow for flexible testing.
+Ad techs can set epsilon to a value greater than 0 and up to and including 64. This range allows for flexible testing. Lower values of epsilon provide greater privacy protection. We recommend you start with epsilon=10.
 
 #### Recommendations to experiment
 

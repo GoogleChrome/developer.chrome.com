@@ -66,7 +66,7 @@ Lighthouse will display the LCP element along with the phase breakdown in the "L
 
 | LCP phase                 | Description |
 | ------------------------- | ----------- |
-| Time to first byte (TTFB) |	The time from when the user initiates loading the page until when the browser receives the first byte of the HTML document response. [Learn more about TTFB](https://web.dev/ttfb/). |
+| Time to first byte (TTFB) |	The time from when the user initiates loading the page until when the browser receives the first byte of the HTML document response. [Learn more about TTFB](https://web.dev/articles/ttfb). |
 | Load delay	              | The delta between TTFB and when the browser starts loading the LCP resource. |
 | Load time	                | The time it takes to load the LCP resource itself. |
 | Render delay	            | The delta between when the LCP resource finishes loading until the LCP element is fully rendered. |
@@ -74,7 +74,7 @@ Lighthouse will display the LCP element along with the phase breakdown in the "L
 ## Resources
 
 - [Source code for **Largest Contentful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/largest-contentful-paint.js)
-- [Largest Contentful Paint](https://web.dev/lcp/)
+- [Largest Contentful Paint](https://web.dev/articles/lcp)
 - [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/)
 
 [definition]: https://web.dev/lcp/#what-is-lcp

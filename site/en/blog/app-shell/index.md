@@ -116,7 +116,7 @@ The application shell architecture makes the most sense for apps and sites that 
 
 ## Are there any production apps using this pattern yet?
 
-The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](https://web.dev/service-workers-iowa/) and Google’s Inbox.
+The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](https://web.dev/articles/service-workers-iowa) and Google’s Inbox.
 
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/VrI0pv3eihgLe7qMF3Hs.png", alt="Image of Google Inbox loading. Illustrates Inbox using service worker.", width="800", height="618" %}

@@ -44,7 +44,7 @@ Lighthouse 报告的“Opportunities（机会）”部分列出了所有未使�
 
 考虑使用[关键工具](https://github.com/addyosmani/critical/blob/master/README.md)自动化提取和内联“首屏”CSS 的过程。
 
-在[延迟非关键 CSS](https://web.dev/defer-non-critical-css/) 中了解更多信息。
+在[延迟非关键 CSS](https://web.dev/articles/defer-non-critical-css) 中了解更多信息。
 
 ## 特定于堆栈的指南
 

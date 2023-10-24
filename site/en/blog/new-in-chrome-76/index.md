@@ -134,7 +134,7 @@ of your site to match the user's preferred mode.
 ```
 
 Tom has a great article [Hello darkness, my old friend][dark-article] on
-[web.dev](https://web.dev/blog/) with everything you need to know, plus tips
+[web.dev](https://web.dev/articles/blog) with everything you need to know, plus tips
 for architecting your style sheets to support both a light,
 and a dark mode.
 

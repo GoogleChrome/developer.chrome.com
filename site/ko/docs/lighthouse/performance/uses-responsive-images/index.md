@@ -20,9 +20,9 @@ Lighthouse 보고서의 '기회' 섹션에는 페이지에서 크기가 적절�
 
 이상적으로, 사용자 화면에 렌더링된 버전보다 큰 이미지가 페이지에 제공되어서는 안 됩니다. 그보다 크면 바이트가 낭비되고 페이지 로드 시간이 느려집니다.
 
-적절한 크기의 이미지를 제공하기 위한 주요 전략을 "반응형 이미지"라고 합니다. 반응형 이미지를 사용하면 각 이미지의 여러 버전을 생성한 다음 미디어 쿼리, 뷰포트 크기 등을 사용하여 HTML 또는 CSS에서 사용할 버전을 지정합니다. 자세한 내용은 [반응형 이미지 제공](https://web.dev/serve-responsive-images/)을 참조하세요.
+적절한 크기의 이미지를 제공하기 위한 주요 전략을 "반응형 이미지"라고 합니다. 반응형 이미지를 사용하면 각 이미지의 여러 버전을 생성한 다음 미디어 쿼리, 뷰포트 크기 등을 사용하여 HTML 또는 CSS에서 사용할 버전을 지정합니다. 자세한 내용은 [반응형 이미지 제공](https://web.dev/articles/serve-responsive-images)을 참조하세요.
 
-[이미지 CDN](https://web.dev/image-cdns/)은 적절한 크기의 이미지를 제공하기 위한 또 다른 주요 전략입니다. 이미지 변환을 위한 웹 서비스 API와 같은 이미지 CDN을 생각해볼 수 있습니다.
+[이미지 CDN](https://web.dev/articles/image-cdns)은 적절한 크기의 이미지를 제공하기 위한 또 다른 주요 전략입니다. 이미지 변환을 위한 웹 서비스 API와 같은 이미지 CDN을 생각해볼 수 있습니다.
 
 또 다른 전략은 SVG와 같은 벡터 기반 이미지 형식을 사용하는 것입니다. SVG 이미지는 한정된 양의 코드를 사용해 어떤 크기로든 확장할 수 있습니다. 자세한 내용은 [복잡한 아이콘을 SVG로 바꾸기](https://developers.google.com/web/fundamentals/design-and-ux/responsive/images#replace_complex_icons_with_svg)를 참조하세요.
 
@@ -32,7 +32,7 @@ Lighthouse 보고서의 '기회' 섹션에는 페이지에서 크기가 적절�
 
 ### AMP
 
-[`amp-img`](https://amp.dev/documentation/components/amp-img/?format=websites) 구성 요소의 [`srcset`](https://web.dev/use-srcset-to-automatically-choose-the-right-image/) 지원을 사용하여 화면 크기에 따라 사용할 이미지 자산을 지정합니다. [srcset, 크기 및 높이가 있는 반응형 이미지](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/art_direction/)를 참조하세요.
+[`amp-img`](https://amp.dev/documentation/components/amp-img/?format=websites) 구성 요소의 [`srcset`](https://web.dev/articles/use-srcset-to-automatically-choose-the-right-image) 지원을 사용하여 화면 크기에 따라 사용할 이미지 자산을 지정합니다. [srcset, 크기 및 높이가 있는 반응형 이미지](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/art_direction/)를 참조하세요.
 
 ### Angular
 
@@ -57,4 +57,4 @@ CDK(Component Dev Kit)의 [`BreakpointObserver` 유틸리티](https://material.a
 ## 리소스
 
 - [**적절한 크기의 이미지** 감사 소스 코드](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/uses-responsive-images.js)
-- [올바른 크기의 이미지 제공](https://web.dev/serve-images-with-correct-dimensions/)
+- [올바른 크기의 이미지 제공](https://web.dev/articles/serve-images-with-correct-dimensions)

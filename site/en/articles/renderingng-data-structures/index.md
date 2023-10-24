@@ -319,8 +319,8 @@ geometry.
 - Avoiding work for offscreen elements and GPU texture tiles.
 - Efficiently and accurately invalidating paint and raster.
 - Measuring
-[layout shift](https://web.dev/cls/) and
-[largest contentful paint](https://web.dev/lcp/) in Core Web Vitals.
+[layout shift](https://web.dev/articles/cls) and
+[largest contentful paint](https://web.dev/articles/lcp) in Core Web Vitals.
 
 Every web document has four separate property trees: transform, clip, effect, and scroll.(*)
 The transform tree represents CSS transforms and scrolling.

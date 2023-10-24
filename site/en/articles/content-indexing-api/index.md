@@ -26,12 +26,12 @@ launched in Chrome 84 for Android.
 ## What is the Content Indexing API? {: #what }
 
 Using a [progressive web
-app](https://web.dev/progressive-web-apps/) means having access
+app](https://web.dev/explore/progressive-web-apps) means having access
 to information people care about—images, videos, articles, and more—regardless
 of the current state of your network connection. Technologies like [service
 workers](/docs/workbox/service-worker-overview/),
 the [Cache Storage
-API](https://web.dev/cache-api-quick-guide/),
+API](https://web.dev/articles/cache-api-quick-guide),
 and [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
 provide you with the building blocks for storing and serving data when folks
 interact directly with a PWA. But building a high-quality, offline-first PWA is
@@ -123,7 +123,7 @@ underlying media URL as a query parameter and then display the contents of the
 file, potentially with additional controls or content on the page.
 
 Web apps can only add URLs to the content index that are under the
-[scope](https://web.dev/learn/pwa/service-workers/)
+[scope](https://web.dev/learn/pwa/service-workers)
 of the current service worker. In other words, a web app could not add a URL
 belonging to a completely different domain into the content index.
 
@@ -190,7 +190,7 @@ await registration.index.add({
 ```
 
 Adding an entry only affects the content index; it does not add anything to the
-[cache](https://web.dev/cache-api-quick-guide/).
+[cache](https://web.dev/articles/cache-api-quick-guide).
 
 #### Edge case: Call `add()` from `window` context if your icons rely on a `fetch` handler
 
@@ -231,7 +231,7 @@ await registration.index.delete('article-123');
 ```
 
 Calling `delete()` only affects the index. It does not delete anything from the
-[cache](https://web.dev/cache-api-quick-guide/).
+[cache](https://web.dev/articles/cache-api-quick-guide).
 
 {% Aside 'warning' %}
 Once indexed, entries do not automatically expire. It's

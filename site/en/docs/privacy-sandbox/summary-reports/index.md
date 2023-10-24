@@ -12,10 +12,11 @@ authors:
   - alexandrawhite
 ---
 
+{% Partial 'privacy-sandbox/ot-end.njk' %}
+
 ## Implementation status
 
 *  Participate and experiment with [Attribution Reporting summary reports](/docs/privacy-sandbox/attribution-reporting-experiment/).
-   *  This API is available in the [ads relevance and measurement origin trial](/blog/privacy-sandbox-unified-origin-trial/).
 
 ## What is a summary report?
 

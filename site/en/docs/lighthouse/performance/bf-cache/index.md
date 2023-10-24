@@ -54,7 +54,7 @@ If the page could not be restored from bfcache for any reason, the audit will fa
 
 ## Resources
 
- - [Back/forward cache](https://web.dev/bfcache/)
+ - [Back/forward cache](https://web.dev/articles/bfcache)
  - [Test bfcache in DevTools](/docs/devtools/application/back-forward-cache/)
  - [Source code for the bfcache audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/bf-cache.js)
 

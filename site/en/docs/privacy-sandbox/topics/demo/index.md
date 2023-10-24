@@ -6,16 +6,16 @@ subhead: >
 description: >
   Experiment and learn how topics are inferred from hostnames with minimal setup.
 date: 2023-03-08
+updated: 2023-09-18
 authors:
   - samdutton
 ---
 
 ## Implementation status
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
+{% Partial 'privacy-sandbox/ot-end.njk' %}
 
 The Topics API demo provides a look at how topics are inferred from hostnames. You can preview what topics are observed when you visit a demo site, which requires very little setup.
-
-If you want to test the API with your users, sign up for the [Relevance and Measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 
 Our demo is a preview that demonstrates most features of the Topics API, for you to gain familiarity with how the API is implemented.
 

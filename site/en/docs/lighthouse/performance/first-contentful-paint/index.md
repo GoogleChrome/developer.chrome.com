@@ -80,7 +80,7 @@ see Google's [User-centric Performance Metrics][metrics] page.
 The [Tracking FP/FCP][tracking] section describes
 how to programmatically access FCP data and submit it to Google Analytics.
 
-See Google's [Assessing Loading Performance in Real Life with Navigation and Resource Timing](https://web.dev/navigation-and-resource-timing/)
+See Google's [Assessing Loading Performance in Real Life with Navigation and Resource Timing](https://web.dev/articles/navigation-and-resource-timing)
 for more on collecting real-user metrics.
 
 {% Partial 'lighthouse-performance/improve.njk' %}
@@ -88,7 +88,7 @@ for more on collecting real-user metrics.
 ## Resources
 
 - [Source code for **First Contentful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/first-contentful-paint.js)
-- [FCP Metric Guide](https://web.dev/fcp/)
+- [FCP Metric Guide](https://web.dev/articles/fcp)
 - [Lighthouse Scoring Guide](/docs/lighthouse/performance/performance-scoring/)
 - [Paint Timing specification](https://w3c.github.io/paint-timing)
 

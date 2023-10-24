@@ -1,18 +1,15 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Overriding Chrome pages"
-seoTitle: "Chrome Extensions: Overriding Chrome pages"
+title: "Override Chrome pages"
+seoTitle: "Chrome Extensions: Override Chrome pages"
 date: 2012-09-18
-updated: 2023-02-06
+updated: 2023-08-31
 description: >
   How to override the Chrome bookmark manager, history, and new tab
   pages from your Chrome Extension.
 ---
 
-Override pages are a way to substitute an HTML file from your extension for a page that Google
-Chrome normally provides like New Tab page. In addition to HTML, an override page usually has CSS and JavaScript code.
-
-An extension can replace any one of the following pages:
+Extensions can use HTML override pages to replace a page Google Chrome normally provides. An extension can contain an override for any of the following pages, but each extension can only override one page:
 
 Bookmark Manager
 : The page that appears when the user chooses the Bookmark Manager menu item
@@ -28,14 +25,6 @@ New Tab
 : The page that appears when the user creates a new tab or window. You can also get to
 this page by entering the URL **chrome://newtab**.
 
-{% Aside %}
-A single extension can override <b>only one page</b>. For example, an extension can't override both the Bookmark Manager and History pages.
-{% endAside %}
-
-Incognito windows are treated specially. New Tab pages cannot be overridden in incognito windows.
-Other override pages work in incognito windows as long as the [incognito][1] manifest property is
-set to "spanning" (which is the default value). See [Saving data and incognito mode][2] in Protect User Privacy for more details on how you should treat incognito windows.
-
 The following screenshots show the default New Tab page and then a custom New Tab page.
 
 <figure>
@@ -50,9 +39,16 @@ The following screenshots show the default New Tab page and then a custom New Ta
   <figcaption>A custom new tab page.</figcaption>
 </figure>
 
+To try this out, see our [override samples][4].
+
+## Incognito window behavior {: #incognito }
+
+In incognito windows, extensions can't override New Tab pages. Other pages still work if the [incognito][2] manifest property is
+set to "spanning" (the default value). For details on how to handle incognito windows, see [Saving data and incognito mode][3].
+
 ## Manifest {: #manifest }
 
-Register an override page in the [extension manifest][3] like this:
+Use the following code to register an override page in the [extension manifest][4]:
 
 ```json/4-6
 {
@@ -69,30 +65,26 @@ Register an override page in the [extension manifest][3] like this:
 
 For `PAGE_TO_OVERRIDE`, substitute one of the following:
 
-- `bookmarks`
-- `history`
-- `newtab`
+- `"bookmarks"`
+- `"history"`
+- `"newtab"`
 
-## Tips {: #tips }
+## Best practices {: #tips }
 
-For an effective override page, follow these guidelines:
+* **Make your page quick and small.** <br/>Users expect built-in browser pages to open instantly. Avoid doing things that might take a long
+time. Specifically, avoid accessing database resources synchronously. When making network requests, prefer [`fetch()`](https://developer.mozilla.org/docs/Web/API/fetch) over `XMLHttpRequest()`.
 
-**Make your page quick and small.**<br/>Users expect built-in browser pages to open instantly. Avoid doing things that might take a long
-time. For example, avoid synchronous fetches of network or database resources.
+* **To avoid user confusion, give your page a title.** <br/> Without a title, the page title defaults to the URL. Specify the title using the `<title>` tag in your HTML file.
 
-**Include a title in your page.**<br/>Otherwise people might see the URL of the page, which could be confusing. Here's an example of
-specifying the title: `<title>New Tab</title>`
+* **Remember that new tabs give keyboard focus to the address bar first.** Don't rely on keyboard focus defaulting to other parts of the page.
 
-**Don't rely on the page having the keyboard focus.**<br/>The address bar always gets the focus first when the user creates a new tab.
-
-**Don't try to emulate the default New Tab page.**<br/>The APIs necessary to create a slightly modified version of the default New Tab page—with top
-pages, recently closed pages, tips, a theme background image, and so on—don't exist.
+* **Make the new tab page your own.** <br/>Avoid creating a new tab page which users may confuse with Chrome's default new tab page.
 
 ## Examples {: #examples }
 
-See the [override samples][4].
+See the [override samples][1].
 
-[1]: /docs/extensions/mv3/manifest/incognito
-[2]: /docs/extensions/mv3/user_privacy#data-incognito
-[3]: /docs/extensions/mv3/manifest/
-[4]: /docs/extensions/samples/
+[1]: /docs/extensions/mv3/samples#search:chrome_url_overrides
+[2]: /docs/extensions/mv3/manifest/incognito
+[3]: /docs/extensions/mv3/user_privacy#data-incognito
+[4]: /docs/extensions/mv3/manifest/

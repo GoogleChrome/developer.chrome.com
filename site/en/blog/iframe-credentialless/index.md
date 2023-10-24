@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: "Iframe credentialless: Easily embed iframes in COEP environments"
 description: >
-  Iframe credentialless is implemented in Chrome 110.  It provides developers a way to load documents in third-party iframes using a new and ephemeral context. In return, they are no longer subject to the COEP embedding rules. 
+  Iframe credentialless is implemented in Chrome 110.  It provides developers a way to load documents in third-party iframes using a new and ephemeral context. In return, they are no longer subject to the COEP embedding rules.
   Developers using COEP can now embed third party iframes that do not use COEP themselves.
 subhead: >
   Developers using COEP can now embed third party iframes that do not use COEP themselves.
@@ -10,7 +10,7 @@ date: 2023-01-12
 authors:
   - arthursonzogni
 hero: image/udVScdcCFAdRjZwFdLk2jWAFQyr1/unmhfaD1hmGZfa8DF04f.jpg
-alt: A photo of a person sitting on a bench.  
+alt: A photo of a person sitting on a bench.
 tags:
   - privacy
   - security
@@ -18,16 +18,16 @@ tags:
 
 Iframe credentialless is enabled by default from Chrome version 110. It solves the most common complaint developers working with [Cross-Origin-Embedder-Policy (COEP)](https://web.dev/security-headers/#coep) have: embedding third-party iframes that do not set COEP.
 
-{% Aside %}  
+{% Aside %}
 It was previously available as an origin trial from version 106 to 108, and known as [anonymous iframe](/blog/anonymous-iframe-origin-trial/).
 {% endAside %}
 
 ## Why we need COEP
 
-Some web APIs increase the risk of side-channel attacks such as [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To mitigate that risk, browsers offer an opt-in-based isolated environment called [cross-origin isolation](https://web.dev/coop-coep/), which requires deploying COEP. [Cross-origin isolation](https://web.dev/coop-coep/) allows websites to use privileged features including [`SharedArrayBuffer`](/blog/enabling-shared-array-buffer/), [`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/), and [high-precision timers with better resolution](/blog/cross-origin-isolated-hr-timers/).
+Some web APIs increase the risk of side-channel attacks such as [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To mitigate that risk, browsers offer an opt-in-based isolated environment called [cross-origin isolation](https://web.dev/articles/coop-coep), which requires deploying COEP. [Cross-origin isolation](https://web.dev/articles/coop-coep) allows websites to use privileged features including [`SharedArrayBuffer`](/blog/enabling-shared-array-buffer/), [`performance.measureUserAgentSpecificMemory()`](https://web.dev/articles/monitor-total-page-memory-usage), and [high-precision timers with better resolution](/blog/cross-origin-isolated-hr-timers/).
 
-To enable cross-origin isolation, websites must send the following HTTP headers: 
- 
+To enable cross-origin isolation, websites must send the following HTTP headers:
+
 ```http
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
@@ -37,13 +37,13 @@ Cross-Origin-Opener-Policy: same-origin
 
 ## Challenges with enabling COEP
 
-While cross-origin isolation brings webpages better security and the ability to enable powerful features, deploying COEP can be [difficult](https://web.dev/cross-origin-isolation-guide/). One of the biggest challenges is that all cross-origin iframes must deploy COEP and [CORP](https://web.dev/security-headers/#corp). Iframes without those headers will not be loaded by the browser.
+While cross-origin isolation brings webpages better security and the ability to enable powerful features, deploying COEP can be [difficult](https://web.dev/articles/cross-origin-isolation-guide). One of the biggest challenges is that all cross-origin iframes must deploy COEP and [CORP](https://web.dev/security-headers/#corp). Iframes without those headers will not be loaded by the browser.
 
 ## Iframe credentialless to the rescue
 
 We're introducing `<iframe credentialless>` to help embed third-party iframes that don't set COEP. By adding the `credentialless` attribute to the `<iframe>` element, the iframe is loaded from a different, empty context. In particular, it is loaded without cookies. This allows for removing the COEP restriction.
 
-Example:  
+Example:
 
 ```html
 <iframe credentialless src="https://example.com">
@@ -79,9 +79,9 @@ Pop-ups are opened as if `noopener` was set. They are created in a new regular t
 
 ## Resources
 
--  [Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/coop-coep/)
--  [Why you need "cross-origin isolated" for powerful features](https://web.dev/why-coop-coep/)
--  [A guide to enable cross-origin isolation](https://web.dev/cross-origin-isolation-guide/)
+-  [Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/articles/coop-coep)
+-  [Why you need "cross-origin isolated" for powerful features](https://web.dev/articles/why-coop-coep)
+-  [A guide to enable cross-origin isolation](https://web.dev/articles/cross-origin-isolation-guide)
 -  [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](/blog/enabling-shared-array-buffer/)
 -  [Load cross-origin resources without CORP headers using `COEP: credentialless`](/blog/coep-credentialless-origin-trial/)
 -  [IFrame credentialless - Web security | MDN](https://developer.mozilla.org/docs/Web/Security/IFrame_credentialless)

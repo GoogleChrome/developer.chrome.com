@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Frequently asked questions"
 seoTitle: "Chrome Extensions: Frequently asked questions"
 date: 2014-02-28
-updated: 2020-11-20
+updated: 2023-09-12
 description: Frequently asked questions about Chrome Extensions.
 ---
 
@@ -40,66 +40,38 @@ the browser.
 
 ### Are extensions fetched from the web every time the browser is loaded? {: #faq-gen-03 }
 
-Extensions are downloaded by the Chrome browser upon install, and are subsequently run off of the
-local disk in order to speed up performance. However, if a new version of the extension is pushed
-online, it will be automatically downloaded in the background to any users who have the extension
-installed. Extensions may also make requests for remote content at any time, in order to interact
-with a web service or pull new content from the web.
+Extensions are downloaded by the Chrome browser upon install, and are subsequently run off of
+local disk to speed up performance. However, if a new version of the extension is uploaded to
+the Chrome Web Store, it will be automatically downloaded in the background for any users who have
+the extension installed. Extensions may also make requests for remote data at any time, but not
+remotely-hosted code.
 
 ### How do I determine which version of Chrome is deployed to which channel? {: #faq-dev-14 }
 
 To determine which version of Chrome is currently available on each of the different platforms,
-visit [omahaproxy.appspot.com][34]. On that site you will see data in a format similar to:
-
-```text
-cf,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-cf,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-cf,stable,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-linux,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-linux,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-linux,stable,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-mac,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-mac,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-mac,stable,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-win,canary,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-win,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-win,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-win,stable,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-cros,dev,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-cros,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
-```
-
-Each line represents information about a different platform and channel combination. The listed
-platforms are `cf` (Google Chrome Frame), `linux`, `mac`, `win`, and `cros` (Google ChromeOS). The
-listed channels are `canary`, `dev`, `beta`, and `stable`. The two four-part numbers after the
-channel represent the current and previous versions of Chrome deployed to that platform-channel
-combination. The rest of the information is metadata about when the releases were first pushed, as
-well as revision numbers associated with each build.
+visit [chrome releases][34], which lists the current Chrome releases for each channel and platform.
 
 ## Capabilities {: #capabilities2 }
 
-### Can extensions make cross-domain Ajax requests? {: #faq-dev-02 }
+### Can extensions make cross-origin network requests? {: #faq-dev-02 }
 
-Yes. Extensions can make cross-domain requests. See [this page][35] for more information.
+Yes. Extensions can make cross-origin network requests. See [this page][35] for more information.
 
 ### Can extensions use 3rd party web services? {: #faq-dev-03 }
 
-Yes. Extensions are capable of making cross-domain Ajax requests, so they can call remote APIs
+Yes. Extensions are capable of making cross-origin network requests, so they can call remote APIs
 directly. APIs that provide data in JSON format are particularly easy to use.
 
 ### Can extensions encode/decode JSON data? {: #faq-dev-07 }
 
-Yes, modern JavaScript engines like Chrome's V8 have built-in support for
+Yes. Chrome's JavaScript engine, called "V8", has built-in support for
 [JSON.stringify][stringify] and [JSON.parse][parse] so you can use these
 functions in your extensions without including JSON libraries in
 your code.
 
 ### Can extensions store data locally? {: #faq-dev-08 }
 
-Yes, extensions can use [localStorage][37] to store string data permanently. Using Chrome's built-in
-JSON functions, you can store complex data structures in localStorage. For extensions that need to
-execute SQL queries on their stored data, Chrome implements [client side SQL databases][38], which
-may be used as well.
+Yes. Extensions provide a [storage API][63] designed specifically for extensions. An extension service worker can als0 use [CacheStorage][65], and [IndexedDB][38]. Additionally, contexts outside the extension service worker can use the [Web Storage API][37].
 
 ### Can extensions use OAuth? {: #faq-dev-04 }
 
@@ -109,11 +81,11 @@ requests.
 
 ### Can extensions create UI outside of the rendered web page? {: #faq-dev-05 }
 
-Yes, your extension may add buttons to the Chrome browser's user interface. See [browser
-actions][40] and [page actions][41] for more information.
+Yes, your extension may add buttons to the Chrome browser's user interface using the
+[action API][40].
 
 An extension may also create popup notifications, which exist outside of the browser window. See the
-[Rich notifications][42] documentation for more details.
+[Rich notifications][42] documentation for details.
 
 ### Can extensions listen to clicks on Chrome tabs and navigation buttons? {: #faq-interact-chrome }
 
@@ -121,21 +93,20 @@ No. Extensions are limited to listening to the events described in the [API docu
 
 ### Can two extensions communicate with each other? {: #faq-dev-11 }
 
-Yes, extensions may pass messages to other extensions. See the [message passing documentation][44]
+Yes, extensions may pass messages to other extensions. See [Cross-extension messaging][44]
 for more information.
 
 ### Can extensions use Google Analytics? {: #faq-dev-13 }
 
 Yes, since extensions are built just like websites, they can use [Google Analytics][45] to track
-usage. However, you must modify the tracking code to pull an HTTPS version of the Google Analytics
-library. See [this tutorial][46] for more information on doing this.
+usage. See [Using Google Analytics 4][46] for more information.
 
 ### Can extensions modify chrome:// URLs? {: #faq-dev-15 }
 
 No. The extensions APIs have been designed to minimize backwards compatibility issues that can arise
 when new versions of the browser are pushed. Allowing content scripts on `chrome://` URLs would mean
 that developers would begin to rely on the DOM, CSS, and JavaScript of these pages to stay the same.
-In the best case, these pages could not be updated as quickly as they are being updated right now.
+In the best case, these pages could not be updated as quickly as they are currently.
 In the worst case, it could mean that an update to one of these pages could cause an extension to
 break, causing key parts of the browser to stop working for users of that extension.
 
@@ -143,19 +114,19 @@ The reason that [replacing the content][47] hosted at these URLs entirely is all
 forces an extension developer to implement all of the functionality they want without depending on
 the browser's internal implementation to stay the same.
 
-### Can extensions open browser/page action popups without user interaction? {: #faq-open-popups }
+### Can extensions open action popups without a user interaction? {: #faq-open-popups }
 
-No, popups can only be opened if the user clicks on the corresponding page or browser action. An
+No. Popups can only be opened if the user clicks the corresponding action. An
 extension cannot open its popup programmatically.
 
 ### Can extensions keep popups open after the user clicks away from them? {: #faq-persist-popups }
 
-No, popups automatically close when the user focuses on some portion of the browser outside of the
+No. Popups automatically close when the user focuses on some portion of the browser outside of the
 popup. There is no way to keep the popup open after the user has clicked away.
 
 ### Can extensions be notified when they are installed/uninstalled? {: #faq-lifecycle-events }
 
-You can listen to the [runtime.onInstalled][48] event to be notified when your
+You can listen to the [`runtime.onInstalled`][48] event to be notified when your
 extension is installed or updated, or when Chrome itself is updated. While there
 is no event listener for uninstalling an extension, a URL can be set by calling
 [`runtime.setUninstallUrl()`](/docs/extensions/reference/runtime/#method-setUninstallURL)
@@ -169,12 +140,13 @@ implementing surveys without access to any extension APIs.
 ### How do I build a UI for my extension? {: #faq-building-ui }
 
 Extensions use HTML and CSS to define their user interfaces, so you can use standard form controls
-to build your UI, or style the interface with CSS, as you would a web page. Additionally, extensions
+to build your UI, or style the interface with CSS, as you would a web page. You can also create rich
+interactions using JavaScript and the web platform's many APIs. Additionally, extensions
 can add [some limited UI elements to Chrome itself.][49]
 
 ### How much data can I store in localStorage? {: #faq-dev-09 }
 
-Extensions can store up to 5MB of data in localStorage.
+Extensions can store up to 10MB of data in [`storage.local`][local-storage].
 
 ### How do I create an options menu for my extension? {: #faq-dev-10 }
 
@@ -185,23 +157,23 @@ they can be persisted across browsers.
 
 ### What debugging tools are available to extension developers? {: #faq-dev-12 }
 
-Chrome's built-in developer tools can be used to debug extensions as well as web pages. See this
-[tutorial on debugging extensions][51] for more information.
+Chrome's built-in developer tools can be used to debug extensions as well as web pages. See
+[Debugging extensions][51] for more information.
 
-### Why do wildcard matches not work for top level domains (TLDs)? {: #faq-dev-16 }
+### Why do wildcard matches not work for top level domains? {: #faq-dev-16 }
 
-You cannot use wildcard match patterns like `https://google.*/*` to match TLDs (like
+You cannot use wildcard match patterns like `https://google.*/*` to match top level domains (like
 `https://google.es` and `https://google.fr`) due to the complexity of actually restricting such a
 match to only the desired domains.
 
 For the example of `https://google.*/*`, the Google domains would be matched, but so would
-`https://google.someotherdomain.com`. Additionally, many sites do not own all of the TLDs for their
+`https://google.someotherdomain.com`. Additionally, many sites do not own all of the top level domains for their
 domain. For an example, assume you want to use `https://example.*/*` to match `https://example.com`
 and `https://example.es`, but `https://example.net` is a hostile site. If your extension has a bug,
 the hostile site could potentially attack your extension in order to get access to your extension's
 increased privileges.
 
-You should explicitly enumerate the TLDs that you wish to run your extension on.
+You should explicitly enumerate the top level domains that you wish to run your extension on.
 
 ### How can an extension determine whether it is running for the first time? {: #faq-firstrun }
 
@@ -305,14 +277,13 @@ The steps you should follow to ensure this are:
 [31]: #faq-fea-02
 [32]: /docs/extensions/mv3/getstarted
 [33]: https://developer.mozilla.org/docs/Web/API
-[34]: https://omahaproxy.appspot.com
+[34]: https://chromiumdash.appspot.com/releases
 [35]: /docs/extensions/mv3/xhr
 [36]: https://json.org/js.html
-[37]: https://dev.w3.org/html5/webstorage/
-[38]: https://dev.w3.org/html5/webdatabase/
-[39]: https://unitedheroes.net/OAuthSimple/js/OAuthSimple.js
-[40]: /docs/extensions/reference/browserAction
-[41]: /docs/extensions/reference/pageAction
+[37]: https://developer.mozilla.org/docs/Web/API/Web_Storage_API
+[38]: https://developer.mozilla.org/docs/Web/API/IDBDatabase
+[39]: /docs/extensions/mv3/tut_oauth/
+[40]: /docs/extensions/reference/action/
 [42]: /docs/extensions/mv3/richNotifications
 [43]: /docs/extensions/reference
 [44]: /docs/extensions/mv3/messaging#external
@@ -335,5 +306,9 @@ The steps you should follow to ensure this are:
   https://bugs.chromium.org/p/chromium/issues/list?can=2&q=component%3DPlatform>Extensions+Type%3DFeature+shortcuts
 [61]: https://crbug.com/new
 [62]: https://groups.google.com/a/chromium.org/group/chromium-extensions/topics
+[63]: /docs/extensions/reference/storage/
+[64]: /docs/extensions/mv3/service_workers/
+[65]: https://developer.mozilla.org/docs/Web/API/CacheStorage
+[local-storage]: /docs/extensions/reference/storage/#property-local
 [stringify]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 [parse]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse

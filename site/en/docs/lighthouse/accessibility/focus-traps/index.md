@@ -35,7 +35,7 @@ it makes sense to temporarily trap the user.
 
 But you should aim to provide a keyboard-accessible method of escaping the modal as well.
 Check out [this example on how to create an accessible modal](https://github.com/gdkraus/accessible-modal-dialog).
-See also [Modals and Keyboard Traps](https://web.dev/using-tabindex/#modals-and-keyboard-traps).
+See also [Modals and Keyboard Traps](https://web.dev/articles/using-tabindex#modals_and_keyboard_traps).
 In this example,
 you get the desired behaviors of a modal,
 without forcing the user to refresh the page to get out of the focus trap.
@@ -48,7 +48,7 @@ Good keyboarding experiences depend on a logical tab order and easily discernibl
 If a keyboard user gets trapped in a particular page element,
 they have no way of interacting with the page.
 
-Learn more in [How to do an Accessibility Review](https://web.dev/how-to-review/#try-it-with-a-screen-reader).
+Learn more in [How to do an Accessibility Review](https://web.dev/articles/how-to-review#try_it_with_a_screen_reader).
 
 ## Resources
 

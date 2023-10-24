@@ -8,7 +8,7 @@ description: >
 authors:
  - agektmr
 date: 2022-11-09
-updated: 2023-07-10
+updated: 2023-09-18
 ---
 
 The Federated Credential Management API is
@@ -21,7 +21,7 @@ These updates are for you if:
 
 -   You are an IdP using the Federated Credential Management API—for
     example,
-    [you have run an origin trial](/blog/fedcm-origin-trial/).
+    [you've run an origin trial](/blog/fedcm-origin-trial/).
 -   You are an IdP or RP and interested in extending the API to fit your use
     case – e.g. you've been observing or participating in
     [the discussions on the FedID CG repository](https://github.com/fedidcg/FedCM/issues)
@@ -36,6 +36,18 @@ If you're new to this API or have not experimented with it yet, read the
 
 To stay updated on the FedCM API changes, please subscribe to [our
 newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
+
+### Chrome 117 (Sep 2023)
+
+- Origin trial for Idp Sign-In Status API is available on Android from Chrome 117. Learn more about it in [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/#idp-signin-status).
+
+### Chrome 116 (Aug 2023)
+
+- Added support for following three features in Chrome 116:
+  - **Login Hint API**: Specify a preferred user account to be signed in.
+  - **User Info API**: Fetch the information of the returning user so that the identity provider (IdP) can render a personalized sign-in button within an iframe.
+  - **RP Context API**: Use a title different from 'Sign in' in the FedCM dialog.
+- Origin Trial for IdP Sign-In Status API is available. Learn more about it in [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/).
 
 ### Chrome 115 (June 2023)
 

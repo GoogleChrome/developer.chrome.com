@@ -31,7 +31,7 @@ First-Party Sets の提案は現在[テスト段階](https://privacysandbox.com/
 
 Cookie は本質的にファーストパーティまたはサードパーティではなく、Cookie が含まれる現在のコンテキストに依存します。これは、`cookie` ヘッダー内、または JavaScript の `document.cookie` を介したリクエストのいずれかです。
 
-たとえば、 `video.site` に `theme=dark` Cookie がある場合、`video.site` を閲覧中にリクエストが `video.site` に対して行われると、これは [same-site コンテキスト](https://web.dev/same-site-same-origin/#same-site-cross-site)であり、含まれる Cookie は *first-party* となります。
+たとえば、 `video.site` に `theme=dark` Cookie がある場合、`video.site` を閲覧中にリクエストが `video.site` に対して行われると、これは [same-site コンテキスト](https://web.dev/articles/same-site-same-origin#same_site_cross_site)であり、含まれる Cookie は *first-party* となります。
 
 ただし、`video.site` の iframe プレーヤーを埋め込んだ `my-blog.site` を閲覧している場合に `my-blog.site` から `video.site` にリクエストが送信されると、これはクロスサイトコンテキストであり、`theme` Cookie は *third-party* となります。
 
@@ -39,7 +39,7 @@ Cookie は本質的にファーストパーティまたはサードパーティ�
 
 Cookie の組み込みは、Cookie の `SameSite` 属性によって決定されます。
 
-- `SameSite=Lax`、`Strict`、または `None` を指定した [**same-site コンテキスト**](https://web.dev/same-site-same-origin/#same-site-cross-site)では、Cookie は**ファーストパーティ**になります。
+- `SameSite=Lax`、`Strict`、または `None` を指定した [**same-site コンテキスト**](https://web.dev/articles/same-site-same-origin#same_site_cross_site)では、Cookie は**ファーストパーティ**になります。
 - `SameSite=None` を指定した **cross-site コンテキスト**では、Cookie は**サードパーティ**になります。
 
 ただし、必ずしも明確ではありません。`brandx.site` が旅行予約サイトで、`fly-brandx.site` と `drive-brandx.site` も併用してフライトとレンタカーのサービスを分けているとします。1 つの旅行を予約する過程で、訪問者はこれらのサイト間を移動してさまざまなオプションを選択し、これらのサイト間で、「ショッピングカート」の中身が維持されることを期待しています。`brandx.site`は、`SameSite=None` Cookie を使用して、cross-site コンテキストを許可することでユーザーのセッションを管理します。ただし欠点があり、Cookie にクロスサイトリクエストフォージェリ（CSRF）保護がありません。`evil.site` が `brandx.site` へのリクエストを含めると、その Cookie が含まれてしまうことになります！

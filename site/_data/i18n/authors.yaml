@@ -692,7 +692,7 @@ rowan_m:
   title:
     en: 'Rowan Merewood'
   description:
-    en: 'Rowan is a Staff Developer Relations Engineer at Chrome.'
+    en: 'Developer Relations for Privacy Sandbox.'
 danielcheng:
   title:
     en: 'Daniel Cheng'
@@ -1521,6 +1521,11 @@ hemeryar:
     en: 'Arthur Hemery'
   description:
     en: 'Software Engineer, Google'
+paulrossman:
+  title:
+    en: 'Paul Rossman'
+  description:
+    en: 'Paul is a Technical Program Manager at Google'
 nrosenthal:
   title:
     en: 'Noam Rosenthal'
@@ -1567,3 +1572,18 @@ ferreiram:
     en: 'Maxi Ferreira'
   description:
     en: 'Creator, FrontendAtScale'
+iforfota7:
+  title:
+    en: 'Ioana Forfota'
+  description:
+    en: 'STEP Intern, Chrome DevTools team'
+silviaeremia7:
+  title:
+    en: 'Silvia Eremia'
+  description:
+    en: 'STEP Intern, Chrome DevTools team'
+saurabhrajpal:
+  title:
+    en: Saurabh Rajpal
+  description:
+    en: Web Ecosystem Consultant.

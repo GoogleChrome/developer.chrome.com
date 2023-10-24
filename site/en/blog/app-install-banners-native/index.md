@@ -154,7 +154,7 @@ the next page navigation.
 
 ## Special considerations for when using content security policy
 
-If your site has a restrictive [Content Security Policy](https://web.dev/csp/),
+If your site has a restrictive [Content Security Policy](https://web.dev/articles/csp),
 make sure to add `*.googleusercontent.com` to the `img-src` directive so Chrome
 can download the icon associated with your app from the Play Store.
 

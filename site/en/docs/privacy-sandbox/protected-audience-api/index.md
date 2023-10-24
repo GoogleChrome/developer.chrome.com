@@ -9,7 +9,7 @@ description: >
   previously visited websites, designed so it cannot be used by
   third parties to track user browsing behavior across sites.
 date: 2022-01-27
-updated: 2023-03-14
+updated: 2023-09-18
 authors:
   - samdutton
   - kevinkiklee
@@ -17,8 +17,10 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
+{% Partial 'privacy-sandbox/ot-end.njk' %}
+
 For those new to the Protected Audience API, read the [Protected Audience API overview](/docs/privacy-sandbox/protected-audience)
-for a high-level explanation of the proposal.
+for a high-level explanation of the API.
 
 This post is written for developers as a technical reference for the most
 recent iteration of the experimental Protected Audience API. A [demo](#demo) of a basic
@@ -31,7 +33,7 @@ Protected Audience API deployment is available, as are
 
 ## What is the Protected Audience API? {: #what}
 
-The Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve
+The Protected Audience API is a [Privacy Sandbox](/docs/privacy-sandbox/overview) API designed to serve
 [remarketing](/docs/privacy-sandbox/protected-audience#remarketing) and custom audience use
 cases, designed so that it cannot be used by third parties to track user
 browsing behavior across sites. The API enables on-device auctions by
@@ -69,59 +71,6 @@ sites is available at [protected-audience-demo.web.app/](https://protected-audie
 </figcaption>
 </figure>
 
-### Take part in the origin trial {: #origin-trial}
-
-The [Privacy Sandbox Relevance and Measurement origin trial](/docs/privacy-sandbox/unified-origin-trial)
-has been made available in Chrome Beta 101.0.4951.26 and above on desktop for
-the Protected Audience API, [Topics](/docs/privacy-sandbox/topics/), and
-[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
-
-To take part, [register for an origin trial token](/origintrials/#/view_trial/771241436187197441).
-
-Once you have successfully enrolled in the trial, you can try out the Protected Audience API
-API on pages that provide a valid trial token. For example, to ask
-the browser to [join one or more interest groups](#joinadinterestgroup),
-and then to run an ad auction to select and display an ad.
-
-Provide a trial token for every page on which you would like to run Protected Audience API code:
-
-*  As a meta tag in the `<head>`:
-  ```html
-  <meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">
-  ```
-
-*  As an HTTP header:
-  ```text
-  Origin-Trial: TOKEN_GOES_HERE
-  ```
-
-*   By providing a token programmatically:
-
-  ```javascript
-  const otMeta = document.createElement('meta');
-  otMeta.httpEquiv = 'origin-trial';
-  otMeta.content = 'TOKEN_GOES_HERE';
-  document.head.append(otMeta);
-  ```
-
-An iframe running Protected Audience API code—such as a
-[`navigator.joinAdInterestGroup()`](#joinadinterestgroup)
-call by an interest group owner—will need to provide a token that matches its origin.
-
-[Proposed First Protected Audience API Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
-provides more details about the goals of the first trial and explains what
-features are supported.
-
-{% Aside 'caution' %}
-
-Not all users are eligible for the Privacy Sandbox Relevance and Measurement
-origin trial, even on pages that provide a valid trial token.
-
-The [Relevance and measurement unified origin trial overview](/docs/privacy-sandbox/unified-origin-trial#eligible-users)
-explains why this is so, and shows how you can (and should) detect if an origin 
-trial feature is available before attempting to use it.
-
-{% endAside %}
 
 ### Test with `chrome://flags` or feature flags {: #flags}
 
@@ -160,14 +109,14 @@ This is an in-progress version of the Protected Audience API for early testing. 
 considered complete or indicative of the final implementation. Protected Audience API progress
 and status are discussed in the regular WICG meetings.
 
-The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timing for Protected Audience API and other Privacy Sandbox proposals.
+The [Privacy Sandbox timeline](https://privacysandbox.com/timeline) provides implementation timelines for Protected Audience API and other Privacy Sandbox APIs.
 
 {% endAside %}
 
 ## Supported features
 
 Protected Audience API behind feature flags in Chromium is a first experiment to test the
-following features of the Protected Audience API proposal:
+following features of the Protected Audience API:
 
 -  **Interest groups**: stored by the browser, with associated metadata to
    configure ad bidding and rendering.
@@ -528,14 +477,21 @@ manage the list of interest groups that they have been added to across the web
 sites they have visited. As with the Privacy Sandbox technologies themselves,
 user settings may evolve with feedback from users, regulators and others.
 
-We'll continue to update the available settings in Chrome as the Protected Audience API
-proposal progresses, [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#collaborate).
+We'll continue to update the available settings in Chrome [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#collaborate).
 In the future, we plan to offer more granular settings to manage the Protected Audience API and
 associated data.
 
 API callers can't access group membership when users browse in Incognito mode,
 and membership is removed when users clear their site data.
 
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
+### Are the Protected Audience worklets cached by the browser?
+{% endDetailsSummary %}
+
+The resources that contain the Protected Audience worklets—the buyer's bid generation and reporting worklets, and seller's ad scoring and reporting worklets—are cached by the browser. You can use the `Cache-Control` header to control the caching behavior.
 {% endDetails %}
 
 {: #engage}
@@ -548,9 +504,9 @@ To ask a questions and get support with your implementation, the demo, or the
 documentation:
 
 *  **GitHub**: Read the
-  [proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md), 
+  [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md), 
    [raise questions, and follow  discussion](https://github.com/WICG/turtledove/issues).
-* **Demo**: Raise an issue on the [demo code repository](https://github.com/JackJey/fledge-demo).
+* **Demo**: Raise an issue on the [demo code repository](https://github.com/GoogleChromeLabs/protected-audience-demo).
 *  **Developer support**: Ask questions and join discussions on the
    [Privacy Sandbox Developer Support 
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
@@ -560,7 +516,7 @@ documentation:
   or [raise a new issue](https://crbug.com/new).
 
 For more general questions about meeting your needs with the Protected Audience API, 
-[file an issue on the proposal repository](https://github.com/WICG/turtledove/issues/new).
+[file an issue on the API repository](https://github.com/WICG/turtledove/issues/new).
 You can also discuss industry use cases in the W3C's
 [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
 
@@ -577,12 +533,12 @@ as a site owner or an individual user.
 
 - For notifications of API status changes, join the
   [mailing list for developers](https://groups.google.com/u/3/a/chromium.org/g/fledge-api-announce).
-- To closely follow all ongoing discussions on the API, click the **Watch** button on the [proposal page on
+- To closely follow all ongoing discussions on the API, click the **Watch** button on the [API page on
   GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md). This requires you have or [create a GitHub
   account](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
 - To get overall updates on the Privacy Sandbox, subscribe to the RSS feed
   [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/).
 - [Join the scheduled calls for the Protected Audience API](https://github.com/WICG/turtledove/issues/88)
-  (every   second week). Everyone is welcome to join&mdash;to participate,
+  (every second week). Everyone is welcome to join&mdash;to participate,
   first make sure to [join the WICG](https://www.w3.org/community/wicg/). You
   can actively participate or just listen in!

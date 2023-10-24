@@ -2,9 +2,12 @@
 layout: 'layouts/doc-post.njk'
 title: 'Private Aggregation API: experiment and participate'
 date: 2023-03-02
+updated: 2023-09-18
 authors:
   - alexandrawhite
 ---
+
+{% Partial 'privacy-sandbox/ot-end.njk' %}
 
 Read the [Private Aggregation API overview](/docs/privacy-sandbox/private-aggregation/)
 and [Shared Storage overview](/docs/privacy-sandbox/shared-storage/).
@@ -16,9 +19,7 @@ for the Private Aggregation API.
 
 1. Try the [demo](http://goo.gle/shared-storage-demo). The code is available on
    [GitHub](https://github.com/GoogleChromeLabs/shared-storage-demo).
-2. Experiment with the API. The API is available in the [Privacy Sandbox unified origin trial](/docs/privacy-sandbox/unified-origin-trial/) on Chrome Canary, Dev, and Beta M107 or later.
-   * Learn how you can register for a [third-party origin trial](/docs/web-platform/third-party-origin-trials/).
-3. Generate summary reports with the [Aggregation Service](/docs/privacy-sandbox/aggregation-service).
+1. Generate summary reports with the [Aggregation Service](/docs/privacy-sandbox/aggregation-service).
    *  Set up
       [local testing](https://github.com/privacysandbox/aggregation-service/blob/main/README.md).
       The Aggregation Service for the Private Aggregation API is not yet

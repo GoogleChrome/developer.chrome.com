@@ -6,7 +6,7 @@ date: 2019-05-02
 updated: 2020-05-29
 ---
 
-A seção Oportunidades de seu relatório Lighthouse lista todas as imagens offscreen ou ocultas em sua página junto com a economia potencial em [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte). Considere o carregamento lazy dessas imagens depois que todos os recursos críticos terminarem de carregar para reduzir a métrica [Time to Interactive](https://web.dev/tti/) (tempo até interação):
+A seção Oportunidades de seu relatório Lighthouse lista todas as imagens offscreen ou ocultas em sua página junto com a economia potencial em [kibibytes (KiB)](https://en.wikipedia.org/wiki/Kibibyte). Considere o carregamento lazy dessas imagens depois que todos os recursos críticos terminarem de carregar para reduzir a métrica [Time to Interactive](https://web.dev/articles/tti) (tempo até interação):
 
 <figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/agMyJtIarLruD8iuz0Mt.png", alt="Uma captura de tela da auditoria Lighthouse Defer offscreen images", width="800", height="416" %}</figure>
 
@@ -28,7 +28,7 @@ Instale um [plugin Joomla de carregamento lazy](https://extensions.joomla.org/in
 
 ### Magento
 
-Considere modificar seus modelos de produto e catálogo para usar o recurso de [carregamento lazy](https://web.dev/browser-level-image-lazy-loading/) da plataforma web.
+Considere modificar seus modelos de produto e catálogo para usar o recurso de [carregamento lazy](https://web.dev/articles/browser-level-image-lazy-loading) da plataforma web.
 
 ### WordPress
 

@@ -35,7 +35,7 @@ Die wichtigsten Vorschläge des Chrome-Teams sind unten aufgeführt.
 
 ### Erstanbieterschutz
 
-- [**SameSite-Cookie-Änderungen**](https://web.dev/samesite-cookies-explained/): Sichern Sie Websites ab, indem Sie explizit Ihre Cross-Site-Cookies markieren.
+- [**SameSite-Cookie-Änderungen**](https://web.dev/articles/samesite-cookies-explained): Sichern Sie Websites ab, indem Sie explizit Ihre Cross-Site-Cookies markieren.
 - [**Erstanbietersets**](/docs/privacy-sandbox/first-party-sets): Erlauben Sie verwandten Domainnamen, die zur selben Organisation gehören, sich als zu einem Erstanbieter gehörend zu erklären.
 
 ### Betrugserkennung
@@ -45,7 +45,7 @@ Die wichtigsten Vorschläge des Chrome-Teams sind unten aufgeführt.
 ### Einschränkung der Datensammlung
 
 - [**Datenschutzbudget**](https://www.youtube.com/watch?v=0STgfjSA6T8): Erlaubt Websites, Informationen über den Browser oder das Gerät eines Benutzers abzurufen, ermöglicht es dem Browser jedoch, ein Kontingent für die Gesamtmenge an Informationen festzulegen, auf die eine Website zugreifen kann, sodass ein Benutzer nicht identifiziert werden kann.
-- [**User-Agent-Client-Hinweise**](https://web.dev/user-agent-client-hints/): Der [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)-String (UA) bietet eine signifikante Oberfläche für passives [Fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) und lässt sich dazu noch schwer verarbeiten. Client-Hinweise (Client Hints) ermöglichen es Entwicklern, aktiv nur die Informationen anzufordern, die sie über das Gerät oder die Anforderungen des Benutzers benötigen, anstatt diese Daten aus dem User-Agent-String parsen zu müssen.
+- [**User-Agent-Client-Hinweise**](https://web.dev/articles/user-agent-client-hints): Der [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)-String (UA) bietet eine signifikante Oberfläche für passives [Fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) und lässt sich dazu noch schwer verarbeiten. Client-Hinweise (Client Hints) ermöglichen es Entwicklern, aktiv nur die Informationen anzufordern, die sie über das Gerät oder die Anforderungen des Benutzers benötigen, anstatt diese Daten aus dem User-Agent-String parsen zu müssen.
 - [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): Beschränken Sie die Möglichkeit, einzelne Benutzer durch Zugriff auf ihre IP-Adresse zu identifizieren. Der Vorschlag besteht aus zwei Teilen: [**Willful IP Blindness**](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) bietet Websites die Möglichkeit, Browsern mitzuteilen, dass die Website IP-Adressen nicht mit Benutzern verknüpft werden, und [**Near-Path-NAT**](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) ermöglicht es Benutzergruppen, ihren Datenverkehr über denselben privatisierenden Server zu senden, um so effektiv ihre IP-Adressen vor einem Site-Host zu verstecken. Gnatcatcher stellt ebenfalls sicher, dass Websites, die für legitime Zwecke wie die Missbrauchsprävention Zugriff auf IP-Adressen benötigen, dies vorbehaltlich einer Zertifizierung und Prüfung tun können.
 
 ### Identität
@@ -90,10 +90,10 @@ Für die Erläuterungen zu API-Vorschlägen wird Feedback benötigt, insbesonder
 ### Artikel und Videos für Webentwickler
 
 - [Mehr über die Privacy Sandbox erfahren](https://web.dev/digging-into-the-privacy-sandbox)
-- [SameSite-Cookies erklärt](https://web.dev/samesite-cookies-explained/)
+- [SameSite-Cookies erklärt](https://web.dev/articles/samesite-cookies-explained)
 - [Erste Schritte mit Vertrauenstoken](https://web.dev/trust-tokens)
-- [Eine privatere Methode zur Messung von auf Anzeigen zurückzuführende Conversions](https://web.dev/conversion-measurement/)
-- [Was ist FLoC?](https://web.dev/floc/)
+- [Eine privatere Methode zur Messung von auf Anzeigen zurückzuführende Conversions](/docs/privacy-sandbox/attribution-reporting/)
+- [Was ist FLoC?](https://web.dev/articles/floc)
 - [Einführung des Datenschutzbudgets](https://www.youtube.com/watch?v=0STgfjSA6T8)
 
 ### Prinzipien und Konzepte hinter den Vorschlägen

@@ -46,7 +46,7 @@ Owners of Protected Audience API interest groups can be invited to [bid in Prote
 
 The advertiser's demand-side platform (DSP) or the advertiser itself calls
 `navigator.joinAdInterestGroup()` to ask the browser to add an interest group
-to the browser's membership list. 
+to the browser's membership list.
 
 The origin of the calling context for `joinAdInterestGroup()` must match the
 interest group owner's origin, so `joinAdInterestGroup()` will need to be
@@ -128,10 +128,10 @@ previously stored values.
 {% Aside 'gotchas' %}
 
 All URLs used as parameters for Protected Audience API methods must be from secure origins:
-all resources must be served over HTTPS URLs. [How to use HTTPS for local development](https://web.dev/how-to-use-local-https/)
+all resources must be served over HTTPS URLs. [How to use HTTPS for local development](https://web.dev/articles/how-to-use-local-https)
 explains how to do this when running the Protected Audience API locally.
 
-In addition, `biddingLogicUrl`, `decisionLogicUrl`, and `trustedBiddingSignals` 
+In addition, `biddingLogicUrl`, `decisionLogicUrl`, and `trustedBiddingSignals`
 require an `X-Allow-FLEDGE: true` HTTP response header.
 
 {% endAside %}
@@ -196,7 +196,7 @@ The remaining properties are optional:
         <dd>Role: Components for <a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces">ads composed of multiple pieces</a>.</dd>
 </dl>
 
-   
+
     <caption style="text-align:left">
     <p id="first-ref"><sup>1</sup> The `biddingLogicUrl` and `ads` properties are optional, but
     required to participate in an auction. There may be use cases for creating an interest group without these properties: for example, an interest group owner might want to add a browser to an interest group for a campaign that isn't running yet, or for some other future use, or they may temporarily have run out of advertising budget.</p>
@@ -285,7 +285,7 @@ include a `generateBid()` function.
 When a [seller calls `navigator.runAdAuction()`](/docs/privacy-sandbox/protected-audience-api/ad-auction),
 the `generateBid()` function is called once for each candidate ad. In other
 words, it's called for each interest group that the browser is a member
-of&mdash;if the interest group's owner is invited to bid. 
+of&mdash;if the interest group's owner is invited to bid.
 
 The seller provides a `decisionLogicUrl` in the auction
 configuration parameter passed to `navigator.runAdAuction()`. The code at this
@@ -449,9 +449,9 @@ Code for an ad can also call this function for its interest group.
 ### How do I implement frequency control by click?
 {% endDetailsSummary %}
 
-For simple frequency control, you can use the `prevWins` field in `browserSignals` inside `generateBid()`. Alternatively, you can call `navigator.leaveAdInterestGroup()` to request that a user's browser leave an interest group when an ad is clicked. This prevents future bidding and acts as a form of frequency capping. 
+For simple frequency control, you can use the `prevWins` field in `browserSignals` inside `generateBid()`. Alternatively, you can call `navigator.leaveAdInterestGroup()` to request that a user's browser leave an interest group when an ad is clicked. This prevents future bidding and acts as a form of frequency capping.
 
-You can also use a first-party cookie to store click information. When the ad is rendered, overwrite an existing interest group with the click data as user bidding signals. The workflow would look something like: 
+You can also use a first-party cookie to store click information. When the ad is rendered, overwrite an existing interest group with the click data as user bidding signals. The workflow would look something like:
 
 *   User visits `advertiser.com/product`.
 *   The advertiser writes "0 clicks" in a first-party cookie and calls `joinAdInterestGroup({ ..., userBiddingSignals: { clicks: [] } })`.
@@ -467,7 +467,7 @@ You can also use a first-party cookie to store click information. When the ad is
 
 A user's browsing history for the site that called `joinAdInterestGroup()` can be updated in `userBiddingSignals`, which can be used during on-device bidding. See the [product-level TURTLEDOVE](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md) original proposal which includes some analysis by RTB House on the impact of core metrics for recommendation use case adoption.
 
-`dailyUpdateUrl` provides a mechanism to periodically update the attributes of the interest group, but this update is not based on the user's browsing history. 
+`dailyUpdateUrl` provides a mechanism to periodically update the attributes of the interest group, but this update is not based on the user's browsing history.
 {% endDetails %}
 
 {% Details %}

@@ -22,7 +22,7 @@ Chrome 108 includes a number of new CSS features.
 
 ### CSS Overflow for replaced elements
 
-Chrome will start to roll out a change that allows developers to use the existing `overflow` property with replaced elements that paint outside the content-box. Paired with `object-view-box` this can be used to create an image with a custom glow or shadow applied, with proper ink-overflow behavior like a CSS shadow would have. 
+Chrome will start to roll out a change that allows developers to use the existing `overflow` property with replaced elements that paint outside the content-box. Paired with `object-view-box` this can be used to create an image with a custom glow or shadow applied, with proper ink-overflow behavior like a CSS shadow would have.
 
 This is a potential breaking change, find out more in [A change to overflow on replaced elements](/blog/overflow-replaced-elements/).
 
@@ -44,10 +44,10 @@ This feature has been added due to Chrome 108 adding support for LayoutNG printi
 
 ### Last baseline item alignment
 
-This feature allows developers to align items within either flex or grid layout by their last baseline, instead of their first. This is done via the following properties: 
+This feature allows developers to align items within either flex or grid layout by their last baseline, instead of their first. This is done via the following properties:
 
 - `align-items: last baseline;`
-- `justify-items: last baseline;` 
+- `justify-items: last baseline;`
 - `align-self: last baseline;`
 - `justify-self: last baseline;`
 
@@ -65,21 +65,21 @@ The Federated Credential Management API allows users to bring their federated id
 
 ### Media Source Extensions in workers
 
-Enables Media Source Extensions (MSE) API usage from DedicatedWorker contexts to enable improved performance of buffering media for playback by an HTMLMediaElement on the main Window context. By creating a MediaSource object on a DedicatedWorker context, an application may then obtain a MediaSourceHandle from it and transfer that handle to the main thread for use in attaching to an HTMLMediaElement. The context that created the MediaSource object may then use it to buffer media. 
+Enables Media Source Extensions (MSE) API usage from DedicatedWorker contexts to enable improved performance of buffering media for playback by an HTMLMediaElement on the main Window context. By creating a MediaSource object on a DedicatedWorker context, an application may then obtain a MediaSourceHandle from it and transfer that handle to the main thread for use in attaching to an HTMLMediaElement. The context that created the MediaSource object may then use it to buffer media.
 
 ### `Sec-CH-Prefers-Reduced-Motion` User Preference Media Features Client Hints Header
 
-[User Preference Media Features Client Hints Headers](https://web.dev/user-preference-media-features-headers/) defines a set of HTTP Client Hints headers around user preference media features as defined by Media Queries Level 5. If used as Critical Client Hints, these headers allow servers to make smart choices regarding, for example, CSS inlining. `Sec-CH-Prefers-Reduced-Motion` reflects the user's `prefers-reduced-motion` preference. 
+[User Preference Media Features Client Hints Headers](https://web.dev/articles/user-preference-media-features-headers) defines a set of HTTP Client Hints headers around user preference media features as defined by Media Queries Level 5. If used as Critical Client Hints, these headers allow servers to make smart choices regarding, for example, CSS inlining. `Sec-CH-Prefers-Reduced-Motion` reflects the user's `prefers-reduced-motion` preference.
 
 ### WebTransport BYOB readers
 
-Supports BYOB(bring-your-own-buffer) readers for WebTransport to allow reading into a developer-supplied buffer. BYOB readers can minimize buffer copies, and reduce memory allocations. 
+Supports BYOB(bring-your-own-buffer) readers for WebTransport to allow reading into a developer-supplied buffer. BYOB readers can minimize buffer copies, and reduce memory allocations.
 
 ### Wildcards in Permissions Policy Origins
 
 The Permissions Policy specification defines a mechanism that allows developers to selectively enable and disable use of various browser features and APIs. One capability of this mechanism allows features to be enabled only on explicitly enumerated origins (for example, `https://foo.com/`). This mechanism is not flexible enough for the design of some CDNs, which deliver content via an origin that might be hosted on one of several hundred possible subdomains.
 
-Therefore, this feature adds support for wildcards in permissions policy structured like `SCHEME://*.HOST:PORT` (for example, `https://*.foo.com/`) where a valid Origin could be constructed from `SCHEME://HOST:PORT` (for example, `https://foo.com/`). This requires that HOST is a registrable domain. This means that `https://*.bar.foo.com/` works but `https://*.com/` won’t (if you want to allow all domains to use the feature, you should just delegate to `*`). 
+Therefore, this feature adds support for wildcards in permissions policy structured like `SCHEME://*.HOST:PORT` (for example, `https://*.foo.com/`) where a valid Origin could be constructed from `SCHEME://HOST:PORT` (for example, `https://foo.com/`). This requires that HOST is a registrable domain. This means that `https://*.bar.foo.com/` works but `https://*.com/` won’t (if you want to allow all domains to use the feature, you should just delegate to `*`).
 
 ### Sync methods for AccessHandles in File System Access API
 
@@ -90,7 +90,7 @@ This is a potential breaking change, you can read more in [Breaking change: sync
 
 ### WebAuthn conditional UI
 
-[Conditional UI](https://web.dev/passkey-form-autofill/) for WebAuthn is supported on Windows 22H2 or later, macOS, and Android P or later. The WebAuthn UI on desktop platforms has also been refreshed.
+[Conditional UI](https://web.dev/articles/passkey-form-autofill) for WebAuthn is supported on Windows 22H2 or later, macOS, and Android P or later. The WebAuthn UI on desktop platforms has also been refreshed.
 
 ## Variable COLRv1 fonts and font feature detection
 
@@ -158,18 +158,18 @@ The feature has no observable effects in primary use cases, but may constrain im
 
 #### Remove `navigateEvent.restoreScroll()`
 
-`restoreScroll()` is being replaced by `navigateEvent.scroll()`. `scroll()` works identically except that it allows the developer to control scroll timing for non-traverse navigations (`scroll()` works when the scroll is not a restore, hence the name change along with the behavior change). 
+`restoreScroll()` is being replaced by `navigateEvent.scroll()`. `scroll()` works identically except that it allows the developer to control scroll timing for non-traverse navigations (`scroll()` works when the scroll is not a restore, hence the name change along with the behavior change).
 
 #### Remove `navigateEvent.transitionWhile()`
 
-`transitionWhile()` is being replaced by `navigateEvent.intercept()` due to design flaws reported by developers. intercept() behaves nearly identically to transitionWhile(), but instead of taking a mandatory Promise parameter, it takes an optional handler function that returns a Promise. This allows the browser to control when the handler executes, which is later and more intuitive than for `transitionWhile()`. 
+`transitionWhile()` is being replaced by `navigateEvent.intercept()` due to design flaws reported by developers. intercept() behaves nearly identically to transitionWhile(), but instead of taking a mandatory Promise parameter, it takes an optional handler function that returns a Promise. This allows the browser to control when the handler executes, which is later and more intuitive than for `transitionWhile()`.
 
 #### Remove WebRTC mediaConstraint's `googIPv6`
 
-`"googIPv6: false"` can be used to disable IPv6 support in WebRTC, as in the following example. 
+`"googIPv6: false"` can be used to disable IPv6 support in WebRTC, as in the following example.
 
 ```js
 new RTCPeerConnection({}, {mandatory:{googIPv6:false}});
 ```
 
-IPv6 has been enabled by default for many years and we should not be able to disable it. This is a legacy API that does not exist in the spec. 
+IPv6 has been enabled by default for many years and we should not be able to disable it. This is a legacy API that does not exist in the spec.

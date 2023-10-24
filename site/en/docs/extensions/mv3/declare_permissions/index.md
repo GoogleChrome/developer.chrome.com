@@ -376,3 +376,7 @@ including <a href="/docs/extensions/reference/tabs">chrome.tabs</a> and <a href=
 [vision-optperms]: /docs/extensions/mv3/intro/platform-vision/#improved-user-visibility-and-control
 [file-scheme-allow]: /docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess
 [incognito-allow]: /docs/extensions/reference/extension/#method-isAllowedIncognitoAccess
+[indexeddb]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
+[cache-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
+[opfs]: https://web.dev/origin-private-file-system/
+[storage-and-cookies]: /docs/extensions/mv3/storage-and-cookies

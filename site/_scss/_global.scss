@@ -32,9 +32,16 @@
   --flow-space: #{get-size(500)};
 }
 
+html {
+  // Disabled due to https://github.com/GoogleChrome/developer.chrome.com/issues/7412
+  // scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   // Allow normally unbreakable words to be broken at arbitrary points if
   // there are no otherwise acceptable break points in the line.
   // Soft wrap opportunities introduced by the word break are NOT considered

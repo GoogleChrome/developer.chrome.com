@@ -8,7 +8,7 @@ description: >
   Measure when an ad click or view leads to a conversion, such as a
   purchase on an advertiser site.
 date: 2021-05-18
-updated: 2023-03-14
+updated: 2023-10-09
 authors:
   - maudn
   - alexandrawhite
@@ -64,8 +64,6 @@ If you're unfamiliar with some of these terms or concepts, consult the
 
 ## Try the API
 
-- The Attribution Reporting API is available for experiments in the
-  [relevance and measurement origin trial](/docs/privacy-sandbox/unified-origin-trial/).
 - Test locally in your browser. [Set a _flag_](/docs/web-platform/chrome-flags/),
   which tells the Chrome browser to enable specific experimental
   features.
@@ -169,7 +167,7 @@ conversion data is too coarse)—is an area of active research.
 
 ### Other features
 
-Other features proposed for this API include:
+Other features of this API include:
 
 - [App-to-web attribution](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md):
   see or click an ad in an app and convert on the web.
@@ -195,16 +193,16 @@ In a future without third-party cookies, this API would be combined with other p
 {% Details %}
 
 {% DetailsSummary 'h3' %}
-Differences between the API proposed by Chrome and the API proposed by WebKit
+Differences between the Attribution Reporting API and the API proposed by WebKit
 {% endDetailsSummary %}
 
 Though the two APIs are different, Chrome and WebKit are working together in the open to simplify
 the developer experience, for example by aligning on the attribute names and on the [JSON structure
 for reports](https://github.com/privacycg/private-click-measurement/issues/30).
 
-The feature set of the Attribution Reporting API proposed by Chrome is different from that of the
+The feature set of the Attribution Reporting API is different from that of the
 Private Click Measurement API proposed by Safari/WebKit.
-Most notably, with the Attribution Reporting API proposed by Chrome:
+Most notably, with the Attribution Reporting API:
 
 - View-through measurement is supported.
 - Event-level reports can be provided.
@@ -421,13 +419,11 @@ They provide conversion insights without tracking users across sites, by using t
 
 ## Engage and share feedback
 
--  For questions about the proposal:
+-  For questions about the API:
    [create an issue](https://github.com/WICG/conversion-measurement-api/issues) 
-   on the proposal repo.
--  If you're an origin trial participant and have technical questions, join the
-   [Attribution Reporting mailing list](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) 
-   for developers and ask questions there, or
-   [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=attribution%20reporting).
+   on the API repo.
+-  Follow API updates and announcements on the [Attribution Reporting mailing list](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
+-  If you have technical questions, [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=attribution%20reporting).
 -  For implementation, integration, and general best practice questions:
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
    on the Privacy Sandbox developer support repo.

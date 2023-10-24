@@ -117,7 +117,7 @@ that wants control of the event loop, or get up to an extra `QUANTUM` millisecon
 of event latency.
 
 {% Aside %}
-A good value for `QUANTUM` (under the [RAIL model](https://web.dev/rail/)) is <50ms,
+A good value for `QUANTUM` (under the [RAIL model](https://web.dev/articles/rail)) is <50ms,
 depending on the type of work being done. This value is primarily what
 dictates the tradeoff between throughput and latency.
 {% endAside %}
@@ -191,7 +191,7 @@ API](https://www.w3.org/TR/page-visibility-2/).
 We encourage you to use `isInputPending()` with discretion. If there isn't
 user-blocking work to be done, then be kind to others on the event loop by
 yielding more frequently. [Long tasks can be
-harmful](https://web.dev/long-tasks-devtools/).
+harmful](https://web.dev/articles/long-tasks-devtools).
 
 ## Feedback
 

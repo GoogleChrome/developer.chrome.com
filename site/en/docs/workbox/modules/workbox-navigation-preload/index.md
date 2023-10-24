@@ -7,7 +7,7 @@ description: >
   Enable navigation preload, to get a network response for navigation requests faster.
 ---
 
-"[Speed up Service Worker with Navigation Preloads](https://web.dev/navigation-preload/)" does a
+"[Speed up Service Worker with Navigation Preloads](https://web.dev/articles/navigation-preload)" does a
 great job of explaining what navigation preload is, and the benefits it offers to web apps whose
 service worker does not explicitly handle
 [navigation requests](/docs/workbox/caching-strategies-overview/).

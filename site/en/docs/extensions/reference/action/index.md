@@ -12,7 +12,7 @@ not specified.
 
 ## Manifest
 
-In order to use the `chrome.action` API, you need to specify a `"manifest_version"` of `3` or higher
+To use the `chrome.action` API, you need to specify a `"manifest_version"` of `3` or higher
 and include the `action` key in your [manifest file][doc-manifest].
 
 ```json

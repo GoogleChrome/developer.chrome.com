@@ -11,68 +11,20 @@ authors:
   - samdutton
 ---
 
+{% Partial 'privacy-sandbox/ot-end.njk' %}
+
 ## Implementation status
 
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
-## Try the Topics API
+## Try the demo {: #demo}
 
-Topics is not currently available by default in any version of Chrome, but you can activate the API in two ways, as a single user or at scale:
-
--   The Topics API demo allows you to try it out as a single user.
--   The Topics origin trial allows you to try the API at scale with your website users.
-
-### Try the demo {: #demo}
+The Topics API demo allows you to try it out as a single user.
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
 
-### Test Topics in an origin trial {: #origin-trial}
-
-A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [Protected Audience](/docs/privacy-sandbox/protected-audience/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
-
-#### Provide an origin trial token
-
-To take part in the origin trial, you can provide a valid trial token
-[programmatically, in a header, or in a meta tag](/docs/web-platform/origin-trials/#take-part-in-an-origin-trial).
-Whichever method you choose to provide a trial token, and [whichever way you use the Topics API](#access-topics),
-you must provide a valid token **before** calling the API, and the token must be registered for the
-appropriate origin.
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left;">API usage</th>
-      <th style="text-align: left;">Trial token origin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>fetch()</code></td>
-      <td>Origin of the code making the call.</td>
-    </tr>
-    <tr>
-      <td><code>document.browsingTopics()</code></td>
-      <td>Origin of the code making the call.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top; white-space: nowrap"><code>&lt;iframe browsingtopics&nbsp;...&gt;</code></td>
-      <td>The token is required in the document that embeds the iframe: a token must be provided
-      that has been registered for the same origin as the code that creates the iframe.</td>
-    </tr>
-  </tbody>
-</table>
-
-When using the `fetch()` or `document.browsingTopics()` approach in a third-party context, the API
-caller must provide a token registered for the origin of the code making the call. That origin will
-be the same wherever the code is embedded. For example, multiple sites might include `<script
-src="https://adtech.example/js/topics.js">`, which would provide a token registered for
-`https://adtech.com` before making an API call. If the Topics API is used from a script element in a
-page in an iframe (as opposed to a script included from a different origin) a trial token must be
-provided in the page, registered for its origin.
-
-Always do [feature detection](#feature-detection) before attempting to use an origin trial API.
 
 ## Get and set topics {: #epoch}
 
@@ -106,25 +58,30 @@ Feature support on the current page isn't a guarantee that an API is usable: the
 
 ### Access topics with the JavaScript API {: #access-topics}
 
-Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
+Here is a basic example of possible API usage to access topics for the current user. 
 
 ```javascript
-// Get the array of top topics for this user.
-const topics = await document.browsingTopics();
+try {
+  // Get the array of top topics for this user.
+  const topics = await document.browsingTopics();
+  
+  // Request an ad creative.
+  const response = await fetch('https://ads.example/get-creative', {
+   method: 'POST',
+   headers: {
+     'Content-Type': 'application/json',
+   },
+   body: JSON.stringify(topics)
+  })
+  
+  // Get the JSON from the response.
+  const creative = await response.json();
+  
+  // Display ad.
 
-// Request an ad creative.
-const response = await fetch('https://ads.example/get-creative', {
- method: 'POST',
- headers: {
-   'Content-Type': 'application/json',
- },
- body: JSON.stringify(topics)
-})
-
-// Get the JSON from the response.
-const creative = await response.json();
-
-// Display ad.
+} catch (error) {
+  // Handle error.
+}
 ```
 
 ### Access topics without modifying state {: #skipobservation}
@@ -350,7 +307,7 @@ Permissions-Policy: browsing-topics=(self "https://example.com")
 ## Next steps
 
 - Learn more about [what topics are and how they work](/docs/privacy-sandbox/topics/topic-classification). <!-- topic classification page and demo and trial links needed-->
-- Try out the [demo](/docs/privacy-sandbox/topics/demo) or join an [origin trial](/docs/web-platform/origin-trials/).
+- Try out the [demo](/docs/privacy-sandbox/topics/demo).
 
 ## Find out more
 

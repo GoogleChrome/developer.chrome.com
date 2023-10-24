@@ -5,7 +5,7 @@ description: 如何通过“避免非合成动画”Lighthouse 审计。
 date: 2020-08-12
 ---
 
-在低端手机上，或当主线程上运行高性能任务时，非合成动画可能会出现卡顿（即不流畅）。卡顿的动画会提高页面的 [Cumulative Layout Shift](https://web.dev/cls/) (CLS)。降低 CLS 将提高 Lighthouse Performance 得分。
+在低端手机上，或当主线程上运行高性能任务时，非合成动画可能会出现卡顿（即不流畅）。卡顿的动画会提高页面的 [Cumulative Layout Shift](https://web.dev/articles/cls) (CLS)。降低 CLS 将提高 Lighthouse Performance 得分。
 
 ## 背景
 
@@ -27,12 +27,12 @@ date: 2020-08-12
 
 ## 如何确保合成动画
 
-请参阅[坚持仅合成器的属性和管理层计数](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)和[高性能动画](https://web.dev/animations-guide/)。
+请参阅[坚持仅合成器的属性和管理层计数](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)和[高性能动画](https://web.dev/articles/animations-guide)。
 
 ## 资源
 
 - [*避免非合成动画*审计的源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/non-composited-animations.js)
 - [坚持仅合成器的属性和管理层计数](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
-- [高性能动画](https://web.dev/animations-guide/)
+- [高性能动画](https://web.dev/articles/animations-guide)
 - [简化绘制的复杂度、减小绘制区域](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas)
 - [深入了解现代 Web 浏览器（第 3 部分）](https://developers.google.com/web/updates/2018/09/inside-browser-part3)

@@ -38,9 +38,9 @@ provide the same experience for both password and passkey users.
 
 ## Conditional UI
 
-Allowing websites to make a WebAuthn request without triggering the modal UI is 
-called "conditional mediation". This autofill integration is often referred to 
-as a [conditional 
+Allowing websites to make a WebAuthn request without triggering the modal UI is
+called "conditional mediation". This autofill integration is often referred to
+as a [conditional
 UI](https://github.com/w3c/webauthn/wiki/Explainer:-WebAuthn-Conditional-UI).
 
 <figure class="screenshot" style="max-width:300px; margin:auto;">
@@ -62,8 +62,8 @@ passkeys](https://developers.google.com/identity/passkeys#security-consideration
 
 ### How to use conditional UI
 
-To use the WebAuthn conditional UI, learn how to [Create a passkey for 
-passwordless logins](https://web.dev/passkey-registration/) and [Sign in with a 
-passkey through form autofill](https://web.dev/passkey-form-autofill/).
+To use the WebAuthn conditional UI, learn how to [Create a passkey for
+passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a
+passkey through form autofill](https://web.dev/articles/passkey-form-autofill).
 
 Photo by <a href="https://unsplash.com/@homajob?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Scott Graham</a> on <a href="https://unsplash.com/s/photos/form?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

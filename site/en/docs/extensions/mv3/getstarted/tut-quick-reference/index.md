@@ -308,7 +308,7 @@ async function createAlarm() {
 
 createAlarm();
 
-// Update tip once a the day
+// Update tip once a day
 chrome.alarms.onAlarm.addListener(updateTip);
 ```
 
