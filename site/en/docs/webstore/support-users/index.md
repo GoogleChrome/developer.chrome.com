@@ -1,27 +1,32 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Build user trust"
+title: "Manage user feedback"
 date: 2021-08-17
 updated: 2023-03-27
 description: >
-  How to provide support and build trust with users in the Chrome Web Store.
+  Follow-up on reviews and provide user support in the Chrome Web Store.
 ---
 
-This page describes how to TBD follow ("item") that was previously submitted to
-the Chrome Web Store.
+This guide covers how to manage user feedback on the Chrome Web Store. Learn how to reply to
+reviews, check ratings, and provide user support. Whether you choose to use the built-in tools or
+set up a dedicated support site, we'll show you the steps to improve your user engagement and handle
+feedback efficiently.
 
-## Improve ratings and reply to user reviews
+## Reply to user reviews
 
 Ratings and reviews help people decide whether or not to try out an extension. Not only do they
 leave a positive impression, but can also increase your ranking on the Chrome Web Store.
 
-Users can leave comments in the **Reviews tab** of your store item; you can also post replies here
+Users can leave comments in the **Reviews** section of your store item, under the item's overview. You can also post replies here
 to those reviews. Each user can only rate an extension once, but they can update their rating or
-review at any time. You can edit your reply at any time to provide the user with updates.
+review at any time. You can also edit your reply at any time to provide the user with updates.
 
- {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/M09XcAQmPi1dS84EiVQo.png", alt="Store item
-reviews tab",
-width="600", height="201" %}
+<figure>
+   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/UAwuiEvk4BJHFzyPkhcl.png", alt="User review section in the store listing", width="600", height="382", class='screenshot' %}
+   <figcaption>
+      User review section in the store listing
+   </figcaption>
+</figure>
 
 {% Aside %}
 
@@ -35,6 +40,8 @@ receive email notifications when users post reviews or update existing reviews, 
 Reviews in the **Account settings** of the Developer Dashboard.
 
    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8KGlMCKpiVVBRVqPAkXF.png", alt="Enable reviews notifications", width="600", height="212" %}
+
+### The Rating tab
 
 The **Rating tab** in the developer dashboard provides an overview of your extension’s ratings,
 including the total number of reviews and ratings over time.
@@ -51,32 +58,44 @@ store item by adding `/reviews` at the end of your item’s URL:
 
 ## Provide user support
 
-To ensure the best user experience and build a great extension it's important to
-collect, evaluate, and follow up on user feedback. You can manage your extension's user feedback in
-two ways:
+To ensure the best user experience and build a great extension it's important to collect, evaluate,
+and follow up on bug reports and feature requests. Users will be able to seek support by scrolling
+down to the **Support** section of your store item, under the **Privacy** section. You can respond
+to user feedback in two ways:
 
-- By using the built in CWS User Support tab, or
-- By using a dedicated support site.
+- By using the built-in [Support hub](#the-support-hub), or
+- By directing users to a dedicated support site.
 
-Users will be able to communicate with you using the **Support** tab of your store item.
+<figure>
+   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/rIOTquMOHdz8XgaOMruK.png", alt="Support section in the store listing", width="800", height="271", class='screenshot' %}
+   <figcaption>
+      Support section in the store listing
+   </figcaption>
+</figure>
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OBDYk7n5dBcaqs3z1HtL.png", alt="Store item Support tab", width="800", height="121" %}
+### The support hub {: #user-support-tab }
 
-### Using the User Support tab {: #user-support-tab }
+The Chrome Web Store provides a support hub, where users can leave questions, suggestions, and issues they are facing. To use the support hub, you need to enable it first by going to the **Account** management page and turning on the **Visibility** under the **Item support** section.
 
-Having a Support section on your extension's Chrome Web Store page allows users to easily report issues and suggest new features separately from leaving a review. To enable user feedback on your extension, the Visibility option (located in the Support tab area) must be switched on.   
-The Support Visibility option switch is located in the Chrome Web Store Developer Dashboard, in the Support Tab section of Account Options.
+<figure>
+   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i9AT9btb0qcJBr1ngXM5.png", alt="Visibility toggle under Item support section", width="214", height="123" %}
+   <figcaption>
+      Visibility toggle under Item support section
+   </figcaption>
+</figure>
 
-{% Img src="image/6AZNJBRnkpQUWTKPzig99lQY8jT2/7K825tSAz4wbXJpjGYj2.png", alt="Visibility option", width="800", height="239" %}
-
-In the **User Support** tab of the developer console you can view, respond and manage user feedback. Use the **Type**
+In the **User Support** tab of the developer dashboard you can view, respond and manage user feedback. Use the **Type**
 dropdown to filter user input by
 feature request, bug report or question. You can assign a status to each request, and can respond to each inquiry. Each ticket includes the extension
 version, browser type and operating system to help you reproduce bugs
 more efficiently.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/VvJFAHdrcMnUivTLm0kK.png", alt="Dashboard User
-Support Tab", width="800", height="269" %}
+<figure>
+   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/JDKcMpp4YsssaiTK8god.png", alt="User Support tab in the developer dashboard item", width="800", height="309", class='screenshot' %}
+   <figcaption>
+      User Support tab in the developer dashboard item
+   </figcaption>
+</figure>
 
 {% Aside %}
 Currently, this feature does not provide notifications:
@@ -102,10 +121,9 @@ URL field", width="514", height="283" %}
 
 {% Aside %}
 
-Make sure you **turn off** the [User Feedback][support-tab] in the dashboard Account settings to disable the default support experience.
+Make sure you **turn off** the [Item support][support-tab] Visibility in the dashboard Account settings to disable the support hub.
 
 {% endAside %}
-
 
 [cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
