@@ -177,7 +177,7 @@ Refer to [User-Agent Strings](/docs/multidevice/user-agent/) for examples of new
 
 ### Test the string locally {: #test-locally}
 
-There are a couple of methods to test the reduced User-Agent locally:
+To test the reduced User-Agent locally:
 
 * Configure an emulated device in DevTools with the right `user-agent` string
   and client hints.
