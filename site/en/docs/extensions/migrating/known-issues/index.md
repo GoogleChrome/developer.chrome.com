@@ -25,7 +25,7 @@ Recently, we announced changes to the Manifest V2 deprecation timeline, and whil
 We are committed to closing the following gaps before announcing a new Manifest V2 deprecation timeline:
 
 1. **Support File Handling API on ChromeOS** as a replacement for [`chrome.fileBrowserHandler`](/docs/extensions/reference/fileBrowserHandler/).
-1. **User Script support:** Allow registering content scripts with arbitrary code with the new [userScripts API](/docs/extensions/reference/userscripts/). (See [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details.)
+1. **User Script support:** Allow registering content scripts with arbitrary code with the new userScripts API. (See [our proposal](https://github.com/w3c/webextensions/blob/main/proposals/user-scripts-api.md) for details.)
 
 These issues have been collected based on feedback from partners, bug reports, and developers. In addition to these, we will continue our ongoing work to address stability issues and improve overall performance. 
 
