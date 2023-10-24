@@ -3,7 +3,7 @@
   Differs from banner.njk by not being able to be dismissed, and being applied via URL instead of frontmatter metadata.
 #}
 
-{% if '/docs/lighthouse/' in page.url %}
+{% if '/docs/lighthouse/overview' in page.url or page.url == '/en/docs/lighthouse/' %}
   <div class="aside aside--warning">
     Getting NO_SCREENSHOT errors? Some pages run under Chrome 118 will get this error. See <a target=_blank href="https://github.com/GoogleChrome/lighthouse/issues/15460#issuecomment-1775760096">this Github issue</a> for details and workarounds.
   </div>
