@@ -245,9 +245,6 @@ alert('Hello, world!');
 
 ### Emulate pageActions with declarativeContent
 
-The `chrome.action` API replaced the [`browserAction`][api-browser-action] and
-[`pageAction`][api-page-action] APIs in Manifest V3. By default, actions are similar to Manifest V2's browser
-actions, but you can use the action API to emulate the behavior of page actions. <!--Do we want this to reference the old version? I can clean that up if needed.-->
 
 This example shows how an extension's background logic can (a) disable an action by default and (b)
 use [declarativeContent][api-declarative-content] to enable the action on specific sites.
