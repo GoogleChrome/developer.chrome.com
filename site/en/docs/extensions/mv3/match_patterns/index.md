@@ -19,14 +19,6 @@ A match pattern is a URL with the following structure, used to specify a group o
 - `https`
 - A wildcard `*`, which matches only `http` or `https`
 - `file`
-- `ftp`
-- `chromeui`
-- `extension`
-- `filesystem`
-- `ws`
-- `wss`
-- `data`
-- `uuid_in_package`
 
 For information on injecting content scripts into unsupported schemes, such as `about:` and `data:`, see [Injecting in related frames][cs-frames].
 
