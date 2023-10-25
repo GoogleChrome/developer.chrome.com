@@ -12,16 +12,7 @@ listing can affect conversion rates. For example, you can identify countries wit
 of visitors so you can prioritize supporting languages for those countries. You can also export all
 the reports described below as CSV files.
 
-## Impressions
-
-The impressions metrics track the number of users that discover your extension while searching or
-browsing the Chrome Web Store. An impression occurs when your extension is featured in any
-collection or direct visits to your store item.
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Hu4dskyv3lIOuYB0qpv0.png", alt="daily impressions
-statistics chart", width="800", height="299" %}
-
-## Daily installs and uninstalls
+## Installs and uninstalls
 
 You can track customer acquisition and churn using these reports:
 - Track acquisition using the daily install report.
@@ -34,7 +25,16 @@ These numbers include new and returning
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bj6IRC7am3XgQwcfxpnr.png", alt="daily installs
 statistics chart", width="800", height="586" %}
 
-## Weekly users
+## Impressions
+
+The impressions metrics track the number of users that discover your extension while searching or
+browsing the Chrome Web Store. An impression occurs when your extension is featured in any
+collection or direct visits to your store item.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Hu4dskyv3lIOuYB0qpv0.png", alt="daily impressions
+statistics chart", width="800", height="299" %}
+
+## Users
 
 You can monitor weekly user retention for different groups of users, categorized by country,
 language, operating system, and item version.
@@ -44,7 +44,7 @@ statistics chart", width="800", height="342" %}
 
 {% Aside %}
 
-The **Weekly Users** stats only captures installations; it doesn't monitor whether users are active or not.
+The **Users** stats only captures installations; it doesn't monitor whether users are active or not.
 
 {% endAside %}
 
