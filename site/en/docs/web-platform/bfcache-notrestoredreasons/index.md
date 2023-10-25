@@ -99,8 +99,10 @@ The properties are as follows:
 `url`
 : A string representing the URL of the navigated page.
 
+For `PerformanceNavigationTiming` objects that do not represent history navigations, the `notRestoredReasons` property will return `null`. This is useful for determining whether bfcache is not relevant to a particular navigation, as opposed to `notRestoredReasons` not being supported in which case it would return `undefined`.
+
 {% Aside %}
-For `PerformanceNavigationTiming` objects that do not represent history navigations, `PerformanceNavigationTiming.notRestoredReasons` will return `null`. This is useful for determining whether bfcache is not relevant to a particular navigation, as opposed to `notRestoredReasons` support not being enabled (in which case it would return `undefined`).
+`notRestoredReasons` may return `null` despite the navigation type being reported as a back/forward navigation. These circumstances include duplicating a back/forward navigation in a new tab and restoring a back/forward navigation tab after a browser restart. In such cases, some browsers copy the navigation type from the original tab, but as these are not actually back/forward navigations, `notRestoredReasons` returns `null`.
 {% endAside %}
 
 ### Reporting bfcache blocking in same-origin frames
