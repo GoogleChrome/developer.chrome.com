@@ -211,7 +211,13 @@ rule you're using.
 
 #### Static rules {: #static-rules }
 
-Static rules are those specified in rule files declared in the manifest file. An extension can specify up to 50 static [rulesets](#type-Ruleset) as part of the `"rule_resources"` manifest key, but only 10 of these rulesets can be enabled at a time. The latter is called the [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`](#property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS). Collectively, those rulesets are guaranteed at least 30,000 rules. This is called the [`GUARANTEED_MINIMUM_STATIC_RULES`](#property-GUARANTEED_MINIMUM_STATIC_RULES).
+Static rules are those specified in rule files declared in the manifest file. An extension can specify up to 100 static [rulesets](#type-Ruleset) as part of the `"rule_resources"` manifest key, but only 50 of these rulesets can be enabled at a time. The latter is called the [`MAX_NUMBER_OF_ENABLED_STATIC_RULESETS`](#property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS). Collectively, those rulesets are guaranteed at least 30,000 rules. This is called the [`GUARANTEED_MINIMUM_STATIC_RULES`](#property-GUARANTEED_MINIMUM_STATIC_RULES).
+
+{% Aside 'note' %}
+Prior to Chrome 120, extensions were limited to a total of 50 static rulesets, and only 10 of these
+could be enabled at the same time. Use the [`minimum_chrome_version`][minimum-chrome-version]
+manifest field to limit which Chrome versions can install your extension.
+{% endAside %}
 
 The number of rules available after that depends on how many rules are enabled by all the extensions installed on a user's browser. You can find this number at runtime by calling [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount). You can see [an example of this](#update-static-rulesets) under [code examples](#code-examples).
 
@@ -400,12 +406,4 @@ The following example removes all cookies from both a main frame and any sub fra
   "condition": { "resourceTypes": ["main_frame", "sub_frame"] }
 }
 ```
-
-
-
-
-
-
-
-
-
+[minimum-chrome-version]: /docs/extensions/mv3/manifest/minimum_chrome_version/
