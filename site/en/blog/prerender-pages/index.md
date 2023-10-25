@@ -326,8 +326,8 @@ Pages should only be prerendered when there is a high probability the page will 
 
 However—particularly when using the Speculation Rules API—prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation, as not all analytics providers may do this by default.
 
-{% Aside 'update' %}
-Google Analytics (GA4) and Google Publisher Tag (GPT) handle prerender by default as of September and October 2023 respectively.
+{% Aside 'important' %}
+Google Analytics (GA4) and Google Publisher Tag (GPT) handle prerender by default so do not need additional logic, but check with other providers if this is the case. If unsure then delaying until activation is recommended.
 {% endAside %}
 
 This could be achieved by using a `Promise` which waits for the `prerenderingchange` event if a document is prerendering, or resolves immediately if it is now:
