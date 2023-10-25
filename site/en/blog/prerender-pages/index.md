@@ -7,7 +7,7 @@ description: |
 authors:
  - tunetheweb
 date: 2022-12-02
-updated: 2023-09-08
+updated: 2023-10-25
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eohdiqaZlxnWen7TT66M.jpg
 alt: City road at dusk with a long exposure of car lights giving impression of speed
 tags:
@@ -327,7 +327,7 @@ Pages should only be prerendered when there is a high probability the page will 
 However—particularly when using the Speculation Rules API—prerendered pages may have an impact on analytics and site owners may wish to add extra code to only enable analytics for prerendered pages on activation, as not all analytics providers may do this by default.
 
 {% Aside 'update' %}
-Google Analytics handles prerender by default as of September 2023.
+Google Analytics (GA4) and Google Publisher Tag (GPT) handle prerender by default as of September and October 2023 respectively.
 {% endAside %}
 
 This could be achieved by using a `Promise` which waits for the `prerenderingchange` event if a document is prerendering, or resolves immediately if it is now:
