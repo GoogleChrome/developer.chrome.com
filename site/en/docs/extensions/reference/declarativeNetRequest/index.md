@@ -215,7 +215,8 @@ Static rules are those specified in rule files declared in the manifest file. An
 
 {% Aside 'note' %}
 Prior to Chrome 120, extensions were limited to a total of 50 static rulesets, and only 10 of these
-could be enabled at the same time.
+could be enabled at the same time. Use the [`minimum_chrome_version`][minimum-chrome-version]
+manifest field to limit which Chrome versions can install your extension.
 {% endAside %}
 
 The number of rules available after that depends on how many rules are enabled by all the extensions installed on a user's browser. You can find this number at runtime by calling [`getAvailableStaticRuleCount()`](#method-getAvailableStaticRuleCount). You can see [an example of this](#update-static-rulesets) under [code examples](#code-examples).
@@ -405,12 +406,4 @@ The following example removes all cookies from both a main frame and any sub fra
   "condition": { "resourceTypes": ["main_frame", "sub_frame"] }
 }
 ```
-
-
-
-
-
-
-
-
-
+[minimum-chrome-version]: /docs/extensions/mv3/manifest/minimum_chrome_version/
