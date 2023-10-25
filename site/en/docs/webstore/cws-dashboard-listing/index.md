@@ -64,7 +64,7 @@ The Chrome Web Store highlights verified publishers by placing a linked, officia
 linked to the website, as shown in the following example:
 
 <figure>
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/YEoohoq7YjMrpmkLtGMD.pn", alt="Official URL in Chrome Web Store item page", width="348", height="230" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/YEoohoq7YjMrpmkLtGMD.png", alt="Official URL in Chrome Web Store item page", width="348", height="230" %}
   <figcaption>
     Official URL in Chrome Web Store item page
   </figcaption>
@@ -94,7 +94,7 @@ To explain how your extension works in more detail, you can provide a direct lin
 You can direct users to a dedicated support site by including a link in the **Support URL**. 
 
 <figure>
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KsZdITw3oTNYnaoa4M8b.png", alt="Chrome Web Store listing support section linking to external support site", width="500", height="140" %}
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KsZdITw3oTNYnaoa4M8b.png", alt="Store listing support section linking to external support site", width="500", height="140" %}
   <figcaption>
    Store listing support section linking to an external support site.
   </figcaption>
@@ -102,7 +102,7 @@ You can direct users to a dedicated support site by including a link in the **Su
 
 The Chrome Web Store also provides a built-in user support experience under your items' **Support hub**. See [Manage user feedback][user-support] to learn more. 
 
-### Enabling Mature Content {: #mature-content}
+### Enabling Mature Content {: #mature-content }
 
 Content ratings help users know whether your extension and its content are mature in nature.
 See [Mature Content Guidelines][mature-guidelines] to determine whether your extension should be rated

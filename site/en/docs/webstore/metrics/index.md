@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Analyze your listing metrics"
+title: "Analyze your store listing metrics"
 date: 2021-08-17
 updated: 2023-10-25
 description: >
