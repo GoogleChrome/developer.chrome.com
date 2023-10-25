@@ -45,7 +45,7 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
 
 {% Aside %}
 
-**Chrome 120:** Starting in Chrome 120, the minimum alarm interval has been reduced from 1min to 30s. Call    `await chrome.alarms.create('min-alarm', { periodInMinutes: 0.5 });` to set the alarm period to 30s.
+**Chrome 120:** Starting in Chrome 120, the minimum alarm interval has been reduced from 1 minute to 30 seconds. For an alarm to trigger in 30 seconds, set `periodInMinutes: 0.5`. 
 
 **Chrome 117:** Starting in Chrome 117, the number of active alarms is limited to 500. Once this limit is reached, `chrome.alarms.create()` will fail. When using a callback, [`chrome.runtime.lastError`][last-error] will be set. When using promises, the promise will be rejected.
 
