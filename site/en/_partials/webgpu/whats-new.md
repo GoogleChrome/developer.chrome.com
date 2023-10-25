@@ -2,6 +2,13 @@
 
 A list of everything that has been covered in the [What's New in WebGPU](/tags/new-in-webgpu/) series.
 
+### Chrome 119 {: #chrome119 }
+
+* [Filterable 32-bit float textures](/blog/new-in-webgpu-119/#filterable-32-bit-float-textures)
+* [unorm10-10-10-2 vertex format](/blog/new-in-webgpu-119/#unorm10-10-10-2-vertex-format)
+* [rgb10a2uint texture format](/blog/new-in-webgpu-119/#rgb10a2uint-texture-format)
+* [Dawn updates](/blog/new-in-webgpu-119/#dawn-updates)
+
 ### Chrome 118 {: #chrome118 }
 
 * [HTMLImageElement and ImageData support in copyExternalImageToTexture()](/blog/new-in-webgpu-118/#htmlimageelement-and-imagedata-support-in-copyexternalimagetotexture)

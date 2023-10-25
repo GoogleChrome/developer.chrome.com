@@ -66,9 +66,9 @@ find a list of the scoped Protected Audience API features and when they'll be su
  <tr>
     <td><a href="#k-anonymity">K-anonymity</a>
    </td>
-    <td>Later in 2023 Q3
+    <td>Later in 2023 Q4
    </td>
-    <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 7 days” must be met. 
+    <td>For rendering creatives, the k-anonymity threshold of “a crowd of 50 users per creative over 30 days” must be met. 
    </td>
   </tr>
     <tr>
@@ -215,12 +215,11 @@ aggregatable reports, and we will publish a proposal once it is ready.
 
 ## K-anonymity
 
-We will soon publish an explainer with more details on how [k-anonymity](https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_server.md) will be enforced using the Protected Audience API framework.
+For a creative to be considered k-anonymous, the tuple of interest group owner, bidding script URL, creative URL, and creative size must meet the threshold of a crowd of 50 users per creative (`k=50`) within the past 30 days before the ad can be served. The creative is available to be served as soon as it hits the 50 users threshold and does not need to wait for 30 days. 
 
-For rendering a creative, we will require _a crowd of 50 users per creative within the past 7 days_ to pass the k-anonymity threshold before the ad can be served. The creative is available to be served as soon as it hits the 50 ads threshold and does not need to wait for 7 days. 
+The k-anonymity enforcement will be ramped up gradually. Later in 2023, we will begin to check the render URL for k-anonymity. Later in Q1 2025, we will begin to check the ad size in addition to the URL for k-anonymity. 
 
-K-anonymity requirements will be available for testing and will be enforced
-later in 2023. We encourage feedback from ad tech on this parameter.
+You can learn more about the parameters from the [k-anonymity explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_k_anonymity_differential_privacy.md).
 
 ## Bidding and Auction Services
 

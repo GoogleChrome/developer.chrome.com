@@ -7,7 +7,7 @@ description: >
   Related Website Sets (RWS) is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes.
 hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png
 date: 2023-03-07
-updated: 2023-09-26
+updated: 2023-10-20
 authors:
   - mihajlija
 ---
@@ -26,7 +26,7 @@ Related sites like these often rely on cookies to keep you signed in or show you
 As [Chrome moves towards blocking third-party cookies](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html) to improve privacy on the web, new mechanisms are needed to enable these experiences to work.
 
 {% Aside %}
-Cookies set by the site you visit—the one shown in the URL bar—are first-party cookies. A site you visit can embed content from other sites, for example, images, ads, and text. Cookies coming from sites other than the current site are [third-party cookies](https://web.dev/articles/samesite-cookie-recipes#use_cases_for_cross_site_or_third_party_cookies).
+Cookies set by the site you visit—the one shown in the URL bar—are first-party cookies. A site you visit can embed content from other sites: for example, images, ads, and text. Cookies coming from sites other than the current site are [third-party cookies](https://web.dev/articles/samesite-cookie-recipes#use_cases_for_cross_site_or_third_party_cookies).
 {% endAside %}
 
 ## Defining related sites with Related Website Sets
@@ -35,7 +35,7 @@ Related Website Sets is a way for a company to declare relationships among sites
 
 At a high level, a Related Website Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members."
 
-Site authors need to [submit their domains to a set](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md). Set members can include a range of different domain types with [subsets based on use cases](https://github.com/WICG/first-party-sets#defining-a-set-through-use-case-based-subsets).
+Site authors need to [submit their domains to a set](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md). Set members can include a range of different domain types with [subsets based on use cases](https://github.com/WICG/first-party-sets#defining-a-set-through-use-case-based-subsets).
 
 ## Related Website Sets use cases
 
@@ -51,8 +51,8 @@ An organization may have different top-level domains for:
 
 ## Find out more
 
--   [First-Party developer guide](/docs/related-website-sets-integration/)
--   [Related Website Sets technical explainer](https://github.com/WICG/first-party-sets#introduction)
+-   [Related Website Sets: developer guide](/docs/related-website-sets-integration/)
+-   [Related Website Sets: technical explainer](https://github.com/WICG/first-party-sets#introduction)
 -   [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232)
 -   [Chromium Projects](https://www.chromium.org/updates/first-party-sets)
 -   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)

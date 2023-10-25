@@ -4,7 +4,7 @@ title: Migrate to a service worker
 subhead: 'Replacing background or event pages with a service worker'
 description: 'A service worker enables extensions to run only when needed, saving resources.'
 date: 2023-03-09
-updated: 2023-05-19
+updated: 2023-08-28
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
@@ -109,10 +109,17 @@ Communicate between offscreen documents and extension service workers using [mes
 
 ## Convert localStorage to another type {: #convert-localstorage }
 
-The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a service worker. To address this do one of the following:
+The web platform's [`Storage`](https://developer.mozilla.org/docs/Web/API/Storage) interface (accessible from `window.localStorage`) cannot be used in a service worker. To address this do one of two things. First, you can replace it with calls to another storage mechanism. The [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace will serve most use cases, but [other options](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#persist-data) are available.
 
-* Move its calls to an [offscreen document](/docs/extensions/reference/offscreen/).
-* Replace it with calls to another storage mechanism. The [`chrome.storage.local`](/docs/extensions/reference/storage/#property-local) namespace will serve most use cases. [Other options](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#persist-data) are available.
+You can also move its calls to an [offscreen document](/docs/extensions/reference/offscreen/). For example, to migrate data previously stored in `localStorage` to another mechanism:
+
+1. Create an offscreen document with a conversion routine and a [`runtime.onMessage`](/docs/extensions/reference/runtime/#event-onMessage) handler.
+1. Add a conversion routine to the offscreen document.
+1. In the extension service worker check [`chrome.storage`](/docs/extensions/reference/storage/) for your data.
+1. If your data isn't found, [create](/docs/extensions/reference/offscreen/#method-createDocument) an offscreen document and call [`runtime.sendMessage()`](/docs/extensions/reference/runtime/#method-sendMessage) to start the conversion routine.
+1. In the `runtime.onMessage` handler that you added to the offscreen document, call the conversion routine.
+
+There are also some nuances with how web storage APIs work in extensions. Learn more in [Storage and Cookies][storage-and-cookies].
 
 ## Register listeners synchronously {: #register-listeners }
 

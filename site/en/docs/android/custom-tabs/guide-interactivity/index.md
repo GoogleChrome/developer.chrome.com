@@ -193,5 +193,17 @@ CustomTabsIntent intent = new CustomTabsIntent.Builder()
     .build();
 ```
 
+## Bookmarks and download buttons
+
+The bookmarks and download buttons in the three dot menu are enabled by default. To disable them, use the following
+code in `CustomTabsIntent.Builder`:
+
+```java
+CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
+    .setBookmarksButtonEnabled(false)
+    .setDownloadButtonEnabled(false)
+    .build();
+```
+
 
 Next up: [Learn how to speed up loading web content in a Custom Tab](/docs/android/custom-tabs/guide-warmup-prefetch/).

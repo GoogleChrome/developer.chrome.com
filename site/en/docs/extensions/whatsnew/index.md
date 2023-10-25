@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-10-09
+updated: 2023-10-17
 tags:
   - extensions-news
 
@@ -14,6 +14,38 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### New guidance on testing extensions {: #testing-guidance-oct-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 23, 2023</time></p>
+
+We've just published new guidance on how to write automated tests for extensions, including [how
+to write unit tests](/docs/extensions/mv3/unit-testing/) and both
+[general guidance](/docs/extensions/mv3/end-to-end-testing/) and a
+[tutorial](/docs/extensions/mv3/tut_puppeteer-testing/) on end-to-end testing.
+
+### Blog post: What's happening in Chrome Extensions - October 2023 {: #whats-happening-10-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+We've just published the second edition of [What’s Happening in Chrome Extensions](/blog/extension-news-october-2023/). The post discusses what the extension team has been working on for the past few months, including, addressing service worker stability issues, and making good progress on closing all MV3 platform gaps. We also share exciting upcoming API releases like the Reading List API and the User Scripts API.
+
+### Increased static ruleset limits in Declarative Net Request API {: #canary-dnr-rules-increase }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+Following [feedback](https://github.com/w3c/webextensions/issues/318) in the Web Extensions
+Community Group, we are significantly increasing the limit on enabled static rulesets from 10 to 50.
+Additionally, we are increasing the total number of allowed static rulesets from 50 to 100. This is
+currently available in Canary.
+
+### Improved guidance around remotely-hosted code {: #remotely-hosted-code }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+A requirement for Manifest V3 is that extensions may no longer use remotely-hosted code. Although this has been [part of our migration guide](/docs/extensions/migrating/improve-security/#remove-remote-code) from the beginning, we thought it was worth improving the guidance around this issue. That page now provides more information, describing what's still possible in Manifest V3 and providing more information on strategies for upgrading.
+
+There is a related addition to the [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/). A new section describes common reasons that extensions with remotely-hosted code are rejected.
 
 ### Chrome 118: isUrlFilterCaseSensitive now defaults to false {: #118-url-filter-case-sensitive }
 
