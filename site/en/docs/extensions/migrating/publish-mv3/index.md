@@ -172,4 +172,4 @@ To stay on top of user feedback you can add a link to a [dedicated support site]
 [migration-checklist]: /docs/extensions/migrating/checklist/
 [review-factors]: /docs/webstore/review-process/#review-time-factors
 [spam-policy]: /docs/webstore/troubleshooting/#spam
-[support-site]: /docs/webstore/manage/#dedicated-support-site
+[support-site]: /docs/webstore/support-users/#provide-user-support

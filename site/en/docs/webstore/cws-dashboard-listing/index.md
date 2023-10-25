@@ -46,7 +46,7 @@ At a minimum, you should provide the following promotional images:
 
 ### Learning more about images and branding
 
-See [Supplying Images][cws-images] for help on designing the images for your item, and [Branding
+See [Supplying Images][cws-images] for help designing the images for your item, and [Branding
 Guidelines][cws-branding] for information on how you can use Google brands. 
 
 {% Aside %}
@@ -60,16 +60,18 @@ You can include any of these optional links related to your item.
 
 ### Displaying your verified publisher status
 
-The Chrome Web Store highlights verified publishers by placing a linked, official URL in the
-"Offered by:" line of the store listing. This official URL appears under the listing title and is
+The Chrome Web Store highlights verified publishers by placing a linked, official URL under the listing title and is
 linked to the website, as shown in the following example:
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/Vkm8Uhstw2NFVSSt87Vl.png", alt="Offered by:
-cecerduino.com example", width="351", height="143" %}
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/YEoohoq7YjMrpmkLtGMD.pn", alt="Official URL in Chrome Web Store item page", width="348", height="230" %}
+  <figcaption>
+    Official URL in Chrome Web Store item page
+  </figcaption>
+</figure>
 
 {% Aside %}
-If you are not a verified publisher, you can't display this official URL: instead, the "Offered by:"
-displays your publisher name instead.
+If you are not a verified publisher, your publisher name will be displayed under the "Offered by:" in the **Details** section of your store listing.
 {% endAside %}
 
 To display your verified status, choose an official URL for your item from the **Official URL**
@@ -85,14 +87,20 @@ more details.
 
 ### Adding a homepage URL {: #home-url }
 
-To explain how your extension works in more detail, you can provide a direct link to your extension's website in the **Homepage URL**. This link appears under the Additional information of your item.
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/j71L391YIhEAIZTVUuBw.png", alt="Homepage URL in Chrome Web Store item page", width="306", height="106" %}
+To explain how your extension works in more detail, you can provide a direct link to your extension's website in the **Homepage URL**. This link appears under the **Details** section of your item.
 
 ### Providing a support URL {: #support-url }
 
-The Chrome Web Store provides a [built in user support][support-tab] experience under your items' **Support tab**, but you can use
-a [dedicated support site][support-site] by including a link in the **Support URL**. 
+You can direct users to a dedicated support site by including a link in the **Support URL**. 
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KsZdITw3oTNYnaoa4M8b.png", alt="Chrome Web Store listing support section linking to external support site", width="500", height="140" %}
+  <figcaption>
+   Store listing support section linking to an external support site.
+  </figcaption>
+</figure>
+
+The Chrome Web Store also provides a built-in user support experience under your items' **Support hub**. See [Manage user feedback][user-support] to learn more. 
 
 ### Enabling Mature Content {: #mature-content}
 
@@ -123,6 +131,5 @@ If you haven't done so yet, complete your listing by
 [keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
 [mature-guidelines]: /docs/webstore/rating/
 [privacy]: /docs/webstore/cws-dashboard-privacy
-[support-tab]: /docs/webstore/manage/#user-support-tab
-[support-site]: /docs/webstore/manage/#dedicated-support-site
+[user-support]: /docs/webstore/support-users/#provide-user-support
 [verify-owner]: https://support.google.com/webmasters/answer/9008080
