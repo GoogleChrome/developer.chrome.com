@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: WebAssembly Garbage Collection (WasmGC)
+title: WebAssembly Garbage Collection (WasmGC) now enabled by default in Chrome
 description: >
   There are two types of programming languages: garbage-collected programming languages and programming languages that require manual memory management. This article explains how thanks to WebAssembly Garbage Collection, short WasmGC, garbage-collected languages can be ported to WebAssembly.
 authors:
