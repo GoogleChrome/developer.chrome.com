@@ -93,16 +93,16 @@ a considered Chrome response.
     <tr>
       <td style="vertical-align: top;">Ecosystem readiness</td>
       <td style="vertical-align: top;">SSPs highlighted a concern with publishers not being ready and not
-doing the required deployment work</td>
+doing the required deployment work.</td>
       <td style="vertical-align: top;">Privacy Sandbox has outreach focused specifically on educating
 publishers, which includes dedicated webinars and meetings with both
 publishers and SSPs present to drive deployment work.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">3PCD</td>
-      <td style="vertical-align: top;">Concerns over 3PCD ramp up in Q4 2023 due to industry tech blackout</td>
+      <td style="vertical-align: top;">Concerns over third-party cookie deprecation (3PCD) ramp up in Q4 2023 due to industry tech blackout.</td>
       <td style="vertical-align: top;">The timeline for the Privacy Sandbox has been discussed with the CMA,
-with sequencing leading to a second-half of 2024 readiness. Privacy
+with sequencing leading to a second half of 2024 readiness. Privacy
 Sandbox will publish more detailed information on the sequencing of
 ramping up 3PCD. Under the Commitments, 3PCD is subject to the CMA's
 competition concerns being addressed.</td>
@@ -110,9 +110,8 @@ competition concerns being addressed.</td>
     <tr>
       <td style="vertical-align: top;">Google Ad Manager</td>
       <td style="vertical-align: top;">Google Ad Manager refuses to expose the API surface making testing
-difficult</td>
-      <td style="vertical-align: top;"><strong>Response provided by Google Ad Manager:</strong>For the reasons explained <a
-href="#bookmark=id.j3ruuohvjnzs">below</a>, Google Ad Manager's plans for its
+difficult.</td>
+      <td style="vertical-align: top;"><strong>Response provided by Google Ad Manager:</strong> For the reasons explained in <a href="#ad-manager">this response by Google Ad Manager</a>, Google Ad Manager's plans for its
 Protected Audience API integration do not include supporting Google's
 publisher ad server without control of the top-level auction. </td>
     </tr>
@@ -123,9 +122,9 @@ AdX or Open Bidding SSPs.</td>
       <td style="vertical-align: top;"><a
 href="https://github.com/google/ads-privacy/blob/master/proposals/fledge-multiple-seller-testing/README.md#technical-details">Google
 Ad Manager's public documentation</a> says that the winner of the
-contextual auction is passed to the top level scoring logic and not
+contextual auction is passed to the top-level scoring logic and not
 to any component auction, including AdX or Open Bidding. <br>
-Furthermore that documentation says of the top level scoring logic:
+Furthermore, that documentation says of the top-level scoring logic:
 "Ad Manager will compare the winning bid of each component auction,
 including Ad Manager's own component auction for interest group bids
 of its buyers, as well as the best contextual ad (which is selected
@@ -136,11 +135,11 @@ via dynamic allocation), and will serve the ad with the highest bid."</td>
       <td style="vertical-align: top;">Google Ads products should be subject to the same rules as
 third-parties' ads products.</td>
       <td style="vertical-align: top;">Google Ads products are already subjected to the same rules as third
-parties. </td>
+parties.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Chrome-facilitated testing</td>
-      <td style="vertical-align: top;">Add labels for browsers not in A or B</td>
+      <td style="vertical-align: top;">Add labels for browsers not in A or B.</td>
       <td style="vertical-align: top;">We are not considering doing so at this time, as our investigation
 has found that adding non-experiment labels may complicate privacy
 concerns around traffic in incognito mode.</td>
@@ -150,7 +149,7 @@ concerns around traffic in incognito mode.</td>
       <td style="vertical-align: top;">Can agencies or companies without JavaScript on websites use Privacy
 Sandbox APIs?</td>
       <td style="vertical-align: top;">Anyone can call the Privacy Sandbox APIs. If an agency or anyone else
-wishes to build technologies directly on the APIs they can.
+wants to build technologies directly on the APIs they can.
 Client-side APIs require integrating with the client, just as cookies
 do. Many of the APIs, like cookies, also have an HTTP header
 interface. We've already seen one ad industry framework, Prebid,
@@ -167,7 +166,7 @@ significantly since 2012 and, with it, commercially viable
 applications. At the core of Privacy Sandbox are combinations of PETs
 which wouldn't have been feasible over a decade ago. In addition,
 personal computing power has increased, as have consumer expectations
-of browsers and regulatory expectations of privacy. </td>
+of browsers and regulatory expectations of privacy.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Machine Learning</td>
@@ -181,7 +180,7 @@ use machine learning. It is reasonable to expect that companies will
 continue building products and services in ways that meet the needs
 of their customers, whether that includes machine learning or not.
 Any machine learning that Privacy Sandbox integrators do build will
-obviously be known to them and thus not be obscured to them. </td>
+obviously be known to them and thus not be obscured to them.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Data verification</td>
@@ -194,7 +193,7 @@ Execution Environments are also open source and auditable. Anyone who
 wants to inspect the code can, including MRC.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">(Also reported in previous quarters)Production Support</td>
+      <td style="vertical-align: top;">(Also reported in previous quarters) Production Support</td>
       <td style="vertical-align: top;">What is the process in place for Chrome to support Privacy Sandbox
 technical issues and escalations affecting the ecosystem?</td>
       <td style="vertical-align: top;">Google provides a range of channels to allow ad techs to report
@@ -213,21 +212,21 @@ feedback and escalation.</td>
       <td style="vertical-align: top;">More information about the timelines and exact implementations for
 the Chrome-facilitated testing modes.</td>
       <td style="vertical-align: top;">We have shared a <a
-href="https://developer.chrome.com/docs/privacy-sandbox/chrome-testing/">blogpost</a>
+href="https://developer.chrome.com/docs/privacy-sandbox/chrome-testing/">blog post</a>
 about testing modes and are working to share more information soon.<br>
 We are <a
 href="https://developer.chrome.com/docs/privacy-sandbox/chrome-testing/">welcoming suggestions</a> for what size the testing mode labels
 should be.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Integration with other industry Standards</td>
-      <td style="vertical-align: top;">Will the Privacy Sandbox APIs connect to either/both TCF V2.* and
+      <td style="vertical-align: top;">Integration with other industry standards</td>
+      <td style="vertical-align: top;">Will the Privacy Sandbox APIs connect to either or both TCF v2.* and
 Consent Mode?</td>
       <td style="vertical-align: top;">We do not have plans to integrate Privacy Sandbox APIs directly with
 TCF v2 or Consent Mode. However, companies and industry trade groups
 are welcome to adapt their products and frameworks to work in
 conjunction with Privacy Sandbox APIs. For example, with frameworks
-like TCF each participant must determine its own compliance approach
+like TCF, each participant must determine its own compliance approach
 based on the TCF signal it receives and the associated TCF policies.
 We expect companies to determine when and how to use various
 functionality our Privacy Sandbox building blocks offer.</td>
@@ -251,21 +250,21 @@ functionality our Privacy Sandbox building blocks offer.</td>
       <td style="vertical-align: top;">Enrollment process means Google can decide which company in the
 ecosystem is allowed to use Privacy Sandbox APIs.</td>
       <td style="vertical-align: top;">The Enrollment and Attestation process essentially entails
-verification of the entity (eg. the entity has a DUNs number, can
-provide a link to a privacy policy etc) and makes the public
+verification of the entity (for example, the entity has a DUNs number, can
+provide a link to a privacy policy, and so forth) and makes the public
 attestation a requirement for calling the APIs. Entities that can
 successfully fulfill the enrollment requirements will be validated.
 For companies that do not have a DUNs, we are providing an expedited,
 complimentary process with Dun & Bradstreet to acquire one. The
 objective is to enhance privacy protections of the APIs (by the
 measures just mentioned) and also to add a layer of transparency to
-the PS APIs, so interested parties can better understand who is using
+the Privacy Sandbox APIs, so interested parties can better understand who is using
 which API and what attestations they are making. We are open to
 further industry feedback on this issue, which has already been used
 to shape the process.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Re-enrollment Overhead</td>
+      <td style="vertical-align: top;">Re-enrollment overhead</td>
       <td style="vertical-align: top;">Attestation file expires every 12 months and requires websites to
 re-enroll.</td>
       <td style="vertical-align: top;">We've heard feedback from the ecosystem and amended our approach
@@ -282,7 +281,7 @@ site and keep it for public view as long as you are intending to
 continue calling the APIs.<br>
 <br>
 Websites could expect approximately one request per hour from Privacy
-Sandbox, and other potentially entities may query as well. This will
+Sandbox, and other potential entities may query as well. This will
 be conducted via the enrollment system's own mechanism to query
 enrolled entities' servers and ensure the attestation file is valid.
 <br>
@@ -295,7 +294,7 @@ relevant regulatory bodies.</td>
     <tr>
       <td style="vertical-align: top;">Enrollment</td>
       <td style="vertical-align: top;">Is enrollment per site or per origin?</td>
-      <td style="vertical-align: top;">Enrollment is at the site-level.</td>
+      <td style="vertical-align: top;">Enrollment is at the site level.</td>
     </tr>
   </tbody>
 </table>
@@ -316,9 +315,9 @@ relevant regulatory bodies.</td>
     <tr>
       <td style="vertical-align: top;">Performance</td>
       <td style="vertical-align: top;">Performance concerns on the impact of Topics opt-in rate in the
-European Economic Area</td>
+European Economic Area.</td>
       <td style="vertical-align: top;">We would suggest to concerned stakeholders to contact your relevant
-Data Protection Authority about this issue. They are best-placed to
+Data Protection Authority about this issue. They are best placed to
 address such concerns and influence whether applications of
 privacy-enhancing technologies are incentivized by laws or instead
 treated like tracking, requiring the same approaches to consent. The
@@ -335,12 +334,12 @@ enrolled for other API usage. A list of Privacy Sandbox enrollees
 will be provided programmatically as part of the program's
 transparency efforts, which would allow an interested caller of the
 Topics API to check if the recipient they are sending a topic to is
-enrolled, if the caller should want to. </td>
+enrolled, if the caller should want to.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Topics filtering</td>
       <td style="vertical-align: top;">Request to apply another caller's filtering to the topics that they
-retrieve on the page, in order to only share what buyers are eligible
+retrieve on the page, in order to share only what buyers are eligible
 to retrieve.</td>
       <td style="vertical-align: top;">We are considering this request and welcome <a
 href="https://github.com/patcg-individual-drafts/topics/issues">additional
@@ -353,17 +352,17 @@ feedback</a> from the ecosystem.</td>
 content is taken into account when topics are selected, and all
 topics are curated to make sure they are not sensitive. A website can
 also restrict their site from being included in topic calculation via
-the following permission policy header: Permissions-Policy:
-browsing-topics=()</td>
+the following permission policy header: <code>Permissions-Policy:
+browsing-topics=()</code></td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Topics observation</td>
       <td style="vertical-align: top;">Allow publishers to give permissions for Chrome to classify topics
-based on page content (for example, head, body).</td>
+based on page content (for example, head or body).</td>
       <td style="vertical-align: top;">We previously considered offering functionality to classify sites
 into topics based on page content, and made the decision not to move
 forward based on privacy and security concerns. This proposal may
-mitigate some of those concerns, but it's unclear to what extent. Due
+mitigate some of those concerns, but it's unclear as to what extent. Due
 to the upcoming CMA experiment period, we don't expect this change to
 occur before 3PCD. We <a
 href="https://github.com/patcg-individual-drafts/topics/issues/224">welcome additional feedback here</a>.</td>
@@ -371,18 +370,16 @@ href="https://github.com/patcg-individual-drafts/topics/issues/224">welcome addi
     <tr>
       <td style="vertical-align: top;">Topics observation</td>
       <td style="vertical-align: top;">Provide more fine-grained permission policies for publishers.</td>
-      <td style="vertical-align: top;">As explained in further detail <a
-href="#bookmark=id.1agp769wssy">below</a>, providing more
+      <td style="vertical-align: top;">Providing more
 fine-grained permission policies for publishers would enable
 publisher sites to negatively impact the utility of the Topics API
 for the ecosystem as a whole, without it negatively impacting the
-utility of the Topics API for the site itself. Please see <a
-href="https://github.com/patcg-individual-drafts/topics/issues/92">this
-</a>GitHub issue for a more detailed discussion of the topic.</td>
+utility of the Topics API for the site itself. Refer to the <a
+href="https://github.com/patcg-individual-drafts/topics/issues/92">Update permissions policy to support separate permissions for retrieve and observe</a> GitHub issue for a more detailed discussion of the topic.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Medical/Health Topics</td>
-      <td style="vertical-align: top;">Why does the Topics taxonomy not cover topics in Medical/Health
+      <td style="vertical-align: top;">Medical and Health Topics</td>
+      <td style="vertical-align: top;">Why does the Topics taxonomy not cover topics in Medical or Health
 categories?</td>
       <td style="vertical-align: top;">Medical and health categories are considered sensitive topics and
 thus excluded from the Topics taxonomy.</td>
@@ -392,7 +389,7 @@ thus excluded from the Topics taxonomy.</td>
       <td style="vertical-align: top;">Faster way for DSPs to get Topics without fetching using
 headers.</td>
       <td style="vertical-align: top;">The header methods are more performant and less costly than creating
-a cross-origin iframe and making a document.browsingTopics() call
+a cross-origin iframe and making a <code>document.browsingTopics()</code> call
 from it. (A cross-origin iframe must be used for the call, because
 the top-level context to observe a topic must match the context from
 which topics are accessed.) This was <a
@@ -403,15 +400,15 @@ href="https://github.com/patcg-individual-drafts/topics/issues/7">discussed in d
       <td style="vertical-align: top;">Requests to support passing Topics via headers on cross-origin script
 tag requests.</td>
       <td style="vertical-align: top;">From a security perspective, this isn't possible. Each document and
-its execution environment are associated with a single origin– that
+its execution environment are associated with a single origin–that
 of the document. Third-party subresources loaded and executed within
 that same environment are considered to be owned by the origin of the
 document. This is to prevent unconsented data leakage from one origin
 to another.<br>
 <br>
-An alternative is to provide a <code>browsingTopics</code> attribute on &lt;script>
+An alternative is to provide a <code>browsingTopics</code> attribute on <code>&lt;script></code>
 tags. This should be clean from a security perspective, and not add
-additional latency. We are open to<a
+additional latency. We are open to <a
 href="https://github.com/patcg-individual-drafts/topics/issues/239">
 feedback</a> from interested parties.</td>
     </tr>
@@ -421,13 +418,13 @@ feedback</a> from interested parties.</td>
 used.</td>
       <td style="vertical-align: top;">We've engaged with the stakeholder who provided this feedback and
 this issue was <a
-href="https://github.com/patcg-individual-drafts/topics/issues/223#issuecomment-1648193589">resolved on GitHub here</a>.
+href="https://github.com/patcg-individual-drafts/topics/issues/223#issuecomment-1648193589">resolved on GitHub</a>.
 <br>
 <br>
 Going forward, we'll continue supporting ecosystem understanding of
 the API and we look forward to hearing views from stakeholders. In
-the meantime, we suggest stakeholders wishing to know more about the
-Topics API to familiarize themselves with the documentation in the 
+the meantime, we suggest stakeholders wanting to know more about the
+Topics API familiarize themselves with the documentation in the 
 <a
 href="https://developer.chrome.com/en/docs/privacy-sandbox/topics/">Chrome developer guide</a>.</td>
     </tr>
@@ -436,15 +433,14 @@ href="https://developer.chrome.com/en/docs/privacy-sandbox/topics/">Chrome devel
       <td style="vertical-align: top;">Notification to alert user when their Topics are being observed by a
 website.</td>
       <td style="vertical-align: top;">We <a
-href="https://github.com/patcg-individual-drafts/topics/issues/222">addressed this feedback in Github</a>. Users can learn more about Topics controls <a
-href="https://support.google.com/chrome/answer/13355898#zippy=%2Cmanage-ad-topics">
-in the Chrome help center</a>.</td>
+href="https://github.com/patcg-individual-drafts/topics/issues/222">addressed this feedback on Github</a>. Users can learn more about Topics controls in the <a
+href="https://support.google.com/chrome/answer/13355898#zippy=%2Cmanage-ad-topics">Chrome help center</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Machine Learning</td>
       <td style="vertical-align: top;">How ML can be used to infer user Topics?</td>
       <td style="vertical-align: top;">We are discussing this issue and <a
-href="https://github.com/patcg-individual-drafts/topics/issues/221">welcome additional feedback here</a>.</td>
+href="https://github.com/patcg-individual-drafts/topics/issues/221">welcome additional feedback</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Usefulness for different types of stakeholders</td>
@@ -462,25 +458,25 @@ observe a site visit by a given user, may receive more topics than
 other ad techs. This feature is essential for the privacy protections
 of the API as it limits the availability of information about a user
 to only those parties who are already able to observe the same
-underlying information (currently via 3PCs).</td>
+underlying information (currently via third-party cookies).</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">XHR Request</td>
-      <td style="vertical-align: top;">When will Topics inclusion in XMLHttpRequest (XHR) requests be
+      <td style="vertical-align: top;">When will Topics inclusion in <code>XMLHttpRequest</code> (XHR) requests be
 deprecated?</td>
       <td style="vertical-align: top;">As Chrome <a
 href="https://groups.google.com/a/chromium.org/g/topics-api-announce/c/5QPSa2moCAY">announced
 in August 2023</a>, Chrome began deprecating support for XHR when
-transitioning from Origin Trial to General Availability. <br>
+transitioning from Origin Trial to General Availability.<br>
 <br>
-As the ramp up of Topics progressed, XHR support was only included
+As the ramp-up of Topics progressed, XHR support was only included
 for users for whom the OT features were enabled and was fully
 deprecated when the individual OT experiment groups were merged.<br>
 <br>
 If you were using Topics with XHR, your sites will not break. The
 topics just won't be added to your XHR request headers. We recommend
-that you either transition to Fetch for your request, use the iframe
-attribute, or the JavaScript API to retrieve topics. Fetch is
+that you either transition to <code>fetch</code> for your request, use the iframe
+attribute, or use the JavaScript API to retrieve topics. Fetch is
 supported by all modern browsers, but not Internet Explorer or Opera
 Mini.</td>
     </tr>
@@ -490,11 +486,11 @@ Mini.</td>
 cadence and how companies can prepare for such updates.</td>
       <td style="vertical-align: top;">Our response remains unchanged from Q2:<br>
 <br>
-As shared in the recent blog post, we expect the taxonomy to evolve
+As shared in the <a href="/blog/topics-enhancements/">recent blog post</a>, we expect the taxonomy to evolve
 over time, and for governance of the taxonomy to eventually
 transition to an external party representing stakeholders from across
-the industry. We also shared the ramp-up plan in the topics-announce
-group.</td>
+the industry. We also shared the ramp-up plan in the <a href="https://groups.google.com/a/chromium.org/g/topics-api-announce/c/iNYk69wKnJs">topics-announce
+group</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Abuse</td>
@@ -511,14 +507,14 @@ testing support?</td>
 terms of the types of inventory they can be used on.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Ramp up time</td>
+      <td style="vertical-align: top;">Ramp-up time</td>
       <td style="vertical-align: top;">Recommend no ramp-up time for new taxonomies to get to 100%.</td>
       <td style="vertical-align: top;">Following <a
-href="https://github.com/patcg-individual-drafts/topics/issues/236">this</a>
-feedback request from the ecosystem and discussion during PATCG
+href="https://github.com/patcg-individual-drafts/topics/issues/236">this feedback request</a>
+ from the ecosystem and discussion during PATCG
 meetings, we have announced our plan for the <a
 href="https://github.com/patcg-individual-drafts/topics/issues/236#issuecomment-1726405252">rollout of the new
-taxonomy here</a>.</td>
+taxonomy</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -539,7 +535,7 @@ taxonomy here</a>.</td>
       <td style="vertical-align: top;">Ability to use Google's publisher ad server without also giving
 Google Ad Manager control of the top-level Protected Audience API
 auction.</td>
-      <td style="vertical-align: top;"><strong>Response provided by Google Ad Manager:</strong><br>
+      <td id="ad-manager" style="vertical-align: top;"><strong>Response provided by Google Ad Manager:</strong><br>
 Google Ad Manager's plans for the Protected Audience API do not include supporting Google's
 publisher ad server without the control of the top-level Protected Audience auction,
 for the following reasons. <br>
@@ -552,13 +548,13 @@ campaigns without overbooking, and to pace and deliver their direct
 reservations optimally. Doing this requires running the final auction
 to compare all eligible direct and indirect demand.<br>
 <br>
-Forecasting and pacing are core functionality that publishers expect
+Forecasting and pacing are core functionalities that publishers expect
 from an ad server. Without accurate forecasting, publishers may end
-up overselling their inventory which puts their business reputation
-at risk. Pacing is also critical - as being unable to fulfill
+up overselling their inventory, which puts their business reputation
+at risk. Pacing is also critical, as being unable to fulfill
 reservation contracts with advertisers also risks damage to the
-publisher <> advertiser direct relationship, which could result in
-significant impact to a publishers business as.<br>
+publisher-advertiser direct relationship, which could result in
+significant impact to a publishers business.<br>
 <br>
 In short, therefore, we do not view a publisher ad server's activity
 of running the top-level Protected Audience auction as distinct from the other
@@ -569,17 +565,17 @@ activities of the publisher ad server.</td>
       <td style="vertical-align: top;"><code>directFrom<br>SellerSignals</code><br>allows Google Ad Manager to prevent the
 publisher from seeing the price of its contextual auction.</td>
       <td style="vertical-align: top;"><strong>Chrome response:</strong><br>
-Information passed into runAdAuction() is not known to come from the
-seller unless the seller calls runAdAuction() from its own iframe. In
+Information passed into <code>runAdAuction()</code> is not known to come from the
+seller unless the seller calls <code>runAdAuction()</code> from its own iframe. In
 a multi-seller auction it becomes impossible to have all sellers
-create the frame calling runAdAuction(). directFromSellerSignals
+create the frame calling <code>runAdAuction()</code>. <code>directFromSellerSignals</code>
 addressed this issue by loading content from a subresource bundle
-loaded from a seller's origin. This ensures the authenticity and
+loaded from a seller's origin. This ensures that the authenticity and
 integrity of information passed into an auction from the
-seller—auctions configurations cannot be manipulated. If publishers
+seller-auctions configurations cannot be manipulated. If publishers
 want to use Protected Audience API to understand any of the
 information their technology providers are passing into Protected
-Audience auctions they can ask those technology providers for this
+Audience auctions, they can ask those technology providers for this
 functionality.<br>
 <br>
 <strong>Response provided by Google Ad Manager:</strong><br>
@@ -589,28 +585,27 @@ non-guaranteed advertising sources, including non-guaranteed line
 item prices, will be shared with another buyer before they bid in the
 auction, which we then later reaffirmed in our <a
 href="https://blog.google/around-the-globe/google-europe/some-changes-our-ad-technology/">commitments
-to the French Competition Authority</a>. <br>
+to the French Competition Authority</a>.<br>
 <br>
-ForProtected Audience auctionS, we intend to keep our promise by leveraging
-directFromSellerSignals, and not share the bid of any auction
+For Protected Audience auctions, we intend to keep our promise by leveraging
+<code>directFromSellerSignals</code>, and not share the bid of any auction
 participant with any other auction participant prior to completion of
 the auction in multi-seller auctions. To be clear, we won't share the
 price of the contextual auction with our own component auction
-either, as explained in <a
-href="https://github.com/google/ads-privacy/commit/cd5d7c5336a5ce9f6c22776b4532ccd529c55210">this
-update</a>.</td>
+either, as explained in the <a
+href="https://github.com/google/ads-privacy/commit/cd5d7c5336a5ce9f6c22776b4532ccd529c55210">Further clarify top level auction dynamics</a> update.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Information Exposure</td>
       <td style="vertical-align: top;">Sensitive business logics and contractual details may be exposed by
 the browser.</td>
       <td style="vertical-align: top;">The person using a web browser can see everything that is happening
-in the browser.  When an ad auction happens inside the browser, it is
+in the browser. When an ad auction happens inside the browser, it is
 true that the person whose browser it is could watch that auction
 take place, including seeing how much different parties choose to
-bid.  Since a browser is the user's agent, we do not think it is
+bid. Since a browser is the user's agent, we do not think it is
 possible or desirable to try to change this. Only the person using
-the browser has visibility into these operations, however; an
+the browser has visibility into these operations, however. An
 on-device auction run using the Protected Audience API is not
 observable to any servers, including Google's.</td>
     </tr>
@@ -621,7 +616,7 @@ to correlate the contextual data with the trusted server
 request.</td>
       <td style="vertical-align: top;">Using the Protected Audience API in this way is inconsistent with
 Privacy Sandbox's mandatory attestation that API users will not try
-to circumvent the Privacy Sandbox's protections. In the future, the
+to circumvent the Privacy Sandbox protections. In the future, the
 requirement that key-value servers run in trusted execution
 environments (TEEs) will provide technical protection against this
 attack.</td>
@@ -629,33 +624,33 @@ attack.</td>
     <tr>
       <td style="vertical-align: top;">Same-origin policy</td>
       <td style="vertical-align: top;">Relax the same-origin policy to allow for subdomains.</td>
-      <td style="vertical-align: top;">We are considering this request and welcome additional <a
-href="http://github.com/WICG/turtledove/issues/813">feedback from
-the ecosystem</a>.</td>
+      <td style="vertical-align: top;">We are considering this request and welcome <a
+href="http://github.com/WICG/turtledove/issues/813">additional feedback</a> from
+the ecosystem.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">API versioning</td>
       <td style="vertical-align: top;">Request for versioning and release notes for changes to the Protected
 Audience API.</td>
-      <td style="vertical-align: top;">We are considering this request and welcome additional <a
-href="http://github.com/WICG/turtledove/issues/813">feedback from
-the ecosystem</a>.</td>
+      <td style="vertical-align: top;">We are considering this request and welcome <a
+href="http://github.com/WICG/turtledove/issues/813">additional feedback</a> from
+the ecosystem.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Multi-SSP Auctions</td>
       <td style="vertical-align: top;">Allow top-level auction signals to perform JSON merges with component
-signal auctionSignals.</td>
-      <td style="vertical-align: top;">We are considering this request and welcome additional <a
-href="https://github.com/WICG/turtledove/issues/787">feedback from
-the ecosystem</a>.</td>
+signal <code>auctionSignals</code>.</td>
+      <td style="vertical-align: top;">We are considering this request and welcome <a
+href="https://github.com/WICG/turtledove/issues/787">additional feedback</a> from
+the ecosystem.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Bid limit</td>
       <td style="vertical-align: top;">Increase the limit on the number of ad components entering the bid
 from 20 to 40.</td>
-      <td style="vertical-align: top;">We are considering this request and welcome additional <a
-href="http://github.com/WICG/turtledove/issues/810">feedback from
-the ecosystem</a> on why this would be useful.</td>
+      <td style="vertical-align: top;">We are considering this request and welcome <a
+href="http://github.com/WICG/turtledove/issues/810">additional feedback</a> from
+the ecosystem on why this would be useful.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">(Also reported in previous quarters)<br>
@@ -669,7 +664,7 @@ and building tools that let buyers decide how to best use the
 resources available to them. These controls and tools are generally
 available today, but their full benefit will only be realized after
 adoption by buyers and sellers. In addition, Chrome continues to work
-on a variety of infrastructure improvements to auction speed (e.g. <a
+on a variety of infrastructure improvements to auction speed (<a
 href="http://crrev.com/1190815">crrev.com/1190815</a>, <a
 href="http://crrev.com/1199839">crrev.com/1199839</a>, <a
 href="http://crrev.com/1201837">crrev.com/1201837</a>, <a
@@ -686,10 +681,10 @@ bottlenecks that Chrome engineers should investigate.</td>
       <td style="vertical-align: top;">We have suggested several ways in which SSPs and DSPs could change
 their designs to handle this:<br>
 <ul>
-<li>Moving some work into the DSP's Key/Value server. </li>
+<li>Moving some work into the DSP's Key/Value server.</li>
 </ul>
 <ul>
-<li>SSPs creating some contextual signals and giving those to DSPs. </li>
+<li>SSPs creating some contextual signals and giving those to DSPs.</li>
 </ul>
 <ul>
 <li>SSPs caching contextual signals for DSPs.</li>
@@ -698,11 +693,10 @@ their designs to handle this:<br>
     </tr>
     <tr>
       <td style="vertical-align: top;">Publisher Interest Group Control</td>
-      <td style="vertical-align: top;">Support for<br>
-publishers seeking to delegate the use of publisher-created<br>
-interest groups.</td>
+      <td style="vertical-align: top;">Support for publishers seeking to delegate
+      the use of publisher-created interest groups.</td>
       <td style="vertical-align: top;">We have engaged in discussions with many parties about the request.
-We believe that all such use cases involved in 'delegating' the
+We believe that all such use cases involved in "delegating" the
 publisher-created interest groups can be accommodated now, and
 furthermore that we should build additional support to make some use
 cases flow more smoothly in the future.</td>
@@ -721,7 +715,7 @@ believe that continuing to expand and improve cloud-based deployments
 (for example, supporting Google Cloud in addition to AWS) is the most
 beneficial for the ecosystem. However, we welcome additional feedback
 on why such a requirement is necessary and feasible given the privacy
-and security constraints. </td>
+and security constraints.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Trusted Execution Environment</td>
@@ -792,13 +786,13 @@ Per-user frequency controls within a campaign and ad group.	</td>
       <td style="vertical-align: top;">Our response is unchanged from the previous reports:<br>
 <br>
 Protected Audience will support frequency capping for on-device
-auctions and contextual / branding campaigns as well. Shared storage
+auctions and contextual and branding campaigns as well. Shared storage
 and site-specific caps can also be used for additional frequency
 capping controls.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Ad Preferences</td>
-      <td style="vertical-align: top;">Does Protected Audience provide a way to opt-out / blocklist by
+      <td style="vertical-align: top;">Does Protected Audience provide a way to opt-out or blocklist by
 advertiser sites or a way to leave all interest groups from the same
 owner?</td>
       <td style="vertical-align: top;">There are several ways for users to <a
@@ -806,15 +800,15 @@ href="https://developer.chrome.com/docs/privacy-sandbox/protected-audience-api/o
 Audience API and other Privacy Sandbox features.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Same-origin policy for source url of bidding and auction scripts</td>
+      <td style="vertical-align: top;">Same-origin policy for source URL of bidding and auction scripts</td>
       <td style="vertical-align: top;">Relax the requirement that all fields that specify URLs for loading
 scripts or JSON must be same-origin with the owner.</td>
-      <td style="vertical-align: top;">We are currently considering this request and welcome additional
+      <td style="vertical-align: top;">We are currently considering this request and 
  <a
-href="https://github.com/WICG/turtledove/issues/">feedback from the ecosystem</a>.</td>
+href="https://github.com/WICG/turtledove/issues/">welcome additional feedback</a> from the ecosystem.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">forDebuggingOnly</td>
+      <td style="vertical-align: top;"><code>forDebuggingOnly</code></td>
       <td style="vertical-align: top;">Potential for <code>forDebuggingOnly<br>.reportAdAuctionWin</code> to be misused if it
 remains post 3PCD.</td>
       <td style="vertical-align: top;">Over the past years we have been receiving feedback from the
@@ -840,7 +834,7 @@ auctions?</td>
 href="https://chromestatus.com/feature/5733583115255808">will be supported</a> in Chrome on Android.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">(Reported in Q2 2023) Click related data</td>
+      <td style="vertical-align: top;">(Reported in Q2 2023) Click-related data</td>
       <td style="vertical-align: top;">Add click-related data to browserSignals.</td>
       <td style="vertical-align: top;">We continue to evaluate this feature request and welcome <a
 href="https://github.com/WICG/turtledove/issues/579">additional
@@ -873,7 +867,7 @@ request</a>.</td>
       <td style="vertical-align: top;">Content Violation</td>
       <td style="vertical-align: top;">Support features that allow users to report bad ads served by
 Protected Audience API in Fenced Frames.</td>
-      <td style="vertical-align: top;">We believe that the existing<a
+      <td style="vertical-align: top;">We believe that the existing <a
 href="https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md">
 Fenced Frame Ads Reporting mechanism</a> offers good options for ad
 techs who want a user-generated "Bad Ads" reporting flow.  This would
@@ -884,7 +878,7 @@ removal but before Fenced Frame rendering becomes widespread.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Private Aggregation API Reporting</td>
-      <td style="vertical-align: top;">How to calculate time the user has spent in that interest group?</td>
+      <td style="vertical-align: top;">How can we calculate time the user has spent in that interest group?</td>
       <td style="vertical-align: top;">In Chrome M116+ you should be able to use recency as defined <a
 href="https://github.com/WICG/turtledove/pull/639">pull/639</a>.</td>
     </tr>
@@ -898,22 +892,21 @@ welcome additional feedback.</td>
     <tr>
       <td style="vertical-align: top;">Dynamic Creative URLs</td>
       <td style="vertical-align: top;">Support for creative URLs without pre-declaration while still
-respecting K-anonymity.</td>
+respecting k-anonymity.</td>
       <td style="vertical-align: top;">We are discussing this feature request and welcome <a
 href="https://github.com/WICG/turtledove/issues/729">additional
 feedback</a> on why this should be prioritized.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">k-anonymity requirement</td>
+      <td style="vertical-align: top;">K-anonymity requirement</td>
       <td style="vertical-align: top;">Will k-anonymity requirement on Interest Group updates be
 re-introduced?</td>
       <td style="vertical-align: top;">We don't anticipate changes to the position stated in <a
-href="https://github.com/WICG/turtledove/issues/361#issuecomment-1430069343">this</a>
-GitHub post. As announced in that post, we decided to remove the
+href="https://github.com/WICG/turtledove/issues/361#issuecomment-1430069343">this GitHub post</a>. As announced in that post, we decided to remove the
 k-anonymity requirement on Protected Audience interest group updates,
 which does not have a significant impact on the API's overall privacy
 protections, and we plan to consider other potential more direct
-protections (e.g. IP address privacy or a trusted update server) at a
+protections (such as IP address privacy or a trusted update server) at a
 later date when the related technologies are more developed, deployed
 and adopted.</td>
     </tr>
@@ -960,21 +953,21 @@ should be prioritized.</td>
       <td style="vertical-align: top;">Reporting granularity</td>
       <td style="vertical-align: top;">What is the reporting granularity of Fenced Frame Ad Reporting with
 Ads Composed of Multiple Pieces?</td>
-      <td style="vertical-align: top;">Current design does not allow capturing product ID and/or position as
-this may compromise user privacy. Only the reserved.top_navigation
+      <td style="vertical-align: top;">The current design does not allow capturing product ID or position as
+this may compromise user privacy. Only the <code>reserved.top_navigation</code>
 can be invoked, which would be sent when there is a user activation
-(e.g. click) on the ad component fenced frame, which results in a
+(such as a click) on the ad component fenced frame, which results in a
 top-level navigation.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Ad Auction</td>
-      <td style="vertical-align: top;">Can SSP participating in a component auction trigger another
+      <td style="vertical-align: top;">Can an SSP participating in a component auction trigger another
 component auction itself?</td>
-      <td style="vertical-align: top;">A componentSeller cannot also include componentAuctions.<br>
+      <td style="vertical-align: top;">A <code>componentSeller</code> cannot also include <code>componentAuctions</code>.<br>
 The multi-seller auction only has two levels:<br>
 1. The component auctions in parallel.<br>
 2. The top-level auction (where the winning ad from each
-componentAuction competes).</td>
+<code>componentAuction</code> competes).</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Bidding & Auction Services availability</td>
@@ -992,11 +985,10 @@ this should be prioritized.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;"><code>generateBid()</code></td>
-      <td style="vertical-align: top;">Ability to update interestGroup's userBiddingSignals through
-updateURL.</td>
+      <td style="vertical-align: top;">Ability to update interestGroup's <code>userBiddingSignals</code> through
+<code>updateURL</code>.</td>
       <td style="vertical-align: top;">We are considering this proposal and <a
-href="https://github.com/WICG/turtledove/issues/760">welcome additional feedback</a> and
-discussion.</td>
+href="https://github.com/WICG/turtledove/issues/760">welcome additional feedback</a> and discussion.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Publisher Inventory Types</td>
@@ -1006,18 +998,18 @@ Audience and TOPICS testing?</td>
 terms of the types of inventory they can be used on.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Server to Server integration</td>
-      <td style="vertical-align: top;">Is direct integration between SSP and DSP required for Protected
+      <td style="vertical-align: top;">Server-to-Server integration</td>
+      <td style="vertical-align: top;">Is direct integration between the SSP and DSP required for Protected
 Audience?</td>
-      <td style="vertical-align: top;">Direct integration between SSP and DSP is not required if DSP does
+      <td style="vertical-align: top;">Direct integration between the SSP and DSP is not required if DSP does
 not need to process contextual signals in its own server in order to
 pass that processed information into its on-device bidding
 function.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;"><code>bid_currency</code> field in B&A</td>
+      <td style="vertical-align: top;">A <code>bid_currency</code> field in B&A</td>
       <td style="vertical-align: top;">Support for <code>bid_currency</code> field in Bidding and Auction Service.</td>
-      <td style="vertical-align: top;">B&A doesn't support <code>bid_currency</code> yet, although we plan to support
+      <td style="vertical-align: top;">B&A doesn't support a <code>bid_currency</code> yet, although we plan to support
 that by the end of January 2024. Refer to the <a
 href="https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md#timeline-and-roadmap">timeline here</a>.</td>
     </tr>
@@ -1044,7 +1036,7 @@ href="https://github.com/WICG/turtledove/issues/777">welcome more feedback</a> o
 request.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Ad Quality control</td>
+      <td style="vertical-align: top;">Ad quality control</td>
       <td style="vertical-align: top;">Loss of ad quality control related on cross-site information.</td>
       <td style="vertical-align: top;">We are considering this feedback and <a
 href="http://github.com/WICG/turtledove/issues/773">welcome additional feedback</a>.</td>
@@ -1059,7 +1051,7 @@ href="https://github.com/WICG/turtledove/issues/778">welcome additional feedback
     </tr>
     <tr>
       <td style="vertical-align: top;">Trusted Execution Environment</td>
-      <td style="vertical-align: top;">When will the details on which metrics are privacy impacting (and
+      <td style="vertical-align: top;">When will the details on which metrics are privacy-impacting (and
 their degree) be added to the explainer on Trusted Execution
 Environment monitoring?</td>
       <td style="vertical-align: top;">We are in the process of updating the explainer with this
@@ -1080,7 +1072,7 @@ action?</td>
       <td style="vertical-align: top;">Multiple nested auctions are not compatible with our privacy goals
 for two reasons. First, when the winner of an auction renders inside
 a Fenced Frame, our privacy goals for Protected Audience include the
-resulting creative rendering without knowledge of the context:
+resulting creative rendering without knowledge of the context: the
 surrounding page's URL or first-party cookie are a privacy violation.
 In that environment, a nested auction is not viable. Second, the
 Protected Audience model says that each auction's winner should be
@@ -1119,13 +1111,13 @@ received from DSPs.</td>
   </thead>
   <tbody>
     <tr>
-      <td style="vertical-align: top;">Cross device</td>
+      <td style="vertical-align: top;">Cross-device</td>
       <td style="vertical-align: top;">Plan for cross-device support for Attribution Reporting API.</td>
       <td style="vertical-align: top;">Cross-device presents new privacy challenges on top of 3PC and also
 adds technology distribution challenges given the range of devices
 and platforms a user might use. We are exploring potential solutions,
 but we are focused on the critical use cases currently supported by
-ARA and do not have plans to introduce cross-device support before
+ARttribution Reporting and do not have plans to introduce cross-device support before
 the removal of third-party cookies.</td>
     </tr>
     <tr>
@@ -1136,7 +1128,7 @@ Trigger Data Size</td>
 the amount of cross-site and cross-context information about a user is limited.
 We welcome ecosystem players to <a
 href="https://github.com/WICG/attribution-reporting-api/issues/694">submit feedback</a> on whether the
-current parametrization for event level reporting is sufficient.</td>
+current parametrization for event-level reporting is sufficient.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Conversion funnel</td>
@@ -1148,7 +1140,7 @@ We welcome <a
 href="https://github.com/WICG/attribution-reporting-api/issues/1048">additional feedback</a>.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Same Domain in different country support</td>
+      <td style="vertical-align: top;">Same domain in different country support</td>
       <td style="vertical-align: top;">Does Attribution Reporting work with websites that have the same
 Domain but multiple country TLDs?</td>
       <td style="vertical-align: top;">This issue has been discussed and resolved with the stakeholder that
@@ -1178,9 +1170,9 @@ We welcome additional feedback from the ecosystem.</td>
 href="https://github.com/WICG/attribution-reporting-api/issues/920">welcome additional feedback </a>.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Event level report delays</td>
+      <td style="vertical-align: top;">Event-level report delays</td>
       <td style="vertical-align: top;">Reduce event-level report delays.</td>
-      <td style="vertical-align: top;">The full flexible-event level proposal, described in <a
+      <td style="vertical-align: top;">The full flexible event-level proposal, described in <a
 href="https://github.com/WICG/attribution-reporting-api/blob/main/flexible_event_config.md">Flexible event-level configurations</a>, 
 can reduce event-level reporting delays down to 1 hour with a noise
 tradeoff.</td>
@@ -1189,7 +1181,7 @@ tradeoff.</td>
       <td style="vertical-align: top;">Source reporting origin per source</td>
       <td style="vertical-align: top;">Limitation of max source reporting origins per source reporting site
 prevents ad techs from registering sources from different reporting
-origin for a single publisher origin.</td>
+origins for a single publisher origin.</td>
       <td style="vertical-align: top;">This has been discussed with the stakeholder that raised the issue
 and a potential solution of using 1 reporting origin per
 source-reporting site is being tested before trying other potential
@@ -1200,18 +1192,18 @@ as well.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Issue reporting</td>
-      <td style="vertical-align: top;">How to report errors or issues with Attribution Reporting API to
-Chrome.</td>
+      <td style="vertical-align: top;">How can we report errors or issues with the Attribution Reporting API to
+Chrome?</td>
       <td style="vertical-align: top;">Currently we recommend ad techs report any Attribution Reporting API
-errors they may be facing as an Issue on Github. If they are facing a
-Chrome related issue we recommend them creating a Chromium bug. Links
-for how/where to flag any issues can be found in <a
+errors they may be facing as an Issue on GitHub. If they are facing a
+Chrome-related issue we recommend creating a Chromium bug. Links
+for how and where to flag any issues can be found in <a
 href="https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/#engage-and-share-feedback">Engage and share feedback</a>.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Deduplication</td>
-      <td style="vertical-align: top;">How to deduplicate conversions across different pipelines and
-devices.</td>
+      <td style="vertical-align: top;">How can we deduplicate conversions across different pipelines and
+devices?</td>
       <td style="vertical-align: top;">Deduplicating across devices and measurement pipelines is a known and
 current challenge that ad techs also face today with 3PCs. With the
 Attribution Reporting API, ad techs can decide when to register
@@ -1237,8 +1229,8 @@ href="https://github.com/WICG/attribution-reporting-api/blob/main/report_verific
     </tr>
     <tr>
       <td style="vertical-align: top;">Conversion type</td>
-      <td style="vertical-align: top;">How to differentiate between view through and navigation in
-Attribution Reporting.</td>
+      <td style="vertical-align: top;">How can we differentiate between view through and navigation in
+Attribution Reporting?</td>
       <td style="vertical-align: top;">We have the following built-in filtering option: <code>source_type</code>.
 <a
 href="https://developer.android.com/design-for-safety/privacy-sandbox/attribution#trigger-filters:~:text=Ad%20tech%20platforms%20can%20also,for%20%22source_type%22%3A%20%5B%22event%22%5D">Additional details are available here</a>.</td>
@@ -1590,7 +1582,7 @@ access.</td>
 be changed?</td>
       <td style="vertical-align: top;">Yes, the submission guidelines have been changed, and the primary
 domain must serve a JSON file at
-/.well-known/related-website-set.json. <br>
+<code>/.well-known/related-website-set.json</code>. <br>
 <br>
 Existing sets in the RWS list do not need to be changed, but if there
 are modifications submitted to existing sets, the JSON file must be
@@ -1621,13 +1613,13 @@ modifying sets?</td>
       <td style="vertical-align: top;">Per the <a
 href="https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md)">submission
 guides</a>, anyone can submit a PR on GitHub to edit the
-first_party_sets.JSON file. However, if the PR is approved (passes
-technical validations, etc.), it will be manually merged in batches
+<code>first_party_sets.JSON</code> file. However, if the PR is approved (passes
+technical validations, and so forth), it will be manually merged in batches
 to the canonical FPS list once per week (Tuesdays at 12pm Eastern
 Time) by Google.<br>
 <br>
 If a bad actor tries to modify a set they don't own, it shouldn't be
-a problem since they won't be able to modify the .well-known files
+a problem since they won't be able to modify the <code>.well-known</code> files
 and therefore the validations will fail.</td>
     </tr>
     <tr>
@@ -1635,8 +1627,7 @@ and therefore the validations will fail.</td>
       <td style="vertical-align: top;">Domain hijacking may expose related domain data to unauthorized
 parties.</td>
       <td style="vertical-align: top;">This is not possible, as discussed in <a
-href="https://github.com/WICG/first-party-sets/issues/181">this</a>
-GitHub issue.</td>
+href="https://github.com/WICG/first-party-sets/issues/181">this Protected Audience GitHub issue</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -1718,7 +1709,7 @@ No feedback received this quarter.
   </thead>
   <tbody>
     <tr>
-      <td style="vertical-align: top;">Third Party Cookies</td>
+      <td style="vertical-align: top;">Third-party cookies</td>
       <td style="vertical-align: top;">Is FedCM currently disabled if users enable "Block third-party
 cookies" in the Chrome settings"?</td>
       <td style="vertical-align: top;">Yes, FedCM is currently disabled. For testing, we recommend that you
@@ -1747,7 +1738,7 @@ future.</td>
   <tbody>
     <tr>
       <td style="vertical-align: top;">Token expiration</td>
-      <td style="vertical-align: top;">Once Google Chrome is uninstalled, will the Tokens be lost or will it
+      <td style="vertical-align: top;">Once Google Chrome is uninstalled, will the Token be lost or will it
 be cached?</td>
       <td style="vertical-align: top;">The token will be lost if the user uninstalls Google Chrome.</td>
     </tr>
