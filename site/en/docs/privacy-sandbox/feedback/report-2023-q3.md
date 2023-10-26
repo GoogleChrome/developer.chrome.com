@@ -234,7 +234,7 @@ functionality our Privacy Sandbox building blocks offer.</td>
   </tbody>
 </table>
 
-# Enrollment & Attestation
+## Enrollment & Attestation
 
 <table>
   <thead>
@@ -1306,7 +1306,7 @@ case of failures so ad techs can rerun their jobs.</td>
   </tbody>
 </table>
 
-## Private Aggregation API
+### Private Aggregation API
 
 <table>
   <thead>
@@ -1325,9 +1325,9 @@ case of failures so ad techs can rerun their jobs.</td>
   </tbody>
 </table>
 
-# Limit Covert Tracking
+## Limit Covert Tracking
 
-## User Agent Reduction/User Agent Client Hints
+### User Agent Reduction/User Agent Client Hints
 
 <table>
   <thead>
@@ -1357,7 +1357,7 @@ following feedback from the ecosystem.</td>
   </tbody>
 </table>
 
-## IP Protection (formerly Gnatcatcher)
+### IP Protection (formerly Gnatcatcher)
 
 <table>
   <thead>
@@ -1496,7 +1496,7 @@ provide this protection as broadly as possible.</td>
   </tbody>
 </table>
 
-## Bounce Tracking Mitigation
+### Bounce Tracking Mitigation
 
 <table>
   <thead>
@@ -1546,13 +1546,13 @@ from the ecosystem</a>.
   </tbody>
 </table>
 
-## Privacy Budget
+### Privacy Budget
 
 No feedback received this quarter.
 
-# Strengthen cross-site privacy boundaries
+## Strengthen cross-site privacy boundaries
 
-## Relative Website Sets (formerly First-Party Sets)
+### Related Website Sets (formerly First-Party Sets)
 
 <table>
   <thead>
@@ -1632,7 +1632,7 @@ href="https://github.com/WICG/first-party-sets/issues/181">this Protected Audien
   </tbody>
 </table>
 
-## Fenced Frames API
+### Fenced Frames API
 
 <table>
   <thead>
@@ -1666,7 +1666,7 @@ href="https://github.com/WICG/turtledove/issues/741">workarounds and solutions</
   </tbody>
 </table>
 
-## Shared Storage API
+### Shared Storage API
 
 <table>
   <thead>
@@ -1693,11 +1693,11 @@ as we evolve proposals for non-partitioned storage.</td>
   </tbody>
 </table>
 
-## CHIPs
+### CHIPs
 
 No feedback received this quarter.
 
-## FedCM
+### FedCM
 
 <table>
   <thead>
@@ -1723,9 +1723,9 @@ future.</td>
   </tbody>
 </table>
 
-# Fight spam and fraud
+## Fight spam and fraud
 
-## Private State Token API (and other APIs)
+### Private State Token API (and other APIs)
 
 <table>
   <thead>
