@@ -16,7 +16,7 @@ This guide shows you how to use [Chrome DevTools][1] to do the following:
 - Test if you optimized your page for instant loads when using the browser's back and forward buttons.
 - Identify issues that may prevent your page from being eligible for this type of caching.
 
-Back/forward cache (or bfcache) is a browser optimization that enables instant back and forward navigation. For more information, see [Back/forward cache](https://web.dev/bfcache/).
+Back/forward cache (or bfcache) is a browser optimization that enables instant back and forward navigation. For more information, see [Back/forward cache](https://web.dev/articles/bfcache).
 
 {% Aside 'gotchas' %}
 Back/forward cache differs from browser [cache][2] and [HTTP cache][3].
@@ -34,10 +34,10 @@ To test back/forward cache, follow these steps:
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s2M01xBJya7X8U1UkqF3.png", alt="Back/forward cache tab.", width="800", height="416" %}
 
-1. Click **Test back/forward cache**. 
-   
+1. Click **Test back/forward cache**.
+
    Chrome automatically takes you to `chrome://terms/` and back to your page.
-    
+
    Alternatively, you can click the browser's back and forward buttons.
 
 If the back/forward cache works for your page with no issues, you'll see the following message:
@@ -56,7 +56,7 @@ If your page isn't eligible for back/forward caching, the **Back/forward cache**
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3VKdnWq27QjYWT9ahhvY.png", alt="Not eligible for back/forward cache.", width="800", height="744" %}
 
-- **Actionable**. You can fix these issues to enable caching. For example, [stop using `unload` events](https://web.dev/bfcache/#never-use-the-unload-event).
+- **Actionable**. You can fix these issues to enable caching. For example, [stop using `unload` events](https://web.dev/articles/bfcache#never_use_the_unload_event).
 - **Pending Support**. Chrome doesn't support these features yet, so they prevent caching. However, once supported, Chrome removes these limitations.
 - **Not Actionable**. You can't fix these issues on this page. Something that is outside the page's control prevents caching.
 

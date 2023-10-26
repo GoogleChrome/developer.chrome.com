@@ -8,5 +8,5 @@ Chrome (though they may need to upgrade). Origin trials allow developers to
 build demos and prototypes using new features. The trials help Chrome engineers
 understand how new features are used, and how they may interact with other web technologies.
 
-Find out more: 
-[Getting started with Chrome's origin trials](https://web.dev/origin-trials/).
+Find out more:
+[Getting started with Chrome's origin trials](/docs/web-platform/origin-trials/).

@@ -4,6 +4,7 @@ title: Improve extension security
 subhead: 'Improving security in Manifest V3'
 description: 'The last of three sections describing changes needed for code that is not part of the extension service worker.'
 date: 2023-03-08
+updated: 2023-09-26
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
@@ -17,7 +18,7 @@ You can no longer [execute external logic](/docs/extensions/mv3/intro/mv3-overvi
 - Move all external code (JS, Wasm, CSS) into your extension bundle.
 - Update script and style references to load resources from the extension bundle.
 - Use [`chrome.runtime.getURL()`](/docs/extensions/reference/runtime/#method-getURL) to build resource URLs at runtime.
-- Use a sandboxed iframe: `eval` and `new Function(...)` are still supported in sandboxed iframes. For more details read the [guide on sandboxed iframes][sandbox-eval]. 
+- Use a sandboxed iframe: `eval` and `new Function(...)` are still supported in sandboxed iframes. For more details read the [guide on sandboxed iframes][sandbox-eval].
 
 The `executeScript()` method is now in the [`scripting`](/docs/extensions/reference/scripting/) namespace rather than the `tabs` namespace. For information on updating calls, see [Move executeScript()](/docs/extensions/upgrade-to-mv3/update-code#move-executescript).
 
@@ -29,36 +30,44 @@ There are a few special cases in which executing arbitrary strings is still poss
 
 ## Remove remotely hosted code {: #remove-remote-code }
 
-In Manifest V3, all of your extension's logic must be part of the extension package. You can no longer load and execute remotely hosted files. Examples include:
+In Manifest V3, all of your extension's logic must be part of the extension package. You can no longer load and execute remotely hosted files according to [Chrome Web Store policy](/docs/webstore/program-policies/mv3-requirements/). Examples include:
 
 - JavaScript files pulled from the developer's server.
 - Any library hosted on a [CDN][mdn-cdn].
+- Bundled third-party libraries that dynamically fetch remote hosted code.
 
-Alternative approaches are available, depending on your use case and the reason for remote hosting. Here are approaches to consider:
+Alternative approaches are available, depending on your use case and the reason for remote hosting. This section describes approaches to consider.
 
-Configuration-driven features and logic
-: Your extension loads and caches a remote configuration (for example a JSON file) at runtime. The cached configuration determines which features are enabled.
+### Configuration-driven features and logic {: #configuration-drive }
 
-Externalized logic with a remote service
-: Your extension calls a remote web service. This lets you keep code private and change it as needed while avoiding the extra overhead of resubmitting to the Chrome Web Store.
+Your extension loads and caches a remote configuration (for example a JSON file) at runtime. The cached configuration determines which features are enabled.
 
-Embed remotely hosted code in a sandboxed iframe
-: Remotely hosted code [is supported in sandboxed iframes][sandbox-eval]. However, this approach does not work if the code requires access to the embedding page's DOM.
+### Externalized logic with a remote service {: #externalize-with-remote }
 
-Bundle third-party libraries
-: If you are using a popular framework like React or Bootstrap which you were previously loading from an external server, you can download the minified files, add them to your project and import them locally. For example:
-    ```html
-    <script src="./react-dom.production.min.js"></script>
-    <link href="./bootstrap.min.css" rel="stylesheet">
-    ```
-    In some cases, libraries, such as Firebase, will fetch additional code on a by need basis at runtime. In this case, you have to download all possible dynamic imports at build time. Here is an [example script that bundles Firebase using Rollup.js][firebase].
+Your extension calls a remote web service. This lets you keep code private and change it as needed while avoiding the extra overhead of resubmitting to the Chrome Web Store.
 
-Look for other workarounds
-: If the previous approaches don’t help with your use case you might have to either find an alternative solution (i.e. migrate to a different library) or find other ways to use the library's functionality. For example, in the case of Google Analytics, you can switch to the Google measurement protocol instead of using the official remote hosted JavaScript version as described in our [Google Analytics 4 guide][google-analytics].
+### Embed remotely hosted code in a sandboxed iframe {: #embed-in-sandbox }
+
+Remotely hosted code [is supported in sandboxed iframes][sandbox-eval]. Please note that this approach does not work if the code requires access to the embedding page's DOM.
+
+### Bundle third-party libraries {: #bundle-third-party }
+
+If you are using a popular framework such as React or Bootstrap that you were previously loading from an external server, you can download the minified files, add them to your project and import them locally. For example:
+
+```html
+<script src="./react-dom.production.min.js"></script>
+<link href="./bootstrap.min.css" rel="stylesheet">
+```
+
+To include a library in a service worker set the []`"background.type"` key](/docs/extensions/mv3/manifest/background/) to `"module"` in the manifest and use an `import` statement.
+
+{% Aside 'caution' %}
+Some libraries (Firebase, for example) fetch additional code as needed at runtime. You have two options for avoiding this. You can chose a library that does not use remotely-hosted code. You can also download all possible dynamic imports at build time. Here is an [example script that bundles Firebase using Rollup.js][firebase].
+{% endAside %}
 
 ### Use external libraries in tab-injected scripts {: #use-external-libraries }
 
-External libraries may no longer be loaded remotely. They must be part of your extension bundle. Load them at runtime by adding them to the `files` array when calling `executeScript()`. You can still load data remotely at runtime.
+You can also load external libraries at runtime by adding them to the `files` array when calling [`scripting.executeScript()`](/docs/extensions/reference/scripting/#method-executeScript). You can still load data remotely at runtime.
 
 ```js
 chrome.scripting.executeScript({
@@ -68,7 +77,7 @@ chrome.scripting.executeScript({
 ```
 ### Inject a function {: #inject-func }
 
-If you need more dynamism, the new `func` property in `scripting.executeScript()` allows you to inject a function as a content script and pass variables using the `args` property. 
+If you need more dynamism, the new `func` property in `scripting.executeScript()` allows you to inject a function as a content script and pass variables using the `args` property.
 
 <div class="switcher">
 {% Compare 'worse', 'Manifest V2' %}
@@ -109,7 +118,11 @@ In the background service worker.
 {% endCompare %}
 </div>
 
-The [Chrome Extension Samples repo](https://github.com/GoogleChrome/chrome-extensions-samples.git) contains a [function injection example](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/reference/mv3/intro/mv3-migration/content-scripts/popup.js) you can step through. An example of `getCurrentTab()` is in the [reference](/docs/extensions/reference/tabs/#get-the-current-tab) for that function.
+The [Chrome Extension Samples repo](https://github.com/GoogleChrome/chrome-extensions-samples.git) contains a [function injection example](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/functional-samples/reference.mv3-content-scripts/popup.js) you can step through. An example of `getCurrentTab()` is in the [reference](/docs/extensions/reference/tabs/#get-the-current-tab) for that function.
+
+### Look for other workarounds {: #look-for-workarounds }
+
+If the previous approaches don’t help with your use case you might have to either find an alternative solution (i.e. migrate to a different library) or find other ways to use the library's functionality. For example, in the case of Google Analytics, you can switch to the Google measurement protocol instead of using the official remotely-hosted JavaScript version as described in our [Google Analytics 4 guide][google-analytics].
 
 ## Update the content security policy {: #update-csp }
 
@@ -169,4 +182,3 @@ Content security policy values for `sandbox` have no such new restrictions.
 [send-command]: /docs/extensions/reference/debugger/#method-sendCommand
 [firebase]: https://gist.github.com/patrickkettner/8c1a91b1b8f9502b3b67d874e7024a7b
 [google-analytics]: /docs/extensions/mv3/tut_analytics/
-

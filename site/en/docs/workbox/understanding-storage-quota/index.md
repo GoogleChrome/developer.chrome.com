@@ -62,7 +62,7 @@ This option currently defaults to `false`. Runtime caches should, in general, be
 
 ## How much data are you allowed to store?
 
-Each browser has [its own upper limits on storage](https://web.dev/storage-for-the-web/#how-much), so there's no single answer. Additionally, some browsers have a dynamic limit which varies based on the amount of storage that's free on a given device, so the effective upper limit might change without notice.
+Each browser has [its own upper limits on storage](https://web.dev/articles/storage-for-the-web#how_much), so there's no single answer. Additionally, some browsers have a dynamic limit which varies based on the amount of storage that's free on a given device, so the effective upper limit might change without notice.
 
 Some browsers expose an interface for querying the approximate amount of storage that your origin is using, along with the upper limit, via [`navigator.storage.estimate()`](https://developer.mozilla.org/docs/Web/API/StorageManager/estimate). The "[Estimating Available Storage Space](/blog/estimating-available-storage-space/)" article has more information on how you can use that in your own web apps.
 

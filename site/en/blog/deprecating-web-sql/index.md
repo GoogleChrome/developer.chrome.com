@@ -70,20 +70,21 @@ and outperforms Web SQL in many cases.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/AunrHQyWXS6AmECRn9oT.png", alt="Chrome DevTools Issues panel with a warning that reads Web SQL in non-secure contexts is deprecated.", width="800", height="158" %}
 
-- [📍 We are here.] Web SQL access in **insecure contexts** is no longer
+- [✅ Done.] Web SQL access in **insecure contexts** is no longer
   available as of **Chromium&nbsp;110** ({% ChromeDate '110' %}). An
   **enterprise policy** to keep using the feature is available from
   **Chromium&nbsp;110** ({% ChromeDate '110' %}) to **Chromium&nbsp;123**
   ({% ChromeDate '123' %}).
-- [🔮 In the future.] Web SQL access in **all contexts** is deprecated as of
+- [✅ Done.] Web SQL access in **all contexts** is deprecated as of
   **Chromium&nbsp;115** ({% ChromeDate '115' %}) and a warning message is shown
   in the Chrome DevTools Issue panel.
-- [🔮 In the future.] Web SQL access in **all contexts** is no longer available
-  in **Chromium&nbsp;119** ({% ChromeDate '119' %})
-- [🔮 In the future.] A
+- [📍 We are here.] A
   [deprecation trial](/origintrials/#/view_trial/494270059103911937) to
   keep using Web SQL is available from **Chromium&nbsp;117**
-  ({% ChromeDate '117' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}). To learn more about deprecation trials, see the linked section of the article [Get started with origin trials](/docs/web-platform/origin-trials/#deprecation-trials).
+  ({% ChromeDate '117' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
+  To learn more about deprecation trials, see the linked section of the article [Get started with origin trials](/docs/web-platform/origin-trials/#deprecation-trials).
+- [🔮 In the future.] Web SQL access in **all contexts** is no longer available
+  in **Chromium&nbsp;119** ({% ChromeDate '119' %}).
 
 ## Where to go from here
 
@@ -118,7 +119,7 @@ own database to the web.
 
 What's more, we're hoping that this example will help a new ecosystem of
 open-source databases to flourish! The release of
-[file system access handles](https://web.dev/file-system-access/#accessing-files-optimized-for-performance-from-the-origin-private-file-system)
+[file system access handles](https://web.dev/articles/file-system-access#accessing_files_optimized_for_performance_from_the_origin_private_file_system)
 finally provides the new primitive on which custom storage solutions can be
 built.
 

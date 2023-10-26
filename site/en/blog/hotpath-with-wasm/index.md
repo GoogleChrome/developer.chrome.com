@@ -11,8 +11,8 @@ updated: 2020-07-24
 
 ## It's consistently fast, yo
 
-In my [previous](https://web.dev/emscripting-a-c-library/)
-[articles](https://web.dev/emscripten-npm/) I talked about how WebAssembly
+In my [previous](https://web.dev/articles/emscripting-a-c-library)
+[articles](https://web.dev/articles/emscripten-npm) I talked about how WebAssembly
 allows you to bring the library ecosystem of C/C++ to the web. One app that
 makes extensive use of C/C++ libraries is [squoosh](https://squoosh.app/), our
 web app that allows you compress images with a variety of codecs that have been
@@ -270,7 +270,7 @@ allowing us to write code that doesn't comply with that model.
 
 {% Aside %}
 This is not a best practice. In our experience it is usually worth it to
-use binding mechanisms like [embind in Emscripten](https://web.dev/embind/)
+use binding mechanisms like [embind in Emscripten](https://web.dev/articles/embind)
 or [wasm-bindgen](https://rustwasm.github.io/wasm-bindgen/) for Rust to work at
 a higher level.
 {% endAside %}

@@ -35,7 +35,7 @@ stylesheet.replaceSync('.some { color: blue; }');
 stylesheet.insertRule('.some { color: green; }');
 ```
 
-You can [create a completely new stylesheet](https://web.dev/constructable-stylesheets/) as well:
+You can [create a completely new stylesheet](https://web.dev/articles/constructable-stylesheets) as well:
 
 ```js
 // Create a completely new stylesheet
@@ -53,7 +53,7 @@ In DevTools, the most commonly used feature when dealing with CSS is the **Style
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Jy8q9gPbQknRturLyCsq.mp4", autoplay="true", muted="true", loop="true" %}
 
-Before last year, the support for CSS rules modified using CSSOM APIs was rather limited: **you could only see the applied rules but could not edit them.** The main goal we had last year was to allow editing of CSS-in-JS rules using the Styles pane. Sometimes we also call CSS-in-JS styles ["constructed"](https://web.dev/constructable-stylesheets/) to indicate that they were constructed using Web APIs.
+Before last year, the support for CSS rules modified using CSSOM APIs was rather limited: **you could only see the applied rules but could not edit them.** The main goal we had last year was to allow editing of CSS-in-JS rules using the Styles pane. Sometimes we also call CSS-in-JS styles ["constructed"](https://web.dev/articles/constructable-stylesheets) to indicate that they were constructed using Web APIs.
 
 Let's dive into the details of Styles editing works in DevTools.
 

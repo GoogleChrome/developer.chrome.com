@@ -28,9 +28,9 @@ Veja [Faça menos trabalho no thread principal](https://developers.google.com/we
 
 ### Computação de scripts
 
-- [Otimize o JavaScript de terceiros](https://web.dev/fast/#optimize-your-third-party-resources)
+- [Otimize o JavaScript de terceiros](https://web.dev/articles/fast#optimize_your_third_party_resources)
 - [Rode seus handlers de entradas em paralelo](https://developers.google.com/web/fundamentals/performance/rendering/debounce-your-input-handlers)
-- [Use web workers](https://web.dev/off-main-thread/)
+- [Use web workers](https://web.dev/articles/off-main-thread)
 
 ### Estilo e layout
 
@@ -44,18 +44,18 @@ Veja [Faça menos trabalho no thread principal](https://developers.google.com/we
 
 ### Processamento de HTML e CSS
 
-- [Extraia o CSS crítico](https://web.dev/extract-critical-css/)
-- [Minifique o CSS](https://web.dev/minify-css/)
-- [Adie CSS não crítico](https://web.dev/defer-non-critical-css/)
+- [Extraia o CSS crítico](https://web.dev/articles/extract-critical-css)
+- [Minifique o CSS](https://web.dev/articles/minify-css)
+- [Adie CSS não crítico](https://web.dev/articles/defer-non-critical-css)
 
 ### Processamento e compilação de scripts
 
-- [Reduza payloads JavaScript com divisão de código](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
-- [Remova o código não utilizado](https://web.dev/remove-unused-code/)
+- [Reduza payloads JavaScript com divisão de código](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)
+- [Remova o código não utilizado](https://web.dev/articles/remove-unused-code)
 
 ### Coleta de lixo
 
-- [Monitore o uso de memória total de sua página da web com `measureMemory()`](https://web.dev/monitor-total-page-memory-usage/)
+- [Monitore o uso de memória total de sua página da web com `measureMemory()`](https://web.dev/articles/monitor-total-page-memory-usage)
 
 ## Recursos
 

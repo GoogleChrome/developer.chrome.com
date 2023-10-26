@@ -104,8 +104,8 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 <!-- These are some noteworthy fixes in this release: -->
 今回のリリースでは、以下のような注目すべき修正点があります。
 
-<!-- - The [Back/forward cache](/blog/new-in-devtools-98/#bfcache) now displays the extension ID which blocked [bfcache](https://web.dev/bfcache/) when present.( [1284548](https://crbug.com/1284548)) -->
-- [バック/フォワードキャッシュ](/blog/new-in-devtools-98/#bfcache)が存在する場合、 [bfcache](https://web.dev/bfcache/) をブロックした拡張機能のIDを表示するようになりました( [1284548](https://crbug.com/1284548))．
+<!-- - The [Back/forward cache](/blog/new-in-devtools-98/#bfcache) now displays the extension ID which blocked [bfcache](https://web.dev/articles/bfcache) when present.( [1284548](https://crbug.com/1284548)) -->
+- [バック/フォワードキャッシュ](/blog/new-in-devtools-98/#bfcache)が存在する場合、 [bfcache](https://web.dev/articles/bfcache) をブロックした拡張機能のIDを表示するようになりました( [1284548](https://crbug.com/1284548))．
 <!-- - Fixed autocompletion support for array-like objects, CSS class names, `map.get` and HTML tags. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983)) -->
 - array-like オブジェクト、CSSクラス名、 `map.get` 、HTMLタグのオートコンプリートのサポートを修正しました。([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983))
 <!-- - Fixed incorrect highlights when double-clicking on words and undoing autocomplete. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667)) -->
@@ -115,7 +115,7 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 <!-- - Re-enable support for using **Alt** (Options) key for multi selection in the **Sources** panel. ([1304070](https://crbug.com/1304070)) -->
 - **Sources** パネルでの複数選択時に **Alt** （Options） キーを使用するサポートを再び有効化しました。([1304070](https://crbug.com/1304070))
 
- 
+
 <!-- ## [Experimental] New timespan and snapshot mode in the Lighthouse panel {: #lighthouse } -->
 ## [実験的] Lighthouse パネルに新しいタイムスパンとスナップショットのモードを追加 {: #lighthouse }
 
@@ -127,8 +127,8 @@ Chromium issues: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 <!-- Apart from the existing **navigation** mode, the **Lighthouse** panel now support two more modes on measuring user flows - **timespan** and **snapshot**. -->
 従来の **navigation** モードとは別に、 **Lighthouse** パネルは、ユーザーフローを測定するための2つのモード、**タイムスパン**と**スナップショット**をサポートするようになりました。
 
-<!-- For example, you can use the **timespan** reports to analyze user interactions. Open this [demo](https://coffee-cart.netlify.app/) page. Select the **Timespan** mode and click on **Start timespan**. On the page, click on a coffee and end the timespan. Read the report to find out the [Total Blocking Time](https://web.dev/tbt/) and [Cumulative Layout Shift](https://web.dev/cls/) that were caused by the interaction. -->
-例えば、 **タイムスパン** レポートを使用して、ユーザーのインタラクションを分析することができます。この[デモ](https://coffee-cart.netlify.app/)ページを開いてください。 **Timespan** モードを選択し、 **Start timespan** をクリックします。ページ上でコーヒーをクリックし、タイムスパンを終了します。レポートを読んで、インタラクションによって生じた[Total Blocking Time](https://web.dev/tbt/) と [Cumulative Layout Shift](https://web.dev/cls/) を確認します。
+<!-- For example, you can use the **timespan** reports to analyze user interactions. Open this [demo](https://coffee-cart.netlify.app/) page. Select the **Timespan** mode and click on **Start timespan**. On the page, click on a coffee and end the timespan. Read the report to find out the [Total Blocking Time](https://web.dev/articles/tbt) and [Cumulative Layout Shift](https://web.dev/articles/cls) that were caused by the interaction. -->
+例えば、 **タイムスパン** レポートを使用して、ユーザーのインタラクションを分析することができます。この[デモ](https://coffee-cart.netlify.app/)ページを開いてください。 **Timespan** モードを選択し、 **Start timespan** をクリックします。ページ上でコーヒーをクリックし、タイムスパンを終了します。レポートを読んで、インタラクションによって生じた[Total Blocking Time](https://web.dev/articles/tbt) と [Cumulative Layout Shift](https://web.dev/articles/cls) を確認します。
 
 <!-- Each mode has its own unique use cases, benefits, and limitations. Please refer to the [Lighthouse documentation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) for more information. -->
 それぞれのモードには、独自の使用例、利点、制限があります。詳しくは、[Lighthouse のドキュメント](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md)をご参照ください。

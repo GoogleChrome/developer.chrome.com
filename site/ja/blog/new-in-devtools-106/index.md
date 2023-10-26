@@ -174,7 +174,7 @@ Chromium bug: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Performance Insights パネルでの LCP タイミングの内訳  {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/articles/optimize-lcp#lcp_breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Performance Insights パネルでの LCP タイミングの内訳", width="800", height="523" %}
 
@@ -201,11 +201,11 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 
 <!-- - Previously, [Recorder extensions](/docs/devtools/recorder/reference/#extension-troubleshooting) don’t show up in the **Recorder** panel from time to time. ([1351416](https://crbug.com/1351416)) -->
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
-<!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
+<!-- - Identify script causing [layout](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 - 以前は、[Recorder 拡張機能](/docs/devtools/recorder/reference/#extension-troubleshooting) が **Recorder** パネルに時々表示されないことがありました。 ([1351416](https://crbug.com/1351416))
 - **Styles** ペインにて、 [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) 要素の `stop-color` プロパティ向けのカラーピッカーが表示されるようになりました。 ([1351096](https://crbug.com/1351096))
-- **Performance Insights** パネルで、レイアウトシフトの潜在的な根本原因として [レイアウト](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) を引き起こすスクリプトを特定します。 ([1343019](https://crbug.com/1343019))
+- **Performance Insights** パネルで、レイアウトシフトの潜在的な根本原因として [レイアウト](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) を引き起こすスクリプトを特定します。 ([1343019](https://crbug.com/1343019))
 - **Performance Insights** パネルに LCP Web フォントのクリティカルパスを表示します。 ([1350390](https://crbug.com/1350390))
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/50a84ca8e5b556e27bb285477f21a99f0ccb7050 #}

@@ -70,7 +70,7 @@ https://developer.chrome.com/chrome-ux-report-looker-studio-dashboard/
 
 ### Core Web Vitals 개요
 
-첫 번째 페이지는 출처의 월간 [Core Web Vitals](https://web.dev/vitals/) 성능에 대한 개요입니다. 이것은 Google에서 집중할 것을 권장하는 가장 중요한 UX 측정 항목입니다.
+첫 번째 페이지는 출처의 월간 [Core Web Vitals](https://web.dev/articles/vitals) 성능에 대한 개요입니다. 이것은 Google에서 집중할 것을 권장하는 가장 중요한 UX 측정 항목입니다.
 
 {% Img src="image/admin/h8iCTgvmG4DS2zScvatc.png", alt="CrUX 대시보드 Core Web Vitals 개요", width="800", height="906" %}
 
@@ -88,7 +88,7 @@ Core Web Vitals 페이지 다음에 CrUX 데이터 세트의 모든 [메트릭](
 
 각 페이지 상단에는 경험 데이터에 포함된 폼 팩터를 제한하는 데 사용할 수 있는 **장치 필터**가 있습니다. 예를 들어 전화 경험을 구체적으로 드릴다운할 수 있습니다. 이 설정은 여러 페이지에 걸쳐 유지됩니다.
 
-이 페이지의 기본 시각화는 "좋음", "개선 필요" 및 "나쁨"으로 분류된 경험의 월별 분포입니다. 차트 아래 색상으로 구분된 범례는 범주에 포함된 경험의 범위를 나타냅니다. 예를 들어 위의 스크린샷에서 "좋음" [Largest Contentful Paint](https://web.dev/lcp/#what-is-a-good-lcp-score)(LCP) 경험의 비율이 변동하고 최근 몇 개월 동안 약간 나빠지는 것을 볼 수 있습니다.
+이 페이지의 기본 시각화는 "좋음", "개선 필요" 및 "나쁨"으로 분류된 경험의 월별 분포입니다. 차트 아래 색상으로 구분된 범례는 범주에 포함된 경험의 범위를 나타냅니다. 예를 들어 위의 스크린샷에서 "좋음" [Largest Contentful Paint](https://web.dev/articles/lcp#what_is_a_good_lcp_score)(LCP) 경험의 비율이 변동하고 최근 몇 개월 동안 약간 나빠지는 것을 볼 수 있습니다.
 
 가장 최근 달의 "좋음" 및 "나쁨" 경험 비율이 이전달과의 백분율 차이 지표와 함께 차트 위에 표시됩니다. 이 출처의 경우 "좋음" LCP 경험은 전월 대비 3.2% 하락한 56.04%를 기록했습니다.
 
@@ -116,7 +116,7 @@ PageSpeed Insights와 같은 도구의 해당 P75 값은 공개 BigQuery 데이�
 
 {% Aside 'key-term' %} 유효 연결 유형은 사용자 기기의 대역폭 측정을 기반으로 하고 사용된 특정 기술을 의미하지 않기 때문에 *효과적인 것*으로 간주됩니다. 예를 들어 빠른 Wi-Fi를 사용하는 데스크탑 사용자는 4G로 레이블이 지정되고 느린 모바일 연결은 2G로 레이블이 지정될 수 있습니다. {% endAside %}
 
-이러한 차원의 분포는 [First Contentful Paint](https://web.dev/fcp/)(FCP) 히스토그램 데이터의 세그먼트를 사용하여 계산됩니다.
+이러한 차원의 분포는 [First Contentful Paint](https://web.dev/articles/fcp)(FCP) 히스토그램 데이터의 세그먼트를 사용하여 계산됩니다.
 
 ## 자주 묻는 질문
 

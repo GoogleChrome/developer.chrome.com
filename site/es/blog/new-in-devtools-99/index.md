@@ -37,8 +37,8 @@ Chromium issue: [423246](https://crbug.com/423246)
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 Usa el nuevo panel **Reportes API** para monitorizar los reportes generados en tu página y su estado.
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-La [API de Reportes](https://web.dev/reporting-api/) está diseñada para ayudarte a monitorizar las violaciones de seguridad de tu página, llamadas a API obsoletas y más.
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+La [API de Reportes](https://web.dev/articles/reporting-api) está diseñada para ayudarte a monitorizar las violaciones de seguridad de tu página, llamadas a API obsoletas y más.
 
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 Abra una página que use la API de Reportes (ej. [página de demostración](https://reporting-api-demo.glitch.me/)). En el panel **Aplicación**, desplácese hacia abajo hasta la sección **Servicios en segundo plano** y seleccione el panel **Reportes API**.
@@ -156,7 +156,7 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
 ### Muestra los archivos de fuente de Worker en el panel de Fuentes {: #worker-sourcemap }
 
-<!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
+<!-- [Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
 Los archivos fuente de Worker (ej. web worker, service worker) con SourceURL relativa se muestran ahora en el panel de **Fuentes**. Antes, los archivos de fuente de Worker no se manejaban correctamente.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="Muestra los archivos de fuente de Worker en el panel de Fuentes", width="800", height="509" %}
@@ -213,10 +213,10 @@ Estos son algunos arreglos destacados en esta versión:
 - Arreglado el [problema de edición de cookies](/docs/devtools/storage/cookies/#edit) en el panel **Cookies**. ([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - Usa `Mayús` + `Tab` para seleccionar el comando anterior en el [Menú de Comandos](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743))
-<!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
-- Reporta [problemas de solicitud de preflight](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) en la pestaña [Problemas](/docs/devtools/issues/). ([1272445](https://crbug.com/1272445)).
-<!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
-- Reporta [problemas de User-Agent Client Hints](https://web.dev/user-agent-client-hints/) en la pestaña [Problemas](/docs/devtools/issues/). ([1219359](https://crbug.com/1219359)).
+<!-- - Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
+- Reporta [problemas de solicitud de preflight](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) en la pestaña [Problemas](/docs/devtools/issues/). ([1272445](https://crbug.com/1272445)).
+<!-- - Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
+- Reporta [problemas de User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) en la pestaña [Problemas](/docs/devtools/issues/). ([1219359](https://crbug.com/1219359)).
 <!-- - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662)) -->
 - Arreglado el comportamiento de `Mayús` + `Supr` y `Re Pág` / `Av Pág` en el panel **Fuentes** y **Consola**. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->

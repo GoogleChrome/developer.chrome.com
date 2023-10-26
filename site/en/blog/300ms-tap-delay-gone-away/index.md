@@ -19,7 +19,7 @@ Ever since the first release of Chrome for Android, this delay was removed if pi
 The performance difference is huge!
 
 
-Having a UI that responds instantly means the user can quickly press each button with confidence, rather than pausing and waiting for a response. Find out more about the impact of human reaction times and web performance in our [introduction to RAIL](https://web.dev/rail/).
+Having a UI that responds instantly means the user can quickly press each button with confidence, rather than pausing and waiting for a response. Find out more about the impact of human reaction times and web performance in our [introduction to RAIL](https://web.dev/articles/rail).
 
 To remove the 300-350ms tap delay, all you need is the following in the `<head>` of your page:
 

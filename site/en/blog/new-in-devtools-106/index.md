@@ -138,7 +138,7 @@ Chromium bug: [1347390](https://crbug.com/1347390)
 
 ## LCP timings breakdown in the Performance Insights panel {: #insights }
 
-The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown) of the [Largest Contentful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance.
+The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/articles/optimize-lcp#lcp_breakdown) of the [Largest Contentful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="LCP timings breakdown in the Performance Insights panel", width="800", height="523" %}
 
@@ -162,7 +162,7 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 
 - Previously, [Recorder extensions](/docs/devtools/recorder/reference/#extension-troubleshooting) don’t show up in the **Recorder** panel from time to time. ([1351416](https://crbug.com/1351416))
 - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096))
-- Identify scripts causing [layout thrashing](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019))
+- Identify scripts causing [layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019))
 - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390))
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/50a84ca8e5b556e27bb285477f21a99f0ccb7050 #}

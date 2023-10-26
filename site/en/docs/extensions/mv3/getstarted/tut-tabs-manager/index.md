@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Manage tabs'
+seoTitle: 'Chrome Extensions Tutorial: Manage tabs'
 subhead: 'Build your first tabs manager.'
 description: 'Learn how to programmatically organize tabs using tab groups.'
 date: 2022-10-04

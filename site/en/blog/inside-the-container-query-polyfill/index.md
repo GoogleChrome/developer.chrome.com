@@ -91,7 +91,7 @@ However, the `:where(...)` pseudo-class is [fairly new](https://caniuse.com/mdn-
     color: blue;
   }
 }
-  
+
 .card {
   color: red;
 }
@@ -105,7 +105,7 @@ However, the `:where(...)` pseudo-class is [fairly new](https://caniuse.com/mdn-
     color: blue;
   }
 }
-  
+
 .card {
   color: red;
 }
@@ -269,9 +269,9 @@ During the initial load, there is a lot that needs to happen before the polyfill
 * The polyfill needs to be loaded and initialized.
 * Stylesheets need to be parsed and transpiled. Since there aren’t any APIs to access the raw source of an external stylesheet, it may need to be asynchronously re-fetched, though ideally just from the browser cache.
 
-If these concerns aren’t carefully addressed by the polyfill, it could potentially regress your [Core Web Vitals](https://web.dev/vitals/).
+If these concerns aren’t carefully addressed by the polyfill, it could potentially regress your [Core Web Vitals](https://web.dev/articles/vitals).
 
-To make it easier for you to give your visitors a pleasant experience, the polyfill was designed to prioritize [First Input Delay (FID)](https://web.dev/fid/) and [Cumulative Layout Shift (CLS)](https://web.dev/cls/), potentially at the expense of [Largest Contentful Paint (LCP)](https://web.dev/lcp/). Concretely, _the polyfill makes no guarantee that your container queries will be evaluated before the first paint_. This means that for the best user experience, you **must** ensure that any content whose size or position would be affected by using container queries are hidden until after the polyfill has loaded and transpiled your CSS. One way to accomplish this is by using an `@supports` rule:
+To make it easier for you to give your visitors a pleasant experience, the polyfill was designed to prioritize [First Input Delay (FID)](https://web.dev/articles/fid) and [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls), potentially at the expense of [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp). Concretely, _the polyfill makes no guarantee that your container queries will be evaluated before the first paint_. This means that for the best user experience, you **must** ensure that any content whose size or position would be affected by using container queries are hidden until after the polyfill has loaded and transpiled your CSS. One way to accomplish this is by using an `@supports` rule:
 
 ```css
 @supports not (container-type: inline-size) {

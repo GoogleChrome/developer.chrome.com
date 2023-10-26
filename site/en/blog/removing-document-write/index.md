@@ -89,14 +89,14 @@ Specifically Chrome will not execute the `<script>` elements injected via
 
 Third party snippets sometimes use `document.write()` to load scripts.
 Fortunately, most third parties provide
-[asynchronous loading alternatives](https://web.dev/efficiently-load-third-party-javascript/#use-async-or-defer), which
+[asynchronous loading alternatives](https://web.dev/articles/efficiently-load-third-party-javascript#use_async_or_defer), which
 allow third party scripts to load without blocking the display of the rest of
 the content on the page.
 
 ## How do I fix this?
 
 This simple answer is don't inject scripts using `document.write()`. We
-maintain a set of [known services for asynchronous loader support](https://web.dev/async-functions/)
+maintain a set of [known services for asynchronous loader support](https://web.dev/articles/async-functions)
 that we encourage you to keep checking.
 
 If your provider is not on the list and does support asynchronous script loading

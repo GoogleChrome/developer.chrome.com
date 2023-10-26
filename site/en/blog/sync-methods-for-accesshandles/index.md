@@ -18,7 +18,7 @@ tags:
 ---
 
 The
-[origin private file system](https://web.dev/file-system-access/#accessing-files-optimized-for-performance-from-the-origin-private-file-system)
+[origin private file system](https://web.dev/articles/file-system-access#accessing_files_optimized_for_performance_from_the_origin_private_file_system)
 provides access to a special kind of file that is highly optimized for performance, for example, by
 offering in-place and exclusive write access to a file's content. Developers can get access to such
 files by calling

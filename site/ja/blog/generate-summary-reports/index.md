@@ -32,7 +32,7 @@ tags:
 
 初期実装とオリジントライアルにおいては、アドテックは[ローカルテスト](https://github.com/google/trusted-execution-aggregation-service/#set-up-local-testing)をセットアップするか、[Amazon Web Services（AWS）を使用した TEE でテスト](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports)できます。
 
-1. プライバシーサンドボックスの関連性と測定のオリジントライアル（OT）に[登録](/origintrials/#/view_trial/771241436187197441)します。
+1. プライバシーサンドボックスの広告関連のオリジントライアル（OT）に[登録](/origintrials/#/view_trial/771241436187197441)します。
 2. [Amazon Web Services アカウント](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)を作成するか、用意します。
 3. 集計サービスの[オンボーディング フォーム](https://forms.gle/EHoecersGKhpcLPNA)に記入します。このフォームに入力すると、登録確認と集計サービスのセットアップ手順が記載されたメールが届きます。
 

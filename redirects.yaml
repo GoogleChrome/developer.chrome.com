@@ -21,6 +21,15 @@ redirects:
 
 # Simple redirects
 
+- from: /blog/pwa-manifest-id/
+  to: /articles/pwa-manifest-id/
+
+- from: /docs/privacy-sandbox/first-party-sets/
+  to: /docs/privacy-sandbox/related-website-sets/
+
+- from: /docs/privacy-sandbox/first-party-sets-integration/
+  to: /docs/privacy-sandbox/related-website-sets-integration/
+
 - from: /docs/privacy-sandbox/trust-tokens/
   to: /docs/privacy-sandbox/private-state-tokens/
 
@@ -71,6 +80,9 @@ redirects:
 
 - from: /docs/extensions/mv3/xhr
   to: /docs/extensions/mv3/network-requests
+
+- from: /docs/extensions/examples
+  to: /docs/extensions/samples/
 
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
@@ -474,7 +486,7 @@ redirects:
   # MV2 docs that have been removed, but their MV3 version still exists
 
 - from: /docs/extensions/mv2/single_purpose
-  to: /docs/extensions/mv3/single_purpose/
+  to: /docs/extensions/mv3/quality_guidelines/
 
   # Group redirects
 
@@ -648,6 +660,10 @@ redirects:
 - from: /docs/extensions/mv3/known-issues/
   to: /docs/extensions/migrating/known-issues/
 
+# Extension samples
+- from: /docs/extensions/mv3/samples/
+  to: /docs/extensions/samples/
+
 # Redirects for docs now on MDN
 
 - from: /docs/web-platform/popover-api/backdrop-pseudo-element
@@ -763,6 +779,19 @@ redirects:
 
 - from: /docs/privacy-sandbox/fledge/...
   to: /docs/privacy-sandbox/protected-audience/...
+
+- from: /docs/extensions/gethelp
+  to: /docs/extensions/support-feedback
+- from: docs/extensions/mv3/single_purpose/
+  to: docs/extensions/mv3/quality_guidelines/
+
+- from: /docs/privacy-sandbox/permissions-policy/
+  to: /articles/permissions-policy/
+
+# PR 7600 replacing Custom Tabs native apps how-to with external handler section in warmup/prefetch guide
+
+- from: /docs/android/custom-tabs/howto-custom-tab-native-apps/
+  to: /docs/android/custom-tabs/guide-warmup-prefetch/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

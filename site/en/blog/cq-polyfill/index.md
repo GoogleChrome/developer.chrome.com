@@ -24,7 +24,7 @@ Container queries are a part of the [css-contain-3 specification](https://www.w3
 {% endAside %}
 
 ## What are container queries?
-[Container queries](https://www.youtube.com/watch?v=gCNMyYr7F6w) are a CSS feature which enables you to write styling logic that targets features of a parent element to style its children.  You can create truly component-based responsive design by querying for a parent’s size. This is much more granular and useful information than something like [media queries](https://web.dev/learn/design/media-queries/) that only provide size information about the viewport.
+[Container queries](https://www.youtube.com/watch?v=gCNMyYr7F6w) are a CSS feature which enables you to write styling logic that targets features of a parent element to style its children.  You can create truly component-based responsive design by querying for a parent’s size. This is much more granular and useful information than something like [media queries](https://web.dev/learn/design/media-queries) that only provide size information about the viewport.
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/Sw2dY4cpYjc8GBJVmCrK.png", alt="ALT_TEXT_HERE", width="800", height="372" %}
 
@@ -99,7 +99,7 @@ To make container queries even more useful, you can use container-based unit val
 
 <table><thead><tr><th>unit</th><th>relative to</th></tr></thead><tbody><tr><td><code>cqw</code></td><td>1% of a query container’s width</td></tr><tr><td><code>cqh</code></td><td>1% of a query container’s height</td></tr><tr><td><code>cqi</code></td><td>1% of a query container’s inline size</td></tr><tr><td><code>cqb</code></td><td>1% of a query container’s block size</td></tr><tr><td><code>cqmin</code></td><td>The smaller value of cqi or cqb</td></tr><tr><td><code>cqmax</code></td><td>The larger value of cqi or cqb</td></tr></tbody></table>
 
-One example for how you would use container-based units is responsive typography. The viewport-based units (such as `vh`, `vb`, `vw`, and `vi`) can be used to size any element on the screen. 
+One example for how you would use container-based units is responsive typography. The viewport-based units (such as `vh`, `vb`, `vw`, and `vi`) can be used to size any element on the screen.
 
 ```css
 .card h2 {
@@ -178,7 +178,7 @@ For the best user experience, it's recommended that you initially only use the p
 On sufficiently fast networks and devices, or devices that natively support container queries, this loading indicator will never be displayed.
 
 {% Aside %}
-Keep in mind that this technique effectively trades off [LCP](https://web.dev/lcp/) for less jank during initial load, so you may see regressions in the former as a result, particularly on low end devices.
+Keep in mind that this technique effectively trades off [LCP](https://web.dev/articles/lcp) for less jank during initial load, so you may see regressions in the former as a result, particularly on low end devices.
 {% endAside %}
 
 ## New Polyfill Features
@@ -219,7 +219,7 @@ If you are using the container query polyfill, there are a few missing features 
 
 ### Warnings
 
-- To prevent impacting [FID](https://web.dev/fid/) and [CLS](https://web.dev/cls/), the polyfill makes no guarantees about when the first layout will occur, even if it’s loaded synchronously, except that it will attempt to avoid unreasonably delaying LCP. In other words, you should never rely on it for first paint. 
+- To prevent impacting [FID](https://web.dev/articles/fid) and [CLS](https://web.dev/articles/cls), the polyfill makes no guarantees about when the first layout will occur, even if it’s loaded synchronously, except that it will attempt to avoid unreasonably delaying LCP. In other words, you should never rely on it for first paint.
 - Generates `ResizeObserver Loop Errors`. The original polyfill does this too, but it’s worth calling out. This occurs because the block-size of a `container-type: inline-size` will likely change after evaluating a query, but `ResizeObserver` has no way to tell it that we don’t care about block-size changes.
 - This polyfill is tested against Web Platform Tests and reached 70% passing since certain features like JavaScript APIs are not polyfilled, and so the pass rate is intentionally closer to 70%.
 - The `:where()` [workaround](https://github.com/GoogleChromeLabs/container-query-polyfill#supporting-browsers-without-where) is required for the 2.23% users of browsers older than:

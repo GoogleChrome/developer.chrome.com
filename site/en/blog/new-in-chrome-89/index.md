@@ -68,9 +68,9 @@ that can interact with lots of sites, users win because they don't need to
 install special drivers, or software.
 
 You can learn more about some of the devices you can connect to at
-[web.dev/devices](https://web.dev/devices/), or check out the getting started
-guides for [WebHID](https://web.dev/hid/), [WebNFC](https://web.dev/nfc/),
-and [Web Serial](https://web.dev/serial/).
+[web.dev/devices](https://web.dev/explore/devices), or check out the getting started
+guides for [WebHID](https://web.dev/articles/hid), [WebNFC](https://web.dev/articles/nfc),
+and [Web Serial](https://web.dev/articles/serial).
 
 ## PWA installability criteria changes {: #installability }
 
@@ -163,9 +163,9 @@ you'll want to use the Web Share Target API.
 ```
 
 Check
-[Integrate with the OS sharing UI with the Web Share API](https://web.dev/web-share/)
+[Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share)
 and
-[Receiving shared data with the Web Share Target API](https://web.dev/web-share-target/)
+[Receiving shared data with the Web Share Target API](https://web.dev/articles/web-share-target)
 for getting started guides.
 
 ## And more {: #more }

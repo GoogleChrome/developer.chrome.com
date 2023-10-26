@@ -34,7 +34,7 @@ FLEDGE はアプリとウェブ向けに構築されているため、サービ�
 
 本番環境で FLEDGE をテストしている場合は、**[Key-Value サービス](#key-value-service)** についてよく理解していると思います。この提案は、クラウド実装のための新しい信頼モデルとして更新されました。「Bring Your Own Server」モデルに精通している場合には、[移行方法の詳細とタイムラインの更新](#byos-to-tee)をご覧ください。
 
-2 つ目のサービスは、FLEDGE の傘下で新たに提案された **[入札・オークション サービス](#bidding-auction-service)** です。この新しい提案では、広告オークションと入札サービスのプライバシーを保護しながら、入札と広告オークションをクライアントからクラウドにオフロードします。新しい入札およびオークション サービスのアイデアと現在のオンデバイス デザインとの比較についてのフィードバックをお待ちしております。特に、進行中の Chrome 広告の関連性と測定のオリジントライアルの一環として、すでに経験を積んでいるテスターからのフィードバックをお待ちしております。この提案は、[提案ライフ サイクルのディスカッションの段階](/docs/privacy-sandbox/proposal-lifecycle/)にあります。入札・オークションサービスは、「Bring Your Own Server」モデルの対象外です。
+2 つ目のサービスは、FLEDGE の傘下で新たに提案された **[入札・オークション サービス](#bidding-auction-service)** です。この新しい提案では、広告オークションと入札サービスのプライバシーを保護しながら、入札と広告オークションをクライアントからクラウドにオフロードします。新しい入札およびオークション サービスのアイデアと現在のオンデバイス デザインとの比較についてのフィードバックをお待ちしております。特に、進行中の Chrome 広告関連のオリジントライアルの一環として、すでに経験を積んでいるテスターからのフィードバックをお待ちしております。この提案は、[提案ライフ サイクルのディスカッションの段階](/docs/privacy-sandbox/proposal-lifecycle/)にあります。入札・オークションサービスは、「Bring Your Own Server」モデルの対象外です。
 
 ### Key-Value サービス {: #key-value-service }
 
@@ -53,7 +53,7 @@ TEE ベースの [FLEDGE Key-Value サービス](https://github.com/WICG/turtled
 
 {% Aside %} これは議論中の新しい提案であり、**現在の FLEDGE のオンデバイス入札とオークションのアプローチは変更されていません**。入札・オークションサービスは、必要に応じて入札とオークションの計算を信頼できる実行環境（TEE）にオフロードするための補完的な提案です。
 
-皆様からの[フィードバックをお待ちしております](#engage-and-share-feedback)。特に、[広告の関連性と測定のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)に参加しているテスターからのフィードバックをお待ちしております。 {% endAside %}
+皆様からの[フィードバックをお待ちしております](#engage-and-share-feedback)。特に、[広告の広告関連のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)に参加しているテスターからのフィードバックをお待ちしております。 {% endAside %}
 
 FLEDGE の提案では、広告の入札とオークションの実行をオンデバイスで行うことが提案されています。
 
@@ -113,7 +113,7 @@ BYOS モデルを実装したアドテックプラットフォームは、FLEDGE
 
 - **GitHub**:
     - [FLEDGE サービスの提案](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md)を読み、[質問を投稿したり、ディスカッションを閲覧](https://github.com/privacysandbox/fledge-docs/issues)したりできます。
-    - [入札・オークションサービスの提案](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md)を読み、[質問を投稿したり、ディスカッションを閲覧したり](https://github.com/privacysandbox/fledge-docs/issues)できます。特に、広告の関連性と測定のオリジントライアルの参加者からの意見をお待ちしております。現在のオンデバイス設計と比較して、この提案をどう思いますか？
+    - [入札・オークションサービスの提案](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md)を読み、[質問を投稿したり、ディスカッションを閲覧したり](https://github.com/privacysandbox/fledge-docs/issues)できます。特に、広告関連のオリジントライアルの参加者からの意見をお待ちしております。現在のオンデバイス設計と比較して、この提案をどう思いますか？
 - **W3C**: [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants)  では業界のユースケースについて、Web Platform Incubation Community Group の [FLEDGE GitHub リポジトリと定期ミーティング](https://github.com/WICG/turtledove/issues/88)では FLEDGE 設計について話し合えます。
 - **開発者サポート**: 以下の場所では質問を投稿したり、ディスカッションに参加したりできます。
     - [Privacy Sandbox for the Web Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)

@@ -66,7 +66,7 @@ Luckily, you can recreate these behaviors using the `<video>` element.
 
 ## Use a service that converts GIFs to HTML5 videos
 
-Many [image CDNs](https://web.dev/image-cdns/) support GIF to HTML5 video conversion. You upload a
+Many [image CDNs](https://web.dev/articles/image-cdns) support GIF to HTML5 video conversion. You upload a
 GIF to the image CDN, and the image CDN returns an HTML5 video.
 
 ## Stack-specific guidance
@@ -80,5 +80,5 @@ usage when the content is offscreen.
 ## Resources
 
 - [Source code for **Use video formats for animated content** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/efficient-animated-content.js)
-- [Replace animated GIFs with video for faster page loads](https://web.dev/replace-gifs-with-videos/)
-- [Replace GIFs with video codelab](https://web.dev/codelab-replace-gifs-with-video/)
+- [Replace animated GIFs with video for faster page loads](https://web.dev/articles/replace-gifs-with-videos)
+- [Replace GIFs with video codelab](https://web.dev/articles/codelab-replace-gifs-with-video)

@@ -16,9 +16,7 @@ tags:
 
 {% Partial 'devtools/banner.md' %}
 
-*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
-
-{% YouTube id='e8tl_yp5BQg' %}
+{% YouTube id='oMRpODeXzho' %}
 
 <!-- $contentStart -->
 
@@ -103,7 +101,7 @@ Chromium issue: [406900](https://crbug.com/406900).
 
 ## Performance: See the changes in fetch priority for network events {: #performance }
 
-The **Performance** panel now shows two priority fields in the **Summary** of an event in the **Network** track: **Initial Priority** and (final) **Priority**, instead of just the singe **Priority**. With this additional field you can now see if the event's fetch priority changes and tweak the order of downloads. For more information, see [Optimizing resource loading with the Fetch Priority API](https://web.dev/fetch-priority/).
+The **Performance** panel now shows two priority fields in the **Summary** of an event in the **Network** track: **Initial Priority** and (final) **Priority**, instead of just the singe **Priority**. With this additional field you can now see if the event's fetch priority changes and tweak the order of downloads. For more information, see [Optimizing resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IzdOpZvv0KSQNdtGLfhL.png", alt="Before and after displaying changes in fetch priority.", width="800", height="521" %}
 

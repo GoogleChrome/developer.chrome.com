@@ -22,22 +22,22 @@ updated: 2020-05-29
 
 ## 如何减少有效负载大小
 
-争取将总字节大小保持在 1600 KiB 以下。该目标基于理论上可通过 3G 连接下载的数据量，同时仍可实现 10 秒或更短的[Time to Interactive](https://web.dev/tti/)。
+争取将总字节大小保持在 1600 KiB 以下。该目标基于理论上可通过 3G 连接下载的数据量，同时仍可实现 10 秒或更短的[Time to Interactive](https://web.dev/articles/tti)。
 
 以下是一些降低有效负载大小的方法：
 
-- 在真正需要请求之前尽量推迟它们。请参阅 [PRPL Pattern](https://web.dev/apply-instant-loading-with-prpl/) 提供的一种可能办法。
+- 在真正需要请求之前尽量推迟它们。请参阅 [PRPL Pattern](https://web.dev/articles/apply-instant-loading-with-prpl) 提供的一种可能办法。
 - 将请求优化得尽可能小。可能实现的技术包括：
-    - [缩小和压缩网络有效负载](https://web.dev/reduce-network-payloads-using-text-compression/)。
-    - [图像使用 WebP 格式，而不是 JPEG 或 PNG](https://web.dev/serve-images-webp/)。
-    - [将 JPEG 图像的压缩级别设为 85](https://web.dev/use-imagemin-to-compress-images/) 。
-- 缓存请求，避免在重复访问页面时重新下载资源。 （请参阅[网络可靠性登录页面](https://web.dev/reliable/)来了解缓存的工作原理以及实现方法。）
+    - [缩小和压缩网络有效负载](https://web.dev/articles/reduce-network-payloads-using-text-compression)。
+    - [图像使用 WebP 格式，而不是 JPEG 或 PNG](https://web.dev/articles/serve-images-webp)。
+    - [将 JPEG 图像的压缩级别设为 85](https://web.dev/articles/use-imagemin-to-compress-images) 。
+- 缓存请求，避免在重复访问页面时重新下载资源。 （请参阅[网络可靠性登录页面](https://web.dev/explore/reliable)来了解缓存的工作原理以及实现方法。）
 
 ## 针对堆栈的具体指导
 
 ### Angular
 
-应用[路由级代码拆分](https://web.dev/route-level-code-splitting-in-angular/)，将 JavaScript 包最小化。此外，请考虑使用 [Angular 服务工作进程](https://web.dev/precaching-with-the-angular-service-worker/)来预缓存资产。
+应用[路由级代码拆分](https://web.dev/articles/route-level-code-splitting-in-angular)，将 JavaScript 包最小化。此外，请考虑使用 [Angular 服务工作进程](https://web.dev/articles/precaching-with-the-angular-service-worker)来预缓存资产。
 
 ### Drupal
 

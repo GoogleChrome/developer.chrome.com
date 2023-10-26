@@ -36,7 +36,7 @@ tags:
 
 여러분은 CSS의 정보들을 더욱 깊이 파고들 수 있게 됩니다. 예를 들어, **색상** 섹션의 색상을 클릭해서 동일한 색상이 적용되는 요소들의 리스트를 볼 수 있으며, 하나의 구성요소를 클릭해서 **구성요소** 패널에서 열어 볼 수 있습니다.
 
-**CSS 개요** 패널은 프리뷰 기능입니다. 우리는 이 기능에 계속적인 노력을 기울이고 있으며, 또한 더 많은 개선점을 찾기 위해서 여러분의 [피드백](https://goo.gle/css-overview-feedback)이 필요합니다. 
+**CSS 개요** 패널은 프리뷰 기능입니다. 우리는 이 기능에 계속적인 노력을 기울이고 있으며, 또한 더 많은 개선점을 찾기 위해서 여러분의 [피드백](https://goo.gle/css-overview-feedback)이 필요합니다.
 
 **CSS 개요** 에 대해 좀 더 알고 싶으시다면 [더보기](/docs/devtools/css-overview)를 클릭하여 첨부된 문서를 읽어 보세요.
 
@@ -67,7 +67,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
 
 
-## 렌더링 탭의 업데이트 
+## 렌더링 탭의 업데이트
 
 ### CSS 의 prefers-contrast 미디어 기능 에뮬레이션 {: #prefers-contrast }
 
@@ -135,14 +135,14 @@ Chromium issue: [1214030](https://crbug.com/1214030)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1574e9b550317c481a943fec059d84bfb863564 #}
 
-Chromium issue: [1226262](https://crbug.com/1226262) 
+Chromium issue: [1226262](https://crbug.com/1226262)
 
 
 ## 콘솔 업데이트
 
 ### 콘솔의 CORS 에러 숨김 옵션 {: #hide-cors-errors }
 
-**콘솔** 에서 CORS 오류를 숨길 수 있습니다. CORS 오류들은 현재 이슈 탭에 리포트되고 있으므로, **콘솔** 에서 이들을 숨기는 것은 콘솔 내부에 어지럽게 흩어진 오류들을 줄이는 데 도움을 줄 수 있습니다. 
+**콘솔** 에서 CORS 오류를 숨길 수 있습니다. CORS 오류들은 현재 이슈 탭에 리포트되고 있으므로, **콘솔** 에서 이들을 숨기는 것은 콘솔 내부에 어지럽게 흩어진 오류들을 줄이는 데 도움을 줄 수 있습니다.
 
 **콘솔**에서 **설정** 아이콘을 클릭한 다음 **콘솔에 CORS 오류 표시** 체크박스를 해제합니다.
 
@@ -155,7 +155,7 @@ Chromium issue: [1251176](https://crbug.com/1251176)
 
 ### 콘솔에서 적절한 `Intl` 객체 미리보기 및 값 판별 {: #intl }
 
-[Intl](https://tc39.es/ecma402/#intl-object)객체는 적절한 미리보기 기능을 가지고 있고, 또한 콘솔은 이 객체의 모든 값을 괄호닫음 없이 모두 표시합니다. 
+[Intl](https://tc39.es/ecma402/#intl-object)객체는 적절한 미리보기 기능을 가지고 있고, 또한 콘솔은 이 객체의 모든 값을 괄호닫음 없이 모두 표시합니다.
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZxGQoDdnilseKTFsxdbC.png", alt="Intl objects in the Console", width="800", height="559" %} -->
 
@@ -189,11 +189,11 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 ## 애플리케이션 패널 내 애플리케이션 캐시 영역 제거 예정 {: #app-cache }
 
-[AppCache](https://web.dev/appcache-removal/)에 대한 지원이 크롬 및 다른 크로미움 기반 브라우저에서 중단됨에 따라, 애플리케이션 패널 내부 [애플리케이션 캐시](/docs/devtools/storage/applicationcache/) 영역이 제거되었습니다.
+[AppCache](https://web.dev/articles/appcache-removal)에 대한 지원이 크롬 및 다른 크로미움 기반 브라우저에서 중단됨에 따라, 애플리케이션 패널 내부 [애플리케이션 캐시](/docs/devtools/storage/applicationcache/) 영역이 제거되었습니다.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
-Chromium issue: [1084190](https://crbug.com/1084190) 
+Chromium issue: [1084190](https://crbug.com/1084190)
 
 
 ## [실험실 기능] 애플리케이션 패널에 새롭게 추가된 Reporting API 영역 {: #reporting-api }
@@ -202,12 +202,12 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 이 기능을 활성화하기 위해서, **설정** > **실험** > **Enable Reporting API panel in the Application panel** 체크박스에 체크해 주세요.
 {% endAside %}
 
-[Reporting API](https://web.dev/reporting-api/)는 개발자들이 웹페이지, 제거된 API 호츨 등에서의 보안수칙 위반을 잘 모니터링할 수 있도록 설계되었습니다.
+[Reporting API](https://web.dev/articles/reporting-api)는 개발자들이 웹페이지, 제거된 API 호츨 등에서의 보안수칙 위반을 잘 모니터링할 수 있도록 설계되었습니다.
 
 이 실험을 활성화함으로써, 여러분들은 이제 보고된 상태를 **애플리케이션** 패널의 새로운 **Reporting API** 영역에서 볼 수 있습니다.
 **Endpoints** 섹션은 현재 개발중임을 염두에 두세요. (따라서 엔드포인트는 현재 보고되지 않습니다.)
 
-[관련문서](https://web.dev/reporting-api/)를 통해 **Reporting API**에 대해 좀더 알아볼 수 있습니다.
+[관련문서](https://web.dev/articles/reporting-api)를 통해 **Reporting API**에 대해 좀더 알아볼 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Reporting API pane in the Application panel", width="800", height="476" %}
 

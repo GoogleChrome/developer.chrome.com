@@ -30,7 +30,7 @@ problems include:
 
 Furthermore, even though Lighthouse can provide you a single overall Performance score, it might be more
 useful to think of your site performance as a distribution of scores, rather than a single number.
-See the introduction of [User-Centric Performance Metrics](https://web.dev/user-centric-performance-metrics/)
+See the introduction of [User-Centric Performance Metrics](https://web.dev/articles/user-centric-performance-metrics)
 to understand why.
 
 ## How the Performance score is weighted {: #weightings }

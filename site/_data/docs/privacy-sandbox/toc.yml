@@ -21,13 +21,16 @@
     - url: /docs/privacy-sandbox/enroll
       title: i18n.docs.privacy-sandbox.enroll
     - url: /docs/privacy-sandbox/status
-    - url: /docs/privacy-sandbox/privacy-compliance-faq
+    - title: i18n.docs.privacy-sandbox.faq
+      sections:
+        - url: /docs/privacy-sandbox/faq/testing-faq/
+        - url: /docs/privacy-sandbox/faq/privacy-compliance-faq
     - url: /docs/privacy-sandbox/feedback
 - title: i18n.docs.privacy-sandbox.strengthen-boundaries
   sections:
     - url: /docs/privacy-sandbox/third-party-cookie-phase-out
-    - url: /docs/privacy-sandbox/first-party-sets
-    - url: /docs/privacy-sandbox/first-party-sets-integration
+    - url: /docs/privacy-sandbox/related-website-sets
+    - url: /docs/privacy-sandbox/related-website-sets-integration
     - url: /docs/privacy-sandbox/first-party-sets-evolution
     - url: /docs/privacy-sandbox/chips
     - url: /docs/privacy-sandbox/storage-partitioning/
@@ -38,9 +41,6 @@
         - url: /docs/privacy-sandbox/fedcm-developer-guide
         - url: /docs/privacy-sandbox/fedcm-updates
     - title: i18n.docs.privacy-sandbox.control-browser-features
-      sections:
-        - url: /docs/privacy-sandbox/permissions-policy
-          title: i18n.docs.privacy-sandbox.permissions-policy
     - url: /docs/privacy-sandbox/shared-storage
     - url: https://goo.gle/shared-storage-walkthrough
       title: i18n.docs.privacy-sandbox.shared-storage-walkthrough
@@ -78,6 +78,7 @@
             - url: /docs/privacy-sandbox/protected-audience-api/
             - url: /docs/privacy-sandbox/protected-audience-api/ad-auction
             - url: /docs/privacy-sandbox/protected-audience-api/interest-groups
+            - url: /docs/privacy-sandbox/protected-audience-api/reporting
             - url: /docs/privacy-sandbox/protected-audience-api/latency
             - url: /docs/privacy-sandbox/protected-audience-api/opt-out
             - url: /docs/privacy-sandbox/protected-audience-api/reports
@@ -113,6 +114,7 @@
             - url: /docs/privacy-sandbox/attribution-reporting-debugging/part-3/
         - title: i18n.docs.privacy-sandbox.attribution-reporting-developer-guide
           sections:
+            - url: /docs/privacy-sandbox/attribution-reporting/developer-guide/
             - url: /docs/privacy-sandbox/attribution-reporting/getting-started/
             - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-source/
             - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/

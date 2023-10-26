@@ -106,7 +106,7 @@ that the user is trusted by the issuer to be a real human.
 1. An ad view impression is counted.
 
 {% Aside %}
-For more detail about the JavaScript calls in this example, see [Sample API usage](https://web.dev/trust-tokens/#sample-api-usage).
+For more detail about the JavaScript calls in this example, see [Sample API usage](https://web.dev/articles/trust-tokens#sample_api_usage).
 {% endAside %}
 
 ## Is tooling available for Privacy State Tokens?
@@ -132,12 +132,12 @@ follow discussion](https://github.com/WICG/trust-token-api/issues).
 [Privacy&nbsp;Pass&nbsp;working group](https://datatracker.ietf.org/wg/privacypass/about/).
 * **Developer support**: Ask questions and join discussions on the
 [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-* **Origin trial questions**: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=trust%20tokens) or respond to the feedback form that is sent to you as an origin trial participant. 
+* **Origin trial questions**: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=trust%20tokens) or respond to the feedback form that is sent to you as an origin trial participant.
 
 
 ## Find out more
 
 * [Private State Token API technical explainer](https://github.com/dvorak42/trust-token-api)
-* [Getting started with Private State Tokens](https://web.dev/trust-tokens/): an overview for web developers
+* [Getting started with Private State Tokens](https://web.dev/articles/trust-tokens): an overview for web developers
 * [Getting started with Chrome's origin trials](https://web.dev/origin-trials)
 * [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)

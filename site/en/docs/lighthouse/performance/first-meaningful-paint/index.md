@@ -13,7 +13,7 @@ First Meaningful Paint (FMP) is deprecated in Lighthouse 6.0. In practice FMP
 has been overly sensitive to small differences in the page load, leading to inconsistent
 (bimodal) results. Additionally, the metric's definition relies on browser-specific
 implementation details, which means it cannot be standardized nor implemented in all web
-browsers. Moving forward, consider using [Largest Contentful Paint](https://web.dev/lcp/)
+browsers. Moving forward, consider using [Largest Contentful Paint](https://web.dev/articles/lcp)
 instead.
 {% endAside %}
 
@@ -37,7 +37,7 @@ after which the biggest above-the-fold layout change happens.
 Learn more about the technical details of FMP in Google's
 [Time to First Meaningful Paint: a layout-based approach](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view).
 
-[First Contentful Paint (FCP)](https://web.dev/fcp/)
+[First Contentful Paint (FCP)](https://web.dev/articles/fcp)
 and FMP are often the same
 when the first bit of content rendered on the page includes the content above the fold.
 However, these metrics can differ when, for example,
@@ -104,7 +104,7 @@ see Google's [User-centric Performance Metrics][metrics] page.
 The [Tracking FMP using hero elements][tracking] section describes
 how to programmatically access FCP data and submit it to Google Analytics.
 
-See Google's [Assessing Loading Performance in Real Life with Navigation and Resource Timing](https://web.dev/navigation-and-resource-timing/)
+See Google's [Assessing Loading Performance in Real Life with Navigation and Resource Timing](https://web.dev/articles/navigation-and-resource-timing)
 for more on collecting real-user metrics.
 The [User Timing marks and measures Lighthouse audit](/docs/lighthouse/performance/user-timings/)
 enables you to see User Timing data in your report.
@@ -116,7 +116,7 @@ enables you to see User Timing data in your report.
 - [Source code for **First Meaningful Paint** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/first-meaningful-paint.js)
 - [Lighthouse v3 Scoring Guide](https://developers.google.com/web/tools/lighthouse/v3/scoring)
 - [Time to First Meaningful Paint: a layout-based approach](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view)
-- [Largest Contentful Paint](https://web.dev/lcp/)
+- [Largest Contentful Paint](https://web.dev/articles/lcp)
 
 [metrics]: https://web.dev/user-centric-performance-metrics/
 [tracking]: https://web.dev/user-centric-performance-metrics/

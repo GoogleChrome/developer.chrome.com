@@ -18,13 +18,13 @@ Lighthouse 会收集页面上的所有 JPEG 或 BMP 图像，将每个图像的�
 
 可以采取许多步骤来优化图像，包括：
 
-- [使用图像 CDN](https://web.dev/image-cdns/)
-- [压缩图像](https://web.dev/use-imagemin-to-compress-images/)
-- [用视频替换动画 GIF](https://web.dev/replace-gifs-with-videos/)
-- [延迟加载图像](https://web.dev/use-lazysizes-to-lazyload-images/)
-- [提供响应式图像](https://web.dev/serve-responsive-images/)
-- [提供尺寸正确的图像](https://web.dev/serve-images-with-correct-dimensions/)
-- [使用 WebP 图像](https://web.dev/serve-images-webp/)
+- [使用图像 CDN](https://web.dev/articles/image-cdns)
+- [压缩图像](https://web.dev/articles/use-imagemin-to-compress-images)
+- [用视频替换动画 GIF](https://web.dev/articles/replace-gifs-with-videos)
+- [延迟加载图像](https://web.dev/articles/use-lazysizes-to-lazyload-images)
+- [提供响应式图像](https://web.dev/articles/serve-responsive-images)
+- [提供尺寸正确的图像](https://web.dev/articles/serve-images-with-correct-dimensions)
+- [使用 WebP 图像](https://web.dev/articles/serve-images-webp)
 
 ## 使用 GUI 工具优化图像
 

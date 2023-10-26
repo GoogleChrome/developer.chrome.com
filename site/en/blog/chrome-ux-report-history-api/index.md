@@ -125,7 +125,7 @@ The overall shape of a response is similar—but there is a lot more data! Inste
 }
 ```
 
-In this example, the `densities` time series for the 0 to 2500 ms bucket of the [Largest Contentful Paint (LCP)](https://web.dev/lcp/) metric is `[0.9190, 0.9203, 0.9194, 0.9195, 0.9183, 0.9187].` Each of these densities was observed during the corresponding `collectionPeriods` entry. For example, the fifth density, 0.9183, was the density for the fifth collection period, ending on September 3rd, 2022, and 0.9187 was the density in the period ending the week after that.
+In this example, the `densities` time series for the 0 to 2500 ms bucket of the [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp) metric is `[0.9190, 0.9203, 0.9194, 0.9195, 0.9183, 0.9187].` Each of these densities was observed during the corresponding `collectionPeriods` entry. For example, the fifth density, 0.9183, was the density for the fifth collection period, ending on September 3rd, 2022, and 0.9187 was the density in the period ending the week after that.
 
 In other words, interpreting the last time series entries in the example for [https://web.dev](https://web.dev), it was found that from August 14, 2022 until September 10, 2022, 91.87% of page loads had LCP values smaller than 2500ms, 5.27% had values between 2500ms and 4000ms, and 2.85% had values greater than 4000ms.
 
@@ -156,7 +156,7 @@ Page-level (and origin-level) historical data is subject to [the same eligibilit
 
 ## Visualizing the data
 
-So, you may ask, why is the data shaped in this way? It was found that this makes it easy to plot graphs. For example, here is a graph for the p75 values for [Interaction To Next Paint (INP)](https://web.dev/inp/) for [https://web.dev](https://web.dev):
+So, you may ask, why is the data shaped in this way? It was found that this makes it easy to plot graphs. For example, here is a graph for the p75 values for [Interaction To Next Paint (INP)](https://web.dev/articles/inp) for [https://web.dev](https://web.dev):
 
 {% Img src="image/kd0zRXNeKScEzrwMmhY1NNvIzeM2/fgLRTt2WB2Yd67bL3mMc.png", alt="Time series graph of p75 value showing a regression around November 2022", width="512", height="339" %}
 

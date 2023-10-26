@@ -10,7 +10,7 @@ Frameworks make web development more enjoyable through an improved developer exp
 
 ## React/React-compatible
 
-- [create-react-app](https://web.dev/precache-with-workbox-react/)
+- [create-react-app](https://web.dev/articles/precache-with-workbox-react)
 - [gatsby-plugin-offline](https://www.gatsbyjs.com/plugins/gatsby-plugin-offline/)
 - [preact-cli](https://preactjs.com/cli/service-worker/)
 - [next/pwa](https://github.com/shadowwalker/next-pwa)

@@ -12,11 +12,11 @@ authors:
   - mihajlija
 tags:
   - cookies
-  - privacy  
+  - privacy
 ---
 
 ## Changes
- 
+
 - **June 2022**:  Based on feedback, setting cookies with the `Partitioned` attribute no longer requires omitting the `Domain` attribute. This allows subdomains of a third-party site to access cookies within a partition.
 
 ## Implementation status
@@ -27,7 +27,7 @@ tags:
 
 Cookies Having Independent Partitioned State (CHIPS) allows developers to opt a cookie into partitioned storage, with separate cookie jars per top-level site, improving user privacy and security.
 
-Browsers are well under way in phasing out unpartitioned third-party cookies, so CHIPS and [First-Party Sets](/first-party-sets) will be the only way to read and write cookies from cross-site contexts, such as iframes, when third-party cookies are blocked.
+Browsers are well under way in phasing out unpartitioned third-party cookies, so CHIPS and [Related Website Sets](/docs/privacy-sandbox/related-website-sets/) ([formerly called First-Party Sets](/blog/related-website-sets/)) will be the only way to read and write cookies from cross-site contexts, such as iframes, when third-party cookies are blocked.
 
 Without partitioning, third-party cookies can enable services to track users and join their information from across many unrelated top-level sites. This is known as cross-site tracking.
 
@@ -37,7 +37,7 @@ Without partitioning, third-party cookies can enable services to track users and
    width="800", height="450"
 %}
 
-CHIPS introduces a new cookie attribute, `Partitioned`, to support cross-site cookies that are partitioned by top-level context. 
+CHIPS introduces a new cookie attribute, `Partitioned`, to support cross-site cookies that are partitioned by top-level context.
 
 Set-Cookie header:
 
@@ -65,11 +65,11 @@ If a user visits site C as a top level website, the partitioned cookie that C se
 
 ## Use cases
 
-For example, the site `retail.example` may want to work with a third-party service `support.chat.example` to embed a support chat box on its site. Many embeddable chat services today rely on cookies to save interaction history. 
+For example, the site `retail.example` may want to work with a third-party service `support.chat.example` to embed a support chat box on its site. Many embeddable chat services today rely on cookies to save interaction history.
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/jsxgCpkMRXwXughPjg7j.png", alt="Top-level site retail.example embedding a third-party service support.chat.example.", width="400", height="310" %}
 
-Without the ability to set a cross-site cookie, `support.chat.example` could instead rely on `retail.example` passing along their first-party session identifier (or some derived value of it). In that case, every website that `support.chat.example` is embedded on would require additional setup to pass along the state.  
+Without the ability to set a cross-site cookie, `support.chat.example` could instead rely on `retail.example` passing along their first-party session identifier (or some derived value of it). In that case, every website that `support.chat.example` is embedded on would require additional setup to pass along the state.
 
 Alternatively, `support.chat.example` may request `retail.example` to embed JavaScript that's hosted on `support.chat.example` on `retail.example` pages. This introduces security risks, because it allows the `support.chat.example` script to have elevated privileges on `retail.example`, such as the ability to access authentication cookies.
 
@@ -102,19 +102,19 @@ While third-party cookies still exist, the `Partitioned` attribute provides an o
 
 ### Partitioning model
 
-Today, cookies are keyed on the hostname or domain of the site that set them, that is, their _host key_.   
+Today, cookies are keyed on the hostname or domain of the site that set them, that is, their _host key_.
 
-For example, for cookies from `https://support.chat.example`, the host key is `("support.chat.example")`.  
+For example, for cookies from `https://support.chat.example`, the host key is `("support.chat.example")`.
 
-Under CHIPS, cookies that opt into partitioning will be double-keyed on their host key and _partition key_.   
+Under CHIPS, cookies that opt into partitioning will be double-keyed on their host key and _partition key_.
 
-A _cookie's partition key_ is the site ([scheme and registrable domain](https://web.dev/same-site-same-origin/#%22schemeful-same-site%22)) of the top-level URL the browser was visiting at the start of the request to the endpoint that set the cookie.  
+A _cookie's partition key_ is the site ([scheme and registrable domain](https://web.dev/articles/same-site-same-origin#%22schemeful_same_site%22)) of the top-level URL the browser was visiting at the start of the request to the endpoint that set the cookie.
 
-In the example above where `https://support.chat.example` is embedded on `https://retail.example`, the top-level URL is `https://retail.example`.  
+In the example above where `https://support.chat.example` is embedded on `https://retail.example`, the top-level URL is `https://retail.example`.
 
-The partition key in that case is `("https", "retail.example")`.  
+The partition key in that case is `("https", "retail.example")`.
 
-Likewise, a _request's partition key_ is the site of the top-level URL the browser is visiting at the start of a request. Browsers must only send a cookie with the `Partitioned` attribute in requests with the same partition key as that cookie.  
+Likewise, a _request's partition key_ is the site of the top-level URL the browser is visiting at the start of a request. Browsers must only send a cookie with the `Partitioned` attribute in requests with the same partition key as that cookie.
 
 Here's what the cookie key in the example above looks like before and after CHIPS.
 
@@ -142,15 +142,15 @@ key={("https", "retail.example"),
 Chrome has a limit of maximum 180 cookies per partition that cannot exceed 10 KB per-embedded-site.
 {% endAside %}
 
-#### First-Party Sets and cookie partitioning
+#### Related Website Sets and cookie partitioning
 
-[First-Party Sets (FPS)](/first-party-sets-integration) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
+[Related Website Sets (RWS)](/docs/privacy-sandbox/related-website-sets-integration/) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
-The current First-Party Sets design relies on Storage Access API and does not integrate with CHIPS partitioning.
+The current Related Website Sets design relies on Storage Access API and does not integrate with CHIPS partitioning.
 
-Consider First-Party Sets in situations where you need the same cookie to be available to a service that's embedded in multiple related sites.
+Consider Related Website Sets in situations where you need the same cookie to be available to a service that's embedded in multiple related sites.
 
-CHIPS provides the functionality for a service to act as an isolated component across multiple sites. If the service that's a member of a First-Party Set sets a partitioned cookie, its partition key will be the top-level site and that cookie will not be available to other set members.
+CHIPS provides the functionality for a service to act as an isolated component across multiple sites. If the service that's a member of a Related Website Set sets a partitioned cookie, its partition key will be the top-level site and that cookie will not be available to other set members.
 
 If you have a use case that relies on a shared cookie partition across sites within a FPS you can [provide examples and feedback on the GitHub issue](https://github.com/WICG/first-party-sets/issues/94).
 
@@ -163,7 +163,7 @@ Partitioned cookies must be set with `Secure`.
 
 It is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname (and not the registrable domain).
 
-Example: 
+Example:
 
 ```text
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;

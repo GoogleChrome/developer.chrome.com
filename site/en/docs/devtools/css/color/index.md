@@ -56,7 +56,7 @@ Here's a description of each of the UI elements of the **Color Picker**:
 1. **Eyedropper**. See [Sample a color anywhere with the Eyedropper](#eyedropper).
 1. **Copy to clipboard**. Copy the **Display value** to your clipboard.
 1. **Display value**. Arguments of the chosen color space.
-1. **Contrast ratio**. Available only for `color` values. It's the difference between `color` and `background-color`. 
+1. **Contrast ratio**. Available only for `color` values. It's the difference between `color` and `background-color`.
 1. **Color palette**. Click a square to change the color to that of the square.
 1. **Gamut boundary**. This line is available only for the new color spaces and the [`color()`](/articles/high-definition-css-color-guide/#the-color-function) function. They can produce both HD and non-HD colors. The line lets you distinguish between HD and non-HD.
 1. **Color circle**. Drag this circle across the shades to change the display value.
@@ -92,7 +92,7 @@ To choose a color space:
    - [`rgb(X X X / .X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/rgb).
    - [`hsl(X X X / X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/hsl).
    - [`hwb(X X X / .X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/hwb).
-   
+
    Or one of the new spaces:
    - [`lch(X X X / .X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/lch)
    - [`oklch(X X X / .X)`](https://developer.mozilla.org/docs/Web/CSS/color_value/oklch)
@@ -131,7 +131,7 @@ To fix a contrast issue for a `color` declaration:
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/1OBcwQNbZivVFL4vbC47.png", alt="The expanded contrast ratio section with WebAIM or APCA guidelines.", width="800", height="518" %}
 
 {% Aside %}
-By default, the **Color Picker** suggests you to follow the [WebAIM guidelines](https://webaim.org/standards/wcag/). Alternatively, you can set it to suggest values compliant with [APCA](https://web.dev/color-and-contrast-accessibility/#advanced-perceptual-contrast-algorithm-apca):
+By default, the **Color Picker** suggests you to follow the [WebAIM guidelines](https://webaim.org/standards/wcag/). Alternatively, you can set it to suggest values compliant with [APCA](https://web.dev/articles/color-and-contrast-accessibility#advanced_perceptual_contrast_algorithm_apca):
 
 In {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Experiments**](/docs/devtools/settings/experiments/), check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Enable new Advanced Perceptual Contrast Algorithm (APCA)...**
 {% endAside %}

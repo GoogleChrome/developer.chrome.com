@@ -40,8 +40,8 @@ If you're new to this API or have not experimented with it yet, read the
 *  **June 23, 2022**: Several updates have been detailed in the [Attribution Reporting updates in June 2022 blog post](/blog/attribution-reporting-updates-june-2022). Additionally:
    *  The API handbook
       was updated.
-   *  We've published [Experiment with Attribution Reporting: Strategy and tips](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing)
-      for summary reports.
+   *  We published Experiment with Attribution Reporting: Strategy and tips 
+      for summary reports. As of July 2023, that content has been migrated to [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) and [Understanding aggregation keys](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/).
 *  **March 31, 2022**: New [origin trial for Ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial/), which includes the Attribution Reporting API. Now completed (as of September 20, 2023).
 *  **February 7, 2022**: Documentation for the [header trigger redirect](/blog/attribution-reporting-jan-2022-updates/#header-trigger-redirect) added.
 *  **January 27, 2022**: [Migration for API updates](/blog/attribution-reporting-jan-2022-updates/) published, including:

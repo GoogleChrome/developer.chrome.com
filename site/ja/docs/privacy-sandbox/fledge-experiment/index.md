@@ -22,16 +22,16 @@ authors:
 
 {% Aside 'caution' %}
 
-有効なトライアルトークンが提供されているページであっても、すべてのユーザーにプライバシーサンドボックスの関連性と測定のオリジントライアルを実施する資格があるわけではありません。
+有効なトライアルトークンが提供されているページであっても、すべてのユーザーにプライバシーサンドボックスの広告関連のオリジントライアルを実施する資格があるわけではありません。
 
-「[プライバシーサンドボックス広告の関連性と測定 API をテストする](/blog/privacy-sandbox-unified-origin-trial#eligible-users)」には、その理由が説明されています。また、オリジントライアル機能を使用する前に、それが利用可能かどうかを検出する理由と方法が示されています。
+「[プライバシーサンドボックスの広告関連 API をテストする](/blog/privacy-sandbox-unified-origin-trial#eligible-users)」には、その理由が説明されています。また、オリジントライアル機能を使用する前に、それが利用可能かどうかを検出する理由と方法が示されています。
 
 {% endAside %}
 
 1. [デモ](https://fledge-demo.glitch.me)を試す: 基本的な FLEDGE 実装手順が説明されています。 [FLEDGE のデモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードの仕組みと、Chrome DevTools を使用して FLEDGE をデバッグする方法が説明されています。
 2. FLEDGE API の実装状況に関する最新情報については、プライバシーサンドボックスの[ステータスページ](/docs/privacy-sandbox/status/#fledge)を確認してください。
 3. API を使って実験する:
-   * [FLEDGE API 開発者ガイド](/blog/fledge-api#try-fledge)には、プライバシーサンドボックスの関連性と測定のオリジントライアルに参加する方法が説明されています。
+   * [FLEDGE API 開発者ガイド](/blog/fledge-api#try-fledge)には、プライバシーサンドボックスの広告関連のオリジントライアルに参加する方法が説明されています。
    * `chrome://flags/#privacy-sandbox-ads-apis` を有効にするか、コマンドラインから [FLEDGE 機能フラグ](/blog/fledge-api#flags)を指定して Chrome を実行し、単一ユーザーに対して FLEDGE を試してください。
    * [開発者ガイド](/blog/fledge-api)には、API メソッドとパラメーターのリファレンスガイドも記載されています。
    * [FLEDGE デモ](https://fledge-demo.glitch.me)の[ソースコード](https://github.com/JackJey/fledge-demo)には、独自の実験の開始するための出発点が示されています。

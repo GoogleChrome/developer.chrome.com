@@ -17,6 +17,10 @@
     }
   }
 
+  .search-box__btn {
+    display: flex;
+  }
+
   .search-box__btn--close {
     justify-self: end;
   }

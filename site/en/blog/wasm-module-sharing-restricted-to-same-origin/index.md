@@ -16,7 +16,7 @@ alt: >
 ---
 
 Sharing a WebAssembly (Wasm) module between [same-site but
-cross-origin](https://web.dev/same-site-same-origin/) environments will be
+cross-origin](https://web.dev/articles/same-site-same-origin) environments will be
 deprecated to allow [agent
 clusters](https://html.spec.whatwg.org/multipage/origin.html#origin-keyed-agent-clusters)
 to be scoped to origins long term. Developers who are using Wasm modules in such
@@ -31,7 +31,7 @@ deployment, loading, and compilation.
 In the following example code, a Wasm module imported from
 `https://iframe.site.example` is shared with `https://main.site.example` via
 `postMessage()`. Notice these domains are [same-site but
-cross-origin](https://web.dev/same-site-same-origin/).
+cross-origin](https://web.dev/articles/same-site-same-origin).
 
 Wasm module on `https://iframe.site.example`:
 
@@ -80,7 +80,7 @@ clusters by default.
 
 To learn more about origin-keyed agent clusters, see [Requesting performance
 isolation with the Origin-Agent-Cluster
-header](https://web.dev/origin-agent-cluster/).
+header](https://web.dev/articles/origin-agent-cluster).
 
 ## Next steps and resources
 

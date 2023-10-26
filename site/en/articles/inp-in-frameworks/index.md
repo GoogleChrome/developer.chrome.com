@@ -17,12 +17,12 @@ tags:
   - performance
 ---
 
-Chrome recently introduced a new [experimental responsiveness metric](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/F7S4_emZkcw) in the [Chrome UX Report](/docs/crux/) report. This metric, which we now know as [Interaction to Next Paint (INP)](https://web.dev/inp/) measures overall responsiveness to user interactions on the page. Today we want to share insights on where websites built using modern JavaScript frameworks stand in relation to this metric. We want to discuss why INP is relevant to frameworks and how [Aurora](/blog/introducing-aurora/) and frameworks are working to optimize responsiveness.
+Chrome recently introduced a new [experimental responsiveness metric](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/F7S4_emZkcw) in the [Chrome UX Report](/docs/crux/) report. This metric, which we now know as [Interaction to Next Paint (INP)](https://web.dev/articles/inp) measures overall responsiveness to user interactions on the page. Today we want to share insights on where websites built using modern JavaScript frameworks stand in relation to this metric. We want to discuss why INP is relevant to frameworks and how [Aurora](/blog/introducing-aurora/) and frameworks are working to optimize responsiveness.
 
 
 ## Background
 
-Chrome uses First Input Delay ([FID](https://web.dev/fid/#why-only-consider-the-input-delay)) as part of Core Web Vitals ([CWV](https://web.dev/learn-web-vitals/)) to measure the [load responsiveness](https://web.dev/user-centric-performance-metrics/#types-of-metrics) of websites. FID measures the waiting time from the first user interaction to the moment the browser is able to process the event handlers connected to the interaction. It does not include the time to process the event handlers, process subsequent interactions on the same page, or paint the next frame after the event callbacks run. However, responsiveness is crucial to the user experience throughout the page lifecycle because users spend roughly 90% of the time on a page after it loads.
+Chrome uses First Input Delay ([FID](https://web.dev/articles/fid#why_only_consider_the_input_delay)) as part of Core Web Vitals ([CWV](https://web.dev/articles/learn-web-vitals)) to measure the [load responsiveness](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics) of websites. FID measures the waiting time from the first user interaction to the moment the browser is able to process the event handlers connected to the interaction. It does not include the time to process the event handlers, process subsequent interactions on the same page, or paint the next frame after the event callbacks run. However, responsiveness is crucial to the user experience throughout the page lifecycle because users spend roughly 90% of the time on a page after it loads.
 
 [INP](https://web.dev/inp) measures the time it takes a web page to respond to user interactions from when the user starts the interaction until the moment the next frame is painted on the screen. With INP, we hope to enable an aggregate measure for the perceived latency of all interactions in the page's lifecycle. We believe that INP will provide a more accurate estimate of web pages' load and runtime responsiveness.
 
@@ -178,9 +178,9 @@ The table shows the percentage of origins on each framework with a good responsi
 
 INP values in the field correlate well with the Total Blocking Time (TBT) observed in the lab. This could imply that any script that blocks the main thread for a long duration would be bad for INP. Heavy JavaScript execution after any interaction could block the main thread for an extended period and delay the response to that interaction. Some of the common causes that lead to blocking scripts are:
 
-* **Unoptimized JavaScript:** Redundant code or poor code-splitting and loading strategies can cause JavaScript bloat and block the main thread for long periods. Code-splitting, progressive loading, and [breaking up long tasks](https://web.dev/long-tasks-devtools/) can improve response times considerably.
+* **Unoptimized JavaScript:** Redundant code or poor code-splitting and loading strategies can cause JavaScript bloat and block the main thread for long periods. Code-splitting, progressive loading, and [breaking up long tasks](https://web.dev/articles/long-tasks-devtools) can improve response times considerably.
 
-* **Third-party scripts:** [Third-party scripts](https://web.dev/optimizing-content-efficiency-loading-third-party-javascript/), which are sometimes not required to process an interaction (for example, ad scripts), can block the main thread and cause unnecessary delays. Prioritizing essential scripts can help to reduce the negative impact of third-party scripts.
+* **Third-party scripts:** [Third-party scripts](https://web.dev/articles/optimizing-content-efficiency-loading-third-party-javascript), which are sometimes not required to process an interaction (for example, ad scripts), can block the main thread and cause unnecessary delays. Prioritizing essential scripts can help to reduce the negative impact of third-party scripts.
 
 * **Multiple event handlers:** Multiple event handlers associated with every interaction, each running a different script, could interfere with each other and add up to cause long delays. Some of these tasks may be non-essential and could be scheduled on a web worker or when the browser is idle.
 
@@ -197,7 +197,7 @@ From now on, for a good INP score, developers will have to focus on reviewing th
 
 Aurora works with frameworks by incorporating best practices to provide baked-in solutions to common problems. We have worked with Next.js, Nuxt.js, Gatsby, and Angular on [solutions](/blog/introducing-aurora/#what-has-our-work-unlocked-so-far) that offer strong defaults within the framework to optimize performance. Following are the highlights of our work in this context:
 
-* **React and Next.js:** The [Next.js Script component](/blog/script-component/) helps to address issues caused due to inefficient loading of third-party scripts. [Granular chunking](https://web.dev/granular-chunking-nextjs/) was introduced in Next.js to allow for smaller-sized chunks for shared code. This helps to reduce the amount of unused common code that is downloaded on all pages. We are also working with Next.js to make INP data available as part of their [Analytics](https://nextjs.org/analytics) service.
+* **React and Next.js:** The [Next.js Script component](/blog/script-component/) helps to address issues caused due to inefficient loading of third-party scripts. [Granular chunking](https://web.dev/articles/granular-chunking-nextjs) was introduced in Next.js to allow for smaller-sized chunks for shared code. This helps to reduce the amount of unused common code that is downloaded on all pages. We are also working with Next.js to make INP data available as part of their [Analytics](https://nextjs.org/analytics) service.
 
 * **Angular:** Aurora is [partnering with the Angular](https://angular.io/guide/roadmap#explore-hydration-and-server-side-rendering-usability-improvements) team to explore server-side rendering and hydration improvements. We also plan to look into refinements in event handling and change detection to improve INP.
 
@@ -231,7 +231,7 @@ Through these enhancements, we can address different issues that lead to poor re
 
 ## Conclusion
 
-We expect the INP score to provide a better compass for websites to improve responsiveness and performance in the future. We will build on our [existing INP guide](https://web.dev/optimize-inp/) to provide more actionable tips for framework developers in 2023. We hope to achieve this by:
+We expect the INP score to provide a better compass for websites to improve responsiveness and performance in the future. We will build on our [existing INP guide](https://web.dev/articles/optimize-inp) to provide more actionable tips for framework developers in 2023. We hope to achieve this by:
 
 * Creating channels for easy access to field data on INP for frameworks and web developers.
 * Work with frameworks to build features that will improve INP by default.

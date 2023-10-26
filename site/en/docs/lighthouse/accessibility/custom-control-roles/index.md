@@ -14,7 +14,7 @@ Check that all custom controls have an appropriate `role` and
 any required ARIA attributes that confer their properties and state.
 For example, a custom checkbox needs a `role="checkbox"` and
 `aria-checked="true|false"` to properly convey its state.
-See the [Introduction to ARIA](https://web.dev/semantics-aria/)
+See the [Introduction to ARIA](https://web.dev/articles/semantics-aria)
 for a general overview of how ARIA can provide missing semantics for custom controls.
 
 ## How to manually test
@@ -36,7 +36,7 @@ A `<div>` is just a generic grouping element,
 so a screen reader only announces the text content of the `<div>`.
 The `<button>` is announced as a "button,"
 a much stronger signal to the user that it's something they can interact with.
-See also [Semantics and screen readers](https://web.dev/semantics-and-screen-readers/).
+See also [Semantics and screen readers](https://web.dev/articles/semantics-and-screen-readers).
 
 ## How to fix
 
@@ -67,9 +67,9 @@ Using a screen reader first hand will give you a clear understanding
 of how your content is labeled, and if there are any obstructions to
 assistive technology navigation.
 If you're unfamiliar with how semantic markup gets interpreted by assistive technology,
-see the [Introduction to Semantics](https://web.dev/semantics-builtin/) for a refresher.
+see the [Introduction to Semantics](https://web.dev/articles/semantics-builtin) for a refresher.
 
-See also [How to Do an Accessibility Review](https://web.dev/how-to-review/#try-it-with-a-screen-reader).
+See also [How to Do an Accessibility Review](https://web.dev/articles/how-to-review#try_it_with_a_screen_reader).
 
 ## Resources
 

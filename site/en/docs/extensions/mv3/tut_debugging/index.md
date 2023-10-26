@@ -1,22 +1,22 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Debugging extensions"
-seoTitle: "Chrome extensions tutorial: debugging extensions"
+title: "Debug extensions"
+seoTitle: "Chrome extensions tutorial: debug extensions"
 date: 2012-09-18
 updated: 2023-08-09
 description: Instructions for debugging Chrome Extensions.
 ---
 
-## Overview {: #overview }
-
 Extensions can access the same [Chrome DevTools][chrome-devtools] as web pages. To become an expert in debugging extensions, you will need to know how to locate logs and errors of the different extension components. This tutorial provides fundamental techniques for debugging your extension.
+
+{% YouTube id='Ta-YTDhiBIQ' %}
 
 ## Before you begin {: #prereq }
 
 This guide assumes that you have basic web development experience. We recommend reading
 [Development Basics][doc-dev-basics] for an introduction to the extension development workflow and [Architecture overview][doc-arch] to learn about the different extension components.
 
-## Breaking the extension {: #locate_logs }
+## Break the extension {: #locate_logs }
 
 This tutorial will break one extension component at a time and then demonstrate how to fix it. Remember to undo the bugs introduced in one section before continuing to the next section. Start by downloading the [Broken Color sample][gh-broken-color] on GitHub.
 

@@ -37,7 +37,7 @@ Par la suite, la plate-forme publicitaire peut utiliser ces données pour sélec
 
 ## Comment fonctionne la méthode FLoC ?
 
-L'article [Qu'est-ce que la méthode FLoC ?](https://web.dev/floc/#how-does-floc-work) fournit une explication simple, étape par étape, de son fonctionnement.
+L'article [Qu'est-ce que la méthode FLoC ?](https://web.dev/articles/floc#how_does_floc_work) fournit une explication simple, étape par étape, de son fonctionnement.
 
 Le diagramme ci-dessous montre un exemple des différents rôles dans la sélection et la diffusion d'une annonce pertinente à l'aide de la méthode FLoC.
 

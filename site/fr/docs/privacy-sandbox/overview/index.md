@@ -35,7 +35,7 @@ Les principales propositions développées par l'équipe Chrome sont répertori�
 
 ### Protections propriétaires
 
-- [**Modifications des cookies SameSite**](https://web.dev/samesite-cookies-explained/) : sécurisez les sites en marquant explicitement vos cookies intersites.
+- [**Modifications des cookies SameSite**](https://web.dev/articles/samesite-cookies-explained) : sécurisez les sites en marquant explicitement vos cookies intersites.
 - [Les **ensembles propriétaires**](/docs/privacy-sandbox/first-party-sets) : permettent aux noms de domaine associés détenus par la même entité de se déclarer comme tels.
 
 ### Détection de fraude
@@ -45,7 +45,7 @@ Les principales propositions développées par l'équipe Chrome sont répertori�
 ### Limiter la collecte de données
 
 - [**Budget de confidentialité**](https://www.youtube.com/watch?v=0STgfjSA6T8) : permet aux sites web d'obtenir des informations sur le navigateur ou l'appareil d'un utilisateur, mais permet au navigateur de définir un quota sur la quantité totale d'informations auxquelles un site peut accéder, afin qu'un utilisateur ne puisse pas être identifié.
-- [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/) : la [chaîne User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) (UA) est une [surface de fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) passive importante, tout en étant difficile à traiter. Les Client Hints permettent aux développeurs de demander activement uniquement les informations dont ils ont besoin sur l'appareil de l'utilisateur ou les conditions, plutôt que d'avoir à analyser ces données à partir de la chaîne User-Agent.
+- [**User-Agent Client Hints**](https://web.dev/articles/user-agent-client-hints) : la [chaîne User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) (UA) est une [surface de fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) passive importante, tout en étant difficile à traiter. Les Client Hints permettent aux développeurs de demander activement uniquement les informations dont ils ont besoin sur l'appareil de l'utilisateur ou les conditions, plutôt que d'avoir à analyser ces données à partir de la chaîne User-Agent.
 - [**Gnatcatcher**](https://github.com/bslassey/ip-blindness) : limitez la possibilité d'identifier les utilisateurs individuels en accédant à leur adresse IP. Il y a deux parties à la proposition : [**Willful IP Blindness**](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) fournit un moyen pour les sites web d'informer les navigateurs qu'ils ne connectent pas les adresses IP avec les utilisateurs, et [**Near-path NAT**](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) permet à des groupes d'utilisateurs d'envoyer leur trafic via le même serveur de privatisation, cachant efficacement leurs adresses IP à partir d'un hébergeur de site. Gnatcatcher garantit également que les sites nécessitant un accès aux adresses IP à des fins légitimes, telles que la prévention des abus peuvent le faire, sous réserve de certification et d'audit.
 
 ### Identité
@@ -90,10 +90,10 @@ Il est nécessaire d'obtenir des retours d'information concernant les explicatio
 ### Articles et vidéos pour les développeurs web
 
 - [Explications détaillées de Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
-- [Cookies SameSite expliqués](https://web.dev/samesite-cookies-explained/)
+- [Cookies SameSite expliqués](https://web.dev/articles/samesite-cookies-explained)
 - [Premiers pas avec les jetons de confiance](https://web.dev/trust-tokens)
-- [Un moyen plus privé de mesurer les conversions publicitaires](https://web.dev/conversion-measurement/)
-- [Qu'est-ce que la méthode FLoC ?](https://web.dev/floc/)
+- [Un moyen plus privé de mesurer les conversions publicitaires](/docs/privacy-sandbox/attribution-reporting/)
+- [Qu'est-ce que la méthode FLoC ?](https://web.dev/articles/floc)
 - [Présentation du budget de confidentialité](https://www.youtube.com/watch?v=0STgfjSA6T8)
 
 ### Principes et concepts derrière les propositions

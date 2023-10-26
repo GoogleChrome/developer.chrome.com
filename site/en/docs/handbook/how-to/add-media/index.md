@@ -42,7 +42,7 @@ Paste the copied code from the previous step into your article.
 
 Be sure to replace the text that says "ALT_TEXT_HERE" with your own description
 of the image. You can read more about writing effective alt text over on [the
-web.dev handbook](https://web.dev/handbook/inclusion-and-accessibility/#use-inclusive-images).
+web.dev handbook](https://web.dev/articles/handbook/inclusion-and-accessibility#use_inclusive_images).
 
 {% Aside %}
 You may notice that the generated code is using either the

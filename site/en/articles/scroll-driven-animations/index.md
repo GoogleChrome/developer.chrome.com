@@ -73,7 +73,7 @@ For example, here’s an animation that scales up an element on the X-axis while
 }
 ```
 
-{% Aside %} To learn more about CSS Animations, visit [Learn CSS Animations](https://web.dev/learn/css/animations/) {% endAside %}
+{% Aside %} To learn more about CSS Animations, visit [Learn CSS Animations](https://web.dev/learn/css/animations) {% endAside %}
 
 ### Animations on the web with JavaScript
 

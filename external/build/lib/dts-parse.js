@@ -767,6 +767,10 @@ class Transform {
             chromeOsOnly = false;
           }
           break;
+        case 'chrome-install-location':
+          if (text === 'policy') {
+            out.requiresPolicyInstall = true;
+          }
       }
     });
 

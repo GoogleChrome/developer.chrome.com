@@ -25,7 +25,7 @@ updated: 2020-04-29
 
 ### 使用图像 CDN
 
-图像 CDN 可以更轻松地将创建不同大小版本图像的过程自动化。查看[使用图像 CDN 优化图像](https://web.dev/image-cdns/)来了解基本情况，并查看[如何安装 Thumbor 图像 CDN](https://web.dev/install-thumbor/)来了解 codelab 实践。
+图像 CDN 可以更轻松地将创建不同大小版本图像的过程自动化。查看[使用图像 CDN 优化图像](https://web.dev/articles/image-cdns)来了解基本情况，并查看[如何安装 Thumbor 图像 CDN](https://web.dev/articles/install-thumbor)来了解 codelab 实践。
 
 ### 检查影响图像纵横比的 CSS
 
@@ -37,11 +37,11 @@ updated: 2020-04-29
 
 但是，如果您使用的是响应式图像，那么在 HTML 中指定图像尺寸可能会很困难，因为您无法在知道视区尺寸之前知道宽度和高度的值。请考虑使用 [CSS Aspect Ratio](https://www.npmjs.com/package/css-aspect-ratio) 库或[纵横比框](https://css-tricks.com/aspect-ratio-boxes/)来保留响应式图像的纵横比。
 
-最后，查看[以正确尺寸提供图像](https://web.dev/serve-images-with-correct-dimensions/)一文，了解如何为每个用户的设备提供合适尺寸的图像。
+最后，查看[以正确尺寸提供图像](https://web.dev/articles/serve-images-with-correct-dimensions)一文，了解如何为每个用户的设备提供合适尺寸的图像。
 
 ## 资源
 
 - [**显示纵横比不正确的图像**审计的源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/image-aspect-ratio.js)
 - [CSS Aspect Ratio](https://www.npmjs.com/package/css-aspect-ratio)
 - [纵横比框](https://css-tricks.com/aspect-ratio-boxes/)
-- [以正确尺寸提供图像](https://web.dev/serve-images-with-correct-dimensions/)
+- [以正确尺寸提供图像](https://web.dev/articles/serve-images-with-correct-dimensions)

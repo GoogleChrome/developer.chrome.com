@@ -278,7 +278,7 @@ Use `ChromeDate` when you want to refer to a specific milestone date in the Chro
 
 developer.chrome.com uses the same syntax highlighter as web.dev.
 
-See the [Code](https://web.dev/handbook/markup-code/) post for more details.
+See the [Code](https://web.dev/articles/handbook/markup-code) post for more details.
 
 ## Columns
 
@@ -714,7 +714,7 @@ place the `Img` shortcode snippet inside:
 
 ## Labels
 
-Labels can be used to display a filename associated with a [code](https://web.dev/handbook/markup-code/) snippet.
+Labels can be used to display a filename associated with a [code](https://web.dev/articles/handbook/markup-code) snippet.
 
 ````text
 {% raw %}{% Label %}filename.js:{% endLabel %}{% endraw %}

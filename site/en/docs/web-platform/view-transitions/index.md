@@ -621,7 +621,7 @@ You may also want to change which elements you assign a `view-transition-name` d
 
 ### Reacting to the 'reduced motion' preference
 
-Users can indicate they prefer reduced motion via their operating system, and that preference is [exposed via CSS](https://web.dev/prefers-reduced-motion/).
+Users can indicate they prefer reduced motion via their operating system, and that preference is [exposed via CSS](https://web.dev/articles/prefers-reduced-motion).
 
 You could chose to prevent any transitions for these users:
 

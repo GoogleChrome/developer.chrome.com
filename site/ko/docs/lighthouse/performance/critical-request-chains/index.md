@@ -28,7 +28,7 @@ Lighthouse는 네트워크 우선순위를 프록시로 사용하여 렌더링 �
 - 중요한 바이트의 수를 최적화하여 다운로드 시간(왕복 횟수)을 줄이십시오.
 - 나머지 중요 리소스가 로드되는 순서를 최적화합니다. 모든 중요 자산을 최대한 빨리 다운로드하여 중요 경로 길이를 단축합니다.
 
-[이미지](https://web.dev/use-imagemin-to-compress-images/), [자바스크립트](https://web.dev/apply-instant-loading-with-prpl/), [CSS](https://web.dev/defer-non-critical-css/), [웹 글꼴](https://web.dev/avoid-invisible-text/) 최적화에 대해 자세히 알아보십시오.
+[이미지](https://web.dev/articles/use-imagemin-to-compress-images), [자바스크립트](https://web.dev/articles/apply-instant-loading-with-prpl), [CSS](https://web.dev/articles/defer-non-critical-css), [웹 글꼴](https://web.dev/articles/avoid-invisible-text) 최적화에 대해 자세히 알아보십시오.
 
 ## 스택별 지침
 

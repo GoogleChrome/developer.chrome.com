@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-09-15
+updated: 2023-10-17
 tags:
   - extensions-news
 
@@ -15,7 +15,72 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
+### New guidance on testing extensions {: #testing-guidance-oct-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 23, 2023</time></p>
+
+We've just published new guidance on how to write automated tests for extensions, including [how
+to write unit tests](/docs/extensions/mv3/unit-testing/) and both
+[general guidance](/docs/extensions/mv3/end-to-end-testing/) and a
+[tutorial](/docs/extensions/mv3/tut_puppeteer-testing/) on end-to-end testing.
+
+### Blog post: What's happening in Chrome Extensions - October 2023 {: #whats-happening-10-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+We've just published the second edition of [What’s Happening in Chrome Extensions](/blog/extension-news-october-2023/). The post discusses what the extension team has been working on for the past few months, including, addressing service worker stability issues, and making good progress on closing all MV3 platform gaps. We also share exciting upcoming API releases like the Reading List API and the User Scripts API.
+
+### Increased static ruleset limits in Declarative Net Request API {: #canary-dnr-rules-increase }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+Following [feedback](https://github.com/w3c/webextensions/issues/318) in the Web Extensions
+Community Group, we are significantly increasing the limit on enabled static rulesets from 10 to 50.
+Additionally, we are increasing the total number of allowed static rulesets from 50 to 100. This is
+currently available in Canary.
+
+### Improved guidance around remotely-hosted code {: #remotely-hosted-code }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+A requirement for Manifest V3 is that extensions may no longer use remotely-hosted code. Although this has been [part of our migration guide](/docs/extensions/migrating/improve-security/#remove-remote-code) from the beginning, we thought it was worth improving the guidance around this issue. That page now provides more information, describing what's still possible in Manifest V3 and providing more information on strategies for upgrading.
+
+There is a related addition to the [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/). A new section describes common reasons that extensions with remotely-hosted code are rejected.
+
+### Chrome 118: isUrlFilterCaseSensitive now defaults to false {: #118-url-filter-case-sensitive }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 11, 2023</time></p>
+
+Starting in Chrome 118, the [`isUrlFilterCaseSensitive`](/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-isUrlFilterCaseSensitive)
+property in the [chrome.declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest/)
+API has been changed to default to `false`. If you wish to keep the old behavior, you can explicitly set `isUrlFilterCaseSensitive` to `true` in
+your declarativeNetRequest rules.
+
+This follows [discussions](https://github.com/w3c/webextensions/issues/269) in the Web Extensions
+Community Group. Firefox and Safari have already implemented a similar change.
+
+### Documentation on cookies and web storage APIs {: #storage-and-cookies-guide }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 9, 2023</time></p>
+
+We published a new guide on [how cookies and web storage APIs work in Chrome extensions](/docs/extensions/mv3/storage-and-cookies/).
+It includes details on cookie and storage partitioning changes in
+[Privacy Sandbox](/docs/privacy-sandbox/), an ongoing project to deprecate third-party cookies
+through the creation of a series of new web platform APIs, and details on how they work in extensions.
+
+### Extension samples now searchable {: #extension-samples-searchable }
+
+<p class="color-secondary-text type--caption">Posted on <time>September 29, 2023</time></p>
+
+We recently created a page that lets you [search Chrome extension samples](/docs/extensions/samples/). The search page has multiple options. A search box lets you search for text in sample titles. You can restrict the search by permission or extension API. An additional filter lets you restrict search to either API or functional (use case) samples.
+
+This new sample page was built by a Google Summer of Code participant, Xuezhou Dai, who also contributed several new samples. You can read about their experiences this past summer in [their post on our blog](/blog/google-summer-of-code-and-chrome-extensions/).
+
+As before, [our code samples](https://github.com/GoogleChrome/chrome-extensions-samples) are still available on GitHub for cloning or forking.
+
 ### Chrome 118: Changes to opening file: scheme URLs {: #changes-to-file-scheme }
+
+<p class="color-secondary-text type--caption">Posted on <time>September 15, 2023</time></p>
 
 Beginning in Chrome 118, extensions will need the "Allow access to file URLs" setting enabled from the `chrome://extensions` page to open file:// scheme URLs using the [Tabs](/docs/extensions/reference/tabs/) or [Windows](/docs/extensions/reference/windows/) APIs. You can programmatically check for this access by calling [`chrome.extension.isAllowedFileSchemeAccess()`](/docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess). Firefox already restricts file URLs, and Safari supports the change. For more information, read the [post in the extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/ZtCvVISQU54/m/tOjjlzkfAgAJ).
 
@@ -553,7 +618,7 @@ at a time.
 
 Both [Manifest V2](/docs/extensions/mv2/cross-origin-isolation/) and [Manifest
 V3](/docs/extensions/mv3/cross-origin-isolation/) extensions can now opt into [cross origin
-isolation](https://web.dev/cross-origin-isolation-guide/). This feature limits which cross-origin
+isolation](https://web.dev/articles/cross-origin-isolation-guide). This feature limits which cross-origin
 resources can load an extension's pages and enables the use of low level web platform features like
 [`SharedArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer). Opt in will be required starting in Chrome 95.
 
