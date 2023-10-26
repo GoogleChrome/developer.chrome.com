@@ -16,4 +16,4 @@ date: 2022-11-01
 
 For more information on this policy, see the Developer [FAQ][faq].
 
-[faq]: /docs/webstore/user_data/
+[faq]: /docs/webstore/program-policies/user-data-faq/

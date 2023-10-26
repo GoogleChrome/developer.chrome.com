@@ -16,5 +16,5 @@ date: 2022-11-01
 
 For additional information about the spam policy, see the [Spam FAQ][faq].
 
-[faq]: /docs/webstore/spam-faq/
+[faq]: /docs/webstore/program-policies/spam-faq/
 [webmaster]: https://support.google.com/webmasters/answer/35769#3

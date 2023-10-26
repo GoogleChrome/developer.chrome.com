@@ -193,4 +193,4 @@ information about your item.
 [extension icon best practices]: /docs/webstore/images/#icon
 [i18n]: /docs/extensions/reference/i18n/
 [i18n-your-screenshots]: /docs/webstore/i18n/#screenshots
-[keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
+[keyword-spam]: /docs/webstore/policy-policies/spam-faq/#keyword-spam
