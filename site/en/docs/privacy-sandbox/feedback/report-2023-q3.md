@@ -1327,7 +1327,7 @@ case of failures so ad techs can rerun their jobs.</td>
 
 ## Limit Covert Tracking
 
-### User Agent Reduction/User Agent Client Hints
+### User Agent Reduction and User Agent Client Hints
 
 <table>
   <thead>
