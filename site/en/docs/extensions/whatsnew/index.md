@@ -19,8 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>October 26, 2023</time></p>
 
-We've just published a new video on the Chrome for Developers YouTube channel chatting to Google
-Developer Expert and author Matt Frisbie. Watch it
+We've just published a new video on the Chrome for Developers YouTube channel chatting with Google Developer Expert and author Matt Frisbie. Watch it
 [here](https://www.youtube.com/watch?v=8P-Sc8ZaViY).
 
 ### New guidance on testing extensions {: #testing-guidance-oct-23 }
