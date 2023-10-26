@@ -936,7 +936,7 @@ href="https://github.com/WICG/turtledove/issues/741">possible workarounds and so
     </tr>
     <tr>
       <td style="vertical-align: top;">K-anonymity</td>
-      <td style="vertical-align: top;">How can I maximize interest group ads that meet 𝑘-anon
+      <td style="vertical-align: top;">How can I maximize interest group ads that meet k-anon
 thresholds?</td>
       <td style="vertical-align: top;">We have shared some <a
 href="https://developer.chrome.com/docs/privacy-sandbox/protected-audience-api/interest-groups/#how-can-i-maximize-interest-group-ads-that-meet-k-anon-thresholds">tactical guidance on this topic</a>.</td>
