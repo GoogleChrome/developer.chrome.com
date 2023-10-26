@@ -1518,7 +1518,7 @@ interactions:<br>
 href="https://html.spec.whatwg.org/#tracking-user-activation">html
 spec</a>. These are basically clicks, key presses, touch screen taps, etc.</li>
 
-<li>Successful <a href="https://w3c.github.io/webauthn/">webauthn</a>
+<li>Successful <a href="https://w3c.github.io/webauthn/">webauth</a>
 assertions. These are cases where a user taps a security key or uses a
 passkey as form of authentication</li>
 </ul>
