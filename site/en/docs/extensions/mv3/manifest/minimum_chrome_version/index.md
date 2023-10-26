@@ -37,7 +37,7 @@ happens silently so you should exercise caution and consider ways of letting
 existing users know that they are no longer receiving updates.
 
 {% Aside 'note' %}
-Chrome OS users using [ephemeral mode][ephemeral] are treated as new users each time they sign in.
+Enterprise users using [ephemeral mode][ephemeral] are treated as new users each time they sign in.
 This means that if they are using a Chrome version lower than the `minimum_chrome_version`, your
 extension will not be installed.
 {% endAside %}
