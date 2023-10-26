@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-10-17
+updated: 2023-10-26
 tags:
   - extensions-news
 
@@ -14,6 +14,13 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Video: A chat with Matt Frisbie {: #video-interview-oct-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 26, 2023</time></p>
+
+We've just published a new video on the Chrome for Developers YouTube channel chatting with Google Developer Expert and author Matt Frisbie. Watch it
+[here](https://www.youtube.com/watch?v=8P-Sc8ZaViY).
 
 ### New guidance on testing extensions {: #testing-guidance-oct-23 }
 
