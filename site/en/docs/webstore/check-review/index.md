@@ -10,7 +10,7 @@ description: >
 After [publishing][publish] your extension for the first time or [uploading][update] a new version, your item will go
 through a [review process][cws-review]. This page describes the how to check the status of your item .
 
-## The lifecycle of Chrome Web Store item
+## The lifecycle of a Chrome Web Store item
 
 All Chrome Web Store items go through an automated [review process][cws-review]. In some instances, a manual review
 is required, especially when sensitive permissions are requested. For this reason, review times
@@ -19,7 +19,7 @@ it's important to keep track of your item's status. See the lifecycle diagram be
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/yakIoAzWEchO8urosQLs.png", alt="Diagram of the lifecycle of a Chrome Web Store item", width="800", height="177" %}
 
-## Checking your item's status
+## Check your item's status
 
 The review status of your item appears in the [developer dashboard][dev-dashboard] next to each item. The
 status can be Published, Pending, Rejected, or Taken Down.
@@ -52,12 +52,12 @@ been rejected, you can see the details on the **Status tab** of your item.
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/C4wpnEeMriI9YeDAMDIr.png", alt="The Chrome Web Store
 Status Tab", width="700", height="276" %}
 
-If you have been informed about a violation and you do not rectify your item will be taken down. See
+If you have been informed about a violation and you do not rectify it, your item will be taken down. See
 [Violation enforcement][enforcement] for more details.
 
 {% Aside %}
 
-To request further clarification on the reasons for the takedown or appeal the decision,
+To request further clarification on the reasons for the takedown or to appeal the decision,
 contact [Chrome Web Store Developer Support][cws-support]. For more examples and instructions on how
 you can remedy the problem check the [Troubleshooting guide][troubleshooting].
 
