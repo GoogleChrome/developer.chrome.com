@@ -99,7 +99,7 @@ publishers, which includes dedicated webinars and meetings with both
 publishers and SSPs present to drive deployment work.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">3PCD</td>
+      <td style="vertical-align: top;">Third-party cookie deprecation</td>
       <td style="vertical-align: top;">Concerns over third-party cookie deprecation (3PCD) ramp up in Q4 2023 due to industry tech blackout.</td>
       <td style="vertical-align: top;">The timeline for the Privacy Sandbox has been discussed with the CMA,
 with sequencing leading to a second half of 2024 readiness. Privacy
@@ -433,7 +433,7 @@ href="https://developer.chrome.com/en/docs/privacy-sandbox/topics/">Chrome devel
       <td style="vertical-align: top;">Notification to alert user when their Topics are being observed by a
 website.</td>
       <td style="vertical-align: top;">We <a
-href="https://github.com/patcg-individual-drafts/topics/issues/222">addressed this feedback on Github</a>. Users can learn more about Topics controls in the <a
+href="https://github.com/patcg-individual-drafts/topics/issues/222">addressed this feedback on GitHub</a>. Users can learn more about Topics controls in the <a
 href="https://support.google.com/chrome/answer/13355898#zippy=%2Cmanage-ad-topics">Chrome help center</a>.</td>
     </tr>
     <tr>
@@ -593,7 +593,7 @@ participant with any other auction participant prior to completion of
 the auction in multi-seller auctions. To be clear, we won't share the
 price of the contextual auction with our own component auction
 either, as explained in the <a
-href="https://github.com/google/ads-privacy/commit/cd5d7c5336a5ce9f6c22776b4532ccd529c55210">Further clarify top level auction dynamics</a> update.</td>
+href="https://github.com/google/ads-privacy/commit/cd5d7c5336a5ce9f6c22776b4532ccd529c55210">Further clarify top-level auction dynamics</a> update.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Information Exposure</td>
@@ -1652,7 +1652,7 @@ in the usual way.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Interaction with surrounding sites</td>
-      <td style="vertical-align: top;">Allow interaction with the surrounding/top-level website.</td>
+      <td style="vertical-align: top;">Allow interaction with the surrounding or top-level website.</td>
       <td style="vertical-align: top;">We are looking to understand why this request is necessary and
 welcome additional feedback from the ecosystem.</td>
     </tr>
