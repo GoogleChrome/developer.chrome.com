@@ -1097,7 +1097,7 @@ received from DSPs.</td>
   </tbody>
 </table>
 
-## Measuring Digital Ads
+## Measure Digital Ads
 
 ### Attribution Reporting (and other APIs)
 
