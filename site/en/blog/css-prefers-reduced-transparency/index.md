@@ -207,6 +207,10 @@ the user is ok with it.
 This approach helps you to think about a healthy baseline experience that's
 sturdy on its own. Then, if it's ok with the user, add to the experience.
 
+{% Aside 'important' %}
+The additive strategy is best when there is good browser support.
+{% endAside %}
+
 ## Devtools
 
 The Chrome DevTools can emulate this preference for reduced transparency (and
