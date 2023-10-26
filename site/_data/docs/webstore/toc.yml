@@ -15,9 +15,11 @@
     - url: /docs/webstore/set-up-account/
     - url: /docs/webstore/prepare/
     - url: /docs/webstore/publish/
-    - url: /docs/webstore/manage/
     - url: /docs/webstore/update/
     - url: /docs/webstore/review-process/
+    - url: /docs/webstore/check-review/
+    - url: /docs/webstore/support-users/
+    - url: /docs/webstore/metrics
     - url: /docs/webstore/google-analytics/
     - url: /docs/webstore/troubleshooting/
     - url: /docs/webstore/branding/
