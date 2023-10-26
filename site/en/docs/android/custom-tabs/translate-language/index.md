@@ -22,8 +22,4 @@ CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
     .build();
 ```
 
-The intent builder takes the user's [`Locale`](https://developer.android.com/reference/java/util/Locale.html) as input. For best user experience, we recommend using the full
-language code (such as `pt-BR` or `sr-latn-RS`).
-
-<!--Note from Kevin: Check whether this auto-translates, or asks the user whether they want it translated. Test
-in sample code, see what Jinsuk knows.-->
+The intent builder takes the user's [`Locale`](https://developer.android.com/reference/java/util/Locale.html) as input. This value can be any of the supported locales [listed here](https://developer.chrome.com/docs/webstore/i18n/#choosing-locales-to-support).
