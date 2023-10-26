@@ -951,7 +951,7 @@ should be prioritized.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;">Reporting granularity</td>
-      <td style="vertical-align: top;">What is the reporting granularity of Fenced Frame Ad Reporting with
+      <td style="vertical-align: top;">What is the reporting granularity of Fenced Frame ad reporting with
 Ads Composed of Multiple Pieces?</td>
       <td style="vertical-align: top;">The current design does not allow capturing product ID or position as
 this may compromise user privacy. Only the <code>reserved.top_navigation</code>
@@ -960,7 +960,7 @@ can be invoked, which would be sent when there is a user activation
 top-level navigation.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Ad Auction</td>
+      <td style="vertical-align: top;">Ad auction</td>
       <td style="vertical-align: top;">Can an SSP participating in a component auction trigger another
 component auction itself?</td>
       <td style="vertical-align: top;">A <code>componentSeller</code> cannot also include <code>componentAuctions</code>.<br>
@@ -1347,7 +1347,7 @@ data beyond what is available by default in the frozen and reduced
 UA.</td>
     </tr>
     <tr>
-      <td style="vertical-align: top;">Device/Form Factor information</td>
+      <td style="vertical-align: top;">Device and Form Factor information</td>
       <td style="vertical-align: top;">Ability for websites to understand input, output, and other
 information the device visiting the website can support.</td>
       <td style="vertical-align: top;">We have added <a
