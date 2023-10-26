@@ -753,7 +753,7 @@ operate.</td>
       <td style="vertical-align: top;">Traffic Shaping support for Bidding and Auction Services.</td>
       <td style="vertical-align: top;">Buyers can indicate, based on Publisher first party data or
 contextual data, demand for Protected Audience auctions. Sellers can
-do similar determinations as well in the seller's ad server / Ad
+do similar determinations as well in the seller's ad server or Ad
 Exchange server. The models can be trained on 1P data and any
 aggregate reports from Protected Audience auctions. Sellers can use
 this information to avoid sending requests to Bidding and Auction
