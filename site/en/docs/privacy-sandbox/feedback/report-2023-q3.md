@@ -1117,7 +1117,7 @@ received from DSPs.</td>
 adds technology distribution challenges given the range of devices
 and platforms a user might use. We are exploring potential solutions,
 but we are focused on the critical use cases currently supported by
-ARttribution Reporting and do not have plans to introduce cross-device support before
+Attribution Reporting and do not have plans to introduce cross-device support before
 the removal of third-party cookies.</td>
     </tr>
     <tr>
