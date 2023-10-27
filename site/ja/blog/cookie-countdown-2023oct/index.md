@@ -22,7 +22,7 @@ tags:
 
 この [Cookie カウントダウンに関する連載記事](/tags/cookie-countdown/)では、タイムラインと、サイトの準備が整っていることを確認するためにすぐに実行できる対応について説明します。
 
-## 1% third-party cookie deprecation and Chrome-facilitated testing {: #chrome-testing }
+## 1% のサードパーティ Cookie の廃止と Chrome によるテスト {: #chrome-testing }
 
 [privacysandbox.com のタイムライン](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline)によると、 [Chrome によるテスト](/docs/privacy-sandbox/chrome-testing/)モードの一環として、2023 年第 4 四半期と 2024 年第 1 四半期に 2 つのマイルストーンが近づいていることがわかります。このテストは主にプライバシーサンドボックス広告関連 API をテストする組織を対象としていますが、その一環として、Chrome 安定版ユーザーの 1% に対してサードパーティ Cookie を無効にする予定です。
 
@@ -30,11 +30,11 @@ tags:
 
 これは、2024 年の初めから、Chrome が実施するテストに積極的に参加していない場合でもサードパーティ Cookie が無効になっているサイトの Chrome ユーザーの割合が増加することが予想されることを意味します。このテスト期間は 2024 年第 3 四半期まで継続され、[CMA との協議](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes)の後、競争上の懸念が解決されることを条件として、すべての Chrome ユーザーに対してサードパーティ Cookie の無効化を開始する予定です。
 
-## Prepare for the third-party cookie phase out
+## サードパーティ Cookie の段階的廃止に備える
 
 サードパーティ Cookie を使わずにサイトを実行する準備が整っていることを確認するために、プロセスを次の主要な手順に分割し、詳細を以下に示します。
 
-1. [Audit your third-party cookie usage](#audit).
+1. [サードパーティ Cookie の使用状況を監査](#audit)します。
 2. [破損状況についてテスト](#test)します。
 3. 埋め込みなど、サイトごとにデータを保存するクロスサイト Cookie の場合は、[CHIPS による `Partitioned`](#partitioned) の使用を検討してください。
 4. 有意義にリンクされたサイトの小さなグループをまたぐクロスサイト Cookie については、[Related Website Sets](#rws) の使用を検討してください。
@@ -72,7 +72,7 @@ Chrome 118 以降、 [DevTools の [イシュー] タブ](/docs/devtools/issues/
 
 サードパーティ Cookie がトップレベル サイトとの 1 対 1 の埋め込みコンテキストで使用されている場合は、`Partitioned` 属性を Cookies Have Independent Partitioned State（CHIPS）の一部として使用して、サイトごとに使用される個別の Cookie でクロスサイト アクセスを許可することを検討してください。
 
-{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/5JLh0cCChr0bKOzp6XxP.png", alt="The Partitioned attribute enables a seperate fav_store cookie to be set per top-level site.", width="800", height="359" %}
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/5JLh0cCChr0bKOzp6XxP.png", alt="Partitioned 属性により、トップレベル サイトごとに個別の fav_store Cookie を設定できます。", width="800", height="359" %}
 
 CHIPS を実装するには、`Set-Cookie` ヘッダーに `Partitioned` 属性を追加します。
 
@@ -98,7 +98,7 @@ RWS を実装するには、セットのサイトのグループを[定義して
 
 **可能性のあるユースケース:** アプリ固有のドメイン、ブランド固有のドメイン、国固有のドメイン、信頼できないユーザーコンテンツを提供するためのサンドボックスドメイン、API のサービスドメイン、CDN。
 
-**[Learn more about RWS](/blog/related-website-sets/)**
+**[RWS について詳しく見る](/blog/related-website-sets/)**
 
 ## 5. 関連する Web API に移行する {: #migrate }
 
@@ -118,7 +118,7 @@ Storage Access API では、ブラウザの許可を求めるプロンプトが�
 
 これらのオプションで対応されないサードパーティ Cookie のユースケースがまだある場合は、[イシューを当社に報告](#report-issues)し、クロスサイトトラッキングを可能にする機能に依存しない代替実装があるかどうかを検討することをお勧めします。
 
-## Enterprise support
+## エンタープライズサポート
 
 企業が管理する Chrome には、一般的なウェブの使用と比較して常に固有の要件があるため、エンタープライズ管理者がブラウザでのサードパーティ Cookie の廃止を適切に制御できるようにする予定です。
 
