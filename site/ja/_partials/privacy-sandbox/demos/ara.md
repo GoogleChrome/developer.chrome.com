@@ -1,10 +1,10 @@
 {% Details %} {% DetailsSummary %} **アトリビューション レポート**{% endDetailssummary %}
 
-**Demo**
+**<a>デモ</a>**
 
 {% Columns %} {% Column %} Attribution Reporting API を使用すると、広告主とアドテックプロバイダーは、広告のクリックとビュー、サードパーティ iframe の広告、およびファーストパーティコンテキストの広告のコンバージョンを測定できます。このデモでは、広告主がアドテックプロバイダーを使用して、サイト運営者サイトに広告を掲載します。
 
-[Demo](https://arapi-home.web.app/)
+[デモ](https://arapi-home.web.app/)
 
 [Docs](/docs/privacy-sandbox/attribution-reporting/)
 
