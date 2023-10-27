@@ -2,6 +2,6 @@
 
 [デモ](https://permissions-policy-demo.glitch.me/demo/)
 
-[Docs](/docs/privacy-sandbox/permissions-policy/)
+[ドキュメント](/docs/privacy-sandbox/permissions-policy/)
 
 {% endColumn %} {% Column %} <a href="https://permissions-policy-demo.glitch.me/demo/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/qaZFVmYVbQmEGhl004VT.png", alt="権限ポリシーのデモ。", width="676", height="458" %}</a> {% endColumn %} {% endColumns %} {% endDetails %}
