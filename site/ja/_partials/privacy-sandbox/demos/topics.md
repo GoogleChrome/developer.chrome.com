@@ -8,7 +8,7 @@
 
 [ウォークスルー動画](https://www.youtube.com/watch?v=hEBzWuXjeTQ)
 
-[Docs](/docs/privacy-sandbox/topics/overview/)
+[ドキュメント](/docs/privacy-sandbox/topics/overview/)
 
 {% endColumn %} {% Column %}
 
