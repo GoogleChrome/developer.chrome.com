@@ -20,7 +20,7 @@ See [Creating a great listing page][best-listing] to learn how to make your list
 
 In this section you can include the following information about your item:
 
-- A **detailed description** of your item. This helps users understand why they should to install your
+- A **detailed description** of your item. This helps users understand why they should install your
   extension. Start your description with a concise statement of what your item does, so
   users can understand the main idea and features at a glance. After that provide additional details, promotional copy, update logs, and so forth. Be detailed but ensure it complies with the [Keyword Spam][keyword-spam] policy.
 - The **primary [category][categories]** under which your item should be listed on the web store.
@@ -33,16 +33,15 @@ the Marquee promo tile, which is optional:
 
 - A 128x128 to use as your **store icon**.
 - At least one 1280x800 **screenshot**, up to 5 total.
-- A link to a YouTube **video** that demonstrates your extension features or how it works.
-- A 440x280 px **small tile** that will be displayed on the Chrome Web Store wall.
-- A 1400x560 px **Marquee promo tile**
+- A link to a **YouTube video** that showcases your extension features.
+- A 440x280 px **small tile** that will be displayed on the Chrome Web Store search result.
+- A 1400x560 px **marquee promo tile** that will be displayed
 
 See [Supplying Images][cws-images] to help design the images for your item, and [Branding
 Guidelines][cws-branding] for information on how you can use Google brands. 
 
 {% Aside %}
-The quality of the images you supply can affect your item's prominence on the Chrome Web Store. Be
-sure and read [Creating a great listing page][best-listing] for more details.
+The quality of the images you supply can affect your item's prominence on the Chrome Web Store. Read [Creating a great listing page][best-listing] and [Discovery in the Chrome Web Store][discovery] for more details.
 {% endAside %}
 
 ## Localize your listing
@@ -166,6 +165,7 @@ If you haven't done so yet, complete your listing by
 [categories]: /docs/webstore/best_practices/#choose-your-apps-category-well
 [cws-branding]: /docs/webstore/branding
 [cws-images]: /docs/webstore/images
+[discovery]: /docs/webstore/discovery/
 [distribution]: /docs/webstore/cws-dashboard-distribution
 [keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
 [mature-guidelines]: /docs/webstore/rating/
