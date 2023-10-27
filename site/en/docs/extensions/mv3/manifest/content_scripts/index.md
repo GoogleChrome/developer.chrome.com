@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Manifest - content scripts'
 seoTitle: 'Chrome Extensions Manifest: "content_scripts"'
 date: 2023-08-10
-updated: 2023-10-26
+updated: 2023-10-27
 description: Reference documentation for the "content_scripts" property of manifest.json.
 ---
 
@@ -236,11 +236,21 @@ To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"
 
 By default, content scripts are injected when the document and all resources are finished loading, and live in a private isolated execution environment that isn't accessible to the page or other extensions. You can change these defaults in the following keys:
 
-[`"run_at"`][scripting-runat] - `document_start` | `document_end` | `document_idle`
-: _Optional_. Specifies when the script should be injected into the page. It corresponds with the loading states of [Document.readyState][mdn-ready-state]:
-    - `"document_start"`: the DOM is still loading.
-    - `"document_end"`: the page's resources are still loading
-    - `"document_idle"`: the DOM and resources have finished loading. This is the default.
+### [`"run_at"`][scripting-runat]
+_Optional_. Specifies when the script should be injected into the page. It corresponds with the loading states of [Document.readyState][mdn-ready-state]. It takes one of the following values:
+
+`"document_start"`
+: Scripts are injected after css files are loaded, but before the DOM is constructed or any other script is run.
+
+`"document_end"`
+: Scripts are injected immediately after the DOM is complete, but before subresources like images and frames have loaded.
+
+`"document_idle"`
+: _Default_. The DOM and resources have finished loading. When injecting scripts, the browser chooses a time to inject scripts between `"document_end"` and immediately after [`window.onload`](https://developer.mozilla.org/docs/Web/API/Window/load_event) fires. The exact moment of injection depends on how complex the document is and how long it is taking to load, and is optimized for page load speed.
+
+Content scripts running at `"document_idle"` do not need to listen for the `window.onload` event. They are guaranteed to run after the DOM is complete. If a script needs to run after `window.onload`, the extension can check if onload has already fired  using the [`document.readyState`](https://developer.mozilla.org/docs/Web/API/Document/readyState) property.
+
+It's recommended that you use this value whenever possible.
 
 [`"world"`][scripting-world] - `ISOLATED` | `MAIN`
 : _Optional_. The JavaScript world for a script to execute within. Defaults to `"ISOLATED"`, which is the execution environment unique to the content script. Choosing the `"MAIN"` world means the script will share the execution environment with the host page's JavaScript. See [Work in isolated worlds][cs-worlds] to learn more.
