@@ -1,9 +1,9 @@
-{% Details %} {% DetailsSummary %} **Related Website Sets** {% endDetailsSummary %} {% Columns %} {% Column %} Related Website Sets is a way for a company to declare relationships among sites, so that browsers allow limited third-party cookie access for specific purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
+{% Details %} {% DetailsSummary %} Related Website Sets {% endDetailsSummary %} {% Columns %} {% Column %} Related Website Sets は、企業がサイト間の関係を宣言し、ブラウザが特定の目的で限定的なサードパーティ Cookie を許可できるようにする方法です。Chrome は、これらの宣言された関係を使用して、サードパーティのコンテキストで、Cookie へのサイトアクセスをいつ許可または拒否するかを決定します。
 
 [デモ](https://first-party-sets.glitch.me/)
 
 [Docs](/docs/privacy-sandbox/related-website-sets/)
 
-[Submission JSON generator](https://rws-json-generator.ue.r.appspot.com/)
+[提出用 JSON ジェネレーター](https://rws-json-generator.ue.r.appspot.com/)
 
-{% endColumn %} {% Column %} <a href="https://first-party-sets.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xQbEZnwQ7Fjw8MOYuddS.png", alt="Related Website Sets demo.", width="600", height="400" %}</a> {% endColumn %} {% endColumns %} {% endDetails %}
+{% endColumn %} {% Column %} <a href="https://first-party-sets.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/xQbEZnwQ7Fjw8MOYuddS.png", alt="Related Website Sets のデモ。", width="600", height="400" %}</a> {% endColumn %} {% endColumns %} {% endDetails %}
