@@ -1,14 +1,12 @@
 ---
 layout: layouts/doc-post.njk
 title: プライバシーサンドボックスのデモ
-subhead: |2-
-
+subhead: 
   デモと Colab で、プライバシーサンドボックス API について説明します。
-description: |2-
-
+description: 
   デモと Colab で、プライバシーサンドボックス API について説明します。
-date: '2023-08-18'
-updated: '2023-08-29'
+date: 2023-08-18
+updated: 2023-08-29
 authors:
   - nmichell
 ---
