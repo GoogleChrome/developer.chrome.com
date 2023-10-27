@@ -224,7 +224,7 @@ The `"all_frames"` key specifies if the content script should be injected into a
 To inject into other frames like `data:`, `blob:`, and `filesystem:`, set the `"match_origin_as_fallback"` to `true`. For details, see [Injecting in related frames][cs-inject-frames]
 
 `"all_frames"` Boolean
-: _Optional_. Defaults to `false`, meaning that only the top frame is matched. If set to true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it won't inject into child frames if the URL requirements are not met.
+: _Optional_. Defaults to `false`, meaning that only the top frame is matched. If set to true, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements. It won't inject into child frames if the URL requirements are not met.
 
 `"match_about_blank"`- Boolean
 : _Optional_. Defaults to `false`. Whether the script should inject into an `about:blank` frame where the parent URL matches one of the patterns declared in `"matches"`.
