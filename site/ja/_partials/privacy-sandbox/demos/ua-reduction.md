@@ -2,7 +2,7 @@
 
 [デモ](https://uar-ot.glitch.me/)
 
-[Docs](/docs/privacy-sandbox/user-agent/)
+[ドキュメント](/docs/privacy-sandbox/user-agent/)
 
 {% endColumn %} {% Column %} <a href="https://uar-ot.glitch.me/">{% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/S5ALrfmMdD2xDkIpsnS0.png", alt="ユーザーエージェントの削減のデモ。", width="800", height="627" %}</a> {% endColumn %} {% endColumns %} {% Columns %} {% Column %} JavaScript によって縮小されたユーザーエージェント
 
