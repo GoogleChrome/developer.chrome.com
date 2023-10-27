@@ -2,7 +2,7 @@
 
 このデモでは、Protected Audience API を使用して 2 つの広告主サイトの広告インタレストグループに参加し、デバイス上のオークションを開始してサイト運営者サイトに表示する広告を選択します。
 
-[Demo](https://protected-audience-demo.web.app/)
+[デモ](https://protected-audience-demo.web.app/)
 
 [Demo code](https://github.com/GoogleChromeLabs/protected-audience-demo)
 
