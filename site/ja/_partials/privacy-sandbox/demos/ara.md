@@ -6,7 +6,7 @@
 
 [デモ](https://arapi-home.web.app/)
 
-[Docs](/docs/privacy-sandbox/attribution-reporting/)
+[ドキュメント](/docs/privacy-sandbox/attribution-reporting/)
 
 [要約レポートのウォークスルー動画](https://drive.google.com/file/d/18RGEx_mrhDJuMsLUK1BZ0cK5FSZRAAqh/view)
 
@@ -22,7 +22,7 @@
 
 [Noise Lab](https://noise-lab.uc.r.appspot.com/?mode=simple)
 
-[Docs](/docs/privacy-sandbox/attribution-reporting/understanding-noise/)
+[ドキュメント](/docs/privacy-sandbox/attribution-reporting/understanding-noise/)
 
 {% endColumn %} {% Column %}
 
