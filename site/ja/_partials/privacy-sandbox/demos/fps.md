@@ -2,7 +2,7 @@
 
 [デモ](https://first-party-sets.glitch.me/)
 
-[Docs](/docs/privacy-sandbox/related-website-sets/)
+[ドキュメント](/docs/privacy-sandbox/related-website-sets/)
 
 [提出用 JSON ジェネレーター](https://rws-json-generator.ue.r.appspot.com/)
 
