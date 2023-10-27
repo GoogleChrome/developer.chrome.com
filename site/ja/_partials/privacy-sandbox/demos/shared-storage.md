@@ -2,7 +2,7 @@
 
 {% Columns %} {% Column %} Shared Storage API は、クロスサイトで使用できるストレージを提供します。つまり、あるドメインに値を保存し、別のドメインから値を読み取ります。データは自由に設定できますが、ストレージからデータを取得する方法は制限されています。このデモでは、その仕組みを説明します。
 
-[Demo](https://shared-storage-demo.web.app/)
+[デモ](https://shared-storage-demo.web.app/)
 
 [ドキュメント](/docs/privacy-sandbox/shared-storage/)
 
