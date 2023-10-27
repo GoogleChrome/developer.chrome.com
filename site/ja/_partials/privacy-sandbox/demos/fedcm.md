@@ -1,6 +1,6 @@
 {% Details %} {% DetailsSummary %} FedCM {% endDetailsSummary %} {% Columns %} {% Column %} FedCM は、連携された ID サービスに対するプライバシー保護のアプローチであり、ユーザーは ID サービスまたはサイトに個人情報を共有することなくサイトにログインできます。このデモでは、その仕組みを説明します。
 
-[Demo](https://fedcm-rp-demo.glitch.me)
+[デモ](https://fedcm-rp-demo.glitch.me)
 
 [Docs](/docs/privacy-sandbox/fedcm/)
 
