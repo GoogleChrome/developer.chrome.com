@@ -1,10 +1,10 @@
 {% Details %} {% DetailsSummary %} **Topics API** {% endDetailsSummary %}
 
-**Demo**
+**<a>デモ</a>**
 
 {% Columns %} {% Column %} Topics API を使用すると、ブラウザはサードパーティ Cookie を使用せずに、ユーザーの興味に関する情報をサードパーティと共有できます。ユーザーが訪問するサイトを追跡せずに、インタレストベース広告（IBA）を可能にします。このデモでは、API の実際の動作の例を示します。
 
-[Demo](https://topics-demo.glitch.me/)
+[デモ](https://topics-demo.glitch.me/)
 
 [ウォークスルー動画](https://www.youtube.com/watch?v=hEBzWuXjeTQ)
 
