@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Privacy Sandbox demos
+title: プライバシーサンドボックスのデモ
 subhead: |2-
 
   デモと Colab で、プライバシーサンドボックス API について説明します。
