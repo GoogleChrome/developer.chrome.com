@@ -112,7 +112,7 @@ authors:
 - [Chrome リリースチャンネルとは？](/docs/web-platform/chrome-release-channels/)
 - [Chrome のリリース スケジュール](https://www.chromestatus.com/features/schedule)
 - [Chromium の新機能のリリース プロセス](https://www.chromium.org/blink/launching-features)
-- [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
+- [Intent to Explain: Blink の提供プロセスの説明](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
 - [blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev/): 実装ステータスと、Blink（Chromium で使用されるレンダリング エンジン）の機能に関する説明。
 - [Chromium のコード検索](https://source.chromium.org/)
 - [Chrome フラグとは？](/docs/web-platform/chrome-flags/)
