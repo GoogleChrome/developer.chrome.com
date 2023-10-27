@@ -1,4 +1,4 @@
-{% Details %} {% DetailsSummary %} **アトリビューション レポート**{% endDetailssummary %}
+{% Details %} {% DetailsSummary %} **アトリビューション レポート**{% endDetailsSummary %}
 
 **<a>デモ</a>**
 
