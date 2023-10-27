@@ -1,10 +1,10 @@
 {% Details %} {% DetailsSummary %} 共有ストレージ {% endDetailsSummary %}
 
-{% Columns %} {% Column %} The Shared Storage API provides storage that can be used cross-site, meaning you store a value at one domain, then read the value from another domain. You can set data freely, but are restricted in how you get data out of storage. This demo illustrates how it works.
+{% Columns %} {% Column %} Shared Storage API は、クロスサイトで使用できるストレージを提供します。つまり、あるドメインに値を保存し、別のドメインから値を読み取ります。データは自由に設定できますが、ストレージからデータを取得する方法は制限されています。このデモでは、その仕組みを説明します。
 
 [Demo](https://shared-storage-demo.web.app/)
 
-[Docs](/docs/privacy-sandbox/shared-storage/)
+[ドキュメント](/docs/privacy-sandbox/shared-storage/)
 
 {% endColumn %} {% Column %}
 
