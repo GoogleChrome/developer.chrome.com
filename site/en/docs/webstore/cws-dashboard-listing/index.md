@@ -128,7 +128,7 @@ If you haven't done so yet, complete your listing by
 [cws-branding]: /docs/webstore/branding
 [cws-images]: /docs/webstore/images
 [distribution]: /docs/webstore/cws-dashboard-distribution
-[keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
+[keyword-spam]: /docs/webstore/program-policies/spam-faq/#keyword-spam
 [mature-guidelines]: /docs/webstore/rating/
 [privacy]: /docs/webstore/cws-dashboard-privacy
 [user-support]: /docs/webstore/support-users/#provide-user-support

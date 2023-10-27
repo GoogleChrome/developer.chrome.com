@@ -438,4 +438,4 @@ Please print and retain a copy of this document and any linked documents for you
 [one-stop]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [program-policies]: /docs/webstore/program-policies
 [rating]: /docs/webstore/rating
-[user-data]: /docs/webstore/user_data
+[user-data]: /docs/webstore/program-policies/user-data-faq

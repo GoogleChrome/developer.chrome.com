@@ -102,4 +102,4 @@ If you haven't done so yet, complete your listing by
 [remote-code]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code
 [setup-account]: /docs/webstore/publish#setup-a-developer-account
 [upload-item]: /docs/webstore/publish/#upload-your-item
-[user-data]: /docs/webstore/user_data/
+[user-data]: /docs/webstore//program-policies/user-data-faq/

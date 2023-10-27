@@ -122,4 +122,4 @@ After filling out the [Listing][listing] tab and the [Privacy][privacy] tab, you
 [privacy]: /docs/webstore/cws-dashboard-privacy/
 [private-google-groups]: #private-visibility-google-groups
 [publish]: /docs/webstore/publish/#publish-item
-[repetitive-content]: /docs/webstore/spam-faq/#repetitive-content
+[repetitive-content]: /docs/webstore/program-policies/spam-faq/#repetitive-content
