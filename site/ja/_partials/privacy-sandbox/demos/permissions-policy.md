@@ -1,6 +1,6 @@
 {% Details %} {% DetailsSummary %} **権限ポリシー** {% endDetailsSummary %} {% Columns %} {% Column %} 権限ポリシーを使用すると、開発者はブラウザが強制する一連のポリシーを宣言することで、ページ、その iframe、およびサブリソースで使用できるブラウザ機能を制御できます。このデモでは、利用可能なポリシーを試すことができます。
 
-[Demo](https://permissions-policy-demo.glitch.me/demo/)
+[デモ](https://permissions-policy-demo.glitch.me/demo/)
 
 [Docs](/docs/privacy-sandbox/permissions-policy/)
 
