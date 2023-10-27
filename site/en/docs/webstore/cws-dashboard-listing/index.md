@@ -31,11 +31,11 @@ In this section you can include the following information about your item:
 In this section, you must provide the following promotional images and video, with the exception of
 the Marquee promo tile, which is optional:
 
-- A 128x128 to use as your **store icon**.
-- At least one 1280x800 **screenshot**, up to 5 total.
+- A 128x128 px to use as your **store icon**.
+- At least one 1280x800 px **screenshot**, up to 5 total.
 - A link to a **YouTube video** that showcases your extension features.
-- A 440x280 px **small tile** that will be displayed on the Chrome Web Store search result.
-- A 1400x560 px **marquee promo tile** that will be displayed
+- A PNG or JPEG file that is 440x280 px to use as the **small promo tile**.
+- A PNG or JPEG file that is 1400x560 px to use as the **marquee promo tile**.
 
 See [Supplying Images][cws-images] to help design the images for your item, and [Branding
 Guidelines][cws-branding] for information on how you can use Google brands. 
@@ -59,7 +59,10 @@ alt="Choose language in store listing", width="500", height="162" %}
 
 {% Aside %}
 
+By default, your extension is listed in all regions supported by the Chrome Web Store. If your extension is aimed for users in a specific country, you can select that region in the [Distribution][distribution] tab.
+
 {% endAside %}
+
 
 ### Localize detailed description {: #detailed-description }
 
@@ -125,7 +128,9 @@ more details.
 
 ### Add a homepage URL {: #home-url }
 
-To explain how your extension works in more detail, you can provide a direct link to your extension's website in the **Homepage URL**. This link appears under the **Details** section of your item.
+The link provided in the **Homepage URL** appears under the **Details** section of your item. This
+site should contain information about your extension to help users learn more about your extension
+features or service.
 
 ### Provide a support URL {: #support-url }
 
@@ -175,3 +180,4 @@ If you haven't done so yet, complete your listing by
 [verify-owner]: https://support.google.com/webmasters/answer/9008080
 [api-i18n]: /docs/extensions/reference/i18n/
 [locale-dir]: /docs/extensions/reference/i18n/#how-to-support-multiple-languages
+[distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution

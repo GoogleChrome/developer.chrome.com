@@ -69,7 +69,7 @@ Some notes about internationalizing:
   }
   ```
 
-  For more information, see [Formats: Locale-Specific Messages][6].
+For more information, see [Formats: Locale-Specific Messages][6].
 
 Once an extension or app is internationalized, translating it is simple. You copy `messages.json`,
 translate it, and put the copy into a new directory under `_locales`. For example, to support
@@ -77,6 +77,73 @@ Spanish, just put a translated copy of `messages.json` under `_locales/es`. The 
 shows the previous extension with a new Spanish translation.
 
 ![This looks the same as the previous figure, but with a new file at _locales/es/messages.json that contains a Spanish translation of the messages.](i18n-after-2.gif)
+
+{% Details %}
+{% DetailsSummary %}
+## Supported locales
+{% endDetailsSummary %}
+
+You can localize your extension to any of the following locales. Note that Chrome Web Store does not support all of the locals supported by Chrome. If your locale is not listed here, choose the closest alternative. For example, if the default locale of your extension is "de_CH", choose "de" in the Chrome Web Store.
+
+| Locale code | Language (region)                     |
+| :---------- | :------------------------------------ |
+| ar          | Arabic                                |
+| am          | Amharic                               |
+| bg          | Bulgarian                             |
+| bn          | Bengali                               |
+| ca          | Catalan                               |
+| cs          | Czech                                 |
+| da          | Danish                                |
+| de          | German                                |
+| el          | Greek                                 |
+| en          | English                               |
+| en_AU       | English (Australia)                   |
+| en_GB       | English (Great Britain)               |
+| en_US       | English (USA)                         |
+| es          | Spanish                               |
+| es_419      | Spanish (Latin America and Caribbean) |
+| et          | Estonian                              |
+| fa          | Persian                               |
+| fi          | Finnish                               |
+| fil         | Filipino                              |
+| fr          | French                                |
+| gu          | Gujarati                              |
+| he          | Hebrew                                |
+| hi          | Hindi                                 |
+| hr          | Croatian                              |
+| hu          | Hungarian                             |
+| id          | Indonesian                            |
+| it          | Italian                               |
+| ja          | Japanese                              |
+| kn          | Kannada                               |
+| ko          | Korean                                |
+| lt          | Lithuanian                            |
+| lv          | Latvian                               |
+| ml          | Malayalam                             |
+| mr          | Marathi                               |
+| ms          | Malay                                 |
+| nl          | Dutch                                 |
+| no          | Norwegian                             |
+| pl          | Polish                                |
+| pt_BR       | Portuguese (Brazil)                   |
+| pt_PT       | Portuguese (Portugal)                 |
+| ro          | Romanian                              |
+| ru          | Russian                               |
+| sk          | Slovak                                |
+| sl          | Slovenian                             |
+| sr          | Serbian                               |
+| sv          | Swedish                               |
+| sw          | Swahili                               |
+| ta          | Tamil                                 |
+| te          | Telugu                                |
+| th          | Thai                                  |
+| tr          | Turkish                               |
+| uk          | Ukrainian                             |
+| vi          | Vietnamese                            |
+| zh_CN       | Chinese (China)                       |
+| zh_TW       | Chinese (Taiwan)                      |
+
+{% endDetails %}
 
 ## Predefined messages {: #overview-predefined }
 
