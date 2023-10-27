@@ -4,9 +4,9 @@
 
 [デモ](https://protected-audience-demo.web.app/)
 
-[Demo code](https://github.com/GoogleChromeLabs/protected-audience-demo)
+[デモコード](https://github.com/GoogleChromeLabs/protected-audience-demo)
 
-[Docs](/docs/privacy-sandbox/protected-audience-api/)
+[ドキュメント](/docs/privacy-sandbox/protected-audience-api/)
 
 {% endColumn %} {% Column %}
 
