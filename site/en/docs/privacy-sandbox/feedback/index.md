@@ -230,9 +230,9 @@ groups** column of the tables in the [**Proposals** section](#proposals).
 
 {% Details %} {% DetailsSummary %}
 
-### Chrome-facilated testing
+### Chrome-facilitated testing
 
-**_We are seeking feedback on the [Chrome-faciliated testing plans](/docs/privacy-sandbox/chrome-testing/) along with tracking issues from initial third-party cookie deprecation._**
+**_We are seeking feedback on the [Chrome-facilitated testing plans](/docs/privacy-sandbox/chrome-testing/) along with tracking issues from initial third-party cookie deprecation._**
 
 {% endDetailsSummary %}
 
