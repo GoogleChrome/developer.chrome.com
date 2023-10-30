@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-10-26
+updated: 2023-10-30
 tags:
   - extensions-news
 
@@ -14,6 +14,13 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### PSA: Change to handling of privacy policy URLs in Developer Dashboard {: #privacy-policy-per-item }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 30, 2023</time></p>
+
+Privacy policies in the Developer Dashboard are now added at the item level. This allows you to provide a different privacy policy per item. Read more about this
+change in our [PSA](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/c4hhdgSbn5g).
 
 ### Video: A chat with Matt Frisbie {: #video-interview-oct-23 }
 
