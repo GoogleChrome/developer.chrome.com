@@ -616,7 +616,7 @@ The following popover demo, animates popovers in and out using `:popover-open` f
   opacity: 0;
 
   /*  enumarate transitioning properties, including display */
-  transition: transform 0.5s, opacity 0.5s, display 0.5s;
+  transition: transform 0.5s, opacity 0.5s, display 0.5s allow-discrete;
 }
 ```
 {% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hAoQAy9WSwOCmYaPeHxi.mp4", autoplay="true",
