@@ -17,7 +17,6 @@ Use the following code to add translation to your Custom Tabs intent builder:
 
 ```
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-    .setTranslateLanguage(true)
     .setTranslateLocale(Locale locale)
     .build();
 ```
