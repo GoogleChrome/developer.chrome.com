@@ -7,7 +7,7 @@ description: >
   Learn how to integrate Shared Storage and Private Aggregation and how they work together to produce aggregatable reports.
 updated: 2023-10-23
 authors:
-  - kevinkiklee
+  - maybellineb
 ---
 
 This document is a quickstart guide for using
