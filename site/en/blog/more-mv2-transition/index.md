@@ -13,7 +13,7 @@ tags:
   - extensions-news
 ---
 
-{% Aside %}
+{% Aside 'update' %}
 
 **December 9, 2022:** The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
 
@@ -25,8 +25,12 @@ Chrome will take a gradual and experimental approach to turning off Manifest V2 
 
 Specifically:
 
-* Starting in January in **Chrome 112**, Chrome may run experiments to turn off support for Manifest V2 extensions in Canary, Dev, and Beta channels.
-* Starting in June in **Chrome 115**, Chrome may run experiments to turn off support for Manifest V2 extensions in all channels, including stable channel.
+* ~~Starting in January in **Chrome 112**, Chrome may run experiments to turn off support for Manifest V2 extensions in Canary, Dev, and Beta channels.~~
+* ~~Starting in June in **Chrome 115**, Chrome may run experiments to turn off support for Manifest V2 extensions in all channels, including stable channel.~~
+
+{% Aside 'update' %}
+The timeline is currently under review and there are no longer any changes planned for these versions. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
+{% endAside %}
 
 For developers who still own extensions running Manifest V2, we recommend completing migration to Manifest V3 well ahead of the release of these Chrome versions because those extensions may stop working at any time following the aforementioned dates.
 
@@ -34,9 +38,13 @@ For enterprises, we are extending Manifest V2 support via [the ExtensionManifest
 
 We also have a few updates on how the phase-out will look on the Chrome Web Store:
 
-* In **January 2023**, use of Manifest V3 will become a prerequisite for the [Featured badge](https://blog.google/products/chrome/find-great-extensions-new-chrome-web-store-badges/) as we raise the security bar for extensions we highlight in the store.
-* In **June 2023**, the Chrome Web Store will no longer allow Manifest V2 items to be published with [visibility](/docs/webstore/cws-dashboard-distribution/#setting-the-visibility) set to Public. All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.
-* In **January 2024**, following the expiration of the Manifest V2 enterprise policy, the Chrome Web Store will remove all remaining Manifest V2 items from the store.
+* ~~In **January 2023**, use of Manifest V3 will become a prerequisite for the [Featured badge](https://blog.google/products/chrome/find-great-extensions-new-chrome-web-store-badges/) as we raise the security bar for extensions we highlight in the store.~~
+* ~~In **June 2023**, the Chrome Web Store will no longer allow Manifest V2 items to be published with [visibility](/docs/webstore/cws-dashboard-distribution/#setting-the-visibility) set to Public. All existing Manifest V2 items with visibility set to Public at that time will have their visibility changed to Unlisted.~~
+* ~~In **January 2024**, following the expiration of the Manifest V2 enterprise policy, the Chrome Web Store will remove all remaining Manifest V2 items from the store.~~
+
+{% Aside 'update' %}
+The timeline is currently under review and there are no longer any changes planned for these dates. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
+{% endAside %}
 
 In addition, we have been working with extension developers to improve Manifest V3 and to incorporate feedback from our community. Based on developer feedback, in recent months we’ve supplemented service worker functionality, introduced new APIs, and made a number of other platform improvements.
 
