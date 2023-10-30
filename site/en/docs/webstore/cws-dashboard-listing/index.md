@@ -172,7 +172,7 @@ If you haven't done so yet, complete your listing by
 [cws-images]: /docs/webstore/images
 [discovery]: /docs/webstore/discovery/
 [distribution]: /docs/webstore/cws-dashboard-distribution
-[keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
+[keyword-spam]: /docs/webstore/program-policies/spam-faq/#keyword-spam
 [mature-guidelines]: /docs/webstore/rating/
 [prepare-manifest]: /docs/webstore/prepare/#manifest
 [privacy]: /docs/webstore/cws-dashboard-privacy

@@ -195,7 +195,7 @@ To test your code, start or stop the service worker using the links next to **st
   </figcaption>
 </figure>
 
-Also, if you have made changes to the service worker code, you can click **Update** update or **skipWaiting** to apply the changes immediately.
+Also, if you have made changes to the service worker code, you can click **Update** or **skipWaiting** to apply the changes immediately.
 
 <figure>
     <a href="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png"><img src="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png?auto=format&w=845" alt="Service worker status in the Application panel"></a>

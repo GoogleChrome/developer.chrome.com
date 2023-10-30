@@ -1,7 +1,7 @@
 ---
 title: New in Chrome 118
 description: >
-  Chrome 118 is rolling out now! Declare specific styles within a component with the @scope css rule. Use new media features: scripting and prefers-reduced-transparency. DevTools has improvements in the Sources panel and there's plenty more.
+  Chrome 118 is rolling out now! Declare specific styles within a component with the @scope css rule. Use new media feature: prefers-reduced-transparency. DevTools has improvements in the Sources panel and there's plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2023-10-10
 authors:
@@ -19,7 +19,7 @@ tags:
 Here's what you need to know:
 
 * Declare specific styles within a component with the [`@scope` css rule](#css-scope).
-* There are two new media features: [`scripting` and `prefers-reduced-transparency`](#new-media-queries).
+* There's a new media feature: [`prefers-reduced-transparency`](#new-media-queries).
 * DevTools has improvements in the [**Sources** panel](#sources-panel-devtools).
 
 * And there's plenty [more](#more).
@@ -161,21 +161,11 @@ Like in the following example, we could apply style to the text and exclude cont
 
 Checkout the article [Limit the reach of your selectors with the CSS @scope at-rule](/articles/at-scope/) for more information.
 
-## `scripting` and `prefers-reduced-transparency` media features {: #new-media-queries }
+## `prefers-reduced-transparency` media feature {: #new-media-queries }
 
-We use media queries to provide user experiences that adapt to the user's preferences and device conditions. This Chrome version adds two new values that can be used to adapt user experience: `scripting` and `prefers-reduced-transparency`.
+We use media queries to provide user experiences that adapt to the user's preferences and device conditions. This Chrome version adds a new value that can be used to adapt user experience: `prefers-reduced-transparency`.
 
-We may take for granted the presence of scripting when our users access the web, however scripting is not always enabled, now using the `scripting` media feature you can detect if scripting is available and apply particular styles for each case, the available values are: `enabled`,` initial-only` or `none`
-
-```css
-@media (scripting: none) {
-  .script-none {
-    color: red;
-  }
-}
-```
-
-Another value you can test with media queries is `prefers-reduced-transparency` which lets developers adapt web content to user-selected preference for reduced transparency in the OS, such as the Reduce transparency setting on macOS. Valid options are `reduce` or `no-preference`.
+A new value you can test with media queries is `prefers-reduced-transparency` which lets developers adapt web content to user-selected preference for reduced transparency in the OS, such as the Reduce transparency setting on macOS. Valid options are `reduce` or `no-preference`.
 
 ```css
 .translucent {
@@ -193,7 +183,9 @@ And, you can check how it looks with DevTools:
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Xh60t9y0KnAIdwoUnbX5.mp4", autoplay="false", loop="true", muted="true", controls="true", class="screenshot", width="800", height="533" %}
 
-For more information checkout the [scripting](https://developer.mozilla.org/docs/Web/CSS/@media/scripting) and [prefers-reduced-transparency](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) documentation.
+For more information checkout the [prefers-reduced-transparency](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency) documentation.
+
+_Correction: A previous version of this article referred to a new [`scripting`](https://developer.mozilla.org/docs/Web/CSS/@media/scripting) media feature being in this release. It will actually be in version 120._
 
 ## Sources panel improvements in DevTools {: #sources-panel-devtools }
 

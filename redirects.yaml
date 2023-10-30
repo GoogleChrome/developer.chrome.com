@@ -477,6 +477,27 @@ redirects:
 - from: /docs/webstore/program_policies/
   to: /docs/webstore/program-policies/
 
+- from: /docs/webstore/affiliate-ads-faq
+  to: /docs/webstore/program-policies/affiliate-ads-faq
+
+- from: /docs/webstore/deceptive_installation_tactics
+  to: /docs/webstore/program-policies/deceptive-installation-tactics-faq
+
+- from: /docs/webstore/play_edu_tos
+  to: /docs/webstore/program-policies/play_edu_tos
+
+- from: /docs/webstore/terms
+  to: /docs/webstore/program-policies/terms
+
+- from: /docs/webstore/user_data
+  to: /docs/webstore/program-policies/user-data-faq
+
+- from: /docs/webstore/trader-disclosure
+  to: /docs/webstore/program-policies/trader-disclosure
+
+- from: /docs/webstore/spam-faq
+  to: /docs/webstore/program-policies/spam-faq
+
 - from: /webview/overview
   to: /docs/multidevice/android/overview/
 

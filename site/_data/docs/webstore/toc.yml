@@ -37,14 +37,15 @@
 - url: /docs/webstore/discovery/
 - title: i18n.docs.webstore.policies
   sections:
-    - url: /docs/webstore/terms/
     - url: /docs/webstore/program-policies/
-    - url: /docs/webstore/trader-disclosure/
-    - url: /docs/webstore/spam-faq/
-    - url: /docs/webstore/deceptive_installation_tactics/
-    - url: /docs/webstore/user_data/
-    - url: /docs/webstore/play_edu_tos/
+    - url: /docs/webstore/program-policies/terms/
+    - url: /docs/webstore/program-policies/affiliate-ads-faq/
+    - url: /docs/webstore/program-policies/deceptive-installation-tactics-faq/
+    - url: /docs/webstore/program-policies/spam-faq/
+    - url: /docs/webstore/program-policies/user-data-faq/
     - url: /docs/webstore/complaint-faq/
+    - url: /docs/webstore/program-policies/trader-disclosure/
+    - url: /docs/webstore/program-policies/play_edu_tos/
 - title: i18n.docs.webstore.api
   sections:
     - url: /docs/webstore/using_webstore_api

@@ -3,6 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: 'Manifest - content scripts'
 seoTitle: 'Chrome Extensions Manifest: "content_scripts"'
 date: 2023-08-10
+updated: 2023-10-26
 description: Reference documentation for the "content_scripts" property of manifest.json.
 ---
 
@@ -47,7 +48,7 @@ Each file must contain a relative path to a resource in the extension's root dir
 : _Optional_. An array of CSS file paths, injected in the order of this array, and before any DOM construction or page rendering occurs.
       
 `"js"` - Array,
-: _Optional_. An array of JavaScript file paths, injected in the order they appear in this array, after css files are injected.
+: _Optional_. An array of JavaScript file paths, injected in the order they appear in this array, after css files are injected. Each string in the array must be a relative path to a resource in the extension's root directory. Leading slashes ('/') are automatically trimmed.
 
 ## Matching URLs {: #match-urls }
 
@@ -239,7 +240,7 @@ By default, content scripts are injected when the document and all resources are
 : _Optional_. Specifies when the script should be injected into the page. It corresponds with the loading states of [Document.readyState][mdn-ready-state]:
     - `"document_start"`: the DOM is still loading.
     - `"document_end"`: the page's resources are still loading
-    - `"document_idle"`: the DOM and resources have finished loading.
+    - `"document_idle"`: the DOM and resources have finished loading. This is the default.
 
 [`"world"`][scripting-world] - `ISOLATED` | `MAIN`
 : _Optional_. The JavaScript world for a script to execute within. Defaults to `"ISOLATED"`, which is the execution environment unique to the content script. Choosing the `"MAIN"` world means the script will share the execution environment with the host page's JavaScript. See [Work in isolated worlds][cs-worlds] to learn more.
