@@ -71,19 +71,74 @@ Some notes about internationalizing:
 
 For more information, see [Formats: Locale-Specific Messages][6].
 
-Once an extension or app is internationalized, translating it is simple. You copy `messages.json`,
+Once an extension is internationalized, translating it is simple. You copy `messages.json`,
 translate it, and put the copy into a new directory under `_locales`. For example, to support
 Spanish, just put a translated copy of `messages.json` under `_locales/es`. The following figure
 shows the previous extension with a new Spanish translation.
 
 ![This looks the same as the previous figure, but with a new file at _locales/es/messages.json that contains a Spanish translation of the messages.](i18n-after-2.gif)
 
-{% Details %}
-{% DetailsSummary %}
-## Supported locales
-{% endDetailsSummary %}
+## Predefined messages {: #overview-predefined }
 
-You can localize your extension to any of the following locales. Note that Chrome Web Store does not support all of the locals supported by Chrome. If your locale is not listed here, choose the closest alternative. For example, if the default locale of your extension is "de_CH", choose "de" in the Chrome Web Store.
+The internationalization system provides a few predefined messages to help you localize. These
+include `@@ui_locale`, so you can detect the current UI locale, and a few `@@bidi_...` messages that
+let you detect the text direction. The latter messages have similar names to constants in the
+[gadgets BIDI (bi-directional) API][7].
+
+The special message `@@extension_id` can be used in the CSS and JavaScript files, whether or not the
+extension or app is localized. This message doesn't work in manifest files.
+
+The following table describes each predefined message.
+
+<table><tbody><tr><th>Message name</th><th>Description</th></tr><tr><td><code>@@extension_id</code></td><td>The extension or app ID; you might use this string to construct URLs for resources inside the extension. Even unlocalized extensions can use this message.<br><b>Note:</b> You can't use this message in a manifest file.</td></tr><tr><td><code>@@ui_locale</code></td><td>The current locale; you might use this string to construct locale-specific URLs.</td></tr><tr><td><code>@@bidi_dir</code></td><td>The text direction for the current locale, either "ltr" for left-to-right languages such as English or "rtl" for right-to-left languages such as Japanese.</td></tr><tr><td><code>@@bidi_reversed_dir</code></td><td>If the <code>@@bidi_dir</code> is "ltr", then this is "rtl"; otherwise, it's "ltr".</td></tr><tr><td><code>@@bidi_start_edge</code></td><td>If the <code>@@bidi_dir</code> is "ltr", then this is "left"; otherwise, it's "right".</td></tr><tr><td><code>@@bidi_end_edge</code></td><td>If the <code>@@bidi_dir</code> is "ltr", then this is "right"; otherwise, it's "left".</td></tr></tbody></table>
+
+Here's an example of using `@@extension_id` in a CSS file to construct a URL:
+
+```css
+body {
+  background-image:url('chrome-extension://__MSG_@@extension_id__/background.png');
+}
+```
+
+If the extension ID is abcdefghijklmnopqrstuvwxyzabcdef, then the bold line in the previous code
+snippet becomes:
+
+```css
+  background-image:url('chrome-extension://abcdefghijklmnopqrstuvwxyzabcdef/background.png');
+```
+
+Here's an example of using `@@bidi_*` messages in a CSS file:
+
+```css
+body {
+  direction: __MSG_@@bidi_dir__;
+}
+
+div#header {
+  margin-bottom: 1.05em;
+  overflow: hidden;
+  padding-bottom: 1.5em;
+  padding-__MSG_@@bidi_start_edge__: 0;
+  padding-__MSG_@@bidi_end_edge__: 1.5em;
+  position: relative;
+}
+```
+
+For left-to-right languages such as English, the bold lines become:
+
+```css
+  dir: ltr;
+  padding-left: 0;
+  padding-right: 1.5em;
+```
+
+## Locales
+
+You can choose from many locales, including some (such as `en`) that let a single translation support multiple variations of a language (such as `en_GB` and `en_US`).
+
+### Supported locales
+
+You can localize your extension to any locale that is supported by the Chrome Web Store. If your locale is not listed here, choose the closest alternative. For example, if the default locale of your extension is `"de_CH"`, choose `"de"` in the Chrome Web Store.
 
 | Locale code | Language (region)                     |
 | :---------- | :------------------------------------ |
@@ -142,71 +197,6 @@ You can localize your extension to any of the following locales. Note that Chrom
 | vi          | Vietnamese                            |
 | zh_CN       | Chinese (China)                       |
 | zh_TW       | Chinese (Taiwan)                      |
-
-{% endDetails %}
-
-## Predefined messages {: #overview-predefined }
-
-The internationalization system provides a few predefined messages to help you localize. These
-include `@@ui_locale`, so you can detect the current UI locale, and a few `@@bidi_...` messages that
-let you detect the text direction. The latter messages have similar names to constants in the
-[gadgets BIDI (bi-directional) API][7].
-
-The special message `@@extension_id` can be used in the CSS and JavaScript files, whether or not the
-extension or app is localized. This message doesn't work in manifest files.
-
-The following table describes each predefined message.
-
-<table><tbody><tr><th>Message name</th><th>Description</th></tr><tr><td><code>@@extension_id</code></td><td>The extension or app ID; you might use this string to construct URLs for resources inside the extension. Even unlocalized extensions can use this message.<br><b>Note:</b> You can't use this message in a manifest file.</td></tr><tr><td><code>@@ui_locale</code></td><td>The current locale; you might use this string to construct locale-specific URLs.</td></tr><tr><td><code>@@bidi_dir</code></td><td>The text direction for the current locale, either "ltr" for left-to-right languages such as English or "rtl" for right-to-left languages such as Japanese.</td></tr><tr><td><code>@@bidi_reversed_dir</code></td><td>If the <code>@@bidi_dir</code> is "ltr", then this is "rtl"; otherwise, it's "ltr".</td></tr><tr><td><code>@@bidi_start_edge</code></td><td>If the <code>@@bidi_dir</code> is "ltr", then this is "left"; otherwise, it's "right".</td></tr><tr><td><code>@@bidi_end_edge</code></td><td>If the <code>@@bidi_dir</code> is "ltr", then this is "right"; otherwise, it's "left".</td></tr></tbody></table>
-
-Here's an example of using `@@extension_id` in a CSS file to construct a URL:
-
-```css
-body {
-  background-image:url('chrome-extension://__MSG_@@extension_id__/background.png');
-}
-```
-
-If the extension ID is abcdefghijklmnopqrstuvwxyzabcdef, then the bold line in the previous code
-snippet becomes:
-
-```css
-  background-image:url('chrome-extension://abcdefghijklmnopqrstuvwxyzabcdef/background.png');
-```
-
-Here's an example of using `@@bidi_*` messages in a CSS file:
-
-```css
-body {
-  direction: __MSG_@@bidi_dir__;
-}
-
-div#header {
-  margin-bottom: 1.05em;
-  overflow: hidden;
-  padding-bottom: 1.5em;
-  padding-__MSG_@@bidi_start_edge__: 0;
-  padding-__MSG_@@bidi_end_edge__: 1.5em;
-  position: relative;
-}
-```
-
-For left-to-right languages such as English, the bold lines become:
-
-```css
-  dir: ltr;
-  padding-left: 0;
-  padding-right: 1.5em;
-```
-
-## Locales
-
-You can choose from many locales, including some (such as `en`) that let a single translation
-support multiple variations of a language (such as `en_GB` and `en_US`).
-
-### Supported locales
-
-You can use any of the [locales that the Chrome Web Store supports][8].
 
 ### Searching for messages
 
@@ -413,7 +403,6 @@ For more details on calling `detectLanguage(inputText)`, see the [API reference]
 [5]: #overview-predefined
 [6]: /docs/extensions/mv3/i18n-messages
 [7]: https://code.google.com/apis/gadgets/docs/i18n.html#BIDI
-[8]: /docs/webstore/i18n/#choosing-locales-to-support
 [9]: #windows
 [10]: #mac-os-x
 [11]: #linux

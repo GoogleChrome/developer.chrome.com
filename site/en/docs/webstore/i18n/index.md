@@ -40,7 +40,6 @@ localizing the name, description, and detailed description.
 
 {% endAside %}
 
-
 ## Choose locales to support {: #choosing-locales-to-support }
 
 You can localize your extension to any of the following locales. Note that Chrome Web Store does not support all of the locals supported by Chrome. If your locale is not listed here, choose the closest alternative. For example, if the default locale of your extension is "de_CH", choose "de" in the Chrome Web Store.
