@@ -338,7 +338,7 @@ Business related issues by contacting [CWS support][cws-support].
 [extension-faq]: /docs/extensions/mv3/faq
 [google-groups]: https://groups.google.com
 [great-listing]: /docs/webstore/best_listing/
-[internationalize]: /docs/webstore/i18n
+[internationalize]: /docs/webstore/cws-dashboard-listing/#localize-your-listing
 [malware-policy]: https://www.google.com/about/company/unwanted-software-policy.html
 [manifest-version]: /docs/extensions/mv3/manifestVersion
 [program-policies]: /docs/webstore/program-policies

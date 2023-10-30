@@ -69,9 +69,9 @@ Some notes about internationalizing:
   }
   ```
 
-  For more information, see [Formats: Locale-Specific Messages][6].
+For more information, see [Formats: Locale-Specific Messages][6].
 
-Once an extension or app is internationalized, translating it is simple. You copy `messages.json`,
+Once an extension is internationalized, translating it is simple. You copy `messages.json`,
 translate it, and put the copy into a new directory under `_locales`. For example, to support
 Spanish, just put a translated copy of `messages.json` under `_locales/es`. The following figure
 shows the previous extension with a new Spanish translation.
@@ -134,12 +134,69 @@ For left-to-right languages such as English, the bold lines become:
 
 ## Locales
 
-You can choose from many locales, including some (such as `en`) that let a single translation
-support multiple variations of a language (such as `en_GB` and `en_US`).
+You can choose from many locales, including some (such as `en`) that let a single translation support multiple variations of a language (such as `en_GB` and `en_US`).
 
 ### Supported locales
 
-You can use any of the [locales that the Chrome Web Store supports][8].
+You can localize your extension to any locale that is supported by the Chrome Web Store. If your locale is not listed here, choose the closest alternative. For example, if the default locale of your extension is `"de_CH"`, choose `"de"` in the Chrome Web Store.
+
+| Locale code | Language (region)                     |
+| :---------- | :------------------------------------ |
+| ar          | Arabic                                |
+| am          | Amharic                               |
+| bg          | Bulgarian                             |
+| bn          | Bengali                               |
+| ca          | Catalan                               |
+| cs          | Czech                                 |
+| da          | Danish                                |
+| de          | German                                |
+| el          | Greek                                 |
+| en          | English                               |
+| en_AU       | English (Australia)                   |
+| en_GB       | English (Great Britain)               |
+| en_US       | English (USA)                         |
+| es          | Spanish                               |
+| es_419      | Spanish (Latin America and Caribbean) |
+| et          | Estonian                              |
+| fa          | Persian                               |
+| fi          | Finnish                               |
+| fil         | Filipino                              |
+| fr          | French                                |
+| gu          | Gujarati                              |
+| he          | Hebrew                                |
+| hi          | Hindi                                 |
+| hr          | Croatian                              |
+| hu          | Hungarian                             |
+| id          | Indonesian                            |
+| it          | Italian                               |
+| ja          | Japanese                              |
+| kn          | Kannada                               |
+| ko          | Korean                                |
+| lt          | Lithuanian                            |
+| lv          | Latvian                               |
+| ml          | Malayalam                             |
+| mr          | Marathi                               |
+| ms          | Malay                                 |
+| nl          | Dutch                                 |
+| no          | Norwegian                             |
+| pl          | Polish                                |
+| pt_BR       | Portuguese (Brazil)                   |
+| pt_PT       | Portuguese (Portugal)                 |
+| ro          | Romanian                              |
+| ru          | Russian                               |
+| sk          | Slovak                                |
+| sl          | Slovenian                             |
+| sr          | Serbian                               |
+| sv          | Swedish                               |
+| sw          | Swahili                               |
+| ta          | Tamil                                 |
+| te          | Telugu                                |
+| th          | Thai                                  |
+| tr          | Turkish                               |
+| uk          | Ukrainian                             |
+| vi          | Vietnamese                            |
+| zh_CN       | Chinese (China)                       |
+| zh_TW       | Chinese (Taiwan)                      |
 
 ### Searching for messages
 
@@ -346,7 +403,6 @@ For more details on calling `detectLanguage(inputText)`, see the [API reference]
 [5]: #overview-predefined
 [6]: /docs/extensions/mv3/i18n-messages
 [7]: https://code.google.com/apis/gadgets/docs/i18n.html#BIDI
-[8]: /docs/webstore/i18n/#choosing-locales-to-support
 [9]: #windows
 [10]: #mac-os-x
 [11]: #linux
