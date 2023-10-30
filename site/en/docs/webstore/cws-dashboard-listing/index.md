@@ -6,7 +6,7 @@ updated: 2023-05-01
 description: How to add listing information for your Chrome Web Store item.
 ---
 
-This page describes how to fill out the **Store listing** tab in the developer dashboard. This is
+This page describes how to fill out the **Store listing** tab in the Developer Dashboard. This is
 where you can add information about your item that isn't included in the [metadata of the
 manifest][prepare-manifest], such as a long description, screenshots, a promotional video, and links to related
 sites. 
@@ -22,7 +22,7 @@ In this section you can include the following information about your item:
 
 - A **detailed description** of your item. This helps users understand why they should install your
   extension. Start your description with a concise statement of what your item does, so
-  users can understand the main idea and features at a glance. After that provide additional details, promotional copy, update logs, and so forth. Be detailed but ensure it complies with the [Keyword Spam][keyword-spam] policy.
+  users can understand the main idea and features at a glance. After that provide additional details, promotional copy, update logs, and so forth. Be detailed but ensure it complies with the [Keyword spam][keyword-spam] policy.
 - The **primary [category][categories]** under which your item should be listed on the web store.
 - Your item's **language** to allow users to search for extensions in their own language.
 
@@ -77,7 +77,7 @@ description for each locale.
 ### Localize screenshots and promotional video
 
 You can also tailor screenshots and promotional video for each locale. Once you've choose the
-locale. add a screenshot by dropping your screenshots in the **Localized screenshots** section. If
+locale, add a screenshot by dropping your screenshots in the **Localized screenshots** section. If
 you have a YouTube video in the target language, you can add the URL in the **Localized promo
 video** field.
 
