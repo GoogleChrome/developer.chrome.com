@@ -247,7 +247,7 @@ to the narrow subject matter of search.
 [3]: http://blog.chromium.org/2014/03/protecting-user-settings-on-windows.html
 [4]: https://security.googleblog.com/2017/03/expanding-protection-for-chrome-users.html
 [5]: http://blog.chromium.org/2013/12/keeping-chrome-extensions-simple.html
-[6]: /docs/webstore/program-policies?csw=1#extensions
+[6]: /docs/webstore/program-policies/quality-guidelines
 [9]: /docs/extensions/mv3/override
 [10]: /docs/webstore/money
 [11]: #three
