@@ -37,9 +37,9 @@ DevTools opens the **Elements** panel and selects the element in the DOM tree. I
 
 ### Open the last panel you used from Chrome's main menu {: #last }
 
-To open the last DevTools panel, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="22", height="22" %} button to the right of the address bar and select **More Tools** > **Developer Tools**.
+To open the last DevTools panel, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="22", height="22" %} button to the right of the address bar and select **More tools** > **Developer tools**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bkh79zEFaByczisr3lD5.png", alt="The Developer Tools option selected from the three-dot menu.", width="800", height="516" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bkh79zEFaByczisr3lD5.png", alt="The Developer tools option selected from the three-dot menu.", width="800", height="516" %}
 
 Alternatively, you can open the last panel with a shortcut. See the next section to learn more.
 
