@@ -157,17 +157,14 @@ which features are already implemented and what's still in progress.
 
 ### What browser configuration is available? {: #user-controls}
 
-Users can adjust their participation in Privacy Sandbox trials by enabling or disabling the
-top-level setting in `chrome://settings/privacySandbox`. During initial testing, people can use the
-Privacy Sandbox setting to opt out of FLEDGE. API callers can't access group membership when users
-browse in Incognito mode, and membership is removed when users clear their site data.
+Users can control access to Privacy Sandbox APIs from `chrome://settings/privacySandbox`. 
 
 `chrome://settings/adPrivacy/sites` lists sites where the user has been added to an interest group.
 Chrome DevTools [shows interest groups](/blog/fledge-api/#observe-fledge-events)
 that have been joined, left, or that participated in an auction.
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/jkNZ1ZT44itRV653UiPX.png",
-  alt="Chrome settings for FLEDGE", width="800", height="648" %}
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/1cZU24BcqUZ4LbbUtYcY.png", 
+  alt="Chrome settings for Protected Audience", width="800", height="499" %}
 
 As with other Privacy Sandbox technologies, user settings will evolve
 [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#testing) from users,
