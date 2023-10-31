@@ -135,6 +135,8 @@ Hover over the name of such property in the **Styles** pane, to see a tooltip wi
 
 {% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/vDfXTULIyNIJXVw6lKvf.mp4", width="800", height="511", autoplay="false", loop="true", muted="true", controls="true", class="screenshot" %}
 
+To edit an `@property` rule, [double-click](/docs/devtools/css/reference/#change-declaration) its name or value.
+
 ### View `@supports` at-rules {: #supports }
 
 The **Styles** pane shows you the `@supports` CSS at-rules if they are applied to an element. For example, inspect the following element:
