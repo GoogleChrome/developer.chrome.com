@@ -8,6 +8,7 @@
     - url: /docs/webstore/get_started_simple/
     - url: /docs/webstore/best_practices/
     - url: /docs/webstore/identify_user/
+    - url: /docs/webstore/monetize-firebase/
 - title: i18n.docs.webstore.publish
   sections:
     - url: /docs/webstore/register/
