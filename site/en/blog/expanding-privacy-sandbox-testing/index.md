@@ -6,6 +6,7 @@ description: >
   you can test and give feedback to shape the future of the APIs.
 layout: 'layouts/blog-post.njk'
 date: 2022-07-27
+updated: 2023-01-05
 authors:
   - rowan_m
   - barbsmith
@@ -15,6 +16,11 @@ alt: >
 tags:
   - privacy
 ---
+
+{% Aside %}
+**See updated guidance for the [Relevance and measurement unified origin
+trial](/docs/privacy-sandbox/unified-origin-trial/).**
+{% endAside %}
 
 Today we shared an [updated plan and timeline for Privacy Sandbox for the
 web](https://blog.google/products/chrome/update-testing-privacy-sandbox-web/)
@@ -64,7 +70,7 @@ The [Privacy Sandbox Relevance and Measurement origin
 trial](/blog/privacy-sandbox-unified-origin-trial/) enables the ecosystem to run
 unified tests for technical stability and developer experience across
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/),
-[FLEDGE](/docs/privacy-sandbox/fledge/),
+[Protected Audience](/docs/privacy-sandbox/protected-audience/),
 [Topics](/docs/privacy-sandbox/topics/), [fenced
 frames](/docs/privacy-sandbox/fenced-frame/), and we will be adding [Shared
 Storage](/docs/privacy-sandbox/shared-storage/) soon. The trial is currently
@@ -100,7 +106,7 @@ with implementation and testing guides.
     trial](/blog/privacy-sandbox-unified-origin-trial/)
 *   [Developer guide: Attribution
     Reporting](/docs/privacy-sandbox/attribution-reporting-experiment/)
-*   [Developer guide: FLEDGE](/docs/privacy-sandbox/fledge-experiment/)
+*   [Developer guide: Protected Audience](/docs/privacy-sandbox/protected-audience-experiment/)
 *   [Developer guide: Topics API](/docs/privacy-sandbox/topics-experiment/)
 
 {% endAside %}
@@ -210,7 +216,7 @@ The **changes to the string are intended to be backwards-compatible**, so if you
 do not need those specific values then you will not be affected. However, if you
 do parse the user-agent string to extract the browser minor/build version,
 OS/platform version, or device model then you will need to [migrate to
-User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/).
+User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch).
 
 ## Storage partitioning
 

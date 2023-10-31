@@ -16,7 +16,7 @@ using only the keyboard.
 
 ## How to manually test
 
-To test users can't accidentally trap their focus,
+To test that your users can't accidentally trap their focus,
 navigate to and from all page elements using only the keyboard.
 Use `TAB` to navigate "forward" and `SHIFT + TAB` to navigate "backward."
 
@@ -27,15 +27,15 @@ where keyboard focus may get stuck.
 
 ## How to fix
 
-Pages that present content in multiple formats, such as modal dialogs,
+Pages that present content in multiple formats, such as modal dialogs and
 widgets, are at risk for focus traps.
-In the case of a displaying a modal,
+In the case of displaying a modal,
 when you don't want the user interacting with the rest of the page,
 it makes sense to temporarily trap the user.
 
 But you should aim to provide a keyboard-accessible method of escaping the modal as well.
 Check out [this example on how to create an accessible modal](https://github.com/gdkraus/accessible-modal-dialog).
-See also [Modals and Keyboard Traps](https://web.dev/using-tabindex/#modals-and-keyboard-traps).
+See also [Modals and Keyboard Traps](https://web.dev/articles/using-tabindex#modals_and_keyboard_traps).
 In this example,
 you get the desired behaviors of a modal,
 without forcing the user to refresh the page to get out of the focus trap.
@@ -48,7 +48,7 @@ Good keyboarding experiences depend on a logical tab order and easily discernibl
 If a keyboard user gets trapped in a particular page element,
 they have no way of interacting with the page.
 
-Learn more in [How to do an Accessibility Review](https://web.dev/how-to-review/#try-it-with-a-screen-reader).
+Learn more in [How to do an Accessibility Review](https://web.dev/articles/how-to-review#try_it_with_a_screen_reader).
 
 ## Resources
 

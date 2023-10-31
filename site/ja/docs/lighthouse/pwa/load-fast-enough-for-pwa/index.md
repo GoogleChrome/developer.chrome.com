@@ -19,15 +19,15 @@ updated: 2020-06-10
 下記の2つの主要な指標は、読み込み時間に対するユーザーの知覚に影響します。
 
 - [First Meaningful Paint（FMP）](/docs/lighthouse/performance/first-meaningful-paint)は、ページのメインとなるコンテンツが表示されるまでの時間を測定します
-- [Time to Interactive（TTI）](https://web.dev/tti/)は、ページが操作可能になるまでの時間を測定します
+- [Time to Interactive（TTI）](https://web.dev/articles/tti)は、ページが操作可能になるまでの時間を測定します
 
 たとえば、ページが1秒後に完全に表示されたが、ユーザーが10秒以内でそのページを操作できない場合、ユーザーはページの読み込み時間を10秒と認識するかもしれません。
 
 Lighthouseは、低速の4Gネットワーク接続でTTIがどうなると計算します。操作可能までの時間が10秒を超える場合、監査は失敗します。
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## リソース
 

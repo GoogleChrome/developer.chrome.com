@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Get started with viewing and changing the DOM"
 date: 2019-03-01
-updated: 2022-06-09
+updated: 2023-04-03
 description: "How to view nodes, search for nodes, edit nodes, reference nodes in the Console, break on node changes, and more."
 authors:
   - kaycebasques
@@ -70,7 +70,7 @@ keyboard.
 1. Press the <kbd>Left</kbd> arrow key. The `<ul>` list collapses.
 1. Press the <kbd>Left</kbd> arrow key again. The parent of the `<ul>` node
    is selected. In this case it's the `<li>` node containing the instructions for step 1.
-1. Press the <kbd>Down</kbd> arrow key 2 times so that you've re-selected the `<ul>`
+1. Press the <kbd>Down</kbd> arrow key 3 times so that you've re-selected the `<ul>`
    list that you just collapsed. It should look like this: `<ul>...</ul>`
 1. Press the <kbd>Right</kbd> arrow key. The list expands.
 
@@ -117,6 +117,12 @@ You can search the DOM Tree by string, CSS selector, or XPath selector.
 
 As mentioned above, the Search bar also supports CSS and XPath selectors.
 
+The **Elements** panel selects the first matching result in the DOM tree and rolls it into view in the viewport. By default, this happens as you type. If you always work with long search queries, you can make DevTools run search only when you press <kbd>Enter</kbd>.
+
+To avoid unnecessary jumps between nodes, clear the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Preferences** > **Global** > **Search as you type** checkbox.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BKcshLBj0EI1OahoEXbS.png", alt="Cleared Search as you type checkbox in Settings.", width="800", height="425" %}
+
 ## Edit the DOM {: #edit }
 
 You can edit the DOM on the fly and see how those changes affect the page.
@@ -158,6 +164,10 @@ below to learn how to add attributes to a node.
    of the node changes to gold.
 
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7SKDEvndWzq2KPSketg1.png", alt="Adding a style attribute to the node", width="800", height="545" %}
+
+You can also use the **Edit attribute** right-click option.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/3OB9C2lU8bm77eTsDXxB.png", alt="Right-click options with edit attribute highlighted.", width="260", height="464" %}
 
 ### Edit node type {: #type }
 
@@ -207,6 +217,39 @@ To edit nodes as HTML with syntax highlighting and autocomplete, select **Edit a
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/unvKWSLDvzoh7kHZoWbK.png", alt="Applying changes.", width="800", height="678" %}
 
+### Duplicate a node {: #duplicate }
+
+You can duplicate an element using the **Duplicate element** right-click option.
+
+1. Right-click **Nana** below and select **Inspect**.
+
+    * Bonfire of the Vanities
+    * Nana
+    * Orlando
+    * White Noise
+
+1. In the **Elements** panel, right-click `<li>Nana</li>` and select **Duplicate element** from the drop-down menu.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/u3iK5J8RvHmLY4G6OfJe.png", alt="The Duplicate element option highlighted in the drop-down.", width="800", height="663" %}
+
+1. Return to the page. The list item has been instantly duplicated.
+
+You can also use the keyboard shortcuts: <kbd>Shift + Alt + Down</kbd> arrow (Windows and Linux) and <kbd>Shift + Option + Down</kbd> arrow (MacOS).
+
+### Capture a node screenshot {: #screenshot }
+
+You can screenshot any individual node in the DOM Tree using **Capture node screenshot**.
+
+1. Right-click any image on this page and select **Inspect**.
+
+1. In the **Elements** panel, right-click the image URL and select **Capture node screenshot** from the drop-down menu.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HcMn8iVlx1e53ceGST23.png", alt="A node screenshot being captured.", width="800", height="663" %}
+
+1. The screenshot will be saved to your downloads.
+
+   {% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/uIMeY1flDrlSBhvYqU5b.png", alt="Node screenshot saved to downloads.", width="800", height="296", class="screenshot" %}
+
 ### Reorder DOM nodes {: #reorder }
 
 Drag nodes to reorder them.
@@ -238,7 +281,7 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
 
 1. Hover over **The Lord of the Flies** below. The background color becomes orange.
 
-     <ul> 
+     <ul>
        <li class="demo--hover">The Lord of the Flies</li>
        <li>Crime and Punishment</li>
        <li>Moby Dick</li>
@@ -261,7 +304,7 @@ Press <kbd>H</kbd> to hide a node.
      * The Count of Monte Cristo
      * The Stars My Destination
 
-1. Press the <kbd>H</kbd> key. The node is hidden.
+1. Press the <kbd>H</kbd> key. The node is hidden. You can also right-click the node and use the **Hide element** option.
 
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ynrZooiPHy2DUBbdGL3k.png", alt="What the node looks like in the DOM Tree after it's hidden", width="800", height="545" %}
 
@@ -277,7 +320,7 @@ Press <kbd>Delete</kbd> to delete a node.
      * Through the Looking-Glass
      * Foundation
 
-1. Press the <kbd>Delete</kbd> key. The node is deleted.
+1. Press the <kbd>Delete</kbd> key. The node is deleted. You can also right-click the node and use the **Delete element** option.
 1. Press <kbd>Control</kbd>+<kbd>Z</kbd> or <kbd>Command</kbd>+<kbd>Z</kbd> (Mac).
    The last action is undone and the node reappears.
 
@@ -289,7 +332,7 @@ JavaScript references to them.
 ### Reference the currently-selected node with $0 {: #current }
 
 When you inspect a node, the `== $0` text next to the node means that you can reference this
-node in the Console with the variable `$0`. 
+node in the Console with the variable `$0`.
 
 1. Right-click **The Left Hand of Darkness** below and select **Inspect**.
 

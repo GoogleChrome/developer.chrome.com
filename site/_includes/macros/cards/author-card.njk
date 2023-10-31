@@ -28,7 +28,7 @@
   </h2>
 
   <p class="type--caption gap-top-200">
-    {{ authorDescription }}
+    {{ authorDescription | md | safe }}
   </p>
 </div>
 {% endmacro %}

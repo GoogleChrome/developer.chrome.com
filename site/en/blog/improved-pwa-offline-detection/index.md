@@ -24,7 +24,7 @@ decided to put those plans on hold**. We strongly believe providing a valid
 page when the user is offline is critical to providing a good user experience.
 {% endAside %}
 
-[Progressive Web Apps (PWAs)](https://web.dev/pwa/) are a pattern for
+[Progressive Web Apps (PWAs)](https://web.dev/articles/pwa) are a pattern for
 building modern, installable applications using web technology for mobile and
 desktop devices.
 
@@ -101,6 +101,6 @@ Our team regularly monitors those tags and does our best to help.
 [cwv]: https://web.dev/vitals/
 [offline-fallback]: https://web.dev/offline-fallback-page/
 [so]: https://stackoverflow.com/
-[workbox]: https://developers.google.com/web/tools/workbox
+[workbox]: /docs/workbox
 [so-pwa]: https://stackoverflow.com/questions/tagged/progressive-web-apps
 [so-sw]: https://stackoverflow.com/questions/tagged/service-worker

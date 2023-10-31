@@ -6,6 +6,7 @@ description: >
 authors:
     - alinavarkki
 date: 2022-07-21
+last_updated: 2023-01-25
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/56D6d9pfdEWRPQdima0W.jpg'
 alt: ''
 tags:
@@ -31,7 +32,7 @@ The [top layer](https://fullscreen.spec.whatwg.org/#new-stacking-layer) can be d
 Multiple elements can be inside the top layer at the same time. When that happens, they stack on top of each other, the last one on top. In other words, all of the top layer elements are placed in a *last in, first out* (LIFO) stack in the top layer.
 
 The `<dialog>` element is not the only element that the browser renders into a top layer. Currently, the top layer elements are:
-[pop-ups](https://open-ui.org/components/popup.research.explainer), [modal dialogs](https://developer.mozilla.org/docs/Web/HTML/Element/dialog), and elements in a [fullscreen mode](https://developer.mozilla.org/docs/Web/API/Fullscreen_API).
+[popovers](https://open-ui.org/components/popover.research.explainer), [modal dialogs](https://developer.mozilla.org/docs/Web/HTML/Element/dialog), and elements in a [fullscreen mode](https://developer.mozilla.org/docs/Web/API/Fullscreen_API).
 
 Examine the following dialog implementation:
 
@@ -50,7 +51,7 @@ Here is a demo with a couple of dialogs that have styles applied to their backdr
 
 Luckily, there is a way to customize the content beneath the top layer element.
 
-Every element in the top layer has a [CSS pseudo-element](https://web.dev/learn/css/pseudo-elements/) called a [backdrop](https://developer.mozilla.org/docs/Web/CSS/::backdrop).
+Every element in the top layer has a [CSS pseudo-element](https://web.dev/learn/css/pseudo-elements) called a [backdrop](https://developer.mozilla.org/docs/Web/CSS/::backdrop).
 
 The Backdrop is a box the size of the viewport which is rendered immediately beneath any top layer element. The `::backdrop` pseudo-element makes it possible to obscure, style, or completely hide everything located below the element when it's the topmost one in the top layer.
 
@@ -63,7 +64,7 @@ Here is how you style a backdrop:
 dialog::backdrop {
     background: rgba(255,0,0,.25);
 }
-``` 
+```
 
 ### How to show only the first backdrop?
 
@@ -85,7 +86,7 @@ DevTools support for the top layer helps developers understand the concept of th
 - The element at the top of the stack at any point.
 
 Moreover, DevTools top layer support helps to visualize the position of the backdrop pseudo-element in the top layer stack. Even though it is not a tree element, it plays an important role in how the top layer works and can be useful to developers.
- 
+
 With the top layer support features, you can:
 
 1. Observe which elements are in the top layer stack at any time. The top layer representation stack changes dynamically as elements are added or removed from the top layer.
@@ -113,7 +114,7 @@ To jump from the top layer tree element to the link in the top layer container, 
 You can turn off any badge, including the **top-layer** one. To disable the badges, right-click on any badge, choose **Badge settings** and clear the ticks next to badges you want to hide.
 
 {% Img src="image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/FJydb49bYgzMh22sAHHC.gif", alt="Turning the badge off.", width="800", height="438" %}
- 
+
 {% Aside %}
 **Note**: The top layer container appears only when the top layer stack contains rendered content.
 {% endAside %}
@@ -138,7 +139,7 @@ In the elements tree, a backdrop element resides before the closing tag of the e
 
 ### Changes to the DOM tree
 
-`ElementsTreeElement`, the class responsible for creating and managing individual DOM tree elements in DevTools, was not sufficient to implement a top layer container. 
+`ElementsTreeElement`, the class responsible for creating and managing individual DOM tree elements in DevTools, was not sufficient to implement a top layer container.
 
 To display the **top layer container** as a node in the tree, we added a new class that creates DevTools tree element nodes. Previously, the class responsible for creating DevTools elements tree initialized every `TreeElement` with a `DOMNode`, which is a class with a `backendNodeId` and other backend-related properties. `backendNodeId`, in turn, is assigned on the backend.
 
@@ -177,7 +178,7 @@ To display the current top layer elements, we need a new experimental CDP comman
 
 ```diff
   # Returns NodeIds of the current top layer elements.
-  # Top layer renders closest to the user within a viewport, therefore, its elements always 
+  # Top layer renders closest to the user within a viewport, therefore, its elements always
   # appear on top of all other content.
   experimental command getTopLayerElements
     returns
@@ -187,7 +188,7 @@ To display the current top layer elements, we need a new experimental CDP comman
 
 #### CDP: `DOM.topLayerElementsUpdated` event
 
-To get the up-to-date list of the top layer elements, we need every change of the top layer elements to trigger an experimental CDP event. This event informs the frontend of the change that then calls the `DOM.getTopLayerElements` command and receives the new elements list. 
+To get the up-to-date list of the top layer elements, we need every change of the top layer elements to trigger an experimental CDP event. This event informs the frontend of the change that then calls the `DOM.getTopLayerElements` command and receives the new elements list.
 
 The event looks like the following:
 
@@ -198,11 +199,11 @@ The event looks like the following:
 
 #### CDP considerations
 
-There were multiple options on how the CDP support of the top layer could be implemented. Another option we considered was making an event that would return the list of the top layer elements instead of just informing the front end about an addition or removal of a top layer element. 
+There were multiple options on how the CDP support of the top layer could be implemented. Another option we considered was making an event that would return the list of the top layer elements instead of just informing the front end about an addition or removal of a top layer element.
 
 Alternatively, we could make two events instead of the command: `topLayerElementAdded` and `topLayerElementRemoved`. In this case, we would be receiving an element and would need to manage the array of the top layer elements on the front end.
 
 Currently, a frontend event calls the `getTopLayerElements` command to get a list of updated elements. If we were to send a list of elements or a specific element that caused the change every time an event is triggered, we could avoid one step of calling the command.
-However, in this case, the frontend would lose the control over which elements are pushed. 
+However, in this case, the frontend would lose the control over which elements are pushed.
 
 We implemented it in this way because, in our opinion, it's better if the frontend decides when to request top layer nodes. For example, if the top layer is collapsed in the UI or the user is using a DevTools panel that doesn't have the elements tree, there's no need to get the extra nodes that could be deeper into the tree.

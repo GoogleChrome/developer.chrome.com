@@ -6,7 +6,7 @@ date: 2019-05-02
 updated: 2020-04-29
 ---
 
-글꼴은 로드하는 데 시간이 많이 걸리는 대용량 파일인 경우가 많습니다. 일부 브라우저는 글꼴이 로드될 때까지 텍스트를 숨기면서 [보이지 않는 텍스트의 플래시(FOIT)](https://web.dev/avoid-invisible-text/)를 일으킵니다.
+글꼴은 로드하는 데 시간이 많이 걸리는 대용량 파일인 경우가 많습니다. 일부 브라우저는 글꼴이 로드될 때까지 텍스트를 숨기면서 [보이지 않는 텍스트의 플래시(FOIT)](https://web.dev/articles/avoid-invisible-text)를 일으킵니다.
 
 ## Lighthouse 글꼴 표시 감사가 실패하는 방식
 
@@ -14,7 +14,7 @@ updated: 2020-04-29
 
 <figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/251Gbh9tn89GDJY289zZ.png", alt="웹폰트 로드 중에 텍스트가 계속 표시되도록 하기 Lighthouse 감사의 스크린샷", width="800", height="430" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## 보이지 않는 텍스트가 표시되지 않도록 하는 방법
 
@@ -30,14 +30,14 @@ updated: 2020-04-29
 }
 ```
 
-[글꼴 표시 API](https://developer.mozilla.org/docs/Web/CSS/@font-face/font-display)는 글꼴이 표시되는 방식을 지정합니다. `swap`은 글꼴을 사용하는 텍스트가 시스템 글꼴을 사용하여 즉시 표시되어야 함을 브라우저에 알립니다. 사용자 정의 글꼴이 준비되면 시스템 글꼴을 대체합니다. (자세한 내용은 [로드 중 보이지 않는 텍스트의 표시 방지](https://web.dev/avoid-invisible-text/) 게시물을 참조하세요.)
+[글꼴 표시 API](https://developer.mozilla.org/docs/Web/CSS/@font-face/font-display)는 글꼴이 표시되는 방식을 지정합니다. `swap`은 글꼴을 사용하는 텍스트가 시스템 글꼴을 사용하여 즉시 표시되어야 함을 브라우저에 알립니다. 사용자 정의 글꼴이 준비되면 시스템 글꼴을 대체합니다. (자세한 내용은 [로드 중 보이지 않는 텍스트의 표시 방지](https://web.dev/articles/avoid-invisible-text) 게시물을 참조하세요.)
 
 ### 웹 글꼴 미리 로드
 
 글꼴 파일을 더 일찍 가져오려면 `<link rel="preload" as="font">`를 사용하세요. 자세한 정보:
 
-- [로딩 속도 향상을 위해 웹 글꼴 미리 로드(codelab)](https://web.dev/codelab-preload-web-fonts/)
-- [선택적 글꼴을 미리 로드하여 레이아웃 이동 및 보이지 않는 텍스트의 플래시(FOIT) 방지](https://web.dev/preload-optional-fonts/)
+- [로딩 속도 향상을 위해 웹 글꼴 미리 로드(codelab)](https://web.dev/articles/codelab-preload-web-fonts)
+- [선택적 글꼴을 미리 로드하여 레이아웃 이동 및 보이지 않는 텍스트의 플래시(FOIT) 방지](https://web.dev/articles/preload-optional-fonts)
 
 ### Google 글꼴
 
@@ -66,7 +66,7 @@ Google 글꼴 URL 끝에 `&display=swap` [매개변수](https://developer.mozill
 ## 리소스
 
 - [**웹폰트 로드 중에 텍스트가 계속 표시되도록 하기** 감사에 대한 소스 코드](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/font-display.js)
-- [로딩 중 보이지 않는 텍스트 피하기](https://web.dev/avoid-invisible-text/)
+- [로딩 중 보이지 않는 텍스트 피하기](https://web.dev/articles/avoid-invisible-text)
 - [글꼴 표시로 글꼴 성능 제어](https://developers.google.com/web/updates/2016/02/font-display)
-- [로딩 속도 향상을 위해 웹 글꼴 미리 로드(codelab)](https://web.dev/codelab-preload-web-fonts/)
-- [선택적 글꼴을 미리 로드하여 레이아웃 이동 및 보이지 않는 텍스트의 플래시(FOIT) 방지](https://web.dev/preload-optional-fonts/)
+- [로딩 속도 향상을 위해 웹 글꼴 미리 로드(codelab)](https://web.dev/articles/codelab-preload-web-fonts)
+- [선택적 글꼴을 미리 로드하여 레이아웃 이동 및 보이지 않는 텍스트의 플래시(FOIT) 방지](https://web.dev/articles/preload-optional-fonts)

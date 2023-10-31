@@ -14,7 +14,7 @@ Message passing
 [onConnect][method-onconnect], 
 [onConnectExternal][method-onconnectexternal],
 [sendMessage()][method-sendmessage], 
-[onMessage][method-onconnect] and
+[onMessage][method-onmessage] and
 [onMessageExternal][method-onmessageexternal]. 
 In addition, your extension can pass messages to native applications on the user's device using 
 [connectNative()][method-connectnative] and
@@ -79,6 +79,14 @@ The following example shows how to declare the `nativeMessaging` permission in t
   ...
 }
 ```
+
+## Concepts and usage {: #concepts }
+
+### Unpacked extension behavior {: #unpacked }
+
+When an [unpacked][unpacked] extension is [reloaded][reload], this is treated as an update. This means that the
+[`chrome.runtime.onInstalled`][method-oninstalled] event will fire with the `"update"` reason. This
+includes when the extension is reloaded with [`chrome.runtime.reload()`][method-reload].
 
 ## Use cases {: #examples}
 
@@ -184,7 +192,7 @@ See the [Manifest V3 - Web Accessible Resources demo][github-war-sample] for mor
 [doc-native-messaging]: /docs/apps/nativeMessaging/
 [doc-native-messaging]: /docs/extensions/mv3/messaging/#native-messaging
 [doc-war]: /docs/extensions/mv3/manifest/web_accessible_resources/
-[github-war-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources
+[github-war-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/web-accessible-resources
 [method-connect]: #method-connect
 [method-connectnative]: #method-connectNative
 [method-getmanifest]: #method-getManifest
@@ -192,6 +200,7 @@ See the [Manifest V3 - Web Accessible Resources demo][github-war-sample] for mor
 [method-geturl]: #method-getURL
 [method-onconnect]: #event-onConnect
 [method-onconnectexternal]: #event-onConnectExternal
+[method-onmessage]: #event-onMessage
 [method-onmessageexternal]: #event-onMessageExternal
 [method-oninstalled]: #event-onInstalled
 [method-onstartup]: #event-onStartup
@@ -203,3 +212,5 @@ See the [Manifest V3 - Web Accessible Resources demo][github-war-sample] for mor
 [method-sendmessage]: #method-sendMessage
 [method-sendnativemessage]: #method-sendNativeMessage
 [method-setuninstallurl]: #method-setUninstallURL
+[unpacked]: /docs/extensions/mv3/getstarted/development-basics/#load-unpacked
+[reload]: /docs/extensions/mv3/getstarted/development-basics/#reload

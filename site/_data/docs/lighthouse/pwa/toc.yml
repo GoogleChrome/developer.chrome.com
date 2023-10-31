@@ -16,7 +16,6 @@
     - url: /docs/lighthouse/pwa/content-width/
     - url: /docs/lighthouse/pwa/viewport/
     - url: /docs/lighthouse/pwa/without-javascript/
-    - url: /docs/lighthouse/pwa/apple-touch-icon/
     - url: /docs/lighthouse/pwa/maskable-icon-audit/
 - title: i18n.docs.pwa.topics.additional_items_to_manually_check
   sections:

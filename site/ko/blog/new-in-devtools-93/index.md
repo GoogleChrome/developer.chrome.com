@@ -17,12 +17,12 @@ tags:
 
 *이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였습니다. [이지웅](https://bit.ly/JiwoongLeePortfolio) 님이 리뷰어로 참여했습니다!*
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Styles 영역에서 CSS 컨테이너 쿼리를 수정할 수 있습니다 {: #container-queries }
-이제 **Styles** 영역에서 [CSS 컨테이너 쿼리](https://web.dev/new-responsive/#responsive-to-the-container) 를 보고 수정할 수 있습니다.
+이제 **Styles** 영역에서 [CSS 컨테이너 쿼리](https://web.dev/articles/new-responsive#responsive_to_the_container) 를 보고 수정할 수 있습니다.
 
 컨테이너 쿼리는 반응형 디자인을 구현하기 위해 더 다양한 접근 방식을 제공합니다.
 `@container` 규칙은 `@media` 를 사용한 미디어 쿼리와 비슷한 방식으로 동작합니다.
@@ -45,7 +45,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 
 ## Network 패널에서 Web bundle 미리보기 {: #web-bundle }
-[Web bundle](https://web.dev/web-bundles/) 여러개의 HTTP 리소스를 하나의 파일로 묶은 파일 포맷입니다. 이제 **Network** 패널에서 web bundle 의 내용을 미리볼 수 있습니다.
+[Web bundle](https://web.dev/articles/web-bundles) 여러개의 HTTP 리소스를 하나의 파일로 묶은 파일 포맷입니다. 이제 **Network** 패널에서 web bundle 의 내용을 미리볼 수 있습니다.
 
 web bundle은 현재 실험 기능입니다. `chrome://flags` 에서 `#enable-experimental-web-platform-features` 플래그를 활성화한 상태로 테스트하세요.
 
@@ -149,5 +149,5 @@ Chromium issue: [1219153](https://crbug.com/1219153)
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

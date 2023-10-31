@@ -16,7 +16,7 @@ tags:
 
 *Tradução realizada por [Lucas Santos](https://lsantos.dev). Revisão por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='5gBqTXctxO8' %}
 
@@ -99,8 +99,8 @@ Anteriormente, o stack trace incluía também os scripts de terceiros como `zone
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="Ignorar os scripts de terceiros conhecidos automaticamente", width="800", height="425" %}
 
-<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
-Por baixo do capô, o DevTools ignora esses scripts baseados na nova propriedade `x_google_ignoreList` nos sourcemaps. Os frameworks e bundlers precisam prover essa informação. Veja o [Estudo de caso: Melhor debug com Angular e DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
+<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in source maps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
+Por baixo do capô, o DevTools ignora esses scripts baseados na nova propriedade `x_google_ignoreList` nos source maps. Os frameworks e bundlers precisam prover essa informação. Veja o [Estudo de caso: Melhor debug com Angular e DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 
 <!-- Optionally, if you prefer to always view full stack traces, you can disable the setting via **Settings** > **Ignore list** > **Automatically add known third-party scripts to ignore list**. -->
 Opcionalmente, se você preferir sempre ver os stack traces completos, você pode desabilitar essa cofiguração através do caminho **Configurações** > **Lista de ignorados** > **Adicionar scripts de terceiros conhecidos na lista automaticamente**
@@ -119,7 +119,7 @@ Issue do Chromium: [1323199](https://crbug.com/1323199)
 Com a configuração **Adicionar scripts de terceiros conhecidos na lista automaticamente**, a call stack agora só vai mostrar frames que forem relevantes para o seu código.
 
 <!-- Open this [demo](https://ng-devtools.netlify.app/) and set a breakpoint at the `increment()` function in `app.component.ts`. Click the increment button on the page to trigger the breakpoint. The call stack shows only frames from your code (e.g.  `app.component.ts` and `button.component.ts`).  -->
-Abra essa [demo](https://ng-devtools.netlify.app/) e crie um breakpoint na função `increment()` dentro de `app.component.ts`. Clique no botão de incremento para ativar esse breakpoint. A call stack agora só mostra os frames do seu código (`app.component.ts` e `button.component.ts`). 
+Abra essa [demo](https://ng-devtools.netlify.app/) e crie um breakpoint na função `increment()` dentro de `app.component.ts`. Clique no botão de incremento para ativar esse breakpoint. A call stack agora só mostra os frames do seu código (`app.component.ts` e `button.component.ts`).
 
 <!-- To view all frames, enable **Show ignore-listed frames**. Previously, DevTools displayed all frames by default.  -->
 Para ver todos os frames, ative a configuração **Mostrar frames na lista de ignorados**. Anteriormente, o DevTools mostrava todos os frames por padrão.
@@ -180,7 +180,7 @@ Issue do Chromium: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Detalhamento de tempos de LCP no painel de Performance Insights {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/articles/optimize-lcp#lcp_breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Detalhamento de tempos de LCP no painel de Performance Insights", width="800", height="523" %}
 
@@ -209,8 +209,8 @@ Issue do Chromium: [1351383](https://crbug.com/1351383)
 - Anteriormente, [Extensões do Gravador](/docs/devtools/recorder/reference/#extension-troubleshooting) não eram mostradas no painel do mesmo de tempos em tempos ([1351416](https://crbug.com/1351416))
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
 - O painel **Estilos** agora mostra um seletor de cores para a propriedade `stop-color` da tag [`<stop>` do SVG](https://developer.mozilla.org/docs/Web/SVG/Element/stop). ([1351096](https://crbug.com/1351096))
-<!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
-- Identifique scripts causando [layout thrashing](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) como uma potencial causa para mudanças de layout no painel de **Performance Insights**. ([1343019](https://crbug.com/1343019))
+<!-- - Identify script causing [layout](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
+- Identifique scripts causando [layout thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) como uma potencial causa para mudanças de layout no painel de **Performance Insights**. ([1343019](https://crbug.com/1343019))
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 - O caminho crítico para fontes LCP agora é mostrado no painel **Performance Insights**. ([1350390](https://crbug.com/1350390))
 
@@ -220,5 +220,5 @@ Issue do Chromium: [1351383](https://crbug.com/1351383)
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fe7254c9a51f964b2a106becc1b22f38033b9f50 #}
 
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

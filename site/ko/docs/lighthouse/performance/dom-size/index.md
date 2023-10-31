@@ -35,7 +35,7 @@ Lighthouse는 다음과 같은 DOM 트리가 있는 페이지에 플래그를 �
 - body 요소에 ~800개 이상의 노드가 있는 경우 경고합니다.
 - body 요소에 ~1,400개 이상의 노드가 있는 경우 오류가 발생합니다.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## DOM 크기를 최적화하는 방법
 
@@ -51,11 +51,11 @@ Lighthouse는 다음과 같은 DOM 트리가 있는 페이지에 플래그를 �
 
 ### Angular
 
-큰 목록을 렌더링하는 경우 CDK(구성 요소 개발 키트)와 함께 [가상 스크롤](https://web.dev/virtualize-lists-with-angular-cdk/)을 사용합니다.
+큰 목록을 렌더링하는 경우 CDK(구성 요소 개발 키트)와 함께 [가상 스크롤](https://web.dev/articles/virtualize-lists-with-angular-cdk)을 사용합니다.
 
 ### React
 
-- 페이지에서 반복되는 많은 요소를 렌더링하는 경우 생성되는 DOM 노드 수를 최소화하려면 [`react-window`](https://web.dev/virtualize-long-lists-react-window/)와 같은 "windowing" 라이브러리를 사용하십시오.
+- 페이지에서 반복되는 많은 요소를 렌더링하는 경우 생성되는 DOM 노드 수를 최소화하려면 [`react-window`](https://web.dev/articles/virtualize-long-lists-react-window)와 같은 "windowing" 라이브러리를 사용하십시오.
 - [`shouldComponentUpdate`](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action) , [`PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent) 또는 [`React.memo`](https://reactjs.org/docs/react-api.html#reactmemo)를 사용하여 불필요한 재렌더링을 최소화하십시오.
 - 런타임 성능을 개선하기 위해 `Effect` 후크를 사용하는 경우 특정 종속성이 변경될 때까지만 [효과를 건너뜁니다](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects).
 

@@ -131,5 +131,5 @@ application in production.
 [8]: https://developer.android.com/google/play/billing/terminology
 [9]: https://github.com/GoogleChromeLabs/bubblewrap
 [10]: https://github.com/GoogleChromeLabs/bubblewrap/issues/376
-[11]: https://web.dev/origin-trials/
+[11]: https://developer.chrome.com/docs/web-platform/origin-trials/
 

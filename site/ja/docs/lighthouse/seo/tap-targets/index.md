@@ -37,7 +37,7 @@ updated: 2019-08-21
   </table>
 </div>
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## タップターゲットを修正するには
 

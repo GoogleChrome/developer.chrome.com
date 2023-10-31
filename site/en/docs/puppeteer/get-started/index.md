@@ -32,7 +32,7 @@ npm i puppeteer-core
 
 `puppeteer-core` is intended to be a lightweight version of Puppeteer for launching an existing browser installation or for connecting to a remote one. Be sure that the version of puppeteer-core you install is compatible with the browser you intend to connect to.
 
-See [puppeteer vs puppeteer-core](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/api.md#puppeteer-vs-puppeteer-core).
+See [puppeteer vs puppeteer-core](https://pptr.dev/#puppeteer-core).
 
 ## Usage
 
@@ -42,7 +42,7 @@ Puppeteer follows the latest [maintenance LTS](https://github.com/nodejs/Release
 Prior to v1.18.1, Puppeteer required at least Node v6.4.0. Versions from v1.18.1 to v2.1.0 rely on Node 8.9.0+. Starting from v3.0.0 Puppeteer starts to rely on Node 10.18.1+. All examples below use async/await which is only supported in Node v7.6.0 or greater.
 {% endAside %}
 
-Puppeteer will be familiar to people using other browser testing frameworks. You create an instance of `Browser`, open pages, and then manipulate them with [Puppeteer's API](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/api.md).
+Puppeteer will be familiar to people using other browser testing frameworks. You create an instance of `Browser`, open pages, and then manipulate them with [Puppeteer's API](https://pptr.dev/api).
 
 **Example:** navigating to `https://example.com` and saving a screenshot as example.png:
 
@@ -61,7 +61,7 @@ const puppeteer = require('puppeteer');
 })();
 ```
 
-Puppeteer sets an initial page size to 800×600px, which defines the screenshot size. The page size can be customized with [Page.setViewport()](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/api.md#pagesetviewportviewport).
+Puppeteer sets an initial page size to 800×600px, which defines the screenshot size. The page size can be customized with [Page.setViewport()](https://pptr.dev/api/puppeteer.page.setviewport/).
 
 **Example:** create a PDF.
 
@@ -88,7 +88,7 @@ Execute script on the command line:
 node hn.js
 ```
 
-See [Page.pdf()](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/api.md#pagepdfoptions) for more information about creating pdfs.
+See [Page.pdf()](https://pptr.dev/api/puppeteer.pdfoptions) for more information about creating pdfs.
 
 **Example:** evaluate script in the context of the page
 
@@ -123,13 +123,13 @@ Execute script on the command line:
 node get-dimensions.js
 ```
 
-See [Page.evaluate()](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/api.md#pageevaluatepagefunction-args) for more information on evaluate and related methods such as `evaluateOnNewDocument` and `exposeFunction`.
+See [Evaluate JavaScript](https://pptr.dev/guides/evaluate-javascript) for more information on evaluate and related methods such as `evaluateOnNewDocument` and `exposeFunction`.
 
 ## Default runtime settings
 
 ### Uses Headless mode
 
-Puppeteer launches Chromium in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). To launch a full version of Chromium, set the [`headless`](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/api.md#puppeteerlaunchoptions) option when launching a browser:
+Puppeteer launches Chromium in [headless mode](/blog/headless-chrome/). To launch a full version of Chromium, set the [`headless`](https://pptr.dev/api/puppeteer.puppeteerlaunchoptions) option when launching a browser:
 
 ```shell
 const browser = await puppeteer.launch({ headless: false }); // default is true
@@ -143,7 +143,7 @@ By default, Puppeteer downloads and uses a specific version of Chromium so its A
 const browser = await puppeteer.launch({ executablePath: '/path/to/Chrome' });
 ```
 
-You can also use Puppeteer with Firefox Nightly (experimental support). See [`Puppeteer.launch()`](https://github.com/puppeteer/puppeteer/blob/v14.3.0/docs/api.md#puppeteerlaunchoptions) for more information.
+You can also use Puppeteer with Firefox Nightly (experimental support). See [`Puppeteer.launch()`](https://pptr.dev/api/puppeteer.puppeteerlaunchoptions) for more information.
 
 See [this article](https://www.howtogeek.com/202825/what%E2%80%99s-the-difference-between-chromium-and-chrome/) for a description of the differences between Chromium and Chrome. [This article](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/chromium_browser_vs_google_chrome.md) describes some differences for Linux users.
 

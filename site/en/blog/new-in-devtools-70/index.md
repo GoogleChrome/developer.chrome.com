@@ -15,7 +15,7 @@ tags:
   - chrome-70
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 Welcome back! It's been about 12 weeks since our last update, which was for Chrome 68. We skipped
 Chrome 69 because we didn't have enough new features or UI changes to warrant a post.
@@ -103,7 +103,7 @@ took multiple seconds to load. Processing and visualizing is faster in Chrome 70
 
 Chrome 70 fixes some bugs that were causing breakpoints to disappear or not get triggered.
 
-It also fixes bugs related to sourcemaps. Some TypeScript users would instruct DevTools to ignore
+It also fixes bugs related to source maps. Some TypeScript users would instruct DevTools to ignore
 a certain TypeScript file while stepping through code, and instead DevTools would ignore the
 entire bundled JavaScript file. These fixes also address an issue that was causing the Sources panel
 to generally run slowly.
@@ -203,8 +203,8 @@ certain phase of your lifecycle, call `window.performance.mark()` at the beginni
 lifecycle function. React does this in development mode.
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: #watch
 [2]: #nodes

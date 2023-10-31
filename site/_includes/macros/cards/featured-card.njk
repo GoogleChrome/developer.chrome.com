@@ -1,59 +1,46 @@
 {% from 'macros/icon.njk' import icon with context %}
 {% from 'macros/card-authors.njk' import cardAuthors with context %}
 
-{% macro featuredCard(post, options) %}
-{% set pd = post.data %}
-{% set cardIcon = options.icon or 'blog' %}
-{% set cardTitle = options.title or 'i18n.common.featured' | i18n(locale) %}
-{% set actionText = options.actionText %}
-{% set actionUrl = options.actionUrl %}
+{% macro featuredCard(options) %}
+{% set cardIcon = 'star' %}
+{% set cardTitle = 'i18n.common.featured' | i18n(locale) %}
+{% set class = options.class or 'hairline rounded-lg width-full' %}
 
-<div class="featured-card hairline rounded-lg width-full">
+<div class="featured-card {{ class }}">
   <div class="card-title-bar color-blue-medium">
     {{ icon(cardIcon, {hidden: true}) }}
-    <span class="gap-left-300 flex-1 user-select-none">
+    <span class="gap-left-200 flex-1 user-select-none">
       {{ cardTitle }}
     </span>
   </div>
 
-  {% set thumbnail = pd.hero or pd.thumbnail %}
-  {% set alt = pd.alt %}
-
-  {% if thumbnail %}
-    <div class="featured-card__thumbnail gap-top-400">
-      <a class="display-block" href="{{ post.url }}" {% if not alt %}aria-hidden="true" tabindex="-1"{% endif %}>
+  {% if options.imgSrc %}
+    <div class="featured-card__thumbnail gap-top-300">
+      <div {% if not options.imgAlt %}aria-hidden="true" tabindex="-1"{% endif %}>
         {% Img
           class="rounded-100 object-fit-cover width-full",
-          src=thumbnail,
-          alt=alt,
+          src=options.imgSrc,
+          alt=options.imgAlt,
           width="278",
-          height="156",
+          height="164",
           sizes="(min-width: 592px) 391px, calc(100vw - 82px)"
         %}
-      </a>
+      </div>
     </div>
   {% endif %}
 
-  <h2 class="type--h3-card gap-top-300">
-    <a class="color-text surface display-inline-flex" href="{{ post.url }}">
-      {{ pd.title }}
-    </a>
+  <h2 class="type--h3-card gap-top-300 display-inline-flex">
+    {{ options.title | md | safe }}
   </h2>
 
   <p class="type--caption gap-top-200">
-    {{ pd.description }}
+    {{ options.description | md | safe }}
   </p>
 
-  {% if pd.authors and pd.authors.length %}
+  {% if options.actionText and options.actionUrl %}
     <div class="gap-top-400">
-      {{ cardAuthors(pd.authors, pd.date) }}
-    </div>
-  {% endif %}
-
-  {% if actionText and actionUrl %}
-    <div class="gap-top-400">
-      <a href="{{ actionUrl }}" class="material-button button-text display-inline-flex color-primary">
-        {{ actionText }}
+      <a href="{{ options.actionUrl }}" class="material-button button-text display-inline-flex color-primary">
+        {{ options.actionText }}
       </a>
     </div>
   {% endif %}

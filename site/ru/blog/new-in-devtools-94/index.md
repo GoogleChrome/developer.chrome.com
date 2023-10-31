@@ -19,7 +19,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaya](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="N9Jiou61WH4" %}
 
@@ -179,5 +179,5 @@ DevTools теперь применяет нативные HTML-подсказк�
 
 Задача в трекере Chromium: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

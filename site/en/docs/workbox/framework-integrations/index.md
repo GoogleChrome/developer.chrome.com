@@ -10,7 +10,7 @@ Frameworks make web development more enjoyable through an improved developer exp
 
 ## React/React-compatible
 
-- [create-react-app](https://web.dev/precache-with-workbox-react/)
+- [create-react-app](https://web.dev/articles/precache-with-workbox-react)
 - [gatsby-plugin-offline](https://www.gatsbyjs.com/plugins/gatsby-plugin-offline/)
 - [preact-cli](https://preactjs.com/cli/service-worker/)
 - [next/pwa](https://github.com/shadowwalker/next-pwa)
@@ -21,7 +21,7 @@ Frameworks make web development more enjoyable through an improved developer exp
 - [nuxt/pwa](https://pwa.nuxtjs.org/workbox/)
 - [@vuepress/plugin-pwa](https://vuepress.vuejs.org/plugin/official/plugin-pwa.html)
 - [@vue/cli-plugin-pwa](https://cli.vuejs.org/core-plugins/pwa.html)
-- [vite-plugin-pwa](​​https://github.com/antfu/vite-plugin-pwa)
+- [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa)
 - [quasar-cli](https://quasar.dev/quasar-cli/developing-pwa/introduction)
 
 ### Other framework integrations

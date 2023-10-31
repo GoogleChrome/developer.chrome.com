@@ -6,17 +6,20 @@ description: >
 authors:
   - beaufortfrancois
   - eladalon
-date: 2022-09-30
+date: 2022-09-29
+updated: 2023-09-15
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/5VpvNzrvEM3qSxasqP1j.jpeg
 alt: toddler holding her lips photo
 tags:
   - chrome-107
+  - chrome-119
 ---
 
 Sharing tabs, windows, and screens is already possible on the web platform with the [Screen Capture API]. In short, [`getDisplayMedia()`] allows the user to select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network. This article introduces some recent changes to the API to better preserve privacy, and prevent accidental sharing of personal information.
 
 Here’s a list of controls you can use for privacy preserving screen sharing:
 - The `displaySurface` option can indicate that the web app prefers to offer a specific display surface type (tabs, windows, or screens).
+- The `monitorTypeSurfaces` option can be used to prevent the user from sharing an entire screen.
 - The `surfaceSwitching` option indicates whether Chrome should allow the user to dynamically switch between shared tabs.
 - The `selfBrowserSurface` option can be used to prevent the user from sharing the current tab. This avoids the "hall of mirrors" effect.
 - The `systemAudio` option ensures Chrome only offers relevant audio-capture to the user.
@@ -50,6 +53,27 @@ const stream = await navigator.mediaDevices.getDisplayMedia({
 
 Note that we don’t offer the option to pre-select a specific window or screen. This is by design, as that would give the web app too much power over the user.
 
+### The `monitorTypeSurfaces` option {: #monitorTypeSurfaces }
+
+To protect companies from leakage of private information through employee-error, video conferencing web apps can now set [`monitorTypeSurfaces`] to `"exclude"`. Chrome will then exclude screens in the media picker. To include it, set it to `"include"`. Presently, the default value for `monitorTypeSurfaces` is `"include"`, but web apps are encouraged to set it explicitly, as the default may change in the future.
+
+```js
+const stream = await navigator.mediaDevices.getDisplayMedia({
+  video: true,
+  // Remove the "Entire Screen" pane in the media picker.
+  monitorTypeSurfaces: "exclude",
+});
+```
+
+<figure>
+  {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/HA2gYMmPpJzVcDqM4o8J.png", alt="Screenshot of the media picker with no \"Entire Screen\" pane.", width="800", height="519" %}
+  <figcaption>
+    The "Entire Screen" pane is not visible in the media picker.
+  </figcaption>
+</figure>
+
+Note that an explicit `monitorTypeSurfaces: "exclude"` is mutually exclusive with `displaySurface: "monitor"`.
+
 ### The `surfaceSwitching` option {: #surfaceSwitching }
 
 One of the top-cited reasons for sharing the entire screen, is the desire to seamlessly switch between sharing different surfaces during a session. To address this, Chrome now exposes a button that lets a user dynamically switch between sharing different tabs. This "Share this tab instead" button has previously been available to Chrome extensions, and can now be used by any web app which calls [`getDisplayMedia()`].
@@ -75,9 +99,9 @@ const stream = await navigator.mediaDevices.getDisplayMedia({
 
 ### The `selfBrowserSurface` option {: #selfBrowserSurface }
 
-By default, [`getDisplayMedia()`] offers sharing any tab. In video conferencing scenarios, users often make the mistake of selecting the video conferencing tab itself, leading to a "hall of mirrors" effect, howling and general confusion.
+In video conferencing scenarios, users often make the mistake of selecting the video conferencing tab itself, leading to a "hall of mirrors" effect, howling and general confusion.
 
-To protect users from themselves, video conferencing web apps can now set [`selfBrowserSurface`] to `"exclude"`. Chrome will then exclude the current tab from the list of tabs offered to the user.
+To protect users from themselves, video conferencing web apps can now set [`selfBrowserSurface`] to `"exclude"`. Chrome will then exclude the current tab from the list of tabs offered to the user. To include it, set it to `"include"`. Presently, the default value for `selfBrowserSurface` is `"exclude"`, but web apps are encouraged to set it explicitly, as the default may change in the future.
 
 ```js
 const stream = await navigator.mediaDevices.getDisplayMedia({
@@ -93,9 +117,8 @@ const stream = await navigator.mediaDevices.getDisplayMedia({
   </figcaption>
 </figure>
 
-Presently, the default value for `selfBrowserSurface` is `"include"`, but web apps are encouraged to set it explicitly, as the default may change in the future.
 
-Note that `selfBrowserSurface: "exclude"` is mutually exclusive with [`preferCurrentTab: true`].
+Note that an explicit `selfBrowserSurface: "exclude"` is mutually exclusive with [`preferCurrentTab: true`].
 
 ### The `systemAudio` option {: #systemAudio }
 
@@ -132,7 +155,9 @@ You can play with these screen sharing controls by running the [demo] on Glitch.
 
 ## Browser support {: #browser-support }
 
-`displaySurface`, `surfaceSwitching`, and `selfBrowserSurface` are available in Chrome&nbsp;107 on desktop. `systemAudio` is available in Chrome&nbsp;105 on desktop. 
+- `displaySurface`, `surfaceSwitching`, and `selfBrowserSurface` are available in Chrome&nbsp;107 on desktop.
+- `systemAudio` is available in Chrome&nbsp;105 on desktop.
+- `monitorTypeSurfaces` is available in Chrome&nbsp;119 on desktop.
 
 ## Feedback {: #feedback }
 
@@ -160,6 +185,7 @@ Send a tweet to [@ChromiumDev] and let us know where and how you are using it.
 
 - [Specification][spec]
 - [`displaySurface` explainer]
+- [`monitorTypeSurfaces` explainer]
 - [`surfaceSwitching` explainer]
 - [`selfBrowserSurface` explainer]
 - [`systemAudio` explainer]
@@ -174,6 +200,7 @@ Thanks to [Rachel Andrew] for reviewing this article.
 [screen capture api]: https://w3c.github.io/mediacapture-screen-share/
 [`getdisplaymedia()`]: https://developer.mozilla.org/docs/web/api/mediadevices/getdisplaymedia
 [`displaysurface`]: https://w3c.github.io/mediacapture-screen-share/#dfn-displaysurface
+[`monitortypesurfaces`]: https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamoptions-monitortypesurfaces
 [`surfaceswitching`]: https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamoptions-surfaceswitching
 [`selfbrowsersurface`]: https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamoptions-selfbrowsersurface
 [`prefercurrenttab: true`]: https://wicg.github.io/prefer-current-tab/
@@ -185,6 +212,7 @@ Thanks to [Rachel Andrew] for reviewing this article.
 [@chromiumdev]: https://twitter.com/chromiumdev
 [spec]: https://w3c.github.io/mediacapture-screen-share/
 [`displaysurface` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/displaySurface_Constraint_Explainer.md
+[`monitortypesurfaces` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/monitorTypeSurfaces_Explainer.md
 [`surfaceswitching` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/surfaceSwitching_Explainer.md
 [`selfbrowsersurface` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/selfBrowserSurface_Explainer.md
 [`systemaudio` explainer]: https://github.com/eladalon1983/screen-share-explainers/blob/main/systemAudio_Explainer.md

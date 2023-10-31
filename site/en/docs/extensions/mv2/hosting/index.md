@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Chrome Web Store"
+seoTitle: "MV2 - Chrome Web Store [Deprecated]"
 date: 2012-09-18
 updated: 2018-06-12
 description: >
@@ -8,7 +9,11 @@ description: >
   that's hosted in the Chrome Web Store.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Extension hosting](/docs/extensions/mv3/hosting/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Most extensions are hosted in the [Chrome Web Store][1] to best [protect users from malicious
 extensions][2].

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Bluetooth"
+seoTitle: "Chrome Apps Manifest - Bluetooth [Deprecated]"
 date: 2014-03-11
 updated: 2014-10-31
 description: Reference documentation for the bluetooth property of manifest.json.

@@ -31,7 +31,7 @@ Para los usos más problemáticos, Chrome bloqueará las llamadas a `document.wr
 
 Lighthouse informa de cualquier llamada pendiente a `document.write()` porque afecta negativamente al rendimiento independientemente de cómo se utilice, además de las mejores alternativas.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Evite `document.write()`
 

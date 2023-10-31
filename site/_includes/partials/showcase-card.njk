@@ -1,0 +1,83 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% set apis = "" %}
+{% set searchApis = "" %}
+{% for api in item.usedAPIs %}
+  {% set apis = apis + " " + api.name | replace(" ", '-') %}
+  {% set searchApis = searchApis + " " + api.name %}
+{% endfor %}
+{% set apis = apis | trim | lower | replace("(", "") | replace(")", "") %}
+{% set id = item.screenshot | replace('.webp', '') %}
+
+<div
+  id="{{ id }}"
+  data-terms="{{ id + (item.title | lower) + " " + (searchApis | lower) + " " + (item.appURL | lower) }}"
+  data-used-apis="{{ apis }}"
+  class="blog-card fugu-card rounded-lg pad-300 md:pad-400 width-full"
+>
+  <div class="blog-card__thumbnail gap-bottom-300">
+    <a href="{{ item.appURL }}" rel="noopener" target="_blank">
+      <picture>
+        <source srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshot }}">
+        <source media="(prefers-color-scheme: dark)" srcset="https://googlechromelabs.github.io/fugu-showcase/data/{{ item.screenshotDark }}">
+        <img class="hairline " alt="Screenshot of {{ item.title }}." height="800" src="{{ item.screenshot }}" width="1280" loading="lazy">
+      </picture>
+    </a>
+  </div>
+
+  <div class="fugu-card__actions display-inline-flex gap-bottom-300 pad-bottom-300">
+    {% if item.appURL %}
+      <a class="display-flex align-center color-primary type--small" href="{{ item.appURL }}" rel="noopener" target="_blank">
+        {{ icon('external-link') }}
+        {% if item.isElectronApp %}
+          {{ 'i18n.common.download_app' | i18n(locale) }}
+        {% else %}
+          {{ 'i18n.common.launch_app' | i18n(locale) }}
+        {% endif %}
+      </a>
+    {% endif %}
+    {% if item.isElectronApp %}
+      <span class="type--xsmall">(Electron.js)</span>
+    {% endif %}
+    {% if item.sourceURL %}
+      <a class="display-flex align-center color-primary type--small" href="{{ item.sourceURL }}" rel="noopener" target="_blank">
+        {{ icon('code') }}
+        {{ 'i18n.common.view_source' | i18n(locale) }}
+      </a>
+    {% endif %}
+  </div>
+
+  <h2 class="type--h5">
+    <a class="surface display-inline-flex color-text" href="{{ item.appURL }}">
+      {{ item.title }}
+    </a>
+  </h2>
+
+  <p class="type--caption gap-top-200">
+    {{ item.description }}
+  </p>
+
+  {% from 'macros/tag.njk' import tag with context %}
+  <div class="cluster flow-space-200 gap-top-300">
+    <div>
+      {% for api in item.usedAPIs %}
+        <a
+          class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg"
+          href="{{ api.url }}"
+          rel="noopener"
+          target="_blank">{{ api.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="fugu-card__actions fugu-card__actions--secondary display-inline-flex gap-top-400 gap-bottom-300 pad-top-300">
+    <button class="visibility-hidden display-flex align-center color-secondary-text type--small web-share">
+      {{ icon('share') }}
+      {{ 'i18n.fugu_showcase.share_app' | i18n(locale) }}
+    </button>
+    <a class="display-flex align-center color-secondary-text type--small fugu-app-link" href="/fugu-showcase/#{{ id }}">
+      {{ icon('link') }}
+      {{ 'i18n.fugu_showcase.copy_link' | i18n(locale) }}
+    </a>
+  </div>
+</div>

@@ -65,15 +65,15 @@ web development question, please post it on Stack Overflow, tagged with the
 [google-chrome and android][so] tags.
 
 [so]: https://stackoverflow.com/questions/tagged/google-chrome+android
-[faq]: https://developer.chrome.com/multidevice/faq
+[faq]: /docs/multidevice/faq/
 [raf]: https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
-[debugging]: https://developers.google.com/web/tools/chrome-devtools/remote-debugging/
+[debugging]: /docs/devtools/remote-debugging
 [flexbox-new]: https://www.w3.org/TR/css-flexbox-1/
 [flexbox-old]: https://www.html5rocks.com/tutorials/flexbox/quick/
 [market]: https://play.google.com/store/apps/details?id=com.android.chrome
 [chromium-blog]: https://blog.chromium.org/2012/02/deeper-look-at-chrome-for-android.html
 [codesite]: /multidevice
-[cdt]: https://developers.google.com/web/tools/chrome-devtools/
+[cdt]: /docs/devtools
 [indexeddb]: https://www.html5rocks.com/tutorials/indexeddb/uidatabinding/#toc-intro
 [web workers]: https://www.html5rocks.com/tutorials/workers/basics/
 [web sockets]: https://www.html5rocks.com/tutorials/websockets/basics/

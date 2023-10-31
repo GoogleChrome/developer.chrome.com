@@ -2,8 +2,14 @@ blog:
   en: 'Engineering blog'
 blog_description:
   en: 'Learn how the team builds new features in DevTools.'
+dom:
+  en: 'DOM'
 css:
   en: 'CSS'
+tips:
+  en: 'DevTools tips'
+tips_description:
+  en: 'A series of bite-size videos for you to learn features in DevTools.'
 console:
   en: 'Console'
 new_in_devtools:
@@ -47,3 +53,5 @@ changes:
   en: 'Changes'
 recorder:
   en: 'Recorder'
+settings:
+  en: 'Settings reference'

@@ -1,12 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Publish Your App"
+seoTitle: "MV2 - Publish Your App [Deprecated]"
 #date: TODO
 #updated: TODO
 description: TODO
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 <div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and the Chrome Web Store will continue to support extensions. <a href="https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html"><strong>Read the announcement</strong></a> and learn more about <a href="/apps/migration"><strong>migrating your app</strong></a>.</div>
 

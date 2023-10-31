@@ -19,17 +19,17 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) marca págin
 Duas métricas principais afetam a forma como os usuários percebem o tempo de carregamento:
 
 - [First Meaningful Paint - FMP](/docs/lighthouse/performance/first-meaningful-paint/) (primeira renderização significativa), que mede quando o conteúdo principal da página parece visualmente completo
-- [Time to Interactive - TTI](https://web.dev/tti/) (tempo até a interatividade), que mede quando a página é totalmente interativa
+- [Time to Interactive - TTI](https://web.dev/articles/tti) (tempo até a interatividade), que mede quando a página é totalmente interativa
 
 Por exemplo, se uma página parecer visualmente completa depois de um segundo, mas o usuário não puder interagir com ela por 10 segundos, os usuários provavelmente perceberão o tempo de carregamento da página como sendo 10 segundos.
 
 O Lighthouse calcula qual seria o valor do TTI numa conexão de rede 4G lenta. Se o tempo de interação for superior a 10 segundos, a auditoria falhará.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como melhorar o tempo de carregamento da sua página
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

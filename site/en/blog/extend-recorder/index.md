@@ -14,7 +14,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='LBgzmqzp7ew' %} 
 
@@ -108,7 +108,7 @@ Apart from the default options, you can also [install extensions](/docs/devtools
 
 For example, you can record and export the user flows as [WebPageTest custom script](https://bit.ly/wpt-recorder). With the script, you can test the performance of multi-step user flows through your applications. Writing those scripts, however, can sometimes be challenging.
 
-Additionally, if you already have testing tools in place, there are extensions to export user flows to different test scripts such as Cypress, Nightwatch, WebdriverIO, Testing Library, and more. Here is the [full list](/docs/devtools/recorder/reference/#recorder-extension). This could help you and your team start writing tests quicker.
+Additionally, if you already have testing tools in place, there are extensions to export user flows to different test scripts such as Cypress, Nightwatch, WebdriverIO, Testing Library, and more. Here is the [full list](/docs/devtools/recorder/extensions/#export-extensions). This could help you and your team start writing tests quicker.
 
 ### Transform to different test scripts programmatically {: #transform }
 
@@ -121,6 +121,14 @@ npm install -g @cypress/chrome-recorder
 npx @cypress/chrome-recorder ./recordings/*.json
 
 ```
+
+## Replay user flows with extensions {: #replay-extensions }
+
+Starting from Chrome 112, you can now enhance your experience by using extensions to replay recordings. These extensions let you seamlessly integrate third-party services and infrastructure for replaying recordings without ever leaving DevTools.
+
+{% Img src="image/S3bCpnsKr6OqVjAww1n02HOXFsv1/Qzo4QVUa4A6HpXhHm5MI.gif", alt="Replay extensions allow the extensions to add a panel to DevTools to configure replay and display replay results.", width="800", height="450" %}
+
+To get started, explore [the list of available extensions](/docs/devtools/recorder/extensions/#replay-extensions) or learn how to [create your own custom extension](#customize-replay-extensions).
 
 ## Build your own extensions or libraries  {: #extend }
 
@@ -227,6 +235,15 @@ export class StringifyPlugin extends PuppeteerStringifyExtension {
 
 When you run the plugin with the user flows, the navigation line translates into `await browser.url(‘https://coffee-cart.netlify.app/’)`.
 
+### Customize DevTools replay experience {: #customize-replay-extensions }
+
+Replay extensions provide a way to replay recordings using third-party services and infrastructure, all without leaving the DevTools Recorder. 
+
+{% Img src="image/S3bCpnsKr6OqVjAww1n02HOXFsv1/n4H0ppiy1OiEppAy4Fdi.png", alt="Enhance your replay experience with browser extensions.", width="800", height="425" %}
+
+To create your own replay extension, consult the [replay extension documentation](/docs/extensions/reference/devtools_recorder/#customizing-the-replay-button) and review [an example extension](https://github.com/puppeteer/replay/tree/main/examples/chrome-extension-replay) for guidance.
+
+
 ### Publish Chrome extensions {: #publish-extension }
 
 Once you customize and transform the user flows, you can package them as a Chrome extension and publish to the [Chrome Web Store](https://chrome.google.com/webstore/category/extensions).
@@ -282,5 +299,5 @@ In this blog post, we’ve discussed the different options to export user flows 
 I hope this blog post has given you some ideas about how you can use the Recorder panel and the tools provided to make it easier to integrate a testing workflow into your projects. Can’t wait to see what you’ll build!
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

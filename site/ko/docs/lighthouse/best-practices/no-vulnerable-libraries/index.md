@@ -7,7 +7,8 @@ description: |2
 
   알려진 취약점이 있습니다.
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2023-04-26
+is_outdated: true
 ---
 
 침입자는 사이트에서 알려진 보안 취약점을 스캔할 수 있는 자동화된 웹 크롤러를 포함하고 있습니다. 웹 크롤러가 취약점을 감지하면 침입자에게 경고합니다. 거기에서 침입자는 사이트의 취약점을 악용하는 방법을 파악하기만 하면 됩니다.
@@ -23,7 +24,7 @@ updated: 2020-06-04
 - [Chrome용 라이브러리 감지기](https://www.npmjs.com/package/js-library-detector)를 실행합니다.
 - [snyk의 Vulnerability DB](https://snyk.io/vuln?packageManager=all)에 대해 감지된 라이브러리 목록을 확인합니다.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 안전하지 않은 JavaScript 라이브러리 사용 중지
 

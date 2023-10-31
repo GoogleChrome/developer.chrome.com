@@ -1,6 +1,6 @@
 ---
-title: プライバシーサンドボックス広告の関連性と測定 API をテストする
-description: プライバシーサンドボックスの関連性と測定の API（Topics、FLEDGE、アトリビューション レポート）を統括して実験するための開発者テストと今後のオリジントライアルについて説明します。
+title: プライバシーサンドボックス広告関連 API をテストする
+description: プライバシーサンドボックスの広告関連の API（Topics、FLEDGE、アトリビューション レポート）を統括して実験するための開発者テストと今後のオリジントライアルについて説明します。
 layout: layouts/blog-post.njk
 date: 2022-03-31
 updated: 2022-06-27
@@ -33,7 +33,7 @@ tags:
 
 ## 開発者がオリジントライアルに登録する方法
 
-[プライバシーサンドボックスの関連性と測定](/origintrials/#/view_trial/771241436187197441)のトライアルに登録します。以下の HTML タグを使用して、API コードを実行するすべてのページにトライアルトークンを提供します。
+[プライバシーサンドボックスの広告関連](/origintrials/#/view_trial/771241436187197441)のトライアルに登録します。以下の HTML タグを使用して、API コードを実行するすべてのページにトライアルトークンを提供します。
 
 - トップレベル ページの `<head>` セクションの `<meta>`タグ: `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
 - トップレベル ページのレスポンスの HTTP ヘッダー: `Origin-Trial: TOKEN_GOES_HERE`
@@ -132,7 +132,7 @@ if ('runAdAuction' in navigator && document.featurePolicy.allowsFeature('run-ad-
 `window` 内の `attributionReporting` オブジェクトと、「attribution-reporting」のアクセス許可ポリシーを確認してください。
 
 ```javascript
-if ('attributionReporting' in window && document.featurePolicy.allowsFeature('attribution-reporting')) {
+if (document.featurePolicy.allowsFeature('attribution-reporting')) {
   // Attribution Reporting API enabled
 }
 ```

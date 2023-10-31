@@ -215,6 +215,6 @@ Reminder: _Be absolutely sure_ you want to handle opaque responses with a cache-
 
 ### Opaque Responses and the `navigator.storage` API
 
-To avoid leakage of cross-domain information, there's significant padding added to the size of an opaque response used for calculating storage quota limits. This affects how the [`navigator.storage` API](https://developers.google.com/web/updates/2017/08/estimating-available-storage-space) reports storage quotas.
+To avoid leakage of cross-domain information, there's significant padding added to the size of an opaque response used for calculating storage quota limits. This affects how the [`navigator.storage` API](/blog/estimating-available-storage-space/) reports storage quotas.
 
 This padding varies by browser, but for Chrome, the minimum size that any single cached opaque response contributes to the overall storage used is [approximately 7 megabytes](https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17). You should keep this in mind when determining how many opaque responses you want to cache, since you could easily exceed storage quotas much sooner than you'd otherwise expect.

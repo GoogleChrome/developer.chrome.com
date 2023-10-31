@@ -36,10 +36,13 @@ access it, users must be signed into Chrome with their organization credentials.
 You also need to use a slightly different URL than that of the public store, which specifies your
 Google Workspace domain:
 
-* **Public Chrome Web Store:** &emsp;
-  `chrome.google.com/webstore`
-* **Private Chrome Web Store:** &emsp;
-  `chrome.google.com/webstore/a/example.com`
+Public Chrome Web Store
+: `chrome.google.com/webstore`
+  
+Private Chrome Web Store
+: `https://chrome.google.com/webstore/category/for_your_domain`
+  
+For a private Chrome Web Store, use the URL exactly as shown here. It will resolve to the correct domain based on your login.
 
 The option that enables this is available to administrators at **Devices > Chrome > Apps &
 extensions > Users & browsers > Additional settings > Chrome Web store permissions**:

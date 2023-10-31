@@ -9,6 +9,13 @@ navigation-rail {
   }
 }
 
+.navigation-rail__links {
+  @include media-query('lg') {
+    position: sticky;
+    top: 0;
+  }
+}
+
 .navigation-rail__link {
   @extend %navigation__link;
   @include font-setup(14px, 28px);
@@ -36,7 +43,7 @@ navigation-rail {
       background: transparent;
       // Define an explicit z-index so we can position the ::before
       // element behind it.
-      z-index: 0; 
+      z-index: 0;
 
       // stylelint-disable max-nesting-depth
       &::before {

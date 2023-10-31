@@ -24,7 +24,7 @@ tags:
 
 *翻訳者の [lacolaco](https://github.com/lacolaco) さん、レビュアーの [technohippy](https://github.com/technohippy) さんと [yoichiro](https://github.com/yoichiro) さんに感謝いたします。*
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="T_Ppg7ghrWM" %}
 
@@ -194,5 +194,5 @@ Windows と Linux では <kbd>Control</kbd>+<kbd>P</kbd>で、 MacOS では <kbd
 
 Chromium issue: [1201997](https://crbug.com/1201997)
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

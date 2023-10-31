@@ -21,9 +21,9 @@ capabilities of these platforms to the web platform, while maintaining user
 security, privacy, trust, and other core tenets of the web.
 
 This work, among many other examples, allowed
-[Adobe to bring Photoshop to the web](https://web.dev/ps-on-the-web/),
-[Excalidraw to deprecate their Electron app](https://web.dev/deprecating-excalidraw-electron/), and
-[Betty Crocker to increase purchase intent indicators by 300%](https://web.dev/betty-crocker/).
+[Adobe to bring Photoshop to the web](https://web.dev/articles/ps-on-the-web),
+[Excalidraw to deprecate their Electron app](https://web.dev/articles/deprecating-excalidraw-electron), and
+[Betty Crocker to increase purchase intent indicators by 300%](https://web.dev/articles/betty-crocker).
 
 {% Aside %}
 Be sure to try out some of the apps the community has built with Fugu APIs
@@ -109,4 +109,4 @@ Want to try some of these new capabilities? Check out the
 
 [ot-dashboard]: https://developers.chrome.com/origintrials/#/trials/active
 [ot-guide]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
-[capabilities-project]: https://developers.google.com/web/updates/capabilities
+[capabilities-project]: /blog/capabilities

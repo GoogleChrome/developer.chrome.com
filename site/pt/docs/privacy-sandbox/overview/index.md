@@ -35,7 +35,7 @@ As principais propostas desenvolvidas pela equipe do Chrome estão listadas abai
 
 ### Proteções de fontes primárias
 
-- [**Alterações nos cookies SameSite**](https://web.dev/samesite-cookies-explained/): protege sites marcando explicitamente seus cookies cross-site.
+- [**Alterações nos cookies SameSite**](https://web.dev/articles/samesite-cookies-explained): protege sites marcando explicitamente seus cookies cross-site.
 - [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): permitem que nomes de domínio relacionados pertencentes à mesma entidade se declarem pertencentes à mesma fonte primária.
 
 ### Detecção de fraudes
@@ -45,7 +45,7 @@ As principais propostas desenvolvidas pela equipe do Chrome estão listadas abai
 ### Limitação da coleta de dados
 
 - [**Privacy Budget**](https://www.youtube.com/watch?v=0STgfjSA6T8): permite que os sites obtenham informações sobre o navegador ou dispositivo de um usuário, mas permite que o navegador defina uma cota na quantidade total de informações que um site pode acessar, de modo que o usuário não possa ser identificado.
-- [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/): A string [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) (UA) é uma [significativa superfície de](https://w3c.github.io/fingerprinting-guidance/#passive)[fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) passiva, além de ser difícil de processar. Client Hints (dicas do cliente) permitem que os desenvolvedores solicitem ativamente apenas as informações de que precisam sobre o dispositivo do usuário ou condições, em vez de precisar processar esses dados na string User-Agent.
+- [**User-Agent Client Hints**](https://web.dev/articles/user-agent-client-hints): A string [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) (UA) é uma [significativa superfície de](https://w3c.github.io/fingerprinting-guidance/#passive)[fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) passiva, além de ser difícil de processar. Client Hints (dicas do cliente) permitem que os desenvolvedores solicitem ativamente apenas as informações de que precisam sobre o dispositivo do usuário ou condições, em vez de precisar processar esses dados na string User-Agent.
 - [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): Limita a capacidade de identificar usuários individuais acessando seus endereços IP. A proposta tem duas partes: [**Willful IP Blindness**](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) fornece uma maneira para os sites informarem aos navegadores que eles não estão conectando endereços IP aos usuários e [**Near-path NAT**](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) permite que grupos de usuários enviem seu tráfego através do mesmo servidor de privatização, efetivamente ocultando seus endereços IP de um host. O Gnatcatcher também garante que os sites que requerem acesso a endereços IP para fins legítimos, como prevenção de abusos, possam fazê-lo, sujeito a certificação e auditoria.
 
 ### Identidade
@@ -90,10 +90,10 @@ As explicações da proposta da API precisam de feedback, em particular para sug
 ### Artigos e vídeos para desenvolvedores web
 
 - [Explorando a Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
-- [Cookies SameSite explicados](https://web.dev/samesite-cookies-explained/)
+- [Cookies SameSite explicados](https://web.dev/articles/samesite-cookies-explained)
 - [Primeiros passos com os Trust Tokens](https://web.dev/trust-tokens)
-- [Uma forma de medir conversões de anúncios com mais privacidade](https://web.dev/conversion-measurement/)
-- [O que é FLoC?](https://web.dev/floc/)
+- [Uma forma de medir conversões de anúncios com mais privacidade](/docs/privacy-sandbox/attribution-reporting/)
+- [O que é FLoC?](https://web.dev/articles/floc)
 - [Introdução ao Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8)
 
 ### Princípios e conceitos por trás das propostas

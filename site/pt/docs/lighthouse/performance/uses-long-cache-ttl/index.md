@@ -43,7 +43,7 @@ Quando uma página falha na auditoria, o Lighthouse lista os resultados numa tab
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como armazenar recursos estáticos em cache usando o cache HTTP
 
@@ -63,7 +63,7 @@ Use `no-cache` se o recurso mudar e a atualização for importante, mas você ai
 
 Uma duração de cache mais longa nem sempre é melhor. Em última análise, cabe a você decidir qual é a duração ideal do cache para seus recursos.
 
-Existem muitas diretivas para personalizar como o navegador armazena em cache diferentes recursos. Saiba mais sobre recursos de cache no guia [Cache HTTP: sua primeira linha de defesa](https://web.dev/http-cache/) e no codelab [Configurando o comportamento de cache em HTTP](https://web.dev/codelab-http-cache/) .
+Existem muitas diretivas para personalizar como o navegador armazena em cache diferentes recursos. Saiba mais sobre recursos de cache no guia [Cache HTTP: sua primeira linha de defesa](https://web.dev/articles/http-cache) e no codelab [Configurando o comportamento de cache em HTTP](https://web.dev/articles/codelab-http-cache) .
 
 ## Como verificar respostas em cache no Chrome DevTools
 

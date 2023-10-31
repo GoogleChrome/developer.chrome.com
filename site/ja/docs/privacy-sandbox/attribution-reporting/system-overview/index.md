@@ -26,7 +26,7 @@ Attribution Reporting API を使用すると、アドテックや広告主は、
 
 {% Aside %} 現時点では、サイト運営者はこの API を使用して何らかの措置をとる必要はありません。これが変更された場合、この記事はそれに応じて更新されます。 {% endAside %}
 
-この記事では、サービスが Attribution Reporting API でどのように機能するかについて、概要をエンドツーエンドで説明します。技術者は、[統合されたプライバシーサンドボックスの関連性と測定のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)を使用して、ローカルまたは本番環境で[この API を試す](/docs/privacy-sandbox/attribution-reporting-experiment/)ことができます。
+この記事では、サービスが Attribution Reporting API でどのように機能するかについて、概要をエンドツーエンドで説明します。技術者は、[統合されたプライバシーサンドボックスの広告関連のオリジントライアル](/blog/privacy-sandbox-unified-origin-trial/)を使用して、ローカルまたは本番環境で[この API を試す](/docs/privacy-sandbox/attribution-reporting-experiment/)ことができます。
 
 ## 概要
 

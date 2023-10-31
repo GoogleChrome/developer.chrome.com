@@ -15,7 +15,12 @@ authors:
 date: 2021-11-01
 tags:
   - chrome-96
+is_outdated: true
 ---
+
+{% Aside 'warning'%}
+This article is outdated. Read the latest about version numbers in User-Agent strings in [User-Agent reduction](/docs/privacy-sandbox/user-agent/). 
+{% endAside %}
 
 In the first half of 2022, Chrome will reach a three-digit major version number:
 100!  When browsers first reached version 10 many eons ago,

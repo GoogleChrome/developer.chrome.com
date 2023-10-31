@@ -17,7 +17,7 @@ tags:
 
 *感谢 [流浪大法师 @liuliangsir](https://github.com/liuliangsir) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -49,8 +49,8 @@ Chromium 议题: [423246](https://crbug.com/423246)
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 使用 **报告 API** 新边栏来查看有关自己页面情况的报告以及报告对应的状态。
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-该 [Reporting API](https://web.dev/reporting-api/) 是为了帮助您了解自己页面的安全违规情况，弃用 API 的调用情况以及更多。
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+该 [Reporting API](https://web.dev/articles/reporting-api) 是为了帮助您了解自己页面的安全违规情况，弃用 API 的调用情况以及更多。
 
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 打开一个使用 Reporting API 的页面（例如 [demo 页面](https://reporting-api-demo.glitch.me/)）。在**应用**面板里面，把滚动条滚动到**后台服务**区域，然后选择 **Reporting API** 边栏。
@@ -137,16 +137,16 @@ Chromium 议题: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 Chromium 议题: [1068788](https://crbug.com/1068788)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemap } -->
-## 改进 Sourcemaps {: #sourcemap }
+<!-- ## Source maps improvements {: #sourcemap } -->
+## 改进 Source maps {: #sourcemap }
 
-<!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
-### 使用 sourcemap 文件来调试 Chrome 扩展 {: #extension }
+<!-- ### Debug Chrome extension with source map files {: #extension } -->
+### 使用 source map 文件来调试 Chrome 扩展 {: #extension }
 
-<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
-您现在可以使用 sourcemap 文件来[调试 Chrome 扩展](/docs/extensions/mv3/getstarted/#unpacked)。在此之前，DevTools 只支持内联 sourcemap。
+<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
+您现在可以使用 source map 文件来[调试 Chrome 扩展](/docs/extensions/mv3/getstarted/#unpacked)。在此之前，DevTools 只支持内联 sourcemap。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="使用 sourcemap 文件来调试 Chrome 扩展", width="800", height="518" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="使用 source map 文件来调试 Chrome 扩展", width="800", height="518" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1e73eb62955de7c4b0920575c7b374d47dab6a65 #}
 
@@ -157,7 +157,7 @@ Chromium 议题: [212374](https://crbug.com/212374)
 ### 优化 Sources 面板里面源文件夹树的显示问题 {: #source-tree }
 
 <!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
-现在，**Sources** 面板里面的源文件夹树变得更加简洁，并且命名更加易读（例如：“../”、“./”等）。这项功能的实现得益于规范化 sourcemaps 里面的绝对源 URL。
+现在，**Sources** 面板里面的源文件夹树变得更加简洁，并且命名更加易读（例如：“../”、“./”等）。这项功能的实现得益于规范化 source maps 里面的绝对源 URL。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="优化 Sources 面板里面源文件夹树的显示", width="800", height="444" %}
 
@@ -169,8 +169,8 @@ Chromium 议题: [1284737](https://crbug.com/1284737)
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
 ### Sources 面板里面显示 Worker 源文件 {: #worker-sourcemap }
 
-<!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
-现在，[Worker](https://web.dev/workers-overview/)（例如：web worker、service worker）源文件在使用相对 SourceURL 的情况下，会被显示在 **Source** 面板里面。在此之前，Worker 源文件不会被正确处理。
+<!-- [Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
+现在，[Worker](https://web.dev/articles/workers-overview)（例如：web worker、service worker）源文件在使用相对 SourceURL 的情况下，会被显示在 **Source** 面板里面。在此之前，Worker 源文件不会被正确处理。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="Sources 面板里面显示 Worker 源文件", width="800", height="509" %}
 
@@ -227,10 +227,10 @@ Chromium 议题: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - 修复 **Cookies** 面板里面关于 [edit cookies](/docs/devtools/storage/cookies/#edit) 问题。([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - 使用 `Shift` + `Tab` 可以选择[命令菜单](/docs/devtools/command-menu/)里面的前一个命令。([1278743](https://crbug.com/1278743))
-<!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
-- 在 [Issues](/docs/devtools/issues/) 选项卡里面，会报告 [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) 问题。([1272445](https://crbug.com/1272445))
-<!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
-- 在 [Issues](/docs/devtools/issues/) 选项卡里面，会报告 [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) 问题。([1219359](https://crbug.com/1219359))
+<!-- - Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
+- 在 [Issues](/docs/devtools/issues/) 选项卡里面，会报告 [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) 问题。([1272445](https://crbug.com/1272445))
+<!-- - Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
+- 在 [Issues](/docs/devtools/issues/) 选项卡里面，会报告 [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) 问题。([1219359](https://crbug.com/1219359))
 <!-- - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662)) -->
 - 在 **Sources** 和 **Console** 面板里面修复 `Shift` + `Delete` 和 `Page up` / `Page down` 的行为。([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->
@@ -239,5 +239,5 @@ Chromium 议题: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - 在 DevTools 里面切换 [浅色/深色主题](/docs/devtools/customize/dark-theme/)，不需要重新加载 DevTools。([1278738](https://crbug.com/1278738))
 
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

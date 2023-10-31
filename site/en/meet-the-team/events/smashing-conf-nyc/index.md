@@ -2,7 +2,7 @@
 title: Smashing Conf NYC
 summary: >-
   A conference for designers and front-end developers.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: New York, US
 date: 2022-10-11
 externalUrl: https://smashingconf.com/ny-2022
@@ -15,7 +15,8 @@ sessions:
       lately in Web UI. With loads of new exciting things happening such as Container queries
       you can take your website to the next level.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: null
     type: speaker
     slidesUrl: null

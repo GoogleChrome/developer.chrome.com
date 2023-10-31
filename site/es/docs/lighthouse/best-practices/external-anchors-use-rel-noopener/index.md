@@ -30,7 +30,7 @@ Lighthouse utiliza el siguiente proceso para identificar enlaces como inseguros:
 
 Debido a que Lighthouse filtra los enlaces del mismo host, existe una situación limítrofe que debe tener en cuenta si está trabajando en un sitio grande: si una página contiene un enlace `target="_blank"` a otra página de su sitio sin usar `rel="noopener"`, las implicaciones de rendimiento de esta auditoría aún se aplican. Sin embargo, no verá estos enlaces en los resultados de Lighthouse.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Cómo mejorar el rendimiento de su sitio y prevenir vulnerabilidades de seguridad
 
@@ -45,10 +45,10 @@ Agregue `rel="noopener"` o `rel="noreferrer"` a cada enlace identificado en su i
 - `rel="noopener"` evita que la nueva página pueda acceder a la `window.opener` y garantiza que se ejecute en un proceso separado.
 - `rel="noreferrer"` tiene el mismo efecto, pero también evita que la cabecera `Referer` se envíe a la nueva página. Consulte [Tipo de enlace "noreferrer"](https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer).
 
-Consulte la publicación [Compartir recursos de origen cruzado de forma segura](https://web.dev/cross-origin-resource-sharing/) para obtener más información.
+Consulte la publicación [Compartir recursos de origen cruzado de forma segura](https://web.dev/articles/cross-origin-resource-sharing) para obtener más información.
 
 ## Recursos
 
 - [Código fuente para la auditoría **Enlaces a destinos de origen cruzado inseguros**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js)
-- [Comparta recursos de origen cruzado de forma segura](https://web.dev/cross-origin-resource-sharing/)
+- [Comparta recursos de origen cruzado de forma segura](https://web.dev/articles/cross-origin-resource-sharing)
 - [Aislamiento del sitio para desarrolladores web](https://developers.google.com/web/updates/2018/07/site-isolation)

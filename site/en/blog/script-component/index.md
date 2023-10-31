@@ -18,7 +18,7 @@ Around [45%](https://almanac.httparchive.org/en/2021/third-parties#fig-3) of req
 
 ## Third-party scripts and their impact on performance
 
-[Third-party scripts](https://web.dev/third-party-javascript/) allow web developers to leverage existing solutions to implement common features and reduce development time. But the creators of these scripts typically do not have any incentive to consider the performance impact on the consuming website. These scripts are also a blackbox to developers who use them.
+[Third-party scripts](https://web.dev/articles/third-party-javascript) allow web developers to leverage existing solutions to implement common features and reduce development time. But the creators of these scripts typically do not have any incentive to consider the performance impact on the consuming website. These scripts are also a blackbox to developers who use them.
 
 Scripts account for a significant number of [third-party bytes](https://almanac.httparchive.org/en/2021/third-parties#fig-11) downloaded by websites across different categories of third-party requests. By default, the browser prioritizes scripts based on where they are in the document which may delay the discovery or execution of scripts critical to user experience.
 
@@ -30,7 +30,7 @@ Third-party libraries required for layout should be loaded early to render the p
 
 It's important to consider the resource loading sequence of your page so that critical resources are not delayed and non-critical resources do not block critical resources.
 
-While there are [best practices](https://web.dev/fast/#optimize-your-third-party-resources) to reduce the impact of third parties, not everyone may be aware of how to implement them for every third-party they use. This can be complicated because:
+While there are [best practices](https://web.dev/articles/fast#optimize_your_third_party_resources) to reduce the impact of third parties, not everyone may be aware of how to implement them for every third-party they use. This can be complicated because:
 
 * On average, websites use [21 to 23 different third parties](https://almanac.httparchive.org/en/2021/third-parties#fig-4)&mdash;including scripts&mdash;on mobile and desktop. Usage and recommendations may differ for each.
 * Implementing many third-parties can differ based on whether a particular framework or UI library is used.
@@ -39,15 +39,15 @@ While there are [best practices](https://web.dev/fast/#optimize-your-third-party
 
 ## Aurora’s focus on third-party scripts
 
-Part of Aurora's [collaboration](/blog/introducing-aurora/#aurora:-a-collaboration-between-chrome-and-open-source-web-frameworks-and-tools) with open source web frameworks and tools is to provide strong defaults and opinionated tooling to help developers improve aspects of the user experience such as performance, accessibility, security, and mobile readiness. In 2021, we were focused on helping framework stacks improve user experience and their [Core Web Vitals](https://web.dev/vitals/) metrics.
+Part of Aurora's [collaboration](/blog/introducing-aurora/#aurora:-a-collaboration-between-chrome-and-open-source-web-frameworks-and-tools) with open source web frameworks and tools is to provide strong defaults and opinionated tooling to help developers improve aspects of the user experience such as performance, accessibility, security, and mobile readiness. In 2021, we were focused on helping framework stacks improve user experience and their [Core Web Vitals](https://web.dev/articles/vitals) metrics.
 
-One of the most significant steps towards achieving our goal to improve framework performance involved researching the ideal loading sequence of third-party scripts in Next.js. Frameworks such as Next.js are uniquely positioned to provide useful defaults and features that help developers efficiently load resources, including third-parties. We studied extensive [HTTP Archive](https://httparchive.org/) and Lighthouse [data](https://docs.google.com/spreadsheets/d/1Td-4qFjuBzxp8af_if5iBC0Lkqm_OROb7_2OcbxrU_g/edit?resourcekey=0-ZCfve5cngWxF0-sv5pLRzg#gid=1628564987) to find which third-parties [block rendering](https://web.dev/render-blocking-resources/) the most across different frameworks.
+One of the most significant steps towards achieving our goal to improve framework performance involved researching the ideal loading sequence of third-party scripts in Next.js. Frameworks such as Next.js are uniquely positioned to provide useful defaults and features that help developers efficiently load resources, including third-parties. We studied extensive [HTTP Archive](https://httparchive.org/) and Lighthouse [data](https://docs.google.com/spreadsheets/d/1Td-4qFjuBzxp8af_if5iBC0Lkqm_OROb7_2OcbxrU_g/edit?resourcekey=0-ZCfve5cngWxF0-sv5pLRzg#gid=1628564987) to find which third-parties [block rendering](https://web.dev/articles/render-blocking-resources) the most across different frameworks.
 
 To address the issue of main-thread blocking third-party scripts used in an application, we built the [Script component](https://nextjs.org/docs/basic-features/script). The component encapsulates sequencing features to provide developers with better controls for third-party script loading.
 
 ## Sequencing third-party scripts without a framework component
 
-The [available guidance](https://web.dev/efficiently-load-third-party-javascript/) to reduce the impact of render-blocking scripts provides the following methods for efficiently loading and sequencing third-party scripts:
+The [available guidance](https://web.dev/articles/efficiently-load-third-party-javascript) to reduce the impact of render-blocking scripts provides the following methods for efficiently loading and sequencing third-party scripts:
 
 1. Use the `async` or `defer` attribute with `<script>` tags that tell the browser to load non-critical third-party scripts without blocking the document parser. Scripts not required for initial page load or the first user interaction may be considered non-critical.
 
@@ -56,7 +56,7 @@ The [available guidance](https://web.dev/efficiently-load-third-party-javascript
        <script src="https://example.com/script2.js" async></script>
     ```
 
-2. [Establish early connections to required origins](https://web.dev/preconnect-and-dns-prefetch/) using preconnect and dns-prefetch. This allows critical scripts to start downloading earlier.
+2. [Establish early connections to required origins](https://web.dev/articles/preconnect-and-dns-prefetch) using preconnect and dns-prefetch. This allows critical scripts to start downloading earlier.
 
     ```html
        <head>
@@ -66,7 +66,7 @@ The [available guidance](https://web.dev/efficiently-load-third-party-javascript
     ```
 
 
-3. [Lazy-load](https://web.dev/embed-best-practices/#lazy-loading) third-party resources and embeds after the main page content has finished loading or when the user scrolls down to the part of the page where they are included.
+3. [Lazy-load](https://web.dev/articles/embed-best-practices#lazy_loading) third-party resources and embeds after the main page content has finished loading or when the user scrolls down to the part of the page where they are included.
 
 
 ## The Next.js Script component
@@ -179,7 +179,7 @@ Third-party scripts were added to the demo blog app as given below.
   {% Img src="image/IypihH3o5cSpEMVp5i08dp69otp2/BAWQVlyBX1UUJOMyrBJm.gif", alt="Video showing the loading progress for the index page with and without the Script component. There is a 0.5 seconds improvement in FCP with the Script component.", width="800", height="306" %}
 </figure>
 
-As seen in the video, [First Contentful Paint (FCP)](https://web.dev/fcp/) occurs at 0.9 seconds on the page without the Script component and 0.4 seconds with the Script component.
+As seen in the video, [First Contentful Paint (FCP)](https://web.dev/articles/fcp) occurs at 0.9 seconds on the page without the Script component and 0.4 seconds with the Script component.
 
 ## What’s next for the Script component
 
@@ -206,7 +206,7 @@ The syntax and loading strategy for including popular third-party scripts such a
 
 ## Conclusion
 
-Third-party scripts are usually created to include specific features in the consuming website. To reduce the impact of non-critical scripts, we recommend deferring them&mdash;which the Next.js Script component does by default. Developers have the assurance that included scripts will not delay critical functionality unless they explicitly apply the `beforeInteractive` strategy. Like the Next.js Script component, framework developers can also consider building these features in other frameworks. We are actively exploring landing a similar component with the Nuxt.js team. Based on feedback, we also hope to enhance the [Script component](https://github.com/vercel/next.js/blob/canary/packages/next/client/script.tsx) further to cover additional use cases.
+Third-party scripts are usually created to include specific features in the consuming website. To reduce the impact of non-critical scripts, we recommend deferring them&mdash;which the Next.js Script component does by default. Developers have the assurance that included scripts will not delay critical functionality unless they explicitly apply the `beforeInteractive` strategy. Like the Next.js Script component, framework developers can also consider building these features in other frameworks. We are actively exploring landing a similar component with the Nuxt.js team. Based on feedback, we also hope to enhance the [Script component](https://vercel.com/templates/next.js/script-component-strategies) further to cover additional use cases.
 
 ## Acknowledgments
 

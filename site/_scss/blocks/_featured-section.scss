@@ -1,0 +1,46 @@
+.featured-section {
+  @include media-query('lg') {
+    background: get-color('grey-50');
+    padding: 32px;
+  }
+
+  .featured-card {
+    background: get-color('white');
+    height: 100%;
+    padding-bottom: 3rem;
+    position: relative;
+
+    @include media-query('lg') {
+      border-color: transparent;
+    }
+  }
+
+  .featured-card__thumbnail,
+  .featured-card__thumbnail img {
+    min-height: 164px;
+  }
+
+  .featured-card .type--h3-card {
+    display: block;
+    font-size: px-to-rem(24px);
+
+    @include media-query('lg') {
+      font-size: px-to-rem(28px);
+    }
+  }
+
+  .type--caption {
+    color: get-color('grey-700');
+    font-size: px-to-rem(16px);
+  }
+
+  .material-button {
+    bottom: 1em;
+    position: absolute;
+  }
+
+  .material-button:hover::before,
+  .surface:hover::before {
+    display: none;
+  }
+}

@@ -20,11 +20,11 @@ This feature is available only in Chrome, not Chromium.
 {% YouTube id='5PFmGeCZDvw' %}
 
 {% Aside %}
-This is a preview feature in Chrome 102. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/perf-insights-feedback) for further enhancements. 
+This is a preview feature in Chrome 102. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/perf-insights-feedback) for further enhancements.
 {% endAside %}
 
 
-## Why a new panel? 
+## Why a new panel?
 
 The new **Performance insights** panel is an experiment to address these 3 developer pain points when working with the existing **Performance** panel:
 
@@ -54,21 +54,21 @@ This tutorial teaches you how to measure and understand your page load performan
 
 The **Performance insights** panel can record general and use-case-driven (for example, page load) performance.
 
-1. [Open this demo page](https://coffee-cart.netlify.app/?ad=1) in a new tab and, on the page, [open the Performance insights panel](#open).
+1. [Open this demo page](https://coffee-cart.app/?ad=1) in a new tab and, on the page, [open the Performance insights panel](#open).
 2. You can throttle the network and CPU while recording. For this tutorial, check **Disable cache** and set **CPU** to **4x slowdown** in the drop-down menu:
 
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZcatuTY8eettWFRbBxVf.png", alt="Throttling.", width="800", height="489" %}
-  
+
     {% Aside 'gotchas' %}
     Throttling is relative to your computer's capabilities. For example, the 4x slowdown option makes your CPU operate 4 times slower than usual. DevTools can't truly simulate the CPUs of mobile devices because the architecture of mobile devices is very different from that of desktops and laptops.
-    {% endAside %} 
+    {% endAside %}
 
 3. Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Refresh.", width="20", height="20" %} **Measure page load**. DevTools records performance metrics while the page reloads and then automatically stops the recording a couple seconds after the page load has finished.
-    
+
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/z24Hl8VhBVetZUNHIGms.png", alt="Start options.", width="800", height="489" %}
 
     {% Aside 'gotchas' %}
-    If you want to measure general performance of your web page, use **Start recording**. Interact with the page and click **Stop recording** manually to stop recording. 
+    If you want to measure general performance of your web page, use **Start recording**. Interact with the page and click **Stop recording** manually to stop recording.
     {% endAside %}
 
 
@@ -84,13 +84,13 @@ Here is an example of how to do it.
 
 - Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gjfZMeLnwzpRfOMfXEMY.svg", alt="Play.", width="20", height="20" %} **Play** to play the recording.
 - Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/E4DiaFpjvozAUMoUQgB1.svg", alt="Pause.", width="20", height="20" %} **Pause** to pause the replay.
-- Adjust the **playback speed** with the drop-down. 
-- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CoI0VqgWpyBs6ye9WJZ3.svg", alt="Preview.", width="20", height="20" %} **Toggle visual preview** to show or hide the visual preview. 
+- Adjust the **playback speed** with the drop-down.
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CoI0VqgWpyBs6ye9WJZ3.svg", alt="Preview.", width="20", height="20" %} **Toggle visual preview** to show or hide the visual preview.
 
 
 ## Navigate a performance recording {: #navigate }
 
-DevTools automatically zooms out to show the full recording timeline. You can navigate the recording with zoom and move the timeline. 
+DevTools automatically zooms out to show the full recording timeline. You can navigate the recording with zoom and move the timeline.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/aiNxjBK2fBr76NKHfMoA.mp4", autoplay=true, loop=true, muted="true", class="screenshot" %}
 
@@ -117,13 +117,13 @@ Hover over each of the insights to highlight them on the main tracks.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/FXl6y9hXBJNXsOLgLPft.mp4", controls="true", muted="true", class="screenshot" %}
 
-Click on an insight, for example, the render blocking request, to open it in the **Details** pane. To understand the issue further, examine its **File**, **Issue**, **How to fix** sections, and more. 
+Click on an insight, for example, the render blocking request, to open it in the **Details** pane. To understand the issue further, examine its **File**, **Issue**, **How to fix** sections, and more.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bHHoPGrJHuHPbRYOWWwd.png", alt="Insight details.", width="800", height="489" %}
 
 ## View Web Vitals performance metrics {: #vitals }
 
-[Web Vitals](https://web.dev/vitals/) is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web.
+[Web Vitals](https://web.dev/articles/vitals) is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web.
 
 You can view these metrics on the **Timeline** and **Insights** pane.
 
@@ -135,11 +135,11 @@ Hover over the insights on the **Timeline** to learn more about the metrics.
 
 ## Discover delays of the largest contentful paint {: #largest-contentful-paint }
 
-[Largest Contentful Paint (LCP)](https://web.dev/lcp/) is one of the [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) metrics. It reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading.
+[Largest Contentful Paint (LCP)](https://web.dev/articles/lcp) is one of the [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals) metrics. It reports the render time of the largest image or text block visible within the viewport, relative to when the page first started loading.
 
 {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/elqsdYqQEefWJbUM2qMO.svg", alt="LCP thresholds.", width="800", height="212" %}
 
-A [good LCP score](https://web.dev/lcp/#what-is-a-good-lcp-score?) is 2.5 seconds or less.
+A [good LCP score](https://web.dev/articles/lcp#what_is_a_good_lcp_score?) is 2.5 seconds or less.
 
 If the largest contentful paint on your page takes longer to render, in the timeline, you will see the LCP badge with a yellow square or red triangle.
 
@@ -149,9 +149,9 @@ To open the **Details** pane, click the LCP badge on the timeline or on the **In
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Wnl6w6KOnqUQsXSWu0xN.png", alt="The details pane.", width="800", height="627" %}
 
-In this example, a request blocks rendering and you can apply critical styles inline to fix it. To learn more, see [Eliminate render-blocking resources](https://web.dev/render-blocking-resources/).
+In this example, a request blocks rendering and you can apply critical styles inline to fix it. To learn more, see [Eliminate render-blocking resources](https://web.dev/articles/render-blocking-resources).
 
-To view the [sub-parts of LCP render time](https://web.dev/optimize-lcp/#lcp-breakdown), scroll down to the **Details** > **Timings breakdown** section.
+To view the [sub-parts of LCP render time](https://web.dev/articles/optimize-lcp#lcp_breakdown), scroll down to the **Details** > **Timings breakdown** section.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zog6KF5dnfgnGdshcbvH.png", alt="Timings breakdown.", width="800", height="579" %}
 
@@ -188,19 +188,19 @@ If an LCP element doesn't require a resource load to render, the resource load d
 
 ## View layout shifts activity {: #layout-shifts }
 
-View layout shifts activity in the **Layout Shifts** track. 
+View layout shifts activity in the **Layout Shifts** track.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ronEnmKW9Xh4h8YLdVWN.png", alt="Layout Shifts track.", width="800", height="491" %}
 
-Layout shifts are grouped in a [session window](https://web.dev/evolving-cls/?utm_source=devtools#why-a-session-window). In the example above, there are two session windows. Session windows have gaps between them. 
+Layout shifts are grouped in a [session window](https://web.dev/evolving-cls/?utm_source=devtools#why_a_session_window). In the example above, there are two session windows. Session windows have gaps between them.
 
 {% Aside 'gotchas' %}
-Think about layout shifts like fireworks. There are times where multiple shifts happen at once, then they pause for a while, then multiple shifts happen again. Each set of multiple shifts is a session window. For more information, see [Session window](https://web.dev/evolving-cls/?utm_source=devtools#why-a-session-window).
+Think about layout shifts like fireworks. There are times where multiple shifts happen at once, then they pause for a while, then multiple shifts happen again. Each set of multiple shifts is a session window. For more information, see [Session window](https://web.dev/evolving-cls/?utm_source=devtools#why_a_session_window).
 {% endAside %}
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7uN8y6gdUU8QdmAREPtJ.png", alt="Session window and gap.", width="800", height="491" %}
 
-[Cumulative Layout Shifts (CLS)](https://web.dev/cls) is one of the [core web vitals](https://web.dev/vitals/#core-web-vitals) metrics. Use the **Layout Shifts** track to identify potential issues and causes of layout shifts.
+[Cumulative Layout Shifts (CLS)](https://web.dev/cls) is one of the [core web vitals](https://web.dev/articles/vitals#core_web_vitals) metrics. Use the **Layout Shifts** track to identify potential issues and causes of layout shifts.
 
 Always start with the largest session window when improving CLS metric. In our example, session window 1 is the largest window, based on the background color and level.
 
@@ -210,7 +210,7 @@ Click on a screenshot to view the layout shift's details, identify potential roo
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/T7laY8CqS5kMMowwjwOH.png", alt="View the layout shift's details.", width="800", height="523" %}
 
-In our example, the potential root cause is **unsized media**. To learn how to fix it, see [Optimize Cumulative Layout Shift](https://web.dev/optimize-cls/#images-without-dimensions).
+In our example, the potential root cause is **unsized media**. To learn how to fix it, see [Optimize Cumulative Layout Shift](https://web.dev/articles/optimize-cls#images_without_dimensions).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0eqkyM3nRWQIuWzQACHZ.png", alt="identify potential root causes.", width="800", height="532" %}
 
@@ -254,14 +254,14 @@ View GPU activity in the **GPU** track. The GPU track is hidden by default. To e
 
 ## View user timings {: #timings }
 
-To get custom performance measures, you can use [User Timing](https://www.w3.org/TR/user-timing/) and visualize your timings with the **Timing** track. For more information, see the [User timing API](https://web.dev/usertiming/).
+To get custom performance measures, you can use [User Timing](https://www.w3.org/TR/user-timing/) and visualize your timings with the **Timing** track. For more information, see the [User timing API](https://web.dev/articles/usertiming).
 
-Check out [this demo page](https://jec.fyi/demo/perf-measure) that calculates the elapsed time of text loading. 
+Check out [this demo page](https://jec.fish/demo/perf-measure) that calculates the elapsed time of text loading.
 
 To view user timings:
 
-1. Mark places in your application with [`performance.mark()`](https://web.dev/usertiming/#using-mark()).
-1. Measure the elapsed time between marks with [`performance.measure()`](https://web.dev/usertiming/#calculating-measurements-with-measure()).
+1. Mark places in your application with [`performance.mark()`](https://web.dev/articles/usertiming#using_mark()).
+1. Measure the elapsed time between marks with [`performance.measure()`](https://web.dev/articles/usertiming#calculating_measurements_with_measure()).
 1. [Record performance](#record).
 1. View the measurements on the **Timings** track. If you can't see the track, check **User timings** in [Settings](#settings).
 1. To view details, click the timing on the track.

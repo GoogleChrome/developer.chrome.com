@@ -43,19 +43,19 @@ If [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) has served
 me well, you landed on this article for one of two reasons.
 First, you've built a web app and it's not being indexed the search engines!
 Your app might be a Single Page Application (SPA),
-[PWA](https://web.dev/pwa/), using vanilla JS, or built with
+[PWA](https://web.dev/articles/pwa), using vanilla JS, or built with
 something more complex like a library or framework. To be honest, your tech
 stack doesn't matter. What matters is that you spent a lot of time building
 Awesome Web Thing and users are unable to discover it. The other reason you
 might be here is because some articles out on The Web mentioned that
 server-side rendering is good for performance. You're here for that quick win to
-reduce [JavaScript startup cost](https://web.dev/optimizing-content-efficiency-javascript-startup-optimization/)
+reduce [JavaScript startup cost](https://web.dev/articles/optimizing-content-efficiency-javascript-startup-optimization)
 and improve
 [first meaningful paint](/docs/lighthouse/audits/first-meaningful-paint).
 
 Some frameworks like Preact
 [ship with tools](https://github.com/developit/preact-render-to-string)
-that address server-side rendering. If your framework has a prendering
+that address server-side rendering. If your framework has a prerendering
 solution, please stick with that. There's no reason to bring another tool
 (headless Chrome and Puppeteer) into the mix.
 
@@ -294,7 +294,7 @@ What about performance numbers? On one of my
 ([code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)), headless
 Chrome takes about 1s to render the page on the server. Once the page is cached,
 DevTools **3G Slow emulation** puts
-[FCP](/web/fundamentals/performance/user-centric-performance-metrics) at
+[FCP](https://web.dev/articles/user-centric-performance-metrics) at
 **8.37s faster** than the client-side version.
 
 <table>
@@ -774,7 +774,7 @@ In practice, I've found universal JS difficult to pull off. A personal story...
 I recently started
 [a project](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)
 and wanted to give [lit-html](https://github.com/Polymer/lit-html) a try. Lit
-is a great little library that lets you write [HTML &lt;template>s](https://www.html5rocks.com/en/tutorials/webcomponents/template/)
+is a great little library that lets you write [HTML 5 templates](https://developer.mozilla.org/docs/Web/HTML/Element/template)
 using JS template literals, then efficiently render those templates to
 DOM. The problem is that its core feature (using the `<template>` element)
 doesn't work outside of the browser. That means it won't work in a Node server.

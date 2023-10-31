@@ -3,9 +3,9 @@ title: Web Directions Summit 2022
 summary: >-
   A conference covering the entire digital team–featuring product, design,
   front-end engineering, and more.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/nmNwNgvOmvjk5fOm4MOM.jpg
 location: 'Sydney, Australia'
-date: '2022-12-01'
+date: 2022-12-01
 externalUrl: 'https://webdirections.org/summit/'
 sessions:
   - speaker: pjmclachlan
@@ -19,7 +19,8 @@ sessions:
       browser and running standalone or in a tab.
     topics:
       - Performance
-      - Web UI and CSS,
+      - CSS
+      - Web UI
       - Advanced Apps and Project Fugu
       - Web Developer Tools
     time: null
@@ -30,10 +31,11 @@ sessions:
     title: 'CSS Architecture with Layers, Scope, and Nesting'
     description: ''
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://www.bram.us/2022/12/02/css-architecture-2022-12-01-web-directions-summit/
     videoUrl: null
   - speaker: alexandrawhite
     title: 'Technically speaking: Improve your code with documentation'
@@ -47,19 +49,20 @@ sessions:
       - Documentation
     time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://alexand.us/slides-summit22
     videoUrl: null
   - speaker: thomassteiner
     title: Building amazing apps with Project Fugu APIs
     description: ''
     topics:
       - Performance
-      - Web UI and CSS
+      - CSS
+      - Web UI
       - Advanced Apps and Project Fugu
       - Web Developer Tools
     time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://goo.gle/web-directions-fugu
     videoUrl: null
   - speaker: rachelandrew
     title: >-
@@ -80,10 +83,11 @@ sessions:
       combining different features, and a little peek at what might be around
       the corner.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
       - Interop
     time: null
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://noti.st/rachelandrew/dR6Ize/when-new-css-features-collide-possibility-and-complexity-at-the-intersections
     videoUrl: null
 ---

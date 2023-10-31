@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-09-20
 description: 'キーボードショートカットのカスタマイズ、 Memory Inspector で C/C++ オブジェクトのハイライト表示など'
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ax9N3DYfyH3ZOT7iSXu5.svg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/q31K9IiREUxfRjlmg6Gp.png'
 alt: ''
 tags:
   - new-in-devtools
@@ -15,7 +15,9 @@ tags:
 
 *翻訳者の [yoshiko-pg](https://github.com/yoshiko-pg) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さん、 [lacolaco](https://github.com/lacolaco) さん、 [technohippy](https://github.com/technohippy) さんに感謝いたします。*
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
+
+{% YouTube id='1uwv6HbR8HU' %}
 
 <!-- Content starts here -->
 
@@ -132,5 +134,5 @@ Chromium issue: [1139945](https://crbug.com/1139945)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5dd8494912fa43dfe998c9764ceb1e1763784617 #}
 
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

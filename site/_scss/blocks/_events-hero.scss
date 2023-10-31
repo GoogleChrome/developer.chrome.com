@@ -1,5 +1,5 @@
 .events-hero {
-  background: #fdf7df;
+  background: var(--color-meettheteam-bg);
   border-radius: 12px;
   margin-bottom: 1.1875rem;
   text-align: center;
@@ -58,6 +58,10 @@
 
     @include media-query('lg') {
       display: initial;
+    }
+
+    img {
+      border-radius: 12px;
     }
   }
 }

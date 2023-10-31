@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Rich notifications API"
+seoTitle: "MV2 - Rich notifications API [Deprecated]"
 date: 2014-06-25
 updated: 2017-04-27
 description: How to show notifications to your Chrome Extension users.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Rich notifications](/docs/extensions/mv3/richNotifications/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 <div class="aside aside--note"><strong>Platform difference:</strong> In Chrome version 59, notifications appear differently for Mac OS X users. Instead of Chrome's own notifications, users see native Mac OS X notifications. <a href="https://developers.google.com/web/updates/2017/04/native-mac-os-notifications">Learn more in this article</a>.</div>
 
@@ -189,7 +194,7 @@ can pop-up even when the app or extension isn't running.
 [4]: /docs/extensions/reference/notifications#type-NotificationOptions
 [5]: /docs/extensions/reference/notifications#type-TemplateType
 [6]: /docs/extensions/reference/gcm
-[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/apps/samples/gcm-notifications
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/apps/samples/gcm-notifications
 [8]: /docs/apps/contentSecurityPolicy/
 [9]: /docs/apps/app_external
 [10]: /docs/extensions/reference/events

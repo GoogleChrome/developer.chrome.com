@@ -16,7 +16,7 @@ authors:
 	.type figcaption {text-align:left;}
 </style>
 
-The Attribution Reporting API allows adtechs and advertisers to measure when an
+The Attribution Reporting API allows ad techs and advertisers to measure when an
 ad click or view leads to a conversion, such as a purchase. This API relies on
 a combination of client-side and server-side integrations, depending on your
 business needs.
@@ -25,7 +25,7 @@ Before continuing, make sure to read the
 [Attribution Reporting overview](/docs/privacy-sandbox/attribution-reporting).
 This will help you understand the API's purpose and the flow of the different output reports
 ([event-level report](/docs/privacy-sandbox/attribution-reporting/#event-level-reports)
-and [summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/)).
+and [summary reports](/docs/privacy-sandbox/summary-reports/)).
 If you come across unfamiliar terms, refer to the
 [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
@@ -33,25 +33,18 @@ If you come across unfamiliar terms, refer to the
 
 You should read this article if:
 
-*  You're an adtech or advertiser's **technical decision-maker**. You may work
+*  You're an ad tech or advertiser's **technical decision-maker**. You may work
    in operations, DevOps, data science, IT, marketing, or another role where
-   you make technical implementation decisions. You're wondering how the many
-   proposals for Attribution Reporting systems work together to build a tool
-   for privacy-preserving measurement.
+   you make technical implementation decisions. You're wondering how the APIs work for privacy-preserving measurement.
 *  You're a **technical practitioner** (such as a developer, system operator,
    system architect, or data scientist) who will be setting up experiments with
    this API and Aggregation Service environment.
-
-{% Aside %}
-Right now, publishers don't have to take any action with this API. If this changes, this article will be updated accordingly.
-{% endAside %}
 
 In this article, you'll read a high-level, end-to-end explanation of how the
 services work for the Attribution Reporting API. If you're a technical
 practitioner, you can
 [experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/)
-locally or in production with the
-[unified Privacy Sandbox Relevance and Measurement Origin Trial](/blog/privacy-sandbox-unified-origin-trial/).
+locally.
 
 ## Overview
 
@@ -92,7 +85,7 @@ data. The output reports provide insights on your campaigns or business.
 The output report can be:
 
 *  _Event-level reports_ associate a particular ad click or view (on the ad side) with data on the conversion side. To preserve user privacy by limiting the joining of user identity across sites, conversion-side data is very limited, and the data is noisy (meaning that for a small percentage of cases, random data is sent instead of real reports).
-*  _[Summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/)_ are not tied to a specific event on the ad side. These reports offer more detailed conversion data and flexibility for joining click and view data with conversion data. 
+*  _[Summary reports](/docs/privacy-sandbox/summary-reports/)_ are not tied to a specific event on the ad side. These reports offer more detailed conversion data and flexibility for joining click and view data with conversion data. 
 
 Your report selection determines what data you'll need to collect.
 
@@ -119,25 +112,60 @@ While this API is in testing, your code must confirm the API is available and se
 <figcaption><strong>Figure 1</strong>.</figcaption>
 </figure>
 
-### Attribution sources (publisher's website) {: #attribution-sources}
 
-An _[attribution source](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.dmy7iuqnhvby)_
-is an ad-related event (a click or view), to which an adtech can attach the
-following kinds of information:
+### Attribution event flow
 
-*  Contextual reporting data, such as the ad creative ID, information about the
-   campaign, or geography.
-*  A conversion target, as in the site that is the target of the ad where you
-   hope the user will end. This tells the browser what source events correspond
-   to specific conversions.
+Imagine a publisher site that displays ads. Each advertiser or ad-tech provider wants to learn about interactions with their ads, and attribute conversions to the correct ad. Reports (both event-level and aggregatable) would be generated as follows:
 
-Once the data is collected for the attribution source, the browser adds the
-data to local storage, so it can later be matched with an attribution trigger.
+1.  On the publisher site, an ad element (`<a>` or `<img>` tag) is configured with a special attribute `attributionsrc`. Its value is a URL, for example `https://adtech.example/register-source/ad_id=...`.
+
+    Here's an example of a link that will register a source once clicked:
+
+    ```javascript
+    <a href="https://shoes.example/landing" 
+      attributionsrc="http://adtech.example/register-source?..."
+      target="_blank">
+    Click me</a>
+    ```
+
+    Here's an example of an image that will cause registration of a source when viewed:
+
+    ```javascript
+    <img href="https://advertiser.example/landing" 
+      attributionsrc="https://adtech.example/register-source?..."/>
+    ```
+    Alternatively, instead of HTML elements, JavaScript calls can be used.
+
+    Here's a JavaScript example using `window.open()`. Note that the URL is url-encoded to avoid issues with special characters.
+
+    ```javascript
+    const encodedUrl = encodeURIComponent(
+      'https://adtech.example/attribution_source?ad_id=...');
+    window.open(
+      "https://shoes.example/landing",
+      "_blank",
+      attributionsrc=${encodedUrl});
+
+1.  When the user clicks or views the ad, the browser sends a `GET` request to `attributionsrc`—typically, an advertiser or ad-tech provider endpoint.
+1.  Upon receiving this request, the advertiser or ad-tech provider decides to instruct the browser to [register source events](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/) for interactions with the ad, so that conversions can later be attributed to this ad. To do so, the advertiser or ad-tech provider includes in its response a special HTTP header. It attaches to this header custom data that provides information about the source event (the ad click or view)—if a conversion ends up taking place for this ad, this custom data will ultimately be surfaced in the attribution report.
+
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/BDzoPro5EisV1FeJiNYZ.png", alt="View or click an ad.", width="512", height="302" %}
+1.  Later, the user visits the advertiser's site.
+1.  On each relevant page of the advertiser's site—for example, a purchase confirmation page, or a product page—a conversion pixel (`<img>` element) or JavaScript call makes a request to `https://adtech.example/conversion?param1=...&param2=...`.
+1.  The service at this URL—typically, the advertiser or ad-tech provider—receives the request. It decides to categorize this as a conversion, so it needs to instruct the browser to record a conversion—that is to [trigger an attribution](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/). To do so, the advertiser or ad-tech provider includes in its response to the pixel request a special HTTP header that includes custom data about the conversion.
+1.  The browser—on the user's local device—receives this response, and matches the conversion data with the original source event (ad click or view). Learn more in [Match sources to triggers](#match-sources-to-triggers)
+1.  The browser schedules a report to be sent to `attributionsrc`. This report includes:
+    1.  The custom attribution configuration data that the ad-tech provider or advertiser attached to the source event in Step 3.
+    1.  The custom conversion data set at Step 6.
+
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/AceEr2qZx2ri5HePhx96.png", alt="A conversion.", width="512", height="369" %}
+1.  Later, the browser sends the reports to the endpoint defined in `attributionsrc`, with some delay and noise. Aggregatable reports are encrypted, while event-level reports are not.
+
 
 ### Attribution triggers (advertiser's website)
 
 The _[attribution trigger](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-trigger-registration)_
-is the event which tells the API to capture conversions. 
+is the event that tells the browser to capture conversions. 
 
 We recommend capturing the conversions that are most important to the
 advertiser, such as purchases. Multiple conversion types and metadata can be
@@ -169,7 +197,7 @@ priority.
 ## Data collection
 
 Together, an attribution trigger matched to a corresponding source, are sent as
-a report by the browser to a reporting endpoint on an adtech-owned server
+a report by the browser to a reporting endpoint on an ad tech-owned server
 (sometimes referred to as a collection endpoint or collection service). These
 reports can be event-level reports or aggregatable reports.
 
@@ -177,7 +205,7 @@ _[Aggregatable reports](https://github.com/WICG/conversion-measurement-api/blob/
 are used to generate summary reports. An aggregatable report is a combination
 of data gathered from the ad (on a publisher's site) and conversion data (from
 the advertiser's site) which is generated and encrypted by the browser on a
-user's device before it's collected by the adtech.
+user's device before it's collected by the ad tech.
 
 Event-level reports are delayed between 2 and 30 days. Aggregatable reports are
 sent with a random delay within one hour and the events must fit within the
@@ -192,15 +220,15 @@ you'll need to process the aggregatable reports with an additional service.
 
 To generate summary reports, you'll use the
 [Aggregation Service](https://github.com/google/trusted-execution-aggregation-service)
-(operated by the adtech) to process the aggregatable reports. The Aggregation
+(operated by the ad tech) to process the aggregatable reports. The Aggregation
 Service adds noise to protect user privacy and returns the final summary report.
 
 <figure class="screenshot">
-	{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ZBF0uMoXBDww805XVctQ.png", alt="Aggregatable reports are collected, batched, and sent to the adtech environtment.", width="800", height="464" %}
+	{% Img src="image/VbsHyyQopiec0718rMq2kTE1hke2/ZBF0uMoXBDww805XVctQ.png", alt="Aggregatable reports are collected, batched, and sent to the ad tech environtment.", width="800", height="464" %}
 	<figcaption>
 		<strong>Figure 2</strong>. This diagram represents the asynchronous flow
 		of data from the collection endpoint, batching reports, through
-		processing on the adtech-owned Aggregation Service.<br /><br />
+		processing on the ad tech-owned Aggregation Service.<br /><br />
 		After batching the collected aggregatable reports the batch is processed
 		by the Aggregation Service. A
 		<a href="https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#attestation-and-the-coordinator">coordinator</a>
@@ -235,18 +263,17 @@ can be changed without needing to change attribution sources or triggers.
 
 ### Aggregation Service
 
-The Aggregation Service is responsible for processing aggregatable reports to
+The [Aggregation Service](/docs/privacy-sandbox/aggregation-service/) is responsible for processing aggregatable reports to
 generate a summary report. Aggregatable reports are encrypted and can only be
 read by the Aggregation Service, which runs on a trusted execution environment
 (TEE).
 
-The Aggregation Service
-[requests decryption keys from the coordinator](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#attestation-and-the-coordinator)
+The Aggregation Service requests decryption keys from the [coordinator](/docs/privacy-sandbox/aggregation-service/#coordinator )
 to decrypt and aggregate the data. Once decrypted and aggregated, the results
 are noised to preserve privacy and returned as a summary report. 
 
-Practitioners can generate aggregatable cleartext reports to [test the
-Aggregation Service locally](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing).
+Practitioners can generate aggregatable cleartext reports to
+[test the Aggregation Service locally](https://github.com/google/trusted-execution-aggregation-service#set-up-local-testing).
 Or, you can [test with encrypted reports on AWS with Nitro Enclaves](https://github.com/google/trusted-execution-aggregation-service/#test-on-aws-with-support-for-encrypted-reports).
 
 ## What's next?
@@ -256,7 +283,7 @@ works for everyone.
 
 ### Discuss the API
 
-Like other Privacy Sandbox proposals, this API is documented and
+Like other Privacy Sandbox APIs, this API is documented and
 [discussed publicly](/docs/privacy-sandbox/attribution-reporting-experiment/#join-the-discussion).
 
 ### Experiment with the API

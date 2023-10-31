@@ -28,7 +28,10 @@ webpack v4 includes a plugin for this library by default to create minified buil
 
 ### Drupal
 
-Ensure you have enabled **Aggregate JavaScript files** in the **Administration** &gt; **Configuration** &gt; **Development** page. You can also configure more advanced aggregation options through [additional modules](https://www.drupal.org/project/project_module?f%5B0%5D=&f%5B1%5D=&f%5B2%5D=im_vid_3%3A123&f%5B3%5D=&f%5B4%5D=sm_field_project_type%3Afull&f%5B5%5D=&f%5B6%5D=&text=javascript+aggregation&solrsort=iss_project_release_usage+desc&op=Search) to speed up your site by concatenating, minifying, and compressing your JavaScript assets.
+Ensure you have enabled **Aggregate JavaScript files** in the **Administration** &gt; **Configuration** &gt; **Development** page.
+You can also configure more advanced aggregation options through
+[additional modules](https://www.drupal.org/project/project_module?f%5B0%5D=&f%5B1%5D=&f%5B2%5D=im_vid_3%3A123&f%5B3%5D=&f%5B4%5D=sm_field_project_type%3Afull&f%5B5%5D=&f%5B6%5D=&text=javascript+aggregation&solrsort=iss_project_release_usage+desc&op=Search)
+to speed up your site by concatenating, minifying, and compressing your JavaScript assets.
 
 ### Joomla
 
@@ -60,4 +63,4 @@ also want to use a build process to do this minification up front if possible.
 
 ## Resources
 
-- [Source code for **Minify JavaScript** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unminified-javascript.js)
+- [Source code for **Minify JavaScript** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/unminified-javascript.js)

@@ -57,5 +57,5 @@ updated: 2020-05-06
 
 - [Исходный код проверки **Preconnect to required origins (Используйте предварительное подключение к необходимым доменам)**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/uses-rel-preconnect.js).
 - [Приоритизация ресурсов — как заставить браузер помочь вам](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect).
-- [Устанавливайте сетевые подключения заранее, чтобы улучшить воспринимаемую скорость загрузки страницы](https://web.dev/preconnect-and-dns-prefetch/).
+- [Устанавливайте сетевые подключения заранее, чтобы улучшить воспринимаемую скорость загрузки страницы](https://web.dev/articles/preconnect-and-dns-prefetch).
 - [Типы ссылок: preconnect](https://developer.mozilla.org/docs/Web/HTML/Link_types/preconnect#Browser_compatibility).

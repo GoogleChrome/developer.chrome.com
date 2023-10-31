@@ -1,7 +1,7 @@
 ---
 title: Test Flix 2022
 summary: A global software testing event held virtually.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/nmNwNgvOmvjk5fOm4MOM.jpg
 location: Virtual
 date: 2022-10-08
 externalUrl: https://www.thetesttribe.com/testflix-2022/

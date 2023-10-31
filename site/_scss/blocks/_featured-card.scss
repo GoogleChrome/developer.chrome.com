@@ -14,6 +14,14 @@
       padding-bottom: 0;
     }
   }
+
+  &--bg-yellow {
+    background: var(--color-meettheteam-bg);
+
+    .button-text {
+      color: var(--color-blue-medium);
+    }
+  }
 }
 
 .featured-card__thumbnail {

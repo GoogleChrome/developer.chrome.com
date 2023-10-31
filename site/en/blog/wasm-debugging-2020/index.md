@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='VBMHswhun-s' %}
 
@@ -91,7 +91,7 @@ Now we can go back to the **Sources** panel, enable **Pause on
 exceptions** (⏸ icon), then check **Pause on caught exceptions** and
 reload the page. You should see the DevTools paused on an exception:
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BLvpLwEA0szeMTxCfApF.png", alt="Screenshot of the Sources panel showing how to enable 'Pause on caugh exceptions'", width="800", height="354" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BLvpLwEA0szeMTxCfApF.png", alt="Screenshot of the Sources panel showing how to enable 'Pause on caught exceptions'", width="800", height="354" %}
 
 By default, it stops on an Emscripten-generated glue code, but on the
 right you can see a **Call Stack** view representing the stacktrace of
@@ -429,5 +429,5 @@ Meanwhile, please help us out by trying the current beta on your own code and re
 issues to
 [https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue](https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue).
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

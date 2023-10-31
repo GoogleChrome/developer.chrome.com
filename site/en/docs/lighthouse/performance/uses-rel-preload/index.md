@@ -71,7 +71,7 @@ as soon as possible.
   </figcaption>
 </figure>
 
-See also [Preload critical assets to improve loading speed](https://web.dev/preload-critical-assets/)
+See also [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets)
 for more guidance.
 
 ### Browser compatibility
@@ -89,7 +89,7 @@ page.
 
 ### Angular
 
-[Preload routes](https://web.dev/route-preloading-in-angular/) ahead of time to speed up navigation.
+[Preload routes](https://web.dev/articles/route-preloading-in-angular) ahead of time to speed up navigation.
 
 ### Magento
 
@@ -99,4 +99,4 @@ and add `<link rel=preload>` tags.
 
 ## Resources
 
-- [Source code for **Preload key requests** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/uses-rel-preload.js)
+- [Source code for **Preload key requests** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/uses-rel-preload.js)

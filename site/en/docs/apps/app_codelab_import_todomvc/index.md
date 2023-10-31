@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: "Step 2: Import an Existing Web App"
+seoTitle: "Step 2: Import an Existing Web App [Deprecated]"
 date: 2014-10-17
 updated: 2016-12-16
 description: How to adapt an existing web app for the Chrome Apps platform.

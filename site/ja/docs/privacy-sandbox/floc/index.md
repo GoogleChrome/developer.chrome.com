@@ -37,7 +37,7 @@ FLoC は、興味に基づいて広告やその他のコンテンツを選択す
 
 ## FLoC の仕組み
 
-「[FLoC の仕組み](https://web.dev/floc/#how-does-floc-work)」には、FloC の仕組みに関するステップバイステップの説明が記載されています。
+「[FLoC の仕組み](https://web.dev/articles/floc#how_does_floc_work)」には、FloC の仕組みに関するステップバイステップの説明が記載されています。
 
 次の図では、FLoC を使用して関連する広告を選択して配信する際のさまざまな役割の例を示しています。
 

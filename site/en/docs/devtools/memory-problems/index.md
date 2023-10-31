@@ -76,12 +76,12 @@ These two columns tell you different things about how your page is using memory:
   represents how much memory the reachable objects on your page are using. If this number is
   increasing, either new objects are being created, or the existing objects are growing.
 
-## Visualize memory leaks with Timeline recordings {: #visualize_memory_leaks_with_timeline_recordings }
+## Visualize memory leaks with Performance recordings {: #visualize_memory_leaks_with_timeline_recordings }
 
-You can also use the Timeline panel as another starting point in your investigation. The Timeline
+You can also use the Performance panel as another starting point in your investigation. The Performance
 panel helps you visualize a page's memory use over time.
 
-1.  Open the **Timeline** panel on DevTools.
+1.  Open the **Performance** panel on DevTools.
 2.  Enable the **Memory** checkbox.
 3.  [Make a recording][2].
 
@@ -90,7 +90,7 @@ the **collect garbage** button
 ({% Img src="image/admin/Qkf1EfUFRSoRsCEMVHdY.png", alt="force garbage collection button", width="18", height="20" %})
 while recording to force garbage collection.
 
-To demonstrate Timeline memory recordings, consider the code below:
+To demonstrate Performance memory recordings, consider the code below:
 
 ```js
 var x = [];
@@ -159,7 +159,7 @@ Heap snapshots are one way to identify detached nodes. As the name implies, heap
 how memory is distributed among your page's JS objects and DOM nodes at the point of time of the
 snapshot.
 
-To create a snapshot, open DevTools and go to the **Profiles** panel, select the **Take Heap
+To create a snapshot, open DevTools and go to the **Memory** panel, select the **Heap
 Snapshot** radio button, and then press the **Take Snapshot** button.
 
 {% Img src="image/admin/cZnWVusrPfoLR9R9edO1.png", alt="take heap snapshot", width="800", height="353" %}
@@ -233,11 +233,11 @@ you'd be able to see that it was allocated to the `x` variable in the `Window` s
 
 ## Investigate memory allocation by function {: #allocation-profile }
 
-Use the **Record Allocation Profiler** type to view memory allocation by JavaScript function.
+Use the **Allocation Sampling** type in the **Memory** panel to view memory allocation by JavaScript function.
 
 {% Img src="image/admin/EiRjVwtHv1eh7idYWz37.png", alt="Record Allocation Profiler", width="800", height="564" %}
 
-1.  Select the **Record Allocation Profiler** radio button. If there is a worker on the page, you
+1.  Select the **Allocation Sampling** radio button. If there is a worker on the page, you
     can select that as the profiling target using the dropdown menu next to the **Start** button.
 2.  Press the **Start** button.
 3.  Perform the actions on the page which you want to investigate.

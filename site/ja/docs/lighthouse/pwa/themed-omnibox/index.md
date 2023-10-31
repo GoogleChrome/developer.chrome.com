@@ -8,7 +8,7 @@ date: 2019-05-04
 updated: 2020-06-17
 ---
 
-[Progressive Web App（PWA）](https://web.dev/discover-installable/)のブランドカラーに一致するようにブラウザのアドレスバーにテーマを設定すると、より没入型のユーザー体験が提供されます。
+[Progressive Web App（PWA）](https://web.dev/articles/discover-installable)のブランドカラーに一致するようにブラウザのアドレスバーにテーマを設定すると、より没入型のユーザー体験が提供されます。
 
 ## ブラウザの互換性
 
@@ -20,11 +20,11 @@ updated: 2020-06-17
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/YadFSuw8denjl1hhnvFs.png", alt="Lighthouse 監査はページの色をテーマにしていないアドレスバーを表示します", width="800", height="98" %}</figure>
 
-LighthouseがページのHTMLで`theme-color`メタタグを検出せず、[Webアプリマニフェスト](https://web.dev/add-manifest/)で`theme_color`プロパティを検出しない場合、監査は失敗します。
+LighthouseがページのHTMLで`theme-color`メタタグを検出せず、[Webアプリマニフェスト](https://web.dev/articles/add-manifest)で`theme_color`プロパティを検出しない場合、監査は失敗します。
 
 Lighthouseは、値が有効なCSSカラー値であるかどうかをテストしないことに注意してください。
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## アドレスバーのテーマの色を設定する方法
 
@@ -47,7 +47,7 @@ Lighthouseは、値が有効なCSSカラー値であるかどうかをテスト�
 
 ### ステップ2： `theme_color`プロパティをWebアプリマニフェストに追加します
 
-Webアプリマニフェストの`theme_color`プロパティにより、ユーザーがホーム画面からPWAを起動したときに、アドレスバーがブランド化されます。 `theme-color`メタタグとは異なり、[マニフェスト](https://web.dev/add-manifest/)でこれを定義する必要があるのは1回だけです。プロパティを任意の有効なCSSカラー値に設定してください。
+Webアプリマニフェストの`theme_color`プロパティにより、ユーザーがホーム画面からPWAを起動したときに、アドレスバーがブランド化されます。 `theme-color`メタタグとは異なり、[マニフェスト](https://web.dev/articles/add-manifest)でこれを定義する必要があるのは1回だけです。プロパティを任意の有効なCSSカラー値に設定してください。
 
 ```html/1
 {
@@ -61,5 +61,5 @@ Webアプリマニフェストの`theme_color`プロパティにより、ユー�
 ## リソース
 
 - [監査の**アドレスバーのテーマカラーを設定しない**監査用のソースコード](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/themed-omnibox.js)
-- [Webアプリマニフェストを追加する](https://web.dev/add-manifest/)
+- [Webアプリマニフェストを追加する](https://web.dev/articles/add-manifest)
 - [Android向けのChrome 39で`theme-color`用のサポート](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android)

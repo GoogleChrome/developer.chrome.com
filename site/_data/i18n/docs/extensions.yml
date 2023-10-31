@@ -16,7 +16,7 @@ quality:
 devtools:
   en: 'Extend Chrome DevTools'
 develop:
-  en: 'Develop extensions and themes'
+  en: 'Develop extensions'
 indepth:
   en: 'Development in depth'
 indepth-core:
@@ -35,3 +35,7 @@ mv2:
   en: 'Manifest V2'
 apps:
   en: 'Develop Chrome Apps'
+service_workers:
+  en: 'Service workers'
+support:
+  en: 'Support and feedback'

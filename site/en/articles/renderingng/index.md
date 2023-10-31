@@ -270,7 +270,7 @@ All of them were developed with open specifications and collaboration with open 
 partners—engineers at other browsers, experts, and web developers.
 In subsequent blog posts, we will dive into each of these and explain how RenderingNG makes them possible.
 
-- [content-visibility](https://web.dev/content-visibility/):
+- [content-visibility](https://web.dev/articles/content-visibility):
 allows sites to easily avoid rendering work for offscreen content,
 and cache rendering for not-currently-shown single page application views.
 - [OffscreenCanvas](/web/updates/2018/08/offscreen-canvas): allows canvas rendering
@@ -278,16 +278,16 @@ and cache rendering for not-currently-shown single page application views.
 This project is also another major milestone for the web—it's
 the very first web API that allows JavaScript (or WebAssembly!)
 to render a single web page document from multiple threads.
-- [Container queries](https://web.dev/new-responsive/): allows a single component to responsively lay itself out,
+- [Container queries](https://web.dev/articles/new-responsive): allows a single component to responsively lay itself out,
 unblocking a whole universe of plug-and-play components (currently an experimental implementation).
-- [Origin isolation](https://web.dev/origin-agent-cluster/): allows sites to opt into more performance isolation between iframes.
-- Off-main-thread [paint worklets](https://web.dev/houdini-how/): gives developers a way to extend how elements are painted,
+- [Origin isolation](https://web.dev/articles/origin-agent-cluster): allows sites to opt into more performance isolation between iframes.
+- Off-main-thread [paint worklets](https://web.dev/articles/houdini-how): gives developers a way to extend how elements are painted,
 with code that runs on the compositor thread.
 
 In addition to explicit web APIs,
 RenderingNG allowed us to ship several very significant "automatic features" that benefit all sites:
 
-- [Site Isolation](https://developers.google.com/web/updates/2018/07/site-isolation):
+- [Site Isolation](/blog/site-isolation/):
 puts cross-origin iframes in different CPU processes,
 for better security and performance isolation.
 - [Vulkan](https://www.vulkan.org/),
@@ -599,7 +599,7 @@ Definitions of terms in the chart above:
 Mojo
 : A next-generation IPC subsystem for Chromium.
 
-Surface 
+Surface
 : A concept that is part of the Viz project design.
 
 ## Conclusion

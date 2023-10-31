@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-07-19
+updated: 2023-05-10
 
 # Optional
 # How to add a new author
@@ -45,6 +45,8 @@ CrUX on BigQuery allows users to directly query the full dataset going back to 2
 
 The data is structured by monthly release, as well as a number of summary tables to provide simple access for querying the data. These are documented further below.
 
+The BigQuery data is the basis of the [CrUX Dashboard](/docs/crux/dashboard/), which allows you to visualize this data without writing SQL queries.
+
 ## Accessing the dataset in GCP
 
 Using BigQuery requires a [GCP project](https://cloud.google.com/) and basic knowledge of SQL. The [CrUX dataset on BigQuery](https://console.cloud.google.com/bigquery?p=chrome-ux-report&d=all&page=dataset) is free to access and explore up to the limits of the [free tier](https://cloud.google.com/bigquery/pricing#queries), which is renewed monthly and provided by BigQuery. Additionally, new GCP users may be eligible for a [signup credit](https://cloud.google.com/free/docs/frequently-asked-questions#free-trial) to cover expenses beyond the free tier. Note that a credit card must be provided for the GCP project, see [Why do I need to provide a credit card?](https://cloud.google.com/free/docs/frequently-asked-questions#why-credit-card).
@@ -59,7 +61,7 @@ If this is your first time using BigQuery then follow below steps to set up a pr
 Now you’re ready to start querying the dataset.
 
 {% Aside %}
-For example queries see the [getting started guide on web.dev](https://web.dev/chrome-ux-report-bigquery/).
+For example queries see the [getting started guide](/blog/chrome-ux-report-bigquery/).
 {% endAside %}
 
 ## Project organization
@@ -98,12 +100,17 @@ The raw tables for each country and the `all` dataset have the following schema:
     - delay
 - layout_instability
     - cumulative_layout_shift
+- interaction_to_next_paint
 - experimental
     - permission
         - notifications
     - time_to_first_byte
-    - responsiveness
+    - interaction_to_next_paint (deprecated)
     - popularity
+
+{% Aside 'important' %}
+The `interaction_to_next_paint` metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
+{% endAside %}
 
 ## Materialized table schema {: #schema-materialized }
 
@@ -157,7 +164,7 @@ Materialized tables are provided for easy access to summary data by a number of 
 </tbody>
 </table></div>
 
-This shows that in the 202204 dataset, 90.56% of real-user experiences on `https://example.com` met the criteria for [good LCP](https://web.dev/defining-core-web-vitals-thresholds/#refresher:-core-web-vitals-metrics-and-thresholds), and that the coarse 75th percentile LCP value was 1,600ms. This is slightly slower than previous months.
+This shows that in the 202204 dataset, 90.56% of real-user experiences on `https://example.com` met the criteria for [good LCP](https://web.dev/articles/defining-core-web-vitals-thresholds#refresher:_core_web_vitals_metrics_and_thresholds), and that the coarse 75th percentile LCP value was 1,600ms. This is slightly slower than previous months.
 
 Four materialized tables are provided:
 

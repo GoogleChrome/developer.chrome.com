@@ -50,7 +50,7 @@ Heutzutage wird bei Werbung für die Conversion-Messung häufig auf [Drittanbiet
 
 Das Attribution Reporting API ermöglicht die Messung zweier miteinander verknüpfter Ereignisse: einem Ereignis auf einer Betreiberwebsite (beispielsweise eine Anzeigenansicht oder ein Anzeigenklick) mit einer anschließenden Conversion auf einer Betreiberwebsite.
 
-Dieses API unterstützt die Messung der Click-through-Conversion-Attribution (verfügbar in der ersten Implementierung dieses, sich derzeit in einer [Origin-Trial](https://web.dev/conversion-measurement/#browser-support) befindenden APIs) sowie die View-through-Attributionsmessung ([siehe öffentliche Erläuterung](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md)).
+Dieses API unterstützt die Messung der Click-through-Conversion-Attribution (verfügbar in der ersten Implementierung dieses, sich derzeit in einer [Origin-Trial](/docs/privacy-sandbox/attribution-reporting/#browser-support) befindenden APIs) sowie die View-through-Attributionsmessung ([siehe öffentliche Erläuterung](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md)).
 
 Das API bietet zwei Arten von Attributionsberichten, die sich für verschiedene Anwendungsfälle anbieten:
 
@@ -69,8 +69,8 @@ Das API bietet zwei Arten von Attributionsberichten, die sich für verschiedene 
 
 - [Einführung in die Attributionsberichterstattung (Conversion-Messung)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [Technische Erläuterungen zum API](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ veraltet) [Eine datenschutzfreundlichere Methode zur Messung von Conversions, die auf Anzeigen zurückzuführen sind](https://web.dev/conversion-measurement/): Überblick über die erste Iteration dieses APIs für Webentwickler
+- (⚠️ veraltet) [Eine datenschutzfreundlichere Methode zur Messung von Conversions, die auf Anzeigen zurückzuführen sind](/docs/privacy-sandbox/attribution-reporting/): Überblick über die erste Iteration dieses APIs für Webentwickler
 - (⚠️ veraltet) [Eine datenschutzfreundlichere Methode zur Messung von auf Anzeigen zurückzuführender Conversions – Video](https://www.youtube.com/watch?v=jcDfOoWwZcM): Demo der ersten Iteration dieses APIs (nur Klicks)
-- (⚠️ veraltet) [Verwenden des Event Conversion Measurement APIs](https://web.dev/using-conversion-measurement/): Wie man mit der ersten Iteration dieses APIs für Webentwickler experimentieren kann
+- (⚠️ veraltet) [Verwenden des Event Conversion Measurement APIs](/docs/privacy-sandbox/attribution-reporting/): Wie man mit der ersten Iteration dieses APIs für Webentwickler experimentieren kann
 - [Mehr über die Privacy Sandbox erfahren](https://web.dev/digging-into-the-privacy-sandbox)
 - Debuggen Sie das API mit den Chrome-Entwicklertools

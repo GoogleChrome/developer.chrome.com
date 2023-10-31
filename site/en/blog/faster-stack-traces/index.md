@@ -13,7 +13,7 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 Web developers have come to expect little to no performance impact when debugging their code. However, this expectation is by no means universal. A C++ developer would never expect a debug build of their application to reach production performance, and in early years of Chrome, simply opening DevTools significantly impacted the performance of the page.
 
@@ -118,5 +118,5 @@ With the above improvements, we've significantly reduced the overhead of DevTool
 
 We know there are still various possible improvements - for example the overhead when using `MutationObserver`s is still noticeable, as reported in [chromium:1077657](https://crbug.com/1077657) - but for the time being, we've addressed the major pain points, and we might come back in the future to further streamline the debugging performance.
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

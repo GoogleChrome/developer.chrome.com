@@ -12,12 +12,11 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-106
-draft: true
 ---
 
 *感谢 [Yoong Sin Yi (Louis)](https://www.linkedin.com/in/louis-yoong-a2370ab7/) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='5gBqTXctxO8' %}
 
@@ -107,8 +106,8 @@ Chromium 议题: [1334585](https://crbug.com1334585)
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="Automatically ignore known third-party scripts in the stack trace", width="800", height="425" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="自动忽略堆栈跟踪中的已知第三方脚本", width="800", height="425" %}
 
-<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
-在幕后，DevTools 根据 sourcemaps 中新的`x_google_ignoreList`属性来忽略第三方脚本。框架和捆绑器需要提供这一信息。参见[案例研究：用 DevTools 进行更好的 Angular 调试]（/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular）。
+<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in source maps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
+在幕后，DevTools 根据 source maps 中新的`x_google_ignoreList`属性来忽略第三方脚本。框架和捆绑器需要提供这一信息。参见[案例研究：用 DevTools 进行更好的 Angular 调试]（/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular）。
 
 <!-- Optionally, if you prefer to always view full stack traces, you can disable the setting via **Settings** > **Ignore list** > **Automatically add known third-party scripts to ignore list**. -->
 另外，如果您喜欢总是查看完整的堆栈跟踪，您可以通过**设置** > **忽略列表** > **自动添加已知的第三方脚本到忽略列表**来禁用该设置。
@@ -180,7 +179,7 @@ Chromium 议题: [1336604](https://crbug.com/1336604)
 
 
 <!-- ## New Interactions track in the Performance panel  {: #performance } -->
-## 性能面板中的新互动轨道 {: #performance } 
+## 性能面板中的新互动轨道 {: #performance }
 
 <!-- Use the new **Interactions** track in the **Performance** panel to visualize interactions and track down potential responsiveness issues.  -->
 使用**性能**面板中新的**互动**轨道来可视化互动并追踪潜在的响应性问题。
@@ -201,7 +200,7 @@ Chromium 议题: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## 性能洞察面板中的LCP时序分解 {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/articles/optimize-lcp#lcp_breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 **性能洞察**面板现在显示了[时间表分类](web.dev/optimize-lcp/#lcp-breakdown)中的[Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint)。 并使用这些时间信息来了解和提高 LCP 性能的机会。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="LCP timings breakdown in the Performance Insights panel", width="800", height="523" %} -->
@@ -236,8 +235,8 @@ Chromium 议题: [1351383](https://crbug.com/1351383)
 - 之前，[Recorder 扩展] (/docs/devtools/recorder/reference/#extension-troubleshooting)不时会在 **Recorder** 面板上不被显示出来。
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
 - **样式**边栏现在显示 [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) 元素的 `stop-color` 属性显示一个颜色选择器。([1351096](https://crbug.com/1351096))
-<!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
-- 在 **Performance Insights** 面板中，识别导致[布局](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/)的脚本是布局转变的潜在根源。([1343019](https://crbug.com/1343019)) 
+<!-- - Identify script causing [layout](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
+- 在 **Performance Insights** 面板中，识别导致[布局](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing)的脚本是布局转变的潜在根源。([1343019](https://crbug.com/1343019))
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 - 在 **Performance Insights** 面板中显示 LCP 网页字体的关键路径。 ([1350390](https://crbug.com/1350390))
 
@@ -246,5 +245,5 @@ Chromium 议题: [1351383](https://crbug.com/1351383)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1f6ef0d58292665e06eded4059d8714a2e487e8a #}
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fe7254c9a51f964b2a106becc1b22f38033b9f50 #}
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

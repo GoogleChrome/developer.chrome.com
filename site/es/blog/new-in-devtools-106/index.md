@@ -16,7 +16,7 @@ tags:
 
 _Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y por la revisión [Miguel Ángel](https://midu.dev)._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='5gBqTXctxO8' %}
 
@@ -104,7 +104,7 @@ Anteriormente, el seguimiento de la pila incluía scripts de terceros como `zone
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GQ9B11tKBcFc1BxQYW9z.png", alt="Automatically ignore known third-party scripts in the stack trace", width="800", height="425" %}
 
-<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
+<!-- Behind the scenes, DevTools ignores third-party scripts based on the new `x_google_ignoreList` property in source maps. Frameworks and bundlers need to supply this information. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).  -->
 Detrás de escena, DevTools ignora los scripts de terceros basados en la nueva propiedad `x_google_ignoreList` en los mapas de origen. Los frameworks y los bundlers deben proporcionar esta información. Consulte [Estudio de caso: Mejor depuración angular con DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
 
 <!-- Optionally, if you prefer to always view full stack traces, you can disable the setting via **Settings** > **Ignore list** > **Automatically add known third-party scripts to ignore list**. -->
@@ -188,7 +188,7 @@ Chromium bug: [1347390](https://crbug.com/1347390)
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Desglose de tiempos de LCP en el panel de pespectiva de rendimiento {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/articles/optimize-lcp#lcp_breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Desglose de tiempos de LCP en el panel Perspectiva de Rendimiento", width="800", height="523" %}
@@ -221,8 +221,8 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
 - El panel **Estilos** ahora muestra un selector de color para la propiedad `stop-color` del elemento [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) . ([1351096](https://crbug.com/1351096))
 
-<!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
-- Identifique el script que está provocando la ejecución de [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) como una posible causa fundamental de cambios de diseño con el panel **Performance Insights**. ([1343019](https://crbug.com/1343019))
+<!-- - Identify script causing [layout](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
+- Identifique el script que está provocando la ejecución de [layout](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) como una posible causa fundamental de cambios de diseño con el panel **Performance Insights**. ([1343019](https://crbug.com/1343019))
 
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 - Se muestra la ruta crítica para las fuentes web LCP en el panel **Performance Insights**. ([1350390](https://crbug.com/1350390))
@@ -233,5 +233,5 @@ Chromium bug: [1351383](https://crbug.com/1351383)
 {# https://chrome-internal.googlesource.com/devtools/devtools-internal/+/fe7254c9a51f964b2a106becc1b22f38033b9f50 #}
 
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

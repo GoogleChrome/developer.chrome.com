@@ -4,7 +4,7 @@ summary: >-
   A developer event in Southeastern Europe that brings together the global
   tech community; devs, software engineers, product owners, founders, startups
   and more.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: Zadar, Croatia
 date: 2022-09-19
 externalUrl: https://shift.infobip.com/
@@ -19,7 +19,8 @@ sessions:
       or will be coming soon like container queries, the :has() family selector,
       cascade layers, and much more!
     topics:
-      - Web UI and CSS
+      - Web UI
+      - CSS
     time: null
     type: speaker
     slidesUrl: null

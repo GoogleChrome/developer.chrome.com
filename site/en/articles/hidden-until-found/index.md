@@ -1,21 +1,20 @@
 ---
 title: 'Making collapsed content accessible with hidden=until-found'
 description: >
-  How this new attribute value can ensure that content within accordion sections can be found and linked to. 
+  How this new attribute value can ensure that content within accordion sections can be found and linked to.
 layout:
   'layouts/blog-post.njk'
 date: 2022-04-28
 authors:
   - jarhar
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/KjF2oAvuvbZ1rCQkCXX4.jpg'
-alt: >
-  A cat hiding behind a curtain.
+alt: A cat hiding behind a curtain.
 tags:
   - chrome
   - html
 ---
 
-Collapsing content sections, sometimes described as [an accordion](https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/), are a common UI pattern. However, content hidden in the collapsed sections becomes impossible to search using a find-in-page search. Also, it isn't possible to link to [text fragments](https://web.dev/text-fragments/) inside collapsed regions.
+Collapsing content sections, sometimes described as [an accordion](https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/), are a common UI pattern. However, content hidden in the collapsed sections becomes impossible to search using a find-in-page search. Also, it isn't possible to link to [text fragments](https://web.dev/articles/text-fragments) inside collapsed regions.
 
 The `hidden=until-found` HTML attribute and `beforematch` event can solve these problems. By adding `hidden=until-found` to the container for your hidden content, you make it possible for the browser to search text in that hidden region, and reveal the section if a match is found.
 

@@ -75,7 +75,7 @@ property:
 This function also supports a second parameter, `startNode`, that specifies an 'element' or Node from
 which to search for elements. The default value of this parameter is `document`.
 
-The following example returns a reference to the first element after the currently selected Node and
+The following example returns a reference to the first `img` element that is a descendant of `devsite-header-background`, and
 displays its `src` property:
 
 {% Img src="image/admin/Q5XlmeIMaHQkpP1QryBd.png", alt="Example of $('img', div).src.", width="800", height="234" %}
@@ -90,7 +90,7 @@ overwritten, and `$` will correspond to that library's implementation.
 ## \$\$(selector \[, startNode\]) {: #querySelectorAll-function }
 
 `$$(selector)` returns an array of elements that match the given CSS selector. This command is
-equivalent to calling [document.querySelectorAll()][3].
+equivalent to calling <code>Array.from([document.querySelectorAll()][3])</code>.
 
 The following example uses `$$()` to create an array of all `<img>` elements in the current document
 and displays the value of each element's `src` property:
@@ -324,20 +324,27 @@ Use [`unmonitorEvents(object[, events])`](#unmonitorEvents-function) to stop mon
 ## profile(\[name\]) and profileEnd(\[name\]) {: #profile-function }
 
 `profile()` starts a JavaScript CPU profiling session with an optional name. `profileEnd()`
-completes the profile and displays the results in the Profile panel. (See also [Speed Up JavaScript
-Execution][7].)
+completes the profile and displays the results in the **Performance** > **Main** track.
+
+{% Aside %}
+**Note**: The `profile()` and `profileEnd()` are the shorthands for [`console.profile()`](https://developer.mozilla.org/docs/Web/API/console/profile) and [`console.profileEnd()`](https://developer.mozilla.org/docs/Web/API/console/profileEnd).
+{% endAside %}
 
 To start profiling:
 
 ```js
-profile("My profile")
+profile("Profile 1")
 ```
 
-To stop profiling and display the results in the Profiles panel:
+To stop profiling and see the results in the **Performance** > **Main** track:
 
 ```js
-profileEnd("My profile")
+profileEnd("Profile 1")
 ```
+
+Result in the **Performance** > **Main** track:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GAFSVu5lUoZVlumrcmHl.png", alt="Profile 1 in the Performance > Main track.", width="800", height="606" %}
 
 Profiles can also be nested. For example, this will work in any order:
 
@@ -347,10 +354,6 @@ profile('B');
 profileEnd('A');
 profileEnd('B');
 ```
-
-Result in the profiles panel:
-
-{% Img src="image/admin/BWxxLJby5scm6zF0eidW.png", alt="Grouped profiles.", width="800", height="469" %}
 
 {% Aside %}
 

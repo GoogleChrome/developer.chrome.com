@@ -15,12 +15,12 @@ tags:
   - chrome-93
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Editable CSS container queries in the Styles pane {: #container-queries }
-You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
+You can now view and edit [CSS container queries](https://web.dev/articles/new-responsive#responsive_to_the_container) in the **Styles** pane.
 
 Container queries provide a much more dynamic approach to responsive design. The `@container` at-rule works in a similar way to a media query with `@media`. However, instead of querying the viewport and user agent for information, `@container` queries the ancestor container that matches certain criteria.
 
@@ -38,7 +38,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 
 ## Web bundle preview in the Network panel {: #web-bundle }
-[Web bundle](https://web.dev/web-bundles/) is a file format for encapsulating one or more HTTP resources in a single file. You can now preview the web bundle content in the **Network** panel.
+[Web bundle](https://web.dev/articles/web-bundles) is a file format for encapsulating one or more HTTP resources in a single file. You can now preview the web bundle content in the **Network** panel.
 
 The web bundle feature is experimental currently. Please enable `#enable-experimental-web-platform-features` flag under `chrome://flags` to test it.
 
@@ -66,7 +66,7 @@ New context menu in the **Console** allows you to copy any string in as content,
 
 In Chrome 90, DevTools updated the **Console** to always [format string outputs as valid JSON literals](/blog/new-in-devtools-90/#double-quotes). We received feedback from the developers that this change could be confusing, some feel that the amount of escaping is excessive and makes the output unreadable.
 
-The **Console** now formats string outputs as valid JavaScript litera, and furthermore provides you 3 copy string options. The **Copy as JavaScript literal** option will escape appropriate special characters and wrap the string in either single quotes, double quotes, or backticks depending on the string content. The **Copy string contents** instead copies the raw string contents (including new lines and other special characters) verbatim to the clipboard. Finally, **Copy as JSON literal** formats the string as a valid JSON literal and copies it to the clipboard.
+The **Console** now formats string outputs as valid JavaScript literals, and furthermore provides you 3 copy string options. The **Copy as JavaScript literal** option will escape appropriate special characters and wrap the string in either single quotes, double quotes, or backticks depending on the string content. The **Copy string contents** instead copies the raw string contents (including new lines and other special characters) verbatim to the clipboard. Finally, **Copy as JSON literal** formats the string as a valid JSON literal and copies it to the clipboard.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9242d13569e9fe67ac01e75d28fa2b6e6bf310d2 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5715a7b9800532d8b28e2c9fa2d3c1e220ba54a8 #}
@@ -142,5 +142,5 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

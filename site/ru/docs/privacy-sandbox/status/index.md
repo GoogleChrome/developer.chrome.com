@@ -15,7 +15,7 @@ authors:
 
 *Старое название—«Измерение конверсии».*
 
-- [Текущее испытание origin trial](https://web.dev/origin-trials/): с Chrome 86 [теперь расширено](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) до Chrome 93.
+- [Текущее испытание origin trial](/docs/web-platform/origin-trials/): с Chrome 86 [теперь расширено](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) до Chrome 93.
 - [Регистрация для участия в испытании Origin Trial](/origintrials/#/view_trial/3411476717733150721).
 - [Демонстрация](https://goo.gle/demo-event-level-conversion-measurement-api).
 - [Статус платформы Chrome](https://www.chromestatus.com/features/6412002824028160).
@@ -31,25 +31,25 @@ authors:
 - [Отчеты по атрибуции (измерение конверсии)](/docs/privacy-sandbox/attribution-reporting)
 - [Введение в отчеты по атрибуции (измерение конверсии)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [Технические описания API](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ устарело) [Более конфиденциальный способ измерения конверсии рекламы](https://web.dev/conversion-measurement/): обзор первой версии этого API для веб-разработчиков
+- (⚠️ устарело) [Более конфиденциальный способ измерения конверсии рекламы](/docs/privacy-sandbox/attribution-reporting/): обзор первой версии этого API для веб-разработчиков
 - (⚠️ устарело) [Более конфиденциальный способ измерения конверсии рекламы-видео](https://www.youtube.com/watch?v=jcDfOoWwZcM): демонстрация первой версии этого API для веб-разработчиков (только клики)
-- (⚠️ устарело) [Использование Event Conversion Measurement API](https://web.dev/using-conversion-measurement/): как экспериментировать с первой версией этого API для веб-разработчиков
+- (⚠️ устарело) [Использование Event Conversion Measurement API](/docs/privacy-sandbox/attribution-reporting/): как экспериментировать с первой версией этого API для веб-разработчиков
 - [Погружение в Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 
 ## Токены доверия
 
-- [Текущее испытание origin trial](https://web.dev/origin-trials/): с Chrome 84 [теперь расширено](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ) до Chrome 94.
+- [Текущее испытание origin trial](/docs/web-platform/origin-trials/): с Chrome 84 [теперь расширено](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ) до Chrome 94.
 - [Регистрация для участия в испытании Origin Trial](/origintrials/#/view_trial/2479231594867458049).
 - [Демонстрация](https://trust-token-demo.glitch.me/).
 - [Статус платформы Chrome](https://www.chromestatus.com/feature/5078049450098688).
 - [Статус Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
 - [GitHub](https://github.com/WICG/trust-token-api): задавайте вопросы и участвуйте в обсуждении API в разделе [Issues](https://github.com/WICG/trust-token-api/issues).
 - [Интеграция с Chrome DevTools](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
-- Дополнительная информация: [Начало работы с токенами доверия](https://web.dev/trust-tokens/)
+- Дополнительная информация: [Начало работы с токенами доверия](https://web.dev/articles/trust-tokens)
 
 ## Наборы собственных доменов
 
-- [Текущее испытание Origin Trial](https://web.dev/origin-trials/): Chrome с 89 по 93.
+- [Текущее испытание Origin Trial](/docs/web-platform/origin-trials/): Chrome с 89 по 93.
 - [Регистрация для участия в испытании Origin Trial](/origintrials/#/view_trial/988540118207823873).
 - [Статус платформы Chrome](https://chromestatus.com/feature/5640066519007232).
 - [Статус Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
@@ -64,7 +64,7 @@ authors:
 - [Предложение API](https://github.com/WICG/floc) в настоящий момент обсуждается с [WICG](https://www.w3.org/community/wicg/) и другими заинтересованными группами.
 - [GitHub](https://github.com/WICG/floc): задавайте вопросы и участвуйте в обсуждении API в разделе [Issues](https://github.com/WICG/floc/issues).
 - [Статус платформы Chrome](https://www.chromestatus.com/features/5710139774468096).
-- Дополнительная информация: [Что такое FLoC?](https://web.dev/floc/)
+- Дополнительная информация: [Что такое FLoC?](https://web.dev/articles/floc)
 
 ## FLEDGE
 
@@ -91,7 +91,7 @@ authors:
 
 ### Испытания Origin Trial
 
-- [Знакомство с испытаниями Chrome Origin Trial](https://web.dev/origin-trials/)
+- [Знакомство с испытаниями Chrome Origin Trial](/docs/web-platform/origin-trials/)
 - [Что такое сторонние испытания Origin Trial?](https://web.dev/third-party-origin-trials)
 - [Знакомство с испытаниями Chrome Origin Trial](/blog/origin-trial-troubleshooting/)
 - [Руководство по испытаниям Origin Trial для веб-разработчиков](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)

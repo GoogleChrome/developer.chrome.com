@@ -17,7 +17,7 @@ tags:
 
 *Traducción cedida por [Miguel Ángel](https://twitter.com/midudev).*
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -150,7 +150,7 @@ Chromium issue: [622660](https://crbug.com/622660)
 
 ## Incluye las intersecciones computadas en el panel de Performance {: #computed-intersections }
 
-DevTools ahora te muestra el coste de las **intersecciones computadas** en la pila de JavaScript. Este cambio te puede ayudar a identificar los eventos de [Intersection Observer](https://web.dev/intersectionobserver-v2/) y depurar cualquier problema potencial de rendimiento.
+DevTools ahora te muestra el coste de las **intersecciones computadas** en la pila de JavaScript. Este cambio te puede ayudar a identificar los eventos de [Intersection Observer](https://web.dev/articles/intersectionobserver-v2) y depurar cualquier problema potencial de rendimiento.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Nx3K0Lpst0lICGbtpzsW.png", alt="Interseciones computadas en el panel de Performance", width="800", height="496" %}
 
@@ -222,5 +222,5 @@ Ten en cuenta que este experimento está en sus primeras etapas de desarrollo. H
 
 Chromium issue: [1199787](https://crbug.com/1199787)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

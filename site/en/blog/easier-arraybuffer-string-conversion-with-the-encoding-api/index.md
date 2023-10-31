@@ -6,10 +6,10 @@ description: >
 authors:
   - jeffposnick
 date: 2014-08-27
-updated: 2019-03-15 
+updated: 2019-03-15
 ---
 
-Over two years ago, [Renato Mangini](https://www.html5rocks.com/en/profiles/#renatomangini) described a [method](https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String) for converting between raw [ArrayBuffers](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) and the corresponding string representation of that data. At the end of the post, Renato mentioned that an official standardized API to handle the conversion was in the process of being drafted. The [specification](https://encoding.spec.whatwg.org/) has now matured, and both [Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/18) and [Google Chrome](https://www.chromestatus.com/feature/5714368087982080) have added native support for the [TextDecoder](https://encoding.spec.whatwg.org/#interface-textdecoder) and [TextEncoder](https://encoding.spec.whatwg.org/#interface-textencoder) interfaces.
+Over two years ago, [Renato Mangini](https://www.html5rocks.com/en/profiles/#renatomangini) described a [method](/blog/how-to-convert-arraybuffer-to-and-from-string/) for converting between raw [ArrayBuffers](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) and the corresponding string representation of that data. At the end of the post, Renato mentioned that an official standardized API to handle the conversion was in the process of being drafted. The [specification](https://encoding.spec.whatwg.org/) has now matured, and both [Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/18) and [Google Chrome](https://www.chromestatus.com/feature/5714368087982080) have added native support for the [TextDecoder](https://encoding.spec.whatwg.org/#interface-textdecoder) and [TextEncoder](https://encoding.spec.whatwg.org/#interface-textencoder) interfaces.
 
 As demonstrated by [this live sample](https://googlechrome.github.io/samples/encoding-api/index.html), excerpted below, the [Encoding API](https://encoding.spec.whatwg.org/) makes it simple to translate between raw bytes and native JavaScript strings, regardless of which of the many standard encodings you need to work with.
 

@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Accessibility (a11y)"
+seoTitle: "MV2 Accessibility (a11y) [Deprecated]"
 date: 2012-09-17
 updated: 2018-07-30
-description: How to make your Chrome Extension accessible.
+description: How to make your Manifest V2 Chrome Extension accessible.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Accessibility (a11y)](/docs/extensions/mv3/a11y) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Extensions empower users to create their ideal browsing experience, tailored to an individual's
 abilities and preferences. Extensions should include accessibility components that encourage an
@@ -30,7 +35,7 @@ way to create an accessible UI is to use a standard HTML control.
 {% Aside %}
 
 Note: If an extension requires a custom control, it is much easier to make a custom control
-accessible from the beginning than to go back an add accessibility support later.
+accessible from the beginning than to go back and add accessibility support later.
 
 {% endAside %}
 
@@ -167,8 +172,8 @@ button.
      onkeydown="return optionKeyEvent(event);"
      onkeypress="return optionKeyEvent(event);">
   <img src="buttoncut" role="button" alt="cut" id="button1">
-  <img src="buttoncopy" role="button" alt="copy" id="button1">
-  <img src="buttonpaste" role="button" alt="paste" id="button1">
+  <img src="buttoncopy" role="button" alt="copy" id="button2">
+  <img src="buttonpaste" role="button" alt="paste" id="button3">
 </div>
 ```
 
@@ -191,7 +196,7 @@ As an indicator of flexibility of an extension's UI, apply the [200% test][11]; 
 page zoom is increased 200%, is it still usable?
 
 Avoid baking text into images. Users are unable to modify the size and screen readers are unable to
-interpret images. Insead, opt for styled web font, such as one of the fonts found in the [Google
+interpret images. Instead, opt for styled web font, such as one of the fonts found in the [Google
 Font API][12]. Web fonts can scale to different sizes and can be accessed by people using screen
 readers.
 

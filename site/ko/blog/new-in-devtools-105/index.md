@@ -16,7 +16,7 @@ tags:
 
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하셨으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -45,9 +45,9 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- ## Support mouse over event in the Recorder panel {: #recorder-hover } -->
 ## Recorder 패널에서 마우스 오버 이벤트 기능 지원 {: #recorder-hover }
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
-**Recorder** 기능에서 레코딩 시에 마우스 오버 (호버) 단계를 수동으로 추가하는 것이 가능해졌습니다. 
-<!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
-[데모](https://jec.fyi/demo/menu-hover)에서 볼 수 있듯이, 마우스 호버 시에 팝업 메뉴가 표출됩니다. 유저 플로우의 녹화 및 메뉴 아이템 클릭을 시도해 보세요.
+**Recorder** 기능에서 레코딩 시에 마우스 오버 (호버) 단계를 수동으로 추가하는 것이 가능해졌습니다.
+<!-- [This demo](https://jec.fish/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
+[데모](https://jec.fish/demo/menu-hover)에서 볼 수 있듯이, 마우스 호버 시에 팝업 메뉴가 표출됩니다. 유저 플로우의 녹화 및 메뉴 아이템 클릭을 시도해 보세요.
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
 녹화 중에 **Recorder** 가 마우스 오버 이벤트를 자동적으로 감지하기 않기 때문에 지금 당신이 유저 플로우를 재생한다고 할지라도 재생이 실패할 것입니다. 이 문제를 해결하기 위해서, 메뉴 항목을 클릭하기 전에 [이 단계를 수동으로 추가](/docs/devtools/recorder/reference/#add-and-remove-steps)하여 셀렉터 위로 마우스를 올릴 수 있습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Recorder 에서 마우스오버 기능 지원", width="800", height="488" %}
@@ -57,9 +57,9 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
 ## Performance insights 패널의 Largest Contentful Paint (LCP) {: #lcp }
-<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-LCP 는 [인지 로드 속도](https://web.dev/user-centric-performance-metrics/#types-of-metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
-여러분은 이제 [최대 콘텐츠풀 페인트(LCP)](https://web.dev/lcp/) 의 중요한 경로와 근본적인 원인을 찾을 수 있습니다.
+<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp). -->
+LCP 는 [인지 로드 속도](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics)를 측정하기 위한 중요한 사용자 중심적 측정 기준입니다.
+여러분은 이제 [최대 콘텐츠풀 페인트(LCP)](https://web.dev/articles/lcp) 의 중요한 경로와 근본적인 원인을 찾을 수 있습니다.
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 [performance recording](/docs/devtools/performance-insights/#record) 에서, **타임라인** 의 LCP 배지를 클릭하세요. **Details** 창에서, 여러분은 LCP 점수를 볼 수 있고, LCP를 느리게 만드는 리소스를 어떻게 수정할지를 알 수 있고, LCP 자원의 중요한 경로를 찾을 수 있습니다.
 <!-- See [Performance Insights](/docs/devtools/performance-insights/) to learn how to get actionable insights and improve your website’s performance with the panel. -->
@@ -72,12 +72,12 @@ Chromium issue: [1326481](https://crbug.com/1326481)
 
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
 ## 레이아웃 변경의 잠재적 근본 원인으로서 텍스트 깜박임(FOIT, FOUT) 식별 {: #foit-fout }
-<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
-이제 **Performance insights** 패널에서, 레이아웃 변경의 잠재적 근본 원인으로서 [보이지 않는 텍스트 깜박임(FOIT)과 스타일이 지정되지 않은 텍스트 깜박임(FOUT)](https://web.dev/preload-optional-fonts/#font-rendering)을 감지할 수 있습니다.
+<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering) as potential root causes for layout shifts. -->
+이제 **Performance insights** 패널에서, 레이아웃 변경의 잠재적 근본 원인으로서 [보이지 않는 텍스트 깜박임(FOIT)과 스타일이 지정되지 않은 텍스트 깜박임(FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering)을 감지할 수 있습니다.
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
 레이아웃 변경의 잠재적 근본 원인을 찾아보기 위해서, **Layout shifts** 트랙 내의 스크린샷을 클릭하세요.
-<!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
-[WebFont 로딩 및 렌더링 최적화](https://web.dev/optimize-webfont-loading/)에서 레이아웃 변경을 방지하기 위한 기술들을 배워 보세요.
+<!-- See [Optimize WebFont loading and rendering](https://web.dev/articles/optimize-webfont-loading) to learn the technique to prevent layout shifts.  -->
+[WebFont 로딩 및 렌더링 최적화](https://web.dev/articles/optimize-webfont-loading)에서 레이아웃 변경을 방지하기 위한 기술들을 배워 보세요.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="Performance insights 패널에서의 FOUT", width="800", height="497" %}
 
 Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.com/1328873)
@@ -85,8 +85,8 @@ Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.c
 
 <!-- ## Protocol handlers in the Manifest pane {: #manifest } -->
 ## 매니페스트 창의 프로토콜 핸들러 {: #manifest }
-<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/url-protocol-handler/) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/). -->
-이제 여러분은 DevTools를 이용하여 [프로그레시브 웹 앱(PWA)](https://web.dev/learn/pwa/)에 대한 [URL 프로토콜 핸들러 등록](https://web.dev/url-protocol-handler/)을 테스트할 수 있습니다.
+<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/articles/url-protocol-handler) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa). -->
+이제 여러분은 DevTools를 이용하여 [프로그레시브 웹 앱(PWA)](https://web.dev/learn/pwa)에 대한 [URL 프로토콜 핸들러 등록](https://web.dev/articles/url-protocol-handler)을 테스트할 수 있습니다.
 
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
 URL 프로토콜 핸들러 등록을 통해, 설치된 PWA(프로그레시브 웹 앱)이 특정한 프로토콜 (예: [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) 핸들링하도록 할 수 있으며, 이는 더욱 통합된 경험을 위해서입니다.
@@ -110,11 +110,11 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
 [Top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) 를 사용하여, top layer의 개념을 이해할 수 있으며 또한 top layer 의 컨텐츠 변화를 시각화할 수 있습니다.
 
-<!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
-[`<dialog>` 요소](https://web.dev/building-a-dialog-component/) 가 최근에 웹 브라우저들에 대해 안정화되었습니다. 여러분이 다이얼로그를 열 때, 이는 [top layer](/blog/top-layer-devtools/)에 위치하게 됩니다. 최상위 레벨 컨텐츠는 기타 다른 컨텐츠 위에 렌더링됩니다.
+<!-- The [`<dialog>` element](https://web.dev/articles/building-a-dialog-component) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
+[`<dialog>` 요소](https://web.dev/articles/building-a-dialog-component) 가 최근에 웹 브라우저들에 대해 안정화되었습니다. 여러분이 다이얼로그를 열 때, 이는 [top layer](/blog/top-layer-devtools/)에 위치하게 됩니다. 최상위 레벨 컨텐츠는 기타 다른 컨텐츠 위에 렌더링됩니다.
 
-<!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
-주어진 [데모](https://jec.fyi/demo/dialog) 페이지에서 **Open dialog**를 클릭합니다.
+<!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
+주어진 [데모](https://jec.fish/demo/dialog) 페이지에서 **Open dialog**를 클릭합니다.
 
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
 top layer 요소를 시각화하기 위해, DevTools는 top layer 컨테이너 (`#top-layer`) 를 DOM 트리에 추가하며, 이는 `</html>` 태그 다음에 위치합니다.
@@ -134,7 +134,7 @@ Chromium issue: [1313690](https://crbug.com/1313690)
 
 <!-- ## Attach Wasm debugging information at runtime {: #wasm } -->
 ## 런타임에 Wasm 디버깅 정보 연결하기 {: #wasm }
-<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
+<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching source maps to JavaScript and Wasm files. -->
 여러분은 이제 런타임에 wasm 에 대한 DWARF 디버깅 정보를 연결할 수 있습니다. 이전에는 **소스** 패널만이 소스맵을 자바스크립트와 Wasm 파일에 연결할 수 있었습니다.
 
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
@@ -187,13 +187,13 @@ CSS `@scope` 는 현재 개발중이므로, `chrome://flags/#enable-experimental
 Chromium issue: [1337777](https://crbug.com/1337777)
 
 
-<!-- ## Sourcemap improvements {: #sourcemaps } -->
+<!-- ## Source map improvements {: #sourcemaps } -->
 ## 소스맵 개선 {: #sourcemaps }
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 전반적인 디버깅 경험을 개선하기 위한 소스맵에 대한 몇 가지 수정 사항입니다:
-<!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+<!-- - DevTools now properly resolves source map identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
 DevTools는 현재 구두점을 통해 소스맵 식별자를 적절하게 해결합니다. 몇몇 모던한 축소자는 일부 현대식 축소자(예: [esbuild](https://esbuild.github.io/)) 는 식별자를 후속 구두점과 병합하는 소스맵을 생성합니다.
-<!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
+<!-- - DevTools now resolves source map names for constructors with a `super` call. -->
 DevTools는 현재 `super`를 호출하는 생성자에 대한 소스맵 이름 문제를 해결합니다.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="ALT_TEXT_HERE", width="800", height="441" %}
 <!-- - Fixed source map URL indexing for duplicate canonical URLs. Previously, breakpoints were not activated in some files because of duplicate canonical URLs. -->
@@ -214,5 +214,5 @@ Chromium issue: [1335338](https://crbug.com/1335338), [1333411](https://crbug.co
 - **레이아웃** 창에서 CSS Flex 와 grid item 을 일관되게 표시하고 이들을 **요소**패널에 배지로서 표시합니다. 이전에는 flex item과 grid item 이 양쪽 모두에서 무작위로 누락되었습니다. ([1340441](https://crbug.com/1340441), [1273992](https://crbug.com/1273992))
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - DevTools 가 특정 프레임을 광고로서 표시하도록 하는 스크립트를 발견한 경우, [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker)에 대해 새로운 **Creator Ad Script** 링크가 이용가능해집니다. 여러분은 **애플리케이션** > **프레임** 을 통해 프레임을 열 수 있습니다. ([1217041](https://crbug.com/1217041))
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

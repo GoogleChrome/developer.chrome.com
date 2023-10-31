@@ -16,11 +16,11 @@ Una pantalla de presentación personalizada hace que su [aplicación web progres
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/CKrrTDSCZ0XLZ7ABKlZt.png", alt="Auditoría Lighthouse que muestra que el sitio no está configurado para una pantalla de presentación personalizada", width="800", height="98" %}</figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Cómo crear una pantalla de bienvenida personalizada
 
-Chrome para Android muestra automáticamente su pantalla de presentación personalizada siempre que cumpla con los siguientes requisitos en el [manifiesto de su aplicación web](https://web.dev/add-manifest/):
+Chrome para Android muestra automáticamente su pantalla de presentación personalizada siempre que cumpla con los siguientes requisitos en el [manifiesto de su aplicación web](https://web.dev/articles/add-manifest):
 
 - La propiedad `name` se configura como el nombre de su PWA.
 - La propiedad `background_color` se establece en un valor de color CSS válido.

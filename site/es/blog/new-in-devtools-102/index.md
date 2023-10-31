@@ -16,7 +16,7 @@ tags:
 
 _Gracias  por la traducción [Carlos Caballero](https://carloscaballero.io) y [Miguel Ángel](https://midu.dev) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 
 {% YouTube id='0V_ph7PA_aw' %}
@@ -61,13 +61,13 @@ Chromium issue: [1270700](https://crbug.com/1270700)
 
 <!-- ## New shortcuts to emulate light and dark themes {: #emulation } -->
 
-<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
+<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) with the new shortcuts in the **Styles** pane. -->
 
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
 
 ## Nuevos atajos para emular temas claros y oscuros {: #emulation }
 
-Ahora puede emular los temas claros y oscuros rápidamente (característica multimedia CSS [prefiere-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) con los nuevos accesos directos en el panel **Estilos**.
+Ahora puede emular los temas claros y oscuros rápidamente (característica multimedia CSS [prefiere-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) con los nuevos accesos directos en el panel **Estilos**.
 
 Anteriormente, se necesitaban más pasos para [emular temas](/docs/devtools/rendering/emulate-css/) en la pestaña **Rendering**.
 
@@ -82,7 +82,7 @@ Chromium issue: [1314299](https://crbug.com/1314299)
 
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
 
-<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
+<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/articles/what-is-mixed-content). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
 
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
 
@@ -90,7 +90,7 @@ Chromium issue: [1314299](https://crbug.com/1314299)
 
 DevTools ahora aplica la Política de seguridad de contenido (CSP) en la pestaña **Vista previa** en el panel **Red**.
 
-Por ejemplo, la primera captura de pantalla muestra una página que contiene [contenido mixto](https://web.dev/what-is-mixed-content/). La página se carga a través de una conexión HTTPS segura, pero la hoja de estilo se carga a través de una conexión HTTP no segura.
+Por ejemplo, la primera captura de pantalla muestra una página que contiene [contenido mixto](https://web.dev/articles/what-is-mixed-content). La página se carga a través de una conexión HTTPS segura, pero la hoja de estilo se carga a través de una conexión HTTP no segura.
 
 El navegador bloqueó la solicitud de la hoja de estilo de forma predeterminada. Sin embargo, cuando abrió la página a través de la pestaña **Vista previa** en el panel **Red**, la hoja de estilo no estaba bloqueada previamente (por lo tanto, el fondo se volvió rojo). Este está bloqueado como era de esperar (segunda captura de pantalla).
 
@@ -280,5 +280,5 @@ En el panel **Estilos**, haga clic en cualquier vista previa de color para abrir
 Chromium issue: [1245191](https://crbug.com/1245191)
 
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

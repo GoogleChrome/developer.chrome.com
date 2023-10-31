@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: Automating Web Performance Measurement 
+title: Automating Web Performance Measurement
 description: >
   Use PSI to get web performance metrics into your build process.
 authors:
@@ -9,7 +9,7 @@ date: 2014-06-05
 updated: 2019-03-15
 ---
 
-Web performance can have a huge impact on your [entire](http://radar.oreilly.com/2014/01/web-performance-is-user-experience.html) user experience. If you’ve been looking at improving your own site’s perf lately, you’ve probably heard of [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) - a tool that analyzes pages and offers advice on how to make them faster based on best practices for mobile and desktop web performance.
+Web performance can have a huge impact on your [entire](http://radar.oreilly.com/2014/01/web-performance-is-user-experience.html) user experience. If you’ve been looking at improving your own site’s perf lately, you’ve probably heard of [PageSpeed Insights](https://pagespeed.web.dev/) - a tool that analyzes pages and offers advice on how to make them faster based on best practices for mobile and desktop web performance.
 
 PageSpeed’s scores are based on a number of factors, including how well your scripts are minimized, images optimized, content gzipped, tap targets being appropriately sized and landing page redirects avoided.
 
@@ -17,7 +17,7 @@ With [40%](https://www.akamai.com/about/news/press/2009-press/akamai-reveals-2-s
 
 ## Performance metrics in your build process
 
-Although manually going to the [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) to find out how your scores is fine, a number of developers have been asking whether it's possible to get similar performance scoring into their build process.
+Although manually going to the [PageSpeed Insights](https://pagespeed.web.dev/) to find out how your scores is fine, a number of developers have been asking whether it's possible to get similar performance scoring into their build process.
 
 The answer is: absolutely.
 
@@ -37,7 +37,7 @@ If you've tried using the PageSpeed Insights API in the past or attempted to use
 
 We're happy to inform you that the PageSpeed Insights service supports making requests without an API key for up to 1 request every 5 seconds (plenty for anyone). For more regular usage or serious production builds, you'll probably want to register for a key.
 
-The PSI module supports both a `nokey` option for getting it setup in less than a few minutes and the `key` option for a little longer. Details on how to register for an [API key](https://developers.google.com/speed/docs/insights/v1/getting_started#auth) are documented.
+The PSI module supports both a `nokey` option for getting it setup in less than a few minutes and the `key` option for a little longer. Details on how to register for an [API key](https://developers.google.com/speed/docs/insights/v5/getting_started#auth) are documented.
 
 ### Getting started
 

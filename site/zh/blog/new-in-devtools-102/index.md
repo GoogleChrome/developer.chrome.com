@@ -16,7 +16,7 @@ tags:
 
 *感谢 [韩昌浩](https://github.com/hanselfmu) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='0V_ph7PA_aw' %}
 
@@ -54,8 +54,8 @@ Chromium 议题: [1270700](https://crbug.com/1270700)
 <!-- ## New shortcuts to emulate light and dark themes {: #emulation } -->
 ## 新的模拟浅色和深色主题的快捷方式 {: #emulation }
 
-<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
-您现在可以在**样式**边栏中利用新的快捷方式来更快速地模拟浅色和深色主题（CSS 媒体功能 [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)）。
+<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) with the new shortcuts in the **Styles** pane. -->
+您现在可以在**样式**边栏中利用新的快捷方式来更快速地模拟浅色和深色主题（CSS 媒体功能 [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)）。
 
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
 在此之前，在**渲染**标签页中[模拟主题](/docs/devtools/rendering/emulate-css/)需要更多步骤。
@@ -73,8 +73,8 @@ Chromium 议题: [1314299](https://crbug.com/1314299)
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
 **网络**面板中的**预览**标签页现在应用了内容安全政策（CSP）。
 
-<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
-例如，第一个屏幕截图显示了一个包含[混合内容](https://web.dev/what-is-mixed-content/)的页面。该页面通过安全的 HTTPS 连接加载，但样式表通过不安全的 HTTP 连接加载。
+<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/articles/what-is-mixed-content). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
+例如，第一个屏幕截图显示了一个包含[混合内容](https://web.dev/articles/what-is-mixed-content)的页面。该页面通过安全的 HTTPS 连接加载，但样式表通过不安全的 HTTP 连接加载。
 
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
 浏览器默认阻止样式表请求。但是，当您通过**网络**面板中的**预览**标签页打开页面时，样式表此前并没有被阻止（因此背景变成了红色）。现在像您期望的那样，该样式表被阻止了（第二个屏幕截图）。
@@ -128,7 +128,7 @@ Chromium 议题: [1295750](https://crbug.com/1295750)
 一旦您完成了一个[实时表达式](/blog/new-in-devtools-70/#watch) 的输入，您即可通过回车键来提交它。在此之前，按回车键会导致添加新行。这行为与 DevTools 的其他部分不一致。
 
 <!-- To add a new line in the **live expression** editor, use `Shift` + `Enter` instead. -->
-使用 `Shift` + `回车键` 来添加新行。 
+使用 `Shift` + `回车键` 来添加新行。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yB7m2052mYzgsRgjIMvs.png", alt="通过回车键提交实时表达式", width="800", height="541" %}
 
@@ -212,7 +212,7 @@ Chromium 议题: [1024156](https://crbug.com/1024156)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/afe5698f1cd20304d2763574ef8e9faf6a4a6db1 #}
 {# ​​https://chromium.googlesource.com/devtools/devtools-frontend/+/5de1d6140cad945783f3ca54055134f4a7db42a1 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #}
 
 Chromium 议题: [1268754](https://crbug.com/1268754)
 
@@ -237,5 +237,5 @@ Chromium 议题: [1268754](https://crbug.com/1268754)
 
 Chromium 议题: [1245191](https://crbug.com/1245191)
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

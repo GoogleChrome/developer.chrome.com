@@ -6,7 +6,7 @@ description: >
   Learn how to force a network timeout in the presence of a slow network connection, and how to get the timing right.
 ---
 
-There are times when you have a network connection, but that connection is either too slow, or your connection [is lying to you that you're online](https://developers.google.com/web/fundamentals/performance/poor-connectivity#lie-fi). In such situations where a service worker is in the mix, a network-first caching strategy may take too long to get a response from the network, or the request will hang&mdash;and loading spinners will spin endlessly&mdash;until you get an error page.
+There are times when you have a network connection, but that connection is either too slow, or your connection [is lying to you that you're online](https://web.dev/articles/performance-poor-connectivity#lie_fi). In such situations where a service worker is in the mix, a network-first caching strategy may take too long to get a response from the network, or the request will hang&mdash;and loading spinners will spin endlessly&mdash;until you get an error page.
 
 Whatever the situation is, there are instances in which falling back to the last cached response for an asset or page after a certain period of time would be preferable&mdash;yet another problem that Workbox can help with.
 
@@ -77,4 +77,4 @@ When forcing a timeout for requests&mdash;particularly navigation requests&mdash
 
 The right answer is "it depends". If you're running a site such as a blog and don't update content too often, the right answer is probably to err on the side of not waiting _too_ much, as whatever is in the cache is probably "fresh" enough. However, for more interactive websites and web apps, it may be best to wait a bit longer and avoid serving stale data from the service worker cache too eagerly.
 
-If you're recording metrics [in the field](https://web.dev/how-to-measure-speed/#lab-data-vs-field-data), look at the **75th percentile** of [Time to First Byte (TTFB)](https://web.dev/ttfb/) and [First Contentful Paint (FCP)](https://web.dev/fcp/) scores to get a sense of where longer wait times for navigation requests might be among your user base. That may give you insight as to where to draw the line.
+If you're recording metrics [in the field](https://web.dev/articles/how-to-measure-speed#lab_data_vs_field_data), look at the **75th percentile** of [Time to First Byte (TTFB)](https://web.dev/articles/ttfb) and [First Contentful Paint (FCP)](https://web.dev/articles/fcp) scores to get a sense of where longer wait times for navigation requests might be among your user base. That may give you insight as to where to draw the line.

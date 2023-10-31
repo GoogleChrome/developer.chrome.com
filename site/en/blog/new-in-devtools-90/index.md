@@ -16,7 +16,7 @@ tags:
   - chrome-90
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="UyXPdYLQVQk" %}
 
@@ -270,8 +270,8 @@ over time.
 Chromium issue: [887173][41]
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: https://crbug.com/1166710
 [2]: https://crbug.com/1175699
@@ -309,7 +309,7 @@ Chromium issue: [887173][41]
 [34]: https://blog.chromium.org/2019/04/data-saver-is-now-lite-mode.html
 [35]: https://crbug.com/1056922
 [36]: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
-[37]: https://jec.fyi/demo/cds-anchovy
+[37]: https://jec.fish/demo/cds-anchovy
 [38]: #issue-count
 [39]: https://crbug.com/1155460
 [40]: /docs/devtools/accessibility/reference#pane

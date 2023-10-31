@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest for storage areas"
+seoTitle: "Chrome Extensions Manifest: storage"
 date: 2013-12-06
 updated: 2018-05-14
 description: Reference documentation for the storage property of manifest.json.
@@ -34,9 +35,8 @@ schema.
 ```
 
 Chrome will then load these policies from the underlying operating system and from Google Apps for
-signed-in users. The [storage.onChanged][4] event is fired whenever a policy change is detected,
-including while the browser wasn't running if the extension uses [event pages][5]. You can verify
-the policies that Chrome loaded at [chrome://policy][6].
+signed-in users. The [storage.onChanged][4] event is fired whenever a policy change is detected.
+You can verify the policies that Chrome loaded at [chrome://policy][6].
 
 ## Schema format {: #format }
 

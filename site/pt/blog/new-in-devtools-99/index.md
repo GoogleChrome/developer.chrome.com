@@ -17,7 +17,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -30,7 +30,7 @@ tags:
 <!-- end: translation instructions -->
 
 <!-- ## Throttling WebSocket requests {: #websocket } -->
-## Limitando requests de WebSocket {: #websocket } 
+## Limitando requests de WebSocket {: #websocket }
 <!-- The **Network** panel now supports throttling web socket requests. Previously, the network throttling didn't work on web socket requests. -->
 O painel **Rede** agora é compatível com a limitação de requests de web sockets. Anteriormente, a limitação de rede não funcionava em requests de web sockets.
 <!-- Open the **Network** panel, click on a web socket request and open the **Messages** tab to observe the message transfers. Select **Slow 3G** to throttle the speed.  -->
@@ -46,8 +46,8 @@ Issue relacionada: [423246](https://crbug.com/423246)
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 Use o novo painel **API de relatórios** para monitorar os relatórios gerados em sua página e o status deles.
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-A [API de relatórios](https://web.dev/reporting-api/) foi desenvolvida para ajudar você a monitorar violações de segurança de sua página, chamadas de API obsoletas e muito mais.
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+A [API de relatórios](https://web.dev/articles/reporting-api) foi desenvolvida para ajudar você a monitorar violações de segurança de sua página, chamadas de API obsoletas e muito mais.
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 Abra uma página que usa a API de relatórios (por exemplo, [página de demonstração](https://reporting-api-demo.glitch.me/)). No painel **Aplicativo**, role para baixo até a seção **Serviços em segundo plano** e selecione o painel **API de relatórios**.
 <!-- The **Reports** section shows you a list of reports generated on your page and their status. Click on it to view the report’s details. -->
@@ -75,7 +75,7 @@ Issue relacionada: [1257499](https://crbug.com/1257499#c38)
 
 
 <!-- ## Better console styling, formatting and filtering {: #console } -->
-## Melhor estilização, formatação e filtragem do console {: #console } 
+## Melhor estilização, formatação e filtragem do console {: #console }
 <!-- ### Properly style log messages with ANSI escape code {: #console-styling }  -->
  ### Estilize corretamente as mensagens de log com código de escape ANSI {: #console-styling }
 
@@ -121,14 +121,14 @@ Além disso, se uma mensagem do console for exibida, o grupo (ou o grupo ancestr
 Issue relacionada: [1068788](https://crbug.com/1068788)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemap } -->
-## Melhorias nos sourcemaps {: #sourcemap }
-<!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
-### Depuração de extensões do Chrome com arquivos de sourcemap  {: #extension }
-<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
-Agora você pode [depurar a extensão do Chrome](/docs/extensions/mv3/getstarted/#unpacked) com arquivos de sourcemap. Anteriormente, o DevTools suportava apenas o sourcemap inline para depuração de extensão do Chrome.
+<!-- ## Source maps improvements {: #source map } -->
+## Melhorias nos source maps {: #sourcemap }
+<!-- ### Debug Chrome extension with source map files {: #extension } -->
+### Depuração de extensões do Chrome com arquivos de source map  {: #extension }
+<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
+Agora você pode [depurar a extensão do Chrome](/docs/extensions/mv3/getstarted/#unpacked) com arquivos de source map. Anteriormente, o DevTools suportava apenas o sourcemap inline para depuração de extensão do Chrome.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with sourcemap files", width="800", height="518" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with source map files", width="800", height="518" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1e73eb62955de7c4b0920575c7b374d47dab6a65 #}
 
@@ -137,8 +137,8 @@ Issue relacionada: [212374](https://crbug.com/212374)
 
 <!-- ### Improved source folder tree in the Sources panel {: #source-tree } -->
 ### Árvore de pastas aprimorada no painel Fontes {: #source-tree }
-<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
-A árvore de pastas no painel **Fontes** agora foi aprimorada com menos confusão nas estruturas de pastas e nomenclatura (por exemplo, “../”, “./”, etc). Sob o capô, isso é o resultado da normalização das URLs de origem absolutas nos sourcemaps.
+<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the source maps. -->
+A árvore de pastas no painel **Fontes** agora foi aprimorada com menos confusão nas estruturas de pastas e nomenclatura (por exemplo, “../”, “./”, etc). Sob o capô, isso é o resultado da normalização das URLs de origem absolutas nos source maps.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="Árvore de pastas aprimorada no painel Fontes", width="800", height="444" %}
 
@@ -149,14 +149,14 @@ Issue relacionada: [1284737](https://crbug.com/1284737)
 
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
 ### Exibição arquivos fontes de workers no painel Origens {: #worker-sourcemap }
-<!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
-[Worker](https://web.dev/workers-overview/) (por exemplo, web worker, service worker) arquivos fontes com SourceURL relativo agora são exibidos no painel **Fontes**. Anteriormente, os arquivos fontes do worker não eram tratados corretamente.
+<!-- [Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
+[Worker](https://web.dev/articles/workers-overview) (por exemplo, web worker, service worker) arquivos fontes com SourceURL relativo agora são exibidos no painel **Fontes**. Anteriormente, os arquivos fontes do worker não eram tratados corretamente.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="Exibição arquivos fontes de workers no painel Origens", width="800", height="509" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
-Issue relacionada: [1277002](https://crbug.com/1277002) 
+Issue relacionada: [1277002](https://crbug.com/1277002)
 
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
@@ -188,7 +188,7 @@ Aqui está um exemplo capturado com a tela sensível ao toque do dispositivo [Go
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f60936b29519e0cf387cd0a133d43885c6eb183d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22bb84d657aa69f6f7d5067605c2c133a5714172 #}
 
-Issues relacionadas: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995) 
+Issues relacionadas: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
@@ -199,10 +199,10 @@ Estas são algumas correções dignas de nota nesta versão:
 - Corrigido o problema de [editar cookies](/docs/devtools/storage/cookies/#edit) no painel **Cookies**. ([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - Use `Shift` + `Tab` para selecionar o comando anterior no [menu Comando](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743))
-<!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
-- Informe os problemas de [solicitação de simulação do CORS](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) na aba [Problemas](/docs/devtools/issues/ ). ([1272445](https://crbug.com/1272445)).
-<!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
-- Relate problemas de [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) na guia [Problemas](/docs/devtools/issues/).(https://crbug.com/1219359)).
+<!-- - Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
+- Informe os problemas de [solicitação de simulação do CORS](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) na aba [Problemas](/docs/devtools/issues/ ). ([1272445](https://crbug.com/1272445)).
+<!-- - Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
+- Relate problemas de [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) na guia [Problemas](/docs/devtools/issues/).(https://crbug.com/1219359)).
 <!-- - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662)) -->
 - Corrigidos os comportamentos `Shift` + `Delete` e `Page up` / `Page down` no painel **Sources** e **Console**. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->
@@ -210,5 +210,5 @@ Estas são algumas correções dignas de nota nesta versão:
 <!-- - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738)) -->
 
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

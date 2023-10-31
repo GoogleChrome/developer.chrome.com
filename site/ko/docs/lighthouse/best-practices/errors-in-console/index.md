@@ -18,7 +18,7 @@ updated: 2019-08-28
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/AjfKRZm8E4ZUi2QvQtL3.png", alt="콘솔에서 브라우저 오류를 보여주는 Lighthouse 감사", width="800", height="247" %}</figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 브라우저 오류를 수정하는 방법
 

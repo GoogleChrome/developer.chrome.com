@@ -27,7 +27,7 @@ Uma página falha na auditoria, a menos que todas essas condições sejam atendi
 
 O Lighthouse _não_ verifica se `width` é igual a `device-width`. Também não verifica se há um par de valores-chave de `initial-scale`. No entanto, você ainda precisa incluir ambos para que sua página seja processada corretamente em dispositivos móveis.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como adicionar uma meta tag viewport
 

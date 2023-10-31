@@ -4,7 +4,7 @@ summary: >-
   Modern web, web apps, apps & the frameworks, libraries, browsers,
   tools, platforms, databases, APIs and everything else that
   powers them up behind the scenes.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/dZBRyZIZ0xhHvDtI6eql.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/6mj7t7rHxZ5Vs31fWoSs.jpg
 location: London, UK
 date: 2022-11-17
 externalUrl: https://www.modernfrontends.live/
@@ -40,7 +40,8 @@ sessions:
     title: Supercharge your skills with Creative Coding
     description: null
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: null
     type: speaker
     slidesUrl: null

@@ -20,13 +20,15 @@ date: 2017-04-27
 
 # Optional
 # Include an updated date when you update your post
-updated: 2018-02-23
+updated: 2023-03-01
 
 # Optional
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - chrome59
+  - automation
+  - headless
 
 
 
@@ -38,6 +40,12 @@ figure {
   text-align: center;
 }
 </style>
+
+{% Aside %}
+Note: This article is about the initial “old” Headless launch in Chrome 59. Since then, a new
+Headless implementation has shipped. Find out more by reading [_Chrome’s Headless mode gets an
+upgrade: introducing `--headless=new`_](/articles/new-headless/).
+{% endAside %}
 
 ## TL;DR
 
@@ -231,7 +239,7 @@ const puppeteer = require('puppeteer');
 Check out [Puppeteer's documentation](https://pptr.dev/api/)
 to learn more about the full API.
 
-### The CRI library 
+### The CRI library
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface)
 is a lower-level library than Puppeteer's API. I recommend it if you want to be
@@ -282,6 +290,7 @@ use it, first install from npm:
 
 ```bash
 npm i --save chrome-launcher
+```
 
 **Example** - using `chrome-launcher` to launch Headless
 
@@ -593,7 +602,7 @@ in the container.
 
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 
-Yes. See [Using Selenium, WebDrive, or ChromeDriver](#drivers).
+Yes. See [Using Selenium, WebDriver, and ChromeDriver](#using-selenium-webdriver-and-chromedriver).
 
 **How is this related to PhantomJS?**
 

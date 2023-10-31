@@ -3,20 +3,24 @@
 <div class="featured-card bg-green-lightest rounded-lg width-full pad-300 md:pad-400">
   <div class="featured-card__title-bar color-green-darkest display-flex align-center">
     {{ icon('docs', {hidden: true}) }}
-    <span class="gap-left-300 flex-1 user-select-none">Docs</span>
+    <span class="gap-left-300 flex-1 user-select-none">
+      {{ 'i18n.common.bug_report.category' | i18n(locale) }}
+    </span>
   </div>
 
-  <h2 class="type--h5 color-green-darkest gap-top-400">How to report a Chrome bug</h2>
+  <h2 class="type--h5 color-green-darkest gap-top-400">
+    {{ 'i18n.common.bug_report.title' | i18n(locale) }}
+  </h2>
   <div class="display-flex align-center justify-content-between">
     <ol class="gap-top-200 gap-bottom-0 pad-left-0">
-      <li>Verify the bug</li>
-      <li>Search the bug base</li>
-      <li>Create a test case</li>
-      <li>Report the bug</li>
+      <li>{{ 'i18n.common.bug_report.verify' | i18n(locale) }}</li>
+      <li>{{ 'i18n.common.bug_report.search' | i18n(locale) }}</li>
+      <li>{{ 'i18n.common.bug_report.test' | i18n(locale) }}</li>
+      <li>{{ 'i18n.common.bug_report.report' | i18n(locale) }}</li>
     </ol>
     {% Img
       src="image/QMjXarRXcMarxQddwrEdPvHVM242/6sIefmW5LVABkFk32Wub.png",
-      alt="Question icon inside a speech bubble",
+      alt='i18n.common.bug_report.test' | i18n(locale),
       height="96",
       width="96",
       sizes="96px",
@@ -26,11 +30,12 @@
   <div class="display-flex gap-top-300 md:gap-top-400">
     <a class="material-button button-text color-green-medium" href="https://web.dev/how-to-file-a-good-bug/">
       <span>
-        Learn more <span class="visually-hidden">about reporting bugs.</span>
+        {{ 'i18n.common.bug_report.learn_more' | i18n(locale) }}
+        <span class="visually-hidden">{{ 'i18n.common.bug_report.learn_more_hint' | i18n(locale) }}</span>
       </span>
     </a>
     <a class="material-button button-text color-green-medium" href="https://crbug.com">
-      Report a bug
+      {{ 'i18n.common.bug_report.report_cta' | i18n(locale) }}
     </a>
   </div>
 </div>

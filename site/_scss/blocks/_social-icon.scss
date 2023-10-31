@@ -1,6 +1,10 @@
 .social-icon {
   svg {
     height: auto;
-    width: 32px;
+    width: 22px;
+  }
+
+  :hover {
+    color: var(--color-primary);
   }
 }

@@ -16,7 +16,7 @@ tags:
 
 _Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -37,8 +37,8 @@ Chromium issue: [423246](https://crbug.com/423246)
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 Usa el nuevo panel **Reportes API** para monitorizar los reportes generados en tu página y su estado.
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-La [API de Reportes](https://web.dev/reporting-api/) está diseñada para ayudarte a monitorizar las violaciones de seguridad de tu página, llamadas a API obsoletas y más.
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+La [API de Reportes](https://web.dev/articles/reporting-api) está diseñada para ayudarte a monitorizar las violaciones de seguridad de tu página, llamadas a API obsoletas y más.
 
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 Abra una página que use la API de Reportes (ej. [página de demostración](https://reporting-api-demo.glitch.me/)). En el panel **Aplicación**, desplácese hacia abajo hasta la sección **Servicios en segundo plano** y seleccione el panel **Reportes API**.
@@ -124,13 +124,13 @@ Además, si un mensaje de consola se muestra, el grupo (o el grupo ascendente) a
 Chromium issue: [1068788](https://crbug.com/1068788)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemap } -->
+<!-- ## Source maps improvements {: #sourcemap } -->
 ## Mejoras en los mapas de código fuente {: #sourcemap }
 
-<!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
+<!-- ### Debug Chrome extension with source map files {: #extension } -->
 ### Depuración de extensiones de Chrome con archivos de mapa de código fuente {: #extension }
 
-<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
+<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
 Ahora puedes [depurar extensiones de Chrome](/docs/extensions/mv3/getstarted/#unpacked) con archivos de mapa de código fuente. Antes, DevTools sólo soportaba mapa de código fuente en línea para depurar extensiones de Chrome.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Depuración de extensiones de Chrome con archivos de mapa de código fuente", width="800", height="518" %}
@@ -143,7 +143,7 @@ Chromium issue: [212374](https://crbug.com/212374)
 <!-- ### Improved source folder tree in the Sources panel {: #source-tree } -->
 ### Mejorado árbol de carpetas de fuente en el panel de Fuentes {: #source-tree }
 
-<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
+<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the source maps. -->
 El árbol de carpetas de fuente en el panel de **Fuentes** ha sido mejorado con menos ruido en las estructuras de carpetas y nombres (ej. “../”, “./”, etc). Bajo el capó, esto es el resultado de normalizar las URL absolutas de fuente en los mapas de fuente.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="Mejorado árbol de carpetas de fuente en el panel de Fuentes", width="800", height="444" %}
@@ -156,7 +156,7 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
 ### Muestra los archivos de fuente de Worker en el panel de Fuentes {: #worker-sourcemap }
 
-<!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
+<!-- [Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
 Los archivos fuente de Worker (ej. web worker, service worker) con SourceURL relativa se muestran ahora en el panel de **Fuentes**. Antes, los archivos de fuente de Worker no se manejaban correctamente.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="Muestra los archivos de fuente de Worker en el panel de Fuentes", width="800", height="509" %}
@@ -213,10 +213,10 @@ Estos son algunos arreglos destacados en esta versión:
 - Arreglado el [problema de edición de cookies](/docs/devtools/storage/cookies/#edit) en el panel **Cookies**. ([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - Usa `Mayús` + `Tab` para seleccionar el comando anterior en el [Menú de Comandos](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743))
-<!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
-- Reporta [problemas de solicitud de preflight](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) en la pestaña [Problemas](/docs/devtools/issues/). ([1272445](https://crbug.com/1272445)).
-<!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
-- Reporta [problemas de User-Agent Client Hints](https://web.dev/user-agent-client-hints/) en la pestaña [Problemas](/docs/devtools/issues/). ([1219359](https://crbug.com/1219359)).
+<!-- - Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
+- Reporta [problemas de solicitud de preflight](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) en la pestaña [Problemas](/docs/devtools/issues/). ([1272445](https://crbug.com/1272445)).
+<!-- - Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
+- Reporta [problemas de User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) en la pestaña [Problemas](/docs/devtools/issues/). ([1219359](https://crbug.com/1219359)).
 <!-- - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662)) -->
 - Arreglado el comportamiento de `Mayús` + `Supr` y `Re Pág` / `Av Pág` en el panel **Fuentes** y **Consola**. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->
@@ -224,5 +224,5 @@ Estos son algunos arreglos destacados en esta versión:
 <!-- - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738)) -->
 - No se requiere recargar cuando cambias el tema [claro/oscuro](/docs/devtools/customize/dark-theme/) en DevTools. ([1278738](https://crbug.com/1278738))
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

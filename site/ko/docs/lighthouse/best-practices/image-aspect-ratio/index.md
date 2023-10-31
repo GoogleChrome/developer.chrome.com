@@ -21,13 +21,13 @@ updated: 2020-04-29
 - 이미지가 원본 이미지의 크기와 다른 명시적 너비 및 높이 값으로 설정됩니다.
 - 이미지가 가변 크기 컨테이너의 백분율 너비와 높이로 설정됩니다.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 이미지가 올바른 종횡비로 표시되는지 확인하기
 
 ### 이미지 CDN 사용
 
-이미지 CDN을 사용하면 다양한 크기의 이미지를 생성하는 프로세스를 더 쉽게 자동화할 수 있습니다. 개요를 보려면 [이미지 CDN을 사용하여 이미지 최적화하기](https://web.dev/image-cdns/)를, 직접 실습을 원한다면 [Thumbor 이미지 CDN을 설치하는 방법](https://web.dev/install-thumbor/)을 확인하십시오.
+이미지 CDN을 사용하면 다양한 크기의 이미지를 생성하는 프로세스를 더 쉽게 자동화할 수 있습니다. 개요를 보려면 [이미지 CDN을 사용하여 이미지 최적화하기](https://web.dev/articles/image-cdns)를, 직접 실습을 원한다면 [Thumbor 이미지 CDN을 설치하는 방법](https://web.dev/articles/install-thumbor)을 확인하십시오.
 
 ### 이미지의 종횡비에 영향을 미치는 CSS 확인하기
 
@@ -39,11 +39,11 @@ updated: 2020-04-29
 
 그러나 반응형 이미지로 작업하는 경우 뷰포트 크기를 알 때까지 너비와 높이를 알 수 있는 방법이 없기 때문에 HTML에서 이미지 크기를 지정하는 것이 어려울 수 있습니다. 반응형 이미지의 종횡비를 유지하려면 [CSS 종횡비](https://www.npmjs.com/package/css-aspect-ratio) 라이브러리 또는 [종횡비 박스](https://css-tricks.com/aspect-ratio-boxes/)를 사용하는 것이 좋습니다.
 
-마지막으로 [올바른 크기의 이미지 제공](https://web.dev/serve-images-with-correct-dimensions/) 게시물을 확인하여 각 사용자의 기기에 적합한 크기의 이미지를 제공하는 방법을 알아보세요.
+마지막으로 [올바른 크기의 이미지 제공](https://web.dev/articles/serve-images-with-correct-dimensions) 게시물을 확인하여 각 사용자의 기기에 적합한 크기의 이미지를 제공하는 방법을 알아보세요.
 
 ## 리소스
 
 - [**이미지가 잘못된 종횡비로 나타납니다** 검사에 대한 소스 코드](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/image-aspect-ratio.js)
 - [CSS 종횡비](https://www.npmjs.com/package/css-aspect-ratio)
 - [종횡비 상자](https://css-tricks.com/aspect-ratio-boxes/)
-- [이미지를 올바른 크기로 제공하기](https://web.dev/serve-images-with-correct-dimensions/)
+- [이미지를 올바른 크기로 제공하기](https://web.dev/articles/serve-images-with-correct-dimensions)

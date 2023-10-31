@@ -17,7 +17,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='YqkIS88VulM' %}
 
@@ -30,7 +30,7 @@ tags:
 <!-- end: translation instructions -->
 
 <!-- ## Preview feature: Full-page accessibility tree {: #a11y-tree } -->
-## Prévia de funcionalidade: Árvore de acessibilidade da página {: #a11y-tree } 
+## Prévia de funcionalidade: Árvore de acessibilidade da página {: #a11y-tree }
 <!-- The new **Full-page accessibility tree** makes it easier for you to get an overview of the full-page [accessibility tree](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) and help you better understand how your web content is exposed to assistive technology.  -->
 A nova  **Árvore de acessibilidade da página** facilita a obtenção de uma visão geral da [árvore de acessibilidade](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) da página e irá ajudar a entender melhor como seu conteúdo da web é exposto à tecnologia assistiva.
 <!-- In the **Elements** panel, open the **Accessibility** pane and select **Enable full-page accessibility tree** checkbox. Then, reload DevTools and you will see a new accessibility button in the **Elements** panel. -->
@@ -50,7 +50,7 @@ Issue Relacionada: [887173](https://crbug.com/887173)
 
 
 <!-- ## More precise changes in the Changes tab {: #changes }  -->
-## Alterações mais precisas na guia Alterações {: #changes } 
+## Alterações mais precisas na guia Alterações {: #changes }
 <!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->
 As alterações de código na guia **Alterações** são impressas automaticamente.
 <!-- Previously, it was hard to trace the actual changes of minified source code because all the code is shown in a single line.  -->
@@ -67,8 +67,8 @@ Issues Relacionadas: [1238818](https://crbug.com/1238818), [1268754](https://crb
 ## Defina um tempo limite mais longo para a gravação do fluxo do usuário {: #recorder-timeout }
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
 Agora você pode ajustar as configurações de **Tempo limite** no [Gravador](/docs/devtools/recorder/) para todas as etapas ou uma etapa específica. Isso é útil especialmente para páginas com solicitações de rede lentas e animações longas.
-<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
-Por exemplo, foi [gravado um fluxo de usuário](/docs/devtools/recorder/#record) nesta [página de demonstração](https://jec.fyi/demo/pup-slow-result) para carregar e clicar no item do menu. No entanto, o carregamento dos itens do menu é lento (demora 6 segundos). O [replay](/docs/devtools/recorder/#replay) deste fluxo de usuário falhou porque excede 5 segundos (o tempo limite padrão).
+<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fish/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
+Por exemplo, foi [gravado um fluxo de usuário](/docs/devtools/recorder/#record) nesta [página de demonstração](https://jec.fish/demo/pup-slow-result) para carregar e clicar no item do menu. No entanto, o carregamento dos itens do menu é lento (demora 6 segundos). O [replay](/docs/devtools/recorder/#replay) deste fluxo de usuário falhou porque excede 5 segundos (o tempo limite padrão).
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 Podemos usar as novas configurações de **Tempo limite** para corrigir isso. Expanda a etapa em que clicamos no item de menu. [Edite a etapa](/docs/devtools/recorder/#edit-steps) **Adicione tempo limite** e defina-o como **6000** milissegundos (igual a 6s).
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
@@ -79,9 +79,9 @@ Issue Relacionada: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache } -->
-## Verifique se suas páginas podem ser armazenadas em cache com a guia Cache Voltar/Avançar {: #bfcache } 
-<!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
-[Cache de retorno/avanço (ou bfcache)](https://web.dev/bfcache/) é uma otimização do navegador que permite a navegação instantânea de retorno e avanço.
+## Verifique se suas páginas podem ser armazenadas em cache com a guia Cache Voltar/Avançar {: #bfcache }
+<!-- [Back/forward cache (or bfcache)](https://web.dev/articles/bfcache) is a browser optimization that enables instant back and forward navigation.  -->
+[Cache de retorno/avanço (ou bfcache)](https://web.dev/articles/bfcache) é uma otimização do navegador que permite a navegação instantânea de retorno e avanço.
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
 A nova guia **Cache de retorno/avanço** pode ajudar você a testar suas páginas para garantir que elas sejam otimizadas para bfcache e identificar quaisquer problemas que possam estar impedindo que elas sejam qualificadas.
 <!-- To test a particular page, navigate to it in Chrome and then in DevTools go to **Application** > **Back-forward Cache**. Next, click the **Test back/forward cache** button and DevTools will attempt to navigate away and back to determine whether the page could be restored from bfcache. -->
@@ -107,13 +107,13 @@ Estas melhorias permitem chegar mais rapidamente às propriedades de que está a
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="Filtro do painel Propriedades", width="800", height="505" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}  
-  
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}
+
 Issue Relacionada: [1269674](https://crbug.com/1269674)
 
 
 <!-- ## Emulate the CSS forced-colors media feature {: #forced-colors } -->
-## Emular o recurso de mídia CSS cores forçadas  {: #forced-colors } 
+## Emular o recurso de mídia CSS cores forçadas  {: #forced-colors }
 
 <!-- The [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) CSS media feature is used to detect if the user agent has enabled a forced colors mode (e.g. Windows High Contrast mode) where it enforces a user-chosen limited color palette on the page.  -->
 O recurso de mídia CSS [cores forçadas](https://drafts.csswg.org/mediaqueries-5/#forced-colors) é usado para detectar se o agente do usuário ativou um modo de cores forçadas (por exemplo, modo de alto contraste do Windows) onde impõe uma paleta de cores limitada escolhida pelo usuário na página.
@@ -165,7 +165,7 @@ Selecione uma solicitação de XHR no painel **Rede** e pressione **R** no tecla
 
 Issue Relacionada: [1050021](https://crbug.com/1050021)
 
- 
+
 <!-- ### Keyboard shortcut to expand all search results {: #toggle-search-result } -->
 ### Keyboard shortcut to expand all search results {: #toggle-search-result }
 
@@ -192,8 +192,8 @@ Issue Relacionada: [1255073](https://crbug.com/1255073)
 
 <!-- The **Lighthouse** panel is now running Lighthouse 9. Lighthouse will now list all the elements sharing the same id. -->
 O painel **Lighthouse** agora está executando o Lighthouse 9. O Lighthouse agora listará todos os elementos que compartilham o mesmo id.
-<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
-ID de elemento não exclusivo é um problema de acessibilidade comum. Por exemplo, o id referenciado em um atributo `aria-labelledby` é usado em [vários elementos](https://web.dev/duplicate-id-aria/).
+<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/articles/duplicate-id-aria).  -->
+ID de elemento não exclusivo é um problema de acessibilidade comum. Por exemplo, o id referenciado em um atributo `aria-labelledby` é usado em [vários elementos](https://web.dev/articles/duplicate-id-aria).
 
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 Confira [O que há de novo no Lighthouse 9.0](/blog/lighthouse-9-0/) para mais detalhes sobre as atualizações.
@@ -218,7 +218,7 @@ Muitas melhorias de estabilidade no painel **Sources** conforme atualizamos para
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c1ab112d9002d5c3b3bb70cf2839bac182f0cdb5 #}
 
-Issue Relacionada: [1241848](https://crbug.com/1241848) 
+Issue Relacionada: [1241848](https://crbug.com/1241848)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
 ## Destaques diversos {: #misc }
@@ -226,7 +226,7 @@ Issue Relacionada: [1241848](https://crbug.com/1241848)
 Estas são algumas correções dignas de nota nesta versão:
 <!-- - Properly displaying the waterfall diagram of network requests. Previously, the style was broken. ([1275501](https://crbug.com/1275501))
 - The code highlight was broken when searching in documents with very long lines in the **Sources** panel. It’s now fixed. ([1275496](https://crbug.com/1275496))
-- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972)) 
+- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972))
 - Fixed the missing layout shifts details in the **Summary** section of the **Performance** panel. ([1259606](https://crbug.com/1259606))
 - Support arbitrary characters (e.g. `,`, `.`),  in **Network Search** queries. ([1267196](https://crbug.com/1267196)) -->
 - Exibindo corretamente o diagrama em cascata de solicitações de rede. Anteriormente, o estilo estava quebrado. ([1275501](https://crbug.com/1275501))
@@ -247,14 +247,14 @@ Para ativar a experiência, marque a caixa de seleção **Ativar painel da API d
 O painel experimental **API de relatórios** foi introduzido no [Chrome 96](/blog/new-in-devtools-96/#reporting-api) para ajudar você a monitorar os relatórios gerados em sua página e o status deles.
 <!-- The **Endpoints** section is now available. It gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header. -->
 A seção **Endpoints** já está disponível. Ele fornece uma visão geral de todos os endpoints configurados no cabeçalho `Reporting-Endpoints`.
-<!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
-Aprenda a usar a [API de relatórios](https://web.dev/reporting-api/) para monitorar violações de segurança, chamadas de API obsoletas e muito mais.
+<!-- Learn to use the [Reporting API](https://web.dev/articles/reporting-api) to monitor security violations, deprecated API calls, and more. -->
+Aprenda a usar a [API de relatórios](https://web.dev/articles/reporting-api) para monitorar violações de segurança, chamadas de API obsoletas e muito mais.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Painel API de relatórios", width="800", height="560" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #}
 
 Issue Relacionada: [1200732](https://crbug.com/1200732)
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

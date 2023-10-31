@@ -57,5 +57,5 @@ Lighthouse 报告的“机会”部分列出了所有尚未使用 `<link rel=pre
 
 - [**预连接到所需的源**审计的源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/uses-rel-preconnect.js)
 - [资源优先级——让浏览器帮助您](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect)
-- [尽早建立网络连接以提高感知页面速度](https://web.dev/preconnect-and-dns-prefetch/)
+- [尽早建立网络连接以提高感知页面速度](https://web.dev/articles/preconnect-and-dns-prefetch)
 - [链接类型：预连接](https://developer.mozilla.org/docs/Web/HTML/Link_types/preconnect#Browser_compatibility)

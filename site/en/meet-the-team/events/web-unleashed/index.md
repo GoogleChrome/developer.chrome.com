@@ -2,7 +2,7 @@
 title: Web Unleashed
 summary: >-
   A three-day conference for front-end development experts.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: Virtual
 date: 2022-10-24
 externalUrl: https://fitc.ca/event/webu22/
@@ -18,13 +18,13 @@ sessions:
       set around things like motion.
 
       In this talk, Rachel Andrew will take a look at what is available right now across browsers,
-      and what is just around the corner. She’ll also dive into plenty of information about browser
-      support to help you adopt new things with confidence."
+      and what is just around the corner. She'll also dive into plenty of information about browser
+      support to help you adopt new things with confidence.
     topics:
-      - Web UI and CSS
-    time: null
+      - CSS
+      - Web UI
     type: speaker
-    slidesUrl: null
+    slidesUrl: https://noti.st/rachelandrew/nN3xO8/now-and-next-in-responsive-design
     videoUrl: null
   - speaker: addyosmani
     title: >-
@@ -41,7 +41,6 @@ sessions:
     topics:
       - Project Aurora
       - Performance
-    time: null
     type: speaker
     slidesUrl: null
     videoUrl: null

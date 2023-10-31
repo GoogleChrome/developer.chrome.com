@@ -32,7 +32,7 @@ updated: 2019-08-20
 - 정식 링크가 다른 도메인을 가리킵니다.
 - 정식 링크가 사이트 루트를 가리킵니다. 이 시나리오는 AMP 또는 모바일 페이지 변형과 같은 일부 시나리오에서 유효할 수 있지만 Lighthouse는 그럼에도 불구하고 이를 실패로 취급합니다.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## 페이지에 정식 링크를 추가하는 방법
 

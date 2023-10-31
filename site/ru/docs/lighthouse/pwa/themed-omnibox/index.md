@@ -8,7 +8,7 @@ date: 2019-05-04
 updated: 2020-06-17
 ---
 
-Установив тему для адресной строки браузера согласно брендовым цветам своего [современного веб-приложения](https://web.dev/progressive-web-apps/) (Progressive Web App, PWA), вы сделаете интерфейс более единообразным.
+Установив тему для адресной строки браузера согласно брендовым цветам своего [современного веб-приложения](https://web.dev/explore/progressive-web-apps) (Progressive Web App, PWA), вы сделаете интерфейс более единообразным.
 
 ## Совместимость с браузерами
 
@@ -20,11 +20,11 @@ updated: 2020-06-17
 
 <figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/YadFSuw8denjl1hhnvFs.png", alt="Аудит Lighthouse показывает, что для адресной строки не установлена тема согласно цветам страницы", width="800", height="98" %}</figure>
 
-Аудит считается непройденным, если Lighthouse не находит метатег `theme-color` в HTML-коде страницы или свойство `theme_color` в [манифесте веб-приложения](https://web.dev/add-manifest/).
+Аудит считается непройденным, если Lighthouse не находит метатег `theme-color` в HTML-коде страницы или свойство `theme_color` в [манифесте веб-приложения](https://web.dev/articles/add-manifest).
 
 При этом Lighthouse не проверяет, являются ли найденные значения допустимыми цветами CSS.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Как установить цвет темы для адресной строки
 
@@ -47,7 +47,7 @@ updated: 2020-06-17
 
 ### Шаг 2. Добавьте свойство `theme_color` в манифест веб-приложения
 
-Свойство `theme_color` в манифесте веб-приложения оформляет адресную строку в стиле бренда, когда пользователь запускает PWA с главного экрана. В отличие от метатега `theme-color`, это свойство нужно определить только один раз — в [манифесте](https://web.dev/add-manifest/). Установите для свойства любое допустимое значение цвета CSS:
+Свойство `theme_color` в манифесте веб-приложения оформляет адресную строку в стиле бренда, когда пользователь запускает PWA с главного экрана. В отличие от метатега `theme-color`, это свойство нужно определить только один раз — в [манифесте](https://web.dev/articles/add-manifest). Установите для свойства любое допустимое значение цвета CSS:
 
 ```html/1
 {
@@ -61,5 +61,5 @@ updated: 2020-06-17
 ## Материалы
 
 - [Исходный код для аудита **Не установлен цвет темы для адресной строки** (Does not set a theme color for the address bar)](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/themed-omnibox.js).
-- [Как добавить манифест веб-приложения](https://web.dev/add-manifest/).
+- [Как добавить манифест веб-приложения](https://web.dev/articles/add-manifest).
 - [Поддержка `theme-color` в Chrome 39 для Android](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android).

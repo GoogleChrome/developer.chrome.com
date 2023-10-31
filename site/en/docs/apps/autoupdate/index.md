@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Autoupdating"
+seoTitle: "Chrome Apps - Autoupdating"
 date: 2012-09-17
 updated: 2018-03-19
 description: How to enable auto-updating of your Chrome App.
@@ -19,7 +20,7 @@ to incorporate bug and security fixes, add new features or performance enhanceme
 user interfaces.
 
 If you publish using the [Chrome Developer Dashboard][3], you should _ignore this page_. Chrome Web
-Store submissions that pass preview are automatically made available on the extension's CHrome Web Store item listing and deployed to end users.
+Store submissions that pass preview are automatically made available on the extension's Chrome Web Store item listing and deployed to end users.
 
 If you are hosting a CRX file on a web server and using enterprise policies to push it to managed
 devices, keep reading. You should also read [Hosting][4] and [Packaging][5].

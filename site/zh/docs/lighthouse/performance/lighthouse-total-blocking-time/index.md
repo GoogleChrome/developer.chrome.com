@@ -16,7 +16,7 @@ Lighthouse 报告以毫秒为单位显示 TBT：
 
 ## TBT 测量什么
 
-TBT 测量页面被阻止响应用户输入（例如鼠标点击、屏幕点击或按下键盘）的总时间。总和是[首次内容绘制](https://web.dev/fcp/)和[互动时间](https://web.dev/tti/)之间所有[长时间任务](https://web.dev/long-tasks-devtools/)*的阻塞部分*之和。任何执行时间超过 50 毫秒的任务都是长任务。50 毫秒后的时间量是阻塞部分。例如，如果 Lighthouse 检测到一个 70 毫秒长的任务，则阻塞部分将为 20 毫秒。
+TBT 测量页面被阻止响应用户输入（例如鼠标点击、屏幕点击或按下键盘）的总时间。总和是[首次内容绘制](https://web.dev/articles/fcp)和[互动时间](https://web.dev/articles/tti)之间所有[长时间任务](https://web.dev/articles/long-tasks-devtools)*的阻塞部分*之和。任何执行时间超过 50 毫秒的任务都是长任务。50 毫秒后的时间量是阻塞部分。例如，如果 Lighthouse 检测到一个 70 毫秒长的任务，则阻塞部分将为 20 毫秒。
 
 ## Lighthouse 如何确定您的 TBT 分数
 
@@ -49,28 +49,28 @@ TBT 测量页面被阻止响应用户输入（例如鼠标点击、屏幕点击�
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## 如何提高您的 TBT 分数
 
-请参阅[是什么导致了我的长时间任务？](https://web.dev/long-tasks-devtools/#what-is-causing-my-long-tasks)了解如何使用 Chrome DevTools 的性能面板诊断长时间任务的根本原因。
+请参阅[是什么导致了我的长时间任务？](https://web.dev/articles/long-tasks-devtools#what_is_causing_my_long_tasks)了解如何使用 Chrome DevTools 的性能面板诊断长时间任务的根本原因。
 
 一般来说，导致长时间任务的最常见原因是：
 
-- 不必要的 JavaScript 加载、解析或执行。在性能面板中分析您的代码时，您可能会发现主线程正在执行加载页面并不真正需要的工作。[通过代码拆分减少 JavaScript 负载](https://web.dev/reduce-javascript-payloads-with-code-splitting/)、[删除未使用的代码](https://web.dev/remove-unused-code/)或[有效加载第三方 JavaScript](https://web.dev/efficiently-load-third-party-javascript/) 应该可以提高您的 TBT 分数。
+- 不必要的 JavaScript 加载、解析或执行。在性能面板中分析您的代码时，您可能会发现主线程正在执行加载页面并不真正需要的工作。[通过代码拆分减少 JavaScript 负载](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)、[删除未使用的代码](https://web.dev/articles/remove-unused-code)或[有效加载第三方 JavaScript](https://web.dev/articles/efficiently-load-third-party-javascript) 应该可以提高您的 TBT 分数。
 - 低效的 JavaScript 语句。例如，在性能面板中分析您的代码后，假设您看到对`document.querySelectorAll('a')`的调用返回 2000 个节点，则重构您的代码以使用仅返回 10 个节点的更具体的选择器，这样应该会提高您的 TBT 分数。
 
 {% Aside %}在大多数网站上，通常有很大的空间改进不必要的 JavaScript 加载、解析或执行。 {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## 资源
 
 - [**总阻塞时间**审计的源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/total-blocking-time.js)
-- [长的 JavaScript 任务是否会延迟您的交互时间？](https://web.dev/long-tasks-devtools/)
-- [优化首次输入延迟](https://web.dev/optimize-fid/)
-- [首次内容绘制](https://web.dev/fcp/)
-- [互动时间](https://web.dev/tti/)
-- [通过代码拆分减少 JavaScript 负载](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
-- [删除未使用的代码](https://web.dev/remove-unused-code/)
-- [高效加载第三方资源](https://web.dev/efficiently-load-third-party-javascript/)
+- [长的 JavaScript 任务是否会延迟您的交互时间？](https://web.dev/articles/long-tasks-devtools)
+- [优化首次输入延迟](https://web.dev/articles/optimize-fid)
+- [首次内容绘制](https://web.dev/articles/fcp)
+- [互动时间](https://web.dev/articles/tti)
+- [通过代码拆分减少 JavaScript 负载](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)
+- [删除未使用的代码](https://web.dev/articles/remove-unused-code)
+- [高效加载第三方资源](https://web.dev/articles/efficiently-load-third-party-javascript)

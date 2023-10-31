@@ -13,7 +13,7 @@ that automatically request their location on page load.
 
 ## How the Lighthouse geolocation audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) flags pages that request geolocation permission on load:
+[Lighthouse](/docs/lighthouse/overview/) flags pages that request geolocation permission on load:
 
 <figure>
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/EKObTXN3729mGBN5bRyv.png", alt="Lighthouse audit showing geolocation request on page load", width="800", height="213" %}
@@ -31,7 +31,7 @@ before running the audit.
 Lighthouse reports the URL and line number
 of each request for geolocation permission.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to ask for users' locations responsibly
 Remove all calls to `geolocation.getCurrentPosition()` and
@@ -51,5 +51,5 @@ article for more information.
 
 ## Resources
 
-- [Source code for **Requests the geolocation permission on page load** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/geolocation-on-start.js)
+- [Source code for **Requests the geolocation permission on page load** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/dobetterweb/geolocation-on-start.js)
 - [User Location](https://developers.google.com/web/fundamentals/native-hardware/user-location/)

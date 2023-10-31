@@ -1,7 +1,3 @@
 {% from "macros/post-author.njk" import postAuthor with context %}
 
-<div class="post-authors">
-  {% for item in authors %}
-    {{ postAuthor(item, locale) }}
-  {% endfor %}
-</div>
+{{ postAuthor(authors, locale) }}

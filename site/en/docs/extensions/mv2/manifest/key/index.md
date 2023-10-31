@@ -1,10 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Key"
+seoTitle: "Manifest V2 - Key [Deprecated]"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the key property of manifest.json.
 ---
+
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest key](/docs/extensions/mv3/manifest/key) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 This value can be used to control the unique ID of an extension, app, or theme when it is loaded
 during development.

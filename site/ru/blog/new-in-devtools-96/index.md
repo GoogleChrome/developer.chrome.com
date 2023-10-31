@@ -25,7 +25,7 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaya](https://twitter.com/ABatickaya). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -166,7 +166,7 @@ Chrome 96 включает [origin trial](/blog/origin-trials/) функции [
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1574e9b550317c481a943fec059d84bfb863564 #}
 
-Задача в трекере Chromium: [1226262](https://crbug.com/1226262) 
+Задача в трекере Chromium: [1226262](https://crbug.com/1226262)
 
 
 <!-- ## Console updates -->
@@ -206,7 +206,7 @@ Chrome 96 включает [origin trial](/blog/origin-trials/) функции [
 ### Консистентные асинхронные трассировки стека {: #async }
 
 <!-- DevTools now reports `async` stack traces for `async` functions to be consistent with other async tasks.  -->
-DevTools теперь отображает стек трассировки `async` для асинхронных функций, чтобы они соответствовали другим задачам async. 
+DevTools теперь отображает стек трассировки `async` для асинхронных функций, чтобы они соответствовали другим задачам async.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="Стек трассировки async", width="800", height="427" %}
 
@@ -234,12 +234,12 @@ DevTools теперь отображает стек трассировки `asyn
 <!-- ## Deprecated Application cache pane in the Application panel {: #app-cache } -->
 ## Устаревшая панель Кэш приложения на вкладке Приложение {: #app-cache }
 
-<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
-Панель [Кеш приложений](/docs/devtools/storage/applicationcache/) (Application cache) на вкладке Приложение (Application) удалена, поскольку [AppCache](https://web.dev/appcache-removal/) больше не поддерживается в Chrome и других браузерах на основе Chromium.
+<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/articles/appcache-removal) is removed from Chrome and other Chromium-based browsers. -->
+Панель [Кеш приложений](/docs/devtools/storage/applicationcache/) (Application cache) на вкладке Приложение (Application) удалена, поскольку [AppCache](https://web.dev/articles/appcache-removal) больше не поддерживается в Chrome и других браузерах на основе Chromium.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
-Задача в трекере Chromium: [1084190](https://crbug.com/1084190) 
+Задача в трекере Chromium: [1084190](https://crbug.com/1084190)
 
 
 <!-- ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api } -->
@@ -250,17 +250,17 @@ DevTools теперь отображает стек трассировки `asyn
 Чтобы включить эксперимент, поставьте галочку в чекбоксе напротив пункта **Enable Reporting API panel in the Application panel** во вкладке **Настройки** (Settings) > **Экспериментальные функции** (Experiments).
 {% endAside %}
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-[Reporting API](https://web.dev/reporting-api/) призван помочь вам отслеживать нарушения безопасности вашей страницы, устаревшие вызовы API и многое другое. 
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+[Reporting API](https://web.dev/articles/reporting-api) призван помочь вам отслеживать нарушения безопасности вашей страницы, устаревшие вызовы API и многое другое.
 
 <!-- With this experiment enabled, you can now view the reports status in the new **Reporting API** pane in the **Application** panel.  -->
-С включенным экспериментом вы теперь можете просматривать статус отчётов в панели **Reporting API** во вкладке **Приложение** (Application). 
+С включенным экспериментом вы теперь можете просматривать статус отчётов в панели **Reporting API** во вкладке **Приложение** (Application).
 
 <!-- Please note that the **Endpoints** section is currently still under active development (showing no reporting endpoints for now).  -->
-Пожалуйста, обратите внимание что секция **Endpoints** пока находится в активной разработке (пока не показывает конечные точки отчетности). 
+Пожалуйста, обратите внимание что секция **Endpoints** пока находится в активной разработке (пока не показывает конечные точки отчетности).
 
-<!-- Learn more about the **Reporting API** with [this article](https://web.dev/reporting-api/). -->
-Читайте больше о **Reporting API** в [этой статье](https://web.dev/reporting-api/).
+<!-- Learn more about the **Reporting API** with [this article](https://web.dev/articles/reporting-api). -->
+Читайте больше о **Reporting API** в [этой статье](https://web.dev/articles/reporting-api).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Панель Reporting API на вкладке Приложение", width="800", height="476" %}
 
@@ -268,5 +268,5 @@ DevTools теперь отображает стек трассировки `asyn
 
 Задача в трекере Chromium: [1205856](https://crbug.com/1205856)
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

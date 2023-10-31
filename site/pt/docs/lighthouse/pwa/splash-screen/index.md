@@ -8,7 +8,7 @@ date: 2019-05-04
 updated: 2019-09-19
 ---
 
-Uma tela inicial personalizada torna seu [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/) mais parecido com um aplicativo criado para esse dispositivo. Por padrão, quando um usuário inicia seu PWA a partir da tela de início, o Android exibe uma tela branca até que o PWA esteja pronto. O usuário pode ver essa tela em branco por até 200 ms. Ao configurar uma tela inicial personalizada, você pode mostrar aos usuários uma cor de fundo personalizada e o ícone do seu PWA, proporcionando uma experiência de marca e envolvente.
+Uma tela inicial personalizada torna seu [Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps) mais parecido com um aplicativo criado para esse dispositivo. Por padrão, quando um usuário inicia seu PWA a partir da tela de início, o Android exibe uma tela branca até que o PWA esteja pronto. O usuário pode ver essa tela em branco por até 200 ms. Ao configurar uma tela inicial personalizada, você pode mostrar aos usuários uma cor de fundo personalizada e o ícone do seu PWA, proporcionando uma experiência de marca e envolvente.
 
 ## Como a auditoria da tela inicial do Lighthouse falha
 
@@ -16,11 +16,11 @@ Uma tela inicial personalizada torna seu [Progressive Web App (PWA)](https://web
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/CKrrTDSCZ0XLZ7ABKlZt.png", alt="Auditoria do Lighthouse mostrando que o site não está configurado para ter uma tela inicial personalizada", width="800", height="98" %}</figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como criar uma tela inicial personalizada
 
-O Chrome para Android mostra automaticamente sua tela inicial personalizada, desde que você atenda aos seguintes requisitos no [manifesto do seu aplicativo da web:](https://web.dev/add-manifest/)
+O Chrome para Android mostra automaticamente sua tela inicial personalizada, desde que você atenda aos seguintes requisitos no [manifesto do seu aplicativo da web:](https://web.dev/articles/add-manifest)
 
 - A propriedade `name` é definida como o nome do seu PWA.
 - A propriedade `background_color` é definida como um valor de cor CSS válido.

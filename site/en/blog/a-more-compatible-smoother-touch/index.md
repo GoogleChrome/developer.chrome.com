@@ -10,7 +10,7 @@ updated: 2019-03-15
 ---
 
 You and your users want mobile web apps that react and scroll smoothly to the
-touch. Developing them [should be easy](https://developers.google.com/web/fundamentals/documentation/user-input/touch-input/) but, unfortunately, how mobile web
+touch. Developing them should be easy but, unfortunately, how mobile web
 browsers react to touch events during scrolling is left as an implementation
 detail in the [TouchEvent](https://www.w3.org/TR/touch-events/) specification. As
 a result, approaches can be broken down roughly into 4 categories. This

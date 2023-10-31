@@ -31,13 +31,13 @@ the application's loaded.
 
 The first type of data, what's needed to load your web app, consists of HTML,
 JavaScript, CSS, and perhaps some images. [Service
-workers](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers), along with
+workers](https://developer.mozilla.org/docs/Web/API/Service_Worker_API), along with
 the [Cache Storage API](https://developer.mozilla.org/docs/Web/API/Cache),
 provide the needed infrastructure for saving those core resources and then using
 them later to quickly load your web app, ideally bypassing the network entirely.
 (Tools that integrate with your web app's build process, like the new
 [Workbox](https://workboxjs.org/) libraries or the older
-`[sw-precache](https://developers.google.com/web/updates/2015/02/offline-first-with-sw-precache)`,
+[`sw-precache`](https://developers.google.com/web/updates/2015/02/offline-first-with-sw-precache),
 can fully automate the process of storing, updating, and using this type of
 data.)
 
@@ -57,7 +57,7 @@ and what happens when you run out of room?
 
 Browsers have historically supported this type of introspection via prefixed
 interfaces, like the very old (and deprecated)
-`[window.webkitStorageInfo](https://github.com/Modernizr/Modernizr/issues/866)`, 
+[`window.webkitStorageInfo`](https://github.com/Modernizr/Modernizr/issues/866),
 and the not-quite-as-old, but still non-standard
 [`navigator.webkitTemporaryStorage`](/apps/offline_storage#query).
 While these interfaces provided useful information, they don't have a
@@ -71,16 +71,16 @@ enters the picture.
 As part of the ongoing work on the [Storage Living
 Standard](https://storage.spec.whatwg.org/), a couple of useful APIs have made
 it to the
-`[StorageManager](https://storage.spec.whatwg.org/#storagemanager)`
+[`StorageManager`](https://storage.spec.whatwg.org/#storagemanager)
 interface, which is exposed to browsers as
-`[navigator.storage](https://storage.spec.whatwg.org/#navigatorstorage)`.
+[`navigator.storage`](https://storage.spec.whatwg.org/#navigatorstorage).
 Like many other newer web APIs, `navigator.storage` is [only
 available on
 secure](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
 (served via HTTPS, or localhost) origins.
 
 Last year, we [introduced](https://developers.google.com/web/updates/2016/06/persistent-storage) the
-`[navigator.storage.persist()](https://storage.spec.whatwg.org/#persistence)`
+[`navigator.storage.persist()`](https://storage.spec.whatwg.org/#persistence)
 method, which allows your web application to request that its storage be
 exempted from automatic cleanup.
 
@@ -99,10 +99,10 @@ origin.)
 If a web application attempts to store—using, for example, IndexedDB or the
 Cache Storage API—data that's large enough to bring a given origin over its
 available quota, the request will fail with a
-`[QuotaExceededError](https://developer.mozilla.org/en-US/docs/Web/API/DOMException#exception-QuotaExceededError)`
+[`QuotaExceededError`](https://developer.mozilla.org/docs/Web/API/DOMException#exception-QuotaExceededError)
 exception.
 
-### Storage estimates in action 
+### Storage estimates in action
 
 Exactly how you use `estimate()` depends on the type of data your app needs to
 store. For example, you could update a control in your interface letting users
@@ -133,7 +133,7 @@ async function storeDataAndUpdateUI(dataUrl) {
 }
 ```
 
-### How accurate is the estimate? 
+### How accurate is the estimate?
 
 It's hard to miss the fact that the data you get back from the function is just
 an estimate of the space an origin is using. It's right there in the function

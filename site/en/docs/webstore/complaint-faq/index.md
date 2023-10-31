@@ -19,7 +19,7 @@ You can use the [CWS Support form][cws-support-form] to raise concerns with Goog
   removed. If you believe your developer account was wrongly terminated, you can request further clarifications or to appeal the removal
   decision.
 - **General concerns:** You can also contact Google for all other concerns, account transfers,
-  technical support, developer dashboard issues, or any questions about terms and policies. 
+  technical support, developer dashboard issues, or any questions about terms and policies.
 
 ## How can I as a developer in the EU raise concerns related to the Platform To Business (P2B) regulations in Europe? {: #how-can-i-as-a-developer-in-the-eu-raise-concerns-related-to-the-platform-to-business-p2b-regulations-in-europe }
 
@@ -65,4 +65,4 @@ stats on the dashboard, extensions between developers, and developer account rec
 known to require longer investigation times.
 
 [cws-support-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[program-policies]: /docs/webstore/program_policies
+[program-policies]: /docs/webstore/program-policies

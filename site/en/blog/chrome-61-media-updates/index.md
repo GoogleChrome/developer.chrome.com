@@ -137,5 +137,5 @@ This magic behavior only happens when:
 [page visibility api]: https://www.w3.org/TR/page-visibility/
 [keyframe]: https://en.wikipedia.org/wiki/Key_frame#Video_compression
 [mobile web video playback]: /web/fundamentals/media/mobile-web-video-playback#fullscreen
-[fullscreen element]: https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenElement
+[fullscreen element]: https://developer.mozilla.org/docs/Web/API/Document/fullscreenElement
 [screen orientation api]: https://w3c.github.io/screen-orientation/

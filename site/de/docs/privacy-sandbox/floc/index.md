@@ -39,7 +39,7 @@ Anschließend kann die Werbeplattform diese Daten verwenden, um relevante Anzeig
 
 ## Wie funktioniert FLoC?
 
-„[Was ist FLoC?](https://web.dev/floc/#how-does-floc-work)“ bietet eine einfache Schritt-für-Schritt-Erklärung für die Funktionsweise von FLoC.
+„[Was ist FLoC?](https://web.dev/articles/floc#how_does_floc_work)“ bietet eine einfache Schritt-für-Schritt-Erklärung für die Funktionsweise von FLoC.
 
 Das folgende Diagramm zeigt ein Beispiel für die verschiedenen Rollen bei der Auswahl und Bereitstellung einer relevanten Anzeige mittels FLoC.
 

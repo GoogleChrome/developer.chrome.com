@@ -16,7 +16,7 @@ HTTP/2は、ページのリソースをより高速に提供し、ネットワ�
 
 Lighthouseは、ページによって要求されたすべてのリソースを収集し、それぞれのHTTPプロトコルバージョンをチェックします。 HTTP/2以外の要求が監査結果で無視される場合があります。詳細については、[実装を参照](https://github.com/GoogleChrome/lighthouse/blob/9fad007174f240982546887a7e97f452e0eeb1d1/lighthouse-core/audits/dobetterweb/uses-http2.js#L138)してください。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## この監査に合格する方法
 

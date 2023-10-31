@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Alternative extension installation methods"
+seoTitle: "Alternative Chrome extension installation methods"
 date: 2012-09-17
 updated: 2022-01-28
 description: How to install Chrome Extensions via preferences JSON or Windows registry.

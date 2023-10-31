@@ -1,0 +1,62 @@
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/card-authors.njk' import cardAuthors with context %}
+
+{% macro featuredPostCard(post, options) %}
+{% set pd = post.data %}
+{% set cardIcon = options.icon or 'blog' %}
+{% set cardTitle = options.title or 'i18n.common.featured' | i18n(locale) %}
+{% set actionText = options.actionText %}
+{% set actionUrl = options.actionUrl %}
+{% set class = options.class or 'hairline rounded-lg width-full' %}
+
+<div class="featured-card {{ class }}">
+  <div class="card-title-bar color-blue-medium">
+    {{ icon(cardIcon, {hidden: true}) }}
+    <span class="gap-left-200 flex-1 user-select-none">
+      {{ cardTitle }}
+    </span>
+  </div>
+
+  {% set thumbnail = pd.hero or pd.thumbnail %}
+  {% set alt = pd.alt %}
+
+  {% if thumbnail %}
+    <div class="featured-card__thumbnail gap-top-300">
+      <a class="display-block" href="{{ post.url }}" {% if not alt %}aria-hidden="true" tabindex="-1"{% endif %}>
+        {% Img
+          class="rounded-100 object-fit-cover width-full",
+          src=thumbnail,
+          alt=alt,
+          width="278",
+          height="156",
+          sizes="(min-width: 592px) 391px, calc(100vw - 82px)"
+        %}
+      </a>
+    </div>
+  {% endif %}
+
+  <h2 class="type--h3-card gap-top-300">
+    <a class="color-text surface display-inline-flex" href="{{ post.url }}">
+      {{ pd.title | md | safe }}
+    </a>
+  </h2>
+
+  <p class="type--caption gap-top-200">
+    {{ pd.description | md | safe }}
+  </p>
+
+  {% if pd.authors and pd.authors.length %}
+  <div class="gap-top-400">
+    {{ cardAuthors(pd.authors, pd.date) }}
+  </div>
+  {% endif %}
+
+  {% if actionText and actionUrl %}
+    <div class="gap-top-400">
+      <a href="{{ actionUrl }}" class="material-button button-text display-inline-flex color-primary">
+        {{ actionText }}
+      </a>
+    </div>
+  {% endif %}
+</div>
+{% endmacro %}

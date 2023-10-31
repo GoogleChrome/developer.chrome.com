@@ -10,7 +10,7 @@ date: 2019-05-04
 updated: 2020-04-29
 ---
 
-O [manifesto](https://web.dev/add-manifest/) para um [Progressive Web App](https://web.dev/what-are-pwas/) (PWA) deve incluir um `start_url`, que indica a URL a ser carregada quando o usuário inicia o aplicativo.
+O [manifesto](https://web.dev/articles/add-manifest) para um [Progressive Web App](https://web.dev/articles/what-are-pwas) (PWA) deve incluir um `start_url`, que indica a URL a ser carregada quando o usuário inicia o aplicativo.
 
 Se o navegador não receber uma [resposta HTTP 200](https://developer.mozilla.org/docs/Web/HTTP/Status#Successful_responses) ao acessar um aplicativo do `start_url`, o `start_url` não está correto ou a página não está acessível offline. Isso causa problemas para os usuários que instalaram o aplicativo em seus dispositivos.
 
@@ -20,13 +20,13 @@ Se o navegador não receber uma [resposta HTTP 200](https://developer.mozilla.or
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/ZR8gYzKNpBkrXEgQQnbl.png", alt="Auditoria do Lighthouse mostrando que URL inicial não responde com 200 quando está off-line", width="800", height="76" %}</figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como garantir que sua página esteja disponível off-line
 
-{% include 'content/reliable/workbox.njk' %}
+{% Partial 'reliable/workbox.njk' %}
 
-1. Se você ainda não tiver um, [adicione um manifesto de aplicativo da web](https://web.dev/add-manifest/).
+1. Se você ainda não tiver um, [adicione um manifesto de aplicativo da web](https://web.dev/articles/add-manifest).
 2. Verifique se `start_url` em seu manifesto está correto.
 3. Adicione um service worker ao seu aplicativo.
 4. Use o service worker para armazenar arquivos em cache localmente.
@@ -36,6 +36,6 @@ Consulte a [página atual não responde com um guia 200 quando está off-line](/
 
 ## Recursos
 
-- [O que é confiabilidade de rede e como você a mede?](https://web.dev/network-connections-unreliable/)
-- [Adicionar um manifesto de aplicativo da web](https://web.dev/add-manifest/)
+- [O que é confiabilidade de rede e como você a mede?](https://web.dev/articles/network-connections-unreliable)
+- [Adicionar um manifesto de aplicativo da web](https://web.dev/articles/add-manifest)
 - [Caixa de trabalho: seu kit de ferramentas de serviço de alto nível](/docs/workbox/)

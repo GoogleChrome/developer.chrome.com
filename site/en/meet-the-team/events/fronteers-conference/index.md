@@ -3,9 +3,9 @@ title: Fronteers Conference
 summary: >-
   Fronteers Conference is one of Europe’s premiere conferences on front-end web
   development.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/xaRHmkuKLfCcGdRaEiDr.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/nmNwNgvOmvjk5fOm4MOM.jpg
 location: 'Utrecht, The Netherlands'
-date: '2022-09-09'
+date: 2022-09-09
 externalUrl: 'https://fronteersconf.org/'
 sessions:
   - speaker: bramus
@@ -17,7 +17,8 @@ sessions:
       of the features that will be landing across all browsers by the end of
       this year.
     topics:
-      - Web UI and CSS
+      - CSS
+      - Web UI
     time: TBC
     type: speaker
     slidesUrl: https://www.bram.us/2022/09/13/css-in-2022-and-beyond-2022-09-09-fronteers-conf/

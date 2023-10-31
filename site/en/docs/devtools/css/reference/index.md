@@ -6,7 +6,7 @@ authors:
   - jecelynyeen
   - sofiayem
 date: 2017-06-09
-updated: 2022-06-21
+updated: 2023-09-20
 description: "Discover new workflows for viewing and changing CSS in Chrome DevTools."
 tags:
   - css
@@ -44,14 +44,60 @@ There are many ways to select an element:
 
 ## View CSS {: #view }
 
-### View the external stylesheet where a rule is defined {: #view-external }
+Use the **Elements** > **Styles** and **Computed** panes to view CSS rules and [diagnose CSS issues](/docs/devtools/css/issues/).
 
-In the **Styles** pane, click the link next to a CSS rule to open the external stylesheet that
-defines the rule.
+### Navigate with links {: #links }
 
-{% Img src="image/admin/DIRRbj70JvHO7EDpeSdC.svg", alt="Viewing the stylesheet where a rule is defined", width="800", height="488" %}
+The **Styles** pane displays links in various places to various other places, including but not limited to:
 
-If the stylesheet is minified, see [Make a minified file readable][3].
+- Next to CSS rules, to stylesheets and CSS sources. Such links open the **Sources** panel. If the stylesheet is minified, see [Make a minified file readable][3].
+- In the **Inherited from ...** sections, to parent elements.
+- In `var()` calls, to [custom property](https://developer.mozilla.org/docs/Web/CSS/Using_CSS_custom_properties) declarations.
+- In `animation` shorthand properties, to `@keyframes`.
+- **Learn more** links in documentation tooltips.
+- And more.
+
+Here are some of them highlighted:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VIXGDdosRVMxekn5PQip.png", alt="Various links highlighted.", width="800", height="648" %}
+
+Links may be styled differently. If you're not sure if something is a link, try clicking it to find out.
+
+### View tooltips with CSS documentation, specificity, and custom property values {: #tooltips }
+
+#### View CSS documentation {: #view-docs }
+
+To see a tooltip with a short CSS description, hover over the property name in the **Styles** pane.
+
+{% Aside %}
+DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://github.com/microsoft/vscode-custom-data).
+{% endAside %}
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/v0joPkQg0NiMauy0bwwB.png", alt="The tooltip with documentation on a CSS property.", width="800", height="651" %}
+
+Click **Learn more** to go to an [MDN CSS Reference](https://developer.mozilla.org/docs/Web/CSS/Reference) on this property.
+
+To turn the tooltips off, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Don't show**.
+
+To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Elements**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip**.
+
+#### View selector specificity {: #selector-specificity }
+
+Hover over a selector to see a tooltip with its [specificity](https://developer.mozilla.org/docs/Web/CSS/Specificity) weight.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uzY4LvyHgWhD8LEPrXju.png", alt="The tooltip with specificity weight of a matched selector.", width="800", height="451" %}
+
+#### View the values of custom properties {: #custom-css }
+
+Hover over a [`--custom-property`](https://developer.mozilla.org/docs/Web/CSS/--*) to see its value in a tooltip.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7cUcqUfywnS2KQdQqWes.png", alt="The value of a custom property in a tooltip.", width="800", height="645" %}
+
+### View invalid, overridden, inactive, and other CSS {: #css-issues }
+
+The **Styles** pane recognizes many kinds of CSS issues and highlights them in different ways.
+
+See [Understand CSS in the Styles pane](/docs/devtools/css/issues/#css-in-styles).
 
 ### View only the CSS that's actually applied to an element {: #computed }
 
@@ -64,7 +110,9 @@ tab to view only the CSS that's actually being applied to an element.
 
 {% Img src="image/admin/QZo3RH4i4zmlurpX8M3B.svg", alt="The Computed tab.", width="800", height="488" %}
 
-Inherited properties are opaque. Check the **Show All** checkbox to see all inherited values.
+Check the **Show All** checkbox to see all properties.
+
+See [Understand CSS in the Computed pane](/docs/devtools/css/issues/#css-in-computed).
 
 ### View CSS properties in alphabetical order {: #alphabetical }
 
@@ -78,6 +126,14 @@ applied to an element][6].
 Alternatively, scroll down the **Styles** pane and find sections named `Inherited from <element_name>`.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TuWZmbeQlHR6Qp6pUHVP.png", alt="View the Inherited from... section of the Styles pane.", width="800", height="361" %}
+
+### View `@property` at-rules {: #property }
+
+The [`@property` CSS at-rule](https://web.dev/articles/at-property) lets you define [CSS custom properties](https://developer.mozilla.org/docs/Web/CSS/--*) explicitly and register them in a stylesheet without running any JavaScript.
+
+Hover over the name of such property in the **Styles** pane, to see a tooltip with the property's value, descriptors, and a link to its registration in the collapsible `@property` section at the bottom of the **Styles** pane.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/vDfXTULIyNIJXVw6lKvf.mp4", width="800", height="511", autoplay="false", loop="true", muted="true", controls="true", class="screenshot" %}
 
 ### View `@supports` at-rules {: #supports }
 
@@ -308,7 +364,7 @@ To copy CSS:
      ```
    - **Copy property**. Copies only the `property` name.
    - **Copy value**. Copies only the `value`.
-   - **Copy rule**. Copies the entire CSS rule: 
+   - **Copy rule**. Copies the entire CSS rule:
      ```css
      selector[, selector] {
          property: value;
@@ -411,17 +467,17 @@ To change the length unit:
 
 1. Hover over the unit name and notice that it's underlined.
 1. Click on the unit name to select a unit from the drop-down.
-   
+
    <div style="margin-top: 20px;">
-   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}</div>
+   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}</div>
 
 To change the length value:
 
 1. Hover over the unit value and notice that your pointer changes to a horizontal double-headed arrow.
 1. Drag horizontally to increase or decrease the value.
-   
+
    <div style="margin-top: 20px;">
-   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true",class="screenshot" %}</div>
+   {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true", controls="true",class="screenshot" %}</div>
 
 To adjust the value by 10, hold <kbd>Shift</kbd> when dragging.
 
@@ -500,62 +556,7 @@ See the corresponding [section in Inspect CSS grid](/docs/devtools/css/grid/#gri
 
 ### Change colors with the Color Picker {: #color-picker }
 
-{% YouTube id='TuR27BxCRVk' %}
-
-The **Color Picker** provides a GUI for changing `color` and `background-color` declarations.
-
-To open the **Color Picker**:
-
-1.  [Select an element][24].
-2.  In the **Styles** pane, find the `color` or `background-color` declaration that you want to
-    change. To the left of the `color` or `background-color` value, there is a small square which is
-    a preview of the color.
-
-    {% Img src="image/admin/SuJ1WT25iaaOgt8iWQzj.png", alt="Color preview.", width="800", height="517" %}
-
-    The small blue square to the left of `rgb(123, 170, 247)` is a preview of that
-    color.
-
-3.  Click the preview to open the **Color Picker**.
-
-    {% Img src="image/admin/i8pU9ALTZwhbvrhlXGm7.png", alt="The Color Picker.", width="800", height="624" %}
-
-Here's a description of each of the UI elements of the **Color Picker**:
-
-{% Img src="image/admin/kAtu8Uoi2x8IFvaX561h.svg", alt="The Color Picker, annotated.", width="800", height="548" %}
-
-1.  **Shades**.
-2.  **Eyedropper**. See [Sample a color anywhere with the Eyedropper][25].
-3.  **Copy To Clipboard**. Copy the **Display Value** to your clipboard.
-4.  **Display Value**. The [RGBA][29], [HSLA][30], [HWBA][31], or [Hex][32] representation of the color.
-5.  **Color Palette**. Click one of these squares to change the color to that square.
-6.  **Hue**.
-7.  **Opacity**.
-8.  **Display Value Switcher**. Toggle between the [RGBA][29], [HSLA][30], [HWBA][31], and [Hex][32] representations of the
-    current color.
-    {% Aside %}
-    **Note**: Alternatively, to toggle between color representations, hold down <kbd>Shift</kbd> and click on the color preview button.
-    {% endAside %}
-9.  **Color Palette Switcher**. Toggle between the [Material Design palette][26], a custom palette,
-    or a page colors palette. DevTools generates the page color palette based on the colors that it
-    finds in your stylesheets.
-
-#### Sample a color anywhere with the Eyedropper {: #eyedropper }
-
-When you open the **Color Picker**, the **Eyedropper**
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} is on by default.
-
-The **Eyedropper** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WKeaXT922ot9wQjtvwcZ.svg", alt="Eyedropper.", width="20", height="20" %} can sample colors both from the page and from anywhere on the screen:
-
-To pick a color from anywhere on the screen:
-
-1.  Hover over the target color.
-1.  Click to confirm.
-
-    <div class="elevation--4" style="margin-top: 20px; margin-bottom: 20px;">
-    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Omn8AauWoiknzjzjlGA.png", alt="Using the Eyedropper anywhere on the screen.", width="800", height="450" %}</div>
-
-In the example above, the **Color Picker** shows a current color value of `rgb(224 255 255 / 15%)`. This color changes to pink once you click it.
+See [Inspect and debug HD and non-HD colors with the Color Picker](/docs/devtools/css/color).
 
 ### Change angle value with the Angle Clock {: #angle-clock }
 
@@ -622,27 +623,36 @@ To change shadows with the **Shadow Editor**:
 
 ### Edit animation and transition timings with the Easing Editor {: #edit-easing }
 
-The **Easing Editor** provides a GUI for changing the easing values of [`transition-timing-function`][36] and [`animation-timing-function`][37].
+The **Easing Editor** provides a GUI for changing the values of [`transition-timing-function`][36] and [`animation-timing-function`][37].
 
-To change the values with the **Easing Editor**:
+To open the **Easing Editor**:
 
 1. [Select an element][27] with a timing function declaration, like the `<body>` element on this page.
-1. In the **Styles** tab, find the purple {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/U0vVF9a5jrj948Gegu6o.png", alt="Ease.", width="22", height="22" %} icon next to the `transition-timing-function` or `animation-timing-function` declarations.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ulG0cDcH3SnYS13kJbuB.png", alt="Ease icon.", width="800", height="434" %}
+1. In the **Styles** tab, find the purple {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/U0vVF9a5jrj948Gegu6o.png", alt="Ease.", width="22", height="22" %} icon next to the `transition-timing-function`, `animation-timing-function` declarations, or the `transition` shorthand property.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/H1aAwZxrVvJvjwpoOxN5.png", alt="The Easing Editor icon.", width="800", height="463" %}
 1. Click the icon to open the **Easing Editor**:
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JujOC1By7NK2YzfHT7lD.png", alt="The Easing Editor.", width="800", height="584" %}
-1. To set a [keyword value][38], click one of the picker buttons:
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IPbaYo0rCjI4NaczFoyN.png", alt="The Easing Editor.", width="800", height="726" %}
+
+### Use presets to adjust timings {: #presets }
+
+To adjust timings with a click, use the presets in the **Easing Editor**:
+
+1. In the **Easing Editor**, to set a [keyword value][38], click one of the picker buttons:
+   - **linear** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Z9pH2ZrmGkZpaHtdSIUg.png", alt="The linear button.", width="24", height="24" %}
    - **ease-in-out** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/a0WRju7wMXvxVXiCqFuc.png", alt="The ease-in-out button.", width="24", height="24" %}
    - **ease-in** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3kjLNBHixVNDmxarpnqF.png", alt="The ease-in button.", width="24", height="24" %}
    - **ease-out** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jlueFxpe3WZ05X2lxp20.png", alt="The ease-out button.", width="24", height="24" %}
 1. In the **Presets switcher**, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/79O9ggoDdHGLL73Q1tdG.svg", alt="Left.", width="24", height="24" %} or {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/19mp1EDARktd9LnrvI5L.svg", alt="Right.", width="24", height="24" %} buttons to pick one of the following presets:
 
+  - Linear presets: `elastic`, `bounce`, or `emphasized`.
+  - [Cubic Bezier](https://developer.mozilla.org/docs/Glossary/Bezier_curve) presets:
+
 <table>
 <thead>
   <tr>
-    <th>Easing type</th>
+    <th>Timing keyword</th>
     <th>Preset</th>
-    <th>Bezier equivalent</th>
+    <th>Cubic Bezier</th>
   </tr>
 </thead>
 <tbody>
@@ -712,9 +722,17 @@ To change the values with the **Easing Editor**:
 </tbody>
 </table>
 
-Alternatively, in the **Curve editor**, drag the purple circles to set a custom [`cubic-bezier(x1,y1,x2,y2)`](https://developer.mozilla.org/docs/Glossary/Bezier_curve) value.
+### Configure custom timings {: #custom-timings }
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RrpIeYlQURppXdbUXV6C.png", alt="Curve editor.", width="800", height="584" %}
+To set custom values for timing functions, use the control points on the lines:
+
+- For linear functions, click anywhere on the line to add a control point and drag it. Double-click to remove the point.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sy89NLWDhT7oHgVLnnaF.png", alt="Dragging a control point of a linear function.", width="800", height="720" %}
+
+- For Cubic Bezier functions, drag one of the control points.
+
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Y6ZAZfS5jZYwifaFfzRD.png", alt="Dragging the control points of a Cubic Bezier function.", width="800", height="720" %}
 
 Any change triggers a ball animation in the **Preview** at the top of editor.
 
@@ -764,11 +782,7 @@ Additionally, you can [track changes](/docs/devtools/changes/) you make with the
 [26]: https://material.io/design/color/the-color-system.html#color-usage-and-palettes
 [27]: #select
 [28]: /docs/devtools/shortcuts#styles
-[29]: https://drafts.csswg.org/css-color/#rgb-functions
-[30]: https://drafts.csswg.org/css-color/#the-hsl-notation
-[31]: https://drafts.csswg.org/css-color/#the-hwb-notation
-[32]: https://drafts.csswg.org/css-color/#hex-notation
-[33]: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+[33]: https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements
 [34]: /blog/auto-dark-theme/
 [35]: https://web.dev/prefers-color-scheme/
 [36]: https://developer.mozilla.org/docs/Web/CSS/transition-timing-function

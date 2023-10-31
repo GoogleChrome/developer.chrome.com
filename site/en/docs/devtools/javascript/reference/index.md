@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2017-01-04
-updated: 2022-09-22
+updated: 2022-11-29
 description:
   "Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging
   features."
@@ -21,8 +21,21 @@ See [Get Started With Debugging JavaScript In Chrome DevTools][1] to learn the b
 ## Pause code with breakpoints {: #breakpoints }
 
 Set a breakpoint so that you can pause your code in the middle of its execution.
+To learn how to set breakpoints, see [Pause Your Code With Breakpoints][2].
 
-See [Pause Your Code With Breakpoints][2] to learn how to set breakpoints.
+### Check values when paused {: #inline-eval }
+
+While the execution is paused, the debugger evaluates all variables, constants, and objects within the current function up to a breakpoint. The debugger shows the current values inline next to the corresponding declarations.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mUySGJfdYgR3URwClr67.png", alt="Inline evaluations displayed next to declarations.", width="800", height="363" %}
+
+You can use the [**Console**](/docs/devtools/console/) to query the evaluated variables, constants, and objects.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/e1Cyyoa0bLLGDnm3SU4D.png", alt="Using the Console to query the evaluated variables, constants and objects.", width="800", height="613" %}
+
+{% Aside 'gotchas' %}
+While the execution is paused, you can also [restart the current function](/docs/devtools/javascript/reference/#restart-frame) and even [live-edit](/docs/devtools/javascript/reference/#live-edit) it.
+{% endAside %}
 
 ### Preview class/function properties on hover {: #properties }
 
@@ -32,8 +45,7 @@ While the execution is paused, hover over a class or function name to preview it
 
 ## Step through code {: #stepping }
 
-Once your code is paused, step through it, one line at a time, investigating control flow and
-property values along the way.
+Once your code is paused, step through it, one expression at a time, investigating control flow and property values along the way.
 
 ### Step over line of code {: #step-over }
 
@@ -157,6 +169,42 @@ worker script. You want to view the local and global properties for the service 
 the Sources panel is showing the main script context. By clicking on the service worker entry in the
 Threads pane, you'd be able to switch to that context.
 
+### Step through comma-separated expressions {: comma-separated }
+
+{% Aside 'gotchas' %}
+Starting from Chrome version 108, the **Debugger** can step through both semicolon-separated (`;`) and comma-separated (`,`) expressions.
+{% endAside %}
+
+Stepping through comma-separated expressions lets you debug minified code. For example, consider the following code:
+
+```js
+function foo() {}
+
+function bar() {
+  foo();
+  foo();
+  return 42;
+}
+
+bar();
+```
+
+When minified, it contains a comma-separated `foo(),foo(),42` expression:
+
+```js
+function foo(){}function bar(){return foo(),foo(),42}bar();
+```
+
+The **Debugger** steps through such expressions just the same.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4e1gHFnIkayVnoAu6OGK.png", alt="Stepping through a comma-separated expression.", width="800", height="341" %}
+
+Therefore, the stepping behavior is identical:
+
+- Between minified and authored code.
+- When using [source maps](/blog/sourcemaps/) to debug the minified code in terms of the original code.
+  In other words, when you see semicolons, you can always expect to step through them even if the actual source you're debugging is minified.
+
 ## View and edit local, closure, and global properties {: #scope }
 
 While paused on a line of code, use the **Scope** pane to view and edit the values of properties and
@@ -209,7 +257,7 @@ function foo(value) {
     console.log(value);
     bar(value);
 }
- 
+
 function bar(value) {
     value++;
     console.log(value);
@@ -238,11 +286,11 @@ Try restarting the frames of both functions in the following way:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bduFchfauez6IjMrXOm3.png", alt="Editing the value in the Scopes pane.", width="800", height="497" %}
 1. Try restarting the `bar()` frame and stepping through the increment statement several more times. The value continues to increase.
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/LGHUF27jZmP341zxOLZB.png", alt="Restarting the bar() frame again.", width="800", height="497" %}
-   
+
    {% Aside 'gotchas' %}
    Why is the value not reset to `0`?
 
-   Frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function. 
+   Frame restart doesn't reset the arguments. In other words, the restart doesn't restore the initial state at function call. Instead, it simply moves the execution pointer to the start of the function.
 
    Therefore, the current argument value persists in memory across restarts of the same function.
    {% endAside %}
@@ -260,7 +308,7 @@ Try restarting the frames of both functions in the following way:
 
 ### Show ignore-listed frames {: #show-ignore-listed-frames }
 
-With the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting enabled, the **Scope** pane shows only the frames that are relevant to your code.
+By default, the **Call Stack** pane shows only the frames that are relevant to your code and omits any scripts added to {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YZH1mvFdglBhJVn7AGrz.png", alt="Call stack.", width="800", height="422" %}
 
@@ -317,7 +365,7 @@ When developing web applications using frameworks (for example, [React](https://
 
 To help you navigate sources, the **Sources** > **Page** pane can group the files into two categories:
 
-- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KIgoYfQUdaCtgDLdYKSE.svg", alt="Code icon.", width="24", height="24" %} **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on sourcemaps provided by your build tools.
+- {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KIgoYfQUdaCtgDLdYKSE.svg", alt="Code icon.", width="24", height="24" %} **Authored**. Similar to the source files you view in your IDE. DevTools generates these files based on source maps provided by your build tools.
 - {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KDnkz7biIKbfQktK3HXX.svg", alt="Deployed icon.", width="22", height="22" %} **Deployed**. The actual files that the browser reads. Usually these files are minified.
 
 To enable grouping, enable the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Group files by Authored/Deployed** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} option under the three-dot menu at the top of the file tree.
@@ -330,23 +378,11 @@ To enable grouping, enable the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5
 **Note**: This is a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %} preview feature available from Chrome version 106.
 {% endAside %}
 
-To help you focus only on the code you create, the **Sources** panel can hide ignore-listed third-party scripts from the file tree.
+To help you focus only on the code you create, the **Sources** > **Page** pane grays out all scripts or directories added to {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/) by default.
 
-{% Aside 'gotchas' %}
-By default, DevTools automatically adds third-party scripts to the ignore list based on the new `x_google_ignoreList` property in sourcemaps. Frameworks and bundlers need to supply this information.
+To hide such scripts altogether, select **Sources** > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Hide ignore-listed sources** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
 
-As of Chrome version 106, [Angular v14.1.0](https://github.com/angular/angular-cli/releases/tag/14.1.0) supports this feature. See [Case Study: Better Angular Debugging with DevTools](/blog/devtools-better-angular-debugging/#x_google_ignorelist-in-angular).
-{% endAside %}
-
-To hide known third-party sources:
-
-1. Make sure the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} **Settings** > **Ignore List** > **Automatically add known third-party scripts to ignore list** setting is enabled.
-
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4aIHYQjq5gxgrPF9MbkD.png", alt="Automatically add known third-party scripts to ignore list.", width="800", height="496" %}
-
-1. Select **Sources** > **Page** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N5Lkpdwpaz4YqRGFr2Ks.svg", alt="Three-dot menu.", width="24", height="24" %} > **Hide ignore-listed sources** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XfSWf04g2cwpnFcmp40m.svg", alt="Experimental.", width="20", height="20" %}.
-
-   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Y4KSjl9zJQdnAhTvtnXm.png", alt="Hide ignore-listed sources.", width="800", height="449" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6FMlKaxyNzlf3j41kzVZ.png", alt="Before and after hiding ignore-listed sources.", width="800", height="420" %}
 
 ## Ignore a script or pattern of scripts {: #ignore-list }
 
@@ -367,15 +403,32 @@ function animate() {
 `A` is a third-party library that you trust. If you're confident that the problem you're debugging
 is not related to the third-party library, then it makes sense to ignore the script.
 
+### Ignore a script or a directory from the file tree {: #file-tree-ignore-list }
+
+To ignore an individual script or an entire directory:
+
+1. In **Sources** > **Page**, right-click a directory or a script file.
+1. Select **Add directory/script to ignore list**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Y7gblKGiZIzM9gkVSmch.png", alt="Ignore options for a directory or script file.", width="800", height="667" %}
+
+If you didn't [hide ignore-listed sources](#hide-ignore-listed), you can select such a source in the file tree and, on the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/BOj6neshf7WbowM3j21R.svg", alt="Warning.", width="24", height="24" %} warning banner, click **Remove from ignored list** or **Configure**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kL33cvwDpOREDHu7waX5.png", alt="A selected ignored file shows Remove and Configure buttons.", width="800", height="509" %}
+
+Otherwise, you can remove hidden and ignored directories and scripts from the list in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
+
 ### Ignore a script from the Editor pane {: #editor-ignore-list }
 
-To ignore a script from the Editor pane:
+To ignore a script from the **Editor** pane:
 
 1.  Open the file.
 2.  Right-click anywhere.
 3.  Select **Add script to ignore list**.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/q7leDy8D975ZlhtiB3f6.png", alt="Ignoring a script from the Editor pane.", width="800", height="575" %}
+
+You can remove a script from the list of ignored from {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 
 ### Ignore a script from the Call Stack pane {: #call-stack-ignore-list }
 
@@ -386,16 +439,11 @@ To ignore a script from the **Call Stack** pane:
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/y2NiIZH9UURpEtXAuVCZ.png", alt="Ignoring a script from the Call Stack pane.", width="800", height="575" %}
 
+You can remove a script from the list of ignored from {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
+
 ### Ignore a script from Settings {: #settings-ignore-list }
 
-To ignore a single script or pattern of scripts from Settings:
-
-1.  Open [Settings][3].
-2.  Go to the **Ignore List** tab.
-    {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/DFANGZspw5B4IlgO04I6.png", alt="Ignoring a script from Settings.", width="800", height="552" %}
-3.  Click **Add pattern**.
-4.  Enter the script name or a regex pattern of script names to ignore.
-5.  Click **Add**.
+See {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](/docs/devtools/settings/ignore-list/).
 
 ## Run snippets of debug code from any page {: #snippets }
 
@@ -420,14 +468,31 @@ expression.
   {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iWsdoHnowdltMpnOfSJG.png", alt="Delete expression", width="20", height="11" %}
   to delete it.
 
-## Make a minified file readable {: #format }
+## Inspect and edit scripts {: #editor }
 
-Click **Format** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JCyivmZxQVqpI4tj7Sil.svg", alt="Format.", width="20", height="20" %} to make a minified
-file human-readable.
+When you open a script in the [**Page**](/docs/devtools/javascript/reference/#file-tree) pane, DevTools shows you its contents in the **Editor** pane. In the **Editor** pane, you can browse and edit your code.
 
-{% Img src="image/admin/cttlkengXdMrdvwjh5S3.svg", alt="The Format button.", width="800", height="609" %}
+Additionally, you can [override](/docs/devtools/overrides/) the contents locally or create a [workspace](/docs/devtools/workspaces/) and save the changes you make in DevTools directly to your local sources.
 
-## Edit a script {: #edit }
+### Make a minified file readable {: #format }
+
+By default, the **Sources** panel pretty-prints minified files. When pretty-printed, the **Editor** may show a single long code line in multiple lines, with `-` to indicate that it's the line continuation.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/vqpCILSqkHx4mJlliMf5.png", alt="A pretty-printed long code line shown in multiple lines, with '-' to indicate line continuation.", width="800", height="557" %}
+
+To see the minified filed as it was loaded, click `{ }` in the bottom left corner of the **Editor**.
+
+### Fold code blocks {: #fold-code-blocks }
+
+To fold a code block, hover over the line number in the left column and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TGwMBZWZWJlVmQhR2cHx.svg", alt="Collapse.", width="20", height="20" %} **Collapse**.
+
+To unfold the code block, click `{...}` next to it.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/A99gci0l8aXMmv0IHAGH.mp4", width="800", height="456", autoplay="false", controls="true", muted="true", class="screenshot"  %}
+
+To configure this behavior, see {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Sources**](/docs/devtools/settings/preferences/#sources).
+
+### Edit a script {: #edit }
 
 When fixing a bug, you often want to test out some changes to your JavaScript code. You don't need
 to make the changes in an external browser and then reload the page. You can edit your script in
@@ -444,7 +509,7 @@ To edit a script:
 
     The **Editor** pane on the screenshot above is outlined in blue.
 
-## Edit a paused function live {: #live-edit}
+### Edit a paused function live {: #live-edit}
 
 {% Aside %}
 **Note:** This feature is available from Chrome version 105.
@@ -472,7 +537,7 @@ Watch the video below to learn this workflow.
 
 In this example, the `addend1` and `addend2` variables initially have an incorrect `string` type. So, instead of adding numbers, the strings are concatenated. To fix it, the `parseInt()` functions are added during live editing.
 
-## Search and replace text in a script {: #search }
+### Search and replace text in a script {: #search }
 
 To search for text in a script:
 

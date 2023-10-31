@@ -1,49 +1,80 @@
 ---
-layout: "layouts/doc-post.njk"
-title: "Match patterns"
+layout: 'layouts/doc-post.njk'
+title: 'Match patterns'
+seoTitle: 'Chrome Extensions match patterns'
 date: 2012-09-18
-updated: 2017-10-28
-description: How host permission and content script pattern matching works, with examples.
+updated: 2023-08-31
+description: Understanding URL match patterns in Chrome extensions.
 ---
 
-[Host permissions][1] and [content script][2] matching are based on a set of URLs defined by match
-patterns. A match pattern is essentially a URL that begins with a permitted scheme (`http`, `https`,
-`file`, or `ftp`, and that can contain '`*`' characters. The special pattern `<all_urls>` matches
-any URL that starts with a permitted scheme. Each match pattern has 3 parts:
-
-- _scheme_—for example, `http` or `file` or `*`
-
-  <div class="aside aside--note">Access to <code>file</code> URLs isn't automatic. The user must visit the extensions management page and opt in to <code>file</code> access for each extension that requests it.</div>
-
-- _host_—for example, `www.google.com` or `*.google.com` or `*`; if the scheme is `file`, there is
-  no _host_ part
-- _path_—for example, `/*`, `/foo*`, or `/foo/bar`. The path must be present in a host permission,
-  but is always treated as `/*`.
-
-Here's the basic syntax:
+A match pattern is a URL with the following structure, used to specify a group of URLs:
 
 ```text
-&lt;url-pattern&gt; := &lt;scheme&gt;://&lt;host&gt;&lt;path&gt;
-&lt;scheme&gt; := '*' | 'http' | 'https' | 'file' | 'ftp' | 'urn'
-&lt;host&gt; := '*' | '*.' &lt;any char except '/' and '*'&gt;+
-&lt;path&gt; := '/' &lt;any chars&gt;
+&lt;scheme&gt;://&lt;host&gt;/&lt;path&gt;
 ```
 
-The meaning of '`*`' depends on whether it's in the _scheme_, _host_, or _path_ part. If the
-_scheme_ is `*`, then it matches either `http` or `https`, and **not** `file`, `ftp`, or `urn`. If the
-_host_ is just `*`, then it matches any host. If the _host_ is `*._hostname_`, then it matches the
-specified host or any of its subdomains. In the _path_ section, each '`*`' matches 0 or more
-characters. The following table shows some valid patterns.
+**scheme**: Must be one of the following, separated from the rest of the pattern using a double slash (`//`):
 
-Note: `urn` scheme is available since Chrome 91.
+- `http`
+- `https`
+- A wildcard `*`, which matches only `http` or `https`
+- `file`
 
-<table class="fixed-table width-full"><tbody><tr><th style="margin-left:0; padding-left:0">Pattern</th><th style="margin-left:0; padding-left:0">What it does</th><th style="margin-left:0; padding-left:0">Examples of matching URLs</th></tr><tr><td><code>https://*/*</code></td><td>Matches any URL that uses the <code>https</code> scheme</td><td>https://www.google.com/<br>https://example.org/foo/bar.html</td></tr><tr><td><code>https://*/foo*</code></td><td>Matches any URL that uses the <code>https</code> scheme, on any host, as long as the path starts with <code>/foo</code></td><td>https://example.com/foo/bar.html<br>https://www.google.com/foo<b></b></td></tr><tr><td><code>https://*.google.com/foo*bar</code></td><td>Matches any URL that uses the <code>https</code> scheme, is on a google.com host (such as www.google.com, docs.google.com, or google.com), as long as the path starts with <code>/foo</code> and ends with <code>bar</code></td><td>https://www.google.com/foo/baz/bar<br>https://docs.google.com/foobar</td></tr><tr><td><code>https://example.org/foo/bar.html</code></td><td>Matches the specified URL</td><td>https://example.org/foo/bar.html</td></tr><tr><td><code>file:///foo*</code></td><td>Matches any local file whose path starts with <code>/foo</code></td><td>file:///foo/bar.html<br>file:///foo</td></tr><tr><td><code>http://127.0.0.1/*</code></td><td>Matches any URL that uses the <code>http</code> scheme and is on the host 127.0.0.1</td><td>http://127.0.0.1/<br>http://127.0.0.1/foo/bar.html</td></tr><tr><td><code>*://mail.google.com/*</code></td><td>Matches any URL that starts with <code>http://mail.google.com</code> or <code>https://mail.google.com</code>.</td><td>http://mail.google.com/foo/baz/bar<br>https://mail.google.com/foobar</td></tr><tr><td><code>urn:*</code></td><td>Matches any URL that starts with <code>urn:</code>.</td><td>urn:uuid:54723bea-c94e-480e-80c8-a69846c3f582<br>urn:uuid:cfa40aff-07df-45b2-9f95-e023bcf4a6da</td></tr><tr><td><code>&lt;all_urls&gt;</code></td><td>Matches any URL that uses a permitted scheme. (See the beginning of this section for the list of permitted schemes.)</td><td>http://example.org/foo/bar.html<br>file:///bar/baz.html</td></tr></tbody></table>
+For information on injecting content scripts into unsupported schemes, such as `about:` and `data:`, see [Injecting in related frames][cs-frames].
 
-Here are some examples of _invalid_ pattern matches:
+**host**: A hostname (`www.example.com`). A `*` before the hostname to match subdomains (`*.example.com`), or just a wildcard `*`.
+  - If you use a wildcard in the host pattern, it must be the first or only character, and it must be followed by a period (`.`) or forward slash (`/`).
 
-<table class="fixed-table width-full"><tbody><tr><th style="margin-left:0; padding-left:0">Bad pattern</th><th style="margin-left:0; padding-left:0">Why it's bad</th></tr><tr><td><code>https://www.google.com</code></td><td>No <em>path</em></td></tr><tr><td><code>https://*foo/bar</code></td><td>'*' in the <em>host</em> can be followed only by a '.' or '/'</td></tr><tr><td><code>https://foo.*.bar/baz&nbsp;</code></td><td>If '*' is in the <em>host</em>, it must be the first character</td></tr><tr><td><code>http:/bar</code></td><td>Missing <em>scheme</em> separator ("/" should be "//")</td></tr><tr><td><code>foo://*</code></td><td>Invalid <em>scheme</em></td></tr></tbody></table>
+**path**: Must contain at least a forward slash. The slash by itself matches any path, as if it were followed by a wildcard (`/*`).
 
-Some schemes are not supported in all contexts.
+Extensions use match patterns in a variety of use cases, including the following:
 
-[1]: /docs/extensions/mv3/declare_permissions#host-permissions
-[2]: /docs/extensions/mv3/content_scripts
+* Injecting [content script][content-scripts].
+* [Declaring host permissions][host-permissions] that some Chrome APIs require in addition to their own permissions.
+* Granting access to [web-accessible resources][war].
+* Allowing message sending and receiving using ["externally_connectable.matches"][ext-connect].
+
+## Special cases {: #special }
+
+`"<all_urls>"`
+: Matches any URL that starts with a permitted scheme, including any pattern listed under [valid patterns](#valid-examples). Because it affects all hosts, Chrome web store reviews for extensions that use it [may take longer](/docs/webstore/review-process/#review-time-factors).
+
+`"file:///"`
+: Allows your extension to run on local files. This pattern requires the user to manually [grant access][permissions]. Note that this case requires three slashes, not two.
+
+Localhost URLs and IP addresses
+: To match any localhost port during development, use `http://localhost:*/*`. Specify a port using the port number, as in `http://localhost:8080/*`.  For IP addresses, specify the address plus a wildcard in the path, as in `http://127.0.0.1/*`. You can also use `http://*:*/*` to match localhost, IP addresses, and any port.
+
+Top Level domain match patterns
+: Chrome doesn't support match patterns for [top Level domains (TLD)][mdn-tld]. Specify your match patterns within individual TLDs, as in `http://google.es/*` and `http://google.fr/*`.
+
+## Example patterns {: #examples }
+
+`https://*/*` or `https://*/`
+: Matches any URL using the `https` scheme.
+
+`https://*/foo*`
+: Matches any URL using the `https` scheme, on any host, with a path that starts with `foo`. Examples of matches include `https://example.com/foo/bar.html` and `https://www.google.com/foo`.
+
+`https://*.google.com/foo*bar`
+: Matches any URL using the `https` scheme, on a google.com host, with a path that starts with `foo` and ends with `bar`. Examples of matches include `https://www.google.com/foo/baz/bar` and `https://docs.google.com/foobar`.
+
+`file:///foo*`
+: Matches any local file whose path starts with `foo`. Examples of matches include `file:///foo/bar.html` and `file:///foo`.
+
+`http://127.0.0.1/*` or `http://127.0.0.1/`
+: Matches any URL that uses the `http` scheme and is on the host 127.0.0.1. Examples of matches include `http://127.0.0.1/` and `http://127.0.0.1/foo/bar.html`.
+
+`http://localhost/*`
+: Matches any localhost port.
+
+`*://mail.google.com/` or `*://mail.google.com/*`
+: Matches any URL that starts with `http://mail.google.com` or `https://mail.google.com`.
+
+[content-scripts]: /docs/extensions/mv3/content_scripts
+[cs-frames]: /docs/extensions/mv3/content_scripts/#injecting-in-related-frames
+[ext-connect]: /docs/extensions/mv3/manifest/externally_connectable/#manifest
+[mdn-tld]: https://developer.mozilla.org/docs/Glossary/TLD
+[permissions]: /docs/extensions/mv3/declare_permissions/#allow_access
+[host-permissions]: /docs/extensions/mv3/declare_permissions/#host-permissions
+[war]: /docs/extensions/mv3/manifest/web_accessible_resources/#manifest-declaration

@@ -1,10 +1,16 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest - Version"
+title: "Manifest V2 - Version [Deprecated]"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the version property of manifest.json.
 ---
+
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest version](/docs/extensions/mv3/manifest/version) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 One to four dot-separated integers identifying the version of this extension. A couple of rules
 apply to the integers: they must be between 0 and 65535, inclusive, and non-zero integers can't

@@ -7,7 +7,7 @@ description: |2
 date: 2020-12-01
 ---
 
-[Сторонние ресурсы](https://web.dev/third-party-javascript/) часто используются для показа рекламы или видео и интеграции с социальными сетями. По умолчанию сторонние ресурсы загружаются сразу после загрузки страницы, однако такой подход может излишне ее замедлить. Если сторонний контент не критичен, затраты на производительность можно снизить за счет [отложенной загрузки](https://web.dev/fast/#lazy-load-images-and-video).
+[Сторонние ресурсы](https://web.dev/articles/third-party-javascript) часто используются для показа рекламы или видео и интеграции с социальными сетями. По умолчанию сторонние ресурсы загружаются сразу после загрузки страницы, однако такой подход может излишне ее замедлить. Если сторонний контент не критичен, затраты на производительность можно снизить за счет [отложенной загрузки](https://web.dev/articles/fast#lazy_load_images_and_video).
 
 Этот аудит выявляет сторонние встраиваемые файлы, для которых можно выполнить отложенную загрузку при взаимодействии. В этом случае вместо стороннего контента используется *фасад* до тех пор, пока пользователь не начнет с ним взаимодействовать.
 
@@ -51,11 +51,15 @@ Lighthouse ищет сторонние продукты, которые можн
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Встроенный проигрыватель Vimeo
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### Живые чаты (Intercom, Drift, Help Scout, Facebook Messenger)
 

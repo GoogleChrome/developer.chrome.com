@@ -16,7 +16,7 @@ updated: 2019-08-28
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/AjfKRZm8E4ZUi2QvQtL3.png", alt="显示控制台中的浏览器错误的 Lighthouse 审核", width="800", height="247" %}</figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 如何解决浏览器错误
 

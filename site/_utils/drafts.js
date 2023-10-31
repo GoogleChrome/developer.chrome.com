@@ -30,4 +30,30 @@ const filterOutDrafts = item => {
   return true; // include everything in non-prod
 };
 
-module.exports = {filterOutDrafts};
+/**
+ * Checks if the provided date is later than current date and time.
+ *
+ * @param {Date=} postDate Date to be compared.
+ * @param {Date?} now Used to override the current date and time e.g. in tests.
+ * @return {boolean} True if the date is in the future.
+ */
+function isScheduledForFuture(postDate, now = new Date()) {
+  if (!(now instanceof Date)) {
+    throw new Error('argument <now> must be a Date object.');
+  }
+  postDate = postDate ? new Date(postDate) : new Date();
+  return postDate.getTime() > now.getTime();
+}
+
+/**
+ * Checks if the post is in the publishable state: it is not a draft nor
+ * scheduled for future.
+ *
+ * @param {EleventyData} data 11ty data available for a given post.
+ * @return {boolean} True if the post is publishable.
+ */
+function isPublished(data) {
+  return !(data.draft || isScheduledForFuture(data.page?.date));
+}
+
+module.exports = {filterOutDrafts, isScheduledForFuture, isPublished};

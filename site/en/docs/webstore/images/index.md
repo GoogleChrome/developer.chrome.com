@@ -216,7 +216,6 @@ if you'd like your extension to be featured more prominently in the Chrome Web S
 of each of the following:
 
 - Small: 440x280 pixels **(required)**
-- Large: 920x680 pixels
 - Marquee: 1400x560 pixels
 
 {% Aside 'note' %}
@@ -239,31 +238,20 @@ thumb for designing your images:
 
 The following graphics are examples of the promotional images for an extension:
 
-<table>
-  <thead>
-    <tr>
-      <th>Small promo image (440x280)</th>
-      <th>Large promo image (920x680)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/9KruJ8pLUNTrzXIXP6JN.png", 
-               alt="Small promo image", height="140", width="220" %}
-      </td>
-      <td>
-        {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/uvSRznxKJngidMKDIeqN.png", 
-               alt="Large promo image", height="340", width="460" %}
-      </td>
-    </tr>
-  </tbody>
-</table>
+<figure>
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/9KruJ8pLUNTrzXIXP6JN.png", alt="Small promo image", height="140", width="220" %}
+  <figcaption>
+Small promo image (440x280)
+  </figcaption>
+</figure>
 
-Marquee image (1400x560):
+<figure>
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/tn6IOh8ZCrflIOcu8isV.png", alt="Marquee", height="280", width="700" %}
+  <figcaption>
+Marquee image (1400x560)
+  </figcaption>
+</figure>
 
-{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/tn6IOh8ZCrflIOcu8isV.png", 
-        alt="Marquee", height="280", width="700" %}
 
 {% Aside 'note' %}
 
@@ -291,7 +279,7 @@ To replace a promotional image, hover over the image to bring up the remove imag
 Use screenshots to convey capabilities, the look and feel, and experience of your extension to users. You must provide at **least 1**—and preferably the maximum allowed 5—screenshots of your extension to be displayed in the extension's store listing. Screenshots should demonstrate the actual user experience, focusing on the core features and content so users can anticipate what the extension's experience will be like.
 
 If your extension supports multiple locales, you can provide
-locale-specific screenshots as described in [Internationalizing Your Extension][internationalize].
+locale-specific screenshots as described in [Localize your store listing][internationalize].
 
 When you edit your extensions's listing, mousing over a screenshot's thumbnail brings up controls that let
 you delete the screenshot or change its position.
@@ -324,7 +312,7 @@ Next, read [Submit your extension for publishing][submit-item].
 [icon-perspective]: #icon-perspective
 [icon-size]: #icon-size
 [images]: #promo
-[internationalize]: /docs/webstore/i18n
+[internationalize]: /docs/webstore/cws-dashboard-listing/#localize-your-listing
 [screenshots]: #screenshots
 [submit-item]: /docs/webstore/publish/#submit-your-item-for-publishing
 [zip-file]: /docs/webstore/publish#create-your-items-zip-file

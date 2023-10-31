@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Development basics'
+seoTitle: 'Chrome Extension development basics'
 subhead: 'Learn the basics of Chrome extension development.'
 description: 'What to expect during the development of a Chrome extension.'
 date: 2022-10-04
@@ -27,7 +28,10 @@ alt="Hello extension", width="206", height="130", class="screenshot" %}
 Start by creating a new directory to store extension files. If you prefer, you can download the full
 source code from [GitHub][sample-hello-world].
 
-Next, create a new file in this directory called `manifest.json` and add the following code:
+Next, create a new file in this directory called `manifest.json`. This JSON object describes the extension's
+capabilities and configuration. For example, most manifest files contain an `"action"` key which declares
+the image Chrome should use as the extension's action icon and the HTML page to show in a popup when the
+extension's action icon is clicked.
 
 ```json
 {
@@ -42,8 +46,7 @@ Next, create a new file in this directory called `manifest.json` and add the fol
 }
 ```
 
-This JSON object describes the extension's capabilities and configuration. For example, the `"action"` key 
-declares the image Chrome should use as the action's icon and the HTML page to show in a popup when the action is clicked. [Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
+[Download the icon][hello-icon] to your directory, and be sure to change its name to match what's in the `"default_icon"` key. 
 
 For the popup, create a file named `hello.html`, and add the following code:
 
@@ -55,10 +58,10 @@ For the popup, create a file named `hello.html`, and add the following code:
 </html>
 ```
 
-The extension now displays a popup when the extension action (toolbar icon) is clicked. Let's test
+The extension now displays a popup when the extension's action icon (toolbar icon) is clicked. Let's test
 it in Chrome by loading it locally. Ensure all files are saved.
 
-## Loading an unpacked extension {: #load-unpacked }
+## Load an unpacked extension {: #load-unpacked }
 
 To load an unpacked extension in developer mode:
 
@@ -76,10 +79,10 @@ To load an unpacked extension in developer mode:
       </figcaption>
     </figure>
 
-Ta-da! The extension has been successfully installed. Because no extension icons were included in
+Ta-da! The extension has been successfully installed. If no extension icons were included in
 the manifest, a generic icon will be created for the extension.
 
-## Pinning the extension {: #pin }
+## Pin the extension {: #pin }
 
 By default, when you load your extension locally, it will appear in the extensions menu {% Img
 src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/f5i7AgfauCfoQJxnn3kU.png", alt="Puzzle", width="24",
@@ -94,7 +97,7 @@ alt="Pinning the extension", width="358", height="248", class="screenshot" %}
   </figcaption>
 </figure>
 
-Click on the extension’s action (toolbar icon); you should see a popup.
+Click on the extension’s action icon (toolbar icon); you should see a popup.
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xjKRmWMgwMm7Kdf72bkj.png", 
@@ -104,7 +107,7 @@ alt="hello world extension", width="206", height="130", class="screenshot" %}
   </figcaption>
 </figure>
 
-## Reloading the extension {: #reload }
+## Reload the extension {: #reload }
 
 Let’s go back to the code and change the name of the extension to "Hello Extensions of the world!" in the manifest.
 
@@ -139,7 +142,7 @@ Not all components need to be reloaded to see changes made, as shown in the foll
 
 {% endDetails %}
 
-## Finding console logs and errors {: #logs }
+## Find console logs and errors {: #logs }
 
 ### Console logs {: #console }
 
@@ -163,25 +166,24 @@ console.log("This is a popup!")
 
 To see this message logged in the Console:
 
-  1. Refresh the extension.
-  2. Open the popup.
-  3. Right-click on the popup.
-  4. Select **Inspect**. 
+  1. Open the popup.
+  2. Right-click on the popup.
+  3. Select **Inspect**. 
       <figure> 
       {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vHGHW1o4J0kZgUkAteRQ.png", 
-      alt="Inspecting the popup", width="322", height="262", class="screenshot" %}
+      alt="Inspecting the popup.", width="322", height="262", class="screenshot" %}
         <figcaption>
-        Inspecting a popup 
+        Inspecting a popup. 
         </figcaption>
       </figure>
-  5. In the [DevTools][dev-tools], navigate to the **Console** panel.
+  4. In the [DevTools][dev-tools], navigate to the **Console** panel.
     <figure>
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/1ZrcBEYcbMxW1c9UvBy9.png", 
     alt="DevTools Code Panel", width="400", height="374", class="screenshot" %}
       <figcaption>
-      DevTools Console Panel 
+      Inspecting a popup 
       </figcaption>
-    </figure>
+    </figure>   
 
 ### Error logs {: #errors }
 
@@ -204,23 +206,23 @@ alt="Extension error details", width="400", height="281", class="screenshot" %}
 To learn more about debugging the service worker, options page, and content scripts, see [Debugging
 extensions][doc-debug].
 
-## Structuring an extension project {: #structure }
+## Structure an extension project {: #structure }
 
 There are many ways to structure an extension project; however, you must place the
 manifest.json file in the extension's **root directory**. The following is a structure example:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/hjccQNanPjTDpIajkhPU.png", alt="The contents of an extension folder: manifest.json, background.js, scripts folder, popup folder, and images folder.", width="700", height="468" %}
 
-## Using Typescript {: #types }
+## Use TypeScript {: #types }
 
 If you are developing using a [code editor][mdn-ide] such as VSCode or Atom, you can use the npm
 package [chrome-types][npm-chrome-types] to take advantage of auto-completion for the [Chrome
 API][doc-apis]. This npm package is updated automatically when the Chromium source code
 changes.
 
-{% Aside  'gotchas' %}
+{% Aside  'important' %}
 
-Upgrade this npm package frequently to work with the latest Chromium version.
+Update this npm package frequently to work with the latest Chromium version.
 
 {% endAside %}
 
@@ -249,7 +251,7 @@ extension and Chrome Web store documentation:
 [hello-icon]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
 [mdn-ide]: https://developer.mozilla.org/docs/Glossary/IDE
 [npm-chrome-types]: https://www.npmjs.com/package/chrome-types
-[sample-hello-world]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/hello-world
+[sample-hello-world]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.hello-world
 [tut-focus-mode]: /docs/extensions/mv3/getstarted/tut-focus-mode
 [tut-reading-time]: /docs/extensions/mv3/getstarted/tut-reading-time
 [tut-tabs-manager]: /docs/extensions/mv3/getstarted/tut-tabs-manager

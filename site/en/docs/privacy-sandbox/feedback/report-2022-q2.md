@@ -2,10 +2,10 @@
 layout: layouts/doc-post.njk
 title: Feedback Report - 2022 Q2
 subhead: >
-  Quarterly report for 2022 Q2 summarising the ecosystem feedback received on
+  Quarterly report for 2022 Q2 summarizing the ecosystem feedback received on
   Privacy Sandbox proposals and Chrome's response.
 description: >
-  Quarterly report for 2022 Q2 summarising the ecosystem feedback received on
+  Quarterly report for 2022 Q2 summarizing the ecosystem feedback received on
   Privacy Sandbox proposals and Chrome's response.
 date: 2022-07-27
 authors:

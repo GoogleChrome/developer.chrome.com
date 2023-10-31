@@ -4,68 +4,127 @@ title: "Open Chrome DevTools"
 authors:
   - kaycebasques
   - jecelynyeen
+  - sofiayem
 date: 2018-12-14
-#updated: YYYY-MM-DD
+updated: 2022-10-26
 description: "All of the ways that you can open Chrome DevTools."
 ---
 
-There are many ways to open Chrome DevTools, because different users want fast access to different
-parts of the DevTools UI.
+{% YouTube id="X65TAP8a530" %}
 
-## Open the Elements panel to inspect the DOM or CSS {: #elements }
+There are many ways to open Chrome DevTools. Choose your favorite way from this comprehensive reference.
 
-When you want to inspect a DOM node's styles or attributes, right-click the element and select
-**Inspect**.
+You can access DevTools using Chrome UI or keyboard:
 
-{% Img src="image/admin/yDROFVw6p2poGhkOdFKu.png", alt="The Inspect option", width="800", height="648" %}
+- From [drop-down menus in Chrome](#chrome-menu).
+- With dedicated [shortcuts](#shortcuts) that open **Elements**, **Console**, or the last panel you used.
 
-**Figure 1**. The **Inspect** option
+Additionally, learn how to [auto-open DevTools for every new tab](#auto).
 
-Or press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux, ChromeOS).
+## Open DevTools from Chrome menus {: #chrome-menu }
 
-See [Get Started With Viewing And Changing CSS][1].
+If you prefer UI, you can access DevTools from drop-down menus in Chrome.
 
-## Open the Console panel to view logged messages or run JavaScript {: #console }
+### Open the Elements panel to inspect the DOM or CSS {: #inspect}
 
-Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, ChromeOS) to jump straight into
-the **Console** panel.
+To inspect, right-click an element on a page and select **Inspect**.
 
-See [Get Started With The Console][2].
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uLh67ZUQIEJ5En0vcJgq.png", alt="The Inspect option in a drop-down menu in Chrome.", width="800", height="608" %}
 
-## Open the last panel you had open {: #last }
+DevTools opens the **Elements** panel and selects the element in the DOM tree. In the **Styles** pane, you can see CSS rules applied to the selected element.
 
-Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/WTJEhyPfarXQqli3LMwW.png", alt="An element selected in the Elements panel.", width="800", height="469" %}
 
-## Open DevTools from Chrome's main menu {: #chrome }
+### Open the last panel you used from Chrome's main menu {: #last }
 
-Click **Customize and control Google Chrome**
-{% Img src="image/admin/t7rsoT0IGcnwvW76Xj32.png", alt="Customize and control Google Chrome", width="6", height="26" %} and
-then select **More Tools** > **Developer Tools**.
+To open the last DevTools panel, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/N7wEDmtW9lnrSxPRupMa.svg", alt="Three-dot menu.", width="22", height="22" %} button to the right of the address bar and select **More Tools** > **Developer Tools**.
 
-{% Img src="image/admin/0bZRHFrsZGxpTAWhYCg6.png", alt="Opening DevTools from Chrome's main menu.", width="800", height="492" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bkh79zEFaByczisr3lD5.png", alt="The Developer Tools option selected from the three-dot menu.", width="800", height="516" %}
 
-**Figure 2**. Opening DevTools from Chrome's main menu
+Alternatively, you can open the last panel with a shortcut. See the next section to learn more.
+
+## Open panels with shortcuts: Elements, Console, or your last panel  {: #shortcuts }
+
+If you prefer keyboard, press a shortcut in Chrome depending on your operating system:
+
+<table>
+<thead>
+  <tr>
+    <th>OS</th>
+    <th>Elements</th>
+    <th>Console</th>
+    <th>Your last panel</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Windows or Linux</td>
+    <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <strong>C</strong></td>
+    <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <strong>J</strong></td>
+    <td><kbd>F12</kbd></br><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <strong>I</strong></td>
+  </tr>
+  <tr>
+    <td>Mac</td>
+    <td><kbd>Cmd</kbd> + <kbd>Option</kbd> + <strong>C</strong></td>
+    <td><kbd>Cmd</kbd> + <kbd>Option</kbd> + <strong>J</strong></td>
+    <td><kbd>Fn</kbd> + <kbd>F12</kbd></br><kbd>Cmd</kbd> + <kbd>Option</kbd> + <strong>I</strong></td>
+  </tr>
+</tbody>
+</table>
+
+Here's an easy way to memorize the shortcuts:
+
+- **C** stands for CSS.
+- **J** for JavaScript.
+- **I** designates your choice.
+
+The **C** shortcut opens the **Elements** panel in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7s3JQLXmIQmQa4CFXaNv.png", alt="Inspect.", width="21", height="20" %} inspector mode. This mode shows you helpful tooltips when you hover over elements on a page. You can also click any element to view its CSS in the **Elements** > **Styles** pane.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/j55nQO3vIZKKlu59ID15.png", alt="The Elements panel in inspector mode with a tooltip.", width="800", height="475" %}
+
+For the full list of DevTools shortcuts, see [Keyboard shortcuts](/docs/devtools/shortcuts/).
 
 ## Auto-open DevTools on every new tab {: #auto }
 
-Open Chrome from the Command line and pass the `--auto-open-devtools-for-tabs` flag.
+Run Chrome from the command line and pass the `--auto-open-devtools-for-tabs` flag:
 
-Mac:
+1. Quit any running Chrome instance.
 
-```bash
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --auto-open-devtools-for-tabs
-```
+   {% Aside 'gotchas' %}
+   This flag works only for the first Chrome instance you open. If it doesn't work for you, for example, on Windows, make sure to end any residing Chrome processes from the Task Manager.
+   {% endAside %}
 
-This will only work if an instance of Chrome is not already running. From then
-on, every new tab will automatically open DevTools until the user fully quits
-Chrome.
+1. Run your favorite terminal or command line application.
+1. Depending on your operating system, run the following command:
 
-[1]: /docs/devtools/css
-[2]: /docs/devtools/console
+- MacOS:
 
+  ```shell
+  open -a "Google Chrome" --args --auto-open-devtools-for-tabs
+  ```
+
+- Windows:
+
+  ```shell
+  start chrome --auto-open-devtools-for-tabs
+  ```
+
+- Linux:
+
+  ```shell
+  google-chrome --auto-open-devtools-for-tabs
+  ```
+
+DevTools will automatically open for every new tab until you close Chrome.
 
 ## What's next?
 
-Congratulations! You've successfully unlocked the power of Chrome DevTools. Next, watch the following video to learn some useful shortcuts and settings for quicker DevTools navigation.
+{% Aside 'success' %}
+Congratulations! You've successfully unlocked the power of Chrome DevTools.
+{% endAside %}
+
+Next, watch the following video to learn some useful shortcuts and settings for quicker DevTools navigation.
 
 {% YouTube id="xHusjrb_34A" %}
+
+For a more hands-on learning experience, see [how to customize DevTools](/docs/devtools/customize/).

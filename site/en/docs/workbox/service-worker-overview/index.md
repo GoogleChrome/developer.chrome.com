@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Service worker overview
 date: 2021-09-24
+updated: 2023-03-07
 description: >
   An overview of service workers.
 ---
@@ -12,6 +13,10 @@ Workbox makes service workers easier to use.
 However, because service workers solve hard problems,
 any abstraction of that technology will also be tricky without understanding it.
 Thus, these first few bits of documentation will cover that underlying technology before getting into Workbox specifics.
+
+To view a running list of service workers, enter `chrome://serviceworker-internals/` into your address bar.
+
+{% Img src="image/cGQxYFGJrUUaUZyWhyt9yo5gHhs1/6Q4ZxOPzefe1rrXZjlVM.png", alt="A running list of service workers.", width="800", height="321" %}
 
 ## What do service workers provide?
 
@@ -75,7 +80,7 @@ using callbacks for events such as:
 
 - When a service worker is [installing](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/install_event).
 - When a service worker is [activating](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event).
-- When a service worker [detects a network request](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/onfetch).
+- When a service worker [detects a network request](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/fetch_event).
 
 Events can be registered using a familiar
 [`addEventListener` API](https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener).

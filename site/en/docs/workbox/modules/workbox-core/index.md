@@ -69,8 +69,8 @@ with each other.
 ## Clients Claim
 
 Some developers want to be able to publish a new service worker and have it
-control already-open web pages as soon as soon as it activates, which will not
-happen [by default](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#clientsclaim).
+control already-open web pages as soon as it activates, which will not
+happen [by default](https://web.dev/service-worker-lifecycle/#clientsclaim).
 
 If you find yourself wanting this behavior, `workbox-core` provides a helper method:
 

@@ -10,7 +10,7 @@ updated: 2018-07-31
 ---
 
 
-Muted autoplay for video is supported by Chrome for Android as of version 53. Playback will start automatically for a video element once it comes into view if both `autoplay` and `muted` are set, and playback of muted videos can be [initiated pragmatically with `play()`](https://developers.google.com/web/updates/2016/03/play-returns-promise). Previously, playback on mobile had to be initiated by a user gesture, regardless of the muted state.
+Muted autoplay for video is supported by Chrome for Android as of version 53. Playback will start automatically for a video element once it comes into view if both `autoplay` and `muted` are set, and playback of muted videos can be [initiated pragmatically with `play()`](/blog/play-returns-promise). Previously, playback on mobile had to be initiated by a user gesture, regardless of the muted state.
 
 ```html
 <video autoplay muted>
@@ -36,7 +36,7 @@ It's possible to unmute a video programmatically in response to a user gesture s
 
 The `muted autoplay` change will also make it possible to use `play()` with a `video` element not created in the DOM, for example [to drive WebGL playback](https://groups.google.com/a/chromium.org/d/msg/blink-dev/Q1cnzNI2GpI/-T5luh_xAwAJ).
 
-The `play()` method also [returns a promise](https://developers.google.com/web/updates/2016/03/play-returns-promise), which can be used to check whether muted programmatic playback is enabled. There is an example of this at [simpl.info/video/scripted](https://simpl.info/video/scripted).
+The `play()` method also [returns a promise](/blog/play-returns-promise), which can be used to check whether muted programmatic playback is enabled. There is an example of this at [simpl.info/video/scripted](https://simpl.info/video/scripted).
 
 ## Why the change?
 

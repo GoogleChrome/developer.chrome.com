@@ -18,7 +18,7 @@ El JavaScript que no se utiliza puede reducir la velocidad de carga de la págin
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/jYbX7CFrcOaaqMHaHa6f.jpg", alt="Una captura de pantalla de la auditoría", width="800", height="332" %} <figcaption> Haga clic en el valor de la columna <b>URL</b> para abrir el código fuente del script en una nueva pestaña. </figcaption></figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo eliminar el JavaScript que no se utiliza
 
@@ -56,7 +56,7 @@ Desactive la [compactación de JavaScript](https://devdocs.magento.com/guides/v2
 
 ### React
 
-Si no renderiza el lado del servidor, [divida sus paquetes de JavaScript](https://web.dev/code-splitting-suspense/) con `React.lazy()`. De lo contrario, divida el código mediante una biblioteca de terceros como [loadable-components](https://www.smooth-code.com/open-source/loadable-components/docs/getting-started/).
+Si no renderiza el lado del servidor, [divida sus paquetes de JavaScript](https://web.dev/articles/code-splitting-suspense) con `React.lazy()`. De lo contrario, divida el código mediante una biblioteca de terceros como [loadable-components](https://www.smooth-code.com/open-source/loadable-components/docs/getting-started/).
 
 ### Vue
 
@@ -69,7 +69,7 @@ Considere la posibilidad de reducir, o cambiar, el número de [complementos de J
 ## Recursos
 
 - [Código fuente para **Eliminar el código que no se utiliza** en la auditoría](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unused-javascript.js)
-- [Eliminar el código que no se utiliza](https://web.dev/remove-unused-code/)
+- [Eliminar el código que no se utiliza](https://web.dev/articles/remove-unused-code)
 - [Agregar interactividad con JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript)
 - [Dividir el código](https://bundlers.tooling.report/code-splitting/)
 - [Eliminar códigos inactivos](https://bundlers.tooling.report/transformations/dead-code/)

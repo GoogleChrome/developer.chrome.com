@@ -13,7 +13,7 @@ icon, it ensures that the icon takes up all of the space that Android provides f
 
 ## How the Lighthouse maskable icon audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that do not have maskable icon support:
 
 <figure>
@@ -32,7 +32,7 @@ In order to pass the audit:
   You'll need to manually verify that the image displays well.
 {% endAside %}
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## How to add maskable icon support to your PWA
 
@@ -57,17 +57,17 @@ In order to pass the audit:
    ```
 
 3. Use Chrome DevTools to verify that the maskable icon is displaying correctly.
-   See [Are my current icons ready?](https://web.dev/maskable-icon/#are-my-current-icons-ready)
+   See [Are my current icons ready?](https://web.dev/articles/maskable-icon#are_my_current_icons_ready)
 
 ## Resources
 
-- [Source code for **Manifest doesn't have a maskable icon** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/maskable-icon.js)
+- [Source code for **Manifest doesn't have a maskable icon** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/maskable-icon.js)
 - [Adaptive icon support in PWAs with maskable icons][guide]
 - [Maskable.app Editor][editor]
 - [Add a web app manifest][manifest]
 - [The `icons` property on MDN](https://developer.mozilla.org/docs/Web/Manifest/icons)
 
-[guide]: /maskable-icon/
+[guide]: https://web.dev/maskable-icon/
 [editor]: https://maskable.app/editor
 [manifest]: /add-manifest/
 [values]: https://developer.mozilla.org/docs/Web/Manifest/icons#Values

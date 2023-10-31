@@ -6,7 +6,7 @@ date: 2019-05-02
 updated: 2019-11-05
 ---
 
-{% Aside 'caution' %} El Primer despliegue significativo (FMP) está obsoleto a partir de Lighthouse 6.0. En la práctica, FMP se ha comportado de forma demasiado sensible a las pequeñas diferencias en la carga de la página, lo que ha dado lugar a resultados inconsistentes (bimodales). Además, la definición de la métrica se basa en detalles de implementación específicos del navegador, lo que significa que no se puede estandarizar ni implementar en todos los navegadores. En el futuro, en vez de esta métrica, considere usar [Despliegue del contenido más extenso](https://web.dev/lcp/). {% endAside %}
+{% Aside 'caution' %} El Primer despliegue significativo (FMP) está obsoleto a partir de Lighthouse 6.0. En la práctica, FMP se ha comportado de forma demasiado sensible a las pequeñas diferencias en la carga de la página, lo que ha dado lugar a resultados inconsistentes (bimodales). Además, la definición de la métrica se basa en detalles de implementación específicos del navegador, lo que significa que no se puede estandarizar ni implementar en todos los navegadores. En el futuro, en vez de esta métrica, considere usar [Despliegue del contenido más extenso](https://web.dev/articles/lcp). {% endAside %}
 
 Primer despliegue significativo (FMP) es una de las seis métricas que se registran en la sección **Rendimiento** del informe Lighthouse. Cada métrica captura algún aspecto de la velocidad de carga de la página.
 
@@ -18,7 +18,7 @@ Lighthouse muestra FMP en segundos:
 
 FMP mide cuándo el contenido principal de una página se hace visible para el usuario. La puntuación bruta para FMP es el tiempo en segundos entre el momento en que el usuario inicia la carga de la página y el momento en que la página presenta el contenido principal de la mitad superior de la página. FMP esencialmente muestra el momento del despliegue después del cual ocurre el mayor cambio en el diseño en la parte superior de la página. Obtenga más información sobre los detalles técnicos de FMP en [Hasta el primer despliegue significativo: un enfoque basado en diseño](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view) de Google.
 
-El [Primer despliegue del contenido (FCP)](https://web.dev/fcp/) y el FMP suelen ser iguales cuando el primer fragmento de contenido representado en la página incluye el contenido en la mitad superior de la página. Sin embargo, estas métricas pueden diferir cuando, por ejemplo, existe contenido en la mitad superior de un iframe. FMP registra cuando el contenido dentro del iframe es visible para el usuario, mientras que FCP _no_ incluye contenido de iframe.
+El [Primer despliegue del contenido (FCP)](https://web.dev/articles/fcp) y el FMP suelen ser iguales cuando el primer fragmento de contenido representado en la página incluye el contenido en la mitad superior de la página. Sin embargo, estas métricas pueden diferir cuando, por ejemplo, existe contenido en la mitad superior de un iframe. FMP registra cuando el contenido dentro del iframe es visible para el usuario, mientras que FCP _no_ incluye contenido de iframe.
 
 ## Cómo Lighthouse determina su puntaje FMP
 
@@ -59,23 +59,23 @@ Esta tabla muestra cómo interpretar su puntuación FMP:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo mejorar su puntuación FMP
 
-Vea [Cómo mejorar despliegue del contenido más extenso en su sitio](https://web.dev/lcp/#how-to-improve-lcp). Las estrategias para mejorar el FMP son en gran parte las mismas que las estrategias para mejorar el despliegue del contenido más extenso.
+Vea [Cómo mejorar despliegue del contenido más extenso en su sitio](https://web.dev/articles/lcp#how_to_improve_lcp). Las estrategias para mejorar el FMP son en gran parte las mismas que las estrategias para mejorar el despliegue del contenido más extenso.
 
 ## Seguimiento de FMP en dispositivos de usuarios reales
 
-Para saber cómo medir cuándo ocurre realmente el FMP en los dispositivos de sus usuarios, consulte la página de [métricas de rendimiento centradas en el usuario](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics) de Google. La sección [Seguimiento de FMP usando elementos principales](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fmp_using_hero_elements) describe cómo acceder a los datos de FCP mediante programación y enviarlos a Google Analytics.
+Para saber cómo medir cuándo ocurre realmente el FMP en los dispositivos de sus usuarios, consulte la página de [métricas de rendimiento centradas en el usuario](https://web.dev/articles/user-centric-performance-metrics) de Google. La sección [Seguimiento de FMP usando elementos principales](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fmp_using_hero_elements) describe cómo acceder a los datos de FCP mediante programación y enviarlos a Google Analytics.
 
 Consulte [Evaluación del rendimiento de carga en la vida real con la navegación y sincronización de recursos](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/) de Google para obtener más información sobre la recopilación de métricas de usuarios reales. La [auditoría de Lighthouse User Timing marks and measures](/docs/lighthouse/performance/user-timings/) le permite ver los datos del tiempo del usuario en su informe.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 
 - [Código fuente para la auditoría de **Primer despliegue significativo**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/first-meaningful-paint.js)
 - [Guía de puntuación de Lighthouse v3](https://developers.google.com/web/tools/lighthouse/v3/scoring)
 - [Hasta el primer despliegue significativo: un enfoque basado en diseño](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view)
-- [Despliegue con contenido más extenso](https://web.dev/lcp/)
+- [Despliegue con contenido más extenso](https://web.dev/articles/lcp)

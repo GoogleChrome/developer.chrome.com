@@ -14,11 +14,11 @@ tags:
   - security
 ---
 
-[The Privacy Sandbox initiative](https://web.dev/digging-into-the-privacy-sandbox/) proposes a set
+[The Privacy Sandbox initiative](https://web.dev/articles/digging-into-the-privacy-sandbox) proposes a set
 of privacy-preserving APIs to support business models that fund the open web in the absence of
 tracking mechanisms like third-party cookies. It was introduced in 2019, and Chrome shared updates
 on progress in [January](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html)
-and [October](https://blog.chromium.org/2020/10/progress-on-privacy-sandbox-and.html) last year.  
+and [October](https://blog.chromium.org/2020/10/progress-on-privacy-sandbox-and.html) last year.
 
 After a year of incubation, 2021 will be a year of testing with continued [opportunities for the web
 ecosystem to get involved](/blog/privacy-sandbox-participate). This post
@@ -33,12 +33,12 @@ to the user. On today's web, people's interests are often gauged by observing wh
 they visit, relying on third-party cookies or less-transparent and undesirable mechanisms like
 device fingerprinting.
 
-In March, with release 89, Chrome will launch an [origin trial](https://web.dev/origin-trials/) for
+In March, with release 89, Chrome will launch an [origin trial](/docs/web-platform/origin-trials/) for
 the [Federated Learning of Cohorts API](https://github.com/WICG/floc) (FLoC). FLoC proposes a new way
 to reach people with relevant content and ads by clustering large groups of people with similar
 browsing patterns, hiding individuals "in the crowd" and keeping their web history on their browser.
-Today Google Ads is sharing [an update from their tests of the FLoC algorithm](https://blog.google/products/ads-commerce/2021-01-privacy-sandbox), 
-which show that the proposed API could be similarly effective as third-party  cookies in serving 
+Today Google Ads is sharing [an update from their tests of the FLoC algorithm](https://blog.google/products/ads-commerce/2021-01-privacy-sandbox),
+which show that the proposed API could be similarly effective as third-party  cookies in serving
 relevant interest-based ads.
 
 ### Building first-party audiences
@@ -63,22 +63,22 @@ When a marketer runs an ad campaign, it's important for them to understand how m
 ad and if this results in an action by the consumer such as a purchase or sign-up.
 
 In September 2020, we opened up the [Event Conversion Measurement
-API](https://web.dev/conversion-measurement/) for testing in public Chrome origin trials. It
+API](/docs/privacy-sandbox/attribution-reporting/) for testing in public Chrome origin trials. It
 allows marketers to measure conversions without the use of third-party cookies; instead, the browser
 records clicks and conversions and shares an anonymized report. A future version of this technology
 will also support "view-through conversions" (when people see an ad but act on it later).
 
 To help marketers understand the audience reach of a particular ad campaign, in April 2020 we
-published the [Aggregate Measurement API](https://github.com/csharrison/aggregate-reporting-api), 
-which helps measure how many times unique users viewed an ad across multiple sites, again, without  
-revealing data that could be used to identify individuals. This is made possible by reporting data 
-only once it's met a certain threshold for aggregation. We're planning to open up the Aggregate 
+published the [Aggregate Measurement API](https://github.com/csharrison/aggregate-reporting-api),
+which helps measure how many times unique users viewed an ad across multiple sites, again, without
+revealing data that could be used to identify individuals. This is made possible by reporting data
+only once it's met a certain threshold for aggregation. We're planning to open up the Aggregate
 Measurement API for testing via public origin trials in the first half of the year.
 
 ### Preventing fraud
 
 Sites and publishers need to ensure they are able to distinguish spammers, fraudsters and bots from
-real users. Last July we opened up the [Trust Tokens API](https://web.dev/trust-tokens/) for
+real users. Last July we opened up the [Trust Tokens API](https://web.dev/articles/trust-tokens) for
 testing. This supports evaluating a user's authenticity to combat fraud without needing to know the
 user's identity. Chrome 89 introduces an origin trial to support a new type of Trust Token issuer
 that can improve the detection of fraud originating on mobile devices while still safeguarding user
@@ -86,13 +86,13 @@ privacy.
 
 ## Cookie security improvements
 
-In 2020, we also improved the safety of current web technology. The [SameSite cookie policy](https://web.dev/samesite-cookies-explained/) has been adopted by Chrome and Edge and is coming to Firefox soon, 
-treating cookies as first-party, unless the developer indicates that they need to be accessed across 
-sites. We've also rolled this out for Android webview and expect to enforce the "SameSite=Lax" 
+In 2020, we also improved the safety of current web technology. The [SameSite cookie policy](https://web.dev/articles/samesite-cookies-explained) has been adopted by Chrome and Edge and is coming to Firefox soon,
+treating cookies as first-party, unless the developer indicates that they need to be accessed across
+sites. We've also rolled this out for Android webview and expect to enforce the "SameSite=Lax"
 default treatment beginning in apps targeting Android S.
 
 New in this month's Chrome 88 release, we are strengthening this policy by [modifying the definition
-of SameSite](https://web.dev/schemeful-samesite/) to prevent some forms of cross-site attacks,
+of SameSite](https://web.dev/articles/schemeful-samesite) to prevent some forms of cross-site attacks,
 including downgrading a connection's security. Now secure and insecure versions of the same host
 domain, such as [https://site.example](https://site.example) and
 [http://site.example](http://site.example), are considered as third-party context to each other.
@@ -111,7 +111,7 @@ We've also been making progress on changes in Chrome to prevent existing intrusi
 techniques, and enable mitigating workarounds:
 
 +   In the coming weeks, we are completing the Chrome stable rollout of the new [User-Agent
-    Client Hints (UA-CH) API](https://web.dev/user-agent-client-hints/) which enables developers
+    Client Hints (UA-CH) API](https://web.dev/articles/user-agent-client-hints) which enables developers
     to request specific information about a user's browser instead of getting it all by default. We
     encourage developers to begin migrating to the UA-CH API, as Chrome will eventually begin
     limiting the information available in the traditional User-Agent string which today can be used
@@ -133,7 +133,7 @@ techniques, and enable mitigating workarounds:
 
 ## Find out more
 
-* [Digging in to the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox/)
+* [Digging in to the Privacy Sandbox](https://web.dev/articles/digging-into-the-privacy-sandbox)
 * [The Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
 * [How to participate in the Privacy Sandbox initiative](/blog/privacy-sandbox-participate/)
 * [Privacy Sandbox in 2021: Testing a More Private Web](https://blog.chromium.org/)

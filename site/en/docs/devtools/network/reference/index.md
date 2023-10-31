@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - sofiayem
 date: 2015-04-13
-updated: 2022-07-07
+updated: 2023-04-03
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -40,7 +40,7 @@ on the **Network** panel to clear all requests from the **Requests** table.
 To save requests across page loads, check the **Preserve log** checkbox on the **Network** panel.
 DevTools saves all requests until you disable **Preserve log**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MPcVmmemtEEDURBN6lGK.png", alt="The Preserve Log checkbox.", width="800", height="470" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay="false", controls="true", muted="true", class="screenshot"%}
 
 ### Capture screenshots during page load {: #screenshots }
 
@@ -120,13 +120,12 @@ In addition to presets, such as slow or fast 3G, you can also add your own
 custom throttling profiles:
 
 1. Open the **Throttling** menu and select **Custom** > **Add...**.
-1. In **Settings** > **Throttling** > **Network Throttling Profiles**, click **Add custom profile**.
-1. Name the profile, specify the upload and download speeds and latency, and click **Add**.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/swLlVq9sVpQr5GwXWH9z.png", alt="Custom network throttling profile.", width="800", height="426" %}
+1. Set up a new throttling profile as described in [**Settings** > **Throttling**](/docs/devtools/settings/#throttling).
 1. Back on the **Network** panel, select your new profile from the **Throttling** drop-down menu.
 
-DevTools displays a warning icon next to the **Network** panel to remind you that throttling is
-enabled.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UnSmIJe1OEp98TkLFlUE.png", alt="A custom profile selected from the throttling menu. The Network panel displays a warning icon.", width="800", height="464" %}
+
+DevTools displays a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jsbv7jCK4GsRjL6e8RcF.svg", alt="Warning.", width="24", height="24" %} warning icon next to the **Network** panel to remind you that throttling is enabled.
 
 #### Throttle WebSocket connections {: #throttle-websocket}
 
@@ -156,6 +155,10 @@ To manually clear browser cookies at any time, right-click anywhere in the **Req
 **Clear browser cookies**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4mVbTicUyxwkmd5TB1HS.png", alt="Selecting Clear Browser Cookies.", width="800", height="497" %}
+
+### Override HTTP response headers {: #override-headers }
+
+See [Override files and HTTP response headers locally](/docs/devtools/overrides/#override-headers).
 
 ### Override the user agent {: #user-agent }
 
@@ -193,6 +196,7 @@ Below is a complete list of supported properties.
   to include multiple domains. For example, `*.com` displays resources from all domain names ending
   in `.com`. DevTools shows a populates the autocomplete drop-down menu with all of the domains it
   has encountered.
+- `has-overrides`. Show requests that have overridden `content`, `headers`, any overrides (`yes`), or no overrides (`no`). You can add the corresponding [**Has overrides** column](#columns) to the request table.
 - `has-response-header`. Show the resources that contain the specified HTTP response header.
   DevTools populates the autocomplete drop-down with all of the response headers that it has
   encountered.
@@ -208,6 +212,8 @@ Below is a complete list of supported properties.
 - `priority`. Show resources whose priority level matches the specified value.
 - `resource-type`. Show resources of a resource type, e.g. image. DevTools populates the
   autocomplete drop-down with all resource types it has encountered.
+- `response-header-set-cookie`. Show raw Set-Cookie headers in the Issues tab. Malformed cookies
+  with incorrect `Set-Cookie` headers will be flagged in the Network panel.
 - `scheme`. Show resources retrieved over unprotected HTTP (`scheme:http`) or protected HTTPS
   (`scheme:https`).
 - `set-cookie-domain`. Show the resources that have a `Set-Cookie` header with a `Domain` attribute
@@ -250,9 +256,45 @@ shown.
 [Data URLs][12] are small files embedded into other documents. Any request that you see in the
 **Requests** table that starts with `data:` is a data URL.
 
-Check the **Hide data URLs** checkbox to hide these requests.
+To hide these requests, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide data URLs**.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Y3TDa8EhT6gARFcLFwKf.png", alt="The Hide Data URLs checkbox.", width="800", height="514" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/y3wTmRMS9Y5JlM0Z9wBF.png", alt="Data URLs hidden from the Requests table.", width="800", height="567" %}
+
+The status bar at the bottom displays the number of the shown requests out of the total.
+
+### Hide extension URLs {: #hide-extension-urls }
+
+To focus on the code you author, you can filter out irrelevant requests sent by extensions you may have installed in Chrome. Extension requests have URLs that start with `chrome-extension://`.
+
+To hide extension requests, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide extension URLs**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/07CwNEuofVPa8jp3LFfm.png", alt="Extension URLs hidden from the Requests table.", width="800", height="478" %}
+
+The status bar at the bottom displays the number of the shown requests out of the total.
+
+### Show only the requests with blocked response cookies {: #show-blocked-cookies }
+
+To filter out everything except the requests with response cookies blocked for any reason, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked response cookies**. Try it on this [demo page](https://samesite-sandbox.glitch.me/).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/owWZhGDXayLxFQdo20vO.png", alt="The Requests table shows only the requests with blocked response cookies.", width="800", height="550" %}
+
+The status bar at the bottom displays the number of the shown requests out of the total.
+
+To find out the reason why a response cookie was blocked, select the request, open its **Cookies** tab, and hover over the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qruVplg26sPV7Ryl8fHg.svg", alt="", width="24", height="24" %} information icon.
+
+### Show only blocked requests {: #show-blocked }
+
+To filter out everything except blocked requests, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked requests**. To test this, you can use the [**Network request blocking**](/docs/devtools/network/#block) drawer tab.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MWJci8DFgTzlOI18Wlqz.png", alt="The Requests table shows only blocked requests.", width="800", height="517" %}
+
+The **Requests** table highlights blocked requests in red. The status bar at the bottom displays the number of the shown requests out of the total.
+
+### Show only third-party requests {: #third-party }
+
+To filter out everything except the requests with with origin that differs from page origin, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **3rd-party requests**. Try it on this [demo page](https://samesite-sandbox.glitch.me/).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/K6waxv6tB2anAbECE4pK.png", alt="The Requests table shows only the third-party requests.", width="800", height="455" %}
 
 The status bar at the bottom displays the number of the shown requests out of the total.
 
@@ -324,6 +366,8 @@ displayed options have check marks next to them.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zgkV5JsQ7MDYgkWL889O.png", alt="Adding a column to the Requests table.", width="800", height="684" %}
 
+You can add or remove the following additional columns: **Path**, URL, Method, Protocol, Scheme, Domain, Remote address, Remote address space, Initiator address space, Cookies, Set cookies, Priority, Connection ID, and Has overrides.
+
 #### Add custom columns {: #custom-columns }
 
 To add a custom column to the **Requests** table:
@@ -332,6 +376,16 @@ To add a custom column to the **Requests** table:
 1. In the dialog window, click **Add custom header**, enter its name, and click **Add**.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sCXdKBGzlfwQBBeyNdta.png", alt="Adding a custom column to the Requests table.", width="800", height="563" %}
+
+### Group requests by inline frames {: #group-by-frames }
+
+If inline frames on a page initiate a lot of requests, you can make the request log friendlier by grouping them.
+
+To group requests by iframes, open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} inside the **Network** panel and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group by frame**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QgdViJaRvfWo8suAE6a6.png", alt="The network request log with requests grouped by iframes.", width="800", height="702" %}
+
+To view a request initiated by an inline frame, expand it in the request log.
 
 ### View the timing of requests in relation to one another {: #waterfall }
 
@@ -392,12 +446,16 @@ To view the response body to a request:
 
 ### View HTTP headers {: #headers }
 
-To view HTTP header data about a request:
+To view HTTP header data of a request:
 
-1.  Click on the URL of the request, under the **Name** column of the Requests table.
-2.  Click the **Headers** tab.
+1. Click a request in the **Requests** table.
+1. Open the **Headers** tab and scroll down to **General**, **Response Headers**, or **Request Headers** sections.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0l9iRxK3yvrnha53NiKH.png", alt="The Headers tab.", width="800", height="469" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/j67jfFC4iJveVZhMVFwg.png", alt="The Headers tab of a request selected from the Requests table.", width="800", height="683" %}
+
+In the **General** section, DevTools shows you human-readable status message next to the received HTTP status code.
+
+In the **Response Headers** section, you can hover over a header value and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} **Edit** button to [override the response header locally](/docs/devtools/overrides/#override-headers).
 
 #### View HTTP header source {: #header-source }
 
@@ -407,7 +465,6 @@ order they were received:
 1.  Open the **Headers** tab for the request you're interested in. See [View HTTP headers][15].
 2.  Click **view source**, next to the **Request Header** or **Response Header** section.
 
-
 #### Provisional headers warning {: #provisional-headers }
 
 Sometimes the **Headers** tab shows the `Provisional headers are shown...` warning message. This may be due to the following reasons:
@@ -415,7 +472,7 @@ Sometimes the **Headers** tab shows the `Provisional headers are shown...` warni
 - The request wasn't sent over the network but was served from a local cache, which doesn't store the original request headers. In this case, you can [disable caching](#disable-cache) to see the full request headers.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AQfq69qS2Ig6lT9Y7vcc.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
-- The network resource isn't valid. For example, execute `fetch("https://jec.fyi.com/unknown-url/")` in the **Console**.
+- The network resource isn't valid. For example, execute `fetch("https://jec.fish.com/unknown-url/")` in the **Console**.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xMKUHQxXLiRDiiUTol5J.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
 DevTools can also display only provisional headers due to security reasons.
@@ -481,12 +538,12 @@ hovering.
 
 Here's more information about each of the phases you may see in the **Timing** tab:
 
-- **Queueing**. The browser queues requests when:
+- **Queueing**. The browser queues requests before connection start and when:
   - There are higher priority requests.
   - There are already six TCP connections open for this origin, which is the limit. Applies to
     HTTP/1.0 and HTTP/1.1 only.
-  - The browser is briefly allocating space in the disk cache
-- **Stalled**. The request could be stalled for any of the reasons described in **Queueing**.
+  - The browser is briefly allocating space in the disk cache.
+- **Stalled**. The request could be stalled after connection start for any of the reasons described in **Queueing**.
 - **DNS Lookup**. The browser is resolving the request's IP address.
 - **Initial connection**. The browser is establishing a connection, including TCP handshakes/retries
   and negotiating an SSL.
@@ -545,7 +602,7 @@ other requests occurred before DevTools was opened, those requests aren't counte
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2oSUzbdlzdwgvsgeRQr6.png", alt="The total size of transferred and loaded resources.", width="800", height="428" %}
 
-See [View the uncompressed size of a resource][25] to see how large resources are after the browser uncompresses them. 
+See [View the uncompressed size of a resource][25] to see how large resources are after the browser uncompresses them.
 
 ### View the stack trace that caused a request {: #initiator-stack-trace }
 
@@ -567,17 +624,27 @@ In this example, the compressed size of the `www.google.com` document that was s
 
 ### Save all network requests to a HAR file {: #save-as-har }
 
-To save all network requests to a HAR file:
+[HAR (HTTP Archive)][26] is a file format used by several HTTP session tools to export the captured data. The format is a JSON object with a particular set of fields.
 
-1.  Right-click any request in the **Requests** table.
-2.  Select **Save all as HAR with content**. DevTools saves all requests that have occurred since you
-    opened DevTools to the HAR file. There is no way to filter requests, or to save just a single
-    request.
+You can save all network requests to a HAR file in two ways:
 
-Once you've got a HAR file, you can import it back into DevTools for analysis. Just drag-and-drop
-the HAR file into the **Requests** table. See also [HAR Analyzer][26].
+- Right-click any request in the **Requests** table and select **Save all as HAR with content**.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X4lTWJrOAasUtZwD20BT.png", alt="Selecting Save all as HAR with content.", width="800", height="455" %}
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XEd84LBN4Rjoj6WUnpg2.svg", alt="Export.", width="24", height="24" %} **Export HAR** in the action bar at the top of the **Network** panel.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JaytyulU4VllFs9yH5B0.png", alt="The Export HAR button in the action bar at the top.", width="800", height="528" %}
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X4lTWJrOAasUtZwD20BT.png", alt="Selecting Save all as HAR with content.", width="800", height="455" %}
+{% Aside %}
+**Note**: DevTools exports all requests that have occurred since you opened DevTools to the HAR file. You can't filter requests to export. To save a single request, see [Copy one or more requests to the clipboard](#copy).
+{% endAside %}
+
+Once you have a HAR file, you can import it back into DevTools for [analysis][26] in two ways:
+
+- Drag-and-drop the HAR file into the **Requests** table.
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oiUyFA6HRhsKOpUyaq0g.svg", alt="Import.", width="24", height="24" %} **Import HAR** in the action bar at the top of the **Network** panel.
+
+{% Aside %}
+**Note**: The **Network** panel reads and shows [initiators](/docs/devtools/network/reference/#requests) for the requests imported from HAR files.
+{% endAside %}
 
 ### Copy one or more requests to the clipboard {: #copy }
 
@@ -585,6 +652,7 @@ Under the **Name** column of the Requests table, right-click a request, hover ov
 select one of the following options:
 
 - **Copy link address**. Copy the request's URL to the clipboard.
+- **Copy file name**. Copy the file's name to the clipboard.
 - **Copy response**. Copy the response body to the clipboard.
 - **Copy as PowerShell**. Copy the request as a PowerShell command.
 - **Copy as fetch**. Copy the request as a fetch call.

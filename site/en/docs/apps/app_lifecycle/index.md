@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Chrome App Lifecycle"
+seoTitle: "Chrome App Lifecycle [Deprecated]"
 date: 2012-09-17
 updated: 2014-11-14
 description: An overview of the lifecycle of Chrome Apps.

@@ -11,15 +11,15 @@ alt: 'Using a ATM - Hand pressing number'
 date: 2022-09-29
 ---
 
-[The Payment Handler API](https://web.dev/web-based-payment-apps-overview/)
+[The Payment Handler API](https://web.dev/articles/web-based-payment-apps-overview)
 allows payment providers to make their custom payment experience available for
 merchants, along with [the Payment Request
-API](https://web.dev/how-payment-request-api-works/).
+API](https://web.dev/articles/how-payment-request-api-works).
 
 The information on this page only applies to websites that use both [CSP
 (Content-Security-Policy)](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/)
 and the Payment Request API. If you use neither or only one of the two, then you
-can skip these instructions. 
+can skip these instructions.
 
 To check if your payment provider is using the Payment Handler API, contact them
 and follow their instructions.
@@ -35,7 +35,7 @@ your CSP `connect-src` must include `https://example.com` or
 `https://example.com/pay`:
 
 ```http
-Content-Security-Policy: connect-src https://example.com/pay  
+Content-Security-Policy: connect-src https://example.com/pay
 ```
 
 If `https://example.com/pay` is a cross-origin redirect, then the destination

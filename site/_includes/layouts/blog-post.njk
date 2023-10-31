@@ -1,5 +1,9 @@
 {% extends "layouts/base.njk" %}
 
+{% block css %}
+{% InlineCss '/css/single-post.css' %}
+{% endblock %}
+
 {% block title_bar %}
   {% set sharingEnabled = true %}
   {% include 'partials/breadcrumbs.njk' %}
@@ -13,7 +17,7 @@
   {% if hero %}
     <div class="display-flex justify-content-center lg:pad-left-400 lg:pad-right-400">
       {% Img
-        class="hero-image object-fit-cover",
+        class="hero-image object-fit-cover height-full",
         src=hero,
         alt=alt,
         width="960",
@@ -22,12 +26,23 @@
         fetchpriority="high"
       %}
     </div>
+
+  {% elseif hero_youtube_id %}
+    <div class="display-flex justify-content-center lg:pad-left-400 lg:pad-right-400">
+      <div class="measure-960 width-full rounded-lg overflow-hidden">
+        {% YouTube id=hero_youtube_id %}
+      </div>
+    </div>
   {% endif %}
 
   {# The article is wrapped again so that the ToC aligns on its right on desktop #}
   <div class="display-flex gap-top-300 lg:gap-top-400">
     <div class="display-flex justify-content-center width-full">
       <article class="post stack measure-long width-full pad-left-400 pad-right-400">
+        {% if is_outdated %}
+          {% include 'partials/post-banner.njk' %}
+        {% endif %}
+
         <div class="stack flow-space-200">
           {% include 'partials/post-headline.njk' %}
         </div>
@@ -47,9 +62,12 @@
 
         {% include 'partials/tags.njk' %}
         {% include 'partials/updated.njk' %}
+        
       </article>
-
+      
       {% include 'partials/toc-side.njk' %}
     </div>
+    
   </div>
+  {% include 'partials/post-navigation.njk' %}
 {% endblock %}

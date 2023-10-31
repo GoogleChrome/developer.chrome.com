@@ -6,67 +6,98 @@ subhead: >
 description: >
   A web platform API that allows users to login to websites with their federated accounts in a manner compatible with improvements to browser privacy.
 date: 2022-04-25
-updated: 2022-09-12
+updated: 2023-09-18
 authors:
   - agektmr
 ---
 
+## What is FedCM?
+
+FedCM (Federated Credential Management) is a privacy-preserving
+approach to federated identity services (such as "Sign in with...") whereby
+users can log into sites without sharing their personal information with the
+identity service or the site.
+
 ## Implementation status
 
-This document outlines a new proposal for identity federation: the Federated
-Credential Management API (FedCM).
+{% Partial 'privacy-sandbox/timeline/fedcm.njk' %}
 
-*  The [FedCM proposal](https://github.com/fedidcg/FedCM) has entered [public
-   discussion](https://github.com/fedidcg/FedCM/issues).
-*  [FedCM's origin trial](/blog/fedcm-origin-trial) begins in Chrome 101 to 107
-   on Android. Chrome on desktop support starts in Chrome 103. Other browsers
-   don't support it yet.
-*  [The Privacy Sandbox timeline](http://privacysandbox.com/timeline) provides
-   implementation timings for FedCM and other Privacy Sandbox proposals.
-*  [Chrome Platform Status](https://chromestatus.com/feature/6438627087220736)
+Moving forward, we plan to introduce [a number of new features](#roadmap) based
+on the feedback we received from identity providers (IdP), relying parties (RP)
+and browser vendors. While we hope identity providers will adopt FedCM, please
+be aware that FedCM is still an API under active development and that backward
+incompatible changes are expected until Q4 2023.
+
+To minimize the challenges of deploying backwards incompatible changes, we
+currently have two recommendations for identity providers:
+
+* Subscribe to our
+  [newsletter](https://groups.google.com/g/fedcm-developer-newsletter) where we
+  will send updates as the API evolves.
+* We encourage IdPs to distribute the FedCM API via JavaScript SDKs while the
+  API is maturing, and to discourage RPs from self-hosting SDKs. This will
+  ensure IdPs can make changes as the API evolves, without having to ask all of
+  their relying parties to redeploy.
 
 ## Why do we need FedCM?
 
-Over the last decade, identity federation has played a central role in
-raising the bar for authentication on the web, in terms of ease-of-use (such
-as password-less single sign-in), security (such as improved resistance to
-phishing and credential stuffing attacks) and trustworthiness compared to
-per-site usernames and passwords.
+Over the last decade, identity federation has played a central role in raising
+the bar for authentication on the web, in terms of trustworthiness, ease-of-use
+(for example, passwordless single sign-in) and security (for example, improved
+resistance to phishing and credential stuffing attacks) compared to per-site
+usernames and passwords. 
 
-With identity federation, a RP (relying party) relies on an IDP (identity
+With identity federation, an RP (relying party) relies on an IdP (identity
 provider) to provide the user an account without requiring a new username
 and password.
 
-
 {% Aside 'key-term' %}
+
 _Identity federation_ delegates authentication or authorization of an
 individual (user or entity) to a trusted external party (an _identity
 provider_ or IdP). The identity provider then allows the individual to
 sign in to a website (a _relying party_ or RP). 
+
 {% endAside %}
 
-Unfortunately, the mechanisms that identity federation was designed on
-(iframes, redirects and cookies) can also track users across the web. As the
-user agent isn't able to differentiate between identity federation and
-tracking, this makes it difficult to determine when these mechanisms are 
-being used to support identity federation
+Unfortunately, the mechanisms that identity federation has relied on (iframes,
+redirects and cookies) are actively being abused to track users across the web.
+As the user agent isn’t able to differentiate between identity federation and
+tracking, the mitigations for the various types of abuse make the deployment of
+identity federation more difficult.
 
-The Federated Credential Management API (FedCM) provides a use case specific
-abstraction for federated identity flows on the web. This purpose-built API
-allows the browser to understand the context in which the RP and IdP
-exchange information, inform the user as to the information and privilege
-levels being shared and prevent unintended abuse.
+[The Federated Credential Management API
+(FedCM)](https://fedidcg.github.io/FedCM/) provides a use-case-specific
+abstraction for federated identity flows on the web, by exposing a browser
+mediated dialog that allows users to choose accounts from IdPs to login to
+websites. 
+
+FedCM is a multi-step journey to make identity on the web better, and in its
+first step we are focused on reducing the impact of third-party cookie phase-out
+on federated identity (see [the Roadmap section](#roadmap) to see a few steps
+further).
+
+<figure class="screenshot">
+  {% Video
+    src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/2ZZ58TQMavJfj047XM5I.mov",
+    autoplay="true",
+    loop="true"
+  %}
+  <figcaption>A user is signing to an RP using FedCM</figcaption>
+</figure>
 
 ### What do we expect will be affected?
 
 {% Aside 'caution' %}
-We aim to mitigate all tracking vectors on Chrome with the [Privacy
-Sandbox initiative](https://privacysandbox.com/). Our first step is to 
-reduce the impact of third-party cookie phase-out which is already happening 
-on other browsers, and is [planned in Chrome for
-2023](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/).
+
+The aim of the [Privacy Sandbox initiative](https://privacysandbox.com/) 
+is to mitigate all tracking vectors in Chrome. Our first step is to reduce the impact
+of third-party cookie phase-out which is already happening in other browsers,
+and is [planned in Chrome for
+2024](https://blog.google/products/chrome/update-testing-privacy-sandbox-web/).
 While removing these cookies can help reduce third-party tracking, it also
 impacts other cross-site use cases.
+
 {% endAside %}
 
 Through [community
@@ -81,9 +112,7 @@ integrations that are affected by third-party cookie phase-out:
 * [Iframe-based background token
   renewal](https://github.com/fedidcg/use-case-library/issues/10)
 * [Iframe-based login
-  widgets](https://github.com/fedidcg/use-case-library/issues/12) (for example,
-  [Facebook's personalized login
-  button](https://developers.facebook.com/docs/facebook-login/web/login-button/))
+  widgets](https://github.com/fedidcg/use-case-library/issues/12)
 
 FedCM's first goal is to reduce the impact of third-party cookie phase-out on
 identity federation and above is a list of areas we expect to be affected. If
@@ -98,33 +127,23 @@ We expect FedCM to be useful to you only if **all** these conditions apply:
 1. You're affected by the third-party cookie phase out.
 1. Your RPs are third-parties. If your RPs are 
    [SameParty](/blog/first-party-sets-sameparty/), you may be better served
-   by [First-Party
-   Sets](/docs/privacy-sandbox/first-party-sets/).
+   by [Related Website
+   Sets](/docs/privacy-sandbox/related-website-sets/), [formerly called First-Party Sets](/blog/related-website-sets/).
 
 ### You're an IdP {: #idp }
 
-FedCM requires support from an indentity provider. A relying party cannot use
-FedCM independently. If you are a RP, you can ask your IdP to provide
+FedCM requires support from an identity provider. A relying party cannot use
+FedCM independently. If you are an RP, you can ask your IdP to provide
 instructions.
 
 ### You're affected by the third-party cookie phase out {: #unaffected-by-3p-cookies }
 
-<figure class="float-right">
-{%
-   Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/GMv2zAgNt8dG62JnoSEC.png", alt="Simulate third-party cookie phase-out by configuring Chrome to block them", width="800", height="908"
-%}
-   <figcaption>Simulate third-party cookie phase-out by configuring Chrome to block them</figcaption>
-</figure>
-
 You should only use FedCM if your current integration is affected by the
-third-party cookie phase out. If you're not affected, you should not use FedCM.
+third-party cookie phase out.
 
 If you're unsure if your identity federation will continue to work after
-Chrome's third-party cookie phase out, you can test the effect on a website
-with your integration in [Incognito
-mode](https://support.google.com/chrome/answer/95464). Alternatively, you
-can block third-party cookies on desktop at `chrome://settings/cookies` or
-on mobile by navigating to **Settings** > **Site settings** > **Cookies**.
+Chrome's third-party-cookie phase-out, you can test the effect on a website by
+[blocking third-party cookies on Chrome](#block-third-party-cookies).
 
 If there is no discoverable impact on your identity federation without
 third-party cookies, you can continue using your current integration without
@@ -137,18 +156,18 @@ that the phase-out is expected to affect.
 ### Your RPs are third-party
 
 If you're an identity provider whose RPs are within the [same
-party](/blog/first-party-sets-sameparty/#first-party-sets-policy) as your IdP, we expect [First-Party Sets](/docs/privacy-sandbox/first-party-sets/)
-may be a better option. First-Party Sets allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first-party. This allows the same party’s third-party cookies to work, even after third-party cookie phase-out.
+party](/blog/first-party-sets-sameparty/#first-party-sets-policy) as your IdP, we expect [Related Website Sets](/docs/privacy-sandbox/related-website-sets/)
+ may be a better option. Related Website Sets allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first-party. This allows the same party's third-party cookies to work, even after third-party cookie phase-out.
 
-First-Party Sets can't always be used. However, if your RPs are
+Related Website Sets can't always be used. However, if your RPs are
 [SameParty](/blog/first-party-sets-sameparty/#first-party-sets-policy),
-consider using First-Party Sets.
+consider using Related Website Sets.
 
 ## How will users interact with FedCM? {: #use-cases}
 
-In the first origin trial, FedCM's primary focus is to mitigate the impact
-of third-party cookie phase-out. Users can enable or disable FedCM in
-[Chrome's user sttings](#user-settings).
+Currently, FedCM's primary focus is to mitigate the impact of third-party cookie
+phase-out. Users can enable or disable FedCM in [Chrome's user
+settings](#user-settings).
 
 FedCM is designed to be protocol-agnostic and offers the following
 authentication-related functionalities.
@@ -157,45 +176,43 @@ authentication-related functionalities.
 
 [Check out our demo](https://fedcm-rp-demo.glitch.me) to see how it works.
 
-In the future, we hope to support more features, including:
-
-*  Automatic sign-in
-*  Authorization prompt
-*  Access and refresh tokens
-*  Front-channel logout: sign-out from the relying party (RP) initiated by
-   the identity provider (IdP)
-*  OpenID Connect (OIDC) session management
-*  Cross-origin iframes
-*  Personalized buttons
-
 ### Sign in to a relying party {: #sign-in}
 
 <figure class="float-right screenshot">
 {% Video
    src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/Qx48SEGIEqi5OtPE9ogn.mp4",
-   width="280", autoplay="true"
+   width="280", autoplay="true", loop="true"
 %}
   <figcaption>A user is signing to an RP using FedCM</figcaption>
 </figure>
 
-When the user lands on the relying party (RP) website, a FedCM sign-in dialog will appear if the user is signed in to the IdP. 
+When the user lands on the relying party (RP) website, a FedCM sign-in dialog
+will appear if the user is signed in to the IdP. 
 
-If the user hasn't signed in to the RP, a sign-up dialog appears with additional disclosure text such as the RP's terms of service (which is required) and a privacy policy (if provided).
+If the user doesn't have an account on the RP with the IdP, a sign-up dialog
+appears with additional disclosure text such as the RP's terms of service and a
+privacy policy if they are provided.
 
-The user can complete sign in by tapping **Continue as...**. If successful,
-the user's account status and the sign-in status is stored in the browser.
+The user can complete sign in by tapping **Continue as...**. If successful, the
+browser stores the fact that the user has created a federated account on the RP
+with the IdP.
 
-{% Aside 'caution' %}
+{% Aside %}
 
-**There is a known issue**. If the user doesn't sign in with an IdP or if the
-session has expired, the FedCM dialog won't be displayed. [Share
-feedback](#share-feedback) if you need this to be fixed.
+If the user closes the UI manually, an entry would be added to the [settings
+UI](#user-settings) and the UI won't be displayed in the same website for a
+period of time. The UI will be reenabled after the period, but the duration will
+[be exponentially
+expanded](https://developers.google.com/identity/gsi/web/guides/features#exponential_cooldown).
+Users can reenable FedCM on the RP manually by either going to the [settings
+page](#user-settings) or clicking on the PageInfo UI (a lock icon beside the URL
+bar) and reset the permission.
 
 {% endAside %}
 
-RPs are expected to support browsers which don't support FedCM. Users should
-be able to use an existing, non-FedCM sign-in process. Learn more about [how
-sign-in works in the FedCM origin trial](/blog/fedcm-origin-trial#sign-into-rp).
+RPs are expected to work on browsers which don't support FedCM. Users should be
+able to use an existing, non-FedCM sign-in process. Learn more about [how
+sign-in works in the FedCM](#sign-into-rp).
 
 ### Setting to enable or disable FedCM {: #user-settings}
 
@@ -216,26 +233,98 @@ They can do the same for Chrome on desktop by going to
    width="800", height="678", class="screenshot"
 %}
 
-## How can IdPs support FedCM? {: #support-fedcm}
+## Roadmap {: #roadmap}
 
-Read detailed instructions on how to implement and [participate in the
-third-party origin trial](/blog/fedcm-origin-trial) for FedCM for support details.
+We are working on landing a number of changes on the FedCM.
+
+Several updates have already been applied based on feedback. And also it's
+expected to continue evolving until Q4 2023 at least to stabilize. Please see
+Updates for more details.
+
+* **Change Log**: Federated Credential Management API [updates](/docs/privacy-sandbox/fedcm-updates/).
+
+There are a few things we know that still need to be done, including issues we
+heard about from IdPs, RPs and browser vendors. We believe we know how to
+resolve these issues:
+
+* **Cross-origin iframe support**: IdPs can call FedCM from within a
+  cross-origin iframe ([update](/docs/privacy-sandbox/fedcm-developer-guide/#call-fedcm-from-within-a-cross-origin-iframe)).
+* **Personalized button**: IdPs can display a returning user's identity on the
+  sign-in button from within an IdP owned cross-origin iframe ([update](/blog/fedcm-chrome-116-updates/#user-info)).
+* **Metrics endpoint**: Provides performance metrics to IdPs.
+
+Additionally, there are unresolved issues we are actively exploring including
+specific proposals that we are evaluating or prototyping:
+
+* **CORS**: We are [discussing with Apple and
+  Mozilla](https://github.com/fedidcg/FedCM/issues/320) to ensure to improve the
+  specification of FedCM fetches.
+* **Multiple-IdP API**: We are exploring ways to support [multiple
+  IdPs](https://github.com/fedidcg/FedCM/issues/319) to coexist cooperatively in
+  the FedCM account chooser.
+* **IdP Sign-in Status API**: Mozilla has identified a [timing attack
+  issue](https://github.com/fedidcg/FedCM/issues/230), and we are exploring ways
+  for an IdP to proactively [notify the browser of the user's sign-in
+  status](https://fedidcg.github.io/FedCM/#the-idp-sign-in-status-api) to
+  mitigate the issue.
+* **Sign in to IdP API**: To support [various
+  scenarios](https://github.com/fedidcg/FedCM/issues/348), when a user is not
+  signed in to the IdP, the browser provides a UI for the user to sign in
+  without leaving the RP ([update](/blog/fedcm-chrome-116-updates/#idp-signin-status)).
+
+Finally, there are things we believe still need to be done, based on feedback
+from
+[Mozilla](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
+[Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)
+and [TAG
+reviewers](https://github.com/w3ctag/design-reviews/issues/718#issue-1165654549).
+We are working to evaluate the best solutions for these open questions:
+
+* **Improving user comprehension and matching intent**: As [Mozilla
+  noted](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
+  we’d like to continue exploring different UX formulations and surface areas,
+  as well as triggering criteria.
+* **Identity Attributes and Selective Disclosure**: As our [TAG Reviewers
+  noted](https://github.com/w3ctag/design-reviews/issues/718#issuecomment-1171733526),
+  we’d like to provide a mechanism to selectively share more or less identity
+  attributes (such as emails, age brackets, phone numbers, and so on).
+* **Raising the Privacy Properties**: As Mozilla suggested
+  [here](https://github.com/mozilla/standards-positions/issues/618#issuecomment-1221964677),
+  we’d like to continue exploring  mechanisms to offer better privacy
+  guarantees, such as IdP blindness, directed identifiers.
+* **Relationship with WebAuthn**: As suggested by
+  [Apple](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html),
+  we are super excited to see the progress on
+  [passkeys](http://goo.gle/passkeys) and to work on providing a coherent and
+  cohesive experience between FedCM, Passwords, WebAuthn and WebOTP.
+* **Login Status**: As Apple suggested with the Privacy CG’s [Login Status
+  API](https://github.com/privacycg/is-logged-in), we share the intuition that
+  the user’s login status is a useful bit of information that can help browsers
+  make informed decisions, and we are excited to see what opportunities arise
+  from that.
+* **Enterprises and Education**: As is clear at the FedID CG, there are still [a
+  lot of use
+  cases](https://github.com/fedidcg/use-case-library/blob/main/decision_tree_flows/login/Federated%20Login%20OIDC%20Oauth2%20Auth%20Code%20Flow.png)
+  that are not well served by FedCM that we’d like to work on, such as  
+  front-channel logout (the ability for an IdP to send a signal to RPs to
+  logout) and support for SAML.
+* **Relationship with mDLs/VCs/etc**: continue working to understand how these
+  fit within FedCM, for example with the [Mobile Document Request
+  API](https://github.com/WICG/mobile-document-request-api).
+
+## Using the FedCM API {: #use-api }
+
+You need a secure context (HTTPS or localhost) both on the IdP and RP in Chrome to use the FedCM.
+
+To integrate with FedCM you need to create a well-known file, config file and endpoints for accounts list, assertion issuance and optionally client metadata. From there, FedCM exposes JavaScript APIs that RPs can use to sign in with the IdP.
+
+To learn how to use the FedCM API check out the [FedCM developer guide](docs/privacy-sandbox/fedcm-developer-guide).
 
 ## Engage and share feedback {: #share-feedback}
 
-*  **Origin trial**: an [origin trial for
-   FedCM](/origintrials/#/view_trial/3977804370874990593) is available in Chrome from version 101 to 107. Learn more about [the origin trial](/blog/fedcm-origin-trial).
 *  **GitHub**: Read the
-   [proposal](https://github.com/fedidcg/FedCM/blob/main/explorations/proposal.md),
-   [raise issues and follow discussion](https://github.com/fedidcg/FedCM/issues).
+   [explainer](https://github.com/fedidcg/FedCM/blob/main/explainer.md), [raise
+   issues and follow discussion](https://github.com/fedidcg/FedCM/issues).
 *  **Developer support**: Ask questions and join discussions on the [Privacy
-   Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-
-## Find out more
-
-*  Read more about API implementation in [Participate in an origin trial for
-   FedCM](/blog/fedcm-origin-trial)
-*  Read the [Federated Credential Management technical
-   explainer](https://github.com/fedidcg/FedCM/)
-*  Review FedCM's [Chrome Platform
-   Status](https://chromestatus.com/feature/6438627087220736)
+   Sandbox Developer Support
+   repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).

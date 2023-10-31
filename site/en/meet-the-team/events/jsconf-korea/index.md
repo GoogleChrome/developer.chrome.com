@@ -3,7 +3,7 @@ title: JSConf Korea
 summary: >-
   JSConf Korea is a community conference that pushes the boundaries
   of what can be created using JavaScript.
-image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/hZOjTuTVO19BpM7X1YTm.png
+image: image/fuiz5I8Iv7bV8YbrK2PKiY3Vask2/9Paz0GyJW9AgEVtmc4yN.jpg
 location: Seoul, Korea
 date: 2022-09-16
 externalUrl: https://2022.jsconf.kr/en

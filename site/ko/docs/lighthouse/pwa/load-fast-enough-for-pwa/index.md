@@ -22,15 +22,15 @@ updated: 2020-06-10
 두 가지 주요 메트릭은 사용자가 로드 시간을 인식하는 방식에 영향을 줍니다.
 
 - [첫 번째 의미 있는 페인트(FMP)](/docs/lighthouse/pwa/first-meaningful-paint) , 페이지의 기본 콘텐츠가 시각적으로 완전히 나타나는 시점을 측정합니다.
-- [상호 작용까지의 시간(TTI)](https://web.dev/tti/), 페이지가 완전히 상호 작용하는 때를 측정
+- [상호 작용까지의 시간(TTI)](https://web.dev/articles/tti), 페이지가 완전히 상호 작용하는 때를 측정
 
 예를 들어 페이지가 1초 후에 시각적으로 완료된 것처럼 보이지만 사용자가 10초 동안 페이지와 상호 작용할 수 없는 경우 사용자는 페이지 로드 시간을 10초로 인식할 것입니다.
 
 Lighthouse는 느린 4G 네트워크 연결에서 TTI가 무엇인지 계산합니다. 상호 작용 시간이 10초를 초과하면 감사가 실패합니다.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## 참고 자료
 

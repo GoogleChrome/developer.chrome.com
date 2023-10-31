@@ -22,6 +22,9 @@ const devConfig = {
     // Scripts used on /100 page
     'site/_js/100.js',
     'site/_js/events.js',
+    'site/_js/styleguide.js',
+    'site/_js/fugu-showcase.js',
+    'site/_js/extension-samples.js',
   ],
   output: {
     dir: 'dist/js',
@@ -48,7 +51,14 @@ const devConfig = {
 };
 
 const productionConfig = {
-  input: ['site/_js/main.js', 'site/_js/100.js', 'site/_js/events.js'],
+  input: [
+    'site/_js/main.js',
+    'site/_js/100.js',
+    'site/_js/events.js',
+    'site/_js/styleguide.js',
+    'site/_js/fugu-showcase.js',
+    'site/_js/extension-samples.js',
+  ],
   output: {
     dir: 'dist/js',
     format: 'esm',

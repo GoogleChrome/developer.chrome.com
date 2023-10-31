@@ -10,7 +10,7 @@
         {# align-items: last baseline. But the inline-block hack seems to #}
         {# do the trick. #}
         <div class="display-inline-block">
-          {{ banner.text }}
+          {{ banner.text | md | safe }}
         </div>
       </div>
       <div class="banner__actions">

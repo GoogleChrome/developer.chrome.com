@@ -79,14 +79,14 @@ Each of these values allows you to limit how much rendering work the browser nee
 ### Layout (contain: layout)
 
 {% Aside %}
-This value turns on layout containment for the element. This ensures that the containing element is totally opaque for layout purposes; nothing outside can affect its internal layout, and vice versa. 
+This value turns on layout containment for the element. This ensures that the containing element is totally opaque for layout purposes; nothing outside can affect its internal layout, and vice versa.
 
 [Containment spec](https://drafts.csswg.org/css-contain/#valdef-contain-layout)
 {% endAside %}
 
 Layout containment is probably _the_ biggest benefit of containment, along with `contain: paint`.
 
-Layout is normally document-scoped, making it scale proportionally to the size of your DOM, so if you change an element's `left` property ([as just one example](https://csstriggers.com)), every single element in the DOM might need to be checked.
+Layout is normally document-scoped, making it scale proportionally to the size of your DOM, so if you change an element's `left` property, every single element in the DOM might need to be checked.
 
 Enabling containment here can potentially reduce the number of elements to just a handful, rather than the whole document, saving the browser a ton of unnecessary work and significantly improving performance.
 

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Overriding Chrome pages"
+seoTitle: "MV2 - Overriding Chrome pages [Deprecated]"
 date: 2012-09-18
 updated: 2015-05-11
 description: >
@@ -8,7 +9,11 @@ description: >
   pages from your Chrome Extension.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Overriding Chrome pages](/docs/extensions/mv3/override/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Override pages are a way to substitute an HTML file from your extension for a page that Google
 Chrome normally provides. In addition to HTML, an override page usually has CSS and JavaScript code.

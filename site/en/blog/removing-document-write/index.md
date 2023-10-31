@@ -29,7 +29,7 @@ specifically those uses that inject scripts. As innocuous as the following looks
 can cause real issues for users.
 
 ```js
-document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>');
+document.write('<script src="https://example.com/ad-inject.js"></script>');
 ```
 
 Before the browser can render a page, it has to build the DOM tree by parsing the HTML markup.
@@ -38,12 +38,12 @@ parsing the HTML. If the script dynamically injects another script, the parser i
 even longer for the resource to download, which can incur one or more network roundtrips and
 delay the time to first render of the page
 
-**For users on slow connections, such as 2G, external scripts dynamically injected via
-`document.write()` can delay the display of main page content for tens of seconds**,
-or cause pages to either fail to load or take so long that the user just gives
-up. Based on instrumentation in Chrome, we've learned that pages featuring
-third-party scripts inserted via `document.write()` are typically twice as slow to
-load than other pages on 2G.
+For users on slow connections, such as 2G, external scripts dynamically
+injected via `document.write()` can delay the display of main page content for
+tens of seconds, or cause pages to either fail to load or take so long that the
+user just gives up. Based on instrumentation in Chrome, we've learned that
+pages featuring third-party scripts inserted via `document.write()` are
+typically twice as slow to load than other pages on 2G.
 
 We collected data from a 28 day field trial on 1% of Chrome
 stable users, restricted to users on 2G connections. We saw that 7.6% of all page loads
@@ -89,29 +89,28 @@ Specifically Chrome will not execute the `<script>` elements injected via
 
 Third party snippets sometimes use `document.write()` to load scripts.
 Fortunately, most third parties provide
-[asynchronous loading alternatives](https://developers.google.com/web/fundamentals/primers/async-functions), which
+[asynchronous loading alternatives](https://web.dev/articles/efficiently-load-third-party-javascript#use_async_or_defer), which
 allow third party scripts to load without blocking the display of the rest of
 the content on the page.
 
 ## How do I fix this?
 
-This simple answer is don't inject scripts using `document.write()`. We are
-[maintaining a set of known services that provide asynchronous loader support](https://developers.google.com/web/fundamentals/primers/async-functions)
+This simple answer is don't inject scripts using `document.write()`. We
+maintain a set of [known services for asynchronous loader support](https://web.dev/articles/async-functions)
 that we encourage you to keep checking.
 
 If your provider is not on the list and does support asynchronous script loading
-then please [let us know and we can update the page to help all users](https://docs.google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform).
+then please [let us know and we can update the page](https://docs.google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform) to help all users.
 
 If your provider does not support the ability to asynchronously load scripts
 into your page then we encourage you to contact them and
-[let us](https://docs.google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform)
-and them know how they will be affected.
+[let us and them know](https://docs.google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform)
+how they will be affected.
 
 If your provider gives you a snippet that includes the `document.write()`, it
 might be possible for you to add an `async` attribute to the script element, or
 for you to add the script elements with DOM API's like `document.appendChild()`
-or `parentNode.insertBefore()` much like
-[Google Analytics does](https://developers.google.com/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
+or `parentNode.insertBefore()`.
 
 ## How to detect when your site is affected
 
@@ -158,8 +157,8 @@ using `chrome://flags/#disallow-doc-written-script-loads`.
 {% Aside %}
 One of the heuristics for this intervention to detect if the file is not already in the user's
 Cache. DevTools allows you to disable the Cache, however you will not see the `onerror` event
-on the script element being triggered, but you will see it when not using DevTools. This is
-already fixed in Chrome 56.
+on the script element being triggered, but you will see it when not using
+DevTools. This is fixed in Chrome 56.
 {% endAside %}
 
 ### Check your HTTP headers on the script resource

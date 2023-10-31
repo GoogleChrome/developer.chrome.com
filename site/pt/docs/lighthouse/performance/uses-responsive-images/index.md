@@ -18,9 +18,9 @@ Para cada imagem na página, o Lighthouse compara o tamanho da imagem renderizad
 
 O ideal é que sua página nunca sirva imagens maiores do que a versão renderizada na tela do usuário. Qualquer coisa maior do que apenas resulta em bytes perdidos e diminui o tempo de carregamento da página.
 
-A principal estratégia para servir imagens de tamanhos adequados é chamada de "imagens responsivas". Com imagens responsivas, você gera várias versões de cada imagem e, a seguir, especifica qual versão usar em seu HTML ou CSS usando media queries, dimensões da viewport e assim por diante. Veja [Sirva imagens responsivas](https://web.dev/serve-responsive-images/) para saber mais.
+A principal estratégia para servir imagens de tamanhos adequados é chamada de "imagens responsivas". Com imagens responsivas, você gera várias versões de cada imagem e, a seguir, especifica qual versão usar em seu HTML ou CSS usando media queries, dimensões da viewport e assim por diante. Veja [Sirva imagens responsivas](https://web.dev/articles/serve-responsive-images) para saber mais.
 
-[Os CDNs de imagem](https://web.dev/image-cdns/) são outra boa estratégia para servir imagens de tamanho apropriado. Você pode pensar em CDNs de imagem como APIs de serviços web para transformar imagens.
+[Os CDNs de imagem](https://web.dev/articles/image-cdns) são outra boa estratégia para servir imagens de tamanho apropriado. Você pode pensar em CDNs de imagem como APIs de serviços web para transformar imagens.
 
 Outra estratégia é usar formatos de imagem vetoriais, como SVG. Com uma quantidade finita de código, uma imagem SVG pode ser redimensionada para qualquer tamanho. Veja [Substitua ícones complexos por SVG](https://developers.google.com/web/fundamentals/design-and-ux/responsive/images#replace_complex_icons_with_svg) para saber mais.
 
@@ -30,7 +30,7 @@ Ferramentas como [gulp-responsive](https://www.npmjs.com/package/gulp-responsive
 
 ### AMP
 
-Use o suporte ao componente [`amp-img`](https://amp.dev/documentation/components/amp-img/?format=websites) [`srcset`](https://web.dev/use-srcset-to-automatically-choose-the-right-image/) para especificar quais ativos de imagem usar com base no tamanho da tela. Veja também [Imagens responsivas com srcset, sizes e heights](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/art_direction/) .
+Use o suporte ao componente [`amp-img`](https://amp.dev/documentation/components/amp-img/?format=websites) [`srcset`](https://web.dev/articles/use-srcset-to-automatically-choose-the-right-image) para especificar quais ativos de imagem usar com base no tamanho da tela. Veja também [Imagens responsivas com srcset, sizes e heights](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/art_direction/) .
 
 ### Angular
 
@@ -55,4 +55,4 @@ Carregue imagens diretamente pela [biblioteca de mídia](https://wordpress.org/s
 ## Recursos
 
 - [Código fonte para a auditoria **Redimensione imagens corretamente**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/uses-responsive-images.js)
-- [Sirva imagens com dimensões corretas](https://web.dev/serve-images-with-correct-dimensions/)
+- [Sirva imagens com dimensões corretas](https://web.dev/articles/serve-images-with-correct-dimensions)

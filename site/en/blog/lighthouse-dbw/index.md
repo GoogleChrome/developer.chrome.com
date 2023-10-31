@@ -5,17 +5,17 @@ description: >
     What's new in Lighthouse. Redesign, new best practice audits, and an online report viewer.
 authors:
   - ericbidelman
-date: 2016-12-19 
-updated: 2016-12-19 
+date: 2016-12-19
+updated: 2016-12-19
 ---
 
 {% Aside %}
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is an
+[Lighthouse](/docs/lighthouse/overview/) is an
 [open-source](https://github.com/GoogleChrome/lighthouse), automated tool for
 improving the quality of your web apps. You can install it as a
 [Chrome Extension][crx] or run it as a Node command line tool. When you
 give Lighthouse a URL, it runs a barrage of tests against the page and then
-generates a report explaining how well the page did and indicating areas for 
+generates a report explaining how well the page did and indicating areas for
 improvement.
 {% endAside %}
 
@@ -51,7 +51,7 @@ and include pointers to recommended workarounds.
 To date, Lighthouse has focused on performance metrics and the quality of PWAs.
 However, an overarching goal of the project is to provide a guidebook for all of
 web development. This includes guidance on general best practices, performance
-and accessibility tips, and end-to-end help on making quality apps. 
+and accessibility tips, and end-to-end help on making quality apps.
 
 "Do Better Web" is an effort within the Lighthouse project to help developers do
 better on the web. In other words, help them modernize and optimize their web
@@ -91,7 +91,7 @@ Lighthouse HTML report.
   </figcaption>
 </figure>
 
-Lighthouse Viewer also lets you share reports with others. Clicking the share 
+Lighthouse Viewer also lets you share reports with others. Clicking the share
 icon will sign you in to GitHub. We stash reports as secret gist in your account
 so you can easily delete a shared report or update it later on. Using GitHub for
 data storage also means you get version control for free!

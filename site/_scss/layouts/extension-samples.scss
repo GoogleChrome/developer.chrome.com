@@ -1,0 +1,149 @@
+// Globals
+@import '../global';
+
+//blocks
+@import '../blocks/extension-sample-item';
+@import '../blocks/navigation-tree';
+@import '../blocks/hero-card';
+@import '../blocks/checkbox-group';
+@import '../blocks/filter-sheet';
+@import '../blocks/enhanced-select';
+@import '../blocks/tag-pill';
+@import '../blocks/tag-pill-list';
+@import '../blocks/tabs';
+
+// Utilities
+@import '../utilities/center-margin';
+@import '../utilities/center-images';
+@import '../utilities/floats';
+@import '../utilities/elevation';
+@import '../utilities/hairline';
+@import '../utilities/colors';
+@import '../utilities/scrollbars';
+@import '../utilities/surface';
+@import '../utilities/visually-hidden';
+@import '../utilities/wrapper';
+
+.extension-samples-container {
+  max-width: calc(1400px);
+
+  @media screen and (min-width: 860px) {
+    .hero-card {
+      padding-bottom: 1.75rem;
+      padding-top: 1.75rem;
+    }
+  }
+
+  .hero-card__inner {
+    display: block;
+  }
+
+  @media (min-width: 1231px) {
+    .hero-card__inner {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+    }
+  }
+
+  .hero-card h1 {
+    font-size: 2em;
+  }
+
+  .search-box {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-box__input {
+    background: var(--color-bg-shade);
+    border: 0;
+    border-radius: px-to-rem(100px);
+    display: block;
+    margin: 0;
+    padding: get-size(200) get-size(700);
+
+    &::placeholder {
+      color: var(--color-secondary-text);
+    }
+  }
+
+  .search-box__btn {
+    display: flex;
+  }
+
+  .search-box__btn--close {
+    justify-self: end;
+
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &__filters {
+    display: none;
+
+    @include media-query('lg') {
+      display: flex;
+    }
+
+    > span {
+      color: var(--color-grey-medium);
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+      line-height: 1rem;
+      margin-right: 0.75rem;
+    }
+
+    select {
+      display: none;
+    }
+
+    .enhanced-select__wrapper {
+      border: 0;
+    }
+
+    &.no-js {
+      display: none;
+    }
+  }
+
+  &__filters label {
+    color: var(--color-blue-medium);
+
+    path {
+      fill: var(--color-blue-medium);
+    }
+  }
+
+  dialog {
+    border: 0;
+    border-radius: 4px;
+    height: auto;
+    margin: get-size(1000) 0 0 auto;
+    max-height: 80vh;
+    overflow-y: scroll;
+
+    &::backdrop {
+      background: var(--color-inverse);
+      opacity: 0.48;
+    }
+  }
+
+  .mobile-filters-btn {
+    @include media-query('lg') {
+      display: none;
+    }
+
+    &.tag-pill .icon {
+      margin-left: 0;
+      margin-right: get-size(200);
+    }
+  }
+
+  .selected-filters {
+    &.no-js {
+      display: none;
+    }
+  }
+}

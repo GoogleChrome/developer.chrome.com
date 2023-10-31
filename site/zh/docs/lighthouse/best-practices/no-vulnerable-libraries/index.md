@@ -5,7 +5,8 @@ description: |2-
 
   了解如何通过替换具有已知漏洞的 JavaScript 库使您的页面更安全。
 date: 2019-05-02
-updated: 2020-06-04
+updated: 2023-04-26
+is_outdated: true
 ---
 
 入侵者有自动网络爬虫，可以扫描您的站点查找已知的安全漏洞。网络爬虫检测到漏洞时，会向入侵者发出警报。至此，入侵者需要的便只剩下弄清楚如何利用您网站上的漏洞了。
@@ -21,7 +22,7 @@ updated: 2020-06-04
 - 运行[适用于 Chrome 的库检测器](https://www.npmjs.com/package/js-library-detector)。
 - [根据 snyk 的漏洞数据库](https://snyk.io/vuln?packageManager=all)检查检测到的库列表。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 停止使用不安全的 JavaScript 库
 

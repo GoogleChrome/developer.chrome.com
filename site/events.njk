@@ -1,0 +1,20 @@
+---
+disable_algolia: true
+permalink: "/events.json"
+---
+[
+  {% for event in collections.currentEvents.concat(collections.pastEvents)  %}
+    {% set html %}
+      {% include 'partials/event-card.njk' %}
+    {% endset %}
+    {
+      "id": {{event.id|dump|safe}},
+      "html": {{ html|minifyHtml|dump|safe}},
+      "date": {{ event.date|dump|safe }},
+      "isPastEvent": {{ event.isPastEvent|dump|safe }},
+      "location": {{ event.location|dump|safe }},
+      "topics": {{ event.topics|dump|safe }},
+      "googlers": {{ event.googlers|dump|safe }}
+    } {% if loop.last === false %},{% endif %}
+  {% endfor %}
+]

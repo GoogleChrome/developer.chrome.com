@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Houdini - Demystifying CSS 
+title: Houdini - Demystifying CSS
 description: >
     Houdini is a collection of APIs that expose the CSS engine’s internals to developers
 authors:
@@ -73,7 +73,7 @@ the type of the worklet. They are light-weight and short-lived.
 ([spec][Paint Worklet spec])
 
 **Status update:** Paint API is enabled by default in Chrome 65. Read the
-[detailed introduction](https://developers.google.com/web/updates/2018/01/paintapi).
+[detailed introduction](/blog/paintapi).
 
 ### Compositor worklet
 
@@ -321,7 +321,7 @@ If you want to get involved, there’s always the [Houdini mailing list].
 [compworklet polyfill]: https://github.com/googlechrome/houdini-samples
 [web components]: http://webcomponents.org/
 [parallax scrolling]: https://en.wikipedia.org/wiki/Parallax_scrolling
-[css custom properties]: https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care
+[css custom properties]: /blog/css-variables-why-should-you-care/
 [houdini demo]: https://googlechromelabs.github.io/houdini-samples/animation-worklet/twitter-header/
 [paint worklet demo]: http://googlechrome.github.io/houdini-samples/paint-worklet/ripple/
 [paint worklet source]: https://github.com/GoogleChrome/houdini-samples/tree/master/paint-worklet/ripple

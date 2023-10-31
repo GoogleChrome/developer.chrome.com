@@ -12,7 +12,7 @@ tags:
   - chrome-96
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 96 beta was released on October 21, 2021 and is expected to become the
 stable version in late November, 2021.
@@ -36,4 +36,4 @@ The basic-card method is deprecated in the Reporting API.
 
 The basic-card method will be removed.
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

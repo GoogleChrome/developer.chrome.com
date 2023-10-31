@@ -17,7 +17,7 @@ tags:
 
 *이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='zFVWeOKZBHs' %}
 
@@ -36,7 +36,7 @@ Chromium 이슈: [423246](https://crbug.com/423246)
 
 **Reporting API** 창을 사용하여 페이지에서 생성된 보고서와 그 상태를 모니터링할 수 있습니다.
 
-[Reporting API](https://web.dev/reporting-api/) 는 페이지에 대한 보안 위험도, 더 이상 사용되지 않는 API 호출 등을 모니터링하는 데 도움을 주도록 설계되었습니다.
+[Reporting API](https://web.dev/articles/reporting-api) 는 페이지에 대한 보안 위험도, 더 이상 사용되지 않는 API 호출 등을 모니터링하는 데 도움을 주도록 설계되었습니다.
 
 Reporting API 를 사용하고자 하는 페이지에 접속하세요 (예시: [demo page](https://reporting-api-demo.glitch.me/)).
 **애플리케이션** 패널에서 스크롤을 내려 **백그라운드 서비스** 영역의 **Reporting API** 창을 선택하세요.
@@ -133,7 +133,7 @@ Chromium 이슈: [1284737](https://crbug.com/1284737)
 
 ### 소스 패널에서 워커 소스 파일 표시 {: #worker-sourcemap }
 
-소스 패널에서 [워커](https://web.dev/workers-overview/) (예: 웹 워커, 서비스 워커) 소스 파일 및 연관된 sourceURL이 보입니다. 이전에는 워커 소스 파일이 제대로 제어되지 않았습니다.
+소스 패널에서 [워커](https://web.dev/articles/workers-overview) (예: 웹 워커, 서비스 워커) 소스 파일 및 연관된 sourceURL이 보입니다. 이전에는 워커 소스 파일이 제대로 제어되지 않았습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="소스 패널에서 워커 소스 파일 표시", width="800", height="509" %}
 
@@ -181,12 +181,12 @@ Chromium 이슈: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 
 - **쿠키** 창에서 [edit cookies](/docs/devtools/storage/cookies/#edit) 이슈를 해결하였습니다. ([1290196](https://crbug.com/1290196))
 - [Command menu](/docs/devtools/command-menu/) 에서 `Shift` + `Tab` 을 사용해 이전 커맨드를 선택할 수 있습니다. ([1278743](https://crbug.com/1278743))
-- [이슈](/docs/devtools/issues/) 탭에서 [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) 이슈가 노출됩니다. ([1272445](https://crbug.com/1272445)).
-- [이슈](/docs/devtools/issues/) 탭에서 [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) 이슈가 노출됩니다. ([1219359](https://crbug.com/1219359)).
+- [이슈](/docs/devtools/issues/) 탭에서 [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) 이슈가 노출됩니다. ([1272445](https://crbug.com/1272445)).
+- [이슈](/docs/devtools/issues/) 탭에서 [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) 이슈가 노출됩니다. ([1219359](https://crbug.com/1219359)).
 - **소스** 및 **콘솔** 패널에서 `Shift` + `Delete` 및 `Page up` / `Page down` 동작을 수정하였습니다. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 - **소스** 패널에서 브레이크포인트를 제거하면 브레이크포인트 편집 다이얼로그를 닫습니다. ([922513](https://crbug.com/922513))
 - DevTools에서 [라이트 / 다크 테마 선택](/docs/devtools/customize/dark-theme/) 시에 다시 불러올 필요가 없어졌습니다. ([1278738](https://crbug.com/1278738))
 
 
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

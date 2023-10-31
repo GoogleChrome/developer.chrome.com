@@ -176,7 +176,7 @@ defaults of multiple frameworks, including:
   [Next.js](https://nextjs.org/docs/advanced-features/measuring-performance) to
   allow easier insight into page performance through web vitals and other custom
   metrics.
-- [Granular chunking](https://web.dev/granular-chunking-nextjs/) shipped in Next.js and Gatsby,
+- [Granular chunking](https://web.dev/articles/granular-chunking-nextjs) shipped in Next.js and Gatsby,
   resulting in 30 to 70 percent reduction in bundle sizes while improving caching
   performance. This has become the default in Webpack 5.
 - A separate [polyfill

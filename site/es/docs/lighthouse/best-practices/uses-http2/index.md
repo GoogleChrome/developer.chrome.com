@@ -20,7 +20,7 @@ HTTP / 2 sirve los recursos de su página más rápido y con menos datos movién
 
 Lighthouse recopila todos los recursos solicitados por la página y verifica la versión del protocolo HTTP de cada uno. Hay algunos casos en los que las solicitudes que no son HTTP / 2 se ignorarán en los resultados de la auditoría. [Consulte la implementación](https://github.com/GoogleChrome/lighthouse/blob/9fad007174f240982546887a7e97f452e0eeb1d1/lighthouse-core/audits/dobetterweb/uses-http2.js#L138) para obtener más detalles.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Cómo pasar esta auditoría
 

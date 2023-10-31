@@ -14,7 +14,7 @@ tags:
   - chrome-102
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='0V_ph7PA_aw' %}
 
@@ -26,9 +26,9 @@ Use the **Performance insights** panel to get actionable and use-case-driven ins
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EjgH5CD6FHnzoEhDEWxu.png", alt="New Performance insights panel", width="800", height="585" %}
 
-Once the recording is complete, you get the performance insights on the  **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes. 
+Once the recording is complete, you get the performance insights on the  **Insights** pane. Click on each insight item (for example, Render blocking request, layout shift) to understand the issue and potential fixes.
 
-Go to the **Performance insights** panel [documentation](/docs/devtools/performance-insights/) to learn more with the step-by-step tutorial. 
+Go to the **Performance insights** panel [documentation](/docs/devtools/performance-insights/) to learn more with the step-by-step tutorial.
 
 This is a preview feature to help web developers (especially non-performance experts) to identify and fix potential performance issues. Our team is actively working on this feature and we are looking for your [feedback](https://crbug.com/1270700) for further enhancements.
 
@@ -37,9 +37,9 @@ Chromium issue: [1270700](https://crbug.com/1270700)
 
 ## New shortcuts to emulate light and dark themes {: #emulation }
 
-You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane.
+You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) with the new shortcuts in the **Styles** pane.
 
-Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.  
+Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dCbNHwE5ICGNXRUws1zz.png", alt="New shortcuts to emulate light and dark themes", width="800", height="488" %}
 
@@ -52,7 +52,7 @@ Chromium issue: [1314299](https://crbug.com/1314299)
 
 DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel.
 
-For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection.
+For example, the first screenshot shows a page that contains [mixed content](https://web.dev/articles/what-is-mixed-content). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection.
 
 The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot).
 
@@ -67,7 +67,7 @@ Chromium issue: [833147](https://crbug.com/833147)
 
 The debugger now terminates script execution when reloading at breakpoint.
 
-For example, the script got into an endless loop previously when setting and reloading at the `ReactDOM` breakpoint in this [React demo](https://react-stuck.glitch.me/). The **Sources** panel broke due to the endless loop. 
+For example, the script got into an endless loop previously when setting and reloading at the `ReactDOM` breakpoint in this [React demo](https://react-stuck.glitch.me/). The **Sources** panel broke due to the endless loop.
 
 Continuing to execute JavaScript is causing a lot of trouble for developers and might leave the renderer in a broken state. This change aligns the debugging behavior with other browsers like Firefox.
 
@@ -93,7 +93,7 @@ Chromium issue: [1295750](https://crbug.com/1295750)
 
 ### Commit live expression with Enter {: #live-expression }
 
-Once you finish typing a [live expression](/blog/new-in-devtools-70/#watch), you can click `Enter` to commit it. Previously, hitting Enter resulted in adding new lines. This is inconsistent with other parts of the DevTools. 
+Once you finish typing a [live expression](/blog/new-in-devtools-70/#watch), you can click `Enter` to commit it. Previously, hitting Enter resulted in adding new lines. This is inconsistent with other parts of the DevTools.
 
 To add a new line in the **live expression** editor, use `Shift` + `Enter` instead.
 
@@ -162,7 +162,7 @@ A new **Copy** button is added to the [Changes](/docs/devtools/changes/) tab as 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/afe5698f1cd20304d2763574ef8e9faf6a4a6db1 #}
 {# ​​https://chromium.googlesource.com/devtools/devtools-frontend/+/5de1d6140cad945783f3ca54055134f4a7db42a1 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #}
 
 Chromium issue: [1268754](https://crbug.com/1268754)
 
@@ -175,7 +175,7 @@ To enable the experiment, check **Enable color picking outside the browser windo
 
 Enable this experiment to pick a color outside of the browser with the color picker. Previously, you could only pick a color within the browser.
 
-In the **Styles** pane, click on any color preview to open the color picker. Use the eyedropper to pick color from anywhere. 
+In the **Styles** pane, click on any color preview to open the color picker. Use the eyedropper to pick color from anywhere.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/h3xLPNl1QdvyuzZpNuqW.png", alt="Picking color outside of browser", width="800", height="450" %}
 
@@ -184,5 +184,5 @@ In the **Styles** pane, click on any color preview to open the color picker. Use
 Chromium issue: [1245191](https://crbug.com/1245191)
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

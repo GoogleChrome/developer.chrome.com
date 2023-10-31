@@ -7,9 +7,9 @@ description: >
   Intensive throttling takes effect when the page has been hidden
   for more than 5 minutes, the page has been silent for at least
   30 seconds, WebRTC is not in use, and the chain of timers is
-  100 or greater.
+  5 or greater.
 date: 2021-01-18
-updated: 2022-08-30
+updated: 2023-04-18
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/5diIn5KBi44iwy3o6GRi.jpg
 alt: A collection of broken clocks
 ---
@@ -82,7 +82,7 @@ This happens to timers that are scheduled when _any_ of the following is true:
   sound-making APIs, but a silent audio track doesn't count.
 
 The timer isn't throttled, unless the requested timeout is less than 4ms, and
-the chain count is 100 or greater, in which case the timeout is set to 4ms. This
+the chain count is 5 or greater, in which case the timeout is set to 4ms. This
 isn't new; browsers have done this for many years.
 
 ### Throttling
@@ -90,7 +90,7 @@ isn't new; browsers have done this for many years.
 This happens to timers that are scheduled when _minimal throttling_ doesn't
 apply, and _any_ of the following is true:
 
-- The _chain count_ is less than 100.
+- The _chain count_ is less than 5.
 - The page has been _hidden_ for less than 5 minutes.
 - WebRTC is in use. Specifically, there's an `RTCPeerConnection` with an 'open'
   `RTCDataChannel` or a 'live' `MediaStreamTrack`.
@@ -107,7 +107,7 @@ scheduled when none of the _minimal throttling_ or _throttling_ conditions
 apply, and _all_ of the following conditions are true:
 
 - The page has been _hidden_ for more than 5 minutes.
-- The _chain count_ is 100 or greater.
+- The _chain count_ is 5 or greater.
 - The page has been silent for at least 30 seconds.
 - WebRTC is not in use.
 
@@ -134,7 +134,7 @@ Some examples:
 - If you need to know when an element enters in the viewport, use
   [`IntersectionObserver`](https://developer.mozilla.org/docs/Web/API/Intersection_Observer_API).
 - If you need to know when an element changes size, use
-  [`ResizeObserver`](https://web.dev/resize-observer/).
+  [`ResizeObserver`](https://web.dev/articles/resize-observer).
 - If you need to know when the DOM changes, use
   [`MutationObserver`](https://developer.mozilla.org/docs/Web/API/MutationObserver),
   or maybe [custom element lifecycle
@@ -145,14 +145,14 @@ Some examples:
   events](https://developer.mozilla.org/docs/Web/API/EventSource), [push
   messages](https://developer.mozilla.org/docs/Web/API/Push_API), or
   [fetch
-  streams](https://web.dev/fetch-upload-streaming/#previously-on-the-exciting-adventures-of-fetch-streams).
+  streams](https://web.dev/articles/fetch-upload-streaming#previously_on_the_exciting_adventures_of_fetch_streams).
 - If you need to react to stage changes in audio/video, [use events like
   `timeupdate` and
   `ended`](https://html.spec.whatwg.org/multipage/media.html#mediaevents), or
-  [`requestVideoFrameCallback`](https://web.dev/requestvideoframecallback-rvfc/)
+  [`requestVideoFrameCallback`](https://web.dev/articles/requestvideoframecallback-rvfc)
   if you need to do something with each frame.
 
-There's also [notification triggers](https://web.dev/notification-triggers/) if
+There's also [notification triggers](https://web.dev/articles/notification-triggers) if
 you want to show a notification at a particular time.
 
 ### Animation

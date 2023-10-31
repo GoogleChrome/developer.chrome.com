@@ -19,14 +19,14 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaya](https://github.com/solarrust). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
-{% include 'partials/devtools/ru/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Редактируемые выражения от контейнера в панели Styles {: #container-queries }
 
 Теперь вы можете просматривать и редактировать [выражения от
-контейнера](https://web.dev/new-responsive/#responsive-to-the-container) в
+контейнера](https://web.dev/articles/new-responsive#responsive_to_the_container) в
 панели **Styles**.
 
 
@@ -63,7 +63,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/ef157dab2ccf32194
 
 ## Предварительный просмотр веб-бандлов во вкладке Network {: #web-bundle }
 
-[Веб-бандлы](https://web.dev/web-bundles/) — это способ инкапсуляции одного или
+[Веб-бандлы](https://web.dev/articles/web-bundles) — это способ инкапсуляции одного или
 нескольких HTTP-ресурсов в один файл. Теперь вы можете просмотреть содержимое
 веб-бандла во вкладке **Network**.
 
@@ -235,5 +235,5 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283c
 
 Задача в трекере Chromium: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/ru/reach-out.md' %}
-{% include 'partials/devtools/ru/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

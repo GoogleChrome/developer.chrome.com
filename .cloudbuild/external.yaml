@@ -10,11 +10,6 @@ steps:
     args: ['ci']
 
   - name: node:16.14.2
-    id: 'Configure secrets'
-    entrypoint: npm
-    args: ['run', 'cloud-secrets']
-
-  - name: node:16.14.2
     id: 'Build external data'
     entrypoint: npm
     args: ['run', 'build-external']
@@ -34,6 +29,8 @@ steps:
   - name: node:16.14.2
     id: 'Build eleventy in dev mode to confirm'
     entrypoint: npm
+    env:
+      - 'NODE_OPTIONS="--max_old_space_size=8192"'
     args: ['run', 'eleventy']
     # This does NOT set `NODE_ENV=production`, as we don't need the full build.
 
@@ -49,3 +46,15 @@ options:
   env:
     - 'PROJECT_ID=$PROJECT_ID'
     - 'NODE_OPTIONS=--unhandled-rejections=strict'
+  secretEnv: ['GITHUB_APP_ID', 'GITHUB_APP_KEY', 'GITHUB_APP_INSTALLATION_ID', 'YOUTUBE_API_KEY']
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/chrome-apps-doc/secrets/GITHUB_APP_ID/versions/1
+      env: 'GITHUB_APP_ID'
+    - versionName: projects/chrome-apps-doc/secrets/GITHUB_APP_KEY/versions/4
+      env: 'GITHUB_APP_KEY'
+    - versionName: projects/chrome-apps-doc/secrets/GITHUB_APP_INSTALLATION_ID/versions/1
+      env: 'GITHUB_APP_INSTALLATION_ID'
+    - versionName: projects/chrome-apps-doc/secrets/YOUTUBE_API_KEY/versions/1
+      env: 'YOUTUBE_API_KEY'

@@ -55,4 +55,5 @@ async function getPageByUrl(urlPath) {
 
 module.exports = {
   getPageByUrl,
+  distPath,
 };

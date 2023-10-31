@@ -1,7 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Add a collection page
-description: 'Add a landing page for a project or initiative.'
+description: >
+  Add a landing page for a project or initiative
 date: 2022-03-08
 ---
 
@@ -11,10 +12,14 @@ Choose a tag for your collection. It will become the `<COLLECTION_NAME>`. You ca
 [existing tag](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/_data/i18n/tags.yml)
 or [create a new one](/docs/handbook/how-to/add-a-tag/).
 
-## Tag content
+### Tag content
 
-Make sure all posts / articles / docs that will be bart of the collection are
-tagged with the chosen tag (e.g. `tags: [“capabilities”]`).
+Make sure all posts / articles / docs that will be part of the collection are
+tagged with the chosen tag.
+
+```yaml
+tags: ["<COLLECTION_NAME>"]
+```
 
 ## Create collection landing page
 
@@ -31,7 +36,7 @@ Create a new page in the `site/en` directory:
 
 Add the following frontmatter to the `index.md` file:
 
-```bash
+```yaml
 ---
 title: '<COLLECTION_NAME_OR_CUSTOM_TITLE>'
 description: '<COLLECTION_DESCRIPTION>'

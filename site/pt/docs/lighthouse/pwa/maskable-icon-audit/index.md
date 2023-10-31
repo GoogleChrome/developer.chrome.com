@@ -7,7 +7,7 @@ description: |2
 date: 2020-05-06
 ---
 
-Os [ícones mascaráveis](https://web.dev/maskable-icon/) são um novo formato de ícone que garante que seu ícone PWA tenha uma ótima aparência em todos os dispositivos Android. Em dispositivos Android mais recentes, os ícones PWA que não seguem o formato de ícone mascarável recebem um fundo branco. Quando você usa um ícone mascarável, isso garante que o ícone ocupe todo o espaço que o Android fornece para ele.
+Os [ícones mascaráveis](https://web.dev/articles/maskable-icon) são um novo formato de ícone que garante que seu ícone PWA tenha uma ótima aparência em todos os dispositivos Android. Em dispositivos Android mais recentes, os ícones PWA que não seguem o formato de ícone mascarável recebem um fundo branco. Quando você usa um ícone mascarável, isso garante que o ícone ocupe todo o espaço que o Android fornece para ele.
 
 ## Como a auditoria do ícone mascarável do Lighthouse falha
 
@@ -23,13 +23,13 @@ Para passar na auditoria:
 
 {% Aside 'caution' %} O Lighthouse não inspeciona a imagem especificada como ícone mascarável. Você precisará verificar manualmente se a imagem é exibida corretamente. {% endAside %}
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Como adicionar suporte a ícones mascaráveis ao seu PWA
 
 1. Use o [Editor Maskable.app](https://maskable.app/editor) para converter um ícone existente em um ícone mascarável.
 
-2. Adicione a `purpose` a um dos objetos de `icons` [em seu manifesto de aplicativo da web](https://web.dev/add-manifest/) . Defina o valor de `purpose` como `maskable` ou `any maskable`. Veja [valores](https://developer.mozilla.org/docs/Web/Manifest/icons#Values).
+2. Adicione a `purpose` a um dos objetos de `icons` [em seu manifesto de aplicativo da web](https://web.dev/articles/add-manifest) . Defina o valor de `purpose` como `maskable` ou `any maskable`. Veja [valores](https://developer.mozilla.org/docs/Web/Manifest/icons#Values).
 
    ```json/8
    {
@@ -47,12 +47,12 @@ Para passar na auditoria:
    }
    ```
 
-3. Use o Chrome DevTools para verificar se o ícone mascarável está sendo exibido corretamente. Consulte [Meus ícones atuais estão prontos?](https://web.dev/maskable-icon/#are-my-current-icons-ready)
+3. Use o Chrome DevTools para verificar se o ícone mascarável está sendo exibido corretamente. Consulte [Meus ícones atuais estão prontos?](https://web.dev/articles/maskable-icon#are_my_current_icons_ready)
 
 ## Recursos
 
 - [O código-fonte para a auditoria **O manifesto não tem um ícone mascarável**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/maskable-icon.js)
-- [Suporte de ícone adaptável em PWAs com ícones mascaráveis](https://web.dev/maskable-icon/)
+- [Suporte de ícone adaptável em PWAs com ícones mascaráveis](https://web.dev/articles/maskable-icon)
 - [Editor Maskable.app](https://maskable.app/editor)
-- [Adicionar um manifesto de aplicativo da web](https://web.dev/add-manifest/)
+- [Adicionar um manifesto de aplicativo da web](https://web.dev/articles/add-manifest)
 - [A propriedade `icons` no MDN](https://developer.mozilla.org/docs/Web/Manifest/icons)

@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title:  Automated testing with Headless Chrome
 description: >
     Automated testing with Headless Chrome
-authors: 
+authors:
   - ericbidelman
 date: 2017-06-13
 updated: 2018-08-05
@@ -22,7 +22,7 @@ any of the most popular testing frameworks ([Jasmine](https://jasmine.github.io/
 [Chai](http://chaijs.com/) is an assertion library that works with Node and in the browser.
 We need the latter.
 
-[Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) is a way to run
+[Headless Chrome](/blog/headless-chrome) is a way to run
 the Chrome browser in a headless environment without the full browser UI. One of
 the benefits of using Headless Chrome (as opposed to testing directly in Node)
 is that your JavaScript tests will be executed in the same environment as users

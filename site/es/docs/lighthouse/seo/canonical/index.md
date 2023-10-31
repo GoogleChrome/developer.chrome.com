@@ -32,7 +32,7 @@ Una página falla en esta auditoría si se cumple alguna de las siguientes condi
 - El enlace canónico apunta a un dominio diferente.
 - El enlace canónico apunta a la raíz del sitio. Tenga en cuenta que este escenario puede ser válido en algunos escenarios, como AMP o variaciones de la página móvil, pero Lighthouse, no obstante, lo trata como un error.
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## Cómo agregar enlaces canónicos a sus páginas
 

@@ -14,7 +14,7 @@ tags:
   - devtools-architecture
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 <!-- lint disable no-smart-quotes -->
 
@@ -171,5 +171,5 @@ Sadly, the solutions that are available to us today are not always suitable for 
 
 At this moment, we have removed the Closure compiler type checker from our codebase and solely rely on the TypeScript compiler. We are able to write TypeScript-authored files and make use of TypeScript-specific features (such as interfaces, generics, etc...), which helps us on a daily basis. We have increased confidence that the TypeScript compiler will catch type errors and regressions, which is what we’d hoped would happen when we first started work on this migration. This migration, like so many, was slow, nuanced, and oftentimes challenging, but as we yield the benefits, we believe it was worth it.
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/engineering-blog.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/engineering-blog.md' %}

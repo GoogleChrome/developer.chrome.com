@@ -6,7 +6,7 @@ date: 2019-05-04
 updated: 2019-09-19
 ---
 
-自定义初始屏幕使您的[渐进式 Web 应用 (PWA)](https://web.dev/progressive-web-apps/) 感觉更像是为特定设备专门构建。默认情况下，当用户从主屏幕启动您的 PWA 时，Android 会显示一个白屏，直到 PWA 准备就绪。用户可能会看着这个空白的白色屏幕长达 200 毫秒。通过设置自定义初始屏幕，您可以向用户显示自定义背景颜色和 PWA 图标，提供品牌化、吸引人的体验。
+自定义初始屏幕使您的[渐进式 Web 应用 (PWA)](https://web.dev/explore/progressive-web-apps) 感觉更像是为特定设备专门构建。默认情况下，当用户从主屏幕启动您的 PWA 时，Android 会显示一个白屏，直到 PWA 准备就绪。用户可能会看着这个空白的白色屏幕长达 200 毫秒。通过设置自定义初始屏幕，您可以向用户显示自定义背景颜色和 PWA 图标，提供品牌化、吸引人的体验。
 
 ## Lighthouse 初始屏幕审计如何失败
 
@@ -14,11 +14,11 @@ updated: 2019-09-19
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/CKrrTDSCZ0XLZ7ABKlZt.png", alt="Lighthouse 审计显示站点未配置自定义初始屏幕", width="800", height="98" %}</figure>
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 如何创建自定义初始屏幕
 
-只要您在 [Web 应用清单](https://web.dev/add-manifest/)中满足以下要求，Android 版 Chrome 就会自动显示您的自定义初始屏幕：
+只要您在 [Web 应用清单](https://web.dev/articles/add-manifest)中满足以下要求，Android 版 Chrome 就会自动显示您的自定义初始屏幕：
 
 - `name` 属性设置为您的 PWA 的名称。
 - `background_color` 属性设置为有效的 CSS 颜色值。

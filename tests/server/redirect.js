@@ -3,7 +3,9 @@
  */
 
 const test = require('ava');
-const {buildCheckHandlerInternal} = require('../../server/redirect');
+const {
+  buildCheckHandlerInternal,
+} = require('../../server/handlers/redirects/redirect');
 const YAML = require('js-yaml');
 
 const sharedYamlSource = `

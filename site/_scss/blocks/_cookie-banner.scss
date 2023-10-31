@@ -1,4 +1,4 @@
-[data-cookies-accepted] .cookie-banner {
+[data-cookies-answered] .cookie-banner {
   display: none;
 }
 
@@ -22,11 +22,12 @@
   margin-top: get-size(300);
 
   @include media-query('md') {
-    margin-left: get-size(400);
+    margin-left: get-size(300);
     margin-top: 0;
   }
 
-  > *:last-child {
-    margin-left: get-size(300);
+  > button {
+    margin: get-size(100) 1rem get-size(100) 0;
+    min-width: 8rem;
   }
 }

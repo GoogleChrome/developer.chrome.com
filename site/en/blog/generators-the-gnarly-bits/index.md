@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: Generators - the gnarly bits 
+title: Generators - the gnarly bits
 description: >
   An exploration of ES6 Generators.
 authors:
@@ -9,7 +9,7 @@ date: 2014-10-06
 updated: 2019-03-15
 ---
 
-The [ECMAScript 6 draft specification](https://github.com/jorendorff/es-spec-html/blob/master/es6-draft.html) has already yielded many sources of joy for the modern JavaScript developer. We covered some new collections classes and `for..of` iteration loops in a [previous post](https://developers.google.com/web/updates/2014/08/Collecting-and-Iterating-the-ES6-Way). In this post, we’re going to talk about something that goes hand-in-hand with `for..of` loops: generator functions.
+The [ECMAScript 6 draft specification](https://github.com/jorendorff/es-spec-html/blob/master/es6-draft.html) has already yielded many sources of joy for the modern JavaScript developer. We covered some new collections classes and `for..of` iteration loops in a [previous post](/blog/collecting-and-iterating-the-es6-way). In this post, we’re going to talk about something that goes hand-in-hand with `for..of` loops: generator functions.
 
 There’s a [host](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function*) of [great material](http://2ality.com/2013/06/iterators-generators.html) out there already that covers the why and how of using generators. In a nutshell, generators are special functions which create [iterators](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Iteration_protocols), and iterators are objects that have a `next()` method, which can be called to obtain a value. Within a generator function, the keyword `yield` provides the value for `next()`. Using `yield` _suspends_ execution of the generator function, preserving the state until `next()` is called again, at which point the code starts back up and continues, until it `yield`s another value (or until the generator function terminates). There are several canonical use cases for generator functions, like using them to iterate over the numbers in the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number).
 

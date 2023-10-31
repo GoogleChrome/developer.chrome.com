@@ -16,7 +16,7 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) sinaliza as 
 
 <figure> {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/l6IEjHdtgCa45QimENjb.png", alt="Auditoria do Lighthouse mostrando ausência do doctype", width="800", height="76" %}</figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Como adicionar uma declaração de doctype
 

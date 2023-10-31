@@ -123,7 +123,7 @@ npx workbox-cli copyLibraries third_party/workbox/
 
 The Workbox project contains a number of libraries that work together to
 power your web app's
-[service worker](https://developers.google.com/web/fundamentals/primers/service-workers/). In order to
+[service worker](/docs/workbox/service-worker-overview/). In order to
 use those libraries effectively, Workbox needs to be integrated into your
 web app's build process. This ensures that your service worker is able to
 efficiently precache all of your web app's critical content, and keep that

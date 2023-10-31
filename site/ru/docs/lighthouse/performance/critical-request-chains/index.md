@@ -12,7 +12,7 @@ updated: 2020-04-29
 
 <figure> {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/apWYFAWSuxf9tQHuogSN.png", alt="Скриншот проверки Minimize critical request depth («Минимизируйте глубину критических запросов») в Lighthouse", width="800", height="452" %}</figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как Lighthouse выявляет цепочки критических запросов
 
@@ -28,7 +28,7 @@ Lighthouse использует сетевой приоритет в качес�
 - Сократите объем критических ресурсов в байтах, чтобы уменьшить время их загрузки (количество циклов обмена).
 - Оптимизируйте порядок загрузки оставшихся критических ресурсов: загружайте все критические ресурсы как можно раньше, чтобы сократить длину критического пути.
 
-Читайте подробнее об оптимизации [изображений](https://web.dev/use-imagemin-to-compress-images/), [JavaScript](https://web.dev/apply-instant-loading-with-prpl/), [CSS](https://web.dev/defer-non-critical-css/) и [веб-шрифтов](https://web.dev/avoid-invisible-text/).
+Читайте подробнее об оптимизации [изображений](https://web.dev/articles/use-imagemin-to-compress-images), [JavaScript](https://web.dev/articles/apply-instant-loading-with-prpl), [CSS](https://web.dev/articles/defer-non-critical-css) и [веб-шрифтов](https://web.dev/articles/avoid-invisible-text).
 
 ## Рекомендации по стекам
 

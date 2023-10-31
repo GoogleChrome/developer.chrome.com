@@ -1,11 +1,12 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Edit and save files with Workspaces"
+title: "Edit and save files in a workspace"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2018-04-10
-#updated: YYYY-MM-DD
-description: "Learn how to save changes made within DevTools to disk."
+updated: 2023-09-20
+description: "Learn how to save changes made within DevTools to your source files."
 tags:
   - prototype-fixes
   - html
@@ -13,8 +14,10 @@ tags:
   - javascript
 ---
 
-**Goal**: This tutorial provides hands-on practice in setting up and using Workspaces so that you
-can use Workspaces in your own projects. Workspaces enable you to save changes that you make within
+{% YouTube id='Zu9CdbnS5ps' %}
+
+**Goal**: This tutorial provides hands-on practice in setting up a workspace so that you
+can use it in your own projects. Workspace lets you to save changes that you make within
 DevTools to source code that's stored on your computer.
 
 {% Aside "caution" %}
@@ -29,7 +32,7 @@ DevTools to source code that's stored on your computer.
 
 ## Overview {: #overview }
 
-Workspaces enable you to save a change that you make in Devtools to a local copy of the same file on
+Workspace lets you save a change that you make in DevTools to a local copy of the same file on
 your computer. For example, suppose:
 
 - You have the source code for your site on your desktop.
@@ -38,113 +41,94 @@ your computer. For example, suppose:
 - You've got `localhost:8080` open in Google Chrome, and you're using DevTools to change the site's
   CSS.
 
-With Workspaces enabled, the CSS changes that you make within DevTools are saved to the source code
+With workspace enabled, the CSS changes that you make within DevTools are saved to the source code
 on your desktop.
 
 ## Limitations {: #limitations }
 
 If you're using a modern framework, it probably transforms your source code from a format that's
-easy for you to maintain into a format that's optimized to run as quickly as possible. Workspaces is
+easy for you to maintain into a format that's optimized to run as quickly as possible. Workspace is
 usually able to map the optimized code back to your original source code with the help of [source
-maps][4]. But there's a lot of variation between frameworks over how they use source maps. Devtools
-simply can't support all the variations.
+maps][4].
 
-Workspaces is known to not work with these frameworks:
-
-- Create React App
-
-If you run into issues while using Workspaces with your framework of choice, or you get it working
-after some custom configuration, please [start a thread in the mailing list][5] or [ask a question
+The DevTools community works to support the capabilities provided by source maps across a [variety of frameworks and tools](/docs/devtools/javascript/source-maps/#use_a_supported_preprocessor).
+If you run into issues while using a workspace with your framework of choice, or you get it working
+after some custom configuration, [start a thread in the mailing list][5] or [ask a question
 on Stack Overflow][6] to share your knowledge with the rest of the DevTools community.
 
 ## Related feature: Local Overrides {: #overrides }
 
-[Local Overrides][7] is another DevTools feature that is similar to Workspaces. Use Local Overrides
+[Local overrides][7] is another DevTools feature that is similar to workspace.
+Use local overrides to mock web content or request headers without waiting for backend changes or
 when you want to experiment with changes to a page, and you need to see those changes across page
 loads, but you don't care about mapping your changes to the page's source code.
 
 ## Step 1: Setup {: #setup }
 
-Complete this tutorial to get hands-on experience with Workspaces.
+Complete this tutorial to get hands-on experience with a workspace.
 
 ### Set up the demo {: #demo }
 
-1.  [Open the demo][8]. In the bottom-left of the editor, click the button labelled **Tools**.
-3.  Under **Tools**, select **Import/Export** > **Download Project**.
-4.  Close the tab.
-5.  Unzip the source code and move the unzipped `app` directory to your desktop. For the rest of
-    this tutorial this directory will be referred to as `~/Desktop/app`.
-6.  Start a local web server in `~/Desktop/app`. Below is some sample code for starting up
+1.  Clone this [demo repository](https://github.com/sofiayem/devtools-workspace-demo) to some directory on your computer. For example, to `~/Desktop`.
+1.  Start a local web server in `~/Desktop/devtools-workspace-demo`. Below is some sample code for starting up
     `SimpleHTTPServer`, but you can use whatever server you prefer.
 
     ```bash
-    cd ~/Desktop/app
+    cd ~/Desktop/devtools-workspace-demo
     # If your Python version is 3.X
     # On Windows, try "python -m http.server" or "py -3 -m http.server"
     python3 -m http.server
     # If your Python version is 2.X
     python -m SimpleHTTPServer
     ```
+    For the rest of this tutorial this directory will be referred to as `/devtools-workspace-demo`.
+1.  Open a tab in Google Chrome and go to locally-hosted version of the site. You should be able to
+    access it via a URL like `localhost:8000`. The exact [port number][9] may be different.
 
-7.  Open a tab in Google Chrome and go to locally-hosted version of the site. You should be able to
-    access it via a URL like `localhost:8080`. The exact [port number][9] may be different.
-
-    {% Img src="image/admin/uXnoG3LgkfkOGbHPaQtP.png", alt="The demo.", width="800", height="633" %}
-
-    **Figure 1**. The demo
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/l9G12rEKEiiD9b50TOnu.png", alt="The locally-hosted demo page opened in Chrome.", width="800", height="491" %}
 
 ### Set up DevTools {: #devtools }
 
-1.  Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, ChromeOS) to open the
-    **Console** panel of DevTools.
+1.  [Open DevTools](/docs/devtools/open/) on the locally-hosted demo page.
 
-    {% Img src="image/admin/RjZAIMvHhWe2HnMp4XUU.png", alt="The Console panel.", width="800", height="524" %}
+1.  Navigate to **Sources** > **Workspace** and set up a workspace in the `devtools-workspace-demo` folder that you cloned. You can do that in several ways:
 
-    **Figure 2**. The **Console** panel
+    - Drag and drop the folder into the **Editor** in **Sources**.
+    - Click the **select folder** link and select the folder.
+    - Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YihNsXarRhDgEi9rOT4H.svg", alt="Add.", width="22", height="22" %} **Add folder** and select the folder.
 
-2.  Click the **Sources** tab.
-3.  Click the **Filesystem** tab.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/bfZVMkr26xHrXzwcBvav.png", alt="The Sources > Workspace tab.", width="800", height="492" %}
 
-    {% Img src="image/admin/eEo5tlYXGVAX6gc4ZY3t.png", alt="The Filesystem tab.", width="800", height="524" %}
+1.  In the prompt at the top, click **Allow** to give DevTools permission to read and write to the directory.
 
-    **Figure 3**. The **Filesystem** tab
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AUXgZ4Sqh9mBM41nVXkx.png", alt="The Allow button in the prompt.", width="800", height="492" %}
 
-4.  Click **Add Folder To Workspace**.
-5.  Select `~/Desktop/app`.
-6.  Click **Allow** to give DevTools permission to read and write to the directory. In the
-    **Filesystem** tab, there is now a green dot next to `index.html`, `script.js`, and
-    `styles.css`. These green dots mean that DevTools has established a mapping between the network
-    resources of the page, and the files in `~/Desktop/app`.
+In the **Workspace** tab, there is now a green dot next to `index.html`, `script.js`, and `styles.css`. These green dots mean that DevTools has established a mapping between the network resources of the page, and the files in `devtools-workspace-demo`.
 
-    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/uPHSpNhpCTrOdwtOyP9D.png", alt="The Filesystem tab now shows a mapping between the local files and the network ones.", width="800", height="524" %}
-
-    **Figure 4**. The **Filesystem** tab now shows a mapping between the local files and the network
-    ones
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Vrm9DJM8rBmKhp992Nlg.png", alt="The Workspace tab now shows a mapping between the local files and the network ones.", width="800", height="492" %}
 
 ## Step 2: Save a CSS change to disk {: #css }
 
-1.  Open `~/Desktop/app/styles.css` in a text editor. Notice how the `color` property of `h1`
+1.  Open `/devtools-workspace-demo/styles.css` in a text editor. Notice how the `color` property of `h1`
     elements is set to `fuchsia`.
 
     {% Img src="image/admin/aYtE6OhxyFc6D6Ur0eXY.png", alt="Viewing styles.css in a text editor.", width="800", height="551" %}
 
-    **Figure 5**. Viewing `styles.css` in a text editor
-
 2.  Close the text editor.
 3.  Back in DevTools, click the **Elements** tab.
-4.  Change the value of the `color` property of the `<h1>` element to your favorite color. Remember
-    that you need to click the `<h1>` element in the **DOM Tree** in order to see the CSS rules
-    applied to it in the **Styles** pane. The green dot next to `styles.css:1` means that any change
-    you make will get mapped to `~/Desktop/app/styles.css`.
+4.  Change the value of the `color` property of the `<h1>` element to your favorite color. To do so:
 
-    {% Img src="image/admin/izj9zoJvOeyE4zHJvCC0.png", alt="Setting the color property of the h1 element to green.", width="800", height="524" %}
+    1. Click the `<h1>` element in the **DOM Tree**.
+    1. In the **Styles** pane, find the `h1 { color: fuchsia }` CSS rule and change the color to your favorite. In this example, the color is set to green.
 
-    **Figure 6**. Setting the `color` property of the `h1` element to `green`
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hcX5yGjSy71cuYDdXdkl.png", alt="Setting the color property of the h1 element to green.", width="800", height="545" %}
 
-5.  Open `~/Desktop/app/styles.css` in a text editor again. The `color` property is now set to your
+    The green dot {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/juauf8mjfnBBWVxNsQnV.png", alt="The green dot.", width="22", height="28" %} next to `styles.css:1` in the **Styles** pane means that any change you make is mapped to `/devtools-workspace-demo/styles.css`.
+
+5.  Open `/devtools-workspace-demo/styles.css` in a text editor again. The `color` property is now set to your
     favorite color.
-6.  Reload the page. The color of the `<h1>` element is still set to your favorite color. This works
-    because when you made the change, DevTools saved the change to disk. And then, when you reloaded
+6.  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Reload.", width="22", height="22" %} Reload the page. The color of the `<h1>` element is still set to your favorite color. This works
+    because when you made the change and DevTools saved the change to disk. And then, when you reloaded
     the page, your local server served the modified copy of the file from disk.
 
 ## Step 3: Save an HTML change to disk {: #html }
@@ -158,16 +142,14 @@ don't waste time later trying to figure out why it's not working.
 
 {% endAside %}
 
-1.  Click the **Elements** tab.
+1.  Open the **Elements** tab.
 2.  Double click the text content of the `h1` element, which says `Workspaces Demo`, and replace it
     with `I ❤️ Cake`.
 
-    {% Img src="image/admin/aIjt9kcloYh3DT7XlIWV.png", alt="Attempting to change HTML from the DOM Tree of the Elements panel", width="800", height="524" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3bfthvibhivwCcXxpzWn.png", alt="Attempting to change HTML from the DOM Tree of the Elements panel.", width="800", height="545" %}
 
-    **Figure 7**. Attempting to change HTML from the **DOM Tree** of the **Elements** panel
-
-3.  Open `~/Desktop/app/index.html` in a text editor. The change that you just made isn't there.
-4.  Reload the page. The page reverts to its original title.
+3.  Open `/devtools-workspace-demo/index.html` in a text editor. The change that you just made isn't there.
+4.  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Reload.", width="22", height="22" %} Reload the page. The page reverts to its original title.
 
 #### Optional: Why it doesn't work {: #why }
 
@@ -195,18 +177,15 @@ In short, the **DOM Tree** `!==` HTML.
 
 If you want to save a change to the page's HTML, do it via the **Sources** panel.
 
-1.  Click the **Sources** tab.
-2.  Click the **Page** tab.
+1.  Navigate to **Sources** > **Page**.
 3.  Click **(index)**. The HTML for the page opens.
-4.  Replace `<h1>Workspaces Demo</h1>` with `<h1>I ❤️ Cake</h1>`. See **Figure 11**.
-5.  Press Command+S (Mac) or Control+S (Windows, Linux, ChromeOS) to save the change.
-6.  Reload the page. The `<h1>` element is still displaying the new text.
+4.  Replace `<h1>Workspaces Demo</h1>` with `<h1>I ❤️ Cake</h1>`.
+5.  Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or <kbd>Control</kbd>+<kbd>S</kbd> (Windows, Linux, ChromeOS) to save the change.
+6.  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Reload.", width="22", height="22" %} Reload the page. The `<h1>` element is still displaying the new text.
 
-    {% Img src="image/admin/AMhS744qZFBSt0UHqFjv.png", alt="Changing HTML from the Sources panel.", width="800", height="524" %}
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mT1pHymBAkdJDjK6pSBZ.png", alt="Changing HTML from the Sources panel.", width="800", height="416" %}
 
-    **Figure 8**. Line 12 has been set to `I ❤️ Cake`
-
-7.  Open `~/Desktop/app/index.html`. The `<h1>` element contains the new text.
+7.  Open `/devtools-workspace-demo/index.html`. The `<h1>` element contains the new text.
 
 ## Step 4: Save a JavaScript change to disk {: #js }
 
@@ -214,52 +193,53 @@ The **Sources** panel is also the place to make changes to JavaScript. But somet
 access other panels, such as the **Elements** panel or the **Console** panel, while making changes
 to your site. There's a way to have the **Sources** panel open alongside other panels.
 
-1.  Click the **Elements** tab.
-2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, ChromeOS). The **Command Menu**
+1.  Open the **Elements** tab.
+2.  Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS). The **Command Menu**
     opens.
 3.  Type `QS`, then select **Show Quick Source**. At the bottom of your DevTools window there is now
-    a **Quick Source** tab. The tab is displaying the contents of `index.html`, which is the last
+    a **Quick Source** tab.
+
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QrRbZtkRkyiMSAdj73Bd.png", alt="Opening the Quick Source tab via Command Menu.", width="800", height="481" %}
+
+    The tab is displaying the contents of `index.html`, which is the last
     file you edited in the **Sources** panel. The **Quick Source** tab gives you the editor from the
     **Sources** panel, so that you can edit files while having other panels open.
 
-    {% Img src="image/admin/dp21fCa89ezyttjmgzVT.png", alt="Opening the Quick Source tab via Command Menu.", width="800", height="524" %}
+4.  Press <kbd>Command</kbd>+<kbd>P</kbd> (Mac) or <kbd>Control</kbd>+<kbd>P</kbd> (Windows, Linux, ChromeOS) to open the **Open File** dialog.
 
-    **Figure 9**. Opening the **Quick Source** tab via the **Command Menu**
+5.  Type `script`, then select **devtools-workspace-demo/script.js**.
 
-4.  Press Command+P (Mac) or Control+P (Windows, Linux, ChromeOS) to open the **Open File** dialog.
-    See **Figure 10**.
-5.  Type `script`, then select **app/script.js**.
+    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wpiLwWgnLo3uUFlHnZqg.png", alt="Opening script.js via the Open File dialog.", width="800", height="508" %}
 
-    {% Img src="image/admin/eoOAA9Pt6Qz3Xfy2PpbZ.png", alt="Opening script.js via the Open File dialog.", width="800", height="524" %}
-
-    **Figure 10**. Opening `script.js` via the **Open File** dialog
-
-6.  Notice the `Save Changes To Disk With Workspaces` link in the demo. It's styled regularly.
+6.  Notice the `Edit and save files in a workspace` link in the demo. It's styled regularly.
 7.  Add the following code to the bottom of **script.js** via the **Quick Source** tab.
 
     ```js
-    console.log('greetings from script.js'); document.querySelector('a').style = 'font-style:italic';
+    document.querySelector('a').style = 'font-style:italic';
     ```
 
-8.  Press Command+S (Mac) or Control+S (Windows, Linux, ChromeOS) to save the change.
-9.  Reload the page. The link on the page is now italic.
+8.  Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or <kbd>Control</kbd>+<kbd>S</kbd> (Windows, Linux, ChromeOS) to save the change.
+9.  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Reload.", width="22", height="22" %} Reload the page. The link on the page is now italic.
 
-    {% Img src="image/admin/9USr1MmQSdD8wGABrVtI.png", alt="The link on the page is now italic.", width="800", height="524" %}
-
-    **Figure 11**. The link on the page is now italic
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oc74syCBiABs0I2KFY6v.png", alt="The link on the page is now italic.", width="800", height="457" %}
 
 ## Next steps {: #next-steps }
 
-Congratulations, you have completed the tutorial.
+{% Aside "success" %}
+Congratulations! You now know how to save to sources the changes you make in DevTools to your locally hosted website.
+{% endAside %}
+
+You can set up multiple folders in a workspace. All such folders are listed in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Workspace**](/docs/devtools/settings/#workspace).
+
+Next, learn how to use DevTools to [change CSS](/docs/devtools/css/) and [debug JavaScript](/docs/devtools/javascript/).
 
 [1]: https://developer.mozilla.org/docs/Learn/Getting_started_with_the_web
 [2]: /docs/devtools/css
-[3]:
-  https://developer.mozilla.org/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server
-[4]: http://blog.teamtreehouse.com/introduction-source-maps
+[3]: https://developer.mozilla.org/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server
+[4]: https://web.dev/source-maps/
 [5]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 [6]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools
-[7]: /blog/new-in-devtools-65/#overrides
+[7]: /docs/devtools/overrides/
 [8]: https://glitch.com/edit/#!/remix/workspaces
 [9]: https://en.wikipedia.org/wiki/Port_(computer_networking)#Use_in_URLs
 [10]: #elements

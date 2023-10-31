@@ -1,10 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Incognito"
+seoTitle: "Manifest V2 - Incognito [Deprecated]"
 date: 2013-05-12
 updated: 2015-09-25
 description: Reference documentation for the incognito property of manifest.json.
 ---
+
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest incognito](/docs/extensions/mv3/manifest/incognito) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Use the `"incognito"` manifest key with either `"spanning"` or `"split"` to specify how this
 extension will behave if allowed to run in incognito mode. Using `"not_allowed"` to prevent this

@@ -14,6 +14,8 @@ have been defined in the _data/docs/*.yml file for this project.
   {% set type = 'column' %}
 {% elif previousType === 'column' %}
   {% set type = 'nested-column' %}
+{% elif previousType === 'nested-column' %}
+  {% set type = 'nested-column' %}
 {% endif %}
 
 <ul class="project-sections__{{type}} stack flow-space-300 pad-left-0 gap-top-0" role="list">
@@ -22,7 +24,11 @@ have been defined in the _data/docs/*.yml file for this project.
       <li>
         {% set translatedTitle = item.title | i18n(locale) %}
         {% set translatedSlug = translatedTitle | slugify %}
-        <div id="{{ translatedSlug }}">
+        <div id="{{ translatedSlug }}"
+          {% if type === 'column' %}
+            class="project-sections__nested-title"
+          {% endif %}
+           >
           {{ translatedTitle }}
           <a class="heading-link" href="#{{ translatedSlug }}">#</a>
         </div>
@@ -71,13 +77,14 @@ have been defined in the _data/docs/*.yml file for this project.
         {% set inner %}
           {% if type === 'column' %}
             <span class="project-sections__icon"></span>
+            {% else %}
+            <span class="project-sections__icon-optional"></span>
           {% endif %}
           <a
             class="display-inline-flex align-center color-primary-shade decoration-none surface lg:gap-right-600"
             href="{{ postUrl }}"
             {%- if isExternal -%}
-            target="_blank"
-            rel="noopener"
+            target="_blank" rel="noopener"
             {%- endif -%}
             >
               {{ postTitle }}

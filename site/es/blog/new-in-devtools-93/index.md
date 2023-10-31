@@ -17,13 +17,13 @@ tags:
 
 *Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión.*
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Consultas de contenedores CSS editables en el panel de Estilos {: #container-queries }
 
-Ahora puedes ver y editar las [consultas de contenedores CSS](https://web.dev/new-responsive/#responsive-to-the-container) en el panel de **Estilos**.
+Ahora puedes ver y editar las [consultas de contenedores CSS](https://web.dev/articles/new-responsive#responsive_to_the_container) en el panel de **Estilos**.
 
 
 Las consultas de contenedor (*container queries*) ofrecen una manera mucho más dinámica de realizar diseños adaptables. La regla `@container` funciona de una forma similar a las consultas de medios (*media queries*). Sin embargo, en lugar de consultar el tamaño de la ventana y la información del agente del usuario, `@container` consulta el contenedor ascendiente que cumple cierto criterio.
@@ -43,7 +43,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 ## Previsualización de paquetes Web en el panel de Red {: #web-bundle }
 
-[Un paquete Web](https://web.dev/web-bundles/) es un formato de encapsulación de uno o más recursos HTTP en un sólo fichero. Ahora puedes previsualizar el contenido de tu paquete web en el panel de **Red**.
+[Un paquete Web](https://web.dev/articles/web-bundles) es un formato de encapsulación de uno o más recursos HTTP en un sólo fichero. Ahora puedes previsualizar el contenido de tu paquete web en el panel de **Red**.
 
 Actualmente la característica de paquete web es experimental. Por favor, activa la opción `#enable-experimental-web-platform-features` en `chrome://flags` para probarlo.
 
@@ -154,5 +154,5 @@ Abre la respuesta JSON en el panel de **Red**, haz clic en el botón `{}` para f
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

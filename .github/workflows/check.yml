@@ -1,82 +1,227 @@
-name: Lint, test and build
+---
+name: 'Check'
 
-# By default, runs when a pull request is opened, synchronized, or reopened.
 on: pull_request
 
 jobs:
-  lint_and_test:
-    name: Lint, test and build
+  queue:
     runs-on: ubuntu-latest
-    env:
-      # Increase RAM limit, and make uncaught exceptions crash (default in 16+).
-      NODE_OPTIONS: --max_old_space_size=4096 --unhandled-rejections=strict
-      # Make sure we check all translations in our GH Action presubmit.
-      # See https://github.com/GoogleChrome/developer.chrome.com/issues/3029
-      ELEVENTY_INCLUDE_TRANSLATED: true
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - id: skip
+        uses: fkirc/skip-duplicate-actions@master
         with:
-          node-version: 'v16.14.2'
-          cache: 'npm'
-      - name: Install
-        run: npm ci
-
-      # Checks to see if any files in the PR match one of the listed file types.
-      # We can use this filter to decide whether or not to run linters or tests.
-      # You can check if a file with a listed file type is in the PR by doing:
-      # if: ${{ steps.filter.outputs.md == 'true' }}
-      # This will return true if there's a markdown file that was changed
-      # in the PR.
-      - uses: dorny/paths-filter@v2.2.1
-        id: filter
+          concurrent_skipping: 'outdated_runs'
+          cancel_others: true
+          skip_after_successful_duplicate: true
+          do_not_skip: '["workflow_dispatch", "schedule"]'
+  lint:
+    needs: queue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting changes
+        id: changes
+        uses: dorny/paths-filter@v2
         with:
           filters: |
-            md:
-              - '**/*.md'
             js:
               - '**/*.js'
-            json:
+              - '**/*.ts'
+              - '**/*.d.ts'
               - '**/*.json'
-            yml:
-              - '**/*.yml'
+            md:
+              - '**/*.md'
             scss:
               - '**/*.scss'
-            njk:
-              - '**/*.njk'
-            _external:
-              - 'external/**/*'
 
-      # Use the filter to check if files with a specific file type were changed
-      # in the PR. If they were, run the relevant linters. Otherwise, skip.
+      - name: Cloning repository
+        uses: actions/checkout@v3
 
-      - name: Lint Markdown
-        if: ${{ steps.filter.outputs.md == 'true' }}
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        run: npm ci
+
+      - name: Linting JavaScript
+        if: ${{ steps.changes.outputs.js == 'true' }}
+        run: |
+          npm run lint:js
+          npm run lint:types
+
+      - name: Linting Markdown
+        if: ${{ steps.changes.outputs.md == 'true' }}
         run: npm run lint:md
 
-      - name: Lint JavaScript
-        if: ${{ steps.filter.outputs.js == 'true' || steps.filter.outputs.json == 'true' }}
-        run: npm run lint:js && npm run lint:types
-
-      - name: Build JavaScript
-        if: ${{ steps.filter.outputs.js == 'true' || steps.filter.outputs.json == 'true' }}
-        run: npm run rollup
-
-      - name: Lint SCSS
-        if: ${{ steps.filter.outputs.scss == 'true' }}
+      - name: Linting SCSS
+        if: ${{ steps.changes.outputs.scss == 'true' }}
         run: npm run lint:scss
 
-      - name: Build External
-        if: ${{ steps.filter.outputs._external == 'true' }}
-        run: npm run build-external
+  test:
+    needs: queue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting changes
+        id: changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            js:
+              - 'package.json'
+              - 'site/**/*.js'
+              - 'server/**.js'
+              - 'tests/**.js'
 
-      - name: Build Eleventy
-        if: ${{ steps.filter.outputs.md == 'true' || steps.filter.outputs.js == 'true' || steps.filter.outputs.yml == 'true' || steps.filter.outputs.njk == 'true' }}
-        run: npm run ignore && npm run maybe-sync-external && npm run eleventy
+      - name: Cloning repository
+        uses: actions/checkout@v3
 
-      # Only run tests if the PR touches behavior related files.
-      - name: Test
-        if: ${{ steps.filter.outputs.js == 'true' || steps.filter.outputs.json == 'true' || steps.filter.outputs.yml == 'true' || steps.filter.outputs.njk == 'true'}}
-        run: npm run test
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        run: npm ci
+
+      - name: Running tests
+        if: ${{ steps.changes.outputs.js == 'true' }}
+        run: |
+          npm run test
+
+  build:
+    needs: queue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repository
+        uses: actions/checkout@v3
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        run: npm ci
+
+      - name: Building site
+        env:
+          # Increase memory limit as a full build requires around 8GB
+          NODE_OPTIONS: --max_old_space_size=8192
+          ELEVENTY_INCLUDE_TRANSLATED: true
+        run: |
+          npm run production
+
+      - name: Packing up built files
+        run: |
+          tar cfj dist.tar.gz ./dist
+
+      - name: Storing build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-${{ github.run_id }}
+          path: dist.tar.gz
+          if-no-files-found: error
+
+  lighthouse:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting changes
+        id: changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            frontend:
+              - 'package.json'
+              - 'site/_js/**/*.js'
+              - 'site/_includes/**/*.njk'
+              - 'site/_scss/**/*.scss'
+
+      - name: Cloning repository
+        uses: actions/checkout@v3
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        run: npm ci
+
+      - name: Downloading build artifacts
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-${{ github.run_id }}
+
+      - name: Unpacking built files
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        run: |
+          tar xf dist.tar.gz
+
+      - name: Lighthouse
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        run: |
+          npx lhci autorun \
+          --config=./lighthouserc.js
+
+  percy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting changes
+        id: changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            frontend:
+              - 'package.json'
+              - 'site/_filters/**.js'
+              - 'site/_includes/**'
+              - 'site/_js/**.js'
+              - 'site/_plugins/**.js'
+              - 'site/_scss/**.scss'
+              - 'site/_shortcodes/**.js'
+              - 'site/_transforms/**.js'
+              - 'site/_utils/**.js'
+              - 'site/en/content-types/**'
+
+      - name: Cloning repository
+        uses: actions/checkout@v3
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v3
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        with:
+          cache: npm
+          node-version: 16
+
+      - name: Installing Node.js packages
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        run: npm ci
+
+      - name: Downloading build artifacts
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-${{ github.run_id }}
+
+      - name: Unpacking built files
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        run: |
+          tar xf dist.tar.gz
+
+      - name: Percy
+        if: ${{ steps.changes.outputs.frontend == 'true' }}
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: npm run snapshots

@@ -4,6 +4,11 @@
 
 {% extends "layouts/base.njk" %}
 
+
+{% block css %}
+{% InlineCss '/css/main.css' %}
+{% endblock %}
+
 {% block title_bar %}
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
@@ -46,7 +51,8 @@
 
         {% if f.platformAppsOnly %}
           <div class="aside aside--warning">
-            This API is part of the deprecated Chrome Apps platform.
+            This API is part of the Chrome Apps platform, which was deprecated in 2020.
+            It remains supported for Enterprise and Education customers on ChromeOS until at least Jan 2025.
             Learn more about <a href="/docs/apps/migration">migrating your app</a>.
           </div>
         {% endif %}

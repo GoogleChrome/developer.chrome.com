@@ -4,14 +4,21 @@ title: 'Chacmool: Augmented reality in Chrome Canary'
 authors:
   - ericbidelman
 date: 2018-06-26
-updated: 2020-01-27
+updated: 2023-02-25
 hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/iT1xyQsCEKZh1VAxOM6l.png'
 alt: Checklist
 description: >
   Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 ---
 
-## TL;DR {: #tldr .hide-from-toc}
+{% Aside %}
+The Feature Policy was renamed to the [Permissions Policy](https://github.com/w3c/webappsec-permissions-policy/issues/359)
+on [May 26, 2020](https://github.com/w3c/webappsec-permissions-policy/pull/379). You should ensure you have
+migrated [your `Feature-Policy` headers](/docs/privacy-sandbox/permissions-policy/#migration-from-feature-policy)
+to align with this change.
+{% endAside %}
+
+## Summary {: #tldr .hide-from-toc}
 
 [Feature Policy][spec] allows web developers to selectively enable, disable, and
 modify the behavior of certain APIs and web features in the browser. **It's like

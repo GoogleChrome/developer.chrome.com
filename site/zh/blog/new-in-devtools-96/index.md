@@ -24,7 +24,7 @@ tags:
 
 *感谢[流浪大法师](https://webfrontend.dev/)提供的翻译。*
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -224,8 +224,8 @@ Chromium 议题: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 <!-- ## Deprecated Application cache pane in the Application panel {: #app-cache } -->
 ## 弃用应用程序面板里面的应用程序缓存边栏 {: #app-cache }
 
-<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
-由于 Chrome 以及基于 Chromium 的浏览器都已移除对 [AppCache](https://web.dev/appcache-removal/) 的支持，因此**应用**面板里面的[应用缓存](/docs/devtools/storage/applicationcache/)边栏现已被移除。
+<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/articles/appcache-removal) is removed from Chrome and other Chromium-based browsers. -->
+由于 Chrome 以及基于 Chromium 的浏览器都已移除对 [AppCache](https://web.dev/articles/appcache-removal) 的支持，因此**应用**面板里面的[应用缓存](/docs/devtools/storage/applicationcache/)边栏现已被移除。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
@@ -240,8 +240,8 @@ Chromium 议题：[1084190](https://crbug.com/1084190)
 要启用实验，请在**设置** > **实验**下勾选带有**在应用面板里面启用 Reporting API 边栏**字样的复选框选项。
 {% endAside %}
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-[Reporting API](https://web.dev/reporting-api/) 旨在帮助您监控违规网页，过时的API调用以及更多。
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+[Reporting API](https://web.dev/articles/reporting-api) 旨在帮助您监控违规网页，过时的API调用以及更多。
 
 <!-- With this experiment enabled, you can now view the reports status in the new **Reporting API** pane in the **Application** panel.  -->
 启用此实验后，您现在可以在**应用程序**面板的新 **Reporting API** 边栏里面查看报告状态。
@@ -249,8 +249,8 @@ Chromium 议题：[1084190](https://crbug.com/1084190)
 <!-- Please note that the **Endpoints** section is currently still under active development (showing no reporting endpoints for now).  -->
 请注意，**Endpoints** 部分目前仍在积极开发中（目前没有 reporting endpoints）。
 
-<!-- Learn more about the **Reporting API** with [this article](https://web.dev/reporting-api/). -->
-欲了解更多有关于 **Reporting API** 的信息，请阅读[这篇文章](https://web.dev/reporting-api/)。
+<!-- Learn more about the **Reporting API** with [this article](https://web.dev/articles/reporting-api). -->
+欲了解更多有关于 **Reporting API** 的信息，请阅读[这篇文章](https://web.dev/articles/reporting-api)。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="应用程序面板里面新增 Reporting API 窗格", width="800", height="476" %}
 
@@ -258,5 +258,5 @@ Chromium 议题：[1084190](https://crbug.com/1084190)
 
 Chromium 议题：[1205856](https://crbug.com/1205856)
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

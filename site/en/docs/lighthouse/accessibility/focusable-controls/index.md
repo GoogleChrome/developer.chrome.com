@@ -14,7 +14,7 @@ Manually check that all custom controls are keyboard focusable
 and display a focus indicator.
 The order in which elements are focused should aim to follow the DOM order.
 If you're unsure which elements should receive focus,
-see [Introduction to Focus](https://web.dev/focus/).
+see [Introduction to Focus](https://web.dev/articles/focus).
 
 ## How to manually test
 
@@ -24,7 +24,7 @@ start by tabbing through your site.
 Use `TAB` (or `SHIFT +
 TAB`) to move between controls, and use the arrow keys and
 `ENTER` and `SPACE` to manipulate their values
-(see also [Keyboard access fundamentals](https://web.dev/keyboard-access/)):
+(see also [Keyboard access fundamentals](https://web.dev/articles/keyboard-access)):
 
 {% Glitch {
   id: 'interactive-elements',
@@ -42,7 +42,7 @@ you may need to use `tabindex` to improve the focusability of those controls.
 
 To make a custom control focusable,
 insert the custom control element into the natural tab order using `tabindex="0"`
-(see also [Control focus with tabindex](https://web.dev/control-focus-with-tabindex/)).
+(see also [Control focus with tabindex](https://web.dev/articles/control-focus-with-tabindex)).
 For example:
 
 ```html
@@ -56,7 +56,7 @@ If you're not seeing a focus indicator,
 consider using `:focus` to always show a focus indicator.
 Regardless of whether you use a mouse or a keyboard to tab to it,
 the button's focus indicator always looks the same
-(see also [Style focus](https://web.dev/style-focus/)).
+(see also [Style focus](https://web.dev/articles/style-focus)).
 
 {% Glitch {
   id: 'focus-style',
@@ -68,13 +68,13 @@ the button's focus indicator always looks the same
 
 For users who either cannot or choose not to use a mouse,
 keyboard navigation is the primary means of reaching everything on a screen.
-Good keyboarding experiences depend on a logical tab order and easily discernable focus styles.
+Good keyboarding experiences depend on a logical tab order and easily discernible focus styles.
 If a keyboard user can't see what's focused, they have no way of interacting with the page.
 
-Learn more in [How to do an Accessibility Review](https://web.dev/how-to-review/#try-it-with-a-screen-reader).
+Learn more in [How to do an Accessibility Review](https://web.dev/articles/how-to-review#try_it_with_a_screen_reader).
 
 ## Resources
 
 - [Source code for **Interactive controls are keyboard focusable** audit](https://github.com/GoogleChrome/lighthouse/blob/master/core/audits/accessibility/manual/focusable-controls.js)
 - [Some elements have a `[tabindex]` value greater than `0`](https://dequeuniversity.com/rules/axe/4.4/tabindex)
-- [Use semantic HTML for easy keyboard wins](https://web.dev/use-semantic-html/)
+- [Use semantic HTML for easy keyboard wins](https://web.dev/articles/use-semantic-html)

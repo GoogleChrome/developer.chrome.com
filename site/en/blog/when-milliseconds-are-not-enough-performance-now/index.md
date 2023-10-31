@@ -41,7 +41,7 @@ There are a few situations where you'd use this high resolution timer instead of
 
 ## Availability
 
-The high resolution timer is currently available in Chrome (Stable) as `window.performance.webkitNow()`, and this value is generally equal to the [new argument value passed into the requestAnimationFrame callback](https://developers.google.com/web/updates/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision). Pretty soon, [WebKit will drop its prefix](https://bugs.webkit.org/show_bug.cgi?id=88278) and this will be available through `performance.now()`. The WebPerfWG in particular, led by Jatinder Mann of Microsoft, has been very [successful in unprefixing](https://jatindersmann.com/2012/08/07/ieblog-web-performance-apis-rapidly-become-w3c-candidate-recommendations/) their features quite quickly[.](https://a.disquscdn.com/uploads/mediaembed/images/272/1565/original.jpg)
+The high resolution timer is currently available in Chrome (Stable) as `window.performance.webkitNow()`, and this value is generally equal to the [new argument value passed into the requestAnimationFrame callback](/blog/requestanimationframe-api-now-with-sub-millisecond-precision/). Pretty soon, [WebKit will drop its prefix](https://bugs.webkit.org/show_bug.cgi?id=88278) and this will be available through `performance.now()`. The WebPerfWG in particular, led by Jatinder Mann of Microsoft, has been very [successful in unprefixing](https://jatindersmann.com/2012/08/07/ieblog-web-performance-apis-rapidly-become-w3c-candidate-recommendations/) their features quite quickly[.](https://a.disquscdn.com/uploads/mediaembed/images/272/1565/original.jpg)
 
 In summary, `performance.now()` is...
 

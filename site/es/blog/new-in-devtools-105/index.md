@@ -16,7 +16,7 @@ tags:
 
 _Gracias  por la traducción [Miguel Ángel](https://midu.dev) y por la revisión [Carlos Caballero](https://carloscaballero.io)._
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 {% YouTube id='bHw_56RiVsg' %}
 
 <!-- start: translation instructions -->
@@ -52,8 +52,8 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
 **Recorder** ahora soporta añadir un paso de pasar el ratón por encima (hover) manualmente en una grabación.
 
-<!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
-[Esta demo](https://jec.fyi/demo/menu-hover) muestra un menu flotante al pasar el ratón por encima. Intente grabar un flujo de usuario y haga clic en un elemento del menú.
+<!-- [This demo](https://jec.fish/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
+[Esta demo](https://jec.fish/demo/menu-hover) muestra un menu flotante al pasar el ratón por encima. Intente grabar un flujo de usuario y haga clic en un elemento del menú.
 
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
 Si reproduce el flujo de usuario ahora, fallará porque **Recorder** no captura automáticamente los eventos de ratón al grabar. Para resolver esto, [añada un paso manualmente](/docs/devtools/recorder/reference/#add-and-remove-steps) para pasar el ratón por encima del selector antes de hacer clic en el elemento del menú.
@@ -65,8 +65,8 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- ## Largest Contentful Paint (LCP) in the Performance insights panel {: #lcp } -->
 ## Largest Contentful Paint (LCP) en el panel Performance Insights {: #lcp }
 
-<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/user-centric-performance-metrics/#types-of-metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/lcp/). -->
-LCP es una métrica importante, centrada en el usuario, para medir [velocidad de carga percibida](https://web.dev/user-centric-performance-metrics/#types-of-metrics). Ahora puede conocer los caminos críticos y las causas raíz de un [Largest Contentful Paint (LCP)](https://web.dev/lcp/).
+<!-- LCP is an important, user-centric metric for measuring [perceived load speed](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics). You can now find out the critical paths and root causes of a [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp). -->
+LCP es una métrica importante, centrada en el usuario, para medir [velocidad de carga percibida](https://web.dev/articles/user-centric-performance-metrics#types_of_metrics). Ahora puede conocer los caminos críticos y las causas raíz de un [Largest Contentful Paint (LCP)](https://web.dev/articles/lcp).
 
 <!-- In a [performance recording](/docs/devtools/performance-insights/#record), click on the LCP badge in the **Timeline**. In the **Details** pane, you can view the LCP score, learn how to fix resources that slow down the LCP and see the critical path for the LCP resource. -->
 En una grabación de rendimiento, haga clic en el sello LCP en la **Línea de tiempo**. En el panel de detalles, puede ver la puntuación del LCP, aprender cómo arreglar recursos que ralentizan el LCP y ver el camino crítico para el recurso LCP.
@@ -82,14 +82,14 @@ Chromium issue: [1326481](https://crbug.com/1326481)
 <!-- ## Identify flashes of text (FOIT, FOUT) as potential root causes for layout shifts {: #foit-fout } -->
 ## Identificar parpadeos de texto (FOIT, FOUT) como causas potenciales de desplazamientos de diseño {: #foit-fout }
 
-<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) as potential root causes for layout shifts. -->
-El [panel Performance Insights](/docs/devtools/performance-insights/) ahora detecta [parpadeos de texto invisible (FOIT) y parpadeos de texto sin estilos (FOUT)](https://web.dev/preload-optional-fonts/#font-rendering) como causas potenciales de desplazamientos de diseño.
+<!-- The **Performance insights** panel now detects [flash of invisible text (FOIT) and flash of unstyled text (FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering) as potential root causes for layout shifts. -->
+El [panel Performance Insights](/docs/devtools/performance-insights/) ahora detecta [parpadeos de texto invisible (FOIT) y parpadeos de texto sin estilos (FOUT)](https://web.dev/articles/preload-optional-fonts#font_rendering) como causas potenciales de desplazamientos de diseño.
 
 <!-- To view the potential root causes of a layout shift, click on a screenshot in the **Layout shifts** track. -->
 Para ver las causas principales de un desplazamiento de diseño, haga clic en una captura de pantalla en la pista de **Desplazamientos de diseño**.
 
-<!-- See [Optimize WebFont loading and rendering](https://web.dev/optimize-webfont-loading/) to learn the technique to prevent layout shifts.  -->
-Vea [Optimizar carga de fuentes web y pintado](https://web.dev/optimize-webfont-loading/) para aprender la técnica para evitar desplazamientos de diseño.
+<!-- See [Optimize WebFont loading and rendering](https://web.dev/articles/optimize-webfont-loading) to learn the technique to prevent layout shifts.  -->
+Vea [Optimizar carga de fuentes web y pintado](https://web.dev/articles/optimize-webfont-loading) para aprender la técnica para evitar desplazamientos de diseño.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AMN5oD5hlKhPhnq98sIB.png", alt="FOUT en el panel Performance Insights", width="800", height="497" %}
 
@@ -98,8 +98,8 @@ Chromium issues: [1334628](https://crbug.com/1334628), [1328873](https://crbug.c
 <!-- ## Protocol handlers in the Manifest pane {: #manifest } -->
 ## Controladores de protocolo en el panel de Manifiesto {: #manifest }
 
-<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/url-protocol-handler/) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa/). -->
-Ahora puede usar DevTools para probar el [registro de controlador de protocolo de URL](https://web.dev/url-protocol-handler/) para [Aplicaciones Web Progresivas (PWA)](https://web.dev/learn/pwa/).
+<!-- You can now use DevTools to test the [URL protocol handler registration](https://web.dev/articles/url-protocol-handler) for [Progressive Web Apps (PWA)](https://web.dev/learn/pwa). -->
+Ahora puede usar DevTools para probar el [registro de controlador de protocolo de URL](https://web.dev/articles/url-protocol-handler) para [Aplicaciones Web Progresivas (PWA)](https://web.dev/learn/pwa).
 
 <!-- The URL protocol handler registration lets installed PWAs handle links that use a specific protocol (e.g. [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) for a more integrated experience. -->
 El registro de controladores para el protocolo URL permite a las PWAs instaladas manejar enlaces que usen un protocolo específico (por ejemplo, [`magnet`](https://wikipedia.org/wiki/Magnet_URI_scheme), `web+example`) para una experiencia más integrada.
@@ -124,11 +124,11 @@ Chromium issues: [1300613](https://crbug.com/1300613)
 <!-- Use the [top layer badge](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) to understand the concept of the top layer and visualize how the top layer content changes.  -->
 Use la [insignia de capa superior](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) para entender el concepto de la capa superior y visualizar cómo cambia el contenido de la capa superior.
 
-<!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
-El [elemento `<dialog>`](https://web.dev/building-a-dialog-component/) se volvió estable recientemente en todos los navegadores. Cuando abre un diálogo, se pone en una [capa superior](/blog/top-layer-devtools/). El contenido de nivel superior es pintado encima de todo el contenido.
+<!-- The [`<dialog>` element](https://web.dev/articles/building-a-dialog-component) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
+El [elemento `<dialog>`](https://web.dev/articles/building-a-dialog-component) se volvió estable recientemente en todos los navegadores. Cuando abre un diálogo, se pone en una [capa superior](/blog/top-layer-devtools/). El contenido de nivel superior es pintado encima de todo el contenido.
 
-<!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
-En esta [demo](https://jec.fyi/demo/dialog), haga clic en **Open dialog**.
+<!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
+En esta [demo](https://jec.fish/demo/dialog), haga clic en **Open dialog**.
 
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
 Para ayudar a visualizar los elementos de la capa superior, DevTools agrega un contenedor de capa superior (`#top-layer`) al árbol del DOM. Reside después de la etiqueta de cierre `</html>`.
@@ -149,7 +149,7 @@ Chromium issue: [1313690](https://crbug.com/1313690)
 <!-- ## Attach Wasm debugging information at runtime {: #wasm } -->
 ## Enlazar información de depuración de WASM al momento de ejecutar {: #wasm }
 
-<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching sourcemaps to JavaScript and Wasm files. -->
+<!-- You can now attach DWARF debugging information for wasm during runtime. Previously, the **Sources** panel only supported attaching source maps to JavaScript and Wasm files. -->
 Ahora puede enlazar la información de depuración DWARF para WASM durante el tiempo de ejecución. Antes, el panel **Fuentes** solo admitía enlazar mapas de origen a archivos JavaScript y WASM.
 
 <!-- Open a Wasm file in the **Sources** panel. Right-click in the editor and select **Add DWARF debugging info…**  to attach debugging information on demand.  -->
@@ -210,15 +210,15 @@ La regla de CSS `@scope` está actualmente en desarrollo. Para probar esta carac
 Chromium issue: [1337777](https://crbug.com/1337777)
 
 
-<!-- ## Sourcemap improvements {: #sourcemaps } -->
+<!-- ## Source map improvements {: #sourcemaps } -->
 ## Mejoras en los mapas de código fuente {: #sourcemaps }
 
-<!-- Here are a few fixes on sourcemaps to improve the overall debugging experience: -->
+<!-- Here are a few fixes on source maps to improve the overall debugging experience: -->
 Aquí hay algunos arreglos en los mapas de código fuente que mejoran la experiencia de depuración general:
 
-<!-- - DevTools now properly resolves sourcemap identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
+<!-- - DevTools now properly resolves source map identifiers with punctuation. Some modern minifiers (for example, [esbuild](https://esbuild.github.io/)) produce sourcemaps that merge identifiers with subsequent punctuation (comma, parentheses, semicolon).  -->
 - DevTools ahora resuelve correctamente los identificadores de mapas de código fuente con signos de puntuación. Algunos *minificadores* modernos (por ejemplo, [esbuild](https://esbuild.github.io/)) producen mapas de código fuente que fusionan identificadores con signos de puntuación (coma, paréntesis, punto y coma).
-<!-- - DevTools now resolves sourcemap names for constructors with a `super` call. -->
+<!-- - DevTools now resolves source map names for constructors with a `super` call. -->
 - DevTools ahora resuelve correctamente los nombres de mapas de código fuente para los constructores con una llamada a `super`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/6djFfkrtPzXuNYq5m8Vk.png", alt="Devtools resuelve correctamente los nombres de mapas de código fuente", width="800", height="441" %}
@@ -241,5 +241,5 @@ Estos son algunos arreglos destacados en esta versión:
 <!-- - A new **Creator Ad Script** link is available for [ad frames](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) if DevTools found the script that caused the frame to be labeled as an ad. You can open a frame via **Application** > **Frames**. ([1217041](https://crbug.com/1217041)) -->
 - Un nuevo enlace de **Script de anunciante** está disponible para los ([marcos de anuncios](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md#adtracker) si DevTools encontró el script que causó que el marco fuera etiquetado como un anuncio). Puede abrir un marco mediante **Aplicación** > **Marcos**. ([1217041](https://crbug.com/1217041))
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

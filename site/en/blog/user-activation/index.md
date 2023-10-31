@@ -9,7 +9,8 @@ hero: 'image/C47gYyWYVMMhDmtYSLOWazuyePF2/DCC9GuTXo9NPmluPCqG1.png'
 alt: >
   Mobile phone
 authors:
-  - addyosmani
+  - mustaqahmed
+  - joemedley
 ---
 
 To prevent malicious scripts from abusing sensitive APIs like popups,

@@ -18,7 +18,7 @@ tags:
 
 *Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión.*
 
-{% include 'partials/devtools/es/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -39,11 +39,11 @@ Lea [este artículo](/docs/devtools/css-overview) para obtener más información
 
 Chromium issue: [1254557](https://crbug.com/1254557)
 
-## Recuperada y mejorada las acciones de copiar y editar propiedades CSS con logintud {: #length } 
+## Recuperada y mejorada las acciones de copiar y editar propiedades CSS con logintud {: #length }
 
 Las acciones de **copiar CSS** y **editar como texto** se restauran para las propiedades CSS con longitud. Estas características dejaron de funcionar en la última versión.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} 
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 Además, puede arrastrar para ajustar el valor de la unidad y actualizar el tipo de unidad a través del menú desplegable. Esta funcionalidad no debería afectar a la experiencia de usuario en la acción principal editar como texto.
 
@@ -178,7 +178,7 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 ## Panel de caché de la aplicación en desuso (deprecated) en el panel de la aplicación  {: #app-cache } -->
 
-El panel [Caché de la aplicación](/docs/devtools/storage/applicationcache/) en el panel de Aplicación se eliminó pues el soporte para [AppCache](https://web.dev/appcache-removal/) se ha eliminado de Chrome y otros navegadores basados ​​en Chromium.
+El panel [Caché de la aplicación](/docs/devtools/storage/applicationcache/) en el panel de Aplicación se eliminó pues el soporte para [AppCache](https://web.dev/articles/appcache-removal) se ha eliminado de Chrome y otros navegadores basados ​​en Chromium.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
@@ -191,13 +191,13 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 Para habilitar esta característica experimental, marque la casilla de verificación **Enable Reporting API panel in the Application panel** que encontrará en la siguiente ruta **Configuración** > **Experimentos**.
 {% endAside %}
 
-La [API de informes](https://web.dev/reporting-api/) está diseñada para ayudarlo a monitorear las violaciones de seguridad de su página, las llamadas a API obsoletas y más.
+La [API de informes](https://web.dev/articles/reporting-api) está diseñada para ayudarlo a monitorear las violaciones de seguridad de su página, las llamadas a API obsoletas y más.
 
 Con este experimento habilitado, ahora puede ver el estado de los informes en el nuevo panel **API de informes** en el panel **Aplicación**.
 
 Tenga en cuenta que la sección **Endpoints** se encuentra actualmente en desarrollo activo (no muestra ningún informe de endpoints por ahora).
 
-Obtenga más información sobre la **API de informes** con [este artículo](https://web.dev/reporting-api/).
+Obtenga más información sobre la **API de informes** con [este artículo](https://web.dev/articles/reporting-api).
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Panel de la API de informes en el panel de la aplicación", width="800", height="476" %}
@@ -206,6 +206,6 @@ Obtenga más información sobre la **API de informes** con [este artículo](http
 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
-{% include 'partials/devtools/es/reach-out.md' %}
-{% include 'partials/devtools/es/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
