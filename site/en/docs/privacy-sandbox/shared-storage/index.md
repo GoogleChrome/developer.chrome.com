@@ -160,6 +160,6 @@ Starting from Chrome Canary M110, you can view and modify Shared Storage entries
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/GHrD4x12BqA8QOPH44VS.png", alt="Shared Storage section in Chrome DevTools", width="426", height="554" %}
 
-Under the 'Applications' tab, you can find a list of origins that have Shared Storage entries. You can edit the entry by right clicking on them. The `Budget` value represents the [daily entropy budget](https://github.com/WICG/shared-storage#budgeting) for Fenced Frames top-level navigation. 
+In **Application**, you can find a list of origins that have Shared Storage entries. Edit the origin by right clicking on the entry. The `Budget` value represents the [daily entropy budget](https://github.com/WICG/shared-storage#budgeting) for Fenced Frames top-level navigation. 
 
 {% Partial 'privacy-sandbox/shared-storage-engage.md' %}
