@@ -46,7 +46,7 @@ harder to understand than others. Users are more likely to install extensions th
 guidelines:
 
 Request relevant permissions
-: Extensions are required to fulfill a [single purpose](/docs/extensions/mv3/quality_guidelines#single-purpose) and
+: Extensions are required to fulfill a [single purpose](/docs/webstore/program-policies/quality-guidelines-faq) and
 comply with the [Use of permissions](/docs/webstore/program-policies/permissions/) policy. Ensure you only
 request permissions that support the extension's main functionality.
 

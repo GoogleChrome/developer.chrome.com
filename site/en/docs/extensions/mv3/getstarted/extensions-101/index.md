@@ -182,7 +182,7 @@ extension and Chrome Web store documentation:
 [doc-popup]: /docs/extensions/mv3/user_interface/#popup
 [doc-reference]: /docs/extensions/reference/
 [doc-service-worker]: /docs/extensions/mv3/service_workers/
-[doc-single-purpose]: /docs/extensions/mv3/quality_guidelines/
+[doc-single-purpose]: /docs/webstore/program-policies/quality-guidelines-faq
 [doc-ui]: /docs/extensions/mv3/user_interface/
 [js-apis]: /docs/extensions/api_other/
 [mdn-dom]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model
