@@ -84,7 +84,7 @@ The following samples demonstrate the `local`, `sync`, and
 
   ```js
   chrome.storage.local.set({ key: value }).then(() => {
-    console.log("Value is set to " + value);
+    console.log("Value is set");
   });
 
   chrome.storage.local.get(["key"]).then((result) => {
@@ -97,7 +97,7 @@ The following samples demonstrate the `local`, `sync`, and
 
   ```js
   chrome.storage.sync.set({ key: value }).then(() => {
-    console.log("Value is set to " + value);
+    console.log("Value is set");
   });
 
   chrome.storage.sync.get(["key"]).then((result) => {
@@ -110,7 +110,7 @@ The following samples demonstrate the `local`, `sync`, and
 
   ```js
   chrome.storage.session.set({ key: value }).then(() => {
-    console.log("Value is set to " + value);
+    console.log("Value was set");
   });
 
   chrome.storage.session.get(["key"]).then((result) => {

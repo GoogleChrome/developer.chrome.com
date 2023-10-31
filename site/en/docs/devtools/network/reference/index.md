@@ -430,7 +430,7 @@ Sometimes the **Headers** tab shows the `Provisional headers are shown...` warni
 - The request wasn't sent over the network but was served from a local cache, which doesn't store the original request headers. In this case, you can [disable caching](#disable-cache) to see the full request headers.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AQfq69qS2Ig6lT9Y7vcc.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
-- The network resource isn't valid. For example, execute `fetch("https://jec.fyi.com/unknown-url/")` in the **Console**.
+- The network resource isn't valid. For example, execute `fetch("https://jec.fish.com/unknown-url/")` in the **Console**.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xMKUHQxXLiRDiiUTol5J.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
 DevTools can also display only provisional headers due to security reasons.

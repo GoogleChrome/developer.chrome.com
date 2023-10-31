@@ -18,7 +18,7 @@ This guide shows you how to inspect and debug CSS container queries in the **Ele
 
 [CSS container queries][3] allow you to manipulate the element's styles based on its parent container properties. This capability shifts the concept of [responsive web design][2] from page-based to [container-based](https://web.dev/new-responsive/).
 
-The screenshots in this guide are taken from [this demo page](https://jec.fyi/demo/css-cq-coffee).
+The screenshots in this guide are taken from [this demo page](https://jec.fish/demo/css-cq-coffee).
 
 ## Discover containers and their descendants {: #discover-descendants}
 
@@ -37,7 +37,7 @@ In this example, the `container-type: inline-size` property defines the containe
 
 The **Elements** panel shows  `@container` query declarations when they are applied to a descendant element, that is, when the container fulfills the query's condition.
 
-To understand when you can inspect `@container` declarations on [this demo page](https://jec.fyi/demo/css-cq-coffee), examine the following code sample:
+To understand when you can inspect `@container` declarations on [this demo page](https://jec.fish/demo/css-cq-coffee), examine the following code sample:
 
 ```css
 @container (inline-size > 400px) {

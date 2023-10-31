@@ -1,0 +1,5 @@
+- [Chrome プラットフォームのステータス](https://chromestatus.com/feature/6438627087220736)。
+- FedCM は Chrome 108 で出荷されました。
+- [FedCM の提案](https://github.com/fedidcg/FedCM)の[公開ディスカッション](https://github.com/fedidcg/FedCM/issues)が開始しました。
+- FedCM は他のブラウザではまだサポートされていません。
+    - Mozilla は Firefox に[プロトタイプを実装](https://bugzilla.mozilla.org/show_bug.cgi?id=1782066)しています 。[Apple は、FedCM の提案に協力することに全般的な支持と関心を表明](https://lists.webkit.org/pipermail/webkit-dev/2022-March/032162.html)しています。

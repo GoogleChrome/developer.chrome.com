@@ -6,7 +6,7 @@ subhead: >
 description: >
   Where and how to provide feedback for Privacy Sandbox proposals throughout the development process.
 date: 2022-02-28
-updated: 2022-07-27
+updated: 2023-06-05
 authors:
   - rowan_m
 ---
@@ -223,6 +223,20 @@ Discussion in standards bodies is wide-ranging, but generally focuses on how a
 proposal meets the needs of the ecosystem and its progress towards becoming an
 accepted standard. You can find a link to follow or join in the **Standards
 groups** column of the tables in the [**Proposals** section](#proposals).
+
+{% endDetails %}
+
+{% Details %} {% DetailsSummary %}
+
+### Chrome-facilated testing
+
+**_We are seeking feedback on the [Chrome-faciliated testing plans](/docs/privacy-sandbox/chrome-testing/) along with tracking issues from initial third-party cookie deprecation._**
+
+{% endDetailsSummary %}
+
+If you rely on third-party cookie data for site functionality, you can now report site issues resulting from third-party cookie deprecation in the [public issue tracker](https://goo.gle/report-3pc-broken).
+
+Additionally, Chrome will deprecate 1% of third party cookies in Q1 2024, and we'll work closely with the CMA before taking further steps to expand deprecation. You can provide [feedback on GitHub](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/labels/chrome-testing) as to the appropriate fraction of traffic to devote to this subset of [Chrome-facilitated testing](/docs/privacy-sandbox/chrome-testing/).
 
 {% endDetails %}
 

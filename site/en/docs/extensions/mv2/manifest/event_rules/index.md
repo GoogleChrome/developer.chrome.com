@@ -8,6 +8,10 @@ description: Reference documentation for the event_rules property of manifest.js
 
 {% Partial 'extensions/mv2-legacy-page.md' %}
 
+{% Aside %}
+You have been redirected from Manifest V3. Chrome extensions no longer support this feature.
+{% endAside %}
+
 The `event_rules` manifest property provides a mechanism to add rules that intercept, block, or
 modify web requests in-flight using [declarativeWebRequest][1] or take actions depending on the
 content of a page, without requiring permission to read the page's content using

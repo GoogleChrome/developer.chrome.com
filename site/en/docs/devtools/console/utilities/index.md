@@ -324,20 +324,23 @@ Use [`unmonitorEvents(object[, events])`](#unmonitorEvents-function) to stop mon
 ## profile(\[name\]) and profileEnd(\[name\]) {: #profile-function }
 
 `profile()` starts a JavaScript CPU profiling session with an optional name. `profileEnd()`
-completes the profile and displays the results in the Profile panel. (See also [Speed Up JavaScript
-Execution][7].)
+completes the profile and displays the results in the **Performance** > **Main** track.
 
 To start profiling:
 
 ```js
-profile("My profile")
+profile("Profile 1")
 ```
 
-To stop profiling and display the results in the Profiles panel:
+To stop profiling and see the results in the **Performance** > **Main** track:
 
 ```js
-profileEnd("My profile")
+profileEnd("Profile 1")
 ```
+
+Result in the **Performance** > **Main** track:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/GAFSVu5lUoZVlumrcmHl.png", alt="Profile 1 in the Performance > Main track.", width="800", height="606" %}
 
 Profiles can also be nested. For example, this will work in any order:
 
@@ -347,10 +350,6 @@ profile('B');
 profileEnd('A');
 profileEnd('B');
 ```
-
-Result in the profiles panel:
-
-{% Img src="image/admin/BWxxLJby5scm6zF0eidW.png", alt="Grouped profiles.", width="800", height="469" %}
 
 {% Aside %}
 

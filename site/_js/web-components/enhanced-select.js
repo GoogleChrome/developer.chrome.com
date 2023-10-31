@@ -25,6 +25,9 @@ import arrowDownIcon from '../../_includes/icons/arrow-down.svg';
 import {generateIdSalt} from '../utils/salt';
 import closeIcon from '../../_includes/icons/close.svg';
 
+import {store} from '../store';
+import {setFilter} from '../actions/filter';
+
 const keyReg = new RegExp('^(Key|Digit|Numpad)', 'i');
 
 export class EnhancedSelect extends BaseElement {
@@ -97,6 +100,22 @@ export class EnhancedSelect extends BaseElement {
 
     // @ts-ignore
     return this.options.find(option => option.value === this.value[0]).label;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    store.subscribe(this.onStoreUpdate.bind(this));
+  }
+
+  /**
+   * Checks if the app state contains entries for this select, and if so
+   * sets the value to the entries.
+   * @param {*} state
+   */
+  onStoreUpdate(state) {
+    const filters = state.filters || {};
+    const entries = filters[this.name] || [];
+    this.setValue(entries.map(entry => entry.value));
   }
 
   disconnectedCallback() {
@@ -425,6 +444,10 @@ export class EnhancedSelect extends BaseElement {
       this.setValue([option.value]);
     }
 
+    setFilter(
+      this.name,
+      this.options.filter(o => o.selected)
+    );
     this.open = this.multiple;
   }
 

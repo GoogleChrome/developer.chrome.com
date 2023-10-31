@@ -8,7 +8,7 @@ description: >
   Learn more about Protected Audience API auction features as we approach third-party
   cookie deprecation.
 date: 2023-02-09
-updated: 2023-03-14
+updated: 2023-06-01
 authors:
   - tristramsouthey
   - kevinkiklee
@@ -37,6 +37,13 @@ find a list of the scoped Protected Audience API features and when they'll be su
     <td>Now</td>
     <td><p>Supported until at least 2026.</p>
       <p>This feature is intended to make the transition to Protected Audience API reporting from third-party cookie reporting easier. Thus, this reporting will not be supported after ad techs have had time to update their reporting mechanisms.</p>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="/docs/privacy-sandbox/private-aggregation/#contributetohistogramonevent">Trigger-based aggregation</a>
+   </td>
+    <td>Now</td>
+    <td><p>Available for testing in Chrome Canary/Dev M113+ and Beta/Stable M115+.</p>
     </td>
   </tr>
   <tr>
@@ -130,6 +137,11 @@ Event-level auction win reporting will be supported until at least 2026, and we 
 
 Auction loss reporting will continue to be supported through the
 [Private Aggregation API](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
+
+## Trigger-based aggregate reporting
+During a Protected Audience auction, you can send an aggregatable report when triggered by an event using [Private Aggregation API](/docs/privacy-sandbox/private-aggregation/)’s `contributeToHistogramOnEvent()` method. The triggering event can come from the auction itself, such as an auction win or loss, which allows you to generate an auction loss report. The event can also come from a fenced frame outside of the auction using [Fenced Frame Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md)’s `window.fenced.reportEvent()` to trigger the aggregatable report submission. 
+
+See the [`contributeToHistogramOnEvent()` section of the Private Aggregation page](/docs/privacy-sandbox/private-aggregation/#contributetohistogramonevent) to learn more. 
 
 ## Trusted Execution Environment usage for Key/Value service
 

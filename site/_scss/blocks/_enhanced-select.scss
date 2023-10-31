@@ -1,6 +1,7 @@
 .enhanced-select {
   &__wrapper {
     border: 1px solid var(--color-hairline);
+    font-family: 'Google Sans', sans-serif;
     height: 100%;
   }
 
@@ -42,9 +43,10 @@
 
     li {
       border-radius: 0 100px 100px 0;
+      color: get-color('grey-800');
       font-family: 'Google Sans', sans-serif;
       font-size: 0.875rem;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1.2rem;
       padding: 1rem 2.75rem;
       text-align: left;

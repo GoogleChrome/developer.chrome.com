@@ -32,7 +32,7 @@ const index = client.initIndex('prod_developer_chrome');
 const blockedQueries = [
   /add? ?bloc?k?/,
   /d(a|o|u)w?nl?o?/,
-  /p(a|e)r?r(a|e)?/,
+  /^p(a|e)r+(l|al|el)/,
   /automate be/,
   /roblox/,
   /ublock/,

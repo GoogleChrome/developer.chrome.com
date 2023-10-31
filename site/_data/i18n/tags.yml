@@ -39,6 +39,10 @@ fugu-case-study:
   en: Fugu case study
 
 # DevTools-related tags
+
+wasm:
+  en: WebAssembly
+
 css:
   en: CSS
 

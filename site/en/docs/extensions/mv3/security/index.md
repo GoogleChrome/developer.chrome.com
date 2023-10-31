@@ -38,11 +38,15 @@ websites they depend on. Arbitrary code should be kept to a minimum.
 
 Limiting an extensions privileges limits what a potential attacker can exploit.
 
-### Cross-origin XMLHttpRequest {: #xhr }
+### Cross-origin fetch() {: #xhr }
 
-An extension can only use [XMLHttpRequest][6] to get resources from itself and from domains
-specified in the permissions.
+{% Aside 'warning' %}
+`XMLHttpRequest()` is not supported in Service Workers.
+Use its modern replacement, `fetch()`.
+{% endAside %}
 
+An extension can only use `fetch()` or [XMLHttpRequest][6] to get resources from itself and from domains
+specified in the permissions, as both API's use the same [fetch handler][27] in the service worker.
 ```json
 {
   "name": "Very Secure Extension",
@@ -156,38 +160,6 @@ function constructDOM() {
 }
 ```
 
-### eval() {: #eval }
-
-Avoid using `eval()` whenever possible to prevent attacks, as `eval()` will execute any code passed
-into it, which may be malicious.
-
-```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
-    // WARNING! Might be evaluating an evil script!
-    var resp = eval("(" + xhr.responseText + ")");
-    ...
-  }
-}
-xhr.send();
-```
-
-Instead, prefer safer, and faster, methods such as `JSON.parse()`
-
-```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.example.com/data.json", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
-    // JSON.parse does not evaluate the attacker's scripts.
-    var resp = JSON.parse(xhr.responseText);
-  }
-}
-xhr.send();
-```
-
 ## Use content scripts carefully {: #content_scripts }
 
 While [content scripts][11] live in an [isolated world][12], they are not immune from attacks:
@@ -278,4 +250,4 @@ function sanitizeInput(input) {
 [24]: /docs/extensions/reference/runtime#type-MessageSender
 [25]: /docs/extensions/mv3/content_scripts
 [26]: /docs/extensions/mv3/security#avoid
-
+[27]: https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/handled

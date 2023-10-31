@@ -47,8 +47,8 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 ## 支持录制面板中的鼠标悬浮事件 {: #recorder-hover }
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
 录制面板现在支持在录制中手动加入鼠标悬停步骤。
-<!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
-[此演示](https://jec.fyi/demo/menu-hover) 显示悬停时的弹出菜单. 在录制用户流程时，单击菜单项。
+<!-- [This demo](https://jec.fish/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
+[此演示](https://jec.fish/demo/menu-hover) 显示悬停时的弹出菜单. 在录制用户流程时，单击菜单项。
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
 现在，如果您重播用户流程，它将会失败。因为 **录制面板** 在录制期间并没有自动捕获鼠标悬停事件。 要解决此问题，请 [手动添加步骤](/docs/devtools/recorder/reference/#add-and-remove-steps) ，在单击菜单项之前，将鼠标悬停在选择器上。
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GY1ZkqEU3zbGmhEKoblN.png", alt="Support mouse over event in the Recorder", width="800", height="488" %}
@@ -106,8 +106,8 @@ Chromium 议题: [1300613](https://crbug.com/1300613)
 使用【顶层徽章】(/blog/top-layer-devtools/#top-layer-support-design-in-devtools) 了解顶层的概念，可视化顶层内容的变化。
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
 [`<dialog>` 元素](https://web.dev/building-a-dialog-component/) 最近在浏览器中变得稳定。 当您打开一个对话框时，它会被放入一个 [top layer](/blog/top-layer-devtools/)。 顶层内容呈现在所有其他内容之上。
-<!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
-在此 [演示](https://jec.fyi/demo/dialog) 中，单击 **Open dialog**。
+<!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
+在此 [演示](https://jec.fish/demo/dialog) 中，单击 **Open dialog**。
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
 为了帮助可视化顶层元素，DevTools 将顶层容器（`#top-layer`）添加到 DOM 树中。 它位于结束 `</html>` 标记之后。
 <!-- To jump from the top layer container element to the top layer tree element, click the **reveal** button next to the element or its backdrop in the top layer container. -->

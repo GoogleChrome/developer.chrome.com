@@ -71,6 +71,10 @@ to be removed from the client if their browser is under heavy storage pressure.
 reference of what's possible with the API, see the
 [Storage Buckets proposal](https://wicg.github.io/storage-buckets/explainer). {% endAside %}
 
+{% Aside %}
+Full debugging support in DevTools for the Storage Buckets API is planned, but still in the works.
+{% endAside %}
+
 ### Creating a new storage bucket
 
 A new storage bucket can be created with the `open()` method on the `StorageBucketManager`

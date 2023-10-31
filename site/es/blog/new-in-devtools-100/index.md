@@ -51,9 +51,9 @@ Como de costumbre, puede ver el último [video de Novedades en DevTools](https:/
 
 Ahora puede ver y editar las reglas-`at` `@supports` en el panel **Estilos**. Estos cambios facilitan la experimentación con las reglas-`at` en tiempo real.
 
-<!-- Open this [demo page](https://jec.fyi/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class="box">` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule's declaration to edit it.  -->
+<!-- Open this [demo page](https://jec.fish/demo/at-support), [inspect](/docs/devtools/dom/#inspect) the `<div class="box">` element, view the `@supports` at-rules in the **Styles** pane. Click on the rule's declaration to edit it.  -->
 
-Abra esta [página de demostración](https://jec.fyi/demo/at-support), [inspeccione](/docs/devtools/dom/#inspect) el elemento `<div class="box">`, vea las reglas-`at` `@support` en el panel **Estilos**. Haga clic en la declaración de la regla para editarla.
+Abra esta [página de demostración](https://jec.fish/demo/at-support), [inspeccione](/docs/devtools/dom/#inspect) el elemento `<div class="box">`, vea las reglas-`at` `@support` en el panel **Estilos**. Haga clic en la declaración de la regla para editarla.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vnokX5Hswmbvlb5weusO.png", alt="Ver y editar @supports en las reglas", width="800", height="502" %}
 
@@ -85,9 +85,9 @@ Al determinar un selector único durante la grabación, ahora el panel [Grabador
 
 Los atributos anteriores son selectores comunes utilizados en la automatización de pruebas.
 
-<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fyi/demo/recorder). Fill in an email address and observe the selector value. -->
+<!-- For example, [start a new recording](/docs/devtools/recorder/#record) with this [demo page](https://jec.fish/demo/recorder). Fill in an email address and observe the selector value. -->
 
-Por ejemplo, [inicie una nueva grabación](/docs/devtools/recorder/#record) con esta [página de demostración](https://jec.fyi/demo/recorder). Complete una dirección de correo electrónico y observe el valor del selector.
+Por ejemplo, [inicie una nueva grabación](/docs/devtools/recorder/#record) con esta [página de demostración](https://jec.fish/demo/recorder). Complete una dirección de correo electrónico y observe el valor del selector.
 
 
 <!-- Since the email element has `data-testid` defined, it's used as the selector automatically instead of the `id` or `class` attributes. -->
@@ -107,9 +107,9 @@ Dado que el elemento de correo electrónico tiene definido `data-testid`, se usa
 Puede personalizar el selector de una grabación si no utiliza los [selectores comunes](/docs/devtools/recorder/#selector).
 
 
-<!-- For example, this [demo page](https://jec.fyi/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
+<!-- For example, this [demo page](https://jec.fish/demo/recorder) uses the `data-automate` attribute as the selector. [Start a new recording](/docs/devtools/recorder/#record) and enter the `data-automate` as the selector attribute. Fill in an email address and observe the selector value (`[data-automate=email-address]`). -->
 
-Por ejemplo, esta [página de demostración](https://jec.fyi/demo/recorder) usa el atributo `data-automate` como selector. [Inicie una nueva grabación](/docs/devtools/recorder/#record) e ingrese `data-automate` como el atributo del selector. Complete una dirección de correo electrónico y observe el valor del selector (`[data-automate=email-address]`).
+Por ejemplo, esta [página de demostración](https://jec.fish/demo/recorder) usa el atributo `data-automate` como selector. [Inicie una nueva grabación](/docs/devtools/recorder/#record) e ingrese `data-automate` como el atributo del selector. Complete una dirección de correo electrónico y observe el valor del selector (`[data-automate=email-address]`).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2PPPt9tOC2ZEz1l9F9AK.png", alt="Personaliza el selector de grabaciones", width="800", height="524" %}
 

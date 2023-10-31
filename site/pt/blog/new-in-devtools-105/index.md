@@ -47,8 +47,8 @@ Issue relacionada: [1257499](https://crbug.com/1257499)
 ## Suporte ao evento do mouse over no painel do Recorder {: #recorder-hover }
 <!-- The **Recorder** now supports adding a mouse over (hover) step manually in a recording.  -->
 O **Recorder** agora é compatível com a adição manual de uma etapa de passar o mouse (hover) em uma gravação.
-<!-- [This demo](https://jec.fyi/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
-[Esta demonstração](https://jec.fyi/demo/menu-hover) mostra um menu pop-up ao passar o mouse. Tente gravar um fluxo de usuário e clique em um item de menu.
+<!-- [This demo](https://jec.fish/demo/menu-hover) shows a pop up menu on hover. Try to record a user flow and click a menu item. -->
+[Esta demonstração](https://jec.fish/demo/menu-hover) mostra um menu pop-up ao passar o mouse. Tente gravar um fluxo de usuário e clique em um item de menu.
 <!-- If you replay the user flow now, it will fail because the **Recorder** doesn’t capture mouse over events automatically during recording. To resolve this, [add a step manually](/docs/devtools/recorder/reference/#add-and-remove-steps) to hover over the selector before clicking the menu item.  -->
 Se você reproduzir o fluxo do usuário agora, ele falhará porque o **Recorder** não captura eventos do mouse over automaticamente durante a gravação. Para resolver isso, [adicione uma etapa manualmente](/docs/devtools/recorder/reference/#add-and-remove-steps) para passar o mouse sobre o seletor antes de clicar no item de menu.
 
@@ -109,8 +109,8 @@ Issue relacionadas: [1300613](https://crbug.com/1300613)
 Use o [emblema da camada superior](/blog/top-layer-devtools/#top-layer-support-design-in-devtools) para entender o conceito da camada superior e visualizar como o conteúdo da camada superior muda.
 <!-- The [`<dialog>` element](https://web.dev/building-a-dialog-component/) has recently become stable across browsers. When you open a dialog, it is put into a [top layer](/blog/top-layer-devtools/). Top level content renders on top of all the other content.  -->
 O elemento [`<dialog>`](https://web.dev/building-a-dialog-component/) tornou-se recentemente estável nos navegadores. Quando você abre uma caixa de diálogo, ela é colocada em uma [camada superior](/blog/top-layer-devtools/). O conteúdo de nível superior é renderizado em cima de todo o outro conteúdo.
-<!-- In this [demo](https://jec.fyi/demo/dialog), click **Open dialog**.  -->
-Nesta [demonstração](https://jec.fyi/demo/dialog), clique em **Abrir caixa de diálogo**.
+<!-- In this [demo](https://jec.fish/demo/dialog), click **Open dialog**.  -->
+Nesta [demonstração](https://jec.fish/demo/dialog), clique em **Abrir caixa de diálogo**.
 <!-- To help visualize the top layer elements, DevTools adds a top layer container (`#top-layer`) to the DOM tree. It resides after the closing `</html>` tag.   -->
 Para ajudar a visualizar os elementos da camada superior, o DevTools adiciona um contêiner da camada superior (`#top-layer`) à árvore DOM. Ele reside após a tag de fechamento `</html>`.
 <!-- To jump from the top layer container element to the top layer tree element, click the **reveal** button next to the element or its backdrop in the top layer container. -->

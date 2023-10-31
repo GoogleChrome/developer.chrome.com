@@ -31,7 +31,7 @@ For instructions on migrating your extensions to Manifest V3, see
 
 {% endAside %}
 
-Additionaly, keep up with Chrome extensions news by visiting our [What's new page][doc-whats-new]. If you need assistance with a development problem, visit our [help page][doc-get-help]
+Additionally, keep up with Chrome extensions news by visiting our [What's new page][doc-whats-new]. If you need assistance with a development problem, visit our [help page][doc-get-help]
 
 Thank you for being a member of the extension developer community. We're glad you are here!
 
