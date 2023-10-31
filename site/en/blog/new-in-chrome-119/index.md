@@ -37,7 +37,7 @@ You can read more about [the expiration date recommendation](https://httpwg.org/
 
 For CSS we have three updates:
 
-Number one: the new [`:user-invalid`]()https://developer.mozilla.org/docs/Web/CSS/:user-invalid and [`:user-valid`](https://developer.mozilla.org/docs/Web/CSS/:user-valid) pseudo-classes that represent an element with incorrect or correct input, respectively, but only after the user has significantly interacted with it. They are similar to the `:valid` and `:invalid`, pseudo-classes but with the added constraint that the new pseudo-classes only match after the user has interacted with the element.
+Number one: the new [`:user-invalid`](https://developer.mozilla.org/docs/Web/CSS/:user-invalid) and [`:user-valid`](https://developer.mozilla.org/docs/Web/CSS/:user-valid) pseudo-classes that represent an element with incorrect or correct input, respectively, but only after the user has significantly interacted with it. They are similar to the `:valid` and `:invalid`, pseudo-classes but with the added constraint that the new pseudo-classes only match after the user has interacted with the element.
 
 Number two: the [relative color syntax](/blog/css-relative-color-syntax/) allows developers to define colors by modifying the parameters of other colors.
 
