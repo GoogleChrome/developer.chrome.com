@@ -43,7 +43,7 @@ Number two: the [relative color syntax](/blog/css-relative-color-syntax/) allows
 
 For example: `oklab(from magenta calc(l * 0.8) a b);` results in an Oklab magenta that is 80% lighter.
 
-And number 3: `clip-path` now supports more values.
+And number three: `clip-path` now supports more values.
 
 The [`clip-path`](https://developer.mozilla.org/docs/Web/CSS/clip-path) property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
 
