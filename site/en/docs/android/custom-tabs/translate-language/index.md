@@ -16,9 +16,11 @@ explains how to implement automatic translation of Custom Tab content.
 Use the following code to add translation to your Custom Tabs intent builder:
 
 ```
+Locale userLocale = new Builder().setLanguage("pt").setRegion("BR").build();
+
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
     .setTranslateLocale(Locale locale)
     .build();
 ```
 
-The intent builder takes the user's [`Locale`](https://developer.android.com/reference/java/util/Locale.html) as input. This value can be any of the supported locales [listed here](https://developer.chrome.com/docs/webstore/i18n/#choosing-locales-to-support).
+The intent builder takes the user's [`Locale`](https://developer.android.com/reference/java/util/Locale.html) as input. This value can be any of the supported locales [listed here](https://developer.chrome.com/docs/webstore/i18n/#supported-locales).
