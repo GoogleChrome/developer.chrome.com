@@ -100,7 +100,7 @@ your extension modifies one of these functions, it must use the Settings Overrid
 
 Where more than one extension modifies these Chrome settings, the most recently installed extension
 will manage the settings it has modified via the Settings Override API. Extension developers can
-modify the new tab page (and a few other Chrome pages) using the same [override method][9] as
+modify the new tab page (and a few other Chrome pages) using the same [override method][settings-override] as
 before.
 
 In addition, if you want to publish an extension that modifies Chrome settings, you must either
@@ -116,7 +116,7 @@ compliant with the single purpose policy.
 
 The only supported way to change the web search settings using an extension is via the Settings
 Overrides API. Extensions that change the web search experience in any form, without using the
-[Settings Overrides API][16], are subject to removal from the Chrome Web Store.
+[Settings Overrides API][settings-override], are subject to removal from the Chrome Web Store.
 
 ### My extension makes programmatic changes to Chrome user settings, but does not use one of the available APIs. What is the deadline to make changes to my extension? {: #eight }
 
@@ -161,8 +161,7 @@ No. This violates the single purpose policy. However, if injecting ads is the si
 extension and the extension is otherwise compliant with Chrome policies, then it would be
 acceptable. For example, a "related articles" extension that adds sponsored links to articles
 related to a page the user is visiting would be compliant with the single purpose policy because it
-has a single purpose limited to a narrow function of the browser. You also might want to explore the
-other monetization options described [here][10].
+has a single purpose limited to a narrow function of the browser.
 
 ### Are toolbars permitted under this policy? {: #fourteen }
 
@@ -248,11 +247,8 @@ to the narrow subject matter of search.
 [4]: https://security.googleblog.com/2017/03/expanding-protection-for-chrome-users.html
 [5]: http://blog.chromium.org/2013/12/keeping-chrome-extensions-simple.html
 [6]: /docs/webstore/program-policies/quality-guidelines
-[9]: /docs/extensions/mv3/override
-[10]: /docs/webstore/money
+[settings-override]: /docs/extensions/mv3/settings_override/
 [11]: #three
 [12]: /docs/extensions/action
 [13]: http://blog.chromium.org/2014/02/make-sure-to-get-your-extension-in.html
-[16]: /docs/extensions/mv3/settings_override/#others
-
 [crx-group]: https://groups.google.com/a/chromium.org/g/chromium-extensions
