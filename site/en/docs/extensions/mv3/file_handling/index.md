@@ -14,7 +14,7 @@ File handling lets you configure ChromeOS so that your extension can open files 
 
 ## Availability in extensions
 
-ChromeOS 118 or later.
+ChromeOS 120 or later.
 
 ## Permissions
 
