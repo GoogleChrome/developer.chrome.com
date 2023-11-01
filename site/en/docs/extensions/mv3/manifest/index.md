@@ -26,7 +26,6 @@ The following code shows the supported manifest keys. For additional usage infor
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/default_locale">default_locale</a>"</span><span class="token operator">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/description">description</a>"</span><span class="token operator">:</span> <span class="token string">"A plain text description"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/icons">icons</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
-
   <span class="token comment">// Optional</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/author">author</a>"</span><span class="token operator">:</span> <span class="token string">"developer@example.com"</span><span class="token punctuation">,</span>
 
