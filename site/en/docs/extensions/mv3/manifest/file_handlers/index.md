@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "file_handlers"
 seoTitle: "Chrome Extensions Manifest: file_handlers"
 date: 2023-11-01
-description: Reference documentation for the externally_connectable property of manifest.json.
+description: Reference documentation for the file_handlers property of manifest.json.
 ---
 
 The `"file_handlers"` manifest key specifies file types to be handled by an extension. To process a file, use the web platform's [Launch Handler API](https://developer.mozilla.org/docs/Web/API/Launch_Handler_API). For extension specific information, see [File Handling](/docs/extensions/mv3/file_handling).
