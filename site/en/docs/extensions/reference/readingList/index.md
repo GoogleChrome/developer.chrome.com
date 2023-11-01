@@ -3,6 +3,10 @@ api: readingList
 has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
+{% Aside 'note' %}
+This API is currently available in Chrome 120 [beta][beta].
+{% endAside %}
+
 Chrome features a reading list located on the side panel. It lets users save web pages to read later or when offline.
 Use the Reading List API to retrieve existing items and add or remove items from the list.
 
@@ -99,3 +103,4 @@ For more Reading List API extensions demos, see the [Reading List API sample][sa
 [update-entry]: #method-updateEntry
 [remove-entry]: #method-removeEntry
 [sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/readingList
+[beta]: https://www.google.com/chrome/beta/
