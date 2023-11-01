@@ -10,7 +10,7 @@ The WebUSB API exposes non-standard Universal Serial Bus (USB) compatible device
 
 ## Availability in extensions
 
-ChromeOS 120 or later.
+ChromeOS 117 or later.
 
 ## Permissions
 

@@ -12,7 +12,7 @@ This page describes aspects of the API that are particular to extensions. Refer 
 
 ## Availability in extensions
 
-ChromeOS 120 or later.
+ChromeOS 117 or later.
 
 ## Permissions
 
