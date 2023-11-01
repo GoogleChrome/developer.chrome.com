@@ -362,6 +362,11 @@ the steps in [Viewing Warnings](#view_warnings).
       <td>Grants access to the <a href="/docs/extensions/reference/proxy">chrome.proxy</a> API.</td>
       <td><strong>Read and change all your data on all websites</strong></td>
     </tr>
+    <tr id="readingList">
+      <td><code>"readingList"</code></td>
+      <td>Grants access to the <a href="/docs/extensions/reference/readingList">chrome.readingList</a> API.</td>
+      <td><strong>Read and change entries in the reading list</strong></td>
+    </tr>
     <tr id="sessionshistory">
       <td><code>"sessions"</code> and <code>"history"</code></td>
       <td>Grants the extension access to the <a href="/docs/extensions/reference/sessions">chrome.sessions</a> API and <a href="/docs/extensions/reference/history">chrome.history</a> API.</td>
