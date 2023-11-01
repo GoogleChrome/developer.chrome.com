@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "File Handling"
+title: "File handling on Chrome OS"
 seoTitle: "Opening files in Chrome Extensions"
 date: 2023-11-01
 description: How to open files in Chrome extension service workers, popups, side panels, or content scripts.
