@@ -122,7 +122,7 @@ In this early experimental stage, the [Kotlin/Wasm image viewer](https://kotlin-
 
 ### Dart and Flutter
 
-The Dart and Flutter teams at Google are also preparing support for WasmGC. The Dart-to-Wasm compilation work is almost complete, and the team is working on tooling support for delivering Flutter web applications compiled to WebAssembly. You can read about the current state of the work in the [Flutter documentation](https://flutter.dev/wasm). The [Flutter WasmGC Preview](https://flutterweb-wasm.web.app/) demo is embedded below.
+The Dart and Flutter teams at Google are also preparing support for WasmGC. The Dart-to-Wasm compilation work is almost complete, and the team is working on tooling support for delivering Flutter web applications compiled to WebAssembly. You can read about the current state of the work in the [Flutter documentation](https://flutter.dev/wasm). The following demo is the [Flutter WasmGC Preview](https://flutterweb-wasm.web.app/).
 
 <iframe style="width: 100%; height: 800px" src="https://flutterweb-wasm.web.app/"></iframe>
 
