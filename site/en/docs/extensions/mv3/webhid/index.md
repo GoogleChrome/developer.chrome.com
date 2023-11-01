@@ -10,6 +10,8 @@ A Human Interface Device (HID) takes input from or provides output to humans. It
 
 This page describes aspects of the API that are particular to extensions. Refer to MDN for complete details of the [WebHID](https://developer.mozilla.org/docs/Web/API/WebHID_API).
 
+You can find a [sample app for WebHID](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.co2meter) in our samples repo.
+
 ## Availability in extensions
 
 ChromeOS 117 or later.

@@ -8,6 +8,8 @@ description: The WebUSB API, which exposes non-standard Universal Serial Bus (US
 
 The WebUSB API exposes non-standard Universal Serial Bus (USB) compatible devices to the web. This page describes aspects of the API that are particular to extensions. Refer to MDN for complete details of the [WebUSB](https://developer.mozilla.org/docs/Web/API/WebUSB_API).
 
+Here is [a sample app for WebUSB](https://github.com/sowbug/weblight/tree/master);
+
 ## Availability in extensions
 
 ChromeOS 117 or later.
