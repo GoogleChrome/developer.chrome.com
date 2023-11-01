@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "file_handlers"
 seoTitle: "Chrome Extensions Manifest: file_handlers"
-date: 2023-10-31
+date: 2023-11-01
 description: Reference documentation for the externally_connectable property of manifest.json.
 ---
 

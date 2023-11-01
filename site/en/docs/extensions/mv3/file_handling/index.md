@@ -2,11 +2,15 @@
 layout: "layouts/doc-post.njk"
 title: "File Handling"
 seoTitle: "Opening files in Chrome Extensions"
-date: 2023-10-31
+date: 2023-11-01
 description: How to open files in Chrome extension service workers, popups, side panels, or content scripts.
 ---
 File handling lets you configure ChromeOS so that your extension can open files using either the Open menu of the file menu or the Open with menu of the context menu. Once open, you process the file's data using the web platform's [Launch Handler API](https://developer.mozilla.org/docs/Web/API/Launch_Handler_API). You will then user standard web platform APIs to [display or handle the file]().
 
+<figure>
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/7GnNUZTtlH7Mohloh8tM.png", alt="A file handler added to the ChromeOS Open menu.", width="800", height="446" %}
+  <figcaption>A file handler added to the ChromeOS Open menu.</figcaption>
+</figure>
 
 ## Availability in extensions
 
