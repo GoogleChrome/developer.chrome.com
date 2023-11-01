@@ -4,6 +4,7 @@ description: >
   Chrome 119 is rolling out now! With an update to the expiration date upper limit  for cookies already in storage. CSS has new pseudo classes, relative color syntax, Fenced Frames improvements like ad size macros, and there’s plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2023-10-31
+updated: 2023-11-01
 authors:
   - ajara
 hero: 'image/SeARmcA1EicLXagFnVOe0ou9cqK2/O86Q55IqPgegjOhrABT6.jpeg'
@@ -51,17 +52,7 @@ Now you can use [`<geometry-box>`](https://developer.mozilla.org/docs/Web/CSS/cl
 
 You can also use the functions [`xywh()`](https://developer.mozilla.org/docs/Web/CSS/basic-shape/xywh) and [`rect()`](https://developer.mozilla.org/docs/Web/CSS/basic-shape/rect) that make it easier to specify rectangular or rounded-rectangular clips.
 
-
-## Fenced frames improvements{: #fenced-frames-improvements }
-
-A [Fenced Frame](/docs/privacy-sandbox/fenced-frame/) is an HTML element for embedded content, similar to an iframe. Unlike iframes, fenced frames restrict communication with their embedding context to allow the frame access to cross-site data without sharing with the embedding context.
-
-In this version Fenced Frames added an additional format option for [Protected Audience](/docs/privacy-sandbox/protected-audience) ad size macros. Now in the Protected Audience API an opt-in feature allows you to macro the size of the ad that wins the auction into the ad’s url, for example:
-`https://ad.com?width={/%AD_WIDTH%}&height={/%AD_HEIGHT%}`
-
-Also, automatic beacons will now send to all registered URLs. Previously, only destinations specified when calling [`setReportEventDataForAutomaticBeacons()`](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#api-to-populate-event-data-for-reservedtop_navigation) received automatic beacons, even if that destination called [`registerAdBeacon()`](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#registeradbeacon) in their worklet.
-
-Now, any destination that called `registerAdBeacon()` for `reserved.top_navigation` will get an automatic beacon, but only destinations specified in `setReportEventDataForAutomaticBeacons()` will get automatic beacon data along with the beacon.
+_Correction: A previous version of this article referred to inprovements for Fenced Frames. These changes are now shipping in Chrome 120._
 
 ## And more! {: #more }
 
