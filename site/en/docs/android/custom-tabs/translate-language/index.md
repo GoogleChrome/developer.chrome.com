@@ -8,8 +8,7 @@ authors:
   - alexmkatz
 ---
 
-When a user opens a Custom Tab, the content in that tab can be translated for their locale. This guide
-explains how to implement automatic translation of Custom Tab content.
+When a user opens a Custom Tab, the content in that tab is usually translated for their device locale. This guide explains how to implement Custom Tab translation for a locale of your choice instead.
 
 ## Implementation
 
@@ -23,4 +22,4 @@ CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
     .build();
 ```
 
-The intent builder takes the user's [`Locale`](https://developer.android.com/reference/java/util/Locale.html) as input. This value can be any of the supported locales [listed here](https://developer.chrome.com/docs/webstore/i18n/#supported-locales).
+`Locale` can take any of the values [listed here](https://developer.chrome.com/docs/webstore/i18n/#supported-locales).
