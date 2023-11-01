@@ -289,7 +289,7 @@ Support tickets must be opened using the [One Stop Support][header-support] form
 ticket is opened all communication takes place over email.
 
 {% Aside %}
-While the team does monitor and respond to various online forums where Chrome extensions are discussed, these platforms are primarily geared towards discussions about extension development and are not intended to be support channels. If you need to raise any concerns, it is recommended to use the CWS Support form.
+Though the team monitors and responds to various online forums where Chrome extensions are discussed, these platforms are primarily geared towards discussions about extension development and are not intended to be support channels. If you need to raise any concerns, it is recommended to use the CWS Support form.
 {% endAside %}
 
 ### Automated emails {: #emails }
@@ -349,7 +349,7 @@ difficult for the agents assisting you to find and keep track of all of the rele
 about your issue.
 
 {% Aside %}
-As a developer in the EU, if you have concerns related to the Platform To Business (P2B) regulations in Europe, you can raise them by filing through the [One Stop Support contact form][page-oss-form].
+As a developer in the European Union, if you have concerns related to the Platform To Business (P2B) regulations in Europe, you can raise them by filing through the [One Stop Support contact form][page-oss-form].
 {% endAside %}
 
 [doc-dpp]: /docs/webstore/program-policies
