@@ -45,6 +45,20 @@ To analyze your cookies:
 
 For more information on how to use the Privacy Sandbox Analysis Tool, see its [GitHub Wiki](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki/A.-PSAT's-How-To).
 
+## Lighthouse 11.2.0 {: #lighthouse }
+
+The **Lighthouse** panel now runs Lighthouse 11.2.0. See the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.2.0).
+
+This update includes an overhaul to the performance category. Performance insights are now scored and prioritized based on their estimated impact to the performance metrics. Additionally, the performance score gauge includes more detailed information about how each metric affects the score.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ax8j1I0KntXSphFTT12b.png", alt="The before and after performance overhaul.", width="800", height="382" %}
+
+To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthouse: Optimize website speed](/docs/devtools/lighthouse/).
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/5d879fe161d12dfebeefef3734b8b18407287cd4 #}
+
+Chromium issues: [772558](https://crbug.com/772558).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
