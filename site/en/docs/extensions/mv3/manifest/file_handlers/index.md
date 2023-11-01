@@ -19,13 +19,7 @@ This feature is currently available in Chrome 120 [beta](https://www.google.com/
     "name": "Plain text",
     "accept": {
       "text/plain": [".txt"]
-    },
-    "icons": [
-      {
-        "src": "/csv-file.png",
-        "sizes": "144x144"
-      }
-    ]
+    }
     "launch_type": "single-client"
   }
 ]
