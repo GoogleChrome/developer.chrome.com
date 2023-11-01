@@ -4,10 +4,14 @@ description: 'The complete reference to all APIs made available to Chrome Extens
 layout: 'layouts/reference-landing.njk'
 ---
 
-Chrome provides extensions with many special-purpose APIs such as `chrome.alarms` and `chrome.action`. Many APIs consist of a namespace and its related manifest fields. These fields are frequently permissions, but not always. For example, `chrome.alarms` requires only the `alarms` permission, while `chrome.action` requires an action object in the `manifest.json` file.
+Most extensions need access to one or more Chrome Extensions APIs to function. This API reference describes the APIs available for use in extensions and presents example use cases.
+
+## Common Extensions API features
+
+An Extensions API typically consists of a namespace containing manifest fields that must be included in your extension's `manifest.json` file to use that API. Those fields can include objects within `manifest.json,` such as the action object required by the `chrome.action` API, as well as [permissions](/docs/extensions/mv3/declare_permissions/) declarations for APIs that require permissions.
+
+Methods in `chrome.*` APIs are **asynchronous** unless stated otherwise. Asynchronous methods return immediately, without waiting for the operation that calls them to finish. Use [promises](/docs/extensions/mv3/promises/) to get the results of these methods. For more information, see [Asynchronous methods](/docs/extensions/mv3/architecture-overview/#async-sync).
+
+<!--What else are users likely to need to know about early? Should I bring back the mention of callbacks in the asynchronous methods explanation? And should I be able to edit the table structures in the generated content?-->
 
 {% Partial 'extensions/mv3-support.md' %}
-
-## Asynchronous methods
-
-Unless stated otherwise, methods in the `chrome.*` APIs are **asynchronous**: they return immediately, without waiting for the operation to finish. If you need to know the result of calling such methods, use the returned promise or pass a callback function into the method. For more information, see [Asynchronous methods](/docs/extensions/mv3/architecture-overview/#async-sync).
