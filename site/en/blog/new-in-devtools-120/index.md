@@ -45,6 +45,17 @@ To analyze your cookies:
 
 For more information on how to use the Privacy Sandbox Analysis Tool, see its [GitHub Wiki](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki/A.-PSAT's-How-To).
 
+## Effective Content Security Policy in the Application panel {: #csp }
+
+You can now view the [Content Security Policy (CSP)](https://developer.mozilla.org/docs/Web/HTTP/CSP) details of an inspected frame. To view the details, navigate to Application > Frames, select a frame and scroll down to the **Content Security Policy (CSP)** section.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hqCYqEh6rqckFz8e6xj8.png", alt="The Content Security Policy section in Application > Frames.", width="800", height="446" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/dee14d983039f08b350c4932efc983e89ceb7dbe #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/61baf65bc88cb991e4fcd9073c8a409f81464ab3 #}
+
+Chromium issue: [1424714](https://crbug.com/1424714).
+
 ## Lighthouse 11.2.0 {: #lighthouse }
 
 The **Lighthouse** panel now runs Lighthouse 11.2.0. See the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.2.0).
