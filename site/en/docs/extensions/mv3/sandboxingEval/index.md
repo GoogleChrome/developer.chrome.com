@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Using eval in Chrome extensions"
+title: "Use eval() in sandboxed iframes"
+seoTitle: "Use eval() - Chrome Extensions"
 date: 2012-09-18
 updated: 2023-02-06
 description: How to use eval() in a Chrome Extension.

@@ -32,7 +32,7 @@ Use os resultados de auditoria de cadeias de solicitação críticas para direci
 - Otimize o número de bytes críticos para reduzir o tempo de download (número de viagens de ida e volta).
 - Otimize a ordem em que os recursos críticos restantes são carregados: baixe todos os ativos críticos o quanto antes para encurtar o comprimento do caminho crítico.
 
-Saiba mais sobre como otimizar suas [imagens](https://web.dev/use-imagemin-to-compress-images/) , [JavaScript](https://web.dev/apply-instant-loading-with-prpl/), [CSS](https://web.dev/defer-non-critical-css/) e [fontes da web](https://web.dev/avoid-invisible-text/) .
+Saiba mais sobre como otimizar suas [imagens](https://web.dev/articles/use-imagemin-to-compress-images) , [JavaScript](https://web.dev/articles/apply-instant-loading-with-prpl), [CSS](https://web.dev/articles/defer-non-critical-css) e [fontes da web](https://web.dev/articles/avoid-invisible-text) .
 
 ## Orientação específica de pilha
 

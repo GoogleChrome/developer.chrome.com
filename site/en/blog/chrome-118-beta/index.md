@@ -18,7 +18,7 @@ Unless otherwise noted, changes described below apply to the newest Chrome beta 
 
 ## CSS
 
-This release adds five new CSS features.
+This release adds four new CSS features.
 
 ### Scoped styles
 
@@ -41,9 +41,6 @@ These flow-relative directional keywords resolve to a physical value depending o
 
 Adds the [`prefers-reduced-transparency` media feature](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-transparency), which lets developers adapt web content to user-selected preference for reduced transparency in the OS, such as the **Reduce transparency** setting on macOS. Valid options are `reduce` or `no-preference`.
 
-### Media Queries: scripting feature
-
-The [`scripting` media feature](https://developer.mozilla.org/docs/Web/CSS/@media/scripting) is used to query whether scripting languages, such as JavaScript, are supported on the current document. Valid options are `enabled`, `initial-only`, or `none`. However, `initial-only` never matches inside a browser. 
 
 ### Support stroke-box, content-box, and border-box in the transform-box CSS property
 

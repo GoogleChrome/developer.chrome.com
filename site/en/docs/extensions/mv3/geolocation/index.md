@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Using geolocation"
+title: "Use geolocation"
 seoTitle: "Using geolocation in Chrome Extensions"
 date: 2023-06-20
 description: How to use geolocation in Chrome extension service workers, popups, side panels, or content scripts.

@@ -143,9 +143,9 @@ need to make. The origin trial is planned to start **from Chrome 95** and we
 will announce when it is available for registration.
 
 If you require the extended information from the User-Agent, then [**User-Agent
-Client Hints (UA-CH)**](https://web.dev/user-agent-client-hints/) provides that
+Client Hints (UA-CH)**](https://web.dev/articles/user-agent-client-hints) provides that
 functionality for both HTTP headers and JavaScript. Check out the [migration
-guide](https://web.dev/migrate-to-ua-ch/) for integrating this into your site.
+guide](https://web.dev/articles/migrate-to-ua-ch) for integrating this into your site.
 
 UA-CH is available by default in Chrome Stable and we are continuing to improve
 functionality with ecosystem feedback. The Microsoft Edge team is contributing

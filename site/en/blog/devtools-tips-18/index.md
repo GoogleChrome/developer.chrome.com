@@ -37,6 +37,6 @@ With DevTools, you can:
 To learn more, see:
 
 - [Debug Progressive Web Apps](/docs/devtools/progressive-web-apps/)
-- [Learn PWA](https://web.dev/learn/pwa/)
+- [Learn PWA](https://web.dev/learn/pwa)
 - [Unpacking the Workbox](https://www.youtube.com/playlist?list=PLNYkxOF6rcIC3BwCw--jvZNN7obH4QUlH) video series
-- [The service worker lifecycle](https://web.dev/service-worker-lifecycle/)
+- [The service worker lifecycle](https://web.dev/articles/service-worker-lifecycle)

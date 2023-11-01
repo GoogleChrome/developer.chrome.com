@@ -5,7 +5,7 @@ authors:
   - samdutton
   - kevinkiklee
 description: >
-  Protected Audience API is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
+  Protected Audience API is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites.
 date: 2022-01-27
 updated: 2022-08-24
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
@@ -68,7 +68,7 @@ The diagram below provides an overview of the FLEDGE lifecycle:
 
 A walkthrough of a basic Protected Audience deployment across advertiser and publisher sites is  available at
 [protected-audience-demo.web.app](https://protected-audience-demo.web.app/).
- 
+
 The [demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)
 explains how the demo code works, and shows how to use Chrome DevTools for Protected Audience debugging.
 
@@ -204,9 +204,9 @@ As part of a Protected Audience ad auction, the browser can access a
 that returns simple key-value pairs to provide information to an ad buyer, such as remaining
 campaign budget. The Protected Audience proposal [mandates](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements)
 that this server "performs no event-level logging and has no other side effects based on these
-requests".  
+requests".
 
-The Protected Audience Key/Value service code is now available in a [Privacy Sandbox GitHub repository](https://github.com/privacysandbox/fledge-key-value-service). This service can be used by Chrome and Android developers. Check out the [announcement blog post](/blog/open-sourcing-fledge-key-value-service/) for the status update. Learn more about the Protected Audience Key/Value service from the [API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) and the [trust model explainer](https://github.com/privacysandbox/fledge-docs/blob/main/key_value_service_trust_model.md).  
+The Protected Audience Key/Value service code is now available in a [Privacy Sandbox GitHub repository](https://github.com/privacysandbox/fledge-key-value-service). This service can be used by Chrome and Android developers. Check out the [announcement blog post](/blog/open-sourcing-fledge-key-value-service/) for the status update. Learn more about the Protected Audience Key/Value service from the [API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) and the [trust model explainer](https://github.com/privacysandbox/fledge-docs/blob/main/key_value_service_trust_model.md).
 
 For initial testing, ["Bring Your Own Server"](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now) model is used. In the long-term, adtechs will need to use the open-source Protected Audience Key/Value services running in [trusted execution environments](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment) for retrieving real-time data.
 
@@ -465,7 +465,7 @@ days. Successive calls overwrite previously stored values.
 {% Aside 'gotchas' %}
 
 All URLs used as parameters for Protected Audience API methods must be from secure origins: all resources must
-be served over HTTPS URLs. [How to use HTTPS for local development](https://web.dev/how-to-use-local-https/)
+be served over HTTPS URLs. [How to use HTTPS for local development](https://web.dev/articles/how-to-use-local-https)
 explains how to do this when running Protected Audience locally.
 
 In addition, `biddingLogicUrl`, `decisionLogicUrl`, and `trustedBiddingSignals` all require an
@@ -1303,5 +1303,5 @@ explains the demo code, and shows how to use Chrome DevTools for Protected Audie
 -  [Intent to prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
 
 <hr>
-  
+
 Photo by [Ray Hennessy](https://unsplash.com/@rayhennessy) on [Unsplash](https://unsplash.com/photos/GL6ORxDMswI).

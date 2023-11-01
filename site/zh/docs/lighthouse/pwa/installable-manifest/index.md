@@ -10,13 +10,13 @@ date: 2019-05-04
 updated: 2019-09-19
 ---
 
-可安装性是 [Progressive Web Apps (渐进式 Web 应用，PWA)](https://web.dev/progressive-web-apps/) 的核心要求。通过提示用户安装您的 PWA，您允许用户将其添加到他们的主屏幕。将应用添加到主屏幕的用户会更频繁地使用这些应用。
+可安装性是 [Progressive Web Apps (渐进式 Web 应用，PWA)](https://web.dev/explore/progressive-web-apps) 的核心要求。通过提示用户安装您的 PWA，您允许用户将其添加到他们的主屏幕。将应用添加到主屏幕的用户会更频繁地使用这些应用。
 
-[Web 应用清单](https://web.dev/add-manifest/)包含使您的应用可安装所需的关键信息。
+[Web 应用清单](https://web.dev/articles/add-manifest)包含使您的应用可安装所需的关键信息。
 
 ## Lighthouse Web 应用程序清单审计如何失败
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)会标记没有满足可安装性最低要求的[Web 应用程序清单](https://web.dev/add-manifest/)的页面：
+[Lighthouse](https://developers.google.com/web/tools/lighthouse/)会标记没有满足可安装性最低要求的[Web 应用程序清单](https://web.dev/articles/add-manifest)的页面：
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/039DlaixA4drrswBzSra.png", alt="显示用户无法从其主屏幕安装 Web 应用的 Lighthouse 审计", width="800", height="98" %}</figure>
 
@@ -28,13 +28,13 @@ updated: 2019-09-19
 - 设置为 `fullscreen` 、`standalone` 或 `minimal-ui` 的 [`display`](https://developer.mozilla.org/docs/Web/Manifest/display) 属性
 - 设置为非 `true` 值的 [`prefer_related_applications`](https://developers.google.com/web/fundamentals/app-install-banners/native) 属性。
 
-{% Aside 'caution' %}要使您的应用可安装，Web 应用清单是*必需\*\*的，但这还不够*。要了解如何满足可安装性的所有要求，请参阅[了解可安装性](https://web.dev/progressive-web-apps/)帖子。 {% endAside %}
+{% Aside 'caution' %}要使您的应用可安装，Web 应用清单是*必需\*\*的，但这还不够*。要了解如何满足可安装性的所有要求，请参阅[了解可安装性](https://web.dev/explore/progressive-web-apps)帖子。 {% endAside %}
 
 {% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 如何使您的 PWA 可安装
 
-确保您的应用具有符合上述条件的清单。有关创建 PWA 的更多信息，请参阅[可安装](https://web.dev/progressive-web-apps/)集。
+确保您的应用具有符合上述条件的清单。有关创建 PWA 的更多信息，请参阅[可安装](https://web.dev/explore/progressive-web-apps)集。
 
 ## 如何检查您的 PWA 是否可安装
 
@@ -42,7 +42,7 @@ updated: 2019-09-19
 
 当您的应用满足可安装性的最低要求时，Chrome 会触发 `beforeinstallprompt` 事件，您可以使用该事件提示用户安装您的 PWA。
 
-{% Aside 'codelab' %}通过[使其可安装](https://web.dev/codelab-make-installable/)代码实验室了解如何使您的应用可安装在 Chrome 中。 {% endAside %}
+{% Aside 'codelab' %}通过[使其可安装](https://web.dev/articles/codelab-make-installable)代码实验室了解如何使您的应用可安装在 Chrome 中。 {% endAside %}
 
 ### 在其他浏览器中
 
@@ -57,7 +57,7 @@ updated: 2019-09-19
 ## 资源
 
 - [**Web 应用清单不符合可安装性要求**审计源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/installable-manifest.js)
-- [添加 Web 应用清单](https://web.dev/add-manifest/)
-- [了解如何具备可安装性](https://web.dev/progressive-web-apps/)
+- [添加 Web 应用清单](https://web.dev/articles/add-manifest)
+- [了解如何具备可安装性](https://web.dev/explore/progressive-web-apps)
 - [Web 应用清单](https://developer.mozilla.org/docs/Web/Manifest)
 - [不使用 HTTPS](/docs/lighthouse/pwa/is-on-https/)

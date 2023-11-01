@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: Best Practices
 seoTitle: Best Practices for Chrome extensions
 date: 2017-08-30
-updated: 2023-08-24
+updated: 2023-09-29
 description: >
   How to create a high-quality extension and Chrome Web store listing.
 ---
@@ -66,7 +66,7 @@ Include all the [required images][cws-images] (icon, tile, marquee, and screensh
 
 ### Choose your extension's category well {: #choose-category-well}
 
-The developer console lets you specify a category for each extension. Choose the most appropriate category:
+The developer console requires you to specify a category for your extension. Choose the most appropriate category:
 
 Accessibility
 : Extensions designed to enhance the browsing experience for individuals with visual impairments, hearing loss, limited dexterity, and other disabilities. This may include tools like screen readers, dark mode extensions, or utilities that help with navigation, using keyboard shortcuts, voice commands, among others.
@@ -149,6 +149,44 @@ Social & Communications
   * Social Media & Networking
   * Travel
   * Well-being
+
+### Choose your theme's category well {: #choose-theme-category-well}
+
+The developer console also asks you specify a category for your theme. Choose the most appropriate category:
+
+Animals
+: Themes inspired by animals.
+
+Art & Design
+: Themes built merely to make your browser look pretty.
+
+Cars
+: Themes relating to cars, such as current and classic cars.
+
+Colors
+: Themes that skin your browser in custom colors.
+
+Dark & Black
+: Themes that feature dark colors and imagery.
+
+Entertainment
+: Themes inspired by popular entertainment, such as television and film franchises.
+
+Games & Anime
+: Themes inspired by video games and anime.
+
+Minimalist
+: Themes that simplify the look of your browser.
+
+Nature & Landscapes
+: Themes inspired by the great outdoors.
+
+Space
+: Themes inspired by space.
+
+Other
+: A category for themes that don't have a home anywhere else.
+
 
 [api-sidepanel]: /docs/extensions/reference/sidePanel/
 [completing-listing]: /docs/webstore/cws-dashboard-listing/

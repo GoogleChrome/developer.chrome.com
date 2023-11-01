@@ -4,7 +4,7 @@ title: Publish your extension
 seoTitle: Publishing a new Manifest V3 Chrome extension.
 description: 'Guidance for publishing a new Manifest V3 extension'
 date: 2023-09-04
-# updated: 2023-05-10
+updated: 2023-09-11
 ---
 
 After [converting your extension][migration-checklist] to Manifest Version 3, the next step is to
@@ -83,6 +83,11 @@ To ensure that any unexpected problems will have minimal impact, you can roll ou
 1. [Upload][cws-upload] your new version.
 2. Go to the **Distribution** tab.
 3. Enter a percentage in **Percentage rollout** field.
+
+{% Aside %}
+Percentage rollout only applies to existing users of your extension. New users will always receive
+the new version.
+{% endAside %}
 
 <figure>
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oZxWW5oMsh7fUSzwvRNp.png", alt="Screenshot of the Chrome Web Store fractional rollout field", height="488", width="800", class='screenshot' %}
@@ -167,4 +172,4 @@ To stay on top of user feedback you can add a link to a [dedicated support site]
 [migration-checklist]: /docs/extensions/migrating/checklist/
 [review-factors]: /docs/webstore/review-process/#review-time-factors
 [spam-policy]: /docs/webstore/troubleshooting/#spam
-[support-site]: /docs/webstore/manage/#dedicated-support-site
+[support-site]: /docs/webstore/support-users/#provide-user-support

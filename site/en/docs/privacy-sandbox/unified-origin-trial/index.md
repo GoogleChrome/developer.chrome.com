@@ -637,9 +637,15 @@ Only available in M105+ Canary, Dev, and Beta for now.
 
 #### August 2022
 
--  Origin trial availability ramps up to [1% of desktop users from Chrome Stable
-    104](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ).
-    -  Updates will follow when the availability includes mobile users.
+### September 2022
+
+-  Topics, Fenced Frames, and Attribution Reporting ramped up to 1% of Chrome Stable traffic on Android.
+
+### August 2022
+
+-  Origin trial availability ramps up to
+    [1% of desktop users from Chrome Stable 104](https://groups.google.com/a/chromium.org/g/blink-dev/c/Vi-Rj37aZLs/m/KhFZN95WBgAJ).
+-  Updates will follow when the availability includes mobile users.
 
 -  Pre-stable channels (Canary, Beta) remain at 50% of users.
 -  APIs are not available on iOS Chrome.

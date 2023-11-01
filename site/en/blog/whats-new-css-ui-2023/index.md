@@ -110,7 +110,7 @@ You can learn more and see more demos in our [blog post on style queries](/blog/
 
 {% BrowserCompat 'css.selectors.has' %}
 
-Speaking of powerful, dynamic features, the [:has() selector](/blog/has-m105/) is one of the most powerful new CSS capabilities landing in modern browsers. With `:has()`, you can apply styles by checking to see if a parent element contains the presence of specific children, or if those children are in a specific state. This means, we essentially now have a parent selector. 
+Speaking of powerful, dynamic features, the [:has() selector](/blog/has-m105/) is one of the most powerful new CSS capabilities landing in modern browsers. With `:has()`, you can apply styles by checking to see if a parent element contains the presence of specific children, or if those children are in a specific state. This means, we essentially now have a parent selector.
 
 Building on the container query example, you can use `:has()` to make the components even more dynamic. In it, an item with a "star" element gets a gray background applied to it, and an item with a checked checkbox a blue background.
 
@@ -145,7 +145,7 @@ Explore this feature further in our [article on nth-of syntax](/articles/css-nth
 
 <!-- {% BrowserCompat 'css.??' %} -->
 
-Selectors and style queries aren’t the only places that we can embed logic within our styles; typography is another one. From Chrome 114, you can use text-wrap balancing for headings, using the `text-wrap` property with the value `balance`. 
+Selectors and style queries aren’t the only places that we can embed logic within our styles; typography is another one. From Chrome 114, you can use text-wrap balancing for headings, using the `text-wrap` property with the value `balance`.
 
 <figure>
   {% Video
@@ -182,7 +182,7 @@ To balance the text, the browser effectively performs a binary search for the sm
 </figure>
 
 {% Aside %}
-While this is a great progressive enhancement you can try out today, it’s important to note that this API works only up to 4 lines of text, so it’s great for titles and headlines, but likely not what you’re looking for with longer pieces of content. 
+While this is a great progressive enhancement you can try out today, it’s important to note that this API works only up to 4 lines of text, so it’s great for titles and headlines, but likely not what you’re looking for with longer pieces of content.
 {% endAside %}
 
 Learn more about it in [this article](/blog/css-text-wrap-balance/).
@@ -215,7 +215,7 @@ The letter’s block-offset, or “sink”, for where the letter will sit.
 
 Learn more about using `intial-letter` [here](/blog/control-your-drop-caps-with-css-initial-letter/).
 
-### Dynamic viewport units 
+### Dynamic viewport units
 
 {% BrowserCompat 'css.types.length.viewport_percentage_units_large' %}
 
@@ -223,21 +223,21 @@ One common problem web developers face today is accurate and consistent full-vie
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/uhcpJi4cZjgCoyPc9hiF.png", alt="Showing too many scrollbars", width="800", height="488" %}
 
-To resolve this issue, we now have new unit values on the web platform, including: 
+To resolve this issue, we now have new unit values on the web platform, including:
 - Small viewport height and width (or `svh` and `svw`), which represent the smallest active viewport size.
-- Large viewport height and width (`lvh` and `lvw`), which represent the largest size. 
+- Large viewport height and width (`lvh` and `lvw`), which represent the largest size.
 - Dynamic viewport height and width (`dvh` and `dvw`).
 
 Dynamic viewport units change in value when the additional dynamic browser toolbars, such as the address at the top or tab bar at the bottom, are visible and when they are not.
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/nJ8JpRlThr7O631TWmu8.png", alt="New viewport units visualized", width="800", height="315" %}
 
-{% Aside %} 
-Note that the dynamic viewport units do not take the presence of the Virtual Keyboard into account. From Chrome 108 you can [set a meta-tag to change this behavior](/blog/viewport-resize-behavior/#opting-in-to-a-different-behavior). 
+{% Aside %}
+Note that the dynamic viewport units do not take the presence of the Virtual Keyboard into account. From Chrome 108 you can [set a meta-tag to change this behavior](/blog/viewport-resize-behavior/#opting-in-to-a-different-behavior).
 {% endAside %}
 
 
-For more information about these new units, read [The large, small, and dynamic viewport units](https://web.dev/viewport-units/).
+For more information about these new units, read [The large, small, and dynamic viewport units](https://web.dev/articles/viewport-units).
 
 ### Wide-gamut color spaces
 
@@ -341,12 +341,12 @@ CSS nesting, something folks love from Sass, and one of the top CSS developer re
 /* can be done with nesting like */
 .card {
   &:hover {
-    
+
   }
 }
 ```
 
-You can also nest [Media Queries](/learn/design/media-queries/), which also means you can nest [Container Queries](https://web.dev/cq-stable/). In the following example, a card is changed from a portrait layout to a landscape layout if there's enough width in it's container:
+You can also nest [Media Queries](/learn/design/media-queries/), which also means you can nest [Container Queries](https://web.dev/articles/cq-stable). In the following example, a card is changed from a portrait layout to a landscape layout if there's enough width in it's container:
 
 ```css
 .card {
@@ -363,13 +363,13 @@ The layout adjustment to `flex` occurs when the container has more (or equal to)
 
 For more information and examples, check out our post on [CSS nesting](/articles/css-nesting/).
 
-### Cascade layers 
+### Cascade layers
 
 {% BrowserCompat 'css.at-rules.layer' %}
 
 Another developer pain point we’ve identified is ensuring consistency in which styles win over others, and one part of resolving this is having better control over the CSS cascade.
 
-[Cascade layers](/blog/cascade-layers/) solve this by giving users control over which layers have a higher precedence than others, meaning more fine-tuned control of when your styles are applied. 
+[Cascade layers](/blog/cascade-layers/) solve this by giving users control over which layers have a higher precedence than others, meaning more fine-tuned control of when your styles are applied.
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/jH8ydtcwmHg4rHTfqvRU.png", alt="Cascade Illustration", width="800", height="393" %}
 
@@ -381,18 +381,18 @@ Another developer pain point we’ve identified is ensuring consistency in which
 
 Learn more about how to use cascade layers [in this article](/blog/cascade-layers/).
 
-### Scoped CSS 
+### Scoped CSS
 
 {% BrowserCompat 'css.at-rules.scope' %}
 
 
-CSS scoped styles allow developers to specify the boundaries for which specific styles apply, essentially creating native namespacing in CSS. Before, developers relied on 3rd party scripting to rename classes, or specific naming conventions to prevent style collision, but soon, you can use `@scope`. 
+CSS scoped styles allow developers to specify the boundaries for which specific styles apply, essentially creating native namespacing in CSS. Before, developers relied on 3rd party scripting to rename classes, or specific naming conventions to prevent style collision, but soon, you can use `@scope`.
 
 Here, we’re scoping a `.title` element to a `.card`. This would prevent that title element from conflicting with any other `.title` elements on the page, like a blog post title or other heading.
 
 ```css
 @scope (.card) {
-  .title { 
+  .title {
     font-weight: bold;
   }
 }
@@ -416,9 +416,9 @@ In the demo below, the dots revolve around a central point. Instead of rotating 
 
 {% Codepen { user: 'web-dot-dev', id: 'ExePgOg', height: 600, theme: 'dark', tab: 'result' } %}
 
-See our [article on trigonometric functions](https://web.dev/css-trig-functions/) for more detailed information on this topic.
+See our [article on trigonometric functions](https://web.dev/articles/css-trig-functions) for more detailed information on this topic.
 
-### Individual transform properties 
+### Individual transform properties
 
 {% BrowserCompat 'css.properties.translate' %}
 
@@ -452,7 +452,7 @@ Now, you can have all of this detail in your CSS animations by separating the ty
 
 With this, changes in translation, rotation, or scale can happen simultaneously at different rates of change in different times during the animation.
 
-See this [post on individual transform functions](https://web.dev/css-individual-transform-properties/) for more information.
+See this [post on individual transform functions](https://web.dev/articles/css-individual-transform-properties) for more information.
 
 ## Customizable Components
 To  make sure we’re resolving some of the key developer needs through the web platform, we’re working with the [OpenUI community group](http://open-ui.com/) and have identified three solutions to start with:
@@ -480,7 +480,7 @@ The DOM structure for popover is declarative and can be written as clearly as gi
   <!-- Popover content goes in here -–>
 </div>
 
-<button popovertarget="event-popup">Create New Event</button> 
+<button popovertarget="event-popup">Create New Event</button>
 ```
 
 `popover` is a shorthand for `popover=auto`. An element with `popover=auto` will force-close other popovers when opened, receive focus when opened, and can light-dismiss. Conversely, `popover=manual` elements do not force-close any other element type, do not receive focus immediately, and do not light-dismiss. They close via a toggle or other close action.
@@ -488,7 +488,7 @@ The DOM structure for popover is declarative and can be written as clearly as gi
 
 {% Codepen { user: 'web-dot-dev', id: 'mdzpGwq', height: 400, tab: 'result' } %}
 
-{% Video 
+{% Video
   src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/cgHE50lFjDLze9JSeHtH.mp4", autoplay="true",
   loop="true",
   muted="true",
@@ -507,7 +507,7 @@ But what happens if the popover doesn’t fit in the viewport based on the way y
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/wlIsaOjCC0lVKzMp2fCF.png", alt="popover popping out of viewport", width="800", height="544" %}
 
-To solve for this, the anchor positioning API includes fallback positions that you can customize. The following example creates a fallback position called "top-then-bottom". The browser will first try to position the tooltip at the top, and if that doesn’t fit in the viewport, the browser would then position it under the anchoring element, on the bottom. 
+To solve for this, the anchor positioning API includes fallback positions that you can customize. The following example creates a fallback position called "top-then-bottom". The browser will first try to position the tooltip at the top, and if that doesn’t fit in the viewport, the browser would then position it under the anchoring element, on the bottom.
 
 ```css
 .center-tooltip {
@@ -528,7 +528,7 @@ To solve for this, the anchor positioning API includes fallback positions that y
 }
 ```
 
-{% Video 
+{% Video
   src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/yZCqhUqmqci63y9V7EFU.mp4", autoplay="true",
   loop="true",
   muted="true",
@@ -550,7 +550,7 @@ Learn more about anchor positioning [in this blog post](/blog/tether-elements-to
 
 ### `<selectmenu>`
 
-With both popover and anchor positioning, you can build fully customizable selectmenus. The OpenUI community group has been investigating the fundamental structure of these menus and looking for ways to allow for the customization of any content within them. Take these visual examples: 
+With both popover and anchor positioning, you can build fully customizable selectmenus. The OpenUI community group has been investigating the fundamental structure of these menus and looking for ways to allow for the customization of any content within them. Take these visual examples:
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/4QPcUaz8AXxtwmMNM8J1.png", alt="Examples of selectmenus", width="800", height="458" %}
 
@@ -605,18 +605,18 @@ The following popover demo, animates popovers in and out using `:popover-open` f
       transform: translateY(20px);
       opacity: 0;
     }
-    
+
     /*   1. open (changed) state   */
     transform: translateY(0);
     opacity: 1;
   }
-  
+
   /*   2. After-change state */
   transform: translateY(-50px);
   opacity: 0;
-  
+
   /*  enumarate transitioning properties, including display */
-  transition: transform 0.5s, opacity 0.5s, display 0.5s;
+  transition: transform 0.5s, opacity 0.5s, display 0.5s allow-discrete;
 }
 ```
 {% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hAoQAy9WSwOCmYaPeHxi.mp4", autoplay="true",
@@ -637,7 +637,7 @@ Which brings us to interactions, the last stop on this tour of web UI features.
 
 We already talked about animating discrete properties, but there are also some really exciting APIs landing in Chrome around scroll-driven animations and view transitions
 
-### Scroll-driven animations  
+### Scroll-driven animations
 
 {% BrowserCompat 'css.properties.animation-timeline' %}
 
@@ -654,7 +654,7 @@ These new APIs work in conjunction with existing Web Animations and CSS Animatio
 
 For an extensive in-depth guide to how to create these scroll-driven animations, please refer to [this article on scroll-driven animations](/articles/scroll-driven-animations).
 
-### View transitions 
+### View transitions
 
 {% BrowserCompat 'css.properties.view-transition-name' %}
 

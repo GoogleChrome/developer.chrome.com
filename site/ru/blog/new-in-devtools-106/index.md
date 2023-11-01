@@ -174,8 +174,8 @@ async increment() {
 <!-- ## LCP timings breakdown in the Performance Insights panel {: #insights } -->
 ## Разбивка по времени LCP во вкладке Performance Insights {: #insights }
 
-<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/optimize-lcp/#lcp-breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
-Вкладка **Performance Insights** теперь показывает [разбивку по времени](https://web.dev/optimize-lcp/#lcp-breakdown) для [самого крупного существенного отображения (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Используйте информацию о тайминге для понимания и определения возможностей для улучшения LCP.
+<!-- The **Performance Insights** panel now shows the [timings breakdown](https://web.dev/articles/optimize-lcp#lcp_breakdown)  of the [Largest Containful Paint (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Use these timings information to understand and identify an opportunity to improve LCP performance. -->
+Вкладка **Performance Insights** теперь показывает [разбивку по времени](https://web.dev/articles/optimize-lcp#lcp_breakdown) для [самого крупного существенного отображения (LCP)](/docs/devtools/performance-insights/#largest-contentful-paint). Используйте информацию о тайминге для понимания и определения возможностей для улучшения LCP.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hU6RmoRjFskL8P2ZAB9l.png", alt="Разбивка по времени LCP во вкладке Performance Insights", width="800", height="523" %}
 
@@ -204,8 +204,8 @@ async increment() {
 - Ранее [расширение Recorder](/docs/devtools/recorder/reference/#extension-troubleshooting) во вкладке **Recorder** периодически не показывалось. ([1351416](https://crbug.com/1351416))
 <!-- - The **Styles** pane now displays a color picker for the [SVG `<stop>`](https://developer.mozilla.org/docs/Web/SVG/Element/stop) element’s `stop-color` property. ([1351096](https://crbug.com/1351096)) -->
 - Во вкладке **Стили** (Styles) теперь показывается предпросмотр цвета для элемента [`<stop>` в SVG](https://developer.mozilla.org/docs/Web/SVG/Element/stop) в свойстве `stop-color`. ([1351096](https://crbug.com/1351096))
-<!-- - Identify script causing [layout](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
-- Определение вызова скрипта [отрисовки](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/) как потенциальной причины для сдвигов раскладки во вкладке **Performance Insights**. ([1343019](https://crbug.com/1343019))
+<!-- - Identify script causing [layout](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) as the potential root causes for layout shifts in the **Performance Insights** panel. ([1343019](https://crbug.com/1343019)) -->
+- Определение вызова скрипта [отрисовки](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing) как потенциальной причины для сдвигов раскладки во вкладке **Performance Insights**. ([1343019](https://crbug.com/1343019))
 <!-- - Display critical path for LCP web fonts in the **Performance Insights** panel. ([1350390](https://crbug.com/1350390)) -->
 - Отображение критического для LCP пути до веб-шрифтов во вкладке **Performance Insights**. ([1350390](https://crbug.com/1350390))
 

@@ -43,7 +43,7 @@ Now a few new CSS features, starting with a new length unit: `lh`.
 
 The `lh` CSS unit is equal to the computed value of the line-height property on the element on which it is used. This allows a `textarea` to be given a height that is the same as the number of lines of expected text.
 
-Also the CSS Working Group added a new value of `auto` for the descriptors: `font-weight`, `font-style`, and `font-stretch` inside the `@font-face` rule.  `auto` is now the initial value. These descriptors in [variable fonts](https://web.dev/variable-fonts/) provide users the ability to choose how heavy or slanted or wide the typeface should be.
+Also the CSS Working Group added a new value of `auto` for the descriptors: `font-weight`, `font-style`, and `font-stretch` inside the `@font-face` rule.  `auto` is now the initial value. These descriptors in [variable fonts](https://web.dev/articles/variable-fonts) provide users the ability to choose how heavy or slanted or wide the typeface should be.
 
 To provide better control over web typography, the [`hyphenate-limit-chars`](https://developer.mozilla.org/docs/Web/CSS/hyphenate-limit-chars#:~:text=The%20hyphenate%2Dlimit%2Dchars%20CSS,control%20over%20hyphenation%20in%20text.) property specifies the minimum number of characters in a hyphenated word.
 

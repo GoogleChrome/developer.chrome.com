@@ -126,7 +126,7 @@ const opts = {
 const pickedFonts = await self.queryLocalFonts(opts);
 ```
 
-Check out Tom's article [Use advanced typography with local fonts](https://web.dev/local-fonts/)
+Check out Tom's article [Use advanced typography with local fonts](https://web.dev/articles/local-fonts)
 on web.dev for complete details.
 
 ## Easier Timeouts with AbortSignal.timeout() {: #abort-timeout }

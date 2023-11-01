@@ -11,7 +11,7 @@ authors:
 
 ## 구현 현황
 
-- [최초 평가판](https://web.dev/origin-trials/) Chrome 84 ~ 94
+- [최초 평가판](/docs/web-platform/origin-trials/) Chrome 84 ~ 94
 - [평가판에 등록](/origintrials/#/view_trial/2479231594867458049)
 - [데모](https://trust-token-demo.glitch.me/)
 - [Chrome DevTools 통합](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token)
@@ -62,7 +62,7 @@ Trust Tokens API를 사용하면 웹사이트에서 신뢰하는 사용자에게
 12. 게시자 사이트에서 광고를 표시됩니다.
 13. 광고 조회 노출이 계산됩니다.
 
-{% Aside %} 이 예제의 JavaScript 호출에 대한 자세한 내용은 [Sample API 사용](https://web.dev/trust-tokens/#sample-api-usage)을 참조하세요. {% endAside %}
+{% Aside %} 이 예제의 JavaScript 호출에 대한 자세한 내용은 [Sample API 사용](https://web.dev/articles/trust-tokens#sample_api_usage)을 참조하세요. {% endAside %}
 
 ---
 
@@ -78,6 +78,6 @@ Trust Tokens API를 사용하면 웹사이트에서 신뢰하는 사용자에게
 ## 더 많은 리소스 찾아보기
 
 - [Trust Token API 기술 설명자](https://github.com/dvorak42/trust-token-api)
-- [신뢰 토큰 시작하기](https://web.dev/trust-tokens/): 웹 개발자를 위한 개요
+- [신뢰 토큰 시작하기](https://web.dev/articles/trust-tokens): 웹 개발자를 위한 개요
 - [Chrome의 최초 평가판 시작하기](https://web.dev/origin-trials)
 - [개인정보 보호 샌드박스 자세히 알아보기](https://web.dev/digging-into-the-privacy-sandbox)

@@ -12,7 +12,7 @@ tags:
 
 {% Aside %}
 We expect to [remove support for `data:` URLs in SVG `<use>` element](https://chromestatus.com/feature/5128825141198848)
-in Chrome 119, scheduled to ship in November 2023.
+in Chrome 120, scheduled to ship in December 2023.
 {% endAside %}
 
 The SVG spec was [recently updated](https://github.com/w3c/svgwg/pull/901) to remove support for `data:` URLs in SVG `<use>` element.

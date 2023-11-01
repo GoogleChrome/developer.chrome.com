@@ -23,11 +23,11 @@ is_outdated: true
 
  To replace functionality that relied on the User Agent string, you can implement the [User Agent client hints API](https://developer.mozilla.org/docs/Web/API/User-Agent_Client_Hints_API#browser_compatibility).
 
- The [User-Agent Client Hints page](https://web.dev/migrate-to-ua-ch/) provides some background.
+ The [User-Agent Client Hints page](https://web.dev/articles/migrate-to-ua-ch) provides some background.
 
  The remainder of this blog post should be considered deprecated.
  {% endAside %}
- 
+
 User-Agent Reduction is an effort to reduce passive fingerprinting surfaces by
 reducing the information in the
 [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
@@ -87,14 +87,14 @@ in:
 
 To receive more client information than what's shared by the reduced User-Agent,
 sites will need to migrate to the new User-Agent [Client
-Hints](https://web.dev/migrate-to-ua-ch/) API. For more details on migration
+Hints](https://web.dev/articles/migrate-to-ua-ch) API. For more details on migration
 strategies, see [Migrate to User-Agent Client
-Hints](https://web.dev/migrate-to-ua-ch/).
+Hints](https://web.dev/articles/migrate-to-ua-ch).
 
 The User-Agent reduction plans do not currently include iOS and WebView, therefore
 those platforms will continue to get the full user agent string.  The primary
 reason is that these platforms have not yet implemented User-Agent
-[Client Hints](https://web.dev/migrate-to-ua-ch/).
+[Client Hints](https://web.dev/articles/migrate-to-ua-ch).
 
 ## How does this origin trial work?
 
@@ -124,7 +124,7 @@ provided that the [permissions policy](/docs/privacy-sandbox/permissions-policy/
 1.  To register for the origin trial and get a token for your domains,
     visit the
     [Trial for User Agent Reduction page](/origintrials/#/view_trial/-7123568710593282047).
-    
+
     {% Aside %}
     To register your domains for the trial as a third-party embed, you
         will [need a separate token](#enroll-third-party).
@@ -147,7 +147,7 @@ provided that the [permissions policy](/docs/privacy-sandbox/permissions-policy/
         reduced UA string, even if the origins of those requests are not
         enrolled in the origin trial.
 1.  Load your website in Chrome M95 (or later) and start receiving the
-    reduced UA string. 
+    reduced UA string.
 1.  Submit any issues or feedback to the UA Reduction [GitHub
     repository](https://github.com/miketaylr/user-agent-reduction/issues).
 1.  See [https://uar-ot.glitch.me/](https://uar-ot.glitch.me/) for a simple
@@ -161,7 +161,7 @@ enrolled.
 
 To enroll as a third-party embed:
 
-1.  Visit the 
+1.  Visit the
     [Trial for User Agent Reduction](/origintrials/#/view_trial/-7123568710593282047)
     and click **Register**.
 1.  When creating the token, make sure to select the `Third-party matching` checkbox.

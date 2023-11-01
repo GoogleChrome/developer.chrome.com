@@ -11,8 +11,6 @@ anchorRedirects:
   understanding_permissions: /docs/extensions/mv3/declare_permissions
 ---
 
-## Overview {: overview }
-
 Chrome extensions enhance the user's browser experience. To do this extensions use [Chrome
 APIs][doc-apis] that require certain permissions. Some permissions are less intrusive and do not
 display a warning. Other permissions trigger a warning that users have to allow.
@@ -48,7 +46,7 @@ harder to understand than others. Users are more likely to install extensions th
 guidelines:
 
 Request relevant permissions
-: Extensions are required to fulfill a [single purpose](/docs/extensions/mv3/quality_guidelines#single-purpose) and
+: Extensions are required to fulfill a [single purpose](/docs/webstore/program-policies/quality-guidelines-faq) and
 comply with the [Use of permissions](/docs/webstore/program-policies/permissions/) policy. Ensure you only
 request permissions that support the extension's main functionality.
 
@@ -363,6 +361,11 @@ the steps in [Viewing Warnings](#view_warnings).
       <td><code>"proxy"</code></td>
       <td>Grants access to the <a href="/docs/extensions/reference/proxy">chrome.proxy</a> API.</td>
       <td><strong>Read and change all your data on all websites</strong></td>
+    </tr>
+    <tr id="readingList">
+      <td><code>"readingList"</code></td>
+      <td>Grants access to the <a href="/docs/extensions/reference/readingList">chrome.readingList</a> API.</td>
+      <td><strong>Read and change entries in the reading list</strong></td>
     </tr>
     <tr id="sessionshistory">
       <td><code>"sessions"</code> and <code>"history"</code></td>

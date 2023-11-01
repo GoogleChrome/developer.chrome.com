@@ -9,7 +9,7 @@ description: >
 
 When it comes to building for the web, there are a couple of architectural styles to be aware of.
 
-For example, a "traditional" website&mdash;also referred to as a _Multi-page Application_ (MPA)&mdash;is a collection of pages that users navigate through via traditional [navigation requests](https://web.dev/handling-navigation-requests/). Static sites are a good example of this architectural style,  even CMS-powered websites such as blog and marketing websites are examples of the style as well.
+For example, a "traditional" website&mdash;also referred to as a _Multi-page Application_ (MPA)&mdash;is a collection of pages that users navigate through via traditional [navigation requests](https://web.dev/articles/handling-navigation-requests). Static sites are a good example of this architectural style,  even CMS-powered websites such as blog and marketing websites are examples of the style as well.
 
 Then there's the "modern" _Single Page Application_ (SPA) style,  where the only navigation request is the very first one. SPA architectures tend to serve minimal markup on the initial navigation request,  which is populated by data provided by server-side APIs. This data is then presented in client-rendered markup provided by a client-side router for every subsequent navigation.
 

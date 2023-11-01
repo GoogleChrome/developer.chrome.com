@@ -7,6 +7,7 @@ authors:
   - beaufortfrancois
   - eladalon
 date: 2022-11-28
+updated: 2023-10-24
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/O12v673aOekK889d5Upi.jpg
 alt: Person holding eyeglasses with distant items in focus through the glasses.
 tags:
@@ -49,7 +50,7 @@ if (displaySurface == "browser") {
 } else if (displaySurface == "window") {
   // Do not move focus to the captured window.
   // Keep the capturing page focused.
-  controller.setFocusBehavior("no-focus-change");
+  controller.setFocusBehavior("focus-capturing-application");
 }
 ```
 
@@ -60,7 +61,7 @@ When deciding whether to focus, it is possible to take the [Capture Handle] into
 // Focus anything else.
 const origin = track.getCaptureHandle().origin;
 if (displaySurface == "browser" && origin == "https://example.com") {
-  controller.setFocusBehavior("no-focus-change");
+  controller.setFocusBehavior("focus-capturing-application");
 } else if (displaySurface != "monitor") {
   controller.setFocusBehavior("focus-captured-surface");
 }

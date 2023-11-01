@@ -24,7 +24,7 @@ tags:
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## 样式窗格（Styles pane）可编辑 CSS 容器查询（container queries） {: #container-queries }
-现在，您可以在**样式**窗格（Styles pane）那里查看以及编辑 [CSS 容器查询（container queries）](https://web.dev/new-responsive/#responsive-to-the-container)。
+现在，您可以在**样式**窗格（Styles pane）那里查看以及编辑 [CSS 容器查询（container queries）](https://web.dev/articles/new-responsive#responsive_to_the_container)。
 
 容器查询的出现，给响应式设计提供更多的动态解决方案。虽`@container` @规则的工作方式与媒体查询（`@media`）类似，然而 `@container` 查询的对象是满足一定条件的祖先容器节点，而不是查询视口以及 user agent 信息。
 
@@ -41,7 +41,7 @@ Chromium 议题: [1146422](https://crbug.com/1146422)
 
 
 ## 网络面板可预览 Web bundle {: #web-bundle }
-[Web bundle](https://web.dev/web-bundles/) 是一种新兴的文件格式，用于封装一个或多个 HTTP 资源。现在，您可以在**网络**面板那里预览 web bundle 的网络请求。
+[Web bundle](https://web.dev/articles/web-bundles) 是一种新兴的文件格式，用于封装一个或多个 HTTP 资源。现在，您可以在**网络**面板那里预览 web bundle 的网络请求。
 
 web bundle 特性现还处于实验阶段。测试该特性之前，请在 `chrome://flags` 那里打开 `#enable-experimental-web-platform-features` 开关。
 

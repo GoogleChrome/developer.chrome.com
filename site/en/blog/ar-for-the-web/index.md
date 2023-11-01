@@ -10,7 +10,7 @@ updated: 2018-07-30
 ---
 
 In Chrome 67,
-[we announced](https://web.dev/welcome-to-immersive/)
+[we announced](https://web.dev/articles/welcome-to-immersive)
 the WebXR Device API for both augmented reality (AR) and virtual reality (VR),
 though only the VR features were enabled. VR is an experience based purely on
 what's in a computing device. AR on the other hand allows you to render virtual
@@ -62,7 +62,7 @@ turned on. Please excuse our construction debris.
 At Google IO this year, we demonstrated augmented reality with an early build of
 Chrome. I said something repeatedly to developers and non-developers alike
 during those three days that I wish I had known to put in my
-[immersive web article](https://web.dev/welcome-to-immersive/):
+[immersive web article](https://web.dev/articles/welcome-to-immersive):
 "It's just the web."
 
 {% YouTube id="1t1gBVykneA" %}
@@ -120,7 +120,7 @@ will look next to your other furniture.
 A key problem to solve when implementing augmented reality is how to place
 objects in a real-world view. The method for doing this is called _ray casting_.
 Ray casting means calculating the intersection between the
-[pointer ray](https://web.dev/welcome-to-immersive/#the-input-device-and-the-pointer-ray)
+[pointer ray](https://web.dev/articles/welcome-to-immersive#the_input_device_and_the_pointer_ray)
 and a surface in the real world. That intersection is called a _hit_ and
 determining whether a hit has occurred is a _hit test_.
 
@@ -160,10 +160,10 @@ helping you understand what's going on.
 
 The basics of entering an AR session and running a render loop are the same for
 AR as they are for VR. You can read
-[my previous article](https://web.dev/welcome-to-immersive/)
+[my previous article](https://web.dev/articles/welcome-to-immersive)
 if you're unfamiliar. To be more specific, entering and running an AR session
 looks almost exactly like
-[entering a VR magic window session](https://web.dev/welcome-to-immersive/#starting-and-running-an-app).
+[entering a VR magic window session](https://web.dev/articles/welcome-to-immersive#starting_and_running_an_app).
 As with a magic window, the session type must be non-immersive and the frame of
 reference type must be `'eye-level'`.
 

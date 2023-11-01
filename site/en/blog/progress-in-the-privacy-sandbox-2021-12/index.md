@@ -120,7 +120,7 @@ To find those areas:
     * mobile device name
 4. These are the values that will be reduced to fixed strings in the future. If
    you need access to these values, [migrate to User-Agent Client
-   Hints](https://web.dev/migrate-to-ua-ch/).
+   Hints](https://web.dev/articles/migrate-to-ua-ch).
 
 There is one December update to mention—if you are adopting User-Agent Client
 Hints, we have sent the **Intent to Ship to [enable delegating hints to other
@@ -159,8 +159,8 @@ a healthy number of cookies with quality ingredients. As we continue moving
 towards the phase out of third-party cookies, you should make sure you know
 which of your site's cookies will be affected. 2020 provided a headstart as it
 became necessary to [mark all cookies for cross-site or third-party
-use](https://web.dev/samesite-cookies-explained/#samesitenone-must-be-secure)
-with `SameSite=None`. 
+use](https://web.dev/articles/samesite-cookies-explained#samesitenone_must_be_secure)
+with `SameSite=None`.
 
 Any cookie where you have set the `SameSite` attribute to `None` will need an
 update.

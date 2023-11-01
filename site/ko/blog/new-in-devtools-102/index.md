@@ -48,8 +48,8 @@ Chromium issue: [1270700](https://crbug.com/1270700)
 
 <!-- ## New shortcuts to emulate light and dark themes {: #emulation } -->
 ## 새 바로가기 메뉴 -  라이트 테마 및 다크 테마 에뮬레이팅하기 {: #emulation }
-<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
-여러분은 이제 **스타일** 창의 새 바로가기를 통해 라이트 테마 및 다크 테마를 좀 더 빠르게 에뮬레이트할 수 있습니다. (CSS 미디어 기능 [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query))
+<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) with the new shortcuts in the **Styles** pane. -->
+여러분은 이제 **스타일** 창의 새 바로가기를 통해 라이트 테마 및 다크 테마를 좀 더 빠르게 에뮬레이트할 수 있습니다. (CSS 미디어 기능 [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query))
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
 이전에는, **렌더링** 탭에서 [테마 에뮬레이션](/docs/devtools/rendering/emulate-css/) 을 위해 더 많은 단계를 거쳐야 했습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dCbNHwE5ICGNXRUws1zz.png", alt="라이트 테마 및 다크 테마를 에뮬레이팅하기 위한 새로운 바로가기", width="800", height="488" %}
@@ -63,8 +63,8 @@ Chromium issue: [1314299](https://crbug.com/1314299)
 ## 네트워크 창의 미리보기 탭 보안 개선 {: #network-preview }
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
 DevTools의 새로운 기능 중 하나로, **네트워크** 창의 **미리보기** 탭에 콘텐츠 보안 정책(CSP)이 적용되었습니다.
-<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
-예를 들어, 첫 번째 스크린샷을 보면 이 페이지에는 [혼합 콘텐츠](https://web.dev/what-is-mixed-content/)가 포함되어 있습니다. 이 페이지는 안전한 HTTPS 연결을 통해 로딩되지만, 스타일시트는 로딩을 위해 보안되지 않은 HTTP 연결을 이용합니다.
+<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/articles/what-is-mixed-content). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
+예를 들어, 첫 번째 스크린샷을 보면 이 페이지에는 [혼합 콘텐츠](https://web.dev/articles/what-is-mixed-content)가 포함되어 있습니다. 이 페이지는 안전한 HTTPS 연결을 통해 로딩되지만, 스타일시트는 로딩을 위해 보안되지 않은 HTTP 연결을 이용합니다.
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
 브라우저는 스타일시트 요청을 기본적으로 제한합니다. 그러나 이 페이지를 **네트워크** 창의 **미리보기** 탭을 통해 열었을 때, 이전에는 스타일시트의 요청이 제한되지 않았습니다. (따라서 배경이 붉게 바뀝니다.) 그러나 이제는 여러분이 기대하는 것처럼 요청이 받아들여지지 않습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jxqxoJYqWXGzj4V9aJaX.png", alt="네트워크 창의 미리 보기 탭 보안 개선", width="800", height="488" %}
@@ -94,7 +94,7 @@ Chromium issues: [1014415](https://crbug.com/1014415), [1004038](https://crbug.c
 <!-- ### Handle script execution errors in the Console {: #errors } -->
 ### 콘솔에서의 스크립트 실행 오류 다루기 {: #errors }
 <!-- Errors during script evaluation in the Console now generate proper error events that trigger the `window.onerror` handler and are dispatched as `"error"` events on the window object. -->
-콘솔에서의 스크립트 평가 중 발생한 오류는 `window.onerror` 핸들러를 실행시키는 데 적절한 오류 이벤트를 생성하며, 이 이벤트는 윈도우 객체의 `"error"` 이벤트로 전달됩니다. 
+콘솔에서의 스크립트 평가 중 발생한 오류는 `window.onerror` 핸들러를 실행시키는 데 적절한 오류 이벤트를 생성하며, 이 이벤트는 윈도우 객체의 `"error"` 이벤트로 전달됩니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gBtY4zD39SPizfcCGJJW.png", alt="콘솔에서의 스크립트 실행 오류 다루기", width="800", height="487" %}
 
@@ -119,7 +119,7 @@ Chromium issue: [1260744](https://crbug.com/1260744)
 <!-- ## Cancel user flow recording at the start {: #recorder } -->
 ## 시작 전에 유저 플로우 녹화 취소하기 {: #recorder }
 <!-- You can cancel the recording during the start of user flow recording. Previously, there was no option to cancel the recording. -->
-이전 버전에서는 녹화를 취소할 수 있는 옵션이 없었으나 이제 유저 플로우 녹화 시작 중에도 취소가 가능해졌습니다. 
+이전 버전에서는 녹화를 취소할 수 있는 옵션이 없었으나 이제 유저 플로우 녹화 시작 중에도 취소가 가능해졌습니다.
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3vhz3UrjLd9lJKcYw2FU.png", alt="시작 중에 유저 플로우 녹화 취소하기", width="800", height="488" %}
@@ -130,7 +130,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- ## Display inherited highlight pseudo-elements in the Styles pane {: #pseudo } -->
 ## 스타일 창에 상속된 하이라이트 의사 요소들 표시하기 {: #pseudo }
 <!-- View the inherited highlight pseudo-elements  (e.g. `::selection`, `::spelling-error`, `::grammar-error`, and `::highlight`) in the **Styles** pane. Previously, these rules were not displayed. -->
-**스타일** 창에서 상속된 하이라이트 의사 요소들 (예시: `::selection`, `::spelling-error`, `::grammar-error`, `::highlight`)을 보세요. 이전에는 이 규칙들이 표시되지 않았습니다. 
+**스타일** 창에서 상속된 하이라이트 의사 요소들 (예시: `::selection`, `::spelling-error`, `::grammar-error`, `::highlight`)을 보세요. 이전에는 이 규칙들이 표시되지 않았습니다.
 <!-- As mentioned in the [specification](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade), when multiple styles conflict, cascade determines the winning style. This new feature helps you understand the inheritance and priority of the rules. -->
 [스펙 문서](https://drafts.csswg.org/css-pseudo-4/#highlight-cascade)에 언급되었듯이 다중 스타일이 충돌을 일으킬 때, 캐스케이드가 가장 우선시되는 스타일을 결정합니다. 이 새로운 기능은 여러분들로 하여금 상속과 우선되는 규칙을 더 잘 이해할 수 있도록 해 줍니다.
 {% Aside %}
@@ -158,7 +158,7 @@ Chromium issue: [1024156](https://crbug.com/1024156)
 - **스타일** 창이 오버라이딩된 `@support` 규칙을 취소선으로 적절하게 표시하기 시작했습니다. 이전 버전에서는 취소선이 표시되지 않았습니다. ([1298025](https://crbug.com/1298025))
 - **소스** 창에서 CSS를 편집할 떄 여러 개의 빈 줄을 만들던 CSS 포매팅 로직이 현 버전에서 수정되었습니다.
 - **콘솔**에 있는 객체의 **재귀적으로 확장** 옵션을 최대 100으로 제한하여 원형 개체에 대해 영원히 지속되지 않도록 합니다. ([1272450](https://crbug.com/1272450))
- 
+
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4240f8bc96a3ebd2dc2a5b316fd41c24e20fb3c #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/cf09d1de8a0277dbaa9e2000a8d2fcca69e7128e #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6616b9f0cd3e9f1138fb0f409fbe91206d5c8640 #}
@@ -183,7 +183,7 @@ Chromium issue: [1024156](https://crbug.com/1024156)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/afe5698f1cd20304d2763574ef8e9faf6a4a6db1 #}
 {# ​​https://chromium.googlesource.com/devtools/devtools-frontend/+/5de1d6140cad945783f3ca54055134f4a7db42a1 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #}
 
 Chromium issue: [1268754](https://crbug.com/1268754)
 

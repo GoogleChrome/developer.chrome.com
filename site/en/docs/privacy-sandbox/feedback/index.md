@@ -32,6 +32,7 @@ Regular updates for each Privacy Sandbox API are published on this site. In
 particular, these updates will cover a summary of common feedback themes per
 API.
 
+ * [Feedback report for 2023 Q3](/docs/privacy-sandbox/feedback/report-2023-q3/)
  * [Feedback report for 2023 Q2](/docs/privacy-sandbox/feedback/report-2023-q2/)
  * [Feedback report for 2023 Q1](/docs/privacy-sandbox/feedback/report-2023-q1/)
  * [Feedback report for 2022 Q4](/docs/privacy-sandbox/feedback/report-2022-q4/)
@@ -229,9 +230,9 @@ groups** column of the tables in the [**Proposals** section](#proposals).
 
 {% Details %} {% DetailsSummary %}
 
-### Chrome-facilated testing
+### Chrome-facilitated testing
 
-**_We are seeking feedback on the [Chrome-faciliated testing plans](/docs/privacy-sandbox/chrome-testing/) along with tracking issues from initial third-party cookie deprecation._**
+**_We are seeking feedback on the [Chrome-facilitated testing plans](/docs/privacy-sandbox/chrome-testing/) along with tracking issues from initial third-party cookie deprecation._**
 
 {% endDetailsSummary %}
 

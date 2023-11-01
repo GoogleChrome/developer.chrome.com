@@ -49,8 +49,8 @@ Chromium 议题: [423246](https://crbug.com/423246)
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 使用 **报告 API** 新边栏来查看有关自己页面情况的报告以及报告对应的状态。
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-该 [Reporting API](https://web.dev/reporting-api/) 是为了帮助您了解自己页面的安全违规情况，弃用 API 的调用情况以及更多。
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+该 [Reporting API](https://web.dev/articles/reporting-api) 是为了帮助您了解自己页面的安全违规情况，弃用 API 的调用情况以及更多。
 
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 打开一个使用 Reporting API 的页面（例如 [demo 页面](https://reporting-api-demo.glitch.me/)）。在**应用**面板里面，把滚动条滚动到**后台服务**区域，然后选择 **Reporting API** 边栏。
@@ -169,8 +169,8 @@ Chromium 议题: [1284737](https://crbug.com/1284737)
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
 ### Sources 面板里面显示 Worker 源文件 {: #worker-sourcemap }
 
-<!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
-现在，[Worker](https://web.dev/workers-overview/)（例如：web worker、service worker）源文件在使用相对 SourceURL 的情况下，会被显示在 **Source** 面板里面。在此之前，Worker 源文件不会被正确处理。
+<!-- [Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
+现在，[Worker](https://web.dev/articles/workers-overview)（例如：web worker、service worker）源文件在使用相对 SourceURL 的情况下，会被显示在 **Source** 面板里面。在此之前，Worker 源文件不会被正确处理。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="Sources 面板里面显示 Worker 源文件", width="800", height="509" %}
 
@@ -227,10 +227,10 @@ Chromium 议题: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - 修复 **Cookies** 面板里面关于 [edit cookies](/docs/devtools/storage/cookies/#edit) 问题。([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - 使用 `Shift` + `Tab` 可以选择[命令菜单](/docs/devtools/command-menu/)里面的前一个命令。([1278743](https://crbug.com/1278743))
-<!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
-- 在 [Issues](/docs/devtools/issues/) 选项卡里面，会报告 [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) 问题。([1272445](https://crbug.com/1272445))
-<!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
-- 在 [Issues](/docs/devtools/issues/) 选项卡里面，会报告 [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) 问题。([1219359](https://crbug.com/1219359))
+<!-- - Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
+- 在 [Issues](/docs/devtools/issues/) 选项卡里面，会报告 [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) 问题。([1272445](https://crbug.com/1272445))
+<!-- - Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
+- 在 [Issues](/docs/devtools/issues/) 选项卡里面，会报告 [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) 问题。([1219359](https://crbug.com/1219359))
 <!-- - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662)) -->
 - 在 **Sources** 和 **Console** 面板里面修复 `Shift` + `Delete` 和 `Page up` / `Page down` 的行为。([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->

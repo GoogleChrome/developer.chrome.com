@@ -42,7 +42,7 @@ Chrome では、キャッシュの仕組みがさまざまな方法で使用さ�
 
 キャッシュ パーティションでは、キャッシュされたリソースは、リソース URL に加えて新しい「ネットワーク分離キー」を使用するキーとなります。ネットワーク分離キーは、トップレベルサイトと現在のフレームのサイトで構成されます。
 
-{% Aside %} 「サイト」は「[scheme://eTLD+1](https://web.dev/same-site-same-origin/)」を使用して認識されるため、リクエストが異なるページからのものであっても、同じスキームと有効なトップレベルドメイン+1 を持つ場合、同じキャッシュ分割が使用されます。詳細については、「[「same-site」と「same-origin」を理解する](https://web.dev/same-site-same-origin/)」をご覧ください。 {% endAside %}
+{% Aside %} 「サイト」は「[scheme://eTLD+1](https://web.dev/articles/same-site-same-origin)」を使用して認識されるため、リクエストが異なるページからのものであっても、同じスキームと有効なトップレベルドメイン+1 を持つ場合、同じキャッシュ分割が使用されます。詳細については、「[「same-site」と「same-origin」を理解する](https://web.dev/articles/same-site-same-origin)」をご覧ください。 {% endAside %}
 
 前の例をもう一度見て、さまざまなコンテキストでキャッシュ パーティションがどのように機能するかを確認しましょう。
 

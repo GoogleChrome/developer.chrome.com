@@ -76,7 +76,8 @@ To toggle **Restore last dock position** with a keyboard shortcut, press:
 To change ordering, click and drag left or right any of the following:
 
 - Panels at the top of DevTools.
-- Panes in the **Elements** panel such as **Styles**, **Computed**, or **Layout**.
+- Panes in the **Elements** panel such as **Styles**, **Computed**, **Layout**, and others.
+- Panes in the **Sources** panel such as **Page**, **Workspace**, **Overrides**, and others.
 - **Drawer** tabs at the bottom of DevTools.
 
 Additionally, you can [move panels and tabs up and down](/blog/new-in-devtools-87/#moveable-tools) to and from the **Drawer**. To do this, right-click the panel or tab and select **Move to top** or **Move to bottom** from the drop-down menu.

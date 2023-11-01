@@ -25,7 +25,7 @@ In general,
 focus should follow reading order, moving from left to right,
 from the top to the bottom of your page.
 
-Learn more in [Keyboard access fundamentals](https://web.dev/keyboard-access/).
+Learn more in [Keyboard access fundamentals](https://web.dev/articles/keyboard-access).
 
 Are you able to reach all of the interactive controls on the page?
 If not, you may need to use `tabindex` to improve the focusability of those controls.

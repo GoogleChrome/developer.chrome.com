@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Using WebSockets in Service Workers'
+title: 'Use WebSockets in service workers'
 seoTitle: 'How to use WebSockets in Chrome extension Service Workers'
 date: 2023-07-04
 description: 'Step-by-step instructions on how to connect to a WebSocket in your Chrome extension.'

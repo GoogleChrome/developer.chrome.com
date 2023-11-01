@@ -62,7 +62,7 @@ An auto completion feature now powers the command input bar. It helps you write 
 
 With this new editor, you can now easily edit the values of primitive parameters. To open the editor, click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/H4duJWlMkdd1903sC0Bw.svg", alt="Open left panel.", width="20", height="20" %} icon next to the command input.
 
-Once you enter the command name, the editor shows you the corresponding parameters automatically. You don't have to look up documentation to know what parameters go with what commands. Furthermore, the editor displays the parameters in a given order: the mandatory one first (in red)  and the optional ones next (in blue).
+Once you enter the command name, the editor shows you the corresponding parameters automatically. You don't have to look up documentation to know what parameters go with what commands. Furthermore, the editor displays the parameters in a given order: the mandatory ones first (in red) and the optional ones next (in blue).
 
 To add a value to an optional parameter, hover over its name and click the `+` button. To reset the parameter to undefined, click the **Reset to default value**  button.
 
@@ -86,7 +86,7 @@ To delete array items one by one, click the bin button next to the items. You ca
 
 ## Object parameters
 
-When you enter a command that accepts object parameters, the editor lists the keys of this object and you can edit their values directly. This works for every type of nested parameters.
+When you enter a command that accepts object parameters, the editor lists the keys of this object and you can edit their values directly. This works for all types of nested parameters.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/O9VSKDH9ENYv9aWW1igP.png", alt="Nested parameters.", width="800", height="564" %}
 

@@ -51,4 +51,4 @@ updated: 2019-10-04
 ## Ресурсы
 
 - [Исходный код проверки **Reduce server response times (TTFB)** (Сократите время ответа сервера (TTFB))](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/server-response-time.js).
-- [Адаптивное обслуживание с Network Information API](https://web.dev/adaptive-serving-based-on-network-quality/).
+- [Адаптивное обслуживание с Network Information API](https://web.dev/articles/adaptive-serving-based-on-network-quality).

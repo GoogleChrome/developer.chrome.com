@@ -82,7 +82,7 @@ const handlerCb = async ({url, request, event, params}) => {
 
 Your handler must return a promise that resolves to a `Response`. In this
 example, we're using
-[`async` and `await`](https://web.dev/javascript-async-functions/).
+[`async` and `await`](https://web.dev/articles/javascript-async-functions).
 Under the hood, the return `Response` value will be wrapped in a promise.
 
 You can register these callbacks like so:

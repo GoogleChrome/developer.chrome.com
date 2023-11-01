@@ -66,7 +66,7 @@ Content-Encoding: br
 3. 大きなリクエスト行を有効にします。[Use large request rows (大きなリクエスト行を使用する)](https://developers.google.com/web/tools/chrome-devtools/network/reference#request-rows)を参照してください。
 4. 関心のあるレスポンスの[**Size**]列を見てください。一番上の値は圧縮されたサイズで、一番下の値は圧縮解除されたサイズです。
 
-[Minify and compress network payloads (ネットワークペイロードの縮小と圧縮)](https://web.dev/reduce-network-payloads-using-text-compression/) も参照してください。
+[Minify and compress network payloads (ネットワークペイロードの縮小と圧縮)](https://web.dev/articles/reduce-network-payloads-using-text-compression) も参照してください。
 
 ## スタック固有のガイダンス
 

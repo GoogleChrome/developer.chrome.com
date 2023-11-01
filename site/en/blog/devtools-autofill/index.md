@@ -129,7 +129,7 @@ alias ca='open -a "Google Chrome Canary" --args --restart --flag-switches-begin
 {% endAside %}
 
 To check for problems, open the DevTools **Issues** panel on a page that has a form.
-[form-problems.glitch.me](form-problems.glitch.me) is a good place to start.
+[form-problems.glitch.me](https://form-problems.glitch.me) is a good place to start.
 
 {% Video src="video/80mq7dk16vVEg8BBhsVe42n6zn82/3XO1fnPLodqZcMRDeAfz.mp4", width="800",
 height="450" %}
@@ -188,5 +188,5 @@ related to DevTools:
 
 * [Learn Forms](https://web.dev/learn/forms): A course about HTML forms to help you improve
     your web developer expertise. Ideal for anyone new to forms and Autofill.
-* [web.dev/tags/forms](https://web.dev/tags/forms/): Guidance, best practice and codelabs, for
+* [web.dev/tags/forms](https://web.dev/articles/tags/forms): Guidance, best practice and codelabs, for
     payment, login, and address forms.

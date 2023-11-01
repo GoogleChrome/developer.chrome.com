@@ -34,8 +34,8 @@ There are two common causes for an incorrect image aspect ratio:
 ### Use an image CDN
 
 An image CDN can make it easier to automate the process of creating different sized
-versions of your images. Check out [Use image CDNs to optimize images](https://web.dev/image-cdns/)
-for an overview and [How to install the Thumbor image CDN](https://web.dev/install-thumbor/) for a
+versions of your images. Check out [Use image CDNs to optimize images](https://web.dev/articles/image-cdns)
+for an overview and [How to install the Thumbor image CDN](https://web.dev/articles/install-thumbor) for a
 hands-on codelab.
 
 ### Check the CSS that affects the image's aspect ratio
@@ -61,7 +61,7 @@ until you know the viewport dimensions. Consider using the
 [aspect ratio boxes](https://css-tricks.com/aspect-ratio-boxes/)
 to help preserve aspect ratios for responsive images.
 
-Finally, check out the [Serve images with correct dimensions](https://web.dev/serve-images-with-correct-dimensions/)
+Finally, check out the [Serve images with correct dimensions](https://web.dev/articles/serve-images-with-correct-dimensions)
 post to learn how to serve images that are the right size for each user's device.
 
 ## Resources
@@ -69,6 +69,6 @@ post to learn how to serve images that are the right size for each user's device
 - [Source code for **Displays images with incorrect aspect ratio** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/image-aspect-ratio.js)
 - [CSS Aspect Ratio](https://www.npmjs.com/package/css-aspect-ratio)
 - [Aspect Ratio Boxes](https://css-tricks.com/aspect-ratio-boxes/)
-- [Serve images with correct dimensions](https://web.dev/serve-images-with-correct-dimensions/)
+- [Serve images with correct dimensions](https://web.dev/articles/serve-images-with-correct-dimensions)
 
 [ar]: https://en.wikipedia.org/wiki/Aspect_ratio_(image)

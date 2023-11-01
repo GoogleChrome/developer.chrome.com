@@ -8,7 +8,7 @@ authors:
   - sebastianbenz
 ---
 
-The third part of this guide focuses on speeding up the browser startup via [`warmup()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)) and prefetching web pages via [`mayLaunchUrl`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession#mayLaunchUrl(android.net.Uri,android.os.Bundle,java.util.List%3Candroid.os.Bundle%3E))(). Warming up the browser process can save up to 700ms when opening a link. Pre-rendering content via `mayLaunchUrl` will make external content open instantly. Together both APIs can greatly improve the user experience of a Custom Tabs integration and are highly recommended.
+The third part of this guide focuses on speeding up the browser startup via [`warmup()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)) and prefetching web pages via [`mayLaunchUrl`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession#mayLaunchUrl(android.net.Uri,android.os.Bundle,java.util.List%3Candroid.os.Bundle%3E))(). Warming up the browser process can save up to 700ms when opening a link. Pre-rendering content via `mayLaunchUrl` makes external content open instantly. Together both APIs can greatly improve the user experience of a Custom Tabs integration and are highly recommended.
 
 The required steps are:
 
@@ -18,11 +18,7 @@ The required steps are:
     a. Warmup the browser process via [`CustomTabsClient.warmup()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)).
     b. Create a new [`CustomTabsSession`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession) via [`CustomTabsClient.newSession()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#newSession(androidx.browser.customtabs.CustomTabsCallback,int)).
 3. Optionally, prefetch web pages the user is likely to visit via [`CustomTabsSession.mayLaunchUrl()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession#mayLaunchUrl(android.net.Uri,android.os.Bundle,java.util.List%3Candroid.os.Bundle%3E)).
-4. When launching a new Custom Tab, pass the [`CustomTabsSession`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession) to the [CustomTabsIntent.Builder](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder) via the constructor `new CustomTabsIntent.Builder(session)`. 
-
-{% Aside 'important' %}
-Passing a session to a `CustomTabIntent` will force open the link in a Custom Tab, even if the corresponding native app is installed. If you want to keep the default behavior of opening web links in native apps, you need to additionally follow our [guide on how to check if a link can be handled by an installed native app](/docs/android/custom-tabs/howto-custom-tab-native-apps/).
-{% endAside %}
+4. When launching a new Custom Tab, pass the [`CustomTabsSession`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession) to the [CustomTabsIntent.Builder](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder) via the constructor `new CustomTabsIntent.Builder(session)`.
 
 If your app targets **Android API level 30**, [`CustomTabsClient.getPackageName(...)`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#getPackageName(android.content.Context,java.util.List%3Cjava.lang.String%3E)) requires you to add a queries section to your Android Manifest, declaring an intent-filter that matches browsers with Custom Tabs support.
 
@@ -108,5 +104,17 @@ A Custom Tabs service connection might fail while your activity is running. If y
 2. Wait until the user triggers a Custom Tab, then establish the service connection and launch the Custom Tab.
 
 {% endAside %}
+
+## Open webpages in native apps
+
+On Android, URLs can be handled by native applications. For example, if the user has the Facebook app installed and clicks on a link to a Facebook post, they usually prefer the link opening in the Facebook app instead of in the browser.
+
+By default, Custom Tabs opens links in the respective native application if installed. However, once a `CustomTabsServiceConnection` has been established, this behavior stops working and all URLs open in Custom Tabs instead. For an improved user experience, we recommend re-enabling this behavior using the following code:
+
+```java
+CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
+    .setSendToExternalDefaultHandlerEnabled(true)
+    .build();
+```
 
 Next up: [Learn how to resize the Custom Tabs experience](/docs/android/custom-tabs/guide-partial-custom-tabs/).

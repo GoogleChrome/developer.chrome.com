@@ -17,7 +17,7 @@ tags:
   - chrome-116
 ---
 
-The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md) (LoAF - pronounced Lo-Af) is a new proposal from the Chrome team to update the [Long Tasks API](https://w3c.github.io/longtasks/) to provide a better understanding of slow user interface (UI) updates. This can be useful to identify slow animation frames which are likely to affect the pending [Interaction to Next Paint (INP)](https://web.dev/inp/) Core Web Vital metric which measures responsiveness, or to identify other UI jank which affects [smoothness](https://web.dev/smoothness/).
+The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md) (LoAF - pronounced Lo-Af) is a new proposal from the Chrome team to update the [Long Tasks API](https://w3c.github.io/longtasks/) to provide a better understanding of slow user interface (UI) updates. This can be useful to identify slow animation frames which are likely to affect the pending [Interaction to Next Paint (INP)](https://web.dev/articles/inp) Core Web Vital metric which measures responsiveness, or to identify other UI jank which affects [smoothness](https://web.dev/articles/smoothness).
 
 The LoAF API is available as [an origin trial from Chrome 116](/origintrials/#/view_trial/3935020174414970881) for developers to experiment with and provide feedback on.
 
@@ -33,13 +33,13 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: 'longtask', buffered: true });
 ```
 
-Long tasks are likely to cause responsiveness issues. If a user tries to interact with a page—for example, click a button, or open a menu—but the main thread is already dealing with a long task, then the [user's interaction is delayed](https://web.dev/optimize-input-delay/#what-is-input-delay) waiting for that task to be completed.
+Long tasks are likely to cause responsiveness issues. If a user tries to interact with a page—for example, click a button, or open a menu—but the main thread is already dealing with a long task, then the [user's interaction is delayed](https://web.dev/articles/optimize-input-delay#what_is_input_delay) waiting for that task to be completed.
 
-To improve responsiveness, it is often advised to [break up long tasks](https://web.dev/optimize-long-tasks/). If each long task is instead broken up into a series of multiple, smaller tasks, it may allow more important tasks to be executed in between them to avoid significant delays in responding to interactions.
+To improve responsiveness, it is often advised to [break up long tasks](https://web.dev/articles/optimize-long-tasks). If each long task is instead broken up into a series of multiple, smaller tasks, it may allow more important tasks to be executed in between them to avoid significant delays in responding to interactions.
 
-So when trying to improve responsiveness, the first effort is often to run a performance trace and look at long tasks. This could be through a lab-based auditing tool like Lighthouse (which has an **Avoid long main-thread tasks** audit), or by [looking at long tasks in Chrome DevTools](https://web.dev/long-tasks-devtools/).
+So when trying to improve responsiveness, the first effort is often to run a performance trace and look at long tasks. This could be through a lab-based auditing tool like Lighthouse (which has an **Avoid long main-thread tasks** audit), or by [looking at long tasks in Chrome DevTools](https://web.dev/articles/long-tasks-devtools).
 
-Lab-based testing is [often a poor starting place for identifying responsiveness issues](https://web.dev/diagnose-slow-interactions-in-the-lab/), as these tools may not include interactions—when they do, they are a small subset of likely interactions. Ideally, you would measure causes of slow interactions in the field.
+Lab-based testing is [often a poor starting place for identifying responsiveness issues](https://web.dev/articles/diagnose-slow-interactions-in-the-lab), as these tools may not include interactions—when they do, they are a small subset of likely interactions. Ideally, you would measure causes of slow interactions in the field.
 
 ### Shortcomings of the Long Tasks API
 
@@ -76,7 +76,7 @@ The final issue is that measuring long tasks only reports on individual tasks th
 
 The [Long Animation Frames API](https://github.com/w3c/longtasks/blob/main/loaf-explainer.md) (LoAF) is a new API that seeks to address some of the shortcomings of the Long Tasks API to enable developers to get more actionable insights to help address responsiveness problems and improve INP.
 
-Good responsiveness means that a page responds quickly to interactions made with it. That involves being able to paint any updates needed by the user in a timely manner, and avoiding blocking these updates from happening. For INP, [it is recommended to respond in 200 milliseconds or less](https://web.dev/inp/#what-is-a-good-inp-score), but for other updates (for example, animations) even that may be too long.
+Good responsiveness means that a page responds quickly to interactions made with it. That involves being able to paint any updates needed by the user in a timely manner, and avoiding blocking these updates from happening. For INP, [it is recommended to respond in 200 milliseconds or less](https://web.dev/articles/inp#what_is_a_good_inp_score), but for other updates (for example, animations) even that may be too long.
 
 The Long Animation Frames API is an alternative approach to measuring blocking work. Rather than measuring the individual _tasks_, the Long Animation Frames API—as its name suggests—measures _long animation frames_. A long animation frame is when a rendering update is delayed beyond 50 milliseconds (the same as the Long Tasks API's threshold).
 
@@ -141,7 +141,7 @@ These timestamps allow the long animation frame to be divided into timings:
     </tr>
     <tr>
       <td>Render duration</td>
-      <td><code>syleAndLayoutStart - renderStart</code></td>
+      <td><code>styleAndLayoutStart - renderStart</code></td>
     </tr>
     <tr>
       <td>Work duration</td>
@@ -172,7 +172,7 @@ The `long-animation-frame` entry type includes better attribution data of each s
     -  `startTime`:  time the entry function was invoked.
     -  `executionStart`: the time after compilation.
     -  `duration`: the duration between `startTime` and when the subsequent microtask queue has finished processing.
-    -  `forcedStyleAndLayoutDuration`: the total time spent processing forced layout/style inside this function (see [thrashing](https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/#avoid-layout-thrashing)).
+    -  `forcedStyleAndLayoutDuration`: the total time spent processing forced layout/style inside this function (see [thrashing](https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing#avoid_layout_thrashing)).
     -  `desiredExecutionStart`: the time when the callback was queued.
 - `sourceLocation`:  the script resource name and character position.
 - `windowAttribution`:  the container (the top-level document, or an `<iframe>`) the long animation frame occurred in.
@@ -372,7 +372,7 @@ If this API proves useful in the long term, it will likely be incorporated into 
 
 ### Using long animation frames data in other developer tooling
 
-The [Web Vitals extension has shown the value in logging summary debug information](https://web.dev/debug-cwvs-with-web-vitals-extension/) to diagnose performance issues. Should this proposal prove useful and the API is launched, tools like that could more easily surface data to help make developers aware of where to concentrate their efforts. Similarly, this could be added to the [web vitals JavaScript library](https://github.com/GoogleChrome/web-vitals) in the future.
+The [Web Vitals extension has shown the value in logging summary debug information](https://web.dev/articles/debug-cwvs-with-web-vitals-extension) to diagnose performance issues. Should this proposal prove useful and the API is launched, tools like that could more easily surface data to help make developers aware of where to concentrate their efforts. Similarly, this could be added to the [web vitals JavaScript library](https://github.com/GoogleChrome/web-vitals) in the future.
 
 ### Using long animation frames data in automated testing tools
 

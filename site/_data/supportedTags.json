@@ -29,6 +29,9 @@
   "cookies": {
     "title": "i18n.tags.cookies"
   },
+  "cookie-countdown": {
+    "title": "i18n.tags.cookie-countdown"
+  },
   "deprecations-removals": {
     "title": "i18n.tags.deprecations-removals"
   },

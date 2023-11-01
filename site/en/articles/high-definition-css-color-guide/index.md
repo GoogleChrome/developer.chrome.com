@@ -1688,3 +1688,7 @@ and interpolations and overall deliver a more colorful experience to your users.
 - [https://en.wikipedia.org/wiki/CIE_1931_color_space](https://en.wikipedia.org/wiki/CIE_1931_color_space)
 - [https://www.joshwcomeau.com/css/color-formats/](https://www.joshwcomeau.com/css/color-formats/)
 - [https://ciechanow.ski/color-spaces/](https://ciechanow.ski/color-spaces/)
+
+### Additional Color Level 5 articles
+- [CSS relative color syntax](/blog/css-relative-color-syntax/)
+- [CSS color-mix](/blog/css-color-mix/)

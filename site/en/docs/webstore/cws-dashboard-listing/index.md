@@ -6,70 +6,113 @@ updated: 2023-05-01
 description: How to add listing information for your Chrome Web Store item.
 ---
 
-This page describes the fields you must fill out to complete your store listing. To learn how to
-make your listing more compelling, be sure to read [Creating a great listing page][best-listing].
+This page describes how to fill out the **Store listing** tab in the Developer Dashboard. This is
+where you can add information about your item that isn't included in the [metadata of the
+manifest][prepare-manifest], such as a long description, screenshots, a promotional video, and links to related
+sites. 
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4RwZvdR4eACU46OCy7rm.png",
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/qppUipFhOmfTuXuAiMDY.png",
        alt="Screenshot of the Chrome Web Store developer dashboard Store listing tab", height="472", width="800" %}
 
-Add the store listing information for your item that isn't in the ZIP file, such as a long
-description, screenshots, videos and links to related sites. 
+See [Creating a great listing page][best-listing] to learn how to make your listing more compelling.
 
 ## Product details
 
-You'll need to fill out the following details about your item:
+In this section you can include the following information about your item:
 
-- A **detailed description** of your item. Write your description to entice users to download your
-  item. Make sure to start your description with a concise statement of what your item does, so
-  users can understand the main idea and features at a glance. Your description can then go on to
-  provide more detail, promotional copy, update logs, and so forth.
-  
-{% Aside 'caution' %}
-Be detailed but make sure your description complies with the [Keyword Spam][keyword-spam] policy.
-{% endAside %}
-
-- The **primary [category][categories]** where your item should be listed.
-- Your item's **language** to help users find it.
+- A **detailed description** of your item. This helps users understand why they should install your
+  extension. Start your description with a concise statement of what your item does, so
+  users can understand the main idea and features at a glance. After that provide additional details, promotional copy, update logs, and so forth. Be detailed but ensure it complies with the [Keyword spam][keyword-spam] policy.
+- The **primary [category][categories]** under which your item should be listed on the web store.
+- Your item's **language** to allow users to search for extensions in their own language.
 
 ## Graphic assets {: #graphic-assets }
 
-At a minimum, you should provide the following promotional images:
+In this section, you must provide the following promotional images and video, with the exception of
+the Marquee promo tile, which is optional:
 
-- A 128x128 **store icon**.
-- At least one 1280x800 or 640x400 **screenshot** or YouTube **video** to show off what your item
-  does. These are displayed in your item's Chrome Web Store listing in the following order:
-  1.  Any localized video that you provide.
-  1.  Any localized screenshots that you provide.
-  1.  Any global (non-localized) video.
-  1.  Global screenshots.
-- A 440x280 **small tile icon** that will be displayed on the Chrome Web Store wall.
+- A 128x128 px to use as your **store icon**.
+- At least one 1280x800 px **screenshot**, up to 5 total.
+- A link to a **YouTube video** that showcases your extension features.
+- A PNG or JPEG file that is 440x280 px to use as the **small promo tile**.
+- A PNG or JPEG file that is 1400x560 px to use as the **marquee promo tile**.
 
-### Learning more about images and branding
-
-See [Supplying Images][cws-images] for help on designing the images for your item, and [Branding
+See [Supplying Images][cws-images] to help design the images for your item, and [Branding
 Guidelines][cws-branding] for information on how you can use Google brands. 
 
 {% Aside %}
-The quality of the images you supply can affect your item's prominence on the Chrome Web Store. Be
-sure and read [Creating a great listing page][best-listing] for more details.
+The quality of the images you supply can affect your item's prominence on the Chrome Web Store. Read [Creating a great listing page][best-listing] and [Discovery in the Chrome Web Store][discovery] for more details.
 {% endAside %}
+
+## Localize your listing
+
+If you have [localized your extension][api-i18n], you will be able to provide a description,
+screenshots, and promotional video in the locales your extension supports. The small tile and
+Marquee promo tile cannot be localized.
+
+Begin by selecting the language from the dropdown list at the top of the store listing details. Each
+locale corresponds to one of the [`_locales/LOCALE_CODE`][locale-dir] directories included in the
+extension.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GNIhOrJH6k6x4rM6iZyg.png",
+alt="Choose language in store listing", width="500", height="162" %}
+
+{% Aside %}
+
+By default, your extension is listed in all regions supported by the Chrome Web Store. If your extension is aimed for users in a specific country, you can select that region in the [Distribution][distribution] tab.
+
+{% endAside %}
+
+
+### Localize detailed description {: #detailed-description }
+
+Once you've chosen a locale, provide the detailed description for the current locale.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/70mdctbPy8hIIHPFxvZF.png",
+alt="Detailed description of the Store Listing", width="483", height="140" %}
+
+If you support multiple locales, repeat the previous two steps until you've provided a detailed
+description for each locale.
+
+### Localize screenshots and promotional video
+
+You can also tailor screenshots and promotional video for each locale. Once you've choose the
+locale, add a screenshot by dropping your screenshots in the **Localized screenshots** section. If
+you have a YouTube video in the target language, you can add the URL in the **Localized promo
+video** field.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/y792ypc5Zy3AGyh0HwhE.png",
+alt="localize screenshots and video", width="414", height="256" %}
+
+To provide screenshots for another locale, use the pull-down list at the top of the page and select
+the next language.
+
+## Order of graphic assets
+
+Your promotional images and videos are displayed in your listing in the following order:
+
+1.  Any localized video that you provide.
+1.  Any localized screenshots that you provide.
+1.  Any global (non-localized) video.
+1.  Global screenshots.
 
 ## Additional fields {: #additional-fields }
 
-You can include any of these optional links related to your item. 
+The following are optional URLs you can include in your listing. 
 
-### Displaying your verified publisher status
+### Display your verified publisher status
 
-The Chrome Web Store highlights verified publishers by placing a linked, official URL in the
-"Offered by:" line of the store listing. This official URL appears under the listing title and is
-linked to the website, as shown in the following example:
+The Chrome Web Store highlights verified publishers by placing a linked, official URL under the listing title, as shown in the following example:
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/Vkm8Uhstw2NFVSSt87Vl.png", alt="Offered by:
-cecerduino.com example", width="351", height="143" %}
+<figure>
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/YEoohoq7YjMrpmkLtGMD.png", alt="Official URL in Chrome Web Store item page", width="348", height="230" %}
+  <figcaption>
+    Official URL in Chrome Web Store item page
+  </figcaption>
+</figure>
 
 {% Aside %}
-If you are not a verified publisher, you can't display this official URL: instead, the "Offered by:"
-displays your publisher name instead.
+If you are not a verified publisher, your publisher name will be displayed under the "Offered by:" in the **Details** section of your store listing.
 {% endAside %}
 
 To display your verified status, choose an official URL for your item from the **Official URL**
@@ -83,18 +126,26 @@ To add a verified site that you own, click on **Add a new site**. This opens the
 Console, where you can add and verify a site. See [Verify your site ownership][verify-owner] for
 more details.
 
-### Adding a homepage URL {: #home-url }
+### Add a homepage URL {: #home-url }
 
-To explain how your extension works in more detail, you can provide a direct link to your extension's website in the **Homepage URL**. This link appears under the Additional information of your item.
+The link provided in the **Homepage URL** appears under the **Details** section of your item. This
+site should contain information about your extension to help users learn more about your extension
+features or service.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/j71L391YIhEAIZTVUuBw.png", alt="Homepage URL in Chrome Web Store item page", width="306", height="106" %}
+### Provide a support URL {: #support-url }
 
-### Providing a support URL {: #support-url }
+You can direct users to a dedicated support site by including a link in the **Support URL**. 
 
-The Chrome Web Store provides a [built in user support][support-tab] experience under your items' **Support tab**, but you can use
-a [dedicated support site][support-site] by including a link in the **Support URL**. 
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KsZdITw3oTNYnaoa4M8b.png", alt="Store listing support section linking to external support site", width="500", height="140" %}
+  <figcaption>
+   Store listing support section linking to an external support site.
+  </figcaption>
+</figure>
 
-### Enabling Mature Content {: #mature-content}
+The Chrome Web Store also provides a built-in user support experience under your items' **Support hub**. See [Manage user feedback][user-support] to learn more. 
+
+### Declare content rating {: #mature-content }
 
 Content ratings help users know whether your extension and its content are mature in nature.
 See [Mature Content Guidelines][mature-guidelines] to determine whether your extension should be rated
@@ -119,10 +170,14 @@ If you haven't done so yet, complete your listing by
 [categories]: /docs/webstore/best_practices/#choose-your-apps-category-well
 [cws-branding]: /docs/webstore/branding
 [cws-images]: /docs/webstore/images
+[discovery]: /docs/webstore/discovery/
 [distribution]: /docs/webstore/cws-dashboard-distribution
-[keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
+[keyword-spam]: /docs/webstore/program-policies/spam-faq/#keyword-spam
 [mature-guidelines]: /docs/webstore/rating/
+[prepare-manifest]: /docs/webstore/prepare/#manifest
 [privacy]: /docs/webstore/cws-dashboard-privacy
-[support-tab]: /docs/webstore/manage/#user-support-tab
-[support-site]: /docs/webstore/manage/#dedicated-support-site
+[user-support]: /docs/webstore/support-users/#provide-user-support
 [verify-owner]: https://support.google.com/webmasters/answer/9008080
+[api-i18n]: /docs/extensions/reference/i18n/
+[locale-dir]: /docs/extensions/reference/i18n/#how-to-support-multiple-languages
+[distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution

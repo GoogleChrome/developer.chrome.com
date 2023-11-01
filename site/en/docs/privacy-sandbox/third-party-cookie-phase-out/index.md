@@ -6,7 +6,7 @@ subhead: >
 description: >
   Learn how to audit your code to look for third-party cookies and what action you can take to ensure you're all set for the end of third-party cookies.
 date: 2023-05-17
-updated: 2023-08-30
+updated: 2023-10-11
 authors:
   - mihajlija
 ---
@@ -17,20 +17,37 @@ As part of the [Privacy Sandbox](https://privacysandbox.com/) project, Chrome is
 
 To get ready for the future without cross-site tracking, audit your use of cookies and plan the actions needed if your site is impacted.
 
-## Overview
+## Prepare for the third-party cookie phase out
 
-1.  [Identify first-party and third-party cookies](#identify) in your code. Cookies that contain `SameSite=None` will require updates.
-1.  If you use third-party cookies in a fully contained, embedded context, investigate [partitioned cookies](#partitioned-cookies).
-1.  If you need third-party cookies across multiple sites that form one cohesive group, investigate [First-Party Sets](#first-party-sets).
-1.  If you're not covered by either of these options, [investigate other Privacy Sandbox APIs](#other-apis) for individual use cases that don't rely on cross-site tracking.
+We've broken the process down into these key steps, with detail below, to ensure you're prepared for your site to run without third-party cookies:
 
-## Identify your first-party and third-party cookies {: #identify }
+1. [Audit your third-party cookie usage](#audit).
+2. [Test for breakage](#test).
+3. For cross-site cookies which store data on a per site basis, like an embed, consider [`Partitioned` with CHIPS](#partitioned).
+4. For cross-site cookies across a small group of meaningfully linked sites, consider [Related Website Sets](#rws).
+5. For other third-party cookie use cases, [migrate to the relevant web APIs](#migrate).
 
-Cookies can be first-party or third-party relative to the user's context; depending on which site the user is on at the time. This distinction between first-party and third-party context on the web isn't always obvious and the effect it has on different resources can vary.
 
-Cookies are associated with the site that set them and they can be sent on HTTP requests or accessed by JavaScript. If the site in the browser's location bar matches the site associated with the cookie request, then that's a first-party cookie. If the site is different, it's a third-party cookie.
+## 1. Audit your third-party cookie usage {: #audit}
 
-### First-party cookies
+Third-party cookies can be identified by their `SameSite=None` value. You should search your code to look for instances where you set the `SameSite` attribute to this value. If you previously made changes to add `SameSite=None` to your cookies around 2020, then those changes may provide a good starting point.
+
+The Chrome DevTools Network panel shows cookies set and sent on requests. In the Application panel you can see the Cookies heading under Storage. You can browse the cookies stored for each site accessed as part of the page load. You can sort by the `SameSite` column to group all the `None` cookies.
+
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/xYNwixxMkPfMmlMmKY4L.png", alt="DevTools Issues tab showing a warning for SameSite=None cookies.", width="800", height="403" %}
+
+From Chrome 118, the [DevTools Issues tab](/docs/devtools/issues/) shows the breaking change issue, "Cookie sent in cross-site context will be blocked in future Chrome versions." The issue lists potentially affected cookies for the current page.
+
+{% Aside %}
+
+We are building a DevTools extension to facilitate analysis of cookie usage during browsing sessions. This will provide debugging pathways for cookies, and Privacy Sandbox features, with access points to learn and understand the different aspects of the Privacy Sandbox initiative.
+**Look out for our preview launch in November 2023!**
+
+{% endAside %}
+
+If you identify cookies set by third parties, you should check with those providers to see if they have plans for the third-party cookie phase out. For instance, you may need to upgrade a version of a library you are using, change a configuration option in the service, or take no action if the third party is handling the necessary changes themselves.
+
+### Improve your first-party cookies
 
 If your cookie is never used on a third-party site, for example if you set a cookie to manage the session on your site and it's never used in a cross-site iframe, that cookie is always used in a first-party context.
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/ArhVqaVr6O2X0mE0YYxp.png", alt="Diagram showing a first-party cookie.", width="800", height="653" %}
@@ -63,18 +80,18 @@ SameSite=Lax
 
 For more details, check out [Recipes for first-party cookies](https://web.dev/first-party-cookie-recipes).
 
-### Third-party cookies
+### Understand your third-party cookies
 
 Cookies that are sent in cross-site contexts, like iframes or subresource requests, are generally referred to as third-party cookies.
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NJLl1qG9AN8tD9GwR2jp.png", alt="Diagram showing a third-party cookie.", width="800", height="646" %}
-[Some use cases for third-party cookies](https://web.dev/samesite-cookie-recipes/#use-cases-for-cross-site-or-third-party-cookies) include:
+[Some use cases for third-party cookies](https://web.dev/articles/samesite-cookie-recipes#use_cases_for_cross_site_or_third_party_cookies) include:
 
 -   Embedded content shared from other sites, such as videos, maps, code samples, and social posts.
 -   Widgets from external services such as payments, calendars, booking, and reservation functionality.
 -   Widgets such as social buttons or anti-fraud services.
 -   Remote resources on a page such as `<img>` or `<script>` tags, that rely on cookies to be sent with a request (commonly used for tracking pixels and personalizing content).
 
-[In 2019, browsers changed the cookie behavior, restricting them to first-party access by default](https://web.dev/samesite-cookies-explained/#changes-to-the-default-behavior-without-samesite). Any cookies used in cross-site contexts today must be set with `SameSite=None` attribute.
+[In 2019, browsers changed the cookie behavior, restricting them to first-party access by default](https://web.dev/articles/samesite-cookies-explained#changes_to_the_default_behavior_without_samesite). Any cookies used in cross-site contexts today must be set with `SameSite=None` attribute.
 
 ```text
 Set-Cookie: cookie-name=value; SameSite=None; Secure
@@ -84,84 +101,114 @@ Set-Cookie: cookie-name=value; SameSite=None; Secure
 Make sure to review your cookies and have a list of those set with the `SameSite=None`. These are the cookies for which you will need to take action to ensure they keep functioning properly.
 {% endAside %}
 
-## Debugging cookies
+## 2. Test for breakage {: #test }
 
-One way to identify third-party cookies in your code base is to search for cookies containing `SameSite=None`.
+You can launch Chrome using the `--test-third-party-cookie-phaseout` [command-line flag](/docs/web-platform/chrome-flags) or from Chrome 118, enable `chrome://flags/#test-third-party-cookie-phaseout`. This will set Chrome to block third-party cookies and ensure that new functionality and mitigations are active in order to best simulate the state after the phase out.
 
-Another option is to browse through your site with third-party cookies blocked on your machine and use DevTools to investigate any potential breakage. 
+You can also try browsing with third-party cookies blocked via `chrome://settings/cookies`, but be aware that the flag ensures the new and updated functionality is also enabled. Blocking third-party cookies is a good approach to detect issues, but not necessarily validate you have fixed them.
 
-To learn more about DevTools features you can use to investigate third-party cookies check out [the instructions on chromium.org](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox/third-party-cookie-phaseout/).
+If you maintain an active test suite for your sites, then you should do two side-by-side runs: one with Chrome on the usual settings and one with the same version of Chrome launched with the `--test-third-party-cookie-phaseout` flag. Any test failures in the second run and not in the first are good candidates to investigate for third-party cookie dependencies. Make sure you [report the issues](#report-issues) you find.
 
-In Chrome version 115 or higher, you can test the browser behavior after third-party cookie phase out by [running Chrome from the command line](https://www.chromium.org/developers/how-tos/run-chromium-with-flags/) with the flag `--test-third-party-cookie-phaseout`. This will block third-party cookies, enable [third-party storage partitioning](/docs/privacy-sandbox/storage-partitioning) and [FedCM](/docs/privacy-sandbox/fedcm), and enable Chrome UI settings for [First-Party Sets](docs/privacy-sandbox/first-party-sets-integration) (["Allow related sites to see your activity in the group"](https://support.google.com/chrome/answer/95647?hl=EN#zippy=%2Callow-related-sites-to-access-your-activity)).
+Once you have identified the cookies with issues and understand the use cases for them, you can work through the following options to pick the necessary solution.
 
-If your site breaks when third-party cookies are blocked, you can report the issue to [Chrome's cookie breakage tracker](https://goo.gle/report-3pc-broken).
 
-{% Aside %}
-This article was updated on 30 August 2023 to correct a typing mistake in the testing flag `--test-third-party-cookie-phaseout`.
+## 3. Use `Partitioned` cookies with CHIPS {: #partitioned }
+
+Where your third-party cookie is being used in a 1:1 embedded context with the top-level site, then you may consider using the `Partitioned` attribute as part of Cookies Having Independent Partitioned State (CHIPS) to allow cross-site access with a separate cookie used per site.
+
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/5JLh0cCChr0bKOzp6XxP.png", alt="The Partitioned attribute enables a seperate fav_store cookie to be set per top-level site.", width="800", height="359" %}
+
+To implement CHIPS, you add the `Partitioned` attribute to your `Set-Cookie` header:
+
+By setting `Partitioned`, the site opts in to storing the cookie in a separate cookie jar partitioned by top-level site. In the example above, the cookie comes from `store-finder.site` which hosts a map of stores that enables a user to save their favorite store. By using CHIPS, when `brand-a.site` embeds `store-finder.site`, the value of the `fav_store` cookie is `123`. Then when `brand-b.site` also embeds `store-finder.site` they will set and send their own partitioned instance of the `fav_store` cookie, for example with value `456`.
+
+This means embedded services can still save state, but do not have shared cross-site storage that would allow cross-site tracking.
+
+**Potential use cases:** third-party chat embeds, third-party map embeds, third-party payment embeds, subresource CDN load balancing, headless CMS providers, sandbox domains for serving untrusted user content, third-party CDNs using cookies for access control, third-party API calls that require cookies on requests, embedded ads with state scoped per publisher.
+
+**[Learn more about CHIPS](/docs/privacy-sandbox/chips/)**
+
+
+## 4. Use Related Website Sets {: #rws }
+
+Where your third-party cookie is only used across a small number of related sites, then you may consider using [Related Website Sets](/en/blog/related-website-sets/) (RWS) to allow cross-site access for that cookie within the context of those defined sites.
+
+To implement RWS, you will need to [define and submit](https://github.com/GoogleChrome/first-party-sets/blob/main/RWS-Submission_Guidelines.md) the group of sites for the set. To ensure that the sites are meaningfully related, the policy for a valid set requires grouping those sites by: associated sites with a visible relation to each other (e.g. variants of a company’s product offering), service domains (e.g. APIs, CDNs), or country-code domains (e.g. \*.uk, \*.jp).
+
+{% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/es7ld9MfMP8sowe7PZzC.png", alt="Related Website Sets allows cookie access within the context of the declared sites, but not across other third-party sites.", width="800", height="359" %}
+
+Sites can use the Storage Access API to either request cross-site cookie access using `requestStorageAccess()` or delegate access using `requestStorageAccessFor()`. When sites are within the same set, the browser will automatically grant access and cross-site cookies will be available.
+
+This means that groups of related sites can still make use of cross-site cookies in a limited context, but do not risk sharing third-party cookies across unrelated sites in a way that would allow cross-site tracking.
+
+**Potential use cases:** app-specific domains, brand-specific domains, country-specific domains, sandbox domains for serving untrusted user content, service domains for APIs, CDNs.
+
+**[Learn more about RWS](/blog/related-website-sets/)**
+
+
+## 5. Migrate to the relevant web APIs {: #migrate }
+
+CHIPS and RWS enable specific types of cross-site cookie access while retaining user privacy, however the other use cases for third-party cookies must migrate to privacy-focused alternatives.
+
+The Privacy Sandbox provides a range of purpose-built APIs for specific use cases without a need for third-party cookies:
+
+*   **[Federated Credential Management (FedCM)](/docs/privacy-sandbox/fedcm/)** enables federated identity services allowing users to sign in to sites and services.
+*   **[Private State Tokens](/docs/privacy-sandbox/private-state-tokens/)** enable anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
+*   **[Topics](/docs/privacy-sandbox/topics/overview/)** enables interest-based advertising and content personalization.
+*   **[Protected Audience](/docs/privacy-sandbox/protected-audience/)** enables remarketing and custom audiences.
+*   **[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/)** enables measurement of ad impressions and conversions.
+
+Additionally, Chrome supports the **[Storage Access API](https://developer.mozilla.org/docs/Web/API/Storage_Access_API/Using)** (SAA) for usage in iframes with user interaction. SAA is already [supported across Edge, Firefox, and Safari](https://developer.mozilla.org/docs/Web/API/Storage_Access_API#browser_compatibility). We believe it strikes a good balance to maintain user privacy while still enabling critical cross-site functionality with the benefit of cross-browser compatibility.
+
+Note that the Storage Access API will surface a browser permission prompt to users. To provide an optimal user experience, we will only prompt the user if the site calling `requestStorageAccess()` has interacted with the embedded page and has previously visited the third-party site in a top-level context. A successful grant will allow cross-site cookie access for that site for 30 days. Potential use cases are authenticated cross-site embeds such as social network commenting widgets, payment providers, subscribed video services.
+
+If you still have third-party cookie use cases that are not covered by these options, you should [report the issue to us](#report-issues) and consider if there are alternative implementations that do not depend on functionality that can enable cross-site tracking.
+
+
+## Enterprise support
+
+Enterprise-managed Chrome always has unique requirements compared to general web usage and we will be ensuring that enterprise administrators have appropriate controls over the deprecation of third-party cookies in their browsers.
+
+As with the majority of Chrome experiments, most enterprise end users will be excluded from the 1% third-party cookie deprecation automatically. For the few that may be affected, enterprise administrators can set the [BlockThirdPartyCookies policy](https://chromeenterprise.google/policies/#BlockThirdPartyCookies) to `false` to  opt out their managed browsers ahead of the experiment and allow time to make necessary changes to not rely on this policy or third-party cookies. You can read more in the [Chrome Enterprise release notes](https://support.google.com/chrome/a/answer/7679408?sjid=16745203858910744446-EU#upChromeBrsrBB117).
+
+We also intend to provide further reporting and tooling to help identify third-party cookie usage on enterprise sites. We have less visibility of enterprise browsers in Chrome's usage metrics which means it is especially important for enterprises to [test for breakage](#test) and [report issues to us](#report-issues).
+
+Enterprise SaaS integrations will be able to use the third-party deprecation trial described below.
+
+
+## Request additional time with the third-party deprecation trial for non-advertising use cases
+
+As with many previous deprecations on the web, we understand there are cases where sites need extra time to make the necessary changes. When it comes to privacy-related changes like this, we also have to balance that against the best interests of people using the web.
+
+We plan to offer a [deprecation trial](/docs/web-platform/origin-trials/#deprecation-trials) to provide a way for sites or services used in a cross-site context to register for continued access to third-party cookies for a limited period of time.
+
+{% Aside 'key-term' %}
+
+Deprecation trials are a type of [origin trial](/docs/web-platform/origin-trials/#deprecation-trials) that allow a feature to be temporarily re-enabled.
+
 {% endAside %}
 
-## Partitioned cookies
+We will share more details as plans progress, but we are starting with a few key principles:
 
-[CHIPS (Cookies Having Independent Partitioned State)](/docs/privacy-sandbox/chips/) is a web platform mechanism that enables opting-in to having third-party cookies partitioned by top-level site using a new cookie attribute `Partitioned`.
+*   It will be a [third-party](/docs/web-platform/third-party-origin-trials/) deprecation trial allowing third-party embeds to opt in to temporarily continue using third-party cookies.
+*   Registering will require a review process to ensure the deprecation trial is only used for functions that greatly affect critical user journeys and registrations will be considered on a case by case basis.
+*   It will not interfere with the [advertising testing planned for the start of 2024, as described by the CMA](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes#industry-testing). As such, this means advertising use cases will not be considered for the deprecation trial.
 
-If you have a service that is used as a component on another site, any cookies it sets are in a cross-site context. The way cookies currently work, the same cookie that service C sets on site A, can be read when service C is embedded on site B.
+**Next step:** We will publish an [Intent](https://goo.gle/blink-intents) to the [blink-dev mailing list](https://groups.google.com/a/chromium.org/g/blink-dev) with further details this month and continue to update documentation here.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/4eKoilhldt8qdmiEvEDo.jpg", alt="Diagram showing sites and storage with unpartitioned cookies.", width="800", height="450" %}
 
-If your service and the sites using it have a 1:1 relationship, those cookies are only ever needed on the site where they were set and not used across multiple sites. [Examples](/docs/privacy-sandbox/chips/#use-cases) include saving preferences for a widget or sharing a session cookie for an API.
+## Preserving critical user experiences
 
-In this case, having cookies partitioned by top-level site is an improvement as it reduces the complexity and risk of cross-site data leaks. Third-party cookies can still be used across sites, however, you will see different cookies when the browser is on different top-level sites.
+Cross-site cookies have been a critical part of the web for over a quarter of a century. This makes any change, especially a breaking change, a complex process that requires a coordinated and incremental approach. While the additional cookie attributes and new privacy-focused APIs account for the majority of use cases, there are specific scenarios where we want to ensure we do not break the experience for people using those sites.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Myb2Km4gEVROgCi5NZFQ.png", alt="Diagram showing sites and paritioned storage with cookies.", width="800", height="393" %}
+Primarily these are authentication or payment flows where a top-level site either opens a pop-up window or redirects to a third-party site for an operation and then returns to the top-level site, making use of a cookie either on that return journey or in the embedded context. We intend to provide a temporary set of heuristics to identify these scenarios and allow third-party cookies for a limited amount of time, giving sites a longer window to implement the necessary changes.
 
-```text
-Set-Cookie: __Host-cookie=value; SameSite=None; Secure; Path=/; Partitioned;
-```
-### Learn more
+**Next step:** We will publish an [Intent](https://goo.gle/blink-intents) to the [blink-dev mailing list](https://groups.google.com/a/chromium.org/g/blink-dev) with further details in this month and continue to update documentation here.
 
-For more details about technical design, use cases, and testing, check out [CHIPS documentation](/docs/privacy-sandbox/chips/).
 
-## First-Party Sets
+## Reporting issues with third-party cookies and getting help  {: #report-issues }
 
-[First-Party Sets (FPS)](/docs/privacy-sandbox/first-party-sets/) is a web platform mechanism for developers to declare relationships among sites, so that browsers can use this information to enable limited cross-site cookie access for specific, user-facing purposes. Chrome will use these declared relationships to decide when to allow or deny a site access to their cookies when in a third-party context.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/NIUl4xLnUCe3yYP7TblC.png", alt="Diagram showing three sites accessing each other's cookies.", width="800", height="446" %}
+We want to ensure we are capturing the various scenarios where sites break without third-party cookies to ensure that we have provided guidance, tooling, and functionality to allow sites to migrate away from their third-party cookie dependencies. If your site or a service you depend on is breaking with third-party cookies disabled, you can submit it to our breakage tracker at [goo.gle/report-3pc-broken](https://goo.gle/report-3pc-broken).
 
-If a cookie is used across multiple related sites, blocking cross-site cookies or partitioning by top-level site would prevent [use cases](/blog/first-party-sets-sameparty/#usecases) such as single sign-on or a shared shopping cart.
-
-Declaring your sites as part of a First-Party Set will allow you to use [Storage Access API (SAA)](/docs/privacy-sandbox/first-party-sets-integration/#storage-access-api) and the [requestStorageAccessFor API](/docs/privacy-sandbox/first-party-sets-integration/#requeststorageaccessfor-in-chrome) to request access to those cookies.
-
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zbeLi9FbtJVhLXiCiRig.png", alt="Diagram showing only sites within the same First-Party Set accessing each other's cookies, while the third site is denied access.", width="800", height="452" %}
-
-The sets are declared in JSON format–in the example below, the primary domain is `travel.site`, and `air-travel.site` is in the list of associated sites.
-
-```json
-{
- "primary": "https://travel.site",
- "associatedSites": ["https://air-travel.site"]
-}
-```
-
-Top-level sites can request storage access on behalf of specific origins with [`Document.requestStorageAccessFor()`](https://privacycg.github.io/requestStorageAccessFor/) (rSAFor).
-
-```js
-document.requestStorageAccessFor('https://target.site')
-```
-
-### Learn more
-
-For more details about technical design, use cases, and set submission process, check out [First-Party Sets developer documentation](/docs/privacy-sandbox/first-party-sets-integration/).
-
-## Privacy Sandbox APIs replacing the need for cookies {: #other-apis }
-
-CHIPS and First-Party Sets cover use cases that can continue to rely on cross-site cookies in a privacy-preserving way.
-
-If neither meets your needs, there is a wider set of Privacy Sandbox proposals for new APIs for specific use cases, replacing the need for cookies. Some of the new APIs are focused on identity, fraud detection, and more, while others cover advertising.
-
-[Federated Credential Management (FedCM)](/docs/privacy-sandbox/fedcm/) enables privacy-preserving approach to federated identity services so users can log into sites without sharing their personal information with a third-party service or website.
-
-[Private State Tokens](/docs/privacy-sandbox/private-state-tokens/) convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
-
-A suite of APIs is available to cover [ad relevance](/docs/privacy-sandbox/#show-relevant-content) and [measurement](/docs/privacy-sandbox/#measure-digital-ads) use cases such as interest-based advertising, on-device auctions for custom audiences, cross-site content selection, ad conversion measurement and attribution, and more.
-
-To learn more about how new APIs might serve use cases that are not covered in this post, explore the [Privacy Sandbox documentation](/docs/privacy-sandbox/).
+If you have questions around the deprecation process and Chrome's plan, you can [raise a new issue using the "third-party cookie deprecation" tag](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose) in our developer support repo.

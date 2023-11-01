@@ -1,7 +1,7 @@
 ---
 
 layout: "layouts/doc-post.njk"
-title: "Using Google Analytics 4"
+title: "Use Google Analytics 4"
 seoTitle: "How to use Google Analytics 4 in your Chrome Extension"
 date: 2012-09-18
 updated: 2023-05-23

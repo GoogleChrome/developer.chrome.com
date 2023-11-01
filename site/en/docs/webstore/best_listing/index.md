@@ -131,7 +131,7 @@ screenshot that is blurry", width="800", height="467" %}
 
 {% Aside %}
 Tip: If your extension supports multiple locales, you can provide locale-specific screenshots as
-described in [Internationalize your extension][i18n-your-screenshots].
+described in [Localize your listing][i18n-your-screenshots].
 {% endAside %}
 
 ### Promotional images: promo tiles and marquee image
@@ -192,5 +192,5 @@ information about your item.
 [devconsole]: https://chrome.google.com/webstore/devconsole
 [extension icon best practices]: /docs/webstore/images/#icon
 [i18n]: /docs/extensions/reference/i18n/
-[i18n-your-screenshots]: /docs/webstore/i18n/#screenshots
+[i18n-your-screenshots]: /docs/webstore/cws-dashboard-listing/#localize-your-listing
 [keyword-spam]: /docs/webstore/spam-faq/#keyword-spam

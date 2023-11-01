@@ -48,6 +48,7 @@ declare global {
     permissions?: string[];
     manifestKeys?: string[];
     chromeOsOnly?: true;
+    requiresPolicyInstall?: true;
   }
 
   /**

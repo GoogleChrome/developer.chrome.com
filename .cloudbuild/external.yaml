@@ -29,6 +29,8 @@ steps:
   - name: node:16.14.2
     id: 'Build eleventy in dev mode to confirm'
     entrypoint: npm
+    env:
+      - 'NODE_OPTIONS="--max_old_space_size=8192"'
     args: ['run', 'eleventy']
     # This does NOT set `NODE_ENV=production`, as we don't need the full build.
 

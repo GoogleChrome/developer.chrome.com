@@ -12,11 +12,11 @@ updated: 2019-09-19
 
 La instalación es un requisito fundamental de las [aplicaciones web progresivas (PWA)](/es/docs/lighthouse/pwa/#instalable). Al pedirles a los usuarios que instalen su PWA, les permite agregarla a sus pantallas de inicio. Los usuarios que agregan aplicaciones a las pantallas de inicio interactúan con esas aplicaciones con más frecuencia.
 
-Un [manifiesto de aplicación web](https://web.dev/add-manifest/) incluye información clave necesaria para que su aplicación se pueda instalar.
+Un [manifiesto de aplicación web](https://web.dev/articles/add-manifest) incluye información clave necesaria para que su aplicación se pueda instalar.
 
 ## Cómo falla la auditoría Lighthouse del manifiesto de la aplicación web
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) marca las páginas que no tengan un [manifiesto de aplicación web](https://web.dev/add-manifest/) que cumpla con los requisitos mínimos de instalación:
+[Lighthouse](https://developers.google.com/web/tools/lighthouse/) marca las páginas que no tengan un [manifiesto de aplicación web](https://web.dev/articles/add-manifest) que cumpla con los requisitos mínimos de instalación:
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/039DlaixA4drrswBzSra.png", alt="Auditoría de Lighthouse que muestra que el usuario no puede instalar la aplicación web desde su pantalla de inicio", width="800", height="98" %}</figure>
 
@@ -34,7 +34,7 @@ Si el manifiesto de una página no incluye las siguientes propiedades, la audito
 
 ## Cómo hacer que su PWA sea instalable
 
-Verifique que su aplicación tenga un manifiesto que cumpla con los criterios anteriores. Consulte la colección [instalable](https://web.dev/progressive-web-apps/#haga-que-pueda-instalarse) para obtener más información sobre cómo crear una PWA.
+Verifique que su aplicación tenga un manifiesto que cumpla con los criterios anteriores. Consulte la colección [instalable](https://web.dev/articles/progressive-web-apps#haga_que_pueda_instalarse) para obtener más información sobre cómo crear una PWA.
 
 ## Cómo comprobar que su PWA es instalable
 
@@ -57,7 +57,7 @@ Otros navegadores tienen diferentes criterios de instalación y para activar el 
 ## Recursos
 
 - [El código fuente de la auditoria **El manifiesto de la aplicación web no cumple con los requisitos de instalación**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/installable-manifest.js).
-- [Agregar un manifiesto de aplicación web](https://web.dev/add-manifest/)
+- [Agregar un manifiesto de aplicación web](https://web.dev/articles/add-manifest)
 - [Descubra lo que se necesita para que sea instalable](/es/docs/lighthouse/pwa/#instalable)
 - [Manifiesto de la aplicación web](https://developer.mozilla.org/docs/Web/Manifest)
 - [No usa HTTPS](/es/docs/lighthouse/pwa/is-on-https/)
