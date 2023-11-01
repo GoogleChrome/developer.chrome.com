@@ -22,7 +22,7 @@ List all platform and channel combinations:
 GET https://versionhistory.googleapis.com/v1/chrome/platforms/all/channels
 ```
 
-List all versions for all platform and channel combinations.
+List all versions for all platform and channel combinations:
 
 ```http
 GET https://versionhistory.googleapis.com/v1/chrome/platforms/all/channels/all/versions
@@ -46,7 +46,7 @@ GET https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stabl
 List all versions for Windows in `stable`, `beta`, and `dev` channels:
 
 ```http
-GET https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/all/versions/?filter=channel<=dev
+GET https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/all/versions?filter=channel<=dev
 ```
 
 ## Release
