@@ -41,7 +41,7 @@ The file handler is an HTML file contained within your extension. When the user 
 
 ## Example
 
-The following example demonstrates how to get a `FileSystemFileHandle` object using the `LaunchQueue` interface.
+The following example demonstrates how to get a `FileSystemFileHandle` object using the `LaunchQueue` interface. To see file handling in action, install the [File Handling Demo](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.file_handlers/README.md).
 
 ```javascript
 if ('launchQueue' in window) {
