@@ -47,10 +47,6 @@ Both user and content scripts can run in an isolated world or in the main world.
 
 To configure a [content security policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) for whichever world you specify, call `userScripts.configureWorld()`.
 
-### Basic usage
-
-TBD
-
 ## Examples
 
 ### Register a script
