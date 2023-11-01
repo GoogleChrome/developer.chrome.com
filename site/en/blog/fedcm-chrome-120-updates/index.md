@@ -2,9 +2,9 @@
 layout: 'layouts/blog-post.njk'
 title: 'FedCM updates: Login Status API, Error API, and Auto-selected Flag API'
 description: >
-  LoginStatus API enables FedCM API without third-party cookies. Error API and Auto-selected Flag API bring more capabilities to FedCM API.
+  The LoginStatus API enables FedCM API without third-party cookies. The Error API and Auto-Selected Flag API bring more capabilities to FedCM API.
 subhead: >
-  LoginStatus API enables FedCM API without third-party cookies. Error API and Auto-selected Flag API bring more capabilities to FedCM API.
+  The LoginStatus API enables FedCM API without third-party cookies. The Error API and Auto-Selected Flag API bring more capabilities to FedCM API.
 date: 2023-11-01
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/KG2D0nQ3epKsOdbb9B5e.jpg'
 alt: 'Series of tools.'
@@ -21,12 +21,12 @@ tags:
 Chrome 120 is shipping the [**Login Status API**](#login-status-api) for FedCM.
 The Login Status API (formerly known as IdP Sign-in Status API) allows websites,
 particularly identity providers, to signal to the browser when their users are
-logging-in/out. This signal is used by FedCM to address a silent timing attack
+logging in and out. This signal is used by FedCM to address a silent timing attack
 problem, and in doing so, allows FedCM to operate *[without third-party
 cookies](/docs/privacy-sandbox/third-party-cookie-phase-out/) altogether*. This
 update addresses the last remaining backwards-incompatible changes we previously
 identified in the [original Intent to Ship of
-FedCM](https://groups.google.com/a/chromium.org/g/blink-dev/c/URpYPPH-YQ4/m/E9pgS7GEBAAJ)
+FedCM](https://groups.google.com/a/chromium.org/g/blink-dev/c/URpYPPH-YQ4/m/E9pgS7GEBAAJ),
 as part of our [scope of
 work](/docs/privacy-sandbox/fedcm/#roadmap).
 
@@ -35,13 +35,13 @@ backward-incompatible change once shipped. If you have an existing
 implementation of FedCM, make sure to update it using the following
 instructions.
 
-Additionally, Chrome is shipping the following two new [Federated Credential
-Management (FedCM)](/docs/privacy-sandbox/fedcm/) features:
+Additionally, Chrome is shipping two new [Federated Credential Management
+(FedCM)](/docs/privacy-sandbox/fedcm/) features:
 
 * [**Error API**](#error-api): Notify users when their sign-in attempt fails with a native UI
   based on the server response from the id assertion endpoint, if any.
-* [**Auto-selected Flag API**](#auto-selected-flag-api): Notify both identity provider (IdP) and relying
-  party (RP) that whether the credential was automatically selected in the flow.
+* [**Auto-Selected Flag API**](#auto-selected-flag-api): Notify the identity provider (IdP)
+  and relying party (RP) if a credential was automatically selected in the flow.
 
 ## Login Status API {: #login-status-api}
 
@@ -65,10 +65,10 @@ unnecessary requests to the IdP and mitigate potential timing attacks.
 FedCM introduces a credentialed request to the [accounts list
 endpoint](/docs/privacy-sandbox/fedcm-developer-guide/#accounts-list-endpoint).
 This request doesn't send data that identifies the requestor and doesn't allow
-passing-through data provided by the RP. However, the browser separately
+passing-through data provided by the RP. Separately, the browser
 performs an uncredentialed request containing the RP information to the
 `client_metadata_endpoint`, so the IdP server can correlate the uncredentialed
-request with the credentialed request (stochastically) using timing, or other
+request with the credentialed request (stochastically) using timestamps or other
 fingerprinting data. Read more details on
 [GitHub](https://github.com/fedidcg/FedCM/issues/447).
 
@@ -117,13 +117,13 @@ origin:
 navigator.login.setStatus("logged-out")
 ```
 
-These calls record the user's login status as "sign-out". When the user's login
-status is "logged-out", calling the FedCM silently fails without making a
+These calls record the user's login status as "signed-out." When the user's login
+status is "logged-out," calling the FedCM silently fails without making a
 request to the IdP's accounts list endpoint.
 
-The "unknown" status is used before the IdP sends a signal using the Login
-Status API. We introduce this status for better transition because a user may
-have already signed in to the IdP when we ship this API and the IdP may not have
+The "unknown" status is set before the IdP sends a signal using the Login
+Status API. We introduced this status for a better transition, because a user may
+have already signed into the IdP when we ship this API. The IdP may not have
 a chance to signal this to the browser by the time FedCM is first invoked. In
 this case, we make a request to the IdP's accounts list endpoint and update the
 status based on the response from the accounts list endpoint:
@@ -142,7 +142,7 @@ is "logged-in", but the server returns no accounts because the session is no
 longer available. In such a scenario, the browser can dynamically let the user
 sign in to the IdP through a popup window.
 
-The FedCM dialog will display a message as shown in the following image:
+The FedCM dialog displays a message suggesting a sign in, as shown in the following image.
 
 <figure>
   {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/rUIpGicYbAJHdtLMsxui.png", alt="A FedCM dialog suggesting to sign in to the IdP.", width="800", height="449" %}
@@ -153,7 +153,7 @@ When the user clicks the **Continue** button, the browser opens a dialog for the
 IdP's login page.
 
 <figure>
-  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/i6MeleMIoTotaF3SIhk1.png", alt="An example dialog shown after clicking on the sign in to the IdP button.", width="800", height="516" %}
+  {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/i6MeleMIoTotaF3SIhk1.png", alt="An example dialog.", width="800", height="516" %}
    <figcaption>An example dialog shown after clicking on the sign in to the IdP button.</figcaption>
 </figure>
 
@@ -202,16 +202,17 @@ signed in, the IdP should:
 
 This dynamic login experience is intended for when an IdP session has expired
 without an explicit sign-out, causing the browser's login state to contradict
-with the actual state. This will not be triggered for users who haven't signed
+the user's actual state. This isn't triggered for users who haven't signed
 in to the IdP yet. This new flow is designed to cover the cases where the user's
 IdP login status on the browser is "logged-in" but the IdP's accounts list
 endpoint returns no accounts.
 
-* Assuming the Login Status API is called promptly, when FedCM is invoked, any
-  of the following scenarios can occur: If the user's login status is set to
-  unknown, the status is updated (either "logged-in" or "logged-out") depending
-  on the IdP's response from the accounts list endpoint. A dynamic login flow
-  won't be triggered.
+Assuming the Login Status API is called promptly, when FedCM is invoked, any
+of the following scenarios can occur:
+
+* If the user's login status is set to unknown, the status is updated
+  (either "logged-in" or "logged-out") depending on the IdP's response
+  from the accounts list endpoint. A dynamic login flow won't be triggered.
 * If a user has signed in to the IdP in the browser and then explicitly signed
   out from the IdP, the dynamic login flow won't be triggered.
 * If a user has signed in to the IdP in the browser, but the session expires
@@ -278,7 +279,7 @@ specified error
 list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1)
 [`invalid_request`, `unauthorized_client`, `access_denied`, `server_error` and
 `temporarily_unavailable`] or use any arbitrary string. If the latter, Chrome
-will render the error UI with a generic error message and pass the code to the
+renders the error UI with a generic error message and pass the code to the
 RP.
 
 For `url`, it identifies a human-readable web page with information about the
@@ -318,17 +319,17 @@ try {
 }
 ```
 
-## Auto-selected Flag API {: #auto-selected-flag-api}
+## Auto-Selected Flag API {: #auto-selected-flag-api}
 
 `mediation:optional` is the [default user mediation
 behavior](https://w3c.github.io/webappsec-credential-management/#dom-credentialmediationrequirement-optional)
-in Credential Management API and it will trigger auto reauthentication when
+in the Credential Management API and it triggers automatic re-authentication when
 possible. However, auto reauthentication may be
 [unavailable](/blog/fedcm-auto-reauthn/#mediation-options) due to reasons that
 only the browser knows; when it's unavailable the user may be prompted to sign
-in with explicit user mediation which is a flow with different properties.
+in with explicit user mediation, which is a flow with different properties.
 
-* From an API caller's perspective, when they receive an id token, they don't
+* From an API caller's perspective, when they receive an ID token, they don't
   have visibility over whether it was an outcome of an auto reauthentication
   flow. That makes it hard for them to evaluate the API performance and improve
   UX accordingly.
