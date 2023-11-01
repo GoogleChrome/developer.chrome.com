@@ -28,7 +28,6 @@ The following code shows the supported manifest keys. For additional usage infor
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/icons">icons</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// Optional</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/author">author</a>"</span><span class="token operator">:</span> <span class="token string">"developer@example.com"</span><span class="token punctuation">,</span>
-
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/background">background</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/settings_override">chrome_settings_overrides</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/override">chrome_url_overrides</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
