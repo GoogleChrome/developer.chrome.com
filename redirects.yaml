@@ -477,6 +477,9 @@ redirects:
 - from: /docs/webstore/program_policies/
   to: /docs/webstore/program-policies/
 
+- from: /docs/webstore/complaint-faq/
+  to: /docs/webstore/review-process/
+
 - from: /docs/extensions/mv3/quality_guidelines
   to: /docs/webstore/program-policies/quality-guidelines-faq
 
