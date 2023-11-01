@@ -46,7 +46,7 @@ The following example demonstrates how to get a `FileSystemFileHandle` object us
 ```javascript
 if ('launchQueue' in window) {
   launchQueue.setConsumer(async launchParams => {
-    if (!launchParams.files.length) { return; }
+    if (!launchParams.files || !launchParams.files.length) { return; }
     const fileHandle = launchParams.files[0];
   });
 }
