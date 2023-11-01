@@ -32,7 +32,7 @@ This API may be used in extension service workers, popups, side panels, or conte
 
 Each member of the `"file_handlers"` &mdash;meaning each _file handler_&mdash;specifies a file type or types to be handled by a specific extension page.
 
-The handlers you specify will be added to the ChromeOS Files window, the Open and Open with menus specifically. They will only appear in these meuns when the user selects a file with the specifiec extension. For example, if a file handler specifies `.txt` the ChromeOS menus only show that handler when a file with that extension is selected.
+The handlers you specify will be added to the ChromeOS Files window, the Open and Open with menus specifically. They will only appear in these menus when the user selects a file with the specific extension. For example, if a file handler specifies `.txt` the ChromeOS menus only show that handler when a file with that extension is selected.
 
 ## Process a file
 
