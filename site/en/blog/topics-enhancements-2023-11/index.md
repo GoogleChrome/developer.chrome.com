@@ -50,7 +50,7 @@ follows:
 
 1. At the end of each epoch, Chrome converts participating hostnames from
     the user's browsing history into topics.
-1. First, topics are sorted by bucket, and then by frequency. That is, if
+1. Topics are sorted first by bucket, and then by frequency. That is, if
     two topics are in the same bucket but have different frequency, the higher
     frequency topic is sorted higher.
 1. Lastly, Chrome selects the top five as the user's top topics for that
