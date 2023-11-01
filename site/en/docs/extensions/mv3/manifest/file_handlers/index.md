@@ -6,7 +6,7 @@ date: 2023-11-01
 description: Reference documentation for the file_handlers property of manifest.json.
 ---
 
-The `"file_handlers"` manifest key specifies file types to be handled by an extension. To process a file, use the web platform's [Launch Handler API](https://developer.mozilla.org/docs/Web/API/Launch_Handler_API). For extension specific information, see [File Handling](/docs/extensions/mv3/file_handling).
+The `"file_handlers"` manifest key specifies file types to be handled by a ChromeOS extension. To process a file, use the web platform's [Launch Handler API](https://developer.mozilla.org/docs/Web/API/Launch_Handler_API). For extension specific information, see [File Handling](/docs/extensions/mv3/file_handling).
 
 {% Aside %}
 This feature is currently available in Chrome 120 [beta](https://www.google.com/chrome/beta/).
