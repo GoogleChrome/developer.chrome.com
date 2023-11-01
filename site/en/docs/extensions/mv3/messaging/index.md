@@ -228,7 +228,7 @@ port.postMessage(...);
 Extensions can also receive and respond to messages from other webpages, but can't send messages
 to webpages. To send messages from a webpage to an extension,
 specify in your `manifest.json` which websites you want to communicate with using [`"externally
-connectable"`][43]. For example:
+connectable"`][externally-connectable]. For example:
 
 {% Label %}manifest.json{% endLabel %}
 
@@ -340,6 +340,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 {% endCompare %}
 
 [doc-promises]: /docs/extensions/mv3/promises/#compare-to-callback
+[externally-connectable]: /docs/extensions/mv3/manifest/externally_connectable/
 [mdn-promise]: https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Promises
 [native-client]: /docs/extensions/mv3/nativeMessaging/#native-messaging-client
 [native-host]: /docs/extensions/mv3/nativeMessaging/#native-messaging-host
