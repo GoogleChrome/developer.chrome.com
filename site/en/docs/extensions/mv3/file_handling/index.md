@@ -38,7 +38,6 @@ The handlers you specify will be added to the ChromeOS Files window, the Open an
 
 The file handler is an HTML file contained within your extension. When the user selects your handler from a menu, the HTML file opens in a new tab. Processing the file, whether you display it or use it in some other way, is done with JavaScript using appropriate web platform APIs. Processing code must be in a separate JavaScript file and included via a `<script>` tag and must also be in your extension. The script file uses the [`LaunchQueue`](https://developer.mozilla.org/docs/Web/API/LaunchQueue) interface of the Launch Handler API to get a [`FileSystemFileHandle`](https://developer.mozilla.org/docs/Web/API/FileSystemFileHandle) object.
 
-
 ## Example
 
 The following example demonstrates how to get a `FileSystemFileHandle` object using the `LaunchQueue` interface. To see file handling in action, install the [File Handling Demo](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.file_handlers/README.md).
