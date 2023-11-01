@@ -3,8 +3,8 @@ api: readingList
 has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
-Chrome features a reading list which allows users to save web pages to read later or when offline.
-Use the Reading List API to retrieve existing items and to add and remove items from the list.
+Chrome features a reading list located on the side panel. It lets users save web pages to read later or when offline.
+Use the Reading List API to retrieve existing items and add or remove items from the list.
 
 <figure>
   {% Img src="image/wVNVUJS8Z8O04i1tJKSdsp6nkRQ2/isx7uJZA6B8YmEGTFmB6.png", alt="Reading list showing a number of articles", width="400", height="371" %}
@@ -57,7 +57,7 @@ chrome.readingList.addEntry({
 
 ### Display items {: #display-items }
 
-To display items currently in the reading list, use the [`chrome.readingList.query()`][query]
+To display items from the reading list, use the [`chrome.readingList.query()`][query] method to retrieve them.
 method.
 
 ```js
@@ -70,7 +70,7 @@ for (const item of items) {
 
 ### Mark an item as read {: #mark-item-read }
 
-To mark an item as read, use [`chrome.readingList.updateEntry`][update-entry]:
+You can use [`chrome.readingList.updateEntry`][update-entry] to update the title, URL, and read status. The following code marks an item as read:
 
 ```js
 chrome.readingList.updateEntry({
