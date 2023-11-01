@@ -37,5 +37,5 @@ apps:
   en: 'Develop Chrome Apps'
 service_workers:
   en: 'Service workers'
-reference:
-  en: 'Reference'
+support:
+  en: 'Support and feedback'
