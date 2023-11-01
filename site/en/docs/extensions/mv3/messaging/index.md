@@ -227,8 +227,8 @@ port.postMessage(...);
 
 Extensions can also receive and respond to messages from other webpages, but can't send messages
 to webpages. To send messages from a webpage to an extension,
-specify in your `manifest.json` which websites you want to communicate with using [`"externally
-connectable"`][externally-connectable]. For example:
+specify in your `manifest.json` which websites you want to communicate with using
+the [`"externally_connectable"`][externally-connectable] manifest key. For example:
 
 {% Label %}manifest.json{% endLabel %}
 
