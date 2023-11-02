@@ -132,7 +132,7 @@ This blog post has barely scratched the surface and mostly provided a high-level
 
 <!-- - [Wasm GC blogpost](https://docs.google.com/document/d/1zF0hh3PobeErcGTf2v2ppkbsKFHCtsXNP3VRMQO5ez8/edit) -->
 - [WasmGC Overview](https://github.com/WebAssembly/gc/blob/main/proposals/gc/Overview.md)
-- [Wasm GC MVP](https://github.com/WebAssembly/gc/blob/main/proposals/gc/MVP.md)
+- [WasmGC MVP](https://github.com/WebAssembly/gc/blob/main/proposals/gc/MVP.md)
 - [WasmGC post-MVP](https://github.com/WebAssembly/gc/blob/main/proposals/gc/Post-MVP.md)
 
 ## Acknowledgements
