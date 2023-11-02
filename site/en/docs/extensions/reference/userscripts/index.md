@@ -45,7 +45,29 @@ As an extension developer, you already have Developer mode enabled in your insta
 
 Both user and content scripts can run in an isolated world or in the main world. An isolated world is an execution environment that isn't accessible to a host page or other extensions. This lets a user script change its JavaScript environment without affecting the host page or other extensions' user and content scripts. Conversely, user scripts (and content scripts) are not visible to the host page or the user and content scripts of other extensions. Scripts running in the main world are accessible to host pages and other extensions and are visible to host pages and to other extensions. To select the world, pass `"USER_SCRIPT"` or `"MAIN"` when calling `userScripts.register()`.
 
-To configure a [content security policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) for whichever world you specify, call `userScripts.configureWorld()`.
+To configure a [content security policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) for whichever world you specify, call `userScripts.configureWorld()` as shown below.
+
+```javascript
+browser.userScripts.configureWorld({
+  csp: "script-src 'self'"
+});
+```
+
+### Messaging
+
+Like content scripts and offscreen documents, user scripts can communicate with other parts of an extension using [messaging](/docs/extensions/mv3/messaging/). Unlike other types of messages, user script messages use their own methods: `runtime.onUserScriptMessage` and `chrome.runtime.onUserScriptConnect` events.
+
+Before sending a message, you must call `configureWorld()` with the `messaging` argument set to `true`. Note that both the `csp` and `messaging` arguments can be passed at the same time.
+
+```javascript
+browser.userScripts.configureWorld({
+  messaging: true,
+});
+```
+
+### Extension updates
+
+User scripts are cleared when an extension updates. You can add them back running code via the [`runtime.onInstalled`](/docs/extensions/reference/runtime/#event-onInstalled) event handler in the extension service worker. Respond only to the [`"update"` reason](/docs/extensions/reference/runtime/#type-OnInstalledReason:~:text=as%20an%20installation.-,%22update%22,-Specifies%20the%20event) passed to the event callback.
 
 ## Examples
 
@@ -53,6 +75,13 @@ To configure a [content security policy](https://developer.mozilla.org/docs/Web/
 
 The following example shows a basic call to `register()`. The first argument is an array of objects defining the scripts to be registered. There are more options than are shown here.
 
+```javascript
+chrome.userScripts.register([{
+  id: 'test',
+  matches: ['*://*/*'],
+  js: [{code: 'alert("Hi!")'}]
+}]);
+```
+
 ### Configure the world
 
-You can configure a [content security policy](https://developer.mozilla.org/docs/Web/HTTP/CSP) for whichever world you specify by calling `userScripts.configureWorld()` as shown below.
