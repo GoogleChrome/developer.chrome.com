@@ -1312,7 +1312,7 @@ Store
 [docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
 [docs-publish-setup]: /docs/webstore/cws-dashboard-privacy/#set-privacy-policy
 [docs-service-workers]: /docs/extensions/mv3/service_workers/
-[docs-single-purpose-faq]: /docs/extensions/mv3/quality_guidelines#single-purpose
+[docs-single-purpose-faq]: /docs/webstore/program-policies/quality-guidelines-faq
 [lie-fi]: https://web.dev/performance-poor-connectivity/#what-is-lie-fi
 [mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content
 [mdn-cookie-store]: https://developer.mozilla.org/docs/Web/API/Cookie_Store_API
