@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Message passing"
 seoTitle: "Chrome Extensions Message passing"
 date: 2012-09-18
-updated: 2023-09-22
+updated: 2023-11-02
 description: How to pass messages between extensions and content scripts.
 ---
 
@@ -240,8 +240,11 @@ connectable"`][43]. For example:
 
 This exposes the messaging API to any page that matches the URL patterns you specify. The URL
 pattern must contain at least a [second-level domain][wiki-second-level]; that is, hostname patterns such as "\*",
-"\*.com", "\*.co.uk", and "\*.appspot.com" are not supported.
-[`runtime.sendMessage()`][runtime-send-msg] or [`runtime.connect()`][runtime-connect] APIs to send
+"\*.com", "\*.co.uk", and "\*.appspot.com" are not supported. Starting in Chrome 107, you can use
+<code>&lt;all_urls&gt;</code> to access all domains. Note that because it affects all hosts,
+Chrome web store reviews for extensions that use it [may take longer][review-time-factors].
+
+Use the [`runtime.sendMessage()`][runtime-send-msg] or [`runtime.connect()`][runtime-connect] APIs to send
 a message to a specific app or extension. For example:
 
 {% Label %}webpage.js{% endLabel %}
@@ -344,6 +347,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 [native-client]: /docs/extensions/mv3/nativeMessaging/#native-messaging-client
 [native-host]: /docs/extensions/mv3/nativeMessaging/#native-messaging-host
 [native-messaging]: /docs/extensions/mv3/nativeMessaging/
+[review-time-factors]: https://developer.chrome.com/docs/webstore/review-process/#review-time-factors
 [runtime-connect-native]: /docs/extensions/reference/runtime#method-connectNative
 [runtime-connect]: /docs/extensions/reference/runtime#method-connect
 [runtime-on-connect-ext]: /docs/extensions/reference/runtime#event-onConnectExternal
