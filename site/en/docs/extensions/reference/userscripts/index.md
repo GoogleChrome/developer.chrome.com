@@ -13,7 +13,7 @@ To use the `chrome.userScripts` API, add the `"userScripts"` permission to your 
 {
   "name": "User script test extension",
   "manifest_version": 3,
-  "minimum_chrome_version": "118",
+  "minimum_chrome_version": "120",
   "permissions": [
     "userScripts"
   ],
