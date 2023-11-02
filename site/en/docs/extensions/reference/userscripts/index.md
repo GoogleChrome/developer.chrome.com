@@ -99,5 +99,4 @@ chrome.userScripts.register([{
 }]);
 ```
 
-### Configure the world
 
