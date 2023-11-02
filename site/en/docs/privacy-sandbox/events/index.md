@@ -27,14 +27,12 @@ setup, different types of auctions and participants involved, examine the overvi
 through a detailed sequence diagram along with code. 
 
 **Americas-friendly session**   
-November 7, 2023: 1–2 pm ET  
-Register:
-[rsvp.withgoogle.com/events/protected-audience-multisellerauction-amer_a27cb5](https://rsvp.withgoogle.com/events/protected-audience-multisellerauction-amer_a27cb5)
+November 7, 2023: 1pm to 2pm ET  
+[Register](https://rsvp.withgoogle.com/events/protected-audience-multisellerauction-amer_a27cb5](https://rsvp.withgoogle.com/events/protected-audience-multisellerauction-amer_a27cb5)
 
 **EMEA-friendly session**  
-November 8, 2023: 7–8 am ET  
-Register:
-[rsvp.withgoogle.com/events/protected-audience-multisellerauction-emea_a27cb5_339693](https://rsvp.withgoogle.com/events/protected-audience-multisellerauction-emea_a27cb5_339693)
+November 8, 2023: 11am to 12 noon GMT 
+[Register](https://rsvp.withgoogle.com/events/protected-audience-multisellerauction-emea_a27cb5_339693](https://rsvp.withgoogle.com/events/protected-audience-multisellerauction-emea_a27cb5_339693)
 
 Subscribe to the following mailing lists to be notified of other events:
 
