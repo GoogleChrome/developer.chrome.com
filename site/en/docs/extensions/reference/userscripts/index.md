@@ -85,7 +85,9 @@ chrome.userScripts.configureWorld({
 
 User scripts are cleared when an extension updates. You can add them back running code via the [`runtime.onInstalled`](/docs/extensions/reference/runtime/#event-onInstalled) event handler in the extension service worker. Respond only to the [`"update"` reason](/docs/extensions/reference/runtime/#type-OnInstalledReason:~:text=as%20an%20installation.-,%22update%22,-Specifies%20the%20event) passed to the event callback.
 
-## Examples
+## Example
+
+The example below is from the [userScript sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/userScripts) in our samples repo.
 
 ### Register a script
 
