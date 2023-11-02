@@ -38,7 +38,7 @@ Our new [userScript sample](LINK) demonstrates a simple approach for detecting w
 
 <figure>
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/Fh4eS4ovF8QboLiwLhY4.png", alt="Sample onboarding flow for user scripts.", width="800", height="401" %}
-<figcaption>Onboard users when Developer mode is disabled</figcaption>
+<figcaption>Onboard users when Developer mode is disabled.</figcaption>
 </figure>
 
 To get started check out the [documentation](LINK) or take a look at the [official sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/userScripts).
