@@ -20,7 +20,7 @@ already taken place.
 ### Webinar: Protected Audience API multi-seller auction
 
 The Google Privacy Sandbox team will be hosting our next set of webinars on [Protected
-Audience](https://developer.chrome.com/docs/privacy-sandbox/protected-audience/). 
+Audience](/docs/privacy-sandbox/protected-audience/). 
 
 This set of webinars will focus on multi-seller auctions, where we will cover sequential auction
 setup, different types of auctions and participants involved, examine the overview diagram, and walk
