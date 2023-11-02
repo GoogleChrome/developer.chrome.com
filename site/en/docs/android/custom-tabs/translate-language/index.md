@@ -8,7 +8,7 @@ authors:
   - alexmkatz
 ---
 
-When a user opens a Custom Tab, the content in that tab is usually translated for their device locale. This guide explains how to implement Custom Tab translation for a locale of your choice instead.
+This guide explains how to specify a target locale for the Translate UI in your Custom Tab to trigger with.
 
 ## Implementation
 
@@ -18,7 +18,7 @@ Use the following code to add translation to your Custom Tabs intent builder:
 Locale userLocale = new Builder().setLanguage("pt").setRegion("BR").build();
 
 CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
-    .setTranslateLocale(Locale locale)
+    .setTranslateLocale(userLocale)
     .build();
 ```
 
