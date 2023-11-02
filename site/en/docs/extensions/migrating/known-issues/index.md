@@ -30,7 +30,7 @@ These issues have been collected based on feedback from partners, bug reports, a
 
 The following issues have recently been addressed:
 
-1. **Support File Handling API on ChromeOS** as a replacement for [`chrome.fileBrowserHandler`](/docs/extensions/reference/fileBrowserHandler/) [Chrome 120].
+1. **Support for [File handling on ChromeOS](/docs/extensions/mv3/file_handling/)** as a replacement for [`chrome.fileBrowserHandler`](/docs/extensions/reference/fileBrowserHandler/) [Chrome 120].
 1. **User Script support:** Allow registering content scripts with arbitrary code with the new [userScripts API](/docs/extensions/reference/userscripts/) [Chrome 120]. 
 1. Additional **strong service worker keepalives** for certain operations taking longer than five minutes.
     * Added in Chrome 116 for `permissions.request()`, `desktopCapture.chooseDesktopMedia()`, `identity.launchWebAuthFlow()` and `management.uninstall()`.
