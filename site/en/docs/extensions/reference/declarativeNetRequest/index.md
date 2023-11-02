@@ -203,6 +203,12 @@ If only one extension has a rule that matches a request, that rule is applied. B
 
 1. If more than one rule matches, the most recently installed extension gets priority.
 
+### Safe rules {: #safe-rules }
+
+Rules with an action of `block`, `allow`, `allowAllRequests` or `upgradeScheme` are defined as safe
+rules. These rules are deemed to have a lower risk profile and in some cases allow for increased
+limits on the number of rules in a ruleset.
+
 ### Rule limits {: #limits }
 
 There is a performance overhead to loading and evaluating rules in the browser,
@@ -223,7 +229,18 @@ The number of rules available after that depends on how many rules are enabled b
 
 #### Dynamic and session rules {: #dynamic-session-rules }
 
-The limits applied to dynamic and session rules are simpler than static rules. The total number of both cannot exceed 5000. This is called the [`MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES`](#property-MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES).
+An extension can have up to 5000 session rules. This is exposed as the
+[`MAX_NUMBER_OF_SESSION_RULES`](#property-MAX_NUMBER_OF_SESSION_RULES).
+
+For dynamic rules, up to 30,000 rules are permitted, exposed as the
+[`MAX_NUMBER_OF_DYNAMIC_RULES`](#property-MAX_NUMBER_OF_DYNAMIC_RULES). Included in this set of
+30,000 rules, up to 5,000 unsafe rules are permitted, called
+[`MAX_NUMBER_OF_UNSAFE_DYNAMIC_RULES`](#property-MAX_NUMBER_OF_UNSAFE_DYNAMIC_RULES).
+
+{% Aside 'note' %}
+Prior to Chrome 120, the limits for dynamic and session rules were combined, and the total number of
+dynamic and session rules could not exceed 5000.
+{% endAside %}
 
 #### Rules that use regex {: #regex-rules }
 
