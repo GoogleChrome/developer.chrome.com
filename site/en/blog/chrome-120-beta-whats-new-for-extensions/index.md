@@ -94,7 +94,7 @@ File handling lets extensions open files with specified MIME types and file exte
 
 This is a small update, but addresses an important gap in the service worker lifecycle. Due to the event driven nature of service workers, the recommended way to fire an event in the future is to use [`chrome.alarms`](/docs/extensions/reference/alarms/). The Alarms API ensures that the event gets fired even if the service worker shuts down in the meantime. 
 
-There’s a catch though. Before Chrome 120, the shortest timespan to trigger an alarm was 1 minute. However, service workers shut down after 30 seconds of inactivity. So there was no straightforward way to schedule an alarm to fire in 45 seconds, because when using [`setTimeout()`](https://developer.mozilla.org//docs/Web/API/setTimeout) to set an event in 45 seconds, the service worker could potentially be shut down before the event fired. 
+There’s a catch though. Before Chrome 120, the shortest time span to trigger an alarm was one minute. However, service workers shut down after 30 seconds of inactivity. So there was no straightforward way to schedule an alarm to fire in 45 seconds, because when using [`setTimeout()`](https://developer.mozilla.org//docs/Web/API/setTimeout) to set an event in 45 seconds, the service worker could potentially be shut down before the event fired. 
 
 With Chrome 120 you can now set an alarm for as short as 30 seconds matching the time:
 
