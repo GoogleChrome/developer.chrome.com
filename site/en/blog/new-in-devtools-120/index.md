@@ -68,6 +68,18 @@ When you attempt to paste code, the **Sources** panel now shows you the **Do you
 
 Chromium issue: [345205](https://crbug.com/345205).
 
+## Preloading renamed into Speculative loading {: #speculative-loading }
+
+To avoid overusing the previous term and better reflect the behavior, **Application** > **Preloading** has been renamed into **Speculative loads**. [Speculative loading](/blog/prerender-pages/) allows a [near-instant page load](/blog/prerender-pages/impact-of-prerendering) based on speculation rules that [you can define](/blog/prerender-pages/#the-speculation-rules-api) for your website to prerender and prefetch most navigated to pages.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NLwfnrJcNBqWmxZs6MKA.png", alt="The Speculative loads section of the Application panel.", width="800", height="549" %}
+
+Additionally, the UI of the **Speculative loading** section has been enhanced over several previous versions.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/5b4c2082bd36ab2fa8eccf24c2348f85148a2eb5 #}
+
+Chromium issue: [1478888](https://crbug.com/1478888).
+
 ## Lighthouse 11.2.0 {: #lighthouse }
 
 The **Lighthouse** panel now runs Lighthouse 11.2.0. See the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.2.0).
