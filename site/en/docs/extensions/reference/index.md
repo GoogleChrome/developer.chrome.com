@@ -8,7 +8,7 @@ Most extensions need access to one or more Chrome Extensions APIs to function. T
 
 ## Common Extensions API features
 
-An Extensions API typically consists of a namespace containing manifest fields that must be included in your extension's `manifest.json` file to use that API. Those fields can include objects within `manifest.json,` such as the action object required by the `chrome.action` API, as well as [permissions](/docs/extensions/mv3/declare_permissions/) declarations for APIs that require permissions.
+An Extensions API consists of a namespace containing methods and properties for doing extensions work, and usually, but not always, manifest fields for the `manifest.json` file. For example, the `chrome.action` namespace requires an `"action"` object in the manifest. Additionally, many APIs require [permissions](/docs/extensions/mv3/declare_permissions/) in the manifest.
 
 Methods in `chrome.*` APIs are **asynchronous** unless stated otherwise. Asynchronous methods return immediately, without waiting for the operation that calls them to finish. Use [promises](/docs/extensions/mv3/promises/) to get the results of these methods. For more information, see [Asynchronous methods](/docs/extensions/mv3/architecture-overview/#async-sync).
 
