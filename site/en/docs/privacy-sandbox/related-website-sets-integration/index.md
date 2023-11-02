@@ -62,7 +62,7 @@ The [Storage Access API (SAA)](https://privacycg.github.io/storage-access/) prov
 
 Embedded resources can use SAA methods to check whether they currently have access to storage, and to request access from the user agent.
 
-When third-party cookies are blocked, but Related Website Sets are allowed, Chrome will automatically grant that permission for sites within the set and deny it for sites outside the set.
+When third-party cookies are blocked but Related Website Sets (RWS) is enabled, Chrome will automatically grant permission in intra-RWS contexts, and will show a prompt to the user otherwise.
 
 {% Aside %}
 SAA is shipping in several browsers, however there are [differences between browser implementations](https://developer.mozilla.org/docs/Web/API/Storage_Access_API#safari_implementation_differences) in the rules of handling storage access.
