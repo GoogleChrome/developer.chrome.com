@@ -8,7 +8,7 @@ description: A Human Interface Device (HID), which takes input from or provides 
 
 A Human Interface Device (HID) takes input from or provides output to humans. It also refers to the HID protocol, a standard for bi-directional communication between a host and a device that is designed to simplify the installation procedure.
 
-This page describes aspects of the API that are particular to extensions. Refer to MDN for complete details of the [WebHID](https://developer.mozilla.org/docs/Web/API/WebHID_API).
+This page describes aspects of the API that are particular to extensions. Refer to MDN for complete details of the [WebHID API](https://developer.mozilla.org/docs/Web/API/WebHID_API).
 
 You can find a [sample app for WebHID](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/sample.co2meter) in our samples repo.
 
