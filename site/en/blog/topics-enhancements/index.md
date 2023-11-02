@@ -16,7 +16,7 @@ tags:
   - privacy
 ---
 
-## Update November 6, 2023
+## Update: November 6, 2023
 
 In June, we outlined several enhancements to the Topics API. We closed by
 reiterating our commitment to continue to listen to ecosystem feedback. Today,
@@ -30,7 +30,7 @@ the frequency by which users interacted with each topic, on participating
 websites. We received
 [feedback](https://github.com/patcg-individual-drafts/topics/issues/42) that
 this resulted in the API often returning topics that are less useful for ad
-relevance such as ‘News' or ‘Arts & Entertainment'. We
+relevance such as "News" or "Arts & Entertainment". We
 [explored](https://github.com/patcg-individual-drafts/topics/issues/42#issuecomment-1029111959)
 many solutions, including allowing callers to set a priority list, ranking by
 inverse frequency on the web, by ad clicks observed by Chrome, and other
