@@ -9,7 +9,7 @@ This API is currently available in Chrome 120 beta.
 
 To use the `chrome.userScripts` API, add the `"userScripts"` permission to your manifest.json and `"host_permissions"` for sites you want to run scripts on.
 
-```json/9-15
+```json/7-9
 {
   "name": "User script test extension",
   "manifest_version": 3,
@@ -42,7 +42,20 @@ As an extension developer, you already have Developer mode enabled in your insta
       </figcaption>
     </figure>
 
-You can determine if developer mode is enabled by checking whether `chrome.userScripts` throws an error.
+You can determine if developer mode is enabled by checking whether `chrome.userScripts` throws an error. For example:
+
+```javascript
+function isUserScriptsAvailable() {
+  try {
+    // Property access which throws if developer mode is not enabled.
+    chrome.userScripts;
+    return true;
+  } catch {
+    // Not available.
+    return false;
+  }
+}
+```
 
 ```javascript
 function isUserScriptsAvailable() {
@@ -98,5 +111,3 @@ chrome.userScripts.register([{
   js: [{code: 'alert("Hi!")'}]
 }]);
 ```
-
-
