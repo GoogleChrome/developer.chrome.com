@@ -65,7 +65,7 @@ Starting with Chrome 120, there is a new dynamic rule limit of 30000 for safe DN
 
 As part of this work, we made some additional changes such as enforcing the limits on dynamic and session rulesets separately to align with Firefox. For more information, see our proposal.
 
-What makes me personally really happy about this change is how quickly it landed. [Oliver](https://twitter.com/oliverdunk_) wrote the initial proposal in August following his discussions with different ad blockers. It’s now landing in Chrome - two months later! 🎉
+What makes me personally really happy about this change is how quickly it landed. [Oliver](https://twitter.com/oliverdunk_) wrote the initial proposal in August following his discussions with different ad blockers. It’s now landing in Chrome two months later! 🎉
 
 ## New ReadingList API
 
