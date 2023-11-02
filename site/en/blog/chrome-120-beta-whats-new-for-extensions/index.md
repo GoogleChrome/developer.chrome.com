@@ -27,14 +27,15 @@ User script support has landed! User scripts are (usually relatively small) snip
 
 There is one significant difference between user script support in Manifest V2 and Manifest V3. As user scripts are powerful and require high trust in the author of the user script, the Chrome team decided that users must opt into Developer mode before they can run a user script. 
 
-{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/ktS60KiJNxwjd3PSIEkb.png", alt="Screenshot showing the extensions management tab", width="800", height="164", class="screenshot screenshot--filled" %}
-
-
-
+<figure>
+ {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/3gJmpGWMuvsOk9Jaj2NJ.png", alt="Extensions page",
+ width="400", height="183",  class="screenshot" %}
+  <figcaption>
+  Extensions page (chrome://extensions)
+  </figcaption>
+</figure>
 
 Our new [userScript sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/userScripts) demonstrates a simple approach for detecting whether Developer mode is enabled and providing a simple onboarding flow.
-
-
 
 <figure>
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/Fh4eS4ovF8QboLiwLhY4.png", alt="Sample onboarding flow for user scripts.", width="800", height="401" %}
