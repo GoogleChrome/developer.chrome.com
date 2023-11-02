@@ -18,7 +18,7 @@ To use the `chrome.userScripts` API, add the `"userScripts"` permission to your 
     "userScripts"
   ],
   "host_permissions": [
-    "*://requested.com/*"
+    "*://example.com/*"
   ]
 }
 ```
