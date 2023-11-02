@@ -81,7 +81,7 @@ Chrome introduced the reading list in 2021. Last year, the Chrome team made acce
  
 ## File handling on ChromeOS
 
-The File Handling API lets extensions open files with specified MIME types and file extensions in a similar manner to web platform file handling. Check out [File handling on ChromeOS](/docs/extensions/mv3/file_handling/) for more on how to use it.
+File handling lets extensions open files with specified MIME types and file extensions in a similar manner to web platform file handling. Check out [File handling on ChromeOS](/docs/extensions/mv3/file_handling/) for more on how to use it.
 
 
 <figure>
