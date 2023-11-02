@@ -66,3 +66,7 @@ The change will go into effect in Chrome 121. If you want to test the new behavi
 For more technical details and updates on this change, check the [tracking bug](https://bugs.chromium.org/p/chromium/issues/detail?id=965883) and the [Chrome Platform Status entry](https://chromestatus.com/feature/5084460341264384).
 
 In summary, Chrome's move to change the default durability mode in IndexedDB aims to improve performance while maintaining compatibility with other major browsers. In the majority of cases, our recommendation is to do nothing, as the new default will provide performance enhancements. If required, you can continue to specify your preferred durability mode, taking control over data durability and performance in your web applications.
+
+## Acknowledgements
+
+This article was reviewed by [Evan Stade](https://www.linkedin.com/in/evan-stade-4585826/) and [Rachel Andrew](https://rachelandrew.co.uk/).
