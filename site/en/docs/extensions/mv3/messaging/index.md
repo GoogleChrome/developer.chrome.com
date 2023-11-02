@@ -244,7 +244,7 @@ pattern must contain at least a [second-level domain][wiki-second-level]; that i
 <code>&lt;all_urls&gt;</code> to access all domains. Note that because it affects all hosts,
 Chrome web store reviews for extensions that use it [may take longer][review-time-factors].
 
-[`runtime.sendMessage()`][runtime-send-msg] or [`runtime.connect()`][runtime-connect] APIs to send
+Use the [`runtime.sendMessage()`][runtime-send-msg] or [`runtime.connect()`][runtime-connect] APIs to send
 a message to a specific app or extension. For example:
 
 {% Label %}webpage.js{% endLabel %}
