@@ -32,7 +32,7 @@ There is one significant difference between user script support in Manifest V2 a
 
 
 
-Our new [userScript sample](LINK) demonstrates a simple approach for detecting whether Developer mode is enabled and providing a simple onboarding flow.
+Our new [userScript sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/userScripts) demonstrates a simple approach for detecting whether Developer mode is enabled and providing a simple onboarding flow.
 
 
 
