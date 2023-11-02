@@ -23,7 +23,7 @@ reiterating our commitment to continue to listen to ecosystem feedback. Today,
 we are announcing a further enhancement to the Topics API, in response to that
 feedback.
 
-## Top topics selection
+### Top topics selection
 
 The initial Topics API proposal selected users' top five weekly topics based on
 the frequency by which users interacted with each topic, on participating
@@ -80,7 +80,7 @@ The Privacy Sandbox is highly complementary to Ogury's privacy-first advertising
 
 <hr>
 
-# Update: June 15, 2023
+## Update: June 15, 2023
 
 
 Over a year ago, we
@@ -98,7 +98,7 @@ carefully to their suggestions. Today, we're excited to share some of the latest
 Topics API. We believe these changes will make Topics even more useful to the digital advertising
 industry, without compromising user privacy.
 
-## Taxonomy
+### Taxonomy
 
 Alongside the initial Topics API announcement, we proposed a taxonomy designed for testing. The
 taxonomy is the list of available topics that may be returned by the API. We repeatedly received
@@ -131,7 +131,7 @@ value to API callers._
 
 {% endAside %}
 
-## Per-caller filtering
+### Per-caller filtering
 
 One of many privacy-preserving features of Topics is the per-caller filtering requirement. This
 feature ensures that callers can only receive topics that they've observed the user visit in the
@@ -150,7 +150,7 @@ that topic are recorded as observed as well.
 This change increases the likelihood sites will receive topics information, without impacting the
 API's privacy since the topic's ancestors were already known to the caller.
 
-## User controls
+### User controls
 
 With Topics, users can view and control how their cross-site data is used to personalize ads in a
 more intuitive and accessible manner compared to tracking mechanisms like third-party cookies. In
@@ -164,7 +164,7 @@ able to curate the set of available topics they are interested in by removing se
 change, coming by early next year, will give users even more control over their privacy and make the
 Topics API even more user-friendly.
 
-## Speed improvements
+### Speed improvements
 
 The initial topics proposal required developers to create a cross-origin iframe from which they
 would call the Topics' JavaScript API. We received
@@ -179,7 +179,7 @@ Topics via headers, in requests initiated via Fetch and (temporarily) XHR . Rece
 support to request headers for iframes. These changes will improve the performance of Topics,
 limiting potential negative impacts on developers and users.
 
-## What's next?
+### What's next?
 
 We are excited about these updates to the Topics API and believe that they not only will make it
 more effective for advertisers and keep ads relevant for people, but still preserve privacy.
