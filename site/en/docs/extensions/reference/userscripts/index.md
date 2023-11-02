@@ -25,7 +25,7 @@ To use the `chrome.userScripts` API, add the `"userScripts"` permission to your 
 
 ## Concepts and usage
 
-A user script is a bit of code injected into a web page to modify its appearance or behavior. Scripts are either created by users or downloaded from a script repository using a type of extension called a user script manager.
+A user script is a bit of code injected into a web page to modify its appearance or behavior. Scripts are either created by users or downloaded from a script repository or a user script extension.
 
 ### Developer mode for extension users
 
