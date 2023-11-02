@@ -14,7 +14,7 @@ tags:
   - extensions-news
 ---
 
-It’s been a busy year for the Chrome Extensions team. With yesterday’s [Chrome 120 Beta release](/blog/chrome-120-beta/), the extensions platform is making another big step forward.  For an overview on what’s happened this year, check out our quarterly updates from 
+It’s been a busy year for the Chrome Extensions team. With yesterday’s [Chrome 120 Beta release](/blog/chrome-120-beta/), the extensions platform is making another big step forward. For an overview on what’s happened this year, check out our quarterly updates from 
 [July](/blog/extension-news-july-2023/) and [October](/blog/extension-news-october-2023/). Read on for what's new in Chrome 120 for Extensions.
 
 ## Closing the platform gap
