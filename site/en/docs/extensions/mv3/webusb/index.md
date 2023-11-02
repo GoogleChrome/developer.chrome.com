@@ -1,8 +1,8 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "WebUSB on ChromeOS"
-seoTitle: "Chrome Extensions: on ChromeOS"
-date: 2023-11-01
+title: "WebUSB in extensions"
+seoTitle: "Chrome Extensions: WebUSB"
+date: 2023-11-02
 description: The WebUSB API, which exposes non-standard Universal Serial Bus (USB) compatible devices to the web, is available in extensions.
 ---
 
@@ -12,7 +12,7 @@ Here is [a sample app for WebUSB](https://github.com/sowbug/weblight/tree/master
 
 ## Availability in extensions
 
-ChromeOS 117 or later.
+Chrome 117 or later.
 
 ## Permissions
 
@@ -24,4 +24,4 @@ No manifest keys are needed for this API.
 
 ## Supporting contexts
 
-This API may be used in any extension component. Although this API cannot be used in web service workers, it can be used in extension service workers.
+This API may be used in any extension component. Although this API cannot be used in web service workers, most of its methods and properties can be used in extension service workers.

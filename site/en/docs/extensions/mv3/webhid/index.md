@@ -1,8 +1,8 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "WebHID on ChromeOS"
-seoTitle: "Chrome Extensions: WebHID on ChromeOS"
-date: 2023-11-01
+title: "WebHID in extensions"
+seoTitle: "Chrome Extensions: WebHID"
+date: 2023-11-02
 description: A Human Interface Device (HID), which takes input from or provides output to humans, is available in extensions.
 ---
 
@@ -14,7 +14,7 @@ You can find a [sample app for WebHID](https://github.com/GoogleChrome/chrome-ex
 
 ## Availability in extensions
 
-ChromeOS 117 or later.
+Chrome 117 or later.
 
 ## Permissions
 
