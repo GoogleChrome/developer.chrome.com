@@ -24,7 +24,7 @@ This release adds seven new CSS features.
 
 Supports using the` <image>` syntax for custom properties registered with `@property` or `registerProperty()`. The `<image>` syntax can be used to restrict values of the custom property to `url()` values and generated images like gradients.. 
 
-### CSS <transform-function> and <transform-list> syntax for registered custom properties
+### CSS `<transform-function>` and `<transform-list>` syntax for registered custom properties
 
 Supports using the `<transform-function>` and `<transform-list>` syntaxes for custom properties registered with `@property` or `registerProperty()`.
 
