@@ -77,7 +77,7 @@ Before sending a message, you must call `configureWorld()` with the `messaging` 
 
 ```javascript
 browser.userScripts.configureWorld({
-  messaging: true,
+  messaging: true
 });
 ```
 
