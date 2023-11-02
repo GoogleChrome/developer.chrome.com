@@ -14,7 +14,7 @@ The default durability mode in IndexedDB is changing from `relaxed` to `strict` 
 
 [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API), a powerful web API for storing large amounts of structured data, offers two [durability](https://developer.mozilla.org/docs/Web/API/IDBDatabase/transaction#durability) modes for `readwrite` transactions:
 
-- **`strict`:** this mode explicitly instructs the OS to flush changes to disk before issuing the `complete` event.
+- **`strict`:** this mode explicitly instructs the OS to flush changes to disk before issuing the [`complete`](https://developer.mozilla.org/docs/Web/API/IDBTransaction/complete_event) event.
 - **`relaxed`** this mode relies on default OS flushing behavior and issues the `complete` event after changes make it to the OS buffer, which is typically flushed every couple seconds.
 
 It's important to note that `strict` does not ensure that changes are _actually_ written immediately to disk. After a site calls [`put()`](https://developer.mozilla.org/docs/Web/API/IDBObjectStore/put), there's still some finite amount of time during which a power failure could cause the change to not make it to disk and therefore be missing the next time the app runs.
@@ -49,7 +49,10 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 DBOpenRequest.onsuccess = (event) => {
   db = DBOpenRequest.result;
 };
-const transaction = db.transaction(["toDoList"], "readwrite", {durability: 'strict'});
+const transaction = db.transaction(
+  ['toDoList'],
+  'readwrite',
+  { durability: 'strict' });
 ```
 
 {% Aside %}
