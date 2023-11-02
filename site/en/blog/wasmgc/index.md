@@ -17,6 +17,10 @@ There are two types of programming languages: garbage-collected programming lang
 
 {% BrowserCompat 'webassembly.garbage-collection' %}
 
+{% Aside %}
+The present article covers the concepts behind WasmGC in high level. For an in-depth article on the topic, read [A new way to bring garbage collected programming languages efficiently to WebAssembly](https://v8.dev/blog/wasm-gc-porting) on the V8 blog.
+{% endAside %}
+
 ## Garbage collection
 
 In simplified terms, the idea of garbage collection is the attempt to reclaim memory which was allocated by the program, but that is no longer referenced. Such memory is called garbage. There are many strategies for implementing garbage collection. One of them is [reference counting](https://en.wikipedia.org/wiki/Reference_counting) where the objective is to count the number of references to objects in memory. When there are no more references to an object, it can be marked as no longer used and thus ready for garbage collection. [PHP](https://www.php.net/)'s garbage collector [uses  reference counting](https://www.php.net/manual/en/features.gc.refcounting-basics.php), and using the [Xdebug](https://xdebug.org/) extension's [`xdebug_debug_zval()`](https://xdebug.org/docs/all_functions#xdebug_debug_zval) function allows you to peek under its hood. Consider the following PHP program.
@@ -130,7 +134,7 @@ The Dart and Flutter teams at Google are also preparing support for WasmGC. The 
 
 This blog post has barely scratched the surface and mostly provided a high-level overview of WasmGC. To learn more about the feature, check out these links:
 
-<!-- - [Wasm GC blogpost](https://docs.google.com/document/d/1zF0hh3PobeErcGTf2v2ppkbsKFHCtsXNP3VRMQO5ez8/edit) -->
+- [A new way to bring garbage collected programming languages efficiently to WebAssembly](https://v8.dev/blog/wasm-gc-porting)
 - [WasmGC Overview](https://github.com/WebAssembly/gc/blob/main/proposals/gc/Overview.md)
 - [WasmGC MVP](https://github.com/WebAssembly/gc/blob/main/proposals/gc/MVP.md)
 - [WasmGC post-MVP](https://github.com/WebAssembly/gc/blob/main/proposals/gc/Post-MVP.md)
