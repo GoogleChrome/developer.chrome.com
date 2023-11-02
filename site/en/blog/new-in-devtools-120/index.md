@@ -56,6 +56,18 @@ You can now view the [Content Security Policy (CSP)](https://developer.mozilla.o
 
 Chromium issue: [1424714](https://crbug.com/1424714).
 
+## 'Do you trust this code?' dialog in Sources and self-XSS warning in Console {: #self-xss }
+
+The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show warning about Self-XSS when pasting code** [experiment](/docs/devtools/settings/experiments/) has been enabled by default. Self-XSS (self cross-site scripting) is an attack that tricks you into pasting malicious code into DevTools and lets an attacker gain control of your web accounts and personal information.
+
+When you attempt to paste code, the **Sources** panel now shows you the **Do you trust this code?** dialog and the **Console** now displays a similar warning. Paste only the code that you understand and reviewed yourself. To paste, type `allow pasting` when prompted.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HZxshcqZev8dBvDwYD0v.png", alt="The 'Do you trust this code?' dialog when pasting code to Sources.", width="800", height="505" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/33f928b256c219c815530cb04e8e1160fb28a480 #}
+
+Chromium issue: [345205](https://crbug.com/345205).
+
 ## Lighthouse 11.2.0 {: #lighthouse }
 
 The **Lighthouse** panel now runs Lighthouse 11.2.0. See the [full list of changes](https://github.com/GoogleChrome/lighthouse/releases/tag/v11.2.0).
