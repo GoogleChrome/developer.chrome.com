@@ -99,7 +99,7 @@ There’s a catch though. Before Chrome 120, the shortest time span to trigger a
 With Chrome 120 you can now set an alarm for as short as 30 seconds matching the time:
 
 In a service worker, to fire an event in less than 30 seconds use [`setTimeout()`](https://developer.mozilla.org//docs/Web/API/setTimeout). 
-For anything  longer than or equal to 30 seconds, use [`chrome.alarms`](/docs/extensions/reference/alarms/):
+For anything longer than or equal to 30 seconds, use [`chrome.alarms`](/docs/extensions/reference/alarms/):
 
 await chrome.alarms.create('demo-default-alarm', {
    periodInMinutes: 0.45
