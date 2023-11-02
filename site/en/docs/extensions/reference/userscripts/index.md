@@ -4,6 +4,7 @@ api: userScripts
 {% Aside 'note' %}
 This API is currently available in Chrome 120 beta.
 {% endAside %}
+
 ## Manifest
 
 To use the `chrome.userScripts` API, add the `"userScripts"` permission to your manifest.json and `"host_permissions"` for sites you want to run scripts on.
