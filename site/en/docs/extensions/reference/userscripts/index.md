@@ -76,7 +76,7 @@ Like content scripts and offscreen documents, user scripts can communicate with 
 Before sending a message, you must call `configureWorld()` with the `messaging` argument set to `true`. Note that both the `csp` and `messaging` arguments can be passed at the same time.
 
 ```javascript
-browser.userScripts.configureWorld({
+chrome.userScripts.configureWorld({
   messaging: true
 });
 ```
