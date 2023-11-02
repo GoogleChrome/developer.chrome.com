@@ -5,7 +5,7 @@ authors:
   - sofiayem
 date: 2023-10-10
 description: "Improved @property section in Styles, updated devices list, enhanced pretty-printing in Sources and autocompletion in the Console."
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/C5z0hHEPjBwgsXg2WG0t.png'
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Sn4Hb69riQJo2hnsqOup.jpg'
 alt: 'Improved @property section in Styles, updated devices list, enhanced pretty-printing in Sources and autocompletion in the Console.'
 tags:
   - new-in-devtools
