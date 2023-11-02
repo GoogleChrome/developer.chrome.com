@@ -56,6 +56,20 @@ You can now view the [Content Security Policy (CSP)](https://developer.mozilla.o
 
 Chromium issue: [1424714](https://crbug.com/1424714).
 
+## Improved animation debugging {: #animations }
+
+In the **Animations** tab, you can now:
+
+- Click anywhere on the timeline header to set the playhead. The animation continues to play if it was already playing and stops otherwise. Previously, you had to drag it.
+- Resize the name column to see the full animation names.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/ReiQOLhC2qwi4NeCUbtQ.mp4", width="800", height="454", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/6aafa9de8000bbb4a889375dc483e2da28edd960 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/3c68b4da98b91f729a007b804f548185403a775f #}
+
+Chromium issues: [1492460](https://crbug.com/1492460), [1489721](https://crbug.com/1489721).
+
 ## 'Do you trust this code?' dialog in Sources and self-XSS warning in Console {: #self-xss }
 
 The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show warning about Self-XSS when pasting code** [experiment](/docs/devtools/settings/experiments/) has been enabled by default. Self-XSS (self cross-site scripting) is an attack that tricks you into pasting malicious code into DevTools and lets an attacker gain control of your web accounts and personal information.
