@@ -82,6 +82,20 @@ When you attempt to paste code, the **Sources** panel now shows you the **Do you
 
 Chromium issue: [345205](https://crbug.com/345205).
 
+## Event listener breakpoints in web workers and worklets {: #worker-breakpoints }
+
+When you set an event breakpoint in **Sources** > **Event Listener Breakpoints**, in addition to pausing on this event on your website, the **Debugger** now also pauses when the corresponding event happens in a [web worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API#worker_types) or [worklet](https://developer.mozilla.org/docs/Web/API/Worklet) of any type, including the [Shared Storage Worklet](/docs/privacy-sandbox/shared-storage/#how-does-shared-storage-work).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZCIFXMeZDGW4BMJZhgoZ.png", alt="Debugger paused when a service worker calls the set timeout function.", width="800", height="549" %}
+
+{% Aside %}
+**Note**: Not all worker types support all of the corresponding APIs, so the **Debugger** might not pause when you expect it to.
+{% endAside %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/992fc88c6c9549810616f83dae64047e3e654bf7 #}
+
+Chromium issue: [1445175](https://crbug.com/1445175).
+
 ## Preloading renamed into Speculative loading {: #speculative-loading }
 
 To avoid overusing the previous term and better reflect the behavior, **Application** > **Preloading** has been renamed into **Speculative loads**. [Speculative loading](/blog/prerender-pages/) allows a [near-instant page load](/blog/prerender-pages/#impact-of-prerendering) based on speculation rules that [you can define](/blog/prerender-pages/#the-speculation-rules-api) for your website to prerender and prefetch most navigated-to pages.
