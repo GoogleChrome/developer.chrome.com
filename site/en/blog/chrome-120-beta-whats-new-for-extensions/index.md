@@ -44,29 +44,9 @@ Our new [userScript sample](https://github.com/GoogleChrome/chrome-extensions-sa
 
 To get started check out the [documentation](/docs/extensions/reference/userScripts/) or take a look at the [official sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/userScripts).
 
-## Increased DNR limits
+## Higher static DNR ruleset limits
 
-Declarative Net Request (DNR) got two big updates this Chrome release. 
-
-### Higher static DNR ruleset limits
-
-The first update is big: higher static DNR ruleset limits.  We significantly increased the limit on enabled static rulesets from 10 to 50. Additionally, we increased the total number of allowed static rulesets from 50 to 100. This is in response to feedback we received in the Web Extensions Community Group.
-
-###  Higher dynamic rule limits
-
-The second update is even bigger: we are introducing the concept of safe rules in DNR, which allows extensions to increase the limit on the number of rules that can be added at runtime.
-
-It helps to first understand dynamic rules in general. The [`declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/) API allows extensions to define rules which block or modify requests. Extensions can bundle rules with their extension, or they can add up to 5000 rules at runtime. One of the reasons for limiting the number of rules added at runtime is to mitigate the risks of unreviewed rules acting on requests, as some DNR rules can potentially be abused. Redirects, for example, can be used for phishing or affiliate link fraud. The risk is even higher when rules are loaded dynamically at runtime without being reviewed by the Web Store team.
-
-But it turned out that the initial limit of 5000 dynamic rules was too low. AdGuard reported that more than 2600 changes are made to popular lists each week, and of the 5% of users using custom filter lists, one in four of those users have a combined total of more than 5,000 custom rules across them ([source](https://github.com/w3c/webextensions/issues/319#issue-1443611618)). Adguard noted this as a significant challenge for migrating their extension to MV3 and we heard similar feedback from other ad blockers.
-
-We determined that some DNR rules such as "block" or "allow" are much safer and are less likely to be abused. The good news is, these rules make up the vast majority of adblock filter rules, for example, 98 to 99% of all AdGuard’s filter rules are block rules. By raising the limit for dynamic rules only for these safe rules, we can provide more flexibility for ad blockers, while still keeping the same security guarantees as before - and this is what we’re doing in Chrome 120.
-
-Starting with Chrome 120, there is a new dynamic rule limit of 30000 for safe DNR rules, which we are defining as rules with an action of `“block”`, `“allow”`, `“allowAllRequests”` or `"upgradeScheme"`. This is available in Chrome as the [`MAX_NUMBER_OF_DYNAMIC_RULES`](/docs/extensions/reference/declarativeNetRequest/#property-MAX_NUMBER_OF_DYNAMIC_RULES) constant. The rule limit for all other DNR rules stays at 5000. We still keep an upper limit to avoid performance regressions. We are optimistic that this new limit will enable ad blockers to continue to provide their functionality in the Manifest V3 version of their extension. 
-
-As part of this work, we made some additional changes such as enforcing the limits on dynamic and session rulesets separately to align with Firefox. For more information, see our [proposal](https://docs.google.com/document/d/1srkkCJkl4X2KOOUwnpDd-kvm8AY70eZBAYI4m836bvQ/edit?usp=sharing).
-
-What makes me personally really happy about this change is how quickly it landed. [Oliver](https://twitter.com/oliverdunk_) wrote the initial proposal in August following his discussions with different ad blockers. It’s now landing in Chrome two months later! 🎉
+We significantly increased the limit on enabled static rulesets from 10 to 50. Additionally, we increased the total number of allowed static rulesets from 50 to 100. This is in response to feedback we received in the Web Extensions Community Group.
 
 ## New ReadingList API
 
