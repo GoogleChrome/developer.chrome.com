@@ -72,9 +72,7 @@ Chromium issue: [345205](https://crbug.com/345205).
 
 To avoid overusing the previous term and better reflect the behavior, **Application** > **Preloading** has been renamed into **Speculative loads**. [Speculative loading](/blog/prerender-pages/) allows a [near-instant page load](/blog/prerender-pages/#impact-of-prerendering) based on speculation rules that [you can define](/blog/prerender-pages/#the-speculation-rules-api) for your website to prerender and prefetch most navigated-to pages.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CdENfLwkJdkkNJZPTvs4.png", alt="The before and after renaming preloading into speculative loading.", width="800", height="490" %}
-
-Additionally, the UI of the **Speculative loading** section has been enhanced over several previous versions.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/kloAL5Vj50i4YfTQtO6h.png", alt="The before and after renaming preloading into speculative loading.", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5b4c2082bd36ab2fa8eccf24c2348f85148a2eb5 #}
 
