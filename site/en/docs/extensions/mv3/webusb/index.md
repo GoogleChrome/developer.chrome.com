@@ -24,4 +24,20 @@ No manifest keys are needed for this API.
 
 ## Supporting contexts
 
-This API may be used in any extension component. Although this API cannot be used in web service workers, most of its methods and properties can be used in extension service workers.
+This API may be used in any extension component. Although this API cannot be used in web service workers, most of its methods and properties can be used in extension service workers. See the next section for details.
+
+## Chrome extension differences
+
+Although WebUSB is available to extension service workers, [`WebUSB.requestDevice()`](https://developer.mozilla.org/docs/Web/API/USB/requestDevice), which returns a promise that resolves with a [USBDevice](https://developer.mozilla.org/docs/Web/API/USBDevice) instance, cannot be called in an extension service worker. To get around this, call `requestDevice()` from an extension page other than the extension service worker and pass the reference to the extension service worker.
+
+The following code follows a typical pattern by calling `requestDevice()` as part of a permissions flow requiring a user gesture. (If the permission has not already been granted, calling `requestDevice()` triggers it.)
+
+```javascript
+someButton.addEventListener('click', async () => {
+  const device = await navigator.usb.requestDevice({
+    filters: [{ vendorId: 1241, productId: 41042 }]
+  });
+  console.log('Device access granted!', device);
+  chrome.runtime.sendMessage(device);
+});
+  ```
