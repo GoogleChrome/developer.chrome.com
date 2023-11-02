@@ -89,6 +89,8 @@ To verify the real-world impact of this improvement, Chrome's Wasm team has comp
 
 ## Seeing a WasmGC-ported programming language in action
 
+### Kotlin Wasm
+
 One of the first programming languages that has been ported to Wasm thanks to WasmGC is [Kotlin](https://kotlinlang.org/) in the form of [Kotlin/Wasm](https://kotl.in/wasmgc). The [demo](https://kotlin-wasm-hello-world.glitch.me/), with [source code](https://github.com/Kotlin/kotlin-wasm-examples/tree/main/browser-example) courtesy of the Kotlin team, is shown in the following listing.
 
 ```kotlin
@@ -117,6 +119,12 @@ Now you may be wondering what the point is, since the Kotlin code above basicall
 {% Aside 'warning' %}
 In this early experimental stage, the [Kotlin/Wasm image viewer](https://kotlin-wasm-image-viewer.glitch.me/) demo is fully rendered onto a `canvas` with no meaningful DOM tree that could be used to create an [accessibility tree](https://developer.mozilla.org/docs/Glossary/Accessibility_tree). This means it's completely inaccessible to non-sighted users and breaks important browser features like find on page, translation, text selection, extensions, zooming, and link to text fragment.
 {% endAside %}
+
+### Dart and Flutter
+
+The Dart and Flutter teams at Google are also preparing support for WasmGC. The Dart-to-Wasm compilation work is almost complete, and the team is working on tooling support for delivering Flutter web applications compiled to WebAssembly. You can read about the current state of the work in the [Flutter documentation](https://flutter.dev/wasm). The following demo is the [Flutter WasmGC Preview](https://flutterweb-wasm.web.app/).
+
+<iframe style="width: 100%; height: 800px" src="https://flutterweb-wasm.web.app/"></iframe>
 
 ## Learn more about WasmGC
 

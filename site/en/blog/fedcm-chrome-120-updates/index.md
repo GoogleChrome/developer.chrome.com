@@ -110,7 +110,7 @@ request:
 Set-Login: logged-out
 ```
 
-Alternatively, call the JavaScript API `IdentityProvider.logout()` from the IdP
+Alternatively, call the JavaScript API `navigator.login.setStatus("logged-out")` from the IdP
 origin:
 
 ```js
