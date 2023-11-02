@@ -10,7 +10,7 @@ Most extensions need access to one or more Chrome Extensions APIs to function. T
 
 An Extensions API consists of a namespace containing methods and properties for doing extensions work, and usually, but not always, manifest fields for the `manifest.json` file. For example, the `chrome.action` namespace requires an `"action"` object in the manifest. Additionally, many APIs require [permissions](/docs/extensions/mv3/declare_permissions/) in the manifest.
 
-Methods in `chrome.*` APIs are **asynchronous** unless stated otherwise. Asynchronous methods return immediately, without waiting for the operation that calls them to finish. Use [promises](/docs/extensions/mv3/promises/) to get the results of these methods. For more information, see [Asynchronous methods](/docs/extensions/mv3/architecture-overview/#async-sync).
+Methods in extension APIs are **asynchronous** unless stated otherwise. Asynchronous methods return immediately, without waiting for the operation that calls them to finish. Use [promises](/docs/extensions/mv3/promises/) to get the results of these methods. For more information, see [Asynchronous methods](/docs/extensions/mv3/architecture-overview/#async-sync).
 
 <!--What else are users likely to need to know about early? Should I bring back the mention of callbacks in the asynchronous methods explanation? And should I be able to edit the table structures in the generated content?-->
 
