@@ -240,9 +240,9 @@ connectable"`][43]. For example:
 
 This exposes the messaging API to any page that matches the URL patterns you specify. The URL
 pattern must contain at least a [second-level domain][wiki-second-level]; that is, hostname patterns such as "\*",
-"\*.com", "\*.co.uk", and "\*.appspot.com" are not supported. If you require access to all domains, you may use
-the special pattern <code>&lt;all_urls&gt;</code>, but note that because it affects all hosts, Chrome web store
-reviews for extensions that use it [may take longer][review-time-factors].
+"\*.com", "\*.co.uk", and "\*.appspot.com" are not supported. Starting in Chrome 107, you can use
+<code>&lt;all_urls&gt;</code> to access all domains. Note that because it affects all hosts,
+Chrome web store reviews for extensions that use it [may take longer][review-time-factors].
 
 [`runtime.sendMessage()`][runtime-send-msg] or [`runtime.connect()`][runtime-connect] APIs to send
 a message to a specific app or extension. For example:
