@@ -80,7 +80,7 @@ To request access to cookies in a cross-site context embedded sites can use [`Do
 
 The `requestStorageAccess()` API is meant to be called from within an iframe. That iframe has to have just received user interaction (a [user gesture](https://html.spec.whatwg.org/multipage/interaction.html#user-activation-processing-model), which is required by all browsers), but Chrome additionally requires that at some point in the last 30 days, the user has visited the site that owns that iframe and has interacted with that site specifically—as a top-level document, not in an iframe. 
 
-`requestStorageAccess()` returns a promise that resolves if the access to storage was granted; however, the promise is rejected, citing the reason, if access was denied due to failure of the interaction reqirement.
+`requestStorageAccess()` returns a promise that resolves if the access to storage was granted; however, the promise is rejected, citing the reason, if access was denied for any reason.
 
 
 {% BrowserCompat 'api.Document.requestStorageAccess' %}
