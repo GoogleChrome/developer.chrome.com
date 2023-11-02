@@ -113,11 +113,11 @@ For more detail about the JavaScript calls in this example, see [Sample API usag
 
 Chrome DevTools turns on inspection from the Network and Application tabs. Read more about this [DevTools integration](/blog/new-in-devtools-89/#trust-token) and about [Private State Tokens](/docs/privacy-sandbox/private-state-tokens/).
 
-## How do publishers handle tokens from multiple trusted issuers?
+## How do websites handle tokens from multiple trusted issuers?
 
-The publisher can check a user's browser for valid tokens with `document.hasTrustToken()` for one issuer at a time. If this returns `true` and a token is available, the publisher can redeem the token and stop looking for other tokens.
+The site can check a user's browser for valid tokens with `document.hasTrustToken()` for one issuer at a time. If this returns `true` and a token is available, the site can redeem the token and stop looking for other tokens.
 
-The publisher must decide which token issuers to check and in what order.
+The website must decide which token issuers to check and in what order.
 
 ---
 
