@@ -57,19 +57,6 @@ function isUserScriptsAvailable() {
 }
 ```
 
-```javascript
-function isUserScriptsAvailable() {
-  try {
-    // Property access which throws if developer mode is not enabled.
-    chrome.userScripts;
-    return true;
-  } catch {
-    // Not available.
-    return false;
-  }
-}
-```
-
 ### Work in isolated worlds
 
 Both user and content scripts can run in an isolated world or in the main world. An isolated world is an execution environment that isn't accessible to a host page or other extensions. This lets a user script change its JavaScript environment without affecting the host page or other extensions' user and content scripts. Conversely, user scripts (and content scripts) are not visible to the host page or the user and content scripts of other extensions. Scripts running in the main world are accessible to host pages and other extensions and are visible to host pages and to other extensions. To select the world, pass `"USER_SCRIPT"` or `"MAIN"` when calling [`userScripts.register()`](#method-register).
