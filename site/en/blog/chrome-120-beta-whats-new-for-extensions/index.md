@@ -19,7 +19,7 @@ It’s been a busy year for the Chrome Extensions team. With yesterday’s [Chro
 
 ## Closing the platform gap
 
-With the release of Chrome 120, we will close the remaining platform gaps listed on our [Manifest V3 known issues page](/docs/extensions/migrating/known-issues/). The new userScript API  as well as support for fileHandler on ChromeOS have been the two remaining items on the list that we can now cross off, Together with the changes described in the previous quarterly update we are really happy about the current state of the Chrome extension platform and what we’ve accomplished over the past year.
+With the release of Chrome 120, we will close the remaining platform gaps listed on our [Manifest V3 known issues page](/docs/extensions/migrating/known-issues/). The new userScript API  as well as support for file handling on ChromeOS have been the two remaining items on the list that we can now cross off, Together with the changes described in the previous quarterly update we are really happy about the current state of the Chrome Extension platform and what we’ve accomplished over the past year.
 
 ## New userScripts API
 
