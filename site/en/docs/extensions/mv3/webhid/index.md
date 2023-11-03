@@ -30,11 +30,12 @@ This API may be used in any extension component. Although this API cannot be use
 
 ## Chrome extension differences
 
-Although WebHID is available to extension service workers, [`WebHID.requestDevice()`](https://developer.mozilla.org/docs/Web/API/HID/requestDevice), which returns a promise that resolves with an [HIDDevice](https://developer.mozilla.org/docs/Web/API/HIDDevice) instance, cannot be called in an extension service worker. To get around this, call `requestDevice()` from an extension page other than the extension service worker and pass the reference to the extension service worker.
+Although WebHID is available to extension service workers, [`WebHID.requestDevice()`](https://developer.mozilla.org/docs/Web/API/HID/requestDevice), which returns a promise that resolves with an [HIDDevice](https://developer.mozilla.org/docs/Web/API/HIDDevice) instance, cannot be called in an extension service worker. To get around this, call `requestDevice()` from an extension page other than the extension service worker and send a message to the extension service worker.
 
-The following code follows a typical pattern by calling `requestDevice()` as part of a permissions flow requiring a user gesture. (If the permission has not already been granted, calling `requestDevice()` triggers it.) When the device is acquired it sends a message to the service worker, which can then retrieve the device using `getDevices()`.
+The following code follows a typical pattern by calling `requestDevice()` as part of a permissions flow requiring a user gesture. When the device is acquired it sends a message to the service worker, which can then retrieve the device using [`getDevices()`](https://developer.mozilla.org/docs/Web/API/HID/getDevices).
 
 {% Label %}popup.js:{% endLabel %}
+
 ```javascript
 myButton.addEventListener("click", async () => {
   await navigator.hid.requestDevice({
@@ -45,6 +46,7 @@ myButton.addEventListener("click", async () => {
 ```
 
 {% Label %}serviceworker.js{% endLabel %}
+
 ```javascript
 chrome.runtime.onMessage.addListener(async (message) => {
   if (newMessage === "newDevice") {

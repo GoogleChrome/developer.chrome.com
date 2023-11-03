@@ -8,11 +8,9 @@ description: The WebUSB API, which exposes non-standard Universal Serial Bus (US
 
 The WebUSB API exposes non-standard Universal Serial Bus (USB) compatible devices to the web. This page describes aspects of the API that are particular to extensions. Refer to MDN for complete details of the [WebUSB API](https://developer.mozilla.org/docs/Web/API/WebUSB_API).
 
-Here is [a sample app for WebUSB](https://github.com/sowbug/weblight/tree/master);
-
 ## Availability in extensions
 
-Chrome 117 or later.
+Chrome 118 or later.
 
 ## Permissions
 
@@ -28,11 +26,13 @@ This API may be used in any extension component. Although this API cannot be use
 
 ## Chrome extension differences
 
-Although WebUSB is available to extension service workers, [`WebUSB.requestDevice()`](https://developer.mozilla.org/docs/Web/API/USB/requestDevice), which returns a promise that resolves with a [USBDevice](https://developer.mozilla.org/docs/Web/API/USBDevice) instance, cannot be called in an extension service worker. To get around this, call `requestDevice()` from an extension page other than the extension service worker and pass the reference to the extension service worker.
+Although WebUSB is available to extension service workers, [`WebUSB.requestDevice()`](https://developer.mozilla.org/docs/Web/API/USB/requestDevice), which returns a promise that resolves with a [USBDevice](https://developer.mozilla.org/docs/Web/API/USBDevice) instance, cannot be called in an extension service worker. To get around this, call `requestDevice()` from an extension page other than the extension service worker and send a message to the extension service worker.
 
-The following code follows a typical pattern by calling `requestDevice()` as part of a permissions flow requiring a user gesture. (If the permission has not already been granted, calling `requestDevice()` triggers it.)When the device is acquired it sends a message to the service worker, which can then retrieve the device using `getDevices()`.
+The following code follows a typical pattern by calling `requestDevice()` as part of a permissions flow requiring a user gesture. When the device is acquired it sends a message to the service worker, which can then retrieve the device using [`getDevices()`](https://developer.mozilla.org/docs/Web/API/USB/getDevices).
+
 
 {% Label %}popup.js:{% endLabel %}
+
 ```javascript
 myButton.addEventListener("click", async () => {
   await navigator.usb.requestDevice({
@@ -43,6 +43,7 @@ myButton.addEventListener("click", async () => {
 ```
 
 {% Label %}serviceworker.js{% endLabel %}
+
 ```javascript
 chrome.runtime.onMessage.addListener(async (message) => {
   if (newMessage === "newDevice") {
