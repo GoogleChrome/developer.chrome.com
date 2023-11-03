@@ -77,7 +77,7 @@ This is a small update, but addresses an important gap in the service worker lif
 
 There’s a catch though. Before Chrome 120, the shortest time span to trigger an alarm was one minute. However, service workers shut down after 30 seconds of inactivity. So there was no straightforward way to schedule an alarm to fire in 45 seconds, because when using [`setTimeout()`](https://developer.mozilla.org//docs/Web/API/setTimeout) to set an event in 45 seconds, the service worker could potentially be shut down before the event fired. 
 
-Starting with Chrome 120, you can now either fir an event in:
+Starting with Chrome 120, you can now either fire an event in:
 
 * less than 30 seconds using [`setTimeout()`](https://developer.mozilla.org//docs/Web/API/setTimeout). 
 * anything longer than or equal to 30 seconds using [`chrome.alarms`](/docs/extensions/reference/alarms/):
