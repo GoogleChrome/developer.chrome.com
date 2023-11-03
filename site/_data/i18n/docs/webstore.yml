@@ -3,8 +3,6 @@ developer_dashboard:
 developer_dashboard_description:
   en: >
     Publish and manage your extensions and themes.
-overviews:
-  en: 'Overviews'
 before:
   en: 'Prepare your extension'
 enterprise:
