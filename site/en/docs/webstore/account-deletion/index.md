@@ -19,7 +19,7 @@ things you need to understand before you delete an account:
 - Group publisher accounts can only be deleted by the owner or manager of the associated Google
   Group.
 
-### How to remove my listing from the store {: #remove-listing }
+## How to remove a store listing item {: #remove-listing }
 
 Visit the [developer dashboard][dev-dashboard]. Click the item you want to
 remove from the store, so that the edit page for that item appears. Then click the "more options"
