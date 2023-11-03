@@ -53,7 +53,7 @@ We significantly increased the limit on enabled static rulesets from 10 to 50. A
 Chrome introduced the reading list in 2021. Last year, the Chrome team made access to the reading list even easier via the side panel. With Chrome 120 we are adding the ability for Chrome Extensions to create, read, update, and delete reading list entries. To learn more, checkout the [API docs](/docs/extensions/reference/readingList/) and our [new sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/readingList).
 
 <figure>
-{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/hbkhOAXaKLb6k3PI3zTp.png", alt="Chrome’s reading list showing extension doc pages.", width="754", height="1070" %}
+{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/hbkhOAXaKLb6k3PI3zTp.png", alt="Chrome’s reading list showing extension doc pages.", width="251", height="356" %}
 <figcaption>The reading list side panel in Chrome.</figcaption>
 </figure>
 
