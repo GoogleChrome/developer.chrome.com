@@ -41,6 +41,10 @@ Reviews in the **Account settings** of the Developer Dashboard.
 
    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8KGlMCKpiVVBRVqPAkXF.png", alt="Enable reviews notifications", width="600", height="212" %}
 
+{% Aside %}
+It's important to know that you cannot remove user comments from your listing, even if you believe they are unfair. However, we encourage you to respond to user feedback in the comments to show that you are addressing their concerns. You may also report fake reviews via the [One Support Form][cws-support]. 
+{% endAside %}
+
 ### The Rating tab
 
 The **Rating tab** in the developer dashboard provides an overview of your extension’s ratings,
@@ -126,7 +130,7 @@ Make sure you **turn off** the [Item support][support-tab] Visibility in the das
 {% endAside %}
 
 [cws-review]: /docs/webstore/review-process/
-[cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
+[cws-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
 [dev-policies]: /docs/webstore/program-policies
 [enforcement]: /docs/webstore/review-process/#enforcement

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Using the Chrome Web Store Publish API"
+title: "Use the Chrome Web Store Publish API"
 #date: TODO
 updated: 2022-01-18
 description: How to programmatically create, update, and publish items in the Chrome Web Store.

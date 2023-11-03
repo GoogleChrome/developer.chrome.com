@@ -11,7 +11,20 @@ description: >
 We strive to make it easy for users to discover great items on the Chrome Web Store. A positive
 discovery experience means making it simple for users to find the items they know and love, as well
 as new and undiscovered items. From browsing the home page to searching by title, we want users to
-find the best item to fit their needs. Learn more about discovery on the Chrome Web Store below.
+find the best item to fit their needs. 
+
+Items in the store are ranked or featured in order to make it easier for users to find high quality
+content. Ranking is performed by a heuristic that takes into account ratings from users as well as
+usage statistics, such as the number of downloads vs. uninstalls over time.
+
+Other factors include the following:
+
+- The design is pleasant to the eye.
+- The item provides a clear purpose and fills a real user need.
+- The setup and onboarding flow are intuitive.
+- The item is easy to use.
+
+Learn more about discovery on the Chrome Web Store below.
 
 ## Search {: #search }
 
@@ -20,6 +33,22 @@ search for an item, search returns a list of items that are ranked based on a nu
 including metadata from your item's listing page. Making sure that your store listing page is
 complete, accurate, and optimized is important to ensuring your item is discoverable through search.
 Learn more about [crafting a great listing page][best-listing].
+
+{% Aside %}
+If your extension isn't appearing in search results it could be because you recently published your
+extension, it may take a few hours for it to be indexed. Also, check the regions you selected in the
+Distribution tab.
+{% endAside %}
+
+## Featured items and collections
+
+The Chrome Web Store team occasionally selects interesting listings as "Featured" listings. We're not accepting requests to be featured at this point, since that would quickly become unmanageable. Here are a few tips to increase the likelihood that we'll feature your listing:
+
+- Write a great piece of software
+- Make sure your listing looks really nice (nice icon, good descriptions, crisp screenshots and/or videos)
+- Promote your listing independently so that it starts to rise in the rankings
+
+The collections are curated, and are not intended to be comprehensive. A collection is curated using the ranking criteria already listed and may be selected to provide helpful results for certain circumstantial situations, such as work-from-home extensions. Solicitations to be placed in a collection are not accepted.
 
 ## Categories {: #categories }
 

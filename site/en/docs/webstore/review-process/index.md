@@ -55,6 +55,13 @@ However, some signals may cause the reviewer to examine an extension more closel
 These signals may therefore cause the review to take longer. Review times may also be longer than
 normal after an extension has been rejected or warned.
 
+{% Aside %}
+
+Note that all item submissions—whether for a new item or an update to an existing one—are
+subject to the same review process.
+
+{% endAside %}
+
 ### Notable factors that increase review time  {: #review-time-factors }
 
 Reviews may take longer for extensions that request broad host permissions or sensitive execution
