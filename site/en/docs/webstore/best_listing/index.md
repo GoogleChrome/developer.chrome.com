@@ -18,6 +18,16 @@ compelling and accurate store listing page.  A quality listing page clearly comm
 item will offer, using the item description, images, and other listing metadata.  You can build and
 maintain your store listing page using the [developer dashboard][devconsole].
 
+Items in the store are ranked or featured in order to make it easier for users to find high quality
+content. Ranking is performed by a heuristic that takes into account ratings from users as well as
+usage statistics, such as the number of downloads vs. uninstalls over time.
+
+Other factors include the following:
+
+- The design is pleasant to the eye.
+- The item provides a clear purpose and fills a real user need.
+- The setup and onboarding flow are intuitive.
+- The item is easy to use.
 
 ## Text
 
