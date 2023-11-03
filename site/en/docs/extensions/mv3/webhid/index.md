@@ -32,14 +32,27 @@ This API may be used in any extension component. Although this API cannot be use
 
 Although WebHID is available to extension service workers, [`WebHID.requestDevice()`](https://developer.mozilla.org/docs/Web/API/HID/requestDevice), which returns a promise that resolves with an [HIDDevice](https://developer.mozilla.org/docs/Web/API/HIDDevice) instance, cannot be called in an extension service worker. To get around this, call `requestDevice()` from an extension page other than the extension service worker and pass the reference to the extension service worker.
 
-The following code follows a typical pattern by calling `requestDevice()` as part of a permissions flow requiring a user gesture. (If the permission has not already been granted, calling `requestDevice()` triggers it.)
+The following code follows a typical pattern by calling `requestDevice()` as part of a permissions flow requiring a user gesture. (If the permission has not already been granted, calling `requestDevice()` triggers it.) When the device is acquired it sends a message to the service worker, which can then retrieve the device using `getDevices()`.
 
+{% Label %}popup.js:{% endLabel %}
 ```javascript
-someButton.addEventListener('click', async () => {
-  const device = await navigator.usb.requestDevice({
-    filters: [{ vendorId: 1241, productId: 41042 }]
+myButton.addEventListener("click", async () => {
+  await navigator.hid.requestDevice({
+    filters: [{ vendorId: 0x1234, productId: 0x5678 }],
   });
-  console.log('Device access granted!', device);
-  chrome.runtime.sendMessage(device);
+  chrome.runtime.sendMessage("newDevice");
 });
-  ```
+```
+
+{% Label %}serviceworker.js{% endLabel %}
+```javascript
+chrome.runtime.onMessage.addListener(async (message) => {
+  if (newMessage === "newDevice") {
+    const devices = await navigator.hid.getDevices();
+    for (const device of devices) {
+      // open device connection.
+      await device.open();
+    }
+  }
+});
+```
