@@ -131,7 +131,7 @@ function callback(records) {
   }
 }
 
-const observer = new PressureObserver(callback, {
+const observer = new PressureObserver(callback,{
   // Sample rate in Hertz.
   sampleRate: 1,
 });
