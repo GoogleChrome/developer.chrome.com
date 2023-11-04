@@ -1,0 +1,27 @@
+- title: i18n.docs.puppeteer.get-started
+  sections:
+    - url: /docs/puppeteer/overview
+    - url: /docs/puppeteer/get-started
+
+- title: i18n.docs.puppeteer.resources
+  sections:
+    - url: /docs/puppeteer/debugging
+    - url: /docs/puppeteer/troubleshooting
+    - url: /blog/headless-chrome/
+    - url: /blog/headless-karma-mocha-chai/
+    - url: https://chromedevtools.github.io/devtools-protocol/
+      title: i18n.docs.puppeteer.resources_protocol
+
+- title: i18n.docs.puppeteer.project
+  sections:
+    - url: https://www.npmjs.com/package/puppeteer
+      title: i18n.docs.puppeteer.project_npm
+    - url: https://github.com/puppeteer/puppeteer
+      title: i18n.docs.puppeteer.project_github
+    - url: https://github.com/puppeteer/puppeteer/issues/new/choose
+      title: i18n.docs.puppeteer.project_issue
+    - url: https://github.com/puppeteer/puppeteer/releases
+      title: i18n.docs.puppeteer.project_releases
+    - url: https://pptr.dev/contributing
+      title: i18n.docs.puppeteer.project_contribute
+    - url: /docs/puppeteer/faq

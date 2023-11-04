@@ -3,65 +3,52 @@ layout: "layouts/doc-post.njk"
 title: "Network features reference"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2015-04-13
-updated: 2021-08-12
+updated: 2023-04-03
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
 Discover new ways to analyze how your page loads in this comprehensive reference of Chrome DevTools
 network analysis features.
 
-{% Aside %}
-
-**Note:** This reference is based on Chrome 58. If you use another version of Chrome, the UI and
-features of DevTools may be different. Check `chrome://help` to see what version of Chrome you're
-running.
-
-{% endAside %}
-
 ## Record network requests {: #record }
 
-By default, DevTools records all network requests in the Network panel, so long as DevTools is open.
+By default, DevTools records all network requests in the **Network** panel, so long as DevTools is open.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/62R1WFVGgPSfnWi6EJcd.png", alt="The Network panel.", width="800", height="562" %}
-
-**Figure 1**. The Network panel
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/h90CtfziXluvh1LSSKJE.png", alt="The Network panel.", width="800", height="470" %}
 
 ### Stop recording network requests {: #stop-recording }
 
 To stop recording requests:
 
 - Click **Stop recording network log**
-  {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/20E6CLcSzNV2GELQu7oC.png", alt="Stop recording network", width="18", height="18" %}
-  on the Network panel. It turns grey to indicate that DevTools is no longer recording requests.
-- Press Command+E (Mac) or Control+E (Windows, Linux) while the Network panel is in focus.
+  {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/20E6CLcSzNV2GELQu7oC.png", alt="Stop recording network.", width="18", height="18" %}
+  on the **Network** panel. It turns grey to indicate that DevTools is no longer recording requests.
+- Press <kbd>Command</kbd>> + <kbd>E</kbd> (Mac) or <kbd>Control</kbd> + <kbd>E</kbd> (Windows, Linux) while the **Network** panel is in focus.
 
 ### Clear requests {: #clear }
 
 Click **Clear**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SUPMgMoG5s0cLAe1yKEd.png", alt="Clear", width="26", height="26" %}
-on the Network panel to clear all requests from the Requests table.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MadqZsIZpo1sj3qQ3GsZ.svg", alt="Clear.", width="24", height="24" %}
+on the **Network** panel to clear all requests from the **Requests** table.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IZwN127NS4ZHwAJ4QJNx.svg", alt="The Clear button.", width="606", height="900" %}
-
-**Figure 2**. Clear, outlined in blue
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2P2L80XfBoFWJFxU9TpK.png", alt="The Clear button.", width="800", height="470" %}
 
 ### Save requests across page loads {: #preserve-log }
 
-To save requests across page loads, check the **Preserve log** checkbox on the Network panel.
+To save requests across page loads, check the **Preserve log** checkbox on the **Network** panel.
 DevTools saves all requests until you disable **Preserve log**.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/9xALh1ItognWtTexZzRv.svg", alt="The Preserve Log checkbox.", width="606", height="450" %}
-
-**Figure 3**. The Preserve Log checkbox, outlined in blue
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/JrR2GlPhEO8LgHd3X9mS.mp4", autoplay="false", controls="true", muted="true", class="screenshot"%}
 
 ### Capture screenshots during page load {: #screenshots }
 
 Capture screenshots to analyze what users see as they wait for your page to load.
 
-To enable screenshots, open **Settings** inside the Network panel and check **Capture screenshots**.
+To enable screenshots, open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} inside the **Network** panel and check **Capture screenshots**.
 
-Reload the page while the Network panel is in focus to capture screenshots.
+Reload the page while the **Network** panel is in focus to capture screenshots.
 
 Once captured, you can interact with screenshots in the following ways:
 
@@ -71,18 +58,16 @@ Once captured, you can interact with screenshots in the following ways:
   captured.
 - Double-click a thumbnail to zoom in on it.
 
-{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/RM2QuyGbgYhQu61CSyCw.png",
-  alt="Capture screenshots enabled", width="800", height="614" %}
-
-**Figure 4**. Capture screenshots enabled, showing loading screenshots over time.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/TRFujw0pi0nHF3GwDuRn.png", alt="Capture screenshots enabled.", width="800", height="571" %}
 
 ### Replay XHR request {: #replay-xhr }
 
-To replay an XHR request, right-click the request in the Requests table and select **Replay XHR**.
+To replay an XHR request, do one of the following in the **Requests** table:
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/q78sXBNcIyDKpzm3nQja.png", alt="Selecting Replay XHR.", width="800", height="625" %}
+- Select the request and press <kbd>R</kbd>.
+- Right-click the request and select **Replay XHR**.
 
-**Figure 5**. Selecting Replay XHR
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/AFacMOgv6D0CFTr6U5e8.png", alt="Selecting Replay XHR.", width="800", height="496" %}
 
 ## Change loading behavior {: #change_loading_behavior }
 
@@ -92,26 +77,22 @@ To emulate how a first-time user experiences your site, check the **Disable cach
 DevTools disables the browser cache. This more accurately emulates a first-time user's experience,
 because requests are served from the browser cache on repeat visits.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/04bkZSC2b8Dsi0eE7H0J.svg", alt="The Disable Cache checkbox.", width="606", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QTDnaY32hLDipeRW8e3O.png", alt="The Disable Cache checkbox.", width="800", height="497" %}
 
-**Figure 6**. The Disable Cache checkbox, outlined in blue
+#### Disable the browser cache from the Network conditions drawer {: #disable-cache-network-conditions }
 
-#### Disable the browser cache from the Network Conditions drawer {: #disable-cache-network-conditions }
-
-If you want to disable the cache while working in other DevTools panels, use the Network Conditions
+If you want to disable the cache while working in other DevTools panels, use the **Network conditions**
 drawer.
 
-1.  Open the [Network Conditions drawer][1].
+1.  Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7oHKETDhf3c0SFRrLyVi.png", alt="Network conditions.", width="25", height="20" %} icon to open the **Network Conditions** drawer.
 2.  Check or uncheck the **Disable cache** checkbox.
 
 ### Manually clear the browser cache {: #clear-cache }
 
-To manually clear the browser cache at any time, right-click anywhere in the Requests table and
-select **Clear Browser Cache**.
+To manually clear the browser cache at any time, right-click anywhere in the **Requests** table and
+select **Clear browser cache**.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/m8T2kha4f43D1ipWIVWj.png", alt="Selecting Clear Browser Cache.", width="800", height="596" %}
-
-**Figure 7**. Selecting Clear Browser Cache
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4pIMBj7zOAk1y5Agmmoj.png", alt="Selecting Clear Browser Cache.", width="800", height="497" %}
 
 ### Emulate offline {: #offline }
 
@@ -119,48 +100,71 @@ There's a new class of web apps, called [Progressive Web Apps][2], which can fun
 the help of [service workers][3]. When you're building this type of app, it's useful to be able to
 quickly simulate a device that has no data connection.
 
-Check the **Offline** checkbox to simulate a completely offline network experience.
+To simulate a completely offline network experience, select **Offline** from the **Network throttling** drop-down menu next to the **Disable cache** checkbox.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2GrWegpdEJMfsnEYNkq6.svg", alt="The Offline checkbox", width="684", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/lHvzbNUlrm2Mvd4H1Ywc.png", alt="Offline selected from the drop-down menu.", width="800", height="620" %}
 
-**Figure 8**. The Offline checkbox, outlined in blue
+DevTools displays a warning icon next to the **Network** tab to remind you that offline is enabled.
 
 ### Emulate slow network connections {: #throttling }
 
-Emulate 2G, 3G, and other connection speeds from the **Network Throttling** menu.
+To emulate slow 3G, fast 3G, and other connection speeds, select the corresponding options from the **Throttling** menu.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7LD09urCKiCrkJcsYhiA.svg", alt="The Network Throttling menu.", width="753", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/VSk4XiLkW8TZBCPFzSmE.png", alt="The Network Throttling menu.", width="800", height="620" %}
 
-**Figure 9**. The Network Throttling menu, outlined in blue
+DevTools displays a warning icon next to the **Network** tab to remind you that throttling is enabled.
 
-You can select from a variety of presets, such as Regular or Good 2G. You can also add your own
-custom presets by opening the Network Throttling menu and selecting **Custom** > **Add**.
+#### Create custom throttling profiles {: #throttling-profile}
 
-DevTools displays a warning icon next to the **Network** tab to remind you that throttling is
-enabled.
+In addition to presets, such as slow or fast 3G, you can also add your own
+custom throttling profiles:
 
-#### Emulate slow network connections from the Network Conditions drawer {: #throttling-network-conditions }
+1. Open the **Throttling** menu and select **Custom** > **Add...**.
+1. Set up a new throttling profile as described in [**Settings** > **Throttling**](/docs/devtools/settings/#throttling).
+1. Back on the **Network** panel, select your new profile from the **Throttling** drop-down menu.
+
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/UnSmIJe1OEp98TkLFlUE.png", alt="A custom profile selected from the throttling menu. The Network panel displays a warning icon.", width="800", height="464" %}
+
+DevTools displays a {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/jsbv7jCK4GsRjL6e8RcF.svg", alt="Warning.", width="24", height="24" %} warning icon next to the **Network** panel to remind you that throttling is enabled.
+
+#### Throttle WebSocket connections {: #throttle-websocket}
+
+In addition to HTTP requests, DevTools throttles WebSocket connections since version 99.
+
+To observe WebSocket throttling:
+
+1. Initiate a new connection, for example, by using a [test tool](https://www.piesocket.com/websocket-tester).
+1. On the **Network** panel, select **No throttling** and send a message through the connection.
+1. Create a very slow [custom throttling profile](#throttling-profile), for example, `10 kbit/s`. Such a slow profile will help you notice the difference.
+1. On the **Network** panel, select the profile and send another message.
+1. Toggle the **WS** filter, click your connection name, open the **Messages** tab, and check the time difference between sent and echoed messages with and without throttling. For example:
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/tqynaMk7SIL6oIYwuBgM.png", alt="Messages sent and echoed with and without throttling.", width="800", height="694" %}
+
+#### Emulate slow network connections from the Network conditions drawer {: #throttling-network-conditions }
 
 If you want to throttle the network connection while working in other DevTools panels, use the
-Network Conditions drawer.
+**Network conditions** drawer.
 
-1.  Open the [Network Conditions drawer][4].
-2.  Select your desired connection speed from the **Network Throttling** menu.
+1.  Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7oHKETDhf3c0SFRrLyVi.png", alt="Network conditions.", width="25", height="20" %} icon to open the **Network Conditions** drawer.
+2.  Select your desired connection speed from the **Network throttling** menu.
 
 ### Manually clear browser cookies {: #clear-cookies }
 
-To manually clear browser cookies at any time, right-click anywhere in the Requests table and select
-**Clear Browser Cookies**.
+To manually clear browser cookies at any time, right-click anywhere in the **Requests** table and select
+**Clear browser cookies**.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GJpOkjNwoZTgr4VnFlC4.png", alt="Selecting Clear Browser Cookies.", width="800", height="597" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/4mVbTicUyxwkmd5TB1HS.png", alt="Selecting Clear Browser Cookies.", width="800", height="497" %}
 
-**Figure 10**. Selecting Clear Browser Cookies
+### Override HTTP response headers {: #override-headers }
+
+See [Override files and HTTP response headers locally](/docs/devtools/overrides/#override-headers).
 
 ### Override the user agent {: #user-agent }
 
 To manually override the user agent:
 
-1.  Open the [Network Conditions drawer][5].
+1.  Click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7oHKETDhf3c0SFRrLyVi.png", alt="Network conditions.", width="25", height="20" %} icon to open the **Network Conditions** drawer.
 2.  Uncheck **Select automatically**.
 3.  Choose a user agent option from the menu, or enter a custom one in the text box.
 
@@ -173,9 +177,9 @@ request.
 
 If you can't see the text box, the Filters pane is probably hidden. See [Hide the Filters pane][6].
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oCVPgkalqEC6p9WWbaPu.svg", alt="The Filters text box.", width="684", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/eAaEpNrTCSg41cEP8cmZ.png", alt="The Filters text box and Invert checkbox.", width="800", height="497" %}
 
-**Figure 11**. The Filters text box, outlined in blue
+To invert your filter, check the **Invert** checkbox next to the **Filter** text box.
 
 You can use multiple properties simultaneously by separating each property with a space. For
 example, `mime-type:image/gif larger-than:1K` displays all GIFs that are larger than one kilobyte.
@@ -190,23 +194,26 @@ Below is a complete list of supported properties.
 - `cookie-value`. Show the resources that set a specific [cookie value][10].
 - `domain`. Only display resources from the specified domain. You can use a wildcard character (`*`)
   to include multiple domains. For example, `*.com` displays resources from all domain names ending
-  in `.com`. DevTools shows a populates the autocomplete dropdown menu with all of the domains it
+  in `.com`. DevTools shows a populates the autocomplete drop-down menu with all of the domains it
   has encountered.
+- `has-overrides`. Show requests that have overridden `content`, `headers`, any overrides (`yes`), or no overrides (`no`). You can add the corresponding [**Has overrides** column](#columns) to the request table.
 - `has-response-header`. Show the resources that contain the specified HTTP response header.
-  DevTools populates the autocomplete dropdown with all of the response headers that it has
+  DevTools populates the autocomplete drop-down with all of the response headers that it has
   encountered.
 - `is`. Use `is:running` to find `WebSocket` resources.
 - `larger-than`. Show resources that are larger than the specified size, in bytes. Setting a value
   of `1000` is equivalent to setting a value of `1k`.
 - `method`. Show resources that were retrieved over a specified HTTP method type. DevTools populates
-  the autocomplete dropdown with all of the HTTP methods it has encountered.
-- `mime-type`. Show resources of a specified MIME type. DevTools populates the autocomplete dropdown
+  the autocomplete drop-down with all of the HTTP methods it has encountered.
+- `mime-type`. Show resources of a specified MIME type. DevTools populates the autocomplete drop-down
   with all MIME types it has encountered.
 - `mixed-content`. Show all mixed content resources (`mixed-content:all`) or just the ones that are
   currently displayed (`mixed-content:displayed`).
 - `priority`. Show resources whose priority level matches the specified value.
 - `resource-type`. Show resources of a resource type, e.g. image. DevTools populates the
-  autocomplete dropdown with all resource types it has encountered.
+  autocomplete drop-down with all resource types it has encountered.
+- `response-header-set-cookie`. Show raw Set-Cookie headers in the Issues tab. Malformed cookies
+  with incorrect `Set-Cookie` headers will be flagged in the Network panel.
 - `scheme`. Show resources retrieved over unprotected HTTP (`scheme:http`) or protected HTTPS
   (`scheme:https`).
 - `set-cookie-domain`. Show the resources that have a `Set-Cookie` header with a `Domain` attribute
@@ -219,58 +226,90 @@ Below is a complete list of supported properties.
   the specified value. DevTools populates the autocomplete with all of the cookie values that it has
   encountered.
 - `status-code`. Only show resources whose HTTP status code match the specified code. DevTools
-  populates the autocomplete dropdown menu with all of the status codes it has encountered.
+  populates the autocomplete drop-down menu with all of the status codes it has encountered.
 - `url`. Show the resources that have a `url` matching the specified value.
 
 ### Filter requests by type {: #filter-by-type }
 
-To filter requests by request type, click the **XHR**, **JS**, **CSS**, **Img**, **Media**,
-**Font**, **Doc**, **WS** (WebSocket), **Manifest**, or **Other** (any other type not listed here)
-buttons on the Network panel.
+To filter requests by request type, click the **All**, **Fetch/XHR**, **JS**, **CSS**, **Img**, **Media**,
+**Font**, **Doc**, **WS** (WebSocket), **Wasm** (WebAssembly), **Manifest**, or **Other** (any other type not listed here)
+buttons on the **Network** panel.
 
 If you can't see these buttons, the Filters pane is probably hidden. See [Hide the Filters
 pane][11].
 
-To enable multiple type filters simultaneously, hold Command (Mac) or Control (Windows, Linux) and
+To enable multiple type filters simultaneously, hold <kbd>Command</kbd> (Mac) or <kbd>Control</kbd> (Windows, Linux) and
 then click.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EOVhAQmzNZXNSrvMwXv5.png", alt="Using the Type filters to display JS, CSS, and Document resources.", width="800", height="421" %}
-
-**Figure 12**. Using the Type filters to display JS, CSS, and Doc\[ument\] resources.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qyaC96XHbPxdAmKTdKLR.png", alt="Using the Type filters to display JS, CSS, and Document resources.", width="800", height="470" %}
 
 ### Filter requests by time {: #filter-by-time }
 
-Click and drag left or right on the Overview pane to only display requests that were active during
+Click and drag left or right on the **Overview** pane to display only the requests that were active during
 that time frame. The filter is inclusive. Any request that was active during the highlighted time is
 shown.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/HasYhu7GxWfIp5Jq4ASn.png", alt="Filtering out any requests that weren't active around 2500ms.", width="800", height="511" %}
-
-**Figure 13**. Filtering out any requests that weren't active around 2500ms
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/z4WdOID7XreBRKtpSLSq.png", alt="Filtering out any requests that weren't active around 21-25 ms.", width="800", height="449" %}
 
 ### Hide data URLs {: #hide_data_urls }
 
 [Data URLs][12] are small files embedded into other documents. Any request that you see in the
-Requests table that starts with `data:` is a data URL.
+**Requests** table that starts with `data:` is a data URL.
 
-Check the **Hide data URLs** checkbox to hide these requests.
+To hide these requests, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide data URLs**.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hz8BXb9YlYLhCGarY12J.svg", alt="The Hide Data URLs checkbox.", width="705", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/y3wTmRMS9Y5JlM0Z9wBF.png", alt="Data URLs hidden from the Requests table.", width="800", height="567" %}
 
-**Figure 14**. The Hide Data URLs checkbox
+The status bar at the bottom displays the number of the shown requests out of the total.
+
+### Hide extension URLs {: #hide-extension-urls }
+
+To focus on the code you author, you can filter out irrelevant requests sent by extensions you may have installed in Chrome. Extension requests have URLs that start with `chrome-extension://`.
+
+To hide extension requests, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Hide extension URLs**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/07CwNEuofVPa8jp3LFfm.png", alt="Extension URLs hidden from the Requests table.", width="800", height="478" %}
+
+The status bar at the bottom displays the number of the shown requests out of the total.
+
+### Show only the requests with blocked response cookies {: #show-blocked-cookies }
+
+To filter out everything except the requests with response cookies blocked for any reason, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked response cookies**. Try it on this [demo page](https://samesite-sandbox.glitch.me/).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/owWZhGDXayLxFQdo20vO.png", alt="The Requests table shows only the requests with blocked response cookies.", width="800", height="550" %}
+
+The status bar at the bottom displays the number of the shown requests out of the total.
+
+To find out the reason why a response cookie was blocked, select the request, open its **Cookies** tab, and hover over the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qruVplg26sPV7Ryl8fHg.svg", alt="", width="24", height="24" %} information icon.
+
+### Show only blocked requests {: #show-blocked }
+
+To filter out everything except blocked requests, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Blocked requests**. To test this, you can use the [**Network request blocking**](/docs/devtools/network/#block) drawer tab.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MWJci8DFgTzlOI18Wlqz.png", alt="The Requests table shows only blocked requests.", width="800", height="517" %}
+
+The **Requests** table highlights blocked requests in red. The status bar at the bottom displays the number of the shown requests out of the total.
+
+### Show only third-party requests {: #third-party }
+
+To filter out everything except the requests with with origin that differs from page origin, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **3rd-party requests**. Try it on this [demo page](https://samesite-sandbox.glitch.me/).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/K6waxv6tB2anAbECE4pK.png", alt="The Requests table shows only the third-party requests.", width="800", height="455" %}
+
+The status bar at the bottom displays the number of the shown requests out of the total.
 
 ## Sort requests {: #sort_requests }
 
-By default, the requests in the Requests table are sorted by initiation time, but you can sort the
+By default, the requests in the **Requests** table are sorted by initiation time, but you can sort the
 table using other criteria.
 
 ### Sort by column {: #sort-by-column }
 
-Click the header of any column in the Requests to sort requests by that column.
+Click the header of any column in the **Requests** table to sort requests by that column.
 
 ### Sort by activity phase {: #sort-by-activity }
 
-To change how the Waterfall sorts requests, right-click the header of the Requests table, hover over
+To change how the **Waterfall** sorts requests, right-click the header of the Requests table, hover over
 **Waterfall**, and select one of the following options:
 
 - **Start Time**. The first request that was initiated is at the top.
@@ -283,29 +322,30 @@ To change how the Waterfall sorts requests, right-click the header of the Reques
 These descriptions assume that each respective option is ranked from shortest to longest. Clicking
 on the **Waterfall** column's header reverses the order.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tJOhr2jBQWy2CdKHDlUl.png", alt="Sorting the Waterfall by total duration.", width="800", height="525" %}
-
-**Figure 15**. Sorting the Waterfall by total duration. The lighter portion of each bar is time
+In this example, the **Waterfall** is sorted by total duration. The lighter portion of each bar is time
 spent waiting. The darker portion is time spent downloading bytes.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/uZ9aJ5DdZR91THhaVYD5.png", alt="Sorting the Waterfall by total duration.", width="800", height="655" %}
 
 ## Analyze requests {: #analyze }
 
-So long as DevTools is open, it logs all requests in the Network panel. Use the Network panel to
+So long as DevTools is open, it logs all requests in the **Network** panel. Use the **Network** panel to
 analyze requests.
 
 ### View a log of requests {: #requests }
 
-Use the Requests table to view a log of all requests made while DevTools has been open. Clicking or
+Use the **Requests** table to view a log of all requests made while DevTools has been open. Clicking or
 hovering over requests reveals more information about them.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aUR3bbt8luG6r5p2WIuP.svg", alt="The Requests table.", width="684", height="450" %}
-
-**Figure 16**. The Requests table, outlined in blue
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/0lULFSOjRlz3L83HPcKX.png", alt="The Requests table.", width="800", height="514" %}
 
 The Requests table displays the following columns by default:
 
 - **Name**. The filename of, or an identifier for, the resource.
-- **Status**. The HTTP status code.
+- **Status**. This column can show the following values:
+  - HTTP status code, for example, `200` or `404`.
+  - [`CORS error`](https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors) for requests failed due to Cross-Origin Resource Sharing (CORS).
+  - Generic `(failed)` or `(blocked:origin)` for other requests.
 - **Type**. The MIME type of the requested resource.
 - **Initiator**. The following objects or processes can initiate requests:
   - **Parser**. Chrome's HTML parser.
@@ -321,47 +361,53 @@ The Requests table displays the following columns by default:
 
 #### Add or remove columns {: #columns }
 
-Right-click the header of the Requests table and select an option to hide or show it. Currently
-displayed options have checkmarks next to them.
+Right-click the header of the **Requests** table and select an option to hide or show it. Currently
+displayed options have check marks next to them.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hGwBQqVdg2QGM6aSzFdj.png", alt="Adding a column to the Requests table.", width="800", height="722" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zgkV5JsQ7MDYgkWL889O.png", alt="Adding a column to the Requests table.", width="800", height="684" %}
 
-**Figure 17**. Adding a column to the Requests table.
+You can add or remove the following additional columns: **Path**, URL, Method, Protocol, Scheme, Domain, Remote address, Remote address space, Initiator address space, Cookies, Set cookies, Priority, Connection ID, and Has overrides.
 
 #### Add custom columns {: #custom-columns }
 
-To add a custom column to the Requests table, right-click the header of the Requests table and
-select **Response Headers** > **Manage Header Columns**.
+To add a custom column to the **Requests** table:
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7zoqb5aU14tK8jiNMgQw.png", alt="Adding a custom column to the Requests table.", width="800", height="669" %}
+1. Right-click the header of the **Requests** table and select **Response Headers** > **Manage Header Columns**.
+1. In the dialog window, click **Add custom header**, enter its name, and click **Add**.
 
-**Figure 18**. Adding a custom column to the Requests table.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sCXdKBGzlfwQBBeyNdta.png", alt="Adding a custom column to the Requests table.", width="800", height="563" %}
+
+### Group requests by inline frames {: #group-by-frames }
+
+If inline frames on a page initiate a lot of requests, you can make the request log friendlier by grouping them.
+
+To group requests by iframes, open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} inside the **Network** panel and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Group by frame**.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QgdViJaRvfWo8suAE6a6.png", alt="The network request log with requests grouped by iframes.", width="800", height="702" %}
+
+To view a request initiated by an inline frame, expand it in the request log.
 
 ### View the timing of requests in relation to one another {: #waterfall }
 
-Use the Waterfall to view the timing of requests in relation to one another. By default, the
-Waterfall is organized by the start time of the requests. So, requests that are farther to the left
+Use the **Waterfall** to view the timing of requests in relation to one another. By default, the
+**Waterfall** is organized by the start time of the requests. So, requests that are farther to the left
 started earlier than those that are farther to the right.
 
-See [Sort by activity phase][14] to see the different ways that you can sort the Waterfall.
+See [Sort by activity phase][14] to see the different ways that you can sort the **Waterfall**.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3I6fk1zlTDXx5J6hRaOJ.png", alt="The Waterfall column of the Requests pane.", width="800", height="556" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/saFyvknJ8gVDOH2aiHwD.png", alt="The Waterfall column of the Requests pane.", width="800", height="620" %}
 
-**Figure 19**. The Waterfall column of the Requests pane.
+### Analyze the messages of a WebSocket connection {: #frames }
 
-### Analyze the frames of a WebSocket Connection {: #frames }
+To view the messages of a WebSocket connection:
 
-To view the frames of a WebSocket connection:
-
-1.  Click the URL of the WebSocket connection, under the **Name** column of the Requests table.
-2.  Click the **Frames** tab. The table shows the last 100 frames.
+1.  Under the **Name** column of the **Requests** table, click the URL of the WebSocket connection.
+2.  Click the **Messages** tab. The table shows the last 100 messages.
 
 To refresh the table, re-click the name of the WebSocket connection under the **Name** column of the
-Requests table.
+**Requests** table.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/QgftKdIKE6NqaFwlZAVc.svg", alt="The Frames tab.", width="657", height="450" %}
-
-**Figure 20**. The Frames tab, outlined in blue
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8Ieh1BTg2ezYNAKS3p2q.png", alt="The Messages tab.", width="800", height="453" %}
 
 The table contains three columns:
 
@@ -382,14 +428,12 @@ Messages are color-coded according to their type:
 
 To view a preview of a response body:
 
-1.  Click the URL of the request, under the **Name** column of the Requests table.
+1.  Click the URL of the request, under the **Name** column of the **Requests** table.
 2.  Click the **Preview** tab.
 
 This tab is mostly useful for viewing images.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/v3bEdPqabJ8vxsXfsboK.svg", alt="The Preview tab.", width="705", height="450" %}
-
-**Figure 21**. The Preview tab, outlined in blue
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/91J6iI0F1RkJZEXBysdR.png", alt="The Preview tab.", width="800", height="508" %}
 
 ### View a response body {: #response }
 
@@ -398,65 +442,60 @@ To view the response body to a request:
 1.  Click the URL of the request, under the **Name** column of the Requests table.
 2.  Click the **Response** tab.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/th1QacW6EGUpityje3Rk.svg", alt="The Response tab.", width="705", height="450" %}
-
-**Figure 22**. The Response tab, outlined in blue
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KDZZBMl2isErxrNSY0gQ.png", alt="The Response tab.", width="800", height="479" %}
 
 ### View HTTP headers {: #headers }
 
-To view HTTP header data about a request:
+To view HTTP header data of a request:
 
-1.  Click on the URL of the request, under the **Name** column of the Requests table.
-2.  Click the **Headers** tab.
+1. Click a request in the **Requests** table.
+1. Open the **Headers** tab and scroll down to **General**, **Response Headers**, or **Request Headers** sections.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Zv6sbHi6fZfZMWufSp75.svg", alt="The Headers tab.", width="684", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/j67jfFC4iJveVZhMVFwg.png", alt="The Headers tab of a request selected from the Requests table.", width="800", height="683" %}
 
-**Figure 23**. The Headers tab, outlined in blue
+In the **General** section, DevTools shows you human-readable status message next to the received HTTP status code.
+
+In the **Response Headers** section, you can hover over a header value and click the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} **Edit** button to [override the response header locally](/docs/devtools/overrides/#override-headers).
 
 #### View HTTP header source {: #header-source }
 
-By default, the Headers tab shows header names alphabetically. To view the HTTP header names in the
+By default, the **Headers** tab shows header names alphabetically. To view the HTTP header names in the
 order they were received:
 
 1.  Open the **Headers** tab for the request you're interested in. See [View HTTP headers][15].
 2.  Click **view source**, next to the **Request Header** or **Response Header** section.
 
+#### Provisional headers warning {: #provisional-headers }
 
-#### Provisional headers are shown {: #provisional-headers }
+Sometimes the **Headers** tab shows the `Provisional headers are shown...` warning message. This may be due to the following reasons:
 
-There are times where the headers will show a  warning message "Provisional headers are shown...".
+- The request wasn't sent over the network but was served from a local cache, which doesn't store the original request headers. In this case, you can [disable caching](#disable-cache) to see the full request headers.
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AQfq69qS2Ig6lT9Y7vcc.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
-1. It could be due to the request not sent over the network (served from a local cache), which doesn't store the original request headers. In this case, you can [disable caching](#disable-cache) to see the full request headers.
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AQfq69qS2Ig6lT9Y7vcc.png", alt="Provisional headers warning message", width="800", height="517" %}
+- The network resource isn't valid. For example, execute `fetch("https://jec.fish.com/unknown-url/")` in the **Console**.
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xMKUHQxXLiRDiiUTol5J.png", alt="Provisional headers warning message.", width="800", height="517" %}
 
-2. It could also be due to the network resource not valid (e.g. Try `fetch("https://jec.fyi.com/unknown-url/")` in the Console). DevTools could also display only provisional header due to security reasons.
-  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xMKUHQxXLiRDiiUTol5J.png", alt="Provisional headers warning message", width="800", height="517" %}
+DevTools can also display only provisional headers due to security reasons.
 
+### View request payload {: #payload }
 
-### View query string parameters {: #query-string }
+To view the request's payload, that is, its query string parameters and form data, select a request from the **Requests** table and open the **Payload** tab.
 
-To view the query string parameters of a URL in a human-readable format:
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/CphRGKa7PnCOQtaTcUiP.png", alt="The Payload tab.", width="800", height="570" %}
 
-1.  Open the **Headers** tab for the request you're interested in. See [View HTTP headers][16].
-2.  Go to the **Query String Parameters** section.
+#### View payload source {: #payload-source }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/B5QMjpRJZ72xKQ3uWLlh.svg", alt="The Query String Parameters section.", width="684", height="450" %}
+By default, DevTools shows the payload in a human-readable form.
 
-**Figure 24**. The Query String Parameters section, outlined in blue
+To view the sources of query string parameters and form data, on the **Payload** tab, click **view source** next to the **Query String Parameters** or **Form Data** sections.
 
-#### View query string parameters source {: #query-string-source }
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/H7hbmfoT9PSUezdmHNyH.png", alt="The view source buttons.", width="800", height="570" %}
 
-To view the query string parameter source of a request:
+#### View URL-decoded arguments of query string parameters {: #payload-encodings }
 
-1.  Go to the Query String Parameters section. See [View query string parameters][17].
-2.  Click **view source**.
+To toggle URL-encoding for arguments, on the **Payload** tab, click **view decoded** or **view URL-encoded**.
 
-#### View URL-encoded query string parameters {: #query-string-encodings }
-
-To view query string parameters in a human-readable format, but with encodings preserved:
-
-1.  Go to the Query String Parameters section. See [View query string parameters][18].
-2.  Click **view URL encoded**.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gLU4MbYYgb80DfHKd52R.png", alt="Toggle URL-encoding.", width="800", height="570" %}
 
 ### View cookies {: #cookies }
 
@@ -465,31 +504,25 @@ To view the cookies sent in a request's HTTP header:
 1.  Click the URL of the request, under the **Name** column of the Requests table.
 2.  Click the **Cookies** tab.
 
-See [Fields][19] for a description of each of the columns.
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/y55aBxOJQCA4cOERdvXJ.png", alt="The Cookies tab.", width="800", height="286" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/y2W5yVOMWqgL8ZE1Lklh.svg", alt="The Cookies tab.", width="744", height="450" %}
+For a description of each of the columns, see [Fields][19].
 
-**Figure 25**. The Cookies tab, outlined in blue
+To modify cookies, see [View, edit, and delete cookies](/docs/devtools/storage/cookies).
 
 ### View the timing breakdown of a request {: #timing }
 
 To view the timing breakdown of a request:
 
-1.  Click the URL of the request, under the **Name** column of the Requests table.
+1.  Click the URL of the request, under the **Name** column of the **Requests** table.
 2.  Click the **Timing** tab.
 
 See [Preview a timing breakdown][20] for a faster way to access this data.
 
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/gN0L0udjKqdP6BDaLKlH.png", alt="The Timing tab.", width="800", height="666" %}
+
 See [Timing breakdown phases explained][21] for more information about each of the phases that you
-may see in the Timing tab.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yDJ70NF49BREe9kHD7pw.svg", alt="The Timing tab.", width="615", height="450" %}
-
-**Figure 26**. The Timing tab, outlined in blue
-
-Here's more information about each of the phases.
-
-See [View timing breakdown][22] for another way to access this view.
+may see in the **Timing** tab.
 
 #### Preview a timing breakdown {: #timing-preview }
 
@@ -499,20 +532,18 @@ To view a preview of the timing breakdown of a request, hover over the request's
 See [View the timing breakdown of a request][23] for a way to access this data that does not require
 hovering.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c7kf94kHB11kK5AyYyMn.png", alt="Previewing the timing breakdown of a request.", width="800", height="556" %}
-
-**Figure 27**. Previewing the timing breakdown of a request
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7KlTSfkZgbfcXNviw9dm.png", alt="Previewing the timing breakdown of a request.", width="800", height="666" %}
 
 #### Timing breakdown phases explained {: #timing-explanation }
 
-Here's more information about each of the phases you may see in the Timing tab:
+Here's more information about each of the phases you may see in the **Timing** tab:
 
-- **Queueing**. The browser queues requests when:
+- **Queueing**. The browser queues requests before connection start and when:
   - There are higher priority requests.
   - There are already six TCP connections open for this origin, which is the limit. Applies to
     HTTP/1.0 and HTTP/1.1 only.
-  - The browser is briefly allocating space in the disk cache
-- **Stalled**. The request could be stalled for any of the reasons described in **Queueing**.
+  - The browser is briefly allocating space in the disk cache.
+- **Stalled**. The request could be stalled after connection start for any of the reasons described in **Queueing**.
 - **DNS Lookup**. The browser is resolving the request's IP address.
 - **Initial connection**. The browser is establishing a connection, including TCP handshakes/retries
   and negotiating an SSL.
@@ -529,29 +560,25 @@ Here's more information about each of the phases you may see in the Timing tab:
 
 ### View initiators and dependencies {: #initiators-dependencies }
 
-To view the initiators and dependencies of a request, hold Shift and hover over the request in the
+To view the initiators and dependencies of a request, hold <kbd>Shift</kbd> and hover over the request in the
 Requests table. DevTools colors initiators green, and dependencies red.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JiZisZ4UmarOjo5cAwf3.png", alt="Viewing the initiators and dependencies of a request.", width="800", height="568" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mZ595sGwSfA6lZMzWbXy.png", alt="Viewing the initiators and dependencies of a request.", width="800", height="388" %}
 
-**Figure 28**. Viewing the initiators and dependencies of a request
-
-When the Requests table is ordered chronologically, the first green request above the request that
+When the **Requests** table is ordered chronologically, the first green request above the request that
 you're hovering over is the initiator of the dependency. If there's another green request above
 that, that higher request is the initiator of the initiator. And so on.
 
 ### View load events {: #load }
 
 DevTools displays the timing of the `DOMContentLoaded` and `load` events in multiple places on the
-Network panel. The `DOMContentLoaded` event is colored blue, and the `load` event is red.
+**Network** panel. The `DOMContentLoaded` event is colored blue, and the `load` event is red.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FzH6gwuHgXuGnasATVOH.svg", alt="The locations of the DOMContentLoaded and load events on the Network panel.", width="585", height="450" %}
-
-**Figure 29**. The locations of the `DOMContentLoaded` and `load` events in the Network panel
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/3PdgVRzrO1ujiTIHrx1B.png", alt="The locations of the DOMContentLoaded and load events on the Network panel.", width="800", height="476" %}
 
 ### View the total number of requests {: #total-number }
 
-The total number of requests is listed in the Summary pane, at the bottom of the Network panel.
+The total number of requests is listed in the **Summary** pane, at the bottom of the **Network** panel.
 
 {% Aside "caution" %}
 
@@ -560,14 +587,11 @@ other requests occurred before DevTools was opened, those requests aren't counte
 
 {% endAside %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ce9YHacO35q8t5wbmFp9.svg", alt="The total number of requests since DevTools was opened", width="705", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/20mIck1GaPzmjeHtrnbd.png", alt="The total number of requests since DevTools was opened.", width="800", height="428" %}
 
-**Figure 30**. The total number of requests since DevTools was opened
+### View the total size of transferred and loaded resources {: #total-size }
 
-### View the total download size {: #total-size }
-
-The total download size of requests is listed in the Summary pane, at the bottom of the Network
-panel.
+DevTools lists the total size of transferred and loaded (uncompressed) resources in the **Summary** pane, at the bottom of the **Network** panel.
 
 {% Aside "caution" %}
 
@@ -576,79 +600,83 @@ other requests occurred before DevTools was opened, those requests aren't counte
 
 {% endAside %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hlTa0Pu0GRSTt1yuantk.svg", alt="The total download size of requests", width="705", height="450" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/2oSUzbdlzdwgvsgeRQr6.png", alt="The total size of transferred and loaded resources.", width="800", height="428" %}
 
-**Figure 31**. The total download size of requests
-
-See [View the uncompressed size of a resource][25] to see how large resources are after the browser
-uncompresses them.
+See [View the uncompressed size of a resource][25] to see how large resources are after the browser uncompresses them.
 
 ### View the stack trace that caused a request {: #initiator-stack-trace }
 
 When a JavaScript statement causes a resource to be requested, hover over the **Initiator** column
 to view the stack trace leading up to the request.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tAENLxUdEAUkxHpAysBL.png", alt="The stack trace leading up to a resource request", width="800", height="455" %}
-
-**Figure 32**. The stack trace leading up to a resource request
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/x4z1d0vaP4Copn4Bqb4R.png", alt="The stack trace leading up to a resource request.", width="800", height="439" %}
 
 ### View the uncompressed size of a resource {: #uncompressed }
 
-Click **Use Large Request Rows**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use Large Request Rows", width="28", height="20" %}
-and then look at the bottom value of the **Size** column.
+Check **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} > **Use large request rows** and then look at the bottom value of the **Size** column.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OkTz8xZwi0zVh2GWltnE.png", alt="An example of uncompressed resources.", width="800", height="478" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/na2zXsl9y3f8FqYcdMsT.png", alt="An example of uncompressed resources.", width="800", height="500" %}
 
-**Figure 33**. The compressed size of the `jquery-bundle.js` file that was sent over the network was
-`30.9 KB`, whereas the uncompressed size was `86.3 KB`
+In this example, the compressed size of the `www.google.com` document that was sent over the network was
+`43.8 KB`, whereas the uncompressed size was `136 KB`.
 
 ## Export requests data {: #export }
 
 ### Save all network requests to a HAR file {: #save-as-har }
 
-To save all network requests to a HAR file:
+[HAR (HTTP Archive)][26] is a file format used by several HTTP session tools to export the captured data. The format is a JSON object with a particular set of fields.
 
-1.  Right-click any request in the Requests table.
-2.  Select **Save as HAR with Content**. DevTools saves all requests that have occurred since you
-    opened DevTools to the HAR file. There is no way to filter requests, or to save just a single
-    request.
+You can save all network requests to a HAR file in two ways:
 
-Once you've got a HAR file, you can import it back into DevTools for analysis. Just drag-and-drop
-the HAR file into the Requests table. See also [HAR Analyzer][26].
+- Right-click any request in the **Requests** table and select **Save all as HAR with content**.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/X4lTWJrOAasUtZwD20BT.png", alt="Selecting Save all as HAR with content.", width="800", height="455" %}
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/XEd84LBN4Rjoj6WUnpg2.svg", alt="Export.", width="24", height="24" %} **Export HAR** in the action bar at the top of the **Network** panel.
+  {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JaytyulU4VllFs9yH5B0.png", alt="The Export HAR button in the action bar at the top.", width="800", height="528" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FjVMRBNwMyIlkUElRzYI.png", alt="Selecting Save as HAR with Content.", width="800", height="490" %}
+{% Aside %}
+**Note**: DevTools exports all requests that have occurred since you opened DevTools to the HAR file. You can't filter requests to export. To save a single request, see [Copy one or more requests to the clipboard](#copy).
+{% endAside %}
 
-**Figure 34**. Selecting **Save as HAR with Content**
+Once you have a HAR file, you can import it back into DevTools for [analysis][26] in two ways:
+
+- Drag-and-drop the HAR file into the **Requests** table.
+- Click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oiUyFA6HRhsKOpUyaq0g.svg", alt="Import.", width="24", height="24" %} **Import HAR** in the action bar at the top of the **Network** panel.
+
+{% Aside %}
+**Note**: The **Network** panel reads and shows [initiators](/docs/devtools/network/reference/#requests) for the requests imported from HAR files.
+{% endAside %}
 
 ### Copy one or more requests to the clipboard {: #copy }
 
 Under the **Name** column of the Requests table, right-click a request, hover over **Copy**, and
 select one of the following options:
 
-- **Copy Link Address**. Copy the request's URL to the clipboard.
-- **Copy Response**. Copy the response body to the clipboard.
+- **Copy link address**. Copy the request's URL to the clipboard.
+- **Copy file name**. Copy the file's name to the clipboard.
+- **Copy response**. Copy the response body to the clipboard.
+- **Copy as PowerShell**. Copy the request as a PowerShell command.
+- **Copy as fetch**. Copy the request as a fetch call.
+- **Copy as Node.js fetch**. Copy the request as a Node.js fetch call.
 - **Copy as cURL**. Copy the request as a cURL command.
-- **Copy All as cURL**. Copy all requests as a chain of cURL commands.
-- **Copy All as HAR**. Copy all requests as HAR data.
+- **Copy all as PowerShell**. Copy all requests as a chain of PowerShell commands.
+- **Copy all as fetch**. Copy all requests as a chain of fetch calls.
+- **Copy all as Node.js fetch**. Copy all requests as a chain of Node.js fetch calls.
+- **Copy all as cURL**. Copy all requests as a chain of cURL commands.
+- **Copy all as HAR**. Copy all requests as HAR data.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FCQLdbRS9UMc4eFHzYvI.png", alt="Selecting Copy Response.", width="800", height="514" %}
-
-**Figure 35**. Selecting Copy Response
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/R9WBfJe2pdJihGYfcDbV.png", alt="Selecting Copy options.", width="800", height="455" %}
 
 ## Change the layout of the Network panel {: #change_the_layout_of_the_network_panel }
 
-Expand or collapse sections of the Network panel UI to focus on what's important to you.
+Expand or collapse sections of the **Network** panel UI to focus on what's important to you.
 
 ### Hide the Filters pane {: #hide-filters }
 
 By default, DevTools shows the [Filters pane][27]. Click **Filter**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BmGbqXVYxIY2kwgbNmsp.png", alt="Filter", width="28", height="24" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BmGbqXVYxIY2kwgbNmsp.png", alt="Filter.", width="28", height="24" %}
 to hide it.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zN18ngzI6ejSpoKMYKJG.svg", alt="The Hide Filters button", width="705", height="450" %}
-
-**Figure 36**. Hide Filters, outlined in blue
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/5OSQ3dUijdXDHsj9iZIA.png", alt="The Hide Filters button.", width="800", height="498" %}
 
 ### Use large request rows {: #request-rows }
 
@@ -656,22 +684,18 @@ Use large rows when you want more whitespace in your network requests table. Som
 provide a little more information when using large rows. For example, the bottom value of the
 **Size** column is the uncompressed size of a request.
 
-Open **Settings** and click **Use large request rows** to enable large rows.
+Open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} and click **Use large request rows** to enable large rows.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/rhXHHi7yxFm6IqiwQ7C3.png",
-  alt="The use large request rows checkbox", width="800", height="614" %}
-
-**Figure 37**. Large Request Rows, outlined in blue
+  alt="The use large request rows checkbox.", width="800", height="614" %}
 
 ### Hide the Overview pane {: #hide-overview }
 
-By default, DevTools shows the [Overview pane][28]. Open **Settings** and uncheck the **Show
+By default, DevTools shows the [Overview pane][28]. Open **Settings** {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} and uncheck the **Show
 overview** checkbox to hide it.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/uWWJfuFbpiClEFjPTdVD.png",
-  alt="The show overview checkbox", width="800", height="614" %}
-
-**Figure 38**. Hide Overview, outlined in blue
+  alt="The show overview checkbox.", width="800", height="614" %}
 
 [1]: #network-conditions
 [2]: https://web.dev/progressive-web-apps
@@ -689,8 +713,8 @@ overview** checkbox to hide it.
 [14]: #sort-by-activity
 [15]: #headers
 [16]: #headers
-[17]: #query-string
-[18]: #query-string
+[17]: #payload
+[18]: #payload
 [19]: /docs/devtools/storage/cookies/#fields
 [20]: #timing-preview
 [21]: #timing-explanation

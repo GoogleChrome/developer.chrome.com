@@ -20,6 +20,11 @@ const YAML = require('js-yaml');
 const path = require('path');
 const fs = require('fs');
 
+// There is a tag 'example' used for example, demo and testing
+// content, which should not get a tags-individual.njk page rendered,
+// and not be listed on the tags overview page
+const EXAMPLE_TAG_ID = 'example';
+
 /**
  * Returns an object with the keys being supported tags and the object
  * having the i18n name for the tag, the posts for a tag, and the tag's key.
@@ -62,11 +67,23 @@ module.exports = function (collections) {
   allSortedForLoop: for (const item of allSorted) {
     // If there are no tags or the tags isn't a string or array, skip the post.
     /** @type {string[]} */
-    const allTags = [item.data.tags ?? []].flat();
+    let allTags = [item.data.tags ?? []].flat();
     if (!allTags.length) {
       delete item.data.tags;
       continue allSortedForLoop;
     }
+
+    // rewrite chromeX to chrome-X
+    const chromeXRegex = /^chrome(\d+)$/;
+    allTags = allTags.map(tag => {
+      chromeXRegex.lastIndex = 0;
+      const match = tag.match(chromeXRegex);
+      if (match) {
+        return `chrome-${match[1]}`;
+      }
+
+      return tag;
+    });
 
     // Ensure that tags on the front matter is an array.
     item.data.tags = allTags;
@@ -117,7 +134,7 @@ module.exports = function (collections) {
     // Handle all of the supported tags for a post.
     postsTagsForLoop: for (const postsTag of allTags) {
       // If a tag isn't supported, skip over it in the `postsTagsForLoop`.
-      if (!(postsTag in supportedTags)) {
+      if (!(postsTag in supportedTags) || postsTag === EXAMPLE_TAG_ID) {
         continue postsTagsForLoop;
       }
 

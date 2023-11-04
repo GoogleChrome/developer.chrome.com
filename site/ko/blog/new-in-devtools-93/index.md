@@ -17,12 +17,12 @@ tags:
 
 *이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였습니다. [이지웅](https://bit.ly/JiwoongLeePortfolio) 님이 리뷰어로 참여했습니다!*
 
-{% include 'partials/devtools/ko/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Styles 영역에서 CSS 컨테이너 쿼리를 수정할 수 있습니다 {: #container-queries }
-이제 **Styles** 영역에서 [CSS 컨테이너 쿼리](https://web.dev/new-responsive/#responsive-to-the-container) 를 보고 수정할 수 있습니다.
+이제 **Styles** 영역에서 [CSS 컨테이너 쿼리](https://web.dev/articles/new-responsive#responsive_to_the_container) 를 보고 수정할 수 있습니다.
 
 컨테이너 쿼리는 반응형 디자인을 구현하기 위해 더 다양한 접근 방식을 제공합니다.
 `@container` 규칙은 `@media` 를 사용한 미디어 쿼리와 비슷한 방식으로 동작합니다.
@@ -45,7 +45,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 
 ## Network 패널에서 Web bundle 미리보기 {: #web-bundle }
-[Web bundle](https://web.dev/web-bundles/) 여러개의 HTTP 리소스를 하나의 파일로 묶은 파일 포맷입니다. 이제 **Network** 패널에서 web bundle 의 내용을 미리볼 수 있습니다.
+[Web bundle](https://web.dev/articles/web-bundles) 여러개의 HTTP 리소스를 하나의 파일로 묶은 파일 포맷입니다. 이제 **Network** 패널에서 web bundle 의 내용을 미리볼 수 있습니다.
 
 web bundle은 현재 실험 기능입니다. `chrome://flags` 에서 `#enable-experimental-web-platform-features` 플래그를 활성화한 상태로 테스트하세요.
 
@@ -114,7 +114,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 ## Manifest 영역에서 new note URL을 보여줍니다 {: #new-note-url }
 이제 Manifest 영역에서 [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking)을 보여줍니다.
 
-현재 Chrome OS (CrOS)에서 "new-note" 를 선언한 Chrome Apps 및 Android Apps 는 스타일러스 설정 (CrOS 기기가 스타일러스와 함께 사용된 경우 표시됨)에서 메모 작성 앱으로 선택할 수 있습니다. 메모 앱으로 선택하면 스타일러스 팔레트의 "메모 만들기 (Create Note)" 버튼에서 앱을 실행할 수 있습니다. 애플리케이션 manifest 에 `new-note-url` 필드를 추가하는 건, 웹 앱이 앱과 동일하게 동작하게 하기 위한 노력의 결과입니다.
+현재 ChromeOS (CrOS)에서 "new-note" 를 선언한 Chrome Apps 및 Android Apps 는 스타일러스 설정 (CrOS 기기가 스타일러스와 함께 사용된 경우 표시됨)에서 메모 작성 앱으로 선택할 수 있습니다. 메모 앱으로 선택하면 스타일러스 팔레트의 "메모 만들기 (Create Note)" 버튼에서 앱을 실행할 수 있습니다. 애플리케이션 manifest 에 `new-note-url` 필드를 추가하는 건, 웹 앱이 앱과 동일하게 동작하게 하기 위한 노력의 결과입니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="Manifest 영역의 new note URL", width="800", height="477" %}
 
@@ -149,5 +149,5 @@ Chromium issue: [1219153](https://crbug.com/1219153)
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/ko/reach-out.md' %}
-{% include 'partials/devtools/ko/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

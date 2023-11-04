@@ -3,6 +3,9 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
   },
+  globals: {
+    ga: true,
+  },
   env: {
     browser: true,
     node: true,

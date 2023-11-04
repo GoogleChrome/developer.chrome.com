@@ -43,7 +43,7 @@ Lighthouse는 다음 조건이 모두 충족되는 경우 리소스를 캐시 �
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## HTTP 캐싱을 사용하여 정적 리소스를 캐시하는 방법
 
@@ -63,7 +63,7 @@ Cache-Control: max-age=31536000
 
 캐시 기간이 길다고 항상 좋은 것은 아닙니다. 궁극적으로 리소스에 대한 최적의 캐시 기간을 결정하는 것은 사용자의 몫입니다.
 
-브라우저가 다양한 리소스를 캐시하는 방식을 사용자 정의하기 위한 많은 지시문이 있습니다. [HTTP 캐시: 첫 방어선 가이드라인](https://web.dev/http-cache/) 및 [HTTP 캐싱 동작 구성 codelab](https://web.dev/codelab-http-cache)에서 리소스 캐싱에 대해 자세히 알아보세요.
+브라우저가 다양한 리소스를 캐시하는 방식을 사용자 정의하기 위한 많은 지시문이 있습니다. [HTTP 캐시: 첫 방어선 가이드라인](https://web.dev/articles/http-cache) 및 [HTTP 캐싱 동작 구성 codelab](https://web.dev/codelab-http-cache)에서 리소스 캐싱에 대해 자세히 알아보세요.
 
 ## Chrome DevTools에서 캐시된 응답을 확인하는 방법
 

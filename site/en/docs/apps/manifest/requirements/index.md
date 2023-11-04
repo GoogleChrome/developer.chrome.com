@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Requirements"
+seoTitle: "Chrome Apps Manifest - Requirements [Deprecated]"
 #date: TODO
 #updated: TODO
 #description: TODO

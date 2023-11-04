@@ -1,0 +1,105 @@
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/related-articles.njk' import relatedArticles with context %}
+
+{% macro landingSectionUseCases(title, desc, useCase1Title, useCase1items, useCase2Title, useCase2items, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, customId) %}
+{% set sectionId = customId if customId else title %}
+
+<section
+  class="landing-section landing-section--{{type}} {% if ordered %} landing-section--ordered {% endif %} hairline rounded-lg width-full display-grid gap-top-400"
+  style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);"
+  id="{{sectionId | slugify | ensureUniqueHrefInProduction}}">
+
+  {{ landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, learnMore) }}
+
+  <div class="gap-top-200 gap-left-200 gap-right-200">
+    <div class="landing-section__links usecases">
+	 
+      {% if useCase1items %}
+		<h3 class="type--h5 color-{{color}}-darkest">{{ useCase1Title }}</h3>
+		<div class="use-case {% if ordered %} use-case--ordered {% endif %}">
+      {% for useCase1item in useCase1items %}
+        {% set post = null %} {# Reset #}
+        {% if useCase1item.url and useCase1item.title and useCase1item.description %}
+          {% set post = useCase1item %}
+        {% else %}
+          {% set post = helpers.findByUrl(collections.all, useCase1item.url, locale) %}
+        {% endif %}
+	 
+        {% if post %}
+            <div class="item height-full">
+              <div class="item__inner
+                height-full">
+                <div class="item__title"><a href="{{ post.url }}">{{ post.title or post.data.title }}</a></div>
+                <p class="desc flex-1">{{ post.description or post.data.description }}</p>
+              </div>
+            </div>
+        {% endif %}
+      {% endfor %}
+		</div>
+    {% if moreDocuments1.items %}
+      {% set relatedTitle1 = moreDocuments1.title or 'i18n.landing.sections.more_documents'| i18n %}
+      <div class="landing-section__documents">
+          {{ relatedArticles(relatedTitle1, moreDocuments1.items, color) }}
+      </div>
+    {% endif %}
+	{% endif %}
+	
+	
+	 {% if useCase2items %}
+	 <h3 class="type--h5 color-{{color}}-darkest">{{ useCase2Title }}</h3>
+	 <div class="use-case {% if ordered %} use-case--ordered {% endif %}">
+      {% for useCase2item in useCase2items %}
+        {% set post = null %} {# Reset #}
+        {% if useCase2item.url and useCase2item.title and useCase2item.description %}
+          {% set post = useCase2item %}
+        {% else %}
+          {% set post = helpers.findByUrl(collections.all, useCase2item.url, locale) %}
+        {% endif %}
+		   
+        {% if post %}
+            <div class="item height-full">
+              <div class="item__inner
+                height-full">
+                <div class="item__title"><a href="{{ post.url }}">{{ post.title or post.data.title }}</a></div>
+                <p class="desc flex-1">{{ post.description or post.data.description }}</p>
+              </div>
+            </div>
+        {% endif %}
+      {% endfor %}
+		</div>
+    {% if moreDocuments2.items %}
+    {% set relatedTitle2 = moreDocuments2.title or 'i18n.landing.sections.more_documents'| i18n  %}
+      <div class="landing-section__documents">
+          {{ relatedArticles(relatedTitle2, moreDocuments2.items, color) }}
+      </div>
+    {% endif %}
+	{% endif %}
+
+      {% if items %}
+		<h3 class="type--h5 color-{{color}}-darkest">More proposals</h3>
+		<div class="more-docs {% if ordered %} use-case--unordered {% endif %}">
+      {% for item in items %}
+        {% set post = null %} {# Reset #}
+        {% if item.url and item.title and item.description %}
+          {% set post = item %}
+        {% else %}
+          {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+        {% endif %}
+	
+        {% if post %}  
+            <div class="item height-full">
+              <div class="item__inner
+                height-full">
+                <div class="item__title"><a href="{{ post.url }}">{{ post.title or post.data.title }}</a></div>
+                <p class="desc flex-1">{{ post.description or post.data.description }}</p>
+              </div>
+            </div>
+        {% endif %}
+      {% endfor %}
+	</div>
+	{% endif %}
+    </div>
+  </div>
+</section>
+{% endmacro %}

@@ -4,22 +4,22 @@ title: Does not set a theme color for the address bar
 description: |
   Learn how to set an address bar theme color for your Progressive Web App.
 date: 2019-05-04
-updated: 2020-06-17
+updated: 2020-12-03
 ---
 
 Theming the browser's address bar to match the brand colors
-of your [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/#make-it-installable) provides a more immersive user experience.
+of your [Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps#make-it-installable) provides a more immersive user experience.
 
 ## Browser compatibility
 
-At the time of writing, theming the browser address bar is supported on
-Android-based browsers. See
+As of December 2022, theming the browser address bar is supported on
+Android-based browsers, Google Chrome, and Microsoft Edge. See
 [Browser compatibility](https://developer.mozilla.org/docs/Web/Manifest/theme_color#Browser_compatibility)
 for updates.
 
 ## How the Lighthouse theme color audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that don't apply a theme to the address bar:
 
 <figure>
@@ -27,11 +27,11 @@ flags pages that don't apply a theme to the address bar:
 </figure>
 
 The audit fails if Lighthouse doesn't find a `theme-color` meta tag in the page's
-HTML and a `theme_color` property in the [web app manifest](https://web.dev/add-manifest/).
+HTML and a `theme_color` property in the [web app manifest](https://web.dev/articles/add-manifest).
 
 Note that Lighthouse doesn't test whether the values are valid CSS color values.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to set a theme color for the address bar
 
@@ -53,14 +53,14 @@ Set the tag's `content` attribute to any valid CSS color value:
 ```
 
 Learn more about the `theme-color` meta tag in Google's
-[Support for `theme-color` in Chrome 39 for Android](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android).
+[Support for `theme-color` in Chrome 39 for Android](/blog/support-for-theme-color-in-chrome-39-for-android/).
 
 ### Step 2: Add the `theme_color` property to your web app manifest
 
 The `theme_color` property in your web app manifest ensures that the address
 bar is branded when a user launches your PWA from the home screen.
 Unlike the `theme-color` meta tag, you only need
-to define this once, in the [manifest](https://web.dev/add-manifest/).
+to define this once, in the [manifest](https://web.dev/articles/add-manifest).
 Set the property to any valid CSS color value:
 
 ```html/1
@@ -75,6 +75,6 @@ according to the manifest's `theme_color`.
 
 ## Resources
 
-- [Source code for **Does not set a theme color for the address bar** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/themed-omnibox.js)
-- [Add a web app manifest](https://web.dev/add-manifest/)
-- [Support for `theme-color` in Chrome 39 for Android](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android)
+- [Source code for **Does not set a theme color for the address bar** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/themed-omnibox.js)
+- [Add a web app manifest](https://web.dev/articles/add-manifest)
+- [Support for `theme-color` in Chrome 39 for Android](/blog/support-for-theme-color-in-chrome-39-for-android/)

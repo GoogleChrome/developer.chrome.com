@@ -1,5 +1,8 @@
 module.exports = {
   ci: {
+    upload: {
+      target: 'temporary-public-storage',
+    },
     collect: {
       startServerCommand: 'npm start',
       startServerTimeout: 60 * 1000, // allow our build to take 60s
@@ -25,6 +28,12 @@ module.exports = {
          * Disable until #71 is fixed.
          */
         'tap-targets': 'off',
+
+        /**
+         * Gtag and GTM cause the unused-javascript audit to fail, but out of our control.
+         * So only error if over 2 resources cause this audit to fail
+         */
+        'unused-javascript': ['error', {maxLength: 2}],
 
         /**
          * We don't care about preconnect to Analytics and friends.

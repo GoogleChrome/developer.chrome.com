@@ -1,0 +1,52 @@
+---
+title: 'Password Manager Compatible'
+description: >
+  Help your users stay safe and secure by integrating with password managers for
+  seamless cross-device sign-in across sites and apps along with automated
+  password updates.
+layout: 'layouts/landing.njk'
+collection_tag: 'password-manager-compatible'
+sections:
+  implementation:
+    - url: https://web.dev/sign-up-form-best-practices/
+      title: Sign-up
+      description: Make sure your sign-up forms are properly marked up so the password manager can save that brand new account.
+    - url: https://web.dev/sign-in-form-best-practices/
+      title: Sign-in
+      description: Keep that mark-up best practice going for sign-in forms so that the password manager can drop those credentials in the right place.
+    - url: https://web.dev/change-password-url/
+      title: Change password
+      description: Set up /.well-known/change-password to redirect to your change password page so the password manager can bring users straight there.
+    - url: /blog/site-affiliation/
+      title: Link sites and apps
+      description: For sites (and apps!) that share a single sign-on make use of Digital Asset Links to make sure the password manager knows it's all the same account.
+---
+{% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
+{% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+
+{{ heroCardWide(
+  "Password Manager Compatible",
+  "Help your users stay safe and secure by integrating with password managers for seamless cross-device sign-in across sites and apps along with automated password updates.",
+  "",
+  "",
+  "image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/hktLGMLoCB1ipj9U37Du.png",
+  "Safely save and share passwords across devices with a password manager",
+  "",
+  ""
+  ) }}
+
+{{ landingSectionExpanded(
+  "Check and update each part of your password process",
+  "",
+  sections.implementation,
+  "blue",
+  "top-4",
+  true,
+  "image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/l3ZibRgYJPkeOyRDcpin.png",
+  "Password field with asterisks",
+  200,
+  112,
+  "image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/l3ZibRgYJPkeOyRDcpin.png",
+  ""
+  )
+}}

@@ -25,7 +25,7 @@ tags:
 
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [lacolaco](https://github.com/lacolaco) さんと [yoichiro](https://github.com/yoichiro) さんに感謝いたします。*
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -214,7 +214,7 @@ Chromium issue: [1214030](https://crbug.com/1214030)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1574e9b550317c481a943fec059d84bfb863564 #}
 
-Chromium issue: [1226262](https://crbug.com/1226262) 
+Chromium issue: [1226262](https://crbug.com/1226262)
 
 
 <!-- ## Console updates -->
@@ -307,13 +307,13 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 ## Application パネルの Application cache ペインの廃止 {: #app-cache }
 
-<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
+<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/articles/appcache-removal) is removed from Chrome and other Chromium-based browsers. -->
 
-Chrome やその他の Chromium ベースのブラウザから [AppCache](https://web.dev/appcache-removal/) のサポートが外れることに伴い、Application パネルの [Application cache](/docs/devtools/storage/applicationcache/) は削除されます。
+Chrome やその他の Chromium ベースのブラウザから [AppCache](https://web.dev/articles/appcache-removal) のサポートが外れることに伴い、Application パネルの [Application cache](/docs/devtools/storage/applicationcache/) は削除されます。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
-Chromium issue: [1084190](https://crbug.com/1084190) 
+Chromium issue: [1084190](https://crbug.com/1084190)
 
 
 <!-- ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api } -->
@@ -326,9 +326,9 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 実験的な機能を有効にするには、**Settings** > **Experiments** の中の **Enable Reporting API panel in the Application panel** チェックボックスをチェックしてください。
 {% endAside %}
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
 
-[Reporting API](https://web.dev/reporting-api/) はページのセキュリティ違反や廃止されたAPIの利用などの監視を助けるように用意されています。
+[Reporting API](https://web.dev/articles/reporting-api) はページのセキュリティ違反や廃止されたAPIの利用などの監視を助けるように用意されています。
 
 <!-- With this experiment enabled, you can now view the reports status in the new **Reporting API** pane in the **Application** panel.  -->
 
@@ -338,9 +338,9 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 
 **Endpoints** セクションは現在のところまだ開発が非常に活発であることに注意してください（今はレポーティングのエンドポイントは表示されません）。
 
-<!-- Learn more about the **Reporting API** with [this article](https://web.dev/reporting-api/). -->
+<!-- Learn more about the **Reporting API** with [this article](https://web.dev/articles/reporting-api). -->
 
-**Reporting API** についてより詳しく知るには[この記事](https://web.dev/reporting-api/)を見てください。
+**Reporting API** についてより詳しく知るには[この記事](https://web.dev/articles/reporting-api)を見てください。
 
 <!--
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Reporting API pane in the Application panel", width="800", height="476" %}
@@ -352,5 +352,5 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 
 Chromium issue: [1205856](https://crbug.com/1205856)
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

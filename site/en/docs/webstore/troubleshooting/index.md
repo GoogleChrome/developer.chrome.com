@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
 date: 2020-11-16
-updated: 2021-09-30
+updated: 2023-10-05
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
@@ -16,6 +16,38 @@ violation. In order to make it easier to reference specific violations, the Chro
 each violation a human-readable ID. These IDs are composed of two words: a color and an element. For
 example, Yellow Magnesium corresponds to the general class of errors where the extension does not
 behave as expected.
+
+## Additional requirements for Manifest V3 {: #additional-requirements-for-manifest-v3 }
+
+Corresponds to notification ID: `Blue Argon`
+
+The intent of this policy is to ensure that Manifest V3 extensions are not including remotely hosted code.
+
+### Common reasons for rejection
+
+* Including a `<script>` tag that points to a resource that is not within the extension's package.
+
+* Using JavaScript's `eval()`` method or other mechanisms to execute a string fetched from a remote source.
+
+* Building an interpreter to run complex commands fetched from a remote source, even if those commands are fetched as data.
+
+### How can you rectify this? {: #how-can-you-rectify-this_23 }
+
+* Double check all code for references to external JavaScript files, which should be replaced with internal extension files.
+
+* Review the Manifest V3 migration guide [Improve extension security](/docs/extensions/migrating/improve-security/) for a walkthrough on alternatives to execution of arbitrary strings and remotely hosted code.
+
+### Relevant policy
+
+This section addresses extensions that are in violation of the following section of the Chrome Web Store [developer program policies](/docs/webstore/program-policies/mv3-requirements/):
+
+{% Aside %}
+
+**Additional Requirements for Manifest V3**
+
+Extensions using Manifest V3 must meet additional requirements related to the extension's code. Specifically, the full functionality of an extension must be easily discernible from its submitted code. This means that the logic of how each extension operates should be self-contained. The extension may reference and load data and other information sources that are external to the extension, but these external resources must not contain any logic.
+
+{% endAside %}
 
 ## Functionality not working {: #does-not-work }
 
@@ -56,7 +88,7 @@ cannot, communicate that to the user.
     - If your extension requires an account or special network environment, make sure that
       requirement is communicated to the user. If these conditions are not met, consider ways that
       you can make the user aware that the extension will not work as expected.
-    - Test your experience on an unreliable internet connection (e.g. [lie-fi][wiki-li-fi]). The
+    - Test your experience on an unreliable internet connection (e.g. [lie-fi][lie-fi]). The
       extension's UI should gracefully handle request timeouts, HTTP 400 and 500 errors, certificate
       timeouts, and other such error conditions.
 - If you cannot determine why the reviewer thought that your extension was not working as expected,
@@ -318,8 +350,9 @@ that users are aware of what data is collected, and how it is collected, used, a
 
 - Add a valid, working and accessible link to your privacy policy [in the designated
   field][docs-publish-setup].
-    - Visit the Chrome Web Store item listing for your extension to verify that a privacy policy
-      link appears in the "Additional Information" box and that the link works as expected.
+    - Visit the Privacy tab for your extension to verify that a privacy policy link appears
+      in the "Privacy Policy" box (located at the bottom of the Privacy tab) and that the
+      link works as expected.
 - Ensure the privacy policy talks about data collection, usage, handling, and sharing.
 - If you have done the above but are still encountering review issues, [contact developer
   support][dev-support] to request clarification or appeal the verdict.
@@ -666,7 +699,7 @@ Data][docs-dpp-limited-use] policy for additional information.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_11 }
 
-- Prominently disclose to `the user what data is being collected and how it will be handled. This
+- Prominently disclose to the user what data is being collected and how it will be handled. This
   information must be provided in the extension's Privacy Policy and may be provided elsewhere.
 - Ensure data is collected only if the user consents to it.
     - Prominent disclosure of data collection in the extension's Chrome Web Store listing is
@@ -1156,6 +1189,92 @@ Code Readability Requirements:
 
 {% endAside %}
 
+## Minimum Functionality
+
+Corresponds to notification ID: `Yellow Potassium`
+
+The intent of this policy is to ensure all extensions in the Chrome Web Store are providing a basic
+degree of functionality and utility for users. Extensions should provide users with benefits and
+enrich their browsing experience.
+
+### Common reasons for removal/rejection
+
+- Your submitted extension contained no files other than a manifest.
+- The extension did not provide discernable value or utility to its users.
+- A feature listed in the item's description was not provided directly by the item and instead
+  simply linked to an external service.
+- The extension metadata contained click-baity content designed to attract the attention of
+  users and entice them to install.
+
+### How can you rectify this?
+
+- Ensure that your extension has a defined functionality which provides value.
+- Ensure that any claimed functionality of your item is performed directly by the item itself
+  and not achieved by linking users to an external source.
+
+### Relevant policy
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store
+[developer program policies](/docs/webstore/program-policies/minimum-functionality/):
+
+{% Aside %}
+**Building Quality Products - Minimum Functionality**
+
+Extensions must provide a basic degree of functionality and utility that provide value to the
+catalog of the Chrome Web Store. Some examples of common violations include:
+
+- Extensions with no functionality or utility.
+- Extensions with functionality that is not directly provided by the extension (e.g. file
+  converters which only link to other file conversion services).
+- Click-baity template extensions that only vary slightly in functionality with negligible
+  utility (e.g. a "Word of the Day" extension and a "Daily Inspirational Quotes" extension,
+  which use the same general extension template).
+{% endAside %}
+
+## Affiliate Ads
+
+Corresponds to notification ID: `Grey Titanium`
+
+The intent of this policy is to ensure users are aware of extensions using affiliate links or codes
+for monetization, and to give them some amount of control by requiring user action before
+inclusion.
+
+### Common reasons for removal/rejection
+
+- Your extension uses affiliate marketing links, codes, or cookies without properly
+  disclosing their use in the item's description and user interface.
+- No related user action is required before inclusion of affiliate codes, links, or cookies.
+
+### How can you rectify this?
+
+- Modify your item's description and UI to properly inform users that you are using affiliate
+  programs.
+- Inclusion of affiliate codes must be preceded by a relevant action taken by the user. This
+  action must be related to the affiliated platform such that a reasonable user would understand
+  and consent to the inclusion of said codes.
+
+### Relevant policy
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store
+[developer program policies](/docs/webstore/program-policies/affiliate-ads/):
+
+{% Aside %}
+**Ensuring Responsible Marketing and Monetization - Affiliate Ads**
+
+- Any affiliate program must be described prominently in the product's Chrome Web Store page,
+ user interface, and before installation.
+- Related user action is required before the inclusion of each affiliate code, link, or
+  cookie. Some example violations include:
+  - An extension that updates a shopping-related cookie without the user's knowledge
+    while the user is browsing shopping sites.
+  - An extension that appends an affiliate code to the URL or replaces an existing
+    affiliate code in the URL without the user's explicit knowledge or related user action.
+  - An extension that applies or replaces affiliate promo codes without the user's
+    explicit knowledge or related user action.
+{% endAside %}
+
 [api-action]: /docs/extensions/reference/action
 [api-browser-action]: /docs/extensions/reference/browserAction/
 [api-cookies]: /docs/extensions/reference/cookies/
@@ -1165,35 +1284,36 @@ Code Readability Requirements:
 [api-tabs-query]: /docs/extensions/reference/tabs/#method-query
 [api-tabs-sendmessage]: /docs/extensions/reference/tabs/#method-sendMessage
 [api-tabs]: /docs/extensions/reference/tabs
-[blog-lie-fi]: https://developers.google.com/web/fundamentals/performance/poor-connectivity#lie-fi
+[blog-lie-fi]: https://web.dev/performance-poor-connectivity/#lie-fi
 [dev-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[docs-dpp-api-use]: /docs/webstore/program_policies/#api-use
-[docs-dpp-bullying]: /docs/webstore/program_policies/#bullying
-[docs-dpp-code-readability]: /docs/webstore/program_policies/#code-readability
-[docs-dpp-content-policies]: /docs/webstore/program_policies/#content_policies
-[docs-dpp-deceptive-installation]: /docs/webstore/program_policies/#deceptive_installation_tactics
-[docs-dpp-functionality]: /docs/webstore/program_policies/#functionality
-[docs-dpp-gambling]: /docs/webstore/program_policies/#gambling
-[docs-dpp-hate-speech]: /docs/webstore/program_policies/#hate-speech
-[docs-dpp-illegal-activities]: /docs/webstore/program_policies/#illegal-activities
-[docs-dpp-impersonation]: /docs/webstore/program_policies/#impersonation
-[docs-dpp-keyword-spam]: /docs/webstore/program_policies/#keyword-spam
-[docs-dpp-limited-use]: /docs/webstore/program_policies/#limited_use
-[docs-dpp-other-userdata]: /docs/webstore/program_policies/#other-userdata
-[docs-dpp-permissions]: /docs/webstore/program_policies/#permissions
-[docs-dpp-privacy-policy]: /docs/webstore/program_policies/#post-privacy-policy
-[docs-dpp-prohibited-products]: /docs/webstore/program_policies/#prohibited-products
-[docs-dpp-prominent-disclosure]: /docs/webstore/program_policies/#prominent-disclosure
-[docs-dpp-repetitive-content]: /docs/webstore/program_policies/#repetitive-content
-[docs-dpp-sexually-explicit]: /docs/webstore/program_policies/#sexually-explicit
-[docs-dpp-single-purpose]: /docs/webstore/program_policies/#single-purpose
-[docs-dpp]: /docs/webstore/program_policies/
+[docs-dpp-api-use]: /docs/webstore/program-policies/api-use/
+[docs-dpp-bullying]: /docs/webstore/program-policies/hate-and-violence/
+[docs-dpp-code-readability]: /docs/webstore/program-policies/code-readability/
+[docs-dpp-content-policies]: /docs/webstore/program-policies/explicit-material/
+[docs-dpp-deceptive-installation]: /docs/webstore/program-policies/deceptive-installation-tactics/
+[docs-dpp-functionality]: /docs/webstore/program-policies/minimum-functionality/
+[docs-dpp-gambling]: /docs/webstore/program-policies/regulated-goods-and-services/
+[docs-dpp-hate-speech]: /docs/webstore/program-policies/hate-and-violence/
+[docs-dpp-illegal-activities]: /docs/webstore/program-policies/regulated-goods-and-services/
+[docs-dpp-impersonation]: /docs/webstore/program-policies/impersonation-and-intellectual-property/
+[docs-dpp-keyword-spam]: /docs/webstore/program-policies/spam-and-abuse/
+[docs-dpp-limited-use]: /docs/webstore/program-policies/limited-use/
+[docs-dpp-other-userdata]: /docs/webstore/program-policies/data-handling/
+[docs-dpp-permissions]: /docs/webstore/program-policies/permissions/
+[docs-dpp-privacy-policy]: /docs/webstore/program-policies/privacy/
+[docs-dpp-prohibited-products]: /docs/webstore/program-policies/malicious-and-prohibited/
+[docs-dpp-prominent-disclosure]: /docs/webstore/program-policies/disclosure-requirements/
+[docs-dpp-repetitive-content]: /docs/webstore/program-policies/spam-and-abuse/
+[docs-dpp-sexually-explicit]: /docs/webstore/program-policies/explicit-material/
+[docs-dpp-single-purpose]: /docs/webstore/program-policies/quality-guidelines/
 [docs-options]: /docs/extensions/mv3/options/
 [docs-override-page]: /docs/extensions/mv3/override/
 [docs-override-settings]: /docs/extensions/mv3/settings_override/
 [docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
-[docs-publish-setup]: /docs/webstore/publish/#setup-a-developer-account
-[docs-single-purpose-faq]: /docs/extensions/mv3/single_purpose/
+[docs-publish-setup]: /docs/webstore/cws-dashboard-privacy/#set-privacy-policy
+[docs-service-workers]: /docs/extensions/mv3/service_workers/
+[docs-single-purpose-faq]: /docs/webstore/program-policies/quality-guidelines-faq
+[lie-fi]: https://web.dev/performance-poor-connectivity/#what-is-lie-fi
 [mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content
 [mdn-cookie-store]: https://developer.mozilla.org/docs/Web/API/Cookie_Store_API
 [mdn-document-cookie]: https://developer.mozilla.org/docs/Web/API/Document/cookie

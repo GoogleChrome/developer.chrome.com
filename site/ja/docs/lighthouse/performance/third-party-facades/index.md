@@ -5,7 +5,7 @@ description: ファサードを使用してサードパーティのリソース�
 date: 2020-12-01
 ---
 
-[サードパーティのリソース](https://web.dev/third-party-javascript/)は、広告や動画の表示やソーシャルメディアとの統合でよく使用されます。デフォルトのアプローチでは、ページが読み込まれるとすぐにサードパーティのリソースが読み込まれますが、これによりページの読み込みが不必要に遅くなる可能性があります。サードパーティのコンテンツが重要でない場合は、[遅延読み込み](https://web.dev/fast/#lazy-load-images-and-video)を行うことで、このパフォーマンスコストを削減できます。
+[サードパーティのリソース](https://web.dev/articles/third-party-javascript)は、広告や動画の表示やソーシャルメディアとの統合でよく使用されます。デフォルトのアプローチでは、ページが読み込まれるとすぐにサードパーティのリソースが読み込まれますが、これによりページの読み込みが不必要に遅くなる可能性があります。サードパーティのコンテンツが重要でない場合は、[遅延読み込み](https://web.dev/articles/fast#lazy_load_images_and_video)を行うことで、このパフォーマンスコストを削減できます。
 
 このレポートでは、操作時に遅延読み込みできるサードパーティの埋め込みに焦点を当てます。その場合、ユーザーが操作するまで、サードパーティのコンテンツの代わりに*ファサード*が使用されます。
 
@@ -49,11 +49,15 @@ Lighthouseは、ソーシャルボタンウィジェットや動画埋め込み 
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Vimeo埋め込みプレーヤー
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### ライブチャット (Intercom、Drift、Help Scout、Facebook Messenger)
 

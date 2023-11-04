@@ -1,0 +1,57 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% set show = 5 %}
+
+<div class="display-none">
+  {{ icon('pin', {id: 'pinIcon', hidden:true}) }}
+  {{ icon('calendar', {id: 'calendarIcon', hidden:true}) }}
+  {{ icon('launch', {id: 'launchIcon', className:'event-card__launch-icon', hidden:true}) }}
+  {{ icon('slides', {id: 'slidesIcon', hidden:true}) }}
+  {{ icon('video', {id: 'videoIcon', hidden:true}) }}
+</div>
+
+<div class="events-list">
+  <div class="events-list__selected-filters display-flex flex-flow-row-wrap grid-gap-100">
+      <span id="mobile-filters-opener"
+            class="mobile-filters-btn surface color-blue-medium hairline rounded-lg tag-pill type--label display-inline-flex align-center">
+        {{ icon('filters') }} {{ 'i18n.events.filters' | i18n(locale) }}
+      </span>
+
+    <tag-pill-list id="active-filters"></tag-pill-list>
+  </div>
+
+  <web-tabs>
+    {% set loadMorei18n = {
+      buttonLabel: 'i18n.events.load_more' | i18n,
+      errorMessage: 'i18n.events.load_more_error' | i18n,
+      errorLinkLabel: 'i18n.events.load_more_error_link' | i18n,
+      noResultsMessage: 'i18n.events.no_upcoming_matches' | i18n
+    } %}
+    <web-tab title="{{ 'i18n.events.upcoming_events' | i18n(locale) }} ({{ collections.currentEvents.length }})">
+      <load-more  id="upcoming-events"
+                  total="{{ collections.currentEvents.length }}"
+                  i18n='{{ loadMorei18n|dump|safe }}'>
+        {% for event in collections.currentEvents.slice(0,show) %}
+          {% include 'partials/event-card.njk' %}
+        {% endfor %}
+      </load-more>
+    </web-tab>
+
+    {% set loadMorei18n = {
+      buttonLabel: 'i18n.events.load_more' | i18n,
+      errorMessage: 'i18n.events.load_more_error' | i18n,
+      errorLinkLabel: 'i18n.events.load_more_error_link' | i18n,
+      noResultsMessage: 'i18n.events.no_past_matches' | i18n
+    } %}
+    <web-tab title="{{ 'i18n.events.past_events' | i18n(locale) }} ({{ collections.pastEvents.length }})">
+      <load-more id="past-events"
+                 total="{{ collections.pastEvents.length }}"
+                 i18n='{{ loadMorei18n|dump|safe }}'>
+        {% for event in collections.pastEvents.slice(0,show) %}
+          {% include 'partials/event-card.njk' %}
+        {% endfor %}
+      </load-more>
+    </web-tab>
+  </web-tabs>
+</div>
+

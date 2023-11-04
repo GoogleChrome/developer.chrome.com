@@ -6,7 +6,7 @@ authors:
 date: 2022-02-21
 updated: 2022-02-21
 description: "Throttling WebSocket requests, new Reporting API pane, console styling and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5T6ul166nHYcExpepRoy.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5UIQl4sIWMT0UD4O1GmJ.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -14,15 +14,15 @@ tags:
   - chrome-99
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5UIQl4sIWMT0UD4O1GmJ.jpg -->
+{% YouTube id='zFVWeOKZBHs' %}
 
 ## Throttling WebSocket requests {: #websocket }
 
 The **Network** panel now supports throttling web socket requests. Previously, the network throttling didn't work on web socket requests.
 
-Open the **Network** panel, click on a web socket request and open the **Messages** tab to observe the message transfers. Select **Slow 3G** to throttle the speed. 
+Open the **Network** panel, click on a web socket request and open the **Messages** tab to observe the message transfers. Select **Slow 3G** to throttle the speed.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZHJibovD0IRQ7KrWb0aD.png", alt="Throttling WebSocket requests", width="800", height="540" %}
 
@@ -33,13 +33,13 @@ Chromium issue: [423246](https://crbug.com/423246)
 
 Use the new **Reporting API** pane to monitor the reports generated on your page and their status.
 
-The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more. 
+The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.
 
-Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane. 
+Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.
 
 The **Reports** section shows you a list of reports generated on your page and their status. Click on it to view the report’s details.
 
-The **Endpoints** section gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header. 
+The **Endpoints** section gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Reporting API pane", width="800", height="560" %}
 
@@ -61,11 +61,11 @@ Chromium issue: [1257499](https://crbug.com/1257499#c38)
 
 ## Better console styling, formatting and filtering {: #console }
 
-### Properly style log messages with ANSI escape code {: #console-styling } 
+### Properly style log messages with ANSI escape code {: #console-styling }
 
 You can now use the [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code) to properly style console messages. Previously, DevTools console had very limited (and partly broken) support for ANSI escape sequences.
 
-It is common for [Node.js](https://nodejs.org/) developers to colorize log messages via ANSI escape sequences, often with the help of some styling libraries like [chalk](https://www.npmjs.com/package/chalk), [colors](https://www.npmjs.com/package/colors), [ansi-colors](https://www.npmjs.com/package/ansi-colors), [kleur](https://www.npmjs.com/package/kleur), etc. 
+It is common for [Node.js](https://nodejs.org/) developers to colorize log messages via ANSI escape sequences, often with the help of some styling libraries like [chalk](https://www.npmjs.com/package/chalk), [colors](https://www.npmjs.com/package/colors), [ansi-colors](https://www.npmjs.com/package/ansi-colors), [kleur](https://www.npmjs.com/package/kleur), etc.
 
 With these changes, you can now debug your Node.js applications seamlessly using DevTools, with proper colorized console messages. Open this [demo](https://stackblitz.com/edit/node-colors-test) to view it yourself!
 
@@ -94,7 +94,7 @@ Chromium issues: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 
 When filtering the console message, a console message is now shown if its message content matches the filter or the title of the group (or the ancestor group) matches the filter. Previously, the console group title would show despite the filter.
 
-In addition, if a console message is shown, the group (or the ancestor group) it belongs to is now shown as well. 
+In addition, if a console message is shown, the group (or the ancestor group) it belongs to is now shown as well.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7iE7r79DI3cQxObhiZUh.png", alt="console group filter", width="800", height="612" %}
 
@@ -103,13 +103,13 @@ In addition, if a console message is shown, the group (or the ancestor group) it
 Chromium issue: [1068788](https://crbug.com/1068788)
 
 
-## Sourcemaps improvements {: #sourcemap }
+## Source maps improvements {: #sourcemap }
 
-### Debug Chrome extension with sourcemap files {: #extension }
+### Debug Chrome extension with source map files {: #extension }
 
-You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging.
+You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with sourcemap files", width="800", height="518" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with source map files", width="800", height="518" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1e73eb62955de7c4b0920575c7b374d47dab6a65 #}
 
@@ -118,7 +118,7 @@ Chromium issue: [212374](https://crbug.com/212374)
 
 ### Improved source folder tree in the Sources panel {: #source-tree }
 
-The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps.
+The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the source maps.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Wl1pPVfQ51NaCtpp3KuY.png", alt="Improved source folder tree in the Sources panel", width="800", height="444" %}
 
@@ -129,20 +129,20 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 
 ### Display worker source files in the Sources panel {: #worker-sourcemap }
 
-[Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly.
+[Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="ALT_TEXT_HERE", width="800", height="509" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
-Chromium issue: [1277002](https://crbug.com/1277002) 
+Chromium issue: [1277002](https://crbug.com/1277002)
 
 
-# Chrome’s Auto Dark Theme updates {: #auto-dark-mode }
+## Chrome’s Auto Dark Theme updates {: #auto-dark-mode }
 
 The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously.
 
-Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate perfers-color-scheme** dropdown will be disabled and set to **perfers-color-scheme: dark** automatically.
+Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate prefers-color-scheme** dropdown will be disabled and set to **prefers-color-scheme: dark** automatically.
 
 Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System.
 
@@ -164,7 +164,7 @@ Here is an example captured with the [Google Pixelbook](https://www.google.com/c
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f60936b29519e0cf387cd0a133d43885c6eb183d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22bb84d657aa69f6f7d5067605c2c133a5714172 #}
 
-Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995) 
+Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
 
 ## Miscellaneous highlights {: #misc }
@@ -173,11 +173,11 @@ These are some noteworthy fixes in this release:
 
 - Fixed the [edit cookies](/docs/devtools/storage/cookies/#edit) issue in the **Cookies** pane. ([1290196](https://crbug.com/1290196))
 - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743))
-- Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)).
-- Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)).
+- Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)).
+- Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)).
 - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
-- Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513) 
+- Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)
 - No reload required when [switching light/dark theme](/docs/devtools/customize/dark-theme/) in DevTools. ([1278738](https://crbug.com/1278738))
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

@@ -306,8 +306,5 @@ Did you enjoy the post? If you have any questions or suggestions for the future 
 hear from you in the comment section below or [@kosamari](https://twitter.com/kosamari) on Twitter.
 
 <a class="button button-primary gc-analytics-event attempt-right"
-   href="/web/updates/2018/09/inside-browser-part2"
+   href="/blog/inside-browser-part2"
    data-category="InsideBrowser" data-label="Part1 / Next">Next: What happens in navigation</a>
-
-
-

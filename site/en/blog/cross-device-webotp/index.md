@@ -61,7 +61,7 @@ completing phone number verification on desktop in Chrome 93.
 
 ### Prerequisites {: #prerequisites}
 
-* A desktop or a laptop computer (Windows, Mac, Linux or Chrome OS).
+* A desktop or a laptop computer (Windows, Mac, Linux or ChromeOS).
 * An Android phone with [Google Play Services version
   20.30.12 or higher](https://support.google.com/googleplay/answer/9037938).
 * Chrome 93 or later, both on desktop or laptop and mobile. [Chrome 93
@@ -124,7 +124,7 @@ browser automatically forwards the OTP to the site and resolves the
 the verification process.
 
 Learn more at [Verify phone numbers on the web with the WebOTP
-API](https://web.dev/web-otp/).
+API](https://web.dev/articles/web-otp).
 
 {% Aside 'gotchas' %}
 

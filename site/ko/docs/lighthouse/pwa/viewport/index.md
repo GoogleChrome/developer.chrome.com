@@ -24,7 +24,7 @@ updated: 2019-08-20
 
 Lighthouse `width`가 `device-width`와 같은지 확인하지 _않습니다_. `initial-scale` 키-값 쌍을 확인하지 않습니다. 그러나 모바일 장치에서 페이지가 올바르게 렌더링되도록 두 가지를 모두 포함해야 합니다.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 뷰포트 메타 태그를 추가하는 방법
 

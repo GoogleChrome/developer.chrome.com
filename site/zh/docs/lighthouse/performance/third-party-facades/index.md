@@ -5,7 +5,7 @@ description: 了解使用 Facade 延迟加载第三方资源的机会。
 date: 2020-12-01
 ---
 
-[第三方资源](https://web.dev/third-party-javascript/)通常用于展示广告或视频以及集成社交媒体。默认方法是在页面加载后立即加载第三方资源，但这可能会不必要地减慢页面的加载速度。如果第三方内容不是那么重要，则可以通过[延迟加载](https://web.dev/fast/#lazy-load-images-and-video)来降低这种性能消耗。
+[第三方资源](https://web.dev/articles/third-party-javascript)通常用于展示广告或视频以及集成社交媒体。默认方法是在页面加载后立即加载第三方资源，但这可能会不必要地减慢页面的加载速度。如果第三方内容不是那么重要，则可以通过[延迟加载](https://web.dev/articles/fast#lazy_load_images_and_video)来降低这种性能消耗。
 
 此审计重点介绍了可以在交互时延迟加载的第三方嵌入内容。在这种情况下，在用户与其交互之前，将使用*{nbsp}facade*替换掉第三方内容。
 
@@ -49,11 +49,15 @@ Lighthouse 会寻找可延迟加载的第三方产品，例如社交按钮小部
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Vimeo 嵌入式播放器
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### 实时聊天（Intercom, Drift, Help Scout, Facebook Messenger）
 

@@ -25,6 +25,7 @@ declare global {
     title: string;
     type?: PostTypes;
     url: string;
+    apiNamespacePaths?: string[];
   }
 }
 

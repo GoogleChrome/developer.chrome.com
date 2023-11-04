@@ -22,26 +22,26 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) mostra o tam
 
 Com base nos [dados do arquivo HTTP](https://httparchive.org/reports/state-of-the-web?start=latest#bytesTotal), a carga útil média da rede está entre 1.700 e 1.900 KiB. Para ajudar a revelar as cargas úteis mais altas, o Lighthouse sinaliza páginas cujo total de solicitações de rede excede 5.000 KiB.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como reduzir o tamanho da carga útil
 
-Tente manter o tamanho total de bytes abaixo de 1.600 KiB. Essa meta é baseada na quantidade de dados que podem ser baixados teoricamente em uma conexão 3G enquanto ainda atinge um [tempo de interação](https://web.dev/tti/) de 10 segundos ou menos.
+Tente manter o tamanho total de bytes abaixo de 1.600 KiB. Essa meta é baseada na quantidade de dados que podem ser baixados teoricamente em uma conexão 3G enquanto ainda atinge um [tempo de interação](https://web.dev/articles/tti) de 10 segundos ou menos.
 
 Aqui estão algumas maneiras de manter o tamanho da carga útil baixo:
 
-- Adie as solicitações até que sejam necessárias. Consulte o [padrão PRPL](https://web.dev/apply-instant-loading-with-prpl/) para uma abordagem possível.
+- Adie as solicitações até que sejam necessárias. Consulte o [padrão PRPL](https://web.dev/articles/apply-instant-loading-with-prpl) para uma abordagem possível.
 - Otimize as solicitações para serem o menor possível. As técnicas possíveis incluem:
-    - [Minimize e comprima cargas úteis de rede](https://web.dev/reduce-network-payloads-using-text-compression/).
-    - [Use WebP em vez de JPEG ou PNG para suas imagens](https://web.dev/serve-images-webp/).
-    - [Defina o nível de compressão de imagens JPEG para 85](https://web.dev/use-imagemin-to-compress-images/).
-- Solicitações de cache para que a página não baixe novamente os recursos em visitas repetidas. Consulte a [página inicial de confiabilidade](https://web.dev/reliable/) da rede para saber como o cache funciona e como implementá-lo.
+    - [Minimize e comprima cargas úteis de rede](https://web.dev/articles/reduce-network-payloads-using-text-compression).
+    - [Use WebP em vez de JPEG ou PNG para suas imagens](https://web.dev/articles/serve-images-webp).
+    - [Defina o nível de compressão de imagens JPEG para 85](https://web.dev/articles/use-imagemin-to-compress-images).
+- Solicitações de cache para que a página não baixe novamente os recursos em visitas repetidas. Consulte a [página inicial de confiabilidade](https://web.dev/explore/reliable) da rede para saber como o cache funciona e como implementá-lo.
 
 ## Orientação específica para pilha
 
 ### Angular
 
-Aplique a [divisão de código no nível da rota](https://web.dev/route-level-code-splitting-in-angular/) para minimizar o tamanho de seus pacotes de JavaScript. Além disso, considere pré-armazenar em cache os ativos com o [trabalhador de serviço Angular](https://web.dev/precaching-with-the-angular-service-worker/).
+Aplique a [divisão de código no nível da rota](https://web.dev/articles/route-level-code-splitting-in-angular) para minimizar o tamanho de seus pacotes de JavaScript. Além disso, considere pré-armazenar em cache os ativos com o [trabalhador de serviço Angular](https://web.dev/articles/precaching-with-the-angular-service-worker).
 
 ### Drupal
 

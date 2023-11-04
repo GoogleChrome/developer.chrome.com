@@ -1,0 +1,20 @@
+{% extends "layouts/base.njk" %}
+
+{% block css %}
+{% InlineCss '/css/single-post.css' %}
+{% InlineCss '/css/chrome-main.css' %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+  <script type="module" src="{{ helpers.hashForProd('/js/slider.js') }}"></script>
+  <script type="module" src="{{ helpers.hashForProd('/js/100.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+  {% include 'partials/chrome-100-hero-section.njk' %}
+  {% include 'partials/chrome-100-card-section.njk' %}
+  {% include 'partials/chrome-100-footer-section.njk' %}
+{% endblock %}

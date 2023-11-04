@@ -5,10 +5,11 @@ description: |
   Learn how to specify what icon your Progressive Web App displays on iOS home screens.
 codelabs: codelab-apple-touch-icon
 date: 2019-08-27
-updated: 2019-09-19
+updated: 2023-03-24
+is_outdated: true
 ---
 
-When iOS Safari users add [Progressive Web Apps (PWAs)](https://web.dev/progressive-web-apps/#make-it-installable) to
+When iOS Safari users add [Progressive Web Apps (PWAs)](https://web.dev/explore/progressive-web-apps#make-it-installable) to
 their home screens, the icon that appears is called the *Apple touch icon*.
 You can specify what icon your app should use by including a
 `<link rel="apple-touch-icon" href="/example.png">` tag in the `<head>` of your
@@ -18,7 +19,7 @@ user experience.
 
 ## How the Lighthouse Apple touch icon audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages without a `<link rel="apple-touch-icon" href="/example.png">`
 tag in the `<head>`:
 
@@ -34,7 +35,7 @@ tag in the `<head>`:
 Lighthouse doesn't check whether the icon actually exists or whether the icon is
 the correct size.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## How to add an Apple touch icon
 

@@ -24,7 +24,7 @@ Quando seu JavaScript leva muito tempo para ser executado, ele desacelera o dese
 
 - **Custo de execução**
 
-    JavaScript também é executado no thread principal. Se sua página executa muitos códigos antes de eles realmente serem necessários, isso também atrasa seu [Time to Interactive](https://web.dev/tti/) (tempo até interativa), que é uma das principais métricas relacionadas a como os usuários percebem a velocidade de sua página.
+    JavaScript também é executado no thread principal. Se sua página executa muitos códigos antes de eles realmente serem necessários, isso também atrasa seu [Time to Interactive](https://web.dev/articles/tti) (tempo até interativa), que é uma das principais métricas relacionadas a como os usuários percebem a velocidade de sua página.
 
 - **Custo de memória**
 
@@ -38,11 +38,11 @@ Quando seu JavaScript leva muito tempo para ser executado, ele desacelera o dese
 
 Para ajudá-lo a identificar os maiores contribuintes para o tempo de execução, o Lighthouse relata o tempo gasto na execução, avaliação e análise de cada arquivo JavaScript que sua página carrega.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como acelerar a execução do JavaScript
 
-{% include 'content/lighthouse-performance/js-perf.njk' %}
+{% Partial 'lighthouse-performance/js-perf.njk' %}
 
 ## Recursos
 

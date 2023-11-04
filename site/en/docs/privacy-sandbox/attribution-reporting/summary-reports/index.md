@@ -8,19 +8,16 @@ description: >
   Measure ad conversions aggregated across users, without revealing
   individual data. Formerly known as aggregate reports.
 date: 2022-02-16
+updated: 2023-09-18
 authors:
   - alexandrawhite
 ---
 
 ## Implementation status
 
-*  In the initial proposal
-   ([client-side](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md),
-   [server-side](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md))
-   and discussion stage
-*  Attribution Reporting [API
-   specification](https://wicg.github.io/conversion-measurement-api/)
 *  [Chrome platform status](https://chromestatus.com/feature/5762222527610880)
+*  [Participate and experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/).
+*  Keep track of the [API changes](/docs/privacy-sandbox/attribution-reporting-updates/).
 
 ## What is an Attribution Reporting summary report?
 
@@ -30,10 +27,10 @@ The API doesn't rely on third-party cookies or mechanisms that can be used to
 identify individual users across sites.
 
 This API offers two types of reports. [Event-level
-reports](/docs/privacy-sandbox/attribution-reporting-event-introduction/)
+reports](/docs/privacy-sandbox/attribution-reporting/#event-level-reports)
 are already available for testing in Chrome, which associate a specific ad
 click or view with less detailed conversion data. The browser delays sending
-reports to adtech companies for multiple days to prevent identity connection
+reports to ad tech companies for multiple days to prevent identity connection
 across sites. 
 
 A _summary report_ (formerly known as an aggregate report) is compiled for a
@@ -60,15 +57,17 @@ Today, ad conversion measurement often relies on [third-party
 cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies).
 Browsers are restricting access to third-party cookies to make it more
 difficult to track users across sites and improve user privacy. The
-Attribution Reporting API allows adtechs measure conversations in a
+Attribution Reporting API allows ad techs measure conversations in a
 privacy-preserving way, without third-party cookies.
 
 In contrast to Attribution Reporting API's event-level reports, which associate
 singular events (such as clicks or views) to [coarse
-data](/docs/privacy-sandbox/glossary/#coarse-data), summary reports provide aggregated data (such as the number of users who converted) attached to detailed conversion data (such as what specific product the users purchased). summary reports provide aggregated data (such as the number of users who converted) attached to detailed conversion data (such as what specific product the users purchased).
+data](/docs/privacy-sandbox/glossary/#coarse-data), summary reports provide
+aggregated data (such as the number of users who converted) attached to
+detailed conversion data (such as what specific product the users purchased).
 
 {% Aside 'key-term' %}
-Adtechs [run an aggregation service](#aggregation-service) that processes
+Ad techs [run an aggregation service](#aggregation-service) that processes
 browser events. [Noise is
 added](https://en.wikipedia.org/wiki/Additive_noise_mechanisms) to most data
 points reported in the event, so that no single individual's data is
@@ -78,23 +77,13 @@ _Aggregated data_ is noised values relevant to measuring conversions, such as th
 {% endAside %}
 
 Unlike third-party cookies, report types from the Attribution Reporting API
-don't allow any entity (such as adtech, buyers, publishers, etc) to "see" a
+don't allow any entity (such as ad tech, buyers, publishers, etc) to "see" a
 user's browsing behavior across multiple sites, while still making it possible
 to measure ad conversions.
 
 ## How is user data captured and aggregated?
 
-{% Aside %}
-This API is a work in progress and will evolve over time, dependent on
-ecosystem feedback and input.
-
-All features that the Attribution Reporting API supports are proposals. Each of
-these proposals is open to discussion and feedback, including those that have
-an initial browser implementation ready.
-
-This API is being incubated and developed in the open. [Consider participating](/docs/privacy-sandbox/attribution-reporting-introduction/#participate)
-in the discussion.
-{% endAside %}
+{% Partial 'privacy-sandbox/feedback-aside.njk' %}
 
 With the Attribution Reporting API, an individual user's detailed activity
 across sites, and potentially the user's identity across sites, is kept
@@ -106,37 +95,36 @@ parties from accessing the underlying data.
 _Aggregatable reports_ are reports collected from individual users' browsers.
 They detail cross-site user behavior and
 [conversions](/docs/privacy-sandbox/glossary/#conversion), which are defined
-by adtech providers.
+by ad tech providers.
 {% endAside %}
 
-The proposed process to create a summary report is as follows:
+The process to create a summary report is as follows:
 
 1. Aggregatable reports are sent to the _reporting origin_, operated by an
-   adtech provider.
-   *  For example, these reports may include location details, number of
-      clicks, value of the conversion (such as a purchase price), or other
-      metrics defined by the adtech provider. Since the reports are encrypted,
-      adtech providers cannot see or access the content of any individual
-      report.
-1. Once the adtech reporting origin receives the aggregatable reports, the
-   adtech sends the reports to an [_aggregation service_](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md).
+   ad tech provider.
+   *  These reports may include location details, number of clicks, value of
+	 the conversion (such as a purchase price), or other metrics defined by the
+	 ad tech provider. Reports are encrypted, so ad techs cannot see or access the
+	 content of any individual report.
+1. Once the ad tech reporting origin receives the aggregatable reports, the
+   ad tech sends the reports to an [_aggregation service_](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md).
    *  In our initial implementation, the [aggregation
-      service](#aggregation-service) is operated by the adtech provider
-      with a Trusted Execution Environment (TEE) hosted in the cloud. The
+      service](#aggregation-service) is operated by the ad tech provider
+      with a trusted execution environment (TEE) hosted in the cloud. The
       _coordinator_ ensures that only verified entities have access to
-      decryption keys and that no other intermediary (the adtech, the cloud
+      decryption keys and that no other intermediary (the ad tech, the cloud
       provider, or any other party) can access and decrypt sensitive data
       outside of the aggregation process.
 1. The aggregation service combines the decrypted data and outputs a _summary
-   report_ to the adtech provider.
-   *  The summary report includes a summary of the combined data. The adtech
+   report_ to the ad tech provider.
+   *  The summary report includes a summary of the combined data. The ad tech
       provider can read and use the summary report.
 
 <figure>
 {% Img
    class="screehshot",
    src="image/VbsHyyQopiec0718rMq2kTE1hke2/hoRtQVV2b2MCXIKi1okK.jpg", 
-   alt="The proposed process to create a summary report is represented by encrypted reports sent to a collector server. The collector server sends the data to a secure aggregation service, which has a key to decrypt the data and create the summary report. The report is then sent back to the adtech provider.",
+   alt="The process to create a summary report is represented by encrypted reports sent to a collector server. The collector server sends the data to a secure aggregation service, which has a key to decrypt the data and create the summary report. The report is then sent back to the ad tech provider.",
    width="800", height="168"
 %}
   <figcaption>
@@ -157,29 +145,37 @@ audit. These safeguards are meaningful to:
 
 *  Individual users, who can know their individual data can only be accessed
    in aggregate and not by any singular entity
-*  Adtechs, who can verify that the aggregation process uses valid data and
+*  Ad techs, who can verify that the aggregation process uses valid data and
    can be monitored appropriately
 
-
-### Proposal for an aggregation service {: #aggregation-service}
-
-[The initial
-proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
-asks each adtech provider to operate their own instance of the aggregation
-service, in a Trusted Execution Environment (TEE) deployed on a cloud service
-that supports needed security features.
+### Generate reports with the Aggregation Service {: #aggregation-service}
 
 {% Aside 'key-term' %}
-A _Trusted Execution Environment_ is a special configuration of computer
+A _trusted execution environment_ is a special configuration of computer
 hardware and software that allows external parties to verify the exact
 versions of software running on the computer. TEEs allow external parties to
 verify that the software does exactly what the software manufacturer claims it
 does—nothing more or less.
 {% endAside %}
 
+[The initial
+design](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
+asks each ad tech provider to operate their own instance of the aggregation
+service, in a trusted execution environment (TEE) deployed on a cloud service
+that supports needed security features.
+
+{% Aside %}
+
+Read detailed [setup instructions for the aggregation
+service](https://github.com/google/trusted-execution-aggregation-service/#set-up-aggregation-service-for-aggregatable-reports).
+
+In the future, we intend to add support for other cloud providers that meet the
+aggregation service’s security requirements.
+{% endAside %}
+
 The TEE's code is the only place in the aggregation service which has access
 to raw reports&mdash;this code will be auditable by security researchers,
-privacy advocates, and adtechs. To confirm that the TEE is running the exact
+privacy advocates, and ad techs. To confirm that the TEE is running the exact
 approved software and that data remains secured,  the coordinator performs
 attestation.
 
@@ -197,8 +193,8 @@ The coordinator has several responsibilities:
 *  Track the aggregatable reports to prevent reuse in aggregation for summary
    reports, as reuse may reveal personal identifying information (PII).
 
-To make testing of the aggregation service available in an origin trial,
-Google will play the role of the coordinator. Longer term, we are working to
+To make testing of the aggregation service available in the now-complete origin trial,
+Google played the role of the coordinator. Longer term, we are working to
 identify one or more independent entities who can share this role.
 
 ### What information is captured?
@@ -206,9 +202,9 @@ identify one or more independent entities who can share this role.
 Summary reports offer a combination of aggregated data alongside detailed
 ad-side and conversion data.
 
-For example, an adtech provider runs an ad campaign on `news.example`, where a
+For example, an ad tech provider runs an ad campaign on `news.example`, where a
 conversion represents a user clicking an ad for shoes and completing a
-purchase of shoes on `shoes.example`. The adtech receives a summary report for
+purchase of shoes on `shoes.example`. The ad tech receives a summary report for
 this ad campaign with ID `1234567`, which states there were **518**
 conversions on shoes.example on **January 12, 2022**, with a total spend of
 **$38,174**. **60%** of conversions were from users buying blue sneakers with
@@ -217,7 +213,7 @@ product SKU `2643`. The campaign ID is detailed ad-side data, while the
 product SKUs are detailed conversion data. The number of conversions and total
 spend are aggregated data.
 
-Conversions are defined by the advertiser or adtech company, and may be
+Conversions are defined by the advertiser or ad tech company, and may be
 different for different ad campaigns. One campaign could measure the number of
 ad clicks that were followed by a user purchasing the advertised item. Another
 campaign could measure how many ad views led to advertiser site visits.
@@ -241,9 +237,9 @@ start with one individual's browser actions.
    %}
 1. The browser software matches the ad click or view with the conversion
    event. Based on this match, the browser creates an aggregatable report with
-   specific logic created by an adtech provider.
+   specific logic created by an ad tech provider.
 1. The browser encrypts this data and, after a small delay, sends it to an
-   adtech server for collection. The adtech server must rely on an aggregation
+   ad tech server for collection. The ad tech server must rely on an aggregation
    service to access the aggregated insights from these aggregatable reports.
    {% Img
       class="screehshot",
@@ -253,18 +249,17 @@ start with one individual's browser actions.
       height="209"
    %}
    
-## How will adtech providers create a summary report?
+## Create a summary report
 
-For adtech providers to retrieve a summary report, the following steps must be
+For ad tech providers to retrieve a summary report, the following steps must be
 taken:
 
-1. The adtech provider collects aggregatable reports from individual users'
-   browsers.
+1. The ad tech collects aggregatable reports from individual users' browsers.
    {% Aside %}
-   The adtech provider can only decrypt these reports in the aggregation
-   service.
+   Ad techs can only decrypt these reports in the aggregation service. The
+   decrypted data is not available outside of the TEE.
    {% endAside %}
-1. The adtech provider batches the aggregatable reports and sends the batches
+1. The ad tech provider batches the aggregatable reports and sends the batches
    to the aggregation service.
 1. The aggregation service schedules a worker to aggregate the data.
    {% Aside %}
@@ -272,23 +267,14 @@ taken:
    {% endAside %}
 1. The aggregation worker decrypts and aggregates data from the aggregatable reports,
    along with noised data (a privacy mechanism for data).
-1. The aggregation service returns the summary report to the adtech provider.
+1. The aggregation service returns the summary report to the ad tech provider.
 
-The adtech can use the summary report to inform bidding and to offer
+The ad tech can use the summary report to inform bidding and to offer
 reporting  to its own customers. A [JSON-encoded
 scheme](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#aggregate-attribution-reports)
-is the proposed format for summary reports.
+is the format for summary reports.
 
-## Engage and share feedback
-
-*  GitHub: read the [client-side
-   proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md)
-   and [aggregation service
-   proposal](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md),
-   ask questions, and suggest feedback.
-*  Developer support: ask questions and join discussions on the [Privacy
-   Sandbox Developer Support
-   repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+{% Partial 'privacy-sandbox/ar-engage.njk' %}
 
 ## Find out more
 
@@ -296,5 +282,6 @@ is the proposed format for summary reports.
    Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction/)
 *  Read the [aggregation service
    explainer](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATION_SERVICE_TEE.md)
+   and [detailed setup instructions](https://github.com/google/trusted-execution-aggregation-service/).
 *  [Digging into the Privacy
    Sandbox](https://web.dev/digging-into-the-privacy-sandbox)

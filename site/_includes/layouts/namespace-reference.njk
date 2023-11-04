@@ -4,6 +4,11 @@
 
 {% extends "layouts/base.njk" %}
 
+
+{% block css %}
+{% InlineCss '/css/main.css' %}
+{% endblock %}
+
 {% block title_bar %}
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
@@ -46,17 +51,17 @@
 
         {% if f.platformAppsOnly %}
           <div class="aside aside--warning">
-            This API is part of the deprecated Chrome Apps platform.
+            This API is part of the Chrome Apps platform, which was deprecated in 2020.
+            It remains supported for Enterprise and Education customers on ChromeOS until at least Jan 2025.
             Learn more about <a href="/docs/apps/migration">migrating your app</a>.
           </div>
         {% endif %}
 
-        {# TODO: unsupported #}
         {% if f.chromeOsOnly %}
           {# There are some historic cases of multi-platform support in Platform Apps, but
               the only restriction these days is CrOS vs everywhere. #}
           <div class="aside aside--note">
-            <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
+            <strong>Important:</strong> This API works <strong>only on ChromeOS</strong>
           </div>
         {% endif %}
 
@@ -80,6 +85,7 @@
                     <code>{{ permission }}</code><br />
                   {% endfor %}
                   {{ extra_permissions_html | safe }}
+                  {{ has_warning | safe }}
                 </div>
               </li>
             {% endif %}

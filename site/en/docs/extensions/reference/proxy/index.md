@@ -1,5 +1,6 @@
 ---
 api: proxy
+has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
 ## Manifest
@@ -179,7 +180,7 @@ chrome.proxy.settings.get(
 Note that the `value` object passed to `set()` is not identical to the `value` object passed to
 callback function of `get()`. The latter will contain a `rules.proxyForHttp.port` element.
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/manifest
 [2]: #type-ProxyConfig
 [3]: #type-ProxyRules
 [4]: #type-PacScript

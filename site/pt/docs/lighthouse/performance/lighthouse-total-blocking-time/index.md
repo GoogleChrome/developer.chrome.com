@@ -14,7 +14,7 @@ O Lighthouse apresenta a métrica TBT em segundos:
 
 ## O que o TBT mede
 
-O TBT mede a quantidade total de tempo que uma página fica bloqueada para responder à entrada do usuário, como cliques do mouse, toques na tela ou pressionar de teclas. A soma é calculada adicionando a *parte* do bloqueio de todas [as tarefas longas](https://web.dev/long-tasks-devtools/) entre [First Contentful Paint](https://web.dev/fcp/), renderização do primeiro conteúdo, e [Time to Interactive](https://web.dev/tti/), tempo até interativa. Qualquer tarefa executada por mais de 50 ms é uma tarefa longa. A quantidade de tempo após 50 ms é a parte do bloqueio. Por exemplo, se o Lighthouse detecta uma tarefa de 70 ms, a porção de bloqueio seria de 20 ms.
+O TBT mede a quantidade total de tempo que uma página fica bloqueada para responder à entrada do usuário, como cliques do mouse, toques na tela ou pressionar de teclas. A soma é calculada adicionando a *parte* do bloqueio de todas [as tarefas longas](https://web.dev/articles/long-tasks-devtools) entre [First Contentful Paint](https://web.dev/articles/fcp), renderização do primeiro conteúdo, e [Time to Interactive](https://web.dev/articles/tti), tempo até interativa. Qualquer tarefa executada por mais de 50 ms é uma tarefa longa. A quantidade de tempo após 50 ms é a parte do bloqueio. Por exemplo, se o Lighthouse detecta uma tarefa de 70 ms, a porção de bloqueio seria de 20 ms.
 
 ## Como o Lighthouse determina sua pontuação TBT
 
@@ -47,28 +47,28 @@ Esta tabela mostra como interpretar sua pontuação TBT:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como melhorar sua pontuação TBT
 
-Veja [O que está causando minhas longas tarefas?](https://web.dev/long-tasks-devtools/#what-is-causing-my-long-tasks) para aprender a diagnosticar a causa raiz de tarefas longas com o painel Desempenho do Chrome DevTools.
+Veja [O que está causando minhas longas tarefas?](https://web.dev/articles/long-tasks-devtools#what_is_causing_my_long_tasks) para aprender a diagnosticar a causa raiz de tarefas longas com o painel Desempenho do Chrome DevTools.
 
 Em geral, as causas mais comuns das tarefas longas são:
 
-- Carregamento, análise ou execução desnecessária de JavaScript. Ao analisar seu código no painel Desempenho, você pode descobrir que o thread principal está fazendo um trabalho que não é realmente necessário para carregar a página. [Reduzir as cargas úteis do JavaScript com divisão de código](https://web.dev/reduce-javascript-payloads-with-code-splitting/), [remover código não utilizado](https://web.dev/remove-unused-code/) ou [carregar de forma eficiente o JavaScript de terceiros](https://web.dev/efficiently-load-third-party-javascript/) deve melhorar sua pontuação TBT.
+- Carregamento, análise ou execução desnecessária de JavaScript. Ao analisar seu código no painel Desempenho, você pode descobrir que o thread principal está fazendo um trabalho que não é realmente necessário para carregar a página. [Reduzir as cargas úteis do JavaScript com divisão de código](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting), [remover código não utilizado](https://web.dev/articles/remove-unused-code) ou [carregar de forma eficiente o JavaScript de terceiros](https://web.dev/articles/efficiently-load-third-party-javascript) deve melhorar sua pontuação TBT.
 - Declarações de JavaScript ineficientes. Por exemplo, depois de analisar seu código no painel Desempenho, suponha que você veja uma chamada para `document.querySelectorAll('a')` que retorna 2.000 nós. Refatorar seu código para usar um seletor mais específico que retorna apenas 10 nós deve melhorar sua pontuação TBT.
 
 {% Aside %} Carregamento, análise ou execução desnecessários de JavaScript costumam ser uma oportunidade muito maior para melhorias na maioria dos sites. {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 
 - [Código fonte para auditoria de **Total Blocking Time** (tempo total de bloqueio)](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/total-blocking-time.js)
-- [As longas tarefas de JavaScript estão atrasando seu Time to Interactive (tempo até interativa)?](https://web.dev/long-tasks-devtools/)
-- [First Contentful Paint (primeira renderização de conteúdo)](https://web.dev/fcp/)
-- [Time to Interactive (tempo até interativa)](https://web.dev/tti/)
-- [Reduza os payloads do JavaScript com divisão de código](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
-- [Remova o código não utilizado](https://web.dev/remove-unused-code/)
-- [Carregue com eficiência recursos de terceiros](https://web.dev/efficiently-load-third-party-javascript/)
-- [Carregue com eficiência recursos de terceiros](https://web.dev/efficiently-load-third-party-javascript/)
+- [As longas tarefas de JavaScript estão atrasando seu Time to Interactive (tempo até interativa)?](https://web.dev/articles/long-tasks-devtools)
+- [First Contentful Paint (primeira renderização de conteúdo)](https://web.dev/articles/fcp)
+- [Time to Interactive (tempo até interativa)](https://web.dev/articles/tti)
+- [Reduza os payloads do JavaScript com divisão de código](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)
+- [Remova o código não utilizado](https://web.dev/articles/remove-unused-code)
+- [Carregue com eficiência recursos de terceiros](https://web.dev/articles/efficiently-load-third-party-javascript)
+- [Carregue com eficiência recursos de terceiros](https://web.dev/articles/efficiently-load-third-party-javascript)

@@ -1,0 +1,20 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+<div class="featured-card hairline rounded-lg width-full">
+  <div class="card-title-bar color-blue-medium">
+    {{ icon('gdg', {hidden: true}) }}
+    <span class="gap-left-300 flex-1 user-select-none">
+      {{ 'i18n.common.featured_cards.gdg.title' | i18n(locale) }}
+    </span>
+  </div>
+
+  <p class="gap-top-200">
+    {{ 'i18n.common.featured_cards.gdg.body' | i18n(locale) }} 
+  </p>
+
+  <div class="gap-top-400">
+    <a href="https://developers.google.com/community/gdg" class="material-button button-text display-inline-flex color-primary">
+      {{ 'i18n.common.featured_cards.gdg.cta' | i18n(locale) }} 
+    </a>
+  </div>
+</div>

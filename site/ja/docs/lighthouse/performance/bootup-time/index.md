@@ -20,7 +20,7 @@ JavaScriptの実行に時間がかかると、ページのパフォーマンス�
 
 - **実行コスト**
 
-    JavaScriptもまた、メインスレッドで実行されます。ページがその時点ではまだ必要のないコードを数多く実行してしまうと、[Time to Interactive (インタラクティブになるまでの時間)](https://web.dev/tti/) (ユーザーがどのようにページの速度を認識しているかを判断するための主な指標の1つ) も遅延します。
+    JavaScriptもまた、メインスレッドで実行されます。ページがその時点ではまだ必要のないコードを数多く実行してしまうと、[Time to Interactive (インタラクティブになるまでの時間)](https://web.dev/articles/tti) (ユーザーがどのようにページの速度を認識しているかを判断するための主な指標の1つ) も遅延します。
 
 - **メモリコスト**
 
@@ -34,11 +34,11 @@ JavaScriptの実行に2秒以上かかると、[Lighthouseは警告を表示し�
 
 実行時間が長くなる最大の要因を特定できるように、Lighthouseは、ページが読み込む各JavaScriptファイルの実行、評価、解析に費やされた時間を報告してくれます。
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## JavaScriptの実行を高速化する方法
 
-{% include 'content/lighthouse-performance/js-perf.njk' %}
+{% Partial 'lighthouse-performance/js-perf.njk' %}
 
 ## リソース
 

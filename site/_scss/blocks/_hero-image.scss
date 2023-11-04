@@ -1,6 +1,6 @@
 .hero-image {
-  max-height: 480px;
-  max-width: 960px;
+  max-height: calc(480px + 1.5em);
+  max-width: calc(960px + 3em);
   width: 100%;
 
   @media (min-width: 960px) {

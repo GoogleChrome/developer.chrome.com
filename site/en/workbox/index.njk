@@ -1,0 +1,167 @@
+---
+layout: 'layouts/landing.njk'
+title: 'Workbox'
+description: 'Production-ready service worker libraries and tooling.'
+sections:
+  intro:
+    - url: /docs/workbox/service-worker-overview
+    - url: /docs/workbox/service-worker-lifecycle
+    - url: /docs/workbox/caching-strategies-overview
+    - url: /docs/workbox/what-is-workbox
+  how_to_use:
+    - url: /docs/workbox/the-ways-of-workbox
+    - url: /docs/workbox/precaching-with-workbox
+    - url: /docs/workbox/using-workbox-without-precaching
+    - url: /docs/workbox/framework-integrations
+  know:
+    - url: /docs/workbox/service-worker-deployment
+    - url: /docs/workbox/remove-buggy-service-workers
+    - url: /docs/workbox/improving-development-experience
+    - url: /docs/workbox/troubleshooting-and-logging
+    - url: /docs/workbox/different-architectures
+    - url: /docs/workbox/app-shell-model
+    - url: /docs/workbox/navigation-preload
+    - url: /docs/workbox/faster-multipage-applications-with-streams
+    - url: /docs/workbox/precaching-dos-and-donts
+    - url: /docs/workbox/understanding-storage-quota
+  use_cases:
+    - url: /docs/workbox/using-workbox-window
+    - url: /docs/workbox/caching-resources-during-runtime
+    - url: /docs/workbox/forcing-a-network-timeout
+    - url: /docs/workbox/access-caches-from-the-window
+    - url: /docs/workbox/serving-cached-audio-and-video
+    - url: /docs/workbox/managing-fallback-responses
+    - url: /docs/workbox/handling-service-worker-updates
+    - url: /docs/workbox/retrying-requests-when-back-online
+    - url: /docs/workbox/using-plugins
+  resources:
+    - url: /docs/workbox/modules
+      title: Workbox Modules
+      description: Dig deeper into specific Workbox modules.
+    - url: /docs/workbox/reference
+      title: API Reference
+      description: Browse the API reference to get information on available methods in the Workbox API, broken down by module.
+    - url: /docs/workbox/migration
+      title: Migration Guides
+      description: How-to guides on migrating from older versions of Workbox.
+    - url: https://github.com/GoogleChrome/workbox
+      title: Workbox on GitHub
+      description: File issues, read release notes, and browse the source code.
+---
+
+{% from 'macros/cards/hero-card.njk' import heroCard with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-section.njk' import landingSection with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+
+{# unique styles, needed only for Workbox hero card. #}
+<style>
+.hero-card {
+  background-image: url(https://wd.imgix.net/image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kyRn8vjNdySIzbkaxFRr.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
+  --title-icon-color: var(--color-project-workbox);
+}
+
+.material-button.bg-yellow-medium {
+  color: #000;
+}
+</style>
+
+{{ heroCard(
+  title,
+  description,
+  "Documentation",
+  "/docs/workbox",
+  "",
+  "",
+  "yellow",
+  "image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/TvE0fdJmcXI8fuPc8R7A.svg"
+  )
+}}
+
+{{ landingSection(
+  'Introduction to service workers',
+  'Learn how service workers can progressively enhance your website and how Workbox makes it easy.',
+  sections.intro,
+  'green',
+  'top-4',
+  true,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/2xzRN81jadQ55f1WFkWH.svg',
+  'Waving hand icon',
+  333,
+  165,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'How to use Workbox',
+  "There's more than one way to use Workbox so you can use the right integration for your project",
+  sections.how_to_use,
+  'blue',
+  'left',
+  true,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/DoFpXgJqk97W0lokcSCf.svg',
+  'Arrow icon',
+  429,
+  278,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/pb9Ube4WajLTRTfYCRhF.svg'
+  )
+}}
+
+{{ landingSection(
+  'What you need to know',
+  'Guidance to consider when building a service worker',
+  sections.know,
+  'yellow',
+  'right',
+  true,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/rTbChNDzLjBFvBFMNONh.svg',
+  'Graduation cap',
+  284,
+  193,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg'
+  )
+}}
+
+{{ landingSection(
+  'Use cases and recipes',
+  'Learn how to handle different use cases to get the most out of workbox',
+  sections.use_cases,
+  'green',
+  'top-3',
+  false,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/n9vOrhzQ2QEwhI2MQ7G3.svg',
+  'Docs folder icon',
+  333,
+  165,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/cE1je8n7zbHoDRq6KoGa.svg'
+  )
+}}
+
+<div class="landing-section landing-section--boxes rounded-lg width-full display-grid gap-top-500">
+  {{ landingDeco(
+    'Additional resources',
+    'Dive deeper into Workbox modules, source code, and more',
+    'yellow',
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
+    'alt',
+    291,
+    251,
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg'
+    )
+  }}
+  {% for item in sections.resources %}
+    <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+      <h2 class="type--h4">
+        <a class="surface display-inline-flex color-text" href="{{item.url}}">
+          {{ item.title }}
+        </a>
+      </h2>
+      <p class="flex-1">{{ item.description }}</p>
+    </div>
+  {% endfor %}
+</div>

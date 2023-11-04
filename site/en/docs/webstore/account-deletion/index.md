@@ -15,13 +15,22 @@ things you need to understand before you delete an account:
 
 - Account deletion is permanent. There is no "undo" for this action.
 - You can't delete an account that still has published items. If you have published items, make sure
-  to [unpublish][unpublish] them before you try and delete the account.
+  to [unpublish](#remove-listing) them before you try and delete the account.
 - Group publisher accounts can only be deleted by the owner or manager of the associated Google
   Group.
 
+## How to remove a store listing item {: #remove-listing }
+
+Visit the [developer dashboard][dev-dashboard]. Click the item you want to
+remove from the store, so that the edit page for that item appears. Then click the "more options"
+icon in the top right-hand corner and select **Unpublish**. Your listing will no longer be visible
+in the store.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GdnJe3SsuL84LFkLODZl.png", alt="Screenshot of how to unpublish an item", width="299", height="205" %}
+
 ## How to delete a developer account {: #how-to-delete-a-developer-account }
 
-To delete a developer account, first make sure you've [unpublished][unpublish] any published items. Then, go to
+To delete a developer account, first make sure you've [unpublished](#remove-listing) any published items. Then, go to
 your account page on the Chrome Web Store [Developer Dashboard][dev-dashboard]. Scroll down to the **Developer
 Account** section:
 
@@ -32,7 +41,7 @@ Click on **Delete developer account** to permanently delete the developer accoun
 ## How to delete a group publisher account {: #how-to-delete-a-group-publisher-account }
 
 To delete a [group publisher][group-publisher] account, select it using the "Publisher" pulldown at the top of the
-account page, then proceed as described above. Make sure that you have [unpublished][unpublish] any items
+account page, then proceed as described above. Make sure that you have [unpublished](#remove-listing) any items
 associated with the group publisher account.
 
 With the group publisher account selected, you'll see a **Group publisher account** section:
@@ -43,5 +52,4 @@ Click on **Delete group publisher account** to permanently delete the group publ
 
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
 [group-publisher]: /docs/webstore/group-publishers/
-[unpublish]: /docs/webstore/faq/#faq-listing-03
 

@@ -25,7 +25,7 @@ tags:
 
 *感谢 [韩昌浩 @hanselfmu](https://github.com/hanselfmu) 提供的翻译*。
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='cGotLGL1-Ko' %}
 
@@ -36,7 +36,7 @@ tags:
 利用新的**录制器**面板来录制、重放、以及测量用户操作的性能。
 
 <!-- [Open the **Recorder** panel](/docs/devtools/recorder/#open). Follow the instructions on screen to start a new recording.  -->
-打开**录制器**面板(/docs/devtools/recorder/#open)。请跟随屏幕上的指示来开始一次新的录制。
+[打开**录制器**面板](/docs/devtools/recorder/#open)。请跟随屏幕上的指示来开始一次新的录制。
 
 <!-- For example, you can record the coffee checkout process with this [coffee ordering demo](https://coffee-cart.netlify.app/) application. After adding a coffee and filling out payment details, you can end the recording, replay the process or click on the **Measure performance** button to measure the user flow in the **Performance** panel. -->
 例如，您可以在这个[点咖啡](https://coffee-cart.netlify.app/)应用上录制一次咖啡购买的过程。在添加一杯咖啡并填写支付信息之后，您可以结束录制，重放这个过程，或点击**测量性能**按钮来在**性能**面板中测量用户操作的性能。
@@ -94,7 +94,7 @@ Chromium 议题: [1073064](https://crbug.com/1073064)
 
 
 <!-- ## [Experimental] Syncing DevTools settings across devices {: #sync } -->
-## [实验] 跨设备同步 DevTools 设置 {: #sync }
+## [实验阶段] 跨设备同步 DevTools 设置 {: #sync }
 
 <!-- Your DevTools settings are now synced across devices by default when you turn on Chrome profile sync. You can change the DevTools sync settings via **Settings** > **Sync** > **Enable settings sync**.  -->
 现在当您打开 Chrome 个人设置同步之后，您的 DevTools 设置会默认在多个设备上同步。您可以在**设置** > **同步** > **启用设置同步**中更改 DevTools 的同步设置。
@@ -111,5 +111,5 @@ Chromium 议题: [1073064](https://crbug.com/1073064)
 
 Chromium 议题: [1245541](https://crbug.com/1245541)
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

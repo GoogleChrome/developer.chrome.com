@@ -42,14 +42,14 @@ The following code runs in an inline `<script>` element using JavaScript modules
 
       // This code assumes your app has a promptForUpdate() method,
       // which returns true if the user wants to update.
-	// Implementing this is app-specific; some examples are:
-	// https://open-ui.org/components/alert.research or
+      // Implementing this is app-specific; some examples are:
+      // https://open-ui.org/components/alert.research or
       // https://open-ui.org/components/toast.research
-	const updateAccepted = await promptForUpdate();
+      const updateAccepted = await promptForUpdate();
 
-	if (updateAccepted) {
-        wb.mesageSkipWaiting();
-}
+      if (updateAccepted) {
+        wb.messageSkipWaiting();
+      }
     };
 
     // Add an event listener to detect when the registered
@@ -96,6 +96,6 @@ This isn't a pattern every application that deploys a service worker needs to fo
 - You use precaching extensively. Where static assets are concerned, you can have issues later on if you use a network-first or network-only strategy for navigation requests, but lazy-load static assets. This can cause situations where versioned assets may change, and a service worker hasn't precached them. Offering a reload button here may avoid some unexpected behaviors.
 - If you're serving precached HTML. In this case, you should _strongly_ consider offering a reload button on service worker updates, since updates to that HTML won't be recognized until the updated service worker takes control.
 - If you don't rely mostly on runtime caching. When caching resources at runtime, you don't need to let the user know they should reload. As versioned assets change, they will be added to the runtime cache in due course&mdash;assuming navigation requests use a network-first or network-only strategy.
-- When using a stale-while-revidate strategy, you might consider using the [`workbox-broadcast-update` module](/docs/workbox/modules/workbox-broadcast-update/) to notify users of service worker updates.
+- When using a [stale-while-revalidate](https://web.dev/offline-cookbook/#stale-while-revalidate) strategy, you might consider using the [`workbox-broadcast-update` module](/docs/workbox/modules/workbox-broadcast-update/) to notify users of service worker updates.
 
 Whether you need to notify the user of updates to a service worker depends on your application, and its unique requirements. If you find that your users are experiencing strange behaviors when you push out a new service worker, that's probably your best signal that you should notify them.

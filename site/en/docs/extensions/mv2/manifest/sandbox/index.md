@@ -1,10 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Sandbox"
+seoTitle: "Manifest V2- Sandbox [Deprecated]"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the sandbox property of manifest.json.
 ---
+
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Manifest Sandbox](/docs/extensions/mv3/manifest/sandbox) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 **_Warning:_** Starting in version 57, Chrome will no longer allow external web content (including
 embedded frames and scripts) inside sandboxed pages. Please use a [webview][1] instead.

@@ -1,0 +1,73 @@
+/* stylelint-disable max-nesting-depth*/
+/* Disabled nesting since required as per the DOM */
+
+$share-text-color: #3c4043;
+
+.footer {
+  align-items: center;
+  font-family: 'Google Sans';
+  margin-top: 200px;
+
+  &-description {
+    margin-top: 37px;
+    max-width: 700px;
+    padding: 0 20px;
+
+    @include media-query('md') {
+      margin: 54px auto 0;
+    }
+  }
+
+  &-subheading {
+    color: #{get-color('blue-500')};
+    font-size: 28px;
+
+    @include media-query('md') {
+      font-size: 41px;
+    }
+  }
+
+  &-info {
+    font-size: 18px;
+    line-height: 28px;
+
+    &:nth-child(3) {
+      padding-top: 10px;
+    }
+  }
+
+  share-button {
+    margin-top: 2px;
+  }
+
+  .share-logo {
+    color: $share-text-color;
+    height: 22px;
+    text-decoration: none;
+
+
+    svg {
+      margin: 5px 15px 0 0;
+    }
+  }
+
+  .back-to-top {
+    margin-top: 148px;
+
+    .back-to-logo {
+      height: 20px;
+      margin: 0 auto;
+      width: 20px;
+    }
+
+    a {
+      color: #{get-color('black')};
+      text-decoration: none;
+    }
+
+    span {
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  }
+}

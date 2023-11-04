@@ -7,7 +7,7 @@ description: |2
 date: 2020-12-01
 ---
 
-[타사 리소스](https://web.dev/third-party-javascript/)는 종종 광고 또는 동영상을 표시하고 소셜 미디어와 통합하는 데 사용됩니다. 기본 접근 방식은 페이지가 로드되는 즉시 타사 리소스를 로드하는 것이지만 이렇게 하면 페이지 로드가 불필요하게 느려질 수 있습니다. 타사 콘텐츠가 중요하지 않은 경우 [지연 로드](https://web.dev/fast/#lazy-load-images-and-video)를 통해 이 성능 하락을 줄일 수 있습니다.
+[타사 리소스](https://web.dev/articles/third-party-javascript)는 종종 광고 또는 동영상을 표시하고 소셜 미디어와 통합하는 데 사용됩니다. 기본 접근 방식은 페이지가 로드되는 즉시 타사 리소스를 로드하는 것이지만 이렇게 하면 페이지 로드가 불필요하게 느려질 수 있습니다. 타사 콘텐츠가 중요하지 않은 경우 [지연 로드](https://web.dev/articles/fast#lazy_load_images_and_video)를 통해 이 성능 하락을 줄일 수 있습니다.
 
 이 감사는 상호 작용 시 느리게 로드될 수 있는 타사 임베드를 강조합니다. 이 경우 사용자가 상호 작용할 때까지 타사 콘텐츠 대신 *파사드*가 사용됩니다.
 
@@ -51,11 +51,15 @@ HTML에 직접 타사 임베드를 추가하는 대신 실제 포함된 타사�
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Vimeo 내장 플레이어
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### 실시간 채팅(Intercom, Drift, Help Scout, Facebook Messenger)
 

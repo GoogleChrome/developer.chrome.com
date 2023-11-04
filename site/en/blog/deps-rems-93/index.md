@@ -9,12 +9,11 @@ hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/wzKRtZO1LCra0FDRk1jY.png'
 alt: >
   Deprecations and Removals hero logo
 tags:
-  - deprecations
-  - removals
+  - deprecations-removals
   - chrome-93
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 93 beta was released on July 29, 2021 and is expected to become the
 stable version in late August, 2021.
@@ -46,4 +45,4 @@ be deprecated](https://chromestatus.com/feature/5650158039597056) to allow agent
 clusters to be scoped to origins long term. This follows a WebAssembly
 specification change, which has an impact on the platform as well.
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

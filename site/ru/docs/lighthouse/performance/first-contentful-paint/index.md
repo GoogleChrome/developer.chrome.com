@@ -47,7 +47,7 @@ FCP измеряет, сколько времени требуется брау�
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как улучшить оценку FCP
 
@@ -55,15 +55,15 @@ FCP измеряет, сколько времени требуется брау�
 
 ## Отслеживайте FCP на устройствах реальных пользователей
 
-Чтобы узнать, как измерять FCP на реальных устройствах пользователей, см. статью [Google «Ориентированные на пользователя показатели производительности».](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics) В разделе [«Отслеживание FP/FCP»](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fpfcp) описывается, как программно получить доступ к данным FCP и отправить их в Google Analytics.
+Чтобы узнать, как измерять FCP на реальных устройствах пользователей, см. статью [Google «Ориентированные на пользователя показатели производительности».](https://web.dev/articles/user-centric-performance-metrics) В разделе [«Отслеживание FP/FCP»](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fpfcp) описывается, как программно получить доступ к данным FCP и отправить их в Google Analytics.
 
 См. статью Google [«Оценка производительности загрузки в реальных условиях с помощью API Navigation Timing и API Resource Timing»](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/), чтобы узнать больше о сборе метрик реальных пользователей.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Ресурсы
 
 - [Исходный код проверки **FCP**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/first-contentful-paint.js).
-- [Руководство по метрике FCP](https://web.dev/fcp/).
-- [Руководство по оценке производительности в Lighthouse](https://web.dev/performance-scoring//).
+- [Руководство по метрике FCP](https://web.dev/articles/fcp).
+- [Руководство по оценке производительности в Lighthouse](https://web.dev/articles/performance-scoring/).
 - [Спецификация Paint Timing](https://w3c.github.io/paint-timing).

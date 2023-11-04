@@ -8,7 +8,7 @@ date: 2019-05-02
 updated: 2019-10-04
 ---
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 reports how many network requests were made and
 how much data was transferred while your page loaded:
 
@@ -79,11 +79,11 @@ Affected metrics: [First Contentful Paint][fcp]
 ## Use performance budgets to prevent regressions
 
 Once you've optimized your code to reduce request counts and transfer sizes, see
-[Set performance budgets](https://web.dev/fast/#set-performance-budgets) to learn how to prevent regressions.
+[Set performance budgets](https://web.dev/articles/fast#set_performance_budgets) to learn how to prevent regressions.
 
 ## Resources
 
-[Source code for **Keep request counts low and transfer sizes small** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/resource-summary.js)
+[Source code for **Keep request counts low and transfer sizes small** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/resource-summary.js)
 
 [css]: https://web.dev/fast/#optimize-your-css/
 [js]: https://web.dev/fast/#optimize-your-javascript/

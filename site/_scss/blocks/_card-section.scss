@@ -1,0 +1,370 @@
+/* stylelint-disable max-nesting-depth*/
+/* stylelint-disable selector-max-compound-selectors*/
+/* Disabled nesting since required as per the DOM */
+
+@use 'sass:map';
+
+$chrome-100-colors: (
+  'heart-red': #f44336,
+  'year-2008':#ffebee,
+  'year-2009':#fff3e0,
+  'year-2010':#e3f2fd,
+  'year-2011':#e8f5e9,
+  'year-2012':#ede7f6,
+  'year-2013':#e0f2f1,
+  'year-2014':#fce4ec,
+  'year-2015':#fffde7,
+  'year-2016':#e0f7fa,
+  'year-2017':#efebe9,
+  'year-2018':#f9fbe7,
+  'year-2019':#f3e5f5,
+  'year-2020':#fbe9e7,
+  'year-2021':#e8eaf6,
+  'year-2022':#f1f8e9,
+);
+
+.card-section {
+  font-family: 'Google Sans';
+  position: relative;
+
+  .navigation-wrapper {
+    height: 100vh;
+    left: 5px;
+    position: absolute;
+    top: 56px;
+    width: 100px;
+    z-index: 35;
+
+    @include media-query('lg') {
+      width: 197px;
+    }
+
+    @media screen and (min-width: 650px) and (max-width: 992px) {
+      width: 150px;
+    }
+
+    .chrome-logo-wrapper {
+      text-align: center;
+
+      &--text {
+        display: block;
+        font-size: 2em;
+        font-weight: 600;
+        margin-top: 24px;
+
+        @media screen and (min-width: 1231px) {
+          display: none;
+        }
+      }
+    }
+
+    .chrome-logo {
+      height: 48px;
+      margin: 0 auto;
+      width: 48px;
+    }
+
+    .year-navigation {
+      display: none;
+
+      @include media-query('lg') {
+        width: 197px;
+      }
+
+      @media screen and (min-width: 650px) and (max-width: 992px) {
+        width: 150px;
+      }
+
+      @media screen and (min-width: 1231px) {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        left: 0;
+        margin: 0 auto;
+        overflow: hidden;
+        top: 60px;
+        width: 100px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            color: #{get-color('grey-800')};
+            display: inline-block;
+            font-size: 1em;
+            text-decoration: none;
+            width: 100% !important;
+          }
+
+          &:hover {
+            a:hover {
+              text-decoration: underline;
+            }
+
+            .active-year {
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .fixed-navigation-wrapper {
+    margin: 0;
+    position: fixed;
+    top: 56px;
+
+    @include media-query('lg') {
+      left: 86px;
+      top: 0;
+    }
+
+    @include media-query('md') {
+      top: 50px;
+    }
+  }
+
+  .fixed-year-navigation {
+    left: 5px;
+    position: fixed;
+    top: 120px;
+
+    @include media-query('lg') {
+      left: 96px;
+    }
+  }
+
+  .inner-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 92px 16px 92px 125px;
+    position: relative;
+
+    @media only screen and (min-width: 1162px) and (max-width: 1230px) {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .first-column {
+      .card-with-img {
+        height: auto;
+
+        @include media-query('md') {
+          height: 350px;
+        }
+      }
+
+      @media only screen and (max-width: 1230px) {
+        margin-right: 0;
+      }
+    }
+
+    .second-column {
+      width: 470px;
+
+      .card-with-img {
+        height: auto;
+
+        @include media-query('md') {
+          height: 350px;
+        }
+      }
+    }
+
+    .card {
+      background: #fff;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+      height: auto;
+      max-width: 470px;
+      padding: 15px;
+
+      @include media-query('md') {
+        height: 167px;
+        position: relative;
+        width: 470px;
+      }
+
+      &-info {
+        padding-left: 0;
+
+        @include media-query('md') {
+          padding-left: 12px;
+        }
+
+        .arrow-wrapper {
+          padding: 0;
+
+          @include media-query('md') {
+            padding-top: 10px;
+          }
+
+          .card-arrow {
+            justify-content: space-between;
+            padding-right: 45px;
+          }
+
+          .card-heading {
+            color: #{get-color('black')};
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 28px;
+
+            @include media-query('md') {
+              font-size: 22px;
+            }
+          }
+
+          .right-arrow {
+            display: none;
+
+            @include media-query('md') {
+              display: block;
+            }
+          }
+
+          a {
+            display: flex;
+            justify-content: space-between;
+
+            @include media-query('md') {
+              padding-right: 70px;
+            }
+          }
+        }
+
+        .card-description {
+          font-size: 14px;
+          line-height: 18px;
+          margin-top: 10px;
+
+          @include media-query('md') {
+            line-height: 24px;
+          }
+
+          a {
+            color: #{get-color('black')};
+            text-decoration: none;
+          }
+        }
+
+        .logos {
+          bottom: 0;
+          justify-content: space-between;
+          padding-bottom: 15px;
+
+          @include media-query('md') {
+            margin-top: 18px;
+            position: absolute;
+            width: 90%;
+          }
+
+          .tags {
+            height: 15px;
+          }
+
+          .likes {
+            align-items: center;
+            gap: 10px;
+
+            .heart-logo {
+              background: none;
+              border: 0;
+              cursor: pointer;
+
+              .icon {
+                fill: none;
+              }
+            }
+
+            .like-count {
+              letter-spacing: 1px;
+              text-align: center;
+              width: 50px;
+            }
+
+            .like {
+              .fill-like {
+                fill: map.get($chrome-100-colors, 'heart-red');
+                stroke: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .year-2008 {
+    background: map.get($chrome-100-colors, 'year-2008');
+  }
+
+  .year-2009 {
+    background: map.get($chrome-100-colors, 'year-2009');
+  }
+
+  .year-2010 {
+    background: map.get($chrome-100-colors, 'year-2010');
+  }
+
+  .year-2011 {
+    background: map.get($chrome-100-colors, 'year-2011');
+  }
+
+  .year-2012 {
+    background: map.get($chrome-100-colors, 'year-2012');
+  }
+
+  .year-2013 {
+    background: map.get($chrome-100-colors, 'year-2013');
+  }
+
+  .year-2014 {
+    background: map.get($chrome-100-colors, 'year-2014');
+  }
+
+  .year-2015 {
+    background: map.get($chrome-100-colors, 'year-2015');
+  }
+
+  .year-2016 {
+    background: map.get($chrome-100-colors, 'year-2016');
+  }
+
+  .year-2017 {
+    background: map.get($chrome-100-colors, 'year-2017');
+  }
+
+  .year-2018 {
+    background: map.get($chrome-100-colors, 'year-2018');
+  }
+
+  .year-2019 {
+    background: map.get($chrome-100-colors, 'year-2019');
+  }
+
+  .year-2020 {
+    background: map.get($chrome-100-colors, 'year-2020');
+  }
+
+  .year-2021 {
+    background: map.get($chrome-100-colors, 'year-2021');
+  }
+
+  .year-2022 {
+    background: map.get($chrome-100-colors, 'year-2022');
+  }
+
+  .hide-navigation {
+    display: none;
+  }
+}

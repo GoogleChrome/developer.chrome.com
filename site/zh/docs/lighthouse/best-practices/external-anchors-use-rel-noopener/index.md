@@ -30,7 +30,7 @@ Lighthouse 使用以下过程将链接识别为不安全：
 
 因为 Lighthouse 会过滤掉同主机链接，所以如果您在大型站点上工作，您应该注意一种边缘情况：如果一个页面包含指向您站点上另一个页面的 `target="_blank"` 链接，而未使用 `rel="noopener"`，此审计对性能的影响仍然适用。 但是，您不会在 Lighthouse 结果中看到这些链接。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## 如何提高站点性能并防止安全漏洞
 
@@ -45,10 +45,10 @@ Lighthouse 使用以下过程将链接识别为不安全：
 - `rel="noopener"` 阻止新页面访问 `window.opener` 属性，并确保它在单独的进程中运行。
 - `rel="noreferrer"` 具有相同的效果，但还会阻止将 `Referer` 标头发送到新页面。请参阅[链接类型“noreferrer”](https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer) 。
 
-有关更多信息，请参阅[安全地共享跨源资源](https://web.dev/cross-origin-resource-sharing/)帖文。
+有关更多信息，请参阅[安全地共享跨源资源](https://web.dev/articles/cross-origin-resource-sharing)帖文。
 
 ## 资源
 
 - [**指向跨源目的地的链接不安全**审计源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js)
-- [安全地共享跨源资源](https://web.dev/cross-origin-resource-sharing/)
+- [安全地共享跨源资源](https://web.dev/articles/cross-origin-resource-sharing)
 - [面向 Web 开发人员的站点隔离](https://developers.google.com/web/updates/2018/07/site-isolation)

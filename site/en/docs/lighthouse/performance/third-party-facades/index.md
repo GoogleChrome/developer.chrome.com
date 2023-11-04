@@ -7,9 +7,12 @@ date: 2020-12-01
 #updated: 2020-12-01
 ---
 
-[Third-party resources](https://web.dev/third-party-javascript/) are often used for displaying ads or videos and integrating with social media. The default approach is to load third-party resources as soon as the page loads, but this can unnecessarily slow the page load. If the third-party content is not critical, this performance cost can be reduced by [lazy loading](https://web.dev/fast/#lazy-load-images-and-video) it.
+[Third-party resources](https://web.dev/articles/third-party-javascript) are often used for displaying ads or videos and integrating with social media.
+The default approach is to load third-party resources as soon as the page loads, but this can unnecessarily slow the page load. If the third-party
+content is not critical, this performance cost can be reduced by [lazy loading](https://web.dev/articles/fast#lazy_load_images_and_video) it.
 
-This audit highlights third-party embeds which can be lazily loaded on interaction. In that case, a _facade_ is used in place of the third-party content until the user interacts with it.
+This audit highlights third-party embeds which can be lazily loaded on interaction. In that case, a _facade_ is used in place of the third-party
+content until the user interacts with it.
 
 {% Aside 'key-term' %}
 
@@ -61,11 +64,15 @@ In general, video embeds, social button widgets, and chat widgets can all employ
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Vimeo embedded player
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### Live chat (Intercom, Drift, Help Scout, Facebook Messenger)
 
@@ -85,4 +92,4 @@ If you would like your solution to be included in the list above, check out the 
 
 ## Resources
 
-Source code for [Lazy load third-party resources with facades audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/third-party-facades.js).
+Source code for [Lazy load third-party resources with facades audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/third-party-facades.js).

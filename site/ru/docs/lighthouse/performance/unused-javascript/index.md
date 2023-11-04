@@ -16,7 +16,7 @@ date: 2020-07-07
 
 <figure>{% Img src = "image/tcFciHGuF3MxnTr1y5ue01OGLBn2/jYbX7CFrcOaaqMHaHa6f.jpg", alt = "Скриншот проверки.", width = "800", height = "332"%}<figcaption> Щелкните значение в столбце <b>URL</b>, чтобы открыть исходный код сценария в новой вкладке.</figcaption></figure>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как удалить неиспользуемый JavaScript
 
@@ -54,7 +54,7 @@ date: 2020-07-07
 
 ### React
 
-Если вы не выполняете рендеринг на стороне сервера, [разделите бандлы JavaScript](https://web.dev/code-splitting-suspense/) с помощью `React.lazy()`. В противном случае разделите код с помощью сторонней библиотеки, такой как [loadable-components](https://www.smooth-code.com/open-source/loadable-components/docs/getting-started/).
+Если вы не выполняете рендеринг на стороне сервера, [разделите бандлы JavaScript](https://web.dev/articles/code-splitting-suspense) с помощью `React.lazy()`. В противном случае разделите код с помощью сторонней библиотеки, такой как [loadable-components](https://www.smooth-code.com/open-source/loadable-components/docs/getting-started/).
 
 ### Vue
 
@@ -67,7 +67,7 @@ date: 2020-07-07
 ## Ресурсы
 
 - [Исходный код для проверки **Remove unused code** (Удалите неиспользуемый код)](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unused-javascript.js).
-- [Удалите неиспользуемый код](https://web.dev/remove-unused-code/).
+- [Удалите неиспользуемый код](https://web.dev/articles/remove-unused-code).
 - [Добавление интерактивности с помощью JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript).
 - [Разделение кода](https://bundlers.tooling.report/code-splitting/).
 - [Устранение мертвого кода](https://bundlers.tooling.report/transformations/dead-code/).

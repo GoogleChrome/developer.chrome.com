@@ -5,7 +5,7 @@ description: '"합성되지 않은 애니메이션 방지" Lighthouse 감사를 
 date: 2020-08-12
 ---
 
-합성되지 않은 애니메이션은 저가형 휴대폰 또는 성능이 많이 요구되는 작업이 메인 스레드에서 실행될 때 버벅거림(즉, 매끄럽지 않음)으로 나타날 수 있습니다. 버벅거리는 애니메이션은 페이지의 [누적 레이아웃 이동](https://web.dev/cls/)(CLS)을 증가시킬 수 있습니다. CLS를 줄이면 Lighthouse Performance 점수가 향상됩니다.
+합성되지 않은 애니메이션은 저가형 휴대폰 또는 성능이 많이 요구되는 작업이 메인 스레드에서 실행될 때 버벅거림(즉, 매끄럽지 않음)으로 나타날 수 있습니다. 버벅거리는 애니메이션은 페이지의 [누적 레이아웃 이동](https://web.dev/articles/cls)(CLS)을 증가시킬 수 있습니다. CLS를 줄이면 Lighthouse Performance 점수가 향상됩니다.
 
 ## 배경
 
@@ -27,12 +27,12 @@ HTML, CSS 및 JavaScript를 픽셀로 변환하기 위한 브라우저의 알고
 
 ## 애니메이션이 합성되었는지 확인하는 방법
 
-[합성 전용 속성 유지 및 레이어 수 관리](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) 및 [고성능 애니메이션](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)을 참조하세요.
+[합성 전용 속성 유지 및 레이어 수 관리](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) 및 [고성능 애니메이션](https://web.dev/articles/animations-guide)을 참조하세요.
 
 ## 리소스
 
 - [*합성되지 않은 애니메이션 방지* 감사를 위한 소스 코드](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/non-composited-animations.js)
 - [합성 전용 속성 유지 및  레이어 수 관리](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
-- [고성능 애니메이션](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
+- [고성능 애니메이션](https://web.dev/articles/animations-guide)
 - [페인트 복잡성을 단순화하고 페인트 영역 줄이기](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas)
 - [최신 웹 브라우저 내부 살펴보기(3부)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)

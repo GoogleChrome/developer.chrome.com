@@ -28,7 +28,7 @@ Lighthouse 标记以下通用链接文本：
 - `more`
 - `learn more`
 
-{% include 'content/lighthouse-seo/scoring.njk' %}
+{% Partial 'lighthouse-seo/scoring.njk' %}
 
 ## 如何添加描述性链接文本
 

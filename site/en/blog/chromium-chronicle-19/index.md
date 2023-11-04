@@ -17,7 +17,7 @@ tags:
 
 When dealing with large codebases, it's useful to have the code indexed, so
 you can navigate across symbols. For Googlers, CodeSearch works for Google3
-and Chromium, but doesn't yet support Chrome OS, and isn't available to
+and Chromium, but doesn't yet support ChromeOS, and isn't available to
 non-Googlers. Don't despair, you can use the [CLion IDE][clion] to get this
 functionality, in addition to many more useful features.
 
@@ -40,7 +40,7 @@ of methods. Navigate directly to definitions from the source.
 
 {% Column %}
 Use <a href="https://www.jetbrains.com/help/clion/searching-everywhere.html">Global Search</a>
-to search across all files and symbols in Chrome OS by tapping the **Shift** key
+to search across all files and symbols in ChromeOS by tapping the **Shift** key
 twice.
 {% endColumn %}
 

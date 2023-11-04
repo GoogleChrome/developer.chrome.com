@@ -52,7 +52,7 @@ Progressive Web Apps provide an installable, app-like experience, built and
 delivered directly via the web. In Chrome 73, we've added support for macOS,
 bringing support for
 [Progressive Web Apps to all desktop platforms](https://developers.google.com/web/progressive-web-apps/desktop) -
-Mac, Windows, Chrome OS and Linux, as well as mobile, simplifying web app
+Mac, Windows, ChromeOS and Linux, as well as mobile, simplifying web app
 development.
 
 A Progressive Web App is fast, and reliably so; always loading and performing

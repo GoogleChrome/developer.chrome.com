@@ -1,0 +1,31 @@
+.load-more__button {
+  align-items: center;
+  background: var(--color-secondary);
+  border: 0;
+  border-radius: 10000px;
+  color: var(--color-blue-medium);
+  display: flex;
+  padding: 0.5em 1.12em;
+  text-decoration: none;
+
+  svg {
+    fill: var(--color-blue-medium);
+    height: 1.2em;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}

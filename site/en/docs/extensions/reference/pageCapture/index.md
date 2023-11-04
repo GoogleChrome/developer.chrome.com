@@ -1,5 +1,6 @@
 ---
 api: pageCapture
+has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
 MHTML is a [standard format][1] supported by most browsers. It encapsulates in a single file a page
@@ -25,4 +26,4 @@ API. For example:
 ```
 
 [1]: https://tools.ietf.org/html/rfc2557
-[2]: /docs/extensions/mv2/tabs
+[2]: /docs/extensions/mv3/manifest

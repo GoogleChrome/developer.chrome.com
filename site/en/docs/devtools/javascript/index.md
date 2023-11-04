@@ -3,9 +3,13 @@ layout: "layouts/doc-post.njk"
 title: "Debug JavaScript"
 authors:
   - kaycebasques
+  - sofiayem
 date: 2017-01-04
-#updated: YYYY-MM-DD
+updated: 2023-03-07
 description: "Learn how to use Chrome DevTools to find and fix JavaScript bugs."
+tags:
+  - get-started
+  - javascript
 ---
 
 This tutorial teaches you the basic workflow for debugging any JavaScript issue in DevTools. Read
@@ -18,18 +22,15 @@ on, or watch the video version of this tutorial, below.
 Finding a series of actions that consistently reproduces a bug is always the first step to
 debugging.
 
-1.  Click **Open Demo**. The demo opens in a new tab.
-
-    <a href="https://googlechrome.github.io/devtools-samples/debug-js/get-started" target="_blank">Open Demo</a>
-
+1.  [Open this demo](https://googlechrome.github.io/devtools-samples/debug-js/get-started) in a new tab.
 2.  Enter `5` in the **Number 1** text box.
 3.  Enter `1` in the **Number 2** text box.
 4.  Click **Add Number 1 and Number 2**. The label below the button says `5 + 1 = 51`. The result
     should be `6`. This is the bug you're going to fix.
 
-    {% Img src="image/admin/dCZqJCgs1FHWJAeJ1Nub.png", alt="The result of 5 + 1 is 51. It should be 6.", width="800", height="707" %}
+{% Img src="image/admin/dCZqJCgs1FHWJAeJ1Nub.png", alt="The result of 5 + 1 is 51. It should be 6.", width="800", height="707" %}
 
-    **Figure 1**. The result of 5 + 1 is 51. It should be 6.
+In this example, the result of 5 + 1 is 51. It should be 6.
 
 ## Step 2: Get familiar with the Sources panel UI {: #sources-ui }
 
@@ -37,24 +38,18 @@ DevTools provides a lot of different tools for different tasks, such as changing
 load performance, and monitoring network requests. The **Sources** panel is where you debug
 JavaScript.
 
-1.  Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This
+1.  Open DevTools by pressing Command+Option+J (Mac) or Control+Shift+J (Windows, Linux). This
     shortcut opens the **Console** panel.
 
     {% Img src="image/admin/JS6A41j5zLtT1J0xqjqL.png", alt="The Console panel.", width="800", height="494" %}
-
-    **Figure 2**. The **Console** panel
 
 2.  Click the **Sources** tab.
 
     {% Img src="image/admin/1jeGIsUUPzcGzXOrPOTB.png", alt="The Sources panel.", width="800", height="566" %}
 
-    **Figure 3**. The **Sources** panel
-
 The **Sources** panel UI has 3 parts:
 
 {% Img src="image/admin/fgJB1mwfZsJ7Pv21hzSt.png", alt="The 3 parts of the Sources panel UI.", width="800", height="566" %}
-
-**Figure 4**. The 3 parts of the **Sources** panel UI
 
 1.  The **File Navigator** pane. Every file that the page requests is listed here.
 2.  The **Code Editor** pane. After selecting a file in the **File Navigator** pane, the contents of
@@ -108,8 +103,6 @@ that the `click` listener executes. **Event Listener Breakpoints** let you do ex
     event listener executes.
 
     {% Img src="image/admin/j7toLd0kyGNvBJtMhRHS.png", alt="The click checkbox is enabled.", width="800", height="536" %}
-
-    **Figure 5**. The **click** checkbox is enabled
 
 4.  Back on the demo, click **Add Number 1 and Number 2** again. DevTools pauses the demo and
     highlights a line of code in the **Sources** panel. DevTools should be paused on this line of
@@ -180,12 +173,12 @@ code that you want to pause on, use a line-of-code breakpoint:
     executed.
 3.  Click **Resume script execution**
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lk63wTlzwXWuRIdSsKP4.png", alt="Resume Script Execution", width="26", height="20" %}. The
-    script continues executing until it reaches line 32. On lines 29, 30, and 31, DevTools prints
-    out the values of `addend1`, `addend2`, and `sum` to the right of each line's semi-colon.
+    script continues executing until it reaches line 32. On lines 29, 30, and 31, DevTools [shows
+    the values](/docs/devtools/javascript/reference/#inline-eval) of `addend1`, `addend2`, and `sum` inline next to their declarations.
 
-    {% Img src="image/admin/99Omb7ALyJB7MfYpuqXp.png", alt="DevTools pauses on the line-of-code breakpoint on line 32.", width="800", height="571" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/dDtaoDZ2a8F7mFkhLp9U.png", alt="DevTools pauses on the line-of-code breakpoint on line 32.", width="800", height="554" %}
 
-    **Figure 6**. DevTools pauses on the line-of-code breakpoint on line 32
+In this example, DevTools pauses on the line-of-code breakpoint on line 32.
 
 ## Step 6: Check variable values {: #check-values }
 
@@ -201,9 +194,7 @@ are currently defined, along with the value of each variable. It also shows clos
 applicable. Double-click a variable value to edit it. When you're not paused on a line of code, the
 **Scope** pane is empty.
 
-{% Img src="image/admin/Tynv55DnsSgtvpd6Iz9z.png", alt="The Scope pane.", width="800", height="538" %}
-
-**Figure 7**. The **Scope** pane
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/7Pjgz6fXsYWZB9GLjATQ.png", alt="The Scope pane.", width="800", height="554" %}
 
 ### Method 2: Watch Expressions {: #watch-expressions }
 
@@ -215,14 +206,14 @@ expression in a Watch Expression. Try it now:
 2.  Click **Add Expression**
     {% Img src="image/admin/IYPLvXHyMtjVBILENOIL.png", alt="Add Expression", width="20", height="20" %}.
 3.  Type `typeof sum`.
-4.  Press Enter. DevTools shows `typeof sum: "string"`. The value to the right of the colon is the
+4.  Press <kbd>Enter</kbd>. DevTools shows `typeof sum: "string"`. The value to the right of the colon is the
     result of your Watch Expression.
 
-    {% Img src="image/admin/iAZLQFWjCy2kNbYKPGpR.png", alt="The Watch Expression pane.", width="800", height="542" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/srnzLyxWyeSvCA2Bjqzt.png", alt="The Watch Expression pane", width="800", height="554" %}
 
-    **Figure 8**. The Watch Expression pane (bottom-right), after creating the `typeof sum` Watch
-    Expression. If your DevTools window is large, the Watch Expression pane is on the right, above
-    the **Event Listener Breakpoints** pane.
+The screenshot above shows the **Watch Expression** pane (bottom-right) after creating the `typeof sum` watch
+expression. If your DevTools window is large, the **Watch Expression** pane is on the right, above
+the **Event Listener Breakpoints** pane.
 
 As suspected, `sum` is being evaluated as a string, when it should be a number. You've now confirmed
 that this is the cause of the bug.
@@ -233,16 +224,16 @@ In addition to viewing `console.log()` messages, you can also use the Console to
 JavaScript statements. In terms of debugging, you can use the Console to test out potential fixes
 for bugs. Try it now:
 
-1.  If you don't have the Console drawer open, press Escape to open it. It opens at the bottom of
+1.  If you don't have the Console drawer open, press <kbd>Escape</kbd> to open it. It opens at the bottom of
     your DevTools window.
 2.  In the Console, type `parseInt(addend1) + parseInt(addend2)`. This statement works because you
     are paused on a line of code where `addend1` and `addend2` are in scope.
-3.  Press Enter. DevTools evaluates the statement and prints out `6`, which is the result you expect
+3.  Press <kbd>Enter</kbd>. DevTools evaluates the statement and prints out `6`, which is the result you expect
     the demo to produce.
 
-    {% Img src="image/admin/Z5dF1m9vAWBnpMG29Ltv.png", alt="The Console drawer, after evaluating parseInt(addend1) + parseInt(addend2).", width="800", height="608" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KrpBYhxN1iEfKul9qMUV.png", alt="The Console drawer, after evaluating variables that are in scope.", width="800", height="554" %}
 
-    **Figure 9**. The Console drawer, after evaluating `parseInt(addend1) + parseInt(addend2)`.
+The screenshot above shows the **Console** drawer after evaluating `parseInt(addend1) + parseInt(addend2)`.
 
 ## Step 7: Apply a fix {: #apply-fix }
 
@@ -254,19 +245,21 @@ directly within the DevTools UI. Try it now:
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lk63wTlzwXWuRIdSsKP4.png", alt="Resume Script Execution", width="26", height="20" %}.
 2.  In the **Code Editor**, replace line 31, `var sum = addend1 + addend2`, with
     `var sum = parseInt(addend1) + parseInt(addend2)`.
-3.  Press Command+S (Mac) or Control+S (Windows, Linux) to save your change.
+3.  Press <kbd>Command</kbd> + <kbd>S</kbd> (Mac) or <kbd>Control</kbd> + <kbd>S</kbd> (Windows, Linux) to save your change.
 4.  Click **Deactivate breakpoints**
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WTW7ZmEWJsBaeMrmXRJn.png", alt="Deactivate breakpoints", width="19", height="17" %}.
-    It changes blue to indicate that it's active. While this is set, DevTools ignores any
+    Its color changes to blue to indicate that it's active. While this is set, DevTools ignores any
     breakpoints you've set.
 5.  Try out the demo with different values. The demo now calculates correctly.
 
 {% Aside "caution" %}
-
-**Caution:** This workflow only applies a fix to the code that is running in your browser. It won't
+This workflow only applies a fix to the code that is running in your browser. It won't
 fix the code for all users that visit your page. To do that, you need to fix the code that's on your
-servers.
+servers. You can, however, [edit files in DevTools and save them to your sources with Workspaces](/docs/devtools/workspaces/).
+{% endAside %}
 
+{% Aside "gotchas" %}
+Starting from Chrome version 105, you can [Edit a paused function live](/docs/devtools/javascript/reference/#live-edit).
 {% endAside %}
 
 ## Next steps {: #next-steps }

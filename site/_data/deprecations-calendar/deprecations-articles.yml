@@ -1,0 +1,12 @@
+# Add the id and article path of related articles here.
+# To display a related article on the Deprecations Calendar,
+# add the id of the deprecation to this file and associate
+# it with the article path.
+#
+# Example:
+# 6239658726391808:
+#   article: "/articles/declarative-shadow-dom/"
+
+
+6239658726391808:
+  article: "/articles/declarative-shadow-dom/"

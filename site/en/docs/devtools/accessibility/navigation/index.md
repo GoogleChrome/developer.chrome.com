@@ -6,6 +6,8 @@ authors:
 date: 2019-03-08
 #updated: YYYY-MM-DD
 description: "A guide on navigating Chrome DevTools using assistive technology like screen readers."
+tags:
+  - accessibility
 ---
 
 This guide aims to help users who primarily rely on assistive technology like screen readers access

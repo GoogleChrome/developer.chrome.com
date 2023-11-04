@@ -22,7 +22,7 @@ updated: 2019-10-04
 
 Чтобы помочь вам определить источники загрузки основного потока, Lighthouse показывает, на что было потрачено время ЦП, пока браузер загружал вашу страницу.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Как минимизировать работу основного потока
 
@@ -32,9 +32,9 @@ updated: 2019-10-04
 
 ### Оценка скриптов
 
-- [Оптимизация стороннего JavaScript](https://web.dev/fast/#optimize-your-third-party-resources)
+- [Оптимизация стороннего JavaScript](https://web.dev/articles/fast#optimize_your_third_party_resources)
 - [Устранение обработчиков ввода](https://developers.google.com/web/fundamentals/performance/rendering/debounce-your-input-handlers)
-- [Использование веб-воркеров](https://web.dev/off-main-thread/)
+- [Использование веб-воркеров](https://web.dev/articles/off-main-thread)
 
 ### Стили и верстка
 
@@ -48,18 +48,18 @@ updated: 2019-10-04
 
 ### Анализ HTML и CSS
 
-- [Извлечение критического CSS](https://web.dev/extract-critical-css/)
-- [Минимизация CSS](https://web.dev/minify-css/)
-- [Откладывание некритического CSS](https://web.dev/defer-non-critical-css/)
+- [Извлечение критического CSS](https://web.dev/articles/extract-critical-css)
+- [Минимизация CSS](https://web.dev/articles/minify-css)
+- [Откладывание некритического CSS](https://web.dev/articles/defer-non-critical-css)
 
 ### Анализ и компиляция скрипта
 
-- [Уменьшение полезной нагрузки JavaScript за счет разделения кода](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
-- [Удаление неиспользуемого кода](https://web.dev/remove-unused-code/)
+- [Уменьшение полезной нагрузки JavaScript за счет разделения кода](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)
+- [Удаление неиспользуемого кода](https://web.dev/articles/remove-unused-code)
 
 ### Сбор мусора
 
-- [Контроль общего использования памяти вашей веб-страницей с помощью `measureMemory()`](https://web.dev/monitor-total-page-memory-usage/)
+- [Контроль общего использования памяти вашей веб-страницей с помощью `measureMemory()`](https://web.dev/articles/monitor-total-page-memory-usage)
 
 ## Ресурсы
 

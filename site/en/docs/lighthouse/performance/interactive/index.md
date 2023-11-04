@@ -30,12 +30,12 @@ TTI measures how long it takes a page to become _fully_ interactive.
 A page is considered fully interactive when:
 
 - The page displays useful content, which is measured by the
-  [First Contentful Paint](https://web.dev/fcp/),
+  [First Contentful Paint](https://web.dev/articles/fcp),
 - Event handlers are registered for most visible page elements, and
 - The page responds to user interactions within 50&nbsp;milliseconds.
 
 {% Aside %}
-Both [First CPU Idle]](/docs/lighthouse/performance/first-cpu-idle/) and TTI
+Both [First CPU Idle](/docs/lighthouse/performance/first-cpu-idle/) and TTI
 measure when the page is ready for user input.
 First CPU Idle occurs when the user can _start_ to interact with the page;
 TTI occurs when the user is _fully_ able to interact with the page.
@@ -79,15 +79,15 @@ This table shows how to interpret your TTI score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your TTI score
 
 One improvement that can have a particularly big effect on TTI is
 deferring or removing unnecessary JavaScript work.
-Look for opportunities to [optimize your JavaScript](https://web.dev/fast/#optimize-your-javascript).
-In particular, consider [reducing JavaScript payloads with code splitting](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
-and [applying the PRPL pattern](https://web.dev/apply-instant-loading-with-prpl/). [Optimizing third-party JavaScript][3p]
+Look for opportunities to [optimize your JavaScript](https://web.dev/articles/fast#optimize_your_javascript).
+In particular, consider [reducing JavaScript payloads with code splitting](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)
+and [applying the PRPL pattern](https://web.dev/articles/apply-instant-loading-with-prpl). [Optimizing third-party JavaScript][3p]
 also yields significant improvements for some sites.
 
 These two Diagnostic audits provide additional opportunities
@@ -105,21 +105,21 @@ how to programmatically access TTI data and submit it to Google Analytics.
 
 {% Aside %}
 TTI can be difficult to track in the wild.
-Tracking [First Input Delay](https://developers.google.com/web/updates/2018/05/first-input-delay)
+Tracking [First Input Delay](https://web.dev/articles/fid)
 can be a good proxy for TTI.
 {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 
-- [Source code for **Time to Interactive** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/interactive.js)
+- [Source code for **Time to Interactive** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/interactive.js)
 - [Lighthouse Scoring Guide](/docs/lighthouse/performance/performance-scoring/)
 - [First Interactive And Consistently Interactive](https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c/edit)
-- [JavaScript Start-up Optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)
-- [Reduce JavaScript Payloads with Tree Shaking](https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/)
+- [JavaScript Start-up Optimization](https://web.dev/articles/optimizing-content-efficiency-javascript-startup-optimization)
+- [Reduce JavaScript Payloads with Tree Shaking](https://web.dev/articles/reduce-javascript-payloads-with-tree-shaking)
 - [Optimize third-party resources][3p]
 
-[metrics]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics
-[tracking]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_tti
+[metrics]: https://web.dev/user-centric-performance-metrics/
+[tracking]: https://web.dev/user-centric-performance-metrics/
 [3p]: https://web.dev/fast/#optimize-your-third-party-resources

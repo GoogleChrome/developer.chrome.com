@@ -21,13 +21,13 @@ Existen dos causas comunes para una relación de aspecto incorrecta de las imág
 - Para una imagen se establecen valores explícitos de ancho y altura que difieren de las dimensiones de la imagen original.
 - Para una imagen se establecen valores de ancho y altura expresados como un porcentaje de un contenedor de tamaño variable.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Compruebe que las imágenes se muestren con la relación de aspecto correcta
 
 ### Utilice un CDN de imagen
 
-Un CDN de imagen puede facilitar la automatización del proceso de creación de versiones de diferentes tamaños de sus imágenes. Consulte el documento [Uso de los CDN de imagen para optimizar imágenes](https://web.dev/image-cdns/) para obtener una descripción general, además consulte [Cómo instalar el CDN de imágenes Thumbor](https://web.dev/install-thumbor/) para un laboratorio de código práctico.
+Un CDN de imagen puede facilitar la automatización del proceso de creación de versiones de diferentes tamaños de sus imágenes. Consulte el documento [Uso de los CDN de imagen para optimizar imágenes](https://web.dev/articles/image-cdns) para obtener una descripción general, además consulte [Cómo instalar el CDN de imágenes Thumbor](https://web.dev/articles/install-thumbor) para un laboratorio de código práctico.
 
 ### Verifique el CSS que afecta la relación de aspecto de la imagen
 
@@ -39,11 +39,11 @@ Cuando sea posible, una práctica recomendable es especificar los atributos `wid
 
 Sin embargo, especificar las dimensiones de la imagen en HTML puede ser difícil si se trabaja con imágenes receptivas, porque no hay forma de saber el ancho y la altura hasta que se conozcan las dimensiones de la ventana gráfica. Considere la posibilidad de utilizar la biblioteca [Relación de aspecto CSS](https://www.npmjs.com/package/css-aspect-ratio) o los [cuadros de relación de aspecto](https://css-tricks.com/aspect-ratio-boxes/) para ayudar a conservar las proporciones de las imágenes receptivas.
 
-Por último, consulte la publicación [Suministrar imágenes con las dimensiones correctas](https://web.dev/serve-images-with-correct-dimensions/) para saber cómo suministrar imágenes del tamaño adecuado para el dispositivo de cada usuario.
+Por último, consulte la publicación [Suministrar imágenes con las dimensiones correctas](https://web.dev/articles/serve-images-with-correct-dimensions) para saber cómo suministrar imágenes del tamaño adecuado para el dispositivo de cada usuario.
 
 ## Recursos
 
 - [Código fuente para la auditoría **Mostrar las imágenes con una relación de aspecto incorrecta**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/image-aspect-ratio.js)
 - [Relación de aspecto CSS](https://www.npmjs.com/package/css-aspect-ratio)
 - [Cajas de relación de aspecto](https://css-tricks.com/aspect-ratio-boxes/)
-- [Suministrar imágenes con las dimensiones correctas](https://web.dev/serve-images-with-correct-dimensions/)
+- [Suministrar imágenes con las dimensiones correctas](https://web.dev/articles/serve-images-with-correct-dimensions)

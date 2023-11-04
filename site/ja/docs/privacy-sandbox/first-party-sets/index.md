@@ -1,82 +1,52 @@
 ---
-layout: 'layouts/doc-post.njk'
+layout: layouts/doc-post.njk
 title: First-Party Sets
-subhead: 同じエンティティが所有および運営する関連ドメイン名が、同じファーストパーティに属していると宣言できるようにします。
-description: First-Party Sets を使用すると、同じエンティティが所有および運営する関連ドメイン名が、同じファーストパーティに属していると宣言できるようなります。
-date: 2021-05-18
-updated: 2021-08-12
+subhead: First-Party Sets（FPS）は、企業がサイト間の関係を宣言し、ブラウザが特定の目的で限定的なサードパーティ Cookie を許可できるようにする方法です。
+description: First-Party Sets（FPS）は、企業がサイト間の関係を宣言し、ブラウザが特定の目的で限定的なサードパーティ Cookie を許可できるようにする方法です。
+hero: image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png
+date: 2023-03-07
+updated: 2023-05-16
 authors:
-  - samdutton
+  - mihajlija
 ---
 
-<!--lint disable no-smart-quotes-->
+多くの組織には、`brandx.com` や `fly-brandx.cime` などの異なるドメイン名に関連するサイト、または `example.com`、`example.rs`、`example.co.uk` のように異なる国のドメインに関連するサイトがあります。
 
-## 実装状況
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/OLx3AXkweLjAiDzoDslb.png", alt="brandx.com、fly-brandx.com、drive-brandx.com を 1 グループ、example.com、example.rs、example.co.uk を別の 1 グループとして示す図。", width="800", height="348" %}
 
-- Chrome 89 から 93 の[オリジン トライアル](https://web.dev/origin-trials/)。
-- [オリジン トライアルに登録](/origintrials/#/view_trial/988540118207823873)。
-- [Chrome プラットフォームの状態](https://chromestatus.com/feature/5640066519007232)。
-- [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)。
+休暇の予約を支援する会社を想像してみてください。この会社には、`fly-brandx.com` と `drive-brandx.com` という 2 つの関連サイトがあり、フライトとレンタカーを分けています。1 つの旅行を予約する過程で、これらのサイト間を移動してさまざまなオプションを選択できます。ショッピング カートには、これらのサイト全体での選択が記憶されていると期待できます。
 
-## First-Party Sets が必要な理由
+このような関連サイトは、多くの場合、Cookie を使用してログイン状態を維持したり、パーソナライズされたコンテンツを表示したりします。
 
-{% YouTube
-  id='cNJ8mZ-J3F8'
-%}
+ウェブのプライバシーを改善するために、[Chrome はサードパーティ Cookie をブロックする方向に転換している](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html)ため、こういったエクスペリエンスの機能には新しいメカニズムが必要です。
 
-Web ページには、複数の[オリジン](/docs/privacy-sandbox/glossary#origin)に由来するコンテンツが含まれています。一部のコンテンツはファーストパーティ コンテンツであり、ユーザーがアクセスしているトップレベルのサイトが提供するものです。広告、埋め込みメディア、[CDN](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/) の JavaScript ライブラリのような共有リソースなどのその他のコンテンツは、サードパーティから提供されている場合があります。[Cookie](/docs/privacy-sandbox/glossary#origin) などのメカニズムを使用して、さまざまなサイト間でユーザーの行動を相互に関連付けたいというサードパーティも存在します。
+{% Aside %} アクセスしたサイト（URL バーに表示されるサイト）によって設定される Cookie は、ファースト パーティ Cookie です。アクセスしたサイトには、他のサイトのコンテンツ（画像、広告、テキストなど）を埋め込むことができます。現在のサイト以外のサイトからの Cookie は[サードパーティ Cookie](https://web.dev/articles/samesite-cookie-recipes#use_cases_for_cross_site_or_third_party_cookies) です。 {% endAside %}
 
-ブラウザーは、サイト間ではユーザーを特定できないプライバシー モデルを提案しています。ただし、多くの組織には、さまざまな国のドメイン (`example.com` や `example.co.uk` など) など、さまざまなドメイン名の関連サイトがあります。適切な関係 (たとえば共通の所有権) を持つ関連ドメイン名には、同じファーストパーティであると宣言する能力が必要です。この能力が備わっていれば、ブラウザーはファーストパーティとサードパーティの扱いが異なる状況でもこれらのドメインをファーストパーティとして扱うことができます。
+## First-Party Sets で関連サイトを定義する
 
-どのようなソリューションであっても、システムの悪用を防止する必要があります。たとえば、ファーストパーティの特権を取得するために、所有者が異なる無関係のサイトが同じファーストパーティであると宣言できないようにする必要があります。
+First-Party Sets（FPS）は、企業がサイト間の関係を宣言し、ブラウザが特定の[目的](#first-party-sets-use-cases)で限定的なサードパーティ Cookie を許可できるようにする方法です。Chrome は、これらの宣言された関係を使用して、サードパーティのコンテキストで、Cookie へのサイトアクセスをいつ許可または拒否するかを決定します。
 
-## First-Party Sets の仕組み
+大まかに言えば、First-Party Set はドメインの集合であり、単一の「セット プライマリ」と場合によっては複数の「セット メンバー」が存在します。
 
-Web サイトは、`.well-known/first-party-set` アドレスから JSON ファイルを提供することにより、一連の Web ドメインのメンバー (または所有者) であると宣言できます。
+サイトの作成者は、[ドメインをセットに提出](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md)する必要があります。セットメンバーには、 [ユースケースに基づいたサブセット](https://github.com/WICG/first-party-sets#defining-a-set-through-use-case-based-subsets)を含むさまざまなドメイン タイプを含めることができます。
 
-`a.example`、`b.example`、`c.example` が `a.example` が所有するファーストパーティ セットを形成するとします。この場合、サイトは次のリソースを提供します。
+## First-Party Sets のユースケース
 
-```json
-// https://a.example/.well-known/first-party-set
-{
-  "owner": "a.example",
-  "members": ["b.example", "c.example"],
-  ...
-}
+First-Party Sets は、組織が異なるトップレベルサイト間でなんらかの 共有 ID 形態が必要となる場合に適しています。この場合の共有 ID とは、完全なシングルサインオンソリューションから、サイト間で共有された設定が必要なだけの場合まで、あらゆるものを指しています。
 
-// https://b.example/.well-known/first-party-set
-{
-	"owner": "a.example"
-}
+組織では、以下の項目に対して異なるトップレベルドメインを使用している可能性があります。
 
-// https://c.example/.well-known/first-party-set
-{
-	"owner": "a.example"
-}
-```
+- **ブランドドメイン**: `fly-brandx.com、drive-brandx.com`
+- **アプリドメイン**: `calendar-brandx.com、mail-brandx.com`
+- ローカリゼーションを有効にするための**国固有のドメイン**: `brandx.co.uk`、`brandx.rs`
+- ユーザーが直接やり取りすることはないが、同じ組織のサイト全体でサービスを提供する**サービス ドメイン**: `brandx-assets.com`
+- ユーザーが直接操作することはないが、セキュリティ上の理由から存在する**サンドボックスドメイン**: `brandx-usercontent.com`
 
-所有者ドメインは、そのメンバー ドメインが記載されているマニフェスト ファイルをホストします。ブラウザーは、メンバーの Web サイトに所有者を指定するように要求し、所有者のマニフェストをチェックしてサイトの関係を確認できます。
+## 詳細
 
-ブラウザーのポリシーが悪用や誤用を防げると期待されています。たとえば First-Party Sets では、無関係のサイト間でのユーザー情報の交換、または同じエンティティによって所有されていないサイトのグループ化を防ぐ必要があります。サイトを登録するために考えられる 1 つの方法は、ブラウザーのポリシーを満たすために必要な情報とともに、提案するドメインのグループをパブリック トラッカー (専用の GitHub リポジトリなど) に投稿することです。メンバー ドメインが所有者の管理下であることを証明するために、セットにある各ドメインに対して `.well-known` の URL でチャレンジを提供することが必要になる可能性もあります。
-
-First-Party Sets を補うために、`SameParty` という Cookie 属性が提案されています。`SameParty` の Cookie 属性を指定すると、Cookie のコンテキストがトップレベル コンテキストと同じ First-Party Set の一部である場合に Cookie を含めるようにブラウザーに指示します。
-
-たとえば、上記の First-Party Set の場合、a.example は次の Cookie を設定できます。
-
-`Set-Cookie: session=123; Secure; SameSite=Lax; SameParty`
-
-つまり、b.example または c.example の訪問者が a.example にリクエストを送信すると、そのリクエストに`セッション` Cookie が含まれるということです。
-
----
-
-## 本 API に貢献し、フィードバックを共有しましょう
-
-- **オリジン トライアル**: 登録して [Chrome オリジン トライアル](/origintrials/#/view_trial/988540118207823873)に参加しましょう。
-- **GitHub**: [提案](https://github.com/privacycg/first-party-sets)を読み、[質問をして、議論に参加しましょう](https://github.com/privacycg/first-party-sets/issues)。
-- **開発者サポート**: [プライバシー サンドボックス開発者サポート リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問をしたり、議論に参加したりしましょう。
-
-## 詳細はこちら
-
-- [ファーストパーティセットの技術説明者](https://github.com/privacycg/first-party-sets)
-- [Chrome プラットフォームの状態](https://chromestatus.com/feature/5640066519007232)。
-- [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)。
+- [ファースト パーティ開発者ガイド](/docs/first-party-sets-integration/)
+- [First-Party Sets の技術 Explainer](https://github.com/privacycg/first-party-sets)
+- [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5640066519007232)
+- [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)
+- [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
+- この提案に関するご質問がございましたっら、提案リポジトリで[イシューを提出](https://github.com/privacycg/first-party-sets/issues)してください。

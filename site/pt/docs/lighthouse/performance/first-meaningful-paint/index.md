@@ -8,7 +8,7 @@ date: 2019-05-02
 updated: 2019-11-05
 ---
 
-{% Aside 'caution' %} A métrica first-meaningful-paint (FMP) foi descontinuada no Lighthouse 6.0. Na prática, a FMP tem sido excessivamente sensível a pequenas diferenças no carregamento da página, levando a resultados inconsistentes (bimodais). Além disso, a definição da métrica depende de detalhes de implementação específicos do navegador, o que significa que não pode ser padronizada nem implementada em todos os navegadores da web. Seguindo em frente, considere usar a [Largest Contentful Paint](https://web.dev/lcp/). {% endAside %}
+{% Aside 'caution' %} A métrica first-meaningful-paint (FMP) foi descontinuada no Lighthouse 6.0. Na prática, a FMP tem sido excessivamente sensível a pequenas diferenças no carregamento da página, levando a resultados inconsistentes (bimodais). Além disso, a definição da métrica depende de detalhes de implementação específicos do navegador, o que significa que não pode ser padronizada nem implementada em todos os navegadores da web. Seguindo em frente, considere usar a [Largest Contentful Paint](https://web.dev/articles/lcp). {% endAside %}
 
 First Meaningful Paint (FMP) é uma das seis métricas monitoradas na **seção Desempenho** do relatório Lighthouse. Cada métrica captura algum aspecto da velocidade de carregamento da página.
 
@@ -20,7 +20,7 @@ O Lighthouse exibe FMP em segundos:
 
 O FMP mede quando o conteúdo principal de uma página está visível para o usuário. A pontuação bruta para FMP é o tempo em segundos entre o usuário iniciar o carregamento da página e a página que renderiza o conteúdo primário acima da dobra. A FMP mostra essencialmente o tempo da pintura após o qual a maior mudança de layout acima da dobra acontece. Saiba mais sobre os detalhes técnicos da FMP em [Time to First Meaningful Paint do Google: uma abordagem baseada em layout](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view).
 
-[First Contentful Paint (FCP)](https://web.dev/fcp/) e FMP são geralmente as mesmas quando o primeiro bit de conteúdo renderizado na página inclui o conteúdo acima da dobra. No entanto, essas métricas podem ser diferentes quando, por exemplo, há conteúdo acima da dobra em um iframe. A FMP registra quando o conteúdo do iframe é visível para o usuário, enquanto a FCP *não* inclui o conteúdo do iframe.
+[First Contentful Paint (FCP)](https://web.dev/articles/fcp) e FMP são geralmente as mesmas quando o primeiro bit de conteúdo renderizado na página inclui o conteúdo acima da dobra. No entanto, essas métricas podem ser diferentes quando, por exemplo, há conteúdo acima da dobra em um iframe. A FMP registra quando o conteúdo do iframe é visível para o usuário, enquanto a FCP *não* inclui o conteúdo do iframe.
 
 ## Como o Lighthouse determina sua pontuação FMP
 
@@ -61,23 +61,23 @@ Esta tabela mostra como interpretar sua pontuação FMP:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Como melhorar sua pontuação FMP
 
-Veja [Como melhorar a Largest Contentful Paint em seu site](https://web.dev/lcp/#how-to-improve-lcp). As estratégias para melhorar a FMP são basicamente as mesmas que as estratégias para melhorar a Largest Contentful Paint.
+Veja [Como melhorar a Largest Contentful Paint em seu site](https://web.dev/articles/lcp#how_to_improve_lcp). As estratégias para melhorar a FMP são basicamente as mesmas que as estratégias para melhorar a Largest Contentful Paint.
 
 ## Rastreando FMP em dispositivos de usuários reais
 
-Para saber como medir quando a FMP realmente ocorre nos dispositivos dos usuários, consulte a página [Métricas de desempenho centradas no usuário do Google.](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics) A seção [Acompanhamento de FMP usando elementos hero](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fmp_using_hero_elements) descreve como acessar programaticamente os dados da FCP e enviá-los ao Google Analytics.
+Para saber como medir quando a FMP realmente ocorre nos dispositivos dos usuários, consulte a página [Métricas de desempenho centradas no usuário do Google.](https://web.dev/articles/user-centric-performance-metrics) A seção [Acompanhamento de FMP usando elementos hero](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#tracking_fmp_using_hero_elements) descreve como acessar programaticamente os dados da FCP e enviá-los ao Google Analytics.
 
 Consulte [Avaliação do desempenho de carregamento do Google na vida real com navegação e tempo de recursos](https://developers.google.com/web/fundamentals/performance/navigation-and-resource-timing/) para obter mais informações sobre como coletar métricas de usuários reais. A auditoria [Marcas e medidas de tempo do usuário do Lighthouse](/docs/lighthouse/performance/user-timings/) permite que você veja os dados de tempo do usuário em seu relatório.
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 
 - [Código-fonte para auditoria da **First Meaningful Paint**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/first-meaningful-paint.js)
 - [Guia de pontuação do Lighthouse v3](https://developers.google.com/web/tools/lighthouse/v3/scoring)
 - [Tempo até a First Meaningful Paint: uma abordagem baseada em layout](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view)
-- [Largest Contentful Paint](https://web.dev/lcp/)
+- [Largest Contentful Paint](https://web.dev/articles/lcp)

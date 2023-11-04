@@ -33,7 +33,7 @@ Lighthouse marca páginas con árboles DOM que:
 - Advierte cuando el elemento body tiene más de ~800 nodos.
 - Se producen errores cuando el elemento body tiene más de ~1,400 nodos.
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## Cómo optimizar el tamaño del DOM
 
@@ -49,11 +49,11 @@ Si no puede evitar un árbol DOM grande, otro enfoque para mejorar el rendimient
 
 ### Angular
 
-Si renderiza listas grandes, utilice [desplazamiento virtual](https://web.dev/virtualize-lists-with-angular-cdk/) con el Kit de desarrollo de componentes (CDK).
+Si renderiza listas grandes, utilice [desplazamiento virtual](https://web.dev/articles/virtualize-lists-with-angular-cdk) con el Kit de desarrollo de componentes (CDK).
 
 ### React
 
-- Utilice una biblioteca de "ventanas" como [`react-window`](https://web.dev/virtualize-long-lists-react-window/) para minimizar el número de nodos DOM creados si renderiza muchos elementos repetidos en la página.
+- Utilice una biblioteca de "ventanas" como [`react-window`](https://web.dev/articles/virtualize-long-lists-react-window) para minimizar el número de nodos DOM creados si renderiza muchos elementos repetidos en la página.
 - Minimice las renderizaciones repetititvas innecesarias utilizando [`shouldComponentUpdate`](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action), [`PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent), o [`React.memo`](https://reactjs.org/docs/react-api.html#reactmemo).
 - [Omita efectos](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects) solo hasta que ciertas dependencias hayan cambiado si utiliza el hook `Effect` para mejorar el rendimiento en el tiempo de ejecución.
 

@@ -2,86 +2,8 @@
 title: Components
 layout: 'layouts/doc-post.njk'
 date: 2021-01-12
-updated: 2021-01-27
+updated: 2022-06-17
 ---
-
-## Details
-
-Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-A brief summary goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-A brief summary goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}
-
-The details shortcode also supports using headers in the summary.
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-### A normal heading goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-### A normal heading goes here
-{% endDetailsSummary %}
-
-The body of the Details component goes here, and **can** contain markdown.
-
-{% endDetails %}
-
-````md
-{% raw %}{% Details %}
-{% DetailsSummary %}
-### Details component summary
-This is an optional preview.
-{% endDetailsSummary %}
-
-This is the body of the Details component.
-It **can** contain markdown.
-
-```js
-const bar = 'foo';
-console.log(bar);
-```
-{% endDetails %}{% endraw %}
-````
-
-{% Details %}
-{% DetailsSummary %}
-### Details component summary
-This is an optional preview.
-{% endDetailsSummary %}
-
-This is the body of the Details component.
-It **can** contain markdown.
-
-```js
-const bar = 'foo';
-console.log(bar);
-```
-{% endDetails %}
 
 ## Asides
 Use asides to provide information that's related to but distinct from the
@@ -172,17 +94,17 @@ Use the success aside to describe a successful action or an error-free status.
 Use the success aside to describe a successful action or an error-free status.
 {% endAside %}
 
-### Gotchas asides
+### Important asides
 
 ```md
-{% raw %}{% Aside 'gotchas' %}
-Use the gotcha aside to indicate a common problem that the reader wouldn't know
+{% raw %}{% Aside 'important' %}
+Use the important aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
 {% endAside %}{% endraw %}
 ```
 
-{% Aside 'gotchas' %}
-Use the gotchas aside to indicate a common problem that the reader wouldn't know
+{% Aside 'important' %}
+Use the important aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
 {% endAside %}
 
@@ -212,6 +134,34 @@ Use the codelab aside to link to an associated codelab.
 
 {% Aside 'codelab' %}
 Get started: [Measure your page performance with Lighthouse](#).
+{% endAside %}
+
+### Example asides
+
+```md
+{% raw %}{% Aside 'example' %}
+Use the example aside to give an example use case.
+{% endAside %}{% endraw %}
+```
+
+{% Aside 'example' %}
+Advertising platform Criteo recently ran a competition with more than
+150 teams testing different machine learning models to evaluate how
+differential privacy concepts such as noise insertion and aggregation
+might impact advertising performance. It's helpful to examine these
+concepts since they underlie several of the Privacy Sandbox APIs.
+{% endAside %}
+
+### Update asides
+
+```md
+{% raw %}{% Aside 'update' %}
+Use the update aside for important updates, such as a name change.
+{% endAside %}{% endraw %}
+```
+
+{% Aside 'update' %}
+The end date has been extended to May 2023.
 {% endAside %}
 
 ## Blockquotes
@@ -283,11 +233,52 @@ These buttons are shown for reference.
   Round button
 </button>
 
+## Browser Compat
+
+With the `BrowserCompat` shortcode, you can embed an
+[MDN - Browser Compatibility Data](https://github.com/mdn/browser-compat-data/)
+widget in your post. You have to pass in the dot-separated feature ID,
+as used on [BCD Schema](https://github.com/mdn/browser-compat-data), e.g. for
+[Web/API/BackgroundFetchEvent](https://developer.mozilla.org/docs/Web/API/BackgroundFetchEvent)
+the ID is `api.BackgroundFetchEvent`.
+
+```text
+{% raw %}{% BrowserCompat 'api.BackgroundFetchEvent' %}{% endraw %}
+```
+
+{% BrowserCompat 'api.BackgroundFetchEvent' %}
+
+The widget will use 🗑 symbols to represent features that are deprecated:
+
+{% BrowserCompat 'api.Document.execCommand' %}
+
+The following JavaScript snippet, run from the DevTools console, will display the correct ID for a given MDN page that's currently open:
+
+```js
+window.alert(document.querySelector(".bc-github-link")?.href.match(/title=(.+?)\+/)[1] ?? "No browser compat widget found on the page.")
+```
+
+## Chrome Date
+
+Use `ChromeDate` when you want to refer to a specific milestone date in the Chrome release schedule.
+
+```md
+{% raw %}- Chrome 111 (stable date): {% ChromeDate 111 %}
+- Chrome 111 (stable date): {% ChromeDate 111, "stableDate" %}
+- Chrome 111 (earliest beta date): {% ChromeDate 111, "earliestBetaDate" %}
+- Chrome 111 (final beta date): {% ChromeDate 111, "finalBetaDate" %}{% endraw %}
+```
+
+- Chrome 111 (stable date): {% ChromeDate 111 %}
+- Chrome 111 (stable date): {% ChromeDate 111, "stableDate" %}
+- Chrome 111 (earliest beta date): {% ChromeDate 111, "earliestBetaDate" %}
+- Chrome 111 (final beta date): {% ChromeDate 111, "finalBetaDate" %}
+
 ## Code
 
 developer.chrome.com uses the same syntax highlighter as web.dev.
 
-See the [Code](https://web.dev/handbook/markup-code/) post for more details.
+See the [Code](https://web.dev/articles/handbook/markup-code) post for more details.
 
 ## Columns
 
@@ -381,6 +372,14 @@ const config = {
 {% endColumn %}
 
 {% endColumns %}
+
+## Comments
+
+If you want comments that are stripped out during rendering, you can place your comment text between {&num; and  &num;}.
+
+```md
+{% raw %}{% your comment here %}{% endraw %}
+```
 
 ## Compare
 
@@ -501,6 +500,84 @@ const x = 0;
 var x = 0;
 ```
 {% endCompare %}
+
+## Details (accordion functionality)
+
+Use a details section to hide extra information from the user until it's needed. It can have an optional preview. Use this component if you need an accordion or expandable section.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+The details shortcode also supports using headers in the summary.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview.
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview.
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}
 
 ## Glitches {: #glitches }
 
@@ -635,7 +712,26 @@ place the `Img` shortcode snippet inside:
   </figcaption>
 </figure>
 
+## Labels
+
+Labels can be used to display a filename associated with a [code](https://web.dev/articles/handbook/markup-code) snippet.
+
+````text
+{% raw %}{% Label %}filename.js:{% endLabel %}{% endraw %}
+
+```js
+console.log('hello');
+```
+````
+
+{% Label %}filename.js:{% endLabel %}
+
+```js
+console.log('hello');
+```
+
 ## Lists
+
 See the [Lists section of the Grammar, mechanics, and usage post](https://web.dev/handbook/grammar/#lists)
 for information about when to use each list type.
 
@@ -683,6 +779,16 @@ First Term
 Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
+
+## Partials
+
+Use partials to reuse the same piece of content across a series of articles without having to rewrite it. Like a banner asking for feedback.
+
+```md
+{% raw %}{% Partial 'devtools/banner.md' %}{% endraw %}
+```
+
+{% Partial 'devtools/banner.md' %}
 
 ## Tabs
 

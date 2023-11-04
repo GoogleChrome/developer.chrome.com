@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Cross-origin isolation"
+seoTitle: "Chrome Extensions cross-origin isolation"
 date: 2021-08-03
 updated: 2021-11-10
 description: Overview of cross-origin isolation for extensions
@@ -29,13 +30,13 @@ will opt the extension's origin into cross-origin isolation.
 
 Opting into cross-origin isolation allows the extension to use powerful APIs like SharedArrayBuffers
 in its cross-origin isolated contexts. However, it does also come with certain side-effects. See
-[Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/coop-coep/) for
+[Making your website "cross-origin isolated" using COOP and COEP](https://web.dev/articles/coop-coep) for
 more information on this.
 
 {% Aside 'caution' %}
 
 Even if an extension opts into cross-origin isolation, not all extension contexts will be
-cross-origin isolated. For example, cross-origin isolation [is not fully implemented][crbug-issue])
+cross-origin isolated. For example, cross-origin isolation [is not fully implemented][crbug-issue]
 for service and shared workers currently. Similarly, a cross-origin isolated extension's
 web-accessible subframe on a regular web page is not considered cross-origin isolated currently.
 

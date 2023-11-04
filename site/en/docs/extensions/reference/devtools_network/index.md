@@ -13,7 +13,7 @@ In terms of HAR, the `chrome.devtools.network.getHAR()` method returns entire _H
 `chrome.devtools.network.onRequestFinished` event provides _HAR entry_ as an argument to the event
 callback.
 
-Note that request content is not provided as part of HAR for efficieny reasons. You may call
+Note that request content is not provided as part of HAR for efficiency reasons. You may call
 request's `getContent()` method to retrieve content.
 
 If the Developer Tools window is opened after the page is loaded, some requests may be missing in
@@ -36,8 +36,9 @@ chrome.devtools.network.onRequestFinished.addListener(
 );
 ```
 
-You can find more examples that use this API in [Samples][3].
+To try this API, install the [devtools API examples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/devtools) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
+
 
 [1]: /docs/extensions/mv3/devtools
 [2]: https://www.softwareishard.com/blog/har-12-spec/
-[3]: /docs/extensions/mv3/samples#search:devtools.network

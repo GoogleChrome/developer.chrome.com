@@ -215,7 +215,7 @@ be persisted on the device so that applications can load the license into
 memory without sending another license request to the server. This is how
 offline playback is supported in EME.
 
-Until now, Chrome OS and Android were the only platforms to support persistent
+Until now, ChromeOS and Android were the only platforms to support persistent
 licenses. It is not true anymore. Playing protected content through EME while
 the device is offline is now possible in Chrome 64 on Windows and Mac as well.
 
@@ -295,7 +295,7 @@ Chrome 63 was no exception.
 
 If the video doesn't contain any audio tracks, the video will be automatically
 paused when played in the background (e.g., in a non-visible tab) in Chrome
-desktop (Windows, Mac, Linux, and Chrome OS). This is a follow-up from a
+desktop (Windows, Mac, Linux, and ChromeOS). This is a follow-up from a
 similar change that was only applying to [MSE videos in Chrome 62].
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663999)

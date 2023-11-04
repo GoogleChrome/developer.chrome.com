@@ -1,8 +1,8 @@
 ---
 layout: "layouts/blog-post.njk"
 title: "User-Agent Reduction deprecation trial"
-subhead: > 
-  Register to continue receiving the full User-Agent string.
+subhead: >
+  The User-Agent Reduction deprecation trial allowed sites to continue receiving the full User-Agent string after UA string reduction. The trial ended September 23, 2023.
 description: >
   Starting from Chrome 101, the information available in the User-Agent string will be reduced.
   Sites that haven’t had time to migrate away from using the reduced User-Agent string can take
@@ -11,18 +11,29 @@ authors:
   - abeyad
   - victortan
 date: 2022-02-24
+updated: 2023-09-23
 tags:
   - privacy
   - origin-trials
   - chrome-101
+is_outdated: true
 ---
 
+ {% Aside 'warning' %}
+ The User-Agent Reduction deprecation trial ended September 23, 2023. The information available in the User-Agent string was reduced beginning in Chrome 101. During the deprecation trial, sites were able to continue receiving parts of the UA string, but will now have to rely on other methods.
 
-Starting from Chrome 101, the information available in the User-Agent (UA) string will be reduced [using a phased approach](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html). Sites that haven't had time to migrate away from using the reduced User-Agent string and [move toward User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) can take part in a deprecation trial to continue receiving the full User-Agent string.
+ To replace functionality that relied on the User Agent string, you can implement the [User Agent client hints API](https://developer.mozilla.org/docs/Web/API/User-Agent_Client_Hints_API#browser_compatibility).
+
+ The [User-Agent Client Hints page](https://web.dev/articles/migrate-to-ua-ch) provides some background.
+
+ The remainder of this blog post should be considered deprecated.
+ {% endAside %}
+
+Starting from Chrome 101, the information available in the User-Agent (UA) string will be reduced [using a phased approach](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html). Sites that haven't had time to migrate away from using the reduced User-Agent string and [move toward User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch) can take part in a deprecation trial to continue receiving the full User-Agent string.
 
 The registration for the deprecation trial will begin with the [Chrome 100](https://chromiumdash.appspot.com/schedule) Beta. It will allow sites to receive the full User-Agent string ahead of the Chrome 101 release, where the minor version string will be reduced. If you would like to test the origin trial on Chrome 100 Beta before it launches to the stable channel, be sure to register and test before the release date for Chrome 100 ([currently scheduled for March 31st, 2022](https://chromiumdash.appspot.com/schedule)).
 
-Below is an overview of the deprecation trial and what to expect. If you have feedback to share or you encounter any issues throughout this trial let us know in the [UA Reduction Github repository](https://github.com/abeyad/user-agent-reduction/issues).
+Below is an overview of the deprecation trial and what to expect. If you have feedback to share or you encounter any issues throughout this trial let us know in the [UA Reduction GitHub repository](https://github.com/miketaylr/user-agent-reduction/issues).
 
 ## What does this mean for web developers?
 
@@ -33,29 +44,32 @@ By enrolling in the deprecation trial, sites will continue to receive the full U
 -   The `navigator.platform` Javascript getter
 -   The `navigator.appVersion` Javascript getter
 
-Sites should still audit their usage of the User-Agent header and related APIs, and if needed prepare to [migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) before the deprecation trial expires. The intent is to expire this deprecation trial once the [User-Agent Reduction rollout](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html) is complete.
+Sites should still audit their usage of the User-Agent header and related APIs, and if needed prepare to [migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch) before the deprecation trial expires. The intent is to expire this deprecation trial once the [User-Agent Reduction rollout](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html) is complete.
 
 ## How do I participate in the User-Agent Reduction deprecation  trial?
 
 ### Register for the trial
 
-To register for the origin trial and get a token for your domains, visit the [User Agent Reduction deprecation trial page](/origintrials/#/view_trial/2608710084154359809).
+To register for the origin trial and get a token for your domains, visit the [User Agent Reduction deprecation trial page](/origintrials/#/view_trial/2608710084154359809). If you are a third-party registering please check 'Third-party matching'.
 
 ### Setup
 
-Once you've registerd for the trial, update your HTTP response headers with the following:
+Once you've registered for the trial, update your HTTP response headers with the following:
 
 1.  Add `Origin-Trial: <ORIGIN TRIAL TOKEN>` to your HTTP response header. <`ORIGIN TRIAL TOKEN`> contains the token you got when registering for the origin trial.
-1.  Add `Accept-CH: Sec-CH-UA-Full` to your HTTP response header. Setting `Accept-CH` will only cause the full User-Agent string to be sent on subsequent requests to the origin. 
-1. To resend the first navigation request with the full User-Agent string, add `Critical-CH: Sec-CH-UA-Full` to your HTTP response header, in addition to the `Accept-CH` and `Origin-Trial` headers.
-1.  If you want third-party subresource requests to also receive the full UA string, you have two options:
-    - Add a `Permissions-Policy` header with the third-party domains that should receive the full UA.
-        -  To allow a named list of third-party domains, add `Permissions-Policy: ch-ua-full=(self "https://google.com")`.
+1.  Add `Accept-CH: Sec-CH-UA-Full` to your HTTP response header. Setting `Accept-CH` will only cause the full User-Agent string to be sent on subsequent requests to the origin.
+1.  If the full User-Agent string is critical on first request add `Critical-CH: Sec-CH-UA-Full` to your HTTP response header, in addition to the `Accept-CH` and `Origin-Trial` headers.
+1.  For participants joining the reduction deprecation trial we suggest allowing all third-party domains access to the full User-Agent string. Failure to extend third-party domains access to the full User-Agent string will block their full User-Agent string access regardless of their own reduction deprecation trial registration. You can allow full User-Agent string access to third-party domains by one of the following two options:
+    - Add a `Permissions-Policy` header with the third-party domains that should receive the full User-Agent string.
         -  To allow all third-party domains, add `Permissions-Policy: ch-ua-full=*`.
-    - Add an `Accept-CH` meta tag with the third-party domains that should receive the full UA (only in Chrome 100 and above).
-        -  To allow a named list of third-party domains, add `<meta name="accept-ch" content="ch-ua-full=( https://google.com )">`.
+        -  To allow a named list of third-party domains, add `Permissions-Policy: ch-ua-full=(self "https://thirdparty.example.com")`.
+    - Add an `Accept-CH` meta tag with the third-party domains that should receive the full User-Agent string (only in Chrome 100 and above).
+        -  To allow a named list of third-party domains, add `<meta http-equiv="delegate-ch" value="sec-ch-ua-full https://thirdparty.example.com">`.
         -  It's not possible to delegate to all third-party domains via `*` in the meta tag.
+
 1. Load your website in Chrome 100 (or later) and continue receiving the full User-Agent string.
+
+Note: a third-party embed can register and opt in to the trial without requiring the top-level site to delegate permission via Permissions Policy or `<meta http-equiv="delegate-ch">`. The [standard advice for third-party origin trials](/docs/web-platform/third-party-origin-trials/) applies.
 
 ### Demo
 
@@ -92,8 +106,10 @@ The second, referenced here, is a deprecation trial intended for sites that need
 
 ## How long will the deprecation trial last?
 
-The UA Reduction deprecation trial will run from Chrome 100 to Chrome 112. Chrome 113 will be the first release where only the completely reduced User-Agent string is sent.
+The User-Agent Reduction deprecation trial will run from Chrome 100 to Chrome 115. Chrome 116 will be the first release where only the completely reduced User-Agent string is sent.
 
 ## How do I share feedback for the User-Agent Reduction depreciation trial?
 
-Submit any issues or feedback to the [User-Agent Reduction Github repository](https://github.com/abeyad/user-agent-reduction/issues).
+Submit any issues or feedback to the [User-Agent Reduction GitHub repository](https://github.com/miketaylr/user-agent-reduction/issues).
+
+

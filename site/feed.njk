@@ -14,7 +14,9 @@ pagination:
   <subtitle>{{ feed.description or site.description }}</subtitle>
   <link href="{{ site.url }}{{ feed.permalink | url }}" rel="self"/>
   <link href="{{ absoluteFeedUrl }}" />
-  <updated>{{ feed.items | rssLastUpdatedDate }}</updated>
+  {% if feed.items and feed.items.length  %}
+    <updated>{{ feed.items | rssLastUpdatedDate }}</updated>
+  {% endif %}
   <id>{{ absoluteFeedUrl }}</id>
   <author>
     <name>{{ site.title }}</name>
@@ -28,15 +30,10 @@ pagination:
     <id>{{ absolutePostUrl }}</id>
     {% if item.data.authors.length %}
       {% for authorId in item.data.authors %}
-      {% set author = postsData.authors[authorId] %}
+      {% set authorTitle = 'i18n.authors.' + authorId + '.title' %}
       <author>
-        <name>
-          {%- if author -%}
-            <name>{{ author.title | i18n(locale) }}</name>
-          {%- else -%}
-            {{ authorId }}
-          {%- endif -%}
-        </name>
+        <name>{{ authorTitle | i18n(locale) }}</name>
+        <uri>{{ site.url }}/authors/{{ authorId }}/</uri>
       </author>
       {% endfor %}
     {% else %}

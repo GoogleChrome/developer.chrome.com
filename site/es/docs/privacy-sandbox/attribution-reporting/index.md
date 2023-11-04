@@ -48,7 +48,7 @@ Hoy en día, la evaluación de conversiones publicitarias depende a menudo de la
 
 La API de informes de atribuciones permite medir dos eventos que están vinculados entre sí: un evento en el sitio web de un editor, como un usuario que ve o hace clic en un anuncio, con una conversión posterior en el sitio de un anunciante.
 
-Esta API es compatible con la evaluación de atribuciones de conversiones a través de clics (disponible en la primera implementación de esta API, actualmente en la [prueba de origen](https://web.dev/conversion-measurement/#browser-support)) y la evaluación de atribuciones a través de visualizaciones ([consulte explicación pública](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
+Esta API es compatible con la evaluación de atribuciones de conversiones a través de clics (disponible en la primera implementación de esta API, actualmente en la [prueba de origen](/docs/privacy-sandbox/attribution-reporting/#browser-support)) y la evaluación de atribuciones a través de visualizaciones ([consulte explicación pública](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
 
 La API ofrece dos tipos de informes de atribuciones que se pueden utilizar para diferentes casos de uso:
 
@@ -67,8 +67,8 @@ La API ofrece dos tipos de informes de atribuciones que se pueden utilizar para 
 
 - [Introducción a los Informes de atribuciones (Evaluación de las conversiones)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [Explicaciones técnicas sobre la API](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ obsoleto) [Una forma más privada de medir las conversiones de los anuncios](https://web.dev/conversion-measurement/) : descripción general de la primera iteración de esta API para desarrolladores web
+- (⚠️ obsoleto) [Una forma más privada de medir las conversiones de los anuncios](/docs/privacy-sandbox/attribution-reporting/) : descripción general de la primera iteración de esta API para desarrolladores web
 - (⚠️ obsoleto) [Una forma más privada de medir las conversiones de los anuncios - Video](https://www.youtube.com/watch?v=jcDfOoWwZcM): demostración de la primera iteración de esta API (solo clics)
-- (⚠️ obsoleto) [Uso de la API para Evaluar conversiones de eventos](https://web.dev/using-conversion-measurement/): cómo experimentar con la primera iteración de esta API para desarrolladores web
+- (⚠️ obsoleto) [Uso de la API para Evaluar conversiones de eventos](/docs/privacy-sandbox/attribution-reporting/): cómo experimentar con la primera iteración de esta API para desarrolladores web
 - [Conociendo a detalle la iniciativa de Google, Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 - [Depurar la API con Chrome DevTools](/blog/new-in-devtools-93/#attribution-reporting)

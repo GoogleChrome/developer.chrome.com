@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Update: Event Pages and Background Pages"
+seoTitle: "Chrome Apps - Update: Event Pages and Background Pages [Deprecated]"
 #date: TODO
 #updated: TODO
 #description: TODO
@@ -23,4 +24,4 @@ Scripts][3] for clarification and best practices.
 
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
-[3]: /background_pages
+[3]: /docs/extensions/mv2/background_pages/

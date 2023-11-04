@@ -1,0 +1,50 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% macro heroCardWide(title, text, actionText, actionLink, imgSrc, imgAlt, color, titleIcon) %}
+  {% set color = color or 'blue' %}
+<div class="hero-card width-full rounded-lg bg-{{color}}-lightest pad-400 masonry:pad-right-500 masonry:pad-top-700 masonry:pad-left-500 masonry:pad-bottom-500">
+  <div class="hero-card__inner hero-card__inner-wide">
+    <div>
+      <h1 class="type--h1 color-{{color}}-darkest">
+        {% if titleIcon %}
+          <div class="project-icon gap-right-300">
+            <div class="project-icon__cover cover-last"></div>
+            <div class="project-icon__cover cover-mid"></div>
+            <div class="project-icon__cover">
+              {# image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/TvE0fdJmcXI8fuPc8R7A.svg #}
+              {% Img
+                src=titleIcon,
+                alt="Abstract icon",
+                width="56",
+                height="56",
+                fetchpriority="high"
+              %}
+            </div>
+          </div>
+        {% endif %}
+        {{ title | md | safe }}
+      </h1>
+      <p class="gap-top-300">
+        {{ text | md | safe }}
+      </p>
+      {% if actionText %}
+        <a href="{{ actionLink }}" class="material-button button-filled button-round display-inline-flex color-bg bg-{{color}}-medium gap-top-400">
+          {{ actionText }}
+        </a>
+      {% endif %}
+    </div>
+    {% if imgSrc %}
+      <div class="justify-self-end gap-top-300 masonry:gap-top-0">
+        {% Img
+          class="width-full",
+          src=imgSrc,
+          alt=imgAlt,
+          width="264",
+          height="132",
+          sizes="(min-width: 592px) 597px, calc(100vw - 96px)"
+        %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

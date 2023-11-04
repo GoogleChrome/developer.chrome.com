@@ -4,13 +4,13 @@ api: tts
 
 ## Overview
 
-Chrome provides native support for speech on Windows (using SAPI 5), Mac OS X, and Chrome OS, using
+Chrome provides native support for speech on Windows (using SAPI 5), Mac OS X, and ChromeOS, using
 speech synthesis capabilities provided by the operating system. On all platforms, the user can
 install extensions that register themselves as alternative speech engines.
 
 ## Generating speech
 
-Call `speak()` from your extension or Chrome App to speak. For example:
+Call `speak()` from your extension to speak. For example:
 
 ```js
 chrome.tts.speak('Hello, world.');
@@ -142,7 +142,7 @@ engines are required to ignore any SSML they don't support and to still speak th
 ## Choosing a voice
 
 By default, Chrome chooses the most appropriate voice for each utterance you want to speak, based on
-the language. On most Windows, Mac OS X, and Chrome OS systems, speech synthesis provided by the
+the language. On most Windows, Mac OS X, and ChromeOS systems, speech synthesis provided by the
 operating system should be able to speak any text in at least one language. Some users may have a
 variety of voices available, though, from their operating system and from speech engines implemented
 by other Chrome extensions. In those cases, you can implement custom code to choose the appropriate

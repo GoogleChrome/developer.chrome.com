@@ -7,7 +7,7 @@
 
   &--info {
     --button-color: var(--color-blue-medium);
-    background-color: var(--color-blue-lighter);
+    background-color: var(--color-blue-lightest);
   }
 
   &--warning {
@@ -29,17 +29,24 @@
   }
 
   &__text {
+    margin: auto;
     max-width: 65ch;
+    text-align: center;
+
+    @include media-query('lg') {
+      text-align: left;
+    }
   }
 
   &__actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: get-size(300);
     white-space: nowrap;
 
     @include media-query('lg') {
       align-items: flex-end;
+      justify-content: flex-end;
       margin-left: get-size(300);
       margin-top: 0;
     }

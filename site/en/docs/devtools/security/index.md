@@ -1,11 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Understand security issues"
+title: "Security: Understand security issues"
 authors:
   - kaycebasques
 date: 2015-12-21
 #updated: YYYY-MM-DD
 description: "Use the Security Panel to make sure that a page is fully protected by HTTPS."
+tags:
+  - find-issues
 ---
 
 Use the **Security** Panel in Chrome DevTools to make sure HTTPS is properly implemented on a page.
@@ -87,9 +89,9 @@ shown when available.
 
 **Figure 6**. Main origin details
 
-[1]: https://web.dev/why-https
+[1]: https://web.dev/why-https-matters/
 [2]: /docs/devtools/open
 [3]: https://letsencrypt.org/
 [4]: https://web.dev/redirects-http/
-[5]: https://developers.google.com/web/tools/lighthouse
-[6]: https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+[5]: /docs/lighthouse
+[6]: https://web.dev/what-is-mixed-content/

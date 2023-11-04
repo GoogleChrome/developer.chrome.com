@@ -1,0 +1,3 @@
+* The [Bounce tracking mitigations proposal](https://github.com/privacycg/nav-tracking-mitigations/blob/main/bounce-tracking-explainer.md)
+  has been implemented for testing in Chrome. If you try this out and [have any feedback](https://github.com/privacycg/nav-tracking-mitigations/issues/), we'd love to hear it.
+* [Chrome platform status](https://chromestatus.com/feature/5705149616488448?context=myfeatures).

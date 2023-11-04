@@ -46,7 +46,7 @@ Here are the main differences between the `eval` and `tabs.executeScript` method
 
 {% Aside 'caution' %}
 
-**Important:** Due to the security considerations explained above, the [`tabs.executeScript`][4]
+Due to the security considerations explained above, the [`scripting.executeScript`](/docs/extensions/reference/scripting#method-executeScript)
 method is the preferred way for an extension to access DOM data of the inspected page in cases where
 the access to JavaScript state of the inspected page is not required.
 
@@ -92,7 +92,9 @@ chrome.devtools.inspectedWindow.eval(
 );
 ```
 
-You can find more examples that use Developer Tools APIs in [Samples][8].
+To try this API, install the [devtools API examples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/devtools) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
+
 
 [1]: /docs/extensions/mv3/devtools
 [2]: #property-tabId
@@ -100,4 +102,4 @@ You can find more examples that use Developer Tools APIs in [Samples][8].
 [4]: /docs/extensions/reference/tabs#method-executeScript
 [5]: https://developers.google.com/web/tools/chrome-devtools/
 [7]: https://www.ietf.org/rfc/rfc6454.txt
-[8]: /docs/extensions/mv3/samples#search:devtools
+[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples

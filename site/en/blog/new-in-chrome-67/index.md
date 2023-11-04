@@ -36,7 +36,7 @@ Want the full list of changes? Check out the
 
 {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/jESgkJzlVwmOqipfF2pp.jpg", alt="Spotify's desktop progressive web app", class="float-left", height="533", width="800" %}
 
-Desktop Progressive Web Apps are now supported on Chrome OS 67, and we've
+Desktop Progressive Web Apps are now supported on ChromeOS 67, and we've
 already started working on support for Mac and Windows. Once installed,
 they're launched in the same way as other apps, and run in an
 [app window](https://developers.google.com/web/progressive-web-apps/desktop#app-window),

@@ -107,3 +107,7 @@ pre > code {
 .highlight-line-remove {
   background-color: var(--color-code-remove);
 }
+
+.type--caption + pre[class*='language-'] {
+  --flow-space: 0.5rem;
+}

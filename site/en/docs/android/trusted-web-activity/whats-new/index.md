@@ -6,12 +6,12 @@ updated: 2020-12-02
 description: Learn about the new features for web applications that use Trusted Web Activity.
 authors:
   - andreban
-  - adrianajara
+  - ajara
 ---
 
 Since [Trusted Web Activity][1] was introduced last year, the Chrome team continues to work on the
 product, making it easier to use with Bubblewrap, adding new features like the upcoming Google Play
-Billing integration, and enabling it to work on more platforms, like Chrome OS. This article will
+Billing integration, and enabling it to work on more platforms, like ChromeOS. This article will
 summarize the latest and upcoming updates for Trusted Web Activity.
 
 ## New Bubblewrap and Trusted Web Activity features
@@ -67,7 +67,7 @@ as it will be [required by the store starting in the second half of 2021][5].
 Users expect applications installed on their devices to behave consistently, regardless of
 technology. When used inside a Trusted Web Activity, the [GeoLocation][6] permission can now be
 delegated to the Operating System and, when enabled, users will see the same dialogs as apps built
-with Kotlin or Java, and find controls to manage the permission in the same place. 
+with Kotlin or Java, and find controls to manage the permission in the same place.
 
 The feature can be added via Bubblewrap and, since it adds extra dependencies to the Android
 project, you should only enable it when the web app is using the Geolocation permission.
@@ -217,7 +217,7 @@ is also a requirement for applications published on the Play Store that sell dig
 Chrome 88 will launch with an origin trial on Android that enables the integration of
 [Trusted Web Activities][1], the [Payment Request API][11] and the [Digital Goods API][12] to
 implement purchase flows via Google Play Billing. We expect this Origin Trial to also be available
-for Chrome OS on version 89.
+for ChromeOS on version 89.
 
 **Important:** The Google Play Billing API has its own [terminology][13] and includes client and
 backend components. This section covers only a small part of the API that is specific to using the
@@ -378,10 +378,10 @@ for (p of purchases) {
 }
 ```
 
-## Upload to the Chrome OS Play Store
+## Upload to the ChromeOS Play Store
 
-Trusted Web Activities are also available since Chrome 85 in the Chrome OS Play Store. The process
-to list your app in the store is the same for Chrome OS as it is for Android.
+Trusted Web Activities are also available since Chrome 85 in the ChromeOS Play Store. The process
+to list your app in the store is the same for ChromeOS as it is for Android.
 
 Once you've created your app bundle, the [Play Console][18] will guide you through the required
 steps to list the app on the Play Store. In the Play Console documentation you can find help to
@@ -402,8 +402,8 @@ Android manifest:
 <uses-feature  android:name="org.chromium.arc" android:required="true"/>
 ```
 
-If your listing is shared with an Android app, the Chrome OS only package version will always have
-to be higher than the Android app package version. You can set up the Chrome OS bundle version to a
+If your listing is shared with an Android app, the ChromeOS only package version will always have
+to be higher than the Android app package version. You can set up the ChromeOS bundle version to a
 way higher number than the Android version, so you don't have to update both versions with each
 release.
 
@@ -422,7 +422,7 @@ release.
 [13]: https://developer.android.com/google/play/billing/terminology
 [14]: https://developer.android.com/google/play/billing
 [15]: https://developers.google.com/android-publisher
-[16]: https://developers.google.com/web/fundamentals/payments/basics/how-payment-request-api-works
+[16]: https://web.dev/how-payment-request-api-works
 [17]: https://developer.android.com/google/play/billing/rtdn-reference
 [18]: https://play.google.com/console/about/
 [19]: https://support.google.com/googleplay/android-developer/answer/9859152

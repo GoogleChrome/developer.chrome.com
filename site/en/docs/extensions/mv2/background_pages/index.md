@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manage events with background scripts"
+seoTitle: "MV2 - Manage events with background scripts [Deprecated]"
 date: 2012-09-17
 updated: 2018-05-01
 description: How to respond to browser triggers (events) from a Chrome Extension background script.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - About extension service workers](/docs/extensions/mv3/service_workers/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Extensions are event based programs used to modify or enhance the Chrome browsing experience. Events
 are browser triggers, such as navigating to a new page, removing a bookmark, or closing a tab.
@@ -67,7 +72,7 @@ Multiple background scripts can be registered for modularized code.
 
 The only occasion to keep a background script persistently active is if the extension uses
 [chrome.webRequest][4] API to block or modify network requests. The webRequest API is incompatible
-with non-persistent background pages.
+with non-persistent background pages. By default, `"persistent"` is set to true.
 
 {% endAside %}
 

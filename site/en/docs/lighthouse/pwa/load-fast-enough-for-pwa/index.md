@@ -19,7 +19,7 @@ to be considered a Progressive Web App. See the
 
 ## How the Lighthouse page load speed audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags pages that don't load fast enough on mobile:
 
 <figure>
@@ -29,7 +29,7 @@ flags pages that don't load fast enough on mobile:
 Two main metrics affect how users perceive load time:
 
 - [First Meaningful Paint (FMP)](/docs/lighthouse/performance/first-meaningful-paint), which measures when the primary content of the page appears visually complete
-- [Time to Interactive (TTI)](https://web.dev/tti/), which measures when the page is fully interactive
+- [Time to Interactive (TTI)](https://web.dev/articles/tti), which measures when the page is fully interactive
 
 For example, if a page appears visually complete after 1&nbsp;second,
 but the user can't interact with it for 10&nbsp;seconds,
@@ -38,16 +38,16 @@ users will likely perceive the page load time as 10&nbsp;seconds.
 Lighthouse computes what the TTI would be on a slow 4G network connection.
 If the time to interactive is more than 10&nbsp;seconds, the audit fails.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 
 - [Source code for **Page load is not fast enough on mobile networks** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/load-fast-enough-for-pwa.js)
-- [Baseline Progressive Web App Checklist](https://developers.google.com/web/progressive-web-apps/checklist#baseline)
-- [Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/)
-- [Get Started With Analyzing Runtime Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/)
-- [Record load performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference#record-load)
-- [Optimizing Content Efficiency](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/)
-- [Rendering Performance](https://developers.google.com/web/fundamentals/performance/rendering/)
+- [Baseline Progressive Web App Checklist](https://web.dev/pwa-checklist/#core)
+- [Critical Rendering Path](https://web.dev/articles/critical-rendering-path)
+- [Get Started With Analyzing Runtime Performance](/docs/devtools/evaluate-performance/)
+- [Record load performance](/docs/devtools/evaluate-performance/reference/#record-load)
+- [Optimizing Content Efficiency](https://web.dev/articles/performance-optimizing-content-efficiency)
+- [Rendering Performance](https://web.dev/articles/rendering-performance)

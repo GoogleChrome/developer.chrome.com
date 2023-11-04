@@ -16,10 +16,10 @@ Precaching is one of the most common things you'll do in a service worker, and W
 
 `generateSW` does different things by default depending on which build tool you use. When using `workbox-webpack-plugin`, you don't have to specify any configuration options. By default, the plugin will precache everything webpack includes in its [dependency graph](https://webpack.js.org/concepts/dependency-graph/) and write a service worker named `service-worker.js` to the directory specified by [`output.path`](https://webpack.js.org/configuration/output/#outputpath)
 
-On the other hand, if you use `workbox-build` or `workbox-cli`, only HTML, CSS and JavaScript assets read from the local filesystem will be precached by default. Configuration-wise, you have to specify `swDest` and [the globDirectoryoption in the [`generateSW` config](/docs/workbox/reference/workbox-build/#method-generateSW) for precaching to work. Chances are, you'll want to configure additional options affecting your service worker behavior as well, so take a look through the documentation.
+On the other hand, if you use `workbox-build` or `workbox-cli`, only HTML, CSS and JavaScript assets read from the local filesystem will be precached by default. Configuration-wise, you have to specify `swDest` and the `globDirectory` option in the [`generateSW` config](/docs/workbox/reference/workbox-build/#method-generateSW) for precaching to work. Chances are, you'll want to configure additional options affecting your service worker behavior as well, so take a look through the documentation.
 
 {% Aside 'warning' %}
-If too many assets in your project are precached with the default settings, use one of the glob options to exclude resources in the `generateSW` configuration. When using `workbox-webpack-plugin`, consult the plugin's [`GenerateSW` documentation](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW) to find out how to prevent unwanted assets from being precached, as its configuration differs from `generateSW`.
+If too many assets in your project are precached with the default settings, use one of the glob options to exclude resources in the `generateSW` configuration. When using `workbox-webpack-plugin`, consult the plugin's [`GenerateSW` documentation](/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSW) to find out how to prevent unwanted assets from being precached, as its configuration differs from `generateSW`.
 {% endAside %}
 
 ## Precaching with `injectManifest`

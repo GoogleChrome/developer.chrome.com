@@ -15,16 +15,16 @@ tags:
   - chrome-93
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Editable CSS container queries in the Styles pane {: #container-queries }
-You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
+You can now view and edit [CSS container queries](https://web.dev/articles/new-responsive#responsive_to_the_container) in the **Styles** pane.
 
 Container queries provide a much more dynamic approach to responsive design. The `@container` at-rule works in a similar way to a media query with `@media`. However, instead of querying the viewport and user agent for information, `@container` queries the ancestor container that matches certain criteria.
 
-In the **Elements** panel, click on a DOM element with `@container` at-rule, DevTools now displays the `@container` information in the **Styles** pane. Click on it to edit the size. The **Styles** pane displays the corresponding container information too. Hover on it to highlight the container element on the page and check the container size. Click on it to select the container element. 
+In the **Elements** panel, click on a DOM element with `@container` at-rule, DevTools now displays the `@container` information in the **Styles** pane. Click on it to edit the size. The **Styles** pane displays the corresponding container information too. Hover on it to highlight the container element on the page and check the container size. Click on it to select the container element.
 
 The container queries feature is experimental currently. Please turn on the `#enable-container-queries` flag under `chrome://flags` to test it.
 
@@ -38,7 +38,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 
 ## Web bundle preview in the Network panel {: #web-bundle }
-[Web bundle](https://web.dev/web-bundles/) is a file format for encapsulating one or more HTTP resources in a single file. You can now preview the web bundle content in the **Network** panel.
+[Web bundle](https://web.dev/articles/web-bundles) is a file format for encapsulating one or more HTTP resources in a single file. You can now preview the web bundle content in the **Network** panel.
 
 The web bundle feature is experimental currently. Please enable `#enable-experimental-web-platform-features` flag under `chrome://flags` to test it.
 
@@ -46,7 +46,7 @@ The web bundle feature is experimental currently. Please enable `#enable-experim
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e7672c40f2febc80786632c188b6029b2f2ac7b7 #}
 
-Chromium issue: [1182537](https://crbug.com/1182537) 
+Chromium issue: [1182537](https://crbug.com/1182537)
 
 
 ## Attribution Reporting API debugging {: #attribution-reporting }
@@ -60,13 +60,13 @@ Chromium issue: [1190735](https://crbug.com/1190735)
 
 
 ## Better string handling in the Console {: #string }
-New context menu in the **Console** allows you to copy any string in as content, JavaScript literal or JSON literal. 
+New context menu in the **Console** allows you to copy any string in as content, JavaScript literal or JSON literal.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/O5uMSgkHrQ2mQDSjmg3A.png", alt="New context menu in the Console", width="800", height="477" %}
 
 In Chrome 90, DevTools updated the **Console** to always [format string outputs as valid JSON literals](/blog/new-in-devtools-90/#double-quotes). We received feedback from the developers that this change could be confusing, some feel that the amount of escaping is excessive and makes the output unreadable.
 
-The **Console** now formats string outputs as valid JavaScript litera, and furthermore provides you 3 copy string options. The **Copy as JavaScript literal** option will escape appropriate special characters and wrap the string in either single quotes, double quotes, or backticks depending on the string content. The **Copy string contents** instead copies the raw string contents (including new lines and other special characters) verbatim to the clipboard. Finally, **Copy as JSON literal** formats the string as a valid JSON literal and copies it to the clipboard. 
+The **Console** now formats string outputs as valid JavaScript literals, and furthermore provides you 3 copy string options. The **Copy as JavaScript literal** option will escape appropriate special characters and wrap the string in either single quotes, double quotes, or backticks depending on the string content. The **Copy string contents** instead copies the raw string contents (including new lines and other special characters) verbatim to the clipboard. Finally, **Copy as JSON literal** formats the string as a valid JSON literal and copies it to the clipboard.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9242d13569e9fe67ac01e75d28fa2b6e6bf310d2 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5715a7b9800532d8b28e2c9fa2d3c1e220ba54a8 #}
@@ -76,7 +76,7 @@ Chromium issue: [1208389](https://crbug.com/1208389)
 
 
 ## Improved CORS debugging {: #cors }
-CORS-related TypeErrors in the **Console** are now linked to the Network panel and Issues tab. 
+CORS-related TypeErrors in the **Console** are now linked to the Network panel and Issues tab.
 
 Click on the two new icons next to the CORS-related error message to view the network request, or understand the error message further and get potential solutions in the Issues tab.
 
@@ -86,11 +86,11 @@ Chromium issue: [1213393](https://crbug.com/1213393)
 
 
 ## Lighthouse 8.1 {: #lighthouse }
-The **Lighthouse** panel is now running Lighthouse 8.1. 
+The **Lighthouse** panel is now running Lighthouse 8.1.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wENi9RXYMxdhm3zI4NVu.png", alt="Lighthouse", width="800", height="628" %}
 
-If your site exposes source maps to Lighthouse, look for the **View Treemap** button to see a breakdown of your shipped JavaScript, filterable by size and coverage on load. 
+If your site exposes source maps to Lighthouse, look for the **View Treemap** button to see a breakdown of your shipped JavaScript, filterable by size and coverage on load.
 
 The report also includes a new metric filter (Refer to the **Show audits relevant to** filter in the screenshot). Pick a metric to focus on the opportunities and diagnostics most relevant to improving just that metric.
 
@@ -105,9 +105,9 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 
 ## Display new note URL in the Manifest pane {: #new-note-url }
-The Manifest pane now displays the the [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking). 
+The Manifest pane now displays the the [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 
-Currently on Chrome OS (CrOS), Chrome Apps and Android Apps that declare a "new-note" capability may be selected as a note-taking app in the Stylus settings (shows up if the CrOS device has been used with a stylus). When selected as a note-taking app, the app can be launched from the stylus palette's "Create Note" button. Adding `new-note-url` field in the application manifest is part of the effort to add equivalent functionality to web apps.
+Currently on ChromeOS (CrOS), Chrome Apps and Android Apps that declare a "new-note" capability may be selected as a note-taking app in the Stylus settings (shows up if the CrOS device has been used with a stylus). When selected as a note-taking app, the app can be launched from the stylus palette's "Create Note" button. Adding `new-note-url` field in the application manifest is part of the effort to add equivalent functionality to web apps.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="New note URL in the Manifest pane", width="800", height="477" %}
 
@@ -140,7 +140,7 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
-Chromium bug: [998674](https://crbug.com/998674) 
+Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

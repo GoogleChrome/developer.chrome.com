@@ -4,10 +4,11 @@ title: O apple-touch-icon fornecido não é válido
 description: Aprenda a especificar o ícone exibido pelo Progressive Web App na tela inicial do iOS.
 codelabs: codelab-apple-touch-icon
 date: 2019-08-27
-updated: 2019-09-19
+updated: 2023-03-24
+is_outdated: true
 ---
 
-Quando os usuários do Safari do iOS adicionam [Progressive Web Apps (PWAs)](https://web.dev/progressive-web-apps/) à tela inicial, o ícone exibido é chamado de _ícone Apple Touch_ (Apple touch icon). É possível especificar o ícone usado pelo app com a inclusão de uma tag `<link rel="apple-touch-icon" href="/example.png">` no `<head>` da página. Se a página não apresentar essa tag de link, o iOS faz uma captura de tela do conteúdo para gerar um ícone. Em outras palavras, instruir o iOS a fazer o download de um ícone resulta em uma experiência do usuário mais otimizada.
+Quando os usuários do Safari do iOS adicionam [Progressive Web Apps (PWAs)](https://web.dev/explore/progressive-web-apps) à tela inicial, o ícone exibido é chamado de _ícone Apple Touch_ (Apple touch icon). É possível especificar o ícone usado pelo app com a inclusão de uma tag `<link rel="apple-touch-icon" href="/example.png">` no `<head>` da página. Se a página não apresentar essa tag de link, o iOS faz uma captura de tela do conteúdo para gerar um ícone. Em outras palavras, instruir o iOS a fazer o download de um ícone resulta em uma experiência do usuário mais otimizada.
 
 ## Como a auditoria de ícone Apple Touch do Lighthouse falha
 
@@ -19,7 +20,7 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) sinaliza as 
 
 O Lighthouse não verifica se o ícone realmente existe ou se o tamanho dele está correto.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como adicionar um ícone Apple Touch
 
@@ -38,7 +39,7 @@ O Lighthouse não verifica se o ícone realmente existe ou se o tamanho dele est
 
 2. Substitua `/example.png` pelo caminho real do ícone.
 
-{% Aside 'codelab' %} Confira o codelab [Como adicionar um ícone Apple Touch ao Progressive Web App](https://web.dev/codelab-apple-touch-icon/) para ver como o ícone oferece uma experiência do usuário mais otimizada. {% endAside %}
+{% Aside 'codelab' %} Confira o codelab [Como adicionar um ícone Apple Touch ao Progressive Web App](https://web.dev/articles/codelab-apple-touch-icon) para ver como o ícone oferece uma experiência do usuário mais otimizada. {% endAside %}
 
 Para fornecer uma boa experiência do usuário, verifique o seguinte:
 
@@ -49,5 +50,5 @@ Para fornecer uma boa experiência do usuário, verifique o seguinte:
 ## Recursos
 
 - [Código-fonte da auditoria **O `apple-touch-icon` fornecido não é valido**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/apple-touch-icon.js)
-- [Veja os critérios para a instalação](https://web.dev/install-criteria/)
+- [Veja os critérios para a instalação](https://web.dev/articles/install-criteria)
 - <a href="https://webhint.io/docs/user-guide/hints/hint-apple-touch-icons/" rel="noreferrer">Use o ícone Apple Touch</a>

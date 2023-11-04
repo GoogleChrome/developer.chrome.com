@@ -1,0 +1,59 @@
+{% extends "layouts/base.njk" %}
+
+
+{% block css %}
+{% InlineCss '/css/single-post.css' %}
+{% endblock %}
+
+{% from 'macros/cards/hero-card.njk' import heroCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+
+{% block title_bar %}
+  {% set sharingEnabled = true %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
+{% set tocContents %}
+  {{- content | toc | safe -}}
+{% endset %}
+
+{% block content %}
+  <div class="display-flex gap-top-300 lg:gap-top-400">
+    {% include 'partials/navigation-tree.njk' %}
+
+    {# The article is wrapped again so that the ToC aligns on its right on desktop #}
+    <div class="display-flex justify-content-center width-full">
+    <article class="stack measure-1280 width-full pad-left-400 ">
+      <div class="stack flow-space-200">
+        {% include 'partials/post-headline.njk' %}
+      </div>
+
+      {# Include additional context before blog cards. #}
+      {{ content | safe }}
+
+      <div class="blog-grid pad-top-400">
+        {% if articles %}
+          {# Use custom order to generate collection #}
+          {% for item in articles %}
+            {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+            {{ blogCard(post) }}
+          {% endfor %}
+
+        {% else %}
+
+          {# Use tag to generate collection #}
+          {% for post in collections.tags[collection_tag].posts.en %}
+            {% if loop.index0 < 12 %}
+              {{ blogCard(post) }}
+            {% endif %}
+          {% endfor %}
+
+        {% endif %}
+    </div>
+
+    </article>
+
+  </div>
+  </div>
+{% endblock %}

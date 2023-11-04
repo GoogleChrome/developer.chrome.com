@@ -14,7 +14,7 @@ tags:
   - chrome-77
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="R8KzoMoKhnM" %}
 
@@ -145,8 +145,8 @@ Figure 7. The new Push Messages and Notifications panes in the Application panel
 [Chromium issue #927726][24]
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: https://twitter.com/argyleink
 [2]: https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc

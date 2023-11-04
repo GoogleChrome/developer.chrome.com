@@ -1,0 +1,51 @@
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+
+{% macro landingSection(title, desc, items, color, type, ordered, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, customId) %}
+{% set sectionId = customId if customId else title %}
+
+<section
+  class="landing-section landing-section--{{type}} {% if ordered %} landing-section--ordered {% endif %} hairline rounded-lg width-full display-grid gap-top-400"
+  style="--number-color: var(--color-{{ color }}-medium); --dot-color: var(--color-{{ color }}-lighter);"
+  id="{{sectionId | slugify | ensureUniqueHrefInProduction}}">
+
+  {{ landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc) }}
+
+  <div class="gap-top-200 gap-left-200 gap-right-200">
+    <div class="landing-section__links">
+      {% for item in items %}
+
+        {% set post = null %} {# Reset #}
+        {% if item.url and item.title and item.description %}
+          {% set post = item %}
+        {% else %}
+          {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+        {% endif %}
+
+        {% if post %}
+          {% if type === 'top-3' or type === 'top-4' %}
+            <div class="item__outer">
+              <div class="item">
+                <div class="item__inner height-full display-flex direction-column">
+                  <div class="item__title">
+                    <a href="{{ post.url }}">{{ post.title or post.data.title | md | safe }} </a>
+                  </div>
+                  <div class="desc flex-1">{{ post.description or post.data.description | md | safe }}</div>
+                </div>
+              </div>
+            </div>
+          {% else %}
+            <div class="item height-full">
+              <div class="item__inner
+                height-full">
+                <div class="item__title"><a href="{{ post.url }}">{{ post.title or post.data.title | md | safe }}</a></div>
+                <p class="desc flex-1">{{ post.description or post.data.description | md | safe }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+</section>
+{% endmacro %}

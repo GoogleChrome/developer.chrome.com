@@ -16,7 +16,7 @@ tags:
   - chrome-89
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="msHeKmMEeHU" %}
 
@@ -419,7 +419,7 @@ To enable the experiment, check the **Show CSP Violations view** checkbox under 
 
 {% endAside %}
 
-View all [Content Security Policy (CSP)](https://web.dev/strict-csp/) violations at a glance in the new **CSP Violations** tab.
+View all [Content Security Policy (CSP)](https://web.dev/articles/strict-csp) violations at a glance in the new **CSP Violations** tab.
 This new tab is an experiment that should make it easier to work with web pages with a large amount
 of CSP and Trusted Type violations.
 
@@ -447,13 +447,13 @@ background), and context (ambient light, surroundings, intended purpose of the t
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gYQKfU4hyzKlrK9w7wBr.png", alt="APCA in Color Picker", width="800", height="537" %}
 
-The example show the APCA threshold is **38%**. The contrast ratio must meet or exceed the listed value. This value is calculated based on font weight and size, referring to this [APCA lookup table](https://bugs.chromium.org/p/chromium/issues/attachmentText?aid=486485). 
+The example show the APCA threshold is **38%**. The contrast ratio must meet or exceed the listed value. This value is calculated based on font weight and size, referring to this [APCA lookup table](https://bugs.chromium.org/p/chromium/issues/attachmentText?aid=486485).
 
 Chromium issue: [1121900][50]
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]:
   https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458
@@ -467,7 +467,7 @@ Chromium issue: [1121900][50]
 [9]: https://crbug.com/1126824
 [10]: https://github.com/GoogleChrome/lighthouse/releases/tag/v7.0.0
 [11]: https://crbug.com/772558
-[12]: https://jec.fyi/demo/css-target#section-2
+[12]: https://jec.fish/demo/css-target#section-2
 [13]: https://crbug.com/1156628
 [14]: https://crbug.com/1150797
 [15]: https://crbug.com/1150797
@@ -494,7 +494,7 @@ Chromium issue: [1121900][50]
 [36]: https://crbug.com/1054281
 [37]: https://pptr.dev/
 [38]: https://chromedevtools.github.io/devtools-protocol/
-[39]: https://jec.fyi/demo/recorder
+[39]: https://jec.fish/demo/recorder
 [40]: https://pptr.dev/
 [41]: https://crbug.com/1144127
 [42]: https://crbug.com/1093229

@@ -4,7 +4,7 @@ api: certificateProvider
 
 ## Usage
 
-Typical usage of this API to expose client certificates to Chrome OS follows these steps:
+Typical usage of this API to expose client certificates to ChromeOS follows these steps:
 
 * The Extension registers for the events [onCertificatesUpdateRequested][1] and [onSignatureRequested][3].
 * The Extension calls [setCertificates][2] to provide the initial list of certificates after the initialization.

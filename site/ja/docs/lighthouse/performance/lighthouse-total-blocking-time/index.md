@@ -16,7 +16,7 @@ Lighthouseのレポートには、TBTがミリ秒単位で表示されます。
 
 ## TBTが測定するもの
 
-TBTは、マウスのクリック、画面のタップ、キーボードの押下といったユーザー入力への応答がブロックされている合計時間を測定します。合計は、[First Contentful Paint (最初のコンテンツ描画にかかるまでの時間)](https://web.dev/fcp/) と [Time to Interactive (インタラクティブになるまでの時間)](https://web.dev/tti/) の間に実行されるすべての[長いタスク](https://web.dev/long-tasks-devtools/)の*ブロック部分*を加算することで算出されます。長いタスクとは、50ミリ秒を超えて実行されるタスクのことです。50msを超えた後の時間がブロック部分です。たとえば、Lighthouseが70ミリ秒の長さのタスクを検出した場合、ブロック部分は20ミリ秒になります。
+TBTは、マウスのクリック、画面のタップ、キーボードの押下といったユーザー入力への応答がブロックされている合計時間を測定します。合計は、[First Contentful Paint (最初のコンテンツ描画にかかるまでの時間)](https://web.dev/articles/fcp) と [Time to Interactive (インタラクティブになるまでの時間)](https://web.dev/articles/tti) の間に実行されるすべての[長いタスク](https://web.dev/articles/long-tasks-devtools)の*ブロック部分*を加算することで算出されます。長いタスクとは、50ミリ秒を超えて実行されるタスクのことです。50msを超えた後の時間がブロック部分です。たとえば、Lighthouseが70ミリ秒の長さのタスクを検出した場合、ブロック部分は20ミリ秒になります。
 
 ## LighthouseがTBTスコアを決定する方法
 
@@ -49,28 +49,28 @@ TBTは、マウスのクリック、画面のタップ、キーボードの押�
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## TBTスコアを改善する方法
 
-Chrome DevToolsのパフォーマンスパネルを使用して長いタスクの根本原因を診断する方法を[What is causing my long tasks? (長いタスクが発生する原因は何ですか？)](https://web.dev/long-tasks-devtools/#what-is-causing-my-long-tasks)と題した記事に記載していますので、ぜひ参照してください。
+Chrome DevToolsのパフォーマンスパネルを使用して長いタスクの根本原因を診断する方法を[What is causing my long tasks? (長いタスクが発生する原因は何ですか？)](https://web.dev/articles/long-tasks-devtools#what_is_causing_my_long_tasks)と題した記事に記載していますので、ぜひ参照してください。
 
 一般に、長いタスクの最も一般的な原因は次のとおりです。
 
-- JavaScriptによる不要な読み込み、解析、または実行。パフォーマンスパネルでコードを分析していると、メインスレッドによってページの読み込みには不必要な作業が実行されていることに気付くことがあるかもしれません。[コードを分割してJavaScriptのペイロードを削減する](https://web.dev/reduce-javascript-payloads-with-code-splitting/)、[未使用のコードを除去する](https://web.dev/remove-unused-code/)、または[サードパーティのJavaScriptを効率的に読み込む](https://web.dev/efficiently-load-third-party-javascript/)ことを実践すれば、TBTスコアが向上するはずです。
+- JavaScriptによる不要な読み込み、解析、または実行。パフォーマンスパネルでコードを分析していると、メインスレッドによってページの読み込みには不必要な作業が実行されていることに気付くことがあるかもしれません。[コードを分割してJavaScriptのペイロードを削減する](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)、[未使用のコードを除去する](https://web.dev/articles/remove-unused-code)、または[サードパーティのJavaScriptを効率的に読み込む](https://web.dev/articles/efficiently-load-third-party-javascript)ことを実践すれば、TBTスコアが向上するはずです。
 - JavaScriptの非効率的なステートメント。たとえば、[パフォーマンス]パネルでコードを分析した後、2000個のノードを返す`document.querySelectorAll('a')`の呼び出しがあることに気付くとします。10個のノードのみを返すもっと具体的なセレクタを使用するようにコードをリファクタリングすれば、TBTスコアは向上するはずです。
 
 {% Aside %}JavaScriptによる不要な読み込みや解析、実行を見つければ、多くのサイトでは改善につなげる大きなチャンスとなります。{% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## リソース
 
 - [**Total BlockingTime**監査のソースコード](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/total-blocking-time.js)
 - [Are long JavaScript tasks delaying your Time to Interactive? (JavaScriptの長いタスクがインタラクティブになるまでの時間を遅らせていませんか？)](https://web.dev/long-tasks-devtools)
-- [Optimize First Input Delay (最初の入力の遅延を最適化する)](https://web.dev/optimize-fid/)
-- [First Contentful Paint (最初のコンテンツ描画にかかるまでの時間)](https://web.dev/fcp/)
-- [Time to Interactive (インタラクティブになるまでの時間)](https://web.dev/tti/)
-- [Reduce JavaScript payloads with code splitting (コードを分割してJavaScriptのペイロードを削減する)](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
-- [Remove unused code (未使用のコードを除去うする)](https://web.dev/remove-unused-code/)
-- [Efficiently load third-party resources (サードパーティのリソースを効率的に読み込む)](https://web.dev/efficiently-load-third-party-javascript/)
+- [Optimize First Input Delay (最初の入力の遅延を最適化する)](https://web.dev/articles/optimize-fid)
+- [First Contentful Paint (最初のコンテンツ描画にかかるまでの時間)](https://web.dev/articles/fcp)
+- [Time to Interactive (インタラクティブになるまでの時間)](https://web.dev/articles/tti)
+- [Reduce JavaScript payloads with code splitting (コードを分割してJavaScriptのペイロードを削減する)](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)
+- [Remove unused code (未使用のコードを除去うする)](https://web.dev/articles/remove-unused-code)
+- [Efficiently load third-party resources (サードパーティのリソースを効率的に読み込む)](https://web.dev/articles/efficiently-load-third-party-javascript)

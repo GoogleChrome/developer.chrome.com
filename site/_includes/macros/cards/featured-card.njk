@@ -1,0 +1,48 @@
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/card-authors.njk' import cardAuthors with context %}
+
+{% macro featuredCard(options) %}
+{% set cardIcon = 'star' %}
+{% set cardTitle = 'i18n.common.featured' | i18n(locale) %}
+{% set class = options.class or 'hairline rounded-lg width-full' %}
+
+<div class="featured-card {{ class }}">
+  <div class="card-title-bar color-blue-medium">
+    {{ icon(cardIcon, {hidden: true}) }}
+    <span class="gap-left-200 flex-1 user-select-none">
+      {{ cardTitle }}
+    </span>
+  </div>
+
+  {% if options.imgSrc %}
+    <div class="featured-card__thumbnail gap-top-300">
+      <div {% if not options.imgAlt %}aria-hidden="true" tabindex="-1"{% endif %}>
+        {% Img
+          class="rounded-100 object-fit-cover width-full",
+          src=options.imgSrc,
+          alt=options.imgAlt,
+          width="278",
+          height="164",
+          sizes="(min-width: 592px) 391px, calc(100vw - 82px)"
+        %}
+      </div>
+    </div>
+  {% endif %}
+
+  <h2 class="type--h3-card gap-top-300 display-inline-flex">
+    {{ options.title | md | safe }}
+  </h2>
+
+  <p class="type--caption gap-top-200">
+    {{ options.description | md | safe }}
+  </p>
+
+  {% if options.actionText and options.actionUrl %}
+    <div class="gap-top-400">
+      <a href="{{ options.actionUrl }}" class="material-button button-text display-inline-flex color-primary">
+        {{ options.actionText }}
+      </a>
+    </div>
+  {% endif %}
+</div>
+{% endmacro %}

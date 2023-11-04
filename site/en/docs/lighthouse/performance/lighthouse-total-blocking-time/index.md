@@ -59,11 +59,11 @@ This table shows how to interpret your TBT score:
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to improve your TBT score
 
-See [What is causing my long tasks?](https://web.dev/long-tasks-devtools/#what-is-causing-my-long-tasks) to learn
+See [What is causing my long tasks?](https://web.dev/articles/long-tasks-devtools#what_is_causing_my_long_tasks) to learn
 how to diagnose the root cause of long tasks with the Performance panel of Chrome DevTools.
 
 In general, the most common causes of long tasks are:
@@ -81,11 +81,11 @@ Unnecessary JavaScript loading, parsing, or execution is usually a much bigger o
 on most sites.
 {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Resources
 
-- [Source code for **Total Blocking Time** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/total-blocking-time.js)
+- [Source code for **Total Blocking Time** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/metrics/total-blocking-time.js)
 - [Are long JavaScript tasks delaying your Time to Interactive?][long tasks]
 - [Optimize First Input Delay][optimize fid]
 - [First Contentful Paint][fcp]

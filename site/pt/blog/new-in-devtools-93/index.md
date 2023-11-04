@@ -17,13 +17,13 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](http://info.lsantos.dev)*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Consultas de contêiner CSS editáveis no painel Styles {: #container-queries }
 
-Agora você pode visualizar e editar [Consultas de contêiner CSS](https://web.dev/new-responsive/#responsive-to-the-container) no painel **Styles**.
+Agora você pode visualizar e editar [Consultas de contêiner CSS](https://web.dev/articles/new-responsive#responsive_to_the_container) no painel **Styles**.
 
 As consultas de contêiner fornecem uma abordagem muito mais dinâmica para design responsivo. A regra `@container` funciona de maneira semelhante a uma consulta de mídia com `@media`. No entanto, em vez de consultar a viewport e o agente do usuário em busca de informações, `@container` consulta o container antecessor que corresponde a certos critérios.
 
@@ -41,7 +41,7 @@ Issue relacionada: [1146422](https://crbug.com/1146422)
 
 ## Prévia do web-bundle no painel Network  {: #web-bundle }
 
-[Web bundle](https://web.dev/web-bundles/) é um formato de arquivo para encapsular um ou mais recursos HTTP em um único arquivo. Agora você pode visualizar o conteúdo do web bundle no painel **Network**.
+[Web bundle](https://web.dev/articles/web-bundles) é um formato de arquivo para encapsular um ou mais recursos HTTP em um único arquivo. Agora você pode visualizar o conteúdo do web bundle no painel **Network**.
 
 O recurso de web-bundle é atualmente experimental. Habilite a sinalização `#enable-experimental-web-platform-features` em `chrome://flags` para testá-la.
 
@@ -49,7 +49,7 @@ O recurso de web-bundle é atualmente experimental. Habilite a sinalização `#e
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e7672c40f2febc80786632c188b6029b2f2ac7b7 #}
 
-Issue relacionada: [1182537](https://crbug.com/1182537) 
+Issue relacionada: [1182537](https://crbug.com/1182537)
 
 ## Depuração da Attribution Reporting API {: #attribution-reporting }
 
@@ -108,9 +108,9 @@ Issue relacionada: [772558](https://crbug.com/772558)
 
 ## Exibir o novo URL da nota no painel Manifest {: #new-note-url }
 
-O painel Manifest agora exibe o [URL da nova nota](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking). 
+O painel Manifest agora exibe o [URL da nova nota](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 
-Atualmente no Chrome OS (CrOS), os aplicativos Chrome e aplicativos Android que declaram um recurso de "nova nota", podem ser selecionados como um aplicativo de anotações nas configurações da caneta (aparece se o dispositivo CrOS foi usado com uma caneta). 
+Atualmente no ChromeOS (CrOS), os aplicativos Chrome e aplicativos Android que declaram um recurso de "nova nota", podem ser selecionados como um aplicativo de anotações nas configurações da caneta (aparece se o dispositivo CrOS foi usado com uma caneta).
 
 Quando selecionado como um aplicativo de anotações, ele pode ser iniciado a partir do botão **"Criar Anotação"** da paleta da caneta. Para adicionar a aplicação web como uma das opções de aplicativo de anotação você precisará adicionar o campo `new-note-url` no manifesto web do aplicativo.
 
@@ -145,7 +145,7 @@ Abra uma resposta JSON no painel **Network**, clique no ícone `{}` para transfo
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
-Bug relacionado: [998674](https://crbug.com/998674) 
+Bug relacionado: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

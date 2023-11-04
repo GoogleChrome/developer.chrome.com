@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: "Step 3: Add Alarms and Notifications"
+seoTitle: "Step 3: Add Alarms and Notifications [Deprecated]"
 date: 2014-10-17
 updated: 2015-01-06
 description: How to wake your Chrome App at specified intervals and use notifications.
@@ -26,7 +27,7 @@ In this step, you will learn:
 - How to wake your app at specified intervals to execute background tasks.
 - How to use on-screen notifications to draw attention to something important.
 
-_Estimated time to complete this step: 20 minutes._  
+_Estimated time to complete this step: 20 minutes._
 To preview what you will complete in this step, [jump down to the bottom of this page ↓][4].
 
 ## Enhance your Todo app with reminders {: #overview }
@@ -166,7 +167,7 @@ every time the alarm "rings":
 You should notice that:
 
 - Even when you close the Todo app window, the alarms will keep coming.
-- On platforms other than Chrome OS, if you completely close all Chrome browser instances, alarms
+- On platforms other than ChromeOS, if you completely close all Chrome browser instances, alarms
   won't trigger.
 
 Let's go over some of the pieces in _alarms.js_ that use `chrome.alarms` methods one by one.

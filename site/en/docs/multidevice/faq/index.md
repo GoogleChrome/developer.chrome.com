@@ -15,8 +15,8 @@ used in Chrome for Android using the instructions [here][1].
 
 ### Does Chrome for Android follow the same release cycles as desktop Chrome?
 
-They share the same release cycle and release numbering. Not2 all features in desktop Chrome are
-available in the corresponding version of Chrome for Android, however.
+They share the same release cycle and release numbering. However, not all features in desktop Chrome are
+available in the corresponding version of Chrome for Android.
 
 ### Can I make Chrome for Android auto-update?
 

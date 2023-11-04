@@ -14,7 +14,7 @@ Doctype を指定すると、ブラウザが [Quirks モード](https://develope
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/l6IEjHdtgCa45QimENjb.png", alt="Doctype がないことを示す Lighthouse 監査", width="800", height="76" %}</figure>
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## Doctype 宣言を追加する方法
 

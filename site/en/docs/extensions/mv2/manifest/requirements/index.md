@@ -1,10 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Requirements"
+seoTitle: "Manifest V2- Requirements [Deprecated]"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the requirements property of manifest.json.
 ---
+
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 Technologies required by the app or extension. Hosting sites such as the Chrome Web Store may use
 this list to dissuade users from installing apps or extensions that will not work on their computer.

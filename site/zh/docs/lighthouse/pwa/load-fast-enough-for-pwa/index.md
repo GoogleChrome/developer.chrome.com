@@ -21,17 +21,17 @@ updated: 2020-06-10
 有两个主要指标影响了用户对加载时间的体验：
 
 - [首次有效绘制 (FMP)](/docs/lighthouse/performance/first-meaningful-paint/) ，它衡量页面的主要内容何时看起来完整
-- [交互用时 (TTI)](https://web.dev/tti/) ，衡量页面何时完全交互
+- [交互用时 (TTI)](https://web.dev/articles/tti) ，衡量页面何时完全交互
 
 例如，如果一个页面在 1 秒后看起来完整，但用户在 10 秒内无法与其交互，则用户可能会认为页面加载时间为 10 秒。
 
 Lighthouse 会计算慢速 4G 网络连接上的 TTI。如果交互时间超过 10 秒，则审计失败。
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## 如何改进页面的加载时间
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## 资源
 

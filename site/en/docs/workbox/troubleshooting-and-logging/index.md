@@ -16,8 +16,8 @@ There are loads of tools available in the browser for debugging and troubleshoot
 
 Chrome (and [recent versions of Edge based on the Blink engine](https://en.wikipedia.org/wiki/Microsoft_Edge#Anaheim_(2019%E2%80%93present))) have a robust set of developer tools. Some of those tools&mdash;specifically in Chrome's DevTools&mdash;were [touched upon earlier in this documentation](/docs/workbox/improving-development-experience/), but there's more to discover:
 
-- [Debug Progressive Web Apps](https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps)
-- [Inspect Network Activity in Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/network)
+- [Debug Progressive Web Apps](/docs/devtools/progressive-web-apps/)
+- [Inspect Network Activity in Chrome DevTools](/docs/devtools/network/)
 - Video: [Debugging Service Workers in Chrome](https://www.youtube.com/watch?v=tuRPSaSiK_c)
 - Codelab: [Debugging Service Workers](https://codelabs.developers.google.com/codelabs/debugging-service-workers/index.html)
 
@@ -50,7 +50,7 @@ Bundlers are tools that take code from individual modules and create JavaScript 
 - In webpack, the [`mode` configuration option](https://webpack.js.org/configuration/mode/) can be set to `'production'` or `'development'`. `workbox-webpack-plugin` will use the production or development logging in Workbox based on this value.
 - For Rollup, [`rollup-plugin-workbox`](https://www.npmjs.com/package/rollup-plugin-workbox) accepts a `mode` configuration option that also affects whether Workbox logs anything to the console. If you're using Rollup without the Workbox-specific plugin, you'll need to configure [`@rollup/plugin-replace`](https://www.npmjs.com/package/@rollup/plugin-replace) to substitute `process.env.NODE_ENV` with `'development'` or `'production'`.
 
-Suppose the default logging behavior must be overridden in development. In that case, the appropriate Workbox plugin for your bundler should allow you to hardcode a preference for debugging logs in its configuration. For example, you could disable logging in Workbox via `workbox-webpack-plugin`'s `mode` option for the [`GenerateSW` method](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW#GenerateSW).
+Suppose the default logging behavior must be overridden in development. In that case, the appropriate Workbox plugin for your bundler should allow you to hardcode a preference for debugging logs in its configuration. For example, you could disable logging in Workbox via `workbox-webpack-plugin`'s `mode` option for the [`GenerateSW` method](/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSW).
 
 ### Without a bundler
 
@@ -58,7 +58,7 @@ While bundlers are great, not every project needs them. If you find yourself in 
 
 The `workbox-sw` module simplifies loading other Workbox modules (e.g., `workbox-routing`, `workbox-precaching`, etc) from a CDN. Whether it loads the development or production bundles depends on the URL used to access your web app. By default, `workbox-sw` loads the development version of Workbox if your web app is running on `http://localhost`, and the production version at all other times.
 
-You can override the default behavior by calling Workbox's [`setConfig` method](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox#.setConfig) to set the `debug` option to `true`:
+You can override the default behavior by calling Workbox's `setConfig` method to set the `debug` option to `true`:
 
 ```js
 // Load workbox-sw from a CDN
@@ -87,4 +87,4 @@ One advantage of this approach is that it's completely independent of your bundl
 
 ## Further information
 
-If you're still struggling to figure out what's going on in a buggy service worker and the logging just isn't enough, try posting a question to [Stack Overflow with the `workbox` tag](https://stackoverflow.com/questions/ask?tags=workbox). If you can't find an answer there, [file a Github issue](https://github.com/GoogleChrome/workbox/issues) (after reading [the contributing guidelines](https://github.com/GoogleChrome/workbox/blob/v6/CONTRIBUTING.md)). This not only allows a wide audience of developers to read and answer your questions, but the answer to your question may help someone in the same situation later on.
+If you're still struggling to figure out what's going on in a buggy service worker and the logging just isn't enough, try posting a question to [Stack Overflow with the `workbox` tag](https://stackoverflow.com/questions/ask?tags=workbox). If you can't find an answer there, [file a GitHub issue](https://github.com/GoogleChrome/workbox/issues) (after reading [the contributing guidelines](https://github.com/GoogleChrome/workbox/blob/v6/CONTRIBUTING.md)). This not only allows a wide audience of developers to read and answer your questions, but the answer to your question may help someone in the same situation later on.

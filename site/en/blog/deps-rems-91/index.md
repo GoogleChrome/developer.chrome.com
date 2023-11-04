@@ -9,12 +9,11 @@ hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8E0Wvnv3faCT0nQ0vG8Q.png'
 alt: >
   Deprecations and Removals hero logo
 tags:
-  - deprecations
-  - removals
+  - deprecations-removals
   - chrome-91
 ---
 
-{% include 'partials/see-all-dep-rem.md' %}
+{% Partial 'see-all-dep-rem.md' %}
 
 Chrome 91 beta was released on April 22, 2021 and is expected to become the
 stable version in late May, 2021.
@@ -39,4 +38,4 @@ means notexample.com will no longer be able to call `window.alert()`,
 `window.prompt()`, or `window.confirm()` if embedded in an iframe on
 example.com.
 
-{% include 'partials/deprecations-policy.md' %}
+{% Partial 'deprecations-policy.md' %}

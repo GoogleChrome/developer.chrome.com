@@ -20,7 +20,7 @@ Navigation preload is a service worker feature that solves the delay caused by s
 
 This isn't ideal, but you can fix it by enabling navigation preload, which ensures that service worker bootup and the navigation request occurs concurrently:
 
-{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/dmuAkLpqiB8AkvIgcRm2.png", alt="Two bars stacked upon one another and left-aligned, representing two concurrent actions. The yellow bar is labeled 'SW boot', and the blue one is labeled 'Navigation request'.", width="800", height="171" %}
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/WAiYKZYRuErxcouXoFd3.png", alt="Two bars stacked upon one another and left-aligned, representing two concurrent actions. The yellow bar is labeled 'SW boot', and the blue one is labeled 'Navigation request'.", width="800", height="139" %}
 
 While navigation preload is a great performance optimization for sites that use service workers, it's not a feature you should enable in all situations. In particular, sites that use a precached app shell don't need navigation preload, as the cache serves the navigation request for the app shell markup without any navigation latency. In these cases, the preloaded response will go to waste, which isn't great.
 
@@ -28,7 +28,7 @@ The best time to use navigation preload is when a website can't precache HTML. T
 
 ## Using navigation preload in Workbox
 
-Using navigation preload directly in a service worker not powered by Workbox is tricky. First, [it's not supported in all browsers](https://caniuse.com/mdn-api_navigationpreloadmanager). Secondly, it can be difficult to get right. You can learn how to use it directly in [this great explainer by Jake Archibald](https://developers.google.com/web/updates/2017/02/navigation-preload).
+Using navigation preload directly in a service worker not powered by Workbox is tricky. First, [it's not supported in all browsers](https://caniuse.com/mdn-api_navigationpreloadmanager). Secondly, it can be difficult to get right. You can learn how to use it directly in [this great explainer by Jake Archibald](https://web.dev/articles/navigation-preload).
 
 Workbox simplifies using navigation preload, because the `workbox-navigation-preload` module's [`enable` method](/docs/workbox/reference/workbox-navigation-preload/#method-enable) does the necessary feature support checks, as well as creating the `activate` event listener to enable it for you.
 
@@ -93,7 +93,7 @@ In cases like these, it pays to know that preload requests are sent with a `Serv
 Service-Worker-Navigation-Preload: true
 ```
 
-Then, in your application backend of choice, you can check for this header and modify the response to suit your needs. If the header's default value is problematic for any reason, [you can change it in the window context](https://developers.google.com/web/updates/2017/02/navigation-preload#changing_the_header). Just know that any work you do on the server to read this header is up to you, and outside the scope of Workbox.
+Then, in your application backend of choice, you can check for this header and modify the response to suit your needs. If the header's default value is problematic for any reason, [you can change it in the window context](https://web.dev/articles/navigation-preload#changing_the_header). Just know that any work you do on the server to read this header is up to you, and outside the scope of Workbox.
 
 ## Conclusion
 

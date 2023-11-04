@@ -2,7 +2,7 @@
 title: "The Chromium Chronicle #4: Test your Web Platform Features with WPT"
 description: >
   Web Platform tests (WPT) are the preferred way to test web-exposed features,
-  as they are shared with other browsers via Github. This month, we take a
+  as they are shared with other browsers via GitHub. This month, we take a
   look at WPT best practices.
 layout: 'layouts/blog-post.njk'
 date: 2019-07-30

@@ -12,7 +12,7 @@ Todos los sitios web deben estar protegidos con HTTPS, incluso los que no maneja
 
 Una página no puede calificar como una [aplicación web progresiva (PWA)](/es/docs/lighthouse/pwa/#instalable) si no se ejecuta sobre HTTPS; muchas tecnologías centrales de PWA, como los service workers, requieren HTTPS.
 
-Para obtener más información sobre por qué todos los sitios deben protegerse con HTTPS, consulte [Por qué es importante HTTPS](https://web.dev/why-https-matters/).
+Para obtener más información sobre por qué todos los sitios deben protegerse con HTTPS, consulte [Por qué es importante HTTPS](https://web.dev/articles/why-https-matters).
 
 ## Cómo falla la auditoría Lighthouse para HTTPS
 
@@ -22,7 +22,7 @@ Para obtener más información sobre por qué todos los sitios deben protegerse 
 
 Lighthouse espera un evento del [Protocolo de depuración remota de Chrome](https://github.com/ChromeDevTools/devtools-protocol) que indica que la página se está ejecutando sobre una conexión segura. Si el evento no se detecta en 10 segundos, la auditoría falla.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Cómo migrar su sitio a HTTPS
 

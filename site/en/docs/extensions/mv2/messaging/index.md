@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Message passing"
+seoTitle: "MV2 - Message passing [Deprecated]"
 date: 2012-09-18
 updated: 2019-07-17
 description: How to pass messages between extensions and content scripts.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Message passing](/docs/extensions/mv3/messaging/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Since content scripts run in the context of a web page and not the extension, they often need some
 way of communicating with the rest of the extension. For example, an RSS reader extension might use
@@ -344,6 +349,6 @@ native app. For more examples and for help in viewing the source code, see [Samp
 [37]: /docs/extensions/mv2/security#content_scripts
 [38]: /docs/extensions/mv2/security#sanitize
 [39]: https://en.wikipedia.org/wiki/Cross-site_scripting
-[40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/messaging
+[40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/messaging
 [41]: /docs/apps/nativeMessaging#examples
 [42]: /docs/extensions/mv2/samples

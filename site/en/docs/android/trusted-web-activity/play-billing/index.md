@@ -16,7 +16,7 @@ is also a requirement for applications published on the Play Store that sell dig
 Chrome 88 is launching with an [Origin Trial][11] on Android that enables the integration of
 [Trusted Web Activities][2] with the [Payment Request API][3] and the [Digital Goods API][4] to
 implement purchase flows via Google Play Billing. We expect this Origin Trial to also be available
-for Chrome OS on version 89.
+for ChromeOS on version 89.
 
 In order to ease the integration to the Android app, the Trusted Web Activity team is introducing
 an extension library to [android-browser-helper][5]. This guide will show you the changes required
@@ -30,7 +30,7 @@ those who are **not** using Bubblewrap to update their app.
 ## build.gradle
 
 The billing extension library itself depends on version `2.1.0` of `android-browser-helper`. Ensure
-your application is using a version that is equal or greater than that. 
+your application is using a version that is equal or greater than that.
 
 You will also need to add an implementation declaration for the billing extension library:
 
@@ -131,5 +131,5 @@ application in production.
 [8]: https://developer.android.com/google/play/billing/terminology
 [9]: https://github.com/GoogleChromeLabs/bubblewrap
 [10]: https://github.com/GoogleChromeLabs/bubblewrap/issues/376
-[11]: https://web.dev/origin-trials/
+[11]: https://developer.chrome.com/docs/web-platform/origin-trials/
 

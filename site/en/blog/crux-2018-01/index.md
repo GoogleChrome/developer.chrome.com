@@ -20,7 +20,7 @@ date: 2018-01-24
 
 # Optional
 # Include an updated date when you update your post
-updated: 2018-03-05
+updated: 2022-07-19
 
 # Optional
 # How to add a new tag
@@ -31,7 +31,7 @@ updated: 2018-03-05
 ---
 
 The
-[Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report/)
+[Chrome User Experience Report](/docs/crux/)
 (CrUX) is a public dataset of real user performance data. Since we
 [announced](https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html)
 the report, one of the most requested additions has been the ability to better
@@ -40,7 +40,7 @@ feedback, we are expanding the existing CrUX dataset––which provides a globa
 view across all geographic regions––to also include a collection of separate
 country-specific datasets!
 
-  
+
 <figure>
 {% Img src="image/T4FyVKpzu4WKF1kBNvXepbi08t52/64Hyz3kg8A4LSqmCNYkK.png", alt="Map of countries included in the CrUX dataset", width="800", height="929" %}
   <figcaption>
@@ -64,7 +64,7 @@ The familiar `all` dataset is still there to capture the global aggregate
 performance data. Within each dataset there are monthly tables starting with
 the most recent report, `201712`. For a detailed walkthrough on how to get
 started, please refer to our updated
-[CrUX documentation](https://developers.google.com/web/tools/chrome-user-experience-report/).
+[CrUX documentation](/docs/crux/).
 
 We’re excited to share this new data with you and hope to see you use it in
 ways to improve the user experience on the web. To get help, ask questions,

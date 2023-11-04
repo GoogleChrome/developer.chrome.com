@@ -13,7 +13,9 @@
     - url: /docs/workbox/different-architectures
     - url: /docs/workbox/app-shell-model
     - url: /docs/workbox/navigation-preload
+    - url: /docs/workbox/faster-multipage-applications-with-streams
     - url: /docs/workbox/precaching-dos-and-donts
+    - url: /docs/workbox/understanding-storage-quota
 - title: i18n.docs.workbox.ways
   sections:
     - url: /docs/workbox/the-ways-of-workbox
@@ -37,3 +39,9 @@
 - url: /docs/workbox/reference
   title: i18n.docs.workbox.reference
   description: i18n.docs.workbox.reference_description
+- url: /docs/workbox/migration
+  title: i18n.docs.workbox.migration
+  description: i18n.docs.workbox.migration_description
+- url: https://github.com/GoogleChrome/workbox
+  title: i18n.docs.workbox.github
+  description: i18n.docs.workbox.github_description

@@ -19,12 +19,12 @@ tags:
 
 *感谢[流浪大法师](https://webfrontend.dev/)提供的翻译。*
 
-{% include 'partials/devtools/zh/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## 样式窗格（Styles pane）可编辑 CSS 容器查询（container queries） {: #container-queries }
-现在，您可以在**样式**窗格（Styles pane）那里查看以及编辑 [CSS 容器查询（container queries）](https://web.dev/new-responsive/#responsive-to-the-container)。
+现在，您可以在**样式**窗格（Styles pane）那里查看以及编辑 [CSS 容器查询（container queries）](https://web.dev/articles/new-responsive#responsive_to_the_container)。
 
 容器查询的出现，给响应式设计提供更多的动态解决方案。虽`@container` @规则的工作方式与媒体查询（`@media`）类似，然而 `@container` 查询的对象是满足一定条件的祖先容器节点，而不是查询视口以及 user agent 信息。
 
@@ -41,7 +41,7 @@ Chromium 议题: [1146422](https://crbug.com/1146422)
 
 
 ## 网络面板可预览 Web bundle {: #web-bundle }
-[Web bundle](https://web.dev/web-bundles/) 是一种新兴的文件格式，用于封装一个或多个 HTTP 资源。现在，您可以在**网络**面板那里预览 web bundle 的网络请求。
+[Web bundle](https://web.dev/articles/web-bundles) 是一种新兴的文件格式，用于封装一个或多个 HTTP 资源。现在，您可以在**网络**面板那里预览 web bundle 的网络请求。
 
 web bundle 特性现还处于实验阶段。测试该特性之前，请在 `chrome://flags` 那里打开 `#enable-experimental-web-platform-features` 开关。
 
@@ -110,7 +110,7 @@ Chromium 议题: [772558](https://crbug.com/772558)
 ## 在 Manifest 窗格展示新的 note 链接 {: #new-note-url }
 现在，Manifest 窗格可以显示[新的 note 链接](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking)。
 
-目前，那些有声明 "new-note" 能力 的 Chrome OS (CrOS)、Chrome 以及安卓（Android）的应用 ，可以会在设备的Stylus设定中被选为 note-taking 应用（前提是 CrOS 设备已经在使用 stylus）。当被选为 note-taking 应用，用户可以通过 stylus palette 上的 "创建 Note" 按钮来启动 APP 。我们在应用的 manifest 文件里面添加 `new-note-url` 字段，是为了将相同功能给移植到 web 应用。
+目前，那些有声明 "new-note" 能力 的 ChromeOS (CrOS)、Chrome 以及安卓（Android）的应用 ，可以会在设备的Stylus设定中被选为 note-taking 应用（前提是 CrOS 设备已经在使用 stylus）。当被选为 note-taking 应用，用户可以通过 stylus palette 上的 "创建 Note" 按钮来启动 APP 。我们在应用的 manifest 文件里面添加 `new-note-url` 字段，是为了将相同功能给移植到 web 应用。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="Manifest 窗格里的新 note 链接", width="800", height="477" %}
 
@@ -145,5 +145,5 @@ Chromium 议题: [1219153](https://crbug.com/1219153)
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/zh/reach-out.md' %}
-{% include 'partials/devtools/zh/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

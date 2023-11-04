@@ -1,6 +1,5 @@
 .toc-container {
-  max-width: 100%;
-  width: px-to-rem(320px);
+  max-width: px-to-rem(300px);
 }
 
 .toc > summary {
@@ -37,10 +36,9 @@ toc-active {
 
   [toc--active] {
     font-weight: 600;
-    letter-spacing: -0.35px;  // makes the text roughly the same width
+    letter-spacing: -0.35px; // makes the text roughly the same width
   }
 }
-
 
 // The eleventy-plugin-toc doesn't let us put classes on ul/ol or li children
 // so we have to style them all with descendant selectors.

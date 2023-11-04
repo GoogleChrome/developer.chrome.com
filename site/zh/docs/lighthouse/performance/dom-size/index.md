@@ -33,7 +33,7 @@ Lighthouse 使用 DOM 树标记页面：
 - 当 body 元素有超过约 800 个节点时发出警告。
 - 当 body 元素有超过约 1400 个节点时出错。
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## 如何优化 DOM 大小
 
@@ -49,11 +49,11 @@ Lighthouse 使用 DOM 树标记页面：
 
 ### Angular
 
-如果要渲染大型列表，请使用组件开发工具包 (CDK) 中的[虚拟滚动](https://web.dev/virtualize-lists-with-angular-cdk/)。
+如果要渲染大型列表，请使用组件开发工具包 (CDK) 中的[虚拟滚动](https://web.dev/articles/virtualize-lists-with-angular-cdk)。
 
 ### React
 
-- 如果在页面上渲染许多重复元素，[`react-window`](https://web.dev/virtualize-long-lists-react-window/) 之列的“窗口化”库可以最大限度减少创建的 DOM 节点的数量。
+- 如果在页面上渲染许多重复元素，[`react-window`](https://web.dev/articles/virtualize-long-lists-react-window) 之列的“窗口化”库可以最大限度减少创建的 DOM 节点的数量。
 - 使用 [`shouldComponentUpdate`](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action)、[`PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent) 或 [`React.memo`](https://reactjs.org/docs/react-api.html#reactmemo) 最大限度减少非必要的重新渲染。
 - 如果使用 `Effect` 挂钩来提高运行时性能，则仅在某些依赖项发生更改后[跳过效果](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects)。
 

@@ -20,7 +20,7 @@ tags:
 
 - **执行成本**
 
-    JavaScript 也在主线程上执行。如果您的页面在真正需要之前运行了大量代码，这也会延迟您的[交互时间](https://web.dev/tti/)，这是与用户如何看待您的页面速度相关的关键指标之一。
+    JavaScript 也在主线程上执行。如果您的页面在真正需要之前运行了大量代码，这也会延迟您的[交互时间](https://web.dev/articles/tti)，这是与用户如何看待您的页面速度相关的关键指标之一。
 
 - **内存成本**
 
@@ -34,11 +34,11 @@ tags:
 
 为了帮助您确定对执行时间影响最大的因素，Lighthouse 报告了执行、评估和解析页面加载的每个 JavaScript 文件所花费的时间。
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## 如何加速 JavaScript 执行
 
-{% include 'content/lighthouse-performance/js-perf.njk' %}
+{% Partial 'lighthouse-performance/js-perf.njk' %}
 
 ## 资源
 

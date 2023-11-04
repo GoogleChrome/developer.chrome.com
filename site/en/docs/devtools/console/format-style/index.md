@@ -57,7 +57,7 @@ Here is the list of [format specifiers](https://console.spec.whatwg.org/#formatt
       <td>Formats the value as an expandable DOM element</td>
     </tr>
     <tr>
-      <td><code>%0</code></td>
+      <td><code>%O</code></td>
       <td>Formats the value as an expandable JavaScript object</td>
     </tr>
     <tr>
@@ -119,6 +119,17 @@ You can use the `%c` format specifier to style the console messages with CSS.
 2. The command above produces `Hooray` with CSS styles applied.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/p9oAce6M63d1tYChjaXN.png", alt="style output with CSS", width="800", height="452" %}
 
+{% Aside 'gotchas' %}
+To prevent data leaks and bypasses of security policies, in this format, the [`url()` CSS function](https://developer.mozilla.org/docs/Web/CSS/url) supports only the [`data:` URL schema](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+
+For example, you can set a background image in the following way: 
+
+```css
+background: url(data:image/png;base64,iVBORw…);
+```
+
+Where `iVBORw…` is a base64-encoded PNG image.
+{% endAside %}
 
 ### Style with ANSI escape sequences {: #style-ansi }
 
@@ -175,7 +186,7 @@ Here is a list of color codes supported in DevTools.
       <td>32</td>
       <td>42</td>
       <td><div style="background:#00AA00;color:white;text-align:center;">#00AA00</div></td>
-      <td><div style="background:#01c80;color:white;text-align:center;">#01c80</div></td>
+      <td><div style="background:#01c800;color:white;text-align:center;">#01c800</div></td>
     </tr>
     <tr>
       <td>33</td>
@@ -290,7 +301,7 @@ Here is a list of styling code supported in DevTools.
     </tr>
     <tr>
       <td>9</td>
-      <td>Add <code>line-through</code> to <code>text-decoration</code> propertyh</td>
+      <td>Add <code>line-through</code> to <code>text-decoration</code> property</td>
     </tr>
     <tr>
       <td>22</td>

@@ -1,12 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Chrome 33 Hosting Changes"
+seoTitle: "MV2 - Chrome 33 Hosting Changes [Deprecated]"
 date: 2014-03-04
 updated: 2018-06-12
 description: Details about the hosting changes for Chrome Extensions that started in version 33 of Chrome.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 As a follow-up to our blog post on [protecting Windows users from malicious extensions][1], we're
 enforcing the following changes starting in Chrome 33 Beta and stable channels for Windows:

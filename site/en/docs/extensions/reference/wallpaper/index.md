@@ -35,4 +35,4 @@ chrome.wallpaper.setWallpaper(
 );
 ```
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/manifest

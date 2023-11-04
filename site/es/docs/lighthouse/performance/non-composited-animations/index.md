@@ -5,7 +5,7 @@ description: Cómo aprobar la auditoría Lighthouse "Evitar animaciones no compu
 date: 2020-08-12
 ---
 
-Las animaciones no compuestas pueden parecer irregulares (es decir, no fluidas) en teléfonos de gama baja o cuando se ejecutan tareas de alto rendimiento en la línea principal. Las animaciones Janky pueden aumentar el [cambio de diseño acumulativo](https://web.dev/cls/) (CLS) de su página. Reducir CLS mejorará su puntuación de rendimiento de Lighthouse.
+Las animaciones no compuestas pueden parecer irregulares (es decir, no fluidas) en teléfonos de gama baja o cuando se ejecutan tareas de alto rendimiento en la línea principal. Las animaciones Janky pueden aumentar el [cambio de diseño acumulativo](https://web.dev/articles/cls) (CLS) de su página. Reducir CLS mejorará su puntuación de rendimiento de Lighthouse.
 
 ## Antecedentes
 
@@ -27,12 +27,12 @@ Cuando una animación no se puede componer, Chrome informa las razones de la fal
 
 ## Cómo asegurarse de que las animaciones estén compuestas
 
-Consulta [Adherirse a las propiedades exclusivas del compositor y administrar el número de capas](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) y [las animaciones de alto rendimiento](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) .
+Consulta [Adherirse a las propiedades exclusivas del compositor y administrar el número de capas](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count) y [las animaciones de alto rendimiento](https://web.dev/articles/animations-guide) .
 
 ## Recursos
 
 - [Código fuente para la auditoría de _Evitar animaciones no compuestas_](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/non-composited-animations.js)
 - [Limítate a las propiedades exclusivas del compositor y gestiona el número de capas](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
-- [Animaciones de alto rendimiento](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
+- [Animaciones de alto rendimiento](https://web.dev/articles/animations-guide)
 - [Simplifica la complejidad de la pintura y reduce sus áreas](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas)
 - [Una mirada al interior de los navegadores web modernos (parte 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)

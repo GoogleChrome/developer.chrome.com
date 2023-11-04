@@ -18,7 +18,7 @@ the browser uses its local copy rather than getting it from the network.
 
 ## How the Lighthouse cache policy audit fails
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+[Lighthouse](/docs/lighthouse/overview/)
 flags all static resources that aren't cached:
 
 <figure>
@@ -47,14 +47,14 @@ Lighthouse lists the results in a table with three columns:
         <td>The current cache duration of the resource</td>
       </tr>
       <tr>
-        <td><strong>Size</strong></td>
+        <td><strong>Transfer Size</strong></td>
         <td>An estimate of the data your users would save if the flagged resource had been cached</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## How to cache static resources using HTTP caching
 
@@ -68,7 +68,7 @@ The `max-age` directive tells the browser how long it should cache the resource 
 This example sets the duration to `31536000`, which corresponds to 1 year:
 60&nbsp;seconds × 60&nbsp;minutes × 24&nbsp;hours × 365&nbsp;days = 31536000&nbsp;seconds.
 
-When possible, cache immutable static assets for a long time,
+You should cache immutable static assets for a long time,
 such as a year or longer.
 
 {% Aside %}
@@ -91,8 +91,8 @@ it's up to you to decide what the optimal cache duration is for your resources.
 
 There are many directives for customizing how the browser caches different resources.
 Learn more about caching resources in
-[The HTTP cache: your first line of defense guide](https://web.dev/http-cache/)
-and [Configuring HTTP caching behavior codelab](https://web.dev/codelab-http-cache/).
+[The HTTP cache: your first line of defense guide](https://web.dev/articles/http-cache)
+and [Configuring HTTP caching behavior codelab](https://web.dev/articles/codelab-http-cache).
 
 ## How to verify cached responses in Chrome DevTools
 
@@ -143,6 +143,6 @@ See [Browser Caching](https://wordpress.org/support/article/optimization/#browse
 
 ## Resources
 
-- [Source code for **Serve static assets with an efficient cache policy** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/uses-long-cache-ttl.js)
+- [Source code for **Serve static assets with an efficient cache policy** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/uses-long-cache-ttl.js)
 - [Cache-Control specification](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)
 - [Cache-Control (MDN)](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control)

@@ -1,0 +1,34 @@
+{% if type === 'article' %}
+  {% set collectionName = 'articles-' + locale %}
+{% endif %}
+
+{% if type === 'blogPost' %}
+  {% set collectionName = 'blog-' + locale %}
+{% endif %}
+
+{% if collections[collectionName] %}
+  {% set previousPost = collections[collectionName]  | getPreviousCollectionItem(page) %}
+  {% set nextPost = collections[collectionName]  |  getNextCollectionItem(page) %}
+{% endif %}
+
+<div class="post-navigation">
+  
+    <div class="post-navigation__prev">
+      {% if previousPost %}
+        <a href="{{ previousPost.url }}" class="post-navigation__link">
+          <span class="post-navigation__label">{{ 'i18n.common.back' | i18n(locale) }}</span>
+          <p class="post-navigation__title">{{ previousPost.data.title | safe }}</p>
+        </a>
+      {% endif %}
+    </div>
+ 
+    <div class="post-navigation__next" class="post-navigation__link">
+      {% if nextPost %}
+       <a href="{{ nextPost.url }}" class="post-navigation__link">
+        <span class="post-navigation__label">{{ 'i18n.common.next' | i18n(locale) }}</span>
+        <p class="post-navigation__title">{{ nextPost.data.title | safe }}</p>
+          </a>
+      {% endif %}
+    </div>
+
+</div>

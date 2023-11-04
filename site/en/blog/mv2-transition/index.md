@@ -6,12 +6,19 @@ layout: "layouts/blog-post.njk"
 authors:
   - dsli
 date: 2021-09-23
-hero: image/WlD8wC6g8khYWPJUsQceQkhXSlv1/GoUHyuctM1Zs9wdy5a2s.png
+updated: 2022-10-03
+hero: image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/fjebBemTd8DpKrEe3ya3.png
 alt: Image with extensions logo and text saying Manifest V3 transition timeline
 tags:
-  - extensions
+  - extensions-news
 
 ---
+
+{% Aside %}
+
+The Manifest V2 support timeline has been updated. See our [September 2022 blog post](/blog/more-mv2-transition/) and the [Manifest V2 support timeline](/docs/extensions/mv3/mv2-sunset/) page for more details.
+
+{% endAside %}
 
 Earlier this year, for Chrome 88, we announced [the availability of a new manifest
 version](https://blog.chromium.org/2020/12/manifest-v3-now-available-on-m88-beta.html) for the
@@ -42,7 +49,7 @@ expansions of the extension platform. We introduced additional mechanisms to the
 API](/docs/extensions/reference/scripting/), and we expanded the
 [Declarative Net Request
 API](/docs/extensions/reference/declarativeNetRequest/) with support for
-multiple static rulesets, filtering based on tab ID, and session-scoped rules. 
+multiple static rulesets, filtering based on tab ID, and session-scoped rules.
 
 In the coming months, we'll also be launching support for dynamically configurable content scripts
 and an in-memory storage option, among other new capabilities. These changes were crafted with

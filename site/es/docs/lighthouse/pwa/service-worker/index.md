@@ -6,13 +6,13 @@ date: 2019-05-04
 updated: 2020-06-10
 ---
 
-El registro de un [service worker](https://web.dev/service-workers-cache-storage/) es el primer paso para habilitar las funciones clave de la [aplicación web progresiva (PWA)](/es/docs/lighthouse/pwa/#instalable):
+El registro de un [service worker](https://web.dev/articles/service-workers-cache-storage) es el primer paso para habilitar las funciones clave de la [aplicación web progresiva (PWA)](/es/docs/lighthouse/pwa/#instalable):
 
 - Funcionar sin conexión
 - Admitir notificaciones emergentes
 - Se puede instalar en el dispositivo
 
-Obtenga más información en la publicación [Service Workers y API de almacenamiento en caché.](https://web.dev/service-workers-cache-storage/)
+Obtenga más información en la publicación [Service Workers y API de almacenamiento en caché.](https://web.dev/articles/service-workers-cache-storage)
 
 ## Compatibilidad del navegador
 
@@ -26,23 +26,23 @@ Todos los navegadores principales, excepto Internet Explorer, son compatibles co
 
 Lighthouse comprueba si el [Protocolo de depuración remota de Chrome](https://github.com/ChromeDevTools/devtools-protocol) devuelve una versión del service worker. Si no es así, la auditoría falla.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Cómo registrar un service worker
 
-{% include 'content/reliable/workbox.njk' %}
+{% Partial 'reliable/workbox.njk' %}
 
 El registro de un trabajador del servicio implica solo unas pocas líneas de código, pero la única razón por la que usaría un service worker es para hacer posible la implementación de una de las características de la PWA descritas anteriormente. La implementación real de esas características requiere más trabajo:
 
 - Para saber cómo almacenar archivos en caché para su uso sin conexión, consulte la publicación [¿Qué es la confiabilidad de la red y cómo se mide?](https://web.dev/network-connections-unreliable).
-- Para saber cómo hacer que su aplicación sea instalable, consulte el laboratorio de códigos [Hacerlo instalable](https://web.dev/codelab-make-installable/).
+- Para saber cómo hacer que su aplicación sea instalable, consulte el laboratorio de códigos [Hacerlo instalable](https://web.dev/articles/codelab-make-installable).
 - Para saber cómo habilitar las notificaciones emergentes, consulte [Añadir notificaciones emergentes a una página Web](https://codelabs.developers.google.com/codelabs/push-notifications) de Google.
 
 ## Recursos
 
 - [Código fuente para la auditoría **No registra un service worker que controla la página y el `start_url`**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/service-worker.js)
 - [Service workers: una introducción](https://developers.google.com/web/fundamentals/primers/service-workers)
-- [Service workers y la API de almacenamiento en caché](https://web.dev/service-workers-cache-storage/)
-- [¿Qué es la confiabilidad de la red y cómo se mide?](https://web.dev/network-connections-unreliable/)
-- [Hágalo instalable](https://web.dev/codelab-make-installable/)
+- [Service workers y la API de almacenamiento en caché](https://web.dev/articles/service-workers-cache-storage)
+- [¿Qué es la confiabilidad de la red y cómo se mide?](https://web.dev/articles/network-connections-unreliable)
+- [Hágalo instalable](https://web.dev/articles/codelab-make-installable)
 - [Agregar notificaciones emergentes a una aplicación web](https://codelabs.developers.google.com/codelabs/push-notifications)

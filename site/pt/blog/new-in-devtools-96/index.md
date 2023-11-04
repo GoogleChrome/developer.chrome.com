@@ -25,7 +25,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
 
-{% include 'partials/devtools/pt/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id='3CXbhnaFNEw' %}
 
@@ -109,7 +109,7 @@ Issue relacionada: [1243309](https://crbug.com/1243309)
 
 
 <!-- ## Copy declarations as JavaScript in the Styles pane {: #copy-as-js } -->
-## Copie as declarações como JavaScript no painel Estilos {: #copy-as-js } 
+## Copie as declarações como JavaScript no painel Estilos {: #copy-as-js }
 <!-- Two new options are added in the context menu  for you to easily copy CSS rules as JavaScript properties. These shortcuts options are handy especially for developers who are working with [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js)  libraries. -->
 Duas novas opções foram adicionadas ao menu de contexto para que você copie facilmente as regras CSS como propriedades JavaScript. Essas opções de atalhos são úteis especialmente para desenvolvedores que estão trabalhando com bibliotecas [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js).
 
@@ -127,7 +127,7 @@ Issue relacionada: [1253635](https://crbug.com/1253635)
 
 
 <!-- ## New Payload tab in the Network panel {: #payload } -->
-## Nova guia Payload no painel Rede {: #payload } 
+## Nova guia Payload no painel Rede {: #payload }
 <!-- Use the new **Payload** tab in the **Network** panel when you inspect a network request with payload. Previously, the payload information is available under the **Headers** tab. -->
 Use a nova guia **Payload** no painel **Rede** ao inspecionar uma solicitação de rede com payload. Anteriormente, as informações de payload estavam disponíveis na guia **Headers**.
 
@@ -150,7 +150,7 @@ Junto com as [melhorias](/blog/new-in-devtools-95/#properties) do painel **Propr
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1574e9b550317c481a943fec059d84bfb863564 #}
 
-Issue relacionada: [1226262](https://crbug.com/1226262) 
+Issue relacionada: [1226262](https://crbug.com/1226262)
 
 
 <!-- ## Console updates -->
@@ -196,7 +196,7 @@ Issue relacionada: [1254259](https://crbug.com/1254259)
 
 
 <!-- ### Retain the Console sidebar {: #console-sidebar } -->
-### Mantida a barra lateral do console {: #console-sidebar } 
+### Mantida a barra lateral do console {: #console-sidebar }
 <!-- The Console sidebar is here to stay. In Chrome 94, we announced the [upcoming deprecation of the Console sidebar](/blog/new-in-devtools-94/#deprecated) and ask developers for feedback and concerns. -->
 A barra lateral do Console veio para ficar. No Chrome 94, anunciamos a [próxima descontinuação da barra lateral do Console](/blog/new-in-devtools-94/#deprecated) e pedimos feedback e preocupações aos desenvolvedores.
 <!-- We have now got enough feedback from the deprecation notice and we will work on improving the sidebar rather than removing it. -->
@@ -211,12 +211,12 @@ Issues relacionadas: [1232937](https://crbug.com/1232937), [1255586](https://crb
 
 <!-- ## Deprecated Application cache pane in the Application panel {: #app-cache } -->
 ## Obsolescência do Painel de cache no painel do Aplicativo {: #app-cache }
-<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
-O painel [Cache do aplicativo](/docs/devtools/storage/applicationcache/) no painel do aplicativo foi removido pois o suporte para [AppCache](https://web.dev/appcache-removal/) foi removido do Chrome e de outros navegadores baseados em Chromium.
+<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/articles/appcache-removal) is removed from Chrome and other Chromium-based browsers. -->
+O painel [Cache do aplicativo](/docs/devtools/storage/applicationcache/) no painel do aplicativo foi removido pois o suporte para [AppCache](https://web.dev/articles/appcache-removal) foi removido do Chrome e de outros navegadores baseados em Chromium.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
-Issue relacionada: [1084190](https://crbug.com/1084190) 
+Issue relacionada: [1084190](https://crbug.com/1084190)
 
 
 <!-- ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api } -->
@@ -227,15 +227,15 @@ Issue relacionada: [1084190](https://crbug.com/1084190)
 Para ativar o recurso experimental, marque a caixa de seleção **Ativar painel API de relatórios no painel do aplicativo** em **Configurações** > **Experimentos**.
 {% endAside %}
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-A [API de relatórios](https://web.dev/reporting-api/) foi projetada para ajudá-lo a monitorar violações de segurança de sua página, chamadas de API obsoletas e muito mais.
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+A [API de relatórios](https://web.dev/articles/reporting-api) foi projetada para ajudá-lo a monitorar violações de segurança de sua página, chamadas de API obsoletas e muito mais.
 <!-- With this experiment enabled, you can now view the reports status in the new **Reporting API** pane in the **Application** panel.  -->
 Com esse experimento habilitado, agora você pode visualizar o status dos relatórios no novo painel **API de relatórios** no painel **Aplicativo**.
 
 Observe que a seção **Endpoints** ainda está em desenvolvimento ativo (não mostrando endpoints de relatório por enquanto).
 
-<!-- Learn more about the **Reporting API** with [this article](https://web.dev/reporting-api/). -->
-Saiba mais sobre a **API de relatórios** com [este artigo](https://web.dev/reporting-api/).
+<!-- Learn more about the **Reporting API** with [this article](https://web.dev/articles/reporting-api). -->
+Saiba mais sobre a **API de relatórios** com [este artigo](https://web.dev/articles/reporting-api).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Painel de API de relatórios no painel do aplicativo", width="800", height="476" %}
 
@@ -243,5 +243,5 @@ Saiba mais sobre a **API de relatórios** com [este artigo](https://web.dev/repo
 
 Issue relacionada: [1205856](https://crbug.com/1205856)
 
-{% include 'partials/devtools/pt/reach-out.md' %}
-{% include 'partials/devtools/pt/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

@@ -2,64 +2,79 @@
 api: declarativeContent
 ---
 
-## Usage
-
-The Declarative Content API allows you to show your extension's [page action][1] depending on the
-URL of a web page and the CSS selectors its content matches, without needing to take a [host
-permission][2] or inject a [content script][3]. Use the [activeTab][4] permission in order to be
-able to interact with a page after the user clicks on your page action.
-
-If you need more precise control over when your page action appears or you need to change its
-appearance to match the current tab before the user clicks on it, you'll have to keep using the
-[pageAction][5] API.
-
-## Rules
-
-As a [declarative API][6], this API lets you register rules on the [`onPageChanged`][7] [event][8]
-object which take an action ([`ShowPageAction`][9] and [`SetIcon`][10]) when a set of conditions,
-represented as a [`PageStateMatcher`][11], are met.
-
-The [`PageStateMatcher`][12] matches web pages if and only if all listed criteria are met. The
-following rule would show a page action for pages on "https://www.google.com/" when a password field
-is present on it:
-
-```js
-var rule1 = {
-  conditions: [
-    new chrome.declarativeContent.PageStateMatcher({
-      pageUrl: { hostEquals: 'www.google.com', schemes: ['https'] },
-      css: ["input[type='password']"]
-    })
-  ],
-  actions: [ new chrome.declarativeContent.ShowPageAction() ]
-};
-```
-
 {% Aside %}
 
-**Note:** All conditions and actions are created via a constructor as shown in the example above.
+To transition from page action to action, see [Emulating pageActions with
+declarativeContent][emulating-page-actions]
 
 {% endAside %}
 
-In order to also show a page action for sites with a video, you can add a second condition, as each
-condition is sufficient to trigger all specified actions:
+## Usage
+
+{% Aside 'key-term' %}
+
+An [extension's _action_][api-action] controls the extension's toolbar icon.
+
+{% endAside %}
+
+The Declarative Content API allows you to enable your extension's action depending on the URL of a
+web page, or if a CSS selector matches an element on the page, without needing to 
+add [host permissions][docs-host-perm] or inject a [content script][docs-content-scripts]. 
+
+Use the [activeTab][docs-activetab] permission to interact with a page after the user clicks on the
+extension's action.
+
+## Rules
+
+Rules consists of conditions and actions. If any of the conditions is fulfilled, all actions are
+executed. The actions are [`setIcon`][type-set-icon] and [`showAction`][type-show-action].
+
+The [`PageStateMatcher`][type-page-state-matcher] matches web pages if and only if all listed
+criteria are met. It can match a [page url][section-pageurl], a [css compound selector][section-css]
+or the [bookmarked state][section-bookmarked] of a page. The following rule enables
+the extension's action on Google pages when a password field is present:
 
 ```js
-var rule2 = {
+let rule1 = {
   conditions: [
     new chrome.declarativeContent.PageStateMatcher({
-      pageUrl: { hostEquals: 'www.google.com', schemes: ['https'] },
+      pageUrl: { hostSuffix: '.google.com', schemes: ['https'] },
+      css: ["input[type='password']"]
+    })
+  ],
+  actions: [ new chrome.declarativeContent.ShowAction() ]
+};
+
+```
+
+{% Aside 'success' %}
+
+All conditions and actions are created via a constructor as shown in the example above.
+
+{% endAside %}
+
+To also enable the extension's action for Google sites with a video, you can add a second
+condition, as each condition is sufficient to trigger all specified actions:
+
+```js
+let rule2 = {
+  conditions: [
+    new chrome.declarativeContent.PageStateMatcher({
+      pageUrl: { hostSuffix: '.google.com', schemes: ['https'] },
       css: ["input[type='password']"]
     }),
     new chrome.declarativeContent.PageStateMatcher({
       css: ["video"]
     })
   ],
-  actions: [ new chrome.declarativeContent.ShowPageAction() ]
+  actions: [ new chrome.declarativeContent.ShowAction() ]
 };
 ```
 
-[Added rules][27] are saved across browser restarts, so register them as follows:
+The [`onPageChanged`][event-onpagechanged] event tests whether any rule has at least one fulfilled
+condition and executes the actions. Rules persist across browsing sessions; therefore, during
+extension installation time you should first use [`removeRules`][docs-removing-rules] to clear
+previously installed rules and then use [`addRules`][docs-adding-rules] to register new ones.
 
 ```js
 chrome.runtime.onInstalled.addListener(function(details) {
@@ -71,70 +86,91 @@ chrome.runtime.onInstalled.addListener(function(details) {
 
 {% Aside %}
 
-**Note:** You should always register or unregister rules in bulk rather than individually because
-each of these operations recreates internal data structures. This re-creation is computationally
-expensive but facilitates a faster matching algorithm.
+You should always register or unregister rules in bulk because each of these operations recreates
+internal data structures. This re-creation is computationally expensive but facilitates a faster
+matching algorithm.
 
 {% endAside %}
 
-Combine the above rule with the [activeTab][33] permission to create an extension that doesn't need
-any install-time permissions but can invite the user to click its page action on relevant pages and
-can run on those pages when the user clicks the page action.
+With the [activeTab][docs-activetab] permission, your extension will not display any permission
+warnings and when the user clicks the extension action, it will only run on relevant pages.
 
-## CSS Matching
+## Page URL Matching {: #page-url}
 
-[`PageStateMatcher.css`][34] conditions must be _[compound selectors][35]_, meaning that you can't
-include [combinators][36] like whitespace or "`>`" in your selectors. This helps Chrome match the
-selectors more efficiently.
+The [`PageStateMatcher.pageurl`][type-matcher-url] matches when the URL criteria are fulfilled. The
+most common criteria are a concatenation of either host, path, or url, followed by Contains, Equals, Prefix, or
+Suffix. The following table contains a few examples:
 
-<table><tbody><tr><th>Compound Selectors (OK)</th><th>Complex Selectors (Not OK)</th></tr><tr><td><code>a</code></td><td><code>div p</code></td></tr><tr><td><code>iframe.special[src^='http']</code></td><td><code>p&gt;span.highlight</code></td></tr><tr><td><code>ns|*</code></td><td><code>p + ol</code></td></tr><tr><td><code>#abcd:checked</code></td><td><code>p::first-line</code></td></tr></tbody></table>
+| Criteria                                  | Matches                         |
+|-------------------------------------------|---------------------------------|
+| `{ hostSuffix: 'google.com' }`            | All Google URLs                 |
+| `{ pathPrefix: '/docs/extensions'` }      | Extension docs URLs             |
+| `{ urlContains: 'developer.chrome.com'` } | All chrome developers docs URLs |
+
+All criteria are case sensitive. For a complete list of criteria, see [UrlFilter][type-urlfilter].
+
+## CSS Matching {: #css}
+
+[`PageStateMatcher.css`][type-matcher-css] conditions must be _[compound selectors][w3-compound]_,
+meaning that you can't include [combinators][mdn-combinators] like whitespace or "`>`" in your
+selectors. This helps Chrome match the selectors more efficiently.
+
+<table>
+  <tbody>
+    <tr>
+      <th>Compound Selectors (OK)</th>
+      <th>Complex Selectors (Not OK)</th>
+    </tr>
+    <tr>
+      <td><code>a</code></td>
+      <td><code>div p</code></td>
+    </tr>
+    <tr>
+      <td><code>iframe.special[src^='http']</code></td>
+      <td><code>p&gt;span.highlight</code></td>
+    </tr>
+    <tr>
+      <td><code>ns|*</code></td>
+      <td><code>p + ol</code></td>
+    </tr>
+    <tr>
+      <td><code>#abcd:checked</code></td>
+      <td><code>p::first-line</code></td>
+    </tr>
+  </tbody>
+</table>
 
 CSS conditions only match displayed elements: if an element that matches your selector is
 `display:none` or one of its parent elements is `display:none`, it doesn't cause the condition to
 match. Elements styled with `visibility:hidden`, positioned off-screen, or hidden by other elements
 can still make your condition match.
 
-## Bookmarked State Matching
+## Bookmarked State Matching {: #bookmarked}
 
-The [`PageStateMatcher.isBookmarked`][37] condition allows matching of the bookmarked state of the
-current URL in the user's profile. To make use of this condition the "bookmarks" permission must be
-declared in the [extension manifest][38]
+The [`PageStateMatcher.isBookmarked`][type-matcher-bookmarked] condition allows matching of the
+bookmarked state of the current URL in the user's profile. To make use of this condition the
+"bookmarks" permission must be declared in the extension [manifest][docs-manifest].
 
-[1]: /docs/extensions/pageAction
-[2]: /docs/extensions/mv2/declare_permissions#host-permissions
-[3]: /docs/extensions/mv2/content_scripts
-[4]: /docs/extensions/activeTab
-[5]: /docs/extensions/pageAction
-[6]: /docs/extensions/events#declarative
-[7]: #event-onPageChanged
-[8]: /docs/extensions/events#type-Event
-[9]: #type-ShowPageAction
-[10]: #type-SetIcon
-[11]: #type-PageStateMatcher
-[12]: #type-PageStateMatcher
-[13]: #type-PageStateMatcher
-[14]: #property-PageStateMatcher-pageUrl
-[15]: /docs/extensions/events#property-UrlFilter-hostEquals
-[16]: /docs/extensions/events#property-UrlFilter-schemes
-[17]: #property-PageStateMatcher-css
-[18]: #type-ShowPageAction
-[19]: #type-PageStateMatcher
-[20]: #property-PageStateMatcher-pageUrl
-[21]: /docs/extensions/events#property-UrlFilter-hostEquals
-[22]: /docs/extensions/events#property-UrlFilter-schemes
-[23]: #property-PageStateMatcher-css
-[24]: #type-PageStateMatcher
-[25]: #property-PageStateMatcher-css
-[26]: #type-ShowPageAction
-[27]: /docs/extensions/events#addingrules
-[28]: /docs/extensions/runtime#event-onInstalled
-[29]: #event-onPageChanged
-[30]: /docs/extensions/events#removingrules
-[31]: #event-onPageChanged
-[32]: /docs/extensions/events#addingrules
-[33]: /docs/extensions/activeTab
-[34]: #property-PageStateMatcher-css
-[35]: https://www.w3.org/TR/selectors4/#compound
-[36]: https://www.w3.org/community/webed/wiki/CSS/Selectors#Combinators
-[37]: #property-PageStateMatcher-isBookmarked
-[38]: /docs/extensions/mv2/tabs
+[api-action]: /docs/extensions/reference/action/
+[api-declarative]: /docs/extensions/reference/events/#declarative-event-handlers
+[docs-activetab]: /docs/extensions/mv3/manifest/activeTab/
+[docs-adding-rules]: /docs/extensions/reference/events#adding-rules
+[docs-content-scripts]: /docs/extensions/mv3/content_scripts
+[docs-host-perm]: /docs/extensions/mv3/declare_permissions#host-permissions
+[docs-manifest]: /docs/extensions/mv3/manifest/
+[docs-removing-rules]: /docs/extensions/reference/events#removing-rules
+[emulating-page-actions]: /docs/extensions/reference/action/#emulating-pageactions-with-declarativecontent
+[event-onpagechanged]: #event-onPageChanged
+[mdn-combinators]: https://developer.mozilla.org/docs/Web/CSS/CSS_Selectors#combinators
+[section-bookmarked]: #bookmarked
+[section-css]: #css
+[section-pageurl]: #page-url
+[type-event]: /docs/extensions/reference/events/#type-Event
+[type-matcher-bookmarked]: #property-PageStateMatcher-isBookmarked
+[type-matcher-css]: #property-PageStateMatcher-css
+[type-matcher-url]: #property-PageStateMatcher-pageUrl
+[type-page-state-matcher]: #type-PageStateMatcher
+[type-set-icon]: #type-SetIcon
+[type-show-action]: #type-ShowAction
+[type-urlfilter]: /docs/extensions/reference/events/#type-UrlFilter
+[w3-compound]: https://www.w3.org/TR/selectors4/#compound

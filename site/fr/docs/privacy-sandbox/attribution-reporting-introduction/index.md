@@ -87,7 +87,7 @@ Il est possible de tester quelques démos.
 - Rapports basés sur les événements, clics uniquement :
 
     - [Démo en direct](https://goo.gle/sppi-devrel-eventlevel).
-    - [Code source](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement) de cette démo, que vous pouvez [dupliquer et personnaliser](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/conversion-measurement#fork-and-customize) selon vos besoins.
+    - [Code source](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting) de cette démo, que vous pouvez [dupliquer et personnaliser](https://github.com/GoogleChromeLabs/trust-safety-demo/tree/main/attribution-reporting#fork-and-customize) selon vos besoins.
 
 ## Cas d'utilisation et fonctionnalités
 

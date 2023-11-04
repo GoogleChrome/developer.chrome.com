@@ -21,15 +21,15 @@ Muchos usuarios de su página visitan usando una conexión de red celular lenta.
 Dos métricas principales afectan la forma en que los usuarios perciben el tiempo de carga:
 
 - [First Meaningful Paint: Primer despliegue significativo (FMP)](/docs/lighthouse/performance/first-meaningful-paint/), que mide cuándo el contenido principal de la página aparece visualmente completo
-- [Time to Interactive: Tiempo de interacción (TTI)](https://web.dev/tti/), que mide cuándo la página es completamente interactiva
+- [Time to Interactive: Tiempo de interacción (TTI)](https://web.dev/articles/tti), que mide cuándo la página es completamente interactiva
 
 Por ejemplo, si una página aparece visualmente completa después de 1 segundo, pero el usuario no puede interactuar con ella durante 10 segundos, es probable que los usuarios perciban que el tiempo de carga de la página es de 10 segundos.
 
 Lighthouse calcula lo que sería el TTI en una conexión de red 4G lenta. Si el tiempo para interactuar es más de 10 segundos, la auditoría falla.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## Recursos
 

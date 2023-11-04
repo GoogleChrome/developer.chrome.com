@@ -1,0 +1,26 @@
+get-started:
+  en: 'Get started'
+
+resources:
+  en: 'Resources'
+
+project:
+  en: 'Project'
+
+project_npm:
+  en: 'NPM'
+
+project_github:
+  en: 'Github'
+
+project_issue:
+  en: 'Report an issue'
+
+project_releases:
+  en: 'Releases'
+
+project_contribute:
+  en: 'Contribute'
+
+resources_protocol:
+  en: 'DevTools Protocol APIs'

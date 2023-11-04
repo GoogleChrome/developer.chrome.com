@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Extending DevTools"
+seoTitle: "MV2 - Extending DevTools [Deprecated]"
 date: 2012-09-17
 updated: 2020-08-25
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Extending DevTools](/docs/extensions/mv3/devtools/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 ## Overview {: #overview }
 
@@ -446,7 +451,7 @@ Browse the source of these DevTools extension examples:
 
 ## More information {: #more }
 
-For information on the standard APIs that extensions can use, see [chrome.\* APIs][43] and [Other
+For information on the standard APIs that extensions can use, see [chrome.\* APIs][43] and [web
 APIs][44].
 
 [Give us feedback!][45] Your comments and suggestions help us improve the APIs.
@@ -489,5 +494,5 @@ You can find examples that use DevTools APIs in [Samples][42].
 [40]: https://github.com/thomasboyt/coquette-inspect
 [42]: https://github.com/GoogleChrome/chrome-extensions-samples
 [43]: /docs/extensions/reference/
-[44]: /docs/extensions/api_other/
+[44]: https://developer.mozilla.org/docs/Web/API
 [45]: http://groups.google.com/group/google-chrome-developer-tools/topics

@@ -26,8 +26,7 @@ updated: 2020-12-04
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
-  - deprecations
-  - removals
+  - deprecations-removals
 
 
 
@@ -45,7 +44,7 @@ November 17, 2020.
 
 ## Comma separator in iframe allow attribute
 
-Permissions policy declarations in an `<iframe>` tag [can no longer use
+[Permissions policy](/docs/privacy-sandbox/permissions-policy/) declarations in an `<iframe>` tag [can no longer use
 commas](https://www.chromestatus.com/feature/5740835259809792) as a separator
 between items. Developers should use semicolons instead.
 

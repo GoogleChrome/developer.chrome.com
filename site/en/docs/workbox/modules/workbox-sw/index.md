@@ -110,7 +110,7 @@ self.addEventListener('fetch', event => {
 
 If you need to write code that would otherwise run afoul of this restriction, you can explicitly
 trigger the `importScripts()` call outside of the event handler by using the
-[`workbox.loadModule()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox#.loadModule) method:
+`workbox.loadModule()` method:
 
 ```js
 importScripts(
@@ -172,7 +172,7 @@ option:
 
 ```js
 workbox.setConfig({
-  debug: &lt;true or false&gt;
+  debug: true,
 });
 ```
 

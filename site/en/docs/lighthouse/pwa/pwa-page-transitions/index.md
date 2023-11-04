@@ -9,7 +9,7 @@ updated: 2019-09-19
 ---
 
 Quick page transitions are key to how users perceive the performance of your
-[Progressive Web App (PWA)](https://web.dev/progressive-web-apps/#make-it-installable).
+[Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps#make-it-installable).
 Transitions should feel snappy, even on a slow network.
 
 ## Recommendations
@@ -36,9 +36,9 @@ Make sure to immediately show any content that's already available,
 such as the page title or thumbnail,
 while the rest of the content loads.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Resources
 
-- [Source code for **Page transitions don't feel like they block on the network** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/manual/pwa-page-transitions.js)
+- [Source code for **Page transitions don't feel like they block on the network** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/manual/pwa-page-transitions.js)
 - [Skeleton Screen](http://hannahatkin.com/skeleton-screens/)

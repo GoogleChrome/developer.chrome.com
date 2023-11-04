@@ -1,0 +1,35 @@
+{% macro relatedArticles(relatedTitle, relatedItems, color) %}
+  <div class="related-articles width-full">
+      <div>
+        <h3 class="type--h5 color-{{color}}-darkest">
+          <span>
+            {{ relatedTitle }}
+          </span>
+        </h3>
+          <ul class="related-items">
+         {% for item in relatedItems %}
+           {% set post = null %} {# Reset #}
+              {% if item.url and item.title %}
+              {% set post = item %}
+           {% else %}
+              {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+           {% endif %}
+           {% if post %}
+              {% set icons = {
+                blogPost: 'blog',
+                doc: 'docs',
+                article: 'articles'
+               } %}
+              {% set iconName = icons[post.data.type] or 'articles' %}
+              {% if post.important %}
+                {% set iconName="important" %}
+              {% endif %}
+              <li class="related-item">
+		            <a href="{{ post.url }}"><div class="gap-right-100 color-primary display-flex">{{ icon(iconName) }}</div><div>{{ post.title or post.data.title }}</div></a>
+              </li>
+             {% endif %}
+      {% endfor %}
+         </ul> 
+	</div>
+  </div>
+{% endmacro %}

@@ -17,9 +17,9 @@ tags:
 
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro)さんと [lacolaco](https://github.com/lacolaco) さんに感謝いたします。*
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
-{% YouTube id='YqkIS88VulM' %}
+{% YouTube id='zFVWeOKZBHs' %}
 
 <!-- start: translation instructions -->
 <!-- 1. Remove the "draft: true" tag above when submitting PR -->
@@ -56,9 +56,9 @@ Chromium issue: [423246](https://crbug.com/423246)
 
 新しく追加された **Reporting API** ペインを使用すると、そのページで生成されるレポートやそれらの状況を監視できます。
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
 
-[Reporting API](https://web.dev/reporting-api/) はセキュリティ違反や廃止されるAPIの呼び出しなどを監視できるように設計されています。
+[Reporting API](https://web.dev/articles/reporting-api) はセキュリティ違反や廃止されるAPIの呼び出しなどを監視できるように設計されています。
 
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 
@@ -169,19 +169,19 @@ Chromium issues: [1277944](https://crbug.com/1277944), [1282076](https://crbug.c
 Chromium issue: [1068788](https://crbug.com/1068788)
 
 
-<!-- ## Sourcemaps improvements {: #sourcemap } -->
+<!-- ## Source maps improvements {: #sourcemap } -->
 
 ## ソースマップの改善 {: #sourcemap }
 
-<!-- ### Debug Chrome extension with sourcemap files {: #extension } -->
+<!-- ### Debug Chrome extension with source map files {: #extension } -->
 
 ### ソースマップファイルを使用した Chrome 拡張機能のデバッグ {: #extension }
 
-<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with sourcemap files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
+<!-- You can now [debug Chrome extension](/docs/extensions/mv3/getstarted/#unpacked) with source map files. Previously, DevTools only supported inline sourcemap for Chrome extension debugging. -->
 
 ソースマップファイルを使用して [Chrome 拡張機能をデバッグ](/docs/extensions/mv3/getstarted/#unpacked)できるようになりました。これまで、Chrome 拡張機能のデバッグに関して、DevTools はインラインのソースマップだけをサポートしていました。
 
-<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with sourcemap files", width="800", height="518" %} -->
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="Debug Chrome extension with source map files", width="800", height="518" %} -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lnRa954ROl0MSSExlBl7.png", alt="ソースマップファイルを使用した Chrome 拡張機能のデバッグ", width="800", height="518" %}
 
@@ -194,7 +194,7 @@ Chromium issue: [212374](https://crbug.com/212374)
 
 ### Sources パネルのソースフォルダツリーの改善 {: #source-tree }
 
-<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the sourcemaps. -->
+<!-- The source folder tree in the **Sources** panel is now improved with less clutter in the folder structures and naming (e.g. “../”, “./”, etc). Under the hood, this is the result of normalizing the absolute source URLs in the source maps. -->
 
 **Sources** パネルのソースフォルダツリーがフォルダ構造と名前付け（例、"../"、"./"など）により乱れにくく改善されました。内部的には、ソースマップ内の絶対ソースURLが正規化された結果が使用されています。
 
@@ -211,9 +211,9 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 
 ### Sources パネルにワーカーのソースファイルを表示 {: #worker-sourcemap }
 
-<!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
+<!-- [Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
 
-相対 SourceURL を持つ [Worker](https://web.dev/workers-overview/)（例、Web Worker、Service Worker）のソースファイルが **Source** パネルに表示されるようになりました。これまでは、ワーカーのソースファイルは正しく扱われませんでした。
+相対 SourceURL を持つ [Worker](https://web.dev/articles/workers-overview)（例、Web Worker、Service Worker）のソースファイルが **Source** パネルに表示されるようになりました。これまでは、ワーカーのソースファイルは正しく扱われませんでした。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="ALT_TEXT_HERE", width="800", height="509" %} -->
 
@@ -221,20 +221,20 @@ Chromium issue: [1284737](https://crbug.com/1284737)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6e877d5e1a3ccca22e866fb2a70330613aeb6964 #}
 
-Chromium issue: [1277002](https://crbug.com/1277002) 
+Chromium issue: [1277002](https://crbug.com/1277002)
 
 
 <!-- # Chrome’s Auto Dark Theme updates {: #auto-dark-mode } -->
 
-# Chrome の自動ダークテーマの更新 {: #auto-dark-mode }
+## Chrome の自動ダークテーマの更新 {: #auto-dark-mode }
 
 <!-- The [Auto Dark Theme emulation](/blog/new-in-devtools-96/#auto-dark-mode) UI is now simplified. It is a checkbox now, it was a dropdown previously. -->
 
 [自動ダークテーマエミュレーション](/blog/new-in-devtools-96/#auto-dark-mode)の UI が単純になりました。これまではドロップダウンでしたが、チェックボックスが使用されます。
 
-<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate perfers-color-scheme** dropdown will be disabled and set to **perfers-color-scheme: dark** automatically. -->
+<!-- Apart from that, when the [Auto Dark Theme](/blog/auto-dark-theme/) is enabled, the **Emulate prefers-color-scheme** dropdown will be disabled and set to **prefers-color-scheme: dark** automatically. -->
 
-さらに、[Auto Dark Theme](/blog/auto-dark-theme/) が有効なときに、**Emulate perfers-color-scheme** ドロップダウンが無効になり、**perfers-color-scheme: dark** が自動的に設定されます。
+さらに、[Auto Dark Theme](/blog/auto-dark-theme/) が有効なときに、**Emulate prefers-color-scheme** ドロップダウンが無効になり、**prefers-color-scheme: dark** が自動的に設定されます。
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System. -->
 
@@ -266,7 +266,7 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f60936b29519e0cf387cd0a133d43885c6eb183d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22bb84d657aa69f6f7d5067605c2c133a5714172 #}
 
-Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995) 
+Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.com/1284995)
 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
@@ -281,10 +281,10 @@ Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - **Cookies** ペインの [Cookie 編集](/docs/devtools/storage/cookies/#edit)に関する問題が修正されました。 ([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - [コマンドメニュー](/docs/devtools/command-menu/)で `Shift` + `Tab` を使用して以前のコマンドを選択できます。 ([1278743](https://crbug.com/1278743))
-<!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
-- [CORS プリフライトリクエスト](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls)の問題が [Issues](/docs/devtools/issues/) タブでレポートされるようになりました。 ([1272445](https://crbug.com/1272445)).
-<!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
-- [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) の問題が [Issues](/docs/devtools/issues/) タブでレポートされるようになりました。 ([1272445](https://crbug.com/1272445)).
+<!-- - Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
+- [CORS プリフライトリクエスト](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls)の問題が [Issues](/docs/devtools/issues/) タブでレポートされるようになりました。 ([1272445](https://crbug.com/1272445)).
+<!-- - Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
+- [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) の問題が [Issues](/docs/devtools/issues/) タブでレポートされるようになりました。 ([1272445](https://crbug.com/1272445)).
 <!-- - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662)) -->
 - **Sources** パネルと **Console** パネルでの `Shift` + `Delete` と `Page up` / `Page down` の動作が修正されました。 ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->
@@ -293,5 +293,5 @@ Chromium issues: [1284245](https://crbug.com/1284245), [1284995](https://crbug.c
 - DevTools で[ライト／ダークテーマを切り替え](/docs/devtools/customize/dark-theme/)たときに、リロードが不要になりました。 ([1278738](https://crbug.com/1278738))
 
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

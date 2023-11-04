@@ -46,7 +46,7 @@ plugin](https://extensions.joomla.org/instant-search/?jed_live%5Bquery%5D=amp).
 ### Magento
 
 Consider modifying your product and catalog templates to make use of the web
-platform's [lazy loading](https://web.dev/browser-level-image-lazy-loading/) feature.
+platform's [lazy loading](https://web.dev/articles/browser-level-image-lazy-loading) feature.
 
 ### WordPress
 
@@ -58,7 +58,7 @@ plugin](https://wordpress.org/plugins/amp/).
 
 ## Resources
 
-- [Source code for **Defer offscreen images** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/offscreen-images.js)
+- [Source code for **Defer offscreen images** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/offscreen-images.js)
 
 [drupal]: https://www.drupal.org/project/project_module?f%5B0%5D=&f%5B1%5D=&f%5B2%5D=im_vid_3%3A67&f%5B3%5D=&f%5B4%5D=sm_field_project_type%3Afull&f%5B5%5D=&f%5B6%5D=&text=%22lazy+load%22&solrsort=iss_project_release_usage+desc&op=Search
 [joomla]: https://extensions.joomla.org/instant-search/?jed_live%5Bquery%5D=lazy%20loading

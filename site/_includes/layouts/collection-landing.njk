@@ -1,0 +1,36 @@
+{% extends "layouts/base.njk" %}
+
+
+{% block css %}
+{% InlineCss '/css/single-post.css' %}
+{% endblock %}
+
+{% from 'macros/cards/hero-card.njk' import heroCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+
+{% block content %}
+    <div class="measure-1280 width-full center-margin pad-400">
+      {{ heroCard(title, description) }}
+
+      <div class="pad-top-400">
+        {{ content | safe }}
+      <div>
+
+      <div class="blog-grid pad-top-400">
+        {% for post in collections.tags[collection_tag].posts.en %}
+          {% if loop.index0 < 6 %}
+            {{ blogCard(post) }}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <nav class="pagination gap-top-300 pad-left-400 pad-right-400">
+        <span><!-- pagination elements expects to always have 2 children, therefore this empty span --></span>
+        <a class="pagination__button type--small gap-left-200 text-align-center" href="/tags/{{ collection_tag }}/">
+          <span>{{ 'i18n.common.see_all_articles' | i18n(locale) }}</span>
+          {{ icon('arrow-forward', {hidden: true}) }}
+        </a>
+      </nav>
+    </div>
+{% endblock %}

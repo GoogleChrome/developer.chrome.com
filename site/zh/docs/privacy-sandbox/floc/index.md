@@ -37,7 +37,7 @@ FLoC 为基于兴趣选择广告和其他内容提供了一种隐私保护机制
 
 ## FLoC 的运作方式
 
-[什么是 FLoC？](https://web.dev/floc/#how-does-floc-work)提供了有关 FloC 运作方式的简要分步说明。
+[什么是 FLoC？](https://web.dev/articles/floc#how_does_floc_work)提供了有关 FloC 运作方式的简要分步说明。
 
 下图显示了使用 FLoC 选择和投放相关广告时不同角色的示例。
 

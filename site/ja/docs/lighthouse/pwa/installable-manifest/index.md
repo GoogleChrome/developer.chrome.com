@@ -12,11 +12,11 @@ updated: 2019-09-19
 
 インストール可能性は、[プログレッシブウェブアプリ (PWA)](/docs/lighthouse/pwa/) の基本的な要件です。ユーザーに PWA のインストールを促すことで、ユーザーが PWA をホーム画面に追加できるようにします。ユーザーは、ホーム画面に追加するアプリをそれ以外のアプリよりも頻繁に利用します。
 
-[ウェブアプリマニフェスト](https://web.dev/add-manifest/)には、アプリをインストール可能にするための重要な情報が含まれています。
+[ウェブアプリマニフェスト](https://web.dev/articles/add-manifest)には、アプリをインストール可能にするための重要な情報が含まれています。
 
 ## Lighthouse によるウェブアプリマニフェスト監査が失敗する原因
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) は、インストール可能性の最低要件を満たす[ウェブアプリマニフェスト](https://web.dev/add-manifest/)がないページをフラグします。
+[Lighthouse](https://developers.google.com/web/tools/lighthouse/) は、インストール可能性の最低要件を満たす[ウェブアプリマニフェスト](https://web.dev/articles/add-manifest)がないページをフラグします。
 
 <figure>{% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/039DlaixA4drrswBzSra.png", alt="ユーザーがホーム画面からウェブアプリをインストールできないことを示す Lighthouse 監査", width="800", height="98" %}</figure>
 
@@ -30,11 +30,11 @@ updated: 2019-09-19
 
 {% Aside 'caution' %} アプリをインストール可能にするには、ウェブアプリマニフェストが*必要*ですが、それだけでは*不十分*です。インストール可能性の全要件を満たす方法については、[Discover what it takes to be installable (インストール可能にする方法について)](/docs/lighthouse/pwa/) と題した記事を参照してください。{% endAside %}
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## PWA をインストール可能にする方法
 
-上述した要件を満たすマニフェストがアプリにあることを確認してください。 PWA の作成について詳しくは、[Installable](https://web.dev/progressive-web-apps/) コレクションを参照してください。
+上述した要件を満たすマニフェストがアプリにあることを確認してください。 PWA の作成について詳しくは、[Installable](https://web.dev/explore/progressive-web-apps) コレクションを参照してください。
 
 ## PWA がインストール可能であることを確認する方法
 
@@ -42,7 +42,7 @@ updated: 2019-09-19
 
 アプリがインストール可能性の最低要件を満たしている場合、Chrome は`beforeinstallprompt` イベントを発生させます。このイベントを使用して、ユーザーに PWA のインストールを促すことができます。
 
-{% Aside 'codelab' %} Chrome でアプリをインストール可能にする方法については、コードラボの [Make it installable](https://web.dev/codelab-make-installable/) で紹介されています。{% endAside %}
+{% Aside 'codelab' %} Chrome でアプリをインストール可能にする方法については、コードラボの [Make it installable](https://web.dev/articles/codelab-make-installable) で紹介されています。{% endAside %}
 
 ### 他のブラウザの場合
 
@@ -57,7 +57,7 @@ updated: 2019-09-19
 ## リソース
 
 - [**Web app manifest does not meet the installability requirements (ウェブアプリマニフェストがインストール可能性の要件を満たしていない)** 監査のソースコード](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/installable-manifest.js)
-- [Add a web app manifest (ウェブアプリマニフェストを追加する)](https://web.dev/add-manifest/)
+- [Add a web app manifest (ウェブアプリマニフェストを追加する)](https://web.dev/articles/add-manifest)
 - [Discover what it takes to be installable (インストール可能にする方法について)](/docs/lighthouse/pwa/)
 - [Web App Manifest (ウェブアプリマニフェスト)](https://developer.mozilla.org/docs/Web/Manifest)
 - [Does not use HTTPS (HTTPS を使用していない)](/docs/lighthouse/pwa/is-on-https/)

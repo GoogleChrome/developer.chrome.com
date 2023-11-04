@@ -1,6 +1,12 @@
 # The top-level keys in this file are used to generate tag pages under /tags/<tag>, presuming
 # they have at least one matching post.
 
+example:
+  en: Example
+
+memory:
+  en: Memory
+
 news:
   en: News
   es: Noticias
@@ -14,11 +20,64 @@ accessibility:
 amp:
   en: AMP
 
+android:
+  en: Android
+
+automation:
+  en: Browser Automation
+
 autoplay:
   en: Autoplay
 
 capabilities:
   en: Capabilities
+
+case-study:
+  en: Case study
+
+fugu-case-study:
+  en: Fugu case study
+
+# DevTools-related tags
+
+wasm:
+  en: WebAssembly
+
+css:
+  en: CSS
+
+javascript:
+  en: JavaScript
+
+get-started:
+  en: Get started
+
+prototype-fixes:
+  en: Prototype fixes
+
+find-issues:
+  en: Find issues
+
+emulate:
+  en: Emulate conditions
+
+test:
+  en: Test
+
+performance:
+  en: Performance
+
+sourcemap:
+  en: source map
+
+storage:
+  en: Storage
+
+network:
+  en: Network
+
+dom:
+  en: DOM
 
 # This is used for the title of the shared Chrome RSS feed that 'chrome-xx' posts create.
 # It does not need translation.
@@ -28,11 +87,17 @@ chrome:
 chromium-chronicle:
   en: Chromium Chronicle
 
+cws:
+  en: Chrome Web Store
+
 cookies:
   en: Cookies
 
-deprecations:
-  en: Deprecations
+cookie-countdown:
+  en: Cookie Countdown
+
+deprecations-removals:
+  en: Deprecations and Removals
 
 device-characteristics:
   en: Device Characteristics
@@ -45,6 +110,9 @@ encryption:
 
 extensions:
   en: Extensions
+
+extensions-news:
+  en: Extensions News
 
 fonts:
   en: Fonts
@@ -64,14 +132,24 @@ graphics:
 houdini:
   en: Houdini
 
+headless:
+  en: Chrome’s Headless mode
+
 html:
   en: HTML
 
 media:
   en: Media
 
+webgpu:
+  en: WebGPU
+
+new-in-webgpu:
+  en: What's New in WebGPU
+
 new-in-chrome:
   en: New in Chrome
+  es: Qué hay de nuevo en Chrome
 
 privacy:
   en: Privacy
@@ -82,14 +160,14 @@ progress-in-the-privacy-sandbox:
 progressive-web-apps:
   en: Progressive Web Apps
 
-removals:
-  en: Removals
-
 security:
   en: Security
 
 devtools:
   en: DevTools
+
+devtools-tips:
+  en: DevTools Tips
 
 new-in-devtools:
   en: What's New in DevTools
@@ -120,7 +198,7 @@ lighthouse:
 
 new-in-lighthouse:
   en: What's new in Lighthouse
-  
+
 chrome49:
   en: Chrome 49
 
@@ -159,21 +237,133 @@ chrome61:
 
 chrome64:
   en: Chrome 64
-  
+
 chrome65:
   en: Chrome 65
 
 chrome66:
   en: Chrome 66
- 
+
 chrome67:
   en: Chrome 67
-  
+
 chrome68:
   en: Chrome 68
-  
+
 chrome69:
   en: Chrome 69
 
 chrome70:
   en: Chrome 70
+
+chrome109:
+  en: Chrome 109
+
+chrome110:
+  en: Chrome 110
+
+beta:
+  en: Beta
+
+insider:
+  en: Chrome Dev Insider
+
+web-vitals:
+  en: Web Vitals
+  zh: 网页指标
+
+crux:
+  en: CrUX
+
+aurora-project:
+  en: Aurora Project
+
+#####
+# These are for Privacy Sandbox
+
+proposal:
+  en: Proposal
+
+experiment:
+  en: Experimental
+
+chrome-stable:
+  en: Supported in Chrome stable
+
+cross-browser:
+  en: Supported cross-browser
+
+####
+# These are for collections
+
+payments:
+  en: Payments
+
+spc:
+  en: Secure Payment Confirmation
+
+webauthn:
+  en: WebAuthn
+
+passkeys:
+  en: Passkeys
+
+monitoring:
+  en: Monitoring
+
+web-app-manifest:
+  en: Web app manifest
+
+cors:
+  en: CORS
+
+video:
+  en: Video
+
+idle-detection:
+  en: Idle detection
+
+backpressure:
+  en: Backpressure
+
+websocket:
+  en: Web Socket
+
+websocketstream:
+  en: WebSocketStream
+
+test-automation:
+  en: Test automation
+
+service-worker:
+  en: Service Worker
+
+caching:
+  en: Caching
+
+feedback:
+  en: Feedback
+
+api:
+  en: API
+
+notification-triggers:
+  en: Notification triggers
+
+contacts:
+  en: Contacts
+
+shape-detection:
+  en: Shape detection
+
+wake-lock:
+  en: Wake Lock
+
+notifications:
+  en: Notifications
+
+sensors:
+  en: Sensors
+
+pwa:
+  en: Progressive web apps

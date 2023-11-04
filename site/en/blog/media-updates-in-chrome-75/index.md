@@ -120,7 +120,7 @@ if (bestConfig) {
 
 Note that decoding info for encrypted media requires HTTPS.
 
-Moreover, be aware that it may trigger a user prompt on Android and Chrome OS in
+Moreover, be aware that it may trigger a user prompt on Android and ChromeOS in
 the same way as `requestMediaKeySystemAccess()`. It won't show more prompts than
 `requestMediaKeySystemAccess()` though, in spite of
 requiring more calls to setup encrypted media playback.
@@ -136,7 +136,7 @@ requiring more calls to setup encrypted media playback.
 To get feedback from web developers, this feature is available as an
 [origin trial] in Chrome 75. You will need to [request a token], so that the
 feature is automatically enabled for your origin for a limited period
-of time. 
+of time.
 {% endAside %}
 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/d/topic/blink-dev/eA9uG98td5U/discussion) &#124;

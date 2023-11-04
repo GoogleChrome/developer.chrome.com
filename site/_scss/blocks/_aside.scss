@@ -27,7 +27,7 @@
     background-color: var(--color-yellow-lightest);
     color: var(--color-yellow-darkest);
   }
-  
+
   &--warning {
     --link-color: var(--color-red-darkest);
     --link-visited-color: var(--color-red-darkest);
@@ -35,7 +35,7 @@
     background-color: var(--color-red-lightest);
     color: var(--color-red-darkest);
   }
-  
+
   &--success {
     --link-color: var(--color-green-darkest);
     --link-visited-color: var(--color-green-darkest);
@@ -43,15 +43,23 @@
     background-color: var(--color-green-lightest);
     color: var(--color-green-darkest);
   }
-  
-  &--gotchas {
+
+  &--important {
     --link-color: var(--color-purple-darkest);
     --link-visited-color: var(--color-purple-darkest);
     --link-rgb-background: var(--rgb-purple-darkest);
     background-color: var(--color-purple-lightest);
     color: var(--color-purple-darkest);
   }
-  
+
+  &--update {
+    --link-color: var(--color-blue-darkest);
+    --link-visited-color: var(--color-blue-darkest);
+    --link-rgb-background: var(--rgb-blue-darkest);
+    background-color: var(--color-blue-lightest);
+    color: var(--color-blue-darkest);
+  }
+
   &--key-term {
     --link-color: var(--color-pink-darkest);
     --link-visited-color: var(--color-pink-darkest);
@@ -59,8 +67,9 @@
     background-color: var(--color-pink-lightest);
     color: var(--color-pink-darkest);
   }
-  
-  &--codelab {
+
+  &--codelab,
+  &--example {
     --link-color: var(--color-cyan-darkest);
     --link-visited-color: var(--color-cyan-darkest);
     --link-rgb-background: var(--rgb-cyan-darkest);

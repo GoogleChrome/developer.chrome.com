@@ -1,0 +1,39 @@
+{% macro landingDeco(title, desc, color, imgSrc, imgAlt, imgWidth, imgHeight, smallImgSrc, learnMore) %}
+  <div class="landing-deco pad-300 md:pad-500 masonry:pad-500 width-full bg-{{color}}-lightest">
+    <div class="landing-deco__inner">
+      <div>
+        {% set titleSlug = title | slugify %}
+        <h2 id="{{ titleSlug }}" class="type--h3 color-{{color}}-darkest">
+          {% if smallImgSrc %}
+          <span class="sm-only landing-deco__icon">{% Img
+            src=smallImgSrc,
+            alt=imgAlt,
+            width=46,
+            height=46
+          %}</span>
+          {% endif %}
+          <span>
+            <a class="heading-link" href="#{{ titleSlug }}">#</a>
+            {{ title | md | safe }}
+          </span>
+        </h2>
+        <p class="gap-top-300 gap-bottom-600 md-only">
+          {{ desc | md | safe }}
+        </p>
+        {% if learnMore %}
+          <a class="landing-deco__learn-more color-{{color}}-medium" href="{{learnMore.link}}">{{ learnMore.title or 'i18n.landing.sections.learn_more'| i18n }}</a>
+        {% endif %}
+      </div>
+      {% if imgSrc %}
+        <div class="display-flex justify-content-center align-content-center gap-top-600 masonry:gap-top-600 md-only">
+          {% Img
+            src=imgSrc,
+            alt=imgAlt,
+            width=imgWidth,
+            height=imgHeight
+          %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}

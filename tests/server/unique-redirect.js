@@ -3,7 +3,9 @@
  */
 
 const test = require('ava');
-const {buildMatcher} = require('../../server/unique-redirect');
+const {
+  buildMatcher,
+} = require('../../server/handlers/redirects/uniqueRedirect');
 const tmp = require('tmp');
 const fs = require('fs');
 const path = require('path');

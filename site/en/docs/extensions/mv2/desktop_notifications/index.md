@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Rich notifications with webKit"
+seoTitle: "MV2 - Rich notifications with webKit [Deprecated]"
 date: 2012-09-17
 updated: 2017-01-05
 description: How to implement notifications in your Chrome Extension.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Rich notifications](/docs/extensions/mv3/richNotifications/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 {% Aside 'warning' %}
 **Warning:** `webKitNotifications.createHTMLNotification()` in the [web notifications API][1] has
@@ -109,6 +114,6 @@ unnecessary if you declare the "notifications" permission.
 [5]: http://dev.chromium.org/developers/design-documents/desktop-notifications/api-specification
 [6]: /docs/extensions/extension#method-getBackgroundPage
 [7]: /docs/extensions/extension#method-getViews
-[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/notifications/
+[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/notifications/
 [9]: /docs/extensions/mv2/samples
 [10]: http://www.html5rocks.com/tutorials/notifications/quick/

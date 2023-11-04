@@ -1,0 +1,80 @@
+participants:
+  en: 'Participants'
+
+multiple_participants:
+  en: 'Multiple Participants'
+
+participant_details:
+  en: 'Participant details'
+
+details:
+  en: 'Details'
+
+talk_title:
+  en: 'Talk title'
+
+see_whos_joining:
+  en: "See who's joining"
+
+see_details:
+  en: "See details"
+
+video:
+  en: "Video"
+
+slides:
+  en: "Slides"
+
+see_more:
+  en: "see more"
+
+meet_the:
+  en: "Meet the"
+
+upcoming_events:
+  en: "Upcoming events"
+
+past_events:
+  en: "Past events"
+
+chrome_team:
+  en: "Chrome team"
+
+intro:
+  en: "We're meeting you where you are. Join us at upcoming web conferences in your region or catch up on the content shared at past events."
+
+load_more:
+  en: "Load more events"
+
+load_more_error:
+    en: "Sorry, that did not work. Please refresh the page to try again and if the problem persists consider"
+
+load_more_error_link:
+    en: "raising a bug"
+
+meet_the_team_card:
+  tag:
+    en: Events
+  cta:
+    en: See all events
+
+topic:
+  en: "Topic"
+
+location:
+  en: "Location"
+
+googler:
+  en: "Googler"
+
+done:
+  en: Done
+
+filters:
+  en: Filters
+
+no_upcoming_matches:
+  en: No upcoming events found. See our past events or try different filters
+
+no_past_matches:
+  en: No past events found. See our upcoming events or try different filters

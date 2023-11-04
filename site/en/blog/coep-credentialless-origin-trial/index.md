@@ -6,9 +6,9 @@ description: >
 subhead: >
   Cross-origin resources served by third-parties often do not include adequate CORP
   headers. If they can be requested without credentials, now you can enable cross-origin
-  isolation by marking them as such. 
+  isolation by marking them as such.
 date: 2021-07-29
-updated: 2021-10-14
+updated: 2022-05-13
 authors:
   - agektmr
 tags:
@@ -18,7 +18,16 @@ alt: >
   Anonymous people are walking a corridor.
 ---
 
-We are experimenting with the new Cross-Origin Embedder Policy (COEP) value
+{% Aside %}
+
+**Update, May 2022**
+
+`Cross-Origin-Embedder-Policy: credentialless` shipped and has been available in
+Chrome since 96. We've updated this article accordingly.
+
+{% endAside %}
+
+We have shipped the new Cross-Origin Embedder Policy (COEP) value
 `credentialless` which allows the browser to load cross-origin resources which
 don't use the Cross-Origin Resource Policy (CORP), by sending a request without
 credentials, such as cookies. This helps developers to adopt cross-origin
@@ -29,10 +38,10 @@ isolation more easily.
 Some web APIs increase the risk of side-channel attacks such as
 [Spectre](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)). To
 mitigate that risk, browsers offer an opt-in-based isolated environment called
-[cross-origin isolation](https://web.dev/coop-coep/). With a cross-origin
+[cross-origin isolation](https://web.dev/articles/coop-coep). With a cross-origin
 isolated state, the webpage can use privileged features including
 [`SharedArrayBuffer`](/blog/enabling-shared-array-buffer/),
-[`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/)
+[`performance.measureUserAgentSpecificMemory()`](https://web.dev/articles/monitor-total-page-memory-usage)
 and [high-precision timers with better
 resolution](/blog/cross-origin-isolated-hr-timers/)
 while isolating the origin from others unless they are opted in.
@@ -54,7 +63,7 @@ alt="", width="800", height="372" %}
 
 While cross-origin isolation brings webpages better security and the ability to
 enable powerful features, deploying it can be
-[difficult](https://web.dev/cross-origin-isolation-guide/). One of the biggest
+[difficult](https://web.dev/articles/cross-origin-isolation-guide). One of the biggest
 challenges is the requirement to enable CORS or CORP for all cross-origin
 resources. Resources without those headers will not be loaded by the browser on
 a cross-origin isolated page.
@@ -97,7 +106,7 @@ cookies](https://blog.chromium.org/2020/01/building-more-private-web-path-toward
 ## Demo
 
 You can try various header options in this demo:
-[https://first-party-test.glitch.me](https://first-party-test.glitch.me)
+[https://cross-origin-isolation.glitch.me](https://cross-origin-isolation.glitch.me)
 
 ## FAQ
 
@@ -135,39 +144,11 @@ credentials.
 
 ### Will this feature be adopted by other browsers?
 
-* Mozilla Request for position: [Worth
-  prototyping](https://github.com/mozilla/standards-positions/issues/539)
+* [Firefox tracking issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1731778)
 * Webkit Request for position: [No
   signal](https://lists.webkit.org/pipermail/webkit-dev/2021-June/031898.html)
 * [W3C TAG](https://www.w3.org/2001/tag/) Request for position:
   [Pending](https://github.com/w3ctag/design-reviews/issues/582)
-
-## Register for an origin trial
-
-To ensure that `COEP: credentialless` is helping developers to adopt cross
-origin isolation, we are making it available in Chrome 93 as an origin trial.
-You can register for it to allowlist your website to make the
-`Cross-Origin-Embedder-Policy: credentialless` header to take effect.
-
-1. [Request a
-   token](/origintrials/#/view_trial/3036552048754556929)
-   for your origin.
-2. Apply an `Origin-Trial` HTTP header to the document you want to apply
-   `Cross-Origin-Embedder-Policy: credentialless` header. The resulting response
-   header should look something like: `Origin-Trial: TOKEN_GOES_HERE`. (Adding
-   the token as a meta tag is usually an option for many origin trials, but it
-   won't work for this feature.)
-3. Start serving `COEP: credentialless`.
-
-For instance, to get a cross-origin isolated environment, the HTTP headers sent
-are:
-
-* `Origin-Trial: TOKEN_GOES_HERE`
-* `Cross-Origin-Embedder-Policy: credentialless`
-* `Cross-Origin-Opener-Policy:same-origin`
-
-If you have any feedback on this functionality, file an issue at [the
-GitHub repository](https://github.com/WICG/credentiallessness).
 
 ## What's coming next
 
@@ -184,16 +165,16 @@ SharedArrayBuffer
 change](/blog/enabling-shared-array-buffer/) due to
 the above obstacles might be wondering when it will be terminated. Originally we
 announced that it will be terminated in Chrome 96, but we have decided to
-postpone this to Chrome 103.
+postpone this to Chrome 106.
 
 ## Resources
 
 * [Making your website "cross-origin isolated" using COOP and
-  COEP](https://web.dev/coop-coep/)
+  COEP](https://web.dev/articles/coop-coep)
 * [Why you need "cross-origin isolated" for powerful
-  features](https://web.dev/why-coop-coep/)
+  features](https://web.dev/articles/why-coop-coep)
 * [A guide to enable cross-origin
-  isolation](https://web.dev/cross-origin-isolation-guide/)
+  isolation](https://web.dev/articles/cross-origin-isolation-guide)
 * [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome
   92](/blog/enabling-shared-array-buffer/)
 

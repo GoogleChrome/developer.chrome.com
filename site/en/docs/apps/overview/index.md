@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "What Are Chrome Apps?"
+seoTitle: "What Are Chrome Apps? [Deprecated]"
 date: 2012-09-17
 updated: 2018-04-26
 description: An overview of Chrome Apps and why you might want to build them.
@@ -91,7 +92,7 @@ Use the full featured IDE in the [Chrome Dev Editor][8].
 
 {% YouTube id="NNLnTz6yIc4" %}
 
-[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
+[1]: https://blog.chromium.org/2021/10/extending-chrome-app-support-on-chrome.html
 [2]: /apps/migration
 [3]: apps/chrome_apps_on_mobile
 [4]: https://chrome.google.com/webstore/category/apps?_feature=chromeapp

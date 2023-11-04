@@ -13,12 +13,12 @@ tags:
   - devtools
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
+
 
 Chrome DevTools is launching a full accessibility tree making it easier for developers to get an overview of the whole tree. In this post find out how this tree is created and how to use it in your work.
 
-{% Video src="video/gGNVLl64MBQvhaYBXAAuRiOs3r92/XQNBCFrPG8YqNSOloDE8.mp4", autoplay="true", muted="false", loop="true", class="screenshot" %}
-
+{% YouTube id='Th-nv-SCj4Q' %}
 
 ## What is the accessibility tree?
 
@@ -78,6 +78,7 @@ The HTML example was borrowed from [here](https://source.chromium.org/chromium/c
 
 The new, full accessibility tree synchronized with the DOM tree so developers can switch back and forth between the two trees. We hope that the new tree will prove more explorable, useful, and easier to use.
 
+{% Video src="video/gGNVLl64MBQvhaYBXAAuRiOs3r92/XQNBCFrPG8YqNSOloDE8.mp4", autoplay="true", muted="false", loop="true", class="screenshot" %}
 
 Now that you know how the accessibility tree works, you can use DevTools to see how the new tree view looks. The following HTML document with a title, heading, and two buttons is used to show the tree.
 

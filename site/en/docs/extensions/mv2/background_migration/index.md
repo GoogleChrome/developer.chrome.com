@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Migrate to event-driven background scripts"
+seoTitle: "MV2 - Migrate to event-driven background scripts [Deprecated]"
 date: 2018-04-23
 #updated: YYYY-MM-DD
 description: >
@@ -8,7 +9,11 @@ description: >
   model to improve the performance of your Chrome Extension.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Migrate to Service Workers](/docs/extensions/migrating/to-service-workers/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Implementing non-persistent background scripts will greatly reduce the resource cost of your
 extension. Most extension functionality can be supported by an event based background script. Only
@@ -16,7 +21,7 @@ under [rare circumstances][1] should an extension have a persistent background, 
 consume system resources and can cause a strain on lower-powered devices.
 
 Enhance an extension's performance by migrating a persistent background script to an event-based
-non-persistent model.
+non-persistent model. By default, `"persistent"` is set to true.
 
 ## Designate persistence as false {: #persistence }
 

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "USB Devices"
+seoTitle: "Chrome Apps - USB Devices [Deprecated]"
 date: 2012-09-17
 updated: 2017-01-12
 description: How to communicate with USB devices from your Chrome App.
@@ -25,7 +26,7 @@ can also connect to [serial][5] and [Bluetooth][6] devices.
 
 {% endAside %}
 
-For background information about USB, see the official [USB specifications][10].  
+For background information about USB, see the official [USB specifications][10].
 [_USB in a NutShell_][11] is a reasonable crash course that you may find helpful.
 
 ## Manifest requirement {: #manifest }
@@ -66,7 +67,7 @@ these fields.
 {% endAside %}
 
 Since **Chrome 57**, the requirement for declaring all the device types in the app manifest is
-relaxed for apps running as Chrome OS [kiosk apps][14]. For kiosk apps, you can use the
+relaxed for apps running as ChromeOS [kiosk apps][14]. For kiosk apps, you can use the
 `interfaceClass` permission property to request permission to access USB devices that:
 
 - implement a USB interface of a specific interface class
@@ -169,9 +170,9 @@ chrome.usb.openDevice(device, onOpenCallback);
 
 Not every device can be opened successfully. In general, operating systems lock down many types of
 USB interfaces (e.g. keyboards and mice, mass storage devices, webcams, etc.) and they cannot be
-claimed by user applications. On Linux (other than Chrome OS), once an interface of a device is
+claimed by user applications. On Linux (other than ChromeOS), once an interface of a device is
 locked down by the OS, the whole device is locked down (because all the interfaces shares the same
-device file), even if the other interfaces of the device can be used in theory. On Chrome OS, you
+device file), even if the other interfaces of the device can be used in theory. On ChromeOS, you
 can request access to unlocked interfaces using the [usb.requestAccess][18] method. If permitted,
 the permission broker will unlock the device file for you.
 
@@ -401,7 +402,7 @@ Your app cannot do this automatically since this this procedure requires root ac
 that you provide instructions to end-users and link to the [Caveats][31] section on this page for an
 explanation.
 
-On Chrome OS, simply call [usb.requestAccess][32]. The permission broker does this for you.
+On ChromeOS, simply call [usb.requestAccess][32]. The permission broker does this for you.
 
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration

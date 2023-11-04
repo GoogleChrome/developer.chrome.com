@@ -1,5 +1,6 @@
 ---
 api: privacy
+has_warning: This permission <a href="/docs/extensions/mv3/permission_warnings/#permissions_with_warnings">triggers a warning</a>.
 ---
 
 {% Aside %}
@@ -93,9 +94,10 @@ chrome.privacy.services.autofillEnabled.onChange.addListener(
 
 ## Examples
 
-For example code, see the [Privacy API samples][4].
+To try this API, install the [privacy API example](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/privacy) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
 
 [1]: https://www.google.com/intl/en/landing/chrome/google-chrome-privacy-whitepaper.pdf
-[2]: /docs/extensions/mv2/tabs
+[2]: /docs/extensions/mv3/manifest
 [3]: /docs/extensions/types#ChromeSetting
 [4]: /docs/extensions/mv2/samples#search:privacy

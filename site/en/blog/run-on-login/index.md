@@ -6,10 +6,13 @@ subhead: |
 authors:
   - ajara
 date: 2021-08-02
+updated: 2022-03-30
 description: |
    Many operating systems offer the ability to launch applications automatically when the user logs in. This ability is now available for installed web applications.
 hero: image/SeARmcA1EicLXagFnVOe0ou9cqK2/e5ATqM7ge5Y3Sxdqf1T8.jpg
 alt: Laptop, coffee, and stationary tools on desk.
+tags:
+  - progressive-web-apps
 ---
 Run on login lets the user choose which applications start
 automatically when they first log into their computer. This ability has been
@@ -18,8 +21,8 @@ platform specific applications. Now it is available for installed web applicatio
 
 ## Save users time
 
-Users want to automatically run a set of applications they always use. A
-typical example is high-engagement applications like email clients, chat apps,
+Users want to automatically run a set of applications they always use.
+Typical examples include high-engagement applications like email clients, chat apps,
 monitoring dashboards, and real-time data display apps, to name just a few.
 
 Auto-starting these apps at login streamlines the user experience by saving
@@ -33,7 +36,7 @@ ability as well.
 
 Run on login is available in Chrome 91 or Edge 91 or later, on Windows, Linux,
 and MacOS. To configure an app to run on login, visit `about://apps`, right
-click on the app you want and select 'Start app when you sign in'.
+click on the app you want, and select 'Start app when you sign in'.
 
 {% Img src="image/SeARmcA1EicLXagFnVOe0ou9cqK2/onZ3RWUAzuD8KSSvyu5x.png",
 alt="Squoosh app with right click menu open and the option to start app when

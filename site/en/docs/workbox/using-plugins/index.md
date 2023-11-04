@@ -1,5 +1,5 @@
 ---
-layout: "layouts/doc-post.njk"
+layout: 'layouts/doc-post.njk'
 title: Using plugins
 date: 2022-02-02
 description: >
@@ -36,9 +36,9 @@ registerRoute(
     plugins: [
       new ExpirationPlugin({
         maxEntries: 60,
-        maxAgeSeconds: 30 * 24 * 60 * 60 // 30 Days
-      })
-    ]
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
   })
 );
 ```
@@ -58,9 +58,13 @@ A Workbox plugin needs to implement one or more callback functions. When you add
 - [`handlerWillRespond`](/docs/workbox/reference/workbox-core/#method-HandlerWillRespondCallback): Called before the strategy's [`handle()` method](/docs/workbox/reference/workbox-strategies/#method-CacheFirst-handle) returns a response, which is helpful if you need to modify a response before returning it to a [`RouteHandler`](/docs/workbox/reference/workbox-core/#type-RouteHandler) or other custom logic.
 - [`handlerDidRespond`](/docs/workbox/reference/workbox-core/#method-HandlerDidRespondCallback): Called after the strategy's [`handle()` method](/docs/workbox/reference/workbox-strategies/#method-CacheFirst-handle) returns a response. This is when it might be useful to record any final response details (for example, after changes made by other plugins).
 - [`handlerDidComplete`](/docs/workbox/reference/workbox-core/#method-HandlerDidCompleteCallback): Called after all [extend lifetime promises](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises) added to the event from the invocation of the strategy have settled. This is helpful if you need to report on any data that needs to wait until the handler is done in order to calculate stuff like cache hit status, cache latency, network latency, and other useful information.
-- [`handleDidError`](/docs/workbox/reference/workbox-core/#method-HandlerDidErrorCallback): Called if the handler can't provide a valid response from from _any_ source, which is the optimal time to provide some sort of fallback response as an alternative to failing outright.
+- [`handlerDidError`](/docs/workbox/reference/workbox-core/#method-HandlerDidErrorCallback): Called if the handler can't provide a valid response from from _any_ source, which is the optimal time to provide some sort of fallback response as an alternative to failing outright.
 
 All of these callback are [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), and therefore will require `await` to be used whenever a cache or fetch event reaches the relevant point for the callback concerned.
+
+{% Aside %}
+When some of the callbacks are invoked, the body of the `request` parameter _may_ have already been read, depending on the ordering of cache and network operations in your strategy. If you need to make use of the request's body from within your callback code, you can [use a `requestWillFetch` callback](https://github.com/GoogleChrome/workbox/issues/3075#issuecomment-1115261299) to store a [`clone()`](https://developer.mozilla.org/docs/Web/API/Request/clone) of the request in the `state` parameter. This cloned request will then be available for use in other callbacks run after the request is sent to the network.
+{% endAside %}
 
 If a plugin used all of the above callbacks, this would be the resulting code:
 
@@ -70,7 +74,14 @@ const myPlugin = {
     // Return `response`, a different `Response` object, or `null`.
     return response;
   },
-  cacheDidUpdate: async ({cacheName, request, oldResponse, newResponse, event, state}) => {
+  cacheDidUpdate: async ({
+    cacheName,
+    request,
+    oldResponse,
+    newResponse,
+    event,
+    state,
+  }) => {
     // No return expected
     // Note: `newResponse.bodyUsed` is `true` when this is called,
     // meaning the body has already been read. If you need access to
@@ -84,7 +95,14 @@ const myPlugin = {
     // Returning the original `request` will make this a no-op.
     return request;
   },
-  cachedResponseWillBeUsed: async ({cacheName, request, matchOptions, cachedResponse, event, state}) => {
+  cachedResponseWillBeUsed: async ({
+    cacheName,
+    request,
+    matchOptions,
+    cachedResponse,
+    event,
+    state,
+  }) => {
     // Return `cachedResponse`, a different `Response` object, or null.
     return cachedResponse;
   },
@@ -94,7 +112,7 @@ const myPlugin = {
   },
   fetchDidFail: async ({originalRequest, request, error, event, state}) => {
     // No return expected.
-    // NOTE: `originalRequest` is the browser's request, `request` is the
+    // Note: `originalRequest` is the browser's request, `request` is the
     // request after being passed through plugins with
     // `requestWillFetch` callbacks, and `error` is the exception that caused
     // the underlying `fetch()` to fail.
@@ -121,9 +139,9 @@ const myPlugin = {
     // Can report any data here.
   },
   handlerDidError: async ({request, event, error, state}) => {
-    // Return `response`, a different `Response` object as a fallback, or `null`.
-    return response;
-  }
+    // Return a `Response` to use as a fallback, or `null`.
+    return fallbackResponse;
+  },
 };
 ```
 

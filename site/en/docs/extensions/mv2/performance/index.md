@@ -1,12 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Reach peak performance"
+seoTitle: "MV2 - Reach peak performance [Deprecated]"
 date: 2018-04-16
 updated: 2020-05-07
 description: Guidelines on how to build a high-performance Chrome Extension.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 Extensions are an addition to the browser, designed to provide supplementary and customized
 functionality. An extension that slows down or impairs the browsing experience is problematic to the

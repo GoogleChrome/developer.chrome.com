@@ -6,7 +6,7 @@ date: 2019-05-04
 updated: 2020-06-17
 ---
 
-Aplicar um tema na barra de endereço do navegador para corresponder às cores da marca de seu [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/) fornece uma experiência de usuário mais envolvente.
+Aplicar um tema na barra de endereço do navegador para corresponder às cores da marca de seu [Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps) fornece uma experiência de usuário mais envolvente.
 
 ## Compatibilidade dos navegadores
 
@@ -18,11 +18,11 @@ O [Lighthouse](https://developers.google.com/web/tools/lighthouse/) marca págin
 
 <figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/YadFSuw8denjl1hhnvFs.png", alt="Auditoria Lighthouse mostrando barra de endereço que não tem o tema das cores da página", width="800", height="98" %}</figure>
 
-A auditoria falha se o Lighthouse não encontrar uma meta tag `theme-color` no HTML da página e uma propriedade `theme_color` no [manifesto web app](https://web.dev/add-manifest/).
+A auditoria falha se o Lighthouse não encontrar uma meta tag `theme-color` no HTML da página e uma propriedade `theme_color` no [manifesto web app](https://web.dev/articles/add-manifest).
 
 Observe que o Lighthouse não testa se os valores são valores de cor CSS válidos.
 
-{% include 'content/lighthouse-pwa/scoring.njk' %}
+{% Partial 'lighthouse-pwa/scoring.njk' %}
 
 ## Como definir uma cor de tema para a barra de endereço
 
@@ -45,7 +45,7 @@ Saiba mais sobre a meta tag `theme-color` no artigo <a href="https://developers.
 
 ### Passo 2: adicione a propriedade `theme_color` ao seu manifesto web app
 
-A propriedade `theme_color` em seu manifesto web app garante que a barra de endereço seja marcada quando um usuário iniciar seu PWA a partir da tela inicial. Ao contrário da meta tag `theme-color` do tema, você só precisa defini-la uma vez, no [manifesto](https://web.dev/add-manifest/). Defina a propriedade para qualquer valor de cor CSS válido:
+A propriedade `theme_color` em seu manifesto web app garante que a barra de endereço seja marcada quando um usuário iniciar seu PWA a partir da tela inicial. Ao contrário da meta tag `theme-color` do tema, você só precisa defini-la uma vez, no [manifesto](https://web.dev/articles/add-manifest). Defina a propriedade para qualquer valor de cor CSS válido:
 
 ```html/1
 {
@@ -59,5 +59,5 @@ O navegador definirá a cor da barra de endereço de cada página do seu aplicat
 ## Recursos
 
 - [Código fonte para a auditoria**Não define uma cor de tema para a barra de endereço**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/themed-omnibox.js)
-- [Adicionar um manifesto web app](https://web.dev/add-manifest/)
+- [Adicionar um manifesto web app](https://web.dev/articles/add-manifest)
 - [Suporte a <code>theme-color</code> no Chrome 39 para Android](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android)

@@ -16,7 +16,7 @@ authors:
   - joemedley
 
 # Required
-date: 2020-05-27 
+date: 2020-05-27
 
 # Optional
 # Include an updated date when you update your post
@@ -26,8 +26,7 @@ updated: 2020-05-27
 # How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
-  - deprecations
-  - removals
+  - deprecations-removals
 
 
 
@@ -35,18 +34,18 @@ tags:
 ---
 
 {% Aside %}
-Visit ChromeStatus.com for lists of 
+Visit ChromeStatus.com for lists of
 <a href="https://www.chromestatus.com/features#browsers.chrome.status%3A%22Deprecated%22">current deprecations</a>
-and <a href="https://www.chromestatus.com/features#browsers.chrome.status:%22Removed%22">previous removals</a>.  
+and <a href="https://www.chromestatus.com/features#browsers.chrome.status:%22Removed%22">previous removals</a>.
 {% endAside %}
 
 {% Aside %}
 Chrome expects to start the spec-mandated turn down of AppCache in Chrome
 85. For details and instructions for managing the transition gracefully, see
-[Preparing for AppCache removal](https://web.dev/appcache-removal/). For
+[Preparing for AppCache removal](https://web.dev/articles/appcache-removal). For
 information on a feature that will help you identify uses of this and other
 deprecated APIs, see [Know your code
-health](https://web.dev/reporting-observer/)
+health](https://web.dev/articles/reporting-observer)
 {% endAside %}
 
 ## @import rules in CSSStyleSheet.replace() removed
@@ -110,7 +109,7 @@ Chrome currently has a <a href="http://www.chromium.org/blink#TOC-Launch-Process
 - Announce on the <a href="https://groups.google.com/a/chromium.org/forum/#!forum/blink-dev">blink-dev</a> mailing list.
 - Set warnings and give time scales in the Chrome DevTools Console when usage is detected on the page.
 - Wait, monitor, and then remove the feature as usage drops.
- 
+
 
 
 You can find a list of all deprecated features on chromestatus.com using the <a href="https://www.chromestatus.com/features#deprecated"> deprecated filter </a> and removed features by applying the <a href="https://www.chromestatus.com/features#removed">removed filter</a>. We will also try to summarize some of the changes, reasoning, and migration paths in these posts.

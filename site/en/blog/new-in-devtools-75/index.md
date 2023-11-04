@@ -15,7 +15,7 @@ tags:
   - chrome-75
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 75.
 
@@ -161,8 +161,8 @@ There's been a lot of work recently around making the DevTools UI itself more ke
 Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to learn more.
 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/docs/Web/CSS/filter
@@ -189,6 +189,6 @@ Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to lear
 [23]: /blog/new-in-devtools-73#inspect
 [24]: /docs/devtools/customize/#settings
 [25]: https://crbug.com/948417
-[26]: /docs/devtools/sources#edit
+[26]: /docs/devtools/javascript/sources#edit
 [27]: /docs/devtools/customize/#settings
 [28]: /docs/devtools/accessibility/navigation

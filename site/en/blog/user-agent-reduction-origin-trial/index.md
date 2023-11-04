@@ -3,7 +3,7 @@ layout: "layouts/blog-post.njk"
 title: "User-Agent Reduction origin trial"
 subhead: >
 description: >
-  Starting in Chrome 95 Beta, an origin trial allows
+  Starting in Chrome 95 Beta, an origin trial allowed
   sites to opt into receiving the reduced user agent string, which will
   contain only the browser's brand and significant version, its desktop or mobile
   distinction, and the platform it's running on.
@@ -11,12 +11,22 @@ authors:
   - arichiv
   - abeyad
 date: 2021-09-14
-updated: 2022-01-07
+updated: 2023-09-23
 tags:
   - privacy
   - origin-trials
   - chrome-95
+is_outdated: true
 ---
+ {% Aside 'warning' %}
+ The User-Agent Reduction origin trial ended March 7, 2023. The User-Agent UA string is now fully reduced.
+
+ To replace functionality that relied on the User Agent string, you can implement the [User Agent client hints API](https://developer.mozilla.org/docs/Web/API/User-Agent_Client_Hints_API#browser_compatibility).
+
+ The [User-Agent Client Hints page](https://web.dev/articles/migrate-to-ua-ch) provides some background.
+
+ The remainder of this blog post should be considered deprecated.
+ {% endAside %}
 
 User-Agent Reduction is an effort to reduce passive fingerprinting surfaces by
 reducing the information in the
@@ -45,8 +55,8 @@ Chrome 95 ([currently scheduled](https://chromiumdash.appspot.com/schedule) for
 October 19th, 2021).
 
 Below is an overview of the origin trial and what to expect, and as always, we
-welcome feedback or any issues throughout this trial in the UA Reduction [Github
-repository](https://github.com/abeyad/user-agent-reduction/issues).
+welcome feedback or any issues throughout this trial in the UA Reduction [GitHub
+repository](https://github.com/miketaylr/user-agent-reduction/issues).
 
 ## What is the User-Agent?
 
@@ -77,14 +87,14 @@ in:
 
 To receive more client information than what's shared by the reduced User-Agent,
 sites will need to migrate to the new User-Agent [Client
-Hints](https://web.dev/migrate-to-ua-ch/) API. For more details on migration
+Hints](https://web.dev/articles/migrate-to-ua-ch) API. For more details on migration
 strategies, see [Migrate to User-Agent Client
-Hints](https://web.dev/migrate-to-ua-ch/).
+Hints](https://web.dev/articles/migrate-to-ua-ch).
 
 The User-Agent reduction plans do not currently include iOS and WebView, therefore
 those platforms will continue to get the full user agent string.  The primary
 reason is that these platforms have not yet implemented User-Agent
-[Client Hints](https://web.dev/migrate-to-ua-ch/).
+[Client Hints](https://web.dev/articles/migrate-to-ua-ch).
 
 ## How does this origin trial work?
 
@@ -107,14 +117,14 @@ Subresource requests to the same origin will automatically send the same
 User-Agent string as the top-level request sent. Subresource requests to
 third-party origins will also send the same User-Agent string as the top-level
 request, including the reduced UA string if the origin trial token is valid,
-provided that the permissions policy allows it.
+provided that the [permissions policy](/docs/privacy-sandbox/permissions-policy/) allows it.
 
 ## How do I participate in the User-Agent Reduction origin trial? {: #enroll-top-level }
 
 1.  To register for the origin trial and get a token for your domains,
     visit the
     [Trial for User Agent Reduction page](/origintrials/#/view_trial/-7123568710593282047).
-    
+
     {% Aside %}
     To register your domains for the trial as a third-party embed, you
         will [need a separate token](#enroll-third-party).
@@ -137,9 +147,9 @@ provided that the permissions policy allows it.
         reduced UA string, even if the origins of those requests are not
         enrolled in the origin trial.
 1.  Load your website in Chrome M95 (or later) and start receiving the
-    reduced UA string. 
-1.  Submit any issues or feedback to the UA Reduction [Github
-    repository](https://github.com/abeyad/user-agent-reduction/issues).
+    reduced UA string.
+1.  Submit any issues or feedback to the UA Reduction [GitHub
+    repository](https://github.com/miketaylr/user-agent-reduction/issues).
 1.  See [https://uar-ot.glitch.me/](https://uar-ot.glitch.me/) for a simple
     demonstration of the origin trial (along with the source code).
 
@@ -151,7 +161,7 @@ enrolled.
 
 To enroll as a third-party embed:
 
-1.  Visit the 
+1.  Visit the
     [Trial for User Agent Reduction](/origintrials/#/view_trial/-7123568710593282047)
     and click **Register**.
 1.  When creating the token, make sure to select the `Third-party matching` checkbox.
@@ -221,5 +231,5 @@ months. We will publish more details on the deprecation trial when it's ready.
 
 ## How do I share feedback for the User-Agent Reduction origin trial?
 
-Submit any issues or feedback to the UA Reduction [Github
-repository](https://github.com/abeyad/user-agent-reduction/issues).
+Submit any issues or feedback to the UA Reduction [GitHub
+repository](https://github.com/miketaylr/user-agent-reduction/issues).

@@ -6,7 +6,7 @@ api: vpnProvider
 
 Typical usage of vpnProvider is as follows:
 
-* Create VPN configurations using the [`createConfig`][1] method. A VPN configuration is a persistent entry shown to the user in a native Chrome OS UI. The user can select a VPN configuration from a list and connect to it or disconnect from it.
+* Create VPN configurations using the [`createConfig`][1] method. A VPN configuration is a persistent entry shown to the user in a native ChromeOS UI. The user can select a VPN configuration from a list and connect to it or disconnect from it.
 
 * Add listeners to the events [`onPlatformMessage`][2], [`onPacketReceived`][3] and [`onConfigRemoved`][4].
 
@@ -18,7 +18,7 @@ Typical usage of vpnProvider is as follows:
 
 * Notify the connection state as `"connected"` using [`notifyConnectionStateChanged`][6].
 
-* When the steps above are completed without errors, a virtual tunnel is created to the network stack of Chrome OS. IP packets can be sent through the tunnel using [`sendPacket`][7] and any packets originating on the Chrome OS device will be received using the event [`onPacketReceived`][3].
+* When the steps above are completed without errors, a virtual tunnel is created to the network stack of ChromeOS. IP packets can be sent through the tunnel using [`sendPacket`][7] and any packets originating on the ChromeOS device will be received using the event [`onPacketReceived`][3].
 
 * When the user disconnects from the VPN configuration, [`onPlatformMessage`][2] will be fired with the message `"disconnected"`.
 

@@ -16,7 +16,7 @@ Workbox abstracts this API with the [`workbox-background-sync` module](/docs/wor
 
 ## Basic usage
 
-The `BackgroundSync` plugin is exported from the `workbox-background-sync` module, and can be used to queue up failed requests and retry them when future `sync` events fire:
+The `BackgroundSyncPlugin` is exported from the `workbox-background-sync` module, and can be used to queue up failed requests and retry them when future `sync` events fire:
 
 ```js
 import {BackgroundSyncPlugin} from 'workbox-background-sync';
@@ -101,9 +101,9 @@ Testing Background Sync behavior can be tricky, but it can be done in Chrome Dev
 
 1. Load up a page that registers your service worker.
 2. Turn off your computer's network connection or turn off your web server. **Don't use the offline toggle in Chrome DevTools!** The offline checkbox only affects requests from the page, but service worker requests will continue to go through.
-3. Make network requests that should be queued with `workbox-background-sync`. You can check the requests that have been queued by looking in `Chrome DevTools &gt; Application &gt; IndexedDB &gt; workbox-background-sync &gt; requests`.
+3. Make network requests that should be queued with `workbox-background-sync`. You can check the requests that have been queued by looking in `Chrome DevTools > Application > IndexedDB > workbox-background-sync > requests`.
 4. Now either restore network connectivity or turn your web server back on.
-5. Force an early `sync` event by going to `Chrome DevTools &gt; Application &gt; Service Workers`. Enter the tag name of `workbox-background-sync:&lt;your queue name&gt;`, where `&lt;your queue name&gt;` is the name of the queue you set.
+5. Force an early `sync` event by going to `Chrome DevTools > Application > Service Workers`. Enter the tag name of `workbox-background-sync:<your queue name>`, where `<your queue name>` is the name of the queue you set.
 6. Click the "Sync" button.  
    {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/F5vZHQZ4EX5hRQPnSJ7Q.png", alt="A screenshot of the background sync utility in the application panel of Chrome's DevTools. The sync event is specified for a queue of 'myQueueName' for the 'workbox-background-sync' module.", width="800", height="351" %}
 7. You should now see previously failed network requests retried and go through. As a result, the IndexedDB store should be empty, since the requests have been successfully replayed.

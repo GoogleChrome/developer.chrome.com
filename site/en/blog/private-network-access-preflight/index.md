@@ -4,15 +4,27 @@ title: "Private Network Access: introducing preflights"
 authors:
   - titouan
   - agektmr
+  - lyf
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-updated: 2022-02-11
+updated: 2023-02-10
+is_outdated: true
+new_available_content_url: /blog/private-network-access-update
 hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
   - chrome-98
+  - chrome-102
+  - chrome-104
   - security
 ---
+
+**Updates**
+
+- **July 7, 2022**: Updated current status and added IP address space definition.
+- **April 27, 2022**: Updated timeline announcement.
+- **March 7, 2022**: Announced rollback after issues were discovered in
+  Chrome 98.
 
 ## Introduction
 
@@ -22,7 +34,7 @@ websites as part of the
 specification.
 
 Chrome will start sending a CORS preflight request ahead of any [private
-network request](#what-is-private-network-access) for a subresource, which asks
+network request](#what-is-private-network-access-pna) for a subresource, which asks
 for explicit permission from the target server. This preflight request will
 carry a new header, `Access-Control-Request-Private-Network: true`, and the
 response to it must carry a corresponding header,
@@ -38,15 +50,26 @@ allowing attackers to redirect them to malicious servers.
 Chrome will roll this change out in two phases to give websites time to notice
 the change and adjust accordingly.
 
-1. In Chrome 98:
-    * Chrome sends preflight requests ahead of private network subresource
-      requests.
+1. In Chrome 104:
+    * Chrome experiments by sending preflight requests ahead of private network
+      subresource requests.
     * Preflight failures only display warnings in DevTools, without otherwise
       affecting the private network requests.
-    * Chrome gathers compatibility data and reaches out to the largest
-      affected websites.
+    * Chrome gathers compatibility data and reaches out to the largest affected
+      websites.
     * We expect this to be broadly compatible with existing websites.
-1. In Chrome 101 at the earliest:
+
+    {% Aside 'warning' %}
+
+    To limit the effects on websites that do not already support preflights, the
+    timeout is restricted to 200 milliseconds in Chrome 104. The restriction is only
+    applied in warning mode. The special timeout limit would be removed after
+    enabling the enforce mode by switching "Respect the result of Private Network
+    Access preflights" to "Enabled" in `chrome://flags` and the default limit is 5
+    seconds.
+    {% endAside %}
+
+2. In Chrome 113 at the earliest:
     * This will begin _only_ if and when compatibility data indicates that the
       change is safe enough and we've outreached directly when necessary.
     * Chrome enforces that preflight requests must succeed, otherwise failing
@@ -55,11 +78,20 @@ the change and adjust accordingly.
       the same time to allow for websites affected by this phase to request a
       time extension. The trial will last for at least 6 months.
 
+{% Aside %}
+
+An earlier attempt was made to roll out warnings in Chrome 98 and Chrome 102,
+previously announced by this blog post. This was rolled back after stability and
+compatibility issues were discovered during the rollout.
+
+The identified issues were fixed for Chrome 104.
+
+{% endAside %}
 
 ## What is Private Network Access (PNA)
 
 [Private Network Access](https://wicg.github.io/private-network-access/)
-(formerly known as [CORS-RFC1918](https://web.dev/cors-rfc1918-feedback/))
+(formerly known as [CORS-RFC1918](https://web.dev/articles/cors-rfc1918-feedback))
 restricts the ability of websites to send requests to servers on private
 networks.
 
@@ -78,6 +110,30 @@ a request from a public website (`https://example.com`) to a private website
 (`http://router.local`), or a request from a private website to localhost.
 {% endAside %}
 
+### How does PNA classify IP addresses and identify a private network
+
+The IP addresses are classified into three IP address spaces:
+- `public`
+- `private`
+- `local`
+
+**Local IP address space** contains IP addresses that are either IPv4
+loopback addresses (`127.0.0.0/8`) defined in section 3.2.1.3 of [RFC1122](https://tools.ietf.org/html/rfc1122)
+or IPv6 loopback addresses (`::1/128`) defined in section 2.5.3 of [RFC4291](https://tools.ietf.org/html/rfc4291).
+
+**Private IP address space** contains IP addresses that have meaning only
+within the current network, including `10.0.0.0/8`, `172.16.0.0/12` and
+`192.168.0.0/16` defined in [RFC1918](https://tools.ietf.org/html/rfc1918),
+link-local addresses `169.254.0.0/16` defined in [RFC3927](https://tools.ietf.org/html/rfc3927),
+unique local IPv6 unicast addresses `fc00::/7` defined in [RFC4193](https://datatracker.ietf.org/doc/html/rfc4193),
+link-local IPv6 unicast addresses `fe80::/10` defined in section 2.5.6 of [RFC4291](https://tools.ietf.org/html/rfc4291)
+and IPv4-mapped IPv6 addresses where the mapped IPv4 address is itself private.
+
+**Public IP Address space** contains all other addresses not mentioned previously.
+
+A local IP address is considered more private than a private IP address which
+is considered more private than a public IP address.
+
 <figure>
 {% Img
    src="image/VbsHyyQopiec0718rMq2kTE1hke2/5bLcN5HBih35ykCSpj0z.jpg",
@@ -92,8 +148,7 @@ a request from a public website (`https://example.com`) to a private website
   </figcaption>
 </figure>
 
-Learn more at [Feedback wanted: CORS for private networks (RFC1918)](https://web.dev/cors-rfc1918-feedback/).
-
+Learn more at [Feedback wanted: CORS for private networks (RFC1918)](https://web.dev/articles/cors-rfc1918-feedback).
 
 ## Preflight requests
 
@@ -239,7 +294,7 @@ Access-Control-Allow-Origin: https://foo.example
 
 ## How to know if your website is affected
 
-Starting in Chrome 98, if a private network request is detected, a preflight
+Starting in Chrome 104, if a private network request is detected, a preflight
 request will be sent ahead of it. If this preflight request fails, the final
 request will still be sent, but a warning will be surfaced in the DevTools
 issues panel.
@@ -263,6 +318,18 @@ Affected preflight requests can also be viewed and diagnosed in the network pane
    width="800", height="265"
 %}
 
+If your request would have triggered a regular CORS preflight without
+Private Network Access rules, then two preflights may appear in the
+network panel, with the first one always appearing to have failed. This is a
+[known bug](https://crbug.com/1290390), and you can safely ignore it.
+
+{% Img
+   src="image/I8XwjL2ZK8fUPQRJMwrRzjyKAar1/MaBNk7572rWNybez1FHH.png",
+   alt="A spurious failed preflight request ahead of a successful preflight in
+   the DevTools Network panel.",
+   width="800", height="316"
+%}
+
 To review what happens if preflight success was enforced, you can
 [pass the following command-line argument](https://www.chromium.org/developers/how-tos/run-chromium-with-flags),
 starting in Chrome 98:
@@ -278,7 +345,7 @@ the same way as warnings using the DevTools panels mentioned above.
 
 ## What to do if your website is affected
 
-When this change rolls out in Chrome 98, it is not expected to break any
+When this change rolls out in Chrome 104, it is not expected to break any
 website. However, we strongly encourage you to update affected request paths to
 ensure your website keeps running as expected.
 
@@ -336,10 +403,10 @@ the component to `Blink>SecurityFeature>CORS>PrivateNetworkAccess`.
 Next up, Chrome will extend Private Network Access checks to cover
 [web workers](https://developer.mozilla.org/docs/Web/API/Web_Workers_API):
 dedicated workers, shared workers and service workers. We're tentatively aiming
-for Chrome 100 to begin showing warnings.
+for Chrome 107 to begin showing warnings.
 
 Then, Chrome will extend Private Network Access checks to cover navigations,
-including iframes and popups. We're tentatively aiming for Chrome 102 to start
+including iframes and popups. We're tentatively aiming for Chrome 108 to start
 showing warnings.
 
 In both cases, we will be proceeding cautiously with a similar phased rollout,

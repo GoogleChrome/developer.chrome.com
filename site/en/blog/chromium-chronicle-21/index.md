@@ -1,8 +1,8 @@
 ---
-title: "The Chromium Chronicle #21: Chrome OS End-to-end UI Automation"
+title: "The Chromium Chronicle #21: ChromeOS End-to-end UI Automation"
 description: >
   Tast is a new UI library has been created that uses the Chrome a11y (accessibility) tree
-  to control the Chrome OS UI. The library enables developers to easily
+  to control the ChromeOS UI. The library enables developers to easily
   create End-to-end tests against any visible UI surface.
 layout: 'layouts/blog-post.njk'
 date: 2021-05-27
@@ -16,11 +16,11 @@ tags:
 **Episode 21:** by Brendan Hansknecht in Mountain View, CA (May, 2021)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
-Historically, automating the Chrome OS UI in end-to-end (E2E) tests across the entire
+Historically, automating the ChromeOS UI in end-to-end (E2E) tests across the entire
 fleet of devices has been difficult. In Tast, a new UI library has been
-created that uses the Chrome a11y (accessibility) tree to control the Chrome OS UI. **This
+created that uses the Chrome a11y (accessibility) tree to control the ChromeOS UI. **This
 library enables developers to easily create E2E tests against any visible
-UI surface (Chrome OS desktop UI, native apps, web apps, Chrome Browser UI).**
+UI surface (ChromeOS desktop UI, native apps, web apps, Chrome Browser UI).**
 
 The library has a simple, chainable way to describe how to find a UI element.
 For example, the _Downloads_ folder in the Files App could be defined as:

@@ -1,51 +1,43 @@
 ---
 layout: 'layouts/doc-post.njk'
-
-# The page title. This appears at the top of the doc and as the page name
-# in Google Search.
 title: Welcome to Manifest V3
-
-# This appears below the title and is an optional teaser
+seoTitle: Welcome to the Chrome Extension Manifest V3
 subhead: 'A step in the direction of security, privacy, and performance.'
-
-# This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in 
-# Google Search.
 description: 'An introduction to Manifest V3'
-
-# The publish date
 date: 2020-11-09
-
-# An optional updated date
-# updated: 2020-10-16
-
-# A list of authors. These usernames correspond to the keys in the
-# _data/authorsData.json file.
-
+updated: 2023-08-31
 ---
 
-This site introduces Manifest V3 for Chrome Extensions (Manifest V3). It presents the
-background and reasons for introducing Manifest V3 and our vision for the platform's
-future, along with guidance on how to optimize your extensions to use Manifest V3.
+{% Partial 'extensions/mv3-support.md' %}
 
-Manifest V3 represents one of the biggest shifts in the extensions platform
-since it launched a decade ago. Extensions using Manifest V3 will enjoy enhancements in
-security, privacy, and performance; they can also use more contemporary Open
-Web technologies adopted in Manifest V3, such as service workers and promises.
-Developers can update their extensions today to take advantage of these Manifest V3
-features; this will become mandatory as we phase out Manifest V2 in the future.
+Manifest Version 3 (Manifest V3) is the latest iteration of the Chrome extension platform. This page outlines the changes in Manifest V3 and provides migration resources.
 
-Manifest V3 is part of a shift in the philosophy behind how we approach
-end-user security and privacy. The pages in this section provide an overview of
-Manifest V3, the reasons behind it, and how to approach it:
+An extension [manifest][doc-manifest] gives the browser information about an extension's capabilities and the files it uses. The features available for extensions to use are defined by the current [manifest version][manifest-version]. Manifest V3 introduces enhancements to extension security, privacy, and performance, and allows extensions to use open web technologies such as service workers and promises.
+
+The Chrome Web Store no longer accepts new Manifest V2 extensions. Watch the [Manifest V2 support timeline][mv2-sunset] for details. We strongly recommend migrating your extensions to Manifest V3 as soon as possible.
+
+## Resources {: #manifest-v3-resources }
+
+Manifest V3 is part of a shift in Chrome's user security and privacy philosophy. The following articles provide an overview of Manifest V3, the reasons for the update, and how to
+implement it:
+
+* [Platform vision][mv3-platform] explains how the Manifest V3 changes fit into the big picture.
+
+* [Overview of Manifest V3][mv3-overview] summarizes the technical changes introduced in Manifest V3.
+
+* [Migration guide][mv3-migration] explains how to update Manifest V2 extensions to use Manifest V3. For a quick reference, see [Migration checklist][mv3-checklist].
+
+## Manifest V3 news {: #keep-up-with-the-latest-news }
+
+For more information and updates on Manifest V3, see [What's new in Chrome Extensions][doc-new] and the [Chrome Developer Blog][devs-blog].
 
 
-* [Platform vision](platform-vision) explains how the Manifest V3 changes fit into the big picture of where the platform is going.
-* [Overview of Manifest V3](mv3-overview) summarizes the technical changes introduced with Manifest V3.
-* [Migration guide](mv3-migration) tells you how to get started updating Manifest V2 extensions so they work in Manifest V3.
-
-We're excited about the improvements that Manifest V3 brings to the extensions
-platform. Look for further announcements on the [Chromium
-Blog](https://blog.chromium.org/) and the [Chromium Extensions
-forum](https://groups.google.com/a/chromium.org/g/chromium-extensions).
-
+[devs-blog]: https://developer.chrome.com/tags/extensions-news/
+[doc-manifest]: /docs/extensions/mv3/manifest/
+[doc-new]: /docs/extensions/whatsnew/
+[manifest-version]: /docs/extensions/mv3/manifest/manifest_version/
+[mv2-sunset]: /docs/extensions/mv3/mv2-sunset/
+[mv3-checklist]: /docs/extensions/migrating/checklist/
+[mv3-migration]: /docs/extensions/migrating/
+[mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
+[mv3-platform]: /docs/extensions/mv3/intro/platform-vision/

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - File Handlers"
+seoTitle: "Chrome Apps Manifest - File Handlers [Deprecated]"
 date: 2013-05-11
 updated: 2016-04-19
 description: Reference documentation for the file_handlers property of manifest.json.
@@ -49,7 +50,7 @@ type of `_type_`. Here's an example of specifying file handlers:
 
 To handle files or directories, apps also need to declare the [fileSystem][4] permission. Apps can
 then be passed files or directories in the [app.runtime.onLaunched][5] event - either from the
-system file manager (currently supported on Chrome OS only) or by providing a path on the [command
+system file manager (currently supported on ChromeOS only) or by providing a path on the [command
 line][6].
 
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html

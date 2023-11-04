@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Build a Todo Chrome App"
+seoTitle: "Build a Todo Chrome App [Deprecated]"
 date: 2014-10-17
 updated: 2014-10-20
 description: An introduction to the codelab.
@@ -40,7 +41,7 @@ To prepare for this codelab:
 
 - Use the latest version of [Google Chrome][11].
 - Start fresh in an empty project directory on your development computer.
-- [Download the reference code][12] for all steps or [view them on Github][13] in case you get
+- [Download the reference code][12] for all steps or [view them on GitHub][13] in case you get
   stuck.
 
 Each step builds on top of the previous. You can skip any step and use previous step solutions in

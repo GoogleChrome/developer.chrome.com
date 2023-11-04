@@ -12,6 +12,7 @@ Thumbs.db
 .lighthouseci
 .idea*
 .python-version
+tools/devtools/_temp
 
 # Code coverage generated files
 .nyc_output
@@ -20,6 +21,7 @@ Thumbs.db
 # Node modules and output
 node_modules
 dist
+./dist
 **/_includes/css
 
 # Eleventy
@@ -29,3 +31,7 @@ dist
 # External source files
 external/data/
 external/local-build-flag
+
+# Files used during CI
+gulp-tasks/stageGitHub/tmp/**/*
+!gulp-tasks/stageGitHub/tmp/.gitkeep

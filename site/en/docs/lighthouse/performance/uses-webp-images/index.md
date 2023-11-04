@@ -29,7 +29,7 @@ See [A New Image Format For The Web](https://developers.google.com/speed/webp/)
 for more on WebP.
 
 {% Aside 'codelab' %}
-[Create WebP Images with the Command Line](https://web.dev/codelab-serve-images-webp/)
+[Create WebP Images with the Command Line](https://web.dev/articles/codelab-serve-images-webp)
 {% endAside %}
 
 ## How Lighthouse calculates potential savings
@@ -83,6 +83,11 @@ Consider searching the [Magento
 Marketplace](https://marketplace.magento.com/catalogsearch/result/?q=webp) for a
 variety of third-party extensions to leverage newer image formats.
 
+
+### iPhone
+
+Note that webp, avif images and webm videos will not work on iPhones below ios 16.
+
 ### WordPress
 
 Consider using a [plugin](https://wordpress.org/plugins/search/convert+webp/) or
@@ -91,7 +96,7 @@ formats.
 
 ## Resources
 
-- [Source code for **Serve images in modern formats** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/modern-image-formats.js)
-- [Use WebP images](https://web.dev/serve-images-webp/)
+- [Source code for **Serve images in modern formats** audit](https://github.com/GoogleChrome/lighthouse/blob/v11.2.0/core/audits/byte-efficiency/modern-image-formats.js)
+- [Use WebP images](https://web.dev/articles/serve-images-webp)
 
 <!-- https://www.reddit.com/r/webdev/comments/gspjwe/serve_images_in_nextgen_formats/ -->

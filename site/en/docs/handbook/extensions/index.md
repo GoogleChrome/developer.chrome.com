@@ -8,8 +8,8 @@ updated: 2021-02-02
 ## Metadata {: #metadata }
 
 Extensions documents should follow the conventions outlined in the [Add a Doc][add-a-doc] and [Add a
-Blog Post][add-a-blog] guides. One notable exception to that guidance is that we do not use the
-`tags` and `author` YAML front matter properties in extensions docs.
+Blog Post][add-a-blog] guides. One notable exception is that we do not use the `tags` and `author`
+YAML front matter properties in extensions docs.
 
 ## Line wrapping {: #line-wrapping }
 
@@ -55,7 +55,7 @@ content of the section rather than a [kebab cased][kebab-case] version of the he
 
 ## Link conventions {: #links }
 
-### Footer links
+### Footer links {: #footer-links }
 
 By convention, extensions docs strongly prefer named footer links over inline links. Named links
 have a couple of advantages over inline links.
@@ -170,6 +170,41 @@ clang-format][clang-format] for additional details.
 # Use this command to format JS files and code samples
 git cl format --js <filename>
 ```
+
+## Placeholder convention {: #placeholder }
+
+Placeholders should be styled with `<code><var>PLACEHOLDER_NAME</var></code>` in body copy and `PLACEHOLDER_NAME` in code blocks and inline code.  New content and updates to existing content must
+follow this convention. 
+
+{% Compare 'better' %}
+
+```js
+chrome.runtime.sendMessage('EXTENSION_ID', MESSAGE, function() {
+  if (chrome.runtime.lastError) {
+    // Extension is not installed.
+  }
+}
+```
+
+Replace the following:
+
+- <code><var>EXTENSION_ID</var></code>: the ID of your extension.
+- <code><var>MESSAGE</var></code>: The message string or object to send to the extension.
+
+{% endCompare %}
+
+{% Compare 'worse' %}
+
+```js
+chrome.runtime.sendMessage('<extension id>', <message>, function() {
+  if (chrome.runtime.lastError) {
+    // Extension is not installed.
+  }
+}
+```
+
+{% endCompare %}
+
 
 [clang-format]: https://chromium.googlesource.com/chromium/src/+/main/docs/clang_format.md
 [depot-tools]: https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html

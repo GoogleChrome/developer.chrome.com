@@ -1,0 +1,67 @@
+.events-hero {
+  background: var(--color-meettheteam-bg);
+  border-radius: 12px;
+  margin-bottom: 1.1875rem;
+  text-align: center;
+
+  @include media-query('lg') {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: get-size(400);
+    text-align: left;
+  }
+
+  &__content {
+    padding: get-size(500) get-size(400);
+
+    @include media-query('lg') {
+      padding: get-size(500) 0 get-size(500) get-size(800);
+    }
+  }
+
+  h1 {
+    color: get-color('blue-700');
+    font-size: clamp(2rem, 5vw, 4.25rem);
+    line-height: 1.5;
+    margin-bottom: get-size(200);
+
+    @include media-query('lg') {
+      line-height: 1.2;
+      margin-bottom: get-size(400);
+    }
+  }
+
+  h1 span {
+    @include media-query('lg') {
+      white-space: nowrap;
+    }
+  }
+
+  p {
+    font-size: get-size(300);
+    font-weight: 400;
+    line-height: get-size(400);
+    margin: 0 auto;
+
+    @include media-query('lg') {
+      font-size: clamp(0.9rem, 1.25vw, 1rem);
+      margin: initial;
+      max-width: 400px;
+    }
+  }
+
+  &__image {
+    color: #f57c00;
+    display: none;
+    position: relative;
+
+    @include media-query('lg') {
+      display: initial;
+    }
+
+    img {
+      border-radius: 12px;
+    }
+  }
+}

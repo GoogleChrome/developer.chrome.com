@@ -1,0 +1,220 @@
+---
+layout: 'layouts/landing.njk'
+title: 'Capabilities'
+description: 'Enabling the most amazing apps on the web.'
+sections:
+  intro:
+    - url: https://www.chromium.org/teams/web-capabilities-fugu/
+      title: 'What is Project Fugu?'
+      description: "Project Fugu is an effort to close gaps in the web's capabilities enabling new classes of applications to run on the web."
+      image: '/images/fugu.png'
+    - url: https://www.youtube.com/watch?v=GSiUzuB-PoI
+      title: Why is Project Fugu important?
+      description: "To close the capability gap between the web and platform-specific apps to provide a solid foundation for modern applications delivered on the web."
+    - url: https://goo.gle/fugu-status
+      title: Where are we on our journey?
+      description: "Project Fugu is a work in progress. We are currently working on a number of exciting capabilities."
+  links:
+    - url: /fugu-showcase/
+    - url: https://web.dev/ps-on-the-web/
+      title: Photoshop's journey to the web
+      description: The idea of running software as complex as Photoshop directly in the browser would have been hard to imagine just a few years ago. However, by using various new web technologies, Adobe has now brought a public beta of Photoshop to the web.
+  case_studies:
+    - url: https://web.dev/mishipay/
+      title: MishiPay's PWA increases transactions 10 times and saves 2.5 years of queuing
+      description: Learn how switching to PWA helped MishiPay's business.
+    - url: https://web.dev/kapwing/
+      title: "Kapwing: Powerful video editing for the web"
+      description: Creators can now edit high-quality video content on the web with Kapwing, thanks to powerful APIs (like IndexedDB and WebCodecs) and performance tools.
+    - url: https://web.dev/deprecating-excalidraw-electron/
+      title: Deprecating Excalidraw Electron in favor of the web version
+      description: Learn why the Excalidraw project decided to deprecate their Electron wrapper in favor of the web version.
+  powerful_apis:
+    - url: https://developer.chrome.com/articles/file-system-access/
+      title: "The File System Access API: simplifying access to local files"
+      description: The File System Access API allows web apps to read or save changes directly to files and folders on the user's device.
+    - url: https://developer.chrome.com/articles/badging-api/
+      title: Badging for app icons
+      description: The App Badging API allows installed web apps to set an application-wide badge on the app icon.
+    - url: /blog/web-custom-formats-for-the-async-clipboard-api/
+    - url: https://developer.chrome.com/articles/local-fonts/
+      title: Use advanced typography with local fonts
+      description: Learn how the Local Font Access API allows you to access the user's locally installed fonts and obtain low-level details about them.
+    - url: https://developer.chrome.com/articles/multi-screen-window-placement/
+      title: Managing several displays with the Multi-Screen Window Placement API
+      description: Get information about connected displays and position windows relative to those displays.
+    - url: https://web.dev/web-share/
+      title: Integrate with the OS sharing UI with the Web Share API
+      description: Web apps can use the same system-provided share capabilities as platform-specific apps.
+  hardware:
+    - url: https://web.dev/devices-introduction/
+      title: Accessing hardware devices on the web
+      description: Pick the appropriate API to communicate with a hardware device of your choice.
+    - url: https://developer.chrome.com/articles/hid/
+      title: Connecting to uncommon HID devices
+      description: The WebHID API allows websites to access alternative auxiliary keyboards and exotic gamepads.
+    - url: https://developer.chrome.com/articles/bluetooth/
+      title: Communicating with Bluetooth devices over JavaScript
+      description: The Web Bluetooth API allows websites to communicate with Bluetooth devices.
+    - url: https://developer.chrome.com/articles/serial/
+      title: Read from and write to a serial port
+      description: The Web Serial API allows websites to communicate with serial devices.
+    - url: https://developer.chrome.com/articles/usb/
+      title: Access USB Devices on the Web
+      description: The WebUSB API makes USB safer and easier to use by bringing it to the Web.
+    - url: https://developer.chrome.com/articles/build-for-webusb/
+      title: Building a device for WebUSB
+      description: Build a device to take full advantage of the WebUSB API.
+    - url: https://developer.chrome.com/articles/nfc/
+      title: Interact with NFC devices on Chrome for Android
+      description: Reading and writing to NFC tags is now possible.
+    - url: https://web.dev/gamepad/
+      title: Play the Chrome dino game with your gamepad
+      description: Learn how to use the Gamepad API to push your web games to the next level.
+  media:
+    - url: https://web.dev/tags/media/
+      title: Media APIs on web.dev
+      description: Our latest news, updates, and stories about Media.
+    - url: /tags/media/
+      title: Media APIs on developer.chrome.com
+      description: Our latest news, updates, and stories about Media.
+  videos:
+    - url: https://www.youtube.com/watch?v=1vGVrC03_jo
+      title: How leading developers build innovative web experiences
+      description: Discover how leading developers including Kapwing, Zoom, YouTube, and Adobe have built innovative user experiences with the latest web capabilities.
+    - url: https://www.youtube.com/watch?v=CF5zZZy0R9U
+      title: "Bringing Adobe's Creative Cloud to the web: Starting with Photoshop"
+      description: Creative Cloud is a collection of 20+ apps for photography, video, design, web, UX, social media, and more. Learn about some of the steps the Adobe and the Chrome teams took in order to bring Adobe's Creative Cloud to the Web, starting with Photoshop and Illustrator.
+    - url: https://www.youtube.com/watch?v=kcvfyQh6J-0
+      title: "SVGcode: A PWA to convert raster images to SVG vector graphics"
+      description: SVGcode is a Progressive Web App that lets you convert raster images like JPG, PNG, GIF, WebP, AVIF, etc. to vector graphics in SVG format. It uses the File System Access API, the Async Clipboard API, and the File Handling API, and also makes use of Window Controls Overlay customization.
+  resources:
+    - url: /docs/web-platform/
+      title: Web Platform
+      description: Documentation for Web Platform APIs. Some of them are currently in an experimental status in Chrome. For example, origin and developer trials, or features only found in Canary. The current status of each API is detailed in the documentation.
+    - url: https://bit.ly/new-fugu-request
+      title: Request a new capability
+      description: If you have an idea for a new web capability, please let us know. We are always looking for new ideas to improve the web platform.
+---
+
+{% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-section.njk' import landingSection with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
+
+{{ landingSection(
+  'Capabilities, aka. Project Fugu',
+  'Learn about the cross-company effort around enabling the most amazing apps on the web.',
+  sections.intro,
+  'green',
+  'top-3',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/lauDAddiUZqlgicYTyYV.svg',
+  '',
+  333,
+  165,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'What do developers build with Fugu APIs?',
+  'See what people have built: browse the Project Fugu API Showcase and read about Photoshop on the web!',
+  sections.links,
+  'blue',
+  'top-2',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/8FZcBmFowbDKWxpkOytx.jpg',
+  'Fugu fish swarm.',
+  964,
+  289,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'Powerful APIs',
+  'Read up on some of the most powerful APIs that enable new use cases not possible before.',
+  sections.powerful_apis,
+  'green',
+  'top-3',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/luZO0VUIF4eGhPr4KfIb.svg',
+  '',
+  150,
+  150,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'Hardware APIs',
+  'Learn about the hardware APIs we work on in the context of Project Fugu that allow you to access physical devices from the web.',
+  sections.hardware,
+  'yellow',
+  'top-3',
+  true,
+  'image/vvhSqZboQoZZN9wBvoXq72wzGAf1/qYR7nkwL7cWGOnFb1mPG.jpg',
+  'Arduino board and many electronic components.',
+  400,
+  600,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'Case studies',
+  'Learn how leading developers have used Fugu APIs to build innovative web experiences.',
+  sections.case_studies,
+  'red',
+  'top-3',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/hj30wCIWiTvQSxNI9g5i.svg',
+  '',
+  150,
+  150,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+{{ landingSection(
+  'Fugu talk videos',
+  'Watch some talks about Project Fugu APIs to get a better understanding of the kind of apps we want to enable.',
+  sections.videos,
+  'blue',
+  'right',
+  true,
+  'image/8WbTDNrhLsU0El80frMBGE4eMCD3/j5ZqHuEoD6OlA5gRK3IF.svg',
+  '',
+  150,
+  150,
+  'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/kdPhkPXy7R0mmcJaKyoi.svg'
+  )
+}}
+
+<div class="landing-section landing-section--boxes rounded-lg width-full display-grid gap-top-500">
+  {{ landingDeco(
+    'Additional resources',
+    'Other noteworthy links.',
+    'yellow',
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/RzvgX7vWeDEwkA1IojgU.svg',
+    '',
+    50,
+    50,
+    'image/jxu1OdD7LKOGIDU7jURMpSH2lyK2/d7PJT7aAzObC0ij7EDIJ.svg'
+    )
+  }}
+  {% for item in sections.resources %}
+    <div class="rounded-lg pad-300 md:pad-400 width-full hairline display-flex direction-column">
+      <h2 class="type--h4">
+        <a class="surface display-inline-flex color-text" href="{{item.url}}">
+          {{ item.title }}
+        </a>
+      </h2>
+      <p class="flex-1">{{ item.description }}</p>
+    </div>
+  {% endfor %}
+</div>

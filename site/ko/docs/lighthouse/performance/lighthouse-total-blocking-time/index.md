@@ -16,7 +16,7 @@ Lighthouse 보고서는 TBT를 밀리초 단위로 표시합니다.
 
 ## TBT 측정 항목
 
-TBT는 마우스 클릭, 화면 탭 또는 키보드 누름과 같은 사용자 입력으로부터 페이지가 응답하지 못하도록 차단된 총 시간을 측정합니다. 합계는 [최초 콘텐츠풀 페인트](https://web.dev/fcp/)와 [상호 작용까지의 시간](https://web.dev/tti/) 사이의 모든 [긴 작업](https://web.dev/long-tasks-devtools/)의 *차단 부분*을 더하여 계산합니다. 50ms 이상 실행되는 모든 작업은 긴 작업입니다. 50ms 이후의 시간이 차단 부분입니다. 예를 들어 Lighthouse가 70ms 길이의 작업을 감지하면 차단 부분은 20ms가 됩니다.
+TBT는 마우스 클릭, 화면 탭 또는 키보드 누름과 같은 사용자 입력으로부터 페이지가 응답하지 못하도록 차단된 총 시간을 측정합니다. 합계는 [최초 콘텐츠풀 페인트](https://web.dev/articles/fcp)와 [상호 작용까지의 시간](https://web.dev/articles/tti) 사이의 모든 [긴 작업](https://web.dev/articles/long-tasks-devtools)의 *차단 부분*을 더하여 계산합니다. 50ms 이상 실행되는 모든 작업은 긴 작업입니다. 50ms 이후의 시간이 차단 부분입니다. 예를 들어 Lighthouse가 70ms 길이의 작업을 감지하면 차단 부분은 20ms가 됩니다.
 
 ## Lighthouse가 TBT 점수를 산정하는 방법
 
@@ -49,28 +49,28 @@ TBT 점수는 모바일 장치에 로드되었을 때의 페이지 TBT 시간과
   </table>
 </div>
 
-{% include 'content/lighthouse-performance/scoring.njk' %}
+{% Partial 'lighthouse-performance/scoring.njk' %}
 
 ## TBT 점수를 높이는 방법
 
-Chrome DevTools의 성능 패널로 긴 작업의 근본 원인을 진단하는 방법을 알아보려면 [긴 작업의 원인은 무엇입니까?](https://web.dev/long-tasks-devtools/#what-is-causing-my-long-tasks) 를 참조하십시오.
+Chrome DevTools의 성능 패널로 긴 작업의 근본 원인을 진단하는 방법을 알아보려면 [긴 작업의 원인은 무엇입니까?](https://web.dev/articles/long-tasks-devtools#what_is_causing_my_long_tasks) 를 참조하십시오.
 
 일반적으로 긴 작업의 가장 일반적인 원인은 다음과 같습니다.
 
-- 불필요한 JavaScript 로딩, 구문 분석 또는 실행. 성능 패널에서 코드를 분석하는 동안 기본 스레드가 페이지를 로드하는 데 실제로 필요하지 않은 작업을 수행하고 있음을 발견할 수 있습니다. [코드 분할로 JavaScript 페이로드 줄이기](https://web.dev/remove-unused-code/), [사용하지 않는 코드 제거](https://web.dev/efficiently-load-third-party-javascript/) 또는 [타사 JavaScript를 효율적으로 로드](https://web.dev/reduce-javascript-payloads-with-code-splitting/)하면 TBT 점수가 향상됩니다.
+- 불필요한 JavaScript 로딩, 구문 분석 또는 실행. 성능 패널에서 코드를 분석하는 동안 기본 스레드가 페이지를 로드하는 데 실제로 필요하지 않은 작업을 수행하고 있음을 발견할 수 있습니다. [코드 분할로 JavaScript 페이로드 줄이기](https://web.dev/articles/remove-unused-code), [사용하지 않는 코드 제거](https://web.dev/articles/efficiently-load-third-party-javascript) 또는 [타사 JavaScript를 효율적으로 로드](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)하면 TBT 점수가 향상됩니다.
 - 비효율적인 JavaScript 문. 예를 들어 성능 패널에서 코드를 분석한 후 2000개의 노드를 반환하는 `document.querySelectorAll('a')`에 대한 호출이 표시된다고 가정합니다. 10개의 노드만 반환하는 등 더 구체적인 선택기를 사용하도록 코드를 리팩토링하면 TBT 점수가 향상됩니다.
 
 {% Aside %} 불필요한 JavaScript 로드, 구문 분석 또는 실행은 일반적으로 대부분의 사이트에서 개선할 수 있는 훨씬 더 큰 기회입니다. {% endAside %}
 
-{% include 'content/lighthouse-performance/improve.njk' %}
+{% Partial 'lighthouse-performance/improve.njk' %}
 
 ## 참고 자료
 
 - [**총 차단 시간** 감사에 대한 소스 코드](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/total-blocking-time.js)
-- [긴 JavaScript 작업으로 인해 상호 작용까지의 시간이 지연됩니까?](https://web.dev/long-tasks-devtools/)
+- [긴 JavaScript 작업으로 인해 상호 작용까지의 시간이 지연됩니까?](https://web.dev/articles/long-tasks-devtools)
 - [첫 번째 입력 지연 최적화](https://web.dev/optimize-fid)
-- [최초 콘텐츠풀 페인트](https://web.dev/fcp/)
-- [상호 작용까지의 시간](https://web.dev/tti/)
-- [코드 분할로 JavaScript 페이로드 줄이기](https://web.dev/reduce-javascript-payloads-with-code-splitting/)
-- [사용하지 않는 코드 제거](https://web.dev/remove-unused-code/)
-- [타사 리소스를 효율적으로 로드](https://web.dev/efficiently-load-third-party-javascript/)
+- [최초 콘텐츠풀 페인트](https://web.dev/articles/fcp)
+- [상호 작용까지의 시간](https://web.dev/articles/tti)
+- [코드 분할로 JavaScript 페이로드 줄이기](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting)
+- [사용하지 않는 코드 제거](https://web.dev/articles/remove-unused-code)
+- [타사 리소스를 효율적으로 로드](https://web.dev/articles/efficiently-load-third-party-javascript)

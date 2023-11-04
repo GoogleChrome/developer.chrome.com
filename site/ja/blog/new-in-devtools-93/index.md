@@ -18,7 +18,7 @@ tags:
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さんと [lacolaco](https://github.com/lacolaco) さんに感謝いたします。*
 
 
-{% include 'partials/devtools/ja/banner.md' %}
+{% Partial 'devtools/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -27,9 +27,9 @@ tags:
 -->
 ## Styles ペインで CSS コンテナクエリを編集 {: #container-queries }
 <!--
-You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
+You can now view and edit [CSS container queries](https://web.dev/articles/new-responsive#responsive_to_the_container) in the **Styles** pane.
 -->
-**Styles** ペインで[CSS コンテナクエリ](https://web.dev/new-responsive/#responsive-to-the-container)を確認して編集できるようになりました。
+**Styles** ペインで[CSS コンテナクエリ](https://web.dev/articles/new-responsive#responsive_to_the_container)を確認して編集できるようになりました。
 
 <!--
 Container queries provide a much more dynamic approach to responsive design. The `@container` at-rule works in a similar way to a media query with `@media`. However, instead of querying the viewport and user agent for information, `@container` queries the ancestor container that matches certain criteria.
@@ -37,7 +37,7 @@ Container queries provide a much more dynamic approach to responsive design. The
 コンテナクエリは、レスポンシブデザインに対して、より多くの動的なアプローチを提供します。@-規則の `@container` はメディアクエリの `@media` と同じように動作しますが、`@media` のようにビューポートとユーザーエージェントに問い合わせて情報を得るのではなく、`@container` は上位のコンテナ要素にある基準に合致するかどうかを問い合わせます。
 
 <!--
-In the **Elements** panel, click on a DOM element with `@container` at-rule, DevTools now displays the `@container` information in the **Styles** pane. Click on it to edit the size. The **Styles** pane displays the corresponding container information too. Hover on it to highlight the container element on the page and check the container size. Click on it to select the container element. 
+In the **Elements** panel, click on a DOM element with `@container` at-rule, DevTools now displays the `@container` information in the **Styles** pane. Click on it to edit the size. The **Styles** pane displays the corresponding container information too. Hover on it to highlight the container element on the page and check the container size. Click on it to select the container element.
 -->
 **Elements** パネルで、@-規則 `@container` を持つ DOM 要素をクリックしてください。DevTools は `@container` の情報を **Styles** ペインに表示します。サイズを編集するにはそれをクリックします。**Styles** ペインは関連するコンテナ情報も表示します。その上にマウスカーソルを置くとページ上のコンテナ要素がハイライトされ、コンテナサイズを確認できます。コンテナ要素を選択するにはそれをクリックしてください。
 
@@ -60,9 +60,9 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 -->
 ## NetworkパネルでWeb Bundleをプレビュー {: #web-bundle }
 <!--
-[Web bundle](https://web.dev/web-bundles/) is a file format for encapsulating one or more HTTP resources in a single file. You can now preview the web bundle content in the **Network** panel.
+[Web bundle](https://web.dev/articles/web-bundles) is a file format for encapsulating one or more HTTP resources in a single file. You can now preview the web bundle content in the **Network** panel.
 -->
-[Web Bundle](https://web.dev/web-bundles/) はひとつ以上の HTTP リソースを単一のファイルにカプセル化するためのファイルフォーマットです。**Network** パネルでこの Web Bundle のコンテンツをプレビューできるようになりました。
+[Web Bundle](https://web.dev/articles/web-bundles) はひとつ以上の HTTP リソースを単一のファイルにカプセル化するためのファイルフォーマットです。**Network** パネルでこの Web Bundle のコンテンツをプレビューできるようになりました。
 
 <!--
 The web bundle feature is experimental currently. Please enable `#enable-experimental-web-platform-features` flag under `chrome://flags` to test it.
@@ -73,7 +73,7 @@ Web Bundle 機能は現在のところ実験的です。実際に試してみる
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e7672c40f2febc80786632c188b6029b2f2ac7b7 #}
 
-Chromium issue: [1182537](https://crbug.com/1182537) 
+Chromium issue: [1182537](https://crbug.com/1182537)
 
 
 <!--
@@ -88,7 +88,7 @@ Attribution Reporting API のエラーが **Issues** タブでレポートされ
 <!--
 [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) is a new API to help you measure when a user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 -->
-[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) は（広告のクリックや視聴のような）ユーザーアクションがコンバージョンを引き起こすタイミングについて、クロスサイトの識別を伴わずに測定するための新しい API です。
+[アトリビューション レポート](/docs/privacy-sandbox/attribution-reporting/) は（広告のクリックや視聴のような）ユーザーアクションがコンバージョンを引き起こすタイミングについて、クロスサイトの識別を伴わずに測定するための新しい API です。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Attribution Reporting API errors in the Issues tab", width="800", height="501" %}
 
@@ -100,7 +100,7 @@ Chromium issue: [1190735](https://crbug.com/1190735)
 -->
 ## コンソールでの文字列の扱いの改善 {: #string }
 <!--
-New context menu in the **Console** allows you to copy any string in as content, JavaScript literal or JSON literal. 
+New context menu in the **Console** allows you to copy any string in as content, JavaScript literal or JSON literal.
 -->
 **Console** の新しいコンテキストメニューを使用して、任意の文字列をそのコンテンツそのもの、JavaScript リテラル、JSON リテラルのいずれかとしてコピーできます。
 
@@ -112,7 +112,7 @@ In Chrome 90, DevTools updated the **Console** to always [format string outputs 
 Chrome 90 で、DevTools は常に[文字列の出力を妥当な JSON リテラルとしてフォーマットする](/blog/new-in-devtools-90/#double-quotes)ように **Console** を更新しましたが、開発者の皆さんからこの変更は混乱のもとになるというフィードバックを受け取りました。エスケープが大量で出力が読めなくなったという人もいました。
 
 <!--
-The **Console** now formats string outputs as valid JavaScript litera, and furthermore provides you 3 copy string options. The **Copy as JavaScript literal** option will escape appropriate special characters and wrap the string in either single quotes, double quotes, or backticks depending on the string content. The **Copy string contents** instead copies the raw string contents (including new lines and other special characters) verbatim to the clipboard. Finally, **Copy as JSON literal** formats the string as a valid JSON literal and copies it to the clipboard. 
+The **Console** now formats string outputs as valid JavaScript litera, and furthermore provides you 3 copy string options. The **Copy as JavaScript literal** option will escape appropriate special characters and wrap the string in either single quotes, double quotes, or backticks depending on the string content. The **Copy string contents** instead copies the raw string contents (including new lines and other special characters) verbatim to the clipboard. Finally, **Copy as JSON literal** formats the string as a valid JSON literal and copies it to the clipboard.
 -->
 **Console** は文字列の出力を妥当な JavaScript リテラルとしてフォーマットするようになり、その上で文字列をコピーする場合に3つのオプションを提示します。**Copy as JavaScript literal** オプションは特殊文字を適切にエスケープし、文字列をその内容に応じてシングルクォートか、ダブルクォート、もしくはバッククォートで囲います。**Copy string contents** はその代わりに、文字列の内容を（改行やその他の特殊文字も含めて）そのままクリップボードにコピーします。最後に、**Copy as JSON literal** は文字列を妥当なJSONリテラルとしてフォーマットし、それをクリップボードにコピーします。
 
@@ -128,7 +128,7 @@ Chromium issue: [1208389](https://crbug.com/1208389)
 -->
 ## CORS デバッグの改善 {: #cors }
 <!--
-CORS-related TypeErrors in the **Console** are now linked to the Network panel and Issues tab. 
+CORS-related TypeErrors in the **Console** are now linked to the Network panel and Issues tab.
 -->
 **Console** の CORS に関連する TypeError が Network パネルと Issue タブにリンクされるようになりました。
 
@@ -144,14 +144,14 @@ Chromium issue: [1213393](https://crbug.com/1213393)
 
 ## Lighthouse 8.1 {: #lighthouse }
 <!--
-The **Lighthouse** panel is now running Lighthouse 8.1. 
+The **Lighthouse** panel is now running Lighthouse 8.1.
 -->
 **Lighthouse** パネルで Lighthouse 8.1 が動作するようになりました。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wENi9RXYMxdhm3zI4NVu.png", alt="Lighthouse", width="800", height="628" %}
 
 <!--
-If your site exposes source maps to Lighthouse, look for the **View Treemap** button to see a breakdown of your shipped JavaScript, filterable by size and coverage on load. 
+If your site exposes source maps to Lighthouse, look for the **View Treemap** button to see a breakdown of your shipped JavaScript, filterable by size and coverage on load.
 -->
 対象のサイトが Lighthouse にソースマップを公開している場合、**View Treemap** ボタンを探すと、配信された JavaScript のブレークダウンを、サイズとロード時のカバレッジでフィルタして確認できます。
 
@@ -181,14 +181,14 @@ Chromium issue: [772558](https://crbug.com/772558)
 -->
 ## Manifest ペインで new note URL を表示 {: #new-note-url }
 <!--
-The Manifest pane now displays the the [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking). 
+The Manifest pane now displays the the [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 -->
 Manifest ペインで [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking) が表示されるようになります。
 
 <!--
-Currently on Chrome OS (CrOS), Chrome Apps and Android Apps that declare a "new-note" capability may be selected as a note-taking app in the Stylus settings (shows up if the CrOS device has been used with a stylus). When selected as a note-taking app, the app can be launched from the stylus palette's "Create Note" button. Adding `new-note-url` field in the application manifest is part of the effort to add equivalent functionality to web apps.
+Currently on ChromeOS (CrOS), Chrome Apps and Android Apps that declare a "new-note" capability may be selected as a note-taking app in the Stylus settings (shows up if the CrOS device has been used with a stylus). When selected as a note-taking app, the app can be launched from the stylus palette's "Create Note" button. Adding `new-note-url` field in the application manifest is part of the effort to add equivalent functionality to web apps.
 -->
-現在 Chrome OS（CrOS）では、"new-note" capability を宣言した Chrome Apps、Android Apps は（CrOSデバイスがスタイラスを使用していたら現れる）Stylus settings の中で note-taking app として選択できるようになります。note-taking app として選択すると、そのアプリはスタイラスパレットの「Create Note」ボタンで起動できるようになります。アプリケーションのマニフェストに `new-note-url` フィールドを追加することはウェブアプリに同様の機能を追加するための作業のひとつです。
+現在 ChromeOS（CrOS）では、"new-note" capability を宣言した Chrome Apps、Android Apps は（CrOSデバイスがスタイラスを使用していたら現れる）Stylus settings の中で note-taking app として選択できるようになります。note-taking app として選択すると、そのアプリはスタイラスパレットの「Create Note」ボタンで起動できるようになります。アプリケーションのマニフェストに `new-note-url` フィールドを追加することはウェブアプリに同様の機能を追加するための作業のひとつです。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="New note URL in the Manifest pane", width="800", height="477" %}
 
@@ -244,7 +244,7 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
-Chromium bug: [998674](https://crbug.com/998674) 
+Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/ja/reach-out.md' %}
-{% include 'partials/devtools/ja/whats-new.md' %}
+{% Partial 'devtools/reach-out.md' %}
+{% Partial 'devtools/whats-new.md' %}

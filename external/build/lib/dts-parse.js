@@ -708,6 +708,9 @@ class Transform {
       channel: 'stable',
     };
 
+    // See https://github.com/GoogleChrome/developer.chrome.com/issues/2298
+    let chromeOsOnly = undefined;
+
     tags.forEach(({tag, text}) => {
       text = text.trim(); // some show up with extra \n
 
@@ -749,8 +752,31 @@ class Transform {
         case 'chrome-disallow-service-workers':
           out.disallowServiceWorkers = true;
           break;
+        case 'chrome-platform':
+          // If chromeos is the platform, and chromeOsOnly is undefined because
+          // we haven't seen any other platforms, this might be chromeOsOnly.
+          if (text === 'chromeos' && chromeOsOnly === undefined) {
+            chromeOsOnly = true;
+          } else if (text === 'lacros') {
+            // We don't currently have a lacros specific pill, so we don't need
+            // to do much here, but we should avoid falling in to the next case
+            // and unsetting chromeOsOnly.
+          } else {
+            // The first time we see a platform that's not chromeos or lacros,
+            // we know the feature isn't chromeOsOnly.
+            chromeOsOnly = false;
+          }
+          break;
+        case 'chrome-install-location':
+          if (text === 'policy') {
+            out.requiresPolicyInstall = true;
+          }
       }
     });
+
+    if (chromeOsOnly === true) {
+      out.chromeOsOnly = true;
+    }
 
     return out;
   }
@@ -774,7 +800,7 @@ class Transform {
       const raw = text.split(' ')[0].replace(/\\_/g, '_');
       const value = JSON.parse(raw);
 
-      const rest = text.substr(raw.length + 1).trim();
+      const rest = text.substring(text.indexOf(' ') + 1).trim();
       enums.push({value, description: rest});
     });
 

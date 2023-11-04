@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Migration guide (Chrome 92): Conversion Measurement API to Attribution Reporting API'
+title: '[Obsolete] Migration guide (Chrome 92): Conversion Measurement API to Attribution Reporting API'
 subhead: >
   The Conversion Measurement API is changing in Chrome 92.
 date: 2021-06-22
-updated: 2021-06-22
+updated: 2023-09-18
 authors:
   - maudn
 ---
@@ -18,20 +18,15 @@ ask your question.
 ## What's changing?
 
 Following the [API proposal](https://github.com/WICG/conversion-measurement-api)'s changes
-in the first months of 2021, the API implementation in Chrome is evolving. Here's what changing:
+in the first months of 2021, the API implementation in Chrome is evolving. Here's what's changing:
 
-- The API name, and the feature policy name.
+- The API name, and the permissions policy name.
 - The HTML attribute names and `.well-known` URLs.
 - The format of the reports. Reports are now sent as JSON in the request body.
 - The content of the reports: `credit` has been removed, along with reports that would have had 0 credit.
 
 What remains unchanged in Chrome 92 is the set of supported features: event-level reports, for clicks only.
 **Expect updates on this**. After this change, other updates and features will be released in future Chrome versions.
-
-{% Aside %}
-To receive updates on the origin trial for this API and upcoming features, subscribe to
-the [mailing list](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
-{% endAside %}
 
 ## When do these changes take effect?
 
@@ -45,7 +40,7 @@ Chrome 92 beta was released on June 3rd 2021.
 There are more changes to the API coming in future versions. They will use the new naming adopted in Chrome 92.
 {% endAside %}
 
-If you're running an origin trial or have implemented a demo for this API, you have two
+If you were running an origin trial or have implemented a demo for this API, you have two
 options:
 
 - **Option 1 (recommended)**: migrate your code now or in the following weeks, ideally before
@@ -60,7 +55,7 @@ options:
 
 You can see a migration example for a small demo app in this [pull request (draft)](https://github.com/GoogleChromeLabs/trust-safety-demo/pull/4/files).
 
-### Update your feature policy code
+### Update your permissions policy code
 
 <table class="simple width-full fixed-table with-heading-tint">
 <thead>

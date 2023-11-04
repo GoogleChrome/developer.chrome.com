@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Chrome Apps Architecture"
+seoTitle: "Chrome Apps Architecture [Deprecated]"
 date: 2012-09-17
 updated: 2014-06-06
 description: An overview of the software architecture of Chrome Apps.

@@ -18,4 +18,8 @@
 // meta should be flush left.
 .card-authors__image + .card-authors__meta {
   margin-left: get-size(300);
+  
+  time {
+    color: get-color('grey-700');
+  }
 }

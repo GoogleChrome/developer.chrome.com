@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Frequently asked questions"
+seoTitle: "MV2 - Frequently asked questions [Deprecated]"
 date: 2014-02-28
 updated: 2020-11-20
 description: Frequently asked questions about Chrome Extensions.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Frequently asked questions](/docs/extensions/mv3/faq/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 If you don't find an answer to your question here, try the [Chrome Web Store FAQ][1], the
 [\[google-chrome-extension\] tag on Stack Overflow][2], the [chromium-extensions group][3], or the
@@ -71,7 +76,7 @@ cros,beta,#.#.###.#,#.#.###.#,mm/dd/yy,mm/dd/yy,#####,#####,#####
 ```
 
 Each line represents information about a different platform and channel combination. The listed
-platforms are `cf` (Google Chrome Frame), `linux`, `mac`, `win`, and `cros` (Google Chrome OS). The
+platforms are `cf` (Google Chrome Frame), `linux`, `mac`, `win`, and `cros` (Google ChromeOS). The
 listed channels are `canary`, `dev`, `beta`, and `stable`. The two four-part numbers after the
 channel represent the current and previous versions of Chrome deployed to that platform-channel
 combination. The rest of the information is metadata about when the releases were first pushed, as
@@ -304,7 +309,7 @@ The steps you should follow to ensure this are:
 [30]: #faq-fea-01
 [31]: #faq-fea-02
 [32]: /docs/extensions/mv2/getstarted
-[33]: /docs/extensions/api_other
+[33]: https://developer.mozilla.org/docs/Web/API
 [34]: http://omahaproxy.appspot.com
 [35]: /docs/extensions/mv2/xhr
 [36]: http://json.org/js.html

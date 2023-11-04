@@ -4,36 +4,33 @@
 timeout: 900s # set build timeout to 15 mins
 
 steps:
-  - name: node:14
+  - name: node:16.14.2
     id: 'Install dependencies'
     entrypoint: npm
     args: ['ci']
 
-  - name: node:14
-    id: 'Configure secrets'
-    entrypoint: npm
-    args: ['run', 'cloud-secrets']
-
-  - name: node:14
+  - name: node:16.14.2
     id: 'Build external data'
     entrypoint: npm
     args: ['run', 'build-external']
     env:
-    - 'NODE_ENV=production'
+      - 'NODE_ENV=production'
 
-  - name: node:14
+  - name: node:16.14.2
     id: 'Create .eleventyignore file'
     entrypoint: npm
     args: ['run', 'ignore']
     env:
-    # TODO: We should try to remove more stuff here, because it's supposed to
-    # be a fast build to sanity-check output.
-    # It needs to include extensions and API generation.
-    - 'ELEVENTY_IGNORE_NACL=true'
+      # TODO: We should try to remove more stuff here, because it's supposed to
+      # be a fast build to sanity-check output.
+      # It needs to include extensions and API generation.
+      - 'ELEVENTY_IGNORE_NACL=true'
 
-  - name: node:14
+  - name: node:16.14.2
     id: 'Build eleventy in dev mode to confirm'
     entrypoint: npm
+    env:
+      - 'NODE_OPTIONS="--max_old_space_size=8192"'
     args: ['run', 'eleventy']
     # This does NOT set `NODE_ENV=production`, as we don't need the full build.
 
@@ -41,11 +38,23 @@ steps:
     id: 'Synchronize content to external-dcc-data bucket'
     entrypoint: bash
     args:
-    - '-c'
-    - |
-      gsutil rsync external/data/ gs://external-dcc-data
+      - '-c'
+      - |
+        gsutil rsync external/data/ gs://external-dcc-data
 
 options:
   env:
-  - 'PROJECT_ID=$PROJECT_ID'
-  - 'NODE_OPTIONS=--unhandled-rejections=strict'
+    - 'PROJECT_ID=$PROJECT_ID'
+    - 'NODE_OPTIONS=--unhandled-rejections=strict'
+  secretEnv: ['GITHUB_APP_ID', 'GITHUB_APP_KEY', 'GITHUB_APP_INSTALLATION_ID', 'YOUTUBE_API_KEY']
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/chrome-apps-doc/secrets/GITHUB_APP_ID/versions/1
+      env: 'GITHUB_APP_ID'
+    - versionName: projects/chrome-apps-doc/secrets/GITHUB_APP_KEY/versions/4
+      env: 'GITHUB_APP_KEY'
+    - versionName: projects/chrome-apps-doc/secrets/GITHUB_APP_INSTALLATION_ID/versions/1
+      env: 'GITHUB_APP_INSTALLATION_ID'
+    - versionName: projects/chrome-apps-doc/secrets/YOUTUBE_API_KEY/versions/1
+      env: 'YOUTUBE_API_KEY'

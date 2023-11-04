@@ -17,6 +17,9 @@
   "capabilities": {
     "title": "i18n.tags.capabilities"
   },
+  "case-study": {
+    "title": "i18n.tags.case-study"
+  },
   "chrome": {
     "title": "i18n.tags.chrome"
   },
@@ -26,8 +29,11 @@
   "cookies": {
     "title": "i18n.tags.cookies"
   },
-  "deprecations": {
-    "title": "i18n.tags.deprecations"
+  "cookie-countdown": {
+    "title": "i18n.tags.cookie-countdown"
+  },
+  "deprecations-removals": {
+    "title": "i18n.tags.deprecations-removals"
   },
   "device-characteristics": {
     "title": "i18n.tags.device-characteristics"
@@ -47,6 +53,9 @@
   "file-system": {
     "title": "i18n.tags.file-system"
   },
+  "fugu-case-study": {
+    "title": "i18n.tags.fugu-case-study"
+  },
   "games": {
     "title": "i18n.tags.games"
   },
@@ -65,6 +74,12 @@
   "media": {
     "title": "i18n.tags.media"
   },
+  "webgpu": {
+    "title": "i18n.tags.webgpu"
+  },
+  "new-in-webgpu": {
+    "title": "i18n.tags.new-in-webgpu"
+  },
   "new-in-chrome": {
     "title": "i18n.tags.new-in-chrome"
   },
@@ -76,9 +91,6 @@
   },
   "progressive-web-apps": {
     "title": "i18n.tags.progressive-web-apps"
-  },
-  "removals": {
-    "title": "i18n.tags.removals"
   },
   "security": {
     "title": "i18n.tags.security"
@@ -94,5 +106,8 @@
   },
   "devtools-architecture": {
     "title": "i18n.tags.devtools-architecture"
+  },
+  "example": {
+    "title": "i18n.tags.example"
   }
 }

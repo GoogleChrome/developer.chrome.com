@@ -1,12 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Cross-origin XMLHttpRequest"
+seoTitle: "MV2 - Cross-origin XMLHttpRequest [Deprecated]"
 date: 2012-09-18
 updated: 2020-03-09
 description: How to implement cross-origin XHR in your Chrome Extension.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Aside 'warning' %}
+You're viewing the deprecated Manifest V2 version of this article. See [Manifest V3 - Cross-origin network requests](/docs/extensions/mv3/network-requests/) for the MV3 equivalent.
+
+The Chrome Web Store no longer accepts Manifest V2 extensions. Follow the [Manifest V3 Migration guide](/docs/extensions/migrating) to convert your extension to Manifest V3.
+{% endAside %}
 
 Regular web pages can use the [XMLHttpRequest][1] object to send and receive data from remote
 servers, but they're limited by the [same origin policy][2]. [Content scripts][3] initiate requests

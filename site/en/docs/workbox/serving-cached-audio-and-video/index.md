@@ -10,7 +10,7 @@ There are some wrinkles in how some browsers handle requests for media assets&md
 
 ## The problem
 
-The intricacies of the problem browsers have around serving audio and video assets are explained in detail in [this Github issue discussion](https://github.com/GoogleChrome/workbox/issues/1663#issuecomment-448755945). The full picture is complicated, but the key points are:
+The intricacies of the problem browsers have around serving audio and video assets are explained in detail in [this GitHub issue discussion](https://github.com/GoogleChrome/workbox/issues/1663#issuecomment-448755945). The full picture is complicated, but the key points are:
 
 - Workbox must be told to respect [`Range` request headers](https://developer.mozilla.org/docs/Web/HTTP/Range_requests) by using the [`workbox-range-requests` module](/docs/workbox/modules/workbox-range-request/) to the strategy used as the handler.
 - `<video>` or `<audio>` elements need to opt into CORS mode with the [`crossorigin` attribute](https://developer.mozilla.org/docs/Web/HTML/Attributes/crossorigin).

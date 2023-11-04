@@ -1,12 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Shared modules"
+seoTitle: "MV2 - Shared modules [Deprecated]"
 date: 2015-01-05
 updated: 2018-05-22
 description: How to share code between Chrome Extensions.
 ---
 
-{% include 'partials/extensions/mv2-legacy-page.md' %}
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 _Shared Modules_ are permissionless collections of resources that can be shared between other
 extensions and apps. Common uses of Shared Modules are:

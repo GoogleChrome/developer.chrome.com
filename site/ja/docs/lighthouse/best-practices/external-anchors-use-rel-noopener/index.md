@@ -30,7 +30,7 @@ Lighthouseは、次のプロセスを使用して、リンクを安全でない�
 
 Lighthouseは同じホストのリンクを除外するため、大型のサイトで作業している場合には注意すべき事項があります。1つのページに、同一サイト上の別のページへの`target="_blank"`リンクが`rel="noopener"`を使用せずに含まれている場合でも、この監査のパフォーマンスに関する影響が適用されますが、Lighthouseの結果には、これらのリンクが表示されません。
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## サイトのパフォーマンスを改善し、セキュリティの脆弱性を防ぐには
 
@@ -45,10 +45,10 @@ Lighthouseレポートで識別された各リンクに`rel="noopener"`または
 - `rel="noopener"`によって、新しいページは`window.opener`プロパティにアクセスできなくなり、別のプロセスで実行されるようになります。
 - `rel="noreferrer"`も同じ効果がありますが、 `Referer`ヘッダーが新しいページに送信されないようにします。「["noreferrer" リンクタイプ](https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer)」をご覧ください。
 
-詳細については、「[クロスオリジンリソースを安全に共有する](https://web.dev/cross-origin-resource-sharing/)」をご覧ください。
+詳細については、「[クロスオリジンリソースを安全に共有する](https://web.dev/articles/cross-origin-resource-sharing)」をご覧ください。
 
 ## リソース
 
 - [**安全でないクロスオリジン宛先へのリンク**監査のソースコード](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js)
-- [クロスオリジンリソースを安全に共有する](https://web.dev/cross-origin-resource-sharing/)
+- [クロスオリジンリソースを安全に共有する](https://web.dev/articles/cross-origin-resource-sharing)
 - [ウェブ開発者向けのサイト分離](https://developers.google.com/web/updates/2018/07/site-isolation)

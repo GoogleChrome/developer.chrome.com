@@ -1,10 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Manifest - Nacl Modules"
+seoTitle: "Manifest V2 - Nacl Modules [Deprecated]"
 date: 2013-05-12
 updated: 2018-04-26
 description: Reference documentation for the nacl_modules property of manifest.json.
 ---
+
+{% Partial 'extensions/mv2-legacy-page.md' %}
 
 One or more mappings from MIME types to the Native Client module that handles each type. For
 example, the bold code in the following snippet registers a Native Client module as the content

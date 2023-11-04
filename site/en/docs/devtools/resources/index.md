@@ -6,6 +6,8 @@ authors:
 date: 2015-04-13
 #updated: YYYY-MM-DD
 description: "Organize resources by frame, domain, type, or other criteria."
+tags:
+  - find-issues
 ---
 
 This guide teaches you how to use Chrome DevTools to view a web page's resources. Resources are the

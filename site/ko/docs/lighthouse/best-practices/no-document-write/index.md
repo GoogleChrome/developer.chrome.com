@@ -33,7 +33,7 @@ data from the network to be reparsed.
 
 Lighthouse는 사용 방식에 상관없이 성능에 부정적인 영향을 미치고 더 나은 대안이 있기 때문에 `document.write()`에 대한 나머지 호출을 보고합니다.
 
-{% include 'content/lighthouse-best-practices/scoring.njk' %}
+{% Partial 'lighthouse-best-practices/scoring.njk' %}
 
 ## `document.write()` 피하기
 

@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: An example blog post used for screenshot testing.
+title: An example post for testing prose elements
 subhead: |
   A catchy subhead that previews the content and is a bit wordy to test what
   happens when a subhead wraps.
@@ -80,7 +80,7 @@ sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
 at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
 porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
 quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
-ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
+ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi
 quam sem. Integer et erat ac mi scelerisque suscipit et vitae nulla. Aliquam
 scelerisque efficitur ante ut facilisis. Aenean et risus fringilla, hendrerit
 sapien et, tincidunt orci. Aenean sed tellus aliquam, consectetur metus in,
@@ -450,6 +450,32 @@ quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
 ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
 quam sem.
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
+at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
+porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
+quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
+ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
+quam sem.
+
+{% Blockquote 'Jon Doe' %}
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum
+  a massa sit amet ullamcorper.
+{% endBlockquote %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
+at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
+porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
+quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
+ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
+quam sem.
+
+{% Blockquote 'Jon Doe', 'pullquote' %}
+[Lorem ipsum](#) dolor sit amet, consectetur adipiscing elit. Proin dictum
+a massa sit amet ullamcorper.
+{% endBlockquote %}
+
 {% if site.percy %}
 <div style="background: aquamarine; width: 400px; height: 400px;">
   Glitch iframe placeholder
@@ -472,6 +498,60 @@ porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
 quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
 ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
 quam sem.
+
+{% Codepen {
+  user: 'robdodson',
+  id: 'GRroyyX',
+  height: 300,
+  theme: 'dark',
+  tab: 'css,result',
+  allow: ['geolocation']
+} %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
+at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
+porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
+quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
+ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
+quam sem.
+
+<div class="switcher">
+  <figure>
+    {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/amwrx4HVBEVTEzQspIWw.png", alt="", width="800", height="155" %}
+    <figcaption>
+      Small image.
+    </figcaption>
+  </figure>
+  <figure>
+    {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/amwrx4HVBEVTEzQspIWw.png", alt="", width="800", height="155" %}
+    <figcaption>
+      Small image.
+    </figcaption>
+  </figure>
+</div>
+
+{% Compare 'worse' %}
+```text
+Bad code example
+```
+
+{% CompareCaption %}
+Explanation of why `example` is bad.
+{% endCompareCaption %}
+
+{% endCompare %}
+
+{% Compare 'better' %}
+```text
+Good code example
+```
+
+{% CompareCaption %}
+Explanation of why `example` is good.
+{% endCompareCaption %}
+
+{% endCompare %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
 sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
@@ -499,10 +579,64 @@ quam sem.
 <div class="all-center">
   <p>
     <a href="https://example.com/some.pdf" class="button">
+      {% include "icons/download.svg" %}
       Download case study
     </a>
   </p>
 </div>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
+at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
+porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
+quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
+ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
+quam sem.
+
+{% Widget 'example-set/graph', 540 %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
+at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
+porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
+quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
+ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
+quam sem.
+
+{% Details %}
+
+{% DetailsSummary %}
+Details _summary_
+{% endDetailsSummary %}
+
+This is an optional preview. Make your preview text match the first paragraph
+of your panel text.
+
+Lorem ipsum [dolor sit amet](#), consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. `Suspendisse` auctor ultrices ante, nec tempus nibh varius
+at.
+
+{% endDetails %}
+
+{% Details %}
+
+{% DetailsSummary %}
+Details _summary_
+{% endDetailsSummary %}
+
+Lorem ipsum [dolor sit amet](#), consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. `Suspendisse` auctor ultrices ante, nec tempus nibh varius
+at.
+
+{% endDetails %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
+sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius
+at. Cras ligula lacus, porta vitae maximus a, ultrices a mauris. Vestibulum
+porta dolor erat, vel molestie dolor posuere in. Nam vel elementum augue. Nam
+quis enim blandit, posuere justo dignissim, scelerisque diam. Fusce aliquet urna
+ac blandit ullamcorper. Proin et semper nibh, sit amet imperdiet velit. Morbi at
+quam sem.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum a massa
 sit amet ullamcorper. Suspendisse auctor ultrices ante, nec tempus nibh varius

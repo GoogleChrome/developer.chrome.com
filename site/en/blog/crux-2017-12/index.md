@@ -32,7 +32,7 @@ updated: 2017-12-14
 
 {% YouTube id="_srJ7eHS3IM" %}
 
-Today, we're happy to announce a new [Chrome User Experience Report](https://developers.google.com//web/tools/chrome-user-experience-report/)
+Today, we're happy to announce a new [Chrome User Experience Report](/docs/crux)
 with expanded coverage of over 1 million top origins on the web. Originally
 [announced](https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html)
 at the Chrome Developer Summit 2017, the report is a public dataset of key

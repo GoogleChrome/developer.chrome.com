@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "User Authentication"
+seoTitle: "Chrome Apps - User Authentication [Deprecated]"
 date: 2012-09-17
 updated: 2018-05-14
 description: How to authenticate users in your Chrome App.
@@ -233,7 +234,7 @@ chrome.identity.launchWebAuthFlow(
   function(redirect_url) { /* Extract token from redirect_url */ });
 ```
 
-The <url-to-do-auth> is whatever the URL is to do auth to the provider from a website. For example,
+The `<url-to-do-auth>` is whatever the URL is to do auth to the provider from a website. For example,
 let us say that you are performing OAuth2 flow with a provider and have registered your app with
 client id 123456789012345 and you want access to user's photos on the provider's website:
 `https://www.website-of-provider-with-user-photos.com/dialog/oauth?client_id=123456789012345& redirect_uri=https://abcdefghijklmnopqrstuvwxyzabcdef.chromiumapp.org/provider_cb&response_type=token&scope=user_photos`
