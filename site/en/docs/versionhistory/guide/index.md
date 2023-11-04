@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: VersionHistory API guide
-date: 2021-03-04
+date: 2022-03-31
 description: > 
   A how-to guide on using the VersionHistory web service API to programmatically access Google
   Chrome version history information.
@@ -11,9 +11,9 @@ This guide shows you how to use the VersionHistory web service API.
 
 ## Overview
 
-The VersionHistory API provides programmatic access to Google Chrome and Fuchsia
-Web Engine version history information. It is a [REST][rest] API that returns 
-information as JSON.
+The VersionHistory API provides programmatic access to version history information to many
+Google softwares such as Chrome, ChromeOS, and Fuchsia's Web Engine. It is a [REST][rest] API
+that returns information as JSON.
 
 All API access is over HTTPS, and accessed from `https://versionhistory.googleapis.com/v1`.
 
@@ -36,42 +36,51 @@ Example response
 {
   "platforms": [
     {
-      "name": "chrome/platforms/win",
-      "platformType": "WIN"
-    },
-    {
-      "name": "chrome/platforms/win64",
-      "platformType": "WIN64"
-    },
-    {
-      "name": "chrome/platforms/mac",
-      "platformType": "MAC"
-    },
-    {
-      "name": "chrome/platforms/mac_arm64",
-      "platformType": "MAC_ARM64"
-    },
-    {
-      "name": "chrome/platforms/linux",
-      "platformType": "LINUX"
+      "name": "chrome/platforms/ios",
+      "platformType": "IOS"
     },
     {
       "name": "chrome/platforms/android",
       "platformType": "ANDROID"
     },
     {
-      "name": "chrome/platforms/webview",
-      "platformType": "WEBVIEW"
+      "name": "chrome/platforms/mac_arm64",
+      "platformType": "MAC_ARM64"
     },
     {
-      "name": "chrome/platforms/ios",
-      "platformType": "IOS"
+      "name": "chrome/platforms/mac",
+      "platformType": "MAC"
+    },
+    {
+      "name": "chrome/platforms/linux",
+      "platformType": "LINUX"
     },
     {
       "name": "chrome/platforms/lacros",
       "platformType": "LACROS"
+    },
+    {
+      "name": "chrome/platforms/webview",
+      "platformType": "WEBVIEW"
+    },
+    {
+      "name": "chrome/platforms/win64",
+      "platformType": "WIN64"
+    },
+    {
+      "name": "chrome/platforms/chromeos",
+      "platformType": "CHROMEOS"
+    },
+    {
+      "name": "chrome/platforms/lacros_arm32",
+      "platformType": "LACROS_ARM32"
+    },
+    {
+      "name": "chrome/platforms/win",
+      "platformType": "WIN"
     }
-  ]
+  ],
+  "nextPageToken": ""
 }
 ```
 
@@ -164,6 +173,10 @@ Example response
       "channelType": "CANARY"
     },
     {
+      "name": "chrome/platforms/mac_arm64/channels/extended",
+      "channelType": "EXTENDED"
+    },
+    {
       "name": "chrome/platforms/mac_arm64/channels/stable",
       "channelType": "STABLE"
     },
@@ -236,6 +249,14 @@ Example response
       "channelType": "DEV"
     },
     {
+      "name": "chrome/platforms/ios/channels/canary",
+      "channelType": "CANARY"
+    },
+    {
+      "name": "chrome/platforms/lacros/channels/stable",
+      "channelType": "STABLE"
+    },
+    {
       "name": "chrome/platforms/lacros/channels/beta",
       "channelType": "BETA"
     },
@@ -246,8 +267,41 @@ Example response
     {
       "name": "chrome/platforms/lacros/channels/canary",
       "channelType": "CANARY"
+    },
+    {
+      "name": "chrome/platforms/chromeos/channels/stable",
+      "channelType": "STABLE"
+    },
+    {
+      "name": "chrome/platforms/chromeos/channels/beta",
+      "channelType": "BETA"
+    },
+    {
+      "name": "chrome/platforms/chromeos/channels/dev",
+      "channelType": "DEV"
+    },
+    {
+      "name": "chrome/platforms/chromeos/channels/canary",
+      "channelType": "CANARY"
+    },
+    {
+      "name": "chrome/platforms/lacros_arm32/channels/stable",
+      "channelType": "STABLE"
+    },
+    {
+      "name": "chrome/platforms/lacros_arm32/channels/beta",
+      "channelType": "BETA"
+    },
+    {
+      "name": "chrome/platforms/lacros_arm32/channels/dev",
+      "channelType": "DEV"
+    },
+    {
+      "name": "chrome/platforms/lacros_arm32/channels/canary",
+      "channelType": "CANARY"
     }
-  ]
+  ],
+  "nextPageToken": ""
 }
 ```
 
@@ -297,6 +351,7 @@ Example response
       "channelType": "CANARY_ASAN"
     }
   ]
+  "nextPageToken": ""
 }
 ```
 

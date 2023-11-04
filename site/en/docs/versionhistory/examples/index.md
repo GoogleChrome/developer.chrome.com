@@ -1,8 +1,8 @@
 ---
 layout: "layouts/doc-post.njk"
 title: VersionHistory API examples
-date: 2021-03-04
-description: > 
+date: 2022-03-31
+description: >
   Example usage of the VersionHistory web service API.
 ---
 
@@ -66,7 +66,7 @@ GET https://versionhistory.googleapis.com/v1/chrome/platforms/all/channels/all/v
 List all releases for Windows that are currently being served:
 
 ```http
-GET https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/all/versions/all/releases?filter=endtime=1970-01-01T00:00:00Z
+GET https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/all/versions/all/releases?filter=endtime=none
 ```
 
 List all releases for Windows in the `stable` channel that reached 100% rollout:
