@@ -2,13 +2,13 @@
 layout: 'layouts/blog-post.njk'
 title: A change to the default durability mode in IndexedDB
 description: >
-   The durability mode in IndexedDB is changing from relaxed to strict from Chrome 121.
+   The durability mode in IndexedDB is changing from strict to relaxed from Chrome 121.
 authors:
   - thomassteiner
 date: 2023-11-03
 ---
 
-The default durability mode in IndexedDB is changing from `relaxed` to `strict` from Chrome 121. This adjustment is to enhance performance and to align with other major browsers like Firefox and Safari. The blog post explains the details of this change and what it means for web developers.
+The default durability mode in IndexedDB is changing from `strict` to `relaxed` from Chrome 121. This adjustment is to enhance performance and to align with other major browsers like Firefox and Safari. The blog post explains the details of this change and what it means for web developers.
 
 ## IndexedDB durability modes
 
