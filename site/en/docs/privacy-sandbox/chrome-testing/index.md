@@ -99,7 +99,7 @@ We welcome [feedback](#feedback) as to whether this selection of groups meets th
   </tr>
 </table>
 
-We plan to make the Mode A label_only_ browser groups available starting in November 2023, and Mode A control_1_*  groups starting in January 2024. We will continue sending all Mode A and Mode B labels until third-party cookie phase-out in Q3 2024.
+We plan to make the Mode A `label_only_*` browser groups available starting in November 2023, and Mode A `control_1_*`  groups starting in January 2024. We will continue sending all Mode A and Mode B labels until third-party cookie phase-out in Q3 2024.
 
 
 ## Mode B: 1% third-party cookie deprecation {: #mode-b }
