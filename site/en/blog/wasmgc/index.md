@@ -130,6 +130,10 @@ The Dart and Flutter teams at Google are also preparing support for WasmGC. The 
 
 <iframe style="width: 100%; height: 800px" src="https://flutterweb-wasm.web.app/"></iframe>
 
+{% Aside 'warning' %}
+The [Flutter WasmGC Preview](https://flutterweb-wasm.web.app/) demo is fully rendered onto a `canvas`. This means it breaks important browser features like find on page, translation, text selection, extensions, and link to text fragment.
+{% endAside %}
+
 ## Learn more about WasmGC
 
 This blog post has barely scratched the surface and mostly provided a high-level overview of WasmGC. To learn more about the feature, check out these links:
