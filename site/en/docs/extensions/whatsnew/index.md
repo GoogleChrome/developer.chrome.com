@@ -19,7 +19,7 @@ Check this page often to learn about changes to Chrome extensions, extensions do
 
 <p class="color-secondary-text type--caption">Posted on <time>November 6, 2023</time></p>
 
-[Chrome 120 Beta](/blog/chrome-120-beta/) just got out. For a summary of the important updates for Extension developers, read our new blog post:  [What's new in Chrome 120 for Extensions](/blog/chrome-120-beta-whats-new-for-extensions/). This release also marks a major milestone as it removes the final two items (userScripts, file handler on ChromeOS) from the [list of critical platform gaps](/docs/extensions/migrating/known-issues/). 
+[Chrome 120 Beta](/blog/chrome-120-beta/) was recently released. For a summary of the important updates relevant to extension developers, read our new blog post:  [What's new in Chrome 120 for Extensions](/blog/chrome-120-beta-whats-new-for-extensions/). This release also marks a major milestone as it removes the final two items (userScripts, file handler on ChromeOS) from the [list of critical platform gaps](/docs/extensions/migrating/known-issues/). 
 
 ### PSA: Change to handling of privacy policy URLs in Developer Dashboard {: #privacy-policy-per-item }
 
