@@ -124,7 +124,25 @@ Chromium issues: [772558](https://crbug.com/772558).
 
 These are some noteworthy fixes and improvements in this release:
 
-
+- **Performance**: Fixed the sometimes missing LCP indicator in the recording ([1487136](https://crbug.com/1487136)).
+- Speculative loads: Fixed the full URLs for targets in the drop-down menu in the **Network** panel ([1471020](https://crbug.com/1471020)).
+- **Coverage**:
+  - Fixed line-by-line coverage for pretty-printed code ([1464974](https://crbug.com/1464974)).
+  - The coverage information now updated on page reload ([1494457](https://crbug.com/1494457)).
+- **Console**:
+  - Fixed partial text selection in messages ([1487449](https://crbug.com/1487449)).
+  - Fixed the flickering of autocomplete drop-down ([1487453](https://crbug.com/1487453)).
+  - Supported parentheses in stack paths and URLs in stack traces ([1473926](https://crbug.com/1473926)).
+- **Sources**: Supported the syntax highlighting of the TypeScript `using` keyword ([1490515](https://crbug.com/1490515)).
+- **Quick Open** menu now shows private methods ([1492957](https://crbug.com/1492957)).
+- **Application** > **Background services**: The top action bar now wraps text when resizing ([1487276](https://crbug.com/1487276)).
+- **Elements** > **Styles**:
+  - Fixed the resolution of the inherited CSS variables for slotted elements ([1492162](https://crbug.com/1492162)).
+  - When disabling a CSS property, its comments are now stripped to fix syntax breaks ([1101224](https://crbug.com/1101224)).
+- **Network**: The **Priority** column now shows a tooltip with information on initial priority when **Big request rows** are enabled ([1495735](https://crbug.com/1495735)).
+- Deprecations:
+  - The **Color format** setting has been disabled in previous version and is now removed.
+  - The Delete all overrides option in **Sources** is now removed due to low usage after the [streamlining of overrides](blog/new-in-devtools-117/#overrides) ([1473681](https://crbug.com/1473681)). 
 
 <!-- $contentEnd -->
 
