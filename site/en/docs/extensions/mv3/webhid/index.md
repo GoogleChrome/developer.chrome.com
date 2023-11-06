@@ -27,7 +27,7 @@ No manifest keys are needed for this API.
 
 ## Supporting contexts
 
-This API may be used in any extension component. Although this API cannot be used in web service workers, most of its methods and properties can be used in extension service workers. See the next section for details.
+This API may be used in any context. The `WebHID.requestDevice()` method cannot be used in extension service workers. See the next section for details.
 
 ## Chrome extension differences
 
