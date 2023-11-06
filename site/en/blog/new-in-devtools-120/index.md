@@ -89,6 +89,31 @@ When you attempt to paste code, the **Sources** panel now shows you the **Do you
 
 Chromium issue: [345205](https://crbug.com/345205).
 
+## Enhanced ignore listing {: #ignore-listing }
+
+## Default regular expression {: #default-regex }
+
+This version enables the default regular expression as a custom exclusion rule in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](docs/devtools/settings/ignore-list/). To help you focus on only your code, the **Debugger** will now skip scripts from `/node_modules/` and `/bower_components/` and won't stop on exceptions thrown by them.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YW04UKu8dXAxIby609b1.png", alt="The before and after adding a regular expression.", width="800", height="461" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/ae9af17d55a76abc959667bc61d36df50cd64617 #}
+
+Chromium issue: [1496301](https://crbug.com/1496301).
+
+## `x_google_ignoreList` renamed into `ignoreList` in source maps {: #ignore-list-spec }
+
+The [source maps specification](https://sourcemaps.info/spec.html) has [adopted](https://github.com/tc39/source-map-spec/pull/19) the `ignoreList` field instead of `x_google_ignoreList` and DevTools now supports the new name with a fallback for the old one. Frameworks and bundlers can now use the new field name.
+
+Source maps let you debug the code you wrote rather than minified code served by your website.
+
+For more information on source maps, see:
+
+- [What are source maps](https://web.dev/articles/source-maps)
+- [Debug your original code instead of deployed with source maps](/docs/devtools/javascript/source-maps/)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a5ef7b0545e43e68e5e4ebcdd309aa3c6c927598 #}
+
 ## New input mode toggle during remote debugging {: #remote-input-mode }
 
 You can now toggle between touch and mouse input when debugging a Chrome tab remotely. For example, when you run a Chrome instance with the `--remote-debugging-port=<port>` and connect to this network target via `chrome://inspect/#devices`.

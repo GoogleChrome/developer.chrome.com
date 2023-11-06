@@ -34,7 +34,7 @@ In {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt
 
 To make the debugger skip known third-party scripts, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="22", height="22" %} **Settings** > **Ignore List** > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Automatically add known third-party scripts to ignore list**.
 
-DevTools adds third-party scripts to the ignore list based on the [x_google_ignoreList](/articles/x-google-ignore-list/) property in source maps. Frameworks and bundlers need to supply this information.
+DevTools adds third-party scripts to the ignore list based on the [ignoreList](/articles/x-google-ignore-list/) property in source maps. Frameworks and bundlers need to supply this information.
 
 For example, frameworks like Angular and Nuxt support this feature. 
 
