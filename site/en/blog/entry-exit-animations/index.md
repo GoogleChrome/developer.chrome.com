@@ -47,7 +47,7 @@ From Chrome 116, you can use `display` and `content-visibility` in keyframe rule
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/nR8AB8giViUZoVP1MPbW.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/nGESuHr9Rtn7dkzAc3TD.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -109,7 +109,7 @@ document.querySelector('.delete-btn').addEventListener('click', () => {
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/Ts6F4ogBjgHDJngriVQC.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/VKs7S8xmnliy21dgZ27M.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -151,7 +151,7 @@ If you are using the transition shorthand, make sure to use `transition-behavior
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/nR8AB8giViUZoVP1MPbW.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/1hRaIHkz4ZwLfTXfxSzp.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -238,7 +238,7 @@ Now you have both an entry and exit state for these TODO list items:
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/QnF619KxDkLxSxMhSkD4.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/HmighBYapV54CzIQHyRB.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -280,7 +280,7 @@ dialog {
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/H9CgEK0A0Czus3OCgaTF.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/0uMAi2p1kL3AyGyf8HXv.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -333,7 +333,7 @@ When animating a popover, use the `:popover-open` pseudo class instead of the `o
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/6IkoC57l8SL6whYJmt19.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/MmE1lWPcXdNcPioFuFE4.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -353,7 +353,7 @@ Finally, to fade out a `popover` or `dialog` from the top layer, add the `overla
 
 <figure>
   {% Video 
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/kPZ5Ds1LJQ72ZAiMcaJX.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/z23xg0HvXRov54wGpIft.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -371,7 +371,7 @@ Instead, include `overlay` in the transition or animation to animate `overlay` a
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/6kjtLdvlpz8ObkcbG2jV.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/cTlau9DlLlB4PjCXF82i.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -437,7 +437,7 @@ Now, the browser can handle the fade out and morph of each card to its new posit
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/wMW49SOG7oU7eHknuTTV.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/pNFKxuktq56WGIep1hDL.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -455,7 +455,7 @@ Another example of where this can be handy is with the add/remove list items dem
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/u6bAD6CY3jwR9oq0VeJ1.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/1GSCxOlU2WjtX9Y5DjXk.mp4",
     autoplay="true",
     loop="true",
     muted="true",
