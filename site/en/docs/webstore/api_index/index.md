@@ -82,11 +82,11 @@ For Items Resource details, see the [resource representation][cws-resource]. URI
 }
 ```
 
-<table id="properties"><thead><tr><th>Property name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr id="id"><td><code>id</code></td><td><code>string</code></td><td>Unique ID of the item.</td></tr><tr id="itemError"><td><code>itemError[]</code></td><td><code>list</code></td><td>Detail human-readable status of the operation, in English only. Same error messages are displayed when you upload your app to the Chrome Web Store.</td></tr><tr id="kind"><td><code>kind</code></td><td><code>string</code></td><td>Identifies this resource as an Item. Value: the fixed string <code>"chromewebstore#item"</code>.</td></tr><tr id="publicKey"><td><code>publicKey</code></td><td><code>string</code></td><td>Public key of this item.</td></tr><tr id="uploadState"><td><code>uploadState</code></td><td><code>string</code></td><td>Status of the operation.<br><br>Acceptable values are:<ul><li>"<code>FAILURE</code>"</li><li>"<code>IN_PROGRESS</code>"</li><li>"<code>NOT_FOUND</code>"</li><li>"<code>SUCCESS</code>"</li></ul></td></tr></tbody></table>
+<table id="properties"><thead><tr><th>Property name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr id="id"><td><code>id</code></td><td>string</td><td>Unique ID of the item.</td></tr><tr id="itemError"><td><code>itemError[]</code></td><td>list</td><td>Detail human-readable status of the operation, in English only. Same error messages are displayed when you upload your app to the Chrome Web Store.</td></tr><tr id="kind"><td><code>kind</code></td><td>string</td><td>Identifies this resource as an Item. Value: the fixed string <code>"chromewebstore#item"</code>.</td></tr><tr id="publicKey"><td><code>publicKey</code></td><td>string</td><td>Public key of this item.</td></tr><tr id="uploadState"><td><code>uploadState</code></td><td>string</td><td>Status of the operation.<br><br>Acceptable values are:<ul><li>"<code>FAILURE</code>"</li><li>"<code>IN_PROGRESS</code>"</li><li>"<code>NOT_FOUND</code>"</li><li>"<code>SUCCESS</code>"</li></ul></td></tr></tbody></table>
 
 ## Get
 
-Gets a Chrome Web Store item. Provide `projection="DRAFT"` (case sensitive) in URL as a URL Parameter.
+Gets a Chrome Web Store item. Provide `projection="DRAFT"` (case sensitive) as a URL Parameter.
 
 ### Request
 
@@ -98,7 +98,7 @@ GET https://www.googleapis.com/chromewebstore/v1.1/items/itemId
 
 #### Parameters
 
-<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Path parameters</b></td></tr><tr id="itemId"><td><code>itemId</code></td><td><code>string</code></td><td>Unique identifier representing the Chrome App, Chrome Extension, or the Chrome Theme.</td></tr><tr><td colspan="3"><b>Optional query parameters</b></td></tr><tr id="projection"><td><code>projection</code></td><td><code>string</code></td><td>Determines which subset of the item information to return.<br><br>Acceptable values are:<ul><li>"<code>DRAFT</code>": Return information extracted from the current draft.</li><li>"<code>PUBLISHED</code>": Return information extracted from the published item draft.</li></ul>Note that only <code>"DRAFT"</code> is supported at this time.</td></tr></tbody></table>
+<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Path parameters</b></td></tr><tr id="itemId"><td><code>itemId</code></td><td>string</td><td>Unique identifier representing the Chrome App, Chrome Extension, or the Chrome Theme.</td></tr><tr><td colspan="3"><b>Optional query parameters</b></td></tr><tr id="projection"><td><code>projection</code></td><td>string</td><td>Determines which subset of the item information to return.<br><br>Acceptable values are:<ul><li>"<code>DRAFT</code>": Return information extracted from the current draft.</li><li>"<code>PUBLISHED</code>": Return information extracted from the published item draft.</li></ul>Note that only <code>"DRAFT"</code> is supported at this time.</td></tr></tbody></table>
 
 #### Authorization
 
@@ -134,7 +134,7 @@ POST https://www.googleapis.com/upload/chromewebstore/v1.1/items
 
 #### Parameters
 
-<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Required query parameters</b></td></tr><tr id="uploadType_id"><td><code>uploadType</code></td><td><code>string</code></td><td>The type of upload request to the <strong>/upload</strong> URI. The only accepted value is <code>media</code>: a simple upload of the media data.</td></tr><tr><td colspan="3"><b>Optional query parameters</b></td></tr><tr id="publisherEmail"><td><code>publisherEmail</code></td><td><code>string</code></td><td>The email of the publisher who owns the items. Defaults to the caller's email address.</td></tr></tbody></table>
+<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Required query parameters</b></td></tr><tr id="uploadType_id"><td><code>uploadType</code></td><td>string</td><td>The type of upload request to the <strong>/upload</strong> URI. The only accepted value is <code>media</code>: a simple upload of the media data.</td></tr><tr><td colspan="3"><b>Optional query parameters</b></td></tr><tr id="publisherEmail"><td><code>publisherEmail</code></td><td>string</td><td>The email of the publisher who owns the items. Defaults to the caller's email address.</td></tr></tbody></table>
 
 #### Authorization
 
@@ -169,7 +169,7 @@ POST https://www.googleapis.com/chromewebstore/v1.1/items/itemId/publish
 
 #### Parameters
 
-<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Path parameters</b></td></tr><tr id="itemId"><td><code>itemId</code></td><td><code>string</code></td><td>The ID of the item to publish.</td></tr><tr><td colspan="3"><b>Optional query parameters</b></td></tr><tr id="publishTarget"><td><code>publishTarget</code></td><td><code>string</code></td><td>Provide defined <code>publishTarget</code> in URL (case sensitive): <code>publishTarget="trustedTesters"</code> or <code>publishTarget="default"</code>. Defaults to <code>publishTarget="default"</code>.</td></tr></tbody></table>
+<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Path parameters</b></td></tr><tr id="itemId"><td><code>itemId</code></td><td>string</td><td>The ID of the item to publish.</td></tr><tr><td colspan="3"><b>Optional query parameters</b></td></tr><tr id="publishTarget"><td><code>publishTarget</code></td><td>string</td><td>Provide defined <code>publishTarget</code> in URL (case sensitive): <code>publishTarget="trustedTesters"</code> or <code>publishTarget="default"</code>. Defaults to <code>publishTarget="default"</code>.</td></tr></tbody></table>
 
 #### Request body
 
