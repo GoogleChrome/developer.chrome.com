@@ -132,6 +132,18 @@ To learn the basics of using the **Lighthouse** panel in DevTools, see [Lighthou
 
 Chromium issues: [772558](https://crbug.com/772558).
 
+## Accessibility improvements {: #accessibility }
+
+This version has the following accessibility improvements:
+
+- Screen readers will now announce the status (checked or unchecked) of checkboxes under **Sources** > **Breakpoints**.
+- You can now access the **Hide issues like this** drop-down menu with the keyboard.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/2b96e9e114928bb3df9e594adb385059285e56c7 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/39f76f2c6ae4f3fd9193606682e0e4d0ab3f866e #}
+
+Chromium issues: [1488645](https://crbug.com/1488645), [1484918](https://crbug.com/1484918).
+
 ## Miscellaneous highlights {: #misc }
 
 These are some noteworthy fixes and improvements in this release:
