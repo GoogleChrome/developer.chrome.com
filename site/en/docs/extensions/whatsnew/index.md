@@ -15,6 +15,12 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
+### Blog post: What's new in Chrome 120 for Extensions {: #blog-whats-new-extensions-chrome-120 }
+
+<p class="color-secondary-text type--caption">Posted on <time>November 6, 2023</time></p>
+
+[Chrome 120 Beta](/blog/chrome-120-beta/) just got out. For a summary of the important updates for Extension developers, read our new blog post:  [What's new in Chrome 120 for Extensions](/blog/chrome-120-beta-whats-new-for-extensions/). This release also marks a major milestone as it removes the final two items (userScripts, file handler on ChromeOS) from the [list of critical platform gaps](/docs/extensions/migrating/known-issues/). 
+
 ### PSA: Change to handling of privacy policy URLs in Developer Dashboard {: #privacy-policy-per-item }
 
 <p class="color-secondary-text type--caption">Posted on <time>October 30, 2023</time></p>
