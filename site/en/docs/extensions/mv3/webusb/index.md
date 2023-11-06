@@ -22,7 +22,7 @@ No manifest keys are needed for this API.
 
 ## Supporting contexts
 
-This API may be used in any context. The `WebUSB.requestDevice()` method cannot be used in extension service workers. See the next section for details.
+This API may be used in almost any context; The `WebUSB.requestDevice()` method cannot be used in extension service workers. See the next section for details.
 
 ## Chrome extension differences
 
@@ -41,7 +41,7 @@ myButton.addEventListener("click", async () => {
 });
 ```
 
-{% Label %}serviceworker.js{% endLabel %}
+{% Label %}service-worker.js{% endLabel %}
 
 ```javascript
 chrome.runtime.onMessage.addListener(async (message) => {
