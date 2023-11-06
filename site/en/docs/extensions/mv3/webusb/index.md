@@ -30,7 +30,6 @@ Although WebUSB is available to extension service workers, [`WebUSB.requestDevic
 
 The following code follows a typical pattern by calling `requestDevice()` as part of a permissions flow requiring a user gesture. When the device is acquired it sends a message to the service worker, which can then retrieve the device using [`getDevices()`](https://developer.mozilla.org/docs/Web/API/USB/getDevices).
 
-
 {% Label %}popup.js:{% endLabel %}
 
 ```javascript
