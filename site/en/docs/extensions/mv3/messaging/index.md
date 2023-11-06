@@ -146,7 +146,7 @@ chrome.runtime.onConnect.addListener(function(port) {
 ### Port lifetime {: #port-lifetime }
 
 Ports are designed as a two-way communication method between different parts of the extension. A top-level frame is the smallest part of an extension that can use a port.
-When part of an extension calls [`tabs.connect()][tabs-connect`], [`runtime.connect()`][runtime-connect] or [`runtime.connectNative()`][runtime-connect-native], it creates a [Port][runtime-port] that can immediately
+When part of an extension calls [`tabs.connect()`][tabs-connect], [`runtime.connect()`][runtime-connect] or [`runtime.connectNative()`][runtime-connect-native], it creates a [Port][runtime-port] that can immediately
 send messages using [`postMessage()`][runtime-post-msg].
 
 If there are multiple frames in a tab, calling [`tabs.connect()`][tabs-connect] invokes
@@ -227,8 +227,8 @@ port.postMessage(...);
 
 Extensions can also receive and respond to messages from other webpages, but can't send messages
 to webpages. To send messages from a webpage to an extension,
-specify in your `manifest.json` which websites you want to communicate with using [`"externally
-connectable"`][43]. For example:
+specify in your `manifest.json` which websites you want to communicate with using
+the [`"externally_connectable"`][externally-connectable] manifest key. For example:
 
 {% Label %}manifest.json{% endLabel %}
 
@@ -343,6 +343,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 {% endCompare %}
 
 [doc-promises]: /docs/extensions/mv3/promises/#compare-to-callback
+[externally-connectable]: /docs/extensions/mv3/manifest/externally_connectable/
 [mdn-promise]: https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Promises
 [native-client]: /docs/extensions/mv3/nativeMessaging/#native-messaging-client
 [native-host]: /docs/extensions/mv3/nativeMessaging/#native-messaging-host
