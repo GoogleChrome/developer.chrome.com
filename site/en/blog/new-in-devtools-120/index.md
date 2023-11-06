@@ -82,6 +82,18 @@ When you attempt to paste code, the **Sources** panel now shows you the **Do you
 
 Chromium issue: [345205](https://crbug.com/345205).
 
+## New input mode toggle during remote debugging {: #remote-input-mode }
+
+You can now toggle between touch and mouse input when debugging a Chrome tab remotely. For example, when you run a Chrome instance with the `--remote-debugging-port=<port>` and connect to this network target via `chrome://inspect/#devices`.
+
+Watch the video to see input mode toggling in action.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Mux9Dh4PazeINtyFNSYg.mp4", width="800", height="479", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/28f1262c413523433c8252ae046cabbb97d6211e #}
+
+Chromium issue: [1410433](https://crbug.com/1410433).
+
 ## Event listener breakpoints in web workers and worklets {: #worker-breakpoints }
 
 When you set an event breakpoint in **Sources** > **Event Listener Breakpoints**, in addition to pausing on this event on your website, the **Debugger** now also pauses when the corresponding event happens in a [web worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API#worker_types) or [worklet](https://developer.mozilla.org/docs/Web/API/Worklet) of any type, including the [Shared Storage Worklet](/docs/privacy-sandbox/shared-storage/#how-does-shared-storage-work).
@@ -142,7 +154,7 @@ These are some noteworthy fixes and improvements in this release:
 - **Network**: The **Priority** column now shows a tooltip with information on initial priority when **Big request rows** are enabled ([1495735](https://crbug.com/1495735)).
 - Deprecations:
   - The **Color format** setting has been disabled in previous version and is now removed.
-  - The Delete all overrides option in **Sources** is now removed due to low usage after the [streamlining of overrides](blog/new-in-devtools-117/#overrides) ([1473681](https://crbug.com/1473681)). 
+  - The Delete all overrides option in **Sources** is now removed due to low usage after the [streamlining of overrides](blog/new-in-devtools-117/#overrides) ([1473681](https://crbug.com/1473681)).
 
 <!-- $contentEnd -->
 
