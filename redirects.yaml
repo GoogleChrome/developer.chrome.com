@@ -504,6 +504,24 @@ redirects:
 - from: /docs/webstore/spam-faq
   to: /docs/webstore/program-policies/spam-faq
 
+- from: /docs/webstore/webstore_api/items/get/
+  to: /docs/webstore/api_index/#get
+
+- from: /docs/webstore/webstore_api/items/insert/
+  to: /docs/webstore/api_index/#insert
+
+- from: /docs/webstore/webstore_api/items/publish/
+  to: /docs/webstore/api_index/#publish
+
+- from: /docs/webstore/webstore_api/items/update/
+  to: /docs/webstore/api_index/#update
+
+- from: /docs/webstore/webstore_api/items/#resource
+  to: /docs/webstore/api_index/#resource
+
+- from: /docs/webstore/webstore_api/items/
+  to: /docs/webstore/api_index/#items
+
 - from: /webview/overview
   to: /docs/multidevice/android/overview/
 
