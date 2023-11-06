@@ -108,6 +108,16 @@ When you set an event breakpoint in **Sources** > **Event Listener Breakpoints**
 
 Chromium issue: [1445175](https://crbug.com/1445175).
 
+## Elements now shows URLs for `#document` nodes {: #document-urls }
+
+To let you debug iframes easier, the Elements panel now displays `documentURL` next to `#document` nodes.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/afcWfDe9f4Xf1G7Bp062.png", alt="The before and after shows documentURL next to #document node.", width="800", height="401" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/25e7a0a631115e2649c7b40ec301ca513961a264 #}
+
+Chromium issue: [1376976](https://crbug.com/1376976).
+
 ## Preloading renamed into Speculative loading {: #speculative-loading }
 
 To avoid overusing the previous term and better reflect the behavior, **Application** > **Preloading** has been renamed into **Speculative loads**. [Speculative loading](/blog/prerender-pages/) allows a [near-instant page load](/blog/prerender-pages/#impact-of-prerendering) based on speculation rules that [you can define](/blog/prerender-pages/#the-speculation-rules-api) for your website to prerender and prefetch most navigated-to pages.
