@@ -41,9 +41,16 @@ To analyze your cookies:
 1. [Open DevTools](/docs/devtools/open/) and navigate to the **Privacy Sandbox** panel. This panel might be hidden behind the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ekcx09RfcNTMEi60n8Jj.svg", alt="More tabs.", width="20", height="20" %} drop-down button at the top.
 1. Open the **Cookies** section and click **Analyze this tab**. If the tool didn't find any cookies, try reloading the page.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/zQo1rh5VHAhVGMamCjo9.png", alt="The Privacy Sandbox Analysis Tool.", width="800", height="652" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pd5Rji1qdvVUZyzll1WS.png", alt="The Privacy Sandbox Analysis Tool.", width="800", height="567" %}
 
-For more information on how to use the Privacy Sandbox Analysis Tool, see its [GitHub Wiki](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki/A.-PSAT's-How-To).
+For more information on how to use the [Privacy Sandbox Analysis Tool (PSAT)](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki), see the following:
+
+- [PSAT's How To](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki/A.-PSAT's-How-To).
+- To predict what is likely to happen once the deprecation comes into effect, set up an [Evaluation Environment](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki/B.-Evaluation-Environment).
+- To identify aspects to be affected, see [General Analysis Actions](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki/C.-General-Analysis-Actions).
+- To learn how to analyze common scenarios, including analytics, e-commerce, SSO services, embedded content, and more, check out the demo examples in [Analysis Scenarios](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki/D.-Analysis-Scenarios).
+
+Moreover, see guidance on [Reporting issues](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki/E.-Reporting-Issues-and-Learning-More).
 
 ## Effective Content Security Policy in the Application panel {: #csp }
 
