@@ -88,7 +88,7 @@ Finally, to fade out a `popover` or `dialog` from the top layer, add the `overla
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/kPZ5Ds1LJQ72ZAiMcaJX.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/z23xg0HvXRov54wGpIft.mp4",
     autoplay="true",
     loop="true",
     muted="true",
@@ -104,7 +104,7 @@ Finally, to fade out a `popover` or `dialog` from the top layer, add the `overla
 
 <figure>
   {% Video
-    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/6kjtLdvlpz8ObkcbG2jV.mp4",
+    src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/cTlau9DlLlB4PjCXF82i.mp4",
     autoplay="true",
     loop="true",
     muted="true",
