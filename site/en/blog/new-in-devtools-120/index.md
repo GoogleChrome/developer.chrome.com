@@ -91,7 +91,7 @@ Chromium issue: [345205](https://crbug.com/345205).
 
 ## Enhanced ignore listing {: #ignore-listing }
 
-## Default exclusion pattern {: #default-regex }
+### Default exclusion pattern {: #default-regex }
 
 This version enables the default regular expression as a custom exclusion rule in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](docs/devtools/settings/ignore-list/). To help you focus on only your code, the **Debugger** will now skip scripts from `/node_modules/` and `/bower_components/`.
 
@@ -101,7 +101,7 @@ This version enables the default regular expression as a custom exclusion rule i
 
 Chromium issue: [1496301](https://crbug.com/1496301).
 
-## `x_google_ignoreList` renamed into `ignoreList` in source maps {: #ignore-list-spec }
+### `x_google_ignoreList` renamed into `ignoreList` in source maps {: #ignore-list-spec }
 
 The [source maps specification](https://sourcemaps.info/spec.html) has [adopted](https://github.com/tc39/source-map-spec/pull/19) the `ignoreList` field instead of `x_google_ignoreList` and DevTools now supports the new name with a fallback for the old one. Frameworks and bundlers can now use the new field name.
 
@@ -149,6 +149,18 @@ To let you debug iframes easier, the Elements panel now displays `documentURL` n
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/25e7a0a631115e2649c7b40ec301ca513961a264 #}
 
 Chromium issue: [1376976](https://crbug.com/1376976).
+
+## The new media badge for `<audio>` and `<video>` {: #media }
+
+You can now enable the new media badge for `<audio>` and `<video>` elements in the **Elements** panel. When you click the badge, it takes you to the [**Media** panel](/docs/devtools/media-panel/), so you can debug these elements.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HzQvfQNSiygBdch9UmTt.png", alt="The new media badge for audio and video tags enabled.", width="800", height="522" %}
+
+The DevTools team would like to express gratitude to [Junseo (Jeremy) Yoo](https://chromium.googlesource.com/devtools/devtools-frontend/+/2d6d5624affeb912b95d61fb7267c9cad4686731) for landing this improvement.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/2d6d5624affeb912b95d61fb7267c9cad4686731 #}
+
+Chromium issue: [1448214](https://crbug.com/1448214).
 
 ## Preloading renamed into Speculative loading {: #speculative-loading }
 
