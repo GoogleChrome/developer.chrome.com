@@ -3,7 +3,8 @@ layout: "layouts/doc-post.njk"
 title: "WebHID in extensions"
 seoTitle: "Chrome Extensions: WebHID"
 date: 2023-11-02
-description: A Human Interface Device (HID), which takes input from or provides output to humans, is available in extensions.
+description: The WebHID API, which exposes Human Interface Device (HID) compatible devices to the web, is available in extensions.
+
 ---
 
 A Human Interface Device (HID) takes input from or provides output to humans. It also refers to the HID protocol, a standard for bi-directional communication between a host and a device that is designed to simplify the installation procedure.
@@ -49,7 +50,7 @@ myButton.addEventListener("click", async () => {
 
 ```javascript
 chrome.runtime.onMessage.addListener(async (message) => {
-  if (newMessage === "newDevice") {
+  if (message === "newDevice") {
     const devices = await navigator.hid.getDevices();
     for (const device of devices) {
       // open device connection.

@@ -45,7 +45,7 @@ myButton.addEventListener("click", async () => {
 
 ```javascript
 chrome.runtime.onMessage.addListener(async (message) => {
-  if (newMessage === "newDevice") {
+  if (message === "newDevice") {
     const devices = await navigator.usb.getDevices();
     for (const device of devices) {
       // open device connection.
