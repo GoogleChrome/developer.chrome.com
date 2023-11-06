@@ -244,3 +244,82 @@ chrome.alarms.onAlarm.addListener(() => {
 });
 ```
 {% endCompare %}
+
+## Keep the service worker alive
+
+Service workers are by definition event-driven and will terminate on inactivity. This way Chrome can optimize performance and memory consumption of your extension. Learn more in our [service worker lifecycle documentation](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#idle-shutdown). Exceptional cases might require additional measures to ensure that a service worker stays alive for a longer time.
+
+### Keep a service worker alive until a long-running operation is finished
+
+During long running service worker operations that don't call extension APIs, the service worker might shut down mid operation. Examples include:
+
+* A [`fetch()` request](https://developer.mozilla.org/docs/Web/API/Fetch_API) potentially taking longer than longer than five minutes (e.g. a large download on a potentially poor connection). 
+* A complex asynchronous calculation taking more than 30 seconds.
+
+To extend the service worker lifetime in these cases, you can periodically call a trivial extension API to reset the timeout counter. 
+Please note, that this is only reserved for exceptional cases and in most situations there is usually a better, platform idiomatic, way to achieve the same result.
+
+The following example shows a `waitUntil()` helper function that keeps your service worker alive until a given promise resolves:
+
+```js
+async function waitUntil(promise) = {
+  const keepAlive = setInterval(chrome.runtime.getPlatformInfo, 25 * 1000);
+  try {
+    await promise;
+  } finally {
+    clearInterval(keepAlive);
+  }
+}
+
+waitUntil(someExpensiveCalculation());
+```
+
+{% Aside 'important' %}
+An official API similar to `waitUntil()` is currently being discussed in the WECG. For more detail, see the [discussion on GitHub](https://github.com/w3c/webextensions/issues/416).
+{% endAside %}
+
+### Keep a service worker alive continuously
+
+In rare cases, it is necessary to extend the lifetime indefinitely. We have identified enterprise and education as the biggest use cases, and we specifically allow this there, but we do not support this in general. In these exceptional circumstances, keeping a service worker alive can be achieved by periodically calling a trivial extension API. It is important to note that this recommendation only applies to extensions running on managed devices for enterprise or education use cases. It is not allowed in other cases and the Chrome extension team reserves the right to take action against those extensions in the future. 
+
+Use the following code snippet to keep your service worker alive:
+
+```js
+/**
+ * Tracks when a service worker was last alive and extends the service worker
+ * lifetime by writing the current time to extension storage every 20 seconds.
+ * You should still prepare for unexpected termination - for example, if the
+ * extension process crashes or your extension is manually stopped at
+ * chrome://serviceworker-internals. 
+ */
+let heartbeatInterval;
+
+async function runHeartbeat() {
+  await chrome.storage.local.set({ 'last-heartbeat': new Date().getTime() });
+}
+
+/**
+ * Starts the heartbeat interval which keeps the service worker alive. Call
+ * this sparingly when you are doing work which requires persistence, and call
+ * stopHeartbeat once that work is complete.
+ */
+async function startHeartbeat() {
+  // Run the heartbeat once at service worker startup.
+  runHeartbeat().then(() => {
+    // Then again every 20 seconds.
+    heartbeatInterval = setInterval(runHeartbeat, 20 * 1000);
+  });
+}
+
+async function stopHeartbeat() {
+  clearInterval(heartbeatInterval);
+}
+
+/**
+ * Returns the last heartbeat stored in extension storage, or undefined if
+ * the heartbeat has never run before.
+ */
+async function getLastHeartbeat() {
+  return (await chrome.storage.local.get('last-heartbeat'))['last-heartbeat'];
+}
+```
