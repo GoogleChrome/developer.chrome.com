@@ -28,7 +28,7 @@ Declarative Shadow DOM has been available since Chrome 90 and Edge 91, but it us
 `shadowroot` instead of the standardized `shadowrootmode` attribute.
 {% endAside %}
 
-[Shadow DOM](https://web.dev/shadowdom-v1/) is one of the three Web Components standards, rounded out by [HTML templates](https://developer.mozilla.org/docs/Web/Web_Components/Using_templates_and_slots)
+[Shadow DOM](https://web.dev/articles/shadowdom-v1) is one of the three Web Components standards, rounded out by [HTML templates](https://developer.mozilla.org/docs/Web/Web_Components/Using_templates_and_slots)
 and [Custom Elements](https://developer.mozilla.org/docs/Web/Web_Components/Using_custom_elements). Shadow DOM provides
 a way to scope CSS styles to a specific DOM subtree and isolate that subtree from the rest of the document. The `<slot>` element
 gives us a way to control where the children of a Custom Element should be inserted within its Shadow Tree. These features
@@ -48,7 +48,7 @@ also create their Shadow Roots and set their content. However, many web applicat
 static HTML at build time. This can be an important part of delivering a reasonable experience to visitors who may not be capable
 of running JavaScript.
 
-The justifications for [Server-Side Rendering](https://web.dev/rendering-on-the-web/) (SSR) vary from project to project. Some
+The justifications for [Server-Side Rendering](https://web.dev/articles/rendering-on-the-web) (SSR) vary from project to project. Some
 websites must provide fully functional server-rendered HTML in order to meet accessibility guidelines, others choose to deliver a
 baseline no-JavaScript experience as a way to guarantee good performance on slow connections or devices.
 
@@ -286,7 +286,7 @@ Styles specified this way are also highly optimized: if the same stylesheet is p
 it is only loaded and parsed once. The browser uses a single backing `CSSStyleSheet` that is shared by all of the shadow roots,
 eliminating duplicate memory overhead.
 
-[Constructable Stylesheets](https://web.dev/constructable-stylesheets/) are not supported in Declarative Shadow DOM. This
+[Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) are not supported in Declarative Shadow DOM. This
 is because there is currently no way to serialize constructable stylesheets in HTML, and no way to refer to them when
 populating `adoptedStyleSheets`.
 
@@ -342,7 +342,7 @@ in browsers that support Declarative Shadow DOM because the `<template shadowroo
 
 Declarative Shadow DOM has been available since Chrome 90 and Edge 91, but it used an older non-standard attribute called
 `shadowroot` instead of the standardized `shadowrootmode` attribute. The newer `shadowrootmode` attribute and streaming
-behavior is available in Chrome 111 and Edge Xyz.
+behavior is available in Chrome 111 and Edge 111.
 
 As a new web platform API, Declarative Shadow DOM does not yet have widespread support across all browsers. Browser support
 can be detected by checking for the existence of a `shadowRootMode` property on the prototype of `HTMLTemplateElement`:

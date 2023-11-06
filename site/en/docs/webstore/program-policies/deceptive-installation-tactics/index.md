@@ -18,4 +18,4 @@ date: 2022-11-01
 
 For more information about this policy, see the [Developer FAQ][faq].
 
-[faq]: /docs/webstore/deceptive_installation_tactics/
+[faq]: /docs/webstore/program-policies/deceptive-installation-tactics-faq

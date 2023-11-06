@@ -85,7 +85,7 @@ Chromium 议题：[1238818](https://crbug.com/1238818)，[1268754](https://crbug
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
 另外，您可以在**重放设置**中为所有步骤调整**超时**。展开**重放设置**并编辑**超时**数值。
- 
+
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="用户操作录制的超时设置", width="800", height="530" %}
 
 Chromium 议题：[1257499](https://crbug.com/1257499)
@@ -94,8 +94,8 @@ Chromium 议题：[1257499](https://crbug.com/1257499)
 <!-- ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache } -->
 ## 使用“往返缓存”选项卡确保您的页面可缓存 {: #bfcache }
 
-<!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
-[往返缓存（或 bfcache）](https://web.dev/bfcache/) 是一种浏览器优化，可提供即时的后退和前进导航。
+<!-- [Back/forward cache (or bfcache)](https://web.dev/articles/bfcache) is a browser optimization that enables instant back and forward navigation.  -->
+[往返缓存（或 bfcache）](https://web.dev/articles/bfcache) 是一种浏览器优化，可提供即时的后退和前进导航。
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
 新的**往返缓存**标签页可以帮助您测试您的页面，以确保它们针对 bfcache 进行了优化，并指出任何可能阻止它们符合 bfcache 条件的问题。
@@ -127,8 +127,8 @@ Chromium 议题：[1110752](https://crbug.com/1110752)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="属性边栏过滤", width="800", height="505" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}  
-  
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}
+
 Chromium 议题：[1269674](https://crbug.com/1269674)
 
 
@@ -191,7 +191,7 @@ Chromium 议题：[1263866](https://crbug.com/1263866)
 
 Chromium 议题： [1050021](https://crbug.com/1050021)
 
- 
+
 <!-- ### Keyboard shortcut to expand all search results {: #toggle-search-result } -->
 ### 用于展开所有搜索结果的键盘快捷键 {: #toggle-search-result }
 
@@ -219,8 +219,8 @@ Chromium 议题： [1255073](https://crbug.com/1255073)
 <!-- The **Lighthouse** panel is now running Lighthouse 9. Lighthouse will now list all the elements sharing the same id. -->
 **Lighthouse** 面板现在已运行 Lighthouse 9。Lighthouse 现在将列出所有共享相同 id 的元素。
 
-<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
-重叠元素 id 是一个常见的无障碍（accessibility）问题。例如，`aria-labelledby` 属性中的 id 用于[多个元素](https://web.dev/duplicate-id-aria/)。
+<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/articles/duplicate-id-aria).  -->
+重叠元素 id 是一个常见的无障碍（accessibility）问题。例如，`aria-labelledby` 属性中的 id 用于[多个元素](https://web.dev/articles/duplicate-id-aria)。
 
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 更多的 Lighthouse 更新细节，请参考 [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/)。
@@ -246,7 +246,7 @@ DevTools 升级使用 [CodeMirror 6](https://codemirror.net/6/)。此升级为**
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c1ab112d9002d5c3b3bb70cf2839bac182f0cdb5 #}
 
-Chromium 议题： [1241848](https://crbug.com/1241848) 
+Chromium 议题： [1241848](https://crbug.com/1241848)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
 ## 其他的更新 {: #misc }
@@ -256,7 +256,7 @@ Chromium 议题： [1241848](https://crbug.com/1241848)
 
 <!-- - Properly displaying the waterfall diagram of network requests. Previously, the style was broken. ([1275501](https://crbug.com/1275501))
 - The code highlight was broken when searching in documents with very long lines in the **Sources** panel. It’s now fixed. ([1275496](https://crbug.com/1275496))
-- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972)) 
+- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972))
 - Fixed the missing layout shifts details in the **Summary** section of the **Performance** panel. ([1259606](https://crbug.com/1259606))
 - Support arbitrary characters (e.g. `,`, `.`),  in **Network Search** queries. ([1267196](https://crbug.com/1267196)) -->
 - 修复网络请求的瀑布图。([1275501](https://crbug.com/1275501))
@@ -280,12 +280,12 @@ Chromium 议题： [1241848](https://crbug.com/1241848)
 <!-- The **Endpoints** section is now available. It gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header. -->
 这次我们加入了**端点**部分。它为您提供了在 `Reporting-Endpoints` 标头中配置的所有端点的概述。
 
-<!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
-浏览 [Reporting API](https://web.dev/reporting-api/) 文档，以学习如何使用 Reporting API 来监控违规网页，过时的API调用以及更多。
+<!-- Learn to use the [Reporting API](https://web.dev/articles/reporting-api) to monitor security violations, deprecated API calls, and more. -->
+浏览 [Reporting API](https://web.dev/articles/reporting-api) 文档，以学习如何使用 Reporting API 来监控违规网页，过时的API调用以及更多。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt=" Reporting API 窗格", width="800", height="560" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #}
 
 Chromium 议题： [1200732](https://crbug.com/1200732)
 

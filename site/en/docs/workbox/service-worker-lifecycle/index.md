@@ -197,7 +197,7 @@ Browsers will check for updates to a service worker when:
 
 - The user navigates to a page within the service worker's scope.
 - [`navigator.serviceWorker.register()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
-is called with a URL different from the currently installed service worker&mdash;[but don't change a service worker's URL](https://web.dev/service-worker-lifecycle/#avoid-url-change)!
+is called with a URL different from the currently installed service worker&mdash;[but don't change a service worker's URL](https://web.dev/articles/service-worker-lifecycle#avoid_url_change)!
 - [`navigator.serviceWorker.register()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
 is called with the same URL as the installed service worker,
 but with a different scope.
@@ -233,7 +233,7 @@ The browser automatically performs update checks when there's a navigation to a 
 Concerning updates, registration logic generally shouldn't change.
 Yet, one exception might be if sessions on a website are long-lived.
 This can happen in single page applications where
-[navigation requests](https://web.dev/handling-navigation-requests/) are rare,
+[navigation requests](https://web.dev/articles/handling-navigation-requests) are rare,
 since the application typically encounters one navigation request at the start of the application's lifecycle.
 In such situations, a manual update can be triggered on the main thread:
 
@@ -348,6 +348,6 @@ With that understanding, service worker behaviors should seem more logical than 
 
 For those interested in a deeper dive into this subject,
 it's worth checking out
-[this article by Jake Archibald](https://web.dev/service-worker-lifecycle/).
+[this article by Jake Archibald](https://web.dev/articles/service-worker-lifecycle).
  There's tons of nuance in how the whole dance around the service lifecycle goes,
  but it _is_ knowable, and that knowledge will go far when using Workbox.

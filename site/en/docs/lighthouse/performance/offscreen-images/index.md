@@ -46,7 +46,7 @@ plugin](https://extensions.joomla.org/instant-search/?jed_live%5Bquery%5D=amp).
 ### Magento
 
 Consider modifying your product and catalog templates to make use of the web
-platform's [lazy loading](https://web.dev/browser-level-image-lazy-loading/) feature.
+platform's [lazy loading](https://web.dev/articles/browser-level-image-lazy-loading) feature.
 
 ### WordPress
 

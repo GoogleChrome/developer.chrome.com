@@ -1,16 +1,15 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Using your Google Analytics account with the Chrome Web Store"
+title: "Use your Google Analytics account with the Chrome Web Store"
 seoTitle: "Using your Google Analytics account with the Chrome Web Store"
 date: 2023-08-02
-description: The Chrome Web Store offers integration with Google Analytics, which allows you to see analytics for your Chrome Web Store listing in addition to the view offered in the Developer Dashboard.
+description: See analytics for your Chrome Web Store listing in addition to the metrics offered in the Developer Dashboard.
 ---
 
 The Chrome Web Store offers integration with Google Analytics. This allows you to see analytics for
 your Chrome Web Store listing in addition to the view offered in the Developer Dashboard.
 
-If you’re instead looking to track usage of your extension, see
-[Using Google Analytics 4][extensions-ga4].
+To track usage of your extension, see [Using Google Analytics 4][extensions-ga4].
 
 ## Opt-in to Google Analytics {: #opt-in }
 

@@ -79,7 +79,7 @@ the accompanied code example can be found
 [here](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/wasm/).
 For the basic tutorial on how to use Emscripten and WebAssembly (especially the
 Emscripten glue code), please take a look at
-[this article](https://web.dev/emscripting-a-c-library/).
+[this article](https://web.dev/articles/emscripting-a-c-library).
 
 #### Setting Up
 

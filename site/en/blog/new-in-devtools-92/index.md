@@ -145,7 +145,7 @@ Chromium issue: [622660](https://crbug.com/622660)
 
 
 ## Include Compute Intersections in the Performance panel {: #computed-intersections }
-DevTools now show the **Compute Intersections** in the flame chart. These changes help you to identify the [intersection observers](https://web.dev/intersectionobserver-v2/) events and debug on its potential performance overheads.
+DevTools now show the **Compute Intersections** in the flame chart. These changes help you to identify the [intersection observers](https://web.dev/articles/intersectionobserver-v2) events and debug on its potential performance overheads.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Nx3K0Lpst0lICGbtpzsW.png", alt="Compute Intersections in the Performance panel", width="800", height="496" %}
 

@@ -24,7 +24,7 @@ support? What web applications make use of these APIs? Let's find out!
 
 Project Fugu APIs such as [File Handling](/articles/file-handling/),
 [File System Access](/articles/file-system-access/),
-[Async Clipboard](https://web.dev/async-clipboard/), and [Web Share](https://web.dev/web-share/)
+[Async Clipboard](https://web.dev/articles/async-clipboard), and [Web Share](https://web.dev/articles/web-share)
 have brought capabilities to the web that you might expect only to be possible in platform-specific
 apps. For example, you can now double-click an image file so it opens in an associated PWA, make
 modifications, save the changes back to the file, and then copy the image contents over into another
@@ -65,9 +65,9 @@ Project Fugu APIs. These are:
 
 1. [CacheStorage](https://developer.mozilla.org/docs/Web/API/CacheStorage)
 1. [Service Worker](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)
-1. [Web Share](https://web.dev/web-share/)
-1. [Async Clipboard](https://web.dev/async-clipboard/)
-1. [Async Clipboard (Images)](https://web.dev/async-clipboard/)
+1. [Web Share](https://web.dev/articles/web-share)
+1. [Async Clipboard](https://web.dev/articles/async-clipboard)
+1. [Async Clipboard (Images)](https://web.dev/articles/async-clipboard)
 1. [File System Access](/articles/file-system-access/)
 1. [Web Share Target](/articles/web-share-target/)
 1. [Web Share Target (Files)](/articles/web-share-target/)

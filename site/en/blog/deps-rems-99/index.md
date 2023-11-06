@@ -44,7 +44,7 @@ method now returns an array of
 [instead of a GamepadList](https://www.chromestatus.com/feature/5693119438782464).
 `GamepadList` is no longer supported in Chrome. This brings Chrome in line with
 specification and with Gecko and Webkit. For information on Gamepads generally, see [Play
-the Chrome dino game with your gamepad](https://web.dev/gamepad/).
+the Chrome dino game with your gamepad](https://web.dev/articles/gamepad).
 
 ## Update WebCodecs to match the specification
 

@@ -55,6 +55,13 @@ However, some signals may cause the reviewer to examine an extension more closel
 These signals may therefore cause the review to take longer. Review times may also be longer than
 normal after an extension has been rejected or warned.
 
+{% Aside %}
+
+Note that all item submissions—whether for a new item or an update to an existing one—are
+subject to the same review process.
+
+{% endAside %}
+
 ### Notable factors that increase review time  {: #review-time-factors }
 
 Reviews may take longer for extensions that request broad host permissions or sensitive execution
@@ -288,6 +295,10 @@ emails sent to the extension publisher's email address and support tickets.
 Support tickets must be opened using the [One Stop Support][header-support] form, but once a
 ticket is opened all communication takes place over email.
 
+{% Aside %}
+Though the team monitors and responds to various online forums where Chrome extensions are discussed, these platforms are primarily geared towards discussions about extension development and are not intended to be support channels. If you need to raise any concerns, it is recommended to use the CWS Support form.
+{% endAside %}
+
 ### Automated emails {: #emails }
 
 In all but the most extreme policy violations, the Chrome Web Store will send developers automated
@@ -298,7 +309,8 @@ violation, and provide the developer with guidance on how to appeal the verdict.
 ### One Stop Support {: #support }
 
 The [One Stop Support contact form][page-oss-form] provides Chrome Web Store publishers with a
-single contact point to request assistance with a variety of issues.
+single contact point to request assistance with a variety of issues. Concerns that necessitate escalation, such as issues with dashboard stats, transfers between developers, and developer account recovery, may take longer than seven days to answer due to the complexity and in-depth investigation required to identify the root cause or explanation.
+
 
 {% Details %}
 {% DetailsSummary %}
@@ -342,6 +354,10 @@ can reply to the initial case email to request an update.
 Please only open one support request per enforcement action. Multiple support requests makes it more
 difficult for the agents assisting you to find and keep track of all of the relevant information
 about your issue.
+
+{% Aside %}
+As a developer in the European Union, if you have concerns related to the Platform To Business (P2B) regulations in Europe, you can raise them by filing through the [One Stop Support contact form][page-oss-form].
+{% endAside %}
 
 [doc-dpp]: /docs/webstore/program-policies
 [doc-host-perms]: /docs/extensions/mv3/declare_permissions/

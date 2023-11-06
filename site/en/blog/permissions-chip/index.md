@@ -117,7 +117,7 @@ without any interaction.
 
 In the short term, and until users get used to the new UI, it is likely that site owners will observe
 lower grant rates for sites, especially for those that auto-request permissions without priming or
-demanding a user gesture (which is considered a [bad practice](https://web.dev/notification-on-start/) anyway). This
+demanding a user gesture (which is considered a [bad practice](https://web.dev/articles/notification-on-start) anyway). This
 acknowledged downside is vastly outweighed by the less interruptive experience.
 
 ### Best practices

@@ -28,7 +28,7 @@ tags:
 
 ## File handling in Photopea
 
-As an [installable PWA](https://web.dev/install-criteria/), Photopea runs in a standalone window when the user chooses to install the app. Doing so unlocks a PWA super power, which Photopea makes heavy use of: [file handling](/articles/file-handling/).
+As an [installable PWA](https://web.dev/articles/install-criteria), Photopea runs in a standalone window when the user chooses to install the app. Doing so unlocks a PWA super power, which Photopea makes heavy use of: [file handling](/articles/file-handling/).
 
 ### The declarative part of the File Handling API
 

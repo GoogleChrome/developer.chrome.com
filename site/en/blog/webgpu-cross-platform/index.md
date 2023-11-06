@@ -5,7 +5,7 @@ description: "Learn how to build an app with WebGPU for the web and specific pla
 hero: "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/C9CyIqxrytYlH4uqCbgX.jpg"
 alt: "Landscape photography of person's hand in front of sunrise."
 date: 2023-07-20
-#updated: YYYY-MM-DD
+updated: 2023-10-30
 authors:
   - beaufortfrancois
 tags:
@@ -81,13 +81,13 @@ $ git submodule add https://dawn.googlesource.com/dawn
 Then, append to the `CMakeLists.txt` file as follows:
 - The CMake `DAWN_FETCH_DEPENDENCIES` option will fetch all Dawn dependencies.
 - The `dawn/` sub folder will be included in the target.
-- Your app will depend on `webgpu_dawn`, `webgpu_cpp`, and `webgpu_glfw` targets so that you can use them in the `main.cpp` file later.
+- Your app will depend on `webgpu_cpp`, `webgpu_dawn`, and `webgpu_glfw` targets so that you can use them in the `main.cpp` file later.
 
 ```cmake
 …
 set(DAWN_FETCH_DEPENDENCIES ON)
 add_subdirectory("dawn" EXCLUDE_FROM_ALL)
-target_link_libraries(app PRIVATE webgpu_dawn webgpu_cpp webgpu_glfw)
+target_link_libraries(app PRIVATE webgpu_cpp webgpu_dawn webgpu_glfw)
 ```
 
 ### Open a window
@@ -336,7 +336,7 @@ if(EMSCRIPTEN)
 else()
   set(DAWN_FETCH_DEPENDENCIES ON)
   add_subdirectory("dawn" EXCLUDE_FROM_ALL)
-  target_link_libraries(app PRIVATE webgpu_dawn webgpu_cpp webgpu_glfw)
+  target_link_libraries(app PRIVATE webgpu_cpp webgpu_dawn webgpu_glfw)
 endif()
 ```
 

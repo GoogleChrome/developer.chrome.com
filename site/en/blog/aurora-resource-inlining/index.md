@@ -106,7 +106,7 @@ context of Angular](https://www.youtube.com/watch?v=yOpy9UMQG-Y).
 Another enhancement involves improving the [First Contentful Paint (FCP)](https://web.dev/fcp) and [Largest
 Contentful Paint (LCP)](https://web.dev/lcp) metrics by inlining critical CSS. The critical CSS of a page includes
 all of the styles used at its initial rendering. To learn more about the topic, check out
-[Defer non-critical CSS](https://web.dev/defer-non-critical-css/).
+[Defer non-critical CSS](https://web.dev/articles/defer-non-critical-css).
 
 We observed that many applications are loading styles synchronously, which blocks application
 rendering. A quick fix is to load the styles asynchronously. Rather than loading the scripts with
@@ -139,9 +139,9 @@ updating the `media` attribute to `all`, and applies the styles to the DOM.
 
 During the time between rendering the HTML and applying the styles the page is partially unstyled.
 When the browser uses the styles, we see flickering, which is a bad user experience and results in
-regressions in [Cumulative Layout Shift (CLS)](https://web.dev/cls/).
+regressions in [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls).
 
-[Critical CSS inlining](https://web.dev/extract-critical-css/), along with asynchronous style loading, can improve
+[Critical CSS inlining](https://web.dev/articles/extract-critical-css), along with asynchronous style loading, can improve
 the loading behavior. The [critters](http://npmjs.com/package/critters) tool finds which styles are
 used on the page, by looking at the selectors in a stylesheet and matching them against the HTML.
 When it finds a match, it considers the corresponding styles as part of the critical CSS, and

@@ -21,7 +21,7 @@ authors:
 
 User-Agent（UA）の情報量削減とは、 [パッシブフィンガープリントに使用される](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control). 可能性のある User-Agent 文字列中の識別情報を最小限に抑える取り組みです。この [変更が展開される](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html), と、すべてのリソース リクエストには情報量が削減された `User-Agent` ヘッダーが含まれるようになります。その結果、いくつかの `Navigator` インターフェース `navigator.userAgent`、`navigator.appVersion`、`navigator.platform` など から返される値の情報量が削減されます。
 
-ウェブ デベロッパーは、サイトのコードの中で User-Agent 文字列のインスタンスや使用に関係する部分を確認し、[User-Agent 文字列の情報量削減に備える](#prepare-and-test) 必要があります。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、[User-Agent Client Hints API の実装](https://web.dev/migrate-to-ua-ch/) が必要になります。
+ウェブ デベロッパーは、サイトのコードの中で User-Agent 文字列のインスタンスや使用に関係する部分を確認し、[User-Agent 文字列の情報量削減に備える](#prepare-and-test) 必要があります。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、[User-Agent Client Hints API の実装](https://web.dev/articles/migrate-to-ua-ch) が必要になります。
 
 User-Agent [の情報量削減のスケジュールに関する最新情報をご確認ください](https://www.chromium.org/updates/ua-reduction)。
 
@@ -48,7 +48,7 @@ User-Agent [の情報量削減のスケジュールに関する最新情報を�
 
 ## 情報量削減後の UA と UA-CH の機能
 
-情報量削減後の UA と UA-CH がどのように機能するかについて、簡単な例を次に示します。より詳細な例については、[User-Agent Client Hints によるユーザーのプライバシーとデベロッパーエクスペリエンスの改善](https://web.dev/user-agent-client-hints/#example-exchange) をご覧ください。
+情報量削減後の UA と UA-CH がどのように機能するかについて、簡単な例を次に示します。より詳細な例については、[User-Agent Client Hints によるユーザーのプライバシーとデベロッパーエクスペリエンスの改善](https://web.dev/articles/user-agent-client-hints#example_exchange) をご覧ください。
 
 ユーザーがブラウザを開き、アドレスバーに「`example.com` 」と入力します。
 
@@ -92,7 +92,7 @@ Critical-CH: Device-Memory
 
 ## UA の情報量削減への準備方法 {: #prepare-and-test}
 
-Stable 版 Chrome で情報量削減後の User-Agent が大規模に利用可能になるのに合わせて、User-Agent 文字列のインスタンスや使用に関係する [サイトのコードをご確認ください](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data) 。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、 [UA-CH API の実装](https://web.dev/migrate-to-ua-ch/)が必要になります。
+Stable 版 Chrome で情報量削減後の User-Agent が大規模に利用可能になるのに合わせて、User-Agent 文字列のインスタンスや使用に関係する [サイトのコードをご確認ください](https://web.dev/articles/migrate-to-ua-ch#audit_collection_and_use_of_user_agent_data) 。User-Agent 文字列を解析することでデバイスのモデル、プラットフォームのバージョン、ブラウザのフルバージョンの情報を取得しているサイトの場合は、 [UA-CH API の実装](https://web.dev/articles/migrate-to-ua-ch)が必要になります。
 
 UA-CH API に更新したら、User-Agent から想定どおりのデータが得られることを確認するためのテストを行います。テスト方法は 3 つありますが、いずれもこれまでより複雑です。
 
@@ -124,7 +124,7 @@ UA-CH API に更新したら、User-Agent から想定どおりのデータが�
 
 ## Client Hints と Critical Hints のサポート
 
-サーバーに返される[デフォルトの Client Hints](https://web.dev/migrate-to-ua-ch/#are-you-only-using-basic-user-agent-data) は 3 つあります。これには、ブラウザー名とメジャー バージョン、ブラウザーがモバイル デバイス上にあるかどうかを示すブール値、およびオペレーティング システム名が含まれます。これらは TLS ハンドシェイクの後に送信されます。これらは既に利用可能で、ブラウザでサポートされています。
+サーバーに返される[デフォルトの Client Hints](https://web.dev/articles/migrate-to-ua-ch#are_you_only_using_basic_user_agent_data) は 3 つあります。これには、ブラウザー名とメジャー バージョン、ブラウザーがモバイル デバイス上にあるかどうかを示すブール値、およびオペレーティング システム名が含まれます。これらは TLS ハンドシェイクの後に送信されます。これらは既に利用可能で、ブラウザでサポートされています。
 
 ただし、サイトをレンダリングするために重要な情報を取得する必要がある場合があります。
 
@@ -155,7 +155,7 @@ Critical Hints を使用する必要がある場合は、 [Critical Hints の信
 
 ## 詳細
 
-- [ユーザー プライバシーとデベロッパーエクスペリエンスの改善に関するウェブデベロッパー向け概要](https://web.dev/user-agent-client-hints/): に関するウェブデベロッパー向け概要
-- [UA 文字列から UA-CH に移行する](https://web.dev/migrate-to-ua-ch/): ためのウェブデベロッパー向けチュートリアル
+- [ユーザー プライバシーとデベロッパーエクスペリエンスの改善に関するウェブデベロッパー向け概要](https://web.dev/articles/user-agent-client-hints): に関するウェブデベロッパー向け概要
+- [UA 文字列から UA-CH に移行する](https://web.dev/articles/migrate-to-ua-ch): ためのウェブデベロッパー向けチュートリアル
 - [User-Agent の情報量削減スニペット](/docs/privacy-sandbox/user-agent/snippets/): （テストのために現在の User-Agent 文字列を情報量削減後の形式に変換するコード スニペット）
 - [プライバシーサンドボックスの詳細](https://web.dev/digging-into-the-privacy-sandbox)

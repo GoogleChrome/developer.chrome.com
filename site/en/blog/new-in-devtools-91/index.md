@@ -46,13 +46,13 @@ Chromium issue: [862450](https://crbug.com/862450)
 
 
 ## New Memory inspector {: #memory-inspector }
-Use the new **Memory inspector** to inspect an `ArrayBuffer` in JavaScript, as well as the Wasm memory. 
+Use the new **Memory inspector** to inspect an `ArrayBuffer` in JavaScript, as well as the Wasm memory.
 
 Open [this demo page](https://memory-inspector.glitch.me/demo-js.html). In the **Sources** panel, open the **demo-js.js** file, and set a breakpoint at line 18.
 
 Refresh the page. Expand the **Scope** section in the right **debugger** pane. Notice the new icon next to the **buffer** value. Click on it to reveal the **Memory Inspector**.
 
-Check out the documentation to learn more about [inspecting JavaScript `ArrayBuffer` and `WebAssembly.Memory`](/docs/devtools/memory-inspector/) with this new Memory inspector. 
+Check out the documentation to learn more about [inspecting JavaScript `ArrayBuffer` and `WebAssembly.Memory`](/docs/devtools/memory-inspector/) with this new Memory inspector.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aDyRZhv31ZQq8X22MkgF.png", alt="Memory inspector", width="800", height="527" %}
 
@@ -61,7 +61,7 @@ Chromium issue: [1166577](https://crbug.com/1166577)
 
 
 ## New badge settings pane in the Elements panel {: #badge-settings }
-You can now selectively enable or disable badges via the **Badge settings** in the **Elements** panel. Use this feature to customize and stay focused on the important badges while inspecting web pages. 
+You can now selectively enable or disable badges via the **Badge settings** in the **Elements** panel. Use this feature to customize and stay focused on the important badges while inspecting web pages.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BliSe8qwK8G6lFvNtmTv.png", alt="badge settings pane in the Elements panel", width="800", height="524" %}
 
@@ -73,7 +73,7 @@ Chromium issue: [1066772](https://crbug.com/1066772)
 
 
 ## Enhanced image preview with aspect ratio information  {: #image-preview }
-Image previews in the **Elements** panel now displays more information on the image - rendered size, rendered aspect ratio, intrinsic size, intrinsic aspect ratio, and file size. 
+Image previews in the **Elements** panel now displays more information on the image - rendered size, rendered aspect ratio, intrinsic size, intrinsic aspect ratio, and file size.
 
 This information helps you better understand your images and apply optimization if you need to.
 
@@ -130,7 +130,7 @@ Chromium issue: [1092093](https://crbug.com/1092093)
 ## Categorize issue types with colors and icons {: #issue-category }
 The **Issues** tab now categorize issues into page errors, upcoming breaking changes, and possible improvements for better severity indication. You can open the **Issues** tab by clicking on the **issue count** button in the **Console**.
 
-- **Page errors (red)**. Issues that have immediate impact for page functionality, such as not setting correct [CORS](https://web.dev/cross-origin-resource-sharing/) headers, etc.
+- **Page errors (red)**. Issues that have immediate impact for page functionality, such as not setting correct [CORS](https://web.dev/articles/cross-origin-resource-sharing) headers, etc.
 - **Upcoming breaking changes (yellow)**. Issues that inform about an upcoming, incompatible change of the web platform that may result in a loss of page functionality (e.g. warning of upcoming [CORS RFC 1918 changes](https://web.dev/cors-rfc1918-feedback)).
 - **Possible improvements (blue)**. Potential improvements on the page, but are currently not impairing basic functionality of the page (e.g. accessibility issues)
 
@@ -144,7 +144,7 @@ Chromium issue: [1183241](https://crbug.com/1183241)
 ## Delete Trust tokens {: #trust-tokens }
 You can now delete trust tokens with the new delete button in the **Trust tokens** pane, under the **Application** panel.
 
-Trust Token is a new API to help combat fraud and distinguish bots from real humans, without passive tracking. Learn how to [get started with Trust Tokens](https://web.dev/trust-tokens/).
+Trust Token is a new API to help combat fraud and distinguish bots from real humans, without passive tracking. Learn how to [get started with Trust Tokens](https://web.dev/articles/trust-tokens).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M3WPcQCDFBydw04zETEV.png", alt="Delete Trust tokens", width="800", height="435" %}
 
@@ -164,7 +164,7 @@ Open this [demo](http://permission-policy-demo.glitch.me/) page. Go to the **App
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4751c1c8dcb151c985b1e54cb1c1a05cb83704b8 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/89cc8730ade0d0018671f19770bacc93b705b9ff #}
- 
+
 Chromium issue: [1158827](https://crbug.com/1158827)
 
 
@@ -191,7 +191,7 @@ Chromium issue: [1186049](https://crbug.com/1186049)
 ### Support for new JavaScript features {: #javascript }
 DevTools now support the new [private brand check](https://v8.dev/features/private-brand-checks) JavaScript language feature, a.k.a `#foo in obj`.
 
-This private brand checks feature extends the [in operator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/in) to support the [private class fields](https://v8.dev/features/class-fields#private-class-fields) testing on any given object. 
+This private brand checks feature extends the [in operator](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/in) to support the [private class fields](https://v8.dev/features/class-fields#private-class-fields) testing on any given object.
 
 Try it out in the **Console** and **Sources** panel. You can inspect the private fields in the **Scope** section under the **debugger** pane as well.
 
@@ -201,7 +201,7 @@ Chromium issue: [11374](https://crbug.com/v8/11374)
 
 
 ### Enhanced support for breakpoints debugging {: #breakpoint }
-DevTools now properly set breakpoints in multiple scripts correctly. Modern JavaScript bundlers (e.g. [Webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/)) support code splitting feature - there are scenarios where one shared component can be included in multiple routes (code splits). 
+DevTools now properly set breakpoints in multiple scripts correctly. Modern JavaScript bundlers (e.g. [Webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/)) support code splitting feature - there are scenarios where one shared component can be included in multiple routes (code splits).
 
 Previously, DevTools was only able to set breakpoints on one raw location. With this latest improvement, DevTools can set breakpoints in all relevant locations correctly.
 
@@ -221,7 +221,7 @@ Chromium issue: [1178305](https://crbug.com/1178305)
 
 
 ### Improved outline of HTML files {: #html-outline }
-DevTools now has better outline support for HTML files. In the **Sources** panel, open a HTML file. You can toggle the code outline with keyboard Cmd + Shift + O in Mac or Ctrl + Shift + O in Windows. 
+DevTools now has better outline support for HTML files. In the **Sources** panel, open a HTML file. You can toggle the code outline with keyboard Cmd + Shift + O in Mac or Ctrl + Shift + O in Windows.
 
 In the example below, DevTools now correctly list all functions in the outline. Previously, DevTools only showed some of the functions.
 

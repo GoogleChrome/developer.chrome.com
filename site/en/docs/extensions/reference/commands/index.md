@@ -276,17 +276,10 @@ If an extension attempts to register a shortcut that is already used by another 
 second extension's shortcut will not register as expected. You can provide a more robust end user
 experience by anticipating this possibility and checking for collisions at install time.
 
-{% Aside %}
-
-`_execute_action` will not appear in the list
-of commands returned by `commands.getAll()`.
-
-{% endAside %}
-
 {% Label %}service-worker.js:{% endLabel %}
 
 ```js
-chrome.runtime.onInstalled.addListener((reason) => {
+chrome.runtime.onInstalled.addListener(({reason}) => {
   if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
     checkCommandShortcuts();
   }

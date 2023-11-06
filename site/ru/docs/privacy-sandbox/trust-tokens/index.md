@@ -11,7 +11,7 @@ authors:
 
 ## Статус реализации
 
-- [Доступно в рамках испытания Origin Trial](https://web.dev/origin-trials/) в Chrome с 84 по 94.
+- [Доступно в рамках испытания Origin Trial](/docs/web-platform/origin-trials/) в Chrome с 84 по 94.
 - [Регистрация для участия в испытании](/origintrials/#/view_trial/2479231594867458049).
 - [Демонстрация](https://trust-token-demo.glitch.me/).
 - [Интеграция с Chrome DevTools](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
@@ -62,7 +62,7 @@ authors:
 12. Объявление отображается на сайте издателя.
 13. Сайт засчитывает показ объявления.
 
-{% Aside %} Подробнее о вызовах JavaScript, используемых в этом примере, см. [«Пример использования API»](https://web.dev/trust-tokens/#sample-api-usage). {% endAside %}
+{% Aside %} Подробнее о вызовах JavaScript, используемых в этом примере, см. [«Пример использования API»](https://web.dev/articles/trust-tokens#sample_api_usage). {% endAside %}
 
 ---
 
@@ -78,6 +78,6 @@ authors:
 ## Дополнительная информация
 
 - [Техническое описание API токенов доверия](https://github.com/dvorak42/trust-token-api)
-- [Начало работы с токенами доверия](https://web.dev/trust-tokens/): обзор для веб-разработчиков
+- [Начало работы с токенами доверия](https://web.dev/articles/trust-tokens): обзор для веб-разработчиков
 - [Знакомство с испытаниями Chrome Origin Trial](https://web.dev/origin-trials)
 - [Погружение в Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)

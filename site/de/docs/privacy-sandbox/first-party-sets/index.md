@@ -13,7 +13,7 @@ authors:
 
 ## Implementierungsstatus
 
-- [In der Origin-Trial](https://web.dev/origin-trials/) für Chrome 89 bis 93.
+- [In der Origin-Trial](/docs/web-platform/origin-trials/) für Chrome 89 bis 93.
 - [Registrieren Sie sich für die Origin-Trial](/origintrials/#/view_trial/988540118207823873).
 - [Chrome-Plattformstatus](https://chromestatus.com/feature/5640066519007232).
 - [Chromium-Projekte](https://www.chromium.org/updates/first-party-sets).

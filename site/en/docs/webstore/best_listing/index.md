@@ -18,6 +18,16 @@ compelling and accurate store listing page.  A quality listing page clearly comm
 item will offer, using the item description, images, and other listing metadata.  You can build and
 maintain your store listing page using the [developer dashboard][devconsole].
 
+Items in the store are ranked or featured in order to make it easier for users to find high quality
+content. Ranking is performed by a heuristic that takes into account ratings from users as well as
+usage statistics, such as the number of downloads vs. uninstalls over time.
+
+Other factors include the following:
+
+- The design is pleasant to the eye.
+- The item provides a clear purpose and fills a real user need.
+- The setup and onboarding flow are intuitive.
+- The item is easy to use.
 
 ## Text
 
@@ -131,7 +141,7 @@ screenshot that is blurry", width="800", height="467" %}
 
 {% Aside %}
 Tip: If your extension supports multiple locales, you can provide locale-specific screenshots as
-described in [Internationalize your extension][i18n-your-screenshots].
+described in [Localize your listing][i18n-your-screenshots].
 {% endAside %}
 
 ### Promotional images: promo tiles and marquee image
@@ -192,5 +202,5 @@ information about your item.
 [devconsole]: https://chrome.google.com/webstore/devconsole
 [extension icon best practices]: /docs/webstore/images/#icon
 [i18n]: /docs/extensions/reference/i18n/
-[i18n-your-screenshots]: /docs/webstore/i18n/#screenshots
+[i18n-your-screenshots]: /docs/webstore/cws-dashboard-listing/#localize-your-listing
 [keyword-spam]: /docs/webstore/spam-faq/#keyword-spam

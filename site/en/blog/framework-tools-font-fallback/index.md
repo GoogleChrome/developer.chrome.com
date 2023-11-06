@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: Framework tools for font fallbacks
-description: 
+description:
   Learn how Next.js, Nuxt.js, and other libraries help to generate fallback font CSS without CLS.
 date: 2023-02-27
 authors:
@@ -14,18 +14,18 @@ tags:
   - aurora-project
 ---
 
-Sites that load fonts with _font-display: swap_ often suffer from a layout shift ([CLS](https://web.dev/cls/)) when the web font loads and is swapped with the fallback font.
+Sites that load fonts with _font-display: swap_ often suffer from a layout shift ([CLS](https://web.dev/articles/cls)) when the web font loads and is swapped with the fallback font.
 
 You can prevent CLS by adjusting the dimensions of the fallback font to match that of the primary font. Properties such as `size-adjust`, `ascent-override`, `descent-override`, and `line-gap-override` in the [`@font-face`](https://developer.mozilla.org/docs/Web/CSS/@font-face) rule can help override the metrics of a fallback font allowing developers more control over how fonts are displayed. You can read more about font-fallbacks and the override properties in this [post](/blog/font-fallbacks/). You can also see a working implementation of this technique in this [demo](https://cultured-rightful-check.glitch.me).
 
-This article explores how font size adjustments are implemented in the Next.js and Nuxt.js frameworks to generate the fallback font CSS and reduce the CLS. It also demonstrates how you can generate fallback fonts using cross-cutting tools such as Fontaine and Capsize. 
+This article explores how font size adjustments are implemented in the Next.js and Nuxt.js frameworks to generate the fallback font CSS and reduce the CLS. It also demonstrates how you can generate fallback fonts using cross-cutting tools such as Fontaine and Capsize.
 
 
 ## Background
 
 _[font-display: swap](/blog/font-display/#swap)_ is generally used to prevent FOIT (Flash of invisible text) and to display contents faster on the screen. The value of `swap` tells the browser that text using the font should be displayed immediately using a system font and to replace the system font only when the custom font is ready.
 
-The biggest issue with `swap` is the jarring effect, where the difference in character sizes of the two fonts results in screen content shifting around. This leads to poor CLS scores, especially for text-heavy websites. 
+The biggest issue with `swap` is the jarring effect, where the difference in character sizes of the two fonts results in screen content shifting around. This leads to poor CLS scores, especially for text-heavy websites.
 
 The following images show an example of the issue. The first image uses `font-display: swap` with no attempt to adjust the size of the fallback font. The second shows how adjusting the size using the CSS `@font-face` rule improves the loading experience.
 
@@ -66,14 +66,14 @@ body {
 </figure>
 
 
-Adjusting the size of the fallback font can be an effective strategy for preventing font loading layout shift, but implementing the logic from scratch can be tricky, as described in [this post about font fallbacks](/blog/font-fallbacks/). Fortunately, several tooling options are already available to make this easier while developing apps. 
+Adjusting the size of the fallback font can be an effective strategy for preventing font loading layout shift, but implementing the logic from scratch can be tricky, as described in [this post about font fallbacks](/blog/font-fallbacks/). Fortunately, several tooling options are already available to make this easier while developing apps.
 
 
 ## How to optimize font fallbacks with Next.js
 
 Next.js provides a built-in way to enable fallback font optimization. This feature is enabled by default when you load fonts using the [@next/font](https://nextjs.org/docs/api-reference/next/font) component.
 
-The [@next/font](https://nextjs.org/docs/api-reference/next/font) component was introduced in Next.js version 13. The component provides an API to import Google Fonts or custom fonts into your pages and includes built-in automatic self-hosting of font files. 
+The [@next/font](https://nextjs.org/docs/api-reference/next/font) component was introduced in Next.js version 13. The component provides an API to import Google Fonts or custom fonts into your pages and includes built-in automatic self-hosting of font files.
 
 When used, the fallback font metrics are automatically calculated and injected into the CSS file.
 
@@ -94,7 +94,7 @@ body {
 
 To migrate to next/font:
 
-1. Move the Roboto font declaration into your Javascript by importing the 'Roboto' function from 'next/font'. The function’s return value will be a class name you can leverage in your component template. 
+1. Move the Roboto font declaration into your Javascript by importing the 'Roboto' function from 'next/font'. The function’s return value will be a class name you can leverage in your component template.
 Remember to add `display: swap` to the configuration object to enable the feature.
 
     ```javascript
@@ -107,7 +107,7 @@ Remember to add `display: swap` to the configuration object to enable the featur
     })
     ```
 
-2. In your component, use the generated class name: 
+2. In your component, use the generated class name:
     ```javascript
     export default function RootLayout({ children }: {
       children: React.ReactNode;
@@ -153,7 +153,7 @@ module.exports = {
 **Note**: There is no plan to support this feature with the newly introduced `app` dir. In the long term, it’s ideal to use `next/font`.
 
 
-## How to adjust font fallbacks with Nuxt 
+## How to adjust font fallbacks with Nuxt
 
 [@nuxtjs/fontaine](https://github.com/nuxt-modules/fontaine) is a module for the Nuxt.js framework that automatically calculates the fallback font metric values and generates the fallback `@font-face` CSS.
 
@@ -215,7 +215,7 @@ You can now use `Roboto override` as the fallback font in your CSS, as shown in 
 
 ## Generating the CSS yourself
 
-Standalone libraries can also help you generate the CSS for fallback font size adjustments. 
+Standalone libraries can also help you generate the CSS for fallback font size adjustments.
 
 ### Using Fontaine library
 
@@ -246,7 +246,7 @@ const options = {
 }
 ```
 
-If you're using Vite, add the plugin like this: 
+If you're using Vite, add the plugin like this:
 ```javascript
 // Vite
 export default {
@@ -308,13 +308,13 @@ Consider the following example: The desired web font is Lobster, falling back to
 
 
 
-1. Import createFontStack from the core package: 
+1. Import createFontStack from the core package:
 
     ```javascript
     import { createFontStack } from '@capsizecss/core';
     ```
 
-2. Import the font metrics for each of the desired fonts (see Font Metrics above): 
+2. Import the font metrics for each of the desired fonts (see Font Metrics above):
     ```javascript
     import lobster from '@capsizecss/metrics/lobster';
     import helveticaNeue from '@capsizecss/metrics/helveticaNeue';
@@ -322,9 +322,9 @@ Consider the following example: The desired web font is Lobster, falling back to
     ```
 
 
-3. Create your font stack, passing the metrics as an array, using the same order as you would via the font-family CSS property. 
+3. Create your font stack, passing the metrics as an array, using the same order as you would via the font-family CSS property.
     ```javascript
-    const { fontFamily, fontFaces } = createFontStack([ 
+    const { fontFamily, fontFaces } = createFontStack([
       lobster,
       helveticaNeue,
       arial,

@@ -16,7 +16,7 @@ tags:
 
 Installed platform apps can be launched even when offline. In this situation they often include a page letting the user know internet access is not available. Some developers even create a full set of features that can be used while offline.
 
-With web apps, the capability to work offline is more recent; it became possible with the launch of the [Service Worker API](/docs/workbox/service-worker-overview/). Also, when websites became installable, PWA added a [requirement](https://web.dev/install-criteria/) to register a service worker and implement its `fetch()` method in order for a web app to be installable.
+With web apps, the capability to work offline is more recent; it became possible with the launch of the [Service Worker API](/docs/workbox/service-worker-overview/). Also, when websites became installable, PWA added a [requirement](https://web.dev/articles/install-criteria) to register a service worker and implement its `fetch()` method in order for a web app to be installable.
 The idea was to incentivize developers to provide their users at least a notice that the app couldn’t be used at the moment.
 
 Now developers won’t need to do anything to get a default offline page. From Chrome 109 on Android, the browser will automatically generate a page that lets the user know when they are offline.

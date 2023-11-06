@@ -62,7 +62,7 @@ The [Storage Access API (SAA)](https://privacycg.github.io/storage-access/) prov
 
 Embedded resources can use SAA methods to check whether they currently have access to storage, and to request access from the user agent.
 
-When third-party cookies are blocked, but Related Website Sets are allowed, Chrome will automatically grant that permission for sites within the set and deny it for sites outside the set.
+When third-party cookies are blocked but Related Website Sets (RWS) is enabled, Chrome will automatically grant permission in intra-RWS contexts, and will show a prompt to the user otherwise. (An "intra-RWS context" is a context, such as an iframe, whose embedded site and top-level site are in the same RWS.)
 
 {% Aside %}
 SAA is shipping in several browsers, however there are [differences between browser implementations](https://developer.mozilla.org/docs/Web/API/Storage_Access_API#safari_implementation_differences) in the rules of handling storage access.
@@ -70,21 +70,24 @@ SAA is shipping in several browsers, however there are [differences between brow
 
 ### Checking and requesting storage access
 
-To check whether they currently have access to storage embedded sites can use [`Document.hasStorageAccess()`](https://developer.mozilla.org/docs/Web/API/Document/requestStorageAccess) method. 
+To check whether they currently have access to storage, embedded sites can use [`Document.hasStorageAccess()`](https://developer.mozilla.org/docs/Web/API/Document/requestStorageAccess) method. 
 
 The method returns a promise that resolves with a boolean value indicating whether the document already has access to its cookies or not. The promise also returns true if the iframe is same-origin as the top frame.
 
 {% BrowserCompat 'api.Document.hasStorageAccess' %}
 
-To request access to cookies in a cross-site context embedded sites can use [`Document.requestStorageAccess()`](https://developer.mozilla.org/docs/Web/API/Document/requestStorageAccess) (rSA). 
+To request access to cookies in a cross-site context embedded sites can use [`Document.requestStorageAccess()`](https://developer.mozilla.org/docs/Web/API/Document/requestStorageAccess) (rSA).
 
-When called, the method requires a [user gesture](https://html.spec.whatwg.org/multipage/interaction.html#user-activation-processing-model) to resolve, otherwise it will throw an exception. It returns a promise that resolves if the access to storage was granted, and rejects if access was denied.
+The `requestStorageAccess()` API is meant to be called from within an iframe. That iframe has to have just received user interaction (a [user gesture](https://html.spec.whatwg.org/multipage/interaction.html#user-activation-processing-model), which is required by all browsers), but Chrome additionally requires that at some point in the last 30 days, the user has visited the site that owns that iframe and has interacted with that site specifically—as a top-level document, not in an iframe. 
+
+`requestStorageAccess()` returns a promise that resolves if the access to storage was granted; however, the promise is rejected, citing the reason, if access was denied for any reason.
+
 
 {% BrowserCompat 'api.Document.requestStorageAccess' %}
 
 ### requestStorageAccessFor in Chrome
 
-SAA only allows embedded sites to request access to storage from within `<iframe>` elements that have received user interaction.
+The Storage Access API only allows embedded sites to request access to storage from within `<iframe>` elements that have received user interaction.
 
 This poses challenges in adopting SAA for top-level sites that use cross-site images or script tags requiring cookies.
 
@@ -93,6 +96,8 @@ To address this, Chrome has implemented a way for top-level sites to request sto
 ```js
  document.requestStorageAccessFor('https://target.site')
 ```
+
+The `requestStorageAccessFor()` API is meant to be called by a top-level document. That document must also have just received user interaction. But unlike `requestStorageAccess()`, Chrome doesn't check for an interaction in a top-level document within the last 30 days because the user is already on the page.
 
 ### Checking storage access permissions
 

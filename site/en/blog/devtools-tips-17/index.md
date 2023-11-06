@@ -30,10 +30,10 @@ With DevTools you can:
 - Test tokens for [origin trials](/docs/web-platform/origin-trials/).
 - Explore the Origin Private File System (OPFS) of a web application with a [DevTools extension](https://chrome.google.com/webstore/detail/opfs-explorer/acndjpgkpaclldomagafnognkcgjignd).
 
-To learn more, see the following: 
+To learn more, see the following:
 
 - [Get started with origin trials](/docs/web-platform/origin-trials/)
-- [Learn Progressive Web Apps](https://web.dev/learn/pwa/) and [Debug Progressive Web Apps](/docs/devtools/progressive-web-apps/)
+- [Learn Progressive Web Apps](https://web.dev/learn/pwa) and [Debug Progressive Web Apps](/docs/devtools/progressive-web-apps/)
 - [Emulate device sensors](/docs/devtools/sensors/)
 - [URL protocol handler registration for PWAs](/articles/url-protocol-handler/)
 - [The File System Access API](/articles/file-system-access/)

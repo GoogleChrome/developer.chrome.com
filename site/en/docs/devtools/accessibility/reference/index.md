@@ -24,7 +24,7 @@ can help you examine a page's accessibility.
 See [Navigating Chrome DevTools With Assistive Technology][2] if you're looking for help on
 navigating DevTools with an assistive technology like a screen reader.
 
-See [Learn Accessibility](https://web.dev/learn/accessibility/) if you'd like to learn how to develop accessible websites.
+See [Learn Accessibility](https://web.dev/learn/accessibility) if you'd like to learn how to develop accessible websites.
 
 ## Overview of accessibility features in Chrome DevTools {: #overview }
 
@@ -167,7 +167,7 @@ To view and debug the source order on your website:
 1. [Inspect an element](/docs/devtools/open/#inspect) on the page.
 1. In **Elements** > **Accessibility** > **Source Order Viewer**, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="24", height="24" %} **Show source order**.
 
-In the viewport, DevTools outlines nested elements with borders and marks them with numbers corresponding to their source order. 
+In the viewport, DevTools outlines nested elements with borders and marks them with numbers corresponding to their source order.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sBXqLvOkou3OTfwPzR36.png", alt="Source order option checked.", width="800", height="623" %}
 

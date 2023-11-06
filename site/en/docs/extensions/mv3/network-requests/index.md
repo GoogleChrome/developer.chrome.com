@@ -79,7 +79,7 @@ non-secure HTTP access to a given host or set of hosts, it must declare the perm
 
 ### Avoid cross-site scripting vulnerabilities {: #xss }
 
-When using resources retrieved via `fetch()`, your extension service worker should be careful not to
+When using resources retrieved via `fetch()`, your offscreen document, side panel or popup should be careful not to
 fall victim to [cross-site scripting][9]. Specifically, avoid using dangerous APIs such as
 `innerHTML`. For example:
 

@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /blog/pwa-manifest-id/
+  to: /articles/pwa-manifest-id/
+
 - from: /docs/privacy-sandbox/first-party-sets/
   to: /docs/privacy-sandbox/related-website-sets/
 
@@ -77,6 +80,9 @@ redirects:
 
 - from: /docs/extensions/mv3/xhr
   to: /docs/extensions/mv3/network-requests
+
+- from: /docs/extensions/examples
+  to: /docs/extensions/samples/
 
 - from: /blog/fedcm-origin-trial
   to: /docs/privacy-sandbox/fedcm
@@ -471,6 +477,33 @@ redirects:
 - from: /docs/webstore/program_policies/
   to: /docs/webstore/program-policies/
 
+- from: /docs/webstore/complaint-faq/
+  to: /docs/webstore/review-process/
+
+- from: /docs/extensions/mv3/quality_guidelines
+  to: /docs/webstore/program-policies/quality-guidelines-faq
+
+- from: /docs/webstore/affiliate-ads-faq
+  to: /docs/webstore/program-policies/affiliate-ads-faq
+
+- from: /docs/webstore/deceptive_installation_tactics
+  to: /docs/webstore/program-policies/deceptive-installation-tactics-faq
+
+- from: /docs/webstore/play_edu_tos
+  to: /docs/webstore/program-policies/play_edu_tos
+
+- from: /docs/webstore/terms
+  to: /docs/webstore/program-policies/terms
+
+- from: /docs/webstore/user_data
+  to: /docs/webstore/program-policies/user-data-faq
+
+- from: /docs/webstore/trader-disclosure
+  to: /docs/webstore/program-policies/trader-disclosure
+
+- from: /docs/webstore/spam-faq
+  to: /docs/webstore/program-policies/spam-faq
+
 - from: /webview/overview
   to: /docs/multidevice/android/overview/
 
@@ -480,7 +513,7 @@ redirects:
   # MV2 docs that have been removed, but their MV3 version still exists
 
 - from: /docs/extensions/mv2/single_purpose
-  to: /docs/extensions/mv3/single_purpose/
+  to: /docs/extensions/mv3/quality_guidelines/
 
   # Group redirects
 
@@ -773,6 +806,19 @@ redirects:
 
 - from: /docs/privacy-sandbox/fledge/...
   to: /docs/privacy-sandbox/protected-audience/...
+
+- from: /docs/extensions/gethelp
+  to: /docs/extensions/support-feedback
+- from: docs/extensions/mv3/single_purpose/
+  to: docs/extensions/mv3/quality_guidelines/
+
+- from: /docs/privacy-sandbox/permissions-policy/
+  to: /articles/permissions-policy/
+
+# PR 7600 replacing Custom Tabs native apps how-to with external handler section in warmup/prefetch guide
+
+- from: /docs/android/custom-tabs/howto-custom-tab-native-apps/
+  to: /docs/android/custom-tabs/guide-warmup-prefetch/
 
 # DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
 # URL is fine for all but incorrect syntax, we'll fix it up.

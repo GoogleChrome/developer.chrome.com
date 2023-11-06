@@ -39,7 +39,7 @@ Posteriormente, a plataforma de anúncios pode usar esses dados para selecionar 
 
 ## Como funciona o FLoC?
 
-[O que é FLoC?](https://web.dev/floc/#how-does-floc-work) fornece uma explicação simples e passo a passo de como funciona o FloC.
+[O que é FLoC?](https://web.dev/articles/floc#how_does_floc_work) fornece uma explicação simples e passo a passo de como funciona o FloC.
 
 O diagrama abaixo mostra um exemplo das diferentes funções na seleção e distribuição de um anúncio relevante usando FLoC.
 

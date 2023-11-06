@@ -25,7 +25,7 @@ Chrome's password manager already autofills credentials for sites with saved
 credentials, as well as in the following two cases:
 
 1.  When two sites are in the
-    [same-site](https://web.dev/same-site-same-origin/) relationship, Chrome
+    [same-site](https://web.dev/articles/same-site-same-origin) relationship, Chrome
     will show autofill credentials for the other site if there's at least one
     credential saved on one site. For example, because `www.example.com` and
     `m.example.com` are the same-site, Chrome can share saved credentials
@@ -72,9 +72,9 @@ at `/.well-known/assetlinks.json` on the respective domains.
     `https://www.example.com,`can share credentials with
     `https://www.example.co.uk`, create a file named `assetlinks.json` with the
     following content:
-    
+
     <br>
-    
+
     ```json
     [{
       "relation": ["delegate_permission/common.get_login_creds"],
@@ -91,17 +91,17 @@ at `/.well-known/assetlinks.json` on the respective domains.
       }
      }]
      ```
-    
+
     <br>
-    
+
     The `relation` field is an array of one or more strings that describe the
     relationship between the sites. For sites to share sign-in credentials,
-    specify the string `delegate_permission/common.get_login_creds`.  
+    specify the string `delegate_permission/common.get_login_creds`.
     The `target` field is an object that specifies the asset the declaration
     applies to. The following fields identify a website:
-    
+
     <br>
-    
+
     <table>
       <tr>
         <td><code>namespace</code></td>
@@ -125,7 +125,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
     <br>
 
     In this example, the domain is `www.example.com`, so the JSON file should
-    be hosted at `https://www.example.com/.well-known/assetlinks.json`.   
+    be hosted at `https://www.example.com/.well-known/assetlinks.json`.
 
     <br>
 
@@ -136,10 +136,10 @@ at `/.well-known/assetlinks.json` on the respective domains.
 
     {% Aside 'gotchas' %}
     The request for a DAL file must return an HTTP `200 OK` status code,
-    otherwise it will be treated as an error. This applies to redirects 
+    otherwise it will be treated as an error. This applies to redirects
     which return status codes in the `300-399` range.
     {% endAside %}
-    
+
     <br>
 
 1.  To declare the association in both websites, host the
@@ -196,32 +196,32 @@ the Digital Asset Links file. For example, to associate the `example.com`,
 `https://EXAMPLE_DOMAIN_NAME/.well-known/assetlinks.json`.
 
 ```json
-[{  
-     "relation":[  
-        "delegate_permission/common.get_login_creds"  
-     ],  
-     "target":{  
-        "site":"https://www.example.com",  
-        "namespace":"web"  
-     }  
-  },  
-  {  
-     "relation":[  
-        "delegate_permission/common.get_login_creds"  
-     ],  
-     "target":{  
-        "site":"https://www.example.co.uk",  
-        "namespace":"web"  
-     }  
-  },  
-  {  
-     "relation":[  
-        "delegate_permission/common.get_login_creds"  
-     ],  
-     "target":{  
-        "site":"https://www.example.co.jp",  
-        "namespace":"web"  
-     }  
+[{
+     "relation":[
+        "delegate_permission/common.get_login_creds"
+     ],
+     "target":{
+        "site":"https://www.example.com",
+        "namespace":"web"
+     }
+  },
+  {
+     "relation":[
+        "delegate_permission/common.get_login_creds"
+     ],
+     "target":{
+        "site":"https://www.example.co.uk",
+        "namespace":"web"
+     }
+  },
+  {
+     "relation":[
+        "delegate_permission/common.get_login_creds"
+     ],
+     "target":{
+        "site":"https://www.example.co.jp",
+        "namespace":"web"
+     }
   }]
 ```
 

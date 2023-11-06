@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Debugging extensions"
-seoTitle: "Chrome extensions tutorial: debugging extensions"
+title: "Debug extensions"
+seoTitle: "Chrome extensions tutorial: debug extensions"
 date: 2012-09-18
 updated: 2023-08-09
 description: Instructions for debugging Chrome Extensions.
@@ -16,7 +16,7 @@ Extensions can access the same [Chrome DevTools][chrome-devtools] as web pages. 
 This guide assumes that you have basic web development experience. We recommend reading
 [Development Basics][doc-dev-basics] for an introduction to the extension development workflow and [Architecture overview][doc-arch] to learn about the different extension components.
 
-## Breaking the extension {: #locate_logs }
+## Break the extension {: #locate_logs }
 
 This tutorial will break one extension component at a time and then demonstrate how to fix it. Remember to undo the bugs introduced in one section before continuing to the next section. Start by downloading the [Broken Color sample][gh-broken-color] on GitHub.
 
@@ -195,7 +195,7 @@ To test your code, start or stop the service worker using the links next to **st
   </figcaption>
 </figure>
 
-Also, if you have made changes to the service worker code, you can click **Update** update or **skipWaiting** to apply the changes immediately.
+Also, if you have made changes to the service worker code, you can click **Update** or **skipWaiting** to apply the changes immediately.
 
 <figure>
     <a href="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png"><img src="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png?auto=format&w=845" alt="Service worker status in the Application panel"></a>

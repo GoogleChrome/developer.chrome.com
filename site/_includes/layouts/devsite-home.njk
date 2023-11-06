@@ -1,39 +1,51 @@
-{% extends "layouts/devsite.njk" %}
+{% extends "layouts/devsite.njk" %} 
 {% block devsite_main %}
 <main role="main" class="devsite-content">
-  {% include 'partials/banner.njk' %}
   <devsite-content>
     <article class="devsite-article">
-      <div class="devsite-article-body clearfix
-            ">
-        <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-100 dcc-hero" header-position="top">
+      <div class="devsite-article-body clearfix">
+        <div class="devsite-page-title-meta"></div>
+
+        <section
+          class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-100 dcc-hero"
+          header-position="top"
+        >
           <div class="devsite-landing-row-inner">
             <div class="devsite-landing-row-group">
-              <div class="devsite-landing-row-item" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+              <div
+                class="devsite-landing-row-item"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
                     <img
-                      alt="A cartoon-style rendering of a diverse set of people building a website on a whiteboard."
-                      src="/static/dcc/hero.webp"
+                      alt="A cartoon-style rendering of a diverse set of people building a website on a whiteboard"
+                      src="/images/hero.webp"
                       loading="lazy"
-                      width="1160"
-                      height="608"
-                      fetchpriority="high">
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="a-powerful-web-spanmade-easierspan" data-text="A Powerful Web. Made Easier." class="hide-from-toc no-link">
-                      A Powerful Web.
-                      <span>Made Easier.</span>
+                    <h3
+                      id="a-powerful-web-spanmade-easierspan"
+                      data-text="A Powerful Web. Made Easier."
+                      class="hide-from-toc no-link"
+                    >
+                      A Powerful Web. <span>Made Easier.</span>
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Helping you build, grow and innovate on the web.
+                      Simplifying the web to help you build, grow and innovate.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/#features-tools-and-programs-to-make-developers-successful-on-the-web" class="button
-                              " aria-label="Get started with documentation for web features, tools and programs.">Get Started</a>
+                      <a
+                        href="/#features-tools-and-programs-to-make-developers-successful-on-the-web"
+                        class="button dcc-filled-button"
+                        >Get Started</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -41,6 +53,7 @@
             </div>
           </div>
         </section>
+
         <section
           class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-cards devsite-landing-row-no-image-background
             dcc-featured"
@@ -52,8 +65,8 @@
                 <div class="devsite-landing-row-item-media
                                 ">
                   <figure class="devsite-landing-row-item-image">
-                    <a href="/blog/we-are-chrome-for-developers/">
-                      <img alt="" src="/static/dcc/chrome-for-devs-thumb.png" loading="lazy" width="376" height="240">
+                    <a href="/blog/cookie-countdown-2023oct/">
+                      <img alt="" src="/images/end-third-party-cookies.png" loading="lazy" width="376" height="240">
                     </a>
                   </figure>
                 </div>
@@ -65,17 +78,17 @@
                                      ">FEATURED</span>
                     </div>
 
-                    <h3 id="we-are-chrome-for-developers" data-text="We are Chrome for Developers" class="hide-from-toc no-link">
-                      <a href="/blog/we-are-chrome-for-developers/">
-                        We are Chrome for Developers
+                    <h3 id="thd-arty-cookies" data-text="Preparing for the end of third-party cookies" class="hide-from-toc no-link">
+                      <a href="/blog/cookie-countdown-2023oct/">
+                        Preparing for the end of third-party cookies
                       </a>
                     </h3>
                     <div class="devsite-landing-row-item-description-content">
-                      Celebrating Chrome's 15th anniversary and our role as a trusted, helpful partner to developers.
+                      Find out what you need to do now to get ready for the deprecation of third-party cookies.
                     </div>
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/blog/we-are-chrome-for-developers/" class="button
-                              " aria-label="Read the Chrome for Developers blog post.">Read more</a>
+                      <a href="/blog/cookie-countdown-2023oct/" class="button
+                              " aria-label="Read the third-party cookies blog post.">Read more</a>
                     </div>
                   </div>
                 </div>
@@ -84,8 +97,8 @@
                 <div class="devsite-landing-row-item-media
                                 ">
                   <figure class="devsite-landing-row-item-image">
-                    <a href="/blog/new-in-devtools-118/">
-                      <img alt="" src="/static/dcc/new-in-devtools-118-thumb.webp" loading="lazy" width="565" height="178">
+                    <a href="/blog/new-in-devtools-119/">
+                      <img alt="" src="/images/new-in-devtools-119.png" loading="lazy" width="565" height="178">
                     </a>
                   </figure>
                 </div>
@@ -97,18 +110,18 @@
                     </div>
                     <h3
                       id="bringing-safety-check-to-the-chromeextensions-page"
-                      data-text="What's New in DevTools (Chrome 118)"
+                      data-text="What's New in DevTools (Chrome 119)"
                       class="hide-from-toc no-link">
-                      <a href="/blog/new-in-devtools-118/">
-                        What's New in DevTools (Chrome 118)
+                      <a href="/blog/new-in-devtools-119/">
+                        What's New in DevTools (Chrome 119)
                       </a>
                     </h3>
                     <div class="devsite-landing-row-item-description-content">
                       Check out the latest set of features and updates landing in the next release.
                     </div>
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/blog/new-in-devtools-118/" class="button
-                              " aria-label="Read more about new features in Chrome 118 DevTools.">Explore Now</a>
+                      <a href="/blog/new-in-devtools-119/" class="button
+                              " aria-label="Read more about new features in Chrome 119 DevTools.">Explore Now</a>
                     </div>
                   </div>
                 </div>
@@ -116,79 +129,123 @@
             </div>
           </div>
         </section>
+
         <section
-          class="devsite-landing-row devsite-landing-row-3-up devsite-landing-row-cards devsite-landing-row-no-image-background
-            dcc-case-studies"
-          header-position="top">
+          class="devsite-landing-row devsite-landing-row-3-up devsite-landing-row-cards devsite-landing-row-no-image-background dcc-case-studies"
+          header-position="top"
+        >
           <div class="devsite-landing-row-inner">
             <div class="devsite-landing-row-group">
-              <div class="devsite-landing-row-item" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+              <div
+                class="devsite-landing-row-item"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/get-inspired-icon.svg" loading="lazy" width="40" height="40">
+                    <img
+                      alt=""
+                      src="/images/get-inspired-icon.svg"
+                      loading="lazy"
+                      width="40"
+                      height="40"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="get-inspired" data-text="Get Inspired" class="hide-from-toc no-link">
+                    <h3
+                      id="get-inspired"
+                      data-text="Get Inspired"
+                      class="hide-from-toc no-link"
+                    >
                       Get Inspired
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Extend your product’s reach through the browser, increase engagement by improving quality and make the most of the web’s
-                      capabilities. See how businesses are succeeding on the web.
+                      Extend your product’s reach through the browser, increase
+                      engagement by improving quality and make the most of the
+                      web’s capabilities. See how businesses are succeeding on
+                      the web.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/tags/case-study" class="button
-                              ">All stories</a>
+                      <a href="/tags/case-study" class="button">All stories</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item dcc-blog-card" description-position="top">
-                <div class="devsite-landing-row-item-media
-                                ">
+
+              <div
+                class="devsite-landing-row-item dcc-blog-card"
+                description-position="top"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <a href="/blog/how-photoshop-solved-working-with-files-larger-than-can-fit-into-memory">
-                      <img alt="" src="/static/dcc/case-study-thumb.jpg" loading="lazy" width="395" height="222">
+                    <a
+                      href="/blog/how-photoshop-solved-working-with-files-larger-than-can-fit-into-memory"
+                    >
+                      <img
+                        alt=""
+                        src="/images/case-study-thumb.jpg"
+                        loading="lazy"
+                        width="395"
+                        height="222"
+                      />
                     </a>
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
                     <div class="devsite-landing-row-item-labels">
-                      <span class="
-                        
-                                     ">CASE STUDY</span>
-                      <span class="dcc-label-top
-                              "></span>
+                      <span
+                        class="
+               
+               "
+                        >CASE STUDY</span
+                      >
+
+                      <span class="dcc-label-top"></span>
                     </div>
+
                     <div class="devsite-landing-row-item-description-content">
                       case study
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item devsite-landing-row-item-no-media" description-position="bottom">
+
+              <div
+                class="devsite-landing-row-item devsite-landing-row-item-no-media"
+                description-position="bottom"
+              >
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
                     <h3
                       id="how-photoshop-solved-working-with-files-larger-than-can-fit-into-memory"
                       data-text="How Photoshop solved working with files larger than can fit into memory"
-                      class="hide-from-toc no-link">
-                      <a href="/blog/how-photoshop-solved-working-with-files-larger-than-can-fit-into-memory">
-                        How Photoshop solved working with files larger than can fit into memory
+                      class="hide-from-toc no-link"
+                    >
+                      <a
+                        href="/blog/how-photoshop-solved-working-with-files-larger-than-can-fit-into-memory"
+                      >
+                        How Photoshop solved working with files larger than can
+                        fit into memory
                       </a>
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Learn how Adobe managed to let users edit even the biggest files on the web version of its iconic Photoshop app.
+                      Learn how Adobe managed to let users edit even the biggest
+                      files on the web version of its iconic Photoshop app.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
                       <a
                         href="/blog/how-photoshop-solved-working-with-files-larger-than-can-fit-into-memory"
-                        class="button
-                                       button-white
-                                       ">Read more</a>
+                        class="button button-white"
+                        >Read more</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -196,113 +253,223 @@
             </div>
           </div>
         </section>
+
         <section
-          class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-cards devsite-landing-row-no-image-background
-            dcc-pillars"
+          class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-cards devsite-landing-row-no-image-background dcc-pillars"
           background="pale-blue"
-          header-position="top">
+          header-position="top"
+        >
           <div class="devsite-landing-row-inner">
             <header class="devsite-landing-row-header">
               <div class="devsite-landing-row-header-text">
                 <h2
                   id="features-tools-and-programs-to-make-developers-successful-on-the-web"
-                  data-text="Features, tools and programs to make developers successful on the web.">
-                  Features, tools and programs to make developers successful on the web.
+                  data-text="Features, tools and programs to make developers successful on the web."
+                >
+                  Features, tools and programs to make developers successful on
+                  the web.
                 </h2>
               </div>
             </header>
+
             <div class="devsite-landing-row-group">
-              <div class="devsite-landing-row-item dcc-services-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+              <div
+                class="devsite-landing-row-item dcc-services-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/powerful-icon.webp" loading="lazy" width="176" height="176">
+                    <img
+                      alt=""
+                      src="/images/powerful-icon.webp"
+                      loading="lazy"
+                      width="176"
+                      height="176"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="powerful-platform-capabilities" data-text="Powerful platform capabilities" class="hide-from-toc no-link">
+                    <h3
+                      id="powerful-platform-capabilities"
+                      data-text="Powerful platform capabilities"
+                      class="hide-from-toc no-link"
+                    >
                       Powerful platform capabilities
                     </h3>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/capabilities" class="button dcc-web-app-features-link dcc-icon-button
-                              ">Web App Features</a>
-                      <a href="/docs/android" class="button dcc-web-on-android-link dcc-icon-button
-                              ">Web on Android</a>
-                      <a href="/docs/extensions" class="button dcc-chrome-extensions-link dcc-icon-button
-                              ">Chrome Extensions</a>
+                      <a
+                        href="/capabilities"
+                        class="button dcc-icon-link dcc-web-app-features-link dcc-icon-button"
+                        >Web App Features</a
+                      >
+
+                      <a
+                        href="/docs/android"
+                        class="button dcc-web-on-android-link dcc-icon-button"
+                        >Web on Android</a
+                      >
+
+                      <a
+                        href="/docs/extensions"
+                        class="button dcc-chrome-extensions-link dcc-icon-button"
+                        >Chrome Extensions</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item dcc-services-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+
+              <div
+                class="devsite-landing-row-item dcc-services-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/solutions-icon.webp" loading="lazy" width="176" height="176">
+                    <img
+                      alt=""
+                      src="/images/solutions-icon.webp"
+                      loading="lazy"
+                      width="176"
+                      height="176"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="solutions-for-quality-experiences" data-text="Solutions for quality experiences" class="hide-from-toc no-link">
+                    <h3
+                      id="solutions-for-quality-experiences"
+                      data-text="Solutions for quality experiences"
+                      class="hide-from-toc no-link"
+                    >
                       Solutions for quality experiences
                     </h3>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="https://web.dev/vitals/" class="button dcc-cwv-link dcc-icon-button
-                              ">Core Web Vitals</a>
-                      <a href="/tags/css" class="button dcc-design-link dcc-icon-button
-                              ">Design and UI</a>
-                      <a href="/tags/identity" class="button dcc-identity-link dcc-icon-button
-                              ">Identity</a>
+                      <a
+                        href="https://web.dev/vitals/"
+                        class="button dcc-cwv-link dcc-icon-button"
+                        >Core Web Vitals</a
+                      >
+
+                      <a
+                        href="/tags/css"
+                        class="button dcc-design-link dcc-icon-button"
+                        >Design and UI</a
+                      >
+
+                      <a
+                        href="/tags/identity"
+                        class="button dcc-identity-link dcc-icon-button"
+                        >Identity</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item dcc-services-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+
+              <div
+                class="devsite-landing-row-item dcc-services-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/productivity-icon.webp" loading="lazy" width="176" height="176">
+                    <img
+                      alt=""
+                      src="/images/productivity-icon.webp"
+                      loading="lazy"
+                      width="176"
+                      height="176"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="productivity-made-easier" data-text="Productivity made easier" class="hide-from-toc no-link">
+                    <h3
+                      id="productivity-made-easier"
+                      data-text="Productivity made easier"
+                      class="hide-from-toc no-link"
+                    >
                       Productivity made easier
                     </h3>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/docs/devtools" class="button dcc-dev-tools-link dcc-icon-button
-                              ">Chrome DevTools</a>
-                      <a href="https://developers.google.com/speed/" class="button dcc-performance-link dcc-icon-button
-                              ">Performance
-                        Tools</a>
-                      <a href="/docs/puppeteer" class="button dcc-puppeteer-link dcc-icon-button
-                              ">Puppeteer</a>
-                      <a href="/blog/chrome-for-testing" class="button dcc-chrome-testing-link dcc-icon-button
-                              ">Chrome for Testing</a>
+                      <a
+                        href="/docs/devtools"
+                        class="button dcc-dev-tools-link dcc-icon-button"
+                        >Chrome DevTools</a
+                      >
+
+                      <a
+                        href="https://developers.google.com/speed/"
+                        class="button dcc-performance-link dcc-icon-button"
+                        >Performance Tools</a
+                      >
+
+                      <a
+                        href="/docs/puppeteer"
+                        class="button dcc-puppeteer-link dcc-icon-button"
+                        >Puppeteer</a
+                      >
+
+                      <a
+                        href="/blog/chrome-for-testing"
+                        class="button dcc-chrome-testing-link dcc-icon-button"
+                        >Chrome for Testing</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item dcc-services-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+
+              <div
+                class="devsite-landing-row-item dcc-services-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/open-icon.webp" loading="lazy" width="176" height="176">
+                    <img
+                      alt=""
+                      src="/images/open-icon.webp"
+                      loading="lazy"
+                      width="176"
+                      height="176"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="open-by-design" data-text="Open by design" class="hide-from-toc no-link">
+                    <h3
+                      id="open-by-design"
+                      data-text="Open by design"
+                      class="hide-from-toc no-link"
+                    >
                       Open by design
                     </h3>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="https://web.dev/baseline/" class="button dcc-baseline-link dcc-icon-button
-                              ">Baseline</a>
-                      <a href="/aurora" class="button dcc-aurora-link dcc-icon-button
-                              ">Project Aurora</a>
-                      <a href="https://web.dev/" class="button dcc-webdev-link dcc-icon-button
-                              ">web.dev</a>
+                      <a
+                        href="https://web.dev/baseline/"
+                        class="button dcc-baseline-link dcc-icon-button"
+                        >Baseline</a
+                      >
+
+                      <a
+                        href="/aurora"
+                        class="button dcc-aurora-link dcc-icon-button"
+                        >Project Aurora</a
+                      >
+
+                      <a
+                        href="https://web.dev/"
+                        class="button dcc-webdev-link dcc-icon-button"
+                        >web.dev</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -310,74 +477,118 @@
             </div>
           </div>
         </section>
-        <section class="devsite-landing-row devsite-landing-row-2-up dcc-chrome-releases" header-position="left">
+
+        <section
+          class="devsite-landing-row devsite-landing-row-2-up dcc-chrome-releases"
+          header-position="left"
+        >
           <div class="devsite-landing-row-inner">
             <header class="devsite-landing-row-header" icon-position="top">
-              <div class="devsite-landing-row-header-icon-container" size="medium">
-                <div class="devsite-landing-row-header-icon material-icons" aria-hidden="true">
+              <div
+                class="devsite-landing-row-header-icon-container"
+                size="medium"
+              >
+                <div
+                  class="devsite-landing-row-header-icon material-icons"
+                  aria-hidden="true"
+                >
                   verified
                 </div>
               </div>
+
               <div class="devsite-landing-row-header-text">
                 <h2 id="always-updating" data-text="Always updating">
                   Always updating
                 </h2>
+
                 <div class="devsite-landing-row-description">
-                  See what's included in Chrome's latest stable and beta releases
+                  See what's included in Chrome's latest stable and beta
+                  releases
                 </div>
               </div>
             </header>
+
             <div class="devsite-landing-row-group">
-              <div class="devsite-landing-row-item dcc-blog-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+              <div
+                class="devsite-landing-row-item dcc-blog-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <a href="/blog/chrome-117-beta">
-                      <img alt="" src="/static/dcc/chrome-117-beta.jpg" loading="lazy" width="371" height="200">
+                    <a href="/blog/chrome-120-beta">
+                      <img
+                        alt=""
+                        src="/images/chrome-120-beta.png"
+                        loading="lazy"
+                        width="371"
+                        height="200"
+                      />
                     </a>
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="chrome-117-beta" data-text="Chrome 117 beta" class="hide-from-toc no-link">
-                      <a href="/blog/chrome-117-beta">
-                        Chrome 117 beta
-                      </a>
+                    <h3
+                      id="chrome-120-beta"
+                      data-text="Chrome 120 beta"
+                      class="hide-from-toc no-link"
+                    >
+                      <a href="/blog/chrome-120-beta"> Chrome 120 beta </a>
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Chrome 117 beta brings you subgrid for CSS grid layout, entry and exit animation support in CSS, array grouping,
-                      iterator helpers, and more. You can also register for several new origin trials, including tabbed web apps.
+                      CSS masking, relaxed rules for CSS nesting, 
+                      create accordion patterns with the details element, 
+                      the enterpictureinpicture action for the Media Session API, and much more.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/tags/beta" class="button
-                              ">All beta blog posts</a>
+                      <a href="/tags/beta" class="button"
+                        >All beta blog posts</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item dcc-blog-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+
+              <div
+                class="devsite-landing-row-item dcc-blog-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <a href="/blog/new-in-chrome-116">
-                      <img alt="" src="/static/dcc/new-in-chrome-116.jpg" loading="lazy" width="371" height="200">
+                    <a href="/blog/new-in-chrome-119">
+                      <img
+                        alt=""
+                        src="/images/new-in-chrome-119.png"
+                        loading="lazy"
+                        width="371"
+                        height="200"
+                      />
                     </a>
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="new-in-chrome-116" data-text="New in Chrome 116" class="hide-from-toc no-link">
-                      <a href="/blog/new-in-chrome-116">
-                        New in Chrome 116
-                      </a>
+                    <h3
+                      id="new-in-chrome-119"
+                      data-text="New in Chrome 119"
+                      class="hide-from-toc no-link"
+                    >
+                      <a href="/blog/new-in-chrome-119"> New in Chrome 119 </a>
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      The latest stable Chrome includes the Document Picture-in-Picture API—open an always-on-top window populated with any
-                      HTML content. You’ll also discover new features that make debugging missing stylesheets much easier in Chrome DevTools.
+                      The latest stable Chrome includes an update to the expiration date of cookies already in storage,
+                      new pseudo-classes and relative color syntax for CSS.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/tags/new-in-chrome" class="button
-                              ">All stable blog posts</a>
+                      <a href="/tags/new-in-chrome" class="button"
+                        >All stable blog posts</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -385,112 +596,194 @@
             </div>
           </div>
         </section>
-        <section class="devsite-landing-row devsite-landing-row-4-up dcc-docs" header-position="left">
+
+        <section
+          class="devsite-landing-row devsite-landing-row-4-up dcc-docs"
+          header-position="left"
+        >
           <div class="devsite-landing-row-inner">
             <header class="devsite-landing-row-header" icon-position="top">
-              <div class="devsite-landing-row-header-icon-container" size="medium">
-                <div class="devsite-landing-row-header-icon material-icons" aria-hidden="true">
+              <div
+                class="devsite-landing-row-header-icon-container"
+                size="medium"
+              >
+                <div
+                  class="devsite-landing-row-header-icon material-icons"
+                  aria-hidden="true"
+                >
                   description
                 </div>
               </div>
+
               <div class="devsite-landing-row-header-text">
-                <h2 id="docs" data-text="Docs">
-                  Docs
-                </h2>
+                <h2 id="docs" data-text="Docs">Docs</h2>
+
                 <div class="devsite-landing-row-description">
                   All the resources you need to start building
                 </div>
               </div>
+
               <div class="devsite-landing-row-header-buttons">
-                <a href="/docs" class="button
-                        ">See all docs</a>
+                <a href="/docs" class="button">See all docs</a>
               </div>
             </header>
+
             <div class="devsite-landing-row-group">
-              <div class="devsite-landing-row-item dcc-docs-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+              <div
+                class="devsite-landing-row-item dcc-docs-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/chrome-devtools-thumb.svg" loading="lazy" width="128" height="128">
+                    <img
+                      alt=""
+                      src="/images/chrome-devtools-thumb.svg"
+                      loading="lazy"
+                      width="128"
+                      height="128"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="chrome-devtools" data-text="Chrome DevTools" class="hide-from-toc no-link">
+                    <h3
+                      id="chrome-devtools"
+                      data-text="Chrome DevTools"
+                      class="hide-from-toc no-link"
+                    >
                       Chrome DevTools
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Diagnose problems and edit source files quickly to build better, faster websites, directly in the Chrome browser.
+                      Diagnose problems and edit source files quickly to build
+                      better, faster websites, directly in the Chrome browser.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/docs/devtools" class="button
-                              ">See all documentation</a>
+                      <a href="/docs/devtools" class="button"
+                        >See all documentation</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item dcc-docs-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+
+              <div
+                class="devsite-landing-row-item dcc-docs-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/chrome-extensions-thumb.svg" loading="lazy" width="128" height="128">
+                    <img
+                      alt=""
+                      src="/images/chrome-extensions-thumb.svg"
+                      loading="lazy"
+                      width="128"
+                      height="128"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="extensions" data-text="Extensions" class="hide-from-toc no-link">
+                    <h3
+                      id="extensions"
+                      data-text="Extensions"
+                      class="hide-from-toc no-link"
+                    >
                       Extensions
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Customize the Chrome browsing experience using on web technologies, such as HTML, CSS, and JavaScript.
+                      Customize the Chrome browsing experience using on web
+                      technologies, such as HTML, CSS, and JavaScript.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/docs/extensions" class="button
-                              ">See all documentation</a>
+                      <a href="/docs/extensions" class="button"
+                        >See all documentation</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item dcc-docs-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+
+              <div
+                class="devsite-landing-row-item dcc-docs-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/chrome-web-store-thumb.svg" loading="lazy" width="128" height="128">
+                    <img
+                      alt=""
+                      src="/images/chrome-web-store-thumb.svg"
+                      loading="lazy"
+                      width="128"
+                      height="128"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="chrome-web-store" data-text="Chrome Web Store" class="hide-from-toc no-link">
+                    <h3
+                      id="chrome-web-store"
+                      data-text="Chrome Web Store"
+                      class="hide-from-toc no-link"
+                    >
                       Chrome Web Store
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Publish your extensions and themes to Chrome’s online marketplace.
+                      Publish your extensions and themes to Chrome’s online
+                      marketplace.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/docs/webstore" class="button
-                              ">See all documentation</a>
+                      <a href="/docs/webstore" class="button"
+                        >See all documentation</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item dcc-docs-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+
+              <div
+                class="devsite-landing-row-item dcc-docs-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/web-on-android-thumb.svg" loading="lazy" width="128" height="128">
+                    <img
+                      alt=""
+                      src="/images/web-on-android-thumb.svg"
+                      loading="lazy"
+                      width="128"
+                      height="128"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="web-platform" data-text="Web Platform" class="hide-from-toc no-link">
+                    <h3
+                      id="web-platform"
+                      data-text="Web Platform"
+                      class="hide-from-toc no-link"
+                    >
                       Web Platform
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Learn key Chrome concepts, discover Chrome web APIs, and experiment with origin trials
+                      Learn key Chrome concepts, discover Chrome web APIs, and
+                      experiment with origin trials
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="/docs/web-platform" class="button
-                              ">See all documentation</a>
+                      <a href="/docs/web-platform" class="button"
+                        >See all documentation</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -498,60 +791,102 @@
             </div>
           </div>
         </section>
+
         <section
-          class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-cards devsite-landing-row-no-image-background
-            dcc-social"
+          class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-cards devsite-landing-row-no-image-background dcc-social"
           background="pale-blue"
-          header-position="top">
+          header-position="top"
+        >
           <div class="devsite-landing-row-inner">
             <header class="devsite-landing-row-header">
               <div class="devsite-landing-row-header-text">
-                <h2 id="connect-with-the-team" data-text="Connect with the team">
+                <h2
+                  id="connect-with-the-team"
+                  data-text="Connect with the team"
+                >
                   Connect with the team
                 </h2>
               </div>
             </header>
+
             <div class="devsite-landing-row-group">
-              <div class="devsite-landing-row-item dcc-social-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+              <div
+                class="devsite-landing-row-item dcc-social-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/chrome-twitter.svg" loading="lazy" width="57" height="57">
+                    <img
+                      alt=""
+                      src="/images/chrome-twitter.svg"
+                      loading="lazy"
+                      width="57"
+                      height="57"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="chrome-for-developers-on-x" data-text="Chrome for Developers on X" class="hide-from-toc no-link">
+                    <h3
+                      id="chrome-for-developers-on-x"
+                      data-text="Chrome for Developers on X"
+                      class="hide-from-toc no-link"
+                    >
                       Chrome for Developers on X
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Follow us to get real time updates and announcements about Chrome and the web.
+                      Follow us to get real time updates and announcements about
+                      Chrome and the web.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="https://twitter.com/ChromiumDev" class="button
-                              ">Follow</a>
+                      <a href="https://twitter.com/ChromiumDev" class="button"
+                        >Follow</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="devsite-landing-row-item dcc-social-card" description-position="bottom">
-                <div class="devsite-landing-row-item-media
-                                ">
+
+              <div
+                class="devsite-landing-row-item dcc-social-card"
+                description-position="bottom"
+              >
+                <div class="devsite-landing-row-item-media">
                   <figure class="devsite-landing-row-item-image">
-                    <img alt="" src="/static/dcc/chrome-youtube.svg" loading="lazy" width="57" height="57">
+                    <img
+                      alt=""
+                      src="/images/chrome-youtube.svg"
+                      loading="lazy"
+                      width="57"
+                      height="57"
+                    />
                   </figure>
                 </div>
+
                 <div class="devsite-landing-row-item-description">
                   <div class="devsite-landing-row-item-body">
-                    <h3 id="chrome-for-developers-on-youtube" data-text="Chrome for Developers on YouTube" class="hide-from-toc no-link">
+                    <h3
+                      id="chrome-for-developers-on-youtube"
+                      data-text="Chrome for Developers on YouTube"
+                      class="hide-from-toc no-link"
+                    >
                       Chrome for Developers on YouTube
                     </h3>
+
                     <div class="devsite-landing-row-item-description-content">
-                      Subscribe to stay up to speed with Chrome and web updates, tutorials, case studies and more.
+                      Subscribe to stay up to speed with Chrome and web updates,
+                      tutorials, case studies and more.
                     </div>
+
                     <div class="devsite-landing-row-item-buttons">
-                      <a href="https://www.youtube.com/@ChromeDevs" class="button
-                              ">Learn more</a>
+                      <a
+                        href="https://www.youtube.com/@ChromeDevs"
+                        class="button"
+                        >Learn more</a
+                      >
                     </div>
                   </div>
                 </div>

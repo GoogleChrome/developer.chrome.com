@@ -50,5 +50,5 @@ Para dar una buena experiencia de usuario, asegúrese de que:
 ## Recursos
 
 - [Código fuente para la Auditoría **No proporciona un ícono `apple-touch-icon` válido**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/apple-touch-icon.js)
-- [Descubra lo que se necesita para ser instalable](https://web.dev/install-criteria/)
+- [Descubra lo que se necesita para ser instalable](https://web.dev/articles/install-criteria)
 - <a href="https://webhint.io/docs/user-guide/hints/hint-apple-touch-icons/" rel="noreferrer">Usar el icono táctil de Apple</a>

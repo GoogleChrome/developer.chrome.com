@@ -45,7 +45,9 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
 
 {% Aside %}
 
-Starting in Chrome 117, the number of active alarms is limited to 500. Once this limit is reached, `chrome.alarms.create()` will fail. When using a callback, [`chrome.runtime.lastError`][last-error] will be set. When using promises, the promise will be rejected.
+**Chrome 120:** Starting in Chrome 120, the minimum alarm interval has been reduced from 1 minute to 30 seconds. For an alarm to trigger in 30 seconds, set `periodInMinutes: 0.5`. 
+
+**Chrome 117:** Starting in Chrome 117, the number of active alarms is limited to 500. Once this limit is reached, `chrome.alarms.create()` will fail. When using a callback, [`chrome.runtime.lastError`][last-error] will be set. When using promises, the promise will be rejected.
 
 {% endAside %}
 

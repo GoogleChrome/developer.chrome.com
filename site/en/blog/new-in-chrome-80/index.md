@@ -50,7 +50,7 @@ const worker = new Worker('worker.js', {
 Moving to JavaScript modules, also enables the use of dynamic import for
 lazy-loading code, without blocking the execution of the worker. Check out
 Jason's post
-[Threading the web with module workers](https://web.dev/module-workers/) on
+[Threading the web with module workers](https://web.dev/articles/module-workers) on
 web.dev for more details.
 
 ## Optional chaining {: #opt-chaining }
@@ -93,13 +93,13 @@ allowing them to be used by any site, without a token.
 
 ### Periodic background sync
 
-First up, is [periodic background sync](https://web.dev/periodic-background-sync/),
+First up, is [periodic background sync](https://web.dev/articles/periodic-background-sync),
 it periodically synchronizes data in the background, so that when a user
 opens your installed PWA, they always have the freshest data.
 
 ### Contact picker
 
-Next up, is the [Contact Picker API](https://web.dev/contact-picker/), an
+Next up, is the [Contact Picker API](https://web.dev/articles/contact-picker), an
 on-demand API that allows users to select entries from their contact list
 and share limited details of the selected entries with a website.
 
@@ -108,7 +108,7 @@ easier for users to reach and connect with their friends and family.
 
 ### Get installed related apps
 
-And finally, the [Get Installed Related Apps](https://web.dev/get-installed-related-apps/)
+And finally, the [Get Installed Related Apps](https://web.dev/articles/get-installed-related-apps)
 method allows your web app to check if your native app is installed on a user's
 device.
 
@@ -148,7 +148,7 @@ then call `index.add`, and provide metadata about the content.
 
 Once the index is populated, it's shown in a dedicated area of Chrome for
 Android's Downloads page. Check out Jeff's post [Indexing your offline-capable
-pages with the Content Indexing API](https://web.dev/content-indexing-api/)
+pages with the Content Indexing API](https://web.dev/articles/content-indexing-api)
 on web.dev for complete details.
 
 ### Notification triggers
@@ -178,7 +178,7 @@ registration. In the notification options, add a `showTrigger` property with a
 notification.
 
 The origin trial is planned to run through Chrome 83, so check out Tom's
-[Notification Triggers](https://web.dev/notification-triggers/) post on web.dev
+[Notification Triggers](https://web.dev/articles/notification-triggers) post on web.dev
 for complete details.
 
 ### Other origin trials

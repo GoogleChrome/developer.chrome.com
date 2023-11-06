@@ -20,9 +20,9 @@ Lighthouse 10 is available immediately on the [command line through npm](https:/
 
 ## Scoring changes
 
-The venerable [Time To Interactive (TTI)](https://web.dev/tti/) metric is being removed in Lighthouse 10, concluding the [deprecation process started in Lighthouse 8](https://github.com/GoogleChrome/lighthouse/blob/main/docs/v8-perf-faq.md#whats-the-story-with-tti). TTI's 10% score weight is shifting to [Cumulative Layout Shift (CLS)](https://web.dev/cls/), which will now account for 25% of the [overall performance score](/docs/lighthouse/performance/performance-scoring/#lighthouse-10).
+The venerable [Time To Interactive (TTI)](https://web.dev/articles/tti) metric is being removed in Lighthouse 10, concluding the [deprecation process started in Lighthouse 8](https://github.com/GoogleChrome/lighthouse/blob/main/docs/v8-perf-faq.md#whats-the-story-with-tti). TTI's 10% score weight is shifting to [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls), which will now account for 25% of the [overall performance score](/docs/lighthouse/performance/performance-scoring/#lighthouse-10).
 
-TTI marks a point in time, but the way it's defined makes it overly sensitive to outlier network requests and long tasks. [Largest Contentful Paint (LCP)](/docs/lighthouse/performance/lighthouse-largest-contentful-paint/) and [Speed Index](/docs/lighthouse/performance/speed-index/) are usually better heuristics for a page's contents feeling loaded than a count of active network requests. [Total Blocking Time (TBT)](/docs/lighthouse/performance/lighthouse-total-blocking-time/) meanwhile handles long tasks and main-thread availability more robustly, and while not a direct proxy, tends to correlate better with [Core Web Vitals](https://web.dev/vitals/#core-web-vitals) as measured in the field.
+TTI marks a point in time, but the way it's defined makes it overly sensitive to outlier network requests and long tasks. [Largest Contentful Paint (LCP)](/docs/lighthouse/performance/lighthouse-largest-contentful-paint/) and [Speed Index](/docs/lighthouse/performance/speed-index/) are usually better heuristics for a page's contents feeling loaded than a count of active network requests. [Total Blocking Time (TBT)](/docs/lighthouse/performance/lighthouse-total-blocking-time/) meanwhile handles long tasks and main-thread availability more robustly, and while not a direct proxy, tends to correlate better with [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals) as measured in the field.
 
 CLS's increased weight is incidental to TTI's removal, but better reflects its importance as a Core Web Vital and will ideally increase focus for sites that still make unnecessary layout shifts.
 
@@ -40,7 +40,7 @@ Lighthouse 10 brings a brand new performance audit and a significant change to a
 
 ### Back/forward cache {: #bfcache }
 
-The [back/forward cache (bfcache)](https://web.dev/bfcache/) is one of the most powerful tools available for improving a page's performance for real users. Beyond the normal browser cache, a page loaded from the bfcache will restore page layout and execution state nearly instantly, largely skipping all page load activity and getting your page in front of your users immediately as they navigate backward and forward through their history.
+The [back/forward cache (bfcache)](https://web.dev/articles/bfcache) is one of the most powerful tools available for improving a page's performance for real users. Beyond the normal browser cache, a page loaded from the bfcache will restore page layout and execution state nearly instantly, largely skipping all page load activity and getting your page in front of your users immediately as they navigate backward and forward through their history.
 
 There are a few ways that a page can prevent the browser from restoring a page from the bfcache, however. This new Lighthouse audit actually navigates away from the test page and back again to test if it's bfcache-able, and lists the reasons if it fails.
 
@@ -60,7 +60,7 @@ The new audit is now ["Allows users to paste into input fields" (`paste-preventi
 
 If you use Lighthouse as a Node library, there are a few programmatic breaking changes in this release you may need to account for. See the [10.0 changelog](https://github.com/GoogleChrome/lighthouse/releases/tag/v10.0.0) for full details.
 
-Lighthouse 10 also ships with full TypeScript type declarations! Anything imported from `lighthouse` should now be typed, which should be particularly helpful if you're scripting [Lighthouse user flows](https://web.dev/lighthouse-user-flows/).
+Lighthouse 10 also ships with full TypeScript type declarations! Anything imported from `lighthouse` should now be typed, which should be particularly helpful if you're scripting [Lighthouse user flows](https://web.dev/articles/lighthouse-user-flows).
 
 <figure>
   {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/VlPiDhDRI96PCBWyPm7x.png", alt="A Node script importing Lighthouse as a function, demonstrating that the options object passed into the function is now type checked by TypeScript", width="562", height="199" %}

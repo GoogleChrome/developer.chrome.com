@@ -144,7 +144,7 @@ There is exactly one browser process.
 plus the browser process.
 It rasters and draws using the GPU. There is exactly one Viz process.
 
-Different [sites](https://web.dev/same-site-same-origin/) always end up in different render processes.
+Different [sites](https://web.dev/articles/same-site-same-origin) always end up in different render processes.
 (In reality,
 [always on desktop; when possible on mobile](https://blog.chromium.org/2019/10/recent-site-isolation-improvements.html).
 I'll write "always" below,
@@ -163,7 +163,7 @@ From the perspective of rendering,
 the important advantage of multiple render processes is that cross-site iframes
 and tabs achieve [performance isolation](/blog/renderingng/#performance-isolation)
 from each other.
-In addition, origins can opt into [even more isolation](https://web.dev/origin-agent-cluster/).
+In addition, origins can opt into [even more isolation](https://web.dev/articles/origin-agent-cluster).
 
 There is exactly one Viz process for all of Chromium.
 After all, there is usually only one GPU and screen to draw to.

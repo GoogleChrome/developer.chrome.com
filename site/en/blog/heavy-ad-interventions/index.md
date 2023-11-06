@@ -214,7 +214,7 @@ is only best-effort by the browser not a guarantee.
 
 {% Aside 'caution' %}
 [**Do not use** the `unload` and `beforeunload`
-events](https://web.dev/bfcache/#never-use-the-unload-event) here. This will
+events](https://web.dev/articles/bfcache#never_use_the_unload_event) here. This will
 actively hurt your page caching and performance across multiple browsers.
 {% endAside %}
 
@@ -243,7 +243,7 @@ request:
 Ad content is just web content, so make use of tools like
 [Lighthouse](/docs/lighthouse/overview/) to audit the overall performance of your
 content. The resulting audits provide inline guidance on improvements. You can
-also refer to the [web.dev/fast](https://web.dev/fast/) collection.
+also refer to the [web.dev/fast](https://web.dev/articles/fast) collection.
 
 You may find it helpful to test your ad in a more isolated context. You can use
 the custom URL option on https://heavy-ads.glitch.me to test this with a

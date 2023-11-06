@@ -54,8 +54,8 @@ Chromium issue: [1270700](https://crbug.com/1270700)
 <!-- ## New shortcuts to emulate light and dark themes {: #emulation } -->
 ## ライトテーマとダークテーマをエミュレートする新しいショートカット {: #emulation }
 
-<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)) with the new shortcuts in the **Styles** pane. -->
-**Styles** ペインで新しいショートカットを使用して、ライトテーマとダークテーマ（CSSメディア特性の [prefers-color-scheme](https://web.dev/prefers-color-scheme/#the-prefers-color-scheme-media-query)）をより素早くエミュレートできるようになりました。
+<!-- You can now emulate the light and dark themes quicker (CSS media feature [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)) with the new shortcuts in the **Styles** pane. -->
+**Styles** ペインで新しいショートカットを使用して、ライトテーマとダークテーマ（CSSメディア特性の [prefers-color-scheme](https://web.dev/articles/prefers-color-scheme#the_prefers_color_scheme_media_query)）をより素早くエミュレートできるようになりました。
 
 <!-- Previously, it took more steps to [emulate themes](/docs/devtools/rendering/emulate-css/) in the **Rendering** tab.   -->
 これまでは **Rendering** タブで[テーマをエミュレートする](/docs/devtools/rendering/emulate-css/)ためにより多くの手順が必要でした。
@@ -74,8 +74,8 @@ Chromium issue: [1314299](https://crbug.com/1314299)
 <!-- DevTools now apply the Content Security Policy (CSP) in the **Preview** tab in the **Network** panel. -->
 DevTools は **Network** パネルの **Preview** タブに Content Security Policy（CSP）を適用するようになりました。
 
-<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/what-is-mixed-content/). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
-例えば、最初のスクリーンショットは[混合コンテンツ](https://web.dev/what-is-mixed-content/)を含むページを示しています。このページはセキュアな HTTPS 接続を使用して読み込まれますが、スタイルシートはセキュアではない HTTP 接続が使用されています。
+<!-- For example, the first screenshot shows a page that contains [mixed content](https://web.dev/articles/what-is-mixed-content). The page loads over a secure HTTPS connection, but the stylesheet loads over an insecure HTTP connection. -->
+例えば、最初のスクリーンショットは[混合コンテンツ](https://web.dev/articles/what-is-mixed-content)を含むページを示しています。このページはセキュアな HTTPS 接続を使用して読み込まれますが、スタイルシートはセキュアではない HTTP 接続が使用されています。
 
 <!-- The browser blocked the stylesheet request by default. However, when you opened the page via the **Preview** tab in the **Network** panel, the stylesheet was not blocked previously (hence the background turned into red). It is now blocked as you would expect (second screenshot). -->
 デフォルトではブラウザはスタイルシートのリクエストをブロックします。しかし、これまではこのページが **Network** パネルの **Preview** タブで開かれたときには、スタイルシートがブロックされませんでした（そのため背景が赤色に変わります）。これが期待どおりにブロックされるようになります（2枚目のスクリーンショット）。
@@ -220,7 +220,7 @@ CSS の変更を簡単に追跡してコピーできるように、新しい **C
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/afe5698f1cd20304d2763574ef8e9faf6a4a6db1 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5de1d6140cad945783f3ca54055134f4a7db42a1 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/573dfc1cca09e49177ece3898c9ba9619c386f06 #}
 
 Chromium issue: [1268754](https://crbug.com/1268754)
 

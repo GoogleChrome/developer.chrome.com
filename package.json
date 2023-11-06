@@ -52,7 +52,7 @@
     "@google-cloud/error-reporting": "^2.0.4",
     "@google-cloud/storage": "^6.7.0",
     "@lhci/cli": "^0.7.2",
-    "@mdn/browser-compat-data": "5.3.6",
+    "@mdn/browser-compat-data": "5.3.20",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "adm-zip": "0.5.10",
     "algoliasearch": "^4.6.0",
@@ -94,7 +94,7 @@
     "unistore": "^3.5.2",
     "uslug": "^1.0.4",
     "web-vitals": "^3.5.0",
-    "webdev-infra": "1.0.56",
+    "webdev-infra": "1.0.57",
     "xss": "^1.0.14"
   },
   "optionalDependencies": {
