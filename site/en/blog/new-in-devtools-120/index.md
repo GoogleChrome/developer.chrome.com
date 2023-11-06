@@ -93,7 +93,7 @@ Chromium issue: [345205](https://crbug.com/345205).
 
 ## Default exclusion pattern {: #default-regex }
 
-This version enables the default regular expression as a custom exclusion rule in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](docs/devtools/settings/ignore-list/). To help you focus on only your code, the **Debugger** will now skip scripts from `/node_modules/` and `/bower_components/` and won't stop on exceptions thrown by them.
+This version enables the default regular expression as a custom exclusion rule in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](docs/devtools/settings/ignore-list/). To help you focus on only your code, the **Debugger** will now skip scripts from `/node_modules/` and `/bower_components/`.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YW04UKu8dXAxIby609b1.png", alt="The before and after adding a regular expression.", width="800", height="461" %}
 
