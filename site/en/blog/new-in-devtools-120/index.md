@@ -91,7 +91,7 @@ Chromium issue: [345205](https://crbug.com/345205).
 
 ## Enhanced ignore listing {: #ignore-listing }
 
-### Default exclusion pattern {: #default-regex }
+### Default exclusion pattern for `node_modules` {: #default-regex }
 
 This version enables the default regular expression as a custom exclusion rule in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](docs/devtools/settings/ignore-list/). To help you focus on only your code, the **Debugger** will now skip scripts from `/node_modules/` and `/bower_components/`.
 
@@ -108,7 +108,7 @@ When you debug code with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3Hi
 - Exceptions caught in non-ignored frames in the call stack.
 - Caught exceptions that pass through non-ignored frames in the call stack. For example, see the screenshot.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NGrHd245YHYM5aG07woI.png", alt="Pause on a caught exception that passed through non-ignored code.", width="800", height="436" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/DcFYfGliv5HO3mXV8pxT.png", alt="Pause on a caught exception that passed through non-ignored code.", width="800", height="509" %}
 
 To test this behavior, open [this demo page](https://devtools-ignore-list-stories.glitch.me/):
 
