@@ -122,7 +122,7 @@ Additionally, the **Debugger** no longer predicts that `Promise.finally()` will 
 
 Chromium issues: [1489312](https://crbug.com/1489312), [1291064](https://crbug.com/1291064).
 
-### `x_google_ignoreList` renamed into `ignoreList` in source maps {: #ignore-list-spec }
+### `x_google_ignoreList` renamed to `ignoreList` in source maps {: #ignore-list-spec }
 
 The [source maps specification](https://sourcemaps.info/spec.html) has [adopted](https://github.com/tc39/source-map-spec/pull/19) the `ignoreList` field instead of `x_google_ignoreList` and DevTools now supports the new name with a fallback for the old one. Frameworks and bundlers can now use the new field name.
 
@@ -183,7 +183,7 @@ The DevTools team would like to express gratitude to [Junseo (Jeremy) Yoo](https
 
 Chromium issue: [1448214](https://crbug.com/1448214).
 
-## Preloading renamed into Speculative loading {: #speculative-loading }
+## Preloading renamed to Speculative loading {: #speculative-loading }
 
 To avoid overusing the previous term and better reflect the behavior, **Application** > **Preloading** has been renamed into **Speculative loads**. [Speculative loading](/blog/prerender-pages/) allows a [near-instant page load](/blog/prerender-pages/#impact-of-prerendering) based on speculation rules that [you can define](/blog/prerender-pages/#the-speculation-rules-api) for your website to prerender and prefetch most navigated-to pages.
 
