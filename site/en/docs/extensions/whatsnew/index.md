@@ -265,7 +265,7 @@ From Chrome 112, the quota for the [`storage.session`](/docs/extensions/referenc
 
 Offscreen documents are now available in Manifest V3 extensions. These help with the transition from background pages to extension service workers by providing support for DOM-related features and APIs. For more information, [read the blog post](/blog/Offscreen-Documents-in-Manifest-v3/).
 
-### Chrome 109: Is an extension enabled {: #m110-action }
+### Chrome 110: Is an extension enabled {: #m110-action }
 
 <p class="color-secondary-text type--caption">Posted on <time>January 12, 2023</time></p>
 
@@ -285,7 +285,7 @@ Previously, an extension service worker would frequently shut down at the five m
 
 The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
 
-### Chrome 108: Setting badge colors {: #m110-badge-color }
+### Chrome 110: Setting badge colors {: #m110-badge-color }
 
 <p class="color-secondary-text type--caption">Posted on <time>November 29, 2022</time></p>
 
