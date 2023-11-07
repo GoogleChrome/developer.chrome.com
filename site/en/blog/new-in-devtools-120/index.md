@@ -70,7 +70,7 @@ In the **Animations** tab, you can now:
 - Click anywhere on the timeline header to set the playhead. The animation continues to play if it was already playing and stops otherwise. Previously, you had to drag it.
 - Resize the name column to see the full animation names.
 
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/ReiQOLhC2qwi4NeCUbtQ.mp4", width="800", height="454", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QAXZfGIslB61Alhbbyjs.mp4", width="800", height="353", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6aafa9de8000bbb4a889375dc483e2da28edd960 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3c68b4da98b91f729a007b804f548185403a775f #}
