@@ -115,7 +115,7 @@ To test this behavior, open [this demo page](https://devtools-ignore-list-storie
 1. Open DevTools > **Sources**, add the `hidden` [folder to the ignore list](/docs/devtools/javascript/reference/#file-tree-ignore-list), and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pause on caught exceptions**.
 1. On the page, under the "Caught" list of scenarios, click the different buttons and see the execution paused in the mentioned cases.
 
-Additionally, the **Debugger** no longer predicts that `Promise.finally()` will catch an exception, similar to how the `try...finally` block doesn't catch any.
+To pause execution on caught and/or uncaught exceptions (when checked) in asynchronous calls, the **Debugger** looks for rejection handlers across promises. Starting with this version, the **Debugger** no longer predicts that `Promise.finally()` will catch an exception, similar to how the `try...finally` block doesn't catch any.
 
 {# https://chromium.googlesource.com/v8/v8.git/+/8449af375a7282a4347b197146fc838ccc1bc719 #}
 {# https://chromium.googlesource.com/v8/v8.git/+/94d44af3f774cb57f7f04b43bef3a644c9878644 #}
@@ -161,7 +161,7 @@ Watch the video to see input mode toggling in action.
 
 Chromium issue: [1410433](https://crbug.com/1410433).
 
-## Elements now shows URLs for `#document` nodes {: #document-urls }
+## The Elements panel now shows URLs for `#document` nodes {: #document-urls }
 
 To let you debug iframes easier, the Elements panel now displays `documentURL` next to `#document` nodes.
 
@@ -238,9 +238,9 @@ These are some noteworthy fixes and improvements in this release:
 - **Elements** > **Styles**:
   - Fixed the resolution of the inherited CSS variables for slotted elements ([1492162](https://crbug.com/1492162)).
   - When disabling a CSS property, its comments are now stripped to fix syntax breaks ([1101224](https://crbug.com/1101224)).
-- **Network**: The **Priority** column now shows a tooltip with information on initial priority when **Big request rows** are enabled ([1495735](https://crbug.com/1495735)).
+- **Network**: The **Priority** column now shows a tooltip with information on initial priority (the same is shown when **Big request rows** is checked) ([1495735](https://crbug.com/1495735)).
 - Deprecations:
-  - The **Color format** setting has been disabled in previous version and is now removed.
+  - The **Color format** setting has been disabled in previous versions and is now removed.
   - The Delete all overrides option in **Sources** is now removed due to low usage after the [streamlining of overrides](blog/new-in-devtools-117/#overrides) ([1473681](https://crbug.com/1473681)).
 
 <!-- $contentEnd -->
