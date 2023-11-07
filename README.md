@@ -1,3 +1,7 @@
+**Note:** This site is migrating to a new platform and as of 7 November we are not merging new pull requests for changes to existing content. Please raise content issues in the new [issue tracker](https://issuetracker.google.com/issues/new?component=1400036&template=1897236), and they will be addressed in the migrated copy.
+
+For urgent content updates, contact rachelandrew@.
+
 # developer.chrome.com
 
 developer.chrome.com is the ultimate resource for developers of all backgrounds
