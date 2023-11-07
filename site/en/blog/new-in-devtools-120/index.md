@@ -101,6 +101,27 @@ This version enables the default regular expression as a custom exclusion rule i
 
 Chromium issue: [1496301](https://crbug.com/1496301).
 
+### Caught exceptions now stop execution if caught or passing through non-ignored code {: #exceptions }
+
+When you debug code with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pause on caught exceptions** checked, the **Debugger** now stops the execution on the following caught exceptions, both synchronous and asynchronous:
+
+- Exceptions caught in non-ignored frames in the call stack.
+- Caught exceptions that pass through non-ignored frames in the call stack. For example, see the screenshot.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/NGrHd245YHYM5aG07woI.png", alt="Pause on a caught exception that passed through non-ignored code.", width="800", height="436" %}
+
+To test this behavior, open [this demo page](https://devtools-ignore-list-stories.glitch.me/):
+
+1. Open DevTools > **Sources**, add the `hidden` [folder to the ignore list](/docs/devtools/javascript/reference/#file-tree-ignore-list), and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pause on caught exceptions**.
+1. On the page, under the "Caught" list of scenarios, click the different buttons and see the execution paused in the mentioned cases.
+
+Additionally, the **Debugger** no longer predicts that `Promise.finally()` will catch an exception, similar to how the `try...finally` block doesn't catch any.
+
+{# https://chromium.googlesource.com/v8/v8.git/+/8449af375a7282a4347b197146fc838ccc1bc719 #}
+{# https://chromium.googlesource.com/v8/v8.git/+/94d44af3f774cb57f7f04b43bef3a644c9878644 #}
+
+Chromium issues: [1489312](https://crbug.com/1489312), [1291064](https://crbug.com/1291064).
+
 ### `x_google_ignoreList` renamed into `ignoreList` in source maps {: #ignore-list-spec }
 
 The [source maps specification](https://sourcemaps.info/spec.html) has [adopted](https://github.com/tc39/source-map-spec/pull/19) the `ignoreList` field instead of `x_google_ignoreList` and DevTools now supports the new name with a fallback for the old one. Frameworks and bundlers can now use the new field name.
@@ -113,18 +134,6 @@ For more information on source maps, see:
 - [Debug your original code instead of deployed with source maps](/docs/devtools/javascript/source-maps/)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a5ef7b0545e43e68e5e4ebcdd309aa3c6c927598 #}
-
-## New input mode toggle during remote debugging {: #remote-input-mode }
-
-You can now toggle between touch and mouse input when debugging a Chrome tab remotely. For example, when you run a Chrome instance with the `--remote-debugging-port=<port>` and connect to this network target via `chrome://inspect/#devices`.
-
-Watch the video to see input mode toggling in action.
-
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Mux9Dh4PazeINtyFNSYg.mp4", width="800", height="479", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/28f1262c413523433c8252ae046cabbb97d6211e #}
-
-Chromium issue: [1410433](https://crbug.com/1410433).
 
 ## Event listener breakpoints in web workers and worklets {: #worker-breakpoints }
 
@@ -139,6 +148,18 @@ When you set an event breakpoint in **Sources** > **Event Listener Breakpoints**
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/992fc88c6c9549810616f83dae64047e3e654bf7 #}
 
 Chromium issue: [1445175](https://crbug.com/1445175).
+
+## New input mode toggle during remote debugging {: #remote-input-mode }
+
+You can now toggle between touch and mouse input when debugging a Chrome tab remotely. For example, when you run a Chrome instance with the `--remote-debugging-port=<port>` and connect to this network target via `chrome://inspect/#devices`.
+
+Watch the video to see input mode toggling in action.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/Mux9Dh4PazeINtyFNSYg.mp4", width="800", height="479", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/28f1262c413523433c8252ae046cabbb97d6211e #}
+
+Chromium issue: [1410433](https://crbug.com/1410433).
 
 ## Elements now shows URLs for `#document` nodes {: #document-urls }
 
