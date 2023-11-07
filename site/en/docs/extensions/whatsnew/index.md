@@ -408,6 +408,12 @@ dependencies on DOM capabilities.
 Manifest V3 extensions can now include `wasm-unsafe-eval` in their `content_security_policy`
 declarations. This change allows Manifest V3 extensions to use WebAssembly.
 
+### Chrome 102: New storage.session API {: #m102-storage-session }
+
+<p class="color-secondary-text type--caption">Posted on <time>March 22, 2022</time></p>
+
+Manifest V3 extensions can now use in memory storage [storage.session](/docs/extensions/reference/storage/#property-session) .
+
 ### Docs update: Chrome Web Store item discovery {: #cws-discovery-doc }
 
 <p class="color-secondary-text type--caption">Posted on <time>March 21, 2022</time></p>
