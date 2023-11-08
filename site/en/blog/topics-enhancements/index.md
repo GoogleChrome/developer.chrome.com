@@ -39,9 +39,9 @@ approaches.
 The most promising approach we've seen is to integrate Topics utility feedback
 from the advertising ecosystem directly. We have done so by introducing the
 concept of "high utility" buckets. Chrome
-[places](https://docs.google.com/spreadsheets/d/1ZihmbhaTULWdsPkUZlD1vDshbxbMtDwefUsjl96p69o/edit#gid=0)
-each of the 22 root topics (those without an ancestor) from the taxonomy into
-one of two buckets, indicating higher or standard utility for the ecosystem
+places each of the 22 root topics (those without an ancestor) from the taxonomy [into
+one of two buckets](https://github.com/patcg-individual-drafts/topics/blob/main/topics-utility-buckets-v1.md) 
+indicating higher or standard utility for the ecosystem
 overall. All descendants of the root topics inherit the same bucket assignment
 from their parent. The assignment of root topics to buckets  is based on input
 about utility we received from companies across the ecosystem when crafting our
