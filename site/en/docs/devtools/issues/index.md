@@ -29,6 +29,7 @@ Starting from Chrome 116, the **Issues** tab supports the following types of iss
 - (Preview) [Low-contrast issues][8]
 - [Trusted Web Activity issues][9]
 - [Stylesheet loading issues](/blog/new-in-devtools-116/#stylesheets)
+- [Invalid `@property` CSS rules](/blog/new-in-devtools-119/#property-issues)
 
 Future versions of Chrome will support more issue types.
 

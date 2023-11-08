@@ -4,14 +4,18 @@ title: API のステータスと機能のリリース
 subhead: Chrome プラットフォームのステータス、リソース、機能リリースのタイムラインをご覧ください。
 description: Chrome プラットフォームのステータス、リソース、機能リリースのタイムラインをご覧ください。
 date: 2021-05-18
-updated: 2023-03-16
+updated: 2023-10-09
 authors:
   - alexandrawhite
 ---
 
-プライバシー サンドボックスの各提案は、開発プロセスのさまざまな段階にあります。それぞれの提案には、予想される可用性が異なる機能が個別に存在します。
+プライバシーサンドボックスの提案は、それぞれに開発プロセスのさまざまな段階にあります。各提案には、期待される可用性が異なる個々の機能が存在します。
 
-提案または API に関する最新情報を確認するには、それぞれの概要ドキュメントと[プライバシー サンドボックス タイムライン](https://privacysandbox.com/open-web/)にアクセスしてください。
+提案または API に関する最新情報を確認するには、それぞれの概要ドキュメントと[プライバシーサンドボックスのタイムライン](https://privacysandbox.com/open-web/)をご覧ください。
+
+## 集計サービス
+
+{% Partial 'privacy-sandbox/timeline/aggregation-service.njk' %}
 
 ## アトリビューション レポート
 
@@ -37,18 +41,6 @@ authors:
 
 {% Partial 'privacy-sandbox/timeline/fenced-frames-features.njk' %}
 
-## First-Party Sets
-
-{% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
-
-## FLEDGE
-
-[TURTLEDOVE](https://github.com/WICG/turtledove) の子孫。
-
-{% Partial 'privacy-sandbox/timeline/fledge.njk' %}
-
-{% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
-
 ## IP 保護
 
 {% Partial 'privacy-sandbox/timeline/ip-protection.njk' %}
@@ -57,25 +49,41 @@ authors:
 
 {% Partial 'privacy-sandbox/timeline/private-aggregation.njk' %}
 
+{% Partial 'privacy-sandbox/timeline/private-aggregation-features.njk' %}
+
 ## プライベートステートトークン
 
 {% Partial 'privacy-sandbox/timeline/private-state-tokens.njk' %}
 
-## Topics API
+## Protected Audience
 
-{% Partial 'privacy-sandbox/timeline/topics.njk' %}
+[TURTLDOVE](https://github.com/WICG/turtledove) の後継。以前は FLEDGE と呼ばれていました。詳細については、[保留中の Protected Audience API 機能のステータス](/docs/privacy-sandbox/protected-audience-api/feature-status/)も参照してください。
 
-## ユーザーエージェントの削減と User-Agent Client Hints (UA-CH)
+{% Partial 'privacy-sandbox/timeline/fledge.njk' %}
 
-ブラウザが提供するデータを制限して機密情報が含まれないようにし、フィンガープリンティングを削減します。
+{% Partial 'privacy-sandbox/timeline/fledge-features.njk' %}
 
-{% Partial 'privacy-sandbox/timeline/ua-ch.njk' %}
+## Related Website Sets（以前の First-Party Sets）
+
+{% Partial 'privacy-sandbox/timeline/first-party-sets.njk' %}
 
 ## 共有ストレージ
 
 {% Partial 'privacy-sandbox/timeline/shared-storage.njk' %}
 
 {% Partial 'privacy-sandbox/timeline/shared-storage-features.njk' %}
+
+## Topics API
+
+{% Partial 'privacy-sandbox/timeline/topics.njk' %}
+
+{% Partial 'privacy-sandbox/timeline/topics-features.njk' %}
+
+## ユーザーエージェントの削減と User-Agent Client Hints（UA-CH）
+
+ブラウザが提供するデータを制限して機密情報が含まれないようにし、フィンガープリンティングを削減します。
+
+{% Partial 'privacy-sandbox/timeline/ua-ch.njk' %}
 
 {% Details %} {% DetailsSummary %}
 
@@ -88,7 +96,7 @@ authors:
 [Topics API](#topics) に置き換えられました。
 
 - [Chrome プラットフォームのステータス](https://www.chromestatus.com/features/5710139774468096)。
-- 最初の[オリジントライアル](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs)は終了しました。最新情報については、<a>Intent to Experiment</a> をご覧ください。
+- 最初のオリジントライアルは終了しました。最新情報については、[Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) をご覧ください。
 - [Blink のステータス](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=floc)。
 - [API の提案](https://github.com/WICG/floc)は、[WICG](https://www.w3.org/community/wicg/)、インタレストグループと検討されました。
 - [GitHub](https://github.com/WICG/floc): API に関する質問とディスカッションについては、[イシュー](https://github.com/WICG/floc/issues)をご覧ください。

@@ -342,7 +342,7 @@ in browsers that support Declarative Shadow DOM because the `<template shadowroo
 
 Declarative Shadow DOM has been available since Chrome 90 and Edge 91, but it used an older non-standard attribute called
 `shadowroot` instead of the standardized `shadowrootmode` attribute. The newer `shadowrootmode` attribute and streaming
-behavior is available in Chrome 111 and Edge Xyz.
+behavior is available in Chrome 111 and Edge 111.
 
 As a new web platform API, Declarative Shadow DOM does not yet have widespread support across all browsers. Browser support
 can be detected by checking for the existence of a `shadowRootMode` property on the prototype of `HTMLTemplateElement`:

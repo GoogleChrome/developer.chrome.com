@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Manifest - Minimum Chrome Version"
 seoTitle: "Chrome Extensions Manifest: minimum_chrome_version"
 date: 2013-05-12
-updated: 2023-02-14
+updated: 2023-10-25
 description: Reference documentation for the minimum_chrome_version property of manifest.json.
 ---
 
@@ -35,3 +35,11 @@ Existing users of your extension will not receive updates when the
 `minimum_chrome_version` is higher than their current browser version. This
 happens silently so you should exercise caution and consider ways of letting
 existing users know that they are no longer receiving updates.
+
+{% Aside 'note' %}
+Enterprise users using [ephemeral mode][ephemeral] are treated as new users each time they sign in.
+This means that if they are using a Chrome version lower than the `minimum_chrome_version`, your
+extension will not be installed.
+{% endAside %}
+
+[ephemeral]: https://support.google.com/chrome/a/answer/3538894

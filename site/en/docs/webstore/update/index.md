@@ -180,5 +180,5 @@ Changing the %rollout does *not* trigger a new review.
 [upgrade-item]: #upgrade-your-item
 [visibility]: /docs/webstore/cws-dashboard-distribution#setting-the-visibility
 [visibility-private]: /docs/webstore/cws-dashboard-distribution/#private-visibility-trusted-testers
-[test-production-extension]: /docs/webstore/spam-faq/#test-version
+[test-production-extension]: /docs/webstore/program-policies/spam-faq/#test-version
 

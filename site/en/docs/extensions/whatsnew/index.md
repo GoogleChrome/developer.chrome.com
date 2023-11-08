@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-10-17
+updated: 2023-10-30
 tags:
   - extensions-news
 
@@ -14,6 +14,26 @@ tags:
 <!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
+
+### Blog post: What's new in Chrome 120 for Extensions {: #blog-whats-new-extensions-chrome-120 }
+
+<p class="color-secondary-text type--caption">Posted on <time>November 6, 2023</time></p>
+
+[Chrome 120 Beta](/blog/chrome-120-beta/) was recently released. For a summary of the important updates relevant to extension developers, read our new blog post:  [What's new in Chrome 120 for Extensions](/blog/chrome-120-beta-whats-new-for-extensions/). This release also marks a major milestone as it removes the final two items (userScripts, file handler on ChromeOS) from the [list of critical platform gaps](/docs/extensions/migrating/known-issues/). 
+
+### PSA: Change to handling of privacy policy URLs in Developer Dashboard {: #privacy-policy-per-item }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 30, 2023</time></p>
+
+Privacy policies in the Developer Dashboard are now added at the item level. This allows you to provide a different privacy policy per item. Read more about this
+change in our [PSA](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/c4hhdgSbn5g).
+
+### Video: A chat with Matt Frisbie {: #video-interview-oct-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 26, 2023</time></p>
+
+We've just published a new video on the Chrome for Developers YouTube channel chatting with Google Developer Expert and author Matt Frisbie. Watch it
+[here](https://www.youtube.com/watch?v=8P-Sc8ZaViY).
 
 ### New guidance on testing extensions {: #testing-guidance-oct-23 }
 
@@ -245,7 +265,7 @@ From Chrome 112, the quota for the [`storage.session`](/docs/extensions/referenc
 
 Offscreen documents are now available in Manifest V3 extensions. These help with the transition from background pages to extension service workers by providing support for DOM-related features and APIs. For more information, [read the blog post](/blog/Offscreen-Documents-in-Manifest-v3/).
 
-### Chrome 109: Is an extension enabled {: #m110-action }
+### Chrome 110: Is an extension enabled {: #m110-action }
 
 <p class="color-secondary-text type--caption">Posted on <time>January 12, 2023</time></p>
 
@@ -265,7 +285,7 @@ Previously, an extension service worker would frequently shut down at the five m
 
 The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
 
-### Chrome 108: Setting badge colors {: #m110-badge-color }
+### Chrome 110: Setting badge colors {: #m110-badge-color }
 
 <p class="color-secondary-text type--caption">Posted on <time>November 29, 2022</time></p>
 

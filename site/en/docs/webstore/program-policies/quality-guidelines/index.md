@@ -23,4 +23,4 @@ updated: 2023-05-30
 
 See [this FAQ][faq] for more information.
 
-[faq]: /docs/extensions/mv3/quality_guidelines
+[faq]: /docs/webstore/program-policies/quality-guidelines-faq

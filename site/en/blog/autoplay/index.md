@@ -290,7 +290,7 @@ on the Chromium site.
 [command line flag]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [customize-install]: https://web.dev/customize-install/
 [do this with flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
-[https://airhorner.com]: https://airhorner.com/progressive-web-apps/
+[https://airhorner.com]: https://airhorner.com/
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
 [permissions policy]: /docs/privacy-sandbox/permissions-policy/
 [permissions policy for autoplay]: https://github.com/WICG/feature-policy/blob/main/features.md

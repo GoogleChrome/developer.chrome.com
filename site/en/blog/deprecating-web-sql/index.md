@@ -79,11 +79,12 @@ and outperforms Web SQL in many cases.
   **Chromium&nbsp;115** ({% ChromeDate '115' %}) and a warning message is shown
   in the Chrome DevTools Issue panel.
 - [📍 We are here.] A
-  [deprecation trial](/docs/web-platform/origin-trials/#deprecation-trials) to
+  [deprecation trial](/origintrials/#/view_trial/494270059103911937) to
   keep using Web SQL is available from **Chromium&nbsp;117**
   ({% ChromeDate '117' %}) to **Chromium&nbsp;123** ({% ChromeDate '123' %}).
+  To learn more about deprecation trials, see the linked section of the article [Get started with origin trials](/docs/web-platform/origin-trials/#deprecation-trials).
 - [🔮 In the future.] Web SQL access in **all contexts** is no longer available
-  in **Chromium&nbsp;119** ({% ChromeDate '119' %})
+  in **Chromium&nbsp;119** ({% ChromeDate '119' %}).
 
 ## Where to go from here
 

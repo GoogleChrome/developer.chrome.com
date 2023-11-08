@@ -2,49 +2,54 @@
 - url: https://chrome.google.com/webstore/developer/dashboard
   title: i18n.docs.webstore.developer_dashboard
   description: i18n.docs.webstore.developer_dashboard_description
-- url: /docs/webstore/faq/
-- title: i18n.docs.webstore.develop
+- title: i18n.docs.webstore.before
   sections:
-    - url: /docs/webstore/get_started_simple/
-    - url: /docs/webstore/best_practices/
-    - url: /docs/webstore/i18n/
-    - url: /docs/webstore/identify_user/
-- title: i18n.docs.webstore.publish
-  sections:
+    - url: /docs/webstore/prepare/
     - url: /docs/webstore/register/
     - url: /docs/webstore/set-up-account/
-    - url: /docs/webstore/prepare/
-    - url: /docs/webstore/publish/
-    - url: /docs/webstore/manage/
-    - url: /docs/webstore/update/
-    - url: /docs/webstore/review-process/
-    - url: /docs/webstore/google-analytics/
-    - url: /docs/webstore/troubleshooting/
-    - url: /docs/webstore/branding/
-    - url: /docs/webstore/rating/
     - url: /docs/webstore/group-publishers/
-    - url: /docs/webstore/account-deletion/
-    - url: /docs/webstore/cws-payments-deprecation/
-- title: i18n.docs.webstore.details
-  sections:
-    - url: /docs/webstore/images/
-    - url: /docs/webstore/cws-dashboard-listing/
     - url: /docs/webstore/best_listing/
+    - url: /docs/webstore/best_practices/
+- title: i18n.docs.webstore.publish
+  sections:
+    - url: /docs/webstore/publish/
+    - url: /docs/webstore/cws-dashboard-listing/
     - url: /docs/webstore/cws-dashboard-privacy/
     - url: /docs/webstore/cws-dashboard-distribution/
-    - url: /docs/webstore/cws-enterprise/
-- url: /docs/webstore/discovery/
-- title: i18n.docs.webstore.policies
+- title: i18n.docs.webstore.manage
   sections:
-    - url: /docs/webstore/terms/
-    - url: /docs/webstore/program-policies/
-    - url: /docs/webstore/trader-disclosure/
-    - url: /docs/webstore/spam-faq/
-    - url: /docs/webstore/deceptive_installation_tactics/
-    - url: /docs/webstore/user_data/
-    - url: /docs/webstore/play_edu_tos/
-    - url: /docs/webstore/complaint-faq/
-- title: i18n.docs.webstore.api
-  sections:
+    - url: /docs/webstore/review-process/
+    - url: /docs/webstore/check-review/
+    - url: /docs/webstore/troubleshooting/
+    - url: /docs/webstore/update/
     - url: /docs/webstore/using_webstore_api
     - url: /docs/webstore/api_index
+- title: i18n.docs.webstore.promote
+  sections:
+    - url: /docs/webstore/discovery/
+    - url: /docs/webstore/support-users/
+    - url: /docs/webstore/metrics
+    - url: /docs/webstore/google-analytics/
+- title: i18n.docs.webstore.guidelines
+  sections:
+    - url: /docs/webstore/images/
+    - url: /docs/webstore/branding/
+    - url: /docs/webstore/rating/
+    - url: /docs/webstore/cws-payments-deprecation/
+- title: i18n.docs.webstore.policies
+  sections:
+    - url: /docs/webstore/program-policies/
+    - url: /docs/webstore/program-policies/terms/
+    - url: /docs/webstore/program-policies/quality-guidelines-faq
+    - url: /docs/webstore/program-policies/affiliate-ads-faq/
+    - url: /docs/webstore/program-policies/deceptive-installation-tactics-faq/
+    - url: /docs/webstore/program-policies/spam-faq/
+    - url: /docs/webstore/program-policies/user-data-faq/
+    - url: /docs/webstore/program-policies/trader-disclosure/
+    - url: /docs/webstore/program-policies/play_edu_tos/
+- title: i18n.docs.webstore.enterprise
+  sections:
+    - url: /docs/webstore/cws-enterprise/
+- title: i18n.docs.webstore.sunset
+  sections:
+    - url: /docs/webstore/account-deletion/

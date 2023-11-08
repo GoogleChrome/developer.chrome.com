@@ -6,36 +6,13 @@ title: "Chrome Web Store API Reference"
 #description: TODO
 ---
 
-{% Aside 'warning' %}
-
-The Payments API used by the Chrome Web Store payments system is now deprecated. See [Payment
-deprecation](/docs/webstore/cws-payments-deprecation/) to learn about migration and official
-timelines.
-
-{% endAside %}
-
 This reference describes the methods and resource representation available for the Chrome Web Store
-Publish API and the Licensing API. Each resource type has one or more data representations and one
-or more methods.
+Publish API. Each resource type has one or more data representations and one
+or more methods. See [Using the Chrome Web Store Publish API][publish-api] for implementation details.
 
-## Resource types {: #resource-types }
+## Items {: #items }
 
-**Chrome Web Store Publish API**
-
--  [Items][header-items]
-
-**Licensing API**
-
--  [InAppProducts][header-in-app-products]
--  [Licenses][header-licenses]
--  [UserLicenses][header-user-licenses]
--  [Payments][header-payments]
-
-## Chrome Web Store Publish API {: #publish-api}
-
-### Items {: #items }
-
-For Items Resource details, see the [resource representation][api-items-resource] page.
+For Items Resource details, see the [resource representation][cws-resource]. URIs are relative to https://www.googleapis.com, unless otherwise noted
 
 <table>
   <thead>
@@ -46,11 +23,8 @@ For Items Resource details, see the [resource representation][api-items-resource
     </tr>
   </thead>
   <tbody>
-    <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com, unless otherwise noted</td>
-    </tr>
     <tr>
-      <td><a href="/docs/webstore/webstore_api/items/get/">get</a></td>
+      <td><a href="/docs/webstore/api_index/#get">get</a></td>
       <td>
         <strong>GET</strong><br>
         <code>/chromewebstore/v1.1/items/<var>itemId</var></code>
@@ -59,7 +33,7 @@ For Items Resource details, see the [resource representation][api-items-resource
         sensitive).</td>
     </tr>
     <tr>
-      <td><a href="/docs/webstore/webstore_api/items/insert/">insert</a></td>
+      <td><a href="/docs/webstore/api_index/#insert">insert</a></td>
       <td>
         <strong>POST</strong><br>
         <code>/upload/chromewebstore/v1.1/items</code>
@@ -67,7 +41,7 @@ For Items Resource details, see the [resource representation][api-items-resource
       <td>Inserts a new item.</td>
     </tr>
     <tr>
-      <td><a href="/docs/webstore/webstore_api/items/publish/">publish</a></td>
+      <td><a href="/docs/webstore/api_index/#publish">publish</a></td>
       <td>
         <strong>POST</strong><br>
         <code>/chromewebstore/v1.1/<br>items/<var>itemId</var>/publish</code>
@@ -79,7 +53,7 @@ For Items Resource details, see the [resource representation][api-items-resource
       </td>
     </tr>
     <tr>
-      <td><a href="/docs/webstore/webstore_api/items/update/">update</a></td>
+      <td><a href="/docs/webstore/api_index/#update">update</a></td>
       <td>
         <strong>PUT</strong><br>
         <code>/upload/chromewebstore/v1.1/<br>items/<var>itemId</var></code><br>
@@ -94,152 +68,199 @@ For Items Resource details, see the [resource representation][api-items-resource
   </tbody>
 </table>
 
-{% Aside %}
+### Resource representation {: #resource }
 
-See [Using the Chrome Web Store Publish API][publish-api].
+```json
+{
+  "kind": "chromewebstore#item",
+  "id": string,
+  "publicKey": string,
+  "uploadState": string,
+  "itemError": [
+    (value)
+  ]
+}
+```
 
-{% endAside %}
+<table id="properties"><thead><tr><th>Property name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr id="id"><td><code>id</code></td><td>string</td><td>Unique ID of the item.</td></tr><tr id="itemError"><td><code>itemError[]</code></td><td>list</td><td>Detail human-readable status of the operation, in English only. Same error messages are displayed when you upload your app to the Chrome Web Store.</td></tr><tr id="kind"><td><code>kind</code></td><td>string</td><td>Identifies this resource as an Item. Value: the fixed string <code>"chromewebstore#item"</code>.</td></tr><tr id="publicKey"><td><code>publicKey</code></td><td>string</td><td>Public key of this item.</td></tr><tr id="uploadState"><td><code>uploadState</code></td><td>string</td><td>Status of the operation.<br><br>Acceptable values are:<ul><li>"<code>FAILURE</code>"</li><li>"<code>IN_PROGRESS</code>"</li><li>"<code>NOT_FOUND</code>"</li><li>"<code>SUCCESS</code>"</li></ul></td></tr></tbody></table>
 
-## Licensing API {: #licensing-api }
+## Get
 
-### InAppProducts {: #in-app-products }
+Gets a Chrome Web Store item. Provide `projection="DRAFT"` (case sensitive) as a URL Parameter.
 
-For InAppProducts Resource details, see the [resource representation][api-inappproducts-resource] page.
+### Request
 
-<table>
-  <thead>
-    <tr>
-      <th>Operation</th>
-      <th>HTTP request</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless
-        otherwise noted</td>
-    </tr>
-    <tr>
-      <td><a href="/docs/webstore/webstore_api/inAppProducts/get/">get</a></td>
-      <td>
-        <strong>GET</strong><br>
-        <code>/items/<var>itemId</var>/skus/<var>sku</var></code>
-      </td>
-      <td>Gets the in-app product information of an item.</td>
-    </tr>
-    <tr>
-      <td><a href="/docs/webstore/webstore_api/inAppProducts/list/">list</a></td>
-      <td>
-        <strong>GET</strong><br>
-        <code>/items/<var>itemId</var>/skus</code>
-      </td>
-      <td>Lists the in-app product information of an item.</td>
-    </tr>
-  </tbody>
-</table>
+#### HTTP request
 
+```text
+GET https://www.googleapis.com/chromewebstore/v1.1/items/itemId
+```
 
-### Licenses {: #licenses }
+#### Parameters
 
-For Licenses Resource details, see the [resource representation][api-licenses-resource] page.
+<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Path parameters</b></td></tr><tr id="itemId"><td><code>itemId</code></td><td>string</td><td>Unique identifier representing the Chrome App, Chrome Extension, or the Chrome Theme.</td></tr><tr><td colspan="3"><b>Optional query parameters</b></td></tr><tr id="projection"><td><code>projection</code></td><td>string</td><td>Determines which subset of the item information to return.<br><br>Acceptable values are:<ul><li>"<code>DRAFT</code>": Return information extracted from the current draft.</li><li>"<code>PUBLISHED</code>": Return information extracted from the published item draft.</li></ul>Note that only <code>"DRAFT"</code> is supported at this time.</td></tr></tbody></table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Operation</th>
-      <th>HTTP request</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless
-        otherwise noted</td>
-    </tr>
-    <tr>
-      <td><a href="/docs/webstore/webstore_api/licenses/get/">get</a></td>
-      <td>
-        <strong>GET</strong><br>
-        <code>/licenses/<var>appId</var>/<var>userId</var></code><br>
-      </td>
-      <td>Gets the licenses for Chrome hosted apps.</td>
-    </tr>
-  </tbody>
-</table>
+#### Authorization
 
-### UserLicenses {: #user-licenses }
+This request requires authorization with the following scope.
 
-For UserLicenses Resource details, see the [resource representation][api-userlicenses-resource] page.
+```text
+https://www.googleapis.com/auth/chromewebstore.readonly
+```
 
-<table>
-  <thead>
-    <tr>
-      <th>Operation</th>
-      <th>HTTP request</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless
-        otherwise noted</td>
-    </tr>
-    <tr>
-      <td><a href="/docs/webstore/webstore_api/userLicenses/getUserLicense/">getUserLicense</a></td>
-      <td>
-        <strong>GET</strong><br>
-        <code>/userlicenses/<var>appId</var></code>
-      </td>
-      <td>Gets the user licenses for Chrome Apps and Chrome Extensions.</td>
-    </tr>
-  </tbody>
-</table>
+The above URL is used as the scope parameter when generating an access token. For more details on API authorization and authentication, consult the [OAuth 2.0 documentation][google-oauth2].
 
-### Payments {: #payments }
+#### Request body
 
-For Payments Resource details, see the [resource representation][api-payments-resource] page.
+Do not supply a request body with this method.
 
-<table>
-  <thead>
-    <tr>
-      <th>Operation</th>
-      <th>HTTP request</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="alt">
-      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless
-        otherwise noted</td>
-    </tr>
-    <tr>
-      <td><a href="/docs/webstore/webstore_api/payments/list/">list</a></td>
-      <td>
-        <strong>GET</strong><br>
-        <code>/items/<var>itemId</var>/payments</code>
-      </td>
-      <td>Lists the in-app products that the user has purchased.</td>
-    </tr>
-  </tbody>
-</table>
+### Response
 
-[api-inappproducts-get]: /docs/webstore/webstore_api/inAppProducts/get/
-[api-inappproducts-list]: /docs/webstore/webstore_api/inAppProducts/list/
-[api-inappproducts-resource]: /docs/webstore/webstore_api/inAppProducts/#resource
-[api-items-get]: /docs/webstore/webstore_api/items/get/
-[api-items-insert]: /docs/webstore/webstore_api/items/insert/
-[api-items-publish]: /docs/webstore/webstore_api/items/publish/
-[api-items-resource]: /docs/webstore/webstore_api/items/#resource
-[api-items-update]: /docs/webstore/webstore_api/items/update/
-[api-licenses-get]: /docs/webstore/webstore_api/licenses/get/
-[api-licenses-resource]: /docs/webstore/webstore_api/licenses/#resource
-[api-payments-list]: /docs/webstore/webstore_api/payments/list/
-[api-payments-resource]: /docs/webstore/webstore_api/payments/#resource
-[api-userlicenses-get]: /docs/webstore/webstore_api/userLicenses/getUserLicense/
-[api-userlicenses-resource]: /docs/webstore/webstore_api/userLicenses/#resource
-[header-in-app-products]: #in-app-products
-[header-items]: #items
-[header-licenses]: #licenses
-[header-payments]: #payments
-[header-user-licenses]: #user-licenses
+If successful, this method returns an [Items resource][cws-resource] in the response body.
+
+## Insert
+
+Inserts a new [item][cws-items].
+
+This method supports an upload URI and accepts uploaded media.
+
+### Request
+
+#### HTTP request
+
+```text
+POST https://www.googleapis.com/upload/chromewebstore/v1.1/items
+```
+
+#### Parameters
+
+<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Required query parameters</b></td></tr><tr id="uploadType_id"><td><code>uploadType</code></td><td>string</td><td>The type of upload request to the <strong>/upload</strong> URI. The only accepted value is <code>media</code>: a simple upload of the media data.</td></tr><tr><td colspan="3"><b>Optional query parameters</b></td></tr><tr id="publisherEmail"><td><code>publisherEmail</code></td><td>string</td><td>The email of the publisher who owns the items. Defaults to the caller's email address.</td></tr></tbody></table>
+
+#### Authorization
+
+This request requires authorization with the following scope.
+
+```text
+https://www.googleapis.com/auth/chromewebstore
+```
+
+The above URL is used as the scope parameter when generating an access token. For more details on API authorization and authentication, consult the [OAuth 2.0 documentation][google-oauth2].
+
+#### Request body
+
+Do not supply a request body with this method.
+
+### Response
+
+If successful, this method returns an [Items resource][cws-resource] in the response body.
+
+## Publish
+
+Publishes an [item][cws-items]. Provide defined publishTarget in URL (case sensitive): publishTarget =
+"trustedTesters" or publishTarget = "default".
+
+### Request
+
+#### HTTP request
+
+```text
+POST https://www.googleapis.com/chromewebstore/v1.1/items/itemId/publish
+```
+
+#### Parameters
+
+<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Path parameters</b></td></tr><tr id="itemId"><td><code>itemId</code></td><td>string</td><td>The ID of the item to publish.</td></tr><tr><td colspan="3"><b>Optional query parameters</b></td></tr><tr id="publishTarget"><td><code>publishTarget</code></td><td>string</td><td>Provide defined <code>publishTarget</code> in URL (case sensitive): <code>publishTarget="trustedTesters"</code> or <code>publishTarget="default"</code>. Defaults to <code>publishTarget="default"</code>.</td></tr></tbody></table>
+
+#### Request body
+
+In the request body, you can optionally supply data with the following structure:
+
+#### JSON
+
+```json
+{
+  "target": string
+}
+```
+
+<table><thead><tr><th>Property name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr id="target"><td><code>target</code></td><td><code>string</code></td><td>The publish target of this publish operation. This is the same as using publishTarget as a URL query parameter. The string value can either be target="trustedTesters" or target="default". The default value, if none is supplied, is target="default". Recommended usage is to use the URL query parameter to specify the value.</td></tr></tbody></table>
+
+#### Authorization
+
+This request requires authorization with the following scope.
+
+```text
+https://www.googleapis.com/auth/chromewebstore
+```
+
+The above URL is used as the scope parameter when generating an access token. For more details on API authorization and authentication, consult the [OAuth 2.0 documentation][google-oauth2].
+
+### Response
+
+If successful, this method returns a response body with the following structure:
+
+```json
+{
+  "kind": "chromewebstore#item",
+  "item_id": string,
+  "status": [
+    string
+  ],
+  "statusDetail": [
+    string
+  ]
+}
+```
+
+<table><thead><tr><th>Property name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr id="kind"><td><code>kind</code></td><td><code>string</code></td><td>Static string value is always <code>"chromewebstore#item"</code>.</td></tr><tr id="item_id"><td><code>item_id</code></td><td><code>string</code></td><td>The ID of this item.</td></tr><tr id="status"><td><code>status[]</code></td><td><code>list</code></td><td>The status code of this publish operation. It may contain multiple elements from the following list: <code>OK</code>, <code>NOT_AUTHORIZED</code>, <code>INVALID_DEVELOPER</code>, <code>DEVELOPER_NO_OWNERSHIP</code>, <code>DEVELOPER_SUSPENDED</code>, <code>ITEM_NOT_FOUND</code>, <code>ITEM_PENDING_REVIEW</code>, <code>ITEM_TAKEN_DOWN</code>, <code>PUBLISHER_SUSPENDED</code>.</td></tr><tr id="statusDetail"><td><code>statusDetail[]</code></td><td><code>list</code></td><td>Detailed human-comprehensible explanation of the status code above.</td></tr></tbody></table>
+
+## Update
+
+Updates an existing [item][cws-items].
+
+This method supports an upload URI and accepts uploaded media.
+
+### Request
+
+#### HTTP request
+
+This method provides media upload functionality through two separate URIs.
+
+- Upload URI, for media upload requests:
+
+  ```text
+  PUT https://www.googleapis.com/upload/chromewebstore/v1.1/items/itemId
+  ```
+
+- Metadata URI, for metadata-only requests:
+
+  ```text
+  PUT https://www.googleapis.com/chromewebstore/v1.1/items/itemId
+  ```
+
+#### Parameters
+
+<table><thead><tr><th>Parameter name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td colspan="3"><b>Path parameters</b></td></tr><tr id="itemId"><td><code>itemId</code></td><td><code>string</code></td><td>The ID of the item to upload.</td></tr><tr><td colspan="3"><b>Required query parameters</b></td></tr><tr id="uploadType_id"><td><code>uploadType</code></td><td><code>string</code></td><td>The type of upload request to the <strong>/upload</strong> URI. Acceptable values are: <code>media</code> - Simple upload. Upload the media only, without any metadata.</td></tr></tbody></table>
+
+#### Request body
+
+In the request body, supply an [Items resource][cws-resource] as the metadata.
+
+#### Authorization
+
+This request requires authorization with the following scope.
+
+```text
+https://www.googleapis.com/auth/chromewebstore
+```
+
+The above URL is used as the scope parameter when generating an access token. For more details on API authorization and authentication, consult the [OAuth 2.0 documentation][google-oauth2].
+
+### Response
+
+If successful, this method returns an [Items resource][cws-resource] in the response body.
+
+[cws-items]: #items
+[cws-resource]: #resource
 [publish-api]: /docs/webstore/using_webstore_api
+[google-oauth2]: https://developers.google.com/accounts/docs/OAuth2
