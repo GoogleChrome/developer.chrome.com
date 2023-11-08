@@ -6,7 +6,7 @@ description: >
 subhead: >
   Updates to the Topics taxonomy and filtering mechanisms, along with speed improvements and enhanced user controls.
 date: 2023-06-15
-updated: 2023-11-02
+updated: 2023-11-08
 thumbnail: 'image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png'
 alt: >
   Topics API enhancements
@@ -16,7 +16,7 @@ tags:
   - privacy
 ---
 
-## Update: November 6, 2023
+## Update: November 8, 2023
 
 In June, we outlined several enhancements to the Topics API. We closed by
 reiterating our commitment to continue to listen to ecosystem feedback. Today,
