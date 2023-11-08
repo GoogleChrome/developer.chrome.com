@@ -1,12 +1,12 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "What's New in DevTools (Chrome 120)"
+title: "What's new in DevTools (Chrome 120)"
 authors:
   - sofiayem
-date: 2023-11-01
-description: ""
-hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/C5z0hHEPjBwgsXg2WG0t.png'
-alt: ''
+date: 2023-11-08
+description: "Third-party cookie phaseout issues reported in the Issues panel, Privacy Sandbox Analysis Tool for cookies, effective Content Security Policy in the Applications panel, improved animations debugging, enhanced ignore listing, and more."
+hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KW2IAQCHKlPDK0lyQgY2.png'
+alt: 'Third-party cookie phaseout issues reported in the Issues panel, Privacy Sandbox Analysis Tool for cookies, effective Content Security Policy in the Applications panel, improved animations debugging, enhanced ignore listing, and more.'
 tags:
   - new-in-devtools
   - devtools
@@ -81,7 +81,7 @@ Chromium issues: [1492460](https://crbug.com/1492460), [1489721](https://crbug.c
 
 The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show warning about Self-XSS when pasting code** [experiment](/docs/devtools/settings/experiments/) has been enabled by default. Self-XSS (self cross-site scripting) is an attack that tricks you into pasting malicious code into DevTools and lets an attacker gain control of your web accounts and personal information.
 
-When you attempt to paste code, the **Sources** panel now shows you the **Do you trust this code?** dialog and the **Console** now displays a similar warning. Paste only the code that you understand and have reviewed yourself. To paste, type `allow pasting` when prompted.
+If you are a new DevTools user and you attempt to paste code, the **Sources** panel now shows you the **Do you trust this code?** dialog and the **Console** now displays a similar warning. Paste only the code that you understand and have reviewed yourself. To paste, type `allow pasting` when prompted. Once pasting has been allowed once, the warning will never be shown again.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HZxshcqZev8dBvDwYD0v.png", alt="The 'Do you trust this code?' dialog when pasting code to Sources.", width="800", height="505" %}
 
@@ -173,11 +173,11 @@ Chromium issue: [1376976](https://crbug.com/1376976).
 
 ## The new media badge for `<audio>` and `<video>` {: #media }
 
-You can now enable the new media badge for `<audio>` and `<video>` elements in the **Elements** panel. When you click the badge, it takes you to the [**Media** panel](/docs/devtools/media-panel/), so you can debug these elements.
+You can now enable the new media badge for `<audio>` and `<video>` elements in the **Elements** panel. When you click the badge, it takes you to the [**Media** panel](/docs/devtools/media-panel/), so you can debug these elements. 
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HzQvfQNSiygBdch9UmTt.png", alt="The new media badge for audio and video tags enabled.", width="800", height="522" %}
 
-The DevTools team would like to express gratitude to [Junseo (Jeremy) Yoo](https://chromium.googlesource.com/devtools/devtools-frontend/+/2d6d5624affeb912b95d61fb7267c9cad4686731) for landing this improvement.
+This feature is under development and will be further improved. The DevTools team would like to express gratitude to [Junseo (Jeremy) Yoo](https://chromium.googlesource.com/devtools/devtools-frontend/+/2d6d5624affeb912b95d61fb7267c9cad4686731) for landing this improvement.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2d6d5624affeb912b95d61fb7267c9cad4686731 #}
 
