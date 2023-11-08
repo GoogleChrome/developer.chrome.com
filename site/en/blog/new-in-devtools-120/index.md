@@ -32,7 +32,7 @@ Chromium issue: [1466310](https://crbug.com/1466310).
 
 ## Analyze your website's cookies with the Privacy Sandbox Analysis Tool {: #ps-analysis-tool }
 
-The [Privacy Sandbox Analysis Tool](https://github.com/GoogleChromeLabs/ps-analysis-tool) extension for DevTools is under active development with the latest pre-release [version of 0.3.1](https://github.com/GoogleChromeLabs/ps-analysis-tool/releases). The tool lets you understand how your website uses cookies and provides guidance on the new privacy-preserving Chrome APIs.
+The [Privacy Sandbox Analysis Tool](https://github.com/GoogleChromeLabs/ps-analysis-tool) extension for DevTools is under active development with the latest pre-release [version of 0.3.2](https://github.com/GoogleChromeLabs/ps-analysis-tool/releases). The tool lets you understand how your website uses cookies and provides guidance on the new privacy-preserving Chrome APIs.
 
 To analyze your cookies:
 
