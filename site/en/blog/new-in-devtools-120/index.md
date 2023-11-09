@@ -36,7 +36,7 @@ The [Privacy Sandbox Analysis Tool](https://github.com/GoogleChromeLabs/ps-analy
 
 To analyze your cookies:
 
-1. [Install the extension](https://github.com/GoogleChromeLabs/ps-analysis-tool#install-psat-from-zip-file) in Chrome.
+1. [Install the extension](https://github.com/GoogleChromeLabs/ps-analysis-tool#installing-and-running-psat) in Chrome.
 1. Open your website in a single tab for best analysis.
 1. [Open DevTools](/docs/devtools/open/) and navigate to the **Privacy Sandbox** panel. This panel might be hidden behind the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ekcx09RfcNTMEi60n8Jj.svg", alt="More tabs.", width="20", height="20" %} drop-down button at the top.
 1. Open the **Cookies** section and click **Analyze this tab**. If the tool didn't find any cookies, try reloading the page.
@@ -54,7 +54,7 @@ Moreover, see guidance on [Reporting issues](https://github.com/GoogleChromeLabs
 
 ## Effective Content Security Policy in the Application panel {: #csp }
 
-You can now view the [Content Security Policy (CSP)](https://developer.mozilla.org/docs/Web/HTTP/CSP) details of an inspected frame. To view the details, navigate to Application > Frames, select a frame and scroll down to the **Content Security Policy (CSP)** section.
+You can now view the [Content Security Policy (CSP)](https://developer.mozilla.org/docs/Web/HTTP/CSP) details of an inspected frame. To view the details, navigate to **Application** > **Frames**, select a frame and scroll down to the **Content Security Policy (CSP)** section.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hqCYqEh6rqckFz8e6xj8.png", alt="The Content Security Policy section in Application > Frames.", width="800", height="446" %}
 
@@ -93,7 +93,7 @@ Chromium issue: [345205](https://crbug.com/345205).
 
 ### Default exclusion pattern for `node_modules` {: #default-regex }
 
-This version enables the default regular expression as a custom exclusion rule in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](docs/devtools/settings/ignore-list/). To help you focus on only your code, the **Debugger** will now skip scripts from `/node_modules/` and `/bower_components/`.
+This version enables the default regular expression as a custom exclusion rule in {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Ignore List**](docs/devtools/settings/ignore-list/). To help you focus on only your code, the **Debugger** will now skip scripts from `/node_modules/` and `/bower_components/` by default. You can disable this rule in settings at any time.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/YW04UKu8dXAxIby609b1.png", alt="The before and after adding a regular expression.", width="800", height="461" %}
 
