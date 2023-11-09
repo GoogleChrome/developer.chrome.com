@@ -121,18 +121,9 @@ Now you may be wondering what the point is, since the Kotlin code above basicall
 {% Glitch id="kotlin-wasm-image-viewer", height="900" %}
 
 {% Aside 'warning' %}
-Kotlin/Wasm is [experimental](https://kotlinlang.org/docs/wasm-overview.html)
-and Compose Multiplatform is
-[experimental](https://github.com/Kotlin/kotlin-wasm-examples/tree/main/compose-imageviewer#compose-multiplatform-for-web).
-Both may be changed at any time and are to be used only for evaluation purposes.
+Kotlin/Wasm is [experimental](https://kotlinlang.org/docs/wasm-overview.html) and Compose Multiplatform is [experimental](https://github.com/Kotlin/kotlin-wasm-examples/tree/main/compose-imageviewer#compose-multiplatform-for-web). Both may be changed at any time and are to be used only for evaluation purposes.
 
-Kotlin/Wasm with Compose Multiplatform is fully rendered onto a 
-`canvas` with no meaningful DOM tree that could be used to create 
-an accessibility tree. This means it's completely inaccessible to 
-non-sighted users and breaks important browser features like 
-find on page, translation, text selection, extensions, zooming, 
-and link to text fragment.
-
+The [Kotlin/Wasm image viewer](https://kotlin-wasm-image-viewer.glitch.me/) demo currently uses Kotlin/Wasm with Compose Multiplatform which fully renders onto a `canvas` with no meaningful DOM tree that could be used to create an accessibility tree. This means it's completely inaccessible to non-sighted users and breaks important browser features like find on page, translation, text selection, extensions, zooming, and link to text fragment.
 {% endAside %}
 
 ### Dart and Flutter
@@ -142,7 +133,9 @@ The Dart and Flutter teams at Google are also preparing support for WasmGC. The 
 <iframe style="width: 100%; height: 800px" src="https://flutterweb-wasm.web.app/"></iframe>
 
 {% Aside 'warning' %}
-The [Flutter WasmGC Preview](https://flutterweb-wasm.web.app/) demo is fully rendered onto a `canvas`. This means it breaks important browser features like find on page, translation, text selection, extensions, and link to text fragment.
+Dart WasmGC compilation and Flutter Web with WasmGC are in preview, and are to be used only for evaluation purposes.
+
+The [Flutter Web WasmGC Preview demo](https://flutterweb-wasm.web.app/) currently uses Flutter's [CanvasKit renderer](https://docs.flutter.dev/platform-integration/web/renderers) which fully renders onto a `canvas`. This means it breaks important browser features like find on page, translation, text selection, extensions, and link to text fragment.
 {% endAside %}
 
 ## Learn more about WasmGC
