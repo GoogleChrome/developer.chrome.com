@@ -2,10 +2,11 @@
 layout: 'layouts/blog-post.njk'
 title: Enhancements to the Topics API
 description: >
-  Updates to the Topics taxonomy and filtering mechanisms, along with speed improvements and enhanced user controls.
+ Updates to top topics selection, the Topics taxonomy and filtering mechanisms, along with speed improvements and enhanced user controls.
 subhead: >
-  Updates to the Topics taxonomy and filtering mechanisms, along with speed improvements and enhanced user controls.
+  Updates to top topics selection, the Topics taxonomy and filtering mechanisms, along with speed improvements and enhanced user controls.
 date: 2023-06-15
+updated: 2023-11-08
 thumbnail: 'image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png'
 alt: >
   Topics API enhancements
@@ -14,6 +15,73 @@ authors:
 tags:
   - privacy
 ---
+
+## Update: November 8, 2023
+
+In June, we outlined several enhancements to the Topics API. We closed by
+reiterating our commitment to continue to listen to ecosystem feedback. Today,
+we are announcing a further enhancement to the Topics API, in response to that
+feedback.
+
+### Top topics selection
+
+The initial Topics API proposal selected users' top five weekly topics based on
+the frequency by which users interacted with each topic, on participating
+websites. We received
+[feedback](https://github.com/patcg-individual-drafts/topics/issues/42) that
+this resulted in the API often returning topics that are less useful for ad
+relevance such as "News" or "Arts & Entertainment". We
+[explored](https://github.com/patcg-individual-drafts/topics/issues/42#issuecomment-1029111959)
+many solutions, including allowing callers to set a priority list, ranking by
+inverse frequency on the web, by ad clicks observed by Chrome, and other
+approaches.
+
+The most promising approach we've seen is to integrate Topics utility feedback
+from the advertising ecosystem directly. We have done so by introducing the
+concept of "high utility" buckets. Chrome
+places each of the 22 root topics (those without an ancestor) from the taxonomy [into
+one of two buckets](https://github.com/patcg-individual-drafts/topics/blob/main/topics-utility-buckets-v1.md) 
+indicating higher or standard utility for the ecosystem
+overall. All descendants of the root topics inherit the same bucket assignment
+from their parent. The assignment of root topics to buckets  is based on input
+about utility we received from companies across the ecosystem when crafting our
+improved taxonomy.
+
+Considering the above, the updated top topics selection methodology is as
+follows:
+
+1. At the end of each epoch, Chrome converts participating hostnames from
+    the user's browsing history into topics.
+1. First, topics are sorted by bucket, and then by frequency. That is, if
+    two topics are in the same bucket but have different frequency, the higher
+    frequency topic is sorted higher.
+1. Lastly, Chrome selects the top five as the user's top topics for that
+    epoch, which are eligible to be shared with callers.
+
+We expect the "high utility" bucket assignments of specific topics to evolve
+over time based on feedback from the broader ecosystem, which can be provided by
+creating an issue on the
+[Topics repository on GitHub](https://github.com/patcg-individual-drafts/topics/issues/new).
+The update will be available beginning this quarter (Q4 2023).
+
+{% Aside %}
+
+We are inspired to see the Google Chrome team continue to respond to industry feedback by improving the Topics API.  This enables more relevant advertising solutions for all. This innovative and collaborative approach will support key targeting use cases for clients by providing signals of greater value when the API is called.
+
+— Matthew McIntyre, Global Head of Programmatic, EssenceMediacom
+
+<br>
+
+The Privacy Sandbox is highly complementary to Ogury's privacy-first advertising approach, and significantly improves user privacy. We believe that this improvement to top topics selection will make Topics more relevant to our exclusive data models.
+
+— Stéphane Dupayage, Chief Product Officer, Ogury
+
+{% endAside %}
+
+<hr>
+
+## Update: June 15, 2023
+
 
 Over a year ago, we
 [announced](https://blog.google/products/chrome/get-know-new-topics-api-privacy-sandbox/) the Topics
@@ -30,7 +98,7 @@ carefully to their suggestions. Today, we're excited to share some of the latest
 Topics API. We believe these changes will make Topics even more useful to the digital advertising
 industry, without compromising user privacy.
 
-## Taxonomy
+### Taxonomy
 
 Alongside the initial Topics API announcement, we proposed a taxonomy designed for testing. The
 taxonomy is the list of available topics that may be returned by the API. We repeatedly received
@@ -63,7 +131,7 @@ value to API callers._
 
 {% endAside %}
 
-## Per-caller filtering
+### Per-caller filtering
 
 One of many privacy-preserving features of Topics is the per-caller filtering requirement. This
 feature ensures that callers can only receive topics that they've observed the user visit in the
@@ -82,7 +150,7 @@ that topic are recorded as observed as well.
 This change increases the likelihood sites will receive topics information, without impacting the
 API's privacy since the topic's ancestors were already known to the caller.
 
-## User controls
+### User controls
 
 With Topics, users can view and control how their cross-site data is used to personalize ads in a
 more intuitive and accessible manner compared to tracking mechanisms like third-party cookies. In
@@ -96,7 +164,7 @@ able to curate the set of available topics they are interested in by removing se
 change, coming by early next year, will give users even more control over their privacy and make the
 Topics API even more user-friendly.
 
-## Speed improvements
+### Speed improvements
 
 The initial topics proposal required developers to create a cross-origin iframe from which they
 would call the Topics' JavaScript API. We received
@@ -111,7 +179,7 @@ Topics via headers, in requests initiated via Fetch and (temporarily) XHR . Rece
 support to request headers for iframes. These changes will improve the performance of Topics,
 limiting potential negative impacts on developers and users.
 
-## What's next?
+### What's next?
 
 We are excited about these updates to the Topics API and believe that they not only will make it
 more effective for advertisers and keep ads relevant for people, but still preserve privacy.

@@ -11,6 +11,10 @@ tags:
   - cookies
 ---
 
+{% Aside 'caution' %}
+Your site may use third-party cookies and it's time to take action as we approach their deprecation. To learn what to do about affected cookies, see [Preparing for the end of third-party cookies](/blog/cookie-countdown-2023oct/).
+{% endAside %}
+
 [HTTP Cookies][1] are mainly used to manage user sessions, store user personalization preferences,
 and track user behavior. They are also the cause of all of those annoying "this page uses cookies"
 consent forms that you see across the web. This guide teaches you how to view, add, edit, and delete a
