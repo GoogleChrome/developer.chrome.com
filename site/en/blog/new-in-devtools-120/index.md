@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "What's new in DevTools (Chrome 120)"
 authors:
   - sofiayem
-date: 2023-11-08
+date: 2023-11-09
 description: "Third-party cookie phaseout issues reported in the Issues panel, Privacy Sandbox Analysis Tool for cookies, effective Content Security Policy in the Applications panel, improved animations debugging, enhanced ignore listing, and more."
 hero: 'image/NJdAV9UgKuN8AhoaPBquL7giZQo1/KW2IAQCHKlPDK0lyQgY2.png'
 alt: 'Third-party cookie phaseout issues reported in the Issues panel, Privacy Sandbox Analysis Tool for cookies, effective Content Security Policy in the Applications panel, improved animations debugging, enhanced ignore listing, and more.'
