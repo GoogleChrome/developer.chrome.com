@@ -5,7 +5,7 @@ description: >
   Lookahead nesting enabled in Chrome 120.
 subhead: >
   Lookahead nesting enabled in Chrome 120.
-date: 2023-11-07
+date: 2023-11-09
 authors:
   - argyle
 tags:
