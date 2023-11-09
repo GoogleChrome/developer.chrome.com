@@ -65,6 +65,15 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 ```
 
+### Device sleep
+
+The behavior of alarms when a device goes to sleep is currently undefined. An alarm will never fire
+early but may fire significantly later than expected if a device went to sleep after an alarm was scheduled.
+
+### Persistence
+
+Alarms generally persist until an extension is updated. However, this is not guarenteed and alarms may be cleared when the browser is restarted. Consequently, consider storing any important alarms in storage and making sure they exist each time your service worker starts up.
+
 [repo-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
 [sample-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/alarms
 [action-icon]: /docs/extensions/reference/action/#icon
