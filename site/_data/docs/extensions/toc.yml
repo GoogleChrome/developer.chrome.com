@@ -26,7 +26,6 @@
   sections:
     - url: /docs/extensions/mv3/themes
     - url: /docs/extensions/mv3/faq
-    - url: /docs/extensions/mv3/quality_guidelines
 - title: i18n.docs.extensions.migrating
   sections:
     - url: /docs/extensions/migrating/
@@ -82,6 +81,7 @@
     - url: /docs/extensions/mv3/nativeMessaging
     - url: /docs/extensions/mv3/screen_capture
     - url: /docs/extensions/mv3/geolocation
+    - url: /docs/extensions/mv3/file_handling
     - url: /docs/extensions/mv3/unit-testing
     - url: /docs/extensions/mv3/end-to-end-testing
     - url: /docs/extensions/mv3/tut_puppeteer-testing

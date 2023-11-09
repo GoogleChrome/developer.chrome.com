@@ -69,6 +69,10 @@ Any global variables you set will be lost if the service worker shuts down. Inst
 
 Since the release of Manifest V3, we've made several improvements to service worker lifetimes. This means that if your Manifest V3 extension supports earlier versions of Chrome, there are conditions you will need to be aware of. If these conditions do not affect your extension, you can move on from this section. If they do, consider specifying a [minimum Chrome version](/docs/extensions/mv3/manifest/minimum_chrome_version/) in your manifest.
 
+#### Chrome 120
+
+Alarms can now be set to a minimum period of 30s to match the service worker lifecycle. See [`chrome.alarms`](/docs/extensions/reference/alarms/) for more details.
+
 #### Chrome 118
 
 Active debugger sessions created using the [`chrome.debugger`](/docs/extensions/reference/debugger/) API now keep the service worker alive. This prevents service workers from timing out during calls for this API.

@@ -40,6 +40,9 @@ To stay informed of your item's status, you can:
    ensure that CWS emails don't get flagged as Spam, add **chromewebstore-noreply@google.com** to
    your contacts so that you receive all communications in a timely manner.
 
+{% Aside %}
+The "pending review" status of your item means that it is now in the queue awaiting to be reviewed. Your item will not be visible in the store until it has been reviewed and approved.
+{% endAside %}
 
 ## Follow-up on rejections and takedowns
 

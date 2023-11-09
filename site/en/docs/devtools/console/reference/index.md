@@ -370,9 +370,13 @@ Enumerable properties can be iterated over with the `for … in` loop or `Object
 
 ### Spot private properties of class instances {: #private-properties }
 
-The **Console** designates private properties of class instances with a `#` prefix.
+The **Console** designates [private properties](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of class instances with a `#` prefix.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sAotDs0veLSGWr6J4ZRG.png", alt="Private property of a class instance.", width="800", height="514" %}
+
+The **Console** can also autocomplete private properties even when you evaluate them ouside the class scope.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Gk7WIzWk5nddSydddVLi.png", alt="Private property autocompletion.", width="800", height="466" %}
 
 ### Inspect internal JavaScript properties {: #inspect-internal-properties }
 

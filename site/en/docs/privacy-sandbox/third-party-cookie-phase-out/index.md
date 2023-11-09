@@ -13,7 +13,7 @@ authors:
 
 Third-party cookies are the main mechanism that enables cross-site tracking and several major browsers either already placed restrictions on third-party cookies in some way or are planning to. Third-party cookies also enable many valid use cases such as managing state in embedded content or enabling user sessions across multiple sites.
 
-As part of the [Privacy Sandbox](https://privacysandbox.com/) project, Chrome is phasing out support for third-party cookies and proposing new functionality for cookies along with purpose-built APIs to continue supporting legitimate use cases while preserving user privacy. The phase out will be gradual, [starting from midway through 2024](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline).
+As part of the [Privacy Sandbox](https://privacysandbox.com/) project, Chrome is phasing out support for third-party cookies and proposing new functionality for cookies along with purpose-built APIs to continue supporting legitimate use cases while preserving user privacy. The phase out will be gradual and [starts from Q1 2024](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) with disabling third-party cookies for 1% of users to facilitate testing.
 
 To get ready for the future without cross-site tracking, audit your use of cookies and plan the actions needed if your site is impacted.
 

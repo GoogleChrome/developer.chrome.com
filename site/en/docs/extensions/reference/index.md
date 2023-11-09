@@ -4,10 +4,19 @@ description: 'The complete reference to all APIs made available to Chrome Extens
 layout: 'layouts/reference-landing.njk'
 ---
 
-Chrome provides extensions with many special-purpose APIs such as `chrome.alarms` and `chrome.action`. Many APIs consist of a namespace and its related manifest fields. These fields are frequently permissions, but not always. For example, `chrome.alarms` requires only the `alarms` permission, while `chrome.action` requires an action object in the `manifest.json` file.
+Most extensions need access to one or more Chrome Extensions APIs to function. This API reference describes the APIs available
+for use in extensions and presents example use cases.
+
+## Common Extensions API features
+
+An Extensions API consists of a namespace containing methods and properties for doing extensions work, and usually, but not
+always, manifest fields for the `manifest.json` file. For example, the `chrome.action` namespace requires an `"action"` object
+in the manifest. Many APIs also require [permissions](/docs/extensions/mv3/declare_permissions/) in the manifest.
+
+Methods in extension APIs are **asynchronous** unless stated otherwise. Asynchronous methods return immediately, without waiting
+for the operation that calls them to finish. Use [promises](/docs/extensions/mv3/promises/) to get the results of these methods.
+For more information, see [Asynchronous methods](/docs/extensions/mv3/architecture-overview/#async-sync).
+
+<!--What else are users likely to need to know about early?-->
 
 {% Partial 'extensions/mv3-support.md' %}
-
-## Asynchronous methods
-
-Unless stated otherwise, methods in the `chrome.*` APIs are **asynchronous**: they return immediately, without waiting for the operation to finish. If you need to know the result of calling such methods, use the returned promise or pass a callback function into the method. For more information, see [Asynchronous methods](/docs/extensions/mv3/architecture-overview/#async-sync).

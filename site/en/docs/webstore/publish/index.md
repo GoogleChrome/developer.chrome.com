@@ -27,7 +27,10 @@ Once you've uploaded your extension, you will see it as an item in the dashboard
 </figure>
 
 {% Aside %}
-You cannot have more than 20 _extensions_ published on the Chrome Web Store. There is no such limit on the number of themes.
+You cannot have more than 20 _extensions_ published on the Chrome Web Store. There is no such limit on the number of themes. If you reach this limit, [you may request a limit increase][cws-support]. The Chrome Web Store staff will review your existing items and your developer account history, and if approved, you will be granted an increase. Please note that if your developer account has been suspended in the past, or you have had items taken down previously
+for policy violations, or your items consistently receive low quality ratings, your request may be
+denied.
+
 {% endAside %}
 
 ## Fill out information about your item {: #info }

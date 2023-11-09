@@ -34,6 +34,10 @@ Set the initial [version number][version] in the manifest to a low value, such a
 version that you upload to the Chrome Web Store must have a larger version number than the
 previous version.
 
+{% Aside %}
+If you encounter a "Cannot parse the manifest" error when you upload your extension, check the format of your manifest JSON file. Commonly, this error occurs if there are comments in the manifest file. To resolve this issue, remove any comments from the manifest file and attempt to re-upload your extension.
+{% endAside %}
+
 ## Zip your extension files {: #zip }
 
 To upload your extension, you need to submit a ZIP file that contains all extension files. Make sure you place the manifest file in the **root directory**, not in a folder.
