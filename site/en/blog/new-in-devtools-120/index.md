@@ -101,7 +101,7 @@ This version enables the default regular expression as a custom exclusion rule i
 
 Chromium issue: [1496301](https://crbug.com/1496301).
 
-### Caught exceptions now stop execution if caught or passing through non-ignored code {: #exceptions }
+### Exceptions now stop execution if caught or passing through non-ignored code {: #exceptions }
 
 When you debug code with {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pause on caught exceptions** checked, the **Debugger** now stops the execution on the following caught exceptions, both synchronous and asynchronous:
 
