@@ -121,7 +121,18 @@ Now you may be wondering what the point is, since the Kotlin code above basicall
 {% Glitch id="kotlin-wasm-image-viewer", height="900" %}
 
 {% Aside 'warning' %}
-In this early experimental stage, the [Kotlin/Wasm image viewer](https://kotlin-wasm-image-viewer.glitch.me/) demo is fully rendered onto a `canvas` with no meaningful DOM tree that could be used to create an [accessibility tree](https://developer.mozilla.org/docs/Glossary/Accessibility_tree). This means it's completely inaccessible to non-sighted users and breaks important browser features like find on page, translation, text selection, extensions, zooming, and link to text fragment.
+Kotlin/Wasm is [experimental](https://kotlinlang.org/docs/wasm-overview.html)
+and Compose Multiplatform is
+[experimental](https://github.com/Kotlin/kotlin-wasm-examples/tree/main/compose-imageviewer#compose-multiplatform-for-web).
+Both may be changed at any time and are to be used only for evaluation purposes.
+
+Kotlin/Wasm with Compose Multiplatform is fully rendered onto a 
+`canvas` with no meaningful DOM tree that could be used to create 
+an accessibility tree. This means it's completely inaccessible to 
+non-sighted users and breaks important browser features like 
+find on page, translation, text selection, extensions, zooming, 
+and link to text fragment.
+
 {% endAside %}
 
 ### Dart and Flutter
