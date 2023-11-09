@@ -112,7 +112,7 @@ Chromium issue: [1410433](https://crbug.com/1410433).
 
 ## The Elements panel now shows URLs for `#document` nodes {: #document-urls }
 
-To let you debug iframes easier, the Elements panel now displays `documentURL` next to `#document` nodes.
+To let you debug iframes easier, the **Elements** panel now displays `documentURL` next to `#document` nodes.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/afcWfDe9f4Xf1G7Bp062.png", alt="The before and after shows documentURL next to #document node.", width="800", height="401" %}
 
