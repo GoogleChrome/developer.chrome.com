@@ -52,43 +52,6 @@ For more information on how to use the [Privacy Sandbox Analysis Tool (PSAT)](ht
 
 Moreover, see guidance on [Reporting issues](https://github.com/GoogleChromeLabs/ps-analysis-tool/wiki/E.-Reporting-Issues-and-Learning-More).
 
-## Effective Content Security Policy in the Application panel {: #csp }
-
-You can now view the [Content Security Policy (CSP)](https://developer.mozilla.org/docs/Web/HTTP/CSP) details of an inspected frame. To view the details, navigate to **Application** > **Frames**, select a frame and scroll down to the **Content Security Policy (CSP)** section.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hqCYqEh6rqckFz8e6xj8.png", alt="The Content Security Policy section in Application > Frames.", width="800", height="446" %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/dee14d983039f08b350c4932efc983e89ceb7dbe #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/61baf65bc88cb991e4fcd9073c8a409f81464ab3 #}
-
-Chromium issue: [1424714](https://crbug.com/1424714).
-
-## Improved animation debugging {: #animations }
-
-In the **Animations** tab, you can now:
-
-- Click anywhere on the timeline header to set the playhead. The animation continues to play if it was already playing and stops otherwise. Previously, you had to drag it.
-- Resize the name column to see the full animation names.
-
-{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QAXZfGIslB61Alhbbyjs.mp4", width="800", height="353", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/6aafa9de8000bbb4a889375dc483e2da28edd960 #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/3c68b4da98b91f729a007b804f548185403a775f #}
-
-Chromium issues: [1492460](https://crbug.com/1492460), [1489721](https://crbug.com/1489721).
-
-## 'Do you trust this code?' dialog in Sources and self-XSS warning in Console {: #self-xss }
-
-The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show warning about Self-XSS when pasting code** [experiment](/docs/devtools/settings/experiments/) has been enabled by default. Self-XSS (self cross-site scripting) is an attack that tricks you into pasting malicious code into DevTools and lets an attacker gain control of your web accounts and personal information.
-
-If you are a new DevTools user and you attempt to paste code, the **Sources** panel now shows you the **Do you trust this code?** dialog and the **Console** now displays a similar warning. Paste only the code that you understand and have reviewed yourself. To paste, type `allow pasting` when prompted. Once pasting has been allowed once, the warning will never be shown again.
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HZxshcqZev8dBvDwYD0v.png", alt="The 'Do you trust this code?' dialog when pasting code to Sources.", width="800", height="505" %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/33f928b256c219c815530cb04e8e1160fb28a480 #}
-
-Chromium issue: [345205](https://crbug.com/345205).
-
 ## Enhanced ignore listing {: #ignore-listing }
 
 ### Default exclusion pattern for `node_modules` {: #default-regex }
@@ -135,20 +98,6 @@ For more information on source maps, see:
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a5ef7b0545e43e68e5e4ebcdd309aa3c6c927598 #}
 
-## Event listener breakpoints in web workers and worklets {: #worker-breakpoints }
-
-When you set an event breakpoint in **Sources** > **Event Listener Breakpoints**, in addition to pausing on this event on your website, the **Debugger** now also pauses when the corresponding event happens in a [web worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API#worker_types) or [worklet](https://developer.mozilla.org/docs/Web/API/Worklet) of any type, including the [Shared Storage Worklet](/docs/privacy-sandbox/shared-storage/#how-does-shared-storage-work).
-
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZCIFXMeZDGW4BMJZhgoZ.png", alt="Debugger paused when a service worker calls the set timeout function.", width="800", height="549" %}
-
-{% Aside %}
-**Note**: Not all worker types support all of the corresponding APIs, so the **Debugger** might not pause when you expect it to.
-{% endAside %}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/992fc88c6c9549810616f83dae64047e3e654bf7 #}
-
-Chromium issue: [1445175](https://crbug.com/1445175).
-
 ## New input mode toggle during remote debugging {: #remote-input-mode }
 
 You can now toggle between touch and mouse input when debugging a Chrome tab remotely. For example, when you run a Chrome instance with the `--remote-debugging-port=<port>` and connect to this network target via `chrome://inspect/#devices`.
@@ -170,6 +119,57 @@ To let you debug iframes easier, the Elements panel now displays `documentURL` n
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/25e7a0a631115e2649c7b40ec301ca513961a264 #}
 
 Chromium issue: [1376976](https://crbug.com/1376976).
+
+## Effective Content Security Policy in the Application panel {: #csp }
+
+You can now view the [Content Security Policy (CSP)](https://developer.mozilla.org/docs/Web/HTTP/CSP) details of an inspected frame. To view the details, navigate to **Application** > **Frames**, select a frame and scroll down to the **Content Security Policy (CSP)** section.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hqCYqEh6rqckFz8e6xj8.png", alt="The Content Security Policy section in Application > Frames.", width="800", height="446" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/dee14d983039f08b350c4932efc983e89ceb7dbe #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/61baf65bc88cb991e4fcd9073c8a409f81464ab3 #}
+
+Chromium issue: [1424714](https://crbug.com/1424714).
+
+## Improved animation debugging {: #animations }
+
+In the **Animations** tab, you can now:
+
+- Click anywhere on the timeline header to set the playhead. The animation continues to play if it was already playing and stops otherwise. Previously, you had to drag it.
+- Resize the name column to see the full animation names.
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/QAXZfGIslB61Alhbbyjs.mp4", width="800", height="353", autoplay="true", muted="true", loop="true", controls="true", class="screenshot" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/6aafa9de8000bbb4a889375dc483e2da28edd960 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/3c68b4da98b91f729a007b804f548185403a775f #}
+
+Chromium issues: [1492460](https://crbug.com/1492460), [1489721](https://crbug.com/1489721).
+
+## 'Do you trust this code?' dialog in Sources and self-XSS warning in Console {: #self-xss }
+
+The {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show warning about Self-XSS when pasting code** [experiment](/docs/devtools/settings/experiments/) has been enabled by default. Self-XSS (self cross-site scripting) is an attack that tricks you into pasting malicious code into DevTools and lets an attacker gain control of your web accounts and personal information.
+
+If you are a new DevTools user and you attempt to paste code, the **Sources** panel now shows you the **Do you trust this code?** dialog and the **Console** now displays a similar warning. Paste only the code that you understand and have reviewed yourself. To paste, type `allow pasting` when prompted. Once pasting has been allowed once, the warning will never be shown again.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/HZxshcqZev8dBvDwYD0v.png", alt="The 'Do you trust this code?' dialog when pasting code to Sources.", width="800", height="505" %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/33f928b256c219c815530cb04e8e1160fb28a480 #}
+
+Chromium issue: [345205](https://crbug.com/345205).
+
+## Event listener breakpoints in web workers and worklets {: #worker-breakpoints }
+
+When you set an event breakpoint in **Sources** > **Event Listener Breakpoints**, in addition to pausing on this event on your website, the **Debugger** now also pauses when the corresponding event happens in a [web worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API#worker_types) or [worklet](https://developer.mozilla.org/docs/Web/API/Worklet) of any type, including the [Shared Storage Worklet](/docs/privacy-sandbox/shared-storage/#how-does-shared-storage-work).
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZCIFXMeZDGW4BMJZhgoZ.png", alt="Debugger paused when a service worker calls the set timeout function.", width="800", height="549" %}
+
+{% Aside %}
+**Note**: Not all worker types support all of the corresponding APIs, so the **Debugger** might not pause when you expect it to.
+{% endAside %}
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/992fc88c6c9549810616f83dae64047e3e654bf7 #}
+
+Chromium issue: [1445175](https://crbug.com/1445175).
 
 ## The new media badge for `<audio>` and `<video>` {: #media }
 
