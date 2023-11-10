@@ -85,7 +85,7 @@ As the Service Worker Static Routing API evolves, the plan is for this configura
 
 ## Trying out the Service Worker Static Routing API
 
-The Service Worker Static Routing API is available in Chrome starting in version 116 behind [an origin trial](https://developer.chrome.com/origintrials/#/view_trial/1458040379361198081), which allows developers to test out the API on their site with real users to measure the effect. See ["Get started with origin trials"](/docs/web-platform/origin-trials/) for background information on origin trials.
+The Service Worker Static Routing API is available in Chrome starting in version 116 behind [an origin trial](/origintrials/#/view_trial/1458040379361198081), which allows developers to test out the API on their site with real users to measure the effect. See ["Get started with origin trials"](/docs/web-platform/origin-trials/) for background information on origin trials.
 
 {% Aside 'important' %}
   Unlike other origin trials you may have tried before, this origin trial will only work by putting the origin trial token in an HTTP header (<code>Origin-Trial: TOKEN_GOES_HERE</code>) <em>served on the service worker script</em>. It will not work in a <code>&lt;meta&gt;</code> element with the <code>http-equiv</code> attribute, or as a header on a page's HTML document.
