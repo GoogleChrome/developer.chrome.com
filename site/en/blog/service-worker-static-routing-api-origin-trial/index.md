@@ -95,6 +95,6 @@ For local testing, the Service Worker Static Routing API can be enabled with a f
 
 ## Feedback and future directions
 
-The Service Worker Static Routing API is actively being developed and still being shaped. If it seems like it could be useful for you, please try it out via the origin trial and [provide feedback on the API, implementation, and available functionality](https://github.com/WICG/service-worker-static-routing-api/issues).
+The Service Worker Static Routing API is actively being developed and still being shaped. If it seems like it could be useful for you, please try it out via [the origin trial](https://developer.chrome.com/origintrials/#/view_trial/1458040379361198081) and [provide feedback on the API, implementation, and available functionality](https://github.com/WICG/service-worker-static-routing-api/issues).
 
 _Hero image from [Unsplash](https://unsplash.com/), by [Jan Antonin Kolar](https://unsplash.com/@jankolar)._
