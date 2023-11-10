@@ -41,6 +41,10 @@ Following these outreach and trial phases, here is how we expect the _soft depre
 
 Note that we also offer a [menu of opt-out options](#options-comparison) in case this soft deprecation timeline doesn't provide sufficient time to migrate away from unload. Our goal is to use this _soft deprecation_ to inform the timeline for the last phase (_hard deprecation of unload_) in which these opt-outs will be removed or reduced.
 
+<figure>
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/RImjbA5lHjnw9HGDbDy7.png", alt="Timeline of the unload deprecation.", width="800", height="317" %}
+</figure>
+
 ## Background
 
 `unload` was designed to fire when the document is being unloaded. In theory, it can be used to run code any time a user is navigating away from a page, or as an end of session callback.
