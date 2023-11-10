@@ -81,7 +81,7 @@ self.addEventListener('install', event => {
 });
 ```
 
-As the static routing API evolves, the plan is for this configuration to get more flexible and support more scenarios, like declaratively racing a network fetch and service worker startup. See [the spec explainer's exploration of a potential "final form" of the API](https://github.com/WICG/service-worker-static-routing-api/blob/main/final-form.md) for more details.
+As the Service Worker Static Routing API evolves, the plan is for this configuration to get more flexible and support more scenarios, like declaratively racing a network fetch and service worker startup. See [the spec explainer's exploration of a potential "final form" of the API](https://github.com/WICG/service-worker-static-routing-api/blob/main/final-form.md) for more details.
 
 ## Trying out the Service Worker Static Routing API
 
