@@ -16,7 +16,7 @@ tags:
   - performance
 ---
 
-Service workers are a powerful tool for allowing websites to work offline and create specialized caching rules for themselves. A service worker `fetch` handler sees every request from a page it controls, and can decide if it wants to serve a response to it from the service-worker-cache files, or even rewrite the URL to fetch a different response entirely—for instance, based on local user preferences.
+Service workers are a powerful tool for allowing websites to work offline and create specialized caching rules for themselves. A service worker `fetch` handler sees every request from a page it controls, and can decide if it wants to serve a response to it from the service worker cache, or even rewrite the URL to fetch a different response entirely—for instance, based on local user preferences.
 
 However, there can be a performance cost to service workers when a page is loaded for the first time in a while and the controlling service worker isn't currently running. Since all fetches need to happen through the service worker, the browser has to wait for the service worker to start up and run to know what content to load. This startup cost can be small, but significant, for developers using service workers to improve performance through caching strategies.
 
