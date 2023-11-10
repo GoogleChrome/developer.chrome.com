@@ -20,7 +20,7 @@ Service workers are a powerful tool for allowing websites to work offline and cr
 
 However, there can be a performance cost to service workers when a page is loaded for the first time in a while and the controlling service worker isn't currently running. Since all fetches need to happen through the service worker, the browser has to wait for the service worker to start up and run to know what content to load. This startup cost can be small, but significant, for developers using service workers to improve performance through caching strategies.
 
-[Navigation preload](https://web.dev/blog/navigation-preload) is one approach to solving the problem—allowing navigation requests to be made over the network in parallel to service-worker startup—but it's limited to initial navigation requests and still includes the service worker in the critical path. Since navigation preload launched, there have been multiple efforts to develop a more general solution to the problem space, including ways for some requests to not be blocked on service worker startup at all.
+[Navigation preload](https://web.dev/blog/navigation-preload) is one approach to solving the problem—allowing navigation requests to be made over the network in parallel to service worker startup—but it's limited to initial navigation requests and still includes the service worker in the critical path. Since navigation preload launched, there have been multiple efforts to develop a more general solution to the problem space, including ways for some requests to not be blocked on service worker startup at all.
 
 ## The Service Worker Static Routing API
 
