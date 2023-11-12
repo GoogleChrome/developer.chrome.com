@@ -68,7 +68,7 @@
     "glob": "^7.1.7",
     "google-auth-library": "^8.5.2",
     "googleapis": "110.0.0",
-    "gorko": "^0.2.1",
+    "gorko": "^0.9.1",
     "gray-matter": "^4.0.3",
     "gulp": "^4.0.2",
     "js-yaml": "^4.1.0",
