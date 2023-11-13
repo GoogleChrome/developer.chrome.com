@@ -9,7 +9,7 @@ authors:
   - demianrenzulli
   - tunetheweb
 date: 2023-08-10
-updated: 2023-11-10
+updated: 2023-11-13
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Mxh3dDENwFYXpkwD1z9X.jpg
 alt: Shipping container being unloaded by a large crane
 tags:
@@ -24,7 +24,7 @@ The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_ev
 ## Deprecation timeline
 
 {% Aside 'update' %}
-This timeline has been updated as of 20th November 2023.
+This timeline has been updated as of 13th November 2023.
 {% endAside %}
 
 We noted that unload behavior would likely be subject to changes as early as January 2019, when we announced our [intent to implement a back/forward cache](https://groups.google.com/a/chromium.org/g/blink-dev/c/OVROmzNUng0/m/1gTmi-I3EQAJ). In parallel to the implementation work, we conducted a large outreach which resulted in a significant drop of [unload usage](https://chromestatus.com/metrics/feature/timeline/popularity/203). To complement this outreach, we also started to offer ways to test the effect of deprecating unload from Chrome 115:
