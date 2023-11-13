@@ -9,7 +9,7 @@ authors:
   - demianrenzulli
   - tunetheweb
 date: 2023-08-10
-updated: 2023-09-04
+updated: 2023-11-13
 hero: image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/Mxh3dDENwFYXpkwD1z9X.jpg
 alt: Shipping container being unloaded by a large crane
 tags:
@@ -19,9 +19,31 @@ tags:
   - chrome-117
 ---
 
-The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) by gradually changing the default so that `unload` handlers stop firing on pages unless a page explicitly opts in to re-enable them. The developer trial of the deprecation is available from Chrome 117 with the `chrome://flags/#deprecate-unload` flag. Enabling this flag make the default to deny access to unload handlers for all pages.
+The [`unload` event](https://developer.mozilla.org/docs/Web/API/Window/unload_event) will be gradually [deprecated](https://chromestatus.com/feature/5579556305502208) by gradually changing the default so that `unload` handlers stop firing on pages unless a page explicitly opts in to re-enable them.
 
-The exact timeframe of when this will start to be enabled without a flag is still to be confirmed. This post and [the Chrome Status entry for this feature](https://chromestatus.com/feature/5579556305502208) will both be updated when this happens.
+## Deprecation timeline
+
+{% Aside 'update' %}
+This timeline has been updated as of 13th November 2023.
+{% endAside %}
+
+We noted that unload behavior would likely be subject to changes as early as January 2019, when we announced our [intent to implement a back/forward cache](https://groups.google.com/a/chromium.org/g/blink-dev/c/OVROmzNUng0/m/1gTmi-I3EQAJ). In parallel to the implementation work, we conducted a large outreach which resulted in a significant drop of [unload usage](https://chromestatus.com/metrics/feature/timeline/popularity/203). To complement this outreach, we also started to offer ways to test the effect of deprecating unload from Chrome 115:
+
+- In the wild testing via the [Permission-Policy API for unload](#permissions-policy) in Chrome 115 (July 2023)
+- Local testing by enabling a [flag](#chrome-flags-and-command-line-switches) in Chrome 117 (September 2023)
+
+Following these outreach and trial phases, here is how we expect the _soft deprecation_ to roll out:
+
+- A scoped phase where unload will gradually cease to function for the top 50 popular sites ([reference](https://en.wikipedia.org/wiki/List_of_most-visited_websites) as of the time of writing).
+  - Starting with 1% of users from Chrome 120 (end of November 2023).
+  - Ending with 100% of users by the end of Q3 2024
+- In addition, from Q3 2024, we intend to start a generic phase where unload will gradually cease to function on any sites, starting with 1% of users and ending with 100% of users by the end of Q1 2025.
+
+Note that we also offer a [menu of opt-out options](#options-comparison) in case this soft deprecation timeline doesn't provide sufficient time to migrate away from unload. Our goal is to use this _soft deprecation_ to inform the timeline for the last phase (_hard deprecation of unload_) in which these opt-outs will be removed or reduced.
+
+<figure>
+{% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/RImjbA5lHjnw9HGDbDy7.png", alt="Timeline of the unload deprecation.", width="800", height="317" %}
+</figure>
 
 ## Background
 
