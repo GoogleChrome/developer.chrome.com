@@ -122,6 +122,9 @@ redirects:
 - from: /docs/webstore/overview/
   to: /docs/webstore/about_webstore/
 
+- from: /docs/webstore/faq/
+  to: /docs/webstore/
+
 - from: /docs/webstore/pricing/
   to: /docs/webstore/money/
 
