@@ -235,7 +235,8 @@ An extension can have at least 5000 dynamic rules. This is exposed as the
 
 Starting in Chrome 121, there is a larger limit of 30,000 rules available for safe dynamic rules,
 exposed as the [`MAX_NUMBER_OF_DYNAMIC_RULES`](#property-MAX_NUMBER_OF_DYNAMIC_RULES). Safe rules
-are defined as rules with an action of `block`, `allow`, `allowAllRequests` or `upgradeScheme`.
+are defined as rules with an action of `block`, `allow`, `allowAllRequests` or `upgradeScheme`. Any
+unsafe rules added within the limit of 5000 will also count towards this limit.
 
 Before Chrome 120, there was a limit of 5000 combined dynamic and session rules.
 
