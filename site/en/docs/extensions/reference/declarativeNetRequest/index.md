@@ -238,7 +238,7 @@ exposed as the [`MAX_NUMBER_OF_DYNAMIC_RULES`](#property-MAX_NUMBER_OF_DYNAMIC_R
 are defined as rules with an action of `block`, `allow`, `allowAllRequests` or `upgradeScheme`. Any
 unsafe rules added within the limit of 5000 will also count towards this limit.
 
-Before Chrome 120, there was a limit of 5000 combined dynamic and session rules.
+Before Chrome 120, there was a 5000 combined dynamic and session rules limit.
 
 #### Rules that use regex {: #regex-rules }
 
