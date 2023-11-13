@@ -10,7 +10,7 @@ description: >
 
 A browser's User-Agent string (UA) helps identify which browser is being used, what version, and on which operating system. When feature detection APIs are not available, use the UA to customize behavior or content to specific browser versions.
 
-Like all other browsers, Chrome for Android sends this information in the `User-Agent` HTTP header every time it makes a request to any site. It's also available in the client through JavaScript using the `navigator.userAgent` call.
+Like all other browsers, Chrome for Android sends this information in the `User-Agent` HTTP header every time it makes a request to any site. It's also available in the client through JavaScript using the `navigator.userAgent` property.
 
 Chrome has reduced the amount of data returned in the User-Agent string. However, Chrome reduced the strings in [stages](#user-agent-reduction-stages), so you will see different strings returned for any users running versions of Chrome older than 113.
 
