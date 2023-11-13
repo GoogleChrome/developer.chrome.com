@@ -28,8 +28,27 @@ scheduled.
 ### Persistence
 
 Alarms generally persist until an extension is updated. However, this is not guarenteed and alarms
-may be cleared when the browser is restarted. Consequently, consider storing any important alarms in
-storage and making sure they exist each time your service worker starts up.
+may be cleared when the browser is restarted. Consequently, consider setting a value in storage
+when an alarm is created and then making sure it exists each time your service worker starts up:
+
+```js
+const STORAGE_KEY = "user-preference-alarm-enabled";
+
+async function checkAlarmState() {
+  const { alarmEnabled } = await chrome.storage.get(STORAGE_KEY);
+
+  if (alarmEnabled) {
+    const alarm = await chrome.alarms.get("my-alarm");
+
+    if (!alarm) {
+      await chrome.alarms.create({ periodInMinutes: 1 });
+    }
+  }
+}
+
+checkAlarmState();
+```
+
 
 ## Examples
 
