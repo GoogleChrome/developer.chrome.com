@@ -42,7 +42,7 @@ The downside to the `srcset` attribute is that it can be cumbersome to implement
 
 That’s why adding **[automated srcset generation](https://angular.io/guide/image-directive#request-images-at-the-correct-size-with-automatic-srcset)** into the NgOptimizedImage directive was a major post-launch milestone. With this addition, any application using a CDN that supports image resizing can get full, customizable, srcsets automatically added to every image generated with the NgOptimizedImage directive. 
 
-We’ve included a simplified API for setting the `sizes` property, which is used to ensure that each image gets the correct _type _of `srcset`. If you don’t include a `sizes` attribute, we know that the image is meant to be fixed-size, and should get a density-dependent srcset, like the following:
+We’ve included a simplified API for setting the `sizes` property, which is used to ensure that each image gets the correct type of `srcset`. If you don’t include a `sizes` attribute, we know that the image is meant to be fixed-size, and should get a density-dependent srcset, like the following:
 
 This kind of srcset ensures that images are served at a size that takes the user’s device pixel density into account. 
 
@@ -51,7 +51,7 @@ On the other hand, if you do include the `sizes` property, `NgOptimizedImage` ge
 
 ### Preconnect generation
 
-To improve LCP, it’s important to reduce the time your users spend downloading the LCP image. In the previous section, you saw how `srcset` can assist  by transferring smaller image files, but an equally important optimization is to start the transfer as soon as possible. One way to do that is by using `link rel=”preconnect”` tags to jump-start the connection to your image domain.
+To improve LCP, it’s important to reduce the time your users spend downloading the LCP image. In the previous section, you saw how `srcset` can assist  by transferring smaller image files, but an equally important optimization is to start the transfer as soon as possible. One way to do that is by using `link rel="preconnect"` tags to jump-start the connection to your image domain.
 
 From the start, NgOptimizedImage has warned if you fail to preconnect to your LCP image’s domain, but warning isn’t the ideal solution–we’d rather just fix the problem for you. And that’s exactly what NgOptimizedImage now does, with **automated preconnect generation**.
 
