@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-10-09
+updated: 2023-11-14
 
 # Optional
 # How to add a new author
@@ -42,6 +42,21 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 The CrUX dataset on BigQuery is generally updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
+
+## 202310
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/vHNwpu_IR34)
+
+Publication date
+ : November 14, 2023
+
+What's new
+ : - We're again seeing continual improvements likely due to the final rollout of the [front end improvements to LCP started in August](#202308) which particularly affected LCP (up a further 1.5% this month) and CLS (up 1.6%)
+
+Notable stats
+ : - 18,383,755 origins
+ : - 46.9% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
+ : - 43.4% of origins have good Core Web Vitals when [using INP in place of FID as will happen from March 2024](https://web.dev/articles/inp-cwv).
 
 ## 202309
 
