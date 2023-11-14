@@ -24,18 +24,14 @@ const TMP_PATH_IMAGE_MIN = path.join(__dirname, '../../..', '.tmp', 'images');
 let queue = null;
 
 async function getFileFromCache(url) {
-  console.log('Trying to get', url, 'from cache');
   const parsedUrl = new URL(url, 'https://web-dev.imgix.net/');
   const src = parsedUrl.pathname;
 
-  console.log('-- Looking for', path.join(TMP_PATH, src));
   if (fse.existsSync(path.join(TMP_PATH, src))) {
     const file = await fse.readFile(path.join(TMP_PATH, src));
-    console.log('-- Found, returning', src);
-  return file;
+    return file;
   }
 
-  console.log('-- Not in cache', src);
   return;
 }
 
@@ -50,24 +46,17 @@ async function getImageFromRemote(url) {
   const parsedUrl = new URL(url, 'https://web-dev.imgix.net/');
   const src = parsedUrl.pathname;
 
-  console.log('-- -- Fetching from remote', src);
-
   file = await fetch(parsedUrl.toString());
-  console.log(`Downloading ${url}`);
   file = await file.buffer();
   if (!file) {
-  console.log('-- -- Failed to fetch', src);
-  console.log('Failed to fetch', url);
     return;
   }
 
   await fse.outputFile(path.join(TMP_PATH, src), file);
-  console.log('-- -- Wrote and returning', src);
   return file;
 }
 
 async function getFile(url) {
-  console.log('Trying to get', url);
   const file = await getFileFromCache(url);
   if (file) {
     return file;
@@ -78,7 +67,6 @@ async function getFile(url) {
     queue = new PQueue({concurrency: 3, interval: 60, intervalCap: 2});
   }
 
-  console.log(`Queing download for ${url} (${queue.size})`);
   return queue.add(() => getImageFromRemote(url));
 }
 
