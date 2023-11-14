@@ -27,9 +27,9 @@ scheduled.
 
 ### Persistence
 
-Alarms generally persist until an extension is updated. However, this is not guarenteed and alarms
+Alarms generally persist until an extension is updated. However, this is not guaranteed, and alarms
 may be cleared when the browser is restarted. Consequently, consider setting a value in storage
-when an alarm is created and then making sure it exists each time your service worker starts up:
+when an alarm is created, and then ensure it exists each time your service worker starts up. For example:
 
 ```js
 const STORAGE_KEY = "user-preference-alarm-enabled";
