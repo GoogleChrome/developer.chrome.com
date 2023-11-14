@@ -245,7 +245,7 @@ chrome.alarms.onAlarm.addListener(() => {
 ```
 {% endCompare %}
 
-## Keep the service worker alive
+## Keep the service worker alive {: #keep-sw-alive }
 
 Service workers are by definition event-driven and will terminate on inactivity. This way Chrome can optimize performance and memory consumption of your extension. Learn more in our [service worker lifecycle documentation](/docs/extensions/mv3/service_workers/service-worker-lifecycle/#idle-shutdown). Exceptional cases might require additional measures to ensure that a service worker stays alive for a longer time.
 
