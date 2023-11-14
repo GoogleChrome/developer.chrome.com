@@ -46,7 +46,7 @@ Private-Network-Access-ID: <the MAC address of the device>
 ```
 
 Example:
-```tet
+```text
 Private-Network-Access-Name: "My Smart Toothbrush"
 Private-Network-Access-ID: "01:23:45:67:89:0A"
 ```
