@@ -51,7 +51,7 @@ Publication date
  : November 14, 2023
 
 What's new
- : - We're again seeing continual improvements across most of the metrics likely due to the final rollout of the [front end improvements to LCP started in September](#202308) which particularly affected LCP (up a further 1.5% this month) and CLS (up 1.6%)
+ : - We're again seeing continual improvements across most of the metrics likely due to the final rollout of the [front end improvements to LCP started in August](#202308) which particularly affected LCP (up a further 1.5% this month) and CLS (up 1.6%)
 
 Notable stats
  : - 18,383,755 origins
