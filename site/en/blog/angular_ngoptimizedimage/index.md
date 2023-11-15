@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: What’s new in the Angular NgOptimizedImage directive
 description:
   Learn about the new features included in the Angular NgOptimizedImage directive that further improve image performance in Angular apps.
-date: 2023-11-14
+date: 2023-11-15
 authors:
   - alexcastle
 tags:
@@ -33,6 +33,15 @@ With fill mode, the image sizing requirement is disabled, and the image is autom
 
 Fill mode uses NgOptimizedImage as a better-performing alternative to the `background-image` css property. Place an image inside the `<div>` or other element that would have had the `background-image` styling, then enable fill mode, as demonstrated in the preceding code example. Use the `object-fit` and `object-position` CSS properties on the `<div>` to control how the image is positioned in the background.
 
+```html
+// Height and width are required
+<img ngSrc="example.com" height="300" width="400">
+
+// Unless you use fill mode!
+<div style="width: 100vw; height: 50em; position: relative">
+  <img ngSrc="example.com" fill>
+</div>
+```
 
 ### Srcset generation
 
@@ -44,10 +53,17 @@ That’s why adding **[automated srcset generation](https://angular.io/guide/ima
 
 We’ve included a simplified API for setting the `sizes` property, which is used to ensure that each image gets the correct type of `srcset`. If you don’t include a `sizes` attribute, we know that the image is meant to be fixed-size, and should get a density-dependent srcset, like the following:
 
+```html
+<img src="www.example.com/image.png" srcset="www.example.com/image.png?w=400 1x, www.example.com/image.png?w=800 2x" >
+```
+
 This kind of srcset ensures that images are served at a size that takes the user’s device pixel density into account. 
 
 On the other hand, if you do include the `sizes` property, `NgOptimizedImage` generates a responsive srcset that includes breakpoints for many common device and image sizes, using this default list of breakpoints:
 
+```javascript
+[16, 32, 48, 64, 96, 128, 256, 384, 640, 750, 828, 1080, 1200, 1920, 2048, 3840]
+```
 
 ### Preconnect generation
 
@@ -65,6 +81,15 @@ A key element of NgOptimizedImage is the loader architecture, which allows the d
 At launch, these custom loaders were limited in scope, and could only read the `width` attribute from the image element. In response to user feedback, we added support for a customizable `loaderParams` data structure, which allows arbitrary data to be passed from the image element to the custom loader. With the expansion, custom loaders can be as simple or as complex as required by an application’s image infrastructure.
 
 The following example shows how a simple custom loader could use the `loaderParams` API to select between two alternate image domains: 
+
+```javascript
+const myCustomLoader = (config: ImageLoaderConfig) => {
+  if (config.loaderParams?.alternateDomain) {
+    return `https://alternate.domain.com/images/${config.src}`
+  }
+  return `https://primary.domain.com/images/${config.src}`;
+};
+```
 
 An example of a more complex custom loader is available in the [Angular documentation](https://angular.io/guide/image-directive#example-custom-loader).
 
