@@ -41,6 +41,7 @@ Before beginning, read about the [differences between background scripts and ext
 * [Replace calls to `XMLHttpRequest()` with global `fetch()`](/docs/extensions/migrating/to-service-workers/#replace-xmlhttprequest).
 * [Persist states](/docs/extensions/migrating/to-service-workers/#persist-states)
 * [Convert timers to alarms](/docs/extensions/migrating/to-service-workers/#convert-timers)
+* [Keep the service worker alive (in exceptional cases)](/docs/extensions/migrating/to-service-workers/#keep-sw-alive)
 
 {% endDetails %}
 
