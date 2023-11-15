@@ -20,6 +20,7 @@ const {Environment} = require('nunjucks');
 const yaml = require('js-yaml');
 const fs = require('fs');
 const path = require('path');
+const Papa = require('papaparse');
 
 const {findByUrl} = require('../../_data/lib/find');
 const {exportFile} = require('../utils/exportFile');
@@ -37,6 +38,8 @@ const authorValues = yaml.load(
   fs.readFileSync('./site/_data/i18n/authors.yaml', 'utf-8')
 );
 
+const URLS_PATH = path.join(__dirname, '../../../urls.csv');
+
 const NESTED_MULTI_LINE_CODE_PATTERN = new RegExp(
   '<div( .*)?>[\\s\\S]*?<\\/div>',
   'gi'
@@ -45,14 +48,25 @@ const NESTED_MULTI_LINE_CODE_PATTERN = new RegExp(
 const RAW_SHORTCODE_PATTERN = /{% raw %}(.*?){% endraw %}/gm;
 const RAW_PLACEHOLDER = 'RAW_PLACEHOLDER';
 
+let urls = null;
+
 /**
  * Used to keep track of old URLs and their potential new URLs.
  */
 const exportUrls = new Map();
 
-const allPages = [];
-
 function getExportDetails(url) {
+  if (!urls) {
+    // URLs are lazily loaded from the CSV and then mapped to an object for easier lookup
+    const urlsCsv = fs.readFileSync(URLS_PATH, 'utf-8');
+    const {data: rows} = Papa.parse(urlsCsv);
+
+    urls = {};
+    for (const row of rows) {
+      urls[row[2]] = row[5] || row[2];
+    }
+  }
+
   // Determine a export path for the page, to dissolve the flat-file structure that
   // is currently used for web.dev
   const originalUrl = path.parse(url);
@@ -62,6 +76,30 @@ function getExportDetails(url) {
   // Make sure exportPath has a trailing slash, to safely append path segments
   if (!exportPath.endsWith('/')) {
     exportPath = `${exportPath}/`;
+  }
+
+  if (urls) {
+    // Remove language prefix from exportPath for lookup
+    const languagePrefix = exportPath.split('/')[1];
+    // The map contains the articleName, so pluck it back in
+    const fullPath = `${exportPath.replace(`/${languagePrefix}/`, '/')}${articleName}/`;
+    console.log(fullPath, urls[fullPath], exportPath);
+    exportPath = urls[fullPath]
+      ? `/${languagePrefix}${urls[fullPath]}`
+      : exportPath;
+
+    if (fullPath.includes('blog') && !exportPath.includes('blog')) {
+      // Should not
+      console.log('-- should not be in blog:', fullPath, exportPath);
+    }
+
+    if (!fullPath.includes('blog') && exportPath.includes('blog')) {
+      // Should not
+      console.log('-- should be in blog:', fullPath, exportPath);
+    }
+
+    // Pluck article name back out
+    exportPath = exportPath.replace(new RegExp(articleName + '/$'), '');
   }
 
   return {articleName, exportPath};
@@ -84,7 +122,7 @@ async function transform(ctx, markdown) {
     markdown
   );
 
-  // markdown = await getAndRewriteVideoAssets(ctx, markdown);
+  markdown = await getAndRewriteVideoAssets(ctx, markdown);
 
   // Remove the float-left and float-right classes as they are not used on web.dev
   // as of 06/23 both are not used literally so it's safe to omit a complex regex
@@ -181,26 +219,30 @@ async function Export() {
     return '';
   }
 
+  const tags = page?.template?.frontMatter?.data.tags || [];
   const authors = page?.template?.frontMatter?.data.authors;
   let frontMatter = {
     project_path: '/_project.yaml',
     book_path: '/_book.yaml',
   };
 
-  if (inputPath.includes('privacy-sandbox')) {
+  if (
+    inputPath.includes('privacy-sandbox') ||
+    (inputPath.includes('blog') && tags.includes('privacy')) ||
+    inputPath.includes('docs/privacy-sandbox')
+  ) {
     frontMatter = {
       project_path: '/privacy-sandbox/_project.yaml',
       book_path: '/privacy-sandbox/_book.yaml',
     };
   }
 
-  let tags = page?.template?.frontMatter?.data.tags || [];
   if (inputPath.includes('blog') && tags.includes('privacy')) {
     pageUrl = pageUrl.replace('/blog/', '/privacy-sandbox/blog/');
-    frontMatter = {
-      project_path: '/privacy-sandbox/_project.yaml',
-      book_path: '/privacy-sandbox/_book.yaml',
-    };
+  }
+
+  if (inputPath.includes('docs/privacy-sandbox')) {
+    pageUrl = pageUrl.replace('docs/privacy-sandbox', 'privacy-sandbox/docs');
   }
 
   if (authors) {
@@ -225,7 +267,7 @@ async function Export() {
     frontMatter.description = description.trim();
   }
 
-  let api = page?.template?.frontMatter?.data.api;
+  const api = page?.template?.frontMatter?.data.api;
   if (api) {
     frontMatter.api = api;
     frontMatter.layout = page?.template?.frontMatter?.data.layout;
@@ -301,21 +343,12 @@ ${
 
   const renderedPage = template + transformedMarkdown;
   await exportFile(ctx, renderedPage);
-  allPages.push({
-    exportUrl,
-    thumbnail: thumbnailPath,
-    title,
-    description,
-    date,
-    authors,
-  });
   return renderedPage;
 }
 
 module.exports = {
   Export,
   exportUrls,
-  allPages,
   pluck,
   insert,
   getExportDetails,
