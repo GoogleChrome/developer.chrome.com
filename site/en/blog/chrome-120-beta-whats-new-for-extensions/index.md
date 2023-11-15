@@ -84,7 +84,7 @@ Starting with Chrome 120, you can now either fire an event in:
 
 ```js
 await chrome.alarms.create('demo-default-alarm', {
-   periodInMinutes: 0.45
+   periodInMinutes: 0.75
  });
 ```
 
