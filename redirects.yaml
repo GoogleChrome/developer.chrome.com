@@ -641,6 +641,9 @@ redirects:
 - from: /blog/page-lifecycle-api/
   to: /articles/page-lifecycle-api/
 
+- from: /blog/deprecating-unload
+  to: /articles/deprecating-unload
+
 # Redirecting the intersection observer post from d.c.c. to web.dev
 - from: /intersectionobserver/
   to: https://web.dev/intersectionobserver/
