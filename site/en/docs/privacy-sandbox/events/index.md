@@ -42,14 +42,16 @@ announcements are also made on [this issue](https://github.com/WICG/attribution-
 **Series #1: Protected Audience fundamentals**  
 
 September 27, 2023     
-* [Deck](https://goo.gle/ps-protectedaudience-webinar-1-deck)   
-* [Recording](https://goo.gle/ps-protectedaudience-webinar-1-recording)  
+* [Deck](https://goo.gle/ps-protected-audience-webinar-1-deck)   
+* [AMER Recording](https://goo.gle/ps-protected-audience-webinar-1-recording-amer)
+* [EMEA Recording](https://goo.gle/ps-protected-audience-webinar-1-recording-emea)  
 
-**Series #2: Multi-seller auctions**  
+**Series #2: Sequential auction setup**  
 
 November 7, 2023     
 * [Deck](https://goo.gle/ps-protected-audience-webinar-2-deck)    
-* [Recording](https://goo.gle/ps-protected-audience-webinar-2-recording-amer)  
+* [AMER Recording](https://goo.gle/ps-protected-audience-webinar-2-recording-amer)
+* [EMEA Recording](https://goo.gle/ps-protected-audience-webinar-2-recording-emea)  
 
 ### First-Party Sets Office Hours {: #oh06}
 
