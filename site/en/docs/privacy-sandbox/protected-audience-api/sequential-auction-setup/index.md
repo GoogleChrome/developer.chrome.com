@@ -232,9 +232,9 @@ The component auctions are executed in parallel, and in each component auction, 
   </figcaption>
 </figure>
 
-After the component auctions from the previous section are executed, the browser runs top-level seller’s scoring logic on each component auction’s winning ad. In the top-level seller’s `scoreAd()` function, the contextual auction adjusted bid price may be available as `sellerSignals`, and the scoring logic may compare that contextual auction bid price against the Protected Audience component auction’s winning bid price. 
+After the component auctions from the previous section are executed, the browser runs the top-level seller’s scoring logic on each component auction’s winning ad. In the top-level seller’s `scoreAd()` function, the contextual auction adjusted bid price may be available as `sellerSignals`, and the scoring logic may compare that contextual auction bid price against the Protected Audience component auction’s winning bid price. 
 
-If the contextual auction’s winning bid price is higher than the component auction’s winning bid price, then the `scoreAd()` function can return a desirability score of `0`. If there are no ads with desirability score higher than `0`, then it signifies that the contextual auction’s winning ad is more valuable than any of the component auction’s winning ads, and the `runAdAuction()` function returns `null`. 
+If the contextual auction’s winning bid price is higher than the component auction’s winning bid price, then the `scoreAd()` function can return a desirability score of `0`. If there are no ads with a desirability score higher than `0`, then it signifies that the contextual auction’s winning ad is more valuable than any of the component auction’s winning ads, and the `runAdAuction()` function returns `null`. 
 
 If the Protected Audience auction has no winner and returns `null`, then the publisher’s ad server client-side library can render the contextual auction winner into an iframe. If the Protected Audience auction is the winner against the contextual auction and returns a `FencedFrameConfig` object or an opaque URN, the winning Protected Audience auction ad can be rendered into a fenced frame or an iframe. 
 
