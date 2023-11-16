@@ -11,7 +11,7 @@ authors:
   - garimamimani
 ---
 
-Publishers typically diversify their ad demand sources to optimize for revenue and invoke multiple companies (for example, publisher ad servers, supply side platforms, and demand side platforms) to determine the best ad for a given ad slot on the page. Header bidding allows publishers to capture bids for an ad slot from a variety of demand sources. In a sequential auction setup, header bidding library may be used to run an auction with contextual data and Protected Audience is used to run an auction with cross-site data. 
+Publishers typically diversify their ad demand sources to optimize for revenue and invoke multiple companies (for example, publisher ad servers, supply-side platforms, and demand-side platforms) to determine the best ad for a given ad slot on the page. Header bidding allows publishers to capture bids for an ad slot from a variety of demand sources. In a sequential auction setup, header bidding library may be used to run an auction with contextual data and Protected Audience is used to run an auction with cross-site data. 
 
 Before you begin, learn about the fundamentals of Protected Audience from the [landing page](/docs/privacy-sandbox/protected-audience/) and [header bidding](https://docs.prebid.org/overview/intro-to-header-bidding.html) from the Prebid.js documentation.
 
@@ -102,7 +102,7 @@ A Publisher Ad Server may provide a client-side library for interacting with the
   <tr>
    <td>Top-level seller
    </td>
-   <td>The party that invokes (i.e., creates) the Protected Audience multi-seller auction and participates in the top-level auction. 
+   <td>The party that invokes (that is, creates) the Protected Audience multi-seller auction and participates in the top-level auction. 
    </td>
   </tr>
   <tr>
@@ -115,12 +115,12 @@ A Publisher Ad Server may provide a client-side library for interacting with the
 
 ## Sequential auction setup
 
-In a sequential auction setup, the contextual auctions are executed first, then the Protected Audience auction is executed. This setup allows publishers to maximize their earning potential by running an auction with the contextual data available on the page, and also running an auction with cross-site data in a secure environment to protect user’s privacy. 
+In a sequential auction setup, the contextual auctions are executed first, then the Protected Audience auction is executed. This setup allows publishers to maximize their earning potential by running an auction with the contextual data available on the page, and also running an auction with cross-site data in a secure environment to protect users' privacy. 
 
 A [header bidding](https://docs.prebid.org/overview/intro-to-header-bidding.html#introduction-to-header-bidding) library may be executed first on the page to collect bids for the Publisher Ad Server’s contextual auction. Then, the adjusted winning bid price of the contextual auction can be entered into the Protected Audience auction as a bid floor. During the scoring step, the top-level seller can drop component auction bid prices below the bid floor by assigning them a zero score when the desirability score is calculated. If no Protected Audience component auction bid is above the bid floor, then the contextual auction winning ad is rendered to the user. If the Protected Audience auction returns a winner, it means it is above the bid floor, and the Protected Audience winning ad is rendered to the user. 
 
 {% Aside %}
-The setup in this document describes one potential approach that Protected Audience can be integrated with existing ad serving mechanisms, but it is not the only way. This document describes how one of the header bidding libraries, Prebid.js, has integrated with Protected Audience.
+The setup in this document describes one potential approach to integrating Protected Audience with existing ad serving mechanisms, but it is not the only way. This document describes how one of the header bidding libraries, Prebid.js, has integrated with Protected Audience.
 {% endAside %}
 
 In this sequential auction setup example, three major auctions may be executed on the page in order: 1) contextual auction by header bidding library, 2) contextual auction by the Publisher Ad Server, and 3) Protected Audience auction.
