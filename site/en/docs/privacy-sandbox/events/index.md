@@ -6,7 +6,7 @@ subhead: >
 description: >
  Information and resources for online and in-person events.
 date: 2022-08-19
-updated: 2023-11-02
+updated: 2023-11-15
 authors:
  - samdutton
  - mihajlija
@@ -16,23 +16,6 @@ Learn about forthcoming events, and get access to resources for events that have
 already taken place.
 
 ## Future events
-
-### Webinar: Protected Audience API multi-seller auction
-
-The Google Privacy Sandbox team will be hosting our next set of webinars on [Protected
-Audience](/docs/privacy-sandbox/protected-audience/). 
-
-This set of webinars will focus on multi-seller auctions, where we will cover sequential auction
-setup, different types of auctions and participants involved, examine the overview diagram, and walk
-through a detailed sequence diagram along with code. 
-
-**Americas-friendly session**    
-November 7, 2023: 1pm to 2pm ET   
-[Register](https://rsvp.withgoogle.com/events/protected-audience-multisellerauction-amer_a27cb5)
-
-**EMEA-friendly session**   
-November 8, 2023: 12 noon to 1pm GMT    
-[Register](https://rsvp.withgoogle.com/events/protected-audience-multisellerauction-emea_a27cb5_339693)
 
 Subscribe to the following mailing lists to be notified of other events:
 
@@ -54,6 +37,21 @@ announcements are also made on [this issue](https://github.com/WICG/attribution-
 * [Topics](https://github.com/patcg-individual-drafts/topics/issues/115#issue-1442748960)
 
 ## Past events
+
+### Protected Audience webinars
+**Series #1: Protected Audience fundamentals**  
+
+September 27, 2023     
+* [Deck](https://goo.gle/ps-protected-audience-webinar-1-deck)   
+* [AMER Recording](https://goo.gle/ps-protected-audience-webinar-1-recording-amer)
+* [EMEA Recording](https://goo.gle/ps-protected-audience-webinar-1-recording-emea)  
+
+**Series #2: Sequential auction setup**  
+
+November 7, 2023     
+* [Deck](https://goo.gle/ps-protected-audience-webinar-2-deck)    
+* [AMER Recording](https://goo.gle/ps-protected-audience-webinar-2-recording-amer)
+* [EMEA Recording](https://goo.gle/ps-protected-audience-webinar-2-recording-emea)  
 
 ### First-Party Sets Office Hours {: #oh06}
 
