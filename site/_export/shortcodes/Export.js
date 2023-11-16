@@ -39,6 +39,7 @@ const authorValues = yaml.load(
 );
 
 const URLS_PATH = path.join(__dirname, '../../../urls.csv');
+const EXTENSION_URLS_PATH = path.join(__dirname, '../../../extension-urls.csv');
 
 const NESTED_MULTI_LINE_CODE_PATTERN = new RegExp(
   '<div( .*)?>[\\s\\S]*?<\\/div>',
@@ -55,16 +56,32 @@ let urls = null;
  */
 const exportUrls = new Map();
 
+function mapCsvUrlsToObjects(path) {
+  // URLs are lazily loaded from the CSV and then mapped to an object for easier lookup
+  const urlsCsv = fs.readFileSync(path, 'utf-8');
+  const {data: rows} = Papa.parse(urlsCsv);
+
+  // Extension URL CSV has an extra column so the pointer needs to be moved by a column
+  let pointer = 0;
+  if (path === EXTENSION_URLS_PATH) {
+    pointer++;
+  }
+
+  const urls = {};
+  for (const row of rows) {
+    urls[row[2 + pointer].replace('/en/', '/')] =
+      row[5 + pointer] || row[2 + pointer].replace('/en/', '/');
+  }
+
+  return urls;
+}
+
 function getExportDetails(url) {
   if (!urls) {
-    // URLs are lazily loaded from the CSV and then mapped to an object for easier lookup
-    const urlsCsv = fs.readFileSync(URLS_PATH, 'utf-8');
-    const {data: rows} = Papa.parse(urlsCsv);
-
-    urls = {};
-    for (const row of rows) {
-      urls[row[2]] = row[5] || row[2];
-    }
+    urls = {
+      ...mapCsvUrlsToObjects(URLS_PATH),
+      ...mapCsvUrlsToObjects(EXTENSION_URLS_PATH),
+    };
   }
 
   // Determine a export path for the page, to dissolve the flat-file structure that
@@ -82,27 +99,55 @@ function getExportDetails(url) {
     // Remove language prefix from exportPath for lookup
     const languagePrefix = exportPath.split('/')[1];
     // The map contains the articleName, so pluck it back in
-    const fullPath = `${exportPath.replace(`/${languagePrefix}/`, '/')}${articleName}/`;
-    console.log(fullPath, urls[fullPath], exportPath);
+    const fullPath = `${exportPath.replace(
+      `/${languagePrefix}/`,
+      '/'
+    )}${articleName}/`;
     exportPath = urls[fullPath]
       ? `/${languagePrefix}${urls[fullPath]}`
       : exportPath;
-
-    if (fullPath.includes('blog') && !exportPath.includes('blog')) {
-      // Should not
-      console.log('-- should not be in blog:', fullPath, exportPath);
-    }
-
-    if (!fullPath.includes('blog') && exportPath.includes('blog')) {
-      // Should not
-      console.log('-- should be in blog:', fullPath, exportPath);
-    }
 
     // Pluck article name back out
     exportPath = exportPath.replace(new RegExp(articleName + '/$'), '');
   }
 
   return {articleName, exportPath};
+}
+
+/**
+ * Parses the project name from a url like /en/docs/privacy-sandbox/, /en/docs/chrome
+ * or /en/docs/lighthouse and returns DevSite paths for project and book
+ * @param {string} url
+ * @param {string[]} tags
+ */
+function getProjectAndBookPaths(url, tags) {
+  // Privacy Sandbox is special, as it may have not the same project path format
+  if (
+    url.includes('privacy-sandbox') ||
+    (url.includes('blog') && tags.includes('privacy')) ||
+    url.includes('docs/privacy-sandbox')
+  ) {
+    return {
+      project_path: '/privacy-sandbox/_project.yaml',
+      book_path: '/privacy-sandbox/_book.yaml',
+    };
+  }
+
+  const pathParts = url.split('/');
+  const type = pathParts[2];
+  // Only set project for docs documents
+  if (type === 'docs') {
+    const projectName = pathParts[3];
+    return {
+      project_path: `/docs/${projectName}/_project.yaml`,
+      book_path: `/docs/${projectName}/_book.yaml`,
+    };
+  }
+
+  return {
+    project_path: '/_project.yaml',
+    book_path: '/_book.yaml',
+  };
 }
 
 async function transform(ctx, markdown) {
@@ -221,26 +266,14 @@ async function Export() {
 
   const tags = page?.template?.frontMatter?.data.tags || [];
   const authors = page?.template?.frontMatter?.data.authors;
-  let frontMatter = {
-    project_path: '/_project.yaml',
-    book_path: '/_book.yaml',
-  };
+  // Start the frontmatter with the project and book paths
+  let frontMatter = getProjectAndBookPaths(pageUrl, tags);
 
-  if (
-    inputPath.includes('privacy-sandbox') ||
-    (inputPath.includes('blog') && tags.includes('privacy')) ||
-    inputPath.includes('docs/privacy-sandbox')
-  ) {
-    frontMatter = {
-      project_path: '/privacy-sandbox/_project.yaml',
-      book_path: '/privacy-sandbox/_book.yaml',
-    };
-  }
-
+  // Rewrite Privacy Sandbox paths to have them isolated in their own project.
+  // This is a temporary measure until we have a proper Privacy Sandbox location
   if (inputPath.includes('blog') && tags.includes('privacy')) {
     pageUrl = pageUrl.replace('/blog/', '/privacy-sandbox/blog/');
   }
-
   if (inputPath.includes('docs/privacy-sandbox')) {
     pageUrl = pageUrl.replace('docs/privacy-sandbox', 'privacy-sandbox/docs');
   }
@@ -249,8 +282,7 @@ async function Export() {
     frontMatter.author_name = authorValues[authors[0]].title.en;
   }
 
-  // Set the refresh
-  const date = page?.template?.frontMatter?.data.date;
+  // Set the refresh date
   let updatedAt = page?.template?.frontMatter?.data.updated_at;
   if (!updatedAt) {
     updatedAt = page?.template?.frontMatter?.data.date;
