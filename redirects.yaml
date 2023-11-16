@@ -644,6 +644,42 @@ redirects:
 - from: /blog/deprecating-unload
   to: /articles/deprecating-unload
 
+- from: /blog/css-color-mix
+  to: /articles/css-color-mix
+
+- from: /blog/chrome-ux-report-api
+  to: /articles/chrome-ux-report-api
+
+- from: /blog/chrome-ux-report-bigquery
+  to: /articles/chrome-ux-report-bigquery
+
+- from: /blog/chrome-ux-report-history-api
+  to: /articles/chrome-ux-report-history-api
+
+- from: /blog/chrome-ux-report-looker-studio-dashboard
+  to: /articles/chrome-ux-report-looker-studio-dashboard
+
+- from: /blog/chrome-ux-report-pagespeed-insights
+  to: /articles/chrome-ux-report-pagespeed-insights
+
+- from: /blog/css-layout-gets-smarter-with-calc
+  to: /articles/css-layout-gets-smarter-with-calc
+
+- from: /blog/css-text-wrap-balance
+  to: /articles/css-text-wrap-balance
+
+- from: /blog/css-update-media-query
+  to: /articles/css-update-media-query
+
+- from: /blog/webauthn
+  to: /articles/webauthn
+
+- from: /blog/webauthn-conditional-ui
+  to: /articles/webauthn-conditional-ui
+
+- from: /blog/webauthn-tab
+  to: /articles/webauthn-tab
+
 # Redirecting the intersection observer post from d.c.c. to web.dev
 - from: /intersectionobserver/
   to: https://web.dev/intersectionobserver/
