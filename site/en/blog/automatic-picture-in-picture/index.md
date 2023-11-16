@@ -4,7 +4,7 @@ title: "Automatic picture-in-picture for web apps"
 description: "Chrome allows video conferencing web apps to automatically enter picture-in-picture."
 hero: "image/vvhSqZboQoZZN9wBvoXq72wzGAf1/NOYOTQG5rjItk9Y4n6tH.jpg"
 alt: "A hand holding a photo frame."
-date: 2023-10-30
+date: 2023-11-16
 #updated: YYYY-MM-DD
 authors:
   - beaufortfrancois
