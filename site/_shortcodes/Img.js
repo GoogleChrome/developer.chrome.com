@@ -41,15 +41,14 @@ async function MetaImg(args) {
       : null;
     const fileName = `image/${fileSlug || parsedSrc.name}${parsedSrc.ext}`;
 
-    const parsedPath = path.parse(this.ctx.page.url);
     try {
       await exportFile(
         this.ctx,
         image,
-        path.join(this.ctx.exportPath, parsedPath.name, fileName),
+        path.join(this.ctx.exportPath, this.ctx.articleName, fileName)
       );
     } catch(e) {
-      console.error('Failed to export image', parsedPath.name, fileName);
+      console.error('Failed to export image', this.ctx.articleName, fileName);
     }
 
     // Instead of markdown img syntax we use HTML img syntax, to make sure

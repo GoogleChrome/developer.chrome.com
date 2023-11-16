@@ -69,8 +69,9 @@ function mapCsvUrlsToObjects(path) {
 
   const urls = {};
   for (const row of rows) {
-    urls[row[2 + pointer].replace('/en/', '/')] =
-      row[5 + pointer] || row[2 + pointer].replace('/en/', '/');
+    // Remove the language prefix from the source URL
+    const sourceUrl = row[2 + pointer].replace('/en/', '/');
+    urls[sourceUrl] = row[5 + pointer] || sourceUrl;
   }
 
   return urls;
@@ -87,7 +88,7 @@ function getExportDetails(url) {
   // Determine a export path for the page, to dissolve the flat-file structure that
   // is currently used for web.dev
   const originalUrl = path.parse(url);
-  const articleName = originalUrl.name;
+  let articleName = originalUrl.name;
 
   let exportPath = originalUrl.dir;
   // Make sure exportPath has a trailing slash, to safely append path segments
@@ -97,18 +98,24 @@ function getExportDetails(url) {
 
   if (urls) {
     // Remove language prefix from exportPath for lookup
-    const languagePrefix = exportPath.split('/')[1];
+    const exportPathParts = exportPath.split('/');
+    const languagePrefix = exportPathParts[1];
     // The map contains the articleName, so pluck it back in
+    // but not the language, so throw it out
     const fullPath = `${exportPath.replace(
       `/${languagePrefix}/`,
       '/'
     )}${articleName}/`;
-    exportPath = urls[fullPath]
-      ? `/${languagePrefix}${urls[fullPath]}`
-      : exportPath;
+
+    // Check if there is a new URL for the page
+    const newPath = urls[fullPath];
+    if (newPath) {
+      articleName = path.parse(newPath).name;
+      exportPath = `/${languagePrefix}/${newPath}`;
+    }
 
     // Pluck article name back out
-    exportPath = exportPath.replace(new RegExp(articleName + '/$'), '');
+    exportPath = exportPath.replace(new RegExp(articleName + '/?$'), '');
   }
 
   return {articleName, exportPath};
