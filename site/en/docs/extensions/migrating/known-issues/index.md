@@ -10,9 +10,7 @@ tags:
 ---
 
 {% Aside %}
-
-**December 9, 2022:** The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
-
+The Manifest V2 support timeline has been updated. See our [November 2023 blog post](/blog/resuming-the-transition-to-mv3/) and the [Manifest V2 support timeline page](/docs/extensions/mv3/mv2-sunset/) for details.
 {% endAside %}
 
 Recently, we announced changes to the Manifest V2 deprecation timeline, and while we remain firmly committed to Manifest V3 we acknowledge there is more work to do on our part.

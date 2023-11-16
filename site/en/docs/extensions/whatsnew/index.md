@@ -15,6 +15,17 @@ tags:
 
 Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
+
+### Blog post: Resuming the transition to Manifest V3 {: #blog-mv2-timeline-restart }
+<p class="color-secondary-text type--caption">Posted on <time>November 16, 2023</time></p>
+
+The Manifest V2 support timeline has been updated. See our [November 2023 blog post](/blog/resuming-the-transition-to-mv3/) for details.
+
+### Blog post: Improvements to content filtering support in Manifest V3 {: #blog-content=filtering-improvements }
+<p class="color-secondary-text type--caption">Posted on <time>November 15, 2023</time></p>
+
+Learn about how we improved the declarativeNetRequest API in our [new blog post](/blog/improvements-to-content-filtering-in-manifest-v3/).
+
 ### Blog post: What's new in Chrome 120 for Extensions {: #blog-whats-new-extensions-chrome-120 }
 
 <p class="color-secondary-text type--caption">Posted on <time>November 6, 2023</time></p>

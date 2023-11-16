@@ -14,9 +14,7 @@ tags:
 ---
 
 {% Aside %}
-
-**December 9, 2022:** The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
-
+The Manifest V2 support timeline has been updated. See our [November 2023 blog post](/blog/resuming-the-transition-to-mv3/) and the [Manifest V2 support timeline page](/docs/extensions/migrating/mv2-sunset/) for details.
 {% endAside %}
 
 Last year, we [announced](/blog/mv2-transition/) a timeline for the phasing out of Manifest V2 extensions as we shift our focus to Manifest V3. This change will give Chrome users increased safety and peace of mind while browsing and installing extensions by providing more transparency and control over permissions, adding stricter protocols for accessing resources outside the extension’s context, and ensuring that extensions work well on all devices.
