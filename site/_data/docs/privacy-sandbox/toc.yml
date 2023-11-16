@@ -79,6 +79,7 @@
             - url: /docs/privacy-sandbox/protected-audience-api/ad-auction
             - url: /docs/privacy-sandbox/protected-audience-api/interest-groups
             - url: /docs/privacy-sandbox/protected-audience-api/reporting
+            - url: /docs/privacy-sandbox/protected-audience-api/sequential-auction-setup
             - url: /docs/privacy-sandbox/protected-audience-api/latency
             - url: /docs/privacy-sandbox/protected-audience-api/opt-out
             - url: /docs/privacy-sandbox/protected-audience-api/reports
