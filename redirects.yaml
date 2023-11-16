@@ -648,19 +648,19 @@ redirects:
   to: /articles/css-color-mix
 
 - from: /blog/chrome-ux-report-api
-  to: /articles/chrome-ux-report-api
+  to: /docs/crux/guides/chrome-ux-report-api
 
 - from: /blog/chrome-ux-report-bigquery
-  to: /articles/chrome-ux-report-bigquery
+  to: /docs/crux/guides/chrome-ux-report-bigquery
 
 - from: /blog/chrome-ux-report-history-api
-  to: /articles/chrome-ux-report-history-api
+  to: /docs/crux/guides/chrome-ux-report-history-api
 
 - from: /blog/chrome-ux-report-looker-studio-dashboard
-  to: /articles/chrome-ux-report-looker-studio-dashboard
+  to: /docs/crux/guides/chrome-ux-report-looker-studio-dashboard
 
 - from: /blog/chrome-ux-report-pagespeed-insights
-  to: /articles/chrome-ux-report-pagespeed-insights
+  to: /docs/crux/guides/chrome-ux-report-pagespeed-insights
 
 - from: /blog/css-layout-gets-smarter-with-calc
   to: /articles/css-layout-gets-smarter-with-calc
