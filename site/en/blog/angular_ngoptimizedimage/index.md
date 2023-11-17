@@ -9,7 +9,6 @@ authors:
 hero: 'image/m1xBwEK30TUVOPXOaWN8CXVd3Dg1/4lEN9XIan6f86Y2qoAzS.webp'
 alt: >
   The Angular logo
-updated: 2023-11-17
 tags:
   - performance
   - news
