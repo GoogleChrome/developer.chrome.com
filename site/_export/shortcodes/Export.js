@@ -24,6 +24,7 @@ const Papa = require('papaparse');
 
 const {findByUrl} = require('../../_data/lib/find');
 const {exportFile} = require('../utils/exportFile');
+const {exportExtensionReference} = require('../utils/exportExtensionReference');
 const {getImage} = require('../utils/getImage');
 const {getAndRewriteVideoAssets} = require('../utils/getVideo');
 const {
@@ -91,6 +92,11 @@ function mapCsvUrlsToObjects(path) {
     // Remove the language prefix from the source URL
     const sourceUrl = row[2 + pointer].replace('/en/', '/');
     urls[sourceUrl] = row[5 + pointer] || sourceUrl;
+
+    const redirectUrl = row[6 + pointer];
+    if (redirectUrl) {
+      redirectUrls[sourceUrl] = redirectUrl;
+    }
   }
 
   return urls;
@@ -126,7 +132,8 @@ function getExportDetails(url) {
       '/'
     )}${articleName}/`;
 
-    // Check if there is a new URL for the page
+    // Check if there is a new URL for the page and early exit,
+    // if there is a redirect URL
     const newPath = urls[fullPath];
     if (newPath) {
       articleName = path.parse(newPath).name;
@@ -326,10 +333,6 @@ async function Export() {
   }
 
   const api = page?.template?.frontMatter?.data.api;
-  if (api) {
-    frontMatter.api = api;
-    frontMatter.layout = page?.template?.frontMatter?.data.layout;
-  }
 
   let transformedSource = source;
 
@@ -344,16 +347,17 @@ async function Export() {
   );
 
   const {exportPath, articleName} = getExportDetails(pageUrl);
-
-  // Add the export path to the exportUrls map, so we can construct a redirect map
-  const exportUrl = `${exportPath}${articleName}`;
-  exportUrls.set(pageUrl, exportUrl);
+  // Check if the page has a redirect URL and early exit if it does
+  const redirectUrl = redirectUrls[pageUrl.replace('/en/', '/')];
+  if (redirectUrl) {
+    console.log('Skipping redirect page', pageUrl, '->', redirectUrl);
+    return '';
+  };
 
   const ctx = Object.assign({}, this.ctx, {
     export: true,
     exportPath,
-    exportName: articleName,
-    exportUrl,
+    articleName,
     pageUrl,
     inputPath,
   });
@@ -385,6 +389,11 @@ async function Export() {
 
   const transformedMarkdown = await transform(ctx, markdown);
 
+  if (api) {
+    await exportExtensionReference(ctx, api, frontMatter, transformedMarkdown);
+    return '';
+  }
+
   const title = this.ctx.title;
   const template = `${frontMatter}
 
@@ -401,12 +410,12 @@ ${
 
   const renderedPage = template + transformedMarkdown;
   await exportFile(ctx, renderedPage);
-  return renderedPage;
+  await updateToCs(exportPath, articleName, title);
+  return '';
 }
 
 module.exports = {
   Export,
-  exportUrls,
   pluck,
   insert,
   getExportDetails,
