@@ -1,13 +1,9 @@
 ---
 layout: layouts/doc-post.njk
 title: Protected Audience API auction reporting
-subhead: |2-
-
-  Protected Audience API のオークション データと結果を測定する
-description: |2
-
-  Measure Protected Audience API auction data and results
-date: '2023-09-26'
+subhead: Protected Audience API のオークション データと結果を測定する
+description: Measure Protected Audience API auction data and results
+date: 2023-09-26
 authors:
   - kevinkiklee
 ---
