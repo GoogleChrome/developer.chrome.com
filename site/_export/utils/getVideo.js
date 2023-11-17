@@ -7,7 +7,7 @@ const VIDEO_POSTER_PATTERN = /poster="(.*?)"/gm;
 const VIDEO_SOURCE_PATTERN = /<source\s+src=(?:'|")(.*?)(?:'|")\s/gm;
 
 async function getAndRewritePathsByPattern(ctx, markdown, pattern, pathPrefix) {
-  let exportPath = path.join(ctx.exportPath, ctx.exportName);
+  let exportPath = path.join(ctx.exportPath, ctx.articleName);
   if (pathPrefix) {
     exportPath = path.join(exportPath, pathPrefix);
   }

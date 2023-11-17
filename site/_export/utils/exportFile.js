@@ -32,8 +32,8 @@ async function exportFile(ctx, data = undefined, customFilePath = undefined) {
       // Assume we are only writing .md files, assets gets a forced customFilePath
       // Always check if a .md file with the same name exists, and if it does,
       // rename it and make it the folders index.md
-      if (fse.existsSync(path.join(BASE_PATH, filePath, ctx.exportName))) {
-        filePath = `${filePath}/${ctx.exportName}/index.md`;
+      if (fse.existsSync(path.join(BASE_PATH, filePath, ctx.articleName))) {
+        filePath = `${filePath}/${ctx.articleName}/index.md`;
       } else {
         // Check if there is a {filePath}.md file and move it to {filePath}/index.md
         // if that's the case
@@ -54,7 +54,7 @@ async function exportFile(ctx, data = undefined, customFilePath = undefined) {
           }
         }
 
-        filePath = `${filePath}/${ctx.exportName}.md`;
+        filePath = `${filePath}/${ctx.articleName}.md`;
       }
     }
 
