@@ -39,7 +39,7 @@ Chrome DevTools の [アプリケーション] パネルから、Protected Audie
 
 Protected Audience API が有効になっているブラウザで  [Protected Audience API のデモ広告主サイト](https://protected-audience-demo-advertiser.web.app/)にアクセスすると、DevTools に `join` イベントに関する情報が表示されます。
 
-<figure> {% Img   src="image/80mq7dk16vVEg8BBhsVe42n6zn82/3jI5bJh8XKiZP5WHMBYl.png",   alt="The DevTools Application panel displaying information about a Protected Audience API interest group join event.", width="800", height="402" %} </figure>
+<figure>{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/3jI5bJh8XKiZP5WHMBYl.png", alt="DevTools [アプリケーション] パネル。Protected Audience API インタレスト グループへの join イベントに関する情報が表示されています。", width="800", height="402" %}</figure>
 
 次に、Protected Audience API が有効になっているブラウザで  [Protected Audience API のデモサイト運営者サイト](https://protected-audience-demo-publisher.web.app/)にアクセスすると、DevTools に `bid` イベントと `win` イベントに関する情報が表示されます。
 
