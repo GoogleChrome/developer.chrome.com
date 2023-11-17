@@ -117,7 +117,7 @@ try {
 
 #### `auctionConfig` のプロパティ
 
-{% Aside %} `additionalBids` は、Protected Audience API の現在の実装ではサポートされていません。詳細については、Protected Audience API の Explainer の[オークション参加者](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants)セクションをご覧ください。
+{% Aside %} `additionalBids` は、Protected Audience API の現在の実装ではサポートされていません。詳細については、Protected Audience API の Explainer の[オークション参加者](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants)セクションをご覧ください。{% endAside %}
 
 <dl>
     <dt><code>seller</code></dt>
