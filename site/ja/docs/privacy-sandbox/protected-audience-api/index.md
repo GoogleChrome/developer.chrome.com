@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: 'Protected Audience API: 開発者ガイド'
 subhead: クロスサイト サードパーティトラッキングを使わずにリマーケティングとカスタム オーディエンスにサービスを提供するオンデバイス広告オークションの開発者ガイド
 description: サードパーティがサイト間でユーザーのブラウジング行動を追跡できないように過去にアクセスしたウェブサイトから関連する広告を選択するように設計された、オンデバイス広告オークションの開発者ガイド。
-date: '2022-01-27'
-updated: '2023-09-18'
+date: 2022-01-27
+updated: 2023-09-18
 authors:
   - samdutton
   - kevinkiklee
