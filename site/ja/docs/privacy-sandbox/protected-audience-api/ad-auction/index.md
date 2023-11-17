@@ -1,12 +1,12 @@
 ---
 layout: layouts/doc-post.njk
-title: 'Seller guide: run ad auctions'
-subhead: |2
+title: '売り手向けガイド: 広告オークションを実行する'
+subhead: |2-
 
-  Seller API guide and references for the Protected Audience API ad auction.
-description: |2
+  Protected Audience API 広告オークションの売り手向け API ガイドとリファレンス。
+description: |2-
 
-  Seller API guide and references for the Protected Audience API ad auction.
+  Protected Audience API 広告オークションの売り手向け API ガイドとリファレンス。
 date: '2022-11-01'
 updated: '2023-09-18'
 authors:
@@ -18,33 +18,33 @@ authors:
 
 In this article, you'll find a technical reference for the ad auction, as used in the current iteration of the experimental Protected Audience API.
 
-Read the [developer guide](/docs/privacy-sandbox/protected-audience-api) for the full life cycle of Protected Audience API, and refer to the Protected Audience API explainer for an in-depth discussion of how [sellers run on-device auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions).
+Protected Audience API のライフサイクル全体については[開発者ガイド](/docs/privacy-sandbox/protected-audience-api)を参照し、[売り手によるオンデバイス オークションの実行方法](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions)の詳細なディスカッションについては Protected Audience API の Explainer をご覧ください。
 
 開発者でない方は、[Protected Audience API の概要](/docs/privacy-sandbox/protected-audience)をご覧ください。
 
 ## Protected Audience API 広告オークションとは？
 
-A Protected Audience API ad auction is a collection of small JavaScript programs the browser runs on the user's device to choose an ad. To preserve privacy, all ad auction code from the seller and buyers is run in isolated JavaScript [worklets](/docs/privacy-sandbox/glossary/#worklet) that can't talk to the outside world.
+Protected Audience API 広告オークションは、広告を選択するためにブラウザがユーザーのデバイス上で実行する小さな JavaScript プログラムの集合体を指します。プライバシーを保護する目的で、売り手と買い手からのすべての広告オークション コードは、外部と通信できない分離された JavaScript [ワークレット](/docs/privacy-sandbox/glossary/#worklet)で実行されます。
 
 {: #auction-diagram}
 
 <figure class="w-figure">   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png", alt="Protected Audience API 広告オークションの 6 つのステージ", width="800", height="481" %}<figcaption>この図は、Protected Audience API 広告オークションの各段階の概要を示しています。 <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&amp;w=1600" title="画像の拡大版を表示します。" target="_blank">拡大版を表示</a>。</figcaption></figure>
 
 1. A user visits a site which displays ads.
-2. The seller's code executes `navigator.runAdAuction()`. This specifies which ad space is for sale and who can bid. Sellers must also include a script that scores each bid, `scoreAd()`. {% Aside %} Before the auction starts, the seller finds the best contextual ad for the available ad slot. {% endAside %}
-3. The invited buyer's code executes to generate a bid, URL for a relevant ad creative, and other data. The bidding script can query for real-time data, such as the remaining ad campaign budget, from the buyer's [Key/Value service](/docs/privacy-sandbox/protected-audience#key-value-service-detail).
-4. The seller's code scores each bid and selects a winner. This logic uses the bid value and other data return a bid's desirability. Ads which cannot beat the contextual winner are rejected. The seller can use their own [Key/Value service](/docs/privacy-sandbox/protected-audience#key-value-service-detail) for real-time data.
-5. The winning ad is returned as an opaque value, which displays in a [fenced frame](/docs/privacy-sandbox/fenced-frame/). Both the seller and publisher will be unable to view this value.
-6. The auction is reported to the seller and winning buyers. {% Aside %} The seller's `reportResult()` and buyer's `reportWin()` can include a call to `sendReportTo()`. This is available [temporarily](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now), until aggregate reporting is available with [Private Aggregation](/docs/privacy-sandbox/private-aggregation). {% endAside %}
+2. 売り手のコードは `navigator.runAdAuction()` を実行します。これにより、どの広告スペースが販売され、誰が入札できるかが指定されます。売り手は、 `scoreAd()` という各入札をスコアリングするスクリプトも含める必要があります。{% Aside %} オークションが開始される前に、売り手は利用可能な広告スロットに最適なコンテキスト広告を見つけます。{% endAside %}
+3. 招待された買い手のコードが実行され、入札、関連する広告クリエイティブの URL、およびその他のデータが生成されます。入札スクリプトは、買い手の [Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail)から、残りの広告キャンペーン予算などのリアルタイム データをクエリできます。
+4. 売り手のコードが各入札をスコアリングし、落札者を選択します。このロジックでは、入札値と入札の望ましさを返す他のデータを使用します。コンテキストの落札者に勝てない広告は拒否されます。売り手は、リアルタイム データに独自の[Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail)を使用できます。
+5. 落札した広告は opaque 値として返され、Fenced Frame<br> に表示されます。売り手とサイト運営者のいずれもこの値を閲覧できなくなります。
+6. オークションは、売り手と落札した買い手に報告されます。 {% Aside %} 売り手 `reportResult()` と買い手の `reportWin()` には、`sendReportTo()` の呼び出しを含めることができます。これは、[プライベート集計](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now)で集計レポートが利用可能になるまで、[一時的](/docs/privacy-sandbox/private-aggregation)に利用できます。
 
 ### オークションが行われるタイミング
 
-The Protected Audience API can be run on its own or with programmatic auctions. In a multi-seller, programmatic auction:
+Protected Audience API は、単独で実行することも、プログラマティック オークションを使用して実行することもできます。複数の売り手によるプログラマティック オークションの場合:
 
 1. ユーザーが参加サイトにアクセスします。
-2. A programmatic auction is run by another seller to find a contextual ad for an available ad slot.
+2. 利用可能な広告スロットのコンテキスト広告を見つけるために別の売り手によってプログラマティック オークションが実行されます。
 3. The Protected Audience API auction is run.
-4. `scoreAd()`compares the buyer's bids with the results of the first auction.
+4. `scoreAd()` が買い手の入札を最初のオークションの結果と比較します。
 
 コンテキストの落札者に勝てない入札は拒否されます。
 
@@ -58,19 +58,19 @@ The Protected Audience API can be run on its own or with programmatic auctions. 
 - **[サプライサイド プラットフォーム（SSP）](/docs/privacy-sandbox/glossary/#ssp)**: サイト運営者と協力し、その他のサービスを提供します。
 - **サードパーティ スクリプト**: サイト運営者に代わって、広告オークションへの参加を可能にします。
 
-With the Protected Audience API, a seller has three jobs:
+Protected Audience API では、売り手には次の 3 つのジョブがあります。
 
-- Enforce publisher rules: which buyers and which bids are eligible.
-- Run auction logic: JavaScript run in [worklets](/docs/privacy-sandbox/glossary/#worklet) to calculate a desirability score for each bid.
+- サイト運営者ルールの実施: どの買い手とどの入札が対象であるか。
+- オークション ロジックの実行: JavaScript を[ワークレット](/docs/privacy-sandbox/glossary/#worklet)で実行して、各入札の望ましさのスコアを計算します。
 - オークション結果の報告。
 
-These jobs are done programmatically, in code provided by the seller when it instigates an ad auction by calling the JavaScript function `navigator.runAdAuction()`.
+これらのジョブは、売り手が JavaScript 関数`navigator.runAdAuction()` を呼び出して広告オークションを開始するときに提供するプログラムで実行されます。
 
 ## API 関数
 
 ### `runAdAuction()`
 
-The seller makes a request to the user's browser to begin an ad auction by calling `navigator.runAdAuction()`.
+売り手は、`navigator.runAdAuction()` を呼び出して、ユーザーのブラウザに広告オークションを開始するよう要求します。
 
 たとえば、以下のような例があります。
 
@@ -113,7 +113,7 @@ try {
 
 `runAdAuction()` は、広告オークションの結果を表す [URN](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns)（`urn:uuid:<something>`）に解決される promise を返します。これは、レンダリングのために [Fenced Frame](/docs/privacy-sandbox/fenced-frame/) に渡された場合にのみ、ブラウザによってデコードできます。したがってサイト運営者のページは、落札した広告を検査できません。
 
-{% Aside %} The origin of the script with [`joinAdInterestGroup()`](/blog/fledge-api/#joinadinterestgroup) must match the interest group owner's origin, so `joinAdInterestGroup()` will need to be called from an iframe (for example, from a DSP) unless the origin of the interest group owner matches the origin of the current document (for example, a website with its own interest groups).
+{% Aside %} [`joinAdInterestGroup()`](/blog/fledge-api/#joinadinterestgroup)を使用してスクリプトのオリジンは、インタレスト グループのオーナーのオリジンと一致する必要があるため、`joinAdInterestGroup()` は、インタレスト グループのオーナーのオリジンと現在のドキュメントのオリジンが一致しない限り（たとえば、独自のインタレスト グループを持つウェブサイト）、iframe から呼び出す必要があります。
 
 [`runAdAuction`](/blog/fledge-api/#ad-auction) には同じ要件がないため、`<script>` タグを使用すると、おそらくクロスオリジン iframe よりもはるかにパフォーマンスが向上します。{% endAside %}
 
@@ -128,7 +128,7 @@ try {
         <dd>Required</dd>
         <dd>Example: <code>'https://ssp.example'</code>
 </dd>
-        <dd>Role: Origin of the seller.</dd>
+        <dd>役割: 売り手のオリジン</dd>
     <dt><code>decisionLogicUrl</code></dt>
         <dd>Required</dd>
         <dd>Example: <code>'https://ssp.example/auction-decision-logic.js'</code>
@@ -138,18 +138,18 @@ try {
         <dd>Optional</dd>
         <dd>Example: <code>'https://ssp.example/scoring-signals'</code>
 </dd>
-        <dd>Role: URL of seller's trusted server.</dd>
+        <dd>役割: 売り手の信頼できるサーバーの URL。</dd>
     <dt><code>interestGroupBuyers</code></dt>
         <dd>Required</dd>
         <dd>Example: <code>['https://dsp.example', 'https://buyer2.example', ...]</code>
 </dd>
-        <dd>Role: Origins of all interest group owners asked to bid in the auction.</dd>
-        <dd>Notes: The seller may specify <code>interestGroupBuyers:</code> to permit all interest groups to bid. Ads are then accepted or rejected based on criteria other than inclusion of the interest group owner. For example, the seller may review ad creatives to confirm compliance with their policies.</dd>
+        <dd>役割: オークションへの入札を依頼されたすべてのインタレスト グループのオーナーのオリジン。</dd>
+        <dd>注意: 売り手は、<code>interestGroupBuyers:</code> を指定することで、すべてのインタレスト グループが入札できるようにすることができます。すると、インタレスト グループのオーナーが含まれていること以外の基準に基づいて、広告が承認または拒否されます。たとえば、売り手は広告クリエイティブをレビューして、ポリシーへの準拠を確認することができます。</dd>
     <dt><code>auctionSignals</code></dt>
         <dd>Optional</dd>
         <dd>Example: <code>{...}</code>
 </dd>
-        <dd>Role: Seller information about page context, type of auction, etc.</dd>
+        <dd>役割: ページのコンテキスト、オークションの種類などに関する売り手情報。</dd>
     <dt><code>sellerSignals</code></dt>
         <dd>Optional</dd>
         <dd>Example: <code>{...}</code>
@@ -159,22 +159,22 @@ try {
         <dd>Optional</dd>
         <dd>Example: <code>100</code>
 </dd>
-        <dd>Role: Maximum runtime (ms) of seller's <code>scoreAd()</code> script.</dd>
+        <dd>役割: 売り手の <code>scoreAd()</code> スクリプトの最大実行時間（ミリ秒）。</dd>
     <dt><code>perBuyerSignals</code></dt>
         <dd>Optional</dd>
         <dd>Example:          <pre>{'https://dsp.example': {...}, 'https://another-buyer.example': {...}, ... }</pre>
 </dd>
-        <dd>Role: Contextual signals about the page for each specific buyer, from their server.</dd>
+        <dd>役割: 特定の買い手ごとのページに関する、それぞれのサーバーから得るコンテキスト シグナル。</dd>
     <dt><code>perBuyerTimeouts</code></dt>
         <dd>Optional</dd>
         <dd>Example: <code>50</code>
 </dd>
-        <dd>Role: Maximum runtime (ms) of particular buyer's <code>generateBid()</code> scripts.</dd>
+        <dd>役割: 特定の買い手の <code>generateBid()</code> スクリプトの最大実行時間（ミリ秒）。</dd>
     <dt><code>componentAuctions</code></dt>
         <dd>Optional</dd>
         <dd>例: <pre>[{'seller': 'https://www.some-other-ssp.com', 'decisionLogicUrl': ..., ...}, ...]</pre>
 </dd>
-        <dd>Role: Additional configurations for <a href="/blog/fledge-api/#:~:text=componentauctions">component auctions</a>.</dd>
+        <dd>役割: <a href="/blog/fledge-api/#:~:text=componentauctions">コンポーネント オークション</a>の追加構成。</dd>
     </dl>
 <br><p></p>
 
@@ -191,7 +191,7 @@ scoreAd(adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
 
 #### `browserSignals`
 
-`browserSignals` is an object constructed by the browser, including information that the browser knows and which the seller's auction script might want to verify:
+`browserSignals` はブラウザが認識し、売り手のオークション スクリプトが検証する可能性のある情報を含む、ブラウザによって構築されるオブジェクトです。
 
 ```javascript
 {
@@ -204,7 +204,7 @@ scoreAd(adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
 }
 ```
 
-Before an auction starts, the seller finds the best contextual ad for the available ad slot. Part of the `scoreAd()` logic rejects any ad that can't beat the contextual winner.
+オークションが始まる前に、売り手は利用可能な広告スロットに最適なコンテキスト広告を見つけます。その `scoreAd()` ロジックには、コンテキストの落札者に勝てない広告を拒否するロジックが含まれます。
 
 ### `scoreAd()` {: #scoread }
 
@@ -221,7 +221,7 @@ Before an auction starts, the seller finds the best contextual ad for the availa
     <tbody>
       <tr>
         <td style="vertical-align: top;"><code>adMetadata</code></td>
-        <td style="vertical-align: top;">Arbitrary metadata provided by the buyer.</td>
+        <td style="vertical-align: top;">買い手によって提供される任意のメタデータ。</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>auctionConfig</code></td>
@@ -233,7 +233,7 @@ Before an auction starts, the seller finds the best contextual ad for the availa
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>trustedScoringSignals</code></td>
-        <td style="vertical-align: top;">Values retrieved at auction time from the seller's trusted server, representing the seller's opinion of the ad.</td>
+        <td style="vertical-align: top;">オークション時に売り手の信頼できるサーバーから取得された値で、広告に対する売り手の意見を表します。</td>
       </tr>
     </tbody>
   </table>
@@ -245,9 +245,9 @@ Before an auction starts, the seller finds the best contextual ad for the availa
 
 ### オークションの落札者はどのように決まり、誰が選ぶのですか？
 
-{% endDetailsSummary %} The seller provides the scoring logic to determine the desirability score of each ad, and the browser selects the highest score as the winning ad.
+{% endDetailssummary %} 売り手は各広告の望ましさスコアを決定するためのスコアリング ロジックを提供し、ブラウザは最も高いスコアを落札広告として選択します。
 
-The seller includes logic in the `scoreAd()` function, and the browser executes the function in a worklet that has limited communication with code outside of it. The browser itself does not score the ads. The browser is exclusively responsible to execute the scoring logic and select the bid with the highest score. {% endDetails %}
+売り手は、`scoreAd()` 関数にロジックを組み込み、ブラウザは、外部のコードとの通信が制限されているワークレット内で関数を実行します。ブラウザ自体は広告をスコアリングしません。スコアリング ロジックを実行して最高スコアの入札を選択するタスクは、ブラウザに排他的に当てられています。{% endDetails %}
 
 ## All Protected Audience API references
 
