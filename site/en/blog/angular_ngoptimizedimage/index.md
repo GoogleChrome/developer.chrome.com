@@ -6,6 +6,9 @@ description:
 date: 2023-11-15
 authors:
   - alexcastle
+hero: 'image/m1xBwEK30TUVOPXOaWN8CXVd3Dg1/4lEN9XIan6f86Y2qoAzS.webp'
+alt: >
+  The Angular logo
 tags:
   - performance
   - news
