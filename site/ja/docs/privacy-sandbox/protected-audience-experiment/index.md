@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: 'The Protected Audience API: experiment and participate'
+title: 'Protected Audience API: 実験と参加'
 subhead: |2-
 
   API の実装とテストのクイック ガイド。プライバシーを保護する広告オークションをセットアップし、リマーケティングやカスタム オーディエンスのユースケースに対応します。
@@ -46,7 +46,7 @@ authors:
 API を実験できない問題が起きていませんか？**実装**、**デモ**、または**ドキュメント**についてご質問ください。
 
 - Privacy Sandbox Dev Support リポジトリで[新しいイシューを提出](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)できます。必ず Protected Audience API のイシュー テンプレートを選択してください。
-- Raise an issue on the [demo code repo on GitHub](https://github.com/GoogleChromeLabs/protected-audience-demo).
+- [GitHub の demo code リポジトリ](https://github.com/GoogleChromeLabs/protected-audience-demo)でイシューを提起してください。
 - API を使って**ユースケース**を実現する方法に関する一般的な質問については、[API リポジトリでイシューを提出](https://github.com/WICG/turtledove/issues/new)してください。
 
 Chrome での Protected Audience API の実装に関するバグとイシューについては、以下の方法を利用できます。
