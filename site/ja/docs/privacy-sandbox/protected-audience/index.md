@@ -35,13 +35,13 @@ FLEDGE を使用すると、ブラウザによるオンデバイス オークシ
 
 Protected Audience API は、[TURTLEDOVE](https://github.com/WICG/turtledove) ファミリの提案内で Chromium に実装された最初の実験です。Protected Audience と TURTLEDOVE の違いは主に、広告の買い手と売り手のオンデバイスの役割の分離に関係します。以下のセクションでは、Protected Audience API がどのように機能するかについて説明します。
 
-### Protected Audience API in one minute {: #overview}
+### 1 分でわかる Protected Audience API {: #overview}
 
 For a more in-depth overview of the Protected Audience API, read the [Protected Audience API developer guide](/docs/privacy-sandbox/protected-audience-api/).
 
 <figure class="w-figure">   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png", alt="An overview of each stage of the Protected Audience API lifecycle",   width="800", height="366" %}   <figcaption class="w-figcaption">     The Protected Audience API lifecycle: <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png?auto=format&amp;w=1600" title="Click to view a larger version of image" target="_blank">view a larger version</a>.   </figcaption> </figure>
 
-The Protected Audience API uses [interest groups](#interest-group-detail) to enable sites to display ads that are relevant to their users.
+Protected Audience API は、[インタレスト グループ](#interest-group-detail)を使用して、サイトがユーザーに関連する広告を表示できるようにします。
 
 たとえば、製品の広告を掲載するウェブサイトにユーザーがアクセスすると、インタレスト グループの[オーナー](#interest-group-detail)（[デマンドサイド プラットフォーム（DSP）](/docs/privacy-sandbox/glossary/#dsp)など）は、ユーザーのブラウザにインタレスト グループのメンバーシップを追加するよう要求できます。リクエストが成功すると、ブラウザは次の内容を記録します。
 
@@ -111,7 +111,7 @@ API 呼び出し元は、ユーザーがシークレットモードで閲覧し�
 
 Learn how you can [block access to the Protected Audience API](/docs/privacy-sandbox/protected-audience-api/opt-out), either as a site owner or as an individual user.
 
-## Key concepts
+## 重要な概念
 
 Protected Audience の用語の解説をお探しですか？[プライバシー サンドボックスの用語集](/docs/privacy-sandbox/glossary/)をご覧ください。
 
@@ -241,7 +241,7 @@ Protected Audience API の買い手は、[インタレスト グループ](#inte
 Protected Audience API では、[売り手](/docs/privacy-sandbox/glossary/#seller)には次の 3 つのジョブがあります。
 
 - サイト運営者ルールの実施: どの買い手とどの入札が対象であるか。
-- Run auction logic: JavaScript run in [worklets](/docs/privacy-sandbox/glossary/#worklet) to calculate a desirability score for each bid.
+- オークション ロジックの実行: JavaScript を[ワークレット](/docs/privacy-sandbox/glossary/#worklet)で実行して、各入札の望ましさのスコアを計算します。
 - オークションの結果を報告すること
 
 これらのジョブは、売り手が JavaScript 関数 `navigator.runAdAuction()` を呼び出して広告オークションを開始するときに提供するプログラムで実行されます。
@@ -272,7 +272,7 @@ Protected Audience API の広告オークションは、広告を選択するた
 
 売り手は、各買い手の値、広告クリエイティブの URL、および買い手ごとに返されたその他のデータを含む、入札をスコアリングするためのコードをブラウザに提供します。オークション中、買い手からの入札コードと売り手からの入札スコアリング コードは、[Key/Value サービス](/docs/privacy-sandbox/glossary/#creative)からデータを受け取ることができます。広告が選択されて表示されると（プライバシーを保護する [Fenced Frame](#key-value-service-detail) に表示）、売り手と落札者はオークション結果を報告できます。
 
-1. A user visits a site which displays ads.
+1. ユーザーが広告を表示するサイトにアクセスします。
 
 2. 売り手のコードがオークションを開始します。売り手は、どの広告スペースを販売するか、誰が入札できるか、それらの入札のスコアリング方法を指定します。
 
@@ -394,7 +394,7 @@ navigator.runAdAuction(auctionConfig);
 
 For a more in-depth overview of the Protected Audience API, read the [Protected Audience API developer guide](/docs/privacy-sandbox/protected-audience-api/).
 
-### Developers
+### 開発者
 
 If you're ready to start working with the Protected Audience API, read [experiment and participate](/docs/privacy-sandbox/protected-audience-experiment/).
 
