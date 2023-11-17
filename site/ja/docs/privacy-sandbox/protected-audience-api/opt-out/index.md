@@ -33,7 +33,7 @@ Access to Protected Audience APIs can be disabled completely in first-party cont
 Permissions-Policy: join-ad-interest-group=(), run-ad-auction=()
 ```
 
-You can disable usage of the APIs in an iframe by adding the following `allow` attribute to an iframe element:
+次の `allow` 属性を iframe 要素に追加することで、iframe での API の使用を無効にすることができます。
 
 ```html
 <iframe src="https://example.com" allow="join-ad-interest-group 'none'; run-ad-auction 'none'"></iframe>
@@ -46,8 +46,8 @@ The [Proposed First Protected Audience API Origin Trial Permissions-Policy](http
 ユーザーは、次のいずれかのメカニズムを使用して、Protected Audience API およびその他のプライバシー サンドボックス機能へのアクセスをブロックできます。
 
 - **Disable the Privacy Sandbox trials** in Chrome Settings: **Settings** &gt; **Security and privacy** &gt; **Privacy Sandbox**. This is also accessible at `chrome://settings/privacySandbox`.
-- **Disable third-party cookies** in Chrome Settings: **Settings** &gt; **Security and privacy**.
-- Set **Cookies and other site data** to either "Block third-party cookies" or "Block all cookies" from `chrome://settings/cookies`.
-- Use Incognito mode.
+- Chrome 設定で **設定** &gt; **セキュリティとプライバシー**に移動し、**サードパーティの Cookie を無効**にします。
+- <code>chrome://settings/cookies</code> で、<strong>Cookie とその他のサイト データ</strong>を「サードパーティの Cookie をブロックする」または「すべての Cookie をブロックする」に設定します。
+- シークレットモードを使用します。
 
 The Protected Audience API explainer provides [more detail about API design elements](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements) and describes how the API seeks to meet [privacy goals](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=privacy%20goal).
