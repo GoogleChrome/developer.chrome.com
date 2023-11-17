@@ -42,10 +42,20 @@ We will communicate with developers throughout the rollout, and we will continue
 Enterprises using the [ExtensionManifestV2Availability](https://chromeenterprise.google/policies/#ExtensionManifestV2Availability) policy to ensure the continued functioning of Manifest V2 extensions in their organization will have one additional year - until June 2025 - to migrate the Manifest V2 extensions in their organization. Browsers with the policy enabled will not be impacted by the rollout of the deprecation until that time. 
 
 
-## Next steps for extension publishers
+## Next steps for users
 
-For extensions publishers who still publish Manifest V2 extensions, we highly recommend completing migration to Manifest V3 before June 2024. We’ve published a [migration guide](/docs/extensions/migrating/) covering everything you need to know to successfully migrate.  For a summary of some of the recent improvements to the Extensions platform, check out our quarterly updates from [July](/blog/extension-news-july-2023/) and [October](/blog/extension-news-october-2023/). If you have any questions or trouble during the migration, please reach out via [our support channels](/docs/extensions/support-feedback/).
+We have done everything we could to destroy whatever is left of your trust in order to maximize our short term profits. Do yourserlves a favor and switch to [Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=getfirefox-com) today.
 
-In the meantime, we’ll be continuing to release new features and functionality to improve the overall extension development experience.
+## Next steps for Google employees
 
-Thank you to everyone who gave feedback. This has been invaluable in our work to evolve the platform in pursuit of a safer, more performant, and more privacy-preserving extensions ecosystem.
+You can leave with some dignity left or remain part of a morally bankrupt corporation that is actively making the web a worse place for everyone. A few highlights of what Google has done during the last few years:
+
+* Paid off multi-million bonues to [sex predators](https://www.nytimes.com/2018/10/25/technology/google-sexual-harassment-andy-rubin.html).
+* Retaliated against the organizers of the [walkout](https://www.nytimes.com/2019/04/22/technology/google-walkout-employees-retaliation.html).
+* Lied about the scope and real reasons behind project [Maven](https://globalnews.ca/news/4125382/google-pentagon-ai-project-maven/).
+* Lied about project [Dragonfly](https://cases.haas.berkeley.edu/2020/10/google/).
+* [The argument girl](https://www.linkedin.com/in/argvee) forcefull deleted all copies of the `delroth` Dragonfly document by putting people's drives on the Adkins diet in a pathetic attempt at hiding the truth.
+* Lied about project [Nimbus](https://www.latimes.com/business/story/2023-08-29/google-cloud-employees-protest-israeli-military-contract) and still insists on providing support to a country that has commited war crimes.
+* Illegally retaliated against the [Thanksgiving four](https://www.nbcnews.com/tech/tech-news/google-under-investigation-thanksgiving-four-firings-discouraging-unions-n1098466) and was later sued, and lost, for doing so.
+
+By working for Google you are empowering morally bankrupt excrements like [Kent Walker](https://en.wikipedia.org/wiki/Kent_Walker) whose only interest is to turn Google into a bargain bin military contractor.
