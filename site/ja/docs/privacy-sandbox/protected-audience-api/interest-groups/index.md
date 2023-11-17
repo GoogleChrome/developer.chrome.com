@@ -1,13 +1,9 @@
 ---
 layout: layouts/doc-post.njk
 title: '買い手向けガイド: インタレスト グループに参加して入札を生成する'
-subhead: |2-
-
-  Protected Audience API オークションでリマーケティング リストに参加して入札するための買い手向け API ガイドとリファレンス。
-description: |2-
-
-  Protected Audience API オークションでリマーケティング リストに参加して入札するための買い手向け API ガイドとリファレンス。
-date: '2022-11-01'
+subhead: Protected Audience API オークションでリマーケティング リストに参加して入札するための買い手向け API ガイドとリファレンス。
+description: Protected Audience API オークションでリマーケティング リストに参加して入札するための買い手向け API ガイドとリファレンス。
+date: 2022-11-01
 authors:
   - samdutton
   - alexandrawhite
