@@ -252,4 +252,4 @@ If the Protected Audience auction has no winner and returns `null`, then the pub
 
 ## Engage and share feedback
 
-{% Partial 'privacy-sandbox/partials/fledge-api-next.njk' %}
+{% Partial 'privacy-sandbox/_partials/fledge-api-next.njk' %}
