@@ -76,9 +76,20 @@ function Aside(content, type = 'note') {
       className: type,
       title: type[0].toUpperCase() + type.slice(1), // Capitalize
     };
-    const altAsideHTML =
+    let altAsideHTML =
       `<aside class="${className}">` +
       `${title ? `<b>${title}:</b>` : ''} ${md.renderInline(content.trim())}</aside>`;
+
+    // Some asides spell out their own type in the content, normalize that:
+    altAsideHTML = altAsideHTML.replace(
+      '<b>Note:</b> <strong>Note:</strong> ',
+      '<b>Note:</b> ',
+    );
+    altAsideHTML = altAsideHTML.replace(
+      '<b>Caution:</b> <strong>Important</strong>: ',
+      '<b>Important:</b> ',
+    );
+
     return `${altAsideHTML}`;
   }
 
