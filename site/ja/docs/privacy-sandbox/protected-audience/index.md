@@ -2,11 +2,9 @@
 layout: layouts/doc-post.njk
 title: Protected Audience API
 subhead: クロスサイト サードパーティ トラッキングを使わずにリマーケティングとカスタム オーディエンスにサービスを提供するオンデバイス広告オークション。
-description: |2
+description: |2-
 
-  An API for on-device ad auctions to choose relevant ads from
-  websites a user has previously visited, designed so it cannot be
-  used by third parties to track user browsing behavior across sites.
+  サードパーティがサイト間でユーザーのブラウジング行動を追跡できないようにユーザーが過去にアクセスしたウェブサイトから関連する広告を選択するように設計された、オンデバイス広告オークションの API。
 date: '2022-01-27'
 updated: '2022-09-18'
 authors:
@@ -20,14 +18,14 @@ authors:
 
 ## この記事の対象者
 
-This article covers the basics of the Protected Audience API and explains some underlying concepts, but doesn't go into much technical detail.
+この記事では、Protected Audience API の基本を取り上げ、いくつかの基礎的な概念については説明していますが、技術的な詳細についてはあまり触れません。
 
-- If you work in **advertising or ad tech**, you'll get an overview of [how Protected Audience works](#overview).
-- If you're a **developer or software engineer**, the [Protected Audience API Developer Guide](/docs/privacy-sandbox/protected-audience-api) provides more in-depth technical detail about the API. Read the [latest status of pending Protected Audience capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/).
+- **広告またはアドテック業界**の方は、[Protected Audience の仕組み](#overview)の概要を理解できます。
+- **開発者またはソフトウェア エンジニア**の方には、[Protected Audience API 開発者ガイド](/docs/privacy-sandbox/protected-audience-api)で API に関する技術的な詳細がさらに詳しく説明されています。[保留中の Protected Audience 機能の最新ステータス](/docs/privacy-sandbox/protected-audience-api/feature-status/)をご覧ください。
 
-Refer to the [glossary](/docs/privacy-sandbox/glossary/) for terms used across Protected Audience documentation. At the end of this article, you can learn how to [engage and share feedback](#engage).
+Protected Audience のドキュメント全体で使用される用語については、[用語集](/docs/privacy-sandbox/glossary/)を参照してください。この記事の最後に、[フィードバックに参加して共有する](#engage)方法が説明されています。
 
-## What is the Protected Audience API? {: #what}
+## Protected Audience API とは？ {: #what}
 
 Protected Audience API は、リマーケティングおよびカスタム オーディエンスのユースケースに対応するための[プライバシー サンドボックス](/docs/privacy-sandbox/overview)テクノロジーであり、サードパーティがサイトを跨いでユーザーのブラウジング行動を追跡できないように設計されています。
 
@@ -37,9 +35,9 @@ Protected Audience API は、[TURTLEDOVE](https://github.com/WICG/turtledove) �
 
 ### 1 分でわかる Protected Audience API {: #overview}
 
-For a more in-depth overview of the Protected Audience API, read the [Protected Audience API developer guide](/docs/privacy-sandbox/protected-audience-api/).
+Protected Audience API の詳細な概要については、 [Protected Audience API 開発者ガイド](/docs/privacy-sandbox/protected-audience-api/)をご覧ください。
 
-<figure class="w-figure">   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png", alt="An overview of each stage of the Protected Audience API lifecycle",   width="800", height="366" %}   <figcaption class="w-figcaption">     The Protected Audience API lifecycle: <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png?auto=format&amp;w=1600" title="Click to view a larger version of image" target="_blank">view a larger version</a>.   </figcaption> </figure>
+<figure class="w-figure">{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png", alt="Protected Audience API ライフサイクルの各ステージの概要", width="800", height="366" %} <figcaption class="w-figcaption"> Protected Audience API のライフサイクル: <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/zXKEk8OymLJp6KpOwwbk.png?auto=format&amp;w=1600" title="クリックすると画像の拡大版が表示されます" target="_blank">拡大版を表示</a>。 </figcaption></figure>
 
 Protected Audience API は、[インタレスト グループ](#interest-group-detail)を使用して、サイトがユーザーに関連する広告を表示できるようにします。
 
@@ -71,27 +69,27 @@ Protected Audience API は、[インタレスト グループ](#interest-group-d
 
 [Protected Audience のオークション レポート](/docs/privacy-sandbox/protected-audience-api/reports/)について詳細をご覧ください。
 
-## Why do we need the Protected Audience API? {: #why}
+## Protected Audience API が必要な理由 {: #why}
 
 ユーザーの関心を理解すれば、単にサイトのコンテンツに基づいて広告を選択したり（コンテキスト ターゲティング）、広告が表示されるサイトにユーザーが提供した情報を使用したり（ファーストパーティ データ ターゲティング）するよりも、より関連性の高い広告を提供できます。
 
-Traditionally, ad platforms have learned about user interests by tracking their behavior across sites. Browsers need a way to enable ad platforms to select relevant ads, so content publishers can get ad revenue without cross-site tracking.
+従来、広告プラットフォームはサイト間でのユーザーの行動を追跡することでユーザーの興味を学習してきました。ブラウザには、広告プラットフォームが関連性の高い広告を選択できるようにする方法が必要です。これにより、コンテンツのサイト運営者はサイト間のトラッキングを行わずに広告収入を得ることができます。
 
 Protected Audience API は、広告主やアドテック プラットフォームではなく、ユーザーのデバイス上のブラウザがそのユーザーの興味に関する情報を保持している状態にウェブ プラットフォームを近づけることを目指しています。
 
 {% Aside 'caution' %}
 
-Read the [developer guide](/docs/privacy-sandbox/protected-audience-api/) and [status of pending Protected Audience capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/) to understand what features are currently available for testing in Chrome.
+現在 Chrome でテストできる機能を理解するには、[開発者ガイド](/docs/privacy-sandbox/protected-audience-api/)と[保留中の Protected Audience 機能のステータス](/docs/privacy-sandbox/protected-audience-api/feature-status/)をお読みください。
 
-Protected Audience features will be added over time, and we'll regularly update a list of which features are already implemented and what's still in progress.
+Protected Audience の機能は、徐々に追加される予定です。実装済みの機能と現在開発中の機能のリストを定期的に更新していきます。
 
 {% endAside %}
 
-## How can I try the Protected Audience API? {: #try-fledge}
+## Protected Audience API を試すには？ {: #try-fledge}
 
-- The [Protected Audience API developer guide](/docs/privacy-sandbox/protected-audience-api) describes how to use the API and how to test locally.
+- [Protected Audience API 開発者ガイド](/docs/privacy-sandbox/protected-audience-api)では、API の使用方法とローカルでのテスト方法について説明しています。
 
-- [protected-audience-demo.web.app](https://protected-audience-demo.web.app/) provides a walkthrough of a basic Protected Audience deployment across advertiser and publisher sites. The Protected Audience demo video explains how this code works and previews how to use Chrome DevTools for debugging.
+- [protected-audience-demo.web.app](https://protected-audience-demo.web.app/) は、広告主サイトとサイト運営者サイトにわたる基本的な Protected Audience 導入のチュートリアルを提供しています。Protected Audience のデモ動画では、このコードがどのように機能するかを説明し、デバッグに Chrome DevTools を使用する方法を確認できます。
 
 {% YouTube id='znDD0gkdJyM' %}
 
@@ -101,15 +99,15 @@ Protected Audience features will be added over time, and we'll regularly update 
 
 Chrome では、ユーザーがアクセスしたウェブサイト間で、自分が追加されているインタレスト グループのリストを表示および管理できるようにすることを予定しています。プライバシー サンドボックスのテクノロジー自体と同様に、ユーザー設定は、ユーザー、規制当局などからのフィードバックによって進化する可能性があります。
 
-We'll update the available settings in Chrome as the Protected Audience API progresses, [based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#testing). In the future, we'll offer more granular settings to manage Protected Audience and associated data.
+Protected Audience API の開発が進むにつれて、[テストとフィードバックに基づいて](/docs/privacy-sandbox/proposal-lifecycle/#testing) Chrome で利用可能な設定を更新します。将来的には、Protected Audience と関連データを管理するためのより詳細な設定を提供する予定です。
 
 API 呼び出し元は、ユーザーがシークレットモードで閲覧している場合はグループ メンバーシップにアクセスできません。また、ユーザーがサイトデータを消去するとメンバーシップは削除されます。
 
 {: #opt-out-site}
 
-### Can I opt out of the Protected Audience API? {: #opt-out}
+### Protected Audience API をオプトアウトできますか？ {: #opt-out}
 
-Learn how you can [block access to the Protected Audience API](/docs/privacy-sandbox/protected-audience-api/opt-out), either as a site owner or as an individual user.
+サイト所有者または個人ユーザーとして、[Protected Audience API へのアクセスをブロックする](/docs/privacy-sandbox/protected-audience-api/opt-out)方法を詳しくご覧ください。
 
 ## 重要な概念
 
@@ -199,7 +197,7 @@ Protected Audience API の買い手は、[インタレスト グループ](#inte
 たとえば、以下が該当します。
 
 - **[広告主](#advertiser)**: 広告主自体を代表します。
-- **[Demand-side platform](/docs/privacy-sandbox/glossary/#dsp)** (DSP): acting for advertisers.
+- **[デマンドサイド プラットフォーム](/docs/privacy-sandbox/glossary/#dsp)**（DSP）: 広告主に代わって機能します。
 - **[インタレスト グループ オーナー](#interest-group-detail)**: 複数の広告主のために使用されます。
 
 買い手には 3 つのジョブがあります。
@@ -254,15 +252,15 @@ Protected Audience API では、[売り手](/docs/privacy-sandbox/glossary/#sell
 
 {% DetailsSummary %}
 
-### How does a Protected Audience API ad auction work?
+### Protected Audience API の仕組み
 
 {% endDetailsSummary %}
 
 {: #auction-diagram}
 
-The diagram below outlines each stage of a Protected Audience API ad auction: <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&amp;w=1600" title="Click to view a larger version of image" target="_blank">view a larger version</a>.
+以下の図は、Protected Audience API の広告オークションの各段階の概要を示しています: <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&amp;w=1600" title="クリックすると画像の拡大版が表示されます" target="_blank">拡大版を表示</a>。
 
-<figure class="w-figure">   {% Img     src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png",     alt="Six stages in a Protected Audience API ad auction",     width="800", height="481"     %} </figure>
+<figure class="w-figure">    {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png", alt="Protected Audience API 広告オークションの 6 つのステージ", width="800", height="481" %}</figure>
 
 <br>
 
@@ -294,7 +292,7 @@ Protected Audience API の広告オークションは、広告を選択するた
 
 {% DetailsSummary %}
 
-### What is a Protected Audience API Key/Value service?
+### Protected Audience API Key/Value サービス とは
 
 {% endDetailsSummary %}
 
@@ -306,9 +304,9 @@ Key/Value サービスはアドテック独自のクラウド インフラスト
 
 買い手または売り手は、「キー」のリストを提供して、Protected Audience API Key/Value サービスから必要なデータを指定します。Key/Value サービスは、各キーの値で応答します。
 
-The Protected Audience API Key/Value service code is now available in a [Privacy Sandbox GitHub repository](https://github.com/privacysandbox/fledge-key-value-service). This service can be used by Chrome and Android developers.
+[Protected Audience API Key/Value サービス コード](https://github.com/privacysandbox/fledge-key-value-service)が Privacy Sandbox GitHub リポジトリで利用できるようになりました。このサービスは、Chrome および Android の開発者が使用できます。
 
-Learn more about the Protected Audience API Key/Value service from the [API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) and the [trust model explainer](https://github.com/privacysandbox/fledge-docs/blob/main/key_value_service_trust_model.md).
+Protected Audience API Key/Value サービスの詳細については、[API の Explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_Key_Value_Server_API.md) および[信頼できるモデルの Explainer](https://github.com/privacysandbox/fledge-docs/blob/main/key_value_service_trust_model.md) をご覧ください。
 
 {% endDetails %}
 
@@ -326,7 +324,7 @@ Protected Audience API のプライバシー要件を満たすために、広告
 
 初期テストでは、 [「Bring Your Own Server」](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#3-buyers-provide-ads-and-bidding-functions-byos-for-now)モデルが使用されます。長期的には、アドテックはリアルタイム データを取得するために、[信頼できる実行環境](https://github.com/privacysandbox/fledge-docs/blob/main/trusted_services_overview.md#trusted-execution-environment)で実行されるオープンソースの Protected Audience API Key/Value サービスを使用する必要があります。
 
-To ensure that the ecosystem has sufficient time to test, we don’t expect to require the use of the open-source Key/Value services or trusted execution environments until sometime after third-party cookie deprecation. We will provide substantial notice for developers to begin testing and adoption before this transition takes place.
+エコシステムがテストするのに十分な時間を確保するために、サードパーティの Cookie が廃止されるまでは、オープンソースの Key/Value サービスまたは信頼できる実行環境の使用が必要になるとは考えていません。この移行が行われる前に、開発者がテストと採用を開始できるのに十分な通知を行う予定です。
 
 {% endDetails %}
 
@@ -392,18 +390,18 @@ navigator.runAdAuction(auctionConfig);
 
 ## 詳細について
 
-For a more in-depth overview of the Protected Audience API, read the [Protected Audience API developer guide](/docs/privacy-sandbox/protected-audience-api/).
+Protected Audience API の詳細な概要については、[Protected Audience API 開発者ガイド](/docs/privacy-sandbox/protected-audience-api/)をご覧ください。
 
 ### 開発者
 
-If you're ready to start working with the Protected Audience API, read [experiment and participate](/docs/privacy-sandbox/protected-audience-experiment/).
+Protected Audience API の使用を開始する準備ができている場合は、[実験と参加](/docs/privacy-sandbox/protected-audience-experiment/)をお読みください。
 
-We've written an  [API developer guide](/docs/privacy-sandbox/protected-audience-api) and built a [Protected Audience API demo](https://protected-audience-demo.web.app/), which offers a walkthrough of a basic Protected Audience API deployment. The [Protected Audience API demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) explains how the demo code works, and shows how to use Chrome DevTools for Protected Audience API debugging.
+[API 開発者ガイド](/docs/privacy-sandbox/protected-audience-api)を作成し、Protected Audience API の基本的なデプロイをウォークスルー形式で説明する [Protected Audience API デモ](https://protected-audience-demo.web.app/)を作成しました。[Protected Audience API デモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードがどのように機能するか、また Chrome DevTools で Protected Audience API をデバッグする方法を説明しています。
 
 ## 貢献とフィードバックの共有
 
-- **GitHub**: Read the [explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md), [raise questions and follow discussion](https://github.com/WICG/turtledove/issues).
-- **Announcements**: Join or view past announcements on the [Protected Audience API mailing list](https://groups.google.com/u/0/a/chromium.org/g/fledge-api-announce).
+- **GitHub**: [Explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) を読み、[質問を投稿したり、ディスカッションを閲覧](https://github.com/WICG/turtledove/issues)したりできます。
+- **お知らせ**: [Protected Audience API メーリングリスト](https://groups.google.com/u/0/a/chromium.org/g/fledge-api-announce)に参加するか、過去のお知らせを見ることができます。
 - **W3C**: [Web 広告事業の改善グループ](https://www.w3.org/community/web-adv/participants)で、業界ユースケースについて議論できます。
-- **Developer support**: Ask questions about implementation and best practices, or join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-- **Current implementation**: For questions about the implementation currently available to test in Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).
+- **開発者向けサポート**: [Privacy Sandbox Developer Support リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)では、質問したり、ディスカッションに参加したできます。
+- **現在の実装**: Chrome で現在テストできる実装に関する質問については、[Chromium バグの報告](https://bugs.chromium.org/p/chromium/issues/list?q=fledge)をご利用ください。
