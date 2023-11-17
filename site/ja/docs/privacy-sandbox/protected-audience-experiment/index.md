@@ -17,7 +17,7 @@ authors:
 
 ## 要点を学ぶ
 
-- If you're a developer or software engineer, the [Protected Audience API Developer Guide](/docs/privacy-sandbox/protected-audience-api/) provides an in-depth technical reference.
+- 開発者またはソフトウェア エンジニアの場合は、[Protected Audience API 開発者ガイド](/docs/privacy-sandbox/protected-audience-api/)に詳細な技術リファレンスが記載されています。
 - [Protected Audience API の概要](/docs/privacy-sandbox/protected-audience)では、プライバシー サンドボックスを初めて使用する広告主およびアドテック向けに、より高度な説明を提供しています。
 
 ## API を試す
@@ -28,44 +28,44 @@ authors:
 
 {% endAside %}
 
-1. Learn how to use the Protected Audience API.
-    - Review the [Protected Audience API Developer Guide](/docs/privacy-sandbox/protected-audience-api/). This guide offers a reference for API methods and parameters.
+1. Protected Audience API の使用方法を学習する。
+    - [Protected Audience API 開発者ガイド](/docs/privacy-sandbox/protected-audience-api/)を参照してください。このガイドでは、API メソッドとパラメーターのリファレンスを提供します。
     - [Protected Audience サービス](/blog/fledge-service-overview/)についてお読みください。たとえば、Key/Value サービスは、広告オークション中に売り手と買い手にリアルタイムの情報を提供します。
-2. Try the [demo](https://protected-audience-demo.web.app/).
-    - Review the [source code](https://github.com/GoogleChromeLabs/protected-audience-demo).
-    - Watch the [Protected Audience demo video](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv) to learn how the demo code works and how to use Chrome DevTools for FLEDGE debugging.
-3. Experiment with the API.
-    - Try out the Protected Audience API for a single user by enabling `chrome://flags/#privacy-sandbox-ads-apis` or by running Chrome from the command line with [Protected Audience feature flags](/docs/privacy-sandbox/protected-audience-api/#flags).
-    - [Troubleshoot Protected Audience worklets](/docs/privacy-sandbox/protected-audience-api/troubleshoot/) with Chrome DevTools. Learn how to debug Protected Audience bidding and auction code.
-4. Review the [Protected Audience status](/docs/privacy-sandbox/status/#fledge) for updates on the implementation of the Protected Audience API. Review the [pending Protected Audience capabilities](/docs/privacy-sandbox/protected-audience-api/feature-status/) for more details.
+2. [デモ](https://protected-audience-demo.web.app/)試す。
+    - [ソースコード](https://github.com/GoogleChromeLabs/protected-audience-demo)をご覧ください。
+    - [Protected Audience デモ動画](https://www.youtube.com/watch?v=znDD0gkdJyM&list=PLNYkxOF6rcICntazGfSVKSj5EwuR9w5Nv)では、デモコードがどのように機能するか、FLEDGE のデバッグに Chrome DevTools を使用する方法を学びます。
+3. API を使って実験する。
+    - `chrome://flags/#privacy-sandbox-ads-apis` を有効にするか、[Protected Audience 機能フラグ](/docs/privacy-sandbox/protected-audience-api/#flags)を使用してコマンドラインから Chrome を実行して、単一ユーザーに対して Protected Audience API を試すことができます。
+    - Chrome DevTools を使用して、[Protected Audience ワークレットのトラブルシューティング](/docs/privacy-sandbox/protected-audience-api/troubleshoot/)を行います。保護されたオーディエンスの入札とオークションのコードをデバッグする方法を学びます。
+4. Protected Audience API の実装に関する最新情報については、[Protected Audience のステータス](/docs/privacy-sandbox/status/#fledge)をご覧ください。詳細については、[保留中の Protected Audience 機能](/docs/privacy-sandbox/protected-audience-api/feature-status/)を確認してください。
 
-The [Protected Audience API explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary) provides more detail about feature support and constraints.
+[Protected Audience API の Explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#summary) には、機能のサポートと制約に関する詳細が提供されています。
 
 ## サポートを受ける
 
-Is anything blocking you from experimenting with the API? Ask a question about **your implementation**, the **demo**, or the **documentation**:
+API を実験できない問題が起きていませんか？**実装**、**デモ**、または**ドキュメント**についてご質問ください。
 
 - Privacy Sandbox Dev Support リポジトリで[新しいイシューを提出](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support/issues/new/choose)できます。必ず Protected Audience API のイシュー テンプレートを選択してください。
 - Raise an issue on the [demo code repo on GitHub](https://github.com/GoogleChromeLabs/protected-audience-demo).
-- For more general questions about how to meet your **use cases** with the API, [file an issue on the API repository](https://github.com/WICG/turtledove/issues/new).
+- API を使って**ユースケース**を実現する方法に関する一般的な質問については、[API リポジトリでイシューを提出](https://github.com/WICG/turtledove/issues/new)してください。
 
-For bugs and issues with the implementation of the Protected Audience API in Chrome:
+Chrome での Protected Audience API の実装に関するバグとイシューについては、以下の方法を利用できます。
 
 - この API について報告されている[既存のイシューをご覧ください](https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EInterestGroups)。
 - [crbug.com/new](https://crbug.com/new) で新しいイシューを作成してください。
 
 ## ディスカッションに参加する
 
-Everyone is welcome to join in discussion of the Protected Audience API. In particular, if you're experimenting with the API, your feedback is essential.
+どなたでも、Protected Audience API のディスカッションに参加できます。特に、API を使って実験している場合は、フィードバックが不可欠です。
 
 ### API について話し合う
 
 他のプライバシー サンドボックス API と同様に、この API は文書化され、公に議論されています。
 
-- Read the [FLEDGE explainer on GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md).
+- [GitHub にある FLEDGE の Explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) をお読みください。
 - [既存のイシュー](https://github.com/WICG/turtledove/issues)に関する会話に参加してください。
 - 質問、機能の提案、またはユースケースについて議論するには、[新しいイシューを作成](https://github.com/WICG/turtledove/issues/new)してください。
-- [Join the scheduled calls for Protected Audience](https://github.com/WICG/turtledove/issues/88) (every second week). Everyone is welcome to join—to participate, first make sure to [join the WICG](https://www.w3.org/community/wicg/). You can actively participate or just listen in!
+- [保護されたオーディエンスの定例会議にご参加](https://github.com/WICG/turtledove/issues/88)ください（隔週）。どなたでも参加できますが、参加するにはまず、[WICG に参加](https://www.w3.org/community/wicg/)してください。積極的に参加することも、聞くだけでも構いません。
 
 ### 関連するトピックについて話し合う
 
@@ -78,5 +78,5 @@ Everyone is welcome to join in discussion of the Protected Audience API. In part
 ## 最新情報を入手する
 
 - API のステータス変更の通知を受け取るには、[開発者向けメーリング リスト](https://groups.google.com/u/3/a/chromium.org/g/fledge-api-announce)に参加してください。
-- To closely follow all ongoing discussions on the API, click the **Watch** button on the [API page on GitHub](https://github.com/WICG/turtledove/blob/main/FLEDGE.md). This requires you have or [create a GitHub account](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
+- API に関する現在進行中のすべてのディスカッションを細かくフォローするには、[GitHub の API ページ](https://github.com/WICG/turtledove/blob/main/FLEDGE.md)にある **Watch** ボタンをクリックしてください。これには、[GitHub アカウントを持っているか作成する](https://docs.github.com/get-started/signing-up-for-github/signing-up-for-a-new-github-account)必要があります。
 - プライバシー サンドボックスに関する総合的な最新情報を入手するには、[Progress in the Privacy Sandbox（プライバシー サンドボックスの進捗状況）](/tags/progress-in-the-privacy-sandbox/)という RSSフィードを購読してください。
