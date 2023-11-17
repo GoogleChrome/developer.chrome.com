@@ -44,12 +44,20 @@ async function Partial(partialPath) {
       Object.assign({}, this.ctx, {export: true})
     );
 
+    const exportPartialPath = partialPath.replace(basePath, 'en/_includes/partials');
+
     await exportFile(
       this.ctx,
       transformedTemplate || 'Failed to render partial.',
-      `${partialPath}${ext}`
+      `${exportPartialPath}${ext}`
     );
-    return `{% include '${partialPath}${ext}'}`;
+
+    const relativePartialPath = path.relative(
+      this.ctx.exportPath,
+      exportPartialPath,
+    );
+
+    return `<<${relativePartialPath}${ext}>>`;
   }
 
   // @ts-ignore: `this` has type of `any`
