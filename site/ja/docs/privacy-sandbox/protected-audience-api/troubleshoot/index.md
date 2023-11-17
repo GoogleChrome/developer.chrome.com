@@ -1,13 +1,9 @@
 ---
 layout: layouts/doc-post.njk
 title: Protected Audience API のトラブルシューティング
-subhead: |2-
-
-  ワークレットのトラブルシューティングを行い、Protected Audience API のイベントを観察します。
-description: |2-
-
-  ワークレットのトラブルシューティングを行い、Protected Audience API のイベントを観察します。
-date: '2022-10-29'
+subhead: ワークレットのトラブルシューティングを行い、Protected Audience API のイベントを観察します。
+description: ワークレットのトラブルシューティングを行い、Protected Audience API のイベントを観察します。
+date: 2022-10-29
 authors:
   - samdutton
   - alexandrawhite
