@@ -16,7 +16,7 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-In this article, you'll find a technical reference for the ad auction, as used in the current iteration of the experimental Protected Audience API.
+この記事では、実験的な Protected Audience API の現在のイテレーションで使用されている、広告オークションの技術リファレンスを紹介します。
 
 Protected Audience API のライフサイクル全体については[開発者ガイド](/docs/privacy-sandbox/protected-audience-api)を参照し、[売り手によるオンデバイス オークションの実行方法](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions)の詳細なディスカッションについては Protected Audience API の Explainer をご覧ください。
 
@@ -30,7 +30,7 @@ Protected Audience API 広告オークションは、広告を選択するため
 
 <figure class="w-figure">   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png", alt="Protected Audience API 広告オークションの 6 つのステージ", width="800", height="481" %}<figcaption>この図は、Protected Audience API 広告オークションの各段階の概要を示しています。 <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&amp;w=1600" title="画像の拡大版を表示します。" target="_blank">拡大版を表示</a>。</figcaption></figure>
 
-1. A user visits a site which displays ads.
+1. ユーザーが広告を表示するサイトにアクセスします。
 2. 売り手のコードは `navigator.runAdAuction()` を実行します。これにより、どの広告スペースが販売され、誰が入札できるかが指定されます。売り手は、 `scoreAd()` という各入札をスコアリングするスクリプトも含める必要があります。{% Aside %} オークションが開始される前に、売り手は利用可能な広告スロットに最適なコンテキスト広告を見つけます。{% endAside %}
 3. 招待された買い手のコードが実行され、入札、関連する広告クリエイティブの URL、およびその他のデータが生成されます。入札スクリプトは、買い手の [Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail)から、残りの広告キャンペーン予算などのリアルタイム データをクエリできます。
 4. 売り手のコードが各入札をスコアリングし、落札者を選択します。このロジックでは、入札値と入札の望ましさを返す他のデータを使用します。コンテキストの落札者に勝てない広告は拒否されます。売り手は、リアルタイム データに独自の[Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail)を使用できます。
@@ -43,7 +43,7 @@ Protected Audience API は、単独で実行することも、プログラマテ
 
 1. ユーザーが参加サイトにアクセスします。
 2. 利用可能な広告スロットのコンテキスト広告を見つけるために別の売り手によってプログラマティック オークションが実行されます。
-3. The Protected Audience API auction is run.
+3. Protected Audience API オークションが実行されます。
 4. `scoreAd()` が買い手の入札を最初のオークションの結果と比較します。
 
 コンテキストの落札者に勝てない入札は拒否されます。
@@ -125,53 +125,53 @@ try {
 
 <dl>
     <dt><code>seller</code></dt>
-        <dd>Required</dd>
-        <dd>Example: <code>'https://ssp.example'</code>
+        <dd>必須</dd>
+        <dd>例: <code>'https://ssp.example'</code>
 </dd>
         <dd>役割: 売り手のオリジン</dd>
     <dt><code>decisionLogicUrl</code></dt>
-        <dd>Required</dd>
-        <dd>Example: <code>'https://ssp.example/auction-decision-logic.js'</code>
+        <dd>必須</dd>
+        <dd>例: <code>'https://ssp.example/auction-decision-logic.js'</code>
 </dd>
-        <dd>Role: URL for auction worklet JavaScript.</dd>
+        <dd>役割: オークション ワークレット JavaScript の URL。</dd>
     <dt><code>trustedScoringSignalsUrl</code></dt>
-        <dd>Optional</dd>
-        <dd>Example: <code>'https://ssp.example/scoring-signals'</code>
+        <dd>オプション</dd>
+        <dd>例: <code>'https://ssp.example/scoring-signals'</code>
 </dd>
         <dd>役割: 売り手の信頼できるサーバーの URL。</dd>
     <dt><code>interestGroupBuyers</code></dt>
-        <dd>Required</dd>
-        <dd>Example: <code>['https://dsp.example', 'https://buyer2.example', ...]</code>
+        <dd>必須</dd>
+        <dd>例: <code>['https://dsp.example', 'https://buyer2.example', ...]</code>
 </dd>
         <dd>役割: オークションへの入札を依頼されたすべてのインタレスト グループのオーナーのオリジン。</dd>
         <dd>注意: 売り手は、<code>interestGroupBuyers:</code> を指定することで、すべてのインタレスト グループが入札できるようにすることができます。すると、インタレスト グループのオーナーが含まれていること以外の基準に基づいて、広告が承認または拒否されます。たとえば、売り手は広告クリエイティブをレビューして、ポリシーへの準拠を確認することができます。</dd>
     <dt><code>auctionSignals</code></dt>
-        <dd>Optional</dd>
-        <dd>Example: <code>{...}</code>
+        <dd>オプション</dd>
+        <dd>例: <code>{...}</code>
 </dd>
         <dd>役割: ページのコンテキスト、オークションの種類などに関する売り手情報。</dd>
     <dt><code>sellerSignals</code></dt>
-        <dd>Optional</dd>
-        <dd>Example: <code>{...}</code>
+        <dd>オプション</dd>
+        <dd>例: <code>{...}</code>
 </dd>
         <dd>役割: サイト運営者の設定に基づく情報、コンテキスト広告リクエストの発行など。</dd>
      <dt><code>sellerTimeout</code></dt>
-        <dd>Optional</dd>
-        <dd>Example: <code>100</code>
+        <dd>オプション</dd>
+        <dd>例: <code>100</code>
 </dd>
         <dd>役割: 売り手の <code>scoreAd()</code> スクリプトの最大実行時間（ミリ秒）。</dd>
     <dt><code>perBuyerSignals</code></dt>
-        <dd>Optional</dd>
-        <dd>Example:          <pre>{'https://dsp.example': {...}, 'https://another-buyer.example': {...}, ... }</pre>
+        <dd>オプション</dd>
+        <dd>例：<pre> {'https://dsp.example': {...}, 'https://another-buyer.example': {...}, ... }</pre>
 </dd>
         <dd>役割: 特定の買い手ごとのページに関する、それぞれのサーバーから得るコンテキスト シグナル。</dd>
     <dt><code>perBuyerTimeouts</code></dt>
-        <dd>Optional</dd>
-        <dd>Example: <code>50</code>
+        <dd>オプション</dd>
+        <dd>例: <code>50</code>
 </dd>
         <dd>役割: 特定の買い手の <code>generateBid()</code> スクリプトの最大実行時間（ミリ秒）。</dd>
     <dt><code>componentAuctions</code></dt>
-        <dd>Optional</dd>
+        <dd>オプション</dd>
         <dd>例: <pre>[{'seller': 'https://www.some-other-ssp.com', 'decisionLogicUrl': ..., ...}, ...]</pre>
 </dd>
         <dd>役割: <a href="/blog/fledge-api/#:~:text=componentauctions">コンポーネント オークション</a>の追加構成。</dd>
@@ -215,7 +215,7 @@ scoreAd(adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
     <thead>
       <tr>
         <th style="font-weight: bold; text-align: left;">引数</th>
-        <th style="font-weight: bold; text-align: left;">Role</th>
+        <th style="font-weight: bold; text-align: left;">役割</th>
       </tr>
     </thead>
     <tbody>
@@ -225,11 +225,12 @@ scoreAd(adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>auctionConfig</code></td>
-        <td style="vertical-align: top;">The auction configuration object passed to <code>navigator.runAdAuction()</code>.</td>
+        <td style="vertical-align: top;">
+<code>navigator.runAdAuction()</code>に渡されるオークション構成オブジェクト。</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>bid</code></td>
-        <td style="vertical-align: top;">A numerical bid value.</td>
+        <td style="vertical-align: top;">数値的な入札値。</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>trustedScoringSignals</code></td>
@@ -239,7 +240,7 @@ scoreAd(adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
   </table>
 </div>
 
-## Frequently asked questions
+## よくある質問
 
 {% Details %} {% DetailsSummary %}
 
@@ -249,6 +250,6 @@ scoreAd(adMetadata, bid, auctionConfig, trustedScoringSignals, browserSignals) {
 
 売り手は、`scoreAd()` 関数にロジックを組み込み、ブラウザは、外部のコードとの通信が制限されているワークレット内で関数を実行します。ブラウザ自体は広告をスコアリングしません。スコアリング ロジックを実行して最高スコアの入札を選択するタスクは、ブラウザに排他的に当てられています。{% endDetails %}
 
-## All Protected Audience API references
+## すべての Protected Audience API リファレンス
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
