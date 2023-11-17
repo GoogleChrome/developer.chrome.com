@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Report on Protected Audience API auction results
+title: Protected Audience API オークション結果のレポート
 subhead: |2-
 
   Protected Audience API オークション レポートを生成するための売り手および買い手向けガイド。
@@ -15,7 +15,7 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-This article is a technical reference for generating reports for Protected Audience API auction wins, as used in the current iteration of the experimental Protected Audience API.
+この記事は、実験的な Protected Audience API の現在のイテレーションで使用される、Protected Audience API オークションの落札に関するレポートを生成するための技術リファレンスです。
 
 Protected Audience API のライフサイクル全体については[開発者ガイド](/docs/privacy-sandbox/protected-audience-api)を参照し、[イベント レベルのレポート（暫定）](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now)の詳細なディスカッションについては Protected Audience API の Explainer をご覧ください。
 
@@ -45,7 +45,7 @@ reportResult(auctionConfig, browserSignals) {
 }
 ```
 
-The arguments passed to this function are:
+この関数には以下の引数が渡されます。
 
 #### `auctionConfig`
 
@@ -65,13 +65,13 @@ The arguments passed to this function are:
   }
 ```
 
-The return value of this function is used as the `sellerSignals` argument for the winning bidder's `reportWin()` function.
+この関数の戻り値は、落札者の `reportWin()` 関数の `sellerSignals` 引数として使用されます。
 
 ### 買い手: `reportWin()`
 
 {% Aside %} **Protected Audience API の Explainer**: [Buyer reporting on render and ad events](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#52-buyer-reporting-on-render-and-ad-events) をご覧ください。{% endAside %}
 
-The winning bidder's JavaScript (which also provided `generateBid()`) can include a `reportWin()` function to report the auction outcome.
+落札者の JavaScript（`generateBid()` も提供）には、オークションの結果を報告するための `reportWin()` 関数を含めることができます。
 
 ```javascript
 reportWin(auctionSignals, perBuyerSignals, sellerSignals, browserSignals) {
@@ -85,7 +85,7 @@ Chrome の Protected Audience API の現在の実装では、`reportWin()` が�
 
 {% endAside %}
 
-The arguments passed to this function are:
+この関数には以下の引数が渡されます。
 
 #### `auctionSignals` と `perBuyerSignals`
 
@@ -110,16 +110,16 @@ The arguments passed to this function are:
 }
 ```
 
-## Temporary reporting implementation {: #temporary-reporting}
+## 一時的なレポートの実装 {: #temporary-reporting}
 
-There are two methods available temporarily in Chrome for auction reporting:
+Chrome では、暫定的に 2 つの方法でオークションの勝敗をレポートできます。
 
 - `forDebuggingOnly.reportAdAuctionLoss()`
 - `forDebuggingOnly.reportAdAuctionWin()`
 
-These methods each take a single argument: a URL to fetch after the auction is completed. They can be called multiple times, in both `scoreAd()` and `generateBid()`, with different URL arguments.
+これらのメソッドはそれぞれ、オークションの完了後に取得する URL を引数として取ります。`scoreAd()` と `generateBid()` の両方で、異なる URL 引数を使用して何度も呼び出すことができます。
 
-Chrome only sends debug loss/win reports when an auction runs to completion. If an auction is canceled (for example, due to a new navigation) no reports will be generated.
+Chrome は、オークションが完了するまで実行された場合にのみ、デバッグの勝敗レポートを送信します。オークションがキャンセルされた場合（新しいナビゲーションなどが原因で）、レポートは生成されません。
 
 これらのメソッドは、Chrome で `chrome://flags/#privacy-sandbox-ads-apis` が有効になっている場合にデフォルトで使用できます。ただし、Protected Audience API を有効にするコマンドライン フラグを使用して Chrome を実行している場合は、`BiddingAndScoringDebugReportingAPI` フラグを含めて、メソッドを明示的に有効にする必要があります。フラグが有効になっていない場合、メソッドは引き続き使用できますが、何も起こりません。
 
