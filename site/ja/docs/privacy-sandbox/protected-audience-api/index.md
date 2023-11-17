@@ -224,7 +224,7 @@ https://kv-service.example/getvalues?hostname=publisher.example&keys=key1,key2
 
 [runAdAuction()](/docs/privacy-sandbox/protected-audience-api/ad-auction/) によって返される Promise は、オークション構成で `resolveToConfig` フラグが `true` に設定されている場合、Fenced Frame 構成オブジェクト（`FencedFrameConfig`）に解決されます。フレーム構成は、フレームを落札広告に移動する目的で Fenced Frame によって使用されますが、広告の URL はフレームのエンベッダーには表示されません。
 
-{% Aside ' important' %} `FencedFrameConfig` オブジェクトは、オークション構成でフラグ `resolveToConfig` が `true` に設定されている場合にのみ返されます。フラグが設定されていないか `false` の場合、iframe でのみレンダリングできる不透明な [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) が返されます。{% endAside %}
+{% Aside 'important' %} `FencedFrameConfig` オブジェクトは、オークション構成でフラグ `resolveToConfig` が `true` に設定されている場合にのみ返されます。フラグが設定されていないか `false` の場合、iframe でのみレンダリングできる不透明な [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) が返されます。{% endAside %}
 
 Fenced Frame 構成オブジェクトは、M114 以降で利用可能です。`FencedFrameConfig` オブジェクトの詳細については、[Chrome ブログの記事](/docs/privacy-sandbox/fenced-frame)をご覧ください。
 
