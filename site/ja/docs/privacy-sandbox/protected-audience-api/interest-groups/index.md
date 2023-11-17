@@ -15,7 +15,7 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-In this article, you'll find a technical reference for interest groups, as used in the current iteration of the experimental Protected Audience API.
+この記事では、実験的な Protected Audience API の現在のイテレーションで使用されている、インタレスト グループの技術リファレンスを紹介します。
 
 Protected Audience API のライフサイクル全体については[開発者ガイド](/docs/privacy-sandbox/protected-audience-api)を読み、[ブラウザによるインタレスト グループの記録](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups)方法に関する詳細な提案については Protected Audience API の Explainer をご覧ください。
 
@@ -27,7 +27,7 @@ Protected Audience API インタレスト グループは、共通の関心を�
 
 インタレスト グループのオーナーは、Protected Audience API 広告オークションの買い手として機能します。インタレスト グループのメンバーシップはブラウザによってユーザーのデバイスに保存されるものであり、ブラウザのベンダーや他の誰とも共有されることはありません。
 
-## Bid in a Protected Audience API ad auction
+## Protected Audience API 広告オークションに入札する
 
 Protected Audience API インタレスト グループのオーナーは、[Protected Audience API 広告オークションへの入札](#generatebid)に招待されます。
 
@@ -48,7 +48,7 @@ Protected Audience API インタレスト グループのオーナーは、[Prot
 
 #### アクセスされているサイトからの許可 {: #visited-site-permission}
 
-Permission can be granted from the same origin or cross-origin.
+許可は、同じオリジンまたはクロスオリジンから付与できます。
 
 デフォルトでは、アクセスされているサイトと同じオリジン（現在のページのトップレベル フレームと同じオリジン）からの `joinAdInterestGroup()` 呼び出しに対して許可が付与されます。サイトは、[`join-ad-interest-group` 権限ポリシーヘッダー](/docs/privacy-sandbox/permissions-policy/)を使用して、`joinAdInterestGroup()` 呼び出しを無効にすることができます。
 
@@ -64,7 +64,7 @@ Permission can be granted from the same origin or cross-origin.
 
 基本的に、`joinAdInterestGroup()` はオーナーのドメインのページまたは iframe で実行されるか、`.well-known` URL のリストを使用して提供される他のドメインに委譲されます。
 
-#### Example usage
+#### 使用例
 
 以下は、インタレスト グループを定義し、ブラウザにグループへの参加を要求する方法を例で示しています。
 
@@ -97,7 +97,7 @@ Protected Audience API メソッドのパラメーターとして使用される
 
 {% endAside %}
 
-#### Required properties {: #interest-group-properties}
+#### 必須のプロパティ {: #interest-group-properties}
 
 インタレスト グループに必要なプロパティは、`owner` と `name` のみです。
 
@@ -106,8 +106,8 @@ Protected Audience API メソッドのパラメーターとして使用される
     <thead>
       <tr>
         <th style="font-weight: bold; text-align: left;">プロパティ</th>
-        <th style="font-weight: bold; text-align: left;">Example</th>
-        <th style="font-weight: bold; text-align: left;">Role</th>
+        <th style="font-weight: bold; text-align: left;">例</th>
+        <th style="font-weight: bold; text-align: left;">役割</th>
       </tr>
     </thead>
     <tbody>
@@ -125,51 +125,51 @@ Protected Audience API メソッドのパラメーターとして使用される
   </table>
 </div>
 
-#### Optional properties
+#### オプションのプロパティ
 
-The remaining properties are optional:
+残りのプロパティはオプションです。
 
 <dl>
     <dt>
-<code>biddingLogicUrl</code><sup><a href="#first-ref">1</a>, <a href="#second-ref">2</a></sup>
+<code>biddingLogicUrl</code><sup><a href="#first-ref">1、2</a> <a href="#second-ref">_</a></sup>
 </dt>
-        <dd>Example: <code>https://dsp.example/bid/custom-bikes/bid.js</code>
+        <dd>例: <code>https://dsp.example/bid/custom-bikes/bid.js</code>
 </dd>
         <dd>役割: ワークレットで実行される入札 JavaScript の URL。</dd>
     <dt>
-<code>biddingWasmHelperUrl</code><sup><a href="#first-ref">1</a>, <a href="#second-ref">2</a></sup>
+<code>biddingWasmHelperUrl</code><sup><a href="#first-ref">1、2</a> <a href="#second-ref">_</a></sup>
 </dt>
-        <dd>Example: <code>https://dsp.example/bid/custom-bikes/bid.wasm</code>
+        <dd>例: <code>https://dsp.example/bid/custom-bikes/bid.wasm</code>
 </dd>
         <dd>役割: <code>biddingLogicUrl</code> から駆動される WebAssembly コードの URL。</dd>
     <dt>
 <code>dailyUpdateUrl</code><sup><p data-md-type="paragraph"><a href="#second-ref">2</a></p></sup>
 </dt>
-        <dd>Example: <code>https://dsp.example/bid/custom-bikes/update</code>
+        <dd>例: <code>https://dsp.example/bid/custom-bikes/update</code>
 </dd>
         <dd>役割: インタレスト グループの属性を更新する JSON を返す URL。（<a href="#update-interest-group">インタレスト グループを更新する</a>をご覧ください。）</dd>
     <dt>
 <code>trustedBiddingSignalsUrl</code><sup><p data-md-type="paragraph"><a href="#second-ref">2</a></p></sup>
 </dt>
-        <dd>Example: <code>https://dsp.example/trusted/bidding-signals</code>
+        <dd>例: <code>https://dsp.example/trusted/bidding-signals</code>
 </dd>
         <dd>役割: 入札者の信頼できるサーバーへの Key-Value リクエストのベース URL。</dd>
     <dt><code>trustedBiddingSignalsKeys</code></dt>
-        <dd>Example: <code>['key1', 'key2' ...]</code>
+        <dd>例: <code>['key1', 'key2' ...]</code>
 </dd>
         <dd>役割: Key-Value の信頼できるサーバーへのリクエストのキー。</dd>
     <dt><code>userBiddingSignals</code></dt>
-        <dd>Example: <code>{...}</code>
+        <dd>例: <code>{...}</code>
 </dd>
         <dd>役割: オーナーが入札中に使用できる追加のメタデータ。</dd>
     <dt>
 <code>ads</code><sup><p data-md-type="paragraph"><a href="#first-ref">1</a></p></sup>
 </dt>
-        <dd>Example: <code>[bikeAd1, bikeAd2, bikeAd3]</code>
+        <dd>例: <code>[bikeAd1, bikeAd2, bikeAd3]</code>
 </dd>
         <dd>役割: このインタレスト グループ向けにレンダリングされる可能性のある広告。</dd>
     <dt><code>adComponents</code></dt>
-        <dd>Example: <code>[customBike1, customBike2, bikePedal, bikeFrame1, bikeFrame2]</code>
+        <dd>例: <code>[customBike1, customBike2, bikePedal, bikeFrame1, bikeFrame2]</code>
 </dd>
         <dd>役割: <a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces">複数の部分で構成される広告</a>のコンポーネント。</dd>
 </dl>
@@ -186,7 +186,7 @@ the `ads` and `adComponents` URLs have no such constraint.</p>
 </caption>
 ```
 
-#### Update attributes {: #update-interest-group}
+#### 属性の更新 {: #update-interest-group}
 
 `dailyUpdateUrl` は、`joinAdInterestGroup()` に渡されるインタレスト グループ オブジェクトに対応してインタレスト グループ プロパティを定義する JSON を返すウェブサーバーを指定します。
 
@@ -204,10 +204,10 @@ JSON で指定されていないフィールドは上書きされず、JSON で�
 更新はベストエフォートであり、次の条件では失敗する可能性があります。
 
 - ネットワーク リクエストのタイムアウト（現在 30 秒）。
-- Other network failure.
+- その他のネットワーク障害。
 - JSON 解析の失敗。
 
-Updates are rate-limited to a maximum of one per day.
+更新は 1 日あたり最大 1 回に制限されています。
 
 更新に連続して長い時間が費やされた場合には、更新がキャンセルされることもありますが、これによりキャンセルされた（残りの）更新にレート制限が課されることはありません。ネットワーク エラーが原因で失敗した更新は 1 時間後に再試行され、インターネットからの切断が原因で失敗した更新は再接続後にすぐに再試行されます。
 
@@ -271,7 +271,7 @@ generateBid(interestGroup, auctionSignals, perBuyerSignals,
 }
 ```
 
-#### Arguments
+#### 引数
 
 `generateBid()` は次の引数を取ります。
 
@@ -280,7 +280,7 @@ generateBid(interestGroup, auctionSignals, perBuyerSignals,
     <thead>
       <tr>
         <th style="font-weight: bold; text-align: left;">引数</th>
-        <th style="font-weight: bold; text-align: left;">Role</th>
+        <th style="font-weight: bold; text-align: left;">役割</th>
       </tr>
     </thead>
     <tbody>
@@ -346,7 +346,7 @@ function generateBid(interestGroup, auctionSignals, perBuyerSignals,
     <thead>
       <tr>
         <th style="font-weight: bold; text-align: left;">プロパティ</th>
-        <th style="font-weight: bold; text-align: left;">Role</th>
+        <th style="font-weight: bold; text-align: left;">役割</th>
       </tr>
     </thead>
     <tbody>
@@ -386,7 +386,7 @@ navigator.leaveAdInterestGroup({
 
 広告のコードを使って、そのインタレスト グループに対してこの関数を呼び出すこともできます。
 
-## Frequently asked questions
+## よくある質問
 
 {% Details %} {% DetailsSummary %}
 
@@ -440,6 +440,6 @@ Chrome では、オーナーあたり最大 1,000 個のインタレスト グ�
 
 最近、他の方法で機能する可能性についてのディスカッションがありました。このメカニズムで問題が起きるユースケースがある場合は、API を改善する方法についての公開ディスカッションに引き続き参加してください。{% endDetails %}
 
-## All Protected Audience API references
+## すべての Protected Audience API リファレンス
 
 {% Partial 'privacy-sandbox/fledge-api-reference.njk' %}
