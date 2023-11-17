@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: Protected Audience API オークションのレイテンシを改善する
-subhead: |2-
-
-  Protected Audience API オークションのレイテンシを改善するための一連のベストプラクティスを確認します。
-description: |2-
-
-  Protected Audience API オークションのレイテンシを改善するための一連のベストプラクティスを確認します。
-date: '2022-06-27'
-updated: '2022-07-04'
+subhead: Protected Audience API オークションのレイテンシを改善するための一連のベストプラクティスを確認します。
+description: Protected Audience API オークションのレイテンシを改善するための一連のベストプラクティスを確認します。
+date: 2022-06-27
+updated: 2022-07-04
 authors:
   - pauljensen
 ---
