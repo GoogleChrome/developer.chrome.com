@@ -170,7 +170,6 @@ Protected Audience API メソッドのパラメーターとして使用される
         <dd>役割: <a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces">複数の部分で構成される広告</a>のコンポーネント。</dd>
 </dl>
 
-```
 <caption style="text-align:left">
 <p id="first-ref"><sup>1</sup> The `biddingLogicUrl` and `ads` properties are optional, but
 required to participate in an auction. There may be use cases for creating an interest group without these properties: for example, an interest group owner might want to add a browser to an interest group for a campaign that isn't running yet, or for some other future use, or they may temporarily have run out of advertising budget.</p>
@@ -180,7 +179,6 @@ required to participate in an auction. There may be use cases for creating an in
 have the same origin as owner. That may not be a long-term constraint, and
 the `ads` and `adComponents` URLs have no such constraint.</p>
 </caption>
-```
 
 #### 属性の更新 {: #update-interest-group}
 
