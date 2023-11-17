@@ -1,13 +1,9 @@
 ---
 layout: layouts/doc-post.njk
 title: Protected Audience API オークション結果のレポート
-subhead: |2-
-
-  Protected Audience API オークション レポートを生成するための売り手および買い手向けガイド。
-description: |2-
-
-  Protected Audience API オークション レポートを生成するための売り手および買い手向けガイド。
-date: '2022-10-29'
+subhead: Protected Audience API オークション レポートを生成するための売り手および買い手向けガイド。
+description: Protected Audience API オークション レポートを生成するための売り手および買い手向けガイド。
+date: 2022-10-29
 authors:
   - samdutton
   - alexandrawhite
