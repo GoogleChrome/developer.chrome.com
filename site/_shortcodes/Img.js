@@ -30,6 +30,7 @@ async function MetaImg(args) {
     args.params.auto = 'format';
   }
 
+
   if (this.ctx?.export) {
     const image = await getImage(generateImgixSrc(args.src, args.params));
 
@@ -48,7 +49,7 @@ async function MetaImg(args) {
         path.join(this.ctx.exportPath, this.ctx.articleName, fileName)
       );
     } catch(e) {
-      console.error('Failed to export image', this.ctx.articleName, fileName);
+      console.error('Failed to export image', this.ctx.exportPath, this.ctx.articleName, fileName);
     }
 
     // Instead of markdown img syntax we use HTML img syntax, to make sure

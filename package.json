@@ -16,7 +16,7 @@
     "watch": "npm-run-all --parallel --race gulp:watch rollup:watch eleventy:watch",
     "eleventy:debug": "node --inspect ./node_modules/.bin/eleventy",
     "eleventy:watch": "eleventy --quiet --watch --incremental",
-    "eleventy": "eleventy",
+    "eleventy": "eleventy --quiet",
     "fix": "gts fix",
     "gulp:watch": "npx gulp watch",
     "gulp": "npx gulp",

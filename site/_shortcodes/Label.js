@@ -6,7 +6,7 @@ const md = require('../_filters/md');
 function Label(filename) {
   const renderedContent = md.renderDevSiteInline(filename);
   if (this.ctx.export) {
-    return `<span class="wd-label">${renderedContent}</span>`;
+    return `<span class="dcc-label">${renderedContent}</span>`;
   }
   return `<div class="type--caption"><p class="code-label">${filename}</p></div>`;
 }
