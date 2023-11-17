@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: Protected Audience API のオプトアウト
-subhead: |2-
-
-  Protected Audience API からのオプトアウトを希望する開発者およびユーザー向け。
-description: |2-
-
-  Protected Audience API からのオプトアウトを希望する開発者およびユーザー向け。
-date: '2022-10-29'
-updated: '2023-09-18'
+subhead: Protected Audience API からのオプトアウトを希望する開発者およびユーザー向け。
+description: Protected Audience API からのオプトアウトを希望する開発者およびユーザー向け。
+date: 2022-10-29
+updated: 2023-09-18
 authors:
   - samdutton
   - alexandrawhite
