@@ -31,7 +31,7 @@ Protected Audience API 広告オークションは、広告を選択するため
 3. 招待された買い手のコードが実行され、入札、関連する広告クリエイティブの URL、およびその他のデータが生成されます。入札スクリプトは、買い手の [Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail)から、残りの広告キャンペーン予算などのリアルタイム データをクエリできます。
 4. 売り手のコードが各入札をスコアリングし、落札者を選択します。このロジックでは、入札値と入札の望ましさを返す他のデータを使用します。コンテキストの落札者に勝てない広告は拒否されます。売り手は、リアルタイム データに独自の[Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail)を使用できます。
 5. 落札した広告は opaque 値として返され、Fenced Frame<br> に表示されます。売り手とサイト運営者のいずれもこの値を閲覧できなくなります。
-6. オークションは、売り手と落札した買い手に報告されます。 {% Aside %} 売り手 `reportResult()` と買い手の `reportWin()` には、`sendReportTo()` の呼び出しを含めることができます。これは、[プライベート集計](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now)で集計レポートが利用可能になるまで、[一時的](/docs/privacy-sandbox/private-aggregation)に利用できます。
+6. オークションは、売り手と落札した買い手に報告されます。 {% Aside %} 売り手 `reportResult()` と買い手の `reportWin()` には、`sendReportTo()` の呼び出しを含めることができます。これは、[プライベート集計](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now)で集計レポートが利用可能になるまで、[一時的](/docs/privacy-sandbox/private-aggregation)に利用できます。endAside %}
 
 ### オークションが行われるタイミング
 
