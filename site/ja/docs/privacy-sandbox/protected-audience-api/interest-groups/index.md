@@ -39,9 +39,9 @@ Protected Audience API インタレスト グループのオーナーは、[Prot
 
 `joinAdInterestGroup()` の呼び出し元コンテキストのオリジンは、インタレスト グループのオーナーのオリジンと一致する必要があるため、`joinAdInterestGroup()` は、インタレスト グループのオーナーのオリジンと現在のドキュメントのオリジンが一致しない限り（たとえば、独自のインタレスト グループを持つウェブサイト）、iframe から呼び出す必要があります。
 
-`joinAdInterestGroup()` requires permission from:
+`joinAdInterestGroup()` には以下からの許可が必要です。
 
-- The [site being visited](#visited-site-permission)
+- [アクセスされているサイト](#visited-site-permission)
 - インタレスト グループのオーナー
 
 つまり、`dsp.example.com` が許可を付与しない限り、`malicious.example` は `dsp.example.com` が所有するインタレスト グループに対して `joinAdInterestGroup()` を呼び出せないということです。
@@ -105,7 +105,7 @@ Protected Audience API メソッドのパラメーターとして使用される
   <table class="w-table--top-align width-full">
     <thead>
       <tr>
-        <th style="font-weight: bold; text-align: left;">Property</th>
+        <th style="font-weight: bold; text-align: left;">プロパティ</th>
         <th style="font-weight: bold; text-align: left;">Example</th>
         <th style="font-weight: bold; text-align: left;">Role</th>
       </tr>
@@ -219,7 +219,7 @@ Updates are rate-limited to a maximum of one per day.
 
 同じインタレスト グループの `owner` と `name` に対して `navigator.joinAdInterestGroup()` が再度呼び出される場合、レート制限はリセットされます。
 
-##### Automatic updates
+##### 自動更新
 
 オークション用にロードされたすべてのインタレスト グループは、手動更新と同じレート制限が適用される上で、オークションの完了後に自動的に更新されます。
 
@@ -273,7 +273,7 @@ generateBid(interestGroup, auctionSignals, perBuyerSignals,
 
 #### Arguments
 
-`generateBid()` takes the following arguments:
+`generateBid()` は次の引数を取ります。
 
 <div class="w-table-wrapper">
   <table class="w-table--top-align width-full">
@@ -339,13 +339,13 @@ function generateBid(interestGroup, auctionSignals, perBuyerSignals,
 }
 ```
 
-`generateBid()` returns an object with four properties:
+`generateBid()` は、以下の 4 つのプロパティを持つオブジェクトを返します。
 
 <div class="w-table-wrapper">
   <table class="w-table--top-align width-full">
     <thead>
       <tr>
-        <th style="font-weight: bold; text-align: left;">Property</th>
+        <th style="font-weight: bold; text-align: left;">プロパティ</th>
         <th style="font-weight: bold; text-align: left;">Role</th>
       </tr>
     </thead>
