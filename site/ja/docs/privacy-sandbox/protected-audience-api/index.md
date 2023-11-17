@@ -284,6 +284,8 @@ Protected Audience API はまだ、ユーザーがどの広告を見たかをウ
 
 ### Topics API と Protected Audience API を併用できますか？
 
+{% endDetailsSummary %}
+
 はい。Protected Audience API によって提供される、現在のユーザーについて観察されたトピックは、売り手または入札者がコンテキスト情報として使用することができます。トピックは、次のプロパティに含めることができます。
 
 - `auctionSignals`: `navigator.runAdAuction()` に渡されるオークション構成オブジェクトのプロパティ
