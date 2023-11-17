@@ -14,7 +14,7 @@ authors:
 
 この記事では、Protected Audience API のオークション データをサーバーにレポートするために利用できるさまざまなメカニズムの概要と、代替ソリューションの準備ができるまで、現時点で移行中に使用できる移行メカニズムについて説明します。
 
-To report on important metrics that you gather from an ad auction, Protected Audience API works with:
+広告オークションから収集した重要な指標についてレポートするために、Protected Audience API は以下と連携します。
 
 - [プライベート集計](/docs/privacy-sandbox/summary-reports/): オークション シグナルと結果を収集して[要約レポート](/docs/privacy-sandbox/private-aggregation/)を生成します。
 - [Fenced Frames](/docs/privacy-sandbox/fenced-frame/) と [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) に使用する [Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md): Protected Audience API ワークレットと通信するためのフレーム内のチャネルです。API を使用すると、イベント レベルのデータをオークション シグナルに関連付けることができます。Ads Reporting API のイベント レベルのレポートは、よりプライベートなレポート メカニズムが設計されるまでの移行メカニズムです。
@@ -27,7 +27,7 @@ We recommend you read the documentation on [Private Aggregation](/docs/privacy-s
 
 {% endAside %}
 
-## Protected Audience API reporting overview
+## Protected Audience API レポートの概要
 
 <figure>   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/R35UFscm9XdMmtco0BYH.png", alt="Protected Audience overall workflow", width="800", height="414" %}   <figcaption>     Protected Audience overall workflow   </figcaption> </figure>
 
@@ -54,7 +54,7 @@ Protected Audience API のオークション フローからのデータをサ�
 <code>generateBid()</code>
    </td>
    <td rowspan="4">Signals, auction results, and auction performance    </td>
-   <td>Private Aggregation API    </td>
+   <td>Private Aggregation API</td>
   </tr>
   <tr>
    <td>
@@ -68,7 +68,7 @@ Protected Audience API のオークション フローからのデータをサ�
    <td>
 <code>scoreAd()</code>
    </td>
-   <td>Private Aggregation API    </td>
+   <td>Private Aggregation API</td>
   </tr>
   <tr>
    <td>
@@ -98,7 +98,7 @@ Protected Audience API のオークション フローからのデータをサ�
 
 リストされているそれぞれの期間中に、買い手と売り手は、オークション シグナル、イベントレベルのデータ、コンバージョン データなどのデータをレポートするために利用できるさまざまなレポート API にアクセスできます。
 
-### Data available within a Protected Audience API auction
+### Protected Audience API オークション内で利用可能なデータ
 
 The following data are available to be reported from a Protected Audience API worklet during the auction.
 
@@ -112,16 +112,16 @@ The following data are available to be reported from a Protected Audience API wo
 <strong>Signal</strong>
    </td>
    <td style="background-color: #f3f3f3">
-<strong>Description</strong>
+<strong>説明</strong>
    </td>
    <td style="background-color: #f3f3f3">
 <strong>Set location</strong>
    </td>
    <td style="background-color: #f3f3f3">
-<strong>Users</strong>
+<strong>ユーザー</strong>
    </td>
    <td style="background-color: #f3f3f3">
-<strong>Availability</strong>
+<strong>提供</strong>
    </td>
   </tr>
   <tr>
@@ -275,7 +275,7 @@ The Fenced Frames Ads Reporting API will also be available until at least 2026 f
 
 For a deeper dive, see the [explainer](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md).
 
-#### Unconstrained network access
+#### 制約のないネットワークアクセス
 
 Fenced Frame を使用すると、iframe と同じ方法でネットワーク リソースを読み込むことができ、Fenced Frame 内のイベントレベル データをサーバーに送信できます。Fenced Frame からのイベントレベル データを、上記の[オークション イベントレベルのレポートメカニズム](#event-level-auction-win-reporting-with-sendreportto)のセクションで説明した `sendReportTo()` で送信されたオークションデータに関連付けることにより、後でサーバー側でイベントレベル レポートを生成できます。
 
@@ -289,7 +289,7 @@ Network access will be constrained sometime after third-party cookie deprecation
 
 より永続的なソリューションを設計してはいますが、アトリビューション レポートを使用してイベント レベルの集計可能なレポートを生成するための移行メカニズムとして、Fenced Frame の [Ads Reporting API](#ads-reporting-api-for-fenced-frames-and-iframes) を使用できます。これらのレポートはコンバージョンを測定するためのものであり、オークションや広告フレームから生成されるイベントレベルの集計可能なエンゲージメント レポートとは異なることに注意してください。より永続的なソリューションの準備ができ次第、Explainer を公開します。
 
-#### Transitional mechanism
+#### 移行メカニズム
 
 広告ビーコンを登録する際に、キーワード `reserved.top_navigation` を使用できます。これにより、ビーコンの `Attribution-Reporting-Eligible` ヘッダーが自動的に追加され、[アトリビューション ソースとして登録できる](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#registering-attribution-sources)ようになります。
 
@@ -317,7 +317,7 @@ See the [Attribution Reporting section of the Ads Reporting API explainer](https
 
 このワークフローでは、買い手が売り手と調整して、一意の ID をオークションに送信します。オークション中に、買い手はこの一意の ID をオークションデータとともに送信します。レンダリング時とコンバージョン時には、Fenced Frame または iframe からのデータも同じ一意の ID で送信されます。後で、その一意の ID を使用してこれらのレポートを関連付けることができます。
 
-Workflow:
+ワークフロー:
 
 1. オークションが開始される前に、買い手はプログラムによる[リアルタイム入札（RTB」）入札レスポンス](https://github.com/google/ads-privacy/tree/master/proposals/fledge-rtb)の一部として、一意の ID を売り手に送信します。この ID は、`auctionId` のような変数として設定できます。ID は `auctionConfig` の `perBuyerSignals` として渡され、買い手のワークレットで使用できるようになります。
 2. オークション時間中、買い手は広告レンダリング時間とコンバージョン時間中にトリガーされる広告ビーコンを登録できます（`registerAdBeacon()`）。
@@ -391,7 +391,7 @@ Then, at a later time, from the ad frame, you can trigger the report submission 
 
 Learn more about triggering Private Aggregation contributions from a frame from the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md#triggering-reports).
 
-### Reporting auction results and performance
+### オークション結果とパフォーマンスのレポート
 
 You can also aggregate auction results when triggered by an auction win or loss event with `contributeToHistogramOnEvent(eventType, contribution)` when you pass in a reserved event type keywords (`reserved.win, reserved.loss`, and `reserved.always`).
 
@@ -399,7 +399,7 @@ Private Aggregation provides [a list of base values](https://github.com/WICG/tur
 
 When some base value is provided, like the winning bid amount, you can set how much to add or subtract from that value, then report the final value. For example, if the winning bid of $5 is provided as the base value, you can subtract your bid of $2 to calculate the actual value of $3 of how much you lost your auction by.
 
-#### Auction results reporting
+#### オークション結果レポート
 
 Let’s look at an example where you have lost an auction, and you want to learn how far off your bid was from the auction clearing price.
 
@@ -422,7 +422,7 @@ function generateBid() {
 
 When the report is submitted, the actual reported value will be the scaled `baseValue` shifted by the `offset` value. To learn more, see the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended_PA_reporting.md).
 
-#### Performance reporting
+#### パフォーマンスレポート
 
 買い手と売り手は、スクリプトの実行にかかった時間と、信頼できるシグナルを取得するのににかかった時間をレポートできます。売り手は、買い手の許可を得て、各買い手の入札生成時間と信頼できる入札シグナル時間を収集できます。
 
@@ -434,7 +434,7 @@ See the [explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE_extended
 
 You can also write to shared storage from Protected Audience API bidding, scoring, and reporting worklets. At a later point in time, you can report those values in shared storage to your server using Private Aggregation . You can also use the stored values for the [URL Selection](https://github.com/WICG/shared-storage#url-selection) operation.
 
-From a Protected Audience API worklet, you can write any keys and values to shared storage:
+Protected Audience API ワークレットから、任意のキーと値を共有ストレージに書き込むことができます。
 
 ```js
 // Protected Audience API worklet
