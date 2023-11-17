@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: '売り手向けガイド: 広告オークションを実行する'
-subhead: |2-
-
-  Protected Audience API 広告オークションの売り手向け API ガイドとリファレンス。
-description: |2-
-
-  Protected Audience API 広告オークションの売り手向け API ガイドとリファレンス。
-date: '2022-11-01'
-updated: '2023-09-18'
+subhead: Protected Audience API 広告オークションの売り手向け API ガイドとリファレンス。
+description: Protected Audience API 広告オークションの売り手向け API ガイドとリファレンス。
+date: 2022-11-01
+updated: 2023-09-18
 authors:
   - samdutton
   - alexandrawhite
