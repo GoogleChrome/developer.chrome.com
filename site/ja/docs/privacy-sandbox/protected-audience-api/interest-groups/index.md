@@ -1,14 +1,12 @@
 ---
 layout: layouts/doc-post.njk
-title: 'Buyer guide: join interest groups and generate bids'
-subhead: |2
+title: '買い手向けガイド: インタレスト グループに参加して入札を生成する'
+subhead: |2-
 
-  Buyer API guide and references to join remarketing lists and bid
-  in Protected Audience API auctions.
-description: |2
+  Protected Audience API オークションでリマーケティング リストに参加して入札するための買い手向け API ガイドとリファレンス。
+description: |2-
 
-  Buyer API guide and references to join remarketing lists and bid
-  in Protected Audience API auctions.
+  Protected Audience API オークションでリマーケティング リストに参加して入札するための買い手向け API ガイドとリファレンス。
 date: '2022-11-01'
 authors:
   - samdutton
@@ -19,40 +17,40 @@ authors:
 
 In this article, you'll find a technical reference for interest groups, as used in the current iteration of the experimental Protected Audience API.
 
-Read the [developer guide](/docs/privacy-sandbox/protected-audience-api) for the full life cycle of the Protected Audience API, and refer to the Protected Audience API explainer for an in-depth proposal of how [browsers record interest groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups).
+Protected Audience API のライフサイクル全体については[開発者ガイド](/docs/privacy-sandbox/protected-audience-api)を読み、[ブラウザによるインタレスト グループの記録](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups)方法に関する詳細な提案については Protected Audience API の Explainer をご覧ください。
 
 開発者でない方は、[Protected Audience API の概要](/docs/privacy-sandbox/protected-audience)をご覧ください。
 
-## Protected Audience API interest groups
+## Protected Audience API インタレスト グループ
 
-A Protected Audience API interest group represents a group of people with a common interest, corresponding to a [remarketing](/docs/privacy-sandbox/glossary/#remarketing) list. Every Protected Audience API interest group has an [owner](/docs/privacy-sandbox/protected-audience#interest-group-types).
+Protected Audience API インタレスト グループは、共通の関心を持つユーザーを[リマーケティング](/docs/privacy-sandbox/glossary/#remarketing) リストに対応してグループ化したものです。すべての Protected Audience API インタレスト グループには[オーナー](/docs/privacy-sandbox/protected-audience#interest-group-types)が存在します。
 
-Interest group owners act as the buyer in the Protected Audience API ad auction. Interest group membership is stored by the browser, on the user's device, and is not shared with the browser vendor or anyone else.
+インタレスト グループのオーナーは、Protected Audience API 広告オークションの買い手として機能します。インタレスト グループのメンバーシップはブラウザによってユーザーのデバイスに保存されるものであり、ブラウザのベンダーや他の誰とも共有されることはありません。
 
 ## Bid in a Protected Audience API ad auction
 
-Owners of Protected Audience API interest groups can be invited to [bid in Protected Audience API ad auctions](#generatebid).
+Protected Audience API インタレスト グループのオーナーは、[Protected Audience API 広告オークションへの入札](#generatebid)に招待されます。
 
 ## API 関数
 
 ### `joinAdInterestGroup()`
 
-The advertiser's demand-side platform (DSP) or the advertiser itself calls `navigator.joinAdInterestGroup()` to ask the browser to add an interest group to the browser's membership list.
+広告主のデマンドサイド プラットフォーム（DSP）または広告主自体は、`navigator.joinAdInterestGroup()` を呼び出して、ブラウザに対し、ブラウザのメンバーシップ リストにインタレスト グループを追加するよう要求します。
 
-The origin of the calling context for `joinAdInterestGroup()` must match the interest group owner's origin, so `joinAdInterestGroup()` will need to be called from an iframe (for example, from a DSP) unless the origin of the interest group owner matches the origin of the current document (for example, a website with its own interest groups).
+`joinAdInterestGroup()` の呼び出し元コンテキストのオリジンは、インタレスト グループのオーナーのオリジンと一致する必要があるため、`joinAdInterestGroup()` は、インタレスト グループのオーナーのオリジンと現在のドキュメントのオリジンが一致しない限り（たとえば、独自のインタレスト グループを持つウェブサイト）、iframe から呼び出す必要があります。
 
 `joinAdInterestGroup()` requires permission from:
 
 - The [site being visited](#visited-site-permission)
-- The interest group owner
+- インタレスト グループのオーナー
 
-This means it's not possible for `malicious.example` to call `joinAdInterestGroup()` for an interest group owned by  `dsp.example.com`, without `dsp.example.com` granting permission.
+つまり、`dsp.example.com` が許可を付与しない限り、`malicious.example` は `dsp.example.com` が所有するインタレスト グループに対して `joinAdInterestGroup()` を呼び出せないということです。
 
 #### アクセスされているサイトからの許可 {: #visited-site-permission}
 
 Permission can be granted from the same origin or cross-origin.
 
-By default, permission is granted for `joinAdInterestGroup()` calls from the same origin as the site visited, (in other words, from the same origin as the top-level frame of the current page). Sites can use the [`join-ad-interest-group` permissions policy header](/docs/privacy-sandbox/permissions-policy/) to disable `joinAdInterestGroup()` calls.
+デフォルトでは、アクセスされているサイトと同じオリジン（現在のページのトップレベル フレームと同じオリジン）からの `joinAdInterestGroup()` 呼び出しに対して許可が付与されます。サイトは、[`join-ad-interest-group` 権限ポリシーヘッダー](/docs/privacy-sandbox/permissions-policy/)を使用して、`joinAdInterestGroup()` 呼び出しを無効にすることができます。
 
 `joinAdInterestGroup()` クロスオリジン（現在のページとは異なるオリジン）の呼び出しは、アクセスされているサイトがクロスオリジン iframe からの `joinAdInterestGroup()` の呼び出しを許可する権限ポリシーを設定している場合にのみ成功します。
 
@@ -60,15 +58,15 @@ By default, permission is granted for `joinAdInterestGroup()` calls from the sam
 
 将来的には、サイト所有者に権限ポリシーを調整する時間ができたら、クロスオリジン iframe からの呼び出しをデフォルトで禁止にする予定です。 {% endAside %}
 
-#### Permission from the interest group owner
+#### インタレスト グループのオーナーからの許可
 
-Interest group owner permission is implicitly granted by calling `joinAdInterestGroup()` from an iframe with the same origin as that of the interest group's owner. For example, a `dsp.example.com` iframe can call `joinAdInterestGroup()` for interest groups owned by `dsp.example.com`.
+インタレスト グループのオーナーの許可は、インタレスト グループのオーナーと同じオリジンを持つ iframe から `joinAdInterestGroup()` を呼び出すことによって暗黙的に付与されます。たとえば、`dsp.example.com` iframe は、 `dsp.example.com` が所有するインタレスト グループに対して `joinAdInterestGroup()` を呼び出すことができます。
 
 基本的に、`joinAdInterestGroup()` はオーナーのドメインのページまたは iframe で実行されるか、`.well-known` URL のリストを使用して提供される他のドメインに委譲されます。
 
 #### Example usage
 
-Here's an example of how one might define an interest group and ask the browser to join the group.
+以下は、インタレスト グループを定義し、ブラウザにグループへの参加を要求する方法を例で示しています。
 
 {: #ad-components}
 
@@ -89,7 +87,7 @@ const interestGroup = {
 navigator.joinAdInterestGroup(interestGroup, 7 * kSecsPerDay);
 ```
 
-The `interestGroup` object passed to the function must be no more than 50 kiB in size, otherwise the call will fail. The second parameter specifies the duration of the interest group, capped at 30 days. Successive calls overwrite previously stored values.
+関数に渡される `interestGroup` オブジェクトのサイズは 50 kiB を超えてはいけません。超えてしまうと、呼び出しは失敗します。2 番目のパラメーターは、インタレスト グループの期間を指定します。上限は 30 日です。連続して呼び出すと、以前に保存された値が上書きされます。
 
 {% Aside 'gotchas' %}
 
@@ -101,7 +99,7 @@ Protected Audience API メソッドのパラメーターとして使用される
 
 #### Required properties {: #interest-group-properties}
 
-The only required properties for interest groups are `owner` and `name`:
+インタレスト グループに必要なプロパティは、`owner` と `name` のみです。
 
 <div class="w-table-wrapper">
   <table class="w-table--top-align width-full">
@@ -116,12 +114,12 @@ The only required properties for interest groups are `owner` and `name`:
       <tr>
         <td style="vertical-align: top;"><code>owner</code></td>
         <td style="vertical-align: top;"><code>https://dsp.example</code></td>
-        <td style="vertical-align: top;">Origin of the interest group owner.</td>
+        <td style="vertical-align: top;">インタレスト グループ オーナーのオリジン。</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>name</code></td>
         <td style="vertical-align: top;"><code>custom-bikes</code></td>
-        <td style="vertical-align: top;">Name of the interest group.</td>
+        <td style="vertical-align: top;">インタレスト グループの名前。</td>
       </tr>
     </tbody>
   </table>
@@ -149,7 +147,7 @@ The remaining properties are optional:
 </dt>
         <dd>Example: <code>https://dsp.example/bid/custom-bikes/update</code>
 </dd>
-        <dd>Role: URL that returns JSON to update interest group attributes.         (See <a href="#update-interest-group">Update the interest group</a>.)</dd>
+        <dd>役割: インタレスト グループの属性を更新する JSON を返す URL。（<a href="#update-interest-group">インタレスト グループを更新する</a>をご覧ください。）</dd>
     <dt>
 <code>trustedBiddingSignalsUrl</code><sup><p data-md-type="paragraph"><a href="#second-ref">2</a></p></sup>
 </dt>
@@ -169,7 +167,7 @@ The remaining properties are optional:
 </dt>
         <dd>Example: <code>[bikeAd1, bikeAd2, bikeAd3]</code>
 </dd>
-        <dd>Role: Ads that might be rendered for this interest group.</dd>
+        <dd>役割: このインタレスト グループ向けにレンダリングされる可能性のある広告。</dd>
     <dt><code>adComponents</code></dt>
         <dd>Example: <code>[customBike1, customBike2, bikePedal, bikeFrame1, bikeFrame2]</code>
 </dd>
@@ -190,9 +188,9 @@ the `ads` and `adComponents` URLs have no such constraint.</p>
 
 #### Update attributes {: #update-interest-group}
 
-`dailyUpdateUrl` specifies a web server that returns JSON defining interest group properties, corresponding to the interest group object passed to `joinAdInterestGroup()`.
+`dailyUpdateUrl` は、`joinAdInterestGroup()` に渡されるインタレスト グループ オブジェクトに対応してインタレスト グループ プロパティを定義する JSON を返すウェブサーバーを指定します。
 
-This allows the group's owner to periodically update the attributes of the interest group. In the [current implementation](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/interest_group/interest_group_storage.cc;l=671;drc=5a102f146faa0c21eb9cf255ceb46b35a158ab3f), the following attributes can be changed:
+これにより、グループのオーナーは、インタレスト グループの属性を定期的に更新できます。[現在の実装](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/interest_group/interest_group_storage.cc;l=671;drc=5a102f146faa0c21eb9cf255ceb46b35a158ab3f)では、次の属性を変更できます。
 
 - `biddingLogicUrl`
 - `biddingWasmHelperUrl`
@@ -201,33 +199,33 @@ This allows the group's owner to periodically update the attributes of the inter
 - `ads`
 - `priority`
 
-Any field not specified in the JSON will not be overwritten—only fields specified in the JSON get updated—whereas calling `navigator.joinAdInterestGroup()` overwrites any existing interest group.
+JSON で指定されていないフィールドは上書きされず、JSON で指定されたフィールドのみが更新されますが、`navigator.joinAdInterestGroup()` を呼び出すと、既存のインタレスト グループが上書きされます。
 
 更新はベストエフォートであり、次の条件では失敗する可能性があります。
 
-- Network request timeout (currently 30 seconds).
+- ネットワーク リクエストのタイムアウト（現在 30 秒）。
 - Other network failure.
 - JSON 解析の失敗。
 
 Updates are rate-limited to a maximum of one per day.
 
-Updates can be canceled if too much contiguous time has been spent updating, though this doesn't impose any rate limiting on canceled (remaining) updates. Updates that fail due to network errors are retried after an hour, and updates that fail due to disconnection from the internet are retried immediately on reconnection.
+更新に連続して長い時間が費やされた場合には、更新がキャンセルされることもありますが、これによりキャンセルされた（残りの）更新にレート制限が課されることはありません。ネットワーク エラーが原因で失敗した更新は 1 時間後に再試行され、インターネットからの切断が原因で失敗した更新は再接続後にすぐに再試行されます。
 
 ##### 手動更新
 
-Updates to interest groups owned by the current frame's origin can be triggered manually via `navigator.updateAdInterestGroups()`.
+現在のフレームのオリジンが所有するインタレスト グループの更新は、`navigator.updateAdInterestGroups()` を介して手動でトリガーできます。
 
 レート制限により、更新が頻繁に行われることが防止されています。`navigator.updateAdInterestGroups()` を繰り返し呼び出しても、レート制限期間（現在は 1 日）が経過するまでは何も行われません。
 
-The rate limit gets reset if `navigator.joinAdInterestGroup()` is called again for the same interest group `owner` and `name`.
+同じインタレスト グループの `owner` と `name` に対して `navigator.joinAdInterestGroup()` が再度呼び出される場合、レート制限はリセットされます。
 
 ##### Automatic updates
 
-All interest groups loaded for an auction are updated automatically after an auction completes, subject to the same rate limits as manual updates.
+オークション用にロードされたすべてのインタレスト グループは、手動更新と同じレート制限が適用される上で、オークションの完了後に自動的に更新されます。
 
-For each owner with at least one interest group participating in an auction, it's as if `navigator.updateAdInterestGroups()` is called from an iframe whose origin matches that owner.
+少なくとも 1 つのインタレスト グループがオークションに参加しているオーナーごとに、そのオーナーと一致するオリジンの iframe から `navigator.updateAdInterestGroups()` が呼び出されたかのように動作します。
 
-#### Specify ads for an interest group
+#### インタレスト グループの広告の指定
 
 `ads` および `adComponents` オブジェクトには、広告クリエイティブの URL と、オプションで、入札時に使用できる任意のメタデータが含まれます。
 
@@ -242,11 +240,11 @@ For each owner with at least one interest group participating in an auction, it'
 
 ### `generateBid()` {: #generatebid}
 
-The interest group owner's script at `biddingLogicUrl` must include a `generateBid()` function.
+`biddingLogicUrl` にあるインタレスト グループオーナーのスクリプトには、`generateBid()` 関数が含まれている必要があります。
 
-When a [seller calls `navigator.runAdAuction()`](/docs/privacy-sandbox/protected-audience-api/ad-auction), the `generateBid()` function is called once for each candidate ad. In other words, it's called for each interest group that the browser is a member of—if the interest group's owner is invited to bid.
+[売り手が `navigator.runAdAuction()` を呼び出す](/docs/privacy-sandbox/protected-audience-api/ad-auction)と、`generateBid()` 関数が広告の候補ごとに 1 回呼び出されます。つまり、インタレスト グループのオーナーが入札に招待されている場合、ブラウザがメンバーとなっているインタレスト グループごとに呼び出されます。
 
-The seller provides a `decisionLogicUrl` in the auction configuration parameter passed to `navigator.runAdAuction()`. The code at this URL must include a `scoreAd()` function, which scores the bid generated by each participating bidder.
+売り手は、`navigator.runAdAuction()` に渡されるオークション構成パラメーターに `decisionLogicUrl` を提供します。この URL のコードには、参加している各入札者によって生成された入札をスコアリングする `scoreAd()` 関数が含まれている必要があります。
 
 {% Aside %}
 
@@ -256,7 +254,7 @@ The seller provides a `decisionLogicUrl` in the auction configuration parameter 
 
 {% endAside %}
 
-The script at `biddingLogicUrl` provided by a buyer must include a `generateBid()` function.
+買い手が提供する `biddingLogicUrl` のスクリプトには、`generateBid()` 関数が含まれている必要があります。
 
 この関数は、候補広告ごとに 1 回呼び出されます。[`runAdAuction()`](/docs/privacy-sandbox/protected-audience-api/ad-auction/) は、関連付けられた入札とメタデータとともに各広告を個別にチェックしてから、数値の望ましさスコアを広告に割り当てます。
 
@@ -288,25 +286,25 @@ generateBid(interestGroup, auctionSignals, perBuyerSignals,
     <tbody>
       <tr>
         <td style="vertical-align: top;"><code>interestGroup</code></td>
-        <td style="vertical-align: top;">An object passed to by the ad buyer. The interest group may be updated with <code>dailyUpdateUrl</code>.</td>
+        <td style="vertical-align: top;">広告の買い手によって渡されるオブジェクト。インタレスト グループは、<code>dailyUpdateUrl</code> で更新される場合があります。</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>auctionSignals</code></td>
-        <td style="vertical-align: top;">A property of the <a href="#ad-auction">auction config</a> argument passed to <code>navigator.runAdAuction()</code> by the seller. This provides information about page context (such as the ad size and the publisher ID), the type of auction (first-price or second-price), and other metadata.</td>
+        <td style="vertical-align: top;">売り手によって <code>navigator.runAdAuction()</code> に渡される<a href="#ad-auction">オークション構成</a>引数のプロパティ。これにより、ページ コンテキスト（広告サイズやサイト運営者 ID など）、オークションの種類（ファースト プライスまたはセカンド プライス）、およびその他のメタデータに関する情報が提供されます。</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>perBuyerSignals</code></td>
-        <td style="vertical-align: top;">A property of the <a href="#ad-auction">auction config</a> argument passed by the seller. This can provide contextual signals from the buyer's server about the page, if the seller is an <a href="/docs/privacy-sandbox/glossary#ssp">SSP</a> which performs a real-time bidding call to buyer servers and pipes the response back, or if the publisher page contacts the buyer's server directly. If so, the buyer may wish to check a cryptographic signature of those signals inside <code>generateBid()</code> as protection against tampering. </td>
+        <td style="vertical-align: top;">売り手によって渡される<a href="#ad-auction">オークション構成</a>引数のプロパティ。これにより、売り手が <a href="/docs/privacy-sandbox/glossary#ssp">SSP</a> であり、買い手のサーバーにリアルタイムの入札呼び出しを実行してレスポンスを返す場合、またはサイト運営者のページが買い手のサーバーに直接接続する場合、買い手のサーバーからページに関するコンテキスト シグナルを提供できます。その場合、買い手は、改ざんに対する保護として、<code>generateBid()</code> 内のこれらのシグナルの暗号署名を確認することを希望する場合があります。</td>
       </tr>
       <tr>
               <td style="vertical-align: top;"><code>trustedBiddingSignals</code></td>
-              <td style="vertical-align: top;">An object whose keys are the <code>trustedBiddingSignalsKeys</code> for the interest group, and whose values are returned in the <code>trustedBiddingSignals</code> request.</td>
+              <td style="vertical-align: top;">キーがインタレスト グループの <code>trustedBiddingSignalsKeys</code> であり、その値が <code>trustedBiddingSignals</code> リクエストで返されるオブジェクト。</td>
        </tr>
        <tr>
          <td style="vertical-align: top;">
 <code>browserSignals</code><sup>3</sup>
 </td>
-         <td style="vertical-align: top;">An object constructed by the browser, which might include information about page context (such as the <code>hostname</code> of the current page, which the seller could otherwise fake) and data for the interest group itself (such as a record of when the group previously won an auction, to allow on-device frequency capping). </td>
+         <td style="vertical-align: top;">ブラウザによって作成されたオブジェクトで、ページコンテキストに関する情報（現在のページの <code>hostname</code> など、売り手が偽造する可能性があるもの）やインタレスト グループ自体のデータ（グループが以前に落札したときの記録など、オンデバイスのフリークエンシー キャップを許可するためのデータ）が含まれる場合があります。</td>
        </tr>
     </tbody>
   </table>
@@ -354,19 +352,20 @@ function generateBid(interestGroup, auctionSignals, perBuyerSignals,
     <tbody>
       <tr>
         <td style="vertical-align: top;"><code>ad</code></td>
-        <td style="vertical-align: top;">Arbitrary metadata about the ad, such as information the seller expects to learn about this bid or ad creative. The seller uses this information in its auction and decision logic.</td>
+        <td style="vertical-align: top;">売り手がこの入札または広告クリエイティブについて知ることを期待する情報など、広告に関する任意のメタデータ。売り手は、この情報をオークションおよび決定ロジックで使用します。</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>bid</code></td>
-        <td style="vertical-align: top;">A numerical bid that will enter the auction. The seller must be in a position to compare bids from different buyers, therefore bids must be in some seller-chosen unit (such as"USD per thousand"). If the bid is zero or negative, then this interest group will not participate in the seller's auction at all. With this mechanism, the buyer can implement any advertiser rules for where their ads may or may not appear.</td>
+        <td style="vertical-align: top;">オークションに入力する数値入札。売り手は、さまざまな買い手の入札を比較できる立場にある必要があります。したがって、入札は、売り手が選択した単位で行う必要があります（例: 「1,000 単位の USD」)。入札額がゼロまたはマイナスの場合、このインタレスト グループは売り手のオークションにまったく参加しません。この仕組みにより、買い手は、広告が表示される場所と表示されない場所に関する広告主ルールを実装できます。</td>
       </tr>
       <tr>
         <td style="vertical-align: top;"><code>render</code></td>
-        <td style="vertical-align: top;">A URL, or a list of URLs, that will be used to render the creative if this bid wins the auction. The value has to match the `renderUrl` of one of the <a href="#ad-components">ads defined for the interest group</a>.<br><br><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces">Ads Composed of Multiple Pieces explainer</a> </td>
+        <td style="vertical-align: top;">この入札がオークションで落札された場合にクリエイティブをレンダリングするために使用される URL または URL のリスト。値は、<a href="#ad-components">インタレスト グループに対して定義されたいずれかの広告</a>の `renderUrl` と一致する必要があります。<br><br><a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces">複数の部分で構成される広告の Explainer</a>
+</td>
       </tr>
             <tr>
               <td style="vertical-align: top;"><code>adComponents</code></td>
-              <td style="vertical-align: top;">An optional list of up to 20 components for <a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces">ads composed of multiple pieces</a>, taken from the <a href="#ad-components">adComponents</a> property of the interest group argument passed to `navigator.joinAdInterestGroup()`.</td>
+              <td style="vertical-align: top;">`navigator.joinAdInterestGroup()` に渡されるインタレスト グループ引数の <a href="#ad-components">adComponents</a> プロパティから取得される、<a href="https://github.com/WICG/turtledove/blob/main/FLEDGE.md#34-ads-composed-of-multiple-pieces">複数の部分で構成される広告</a>の最大 20 個のコンポーネントのオプションリスト。</td>
             </tr>
     </tbody>
   </table>
@@ -374,7 +373,7 @@ function generateBid(interestGroup, auctionSignals, perBuyerSignals,
 
 ### ` leaveAdInterestGroup()`
 
-The interest group owner can request to a browser be removed from an interest group. The browser removes the interest group from its membership list.
+インタレスト グループのオーナーは、ブラウザをインタレスト グループから削除するよう要求できます。メンバーシップ リストからインタレスト グループを削除するのはブラウザです。
 
 ```javascript
 navigator.leaveAdInterestGroup({
@@ -383,9 +382,9 @@ navigator.leaveAdInterestGroup({
 });
 ```
 
-If a user returns to the site which asked the browser to add an interest group, the interest group owner can call the `navigator.leaveAdInterestGroup()` function to request the browser remove the interest group.
+ユーザーがインタレスト グループの追加をブラウザに要求したサイトに戻った場合、インタレスト グループのオーナーは `navigator.leaveAdInterestGroup()` 関数を呼び出してブラウザにインタレスト グループの削除を要求できます。
 
-Code for an ad can also call this function for its interest group.
+広告のコードを使って、そのインタレスト グループに対してこの関数を呼び出すこともできます。
 
 ## Frequently asked questions
 
@@ -395,9 +394,9 @@ Code for an ad can also call this function for its interest group.
 
 {% endDetailsSummary %}
 
-For simple frequency control, you can use the `prevWins` field in `browserSignals` inside `generateBid()`. Alternatively, you can call `navigator.leaveAdInterestGroup()` to request that a user's browser leave an interest group when an ad is clicked. This prevents future bidding and acts as a form of frequency capping.
+単純なフリークエンシー制御であれば、`generateBid()` 内の `browserSignals` の `prevWins` フィールドを使用できます。または、`navigator.leaveAdInterestGroup()` を呼び出して、広告がクリックされたときにユーザーのブラウザがインタレスト グループから外されるようにリクエストすることもできます。このようにすると以降の入札が阻止されるため、フリークエンシー <br> キャップの一種として機能します。
 
-You can also use a first-party cookie to store click information. When the ad is rendered, overwrite an existing interest group with the click data as user bidding signals. The workflow would look something like:
+ファーストパーティ Cookie を使用してクリック情報を保存することもできます。広告がレンダリングされると、既存のインタレスト グループがユーザーの入札シグナルとしてのクリック データで上書きされます。ワークフローは次のようになります。
 
 - ユーザーが、`advertiser.com/product` にアクセスします。
 - 広告主はファーストパーティ Cookie に「0 クリック」を書き込み、`joinAdInterestGroup({ ..., userBiddingSignals: { clicks: [] } })` を呼び出します。
@@ -413,25 +412,25 @@ You can also use a first-party cookie to store click information. When the ad is
 
 `joinAdInterestGroup()` を呼び出したサイトのユーザーの閲覧履歴は、`userBiddingSignals` で更新でき、オンデバイス入札中に使用できます。[製品レベルの TURTLEDOVE](https://github.com/WICG/turtledove/blob/main/PRODUCT_LEVEL.md) の原案を参照してください。これには、推奨ユースケース採用のためのコア指標の影響に関する RTB House による分析が含まれています。
 
-`dailyUpdateUrl` provides a mechanism to periodically update the attributes of the interest group, but this update is not based on the user's browsing history. {% endDetails %}
+`dailyUpdateUrl` はインタレスト グループの属性を定期的に更新するメカニズムを提供していますが、この更新はユーザーの閲覧履歴に基づくものではありません。 {% endDetails %}
 
 {% Details %} {% DetailsSummary %}
 
-### What's the maximum number of interest groups per group owner for a single user?
+### グループオーナーあたり、最大いくつの単一ユーザーインタレスト グループが許可されていますか？
 
 {% endDetailsSummary %}
 
-Chrome allows up to 1000 interest groups per owner, and up to 1000 interest group owners. These limits are meant as guard rails, not to be hit in regular operation.
+Chrome では、オーナーあたり最大 1,000 個のインタレスト グループ、および最大 1,000 個のインタレスト グループ オーナーを許可しています。これらはガードレールとしての役割を果たしており、通常の操作では到達することはありません。
 
 {% endDetails %}
 
 {% Details %} {% DetailsSummary %}
 
-### How can I maximize interest group ads that meet 𝑘-anon thresholds?
+### 𝑘-anon のしきい値を満たすインタレスト グループ広告を最大化するにはどうすればよいですか？
 
 {% endDetailsSummary %}
 
-As the [public explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#12-interest-group-attributes) notes, since a single interest group can carry multiple possible ads that it might show, the group will have an opportunity to re-bid another one of its ads to act as a "fallback ad" any time its most-preferred choice is below threshold. This means that a small, specialized ad that is still below the 𝑘-anonymity threshold could still choose to participate in auctions, and its interest group has a way to fall back to a more generic ad until the more specialized one has a large enough audience.
+[公開 Explainer](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#12-interest-group-attributes) に指摘されているように、1 つのインタレスト グループは、表示される可能性のある複数の広告を掲載できるため、そのグループには、最も優先される広告がしきい値を下回るたびに、「フォールバック広告」として機能する別の広告を再入札する機会が与えられます。つまり、𝑘 匿名性のしきい値を未だに下回っている小規模の専門的な広告でもオークションに参加することを選択でき、そのインタレスト グループには、より専門的な広告が十分な数のオーディエンスを獲得するまで、より一般的な広告にフォールバックする方法があるということです。
 
 戦術的には、以下のことを考慮するとよいでしょう。
 
