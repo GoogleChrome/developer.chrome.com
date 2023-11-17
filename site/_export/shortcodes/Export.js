@@ -50,11 +50,30 @@ const RAW_SHORTCODE_PATTERN = /{% raw %}(.*?){% endraw %}/gm;
 const RAW_PLACEHOLDER = 'RAW_PLACEHOLDER';
 
 let urls = null;
+const redirectUrls = {};
 
 /**
- * Used to keep track of old URLs and their potential new URLs.
+ * Holds all articles in arrays, keyed by the directory they are in - that's either
+ * the project name or the subdirectory of the project.
  */
-const exportUrls = new Map();
+const tocs = {}
+
+async function updateToCs(exportPath, articleName, title) {
+  const pathParts = path.normalize(exportPath).split(path.sep);
+  // Remove the first slash and language from the path
+  pathParts.shift();
+  pathParts.shift();
+
+  const tocPath = pathParts.join('/');
+  const toc = tocs[tocPath] || [];
+  toc.push({
+    title,
+    path: path.normalize(`/${tocPath}/${articleName}`),
+  });
+
+  tocs[tocPath] = toc;
+  await exportFile({}, yaml.dump({toc}, {lineWidth: -1, noArrayIndent: true}), `en/${tocPath}/_export_toc.yaml`);
+}
 
 function mapCsvUrlsToObjects(path) {
   // URLs are lazily loaded from the CSV and then mapped to an object for easier lookup
