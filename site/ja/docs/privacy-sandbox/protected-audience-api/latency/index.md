@@ -1,12 +1,12 @@
 ---
 layout: layouts/doc-post.njk
-title: Improve Protected Audience API auction latency
-subhead: |2
+title: Protected Audience API オークションのレイテンシを改善する
+subhead: |2-
 
-  Review a collection of best practices to improve Protected Audience API auction latency.
-description: |2
+  Protected Audience API オークションのレイテンシを改善するための一連のベストプラクティスを確認します。
+description: |2-
 
-  Review a collection of best practices to improve Protected Audience API auction latency.
+  Protected Audience API オークションのレイテンシを改善するための一連のベストプラクティスを確認します。
 date: '2022-06-27'
 updated: '2022-07-04'
 authors:
@@ -15,17 +15,17 @@ authors:
 
 {% Partial 'privacy-sandbox/protected-audience-rename-banner.njk' %}
 
-It's in everyone's best interest to make sure the Protected Audience API operates efficiently.
+Protected Audience API の効率的な稼動の確保は、誰にとっても重要なことです。
 
 - ウェブを閲覧するユーザーは、サイトがすばやく読み込まれることを望んでいます。つまり、サイトとその埋め込み広告を読み込むために必要な計算リソースやネットワーク リソースなど、限られたデバイス リソースを過度に使用しないように、開発者が Protected Audience API を使って効率的に構築する必要があります。
-- Publishers want their sites to load quickly, providing users an efficient and responsive experience. Publishers also want effective advertising to maximize their revenue.
-- Advertisers and ad techs want their ads to display quickly to provide the greatest utility.
+- サイト運営者は、サイトの読み込みが速く、ユーザーに効率的で応答性の高いエクスペリエンスを提供したいと考えています。サイト運営者はまた、収益を最大化できる効果的な広告を求めています。
+- 広告主とアドテックは、最大限の有用性を提供するために、広告がすばやく表示されることを望んでいます。
 
 このドキュメントでは、サイトが最大限の効率で動作できるようにするための Protected Audience API 実装のベストプラクティスについて概説します。
 
 ## 買い手（入札者）のベストプラクティス
 
-To make sure you're optimizing for Protected Audience API auction efficiency, follow these best practices.
+Protected Audience API オークションの効率を最適化するには、次のベストプラクティスに従ってください。
 
 ### インタレスト グループのオーナー数を少なくする
 
@@ -43,35 +43,35 @@ To make sure you're optimizing for Protected Audience API auction efficiency, fo
 
 オークションに参加するインタレスト グループをフィルタリングする方法については、現在もディスカッションが続いています。この分野でアイデアがある場合は、[GitHub のイシューを提出](https://github.com/WICG/turtledove/issues/new)するか、[Issue 305](https://github.com/WICG/turtledove/issues/305) に貢献してください。
 
-There is ongoing discussion about how to reuse the JavaScript execution environment between auctions. Reusing the environment reduces the amount of time the browser must spend initializing them. You can follow along:
+オークション間で JavaScript 実行環境を再利用する方法についてのディスカッションが進行中です。環境を再利用すると、ブラウザが環境の初期化に費やす時間が短縮されます。以下をご覧ください。
 
 - [Issue 304](https://github.com/WICG/turtledove/issues/304)
 - [Issue 310](https://github.com/WICG/turtledove/issues/310)
-- Or [file a new GitHub issue](https://github.com/WICG/turtledove/issues/new).
+- または、[GitHub に新しいイシューを提出](https://github.com/WICG/turtledove/issues/new)してください。
 
-### Reuse bidding scripts
+### 入札スクリプトを再利用する
 
 個別のインタレスト グループで使用する共有の入札スクリプトをセットアップします。これにより、ブラウザが複数のスクリプトをダウンロード、解析、およびコンパイルして余分なネットワーク リクエストを発生させる必要がなくなります。
 
-### Reuse `trustedBiddingSignalsUrls`
+### `trustedBiddingSignalsUrls` を再利用する
 
-Network latency and resource usage can be very significant. Fewer real-time trusted bidding signals fetches can help reduce this latency.
+ネットワークのレイテンシーとリソースの使用量が、非常に重要な場合があります。リアルタイムの信頼できる入札シグナルのフェッチ回数を減らすと、このレイテンシーを短縮できます。
 
 `trustedBiddingSignalsUrl` が複数のインタレスト グループ間で再利用される場合、[信頼できる入札シグナルのフェッチを組み合わせる](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#11-joining-interest-groups)ことができます。可能な場合には、インタレスト グループ間で同じ `trustedBiddingSignalsUrl` を使用します。
 
-### Smaller real-time trusted bidding signals fetches
+### リアルタイムの信頼できる入札シグナルのフェッチ量を小さくする
 
-Network latency can be very significant, and this is directly impacted by how much data is transferred during the real-time trusted bidding signal fetches.
+ネットワークのレイテンシーが非常に大きくなる場合があり、これはリアルタイムの信頼できる入札シグナルのフェッチ中に転送されるデータの量から直接的な影響を受けます。
 
 リアルタイムの信頼できる入札シグナル サービスではなく、広告固有またはインタレスト グループ固有のデータをインタレスト グループに保存することをお勧めします。キャンペーンの予算編成やキルスイッチなど、真にリアルタイムのシグナルのみのために、リアルタイムの信頼できる入札シグナル データを予約します。
 
-Any signal that can be updated on a daily or longer basis should be stored in the interest group and updated via the daily updates.
+毎日またはそれ以上の頻度で更新できるシグナルは、インタレスト グループに保存し、毎日の更新で更新する必要があります。
 
 ## 売り手のベストプラクティス
 
-Make sure you're monitoring and optimizing for Protected Audience API auction efficiency.
+Protected Audience API オークションの効率を監視し、最適化していることを確認します。
 
-### Monitor your auctions
+### オークションを監視する
 
 オークションの指標を収集します。インタレスト グループのオーナーとインタレスト グループの入札の数は、オークションのパフォーマンスに大きな影響を与えるため、監視する必要があります。指標は `scoreAd()` で表示できます。
 
@@ -79,12 +79,12 @@ Make sure you're monitoring and optimizing for Protected Audience API auction ef
 
 入札者は、自身のインタレスト グループの入札パフォーマンスについて洞察を得ることができますが、これを他の入札者と比較することはできない場合があります。さまざまな入札者の相対的な落札率と入札拒否率を比較すると、インタレスト グループが実行可能な入札を行わなかったり、承認されていないクリエイティブで過剰な入札を行ったりしたために入札の計算リソースが浪費されたケースを特定するのに役立つ場合があります。
 
-### Protect against slow bid scripts
+### 遅い入札スクリプトから保護する
 
-Bidding scripts that take excessive time can slow the Protected Audience API auction down for everyone involved.
+入札スクリプトの実行に過度に時間がかかると、関係者全員の Protected Audience API オークションを遅らせる可能性があります。
 
-- **Use timeouts**. The Protected Audience API includes some default time-outs for bidding scripts, but `perBuyerTimeouts` can be adjusted to ensure that no bidders participating in the auction are using excessive computation time.
-    - Consider participating in future timeouts and limits discussions, as described in [Issue 293](https://github.com/WICG/turtledove/issues/293).
+- **タイムアウトを使用します**。Protected Audience API には入札スクリプトのデフォルトのタイムアウトが含まれていますが、`perBuyerTimeouts` を調整して、オークションに参加する入札者が過度に計算時間を使用しないようにすることができます。
+    - [Issue 293](https://github.com/WICG/turtledove/issues/293) で説明されているように、将来のタイムアウトと制限のディスカッションに参加することを検討してください。
 - **制限を使用します**。入札スクリプトのタイムアウトを設定すると、1 つのスクリプトの実行に時間がかかり過ぎてしまうのを防ぐことができますが、買い手は自由にユーザーを重複する可能性のある多数のインタレスト グループに追加できるため、各インタレスト グループは入札の機会と個別のタイムアウトを得ることができます。`perBuyerGroupLimits` を使用してインタレスト グループの数に制限を設定することで、個々の買い手が過度にオークション時間を消費するのを防ぐことができます。
     - 買い手と協力して、インタレスト グループの優先順位を確実に設定してください。そうすることで、最も重要なインタレスト グループが各オークションに確実に含まれるようになります。
 
