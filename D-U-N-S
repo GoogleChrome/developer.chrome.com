@@ -1,0 +1,90 @@
+Cookie Preferences
+Cookies Settings
+dnb-logo	Direct 2.0
+Collapse
+Getting Started
+Hello World
+REST API
+Credentials
+Authentication
+Release Notes
+Country Code Updates
+Onboard API Suite
+Can't Find it?
+Corporate Identity
+Company Data
+Compliance
+Country Data
+Custom Products
+Financial Overview
+Health Care
+Industry Data
+Investigations
+Legal Records
+Monitoring
+People Data
+Product Catalog
+Ratings
+Small Business
+Stress Predictors
+Supplier Risk
+Trade Payments
+Reference Materials
+API Index
+Coded Values
+ISO Country Codes
+Country Codes Handling
+Data Primer
+Error Codes
+Financial Statements
+Predictive Analytics
+Portfolio Feature
+Sandbox
+Customer Support
+Welcome to D&B Direct 2.0
+D&B Direct is an application programming interface that allows you to stream reliable, on-demand business information into enterprise-wide systems, such as Customer Relationship Management (CRM) systems, corporate intranets and web forms, and supply chain management systems or commercial software and web applications.
+
+IMPORTANT: Please see the new Online Services Security Enhancement Release, effective November 09, 2020.
+
+Quick Start using REST
+Two of the most common uses of the D&B Direct API are locating a D&B D-U-N-S Number, and then obtaining a Detailed Company Profile for a company.
+
+D&B Direct API calls must be made using Secured Socket Layers (SSL).
+
+NOTE: To make either of these calls, you will need D&B Direct credentials. You can obtain sandbox (test environment) credentials by completing a online form.
+
+Before making calls to any D&B Direct function using REST, you need to obtain an authentication token, which lasts for twenty four hours. Simply place your userid/password into the header and make the following POST call:
+
+POST https://direct.dnb.com/Authentication/V2.0/
+x-dnb-user: mubashir18@live.com
+x-dnb-pwd: MyPassword
+
+[BODY]
+TransactionDetail: {
+   "ApplicationTransactionID": "{user-defined}",
+   "ServiceTransactionID": "{user-defined}",
+   "TransactionTimestamp": "2001-12-17T09:30:47Z"
+}
+Copy the Authorization: value in the response, and include it in the header of subsequent calls. You'll also need to know what the latest version is for the respective service.
+
+Locating a D-U-N-S Number (often called Match)
+This function is part of the Company Service, which is currently at {version} "5.0".
+
+GET https://direct.dnb.com/V{version}/organizations?CountryISOAlpha2Code=US&SubjectName=GORMAN%20MANUFACTURING&match=true&MatchTypeText=Advanced&TerritoryName=CA
+Authorization: My Token
+The JSON response for this function will return a static response in the sandbox (test environment). Did you try it? Here's what you should have received.
+
+Obtaining a Detailed Company Profile
+This function is part of the Firmographic Product Service, which is currently at {version} "5.0".
+
+GET https://direct.dnb.com/V{version}/organizations/804735132/products/DCP_STD
+Authorization: My Token
+The JSON response for this function will return the profile for Gorman Manufacturing Company, Inc. (D&B's fictional test company) in the sandbox (test environment). Did you try it? Here's what you should have received.
+
+NOTE: A set of D-U-N-S Numbers is available to D&B Direct 2.0 customers for performing non-billable transactions in the production environment.
+
+Disclaimer
+The copyright of the report on Chinese businesses in this product belongs to Shanghai Dun & Bradstreet and this product shall only be internally used by the customer who subscribes for this report. Without prior written consent of Shanghai Dun & Bradstreet, this product may not be reproduced, extracted, provided or resold in whole or in part in any form. This product can only be used for legitimate purposes and shall not be used for illegal purposes such as endangering national security and public interests and infringing on the legitimate rights and interests of citizens or organizations. This product shall not be used for personal, family or household credit or insurance, or for employment. Due to the limitation of information sources and the fact that some information cannot be controlled and verified by Shanghai Dun & Bradstreet, Shanghai Dun & Bradstreet cannot guarantee the accuracy, completeness, or timeliness of the information provided. This product is for customer's reference only. Shanghai Dun & Bradstreet does not bear any commercial risks of customers and shall not be liable for any loss or injury whatsoever resulting from contingencies beyond its control or from negligence.
+
+dnb-full-logo
+© Dun & Bradstreet, Inc. 2019 – 2023. All rights reserved.
