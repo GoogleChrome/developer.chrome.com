@@ -77,7 +77,7 @@ Include reproduction steps that our team can use to verify the functional breaka
 
 
 1. Starting the week of November 27, 2023 navigate to the "3PCD Deprecation Trial" via the [list of Active Trials on the Chrome Origin Trials page](/origintrials/#/trials/active) and click "Register".
-2. For "Web Origin" you should provide the origin which serves your embedded page or scripts.
+2. For "Web Origin", provide the origin which serves your embedded page or scripts.
 3. The "Third-party matching" option will depend on how you need to provide the token. The options are explained in more detail in [Add the trial token](#add-the-trial-token) below.
     * If you are providing the token via HTTP header or meta tag on your own embedded pages, **do not check** "Third-party matching".
     * If you are injecting the token via JavaScript into a different site, you **must check** "Third-party matching".
