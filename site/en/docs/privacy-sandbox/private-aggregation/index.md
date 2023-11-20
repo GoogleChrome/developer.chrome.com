@@ -23,6 +23,8 @@ privacy-preserving manner.
 
 {% Partial 'privacy-sandbox/timeline/private-aggregation.njk' %}
 
+{% Partial 'privacy-sandbox/timeline/private-aggregation-features.njk' %}
+
 ## What is the Private Aggregation API
 
 The Private Aggregation API allows developers to generate aggregate data reports
