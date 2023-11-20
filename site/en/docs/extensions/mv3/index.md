@@ -8,6 +8,10 @@ date: 2020-11-09
 updated: 2023-10-18
 ---
 
+{% Aside %}
+The Manifest V2 support timeline has been updated. See our [November 2023 blog post](/blog/resuming-the-transition-to-mv3/) and the [Manifest V2 support timeline page](/docs/extensions/mv3/mv2-sunset/) for details.
+{% endAside %}
+
 Google Chrome Extensions are applications that run inside the Chrome browser and provide additional
 functionality, integration with third party websites or services, and customized browsing
 experiences. These pages contain guides and reference information for developers who want to
@@ -23,15 +27,6 @@ Beyond that, you might find useful entry points in these pages:
 - Choose one of the step-by-step [getting started tutorials][gs-tuts].
 - Learn the scope of things in the [Extension development overview][doc-dev-overview].
 - Pick something from the [samples page][gh-ext-samples], install it, and start hacking on it.
-
-{% Aside 'warning' %}
-
-As Manifest V3 approaches full feature parity with V2, we will be phasing out
-Manifest V2 in 2023. See [Manifest V2 support timeline][doc-mv2-sunset] for details.
-For instructions on migrating your extensions to Manifest V3, see
-[Migrate to Manifest V3][migrate-to-mv3].
-
-{% endAside %}
 
 Additionally, keep up with Chrome extensions news by visiting our [What's new page][doc-whats-new]. If you need assistance with a development problem, visit our [help page][doc-get-help]
 

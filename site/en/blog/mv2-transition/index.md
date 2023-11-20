@@ -15,9 +15,7 @@ tags:
 ---
 
 {% Aside %}
-
-The Manifest V2 support timeline has been updated. See our [September 2022 blog post](/blog/more-mv2-transition/) and the [Manifest V2 support timeline](/docs/extensions/mv3/mv2-sunset/) page for more details.
-
+The Manifest V2 support timeline has been updated. See our [November 2023 blog post](/blog/resuming-the-transition-to-mv3/) and the [Manifest V2 support timeline page](/docs/extensions/mv3/mv2-sunset/) for details.
 {% endAside %}
 
 Earlier this year, for Chrome 88, we announced [the availability of a new manifest
