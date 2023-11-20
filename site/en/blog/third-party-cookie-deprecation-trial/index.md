@@ -82,7 +82,7 @@ Include reproduction steps that our team can use to verify the functional breaka
     * If you are providing the token via HTTP header or meta tag on your own embedded pages, **do not check** "Third-party matching".
     * If you are injecting the token via JavaScript into a different site, you **must check** "Third-party matching".
     * If you need to do both, you will need to make separate registrations.
-4. If you host cross-site content across multiple subdomains, then tick the "match all subdomains" option.
+4. If you host cross-site content across multiple subdomains, then check the "match all subdomains" option.
     * Tokens will match multiple subdomains similarly to wildcard matching, e.g. `*.<domain>`. Request a token for `example.com` and it can be provided on `a.example.com`, `b.example.com`. Third-party cookie access will still only be re-enabled for the specific origins that provide the token, not all the subdomains. See [What cookies are enabled when subdomain matching is enabled?](#what-cookies-are-enabled-when-subdomain-matching-is-enabled).
     * If you host cross-site content across separate origins that are not under the same domain, you will need to make separate registrations for each origin.
 5. Acknowledge all conditions included in ‘Disclosure and Acknowledgement’ by checking all boxes
