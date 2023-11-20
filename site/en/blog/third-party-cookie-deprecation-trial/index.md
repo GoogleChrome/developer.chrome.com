@@ -145,7 +145,7 @@ The meta tag will enable cross-site cookies for subsequent requests or JavaScrip
 
 ### Inject the token via JavaScript
 
-If you need to enable third-party cookies for your origin before or without serving your own page request, e.g. cookies are required on a cross-site image request, or you intend to create an iframe via JavaScript, then you can inject the token into the top-level site using JavaScript:
+If you need to enable third-party cookies for your origin before or without serving your own page request, for example, if cookies are required on a cross-site image request, or you intend to create an iframe via JavaScript, then you can inject the token into the top-level site using JavaScript:
 
 ```javascript
 const otMeta = document.createElement('meta');
