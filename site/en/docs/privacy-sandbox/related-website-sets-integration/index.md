@@ -23,7 +23,7 @@ As Chrome deprecates third-party cookies, its goal is to maintain key use cases 
 
 At a high level, a Related Website Set is a collection of domains, for which there is a single "set primary" and potentially multiple "set members."
 
-In the example below, `primary` lists the primary domain, and `associatedSites` lists domains that meet the requirements of the [associated subset](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements).
+In the example below, `primary` lists the primary domain, and `associatedSites` lists domains that meet the requirements of the [associated subset](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md#set-formation-requirements).
 
 ```js
 {
@@ -32,13 +32,13 @@ In the example below, `primary` lists the primary domain, and `associatedSites` 
 }
 ```
 
-The canonical Related Website Sets list is a publicly viewable list in a JSON file format hosted in the [Related Website Sets GitHub repository](https://github.com/googlechrome/first-party-sets), which serves as the source-of-truth for all sets. Chrome consumes this file to apply to its behavior.
+The canonical Related Website Sets list is a publicly viewable list in a JSON file format hosted in the [Related Website Sets GitHub repository](https://github.com/GoogleChrome/related-website-sets/), which serves as the source-of-truth for all sets. Chrome consumes this file to apply to its behavior.
 
-Only those with administrative control over a domain can create a set with that domain. Submitters are required to declare the relationship between each "set member" to its "set primary." Set members could include a range of different domain types and must be part of a [subset based on a use case](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements).
+Only those with administrative control over a domain can create a set with that domain. Submitters are required to declare the relationship between each "set member" to its "set primary." Set members could include a range of different domain types and must be part of a [subset based on a use case](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md#set-formation-requirements).
 
 If your application depends on access to cross-site cookies (also called third-party cookies) across sites within the same Related Website Set, you can use [Storage Access API (SAA)](https://privacycg.github.io/storage-access/) and the [requestStorageAccessFor API](https://privacycg.github.io/requestStorageAccessFor/) to request access to those cookies. Depending on the subset that each site is part of, the browser may handle the request differently.
 
-To learn more about the process and requirements for submitting sets, check out the [submission guidelines](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md). Submitted sets will go through various technical checks to validate the submissions.
+To learn more about the process and requirements for submitting sets, check out the [submission guidelines](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md). Submitted sets will go through various technical checks to validate the submissions.
 
 ## Related Website Sets use cases
 
@@ -340,21 +340,21 @@ If you want to remove all Related Website Sets-mediated permissions and reset to
 To declare the relationship amongst the domains and specify which subset they are part of, follow the steps below:
 
 1.  Identify the relevant domains, this includes the **set primary** and **set members**, that will be part of the Related Website Set. Also identify which **subset type** each set member belongs to.
-1.  Ensure the [set formation requirements](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-formation-requirements) and [set validation requirements](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-validation-requirements) are in place.
-1.  Declare the Related Website Set in the correct [JSON format](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md#set-submissions).
-1.  Submit the First Party Set by creating a [pull request (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to the [`first_party_sets.JSON`](https://github.com/GoogleChrome/first-party-sets/blob/main/first_party_sets.JSON) where Chrome will host the canonical Related Website Set list. (A GitHub account is required to create PRs, and you will need to sign a [Contributor's License Agreement (CLA)](https://cla.developers.google.com/about) to contribute to the list.)
+1.  Ensure the [set formation requirements](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md#set-formation-requirements) and [set validation requirements](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md#set-validation-requirements) are in place.
+1.  Declare the Related Website Set in the correct [JSON format](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md#set-submissions).
+1.  Submit the First Party Set by creating a [pull request (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to the [`related_website_sets.JSON`](https://github.com/GoogleChrome/related-website-sets/blob/main/related_website_sets.JSON) where Chrome will host the canonical Related Website Set list. (A GitHub account is required to create PRs, and you will need to sign a [Contributor's License Agreement (CLA)](https://cla.developers.google.com/about) to contribute to the list.)
 
 Once the PR is created, a series of checks will happen to validate that the requirements from step 2 are in place.
 
 {% Aside %}
-Before creating a PR, you can [test your submission locally](https://github.com/GoogleChrome/first-party-sets/blob/main/Getting-Started.md#testing-your-submission-locally) to see if it passes the checks.
+Before creating a PR, you can [test your submission locally](https://github.com/GoogleChrome/related-website-sets/blob/main/Getting-Started.md#testing-your-submission-locally) to see if it passes the checks.
 {% endAside %}
 
 If successful, the PR will indicate that checks have been passed. Approved PRs will be manually merged in batches to the canonical Related Website Set list once per week (Tuesdays at 12pm Eastern Time).
 
 If any of the checks fails, the submitter will be notified through a PR failure on GitHub. The submitter can fix the errors and update the PR, and keep in mind that:
 
--   When the PR fails, an error message will provide additional information on why the submission may have failed ([example](https://github.com/GoogleChrome/first-party-sets/pull/26)).
+-   When the PR fails, an error message will provide additional information on why the submission may have failed ([example](https://github.com/GoogleChrome/related-website-sets/pull/26)).
 -   All technical checks governing set submissions are conducted on GitHub, and consequently all submission failures resulting from technical checks will be viewable on GitHub.
 
 ## Enterprise policies
