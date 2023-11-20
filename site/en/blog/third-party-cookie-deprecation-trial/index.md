@@ -85,7 +85,7 @@ Include reproduction steps that our team can use to verify the functional breaka
 4. If you host cross-site content across multiple subdomains, then check the "match all subdomains" option.
     * Tokens will match multiple subdomains similarly to wildcard matching, e.g. `*.<domain>`. Request a token for `example.com` and it can be provided on `a.example.com`, `b.example.com`. Third-party cookie access will still only be re-enabled for the specific origins that provide the token, not all the subdomains. See [What cookies are enabled when subdomain matching is enabled?](#what-cookies-are-enabled-when-subdomain-matching-is-enabled).
     * If you host cross-site content across separate origins that are not under the same domain, you will need to make separate registrations for each origin.
-5. Acknowledge all conditions included in ‘Disclosure and Acknowledgement’ by checking all boxes
+5. Acknowledge all conditions included in ‘Disclosure and Acknowledgement’ by checking all boxes.
 6. Submit request
 7. We require additional information to process your request. You will receive an email notification with an auto-generated ticket asking for the following:
     * The number of subdomains tied to your requested origin
