@@ -209,7 +209,7 @@ Trial deactivation does not take subdomain matching into account. To deactivate 
 3. Will sites be able to see which one of their partners have enrolled in the deprecation trial? Will they be able to limit the registration across their partners?
     * Yes, sites can see which embeds and services are relying on a deprecation trial token via the application panel in Chrome Devtools. See [Troubleshoot Chrome origin trials](/docs/web-platform/origin-trial-troubleshooting/) for more information.
     * Top level sites won’t be able to limit registration across their partners or the embeds and services on their page. Contact the partner if that is desired.
-4. How is this trial different from other trials like the User Agent Reduction origin trial?
+4. How is this trial different from other trials such as the User-Agent reduction origin trial?
     * The main way this deprecation trial is different is the new registration process that involves meeting the participation criteria and the new UI/pages in the OT console.
     * The second way this is different is that it is exclusively for third-party embedded sites to resolve the maximum amount of web compatibility issues across a number of sites/service clients.
 5. Will there be a first-party deprecation trial for third-party cookie deprecation that top level sites can enroll in to enable 3PCs for their entire site?
