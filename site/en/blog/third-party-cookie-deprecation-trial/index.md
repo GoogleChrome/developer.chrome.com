@@ -90,7 +90,7 @@ Include reproduction steps that our team can use to verify the functional breaka
 7. We require additional information to process your request. You will receive an email notification with an auto-generated ticket asking for the following:
     * The number of subdomains tied to your requested origin
     * The bug ID or link for the associated third-party breakage repo bugs that you previously reported to [goo.gle/report-3pc-broken](https://goo.gle/report-3pc-broken).
-    * Any additional information/context about the breakage/use case that you would like us to consider. (In cases of an appeal for a denied trial request, explain why/how your origin meets the outlined criteria for this trial)
+    * Any additional information/context about the breakage/use case that you would like us to consider. (In cases of an appeal for a denied trial request, explain why/how your origin meets the outlined criteria for this trial).
 
 Once submitted, we will review your request and notify you when review is complete or if additional information is needed, and whether your request is either approved or denied. You will also receive the status and rationale for the result. If approved, you can proceed to provide the trial token as needed. If denied, you can follow the guidance in the request ticket. 
 
