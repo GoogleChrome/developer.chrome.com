@@ -41,6 +41,7 @@ const authorValues = yaml.load(
 
 const URLS_PATH = path.join(__dirname, '../../../urls.csv');
 const EXTENSION_URLS_PATH = path.join(__dirname, '../../../extension-urls.csv');
+const WEBSTORE_URLS_PATH = path.join(__dirname, '../../../webstore-urls.csv');
 
 const NESTED_MULTI_LINE_CODE_PATTERN = new RegExp(
   '<div( .*)?>[\\s\\S]*?<\\/div>',
@@ -83,7 +84,7 @@ function mapCsvUrlsToObjects(path) {
 
   // Extension URL CSV has an extra column so the pointer needs to be moved by a column
   let pointer = 0;
-  if (path === EXTENSION_URLS_PATH) {
+  if (path === EXTENSION_URLS_PATH || path === WEBSTORE_URLS_PATH) {
     pointer++;
   }
 
@@ -107,6 +108,7 @@ function getExportDetails(url) {
     urls = {
       ...mapCsvUrlsToObjects(URLS_PATH),
       ...mapCsvUrlsToObjects(EXTENSION_URLS_PATH),
+      ...mapCsvUrlsToObjects(WEBSTORE_URLS_PATH),
     };
   }
 
