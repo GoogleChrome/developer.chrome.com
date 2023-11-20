@@ -53,7 +53,7 @@ Each rule generally has two properties:
    The flexibility of URL Patterns means that the rule can match something as simple as any resource under a path, to very specific and detailed conditions. The patterns should generally be familiar to users of popular routing libraries.
 
 
-- `source`: specifies how the resources matching `condition` will be loaded. Today, only the `'network'` value is supported (bypassing the service worker to load the resource over the network directly), but the plan is to [expand this to other values](https://github.com/WICG/service-worker-static-routing-api/blob/main/final-form.md) in the future.
+- `source`: specifies how the resources matching `condition` will be loaded. Today, only the `'network'` value is supported (bypassing the service worker to load the resource over the network directly), but the plan is to [expand this to other values](https://github.com/WICG/service-worker-static-routing-api/blob/main/final-form.md#:~:text=enum%20RouterSourceEnum%20%7B%20%22network%22%2C%20%22cache%22%2C%20%22fetch%2Devent%22%2C%20%22race%2Dnetwork%2Dand%2Dfetch%2Dhandler%22%20%7D%3B) in the future.
 
 ## Use cases
 
