@@ -207,7 +207,7 @@ Trial deactivation does not take subdomain matching into account. To deactivate 
 2. Can I register for the deprecation trial if my domain is used for both advertising and non-advertising purposes?
     * Third-party embeds and services used for advertising are not eligible for the deprecation trial, for the reasons explained in this blog previously. This includes advertising-related domains that are also used for non-advertising purposes. For more information, see the [Eligibility criteria and review process](#eligibility-criteria-and-review-process) section.
 3. Will sites be able to see which one of their partners have enrolled in the deprecation trial? Will they be able to limit the registration across their partners?
-    * Yes, sites can see which embeds and services are relying on a deprecation trial token via the application panel in Chrome Devtools. See [Troubleshoot Chrome origin trials](/docs/web-platform/origin-trial-troubleshooting/) for more info.
+    * Yes, sites can see which embeds and services are relying on a deprecation trial token via the application panel in Chrome Devtools. See [Troubleshoot Chrome origin trials](/docs/web-platform/origin-trial-troubleshooting/) for more information.
     * Top level sites won’t be able to limit registration across their partners or the embeds and services on their page. Contact the partner if that is desired.
 4. How is this trial different from other trials like the User Agent Reduction origin trial?
     * The main way this deprecation trial is different is the new registration process that involves meeting the participation criteria and the new UI/pages in the OT console.
