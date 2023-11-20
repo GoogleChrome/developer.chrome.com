@@ -278,9 +278,10 @@ Protected Audience API の広告オークションは、広告を選択するた
 
 5. オークションの構成で `resolveToConfig` フラグが設定されている場合、落札した広告は Fenced Frame 構成オブジェクトとして返されます。この構成は、Fenced Frame が広告クリエイティブにアクセスするために使用されるため、売り手とサイト運営者のいずれもクリエイティブの URL を確認することはできません。`resolveToConfig` フラグが `false` に設定されている場合、または渡されていない場合、落札した広告は、iframe で広告をレンダリングするために使用できる不透明な [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) として返されます。Fenced Frame 構成オブジェクトは、M114 以降で利用可能です。
 
-6. オークションは、売り手と落札した買い手に報告されます。 {% Aside %} 売り手の `reportResult()` と買い手の `reportWin()` には、`sendReportTo()` の呼び出しを含めることができます。これは、[非公開集計](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now)で集計レポートが利用可能になるまで、[一時的](/docs/privacy-sandbox/private-aggregation)に利用できます。
-
-    落札できなかった買い手のレポート メカニズムは[ディスカッション中](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#53-losing-bidder-reporting)です {% endAside %}
+6. オークションは、売り手と落札した買い手に報告されます。
+{% Aside %} 売り手の `reportResult()` と買い手の `reportWin()` には、`sendReportTo()` の呼び出しを含めることができます。これは、[非公開集計](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now)で集計レポートが利用可能になるまで、[一時的](/docs/privacy-sandbox/private-aggregation)に利用できます。
+落札できなかった買い手のレポート メカニズムは[ディスカッション中](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#53-losing-bidder-reporting)です
+{% endAside %}
 
 {% endDetails %}
 

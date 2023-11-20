@@ -24,14 +24,28 @@ Protected Audience API 広告オークションは、広告を選択するため
 
 {: #auction-diagram}
 
-<figure class="w-figure">   {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png", alt="Protected Audience API 広告オークションの 6 つのステージ", width="800", height="481" %}<figcaption>この図は、Protected Audience API 広告オークションの各段階の概要を示しています。 <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&amp;w=1600" title="画像の拡大版を表示します。" target="_blank">拡大版を表示</a>。</figcaption></figure>
+<figure class="w-figure">
+  {% Img
+    src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png",
+    alt="Protected Audience API 広告オークションの 6 つのステージ",
+    width="800", height="481"
+    %}
+    <figcaption>この図は、Protected Audience API 広告オークションの各段階の概要を示しています。 <a href="https://wd.imgix.net/image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/M8lyXt6JbwFncB16mTb0.png?auto=format&w=1600"
+title="View a larger version of image." target="_blank">拡大版を表示</a>.</figcaption>
+</figure>
 
 1. ユーザーが広告を表示するサイトにアクセスします。
-2. 売り手のコードは `navigator.runAdAuction()` を実行します。これにより、どの広告スペースが販売され、誰が入札できるかが指定されます。売り手は、 `scoreAd()` という各入札をスコアリングするスクリプトも含める必要があります。{% Aside %} オークションが開始される前に、売り手は利用可能な広告スロットに最適なコンテキスト広告を見つけます。{% endAside %}
-3. 招待された買い手のコードが実行され、入札、関連する広告クリエイティブの URL、およびその他のデータが生成されます。入札スクリプトは、買い手の [Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail)から、残りの広告キャンペーン予算などのリアルタイム データをクエリできます。
-4. 売り手のコードが各入札をスコアリングし、落札者を選択します。このロジックでは、入札値と入札の望ましさを返す他のデータを使用します。コンテキストの落札者に勝てない広告は拒否されます。売り手は、リアルタイム データに独自の[Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail)を使用できます。
+2. 売り手のコードは `navigator.runAdAuction()` を実行します。これにより、どの広告スペースが販売され、誰が入札できるかが指定されます。売り手は、 `scoreAd()` という各入札をスコアリングするスクリプトも含める必要があります。
+{% Aside %}
+オークションが開始される前に、売り手は利用可能な広告スロットに最適なコンテキスト広告を見つけます。
+{% endAside %}
+3. 招待された買い手のコードが実行され、入札、関連する広告クリエイティブの URL、およびその他のデータが生成されます。入札スクリプトは、買い手の [Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail) から、残りの広告キャンペーン予算などのリアルタイム データをクエリできます。
+4. 売り手のコードが各入札をスコアリングし、落札者を選択します。このロジックでは、入札値と入札の望ましさを返す他のデータを使用します。コンテキストの落札者に勝てない広告は拒否されます。売り手は、リアルタイム データに独自の[Key/Value サービス](/docs/privacy-sandbox/protected-audience#key-value-service-detail) を使用できます。
 5. 落札した広告は opaque 値として返され、Fenced Frame<br> に表示されます。売り手とサイト運営者のいずれもこの値を閲覧できなくなります。
-6. オークションは、売り手と落札した買い手に報告されます。 {% Aside %} 売り手 `reportResult()` と買い手の `reportWin()` には、`sendReportTo()` の呼び出しを含めることができます。これは、[プライベート集計](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now)で集計レポートが利用可能になるまで、[一時的](/docs/privacy-sandbox/private-aggregation)に利用できます。{% endAside %}
+6. オークションは、売り手と落札した買い手に報告されます。
+{% Aside %}
+売り手 `reportResult()` と買い手の `reportWin()` には、`sendReportTo()` の呼び出しを含めることができます。これは、[プライベート集計](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#5-event-level-reporting-for-now) で集計レポートが利用可能になるまで、[一時的](/docs/privacy-sandbox/private-aggregation) に利用できます。
+{% endAside %}
 
 ### オークションが行われるタイミング
 
@@ -117,62 +131,55 @@ try {
 
 #### `auctionConfig` のプロパティ
 
-{% Aside %} `additionalBids` は、Protected Audience API の現在の実装ではサポートされていません。詳細については、Protected Audience API の Explainer の[オークション参加者](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants)セクションをご覧ください。{% endAside %}
+{% Aside %} `additionalBids` は、Protected Audience API の現在の実装ではサポートされていません。詳細については、Protected Audience API の Explainer の[オークション参加者](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#22-auction-participants)セクションをご覧ください。
+{% endAside %}
 
 <dl>
     <dt><code>seller</code></dt>
         <dd>必須</dd>
-        <dd>例: <code>'https://ssp.example'</code>
-</dd>
+        <dd>例: <code>'https://ssp.example'</code></dd>
         <dd>役割: 売り手のオリジン</dd>
     <dt><code>decisionLogicUrl</code></dt>
         <dd>必須</dd>
-        <dd>例: <code>'https://ssp.example/auction-decision-logic.js'</code>
-</dd>
+        <dd>例: <code>'https://ssp.example/auction-decision-logic.js'</code></dd>
         <dd>役割: オークション ワークレット JavaScript の URL。</dd>
     <dt><code>trustedScoringSignalsUrl</code></dt>
         <dd>オプション</dd>
-        <dd>例: <code>'https://ssp.example/scoring-signals'</code>
-</dd>
+        <dd>例: <code>'https://ssp.example/scoring-signals'</code></dd>
         <dd>役割: 売り手の信頼できるサーバーの URL。</dd>
     <dt><code>interestGroupBuyers</code></dt>
         <dd>必須</dd>
-        <dd>例: <code>['https://dsp.example', 'https://buyer2.example', ...]</code>
-</dd>
+        <dd>例: <code>['https://dsp.example', 'https://buyer2.example', ...]</code></dd>
         <dd>役割: オークションへの入札を依頼されたすべてのインタレスト グループのオーナーのオリジン。</dd>
         <dd>注意: 売り手は、<code>interestGroupBuyers:</code> を指定することで、すべてのインタレスト グループが入札できるようにすることができます。すると、インタレスト グループのオーナーが含まれていること以外の基準に基づいて、広告が承認または拒否されます。たとえば、売り手は広告クリエイティブをレビューして、ポリシーへの準拠を確認することができます。</dd>
     <dt><code>auctionSignals</code></dt>
         <dd>オプション</dd>
-        <dd>例: <code>{...}</code>
-</dd>
+        <dd>例: <code>{...}</code></dd>
         <dd>役割: ページのコンテキスト、オークションの種類などに関する売り手情報。</dd>
     <dt><code>sellerSignals</code></dt>
         <dd>オプション</dd>
-        <dd>例: <code>{...}</code>
-</dd>
+        <dd>例: <code>{...}</code></dd>
         <dd>役割: サイト運営者の設定に基づく情報、コンテキスト広告リクエストの発行など。</dd>
      <dt><code>sellerTimeout</code></dt>
         <dd>オプション</dd>
-        <dd>例: <code>100</code>
-</dd>
+        <dd>例: <code>100</code></dd>
         <dd>役割: 売り手の <code>scoreAd()</code> スクリプトの最大実行時間（ミリ秒）。</dd>
     <dt><code>perBuyerSignals</code></dt>
         <dd>オプション</dd>
-        <dd>例：<pre> {'https://dsp.example': {...}, 'https://another-buyer.example': {...}, ... }</pre>
-</dd>
+        <dd>例：
+        <pre> {'https://dsp.example': {...}, 'https://another-buyer.example': {...}, ... }</pre></dd>
         <dd>役割: 特定の買い手ごとのページに関する、それぞれのサーバーから得るコンテキスト シグナル。</dd>
     <dt><code>perBuyerTimeouts</code></dt>
         <dd>オプション</dd>
-        <dd>例: <code>50</code>
-</dd>
+        <dd>例: <code>50</code></dd>
         <dd>役割: 特定の買い手の <code>generateBid()</code> スクリプトの最大実行時間（ミリ秒）。</dd>
     <dt><code>componentAuctions</code></dt>
         <dd>オプション</dd>
-        <dd>例: <pre>[{'seller': 'https://www.some-other-ssp.com', 'decisionLogicUrl': ..., ...}, ...]</pre>
-</dd>
+        <dd>例:
+        <pre>[{'seller': 'https://www.some-other-ssp.com', 'decisionLogicUrl': ..., ...}, ...]</pre></dd>
         <dd>役割: <a href="/blog/fledge-api/#:~:text=componentauctions">コンポーネント オークション</a>の追加構成。</dd>
-    </dl>
-<br><p></p>
+    </dl><br>
+<p>
 
 ### `decisionLogicUrl`
 
