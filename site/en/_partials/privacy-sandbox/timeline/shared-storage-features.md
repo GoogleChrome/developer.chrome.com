@@ -12,16 +12,11 @@
   <tr>
       <td>Per-site budgeting<br>
 <a href="https://github.com/WICG/shared-storage#outside-the-worklet">Explainer</a></td>
-      <td>Available in M119</td>
+      <td>Expected in Chrome Q4 2023</td>
     </tr>
     <tr>
       <td>Allow writing from response headers<br>
 <a href="https://github.com/WICG/shared-storage/blob/main/README.md#from-response-headers">Explainer</a></td>
-      <td>Available in M119</td>
-    </tr>
-    <tr>
-      <td>Private Aggregation contribution timeout<br>
-<a href="https://github.com/WICG/shared-storage/blob/main/README.md">Explainer</a></td>
-      <td>Available in M119</td>
+      <td>Expected in Chrome Q4 2023</td>
     </tr>
 </table>
