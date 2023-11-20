@@ -53,11 +53,11 @@ The principles guiding this deprecation trial are:
 
 The ineligibility of advertising use cases will also help to ensure the deprecation trial does not interfere with the [industry testing planned for the start of 2024 as described by the Competition and Markets Authority](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes#industry-testing). This includes advertising-related domains that are also used for non-advertising purposes.
 
-Chrome will initially work with Disconnect.me, an industry leader in internet privacy, and implement Disconnect.me's tracker protection lists to identify the scripts and domains categorized as advertising. Disconnect is already used by other browsers for similar purposes on the web.
+Chrome will initially work with [Disconnect.me](https://disconnect.me/), an industry leader in internet privacy, and implement Disconnect's tracker protection lists to identify the scripts and domains categorized as advertising. Disconnect is already used by other browsers for similar purposes on the web.
 
 We will apply the following process for registration requests:
 
-1. If the third-party origin matches a known advertising domain, including if the origin matches an entry on the disconnect.me [advertising list](https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json#L1535C11-L1535C11), then the registration request will be rejected. In general, if a domain is considered an advertising domain, subdomains of that domain will also be considered advertising list entries scoped to a particular pathname, however, they will have the pathname removed and matched to the exact origin in the entry.
+1. If the third-party origin matches a known advertising domain, including if the origin matches an entry on the Disconnect [advertising list](https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json#L1535C11-L1535C11), then the registration request will be rejected. In general, if a domain is considered an advertising domain, subdomains of that domain will also be considered advertising list entries scoped to a particular pathname, however, they will have the pathname removed and matched to the exact origin in the entry.
 2. Steps to reproduce a broken user-facing experience must be provided. In particular, this should be an experience for the user operating the device where the cookie is stored, and not a user performing later analysis of data. If we cannot validate a broken user experience then the registration request will be rejected.
 3. Otherwise the registration request will be approved.
 
@@ -202,8 +202,8 @@ Trial deactivation does not take subdomain matching into account. To deactivate 
 
 ## Frequently Asked Questions
 
-1. What if I have questions about the [disconnect.me](http://disconnect.me) list?
-    * Contact Disconnect at [support@disconnect.me](mailto:support@disconnect.me) as we do not manage the [disconnect.me](http://disconnect.me) list. For more information, see their [tracker protection page](https://disconnect.me/trackerprotection). 
+1. What if I have questions about the [Disconnect.me](http://disconnect.me) list?
+    * Contact Disconnect at [support@disconnect.me](mailto:support@disconnect.me) as we do not manage the Disconnect list. For more information, see their [tracker protection page](https://disconnect.me/trackerprotection). 
 2. Can I register for the deprecation trial if my domain is used for both advertising and non-advertising purposes?
     * Third-party embeds and services used for advertising are not eligible for the deprecation trial, for the reasons explained in this blog above. This includes advertising-related domains that are also used for non-advertising purposes. For more information please see the [Eligibility criteria and review process](#eligibility-criteria-and-review-process) section above.
 3. Will sites be able to see which one of their partners have enrolled in the deprecation trial? Will they be able to limit the registration across their partners?
