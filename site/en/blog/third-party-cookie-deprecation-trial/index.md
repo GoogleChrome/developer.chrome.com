@@ -57,9 +57,9 @@ Chrome will initially work with [Disconnect.me](https://disconnect.me/), an indu
 
 We will apply the following process for registration requests:
 
-1. If the third-party origin matches a known advertising domain, including if the origin matches an entry on the Disconnect [advertising list](https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json#L1535C11-L1535C11), then the registration request will be rejected. In general, if a domain is considered an advertising domain, subdomains of that domain will also be considered advertising list entries scoped to a particular pathname, however, they will have the pathname removed and matched to the exact origin in the entry.
-2. Steps to reproduce a broken user-facing experience must be provided. In particular, this should be an experience for the user operating the device where the cookie is stored, and not a user performing later analysis of data. If we cannot validate a broken user experience then the registration request will be rejected.
-3. Otherwise the registration request will be approved.
+* If the third-party origin matches a known advertising domain, including if the origin matches an entry on the Disconnect [advertising list](https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json#L1535C11-L1535C11), then the **registration request will be rejected**. In general, if a domain is considered an advertising domain, subdomains of that domain will also be considered advertising list entries scoped to a particular pathname, however, they will have the pathname removed and matched to the exact origin in the entry.
+* Steps to reproduce a broken user-facing experience must be provided. In particular, this should be an experience for the user operating the device where the cookie is stored, and not a user performing later analysis of data. If we cannot validate a broken user experience then the **registration request will be rejected**.
+* Otherwise the **registration request will be approved**.
 
 We plan to offer an appeals process if the registering origin believes more information could clarify a review decision. The registrant can request an appeal by reapplying on the OT console. The intent of appeals is for requests that were rejected due to missing the requested information (known breakage bug and/or breakage repro steps) and/or if the registering origin believes more information could satisfy these requirements to clarify a review decision. 
 
