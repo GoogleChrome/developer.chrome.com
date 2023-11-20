@@ -53,7 +53,7 @@ The principles guiding this deprecation trial are:
 
 The ineligibility of advertising use cases will also help to ensure the deprecation trial does not interfere with the [industry testing planned for the start of 2024 as described by the Competition and Markets Authority](https://www.gov.uk/cma-cases/investigation-into-googles-privacy-sandbox-browser-changes#industry-testing). This includes advertising-related domains that are also used for non-advertising purposes.
 
-Chromewill initially work with Disconnect.me, an industry leader in internet privacy, and implement Disconnect.me's tracker protection lists to identify the scripts and domains categorized as advertising. Disconnect is already used by other browsers for similar purposes on the web.
+Chrome will initially work with Disconnect.me, an industry leader in internet privacy, and implement Disconnect.me's tracker protection lists to identify the scripts and domains categorized as advertising. Disconnect is already used by other browsers for similar purposes on the web.
 
 We will apply the following process for registration requests:
 
