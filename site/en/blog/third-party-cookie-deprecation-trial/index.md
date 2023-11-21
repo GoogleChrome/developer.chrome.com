@@ -57,7 +57,7 @@ Chrome will initially work with [Disconnect.me](https://disconnect.me/), an indu
 
 We will apply the following process for registration requests:
 
-* If the third-party origin matches a known advertising domain, including if the origin matches an entry on the Disconnect [advertising list](https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json#L1535C11-L1535C11), then the **registration request will be rejected**. In general, if a domain is considered an advertising domain, subdomains of that domain will also be considered advertising list entries scoped to a particular pathname, however, they will have the pathname removed and matched to the exact origin in the entry.
+* If the third-party origin matches a known advertising domain, including if the origin matches an entry on the Disconnect [advertising list](https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json#L1535C11-L1535C11), then the **registration request will be rejected**. In general, entries on the list will match all subdomains below the specified origin.  Some entries, however, include a path element.  These more specific entries will match the given origin, but not subdomains.
 * Steps to reproduce a broken user-facing experience must be provided. In particular, this should be an experience for the user operating the device where the cookie is stored, and not a user performing later analysis of data. If we cannot validate a broken user experience then the **registration request will be rejected**.
 * Otherwise the **registration request will be approved**.
 
