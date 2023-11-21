@@ -19,21 +19,21 @@
   </tr>
   <tr>
     <td>Private Aggregation debug mode availability dependent on 3PC eligibility<br><a href="https://github.com/patcg-individual-drafts/private-aggregation-api/issues/57">GitHub issue</a></td>
-    <td>Expected in Chrome in Q4 2023</td>
+    <td>Available in Chrome M119</td>
   </tr>
     <tr>
       <td>Reducing report delay<br>
 <a href="https://github.com/patcg-individual-drafts/private-aggregation-api/blob/main/report_verification.md#reduced-delay">Explainer</a></td>
-      <td>Expected in Chrome Q4 2023</td>
+      <td>Available in Chrome M119</td>
     </tr>
     <tr>
       <td>Support for Private Aggregation API and Aggregation Service for Google Cloud<br>
 <a href="https://github.com/patcg-individual-drafts/private-aggregation-api#aggregation-coordinator-choice">Explainer</a></td>
-      <td>Expected in Chrome Q4 2023</td>
+      <td>Expected in Chrome M121</td>
     </tr>
     <tr>
       <td>Padding for aggregatable report payloads<br>
 <a href="https://github.com/patcg-individual-drafts/private-aggregation-api#padding">Explainer</a></td>
-      <td>Expected in Chrome Q4 2023</td>
+      <td>Available in Chrome M119</td>
     </tr>
 </table>
