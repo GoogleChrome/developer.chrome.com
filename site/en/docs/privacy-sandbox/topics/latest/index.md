@@ -31,7 +31,7 @@ For a non-technical introduction, see the [Topics overview on privacysandbox.com
 **November 21, 2023**  
 
 ### Taxonomy
-The [updated taxonomy](/blog/topics-enhancements/#taxonomy) is [ramping up](https://groups.google.com/a/chromium.org/g/topics-api-announce/c/iNYk69wKnJs/m/sSWAr6NPAgAJ) to general availability. Testers should begin seeing topics from the new taxonomy on the vast majority of traffic by mid-November 2023. 
+The [updated taxonomy](/blog/topics-enhancements/#taxonomy) is [ramping up](https://groups.google.com/a/chromium.org/g/topics-api-announce/c/iNYk69wKnJs/m/sSWAr6NPAgAJ) to general availability. Testers should have begun to see topics from the new taxonomy on the vast majority of traffic by mid-November 2023. 
 
 ### Classifier
 Along with the updated taxonomy, an updated hostname classifier is ramping up to general availability. This includes a larger override list—50k rather than 10k websites—and an enhanced classifier. Together, these two changes improve the performance of Topics API classification. 
