@@ -7,7 +7,7 @@ description: >
   Easily use common workbox patterns without needing to set them up yourself from individual packages.
 ---
 
-A number of common patters, especially around [routing](/docs/workbox/modules/workbox-routing) and [caching](/docs/workbox/modules/workbox-strategies), are common enough that they can be standardized into reusable recipes. `workbox-recipes` makes these available in an easy-to-consume package, allowing you to get up-and-running with a highly functional service worker quickly.
+A number of common patterns, especially around [routing](/docs/workbox/modules/workbox-routing) and [caching](/docs/workbox/modules/workbox-strategies), are common enough that they can be standardized into reusable recipes. `workbox-recipes` makes these available in an easy-to-consume package, allowing you to get up-and-running with a highly functional service worker quickly.
 
 ## Recipes
 
