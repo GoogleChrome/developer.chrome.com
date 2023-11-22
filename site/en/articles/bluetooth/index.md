@@ -435,7 +435,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['health_thermometer']
   console.log(`User Description: ${decoder.decode(value)}`);
 })
 .catch(error => { console.error(error); });
-````
+```
 
 Now that we've read the user description of the measurement interval of the
 device's health thermometer, let's see how to update it and write a custom
