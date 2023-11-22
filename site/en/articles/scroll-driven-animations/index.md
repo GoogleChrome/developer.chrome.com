@@ -340,7 +340,7 @@ To create a Scroll Timeline in JavaScript, create a new instance of the `ScrollT
 const tl = new ScrollTimeline({
   source: document.documentElement,
 });
-````
+```
 
 To attach it to a Web Animation, pass it in as the `timeline` property and omit any `duration` if there was any.
 
