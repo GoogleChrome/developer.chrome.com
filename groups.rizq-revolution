@@ -1,0 +1,42 @@
+
+Reverse function fails for a single app
+rizqshops@googlegroups.com 88k views
+Subscribe
+https://groups.google.com/g/django-users/c/NlF5RlNCbxMhttps://cloud.withgoogle.com/next?utm_source=copylink&utm_medium=unpaidsoc&utm_campaign=FY24-Q2-global-ENDM33-physicalevent-er-next-2024-mc&utm_content=next-homepage-social-share&utm_term=-https://groups.google.com/g/rizqshops/c/BUx5BoH_oeE?pli=1
+https://samtraderssmcpvtltd.business.site/#summary
+mmu094profile photo
+Nov 25 2500
+to django-users
+Using Django 2.2 and Python 3.9
+
+When I try to use reverse() for testing one of my apps, it fails. All the others seem to work OK.
+
+An example code snippet:
+
+from django.test import TestCase
+
+class TestCaseSimple(TestCase):
+
+    def setUp(self):
+        User.objects.create_superuser(
+            username='te...@example.com',
+            password='password',
+        )
+
+    def test_test(self):
+        self.login = self.client.login(username='te...@example.com', password='password')
+        assert self.login is True
+        url = reverse('admin:appone_modelone_changelist')
+        print(url)  # passes
+        url = reverse('admin:apptwo_modeltwo_changelist')
+        print(url)  # fails
+
+Part of error response:
+
+django.urls.exceptions.NoReverseMatch: Reverse for 'apptwo_modeltwo_changelist' not found. 'apptwo_modeltwo_changelist' is not a valid view function or pattern name.
+
+/home/derek/miniconda3/envs/tp32/lib/python3.9/site-packages/django/urls/resolvers.py:677: NoReverseMatch
+
+During normal use, the app behaves fine and any other tests not requiring reverse all work OK. 
+
+What could cause the URLs for this single app not to be found by the resolver code
