@@ -40,7 +40,7 @@ For user-impacting experiences that are not supported by this limit, Chrome is [
 
 ## Next steps
 
-We're grateful for the ecosystem feedback that has helped shape the API so far. We have invested in RWS as a method of providing developers predictability, control, and agency in preserving the end user experience of the websites they build. We are excited to see how developers adopt and use RWS as we ramp up. The [submission process](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md) is currently live, and the [RWS JSON generator tool](https://goo.gle/rws-json-generator) is a great starting point to help with submissions.
+We're grateful for the ecosystem feedback that has helped shape the API so far. We have invested in RWS as a method of providing developers predictability, control, and agency in preserving the end user experience of the websites they build. We are excited to see how developers adopt and use RWS as we ramp up. The [submission process](https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md) is currently live, and the [RWS JSON generator tool](https://goo.gle/rws-json-generator) is a great starting point to help with submissions.
 
 Follow the [Intent to Ship thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/7_6JDIfE1as/m/wModmpcaAgAJ) to track progress, and check out [these materials](/docs/privacy-sandbox/first-party-sets-integration/) for implementation guidance. 
 
