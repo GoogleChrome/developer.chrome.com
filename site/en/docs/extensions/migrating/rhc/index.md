@@ -143,7 +143,7 @@ User Scripts are small code snippets that are usually supplied by the end user, 
 
 The chrome.debugger API gives extensions the ability to interact with the [Chrome Devtools Protocol](https://chromedevtools.github.io/devtools-protocol/). This is the same protocol that is used for Chrome's Devtools, and an [amazing number of other tools](https://github.com/ChromeDevTools/awesome-chrome-devtools). With it, an extension can request and execute remote code. Just like User Scripts, it is not a substitute for chrome.scripting, and has a much more notable end user experience. While it is being used, the user will see a warning bar at the top of the window. If the banner is closed or dismissed, the debugging session will be terminated.
 
-{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/SyeEuVZINxlaVnCHqqo2.jpg", alt="screenshot of the URL bar in Chrome that has the message 'Debugger Extension started debugging this browser'", width="800", height="18### %}
+{% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/SyeEuVZINxlaVnCHqqo2.jpg", alt="screenshot of the URL bar in Chrome that has the message 'Debugger Extension started debugging this browser'", width="800", height="18" %}
 
 
 ### [Sandboxed iframes][sandboxed_iframes]
