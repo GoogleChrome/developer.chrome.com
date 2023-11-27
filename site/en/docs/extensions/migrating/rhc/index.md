@@ -39,30 +39,30 @@ Some libraries will ship an update almost immediately after being notified, but 
 
 ### Audit the code
 
-        Are you _certain_ that the code that is causing the request is needed? If it can just be deleted, or a library that is causing it can be removed - then we have an easy fix -  delete the code, and the job is done.
+Are you _certain_ that the code that is causing the request is needed? If it can just be deleted, or a library that is causing it can be removed - then we have an easy fix -  delete the code, and the job is done.
 
-        Alternatively, is there another library that offers the same functionality? Try checking [npmjs.org](npmjs.org), github, or other sites for other options that fufill the same usecases.
+Alternatively, is there another library that offers the same functionality? Try checking [npmjs.org](npmjs.org), github, or other sites for other options that fufill the same usecases.
 
 ### [Tree Shaking][tree-shaking]
 
-     If the code causing the RHC violation isn't actually being used, then it may be able to be automatically deleted by tooling. Modern build tools like [webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/), and [Vite](https://vitejs.dev/) (just to name a few) have a feature called tree-shaking. Once enabled on your build system, tree shaking should remove any and all unused code paths. This can mean that you not only have a more compliant version of your code, but a leaner and faster one too! It is important to note that not all libraries are able to be tree shaken, but many are. Some tools, like Rollup and Vite, have tree-shaking enabled by default. webpack [needs to be configured](https://webpack.js.org/guides/tree-shaking/) for it to be enabled. If you aren't using a build system as a part of your extension, but _are_ using code libraries, then we really encourage you to investigate adding a build tool to your workflow. They can help you write safer, more reliable and more maintainable projects.
+If the code causing the RHC violation isn't actually being used, then it may be able to be automatically deleted by tooling. Modern build tools like [webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/), and [Vite](https://vitejs.dev/) (just to name a few) have a feature called tree-shaking. Once enabled on your build system, tree shaking should remove any and all unused code paths. This can mean that you not only have a more compliant version of your code, but a leaner and faster one too! It is important to note that not all libraries are able to be tree shaken, but many are. Some tools, like Rollup and Vite, have tree-shaking enabled by default. webpack [needs to be configured](https://webpack.js.org/guides/tree-shaking/) for it to be enabled. If you aren't using a build system as a part of your extension, but _are_ using code libraries, then we really encourage you to investigate adding a build tool to your workflow. They can help you write safer, more reliable and more maintainable projects.
 
 
-    The specifics of how to implement treeshaking depends on your specific project. But to take a simple example with Rollup, you can add treeshaking just by compiling your project code. In practice, if we had a simple file that justs logs into Firebase Auth, called main.js
+The specifics of how to implement treeshaking depends on your specific project. But to take a simple example with Rollup, you can add treeshaking just by compiling your project code. In practice, if we had a simple file that justs logs into Firebase Auth, called main.js
 
 ```js
 import { GoogleAuthProvider, initializeAuth } from "firebase/auth";
 
 chrome.identity.getAuthToken({ 'interactive': true }, async (token) => {
-    const credential = GoogleAuthProvider.credential(null, token);
-      try {
-        const app = initializeApp({...});
-        const auth = initializeAuth(app, {popupRedirectResolver: undefined, persistence: indexDBLocalPersistence});
-        const {user} = await auth.signInWithCredential(credential)
-        console.log(user)
-      } catch (e) {
-        console.error(error);
-      }
+const credential = GoogleAuthProvider.credential(null, token);
+try {
+const app = initializeApp({...});
+const auth = initializeAuth(app, {popupRedirectResolver: undefined, persistence: indexDBLocalPersistence});
+const {user} = await auth.signInWithCredential(credential)
+console.log(user)
+} catch (e) {
+console.error(error);
+}
 });
 ```
 
@@ -70,7 +70,7 @@ chrome.identity.getAuthToken({ 'interactive': true }, async (token) => {
 Then all we would need to do is tell Rollup the input file, a plugin needed to load node files ([@rollup/plugin-node-resolve][rollup_plugin-node-resolve], and the name of the output file it is generating.
 
 ```sh
- npx rollup --input main.js --plugin '@rollup/plugin-node-resolve' --file compiled.js
+npx rollup --input main.js --plugin '@rollup/plugin-node-resolve' --file compiled.js
 ```
 
 Running that command in a terminal window, you will receive a generated version of our `main.js` file, all compiled into a single file named `compiled.js`.
@@ -79,7 +79,7 @@ Rollup can be simple, but it is also _very_ configurable. You can add all kinds 
 
 ### Automatically editing files
 
-    An increasingly common way that remotely hosted code can enter your codebase is as a subdepenency of a library you are including. If library `X` wants to `import` library `Y` from a CDN, then you will still need to update it to make it load from a local source. With modern build systems, you can trivially create plugins to extract a remote reference, and either inline it directly into your code.
+An increasingly common way that remotely hosted code can enter your codebase is as a subdepenency of a library you are including. If library `X` wants to `import` library `Y` from a CDN, then you will still need to update it to make it load from a local source. With modern build systems, you can trivially create plugins to extract a remote reference, and either inline it directly into your code.
 
 That would mean that given code that looks like this
 
@@ -96,34 +96,34 @@ import { existsSync } from 'fs';
 import fetch from 'node-fetch';
 
 export default {
-  plugins: [{
-      load: async function transform(id, options, outputOptions) {
-        // this code runs over all of out javascript, so we check every import
-        // to see if it resolves as a local file, if that fails, we grab it from
-        // the network via fetch, and return the contents of that file directly inline
-        if (!existsSync(id)) {
-          const response = await fetch(id);
-          const code = await response.text();
+plugins: [{
+load: async function transform(id, options, outputOptions) {
+// this code runs over all of out javascript, so we check every import
+// to see if it resolves as a local file, if that fails, we grab it from
+// the network via fetch, and return the contents of that file directly inline
+if (!existsSync(id)) {
+const response = await fetch(id);
+const code = await response.text();
 
-          return code
-        }
-        return null
-      }
-    }
-  ]
+return code
+}
+return null
+}
+}
+]
 };
 ```
 
 Once we run the build with our new plugin, every remote `import` URL is discovered regardless of whether or not it was our code, a subdependency, subsubdependecy, or anywhere else.
 
 ```sh
- npx rollup --input main.js --config ./rollup.config.mjs --file compiled.js
+npx rollup --input main.js --config ./rollup.config.mjs --file compiled.js
 ```
 
 ### Manually editing files
 
 
-    The simplest option is just to delete the code that is causing the RHC. Open it up in your text editor of choice, and delete the violating lines. This generally **is not** that advisable, because it is brittle and easy to forget about. It makes maintaining your project harder when a file called "library.min.js" isn't _actually_ [library.min.js](library.min.js). Instead of editing the raw files, a slightly more maintainable option is to use a tool like [patch-package](https://www.npmjs.com/package/patch-package). This is a super powerful option that lets you save _modifications_ to a file, rather than the file itself. It is built on [patch files](https://en.wikipedia.org/wiki/Patch_(Unix)), the same sort of thing that powers VCS systems like [Git](https://git-scm.com/) or [Subversion](https://subversion.apache.org/). You just need to manually modify the violating code, and save the diff file, and configure patch-package with the changes you want to apply. You can read a full tutorial on the [project's readme](https://www.npmjs.com/package/patch-package#making-patches). As mentioned above, if you are patching a project, we _really_ encourage you to reach out to the project to request the changes being made upstream. While patch-package makes managing patches a lot easier, nothing is as easy as no patches at all.
+The simplest option is just to delete the code that is causing the RHC. Open it up in your text editor of choice, and delete the violating lines. This generally **is not** that advisable, because it is brittle and easy to forget about. It makes maintaining your project harder when a file called "library.min.js" isn't _actually_ [library.min.js](library.min.js). Instead of editing the raw files, a slightly more maintainable option is to use a tool like [patch-package](https://www.npmjs.com/package/patch-package). This is a super powerful option that lets you save _modifications_ to a file, rather than the file itself. It is built on [patch files](https://en.wikipedia.org/wiki/Patch_(Unix)), the same sort of thing that powers VCS systems like [Git](https://git-scm.com/) or [Subversion](https://subversion.apache.org/). You just need to manually modify the violating code, and save the diff file, and configure patch-package with the changes you want to apply. You can read a full tutorial on the [project's readme](https://www.npmjs.com/package/patch-package#making-patches). As mentioned above, if you are patching a project, we _really_ encourage you to reach out to the project to request the changes being made upstream. While patch-package makes managing patches a lot easier, nothing is as easy as no patches at all.
 
 
 ## What to do if the code isn't being used?
@@ -137,18 +137,18 @@ Generally speaking, no. RHC is simply not allowed. There is, however, a small nu
 
 ### [User Scripts API][user-scripts-api]
 
-        User Scripts are small code snippets that are usually supplied by the end user, intended for User Script managers like [TamperMonkey][tampermonkey] and [Violentmonkey][violentmonkey]. It is not possible to these managers to bundle code that is written by end users, so the User Script API exposes a way to execute code provided by the end user. This _is not_ a substitute for [chrome.scripting.executeScript][executescript], or other code execution environments - end users must enable [developer mode][dev_mode] to execute anything. If the Chrome Web Store review team thinks that this is being used in a manner other than it is intended for (i.e. code provided by the end user), it may be rejected or it's listing taken down from the store.
+User Scripts are small code snippets that are usually supplied by the end user, intended for User Script managers like [TamperMonkey][tampermonkey] and [Violentmonkey][violentmonkey]. It is not possible to these managers to bundle code that is written by end users, so the User Script API exposes a way to execute code provided by the end user. This _is not_ a substitute for [chrome.scripting.executeScript][executescript], or other code execution environments - end users must enable [developer mode][dev_mode] to execute anything. If the Chrome Web Store review team thinks that this is being used in a manner other than it is intended for (i.e. code provided by the end user), it may be rejected or it's listing taken down from the store.
 
 ### [chrome.debugger][chrome.debugger]
 
-        The chrome.debugger API gives extensions the ability to interact with the [Chrome Devtools Protocol](https://chromedevtools.github.io/devtools-protocol/). This is the same protocol that is used for Chrome's Devtools, and an [amazing number of other tools](https://github.com/ChromeDevTools/awesome-chrome-devtools). With it, an extension can request and execute remote code. Just like User Scripts, it is not a substitute for chrome.scripting, and has a much more notable end user experience. While it is being used, the user will see a warning bar at the top of the window. If the banner is closed or dismissed, the debugging session will be terminated.
+The chrome.debugger API gives extensions the ability to interact with the [Chrome Devtools Protocol](https://chromedevtools.github.io/devtools-protocol/). This is the same protocol that is used for Chrome's Devtools, and an [amazing number of other tools](https://github.com/ChromeDevTools/awesome-chrome-devtools). With it, an extension can request and execute remote code. Just like User Scripts, it is not a substitute for chrome.scripting, and has a much more notable end user experience. While it is being used, the user will see a warning bar at the top of the window. If the banner is closed or dismissed, the debugging session will be terminated.
 
 {% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/SyeEuVZINxlaVnCHqqo2.jpg", alt="screenshot of the URL bar in Chrome that has the message 'Debugger Extension started debugging this browser'", width="800", height="18### %}
 
 
 ### [Sandboxed iframes][sandboxed_iframes]
 
-    If you need to evaluate a string as code, and are in a DOM environment (e.g. a content script, as opposed to a background service worker), then another option would be to use a [sandboxed iframe][sandboxed_iframes]. Extensions don't support things like `eval` by default as a safety precaution - a malicious code could put user safety and security at risk. But when the code is only executed in a known safe environment, like an iframe that has been sandboxed from the rest of the web, then those risks are greatly reduced. Within this context, the Content Security Policy that blocks the usage of eval can be lifted, allowing you to run any valid javascript code.
+If you need to evaluate a string as code, and are in a DOM environment (e.g. a content script, as opposed to a background service worker), then another option would be to use a [sandboxed iframe][sandboxed_iframes]. Extensions don't support things like `eval` by default as a safety precaution - a malicious code could put user safety and security at risk. But when the code is only executed in a known safe environment, like an iframe that has been sandboxed from the rest of the web, then those risks are greatly reduced. Within this context, the Content Security Policy that blocks the usage of eval can be lifted, allowing you to run any valid javascript code.
 
 
 If you have a use case that isn't covered, feel free to reach out to the team via the [chromium-extensions][chromium-extensions] mailing list to get feedback, or open a new ticket to request guidance from [One Stop Support][oss]
@@ -156,7 +156,7 @@ If you have a use case that isn't covered, feel free to reach out to the team vi
 
 ## What to do if it is just wrong
 
-The Chrome Web Store is run by humans, and as a result the reviews are not always 10### perfect. If you believe that a mistake was made in review, you can appeal the rejection via [One Stop Support][oss]
+The Chrome Web Store is run by humans, and as a result the reviews are not always 100% perfect. If you believe that a mistake was made in review, you can appeal the rejection via [One Stop Support][oss]
 
 [blue-argon]: /docs/webstore/troubleshooting/#additional-requirements-for-manifest-v3
 [chrome.debugger]: /docs/extensions/reference/debugger/
