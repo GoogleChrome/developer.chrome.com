@@ -31,7 +31,7 @@ uploaded as expected. The most common use cases for the Network panel are:
 
 If you're looking for ways to improve page load performance, _don't_ start with the Network panel.
 There are many types of load performance issues that aren't related to network activity. Start with
-the Audits panel because it gives you targeted suggestions on how to improve your page. See
+the Lighthouse panel because it gives you targeted suggestions on how to improve your page. See
 [Optimize Website Speed][2].
 
 ## Open the Network panel {: #open }
