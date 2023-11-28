@@ -23,7 +23,7 @@ If your extension was rejected during review with a [Blue Argon][blue-argon] err
 
 ## How to spot RHC
 
-Spotting RHC isn't particularly difficult once you know what to look for. A great first option would be to check for the strings "http://" or "https://" in your project. If you have an RHC violation, then you would likely be able to locate them by finding that. If you have a full build system, or use dependencies from [npm][npm] or other third party sources, make sure you are searching the _compiled_ version of the code, since that is what is being evaluated by the store. If you are still unable to find the problem, then the next step would be to contact [One Stop Support][oss] They will be able to outline the specific violations, and what is needed to get the extension published as soon as possible.
+Spotting RHC isn't particularly difficult once you know what to look for. A great first option would be to check for the strings "http://" or "https://" in your project. If you have an RHC violation, then you would likely be able to locate them by finding that. If you have a full build system, or use dependencies from [npm][npm] or other third party sources, make sure you are searching the _compiled_ version of the code, since that is what is being evaluated by the store. If you are still unable to find the problem, then the next step would be to contact [One Stop Support][oss]. They will be able to outline the specific violations, and what is needed to get the extension published as soon as possible.
 
 
 ## What to do if a library is requesting the code
