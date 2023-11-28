@@ -41,7 +41,7 @@ Some libraries will ship an update almost immediately after being notified, but 
 
 Are you _certain_ that the code that is causing the request is needed? If it can just be deleted, or a library that is causing it can be removed - then we have an easy fix -  delete the code, and the job is done.
 
-Alternatively, is there another library that offers the same functionality? Try checking [npmjs.org](npmjs.org), github, or other sites for other options that fufill the same usecases.
+Alternatively, is there another library that offers the same functionality? Try checking [npmjs.org](npmjs.org), GitHub, or other sites for other options that fulfill the same usecases.
 
 ### [Tree Shaking][tree-shaking]
 
