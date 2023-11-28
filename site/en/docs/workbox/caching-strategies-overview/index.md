@@ -350,7 +350,7 @@ const cacheName = 'MyFancyCacheName_v1';
 self.addEventListener('fetch', (event) => {
   if (event.request.destination === 'image') {
     event.respondWith(caches.open(cacheName).then((cache) => {
-      return cache.match(event.request).then((cachedResponse) => {
+      return cache.match(event.request).then((cachedResponse) => {//First time, it won't match, so will return nothing, which, in turn,will do the network call
         const fetchedResponse = fetch(event.request).then((networkResponse) => {
           cache.put(event.request, networkResponse.clone());
 
