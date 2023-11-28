@@ -43,9 +43,9 @@ Are you _certain_ that the code that is causing the request is needed? If it can
 
 Alternatively, is there another library that offers the same functionality? Try checking [npmjs.org](npmjs.org), GitHub, or other sites for other options that fulfill the same usecases.
 
-### [Tree Shaking][tree-shaking]
+### Tree Shaking
 
-If the code causing the RHC violation isn't actually being used, then it may be able to be automatically deleted by tooling. Modern build tools like [webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/), and [Vite](https://vitejs.dev/) (just to name a few) have a feature called tree-shaking. Once enabled on your build system, tree shaking should remove any unused code paths. This can mean that you not only have a more compliant version of your code, but a leaner and faster one too! It is important to note that not all libraries are able to be tree shaken, but many are. Some tools, like Rollup and Vite, have tree-shaking enabled by default. webpack [needs to be configured](https://webpack.js.org/guides/tree-shaking/) for it to be enabled. If you aren't using a build system as a part of your extension, but _are_ using code libraries, then we really encourage you to investigate adding a build tool to your workflow. They can help you write safer, more reliable and more maintainable projects.
+If the code causing the RHC violation isn't actually being used, then it may be able to be automatically deleted by tooling. Modern build tools like [webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/), and [Vite](https://vitejs.dev/) (just to name a few) have a feature called [tree-shaking][tree-shaking]. Once enabled on your build system, tree shaking should remove any unused code paths. This can mean that you not only have a more compliant version of your code, but a leaner and faster one too! It is important to note that not all libraries are able to be tree shaken, but many are. Some tools, like Rollup and Vite, have tree-shaking enabled by default. webpack [needs to be configured](https://webpack.js.org/guides/tree-shaking/) for it to be enabled. If you aren't using a build system as a part of your extension, but _are_ using code libraries, then we really encourage you to investigate adding a build tool to your workflow. They can help you write safer, more reliable and more maintainable projects.
 
 
 The specifics of how to implement treeshaking depends on your specific project. But to take a simple example with Rollup, you can add treeshaking just by compiling your project code. In practice, if we had a simple file that justs logs into Firebase Auth, called main.js
@@ -54,15 +54,15 @@ The specifics of how to implement treeshaking depends on your specific project. 
 import { GoogleAuthProvider, initializeAuth } from "firebase/auth";
 
 chrome.identity.getAuthToken({ 'interactive': true }, async (token) => {
-const credential = GoogleAuthProvider.credential(null, token);
-try {
-const app = initializeApp({...});
-const auth = initializeAuth(app, {popupRedirectResolver: undefined, persistence: indexDBLocalPersistence});
-const {user} = await auth.signInWithCredential(credential)
-console.log(user)
-} catch (e) {
-console.error(error);
-}
+  const credential = GoogleAuthProvider.credential(null, token);
+  try {
+    const app = initializeApp({ ... });
+    const auth = initializeAuth(app, { popupRedirectResolver: undefined, persistence: indexDBLocalPersistence });
+    const { user } = await auth.signInWithCredential(credential)
+    console.log(user)
+  } catch (e) {
+    console.error(error);
+  }
 });
 ```
 
@@ -96,21 +96,20 @@ import { existsSync } from 'fs';
 import fetch from 'node-fetch';
 
 export default {
-plugins: [{
-load: async function transform(id, options, outputOptions) {
-// this code runs over all of out javascript, so we check every import
-// to see if it resolves as a local file, if that fails, we grab it from
-// the network via fetch, and return the contents of that file directly inline
-if (!existsSync(id)) {
-const response = await fetch(id);
-const code = await response.text();
+  plugins: [{
+    load: async function transform(id, options, outputOptions) {
+      // this code runs over all of out javascript, so we check every import
+      // to see if it resolves as a local file, if that fails, we grab it from
+      // the network via fetch, and return the contents of that file directly inline
+      if (!existsSync(id)) {
+        const response = await fetch(id);
+        const code = await response.text();
 
-return code
-}
-return null
-}
-}
-]
+        return code
+      }
+      return null
+    }
+  }]
 };
 ```
 
@@ -135,18 +134,18 @@ As codebases grow, it can easily become possible for a dependency, (or dependenc
 Generally speaking, no. RHC is simply not allowed. There is, however, a small number of cases where it _is_ allowed. These are almost always cases where it is impossible for any other option.
 
 
-### [User Scripts API][user-scripts-api]
+### User Scripts API
 
-User Scripts are small code snippets that are usually supplied by the end user, intended for User Script managers like [TamperMonkey][tampermonkey] and [Violentmonkey][violentmonkey]. It is not possible to these managers to bundle code that is written by end users, so the User Script API exposes a way to execute code provided by the end user. This _is not_ a substitute for [chrome.scripting.executeScript][executescript], or other code execution environments - end users must enable [developer mode][dev_mode] to execute anything. If the Chrome Web Store review team thinks that this is being used in a manner other than it is intended for (i.e. code provided by the end user), it may be rejected or it's listing taken down from the store.
+[User Scripts][user-scripts-api] are small code snippets that are usually supplied by the end user, intended for User Script managers like [TamperMonkey][tampermonkey] and [Violentmonkey][violentmonkey]. It is not possible to these managers to bundle code that is written by end users, so the User Script API exposes a way to execute code provided by the end user. This _is not_ a substitute for [chrome.scripting.executeScript][executescript], or other code execution environments - end users must enable [developer mode][dev_mode] to execute anything. If the Chrome Web Store review team thinks that this is being used in a manner other than it is intended for (i.e. code provided by the end user), it may be rejected or it's listing taken down from the store.
 
-### [chrome.debugger][chrome.debugger]
+### chrome.debugger
 
-The chrome.debugger API gives extensions the ability to interact with the [Chrome Devtools Protocol](https://chromedevtools.github.io/devtools-protocol/). This is the same protocol that is used for Chrome's Devtools, and an [amazing number of other tools](https://github.com/ChromeDevTools/awesome-chrome-devtools). With it, an extension can request and execute remote code. Just like User Scripts, it is not a substitute for chrome.scripting, and has a much more notable end user experience. While it is being used, the user will see a warning bar at the top of the window. If the banner is closed or dismissed, the debugging session will be terminated.
+The [chrome.debugger][chrome.debugger] API gives extensions the ability to interact with the [Chrome Devtools Protocol](https://chromedevtools.github.io/devtools-protocol/). This is the same protocol that is used for Chrome's Devtools, and an [amazing number of other tools](https://github.com/ChromeDevTools/awesome-chrome-devtools). With it, an extension can request and execute remote code. Just like User Scripts, it is not a substitute for chrome.scripting, and has a much more notable end user experience. While it is being used, the user will see a warning bar at the top of the window. If the banner is closed or dismissed, the debugging session will be terminated.
 
 {% Img src="image/DXqUldooyJOUnj3qXSYLHbUgUI93/SyeEuVZINxlaVnCHqqo2.jpg", alt="screenshot of the URL bar in Chrome that has the message 'Debugger Extension started debugging this browser'", width="800", height="18" %}
 
 
-### [Sandboxed iframes][sandboxed_iframes]
+### Sandboxed iframes
 
 If you need to evaluate a string as code, and are in a DOM environment (e.g. a content script, as opposed to a background service worker), then another option would be to use a [sandboxed iframe][sandboxed_iframes]. Extensions don't support things like `eval` by default as a safety precaution - a malicious code could put user safety and security at risk. But when the code is only executed in a known safe environment, like an iframe that has been sandboxed from the rest of the web, then those risks are greatly reduced. Within this context, the Content Security Policy that blocks the usage of eval can be lifted, allowing you to run any valid javascript code.
 
