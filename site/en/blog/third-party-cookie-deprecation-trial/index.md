@@ -18,6 +18,10 @@ tags:
   - cookie-countdown
 ---
 
+{% Aside 'update' %}
+The start of registration for this deprecation trial has been moved to the week of December 4, 2023. This article originally stated that the registration would start the week of November 27, 2023.
+{% endAside %}
+
 Chrome plans to [disable third-party cookies for 1% of users starting in early Q1 2024](/docs/privacy-sandbox/chrome-testing/) with the eventual goal of ramping up to [100% starting in Q3 2024](/docs/privacy-sandbox/third-party-cookie-phase-out/), subject to resolving any competition concerns with the UK’s Competition and Markets Authority (CMA). For an easier transition through the deprecation process, we are offering a third-party [deprecation trial](/docs/web-platform/origin-trials/#deprecation-trials) which allows embedded sites and services to request additional time to migrate away from third-party cookie dependencies for non-advertising use cases. 
 
 {% Aside %}
@@ -28,7 +32,7 @@ Chrome plans to [disable third-party cookies for 1% of users starting in early Q
 
 {% endAside %}
 
-Registration for this deprecation trial is intended to start the week of November 27, 2023. The deprecation trial will officially start in January 2024 and end on December 27, 2024. Developers are expected to make necessary changes and plans by this trial end date.
+Registration for this deprecation trial is intended to start the week of December 4, 2023. The deprecation trial will officially start in January 2024 and end on December 27, 2024. Developers are expected to make necessary changes and plans by this trial end date.
 
 
 ## Deprecation trials
@@ -76,7 +80,7 @@ Include reproduction steps that our team can use to verify the functional breaka
 
 
 
-1. Starting the week of November 27, 2023 navigate to the "3PCD Deprecation Trial" via the [list of Active Trials on the Chrome Origin Trials page](/origintrials/#/trials/active) and click "Register".
+1. Starting the week of December 4, 2023 navigate to the "3PCD Deprecation Trial" via the [list of Active Trials on the Chrome Origin Trials page](/origintrials/#/trials/active) and click "Register".
 2. For "Web Origin", provide the origin which serves your embedded page or scripts.
 3. The "Third-party matching" option will depend on how you need to provide the token. The options are explained in more detail in [Add the trial token](#add-the-trial-token).
     * If you are providing the token via HTTP header or meta tag on your own embedded pages, **do not check** "Third-party matching".
