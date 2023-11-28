@@ -155,7 +155,7 @@ If you have a use case that isn't covered, feel free to reach out to the team vi
 
 ## What to do if you disagree with a verdict
 
-The Chrome Web Store is run by humans, and as a result the reviews are not always 100% perfect. If you believe that a mistake was made in review, you can appeal the rejection via [One Stop Support][oss]
+Enforcing policies can be nuanced and review involves manual input, which means we may sometimes agree to change a review decision. If you believe that a mistake was made in review, you can appeal the rejection via [One Stop Support][oss]
 
 [blue-argon]: /docs/webstore/troubleshooting/#additional-requirements-for-manifest-v3
 [chrome.debugger]: /docs/extensions/reference/debugger/
