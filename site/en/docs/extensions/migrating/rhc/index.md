@@ -154,7 +154,7 @@ If you need to evaluate a string as code, and are in a DOM environment (e.g. a c
 If you have a use case that isn't covered, feel free to reach out to the team via the [chromium-extensions][chromium-extensions] mailing list to get feedback, or open a new ticket to request guidance from [One Stop Support][oss]
 
 
-## What to do if it is just wrong
+## What to do if you disagree with a verdict
 
 The Chrome Web Store is run by humans, and as a result the reviews are not always 100% perfect. If you believe that a mistake was made in review, you can appeal the rejection via [One Stop Support][oss]
 
