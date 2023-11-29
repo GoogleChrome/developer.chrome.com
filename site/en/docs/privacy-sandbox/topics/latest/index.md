@@ -6,7 +6,7 @@ subhead: >
 description: >
  Updates and enhancements to the design and implementation of the API.
 date: 2023-01-24
-updated: 2023-09-18
+updated: 2023-11-21
 authors:
  - leeronisrael
  - joeytrotz
@@ -24,6 +24,26 @@ For technical resources, see the developer guides:
 For a non-technical introduction, see the [Topics overview on privacysandbox.com](https://privacysandbox.com/intl/en_us/proposals/topics/).
 
 {% endAside %}
+
+
+## New top topics selection and launching the updated classifier and taxonomy  
+
+**November 21, 2023**  
+
+### Taxonomy
+The [updated taxonomy](/blog/topics-enhancements/#taxonomy) is [ramping up](https://groups.google.com/a/chromium.org/g/topics-api-announce/c/iNYk69wKnJs/m/sSWAr6NPAgAJ) to general availability. Testers should have begun to see topics from the new taxonomy on the vast majority of traffic by mid-November 2023. 
+
+### Classifier
+Along with the updated taxonomy, an updated hostname classifier is ramping up to general availability. This includes a larger override list—50k rather than 10k websites—and an enhanced classifier. Together, these two changes improve the performance of Topics API classification. 
+
+### Top topics selection
+In response to [feedback](https://github.com/patcg-individual-drafts/topics/issues/42) that the current top topic selection often results in topics that are less useful for ad relevance (such as "News" or "Arts & Entertainment") Chrome is introducing an enhancement to the method for selecting top topics. This updated approach considers the utility of topics following this approach:
+
+1. At the end of each epoch, Chrome converts participating hostnames from the user’s browsing history into topics.
+1. Topics are sorted first by bucket, and then by frequency. That is, if two topics are in the same bucket but have different frequency, the higher frequency topic is sorted higher.
+1. Lastly, Chrome selects the top five as the user’s top topics for that epoch, which are eligible to be shared with callers.   
+
+Chrome will be rolling out this update in Q4 2023.  There are no changes required for testers that have implemented Topics.  See [this post](/blog/topics-enhancements) for more information.
 
 ## Shipping the Privacy Sandbox relevance and measurement APIs
 
