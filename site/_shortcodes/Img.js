@@ -10,6 +10,10 @@ const {imgixDomain} = require('../_data/site.json');
 const {exportFile} = require('../_export/utils/exportFile');
 const {getImage} = require('../_export/utils/getImage');
 
+const BROKEN_IMAGES = [{path: 'blog/no-op', id: 'no-op'}];
+
+const seenImages = new Set();
+
 function randomHash() {
   return Math.random().toString(16).substring(2);
 }
@@ -30,9 +34,8 @@ async function MetaImg(args) {
     args.params.auto = 'format';
   }
 
-
   if (this.ctx?.export) {
-    const image = await getImage(generateImgixSrc(args.src, args.params));
+    let image = await getImage(generateImgixSrc(args.src, args.params));
 
     // And after it's cached we just copy it to the export directory. If there
     // is an alt text, we use this as the file name
@@ -41,15 +44,42 @@ async function MetaImg(args) {
       ? `${slug(stripCommonWords(args.alt).substring(0, 25))}-${randomHash()}`
       : null;
     const fileName = `image/${fileSlug || parsedSrc.name}${parsedSrc.ext}`;
+    let exportPath = path.join(
+      this.ctx.exportPath,
+      this.ctx.articleName,
+      fileName
+    );
+
+    const brokenImage = BROKEN_IMAGES.find(brokenImage =>
+      exportPath.includes(brokenImage.path)
+    );
+    if (brokenImage) {
+      if (seenImages.has(brokenImage.path)) {
+        console.log(
+          'Duplicate image path - check sorting',
+          exportPath,
+          brokenImage.id
+        );
+      }
+
+      console.log('Forcing image re-download for', exportPath);
+      image = await getImage(generateImgixSrc(args.src, args.params), true);
+      // Replace the image ID with the existing one
+      exportPath = exportPath.replace(/-(\w+\.)(.*)$/, `-${brokenImage.id}.$2`);
+      // Also export broken image to the broken images directory
+      await exportFile(this.ctx, image, `brokenImages/${exportPath}`);
+      seenImages.add(brokenImage.path);
+    }
 
     try {
-      await exportFile(
-        this.ctx,
-        image,
-        path.join(this.ctx.exportPath, this.ctx.articleName, fileName)
+      await exportFile(this.ctx, image, exportPath);
+    } catch (e) {
+      console.error(
+        'Failed to export image',
+        this.ctx.exportPath,
+        this.ctx.articleName,
+        fileName
       );
-    } catch(e) {
-      console.error('Failed to export image', this.ctx.exportPath, this.ctx.articleName, fileName);
     }
 
     // Instead of markdown img syntax we use HTML img syntax, to make sure
