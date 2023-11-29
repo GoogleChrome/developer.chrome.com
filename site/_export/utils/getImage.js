@@ -21,7 +21,7 @@ const fetch = require('node-fetch');
 const TMP_PATH = path.join(__dirname, '../../..', '.tmp', 'files');
 const TMP_PATH_IMAGE_MIN = path.join(__dirname, '../../..', '.tmp', 'images');
 
-let queue = null;
+let limit = null;
 
 async function getFileFromCache(url) {
   const parsedUrl = new URL(url, 'https://web-dev.imgix.net/');
@@ -42,32 +42,32 @@ async function getFileFromCache(url) {
  * @returns
  */
 async function getImageFromRemote(url) {
-
   const parsedUrl = new URL(url, 'https://web-dev.imgix.net/');
   const src = parsedUrl.pathname;
 
-  file = await fetch(parsedUrl.toString());
+  let file = await fetch(parsedUrl.toString());
   file = await file.buffer();
   if (!file) {
     return;
   }
 
   await fse.outputFile(path.join(TMP_PATH, src), file);
+  console.log('Downloaded', url, 'from remote ...');
   return file;
 }
 
-async function getFile(url) {
+async function getFile(url, forceDownload = false) {
   const file = await getFileFromCache(url);
-  if (file) {
+  if (file && !forceDownload) {
     return file;
   }
 
-  if (!queue) {
-    const PQueue = (await import('p-queue')).default;
-    queue = new PQueue({concurrency: 3, interval: 60, intervalCap: 2});
+  if (!limit) {
+    const pLimit = (await import('p-limit')).default;
+    limit = pLimit(1);
   }
 
-  return queue.add(() => getImageFromRemote(url));
+  return limit(() => getImageFromRemote(url));
 }
 
 async function imagemin(buffer) {
@@ -96,17 +96,17 @@ async function imagemin(buffer) {
   }
 }
 
-async function getImage(url) {
+async function getImage(url, forceDownload = false) {
   const parsedUrl = new URL(url, 'https://web-dev.imgix.net/');
   const src = parsedUrl.pathname;
 
   // Check if the file has already been downloaded and optimized,
   // if not, download it and optimize it.
-  if (fse.existsSync(path.join(TMP_PATH_IMAGE_MIN, src))) {
+  if (fse.existsSync(path.join(TMP_PATH_IMAGE_MIN, src)) && !forceDownload) {
     return await fse.readFile(path.join(TMP_PATH_IMAGE_MIN, src));
   }
 
-  let file = await getFile(url);
+  let file = await getFile(url, forceDownload);
   if (file && !url.endsWith('.svg')) {
     file = await imagemin(file);
     try {
