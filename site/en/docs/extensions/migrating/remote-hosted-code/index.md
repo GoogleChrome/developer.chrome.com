@@ -17,7 +17,7 @@ With Manifest V3 extensions now need to bundle _all_ code they are using inside 
 
 ## I was told my extension has RHC - what's going on?
 
-If your extension was rejected during review with a [Blue Argon][blue-argon] error, then our reviewers believe that your extension is currently using Remotely Hosted Code. This is usually the result of an extension trying to add a script tag  with a remote resource (i.e. from the open web, rather than the files included in the extension), or <code>[fetch][fetch]</code>ing a resource to execute directly.
+If your extension was rejected during review with a [Blue Argon][blue-argon] error, then our reviewers believe that your extension is currently using Remotely Hosted Code. This is usually the result of an extension trying to add a script tag with a remote resource (i.e. from the open web, rather than the files included in the extension), or <code>[fetch][fetch]</code>ing a resource to execute directly.
 
 
 ## How to spot RHC
