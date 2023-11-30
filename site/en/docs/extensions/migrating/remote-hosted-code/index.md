@@ -28,7 +28,7 @@ Spotting RHC isn't particularly difficult once you know what to look for. A grea
 
 ## What to do if a library is requesting the code
 
-Regardless of where the code comes from, it is not allowed to have RHC. This includes code you didn't author, but just happen to use as a dependency in your project. [Some developers][firebase-rhc-issue] using [Firebase][firebase] had this frustration when remote code was being included for use in [Firebase Auth][firebase-auth]. Even though this was a first party (i.e. Google owned) library - no exception is given for RHC. That code needs to be updated to either remove the RHC, or be able to be configured to not include it in the first place. If you end up hitting an issue where it isn't _your_ code that is loading RHC, but a library that you are using, then the best course of action is to contact the library's author. Let them know that this is happening, and ask for either a workaround or code updates to remove it.
+Regardless of where the code comes from, it is not allowed to have RHC. This includes code you didn't author, but just happen to use as a dependency in your project. [Some developers][firebase-rhc-issue] using [Firebase][firebase] had this issue when remote code was being included for use in [Firebase Auth][firebase-auth]. Even though this was a first party (i.e. Google owned) library - no exception is given for RHC. That code needs to be updated to either remove the RHC, or be able to be configured to not include it in the first place. If you end up hitting an issue where it isn't _your_ code that is loading RHC, but a library that you are using, then the best course of action is to contact the library's author. Let them know that this is happening, and ask for either a workaround or code updates to remove it.
 
 
 ## What if you can't wait for a library update
@@ -162,7 +162,7 @@ Enforcing policies can be nuanced and review involves manual input, which means 
 [chromium-extensions]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [fetch]: https://developer.mozilla.org/docs/Web/API/Fetch_API/Using_Fetch
 [firebase-auth]: https://firebase.google.com/docs/auth
-[firebase-rhc-issue]: https://github.com/GoogleChrome/chrome-extensions-samples/pull/1023
+[firebase-rhc-issue]: https://github.com/firebase/firebase-js-sdk/issues/7617
 [firebase]: https://firebase.google.com/
 [npm]: https://www.npmjs.com/
 [oss]: https://support.google.com/chrome_webstore/contact/one_stop_support
