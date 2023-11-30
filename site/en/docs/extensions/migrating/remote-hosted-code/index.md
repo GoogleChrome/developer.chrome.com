@@ -10,7 +10,6 @@ updated: 2023-11-23
 
 Remotely Hosted Code, or RHC, is what the Chrome Web Store calls anything that is executed by the browser that is loaded from someplace other than the extension's own files. Things like javascript, wasm, etc. It **_does not_** include data - things like JSON or CSS.
 
-
 ## Why is RHC no longer allowed?
 
 With Manifest v3 extensions now need to bundle _all_ code they are using inside the extension itself. In the past, you could dynamically inject script tags from any URL on the web.
