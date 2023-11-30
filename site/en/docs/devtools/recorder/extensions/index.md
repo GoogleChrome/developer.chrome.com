@@ -109,7 +109,7 @@ If you don't see export or replay options after installing an extension, check o
 
 - The extension only works on web pages. For example, the export option is not available for `chrome://` pages like `chrome://extensions`.
 - Always open a new browser tab after installing the extension.
-- The extension will not show up if you open DevTools from a site for which the extensions were blocked by the administrator's policy (see `runtime_blocked_hosts` list in `ExtensionSettings` at chrome://policy/).
+- The administrator's policy. The extension can be blocked by the administrator policy and thus not showing up (see `runtime_blocked_hosts` list in `ExtensionSettings` at `chrome://policy/`).
 
 Known issues:
 
