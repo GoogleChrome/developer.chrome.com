@@ -12,7 +12,7 @@ Remotely Hosted Code, or RHC, is what the Chrome Web Store calls anything that i
 
 ## Why is RHC no longer allowed?
 
-With Manifest v3 extensions now need to bundle _all_ code they are using inside the extension itself. In the past, you could dynamically inject script tags from any URL on the web.
+With Manifest V3 extensions now need to bundle _all_ code they are using inside the extension itself. In the past, you could dynamically inject script tags from any URL on the web.
 
 
 ## I was told my extension has RHC - what's going on?
