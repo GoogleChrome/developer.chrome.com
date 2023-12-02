@@ -1,18 +1,4 @@
----
-name: 'Check'
 
-on: pull_request
-
-jobs:
-  queue:
-    runs-on: ubuntu-latest
-    steps:
-      - id: skip
-        uses: fkirc/skip-duplicate-actions@master
-        with:
-          concurrent_skipping: 'outdated_runs'
-          cancel_others: true
-          skip_after_successful_duplicate: true
           do_not_skip: '["workflow_dispatch", "schedule"]'
   lint:
     needs: queue
@@ -26,27 +12,7 @@ jobs:
             js:
               - '**/*.js'
               - '**/*.ts'
-              - '**/*.d.ts'
-              - '**/*.json'
-            md:
-              - '**/*.md'
-            scss:
-              - '**/*.scss'
-
-      - name: Cloning repository
-        uses: actions/checkout@v3
-
-      - name: Setting up Node.js
-        uses: actions/setup-node@v3
-        with:
-          cache: npm
-          node-version: 16
-
-      - name: Installing Node.js packages
-        run: npm ci
-
-      - name: Linting JavaScript
-        if: ${{ steps.changes.outputs.js == 'true' }}
+  
         run: |
           npm run lint:js
           npm run lint:types
@@ -105,13 +71,7 @@ jobs:
           node-version: 16
 
       - name: Installing Node.js packages
-        run: npm ci
-
-      - name: Building site
-        env:
-          # Increase memory limit as a full build requires around 8GB
-          NODE_OPTIONS: --max_old_space_size=8192
-          ELEVENTY_INCLUDE_TRANSLATED: true
+        run:
         run: |
           npm run production
 
@@ -213,15 +173,4 @@ jobs:
         if: ${{ steps.changes.outputs.frontend == 'true' }}
         uses: actions/download-artifact@v3
         with:
-          name: dist-${{ github.run_id }}
-
-      - name: Unpacking built files
-        if: ${{ steps.changes.outputs.frontend == 'true' }}
-        run: |
-          tar xf dist.tar.gz
-
-      - name: Percy
-        if: ${{ steps.changes.outputs.frontend == 'true' }}
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: npm run snapshots
+          name: dis
