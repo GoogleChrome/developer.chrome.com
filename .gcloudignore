@@ -30,12 +30,15 @@
 /.cloudbuild
 /.git
 /.github
+/.tmp
+/.cache
 /.nyc_output
 /node_modules
 /gulp-tasks
 /tests
 /tools
 /types
+/dist
 
 # Source files already compiled in /dist
 /site/**/*.md

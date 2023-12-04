@@ -14,67 +14,116 @@
  * limitations under the License.
  */
 
-const {isGAEProd} = require('./env');
 const express = require('express');
-const compression = require('compression');
-const {renderHandler} = require('./render');
-const {notFoundHandler} = require('./not-found');
-const {buildStaticHandler} = require('./handlers/static');
+const {
+  createProxyMiddleware,
+  responseInterceptor,
+} = require('http-proxy-middleware');
 
-const unknownDomainRedirectHandler = require('./unknown-domain');
-const healthCheckHandler = require('./health-check');
+// const {isGAEProd} = require('./env');
+// const compression = require('compression');
+// const {renderHandler} = require('./render');
+// const {notFoundHandler} = require('./not-found');
+// const {buildStaticHandler} = require('./handlers/static');
+
+// const unknownDomainRedirectHandler = require('./unknown-domain');
+// const healthCheckHandler = require('./health-check');
 
 const app = express();
 
-// If we see content from /fonts/, then cache it forever.
-// If this ends up 404'ing, we invalidate the Cache-Control header in notFoundHandler.
-const immutableRootMatch = /^\/fonts\//;
-const immutableRootHandler = (req, res, next) => {
-  if (immutableRootMatch.test(req.url)) {
-    res.setHeader('Cache-Control', 'max-age=31536000,immutable');
-  }
-  next();
-};
+// HTML responses from the proxy are rewritten to point to
+// the developer.chrome.com domain. Static assets / binaries do
+// not need that treatment.
+app.use(
+  /.*\.(\S{3,4})/,
+  createProxyMiddleware({
+    target: 'https://chrome-dot-devsite-v2-prod-3p.appspot.com/',
+    changeOrigin: true,
+  })
+);
 
-const cspHandler = (_req, res, next) => {
-  // TODO(samthor): This is an unsuitable policy but included as a start.
-  res.setHeader(
-    'Content-Security-Policy-Report-Only',
-    "object-src 'none'; " +
-      "script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com https://cdnjs.cloudflare.com https://www.gstatic.com https://www.google.com https://*.firebaseio.com https://shared-storage-demo-content-producer.web.app;" +
-      "base-uri 'none'; " +
-      "frame-ancestors 'self'; " +
-      'report-uri https://csp.withgoogle.com/csp/chrome-apps-doc'
-  );
-  // nb. This is superceded by 'frame-ancestors' above, but retain while that
-  // policy is "Report-Only".
-  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
-  next();
-};
+app.use(
+  '*',
+  createProxyMiddleware({
+    target: 'https://chrome-dot-devsite-v2-prod-3p.appspot.com/',
+    changeOrigin: true,
+    pathRewrite: {
+      '^/en/': '',
+      '^/es/': '',
+      '^/fr/': '',
+      '^/ja/': '',
+      '^/ko/': '',
+      '^/pt/': '',
+      '^/ru/': '',
+      '^/zh/': '',
+    },
+    selfHandleResponse: true,
+    onProxyRes: responseInterceptor(
+      async (responseBuffer, proxyRes, req, res) => {
+        try {
+          const response = responseBuffer.toString('utf8'); // convert buffer to string
+          return response.replace(
+            /chrome-dot-devsite-v2-prod-3p.appspot.com/gm,
+            'developer.chrome.com'
+          );
+        } catch (e) {
+          console.log('Rewrite failed', e);
+          return responseBuffer;
+        }
+      }
+    ),
+  })
+);
 
-const handlers = [
-  cspHandler,
-  immutableRootHandler,
-  buildStaticHandler(),
-  healthCheckHandler,
-  notFoundHandler,
-];
+// // If we see content from /fonts/, then cache it forever.
+// // If this ends up 404'ing, we invalidate the Cache-Control header in notFoundHandler.
+// const immutableRootMatch = /^\/fonts\//;
+// const immutableRootHandler = (req, res, next) => {
+//   if (immutableRootMatch.test(req.url)) {
+//     res.setHeader('Cache-Control', 'max-age=31536000,immutable');
+//   }
+//   next();
+// };
 
-if (isGAEProd) {
-  // In production, ensure we're being served from the canonical domain.
-  handlers.unshift(unknownDomainRedirectHandler);
-} else {
-  // In production, the GFEs do gzip compression for us. Just set up for dev
-  // so that audits are happy.
-  handlers.unshift(compression());
-}
+// const cspHandler = (_req, res, next) => {
+//   // TODO(samthor): This is an unsuitable policy but included as a start.
+//   res.setHeader(
+//     'Content-Security-Policy-Report-Only',
+//     "object-src 'none'; " +
+//       "script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com https://cdnjs.cloudflare.com https://www.gstatic.com https://www.google.com https://*.firebaseio.com https://shared-storage-demo-content-producer.web.app;" +
+//       "base-uri 'none'; " +
+//       "frame-ancestors 'self'; " +
+//       'report-uri https://csp.withgoogle.com/csp/chrome-apps-doc'
+//   );
+//   // nb. This is superceded by 'frame-ancestors' above, but retain while that
+//   // policy is "Report-Only".
+//   res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+//   next();
+// };
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+// const handlers = [
+//   cspHandler,
+//   immutableRootHandler,
+//   buildStaticHandler(),
+//   healthCheckHandler,
+//   notFoundHandler,
+// ];
 
-app.post('/_render', renderHandler);
+// if (isGAEProd) {
+//   // In production, ensure we're being served from the canonical domain.
+//   handlers.unshift(unknownDomainRedirectHandler);
+// } else {
+//   // In production, the GFEs do gzip compression for us. Just set up for dev
+//   // so that audits are happy.
+//   handlers.unshift(compression());
+// }
 
-app.use(...handlers);
+// app.use(express.json());
+// app.use(express.urlencoded({extended: true}));
+
+// app.post('/_render', renderHandler);
+
+// app.use(...handlers);
 
 const listener = app.listen(process.env.PORT || 8080, () => {
   console.log('The server is listening at:', listener.address());
