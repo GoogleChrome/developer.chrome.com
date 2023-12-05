@@ -1,4 +1,4 @@
-## developer.chrome.com Archived
+# developer.chrome.com Archived
 
 This site migrated to a new platform. As of 7 November, 2023, we stopped merging new pull requests for updates to existing content. You can raise content issues in the new [issue tracker](https://issuetracker.google.com/issues/new?component=1400036&template=1897236), and they will be addressed on the migrated site.
 
