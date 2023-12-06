@@ -12,9 +12,6 @@ actions that are taken when an extension violates the Chrome Web Store's policie
 practices described in this document are accurate as of the document's last updated date and are
 subject to change without notification.
 
-See [Lifecycle of a Chrome Web Store item][doc-lifecycle] for an overview of how reviews fit in the
-lifecycle.
-
 The review process helps protect end users from scams, data harvesting, malware, and malicious
 actors seeking to take advantage of Chrome users, as well as from extensions that inadvertently
 violate policy.
