@@ -20,7 +20,7 @@ your page more mobile-friendly and accessible.
 with tap targets that meet both of these conditions:
 
 - The target is smaller than 48&nbsp;px by 48&nbsp;px.
-- At least 25% the target area within 48&nbsp;px of the center of the target overlaps with another target.
+- At least 25% the target area within 48&nbsp;px of the center of the target overlaps with another target. i.e., more than 12 pixels.
 
 <figure class="w-figure">
   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/6Dhlxe7vkj7gX3e5rX4B.png", alt="Lighthouse audit showing inappropriately sized tap targets", width="800", height="206", class="w-screenshot" %}
