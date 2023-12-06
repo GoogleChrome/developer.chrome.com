@@ -44,19 +44,19 @@ Multiple `<details>` elements that have the same `name` form a group. With this 
 Here is an example with a group that shares the name `cookies`:
 
 ```html
-<details>
+<details name="cookies">
   <summary>Chocolate chip</summary>
   Yum yum chocolate chip.
 </details>
-<details>
+<details name="cookies">
   <summary>Snickerdoodle</summary>
    Yum yum snickerdoodle.
 </details>
-<details>
+<details name="cookies">
   <summary>Maicenitas</summary>
    Yum yum maicenitas.
 </details>
-<details>
+<details name="cookies">
   <summary>Sugar cookies</summary>
    Yum yum sugar cookies.
 </details>
