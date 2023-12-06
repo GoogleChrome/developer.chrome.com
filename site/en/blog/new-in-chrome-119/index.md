@@ -52,7 +52,7 @@ Now you can use [`<geometry-box>`](https://developer.mozilla.org/docs/Web/CSS/cl
 
 You can also use the functions [`xywh()`](https://developer.mozilla.org/docs/Web/CSS/basic-shape/xywh) and [`rect()`](https://developer.mozilla.org/docs/Web/CSS/basic-shape/rect) that make it easier to specify rectangular or rounded-rectangular clips.
 
-_Correction: A previous version of this article referred to inprovements for Fenced Frames. These changes are now shipping in Chrome 120._
+_Correction: A previous version of this article referred to improvements for Fenced Frames. These changes are now shipping in Chrome 120._
 
 ## And more! {: #more }
 
