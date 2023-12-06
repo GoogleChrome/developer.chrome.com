@@ -54,11 +54,9 @@ IdP.
 
 {% endAside %}
 
-The [Login Status
-API](https://github.com/fedidcg/FedCM/blob/main/proposals/idp-sign-in-status-api.md)
-is a mechanism where a website, especially an IdP, informs the browser the
-user's login status on the IdP. With this API, the browser can reduce
-unnecessary requests to the IdP and mitigate potential timing attacks.
+The Login Status API is a mechanism where a website, especially an IdP, informs
+the browser the user's login status on the IdP. With this API, the browser can
+reduce unnecessary requests to the IdP and mitigate potential timing attacks.
 
 {% Aside %}
 
