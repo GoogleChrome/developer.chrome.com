@@ -298,17 +298,22 @@ The `sendReportTo()` function described above can be used to associate auction d
 
 The [Ads Reporting API](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md) for fenced frames and iframes provides a mechanism for you to associate user event-level data from an ad frame with signals within a Protected Audience auction. 
 
-In a Protected Audience API reporting worklet, you register an ad beacon with the <code>[registerAdBeacon()](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#registeradbeacon)</code> function and set your signals as query params. Then you trigger the event from a fenced frame by calling the <code>[window.fence.reportEvent()](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#reportevent)</code> function with the user event-level data payload. 
+In Protected Audience API reporting worklets (`reportResult()` and `reportWin()`), you register an ad beacon with the <code>[registerAdBeacon()](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#registeradbeacon)</code> function and set your signals as query params. Then you trigger the event from a fenced frame by calling the <code>[window.fence.reportEvent()](https://github.com/WICG/turtledove/blob/main/Fenced_Frames_Ads_Reporting.md#reportevent)</code> function with the user event-level data payload. 
 
 In the following example, a campaign ID is associated with an event-level payload that the click coordinates:
 
 ```js
-// Protected Audience API worklet
-function generateBid(interestGroup) {
-  const { campaignId } = interestGroup.ads.metadata;
+// Protected Audience API reporting worklet
+function reportResult(auctionConfig, browserSignals, directFromSellerSignals) {
+  const { topLevelSeller } = browserSignals;
+
+  // ...
+
   registerAdBeacon({
-    click: `https://your-server.example/report/click?campaignId=${campaignId}`
-  })
+    click: `https://your-server.example/report/click?topLevelSeller=${topLevelSeller}`
+  });
+
+  return signalsForWinner;
 }
 ```
 
