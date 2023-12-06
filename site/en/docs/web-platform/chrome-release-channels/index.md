@@ -166,7 +166,7 @@ updates to be deployed more quickly, outside of release channel schedules, witho
 browser to be relaunched. That's particularly important for security features and can reduce the
 size of the Chrome installer for new versions.
  
-For example, Chrome has a module to enable playback of copyrighted video, called Widevine. You can
+For example, Chrome has a module to enable playback of copyrighted video, called [Widevine](https://www.widevine.com/). You can
 see the full list of Components at `chrome://components`.
  
 ## What are Chromium, Blink, and V8?
@@ -193,12 +193,12 @@ Chrome, [Node.js](https://nodejs.org/en/), and other applications and environmen
 ## How does Chrome roll out new versions?
  
 Chrome doesn't just release a new version to all users and hope for the best. Instead, Chrome uses
-staged rollouts.
+staged roll outs.
  
 This means that initially, only a small number of users for each release channel get an update—maybe
 only 1–5% to start, gradually building up to 100%. As a feature rolls out, Chrome engineers
 use [metrics](#metrics) and user feedback to check for unexpected problems. If something goes
-wrong, the rollout is paused while the Chrome team works out how to fix the problem. The solution may be
+wrong, the roll out is paused while the Chrome team works out how to fix the problem. The solution may be
 turning off an experimental feature, updating a component, or shipping a code update called
 a _respin_.
  
