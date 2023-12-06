@@ -138,8 +138,7 @@ updates.
 
 `PressureObserver.takeRecords()`: Returns a sequence of [records](#records), since the last callback invocation.
 
-
-`static PressureObserver.supportedSources()` (read only): Returns supported source types by the hardware.
+`PressureObserver.supportedSources()` (read only): Returns supported source types by the hardware.
 
 ##### Parameters {: #parameters }
 
