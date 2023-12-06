@@ -21,6 +21,9 @@ redirects:
 
 # Simple redirects
 
+- from: /docs/privacy-sandbox/user-agent/snippets/
+  to: /docs/privacy-sandbox/user-agent/
+
 - from: /blog/pwa-manifest-id/
   to: /articles/pwa-manifest-id/
 

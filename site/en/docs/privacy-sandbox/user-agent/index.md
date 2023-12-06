@@ -6,7 +6,7 @@ subhead: >
 description: >
   User-Agent reduction limits passively shared browser data to reduce the volume of sensitive information which leads to fingerprinting. The reduction is now complete.
 date: 2021-11-09
-updated: 2023-09-23
+updated: 2023-10-18
 authors:
   - alexandrawhite
 ---
@@ -173,13 +173,12 @@ Scaled availability for User-Agent reduction means the fully reduced UA string
 shipped on all Chrome devices. Reduction began with a Chrome
 minor release in Q2 of 2022.
 
+Refer to [User-Agent Strings](/docs/multidevice/user-agent/) for examples of new User-Agent strings.
+
 ### Test the string locally {: #test-locally}
 
-There are a couple of methods to test the reduced User-Agent locally:
+To test the reduced User-Agent locally:
 
-* Enable the `chrome://flags/#reduce-user-agent` flag.
-    * This will set your local browser to receive just the reduced `user-agent`
-      string for all sites, before it becomes the default setting.
 * Configure an emulated device in DevTools with the right `user-agent` string
   and client hints.
     * In the top right of DevTools, click
@@ -199,10 +198,6 @@ If you process the existing Chrome `user-agent` string in your client-side or
 server-side code, you can transform that string to the new format to test
 compatibility. You can test by either overriding and replacing the string, or
 generating the new version and test side by side.
-
-Review these [User-Agent reduction
-snippets](/docs/privacy-sandbox/user-agent/snippets/) for example regular
-expressions.
 
 ## Support for Client Hints and critical hints
 
