@@ -17,12 +17,11 @@ feedback:
   - api
 ---
 
-{% YouTube id="f0YY0o2OAKA" %}
-
 Client Hints enable developers to actively request information about the user's
 device or conditions, rather than needing to parse it out of the User-Agent (UA)
-string. Providing this alternative route is the first step to eventually
-reducing User-Agent string granularity.
+string. This provides an alternative route to obtaining the data removed from
+the string as part of the [User-Agent
+reduction](/docs/privacy-sandbox/user-agent/).
 
 Learn how to update your existing functionality that relies on parsing the
 User-Agent string to make use of User-Agent Client Hints instead.
@@ -53,12 +52,18 @@ browser or library) and a comment (e.g. version).
 
 Over the intervening _decades_, this string has accrued a variety of additional
 details about the client making the request (as well as cruft, due to backwards
-compatibility). We can see that when looking at Chrome's current User-Agent
-string:
+compatibility). We can see that when looking at the user-agent string from
+Chrome 84:
 
 ```text
 Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4076.0 Mobile Safari/537.36
 ```
+
+{% Aside %}
+The reduction of the information in user-agent string started from Chrome 101,
+meaning the above string shows the historic full set of data. Learn more about
+[User-Agent reduction](/docs/privacy-sandbox/user-agent/).
+{% endAside %}
 
 The above string contains information about the user's operating system and
 version, the device model, the browser's brand and full version, enough clues to
@@ -106,7 +111,8 @@ Selection with Client
 Hints](/blog/automating-resource-selection-with-client-hints/),
 but here's a quick refresher on the process.
 
-The server asks for specific Client Hints via a header:
+After receiving an initial request from the browser, the server asks for
+specific Client Hints via a header in its response:
 
 ⬇️ _Response from server_
 
@@ -134,9 +140,11 @@ The server can choose to vary its responses, for example by serving images at an
 appropriate resolution.
 
 {% Aside %}
-There are ongoing discussions on enabling Client Hints on an initial request,
-but you should consider [responsive design](https://web.dev/responsive-web-design-basics) or
-progressive enhancement before going down this route.
+There are methods to [enable Client Hints on an initial
+request](/docs/privacy-sandbox/user-agent/#optimize-critical-hints), but you
+should consider [responsive
+design](https://web.dev/responsive-web-design-basics) or progressive enhancement
+before going down this route.
 {% endAside %}
 
 User-Agent Client Hints expand the range of properties with the `Sec-CH-UA`
@@ -152,7 +160,7 @@ Client Hints are **only sent over secure connections**, so make sure you have
 
 ## User-Agent Client Hints from Chromium 89
 
-User-Agent Client Hints have been default enabled in Chrome since version 89.
+User-Agent Client Hints have been enabled by default in Chrome since version 89.
 
 By default, the browser returns the browser brand, significant / major version,
 platform, and an indicator if the client is a mobile device:
@@ -160,15 +168,20 @@ platform, and an indicator if the client is a mobile device:
 ⬆️ _All requests_
 
 ```text
-Sec-CH-UA: "Chromium";v="93", "Google Chrome";v="93", " Not;A Brand";v="99"
-Sec-CH-UA-Mobile: ?0
-Sec-CH-UA-Platform: "macOS"
+Sec-CH-UA: "Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"
+Sec-CH-UA-Mobile: ?1
+Sec-CH-UA-Platform: "Android"
 ```
 
 {% Aside 'caution' %}
 These properties are more complex than just a single value, so [Structured
 Headers](https://httpwg.org/specs/rfc8941.html)
 are used for representing lists and booleans.
+
+The odd-looking `"Not?A_Brand"` value is added by the browser to strongly
+encourage clients to use proper parsing and not rely on fragile regular
+expressions. This value changes over time and deliberately includes characters
+that may catch those rigid implementations.
 {% endAside %}
 
 ### User-Agent response and request headers
@@ -183,22 +196,25 @@ are used for representing lists and booleans.
 }
 </style>
 
-| ⬇️ Response `Accept-CH`<br>⬆️ Request header | ⬆️ Request<br>Example value                         | Description                                                                                                                                                                  |
-| ------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Sec-CH-UA`                                 | `"Chromium";v="84",`<br>`"Google Chrome";v="84"` | List of browser brands and their significant version.                                                                                                                        |
-| `Sec-CH-UA-Mobile`                          | `?1`                                             | Boolean indicating if the browser is on a mobile device (`?1` for true) or not (`?0` for false).                                                                             |
-| `Sec-CH-UA-Full-Version`                    | `"84.0.4143.2"`                                  | [**Deprecated**]The complete version for the browser.                                                                                                                                        |
-| `Sec-CH-UA-Full-Version-List`               | `"Chromium";v="84.0.4143.2",`<br>`"Google Chrome";v="84.0.4143.2"` | List of browser brands and their full version.                                                                                                           |
-| `Sec-CH-UA-Platform`                        | `"Android"`                                      | The platform for the device, usually the operating system (OS).                                                                                                              |
-| `Sec-CH-UA-Platform-Version`                | `"10"`                                           | The version for the platform or OS.                                                                                                                                          |
-| `Sec-CH-UA-Arch`                            | `"arm"`                                        | The underlying architecture for the device. While this may not be relevant to displaying the page, the site may want to offer a download which defaults to the right format. |
-| `Sec-CH-UA-Model`                           | `"Pixel 3"`                                      | The device model.                                                                                                                                                            |
-| `Sec-CH-UA-Bitness`                         | `"64"`                                           | The underlying architecture's bitness (i.e., the size in bits of an integer or memory address)                                                                               |
+| ⬇️ Response `Accept-CH`<br>⬆️ Request header | ⬆️ Request<br>Example value                                              | Description                                                                                                                                                                  |
+|----------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Sec-CH-UA`                                  | `"Chromium";v="108",`<br>`"Google Chrome";v="108"`                       | List of browser brands and their significant version.                                                                                                                        |
+| `Sec-CH-UA-Mobile`                           | `?1`                                                                     | Boolean indicating if the browser is on a mobile device (`?1` for true) or not (`?0` for false).                                                                             |
+| `Sec-CH-UA-Full-Version`                     | `"108.0.5359.111"`                                                       | [**Deprecated**]The complete version for the browser.                                                                                                                        |
+| `Sec-CH-UA-Full-Version-List`                | `"Chromium";v="108.0.5359.111",`<br>`"Google Chrome";v="108.0.5359.111"` | List of browser brands and their full version.                                                                                                                               |
+| `Sec-CH-UA-Platform`                         | `"Android"`                                                              | The platform for the device, usually the operating system (OS).                                                                                                              |
+| `Sec-CH-UA-Platform-Version`                 | `"13,0,0"`                                                               | The version for the platform or OS.                                                                                                                                          |
+| `Sec-CH-UA-Arch`                             | `"arm"`                                                                  | The underlying architecture for the device. While this may not be relevant to displaying the page, the site may want to offer a download which defaults to the right format. |
+| `Sec-CH-UA-Model`                            | `"Pixel 6"`                                                              | The device model.                                                                                                                                                            |
+| `Sec-CH-UA-Bitness`                          | `"64"`                                                                   | The underlying architecture's bitness (i.e., the size in bits of an integer or memory address)                                                                               |
+| `Sec-CH-UA-Wow64`                            | `"?0"`                                                                   | Boolean indicating if the browser binary is running in 32-bit mode on 64-bit Windows (`?1` for true) or not (`?0` for false).                                                |
 
 {% Aside 'gotchas' %}
 Privacy and compatibility considerations mean the value may be blank, not
-returned, or populated with a varying value. This is referred to as
-[GREASE](https://wicg.github.io/ua-client-hints/#grease).
+returned, or populated with a varying value, e.g. variations of `"Not a brand"`.
+This is referred to as [GREASE](https://wicg.github.io/ua-client-hints/#grease)
+and is intended to motivate clients to properly parse the structured values as
+opposed to relying on fragile string matching.
 {% endAside %}
 
 ### Example exchange
@@ -212,7 +228,7 @@ page from the site and sends its default basic User-Agent.
 GET /downloads HTTP/1.1
 Host: example.site
 
-Sec-CH-UA: "Chromium";v="93", "Google Chrome";v="93", " Not;A Brand";v="99"
+Sec-CH-UA: "Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"
 Sec-CH-UA-Mobile: ?1
 Sec-CH-UA-Platform: "Android"
 ```
@@ -233,9 +249,9 @@ requests.
 GET /downloads/app1 HTTP/1.1
 Host: example.site
 
-Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+Sec-CH-UA: "Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"
 Sec-CH-UA-Mobile: ?1
-Sec-CH-UA-Full-Version-List: " Not A;Brand";v="99.0.0.0", "Chromium";v="98.0.4738.0", "Google Chrome";v="98.0.4738.0"
+Sec-CH-UA-Full-Version-List: "Not?A_Brand";v="8.0.0.0", "Chromium";v="108.0.5359.128", "Google Chrome";v="108.0.5359.128"
 Sec-CH-UA-Platform: "Android"
 ```
 
@@ -253,30 +269,30 @@ console.log(navigator.userAgentData.brands);
 // output
 [
   {
-    brand: 'Chromium',
-    version: '93',
+    "brand": "Not?A_Brand",
+    "version": "8"
   },
   {
-    brand: 'Google Chrome',
-    version: '93',
+    "brand": "Chromium",
+    "version": "108"
   },
   {
-    brand: ' Not;A Brand',
-    version: '99',
-  },
+    "brand": "Google Chrome",
+    "version": "108"
+  }
 ];
 
 // Log the mobile indicator
 console.log(navigator.userAgentData.mobile);
 
 // output
-false;
+true;
 
 // Log the platform value
 console.log(navigator.userAgentData.platform);
 
 // output
-"macOS";
+"Android";
 ```
 
 The additional values are accessed via the `getHighEntropyValues()` call. The
@@ -290,45 +306,48 @@ what values, if any, are returned.
 // Log the full user-agent data
 navigator
   .userAgentData.getHighEntropyValues(
-    ["architecture", "model", "bitness", "platformVersion",
-     "fullVersionList"])
+    ['architecture', 'bitness', 'brands', 'mobile', 'model', 'platform',
+     'platformVersion', 'uaFullVersion', 'fullVersionList', 'wow64'])
   .then(ua => { console.log(ua) });
 
 // output
 {
-   "architecture":"x86",
-   "bitness":"64",
-   "brands":[
-      {
-         "brand":" Not A;Brand",
-         "version":"99"
-      },
-      {
-         "brand":"Chromium",
-         "version":"98"
-      },
-      {
-         "brand":"Google Chrome",
-         "version":"98"
-      }
-   ],
-   "fullVersionList":[
-      {
-         "brand":" Not A;Brand",
-         "version":"99.0.0.0"
-      },
-      {
-         "brand":"Chromium",
-         "version":"98.0.4738.0"
-      },
-      {
-         "brand":"Google Chrome",
-         "version":"98.0.4738.0"
-      }
-   ],
-   "mobile":false,
-   "model":"",
-   "platformVersion":"12.0.1"
+  "architecture": "",
+  "bitness": "",
+  "brands": [
+    {
+      "brand": "Not?A_Brand",
+      "version": "8"
+    },
+    {
+      "brand": "Chromium",
+      "version": "108"
+    },
+    {
+      "brand": "Google Chrome",
+      "version": "108"
+    }
+  ],
+  "fullVersionList": [
+    {
+      "brand": "Not?A_Brand",
+      "version": "8.0.0.0"
+    },
+    {
+      "brand": "Chromium",
+      "version": "108.0.5359.128"
+    },
+    {
+      "brand": "Google Chrome",
+      "version": "108.0.5359.128"
+    }
+  ],
+  "mobile": true,
+  "model": "Pixel 6",
+  "platform": "Android",
+  "platformVersion": "13.0.0",
+  "uaFullVersion": "108.0.5359.128",
+  "wow64": false
 }
 ```
 
@@ -360,7 +379,7 @@ for that site until the browser is closed.
 ⬆️ _Subsequent requests_
 
 ```text
-Sec-CH-UA-Full-Version-List: " Not A;Brand";v="99.0.0.0", "Chromium";v="98.0.4738.0", "Google Chrome";v="98.0.4738.0"
+Sec-CH-UA-Full-Version-List: "Not?A_Brand";v="8.0.0.0", "Chromium";v="108.0.5359.128", "Google Chrome";v="108.0.5359.128"
 ```
 
 However, if another `Accept-CH` header is received then that will **completely
@@ -375,7 +394,7 @@ Accept-CH: Sec-CH-UA-Bitness
 ⬆️ _Subsequent requests_
 
 ```text
-Sec-CH-UA-Platform: "64"
+Sec-CH-UA-Bitness: "64"
 ```
 
 The previously asked-for `Sec-CH-UA-Full-Version-List` **will not be sent**.
@@ -421,7 +440,7 @@ Permissions-Policy: ch-ua-platform-version=(self "downloads.example.com"),
 ⬆️ _Request to `downloads.example.com`_
 
 ```text
-Sec-CH-UA-Platform-Version: "10"
+Sec-CH-UA-Platform-Version: "13.0.0"
 ```
 
 ⬆️ _Requests to `cdn.provider` or `img.example.com`_
@@ -449,30 +468,13 @@ comprehensive and remains up-to-date.
 With these caveats in mind, the [User-Agent Client Hints repo lists some valid
 use cases](https://wicg.github.io/ua-client-hints/#use-cases) for sites.
 
+{% YouTube id="f0YY0o2OAKA" %}
+
 ## What happens to the User-Agent string?
 
-The plan is to minimize the ability for covert tracking on the web by reducing
-the amount of identifying information exposed by the existing User-Agent string
-while not causing undue disruption on existing sites. Introducing User-Agent
-Client Hints now gives you a chance to understand and experiment with the new
-capability, before any changes are made to User-Agent strings.
-
-[Eventually](https://blog.chromium.org/2021/05/update-on-user-agent-string-reduction.html),
-the information in the User-Agent string will be reduced so it maintains the
-legacy format while only providing the same high-level browser and significant
-version information as per the default hints. In Chromium, this change has been
-deferred until at least 2022 to provide additional time for the ecosystem to
-evaluate the new User Agent Client Hints capabilities.
-
-You can test a version of this by enabling the
-`about://flags/#reduce-user-agent` flag from Chrome 93 (Note: this flag was
-named `about://flags/#freeze-user-agent` in versions Chrome 84 - 92). This will
-return a string with the historical entries for compatibility reasons, but with
-sanitized specifics. For example, something like:
-
-```text
-Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36
-```
+User-Agent Client Hints provide an alternative route to request the information
+removed from the user-agent string. Read more in [User-Agent
+reduction](/docs/privacy-sandbox/user-agent/).
 
 _Photo by [Sergey Zolkin](https://unsplash.com/@szolkin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 on

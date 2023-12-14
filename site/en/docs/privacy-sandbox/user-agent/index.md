@@ -81,11 +81,11 @@ A user opens the browser and enters `example.com` into the address bar:
    1. The browser includes the `User-Agent` header with the reduced User-Agent
       string. For example:
       `User-Agent: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML,
-      like Gecko) Chrome/98.0.0.0 Mobile Safari/537.36`
+      like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36`
    1. The browser includes that same information in the default User-Agent
       Client Hint headers. For example:
-      ```powershell
-      Sec-CH-UA: "Chrome"; v="98"
+      ```text
+      Sec-CH-UA: "Google Chrome";v="108"
       Sec-CH-UA-Mobile: ?1
       Sec-CH-UA-Platform: "Android"
       ```
@@ -95,11 +95,11 @@ A user opens the browser and enters `example.com` into the address bar:
 1. The browser applies policies and user configuration to determine what data
    is allowed to return to the server in subsequent request headers. For
    example:
-   ```powershell
-   Sec-CH-UA: "Chrome"; v="93"
+   ```text
+   Sec-CH-UA: "Google Chrome"; v="108"
    Sec-CH-UA-Mobile: ?1
    Sec-CH-UA-Platform: "Android"
-   Sec-CH-UA-Model: "Pixel 2"
+   Sec-CH-UA-Model: "Pixel 6"
    ```
 
 ### Critical Client Hints
@@ -111,7 +111,7 @@ values requested by `Accept-CH`.
 For example, the initial request may include a request for `Device-Memory` and
 `Viewport-Width`, where `Device-Memory` is considered critical.
 
-```powershell
+```text
 GET / HTTP/1.1
 Host: example.com
 
