@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: "Step 6: Export Todos to the Filesystem"
+seoTitle: "Step 6: Export Todos to the Filesystem [Deprecated]"
 date: 2014-10-17
 #updated: TODO
 description: How to write to the file system from your Chrome App.

@@ -18,7 +18,7 @@ Protocol Domains. The available domains are: [Accessibility][accessibility],
 
 ## Manifest
 
-You must declare the "debugger" permission in your extension's manifest to use this API.
+You must declare the `"debugger"`` permission in your extension's manifest to use this API.
 
 ```json
 {
@@ -33,7 +33,9 @@ You must declare the "debugger" permission in your extension's manifest to use t
 
 ## Examples
 
-You can find samples of this API in [Samples][debugger-samples].
+To try this API, install the [debugger API example](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/debugger) from the [chrome-extension-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples)
+repository.
+
 
 [audits]: https://chromedevtools.github.io/devtools-protocol/tot/Audits
 [dom]: https://chromedevtools.github.io/devtools-protocol/tot/DOM
@@ -50,7 +52,6 @@ You can find samples of this API in [Samples][debugger-samples].
 [target]: https://chromedevtools.github.io/devtools-protocol/tot/Target
 [tracing]: https://chromedevtools.github.io/devtools-protocol/tot/Tracing
 [webauthn]: https://chromedevtools.github.io/devtools-protocol/tot/WebAuthn
-[debugger-samples]: /docs/extensions/mv3/samples#search:debugger
 [css]: https://chromedevtools.github.io/devtools-protocol/tot/css
 [cache-storage]: https://chromedevtools.github.io/devtools-protocol/tot/CacheStorage
 [dom-debugger]: https://chromedevtools.github.io/devtools-protocol/tot/DOMDebugger

@@ -37,9 +37,9 @@ User-Agent 削減は、Chrome ブラウザのパッシブ フィンガープリ�
 - `navigator.platform` Javascript ゲッター
 - `navigator.appVersion` Javascript ゲッター
 
-削減された User-Agent によって共有されるものよりも多くのクライアント情報を受け取るには、サイトを新しい User-Agent [Client Hints](https://web.dev/migrate-to-ua-ch/) API に移行する必要があります。移行戦略の詳細については、「[User-Agent Client Hints への移行](https://web.dev/migrate-to-ua-ch/)」をご覧ください。
+削減された User-Agent によって共有されるものよりも多くのクライアント情報を受け取るには、サイトを新しい User-Agent [Client Hints](https://web.dev/articles/migrate-to-ua-ch) API に移行する必要があります。移行戦略の詳細については、「[User-Agent Client Hints への移行](https://web.dev/articles/migrate-to-ua-ch)」をご覧ください。
 
-現在、User-Agent 削減計画には iOS と WebView が含まれていないため、これらのプラットフォームは引き続き完全な User Agent 文字列を取得します。主に、これらのプラットフォームがまだ User-Agent [Client Hints](https://web.dev/migrate-to-ua-ch/) を実装していないことがその理由です。
+現在、User-Agent 削減計画には iOS と WebView が含まれていないため、これらのプラットフォームは引き続き完全な User Agent 文字列を取得します。主に、これらのプラットフォームがまだ User-Agent [Client Hints](https://web.dev/articles/migrate-to-ua-ch) を実装していないことがその理由です。
 
 ## このオリジントライアルの仕組み
 

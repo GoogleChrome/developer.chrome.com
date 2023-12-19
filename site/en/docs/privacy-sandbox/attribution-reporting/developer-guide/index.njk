@@ -1,0 +1,140 @@
+---
+layout: 'layouts/landing.njk'
+title: 'Attribution Reporting API developer guide'
+sections:
+  intro:
+    - url: /docs/privacy-sandbox/attribution-reporting/getting-started/
+      title: Get started with the Attribution Reporting API
+      description: Here's where to start, including setup and a quick overview.
+    - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-source/
+      title: Register sources
+      description: Learn how to register sources to attribute clicks and views to the appropriate events.
+    - url: /docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/
+      title: Register triggers
+      description: Learn how to register attribution triggers to measure your conversions.
+    - url: /docs/privacy-sandbox/attribution-reporting-debugging/
+      title: Set up debugging
+      description: Learn how debugging works and how to set it up.
+  advanced_concepts:
+    - url: /docs/privacy-sandbox/attribution-reporting/understanding-noise/
+    - url: /docs/privacy-sandbox/attribution-reporting/working-with-noise/
+    - url: /docs/privacy-sandbox/attribution-reporting/constraints/
+    - url: /docs/privacy-sandbox/attribution-reporting/contribution-budget/
+    - url: /docs/privacy-sandbox/attribution-reporting/aggregation-keys/
+    - url: /docs/privacy-sandbox/attribution-reporting/web-to-app-attribution/
+  customize_reports:
+    - url: /docs/privacy-sandbox/attribution-reporting/change-attribution-logic/
+    - url: /docs/privacy-sandbox/attribution-reporting/define-filters/
+    - url: /docs/privacy-sandbox/attribution-reporting/prevent-duplication/
+    - url: /docs/privacy-sandbox/attribution-reporting/custom-report-windows/
+    - url: /docs/privacy-sandbox/attribution-reporting/multiple-reporters/
+    - url: /docs/privacy-sandbox/attribution-reporting/report-schedules/
+  tools_demos:
+    - url: https://arapi-home.web.app/
+      title: Attribution Reporting API demo
+      description: In this demo an advertiser uses an ad-tech provider to run their ads on a publisher site. See how the API generates event-level and aggregatable reports.
+    - url: https://github.com/privacysandbox/measurement-simulation/blob/main/OVERVIEW.md
+      title: Measurement Simulation Library
+      description: Use historical data to see how it would look with the Attribution Reporting API.
+    - url: https://noise-lab.uc.r.appspot.com/?mode=simple
+      title: Noise Lab
+      description: Use Noise Lab to experiment with different values to see the impact of noise.
+    - url: https://wicg.github.io/attribution-reporting-api/validate-headers
+      title: Attribution Reporting Header Validator
+      description: Test out your headers to make sure you have the right fields for your API registrations.
+    - url: https://arapi-home.web.app/#:~:text=chrome%3A//attribution%2Dinternals
+      title: Chrome attribution internals
+      description: The demo illustrates how you can use chrome://attribution-internals/, but you can just type it in your browser to see sources, triggers, and more.
+
+---
+
+{% from 'macros/cards/hero-card-wide.njk' import heroCardWide with context %}
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+{% from 'macros/icon.njk' import icon with context %}
+{% from 'macros/landing-section.njk' import landingSection with context %}
+{% from 'macros/landing-deco.njk' import landingDeco with context %}
+{% from 'macros/landing-section-expanded.njk' import landingSectionExpanded with context %}
+{% from 'macros/landing-section-usecases.njk' import landingSectionUseCases with context %}
+
+{# landing-page-expanded has unique styles, added for Privacy Sandbox and expanded landing section. #}
+
+{{ heroCardWide(
+  "Attribution Reporting API developer guide",
+  "What you need to know to start working with the Attribution Reporting API.",
+  "",
+  "",
+  "",
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/i1wLexi7cwRpdfIkBYAX.svg"
+  ) }}
+
+{{ landingSectionExpanded(
+  "Get started with the API",
+  "The first steps to get up and running.",
+  sections.intro,
+  "blue",
+  "top-4",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/QDyL1Otpv6Id7sDTconF.svg",
+  "Graduation cap icon.",
+  200,
+  129,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/QDyL1Otpv6Id7sDTconF.svg"
+  )
+}}
+
+{{ landingSectionUseCases(
+  "Customize reports",
+  "Take advantage of the flexibility of the API.",
+  "",
+  sections.customize_reports,
+  "",
+  "",
+  "",
+  "green",
+  "right",
+  true,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/cT27jgN3G7aYl9ftM0lt.svg",
+  "Analytics icon.",
+  284,
+  193,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg"
+  )
+}}
+
+{{ landingSectionUseCases(
+  "Tools and Demos",
+  "These tools and demos will help you test and understand the API.",
+  "",
+  sections.tools_demos,
+  "",
+  "",
+  "",
+  "red",
+  "right",
+  true,
+  "image/RtQlPaM9wdhEJGVKR8boMPkWf443/CDrmaiLPS4jpwuRRmtdn.svg",
+  "People icon.",
+  429,
+  278,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/yrsJmUfAnqDIDxjVYhXq.svg"
+  )
+}}
+
+{{ landingSectionUseCases(
+  "Advanced concepts",
+  "The background you need to achieve your measurement outcomes.",
+  "",
+  sections.advanced_concepts,
+  "",
+  "",
+  "",
+  "green",
+  "right",
+  true,
+  "image/RtQlPaM9wdhEJGVKR8boMPkWf443/Q3IWTvTWN8uWAKGq6hqd.svg",
+  "People icon.",
+  284,
+  193,
+  "image/VbsHyyQopiec0718rMq2kTE1hke2/pfYmfQtnte4ZKFE7r9nE.svg"
+  )
+}}

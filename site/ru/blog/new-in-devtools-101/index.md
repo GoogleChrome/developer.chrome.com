@@ -62,8 +62,8 @@ tags:
 <!-- [Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications. -->
 [Каскадные слои](/blog/cascade-layers/) позволяют более точно контролировать файлы CSS для предотвращения конфликтов, связанных со специфичностью стилей. Это особенно полезно для большой кодовой базы, дизайн-систем и для управления стилями сторонних приложений.
 
-<!-- In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
-В этом [примере](https://jec.fyi/demo/cascade-layer) определено 3 каскадных слоя: `page`, `component` и `base`. В панели **Стили** (Styles) вы можете просмотреть каждый слой и его стили.
+<!-- In this [example](https://jec.fish/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
+В этом [примере](https://jec.fish/demo/cascade-layer) определено 3 каскадных слоя: `page`, `component` и `base`. В панели **Стили** (Styles) вы можете просмотреть каждый слой и его стили.
 
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
 Кликните на имя слоя, чтобы просмотреть порядок слоёв. Слой `page` имеет наибольшую специфичность, поэтому фон блока `box` зелёный.
@@ -112,8 +112,8 @@ DevTools теперь правильно оценивает и отобража�
 <!-- These are some noteworthy fixes in this release: -->
 Вот несколько заслуживающих внимания исправлений в этом выпуске:
 
-<!-- - The [Back/forward cache](/blog/new-in-devtools-98/#bfcache) now displays the extension ID which blocked [bfcache](https://web.dev/bfcache/) when present.( [1284548](https://crbug.com/1284548)) -->
-- [Возвратный кэш](/blog/new-in-devtools-98/#bfcache) теперь показывает ID расширения, которое блокирует [bfcache](https://web.dev/bfcache/) при наличии. ([1284548](https://crbug.com/1284548))
+<!-- - The [Back/forward cache](/blog/new-in-devtools-98/#bfcache) now displays the extension ID which blocked [bfcache](https://web.dev/articles/bfcache) when present.( [1284548](https://crbug.com/1284548)) -->
+- [Возвратный кэш](/blog/new-in-devtools-98/#bfcache) теперь показывает ID расширения, которое блокирует [bfcache](https://web.dev/articles/bfcache) при наличии. ([1284548](https://crbug.com/1284548))
 <!-- - Fixed autocompletion support for array-like objects, CSS class names, `map.get` and HTML tags. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983)) -->
 - Исправлена поддержка автодополнения объектов типа массив, имён CSS-классов, `map.get` и HTML-тегов. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983))
 <!-- - Fixed incorrect highlights when double-clicking on words and undoing autocomplete. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667)) -->
@@ -123,7 +123,7 @@ DevTools теперь правильно оценивает и отобража�
 <!-- - Re-enable support for using **Alt** (Options) key for multi selection in the **Sources** panel. ([1304070](https://crbug.com/1304070)) -->
 - Вновь включена поддержка клавиш **Alt** (Options) для множественного выбора во вкладке **Источники** (Sources). ([1304070](https://crbug.com/1304070))
 
- 
+
 <!-- ## [Experimental] New timespan and snapshot mode in the Lighthouse panel {: #lighthouse } -->
 ## [Эксперимент] Новые режимы временного промежутка и сводки во вкладке Lighthouse {: #lighthouse }
 
@@ -135,8 +135,8 @@ DevTools теперь правильно оценивает и отобража�
 <!-- Apart from the existing **navigation** mode, the **Lighthouse** panel now support two more modes on measuring user flows - **timespan** and **snapshot**. -->
 Помимо существующего режима **навигации**, вкладка **Lighthouse** теперь поддерживает еще два режима измерения пользовательских потоков — **timespan** и **сводка**.
 
-<!-- For example, you can use the **timespan** reports to analyze user interactions. Open this [demo](https://coffee-cart.netlify.app/) page. Select the **Timespan** mode and click on **Start timespan**. On the page, click on a coffee and end the timespan. Read the report to find out the [Total Blocking Time](https://web.dev/tbt/) and [Cumulative Layout Shift](https://web.dev/cls/) that were caused by the interaction. -->
-Например, вы можете использовать отчёты в режиме **timespan** для анализа пользовательских действий. Откройте эту [демо-страницу](https://coffee-cart.netlify.app/). Выберите режим **Timespan** и нажмите **Start timespan**. Кликните на кофе на странице и завершите запись. Прочитайте отчёт, чтобы узнать [Total Blocking Time](https://web.dev/tbt/) и [Cumulative Layout Shift](https://web.dev/cls/) обусловленные взаимодействием.
+<!-- For example, you can use the **timespan** reports to analyze user interactions. Open this [demo](https://coffee-cart.netlify.app/) page. Select the **Timespan** mode and click on **Start timespan**. On the page, click on a coffee and end the timespan. Read the report to find out the [Total Blocking Time](https://web.dev/articles/tbt) and [Cumulative Layout Shift](https://web.dev/articles/cls) that were caused by the interaction. -->
+Например, вы можете использовать отчёты в режиме **timespan** для анализа пользовательских действий. Откройте эту [демо-страницу](https://coffee-cart.netlify.app/). Выберите режим **Timespan** и нажмите **Start timespan**. Кликните на кофе на странице и завершите запись. Прочитайте отчёт, чтобы узнать [Total Blocking Time](https://web.dev/articles/tbt) и [Cumulative Layout Shift](https://web.dev/articles/cls) обусловленные взаимодействием.
 
 <!-- Each mode has its own unique use cases, benefits, and limitations. Please refer to the [Lighthouse documentation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) for more information. -->
 Каждый режим имеет свои уникальные сценарии использования, преимущества и ограничения. Пожалуйста, обратитесь к [документации по Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) для получения дополнительной информации.

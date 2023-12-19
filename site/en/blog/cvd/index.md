@@ -41,7 +41,7 @@ Chrome DevTools can help developers and designers to improve contrast and to pic
 
 - The Inspect Mode tooltip that appears on top of the web page [shows the contrast ratio](/blog/new-in-devtools-84#a11y) for text elements.
 - The DevTools color picker [calls out bad contrast ratios](/blog/new-in-devtools-65#contrast) for text elements, [shows the recommended contrast line](/blog/new-in-devtools-73#AAA) to help manually select better colors, and can even [suggest accessible colors](/blog/new-in-devtools-86#accessible-color).
-- Both [the CSS Overview panel](/blog/new-in-devtools-87#css-overview) and [the Lighthouse Accessibility audit report](https://web.dev/color-contrast/) lists low-contrast text elements as found on your page.
+- Both [the CSS Overview panel](/blog/new-in-devtools-87#css-overview) and [the Lighthouse Accessibility audit report](https://web.dev/articles/color-contrast) lists low-contrast text elements as found on your page.
 
 {% YouTube id='Mje2wYgPYP0' %}
 
@@ -285,7 +285,7 @@ AtomicString CreateVisionDeficiencyFilterUrl(VisionDeficiency vision_deficiency)
 
 Note that this technique gives us access to the full power of SVG filters without having to re-implement anything or re-invent any wheels. We’re implementing a Blink Renderer feature, but we’re doing so by leveraging the Web Platform.
 
-Okay, so we’ve figured out how to construct SVG filters and turn them into data URLs that we can use within our CSS `filter` property value. Can you think of a problem with this technique? It turns out, we can’t actually _rely_ on the data URL being loaded in all cases, since the target page might have [a `Content-Security-Policy`](https://web.dev/strict-csp/) that blocks data URLs. Our final Blink-level implementation takes special care to bypass CSP for these “internal” data URLs during loading.
+Okay, so we’ve figured out how to construct SVG filters and turn them into data URLs that we can use within our CSS `filter` property value. Can you think of a problem with this technique? It turns out, we can’t actually _rely_ on the data URL being loaded in all cases, since the target page might have [a `Content-Security-Policy`](https://web.dev/articles/strict-csp) that blocks data URLs. Our final Blink-level implementation takes special care to bypass CSP for these “internal” data URLs during loading.
 
 Edge cases aside, we’ve made some good progress. Because we no longer depend on inline `<svg>` being present in the same document, we’ve effectively reduced our solution to just a single self-contained CSS `filter` property definition. Great! Now let’s get rid of that too.
 

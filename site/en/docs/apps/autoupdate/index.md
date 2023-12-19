@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Autoupdating"
+seoTitle: "Chrome Apps - Autoupdating"
 date: 2012-09-17
 updated: 2018-03-19
 description: How to enable auto-updating of your Chrome App.

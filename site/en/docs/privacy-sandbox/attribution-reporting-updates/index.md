@@ -31,17 +31,18 @@ If you're new to this API or have not experimented with it yet, read the
 
 ## Changelog
 
+* **August 9, 2023**: We have begun the [ramp up for the Ads Measurement and Relevance APIs, and testers can expect to see traffic levels increase over the next few days](https://groups.google.com/a/chromium.org/g/attribution-reporting-api-dev/c/w41-x4HmJO4/m/MndCUVf4AgAJ). 
 * **March 17, 2023**: We've updated the
-  [status for API features](/docs/privacy-sandbox/attribution-reporting#status)
+  [status for API features](/docs/privacy-sandbox/attribution-reporting#status).
 * **December 15, 2022**: We've published why we plan to
   [ship the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/chrome-shipping)
   in the first half of 2023.
 *  **June 23, 2022**: Several updates have been detailed in the [Attribution Reporting updates in June 2022 blog post](/blog/attribution-reporting-updates-june-2022). Additionally:
-   *  The  [API handbook](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit)
+   *  The API handbook
       was updated.
-   *  We've published [Experiment with Attribution Reporting: Strategy and tips](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit?usp=sharing)
-      for summary reports.
-*  **March 31, 2022**: New [origin trial for Ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial/), which includes the Attribution Reporting API.
+   *  We published Experiment with Attribution Reporting: Strategy and tips 
+      for summary reports. As of July 2023, that content has been migrated to [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) and [Understanding aggregation keys](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/).
+*  **March 31, 2022**: New [origin trial for Ads relevance and measurement APIs](/blog/privacy-sandbox-unified-origin-trial/), which includes the Attribution Reporting API. Now completed (as of September 20, 2023).
 *  **February 7, 2022**: Documentation for the [header trigger redirect](/blog/attribution-reporting-jan-2022-updates/#header-trigger-redirect) added.
 *  **January 27, 2022**: [Migration for API updates](/blog/attribution-reporting-jan-2022-updates/) published, including:
    *  [API mechanism changes](/blog/attribution-reporting-jan-2022-updates/#mechanism-changes)

@@ -20,11 +20,11 @@ prototyping CSS, debugging JavaScript, and analyzing load performance.
 There are many ways to open DevTools, because different users want quick access to different parts
 of the DevTools UI.
 
-- When you want to work with the DOM or CSS, right-click an element on the page and select
-  **Inspect** to jump into the **Elements** panel. Or press Command+Option+C (Mac) or
-  Control+Shift+C (Windows, Linux, ChromeOS).
-- When you want to see logged messages or run JavaScript, press Command+Option+J (Mac) or
-  Control+Shift+J (Windows, Linux, ChromeOS) to jump straight into the **Console** panel.
+- To work with the DOM or CSS, right-click an element on the page and select
+  **Inspect** to jump into the **Elements** panel. Or press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd> (Mac) or
+  <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux, ChromeOS).
+- To see logged messages or run JavaScript, press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac) or
+  <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, ChromeOS) to jump straight into the **Console** panel.
 
 See [Open Chrome DevTools][2] for more details and workflows.
 
@@ -33,12 +33,12 @@ See [Open Chrome DevTools][2] for more details and workflows.
 If you're a more experienced web developer, here are the recommended starting points for learning
 how DevTools can improve your productivity:
 
-- [View and Change the DOM][3]
-- [View and Change a Page's Styles (CSS)][4]
+- [View and change the DOM][3]
+- [View and change CSS][4]
 - [Debug JavaScript][5]
-- [View Messages and Run JavaScript in the Console][6]
-- [Optimize Website Speed][7]
-- [Inspect Network Activity][8]
+- [View messages and run JavaScript in the Console][6]
+- [Optimize website speed][7]
+- [Inspect network activity][8]
 
 ## Discover DevTools {: #discover }
 
@@ -54,115 +54,110 @@ seriously boost your productivity.
 
 ### Device Mode {: #device-mode }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KCl7BybVtFjmOigO56Si.png", alt="Device Mode", width="800", height="613" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/roZeihCLy8b7qwT6HY4G.png", alt="Device mode turned on in viewport.", width="800", height="625" %}
 
 Simulate mobile devices.
 
-- [Device Mode][9]
-- [Emulate Sensors: Geolocation & Accelerometer][11]
+- [Device mode][9]
+- [Emulate device sensors][11]
 
-### Elements panel & CSS {: #elements }
+### Elements panel {: #elements }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UjVAPTnFGxLEc5RLDwBy.png", alt="Elements Panel", width="800", height="609" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/wSHhyk4ReCEtXESW4SIl.png", alt="Elements panel.", width="800", height="490" %}
 
 View and change the DOM and CSS.
 
-- [Get Started With Viewing And Changing The DOM][12]
-- [Get Started With Viewing And Changing CSS][13]
-- [Inspect and Tweak Your Pages][14]
-- [Edit Styles][15]
+- [Get started with viewing and changing the DOM][12]
+- [Get started with viewing and changing CSS][13]
+- [Edit CSS][15]
 - [Edit the DOM][16]
 - [Find invalid, overridden, inactive, and other CSS][51]
 - [Identify potential CSS improvements][53]
 - [Emulate light/dark themes, contrast, and other CSS media features][52]
-- [Find Unused CSS][18]
-- [Inspect Animations][17]
+- [Find unused CSS][18]
+- [Inspect animations][17]
 
 ### Console panel {: #console }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hlgSxlGaLKLeQ45nGwUC.png", alt="Console Panel", width="800", height="469" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/SvFMhX9k5z5f9oIfgq3V.png", alt="Console panel.", width="800", height="560" %}
 
 View messages and run JavaScript from the Console.
 
-- [Get Started With The Console][19]
-- [Using the Console][20]
-- [Interact from Command Line][21]
-- [Console API Reference][22]
+- [Get started with the Console][19]
+- [Console Utilities API reference][21]
+- [Console API reference][22]
 
 ### Sources panel {: #sources }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tYPZahEdu0RMGFFcCvyp.png", alt="Sources Panel", width="800", height="655" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/asZUgjzzWVOOt4APCCBb.png", alt="Sources panel.", width="800", height="559" %}
 
 Debug JavaScript, persist changes made in DevTools across page reloads, save and run snippets of
-JavaScript, and save changes that you make in DevTools to disk.
+JavaScript, and save changes that you make in DevTools to local sources.
 
-- [Get Started With Debugging JavaScript][23]
-- [Pause Your Code With Breakpoints][24]
-- [Save Changes to Disk with Workspaces][25]
-- [Run Snippets Of Code From Any Page][26]
-- [JavaScript Debugging Reference][27]
-- [Persist Changes Across Page Reloads with Local Overrides][28]
-- [Find Unused JavaScript][29]
+- [Get started with debugging JavaScript][23]
+- [Pause your code with breakpoints][24]
+- [Edit and save files in a workspace][25]
+- [Run snippets of JavaScript][26]
+- [JavaScript debugging reference][27]
+- [Override web content and HTTP response headers locally][28]
 
 ### Network panel {: #network }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XE91VMkc9x1jdMQR1Iep.png", alt="Network Panel", width="800", height="649" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/QxdsutNioCfOjBzf9IfD.png", alt="Network panel.", width="800", height="657" %}
 
 View and debug network activity.
 
-- [Get Started][30]
-- [Network Issues Guide][31]
-- [Network Panel Reference][32]
-- [Inspect Resources][43]
+- [Inspect network activity][30]
+- [Network features reference][32]
+- [View page resources][43]
 
 ### Recorder panel {: #recorder }
 
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fpZHfKigjAf3PB8cNQsL.png", alt="Recorder panel.", width="800", height="646" %}
+
 Record, replay, and measure user flows.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XKjlKjhuoccuFPCQqQ05.png", alt="Recorder panel.", width="800", height="606" %}
-
-- [Get Started][54] 
-- [Explore extensions][55]
-- [Replay beyond Recorder][56]
+- [Record, replay, and measure user flows][54] 
+- [Customize the Recorder with extensions][55]
+- [Recorder features reference][56]
 
 ### Performance panel {: #performance }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nCVPdzEUA2XIY5txAG1G.png", alt="Timeline Panel", width="800", height="649" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/8WrcYMjztXXwvgPF8UUB.png", alt="Performance panel.", width="800", height="693" %}
 
 Find ways to improve load and runtime performance.
 
-- [Optimize Website Speed][33]
-- [Get Started With Analyzing Runtime Performance][34]
-- [Performance Analysis Reference][35]
-- [Analyze runtime performance][36]
-- [Diagnose Forced Synchronous Layouts][37]
+- [Optimize website speed][33]
+- [Analyze runtime performance][34]
+- [Performance features reference][35]
 
 ### Memory panel {: #memory }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oR8gZtwxxhRLj77xYsWd.png", alt="Profiles Panel", width="800", height="655" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/e1Ij43yPpTlhmRrlab9h.png", alt="Memory panel.", width="800", height="562" %}
 
-- [Fix Memory Problems][38]
-- [JavaScript CPU Profiler][39]
+Find and fix memory issues that affect page performance, for example, memory leaks.
+
+- [Fix memory problems][38]
 
 ### Application panel {: #application }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zVZBef8kCIP6uEm9em9y.png", alt="Application Panel", width="800", height="500" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Mt5cwUg90P4CkF8i3w3V.png", alt="The Application panel with the Service workers section opened.", width="800", height="630" %}
 
 Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session
 storage, cookies, Application Cache, images, fonts, and stylesheets.
 
 - [Debug Progressive Web Apps][40]
-- [Inspect and Manage Storage, Databases, and Caches][41]
-- [Inspect and Delete Cookies][42]
+- [View and edit local storage][41]
+- [View, add, edit, and delete cookies][42]
 - [View origin trial information][50]
 
 ### Security panel {: #security }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wB3jgziVHoF13hYf8Yi1.png", alt="Security Panel", width="800", height="573" %}
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/pmyoJrTpfD8s1vA3uEiR.png", alt="Security panel.", width="800", height="562" %}
 
 Debug mixed content issues, certificate problems, and more.
 
-- [Understand Security Issues][44]
+- [Understand security issues][44]
 
 ## Community {: #community }
 
@@ -237,8 +232,8 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [49]: https://chromiumdev.slack.com/messages/devtools/
 [50]: /docs/web-platform/origin-trials/#devtools
 [51]: /docs/devtools/css/issues/
-[52]: /docs/devtools/rendering/emulate-css/
+[52]: /docs/devtools/rendering/
 [53]: /docs/devtools/css-overview/
 [54]: /docs/devtools/recorder/
 [55]: /docs/devtools/recorder/extensions/
-[56]: /blog/extend-recorder/
+[56]: /docs/devtools/recorder/reference/

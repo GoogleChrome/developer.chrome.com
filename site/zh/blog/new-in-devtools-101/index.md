@@ -55,8 +55,8 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 <!-- [Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications. -->
 [级联层（Cascade layers）](/blog/cascade-layers/)允许您显式控制自己的 CSS 文件，从而达到避免样式冲突的目的。这对于大型代码库、设计系统、以及需要在应用中管理第三方样式的情况来说非常有用。
 
-<!-- In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
-在这个[示例](https://jec.fyi/demo/cascade-layer)里面，定义了 3 个级联层（Cascade layers）：`page`、`component` 和 `base`。在**样式**边栏那里，您可以查看每个层以及层里面所包含的样式。
+<!-- In this [example](https://jec.fish/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
+在这个[示例](https://jec.fish/demo/cascade-layer)里面，定义了 3 个级联层（Cascade layers）：`page`、`component` 和 `base`。在**样式**边栏那里，您可以查看每个层以及层里面所包含的样式。
 
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
 点击层名称可以查看层顺序。由于 `page` 层的权重最高，因此 `box` 背景是绿色的。
@@ -104,8 +104,8 @@ Chromium 议题: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 <!-- These are some noteworthy fixes in this release: -->
 下面列出的是此次更新需要注意的 bug 修复：
 
-<!-- - The [Back/forward cache](/blog/new-in-devtools-98/#bfcache) now displays the extension ID which blocked [bfcache](https://web.dev/bfcache/) when present.( [1284548](https://crbug.com/1284548)) -->
-- [Back/forward cache](/blog/new-in-devtools-98/#bfcache) 选项卡现在会显示那些禁止 [bfcache](https://web.dev/bfcache/)功能的插件 ID，前提是插件有 ID。( [1284548](https://crbug.com/1284548))
+<!-- - The [Back/forward cache](/blog/new-in-devtools-98/#bfcache) now displays the extension ID which blocked [bfcache](https://web.dev/articles/bfcache) when present.( [1284548](https://crbug.com/1284548)) -->
+- [Back/forward cache](/blog/new-in-devtools-98/#bfcache) 选项卡现在会显示那些禁止 [bfcache](https://web.dev/articles/bfcache)功能的插件 ID，前提是插件有 ID。( [1284548](https://crbug.com/1284548))
 <!-- - Fixed autocompletion support for array-like objects, CSS class names, `map.get` and HTML tags. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983)) -->
 - 修复类数组对象、CSS 类名、`map.get` 以及 HTML 标签的自动填充问题。([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983))
 <!-- - Fixed incorrect highlights when double-clicking on words and undoing autocomplete. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667)) -->
@@ -127,8 +127,8 @@ Chromium 议题: [1296855](https://crbug.com/1296855), [https://crbug.com/130340
 <!-- Apart from the existing **navigation** mode, the **Lighthouse** panel now support two more modes on measuring user flows - **timespan** and **snapshot**. -->
 除了现有的**导航**模式，Lighthouse 面板现在支持两种新模式，用于评估用户流程 - **timespan** 和 **snapshot**。
 
-<!-- For example, you can use the **timespan** reports to analyze user interactions. Open this [demo](https://coffee-cart.netlify.app/) page. Select the **Timespan** mode and click on **Start timespan**. On the page, click on a coffee and end the timespan. Read the report to find out the [Total Blocking Time](https://web.dev/tbt/) and [Cumulative Layout Shift](https://web.dev/cls/) that were caused by the interaction. -->
-例如，您可以使用 **timespan** 报告来分析用户交互。打开这个 [demo](https://coffee-cart.netlify.app/) 页面。选择 **Timespan** 模式，然后点击**开始 timespan** 按钮。在页面上，点击咖啡杯图案并结束 timespan。读取报告，以便于找出上述交互所产生的 [Total Blocking Time](https://web.dev/tbt/) 和 [Cumulative Layout Shift](https://web.dev/cls/)。
+<!-- For example, you can use the **timespan** reports to analyze user interactions. Open this [demo](https://coffee-cart.netlify.app/) page. Select the **Timespan** mode and click on **Start timespan**. On the page, click on a coffee and end the timespan. Read the report to find out the [Total Blocking Time](https://web.dev/articles/tbt) and [Cumulative Layout Shift](https://web.dev/articles/cls) that were caused by the interaction. -->
+例如，您可以使用 **timespan** 报告来分析用户交互。打开这个 [demo](https://coffee-cart.netlify.app/) 页面。选择 **Timespan** 模式，然后点击**开始 timespan** 按钮。在页面上，点击咖啡杯图案并结束 timespan。读取报告，以便于找出上述交互所产生的 [Total Blocking Time](https://web.dev/articles/tbt) 和 [Cumulative Layout Shift](https://web.dev/articles/cls)。
 
 <!-- Each mode has its own unique use cases, benefits, and limitations. Please refer to the [Lighthouse documentation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) for more information. -->
 每个模式都有属于自己特有的使用场景，优点和限制。请参考 [Lighthouse 帮助文档](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md)以获取更多信息。

@@ -30,7 +30,7 @@ If you don't see a device you want to test, add a custom one:
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/saf99v91L29TNeFEAKev.png", alt="Pixel 7 Pro device details.", width="800", height="1039" %}
 
    {% Aside 'gotchas' %}
-   For more information on what to specify, see [User-Agent Client Hints](https://web.dev/user-agent-client-hints/).
+   For more information on what to specify, see [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints).
    {% endAside %}
 
 1. Click **Save**. Your device is enabled by default and you can select it from the **Dimensions** drop-down list in [device mode](/docs/devtools/device-mode/#device).

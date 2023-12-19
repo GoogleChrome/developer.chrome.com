@@ -24,7 +24,7 @@ decided to put those plans on hold**. We strongly believe providing a valid
 page when the user is offline is critical to providing a good user experience.
 {% endAside %}
 
-[Progressive Web Apps (PWAs)](https://web.dev/pwa/) are a pattern for
+[Progressive Web Apps (PWAs)](https://web.dev/articles/pwa) are a pattern for
 building modern, installable applications using web technology for mobile and
 desktop devices.
 

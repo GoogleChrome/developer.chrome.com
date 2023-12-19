@@ -33,7 +33,7 @@ tags:
 ## Ранний доступ: дерево доступности на всю страницу (Full-page accessibility tree) {: #a11y-tree }
 
 <!-- The new **Full-page accessibility tree** makes it easier for you to get an overview of the full-page [accessibility tree](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) and help you better understand how your web content is exposed to assistive technology.  -->
-Новая функция **Дерево доступности на всю страницу** (Full-page accessibility tree) облегчает обзор полностраничного [дерева доступности](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) и помогает лучше понять, как ваш веб-контент работает со вспомогательными технологиями. 
+Новая функция **Дерево доступности на всю страницу** (Full-page accessibility tree) облегчает обзор полностраничного [дерева доступности](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) и помогает лучше понять, как ваш веб-контент работает со вспомогательными технологиями.
 
 
 <!-- In the **Elements** panel, open the **Accessibility** pane and select **Enable full-page accessibility tree** checkbox. Then, reload DevTools and you will see a new accessibility button in the **Elements** panel. -->
@@ -59,13 +59,13 @@ tags:
 
 
 <!-- ## More precise changes in the Changes tab {: #changes }  -->
-## Явное отображение изменений на вкладке Изменения (Changes) {: #changes } 
+## Явное отображение изменений на вкладке Изменения (Changes) {: #changes }
 
 <!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->
-Изменения кода на вкладке **Изменения** (Changes) автоматически форматируются. 
+Изменения кода на вкладке **Изменения** (Changes) автоматически форматируются.
 
 <!-- Previously, it was hard to trace the actual changes of minified source code because all the code is shown in a single line.  -->
-Раньше было сложно отследить фактические изменения в минифицированных файлах, поскольку весь код отображался в одну строку. 
+Раньше было сложно отследить фактические изменения в минифицированных файлах, поскольку весь код отображался в одну строку.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aup2bT490dkvuBu3o4DS.png", alt="Вкладка Изменения", width="800", height="450" %}
 
@@ -80,15 +80,15 @@ tags:
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
 Теперь вы можете настроить параметр **Timeout** во вкладке [Recorder](/docs/devtools/recorder/) для всех шагов или конкретного шага. Это особенно полезно для страниц с медленными сетевыми запросами и длительной анимацией.
 
-<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
-Например, мы [записали поведение пользователя](/docs/devtools/recorder/#record) на этой [демо-странице](https://jec.fyi/demo/pup-slow-result) при загрузке и клике на пункт меню. Однако загрузка пунктов меню происходит медленно (6 секунд). Воспроизведение [replay](/docs/devtools/recorder/#replay) этой записи не удалось, поскольку она превышает 5 секунд (тайм-аут по умолчанию).
+<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fish/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
+Например, мы [записали поведение пользователя](/docs/devtools/recorder/#record) на этой [демо-странице](https://jec.fish/demo/pup-slow-result) при загрузке и клике на пункт меню. Однако загрузка пунктов меню происходит медленно (6 секунд). Воспроизведение [replay](/docs/devtools/recorder/#replay) этой записи не удалось, поскольку она превышает 5 секунд (тайм-аут по умолчанию).
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 Мы можем использовать новую настройку **Timeout** чтобы исправить это. Откройте детали шага, в котором мы нажимаем на пункт меню. [Редактируйте шаг](/docs/devtools/recorder/#edit-steps), нажав кнопку **Add timeout** и установите значение **6000** миллисекунд (равно 6 секундам).
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
-По желанию вы можете настроить **Timeout** для всех шагов в меню **Replay settings**. Раскройте настройки **Replay settings** и измените значение **Timeout**. 
- 
+По желанию вы можете настроить **Timeout** для всех шагов в меню **Replay settings**. Раскройте настройки **Replay settings** и измените значение **Timeout**.
+
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="Настройка тайм-аута для записи поведения пользователя", width="800", height="530" %}
 
 Задача в трекере Chromium: [1257499](https://crbug.com/1257499)
@@ -97,8 +97,8 @@ tags:
 <!-- ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache } -->
 ## Убедитесь, что ваши страницы кешируются с помощью вкладки Возвратный кеш (Back/forward cache) {: #bfcache }
 
-<!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
-[Возвратный кеш (или bfcache)](https://web.dev/bfcache/) это оптимизация браузера, которая обеспечивает мгновенную навигацию назад и вперед. 
+<!-- [Back/forward cache (or bfcache)](https://web.dev/articles/bfcache) is a browser optimization that enables instant back and forward navigation.  -->
+[Возвратный кеш (или bfcache)](https://web.dev/articles/bfcache) это оптимизация браузера, которая обеспечивает мгновенную навигацию назад и вперед.
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
 Новая вкладка **Возвратный кеш** (Back/forward cache) поможет протестировать ваши страницы, чтобы убедиться, что они оптимизированы для возвратного кеша, или выявить проблемы, которые этому препятствуют.
@@ -107,7 +107,7 @@ tags:
 Чтобы протестировать конкретную страницу, перейдите на неё в Chrome и затем в DevTools откройте **Приложение** (Application) > **Возвратный кеш** (Back-forward Cache). Далее, нажмите кнопку **Test back/forward cache**, и DevTools попытается произвести переход на предыдущую страницу и обратно, чтобы проверить, может ли страница быть восстановлена из кеша.
 
 <!-- As web developers, it's critical to know how to optimize your pages for bfcache across all browsers because it will significantly improve the browsing experience for users—especially those with slower networks or devices.  -->
-Для веб-разработчиков очень важно знать, как оптимизировать страницы для возвратного кеша во всех браузерах, поскольку это значительно улучшит качество просмотра для пользователей. Особенно для тех, у кого медленные сети или устройства. 
+Для веб-разработчиков очень важно знать, как оптимизировать страницы для возвратного кеша во всех браузерах, поскольку это значительно улучшит качество просмотра для пользователей. Особенно для тех, у кого медленные сети или устройства.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="Вкладка Возвратный кеш", width="800", height="516" %}
 
@@ -123,15 +123,15 @@ tags:
 Если вы хотите сфокусироваться на конкретном свойстве в панели **Свойства** (Properties), вы теперь можете ввести название нужного свойства или его значение в новом текстовом поле **Фильтр** (Filter).
 
 <!-- By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all** checkbox to view all properties.  -->
-По умолчанию свойства, чьи значения равны `null` или `undefined`, не отображаются. Поставьте галочку в чекбоксе **Показывать все** (Show all), чтобы увидеть все свойства. 
+По умолчанию свойства, чьи значения равны `null` или `undefined`, не отображаются. Поставьте галочку в чекбоксе **Показывать все** (Show all), чтобы увидеть все свойства.
 
 <!-- These enhancements allow you to get to the properties you care for quicker and thus improve your productivity! -->
 Эти нововведения позволят вам быстрее добраться до объектов, которые вам интересны, и тем самым повысить вашу продуктивность!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="Фильтр во вкладке Свойства", width="800", height="505" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}  
-  
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}
+
 Задача в трекере Chromium: [1269674](https://crbug.com/1269674)
 
 
@@ -170,7 +170,7 @@ tags:
 ## Поддержка значений `row-reverse` и `column-reverse` в редакторе флексбоксов {: #flexbox-editor }
 
 <!-- The [Flexbox editor](/blog/new-in-devtools-90/#flexbox) added two new buttons to support `row-reverse` and `column-reverse` in `flex-direction`.  -->
-В [редактор флексбоксов](/blog/new-in-devtools-90/#flexbox) добавлены две новые кнопки для поддержки значений `row-reverse` и `column-reverse` в свойстве `flex-direction`. 
+В [редактор флексбоксов](/blog/new-in-devtools-90/#flexbox) добавлены две новые кнопки для поддержки значений `row-reverse` и `column-reverse` в свойстве `flex-direction`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHI4frP4MqaydXk19sq2.png", alt="Редактор флексбоксов", width="800", height="546" %}
 
@@ -194,7 +194,7 @@ tags:
 
 Задача в трекере Chromium: [1050021](https://crbug.com/1050021)
 
- 
+
 <!-- ### Keyboard shortcut to expand all search results {: #toggle-search-result } -->
 ### Шорткат для расширение всех результатов поиска {: #toggle-search-result }
 
@@ -223,8 +223,8 @@ tags:
 <!-- The **Lighthouse** panel is now running Lighthouse 9. Lighthouse will now list all the elements sharing the same id. -->
 Во вкладке **Lighthouse** теперь запускается Lighthouse 9. Lighthouse теперь перечисляет все элементы, имеющие одинаковый идентификатор.
 
-<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
-Неуникальный идентификатор элемента — распространенная проблема доступности. Например, id, на который ссылается атрибут `aria-labelledby`, используется на [нескольких элементах] (https://web.dev/duplicate-id-aria/). 
+<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/articles/duplicate-id-aria).  -->
+Неуникальный идентификатор элемента — распространенная проблема доступности. Например, id, на который ссылается атрибут `aria-labelledby`, используется на [нескольких элементах] (https://web.dev/articles/duplicate-id-aria).
 
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 Перейдите на страницу [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) для получения более подробной информации об обновлении.
@@ -246,11 +246,11 @@ tags:
 - Improved auto-complete suggestions for editable sources (e.g. snippets, local override)  -->
 - Значительно ускорилось открытие больших файлов (например, WASM, JavaScript)
 - Больше никакой случайной прокрутки при пошаговом выполнении кода
-- Улучшены предложения автозаполнения для редактируемых источников (например, сниппеты, локальное переопределение) 
+- Улучшены предложения автозаполнения для редактируемых источников (например, сниппеты, локальное переопределение)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c1ab112d9002d5c3b3bb70cf2839bac182f0cdb5 #}
 
-Задача в трекере Chromium: [1241848](https://crbug.com/1241848) 
+Задача в трекере Chromium: [1241848](https://crbug.com/1241848)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
 ## Другие важные моменты {: #misc }
@@ -260,12 +260,12 @@ tags:
 
 <!-- - Properly displaying the waterfall diagram of network requests. Previously, the style was broken. ([1275501](https://crbug.com/1275501))
 - The code highlight was broken when searching in documents with very long lines in the **Sources** panel. It’s now fixed. ([1275496](https://crbug.com/1275496))
-- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972)) 
+- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972))
 - Fixed the missing layout shifts details in the **Summary** section of the **Performance** panel. ([1259606](https://crbug.com/1259606))
 - Support arbitrary characters (e.g. `,`, `.`),  in **Network Search** queries. ([1267196](https://crbug.com/1267196)) -->
 - Правильное отображение графика водопада сетевых запросов. Ранее стили был некорректны. ([1275501](https://crbug.com/1275501))
 - Выделение кода было неисправно при поиске в документах с очень длинными строками во вкладке **Источники** (Sources). Теперь это исправлено. ([1275496](https://crbug.com/1275496))
-- Больше не дублируется вкладка **Полезная нагрузка** (Payload) в сетевых запросах. ([1273972](https://crbug.com/1273972)) 
+- Больше не дублируется вкладка **Полезная нагрузка** (Payload) в сетевых запросах. ([1273972](https://crbug.com/1273972))
 - Исправлено отсутствие деталей сдвига макета в разделе **Сводка** (Summary) во вкладке **Производительность** (Performance). ([1259606](https://crbug.com/1259606))
 - Поддержка произвольных символов (например, `,`, `.`) в запросах поиска на вкладке **Сеть**. ([1267196](https://crbug.com/1267196))
 
@@ -286,12 +286,12 @@ tags:
 <!-- The **Endpoints** section is now available. It gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header. -->
 Секция **Endpoints** теперь доступна. Она показывает все эндпоинты, настроенные в заголовке `Reporting-Endpoints`.
 
-<!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
-Научитесь пользоваться [Reporting API](https://web.dev/reporting-api/) для отслеживания проблем безопасности, устаревших вызовов API и т.д.
+<!-- Learn to use the [Reporting API](https://web.dev/articles/reporting-api) to monitor security violations, deprecated API calls, and more. -->
+Научитесь пользоваться [Reporting API](https://web.dev/articles/reporting-api) для отслеживания проблем безопасности, устаревших вызовов API и т.д.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Панель Reporting API", width="800", height="560" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #}
 
 Задача в трекере Chromium: [1200732](https://crbug.com/1200732)
 

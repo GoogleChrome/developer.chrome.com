@@ -10,13 +10,13 @@ date: 2019-05-04
 updated: 2020-06-10
 ---
 
-Registrar um [service worker](https://web.dev/service-workers-cache-storage/) é a primeira etapa para habilitar os principais recursos do [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/):
+Registrar um [service worker](https://web.dev/articles/service-workers-cache-storage) é a primeira etapa para habilitar os principais recursos do [Progressive Web App (PWA)](https://web.dev/explore/progressive-web-apps):
 
 - Funciona offline
 - Suporta notificações push
 - Pode ser instalado no dispositivo
 
-Saiba mais em [Service workers](https://web.dev/service-workers-cache-storage/) e na postagem da API Cache Storage.
+Saiba mais em [Service workers](https://web.dev/articles/service-workers-cache-storage) e na postagem da API Cache Storage.
 
 ## Compatibilidade do navegador
 
@@ -38,15 +38,15 @@ O Lighthouse verifica se o [protocolo de depuração remota do Chrome](https://g
 
 O registro de um service worker envolve apenas algumas linhas de código, mas o único motivo pelo qual você utilizaria um ervice worker é para possibilitar a implementação de um dos recursos do PWA descritos acima. Na verdade, a implementação desses recursos requer mais trabalho:
 
-- Para aprender como armazenar arquivos em cache para uso offline, consulte a publicação [O que é confiabilidade de rede e como você a mede?](https://web.dev/network-connections-unreliable/).
-- Para saber como tornar seu aplicativo instalável, consulte o codelab [Torne-o instalável.](https://web.dev/codelab-make-installable/)
+- Para aprender como armazenar arquivos em cache para uso offline, consulte a publicação [O que é confiabilidade de rede e como você a mede?](https://web.dev/articles/network-connections-unreliable).
+- Para saber como tornar seu aplicativo instalável, consulte o codelab [Torne-o instalável.](https://web.dev/articles/codelab-make-installable)
 - Para saber como habilitar notificações push, consulte [Adicionando notificações push a um aplicativo da web do Google](https://codelabs.developers.google.com/codelabs/push-notifications) .
 
 ## Recursos
 
 - [Código fonte para a auditoria **Não registra um service worker que controla a página e `start_url`**](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/service-worker.js)
 - [Service workers: uma introdução](https://developers.google.com/web/fundamentals/primers/service-workers)
-- [Service workers e a API Cache Storage](https://web.dev/service-workers-cache-storage/)
-- [O que é confiabilidade de rede e como você a mede?](https://web.dev/network-connections-unreliable/)
-- [Torne-o instalável](https://web.dev/codelab-make-installable/)
+- [Service workers e a API Cache Storage](https://web.dev/articles/service-workers-cache-storage)
+- [O que é confiabilidade de rede e como você a mede?](https://web.dev/articles/network-connections-unreliable)
+- [Torne-o instalável](https://web.dev/articles/codelab-make-installable)
 - [Adicionando notificações push a um aplicativo da web](https://codelabs.developers.google.com/codelabs/push-notifications)

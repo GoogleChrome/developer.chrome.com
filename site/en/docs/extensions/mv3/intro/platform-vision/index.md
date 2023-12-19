@@ -1,24 +1,8 @@
 ---
 layout: 'layouts/doc-post.njk'
-
-# The page title. This appears at the top of the doc and as the page name
-# in Google Search.
 title: Extensions platform vision
-
-# This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in 
-# Google Search.
 description: 'Where the extensions platform is headed and why'
-
-# The publish date
 date: 2020-11-09
-
-# An optional updated date
-# updated: 2020-10-16
-
-# A list of authors. These usernames correspond to the keys in the
-# _data/authorsData.json file.
-
 ---
 
 {% Partial 'extensions/mv3-support.md' %}
@@ -29,7 +13,7 @@ of users, and in one form or another they are becoming a staple feature of most
 major browsers.
 
 There's a thriving extension developer community, with hundreds of thousands of
-published extensions; a strong user base, and millions of extensions downloaded
+published extensions, a strong user base, and millions of extensions downloaded
 every day. We're going to continue improving and extending this vibrant
 ecosystem.
 
@@ -50,52 +34,60 @@ core than previous efforts, by building on web technologies and the web's
 security model.
 
 Later, Chrome extensions introduced a permissions model to give users
-finer-grained control what information and resources could be accessed by any
+finer-grained control over what information and resources could be accessed by any
 extensions they install. The extensions platform also sandboxed extensions in
 separate processes, providing additional security.
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604880385879.svg", alt="Diagram of timeline from previous efforts through current state and future directions", width="574", height="119" %}
+<figure>
+  {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604880385879.svg", alt="Diagram of timeline from previous efforts through current state and future directions", width="574", height="119" %}
+  <figcaption>Where we've been, where we are, and where we're going.</figcaption>
+</figure>
 
 Developers have used our platforms to build a wonderful range of extensions,
 providing Chrome users with all kinds of enhancements to the browser experience.
 But the power of the extensions platform has sometimes
 been exploited to gain inappropriate access to user data and metadata. We see
 scope for improvement in the privacy and security of extensions; we also intend
-to focus on performance, while improving extension capability
+to focus on performance, while improving extension capabilities
 and preserving webbiness.
 
 
 ## Where we're headed
 
 The Chrome extensions platform continues to evolve. The specific course we're
-steering focuses on improvements to security, performance, and privacy &mdash;
-while preserving or extending the capability of extensions and keeping a
+plotting focuses on improvements to security, performance, and privacy,
+while preserving or extending the capabilities of extensions and keeping a
 webby developer experience.
 
-{% 
-  Img src='image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604881144327.svg', 
-  alt='Diagram showing privacy, security, and performance as pillars atop a foundation of webbiness and performance', 
-  width='426', 
-  height='345'
-%}
 
-**Privacy** &mdash; Provide ways for extensions to work well without the need
+
+
+<figure>
+  {%
+    Img src='image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604881144327.svg', 
+    alt='Diagram showing privacy, security, and performance as pillars atop a foundation of webbiness and performance', 
+    width='426', 
+    height='345'
+  %}
+  <figcaption>Where we're headed</figcaption>
+</figure>
+
+**Privacy**&mdash;Provides ways for extensions to work well without the need
 to persistently access user data.
 Improve user control of permissions by informing users what extensions are
 doing, letting them grant permissions at runtime and in context.
 
-**Security** &mdash;
-Move toward stricter protocols and requirements for extensions to access
-resources outside the extension context
+**Security**&mdash;Moves toward stricter protocols and requirements for
+extensions to access resources outside the extension context.
 
-**Performance** &mdash; Ensure that extensions work well on all devices:
+**Performance**&mdash;Ensures that extensions work well on all devices, meaning:
 performance issues don't detract from the browser experience, and Chrome
-runs smoothly even when  many extensions are installed.
+runs smoothly even when many extensions are installed.
 
-**Webbiness** &mdash; Embrace the web platform way of doing things, helping to
-lower barriers to developer engagement, and benefit as the web platform continues to evolve.
+**Webbiness**&mdash;Embraces the web platform way of doing things, helping to
+lower barriers to developer engagement and benefit as the web platform continues to evolve.
 
-**Capability** &mdash; Overall, keep the platform capable, powerful, and
+**Capabilities**&mdash;Overall, keeps the platform capable, powerful, and
 feature-rich so extensions can continue to improve and deliver ever-greater
 value to users.
 
@@ -111,13 +103,13 @@ The extensions platform will provide greater user visibility and control, so
 that users can more easily manage how extensions access their data and
 other resources. The platform already begins to address this by:
 
-* Letting the user modify the host permissions granted to extensions
-* The extensions menu showing which items can or want to access the current page
+* Letting the user modify the host permissions granted to extensions.
+* An extensions menu showing which items can or want to access the current page.
 
 We'll continue to improve this user experience. Look for an increasing emphasis
 on temporary, in-context style of permissions grants, constraining passive
 access to user data. The introduction of
-[activeTab](/extensions/activeTab) was an initial
+[`activeTab`](/extensions/activeTab) was an initial
 step in this direction.
 
 It's also important that users make informed decisions about how their data is
@@ -135,8 +127,8 @@ to let users grant permissions temporarily and only in the context where
 they're needed.
 
 Beyond that, we'll be providing new API features to help
-extensions perform work without requiring data access. Chrome's
-[declarativeNetRequest](/extensions/declarativeNetRequest)
+extensions perform work without requiring data access. The
+[`declarativeNetRequest`](/extensions/declarativeNetRequest) API
 is an example of this approach.
 
 
@@ -146,13 +138,13 @@ Chrome extensions continue to build on *and extend* web technologies. This
 helps to minimize obstacles to developer engagement. Look for further adoption
 of open web capabilities, in addition to extension-specific technologies.
 
-When the [Open Web](https://www.w3.org/wiki/Open_Web_Platform) provides
+When the [open web](https://www.w3.org/wiki/Open_Web_Platform) provides
 a way to achieve a result, the extensions platform will adopt that approach
 in preference to an extensions-specific approach.
 
 Beyond service workers and promises, expect the extensions platform to continue
 adopting contemporary web technologies and approaches as they come about. Our
-intention is to converge with, rather than diverge from, the Open Web.
+intention is to converge with, rather than diverge from, the open web.
 
 ### Expanded capabilities
 
@@ -165,15 +157,15 @@ as they come about.
 
 The extensions platform and the Chrome Web Store will introduce new policies to
 support the objectives described in this vision. These policies will encourage
-clearer communication between developers and end users about the privileges
+clearer communication between developers and users about the privileges
 that extensions use. Look for new policies that require disclosures, constrain
-the context for accessing user data, and better enforcement of the extensions
+the context for accessing user data, and better enforce the extensions
 single purpose policy.
 
 ## Manifest V3
 
-The vision set forth in this article represents a strategic direction &mdash;
-like a compass heading or north star. Manifest V3 and its associated features
+The vision set forth in this article represents a strategic direction, like a
+compass heading or north star. Manifest V3 and its associated features
 are a major step in this strategic direction. 
 
 To learn about Manifest V3 itself and its features, see [Overview of Manifest

@@ -1,22 +1,30 @@
-# developer.chrome.com
+# developer.chrome.com Archived
+
+This site has been migrated to a new platform. As of 7 November, 2023, we stopped merging new pull
+requests for updates to existing content. You can raise content issues in the new
+[issue tracker](https://issuetracker.google.com/issues/new?component=1400036&template=1897236),
+and they will be addressed on the migrated site.
+
+-----
+## [Archived README]
 
 developer.chrome.com is the ultimate resource for developers of all backgrounds
 to learn about what's new in Chrome!
 
-## Found a bug? 👷‍♀️
+### Found a bug? 👷‍♀️
 
 Thanks for letting us know! [File an issue](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=) and a team member should reply shortly.
 
 If you're submitting a pull request to fix a bug, read the
 [Contributing guidelines](https://github.com/GoogleChrome/developer.chrome.com/blob/main/CONTRIBUTING.md).
 
-## Authoring content ✍️
+### Authoring content ✍️
 
 Before you start writing take a moment to look over the
 [developer.chrome.com handbook](https://developer.chrome.com/docs/handbook) and
 familiarize yourself with the process.
 
-## Building the site 🏗
+### Building the site 🏗
 
 You'll need a recent version of [Node](https://nodejs.org/): v14 (LTS) or higher.
 To check your node version run `node -v` in your terminal.
@@ -24,7 +32,7 @@ To check your node version run `node -v` in your terminal.
 If you don't have node, or if you need to upgrade, we recommend using the [Node
 Version Manager (nvm)](https://github.com/nvm-sh/nvm).
 
-### Clone the repo
+#### Clone the repo
 
 ⚠️ If you'd like to contribute (and you're not a member of the core team), be sure to fork the repo first, and clone the fork.
 
@@ -32,13 +40,13 @@ Version Manager (nvm)](https://github.com/nvm-sh/nvm).
 git clone https://github.com/GoogleChrome/developer.chrome.com.git
 ```
 
-### Install dependencies
+#### Install dependencies
 
 ```bash
 npm ci
 ```
 
-### Set up build flags
+#### Set up build flags
 
 Building the entire site can take a while because it's over a thousand pages.
 If you want to _massively_ speed up your build times, we suggest setting some
@@ -97,7 +105,7 @@ ELEVENTY_IGNORE_BLOG=true
 To build only a specific component, start with the above `.env` file and change the value for the
 component you wish to build. You can comment it out, or set it to `0` or `false`.
 
-### Start a local server to preview the site
+#### Start a local server to preview the site
 
 ```bash
 npm run dev
@@ -106,7 +114,7 @@ npm run dev
 Open `http://localhost:8080/` to see the site locally. Changes to assets will
 rebuild the site. Refresh to see your changes.
 
-### Run linters to address bugs
+#### Run linters to address bugs
 
 Before you push your branch, find and address any errors.
 
@@ -114,12 +122,12 @@ Before you push your branch, find and address any errors.
 npm run lint
 ```
 
-## Environments 🌳
+### Environments 🌳
 
 To do a production build of the site and start the local server
 run `npm run production && npm start`.
 
-## Staging 🕺
+### Staging 🕺
 
 When you send in a pull request it will be automatically staged for you. Keep an
 eye out for the netlify bot to comment on the pull request with your unique URL.
@@ -130,9 +138,9 @@ to create a pull request yet, or if you need to stage something private.
 
 ☝️ You will need to be a member of our GCP project for this command to work.
 
-## Deploying the site 🚀
+### Deploying the site 🚀
 
-### Automatic deploys
+#### Automatic deploys
 
 The site will build and deploy the `main` branch automatically every hour,
 Mon–Fri. If you've just merged an article then it should go live at the top

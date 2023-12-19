@@ -1,6 +1,6 @@
-home:
-  text: i18n.nav.side_nav.home
-  url: /
+getInspired:
+  text: i18n.nav.side_nav.getInspired
+  url: /tags/case-study/
 
 docs:
   text: i18n.nav.side_nav.docs
@@ -13,7 +13,3 @@ blog:
 articles:
   text: i18n.nav.side_nav.articles
   url: /articles/
-
-# releases:
-#   text: i18n.nav.side_nav.releases
-#   url: /releases/

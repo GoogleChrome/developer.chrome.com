@@ -27,7 +27,7 @@ content.
 
 There are several ways developers can embed content on a website. The most
 common technique is to use an
-[`<iframe>`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe), 
+[`<iframe>`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe),
 which allows you to embed any content onto your site with just a URL. It's
 already possible to add the `sandbox` attribute to make an iframe more secure.
 
@@ -141,7 +141,7 @@ different top-level partitions needs to be displayed on the same page.
 
 ## Embed with portals  {: #portal }
 
-[Portal](https://web.dev/hands-on-portals/) (`<portal>`) is a proposed HTML
+[Portal](https://web.dev/articles/hands-on-portals) (`<portal>`) is a proposed HTML
 element with an independent browsing context, which could improve the page
 transition experience. Portals embed content like iframe, but the user cannot
 access the portal's code. A portal is view-only and cannot be interacted with by
@@ -162,32 +162,32 @@ early stages of development.
 
 Throughout web history, there have been a number of HTML elements proposed and
 APIs created to embed content. For a while, it was common to create sites with
-multiple [`<frame>`](https://developer.mozilla.org/docs/Web/HTML/Element/frame) 
+multiple [`<frame>`](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
 and a [`<frameset>`](https://developer.mozilla.org/docs/Web/HTML/Element/frameset)
 elements. Sites with several `<frameset>` elements displayed the URL of the
 parent page in the address bar, regardless of the source of the many individual
 frames. This made it difficult to share links to content within the site. These
-APIs have since been deprecated. 
+APIs have since been deprecated.
 
 There was also a time when plugin technologies, such as the Java `<applet>`
 element, were used to cover other use cases. This was later replaced by the
 `<object>` element. Both of these elements were commonly used to display Flash
 plugins, but were also used to display other HTML elements (similar to iframes).
 Other elements, such as  `<canvas>`, `<audio>`, `<video>`, and `<svg>`, have
-rendered both the `<object>` and `<applet>` elements obsolete. 
+rendered both the `<object>` and `<applet>` elements obsolete.
 
 Although `<object>` and `<embed>` are not officially deprecated yet, it's best
 to avoid them, especially since they have some [strange
 behaviors](https://github.com/whatwg/html/issues?q=is%3Aopen+is%3Aissue+label%3A%22topic%3A+embed+and+object%22).
 `<applet>` was [removed from the HTML
-specification](https://github.com/whatwg/html/pull/1399) in 2017. 
+specification](https://github.com/whatwg/html/pull/1399) in 2017.
 
 ## Conclusion
 
-You can securely embed content onto any website, using the existing iframe 
-specification. More HTML elements, including `<fencedframe>` and `<portal>` have 
-been proposed for security and style improvements. We'll continue to share the 
-progress on the [Fenced Frames proposal](/docs/privacy-sandbox/fenced-frame/) as 
+You can securely embed content onto any website, using the existing iframe
+specification. More HTML elements, including `<fencedframe>` and `<portal>` have
+been proposed for security and style improvements. We'll continue to share the
+progress on the [Fenced Frames proposal](/docs/privacy-sandbox/fenced-frame/) as
 it progresses.
 
 _Hero image by [Jackson So](https://unsplash.com/@jacksonsophat)._

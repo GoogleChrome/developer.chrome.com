@@ -48,8 +48,8 @@ Chromium 议题: [1400243](https://crbug.com/1400243).
 ### 使用 pierce 选择器记录 {: #pierce-selectors }
 <!-- In addition to [custom, CSS, ARIA, text, and XPath selectors](/docs/devtools/recorder/reference/#selector), you can now record using [pierce selectors](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce). These selectors behave like CSS ones but can also pierce through shadow roots. -->
 除了 [custom， CSS， ARIA， text 和 XPath 选择器](/docs/devtools/recorder/reference/#selector)，您现在还可以使用 [pierce 选择器](https://pptr.dev/guides/query-selectors#pierce-selectors-pierce)。 这些选择器的行为类似于 CSS 选择器，但也可以穿透影子根。
-<!-- Start a new recording on a page with [shadow DOM](https://web.dev/shadowdom-v1/) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step. -->
-在含有 [shadow DOM](https://web.dev/shadowdom-v1/) 的页面上开始一个新的记录。在 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="复选框.", width="22", height="22" %} **Selector types to record** 选择 **Pierce**，并开始记录您与子 DOM 中元素的交互并检查相应的步骤。
+<!-- Start a new recording on a page with [shadow DOM](https://web.dev/articles/shadowdom-v1) and check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Pierce** in **Selector types to record**. Record your interaction with elements in the shadow DOM and inspect the corresponding step. -->
+在含有 [shadow DOM](https://web.dev/articles/shadowdom-v1) 的页面上开始一个新的记录。在 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="复选框.", width="22", height="22" %} **Selector types to record** 选择 **Pierce**，并开始记录您与子 DOM 中元素的交互并检查相应的步骤。
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Spqbf2DG3Fr0D2sc1kgC.png", alt="将记录器设置为使用 pierce 选择器; Pierce 选择器使用中。", width="800", height="534" %}
 
@@ -98,7 +98,7 @@ Chromium 议题: [1417104](https://crbug.com/1417104), [1413168](https://crbug.c
 如果您很了解 CSS，您可能会觉得工具提示很麻烦。 要将它们全部关闭，请选择 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="复选框。", width="22", height="22" %} **Don't show**.
 
 <!-- To turn them back on, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="Settings.", width="24", height="24" %} [**Settings** > **Preferences** > **Elements**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip**. -->
-要重新打开它们，请检查 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="设置。", width="24", height="24" %} [**Settings** > **Preferences** > **Elements**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip**. 
+要重新打开它们，请检查 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/9gzXiTYY0nZzBxGI6KrV.svg", alt="设置。", width="24", height="24" %} [**Settings** > **Preferences** > **Elements**](/docs/devtools/settings/preferences/#elements) > {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Show CSS documentation tooltip**.
 
 {% Aside %}
 <!-- DevTools pulls the descriptions for tooltips from [VS Code Custom Data](https://github.com/microsoft/vscode-custom-data). -->

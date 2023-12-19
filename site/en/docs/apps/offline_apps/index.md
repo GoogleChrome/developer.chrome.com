@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Offline First"
+seoTitle: "Chrome Apps - Offline First [Deprecated]"
 date: 2012-09-17
 updated: 2015-09-25
 description: How to build Chrome Apps that work offline.

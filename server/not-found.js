@@ -101,7 +101,8 @@ const notFoundHandler = (req, res, next) => {
   if (extMatch && extMatch[1] !== '.html') {
     // If this had an extension and it was not ".html", don't send any bytes.
     // Pages without extensions don't match here.
-    return res.end();
+    res.end();
+    return;
   }
 
   const locale = req.url.split(path.sep)[1];

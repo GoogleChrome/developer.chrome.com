@@ -6,11 +6,12 @@ description: >
 authors:
   - beaufortfrancois
 date: 2023-02-02
-updated: 2023-02-22
+updated: 2023-08-28
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/l8xW8V85N60e4dmwUwmE.jpg
 alt: Person holding outdoor lounge chairs.
 tags:
   - chrome-111
+  - chrome-116
 ---
 
 The [Document Picture-in-Picture API][spec] makes it possible to open an always-on-top window that can be populated with arbitrary HTML content. It extends the existing [Picture-in-Picture API for `<video>`] that only allows an HTML `<video>` element to be put into a Picture-in-Picture window.
@@ -18,7 +19,6 @@ The [Document Picture-in-Picture API][spec] makes it possible to open an always-
 The Picture-in-Picture window in the Document Picture-in-Picture API is similar to a blank same-origin window opened via [`window.open()`], with some differences:
 - The Picture-in-Picture window floats on top of other windows.
 - The Picture-in-Picture window never outlives the opening window.
-- The Picture-in-Picture window cannot open additional windows.
 - The Picture-in-Picture window cannot be navigated.
 - The Picture-in-Picture window position cannot be set by the website.
 
@@ -36,22 +36,10 @@ The Picture-in-Picture window in the Document Picture-in-Picture API is similar 
 | 1. Create explainer                      | [Complete][explainer]    |
 | 2. Create initial draft of specification | [In progress][spec]      |
 | 3. Gather feedback & iterate on design   | [In progress](#feedback) |
-| 4. **Origin trial**                      | [**Started**][ot]        |
-| 5. Launch                                | Not started              |
+| 4. Origin trial                          | [Complete][ot]           |
+| **5. Launch**                            | **Complete** (Desktop)   |
 
 </div>
-
-## Try out the API on desktop
-
-During the trial phase you can test the API on desktop by one of two methods.
-
-### Local testing
-
-To experiment with the Document Picture-in-Picture API locally, without an origin trial token, enable the `chrome://flags/#document-picture-in-picture-api` flag.
-
-### Register for the origin trial
-
-Starting in Chrome 111, the Document Picture-in-Picture API is available as an [origin trial](/docs/web-platform/origin-trials/). It is expected to end in Chrome 115 (September&nbsp;8, 2023). [Register here][ot].
 
 ## Use cases
 
@@ -81,18 +69,11 @@ Research has shown that users need more ways to be productive on the web. Docume
   The promise rejects if it's called without a user gesture.
   The `options` dictionary contains the optional following members:
 
-  `initialAspectRatio`
-  : Sets the initial aspect ratio of the Picture-in-Picture window.
-
   `width`
   : Sets the initial width of the Picture-in-Picture window.
 
   `height`
   : Sets the initial height of the Picture-in-Picture window.
-
-  `copyStyleSheets`
-  : When `true`, the CSS style sheets of the originated window are copied and applied to the Picture-in-Picture window. This is a one-time copy.
-    The default value is `false`.
 
 ### Events
 
@@ -130,45 +111,53 @@ pipButton.addEventListener('click', async () => {
 
 ### Set the size of the Picture-in-Picture window
 
-To set an aspect ratio, set the `initialAspectRatio` option of `documentPictureInPicture.requestWindow()` to the desired Picture-in-Picture window aspect ratio.
+To set the size of the Picture-in-Picture window, set the `width` and `height` options of `documentPictureInPicture.requestWindow()` to the desired Picture-in-Picture window size. Chrome may clamp the option values if they are too large or too small to fit a user-friendly window size.
 
 ```js
 pipButton.addEventListener("click", async () => {
   const player = document.querySelector("#player");
 
-  // Open a Picture-in-Picture window whose aspect ratio is
+  // Open a Picture-in-Picture window whose size is
   // the same as the player's.
   const pipWindow = await documentPictureInPicture.requestWindow({
-    initialAspectRatio: player.clientWidth / player.clientHeight,
+    width: player.clientWidth,
+    height: player.clientHeight,
   });
 
   // Move the player to the Picture-in-Picture window.
   pipWindow.document.body.append(player);
-});
-```
-
-The `width` and `height` options can also be used to set the desired Picture-in-Picture window size. Chrome may clamp those options values if they are too large or too small to fit a user-friendly window size.
-
-```js
-// Set player's width and height as the Picture-in-Picture window size.
-const pipWindow = await documentPictureInPicture.requestWindow({
-  width: player.clientWidth,
-  height: player.clientHeight,
 });
 ```
 
 ### Copy style sheets to the Picture-in-Picture window
 
-To copy the CSS style sheets from the originating window set the `copyStyleSheets` option of `documentPictureInPicture.requestWindow()` to `true`. Note that this is a one-time copy.
+To copy all CSS style sheets from the originating window, loop through [`styleSheets`](https://developer.mozilla.org/docs/Web/API/Document/styleSheets) explicitly linked into or embedded in the document and append them to the Picture-in-Picture window. Note that this is a one-time copy.
 
 ```js
 pipButton.addEventListener("click", async () => {
   const player = document.querySelector("#player");
 
-  // Open a Picture-in-Picture window with style sheets copied over
-  // from the initial document so that the player looks the same.
-  const pipWindow = await documentPictureInPicture.requestWindow({
-    copyStyleSheets: true,
+  // Open a Picture-in-Picture window.
+  const pipWindow = await documentPictureInPicture.requestWindow();
+
+  // Copy style sheets over from the initial document
+  // so that the player looks the same.
+  [...document.styleSheets].forEach((styleSheet) => {
+    try {
+      const cssRules = [...styleSheet.cssRules].map((rule) => rule.cssText).join('');
+      const style = document.createElement('style');
+
+      style.textContent = cssRules;
+      pipWindow.document.head.appendChild(style);
+    } catch (e) {
+      const link = document.createElement('link');
+
+      link.rel = 'stylesheet';
+      link.type = styleSheet.type;
+      link.media = styleSheet.media;
+      link.href = styleSheet.href;
+      pipWindow.document.head.appendChild(link);
+    }
   });
 
   // Move the player to the Picture-in-Picture window.
@@ -176,9 +165,13 @@ pipButton.addEventListener("click", async () => {
 });
 ```
 
+{% Aside %}
+The `copyStyleSheets` option was supported in a previous version of the specification. It is [not the case anymore](https://github.com/WICG/document-picture-in-picture/pull/79).
+{% endAside %}
+
 ### Handle when the Picture-in-Picture window closes
 
-Listen to the window `"unload"` event to know when the Picture-in-Picture window gets closed (either because the website initiated it or the user manually closed it). The event handler is a good place to get the elements back out of the Picture-in-Picture window as shown below.
+Listen to the window `"pagehide"` event to know when the Picture-in-Picture window gets closed (either because the website initiated it or the user manually closed it). The event handler is a good place to get the elements back out of the Picture-in-Picture window as shown below.
 
 ```js
 pipButton.addEventListener("click", async () => {
@@ -191,7 +184,7 @@ pipButton.addEventListener("click", async () => {
   pipWindow.document.body.append(player);
 
   // Move the player back when the Picture-in-Picture window closes.
-  pipWindow.addEventListener("unload", (event) => {
+  pipWindow.addEventListener("pagehide", (event) => {
     const playerContainer = document.querySelector("#playerContainer");
     const pipPlayer = event.target.querySelector("#player");
     playerContainer.append(pipPlayer);
@@ -203,7 +196,7 @@ Close the Picture-in-Picture window programmatically by using the [`close()`] me
 
 ```js
 // Close the Picture-in-Picture window programmatically. 
-// The "unload" event will fire normally.
+// The "pagehide" event will fire normally.
 pipWindow.close();
 ```
 
@@ -279,7 +272,7 @@ You can play with the Document Picture-in-Picture API [VideoJS player demo]. Be 
 
 ## Feedback
 
-Developer feedback is really important at this stage, so please [file issues on GitHub][issues] with suggestions and questions.
+Please [file issues on GitHub][issues] with suggestions and questions.
 
 ## Useful links
 
@@ -289,7 +282,8 @@ Developer feedback is really important at this stage, so please [file issues on 
 - [ChromeStatus.com entry][cr-status]
 - Blink Component: [`Blink>Media>PictureInPicture`][blink-component]
 - [TAG Review][tag]
-- [Intent to Experiment][intent]
+- [Intent to Experiment][intent-experiment]
+- [Intent to Ship][intent-ship]
 
 ## Acknowledgements
 
@@ -313,5 +307,6 @@ Hero image by [Jakob Owens].
 [cr-status]: https://chromestatus.com/feature/5755179560337408
 [blink-component]: https://bugs.chromium.org/p/chromium/issues/list?q=component:Blink%3EMedia%3EPictureInPicture
 [tag]: https://github.com/w3ctag/design-reviews/issues/798
-[intent]: https://groups.google.com/a/chromium.org/g/blink-dev/c/Tz1gUh92dXs
+[intent-experiment]: https://groups.google.com/a/chromium.org/g/blink-dev/c/Tz1gUh92dXs
+[intent-ship]: https://groups.google.com/a/chromium.org/g/blink-dev/c/JTPl7fM64Lc
 [jakob owens]: https://unsplash.com/photos/TqnpKA_elIU

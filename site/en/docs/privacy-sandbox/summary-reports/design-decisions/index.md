@@ -17,12 +17,21 @@ tags:
   - privacy
 ---
 
+{% Partial 'privacy-sandbox/ot-end.njk' %}
+
 ## About this document
 
 When you read this article, you will:
 
-- Understand what strategies to create before generating summary reports in the origin trial.
-- Be introduced to [Noise Lab](#quick-tour), a tool that helps grasp the effects of various noise parameters, and that enables quick exploration and assessment of various noise management strategies.
+- Understand what strategies to create before generating summary reports.
+- Be introduced to [Noise Lab](https://goo.gle/noise-lab), a tool that helps grasp the effects of various noise parameters, and that enables quick exploration and assessment of various noise management strategies.
+
+<figure>
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/0vow72qj9OD9NBZuQ0ej.png", alt="Screenshot of Noise Lab", width="800", height="561" %}
+  <figcaption>
+    Noise Lab
+  </figcaption>
+</figure>
 
 ### Share your feedback
 
@@ -42,23 +51,21 @@ here. Your suggestions, additions, and questions are welcome!
 
 ### Before you start
 
-1. Read [Attribution Reporting: summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/) and [What you should know about the Attribution Reporting API](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit) for an introduction.
-2. Scan [Strategy and tips for summary reports](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.j8m326urvgnt)⏤in particular the [essential notions](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.kizul7z2av3y) required for you to make best use of this guide.
+1. Read [Attribution Reporting: summary reports](/docs/privacy-sandbox/attribution-reporting/summary-reports/) and [Attribution Reporting full system overview](/docs/privacy-sandbox/attribution-reporting/system-overview/) for an introduction.
+2. Scan [Understanding noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) and [Understanding aggregation keys](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/) to make best use of this guide.
 
 ## Design decisions
 
 ### Core design principle {: #core}
 
-There are
-[foundational differences](https://docs.google.com/document/d/1lvrKd5Vv7SYLMGZb0Fz7bpGNEl0LOx9i1waAHw2sUg8/edit#heading=h.ktl1cq7bdlk)
-between how third-party cookies and summary reports operate. One key difference is the
-[noise](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.81usg7c4jnsg) added to measurement data in summary reports.
+There are foundational differences between how third-party cookies and summary reports operate. One key difference is the
+[noise](/docs/privacy-sandbox/attribution-reporting/understanding-noise/) added to measurement data in summary reports. Another is how reports are [scheduled](/docs/privacy-sandbox/attribution-reporting/report-schedules/).
 
 **To access summary report measurement data with higher signal-to-noise
 ratios, demand-side platforms (DSPs) and ad measurement providers will need to
 work with their advertisers to develop noise management strategies.** To develop these strategies, DSPs and measurement providers need to make design decisions. These decisions revolve around one essential concept:
 
-While the distribution _noise values_ are drawn from, absolutely speaking, only depends on two parameters⏤[epsilon and the contribution budget](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.2994euq95tlo)⏤**you have a number of other controls at your disposal that will impact the
+While the distribution _noise values_ are drawn from, absolutely speaking, only depends on two parameters⏤[epsilon and the contribution budget](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#how-noise-is-applied)⏤**you have a number of other controls at your disposal that will impact the
 _signal-to-noise ratios_ of your output measurement data**.
 
 While we expect an iterative process will lead to the best decisions, each variation on these decisions will
@@ -169,7 +176,7 @@ are included; you can also modify these.
 
 Another design decision that will impact the number of attributed conversion
 events within a single bucket is the
-[key structures](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.81usg7c4jnsg)
+[key structures](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/#aggregation-keys-in-practice)
 you decide to use. Consider the following examples of aggregation keys:
 
 - One key structure with all dimensions; let's call this Key Strategy A.
@@ -184,7 +191,7 @@ reports may already give you the information you need. This means that Strategy 
 will likely lead to better signal-to-noise ratios than Strategy A. However, the
 noise may already be acceptable with Strategy A, so you may still decide to favor
 Strategy A for simplicity.
-[Learn more in the detailed example outlining these two strategies](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.i6ovl4dm1npa).
+[Learn more in the detailed example outlining these two strategies](/docs/privacy-sandbox/attribution-reporting/aggregation-keys/#translate-goals-into-keys).
 
 Key management is a deep topic. A number of elaborate techniques can be
 considered to improve signal-to-noise ratios. One is described in [Advanced key
@@ -222,16 +229,18 @@ New to [Noise Lab](https://noise-lab.uc.r.appspot.com/)? [Take a quick tour](#qu
 
 Another design decision that will impact the number of attributed conversion
 events within a single bucket is the batching frequency you decide to use. The
-batching frequency is how often you process aggregatable reports.\
+batching frequency is how often you process aggregatable reports.
+
 A report that is scheduled for aggregation more frequently (e.g. each hour) will
 have fewer conversion events included than the same report with a less frequent
+aggregation schedule (e.g. each week). As a result, the hourly report will include more noise.```
+have fewer conversion events included than the same report with a less frequent
 aggregation schedule (e.g. each week). As a result, the hourly report will have
-a higher signal-to-noise ratio than the weekly report, all else being equal. **Experiment with reporting requirements at various frequencies, and assess
-signal-to-noise ratios for each.**
+a lower signal-to-noise ratio than the weekly report, all else being equal. **Experiment with reporting requirements at various frequencies, and assess signal-to-noise ratios for each.**
 
 Learn more in
-[Batching](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.pef51jskrx06)
-and [Aggregating over longer time periods](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.pef51jskrx06).
+[Batching](/docs/privacy-sandbox/summary-reports/#batching)
+and [Aggregating over longer time periods](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#aggregating-over-longer-time-periods-increases-signal-to-noise-ratio).
 
 ### Decision: Campaign variables that affect attributable conversions {: #campaign-variables}
 
@@ -268,8 +277,8 @@ single-touch attributable conversions to the closest power of 10: 10, 100,
    conversion count PER BUCKET**.
 1. Click **Simulate**.
 1. Observe that the noise ratios are now higher: this is because when you
-   have fewer conversions per bucket, signal-to-noise ratios are likely to be
-   higher.
+   have fewer conversions per bucket, more noise is applied to maintain
+   privacy.
 
 {% endDetails %}
 {% endAside %}
@@ -332,7 +341,7 @@ Given the [core design principle](#core), the noise added is
 a function of the contribution budget.
 
 Therefore, to increase signal-to-noise ratios, you can decide to transform
-values collected during a conversion event by [scaling](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.683u7t2q1xk2) them against the
+values collected during a conversion event by [scaling](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#your-controls-on-noise) them against the
 contribution budget (and de-scaling them after aggregation). **Use scaling to increase signal-to-noise ratios**.
 
 ### Decision: Number of measurement goals, and privacy budget split {: #goals-and-budget}
@@ -457,7 +466,8 @@ A measurement goal is a distinct data point collected in conversion events.
 
 To implement scaling, you would typically calculate a scaling factor based on
 the maximum possible value for a given conversion event
-([learn more in this example](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.t7l1v2w2m4a)).\
+([learn more in this example](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#calculating-a-scaling-factor)).
+
 However, avoid using a literal maximum value to calculate that scaling factor,
 as this would worsen your signal-to-noise ratios. **Instead, remove outliers and
 use a pragmatic maximum value**.
@@ -498,7 +508,7 @@ assess and compare noise management strategies. Use it to:
   values of epsilon and noise parameters work for you, which don't? Where are
   the inflection points?
 
-Think of this as a preparation step before running an origin trial. Noise Lab
+Think of this as a preparation step. Noise Lab
 generates measurement data to simulate summary report outputs based on your
 input. It does not persist or share any data.
 
@@ -588,18 +598,18 @@ Click on the buttons in the top menu to toggle between the two modes (_#1. in th
 
 Noise is added to protect individual user privacy.
 
-A high noise percentage value indicates that buckets/keys are sparse and
+A high noise value indicates that buckets/keys are sparse and
 contain contributions from a limited number of sensitive events. This is done
 automatically by Noise Lab, to allow individuals to "hide in the crowd," or in
 other words, protects these limited individuals' privacy with a larger amount
 of added noise.
 
-A low noise percentage indicates that the data setup was designed in such
+A low noise value indicates that the data setup was designed in such
 a way that already allows individuals to "hide in the crowd." This means the
 buckets contain contributions from a sufficient number of events to ensure that
 individual user privacy is protected.
 
-This statement holds true for both the [APE](#ape) (average percentage error) and [RMSPE_T](#rmspe) (root-mean-square percentage error with a threshold).
+This statement holds true for both the [APE](#ape) (average percentage error) and [RMSRE_T](#rmsre) (root-mean-square relative error with a threshold).
 
 #### APE (average percentage error) {: #ape}
 
@@ -635,7 +645,7 @@ In Noise Lab, this is then multiplied by 100 to give a percentage.
 
 ##### Pros and Cons
 
-Buckets with smaller sizes have a disproportionate impact on the final value of APE. That could be misleading when assessing noise. This is why we've added another metric, [RMSPE_T](#rmspe), that is designed to mitigate this limitation of APE. Review the [examples](#noise-examples) for details. 
+Buckets with smaller sizes have a disproportionate impact on the final value of APE. That could be misleading when assessing noise. This is why we've added another metric, [RMSRE_T](#rmsre), that is designed to mitigate this limitation of APE. Review the [examples](#noise-examples) for details. 
 
 ##### Code
 
@@ -643,54 +653,52 @@ Review the [source code](https://github.com/privacysandbox/noise-lab/blob/main/p
 for APE calculation.
 
 
-#### RMSPE_T  (root-mean-square percentage error with a threshold) {: #rmspe}
+#### RMSRE_T  (root-mean-square relative error with a threshold) {: #rmsre}
 
-RMSPE_T (root-mean-square percentage error with a threshold) is another measure for noise.
+RMSRE_T (root-mean-square relative error with a threshold) is another measure for noise.
 
-##### How to interpret RMSPE_T
+##### How to interpret RMSRE_T
 
-Lower RMSPE_T values mean better signal-to-noise ratios. 
+Lower RMSRE_T values mean better signal-to-noise ratios. 
 
-RMSPE_T is typically higher than the average percentage error. For example, if a noise ratio that's acceptable for your use case is 20%, and RMSPE_T is 20%, you can be confident that noise levels fall into your acceptable range.
+For example, if a noise ratio that's acceptable for your use case is 20%, and RMSRE_T is 0.2, you can be confident that noise levels fall into your acceptable range.
 
 {% Aside %}
-What does it mean if RMSPE_T is above 100%?
-The interpretation of  RMSPE_T over 100% is similar to that of an APE over 100% LINK.
+What does it mean if RMSRE_T is above 1?
+The interpretation of  RMSRE_T over 1 is similar to that of an APE over 100%.
 
-RMSPE (Root Mean Square Error) is a common metricused by data scientists. 
-RMSPE_T is a variation of RMSPE. RMSPE_T differs from RMSPE in two ways:
+RMSRE (Root Mean Square Relative Error) is a common metricused by data scientists. 
+RMSRE_T is a variation of RMSRE. RMSRE_T differs from RMSRE in two ways:
 
-1. RMSPE_T uses a percentage error similar to noise-to-signal rate, like noise/true-value. 
-2. RMSPE_T assumes the existence of minimal signal: the percentage looks like noise/max(true, T). 
+1. RMSRE_T uses a relative error similar to noise-to-signal rate, like noise/true-value. 
+2. RMSRE_T assumes the existence of minimal signal: noise/max(true, T). 
 
 {% endAside %}
 
 ##### Formula
 
-For a given summary report, RMSPE_T is calculated as follows:
+For a given summary report, RMSRE_T is calculated as follows:
 
 <figure>
-{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/zNE4v707JUoUS8keFVsz.png", alt="Formula for RMSPE_T", width="377", height="59" %}
+{% Img src="image/URLGRmk9LjR39BLvmeGDZFZkz3p2/bBMbb19rTteh3gHkS7w9.png", alt="Formula for RMSRE_T", width="498", height="81" %}
 <figcaption style="text-align:left">
-  The equation for RMSPE_T. Absolute values are required, as noise can be negative.
+  The equation for RMSRE_T. Absolute values are required, as noise can be negative.
 </figcaption>
 </figure>
 
-In Noise Lab, this is then multiplied by 100 to give a percentage.
-
 ##### Pros and cons
 
-RMSPE_T is a bit more complex to grasp than APE. However, it has a few advantages that make it in some cases more suitable than APE for analyzing noise in summary reports:
+RMSRE_T is a bit more complex to grasp than APE. However, it has a few advantages that make it in some cases more suitable than APE for analyzing noise in summary reports:
 
-* **RMSPE_T is more stable.** "T" is a threshold. "T" is used to give less weight in the RMSPE_T calculation to buckets that have less conversions and are therefore more sensitive to noise due to their small size. With T, the metric does not spike on buckets with few conversions. If T is equal to 5, a noise value as small as 1 on a bucket with 0 conversions will not be displayed as way over 100%. Instead, it will be capped at 20%, which is equivalent to 1/5, as T is equal to 5. By giving less weight to smaller buckets which are therefore more sensitive to noise, this metric is more stable, and therefore makes it easier to compare two simulations.
-* **RMSPE_T allows for easy aggregation.** Knowing the RMSPE_T of multiple buckets, together with their true counts, allows you to compute the RMSPE_T of their sum. This also allows you to optimize for RMSPE_T for these combined values.
+* **RMSRE_T is more stable.** "T" is a threshold. "T" is used to give less weight in the RMSRE_T calculation to buckets that have less conversions and are therefore more sensitive to noise due to their small size. With T, the metric does not spike on buckets with few conversions. If T is equal to 5, a noise value as small as 1 on a bucket with 0 conversions will not be displayed as way over 1. Instead, it will be capped at 0.2, which is equivalent to 1/5, as T is equal to 5. By giving less weight to smaller buckets which are therefore more sensitive to noise, this metric is more stable, and therefore makes it easier to compare two simulations.
+* **RMSRE_T allows for easy aggregation.** Knowing the RMSRE_T of multiple buckets, together with their true counts, allows you to compute the RMSRE_T of their sum. This also allows you to optimize for RMSRE_T for these combined values.
 
 While aggregation is possible for APE, the formula is quite complicated as it involves the absolute value of sum of Laplace noises. This makes APE harder to optimize.
 
 
 ##### Code
 
-Review the [source code](https://github.com/privacysandbox/noise-lab/blob/main/public/index.html#L66) for RMSPE_T calculation.
+Review the [source code](https://github.com/privacysandbox/noise-lab/blob/main/public/index.html#L66) for RMSRE_T calculation.
 
 #### Examples {: #noise-examples}
 
@@ -706,9 +714,7 @@ bucket_3 = noise: 20, trueSummaryValue: 200
 
 APE = (0.1 + 0.2 + 0.1) / 3 = **13%**
 
-RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2 + (20/max(5,200))^2) / 3) 
-
-      =  sqrt( (0.01 + 0.04 + 0.01) / 3) =  0.14 =  **14%** 
+RMSRE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2 + (20/max(5,200))^2) / 3) =  sqrt( (0.01 + 0.04 + 0.01) / 3) =  **0.14** 
 
 {% endAside %}
 
@@ -725,7 +731,7 @@ bucket_3 = noise: 20, trueSummaryValue: 20
 
 APE = (0.1 + 0.2 + 1) / 3 = **43%**
 
-RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2 + (20/max(5,20))^2) / 3)  =  sqrt( (0.01 + 0.04 + 1.0) / 3) =  0.59 =  **59%**
+RMSRE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2 + (20/max(5,20))^2) / 3)  =  sqrt( (0.01 + 0.04 + 1.0) / 3) =  **0.59**
 {% endAside %}
 
 {% Aside 'example' %}
@@ -740,7 +746,7 @@ bucket_3 = noise: 20, trueSummaryValue: 0
 
 APE = (0.1 + 0.2 + Infinity) / 3 = **Infinity**
 
-RMSPE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2  + (20/max(5,0))^2) / 3) =  sqrt( (0.01 + 0.04 + 16.0) / 3) =  2.31 =  **231%**
+RMSRE_T = sqrt( ( (10/max(5,100))^2  + (20/max(5,100))^2  + (20/max(5,0))^2) / 3) =  sqrt( (0.01 + 0.04 + 16.0) / 3) =  **2.31**
 {% endAside %}
 
 {% endDetails %}
@@ -904,9 +910,9 @@ Let's consider a scenario across two advertisers:
     with only 5% of purchases occurring in the $500 - $1,000 range.
 
 Given the
-[contribution budget requirements](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.pcbjmxqyvd83)
+[contribution budget requirements](/docs/privacy-sandbox/attribution-reporting/contribution-budget/)
 and the methodology with which
-[noise is applied](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.u6r748h70ivc)
+[noise is applied](/docs/privacy-sandbox/attribution-reporting/understanding-noise/#how-noise-is-applied)
 to the end results, Advertiser B will, by default, have a noisier output than
 Advertiser A, as Advertiser B has a higher potential for outliers to impact the
 underlying calculations.

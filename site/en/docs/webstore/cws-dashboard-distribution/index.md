@@ -32,7 +32,8 @@ All visibility settings have the same policy requirements and will go through th
 ### Private visibility: Trusted testers {: #private-visibility-trusted-testers }
 
 Private allows your trusted testers to install the item. You designate trusted testers by listing
-them on your Chrome Web Store account home page.
+them in your account settings in the developer dashboard. Each email should be associated with a
+Google account which will be able to view and install your item on the Chrome Web Store.
 
 {% Aside %}
 
@@ -90,6 +91,74 @@ the Chrome Web Store. You can either:
 When you publish to the world, your item will be immediately visible to the region(s) you select,
 and it'll be visible in the store's search results.
 
+{% Details %}
+{% DetailsSummary %}
+### Regions list
+{% endDetailsSummary %}
+
+The Chrome Web Store supports the following regions:
+
+- Australia
+- Austria
+- Belgium
+- Brazil
+- Bulgaria
+- Canada
+- Chile
+- China
+- Colombia
+- Cuba
+- Czechia
+- Denmark
+- Ecuador
+- Egypt
+- Estonia
+- Finland
+- France
+- Germany
+- Greece
+- Hong Kong
+- Hungary
+- India
+- Indonesia
+- Ireland
+- Israel
+- Italy
+- Japan
+- Lithuania
+- Malaysia
+- Mexico
+- Morocco
+- Netherlands
+- New Zealand
+- Norway
+- Panama
+- Peru
+- Philippines
+- Poland
+- Portugal
+- Romania
+- Russia
+- Saudi Arabia
+- Singapore
+- Slovakia
+- South Africa
+- Spain
+- Sweden
+- Switzerland
+- Taiwan
+- Thailand
+- Turkey
+- Ukraine
+- United Arab Emirates
+- United Kingdom
+- United States
+- Venezuela
+- Vietnam
+{% endDetails %}
+
+
+
 ## Publishing a test version
 
 You can publish a "BETA" or "TESTING" version to the Chrome Web Store in parallel with a
@@ -121,4 +190,4 @@ After filling out the [Listing][listing] tab and the [Privacy][privacy] tab, you
 [privacy]: /docs/webstore/cws-dashboard-privacy/
 [private-google-groups]: #private-visibility-google-groups
 [publish]: /docs/webstore/publish/#publish-item
-[repetitive-content]: /docs/webstore/spam-faq/#repetitive-content
+[repetitive-content]: /docs/webstore/program-policies/spam-faq/#repetitive-content

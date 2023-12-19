@@ -35,23 +35,16 @@ You should read this article if:
 
 *  You're an ad tech or advertiser's **technical decision-maker**. You may work
    in operations, DevOps, data science, IT, marketing, or another role where
-   you make technical implementation decisions. You're wondering how the many
-   proposals for Attribution Reporting systems work together to build a tool
-   for privacy-preserving measurement.
+   you make technical implementation decisions. You're wondering how the APIs work for privacy-preserving measurement.
 *  You're a **technical practitioner** (such as a developer, system operator,
    system architect, or data scientist) who will be setting up experiments with
    this API and Aggregation Service environment.
-
-{% Aside %}
-Right now, publishers don't have to take any action with this API. If this changes, this article will be updated accordingly.
-{% endAside %}
 
 In this article, you'll read a high-level, end-to-end explanation of how the
 services work for the Attribution Reporting API. If you're a technical
 practitioner, you can
 [experiment with this API](/docs/privacy-sandbox/attribution-reporting-experiment/)
-locally or in production with the
-[unified Privacy Sandbox Relevance and Measurement Origin Trial](/blog/privacy-sandbox-unified-origin-trial/).
+locally.
 
 ## Overview
 
@@ -119,25 +112,60 @@ While this API is in testing, your code must confirm the API is available and se
 <figcaption><strong>Figure 1</strong>.</figcaption>
 </figure>
 
-### Attribution sources (publisher's website) {: #attribution-sources}
 
-An _[attribution source](https://docs.google.com/document/d/1BXchEk-UMgcr2fpjfXrQ3D8VhTR-COGYS1cwK_nyLfg/edit#heading=h.dmy7iuqnhvby)_
-is an ad-related event (a click or view), to which an ad tech can attach the
-following kinds of information:
+### Attribution event flow
 
-*  Contextual reporting data, such as the ad creative ID, information about the
-   campaign, or geography.
-*  A conversion target, as in the site that is the target of the ad where you
-   hope the user will end. This tells the browser what source events correspond
-   to specific conversions.
+Imagine a publisher site that displays ads. Each advertiser or ad-tech provider wants to learn about interactions with their ads, and attribute conversions to the correct ad. Reports (both event-level and aggregatable) would be generated as follows:
 
-Once the data is collected for the attribution source, the browser adds the
-data to local storage, so it can later be matched with an attribution trigger.
+1.  On the publisher site, an ad element (`<a>` or `<img>` tag) is configured with a special attribute `attributionsrc`. Its value is a URL, for example `https://adtech.example/register-source/ad_id=...`.
+
+    Here's an example of a link that will register a source once clicked:
+
+    ```javascript
+    <a href="https://shoes.example/landing" 
+      attributionsrc="http://adtech.example/register-source?..."
+      target="_blank">
+    Click me</a>
+    ```
+
+    Here's an example of an image that will cause registration of a source when viewed:
+
+    ```javascript
+    <img href="https://advertiser.example/landing" 
+      attributionsrc="https://adtech.example/register-source?..."/>
+    ```
+    Alternatively, instead of HTML elements, JavaScript calls can be used.
+
+    Here's a JavaScript example using `window.open()`. Note that the URL is url-encoded to avoid issues with special characters.
+
+    ```javascript
+    const encodedUrl = encodeURIComponent(
+      'https://adtech.example/attribution_source?ad_id=...');
+    window.open(
+      "https://shoes.example/landing",
+      "_blank",
+      attributionsrc=${encodedUrl});
+
+1.  When the user clicks or views the ad, the browser sends a `GET` request to `attributionsrc`—typically, an advertiser or ad-tech provider endpoint.
+1.  Upon receiving this request, the advertiser or ad-tech provider decides to instruct the browser to [register source events](/docs/privacy-sandbox/attribution-reporting/register-attribution-source/) for interactions with the ad, so that conversions can later be attributed to this ad. To do so, the advertiser or ad-tech provider includes in its response a special HTTP header. It attaches to this header custom data that provides information about the source event (the ad click or view)—if a conversion ends up taking place for this ad, this custom data will ultimately be surfaced in the attribution report.
+
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/BDzoPro5EisV1FeJiNYZ.png", alt="View or click an ad.", width="512", height="302" %}
+1.  Later, the user visits the advertiser's site.
+1.  On each relevant page of the advertiser's site—for example, a purchase confirmation page, or a product page—a conversion pixel (`<img>` element) or JavaScript call makes a request to `https://adtech.example/conversion?param1=...&param2=...`.
+1.  The service at this URL—typically, the advertiser or ad-tech provider—receives the request. It decides to categorize this as a conversion, so it needs to instruct the browser to record a conversion—that is to [trigger an attribution](/docs/privacy-sandbox/attribution-reporting/register-attribution-trigger/). To do so, the advertiser or ad-tech provider includes in its response to the pixel request a special HTTP header that includes custom data about the conversion.
+1.  The browser—on the user's local device—receives this response, and matches the conversion data with the original source event (ad click or view). Learn more in [Match sources to triggers](#match-sources-to-triggers)
+1.  The browser schedules a report to be sent to `attributionsrc`. This report includes:
+    1.  The custom attribution configuration data that the ad-tech provider or advertiser attached to the source event in Step 3.
+    1.  The custom conversion data set at Step 6.
+
+    {% Img src="image/RtQlPaM9wdhEJGVKR8boMPkWf443/AceEr2qZx2ri5HePhx96.png", alt="A conversion.", width="512", height="369" %}
+1.  Later, the browser sends the reports to the endpoint defined in `attributionsrc`, with some delay and noise. Aggregatable reports are encrypted, while event-level reports are not.
+
 
 ### Attribution triggers (advertiser's website)
 
 The _[attribution trigger](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATE.md#attribution-trigger-registration)_
-is the event which tells the API to capture conversions. 
+is the event that tells the browser to capture conversions. 
 
 We recommend capturing the conversions that are most important to the
 advertiser, such as purchases. Multiple conversion types and metadata can be
@@ -255,7 +283,7 @@ works for everyone.
 
 ### Discuss the API
 
-Like other Privacy Sandbox proposals, this API is documented and
+Like other Privacy Sandbox APIs, this API is documented and
 [discussed publicly](/docs/privacy-sandbox/attribution-reporting-experiment/#join-the-discussion).
 
 ### Experiment with the API

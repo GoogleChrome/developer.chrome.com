@@ -147,7 +147,7 @@ then dive into the [full proposal](https://wicg.github.io/ua-client-hints/).
 
 {% Aside %}
 Client Hints are **only sent over secure connections**, so make sure you have
-[migrated your site to HTTPS](https://web.dev/why-https-matters/).
+[migrated your site to HTTPS](https://web.dev/articles/why-https-matters).
 {% endAside %}
 
 ## User-Agent Client Hints from Chromium 89
@@ -167,7 +167,7 @@ Sec-CH-UA-Platform: "macOS"
 
 {% Aside 'caution' %}
 These properties are more complex than just a single value, so [Structured
-Headers](https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html)
+Headers](https://httpwg.org/specs/rfc8941.html)
 are used for representing lists and booleans.
 {% endAside %}
 

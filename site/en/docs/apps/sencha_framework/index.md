@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Build Apps with Sencha Ext JS"
+seoTitle: "Build Chrome Apps with Sencha Ext JS [Deprecated]"
 date: 2012-10-11
 updated: 2017-03-01
 description: How to build Chrome Apps with the Sencha Ext JS framework.

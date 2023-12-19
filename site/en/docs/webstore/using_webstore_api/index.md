@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Using the Chrome Web Store Publish API"
+title: "Use the Chrome Web Store Publish API"
 #date: TODO
 updated: 2022-01-18
 description: How to programmatically create, update, and publish items in the Chrome Web Store.
@@ -262,10 +262,10 @@ For a full description of the get method, see [Items:Get][cws-api-get].
 
 {% endAside %}
 
-[cws-api-get]: /docs/webstore/webstore_api/items/get
-[cws-api-insert]: /docs/webstore/webstore_api/items/insert
-[cws-api-publish]: /docs/webstore/webstore_api/items/publish
-[cws-api-update]: /docs/webstore/webstore_api/items/update
+[cws-api-get]: /docs/webstore/api_index/#get
+[cws-api-insert]: /docs/webstore/api_index/#insert
+[cws-api-publish]: /docs/webstore/api_index/#publish
+[cws-api-update]: /docs/webstore/api_index/#update
 [cws-api]: /docs/webstore/api_index
 [cws-dashboard]: https://chrome.google.com/webstore/developer/dashboard
 [google-dev-console]: https://console.developers.google.com

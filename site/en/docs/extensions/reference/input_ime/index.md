@@ -42,8 +42,6 @@ chrome.input.ime.onKeyEvent.addListener(
 );
 ```
 
-For an example of using this API, see the [basic input.ime sample][2]. For other examples and for
-help in viewing the source code, see [Samples][3].
 
 [1]: /docs/extensions/mv3/manifest
 [2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/_archive/mv2/api/input.ime/basic/

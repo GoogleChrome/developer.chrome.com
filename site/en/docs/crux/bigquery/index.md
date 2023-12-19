@@ -22,7 +22,7 @@ date: 2022-06-23
 
 # Optional
 # Include an updated date when you update your post
-updated: 2022-11-10
+updated: 2023-05-10
 
 # Optional
 # How to add a new author
@@ -100,12 +100,17 @@ The raw tables for each country and the `all` dataset have the following schema:
     - delay
 - layout_instability
     - cumulative_layout_shift
+- interaction_to_next_paint
 - experimental
     - permission
         - notifications
     - time_to_first_byte
-    - interaction_to_next_paint
+    - interaction_to_next_paint (deprecated)
     - popularity
+
+{% Aside 'important' %}
+The `interaction_to_next_paint` metric is available both with and without the experimental prefix. The experimental prefix should now be considered deprecated and will be removed in August 2023. The non-prefixed schema should be used going forward.
+{% endAside %}
 
 ## Materialized table schema {: #schema-materialized }
 
@@ -159,7 +164,7 @@ Materialized tables are provided for easy access to summary data by a number of 
 </tbody>
 </table></div>
 
-This shows that in the 202204 dataset, 90.56% of real-user experiences on `https://example.com` met the criteria for [good LCP](https://web.dev/defining-core-web-vitals-thresholds/#refresher:-core-web-vitals-metrics-and-thresholds), and that the coarse 75th percentile LCP value was 1,600ms. This is slightly slower than previous months.
+This shows that in the 202204 dataset, 90.56% of real-user experiences on `https://example.com` met the criteria for [good LCP](https://web.dev/articles/defining-core-web-vitals-thresholds#refresher:_core_web_vitals_metrics_and_thresholds), and that the coarse 75th percentile LCP value was 1,600ms. This is slightly slower than previous months.
 
 Four materialized tables are provided:
 

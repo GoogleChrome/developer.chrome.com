@@ -11,7 +11,7 @@ authors:
 
 ## Status de implementação
 
-- [Em ensaio de origem](https://web.dev/origin-trials/): Chrome 84 a 94.
+- [Em ensaio de origem](/docs/web-platform/origin-trials/): Chrome 84 a 94.
 - [Cadastre-se para o ensaio](/origintrials/#/view_trial/2479231594867458049).
 - [Demo](https://trust-token-demo.glitch.me/).
 - [Integração do Chrome DevTools](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
@@ -62,7 +62,7 @@ Neste exemplo, um site de editor deseja verificar se um usuário é um ser human
 12. O site do editor exibe o anúncio.
 13. Uma impressão de visualização do anúncio é contada.
 
-{% Aside %} Para mais detalhes sobre as chamadas de JavaScript neste exemplo, veja o [Exemplo de uso da API](https://web.dev/trust-tokens/#sample-api-usage). {% endAside %}
+{% Aside %} Para mais detalhes sobre as chamadas de JavaScript neste exemplo, veja o [Exemplo de uso da API](https://web.dev/articles/trust-tokens#sample_api_usage). {% endAside %}
 
 ---
 
@@ -78,6 +78,6 @@ Neste exemplo, um site de editor deseja verificar se um usuário é um ser human
 ## Saiba mais
 
 - [Explicação técnica do Trust Token](https://github.com/dvorak42/trust-token-api)
-- [Getting started with Trust Tokens](https://web.dev/trust-tokens/): an overview for web developers
+- [Getting started with Trust Tokens](https://web.dev/articles/trust-tokens): an overview for web developers
 - [Introdução aos ensaios de origem do Chrome](https://web.dev/origin-trials)
 - [Explorando a Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)

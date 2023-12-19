@@ -1,9 +1,9 @@
 <p class="color-secondary-text type--caption">
   {% if updated %}
-    {{ 'i18n.common.updated_on' | i18n(locale) }} <time>{{ helpers.formatDateLong(updated, locale) }}</time>
+    {{ 'i18n.common.updated_on' | i18n(locale) }} <time datetime="{{ helpers.formatDateNumeric(updated) }}">{{ helpers.formatDateLong(updated, locale) }}</time>
     <span>•</span>
   {% elif date %}
-    {{ 'i18n.common.updated_on' | i18n(locale) }} <time>{{ helpers.formatDateLong(date, locale) }}</time>
+    {{ 'i18n.common.published_on' | i18n(locale) }} <time datetime="{{ helpers.formatDateNumeric(date) }}">{{ helpers.formatDateLong(date, locale) }}</time>
     <span>•</span>
   {% endif %}
   <a href="{{ page.inputPath | githubLink }}">

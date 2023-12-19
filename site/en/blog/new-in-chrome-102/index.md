@@ -78,7 +78,7 @@ launchQueue.setConsumer((launchParams) => {
 });
 ```
 
-Check out [Let installed web applications be file handlers](https://web.dev/file-handling/)
+Check out [Let installed web applications be file handlers](https://web.dev/articles/file-handling)
 for all the details.
 
 ## The `inert` property {: #inert }

@@ -1,6 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Serial Devices"
+seoTitle: "Chrome Apps - Serial Devices [Deprecated]"
 date: 2013-10-31
 updated: 2014-09-10
 description: How to communicate with serial devices from your Chrome App.

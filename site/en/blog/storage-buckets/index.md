@@ -23,6 +23,10 @@ We're experimenting with an API for making persistent storage eviction under hea
 memory pressure more predictable. It's available behind the
 `#enable-experimental-web-platform-features` flag in Chromium&nbsp;106, and we'd love your feedback.
 
+{% Aside %}
+You can try the Storage Buckets API by [participating in the Storage Buckets origin trial](/origintrials/#/view_trial/2674012278751232001). The origin trial runs from Chrome&nbsp;115 (stable date): {% ChromeDate 115 %} to Chrome&nbsp;118 (stable date): {% ChromeDate 118 %}.
+{% endAside %}
+
 ## What problem does the storage standard aim to solve?
 
 Traditionally, as the user runs out of storage space on their device, the data stored with APIs like
@@ -66,6 +70,10 @@ to be removed from the client if their browser is under heavy storage pressure.
 {% Aside %} This article only teases the main features of the Storage Buckets API. For a full
 reference of what's possible with the API, see the
 [Storage Buckets proposal](https://wicg.github.io/storage-buckets/explainer). {% endAside %}
+
+{% Aside %}
+Full debugging support in DevTools for the Storage Buckets API is planned, but still in the works.
+{% endAside %}
 
 ### Creating a new storage bucket
 
@@ -129,7 +137,7 @@ const inboxDb = await new Promise(resolve => {
 Apart from IndexedDB, the
 [explainer mentions several other storage APIs](https://wicg.github.io/storage-buckets/explainer#accessing-storage-apis-from-buckets).
  For example, the [Cache API](https://developer.mozilla.org/docs/Web/API/Cache)
-and [File API](https://developer.mozilla.org/docs/Web/API/File_API). The current implementation is only 
+and [File API](https://developer.mozilla.org/docs/Web/API/File_API). The current implementation is only
 the IndexedDB API.
 {% endAside %}
 

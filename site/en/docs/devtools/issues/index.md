@@ -19,7 +19,7 @@ content.
 
 {% Aside %}
 
-Starting from Chrome 92, the **Issues** tab supports the following types of issues:
+Starting from Chrome 116, the **Issues** tab supports the following types of issues:
 
 - [Cookie problems][1]
 - [Mixed content][2]
@@ -28,6 +28,8 @@ Starting from Chrome 92, the **Issues** tab supports the following types of issu
 - [Quirks mode issues][7]
 - (Preview) [Low-contrast issues][8]
 - [Trusted Web Activity issues][9]
+- [Stylesheet loading issues](/blog/new-in-devtools-116/#stylesheets)
+- [Invalid `@property` CSS rules](/blog/new-in-devtools-119/#property-issues)
 
 Future versions of Chrome will support more issue types.
 
@@ -92,11 +94,13 @@ To group issues, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLM
 
 ### Include third-party issues {: #include-third-party }
 
-Third-party cookie issues are hidden by default.
+The Issues tab shows third-party cookies issues by default. 
 
-To view such issues, check {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hmp8j3HiLMCcqPArD9yt.svg", alt="Checkbox.", width="22", height="22" %} **Include third-party cookie issues** in the action bar at the top of the **Issues** tab. You can find third-party cookie issues in the **AFFECTED RESOURCES** section missing a link.
+You can find third-party cookie issues in the **AFFECTED RESOURCES** section missing a link.
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/hPAEUH4LTwDFyPoQoPQ0.png", alt="Third-party cookie without a linked resource in the Affected Resources section.", width="800", height="654" %}
+
+To hide such issues, clear {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Clear.", width="24", height="24" %} **Include third-party cookie issues** in the action bar at the top of the **Issues** tab. 
 
 ### Hide issues {: #hide-issues }
 

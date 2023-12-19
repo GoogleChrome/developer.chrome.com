@@ -66,7 +66,7 @@ Lighthouse собирает все ответы, в которых:
 3. Включите поддержку больших строк запросов. См. раздел [Использование больших строк запросов](https://developers.google.com/web/tools/chrome-devtools/network/reference#request-rows) .
 4. Посмотрите столбец **Size** (Размер) для интересующего вас ответа. Верхнее значение — размер сжатых данных, нижнее значение — размер несжатых данных.
 
-См. также раздел [Уменьшение и сжатие сетевых данных](https://web.dev/reduce-network-payloads-using-text-compression/) .
+См. также раздел [Уменьшение и сжатие сетевых данных](https://web.dev/articles/reduce-network-payloads-using-text-compression) .
 
 ## Инструкции для разных стеков
 

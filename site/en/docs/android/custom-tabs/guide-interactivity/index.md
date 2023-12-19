@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: Adding custom interactivity 
+title: Adding custom interactivity
 seoTitle: "Guide: Adding custom interactivity to a Custom Tab"
 date: 2023-04-21
 description: How to add custom actions to a Custom Tabs.
@@ -10,7 +10,7 @@ authors:
 
 This guide explains how to add custom interactivity to Custom Tabs.
 
-## Enable the default share action 
+## Enable the default share action
 
 If you don't provide a custom share action, it is a good idea to enable the browser's default share action in the overflow menu to make it easier for users to share a link to the content they are seeing:
 
@@ -19,13 +19,13 @@ If you don't provide a custom share action, it is a good idea to enable the brow
     intentBuilder.setShareState(CustomTabsIntent.SHARE_STATE_ON);
 ```
 
-## Add a custom action button 
+## Add a custom action button
 
-For important actions, the Custom Tab toolbar lets you integrate a custom action button, which can either have a text label or a custom icon. The icon should be 24dp in height and 24-48 dp in width. 
+For important actions, the Custom Tab toolbar lets you integrate a custom action button, which can either have a text label or a custom icon. The icon should be 24dp in height and 24-48 dp in width.
 
-{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/9eJW75CRW22UVx7FYnqs.png", alt="Custom Tab with a custom share action", width="800", height="460", class="screenshot screenshot--filled" %}
+{% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/9eJW75CRW22UVx7FYnqs.png", alt="Custom Tab with a custom share action", width="320", height="184", class="screenshot screenshot--filled" %}
 
-For example, you can add a custom share action to the toolbar. To do this, create a [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#receiving-broadcasts) which gets called when the user clicks on the share action in the Custom Tab. 
+For example, you can add a custom share action to the toolbar. To do this, create a [`BroadcastReceiver`](https://developer.android.com/guide/components/broadcasts#receiving-broadcasts) which gets called when the user clicks on the share action in the Custom Tab.
 
 Register the `BroadCastReceiver` in the `AndroidManifest.xml` file:
 
@@ -39,7 +39,7 @@ Then add a new class, `ShareBroadcastReceiver`. In the `onReceive()` method, ext
 
 ```java
 public class ShareBroadcastReceiver extends BroadcastReceiver {
-   
+
     @Override
     public void onReceive(Context context, Intent intent) {
         String url = intent.getDataString();
@@ -53,7 +53,7 @@ public class ShareBroadcastReceiver extends BroadcastReceiver {
 }
 ```
 
-Now, create a `PendingIntent` for `ShareBroadcast` and register it via [`setActionButton()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setActionButton(android.graphics.Bitmap,java.lang.String,android.app.PendingIntent)). Pass the pending intent together with the icon and the description. 
+Now, create a `PendingIntent` for `ShareBroadcast` and register it via [`setActionButton()`](https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setActionButton(android.graphics.Bitmap,java.lang.String,android.app.PendingIntent)). Pass the pending intent together with the icon and the description.
 
 ```java
 String shareDescription = getString(R.string.label_action_share);
@@ -64,7 +64,7 @@ Bitmap shareIcon = BitmapFactory.decodeResource(getResources(),
 Intent actionIntent = new Intent(
        this.getApplicationContext(), ShareBroadcastReceiver.class);
 PendingIntent pendingIntent =
-       PendingIntent.getBroadcast(getApplicationContext(), 0 /* request code */, actionIntent, PendingIntent.FLAG_MUTABLE);           
+       PendingIntent.getBroadcast(getApplicationContext(), 0 /* request code */, actionIntent, PendingIntent.FLAG_MUTABLE);          
 
 //Set the pendingIntent as the action to be performed when the button is clicked.
 CustomTabsIntent intentBuilder = new CustomTabsIntent.Builder()
@@ -75,7 +75,7 @@ CustomTabsIntent intentBuilder = new CustomTabsIntent.Builder()
 
 ## Add custom menu items
 
-Custom tabs has as many as five default actions provided by the browser: "Forward", "Page Info", "Refresh", "Find in Page" and "Open in Browser". Additionally, you can add up to five more, which will be inserted between the icon row and the browser-provided items. (See the image below.)
+A Custom Tab has as many as five default actions provided by the browser: "Forward", "Page Info", "Refresh", "Find in Page" and "Open in Browser". Additionally, you can add up to seven more. These menu items will be inserted between the icon row and the browser-provided items. (See the image below.) The actual number depends on the underlying browser implementation. (For example, with version 117 Chrome increased the number of menu items from five to seven.) So it is best to add the most important items first. 
 
 You can access your custom actions via the three dot menu in the top right corner:
 
@@ -107,7 +107,7 @@ intentBuilder.setCloseButtonIcon(BitmapFactory.decodeResource(
 
 ## Add a bottom toolbar
 
-The bottom toolbar is a very flexible way to add more functionality to a custom tab. 
+The bottom toolbar is a very flexible way to add more functionality to a Custom Tab.
 
 {% Img src="image/6hHqS5auVgWhN0cQNQztaJx5w4M2/e0evUtBxkP0uI7kVj8PS.png", alt="Custom Tab with a bottom toolbar", width="320", height="693", class="screenshot screenshot--filled" %}
 
@@ -180,7 +180,7 @@ Intent actionIntent = new Intent(
        this.getApplicationContext(), BottomToolbarBroadcastReceiver.class);
 
 PendingIntent pendingIntent =
-       PendingIntent.getBroadcast(getApplicationContext(), 0 /* request code */, actionIntent, PendingIntent.FLAG_MUTABLE);           
+       PendingIntent.getBroadcast(getApplicationContext(), 0 /* request code */, actionIntent, PendingIntent.FLAG_MUTABLE);          
 
 // Pass the toolbar layout to the RemoteViews instance
 RemoteViews secondaryToolbarViews = new RemoteViews(getPackageName(), R.layout.custom_tab_toolbar);
@@ -190,6 +190,18 @@ int[] clickableIds = {R.id.ct_toolbar_next, R.id.ct_toolbar_previous};
 // Register the bottom toolbar when creating a new custom tab intent
 CustomTabsIntent intent = new CustomTabsIntent.Builder()
     .setSecondaryToolbarViews(secondaryToolbarViews, clickableIds, toolbarPendingIntent)
+    .build();
+```
+
+## Bookmarks and download buttons
+
+The bookmarks and download buttons in the three dot menu are enabled by default. To disable them, use the following
+code in `CustomTabsIntent.Builder`:
+
+```java
+CustomTabsIntent customTabsIntent = new CustomTabsIntent.Builder()
+    .setBookmarksButtonEnabled(false)
+    .setDownloadButtonEnabled(false)
     .build();
 ```
 

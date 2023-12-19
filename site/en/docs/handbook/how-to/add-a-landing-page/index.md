@@ -18,7 +18,7 @@ image to our CDN. Once you've uploaded the image, copy the path out of the
 shortcode snippet, paste that into this field.
 - `imgAlt` — the description
 of the image. You can read more about writing effective alt text over on [the
-web.dev handbook](https://web.dev/handbook/inclusion-and-accessibility/#use-inclusive-images).
+web.dev handbook](https://web.dev/articles/handbook/inclusion-and-accessibility#use_inclusive_images).
 - `actionUrl`— an url of the CTA at the bottom of the card.
 - `actionText`— a text of the CTA at the bottom of the card.
 
@@ -118,7 +118,7 @@ A featured section is a layout of cards on the same plane. The code below is the
     { postUrl: '/blog/insider-april-2022/',
       actionUrl: '/blog/insider-april-2022/',
       actionText: 'Discover'
-    }, 
+    },
     { customPost: {
         title: '#100CoolWebMoments',
         description: 'Take a stroll down memory lane and celebrate **#100CoolwebMoments** since Chrome’s first release &mdash; _lorem ipsum._',
@@ -128,7 +128,7 @@ A featured section is a layout of cards on the same plane. The code below is the
       actionUrl: '/blog/insider-april-2022/',
       actionText: 'Discover the timeline'
     },
-  ], utilities: 'grid-cols-1 lg:grid-cols-2') 
+  ], utilities: 'grid-cols-1 lg:grid-cols-2')
 }}
 ```
 
@@ -147,7 +147,7 @@ A featured section is a layout of cards on the same plane. The code below is the
     {
       customPost: {
         title: '#100CoolWebMoments',
-        description: 'Take a stroll down memory lane and celebrate **#100CoolwebMoments** since Chrome’s first release &mdash; _lorem ipsum._', 
+        description: 'Take a stroll down memory lane and celebrate **#100CoolwebMoments** since Chrome’s first release &mdash; _lorem ipsum._',
         imgSrc: 'image/kheDArv5csY6rvQUJDbWRscckLr1/AlyVvShYHBM5I7ikG8vj.jpg',
         imgAlt: '#100CoolWebMoments'
       },

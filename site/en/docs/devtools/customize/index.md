@@ -76,7 +76,8 @@ To toggle **Restore last dock position** with a keyboard shortcut, press:
 To change ordering, click and drag left or right any of the following:
 
 - Panels at the top of DevTools.
-- Panes in the **Elements** panel such as **Styles**, **Computed**, or **Layout**.
+- Panes in the **Elements** panel such as **Styles**, **Computed**, **Layout**, and others.
+- Panes in the **Sources** panel such as **Page**, **Workspace**, **Overrides**, and others.
 - **Drawer** tabs at the bottom of DevTools.
 
 Additionally, you can [move panels and tabs up and down](/blog/new-in-devtools-87/#moveable-tools) to and from the **Drawer**. To do this, right-click the panel or tab and select **Move to top** or **Move to bottom** from the drop-down menu.
@@ -114,6 +115,10 @@ You can enable or disable the DevTools settings sync separately using the {% Img
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools sync settings", width="800", height="654" %}
 
 DevTools syncs most of the settings except those in the **Workspace**, **Experiments**, and **Devices** tabs and a few other general settings. The state of the **Enable settings sync** checkbox is synced across devices as well.
+
+{% Aside %}
+DevTools also doesn't sync [Snippets](/docs/devtools/javascript/snippets/), they are stored as local preferences.
+{% endAside %}
 
 For example, the following **Appearance** settings are synced, so you have a consistent experience across devices and don't need to re-define the same settings again.
 

@@ -48,12 +48,12 @@ The worst times to store state are:
 
 These are the worst times to store state because these events are completely unreliable and do not fire in many situations—including when a tab is being discarded.
 
-You can refer to the [Page Lifecycle event diagram](/blog/page-lifecycle-api/#overview-of-page-lifecycle-states-and-events) to see what events are expected to fire as a page is being discarded. As you can see from that diagram, a tab can get from the "hidden" state to the "discarded" state without any events firing.
+You can refer to the [Page Lifecycle event diagram](/articles/page-lifecycle-api/#overview-of-page-lifecycle-states-and-events) to see what events are expected to fire as a page is being discarded. As you can see from that diagram, a tab can get from the "hidden" state to the "discarded" state without any events firing.
 
 <figure>
-  <a href="https://wd.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/KCIeOsJ0lCWMthBSSBrn.svg">
+  <a href="https://wd.imgix.net/image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/vHuB6kURi4lvu8oBaUT9.svg">
     {% Img
-      src="image/eqprBhZUGfb8WYnumQ9ljAxRrA72/KCIeOsJ0lCWMthBSSBrn.svg",
+      src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/vHuB6kURi4lvu8oBaUT9.svg",
       alt="Page Lifecycle API state and event flow. A visual representation of the state and event flow described throughout this document.",
       width="800",
       height="400"
@@ -140,7 +140,7 @@ The main scenario where this mode _could_ be problematic is if your site uses Ja
 
 For example, if your site uses `requestAnimationFrame()` loops and assumes that exactly 16.67 milliseconds will have elapsed between callbacks, your animations will run twice as slow when Energy Saver mode is enabled.
 
-Note that it has [always been problematic](https://web.dev/speed-rendering/#timing-is-everything-requestanimationframe) for developers to assume a default refresh rate of 60 Hz for all users, since that is not true for many current devices.
+Note that it has [always been problematic](https://web.dev/articles/speed-rendering#timing_is_everything_requestanimationframe) for developers to assume a default refresh rate of 60 Hz for all users, since that is not true for many current devices.
 
 ### Measuring display refresh rate
 

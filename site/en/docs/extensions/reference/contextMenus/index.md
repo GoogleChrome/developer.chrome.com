@@ -34,6 +34,8 @@ you should specify a 16x16-pixel icon for display next to your menu item. For ex
 
 ## Examples
 
-You can find samples of this API on the [sample page][1].
+To try this API, install the [contextMenus API example][1] from the [chrome-extension-samples][2]
+repository.
 
-[1]: /docs/extensions/mv2/samples#search:contextMenus
+[1]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/contextMenus
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples

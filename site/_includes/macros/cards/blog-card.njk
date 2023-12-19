@@ -5,10 +5,14 @@
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
   {% if pd.thumbnail %}
   {% set thumbnail = pd.thumbnail %}
-  {% else %}
-  {% set thumbnail = pd.hero %}
-  {% endif %}
   {% set alt = pd.alt %}
+  {% elif pd.hero %}
+  {% set thumbnail = pd.hero %}
+  {% set alt = pd.alt %}
+  {% else %}
+  {% set thumbnail = helpers.randomThumbnail() %}
+  {% set alt = 'i18n.common.deco_thumbnail_alt' | i18n %}
+  {% endif %}
   {% set tags = pd.tags %}
 
   {% if thumbnail %}

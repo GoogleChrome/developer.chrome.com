@@ -21,7 +21,7 @@ date: 2017-10-01
 
 # Optional
 # Include an updated date when you update your post
-updated: 2023-04-11
+updated: 2023-11-14
 
 # Optional
 # How to add a new author
@@ -43,16 +43,129 @@ The CrUX dataset on BigQuery is generally updated on the second Tuesday of every
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release Announcements.
 
+## 202310
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/vHNwpu_IR34)
+
+Publication date
+ : November 14, 2023
+
+What's new
+ : - We're again seeing continual improvements likely due to the final rollout of the [front end improvements to LCP started in August](#202308) which particularly affected LCP (up a further 1.5% this month) and CLS (up 1.6%)
+
+Notable stats
+ : - 18,383,755 origins
+ : - 46.9% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
+ : - 43.4% of origins have good Core Web Vitals when [using INP in place of FID as will happen from March 2024](https://web.dev/articles/inp-cwv).
+
+## 202309
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/w48sCWw8IfA)
+
+Publication date
+ : October 10, 2023
+
+What's new
+ : - We're again seeing continual improvements across most of the metrics despite the fact that FCP and TTFB actually had slight downturns. This suggests that the [front end improvements to LCP mentioned last month](#202308) which were still rolling out during September, likely more than counter acted these downturns.
+ : - One thing not mentioned last month until we saw the impact, was that WordPress had [a number of improvements](https://make.wordpress.org/core/2023/08/07/wordpress-6-3-performance-improvements/) in the latest release, in particular [for LCP images](https://make.wordpress.org/core/2023/07/13/image-performance-enhancements-in-wordpress-6-3/). This looks to have resulted in a [measurable boost for WordPress sites compared to the web as a whole](https://lookerstudio.google.com/reporting/55bc8fad-44c2-4280-aa0b-5f3f0cd3d2be/page/M6ZPC?params=%7B%22df33%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580ALL%22,%22df46%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580mobile%22%7D) and, given it is used on about a third of the sites in the CrUX dataset, also would help explain the further improvement in LCP.
+ : - While on the subject of LCP, Chrome 117 had [a bug whereby LCP may have been incorrect for some SPA applications when observed via Web APIs](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_10_lcp.md). This bug did not affect CrUX, nor Google Search Console data which is fed from CrUX. It has been fixed for Chrome 118 which started rolling out last week. If you noticed a large increase in LCP in your RUM solutions then this may have been the reason why.
+
+Notable stats
+ : - 18,405,462 origins
+ : - 45.7% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
+ : - 42.1% of origins have good Core Web Vitals when [using INP in place of FID as will happen from March 2024](https://web.dev/articles/inp-cwv).
+
+## 202308
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/CJT8_DbO9DU)
+
+Publication date
+ : September 12, 2023
+
+What's new
+ : We're seeing continual improvements across most of the metrics which seem to be driven by the following changes:
+ : - Chrome [started rolling out a change to increase image priority from low to medium for the first 5 images](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_08_image_loading.md) which may have improved LCP and CLS (testing showed less impact on LCP, and more on CLS).
+ : - Chrome made a change for LCP for animated image formats (for example, GIFs) which now measure [the first frame rather than the full image load time as the LCP time](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_08_lcp.md#animated-images). This is expected to improve the LCP for the small number of sites that have animated images as LCP elements.
+ : - Chrome made another change for LCP whereby [video elements are now considered as LCP element candidates](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_08_lcp.md#videos). Previously they were only considered with a poster image. As videos are typically larger resources to download, this is expected to deteriorate the LCP for the small number of sites that have videos as LCP elements.
+ : Note that all of these changes are still rolling out so the full effect of all these changes has not been seen yet and hopefully we will see further improvements next month too.
+ : On a less positive note, INP pass rates remained static, showing it's a more tricky metric to optimize for.
+
+Notable stats
+ : - 18,263,523 origins
+ : - 45.3% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
+ : - 41.6% of origins have good Core Web Vitals when [using INP in place of FID as will happen from March 2024](https://web.dev/articles/inp-cwv).
+
+## 202307
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/76V2bzaidBk)
+
+Publication date
+ : August 8, 2023
+
+What's new
+ : - As noted last month, we made progress on origins with redirects on their root page not showing in CrUX and since then we resolved the last of the known issues, and this month, no origins should be excluded for this reason.
+ : - As warned in the last few releases, we have now removed the experimental prefixed Interaction to Next Paint metric from CrUX BigQuery, API, and History API. Users need to use the non-prefixed field to access this metric.
+
+Notable stats
+ : - 17,976,663 origins
+ : - 44.6% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
+
+## 202306
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/AaW8rohYfHk)
+
+Publication date
+ : July 11, 2023
+
+What's new
+ : - We are pleased to announce that we have finally made progress on the long-standing root page redirect issue [mentioned last month](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/13hl37E28RE). Some origins which redirect their root page, and were therefore excluded from CrUX due to our lack of handling this properly, should now start to be included again from this month. Please note that some origins are still being resolved, so not all origins are in this month's dataset. However, it is great that we have made some good progress on this now and we hope to have the issue fully resolved in the near future.
+ : - This is the last month that the INP metric is guaranteed to be available in the CrUX BigQuery, API, and History API both with and without the experimental prefix. We encourage users to move to the non-prefixed field, as the experimental prefix fields should now be considered deprecated and will be removed in 30 days.
+
+Notable stats
+ : - 18,065,718 origins
+ : - 44.1% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
+
+## 202305
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/13hl37E28RE)
+
+Publication date
+ : June 13, 2023
+
+What's new
+ : - We're seeing a slight decrease again this month for LCP and FCP due to the final roll outs of the [change in LCP to ignore low-entropy images](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_04_lcp.md) and [correction in paint timing](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_03_lcp_fcp.md) discussed last month. However, despite this, the overall good LCP, FID, and CLS rates are up slightly from last month.
+ : - We are aware that some origins that redirect their root page (for example, https://www.example.com that automatically redirects to https://www.example.com/en/) are not showing origin-level data in CrUX, and so are also not appearing in the BigQuery dataset. We're also aware that this has been going on for some time. Unfortunately, this is proving a difficult issue to resolve, and so we still do not have an estimated time of when this will be fixed.
+
+Notable stats
+ : - 18,377,791 origins
+ : - 43.6% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
+
+## 202304
+
+[Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/_1ja3Bg-3Ow)
+
+Publication date
+ : May 10, 2023
+
+What's new
+ : - We're seeing a slight decrease in pass rates for the Core Web Vitals, especially for LCP due in part to [a change in LCP to ignore low-entropy images](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_04_lcp.md). We also see a decrease in FCP pass rates [due to correction in paint timing](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2023_03_lcp_fcp.md) (which also affects LCP but to a lesser extent).
+ : - On a more positive note, the [INP](https://web.dev/articles/inp) pass rate continues to improve with a further increase of 0.2%. This is especially important, as we are [moving this metric from an Experimental metric to a Pending metric](https://web.dev/articles/inp-cwv), and it will join the reset of the Core Web Vitals next year.
+ : - From this release, the INP metric is available in the [CrUX BigQuery](/docs/crux/bigquery/), [API](/docs/crux/api/), and [History API](/docs/crux/history-api/), both with and without the experimental prefix. We encourage users to move to the non-prefixed field, as the experimental prefix fields should now be considered deprecated and will be removed in 90 days.
+
+Notable stats
+ : - 18,406,973 origins
+ : - 43.5% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
+
 ## 202303
 
 [Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/1hHxnk9ZOCk)
 
 Publication date
- : Apri 11, 2023
+ : April 11, 2023
 
 Notable stats
  : - 18,495,210 origins
- : - 44.2% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 44.2% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202302
 
@@ -66,7 +179,7 @@ What's new
 
 Notable stats
  : - 18,184,396 origins
- : - 43.1% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 43.1% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202301
 
@@ -81,7 +194,7 @@ What's new
 
 Notable stats
  : - 18,203,637 origins
- : - 43.0% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 43.0% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202212
 
@@ -95,7 +208,7 @@ What's new
 
 Notable stats
  : - 16,824,271 origins
- : - 41.8% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 41.8% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202211
 
@@ -109,7 +222,7 @@ What's new
 
 Notable stats
  : - 17,618,944 origins
- : - 41.8% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 41.8% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202210
 
@@ -123,7 +236,7 @@ What's new
 
 Notable stats
  : - 17,637,195 origins
- : - 41.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 41.6% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202209
 
@@ -152,7 +265,7 @@ What's new
 
 Notable stats
  : - 17,715,277 origins
- : - 41.4% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 41.4% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202208
 
@@ -163,14 +276,14 @@ Publication date
 
 Notable stats
  : - 16,754,655 origins
- : - 40.7% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 40.7% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202207
 
 [Announcement](https://groups.google.com/a/chromium.org/g/chrome-ux-report-announce/c/N5B3F9QVOmY)
 
 Publication date
- : August 09, 2022
+ : August 9, 2022
 
 What's new
  : - This release includes a change which records the CLS metric when the tab is backgrounded in addition to tab close. See the [CLS changelog](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2021_11_cls.md) for details.
@@ -178,7 +291,7 @@ What's new
 
 Notable stats
  : - 16,190,453 origins
- : - 40.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 40.6% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202206
 
@@ -192,7 +305,7 @@ What's new
 
 Notable stats
  : - 16,230,572 origins
- : - 41.3% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 41.3% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202205
 
@@ -224,7 +337,7 @@ What's new
 
 Notable stats
  : - 8,602,902 origins
- : - 41.2% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 41.2% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202203
 
@@ -238,7 +351,7 @@ What's new
 
 Notable stats
  : - 8,555,307 origins
- : - 39.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 39.6% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202202
 
@@ -248,11 +361,11 @@ Publication date
  : March 8, 2022
 
 What's new
- : - This release includes `experimental.responsiveness`, our candidate for the new responsiveness metric. See [web.dev/responsiveness/](https://web.dev/responsiveness/) for details.
+ : - This release includes `experimental.responsiveness`, our candidate for the new responsiveness metric. See [web.dev/responsiveness/](https://web.dev/articles/responsiveness) for details.
 
 Notable stats
  : - 8,764,246 origins
- : - 39.0% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 39.0% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202201
 
@@ -266,7 +379,7 @@ What's new
 
 Notable stats
  : - 8,934,350 origins
- : - 37.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 37.6% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202112
 
@@ -280,7 +393,7 @@ What's new
 
 Notable stats
  : - 8,398,796 origins
- : - 35.0% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 35.0% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202111
 
@@ -295,7 +408,7 @@ What's new
 
 Notable stats
  : - 8,733,078 origins
- : - 34.8% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 34.8% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202110
 
@@ -309,7 +422,7 @@ What's new
 
 Notable stats
  : - 8,784,894 origins
- : - 34.1% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 34.1% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202109
 
@@ -323,7 +436,7 @@ What's new
 
 Notable stats
  : - 8,660,068 origins
- : - 32.8% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 32.8% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202108
 
@@ -337,7 +450,7 @@ What's new
 
 Notable stats
  : - 8,431,699 origins
- : - 31.3% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 31.3% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202107
 
@@ -351,7 +464,7 @@ What's new
 
 Notable stats
  : - 8,174,923 origins
- : - 30.4% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 30.4% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202106
 
@@ -365,7 +478,7 @@ What's new
 
 Notable stats
  : - 8,416,608 origins
- : - 30.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 30.6% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202105
 
@@ -376,7 +489,7 @@ Publication date
 
 Notable stats
  : - 8,411,670 origins
- : - 29.23% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 29.23% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 Notable Changes
  : - The BigQuery update 202105 includes the same CLS and LCP updates that we released on June 1 for the CrUX API (see below). The previous CLS metric will be available for a limited time as `experimental.uncapped_cumulative_layout_shift`.
@@ -385,7 +498,7 @@ API Update
  : June 1, 2021
 
 Notable Changes
- : - The new [Cumulative Layout Shift definition](https://web.dev/evolving-cls/) is now the default metric surfaced as `cumulative_layout_shift`, the previous Cumulative Layout Shift metric will be available for a limited time as it is phased out as `experimental_uncapped_cumulative_layout_shift`.
+ : - The new [Cumulative Layout Shift definition](https://web.dev/articles/evolving-cls) is now the default metric surfaced as `cumulative_layout_shift`, the previous Cumulative Layout Shift metric will be available for a limited time as it is phased out as `experimental_uncapped_cumulative_layout_shift`.
  : - [Largest Contentful Paint](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/speed/metrics_changelog/2020_11_lcp_2.md) has undergone adjustments in recent Chrome versions and has been updated similarly in CrUX.
  : - First Contentful Paint tri-binning thresholds have been updated to be: [0-1.8s], (1.8s-3s), [3s-∞].
 
@@ -398,7 +511,7 @@ Publication date
 
 Notable stats
  : - 8,423,302 origins
- : - 25.83% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 25.83% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202103
 
@@ -409,7 +522,7 @@ Publication date
 
 Notable stats
  : - 8,326,310 origins
- : - 24.81% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 24.81% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202102
 
@@ -424,7 +537,7 @@ What's new
 
 Notable stats
  : - 8,264,371 origins
- : - 21.98% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 21.98% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202101
 
@@ -435,7 +548,7 @@ Publication date
 
 Notable stats
  : - 8,185,540 origins
- : - 23.71% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 23.71% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202012
 
@@ -446,7 +559,7 @@ Publication date
 
 Notable stats
  : - 7,629,156 origins
- : - 23.4% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 23.4% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202011
 
@@ -462,7 +575,7 @@ What's new
 
 Notable stats
  : - 7,942,408 origins
- : - 23.5% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 23.5% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202010
 
@@ -476,7 +589,7 @@ What's new
 
 Notable stats
  : - 8,050,755 origins
- : - 23.7% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 23.7% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202009
 
@@ -490,7 +603,7 @@ What's new
 
 Notable stats
  : - 7,937,088 origins
- : - 24.6% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 24.6% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202008
 
@@ -504,7 +617,7 @@ What's new
 
 Notable stats
  : - 7,773,359 origins
- : - 24.9% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 24.9% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202007
 
@@ -518,7 +631,7 @@ What's new
 
 Notable stats
  : - 7,527,878 origins
- : - 25.2% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 25.2% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202006
 
@@ -532,7 +645,7 @@ What's new
 
 Notable stats
  : - 7,501,835 origins
- : - 25.34% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 25.34% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202005
 
@@ -547,7 +660,7 @@ What's new
 
 Notable stats
  : - 7,103,486 origins
- : - 23.77% of origins have good [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)
+ : - 23.77% of origins have good [Core Web Vitals](https://web.dev/articles/vitals#core_web_vitals)
 
 ## 202004
 

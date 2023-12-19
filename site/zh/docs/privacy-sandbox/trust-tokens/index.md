@@ -11,7 +11,7 @@ authors:
 
 ## 实现状态
 
-- [源站试用](https://web.dev/origin-trials/)：Chrome 84 到 94。
+- [源站试用](/docs/web-platform/origin-trials/)：Chrome 84 到 94。
 - [注册试用](/origintrials/#/view_trial/2479231594867458049)。
 - [演示](https://trust-token-demo.glitch.me/)。
 - [Chrome DevTools 集成](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token)。
@@ -62,7 +62,7 @@ authors:
 12. 发布商网站展示广告。
 13. 计为一次广告观看展示。
 
-{% Aside %} 有关此示例中 JavaScript 调用的更多详细信息，请参阅[示例 API 用法](https://web.dev/trust-tokens/#sample-api-usage)。{% endAside %}
+{% Aside %} 有关此示例中 JavaScript 调用的更多详细信息，请参阅[示例 API 用法](https://web.dev/articles/trust-tokens#sample_api_usage)。{% endAside %}
 
 ---
 
@@ -78,6 +78,6 @@ authors:
 ## 发现更多
 
 - [Trust Token API 技术说明](https://github.com/dvorak42/trust-token-api)
-- [信任令牌入门](https://web.dev/trust-tokens/)：面向网站开发者的概述
+- [信任令牌入门](https://web.dev/articles/trust-tokens)：面向网站开发者的概述
 - [Chrome 的源站试用入门](https://web.dev/origin-trials)
 - [深入了解隐私沙盒](https://web.dev/digging-into-the-privacy-sandbox)

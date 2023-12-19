@@ -47,7 +47,7 @@ Lighthouse lists the results in a table with three columns:
         <td>The current cache duration of the resource</td>
       </tr>
       <tr>
-        <td><strong>Size</strong></td>
+        <td><strong>Transfer Size</strong></td>
         <td>An estimate of the data your users would save if the flagged resource had been cached</td>
       </tr>
     </tbody>
@@ -91,8 +91,8 @@ it's up to you to decide what the optimal cache duration is for your resources.
 
 There are many directives for customizing how the browser caches different resources.
 Learn more about caching resources in
-[The HTTP cache: your first line of defense guide](https://web.dev/http-cache/)
-and [Configuring HTTP caching behavior codelab](https://web.dev/codelab-http-cache/).
+[The HTTP cache: your first line of defense guide](https://web.dev/articles/http-cache)
+and [Configuring HTTP caching behavior codelab](https://web.dev/articles/codelab-http-cache).
 
 ## How to verify cached responses in Chrome DevTools
 

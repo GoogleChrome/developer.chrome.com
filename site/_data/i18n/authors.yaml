@@ -332,7 +332,12 @@ paulkinlan:
   title:
     en: 'Paul Kinlan'
   description:
-    en: 'Paul is a Developer Advocate'
+    en: 'DevRel Lead'
+  bio:
+    en:
+      - I lead the Chrome Developer Relations team at Google.
+      - We want people to have the best experience possible on the web without having to install a native app or produce content in a walled garden.
+      - Our team tries to make it easier for developers to build on the web by supporting every Chrome release, creating great content to support developers on web.dev, contributing to MDN, helping to improve browser compatibility, and some of the best developer tools like Lighthouse, Workbox, Squoosh to name just a few.
 jakearchibald:
   title:
     en: 'Jake Archibald'
@@ -412,7 +417,7 @@ pavoldrotar:
   title:
     en: 'Pavol Drotar'
   description:
-    en: 'I am a Software Engineer Intern wroking on the Web Platform.'
+    en: 'I am a Software Engineer Intern working on the Web Platform.'
 adrianajara:
   title:
     en: 'Adriana Jara'
@@ -422,7 +427,7 @@ agektmr:
   title:
     en: 'Eiji Kitamura'
   description:
-    en: 'Developer Advocate for identity, security, privacy and payment on the web.'
+    en: 'Developer Advocate, Google Chrome'
 titouan:
   title:
     en: 'Titouan Rigoudy'
@@ -537,9 +542,9 @@ bmeurer:
     en: 'Googler working on Chrome DevTools.'
 demianrenzulli:
   title:
-    en: 'Demian Renzulli'
+    en: 'Demián Renzulli'
   description:
-    en: 'Demián is a Web Ecosystems Consultant working at Google New York.'
+    en: 'Demián is a Partner Engineer working at Google New York.'
 samdutton:
   title:
     en: 'Sam Dutton'
@@ -571,6 +576,23 @@ reillyg:
     pt: Engenheiro de software no Google Chrome com foco em APIs de hardware
     ru: Инженер-программист в команде Google Chrome, специализирующийся на API для работы с устройствами
     zh: 专注于硬件 API 的 Google Chrome 软件工程师
+nabeelalshamma:
+  title:
+    en: Nabeel Al-Shamma
+    es: Nabeel Al-Shamma
+    ja: Nabeel Al-Shamma
+    ko: Nabeel Al-Shamma
+    pt: Nabeel Al-Shamma
+    ru: Nabeel Al-Shamma
+    zh: Nabeel Al-Shamma
+  description:
+    en: Principal Scientist at Adobe
+    es: Principal Scientist at Adobe
+    ja: Principal Scientist at Adobe
+    ko: Principal Scientist at Adobe
+    pt: Principal Scientist at Adobe
+    ru: Principal Scientist at Adobe
+    zh: Principal Scientist at Adobe
 nattestad:
   title:
     en: Thomas Nattestad
@@ -606,6 +628,26 @@ thomassteiner:
     en: 'Thomas Steiner'
   description:
     en: 'Tom is a Developer Advocate'
+jarekfoksa:
+  title:
+    en: Jarek Foksa
+  description:
+    en: "Boxy SVG developer"
+ashleygullen:
+  title:
+    en: 'Ashley Gullen'
+  description:
+    en: 'Founder of Scirra and lead developer of Construct'
+jannispetersen:
+  title:
+    en: Jannis Petersen
+  description:
+    en: Creator of Blockbench
+ivankutskir:
+  title:
+    en: 'Ivan Kutskir'
+  description:
+    en: 'Computer Programmer, creator of Photopea'
 ajara:
   title:
     en: 'Adriana Jara'
@@ -650,7 +692,7 @@ rowan_m:
   title:
     en: 'Rowan Merewood'
   description:
-    en: 'Rowan is a Staff Developer Relations Engineer at Chrome.'
+    en: 'Developer Relations for Privacy Sandbox.'
 danielcheng:
   title:
     en: 'Daniel Cheng'
@@ -967,7 +1009,7 @@ karaerickson:
   title:
     en: Kara Erickson
   description:
-    en: Software Engineer on the Aurora team at Chrome.
+    en: Staff Software Engineer on the Aurora team at Chrome.
     es: Ingeniera de software en el equipo de Aurora en Chrome.
     ja: ChromeのAuroraチームのソフトウェアエンジニア。
     ko: Chrome에서 Aurora 팀의 소프트웨어 엔지니어입니다.
@@ -1254,6 +1296,16 @@ helencho:
     en: Helen Cho
   description:
     en: 'Helen is a product manager at Google.'
+benkelly:
+  title:
+    en: Ben Kelly
+  description:
+    en: 'Ben is an engineering manager at Google.'
+taofiksulaiman:
+  title:
+    en: Taofik Sulaiman
+  description:
+    en: 'Taofik is a product manager at Google.'
 kaustubhag:
   title:
     en: Kaustubha Govind
@@ -1399,3 +1451,154 @@ sebastianbenz:
     en: 'Sebastian Benz'
   description:
     en: 'Sebastian is a Developer Relations Engineer'
+harleenbatra:
+  title:
+    en: Harleen Batra
+  description:
+    en: 'Developer Marketing for Chrome'
+patrickkettner:
+  title:
+    en: 'Patrick Kettner'
+  description:
+    en: 'Developer Advocate for Chrome Extensions'
+nmichell:
+  title:
+    en: 'Nancy Michell'
+  description:
+    en: 'Technical Writer'
+jakobdamjensen:
+  title:
+    en: Jakob Dam Jensen
+  description:
+    en: Software Product Manager at LEGO® Education
+oliverdunk:
+  title:
+    en: 'Oliver Dunk'
+  description:
+    en: 'Developer Relations Engineer for Chrome Extensions'
+shhnjk:
+  title:
+    en: 'Jun Kokatsu'
+  description:
+    en: 'Security Engineer for the Web'
+wanderview:
+  title:
+    en: 'Ben Kelly'
+  description:
+    en: 'Software Engineer'
+alispivak:
+  title:
+    en: 'Ali Spivak'
+  description:
+    en: 'Developer Relations Lead for Chrome Extensions'
+thiagodiogo:
+  title:
+    en: 'Thiago Diogo'
+  description:
+    en:  'Staff Technical Solutions Consultant'
+mikedougherty:
+  title:
+    en: 'Mike Dougherty'
+  description:
+    en: 'Chrome engineer on iOS'
+henrikbostrom:
+  title:
+    en: 'Henrik Boström'
+  description:
+    en: 'Software engineer working on video performance.'
+darojas:
+  title:
+    en: 'Danny Rojas'
+  description:
+    en:  'Product Partnerships, Privacy Sandbox'
+seburan:
+  title:
+    en: 'Séverin Ferrand'
+  description:
+    en:  'Privacy Engineer, Web Ecosystem Consulting'
+yurikoh:
+  title:
+    en: 'Yuriko Hirota'
+  description:
+    en:  'Web Ecosystem Consultant'
+elabadysayed:
+  title:
+    en: 'Sayed El-Abady'
+  description:
+    en: 'Software Engineer, Google'
+hemeryar:
+  title:
+    en: 'Arthur Hemery'
+  description:
+    en: 'Software Engineer, Google'
+paulrossman:
+  title:
+    en: 'Paul Rossman'
+  description:
+    en: 'Paul is a Technical Program Manager at Google'
+nrosenthal:
+  title:
+    en: 'Noam Rosenthal'
+  description:
+    en: 'Software engineer at Google working on web performance.'
+samrichard:
+  title:
+    en: 'Sam Richard'
+  description:
+    en: 'Developer Advocate, Google ChromeOS'
+xuezhoudai:
+  title:
+    en: 'Xuezhou Dai'
+    zh: '戴学舟'
+  description:
+    en: 'Summer of Code ''23 Contributor'
+hadrijau:
+  title:
+    en: 'Hadrien Jaubert'
+  description:
+    en: 'Software Engineering Intern, Google Chrome DevTools'
+jlwagner:
+  title:
+    en: 'Jeremy Wagner'
+  description:
+    en: 'Tech writin'', doc slingin'' reprobate.'
+adamraine:
+  title:
+    en: 'Adam Raine'
+  description:
+    en: 'Software Engineer, Google'
+schottfk:
+  title:
+    en: 'Fred K Schott'
+  description:
+    en: 'Co-creator, Astro'
+phillipsm:
+  title:
+    en: 'Matthew Phillips'
+  description:
+    en: 'Co-creator, Astro'
+ferreiram:
+  title:
+    en: 'Maxi Ferreira'
+  description:
+    en: 'Creator, FrontendAtScale'
+iforfota7:
+  title:
+    en: 'Ioana Forfota'
+  description:
+    en: 'STEP Intern, Chrome DevTools team'
+silviaeremia7:
+  title:
+    en: 'Silvia Eremia'
+  description:
+    en: 'STEP Intern, Chrome DevTools team'
+saurabhrajpal:
+  title:
+    en: Saurabh Rajpal
+  description:
+    en: Web Ecosystem Consultant.
+garimamimani:
+  title:
+    en: Garima Mimani
+  description:
+    en: Senior Technical Solutions Consultant

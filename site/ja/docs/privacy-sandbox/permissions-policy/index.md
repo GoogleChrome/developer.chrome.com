@@ -14,9 +14,9 @@ authors:
 
 権限ポリシーにより、トップレベルサイトは、サイトとそのサードパーティが何を使用する予定であるかを定義できるようになり、機能アクセスリクエストが正当かどうかを判断するユーザーの負担が軽減されます。たとえば、権限ポリシーを使用してすべてのサードパーティの位置情報機能をブロックすることにより、開発者は、サードパーティがユーザーの位置情報にアクセスできないことを確証できます。
 
-{% Aside %} [プライバシーサンドボックス](https://web.dev/digging-into-the-privacy-sandbox/)は、サードパーティ Cookie やその他の追跡メカニズムを使用せずに、サードパーティのユース ケースを満たすための一連の提案です。
+{% Aside %} [プライバシーサンドボックス](https://web.dev/articles/digging-into-the-privacy-sandbox)は、サードパーティ Cookie やその他の追跡メカニズムを使用せずに、サードパーティのユース ケースを満たすための一連の提案です。
 
-[User-Agent Client Hints](https://web.dev/user-agent-client-hints/) や [Topics API](/docs/privacy-sandbox/topics/) などのプライバシーサンドボックス API は、 `geolocation` や `camera` などの機能が管理されるのと同じ方法で、権限ポリシーによって管理されます。権限ポリシーに依存するウェブプラットフォーム API のリストについては、[機能リスト](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md)をご覧ください。このリストは最新のものではない場合があることに注意してください。 {% endAside %}
+[User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) や [Topics API](/docs/privacy-sandbox/topics/) などのプライバシーサンドボックス API は、 `geolocation` や `camera` などの機能が管理されるのと同じ方法で、権限ポリシーによって管理されます。権限ポリシーに依存するウェブプラットフォーム API のリストについては、[機能リスト](https://github.com/w3c/webappsec-permissions-policy/blob/main/features.md)をご覧ください。このリストは最新のものではない場合があることに注意してください。 {% endAside %}
 
 ## 権限ポリシーへの変更
 
@@ -321,9 +321,9 @@ const isCameraFeatureAllowed = isCameraPolicySet && hasCameraAttributeValue
 
 ## Reporting API
 
-[Reporting API](https://web.dev/reporting-api/) は Web アプリケーションのレポートメカニズムを一貫した方法で提供します。権限ポリシーの違反に利用できる Reporting API は実験的機能として提供されています。
+[Reporting API](https://web.dev/articles/reporting-api) は Web アプリケーションのレポートメカニズムを一貫した方法で提供します。権限ポリシーの違反に利用できる Reporting API は実験的機能として提供されています。
 
-この実験的機能をテストするには、[ウォークスルー](https://web.dev/reporting-api/#use-devtools)に従い、`chrome://flags/#enable-experimental-web-platform-features` でフラグを有効にします。 このフラグが有効な場合、DevTools の［アプリケーション］タブで権限ポリシー違反を確認できます。
+この実験的機能をテストするには、[ウォークスルー](https://web.dev/articles/reporting-api#use_devtools)に従い、`chrome://flags/#enable-experimental-web-platform-features` でフラグを有効にします。 このフラグが有効な場合、DevTools の［アプリケーション］タブで権限ポリシー違反を確認できます。
 
 次の例は、Reporting API ヘッダーの構造を示しています。
 

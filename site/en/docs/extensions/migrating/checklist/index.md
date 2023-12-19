@@ -17,7 +17,7 @@ The checklists below are here to help you keep track of your migration work. The
 ## Update the manifest {: update-manifest }
 {% endDetailsSummary %}
 
-The `manifest.json` file requires a slightly different format for Manoifest V3 than for Manifest V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
+The `manifest.json` file requires a slightly different format for Manifest V3 than for Manifest V2. This page describes changes that only affect the `manifest.json` file. But many of the changes to scripts and pages also require changes to the manifest. Those changes are covered with the migration tasks that require them.
 
 * [Change the manifest version number](/docs/extensions/migrating/manifest/#change-version).
 * [Update host permissions](/docs/extensions/migrating/manifest/#update-host-permissions).
@@ -41,6 +41,7 @@ Before beginning, read about the [differences between background scripts and ext
 * [Replace calls to `XMLHttpRequest()` with global `fetch()`](/docs/extensions/migrating/to-service-workers/#replace-xmlhttprequest).
 * [Persist states](/docs/extensions/migrating/to-service-workers/#persist-states)
 * [Convert timers to alarms](/docs/extensions/migrating/to-service-workers/#convert-timers)
+* [Keep the service worker alive (in exceptional cases)](/docs/extensions/migrating/to-service-workers/#keep-sw-alive)
 
 {% endDetails %}
 
@@ -89,5 +90,20 @@ Changes are required to improve the security of extensions. This includes removi
 * [Remove remotely hosted code](/docs/extensions/migrating/improve-security/#remove-remote-code)
 * [Update content security policy](/docs/extensions/migrating/improve-security/#update-csp).
 * [Remove unsupported content security policy values](/docs/extensions/migrating/improve-security/#remove-unsupported-csv)
+
+{% endDetails %}
+
+{% Details  'open' %}
+
+{% DetailsSummary %}
+## Publish your Manifest V3 extension
+{% endDetailsSummary %}
+
+After converting to Manifest Version 3, it's time to release your extension on the Chrome Web Store. Depending on the changes made, consider a step-wise roll out. This approach allows you to ensure your extension works as expected with a limited audience first, before releasing it to the entire user base.
+
+* [Publish a beta testing version](/docs/extensions/migrating/publish-mv3/#publish-beta).
+* [Gradually roll out your release](/docs/extensions/migrating/publish-mv3/#gradual-rollout).
+* [Plan for review times](/docs/extensions/migrating/publish-mv3/#review).
+* [Additional tips](/docs/extensions/migrating/publish-mv3/#tips).
 
 {% endDetails %}

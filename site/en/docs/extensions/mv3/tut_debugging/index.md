@@ -1,24 +1,24 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Debugging extensions"
-seoTitle: "Chrome Extensions Tutorial: Debugging extensions"
+title: "Debug extensions"
+seoTitle: "Chrome extensions tutorial: debug extensions"
 date: 2012-09-18
-updated: 2023-04-28
-description: Step-by-step instructions on how to debug Chrome Extensions.
+updated: 2023-08-09
+description: Instructions for debugging Chrome Extensions.
 ---
 
-## Overview {: #overview }
+Extensions can access the same [Chrome DevTools][chrome-devtools] as web pages. To become an expert in debugging extensions, you will need to know how to locate logs and errors of the different extension components. This tutorial provides fundamental techniques for debugging your extension.
 
-Extensions can access the same [Chrome DevTools][chrome-devtools] as web pages. To become an expert in debugging extensions, you will need to know how to locate logs and errors of the different extension components. This tutorial provides fundamental techniques to debug your extension.
+{% YouTube id='Ta-YTDhiBIQ' %}
 
 ## Before you begin {: #prereq }
 
-This guide assumes that you have basic web development experience. We recommend checking out
+This guide assumes that you have basic web development experience. We recommend reading
 [Development Basics][doc-dev-basics] for an introduction to the extension development workflow and [Architecture overview][doc-arch] to learn about the different extension components.
 
-## Breaking the extension {: #locate_logs }
+## Break the extension {: #locate_logs }
 
-This tutorial will break one extension component at a time and then demonstrate how to fix it. Remember to undo the bugs we introduce before continuing to the next section. Start by downloading the [Broken Color sample][gh-broken-color] on Github.
+This tutorial will break one extension component at a time and then demonstrate how to fix it. Remember to undo the bugs introduced in one section before continuing to the next section. Start by downloading the [Broken Color sample][gh-broken-color] on GitHub.
 
 ### Debug the manifest {: #debug-manifest}
 First, let's break the manifest file by changing the `"version"` key to `"versions"`:
@@ -35,9 +35,9 @@ First, let's break the manifest file by changing the `"version"` key to `"versio
 }
 ```
 
-Now let's try [loading the extension locally][dev-basic-unpacked]. You will see a error dialog pointing to the problem: 
+Now let's try [loading the extension locally][dev-basic-unpacked]. You will see an error dialog box pointing to the problem: 
 
-```text
+```bash
 Failed to load extension
 Required value version is missing or invalid. It must be between 1-4 dot-separated integers each between 0 and 65536.
 Could not load manifest.
@@ -50,10 +50,10 @@ Could not load manifest.
   </figcaption>
 </figure>
 
-When a manifest key is invalid the extension will fail to load, but Chrome will give you a hint of
+When a manifest key is invalid the extension fails to load, but Chrome gives you a hint of
 how to fix the problem. 
 
-Undo that change and let's enter an invalid permission to see what happens.
+Undo that change and enter an invalid permission to see what happens.
 Change the `"activeTab"` permission to lowercase `"activetab"`:
 
 {% Label %}manifest.json:{% endLabel %}
@@ -69,17 +69,17 @@ Change the `"activeTab"` permission to lowercase `"activetab"`:
 
 Save the extension and try loading it again. It should load successfully this time. In the extension
 Management page you will see three buttons: **Details**, **Remove** and **Errors**. The **Errors**
-button letters will turn red if there's an error. Click on the **Errors** button to see the
+button label turns red when there's an error. Click the **Errors** button to see the
 following error:
 
-```text
+```bash
 Permission 'activetab' is unknown or URL pattern is malformed.
 ```
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Kpp5AWbtXMmTj8AOpMMe.gif", alt="Error button is clicked and displays an error", width="700", height="360" %}
   <figcaption>
-    Finding an error message by clicking on the Errors button
+    Finding an error message by clicking the Errors button.
   </figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ Before moving on, change the permission back, click the **Clear all** button in 
   </figcaption>
 </figure>
 
-{% Aside 'important' %}
+{% Aside %}
 
 Using a [manifest schema][manifest-schema] in your code editor is a way to ensure that the manifest has the proper formatting and required fields.
 
@@ -111,9 +111,9 @@ The service worker sets the default color to storage and logs it to the console.
   </figcaption>
 </figure>
 
-{% Aside 'caution' %}
+{% Aside 'important' %}
 
-Inspecting the service worker will keep it **active**. To ensure your extension behaves correctly when your service worker is terminated, remember to close the DevTools. 
+Inspecting the service worker keeps it active. To ensure your extension behaves correctly when your service worker is terminated, remember to close DevTools. 
 
 {% endAside %}
 
@@ -134,9 +134,9 @@ chrome.runtime.oninstalled.addListener(() => {
 });
 ```
 
-Refresh and click the **Errors** button to view the error log. The first error will let you know that the service worker failed to register. This means something went wrong during initiation: 
+Refresh and click **Errors** to view the error log. The first error lets you know that the service worker failed to register. This means something went wrong during initiation: 
 
-```text
+```bash
 Service worker registration failed. Status code: 15.
 ```
 
@@ -149,12 +149,12 @@ Service worker registration failed. Status code: 15.
 
 {% Aside %}
 
-If the service worker fails to register, you will not be able to access the Chrome DevTools until you fix the registration bug. 
+If the service worker fails to register, you will not be able to access Chrome DevTools until you fix the registration bug. 
 
 {% endAside %}
 
 The actual error comes after:
-```text
+```bash
 Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
 ```
 
@@ -165,17 +165,17 @@ Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
   </figcaption>
 </figure>
 
-Undo the bug we introduced, click the **Clear all** button in the upper right-hand corner, and reload the extension.
+Undo the bug we introduced, click **Clear all** in the upper right-hand corner, and reload the extension.
 
 #### Check the service worker status {: #sw-status }
 
 You can identify when the service worker wakes up to perform tasks by following these steps:
 
-1. Copy your extension ID located above "Inspect views"
+1. Copy your extension ID located above "Inspect views".
     <figure>
       {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ISfNxTUOrO6IGEyHt1m0.png", alt="Extension ID in the Extensions Management page", width="459", height="251" %}
       <figcaption>
-        Extension ID
+        Extension ID in the Extensions Management page.
       </figcaption>
     </figure>
 1. Open your manifest file in the browser. For example:
@@ -186,22 +186,21 @@ You can identify when the service worker wakes up to perform tasks by following 
 1. Navigate to the **Application** panel.
 1. Go to the **Service Workers** pane.
 
-You can start or stop the service worker using the links next to the **Status** to test
-your code.
+To test your code, start or stop the service worker using the links next to **status**.
 
 <figure>
     <a href="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i1w015KXe7EzN3chRojv.png"><img src="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/i1w015KXe7EzN3chRojv.png?auto=format&w=845" alt="Service worker status in the Application panel"></a>
   <figcaption>
-  Service worker status in the Application panel (Click to see enlarged image)
+  Service worker status in the Application panel. (Click to enlarge the image.)
   </figcaption>
 </figure>
 
-Also, if you have made changes to the service worker code, you can use the **Update** button and **skipWaiting** to apply the changes immediately.
+Also, if you have made changes to the service worker code, you can click **Update** or **skipWaiting** to apply the changes immediately.
 
 <figure>
     <a href="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png"><img src="https://wd.imgix.net/image/BhuKGJaIeLNPW9ehns59NfwqKxF2/mJISZTRN34bmSbENQpVq.png?auto=format&w=845" alt="Service worker status in the Application panel"></a>
   <figcaption>
-  Refreshing the service worker in the Application panel (Click to see enlarged image)
+  Refreshing the service worker in the Application panel. (Click to enlarge the image.)
   </figcaption>
 </figure>
 
@@ -232,31 +231,40 @@ changeColorButton.addEventListener('click', (event) => {
 });
 ```
 
-Navigate back to the Extensions Management page, the **Errors** button has reappeared. Click it to
-view the new log. It will show the following error message:
+Navigate back to the Extensions Management page. The **Errors** button reappears. Click it to
+view the new log. It shows the following error message:
 
 ```text
 Uncaught ReferenceError: tabs is not defined
 ```
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/M9gIgE8AgIIDYkN2BF58.png", 
-alt="Extensions Management page displaying popup error", width="800", height="588" %}
+
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/M9gIgE8AgIIDYkN2BF58.png", alt="Extensions Management page displaying popup error", width="800", height="588" %}
+  <figcaption>
+  Extensions Management page displaying popup error.
+  </figcaption>
+</figure>
 
 You can open the popup's DevTools by inspecting the popup.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bnigtWyfrWdtIhNnwQ8r.png", 
-alt="DevTools displaying popup error.", width="800", height="207" %}
+<figure>
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bnigtWyfrWdtIhNnwQ8r.png", alt="DevTools displaying popup error.", width="800", height="207" %}
+  <figcaption>
+  DevTools displaying popup error.
+  </figcaption>
+</figure>
 
 The error, `tabs is undefined`, says the extension doesn't know where to inject the content script.
-This can be corrected by calling the [`tabs.query()`][tabs-query] method, then selecting the active tab.
+Correct this by calling [`tabs.query()`][tabs-query], then selecting the active tab.
 
-Update the code, click the **Clear all** button in the upper right-hand corner, and then reload the
+To update the code, click the **Clear all** button in the upper right-hand corner, and then reload the
 extension.
 
 {% Aside %}
 
 For other extension pages displayed as a tab, such as [override pages][doc-override] and [full-page options][doc-options],
-you can find logs by inspecting the page or on the Extensions Management page.  
+you can find logs by inspecting the page or by visiting the Extensions Management page.  
   
 {% endAside %}
 
@@ -276,21 +284,21 @@ function setColor(color) {
 }  
 ```
 
-Refresh the page, open the popup and click the green box. Nothing happens... 
+Refresh the page, open the popup and click the green box. Nothing happens. 
 
-If you go to the Extensions Management page the **Errors** button will not appear. This is because only runtime errors, `console.warning` and, 
+If you go to the Extensions Management page the **Errors** button does not appear. This is because only runtime errors, `console.warning` and, 
 `console.error` are recorded on the Extensions Management page.
 
-[Content scripts][doc-cs] run inside a website, so to find these error we must inspect the web page the extension is trying to alter:
+[Content scripts][doc-cs] run inside a website. So to find these errors we must inspect the web page the extension is trying to alter:
 
-```text
+```bash
 Uncaught ReferenceError: colors is not defined
 ```
 
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xdbCjXTm5wWv3Yaa2jM9.png", alt="Extension error displayed in web page console", width="600", height="207", class="screenshot" %}
   <figcaption>
-    Extension error displayed in web page console
+    Extension error displayed in web page console.
   </figcaption>
 </figure>
 
@@ -299,7 +307,7 @@ To use DevTools from within the content script, click the dropdown arrow next to
 <figure>
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/T3fBKwpznjRBEpXOrkzT.png", alt="Uncaught ReferenceError: colors is not defined", width="600", height="362", class="screenshot"%}
   <figcaption>
-    Uncaught ReferenceError: colors is not defined
+    Uncaught ReferenceError: colors is not defined.
   </figcaption>
 </figure>
 
@@ -308,17 +316,22 @@ Correct the injected script to pass the color variable into the code.
 
 ## Monitor network requests {: #network_requests }
 
-The popup will often make all of the required network requests before even the speediest of
-developers can open DevTools. To view these requests, refresh from inside the network panel. It will
-reload the popup without closing the DevTools panel.
+The popup often makes all of the required network requests before even the speediest of
+developers can open DevTools. To view these requests, refresh from inside the network panel. It
+reloads the popup without closing the DevTools panel.
 
+<figure>
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/x8knWvTA11f4j1wVoNY8.gif",
        alt="Refresh inside the network panel to view popup network requests", height="520", width="566" %}
+  <figcaption>
+    Refresh inside the network panel to view popup network requests.
+  </figcaption>
+</figure>
 
 ## Declare permissions {: #declare_permission }
 
-What makes extensions more powerful than a web app is their access to Chrome APIs. Some of the APIs
-require permissions. Refer to the [permissions][doc-perms] article and the available [Chrome
+Some extension APIs
+require permissions. Refer to the [permissions][doc-perms] article and the [Chrome
 APIs][doc-chrome-apis] to ensure an extension is requesting the correct permissions in the [manifest][doc-manifest].
 
 ```json/4-6
@@ -335,7 +348,7 @@ APIs][doc-chrome-apis] to ensure an extension is requesting the correct permissi
 ```
 
 {% Aside 'important' %}
-To make fetch calls to an external server, you must declare the URL as a [host permission][doc-match-patt].  
+To make `fetch()` calls to an external server, you must declare the URL as a [host permission][doc-match-patt].  
 {% endAside %}
 
 ## Further reading {: #next }

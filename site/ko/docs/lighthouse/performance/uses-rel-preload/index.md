@@ -48,7 +48,7 @@ HTML에 사전 로드 링크를 선언하여 브라우저가 가능한 한 빨�
 
 <figure>   {% Img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/tJLJXH2qXcrDBUfsSAK5.png", alt="사전 로드 링크를 사용하면 style.css 및 ui.js가 app.js와 동시에 요청됩니다.", width="800", height="478" %}   <figcaption>     사전 로드 링크를 사용하면 <code>styles.css</code> 및 <code>ui.js</code>가 <code>app.js</code>와 동시에 요청됩니다.   </figcaption></figure>
 
-추가 지침은 [중요 자산을 사전 로드하여 로딩 속도 개선하기](https://web.dev/preload-critical-assets/)를 참조하세요.
+추가 지침은 [중요 자산을 사전 로드하여 로딩 속도 개선하기](https://web.dev/articles/preload-critical-assets)를 참조하세요.
 
 ### 브라우저 호환성
 
@@ -62,7 +62,7 @@ HTML에 사전 로드 링크를 선언하여 브라우저가 가능한 한 빨�
 
 ### Angular
 
-탐색 속도를 높이려면 미리 [경로를 사전 로드](https://web.dev/route-preloading-in-angular/)하세요.
+탐색 속도를 높이려면 미리 [경로를 사전 로드](https://web.dev/articles/route-preloading-in-angular)하세요.
 
 ### Magento
 

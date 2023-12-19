@@ -5,6 +5,7 @@ authors:
   - jecelynyeen
   - sadym
 date: 2023-04-18
+updated: 2023-05-11
 description: "A journey into the evolution of test automation on the web."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jGD1IO9UitBVPt7IsRol.jpg'
 alt: ''
@@ -13,6 +14,7 @@ tags:
   - devtools
 ---
 
+{% YouTube id='6oXic6dcn9w', startTime='58' %}
 
 ## The birth of test automation
 

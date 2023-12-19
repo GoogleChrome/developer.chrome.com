@@ -35,7 +35,7 @@ FLEDGE の採用と提供規模が拡大し続けているため、先日、オ�
 
 Chrome の入札およびオークションサービスは、2023 年半ばまでにテスト向けに提供され、2023 年末までには規模が拡大されます。これにより、[privacysandbox.com](https://privacysandbox.com/open-web/#the-privacy-sandbox-timeline) で共有されているサードパーティ Cookie の廃止に関わる Chrome のタイムラインが影響されることはありません。
 
-アドテックは、[関連性と測定の統合オリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)で、FLEDGE API の上に構築されたソリューションの設計とデプロイを継続することをお勧めします。入札サービスとオークションサービスは、これらのソリューションに統合され、ほぼドロップイン置換ソリューションとして拡張される予定です。
+アドテックは、[広告関連の統合オリジントライアル](/docs/privacy-sandbox/unified-origin-trial/)で、FLEDGE API の上に構築されたソリューションの設計とデプロイを継続することをお勧めします。入札サービスとオークションサービスは、これらのソリューションに統合され、ほぼドロップイン置換ソリューションとして拡張される予定です。
 
 [コンポーネントオークション](https://github.com/privacysandbox/fledge-docs/blob/main/bidding_auction_services_api.md#types-of-auctions)と同じ機能をサポートする設計を含む、[シングルセラーおよびマルチセラーオークション](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#21-initiating-an-on-device-auction)をサポートするための入札およびオークションサービスを計画しています。これらは、2023 年半ばまでにテスト向けに提供され、2023 年末までには規模を拡大したテスト向けに提供されるようになります。
 

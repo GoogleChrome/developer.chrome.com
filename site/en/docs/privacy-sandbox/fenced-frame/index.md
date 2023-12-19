@@ -10,12 +10,12 @@ authors:
   - alexandrawhite
   - kevinkiklee
 date: 2022-03-07
-updated: 2023-03-14
+updated: 2023-10-09
 ---
 
 ## Implementation status
 
-This document outlines a proposal for a new HTML element: `<fencedframe>`.
+This document outlines a new HTML element: `<fencedframe>`.
 
 {% Partial 'privacy-sandbox/timeline/fenced-frames.njk' %}
 
@@ -23,7 +23,7 @@ This document outlines a proposal for a new HTML element: `<fencedframe>`.
 
 ## Why do we need fenced frames?
 
-A fenced frame (`<fencedframe>`) is a proposed HTML element for embedded
+A fenced frame (`<fencedframe>`) is an HTML element for embedded
 content, similar to an iframe. Unlike iframes, a fenced frame restricts
 communication with its embedding context to allow the frame access to cross-site
 data without sharing it with the embedding context. Some Privacy Sandbox APIs
@@ -39,12 +39,12 @@ the `shoes.example` ad, and `shoes.example` cannot learn first-party data from
 
 ### Strengthen cross-site privacy with storage partitioning
 
-While browsing the web, you've probably looked at products on one site, and then 
+While browsing the web, you've probably looked at products on one site, and then
 you've seen them appear again in an ad on a completely different site.
 
-Today, this advertising technique is achieved primarily through tracking 
-technology that uses third-party cookies to share information across sites. This 
-is technology which [Chrome has committed to phase 
+Today, this advertising technique is achieved primarily through tracking
+technology that uses third-party cookies to share information across sites. This
+is technology which [Chrome has committed to phase
 out](https://blog.google/products/chrome/updated-timeline-privacy-sandbox-milestones/)
 and replace with more privacy-preserving variants.
 
@@ -56,7 +56,7 @@ then that value can be read from the `shoes.example` site. When storage has been
 partitioned, cross-site iframes will no longer share storage, therefore
 `shoes.example` will not be able to access information stored by the iframe. If
 the iframe is served from `*.shoes.example` and embedded on
-`*.shoes.example`, browser storage will be shared as these are considered [same-site](https://web.dev/same-site-same-origin/). 
+`*.shoes.example`, browser storage will be shared as these are considered [same-site](https://web.dev/articles/same-site-same-origin).
 
 {% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/ss7wjBshEJcwdQXcXGov.png", alt="A comparison of before and after state of storage partitinoing.", width="800", height="613" %}
 
@@ -66,20 +66,20 @@ leakage across first-party storage will be significantly reduced.
 
 ### Work with cross-site data {: #cross-site-data }
 
-Fenced frames is a [Privacy Sandbox proposal](/docs/privacy-sandbox/overview/)
+Fenced frames is a [Privacy Sandbox feature](/docs/privacy-sandbox/overview/)
 which suggests top-level sites should partition data. Many Privacy Sandbox
-proposals aim to satisfy cross-site use cases without third-party cookies or
+proposals and APIs aim to satisfy cross-site use cases without third-party cookies or
 other tracking mechanisms. For example:
 
-*  [FLEDGE](/docs/privacy-sandbox/fledge/) allows for interest-based ad serving
+*  [Protected Audience API](/docs/privacy-sandbox/protected-audience/) allows for interest-based ad serving
    in a privacy-preserving manner.
 *  [Shared Storage](https://github.com/pythagoraskitty/shared-storage) allows
    access to unpartitioned cross-site data in a secure environment.
 
 Let's consider how fenced frames could work with the
-[FLEDGE](/docs/privacy-sandbox/fledge/) proposal. With FLEDGE, a user's interests
+[Protected Audience API](/docs/privacy-sandbox/protected-audience/). With the Protected Audience API, a user's interests
 are registered on an advertiser's site in [interest
-groups](/docs/privacy-sandbox/fledge/#interest-group-detail), along with ads that
+groups](/docs/privacy-sandbox/protected-audience/#interest-group-detail), along with ads that
 may be of interest to the user. Then, on a separate site (known as a
 "publisher"), the ads registered in relevant interest groups are auctioned and
 the winning ad is displayed in a fenced frame.
@@ -94,7 +94,7 @@ in the frame. The publisher could not access this information.
 
 ## How do fenced frames work?
 
-Fenced frames use the `FencedFrameConfig` object for navigation. This object can be returned from a FLEDGE auction or Shared Storage’s URL selection operation. Then, the config object is set as the `config` attribute on the fenced frame element. This differs from an iframe where a URL or opaque [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) is assigned to the `src` attribute. The `FencedFrameConfig` object has a read-only `url` property; however, since the current use-cases require the actual URL of the internal resource to be hidden, this property returns the string `opaque` when read.
+Fenced frames use the `FencedFrameConfig` object for navigation. This object can be returned from a Protected Audience API auction or Shared Storage’s URL selection operation. Then, the config object is set as the `config` attribute on the fenced frame element. This differs from an iframe where a URL or opaque [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name) is assigned to the `src` attribute. The `FencedFrameConfig` object has a read-only `url` property; however, since the current use-cases require the actual URL of the internal resource to be hidden, this property returns the string `opaque` when read.
 
 A fenced frame can't use `postMessage` to communicate with its embedder. However, a fenced frame can use `postMessage` with iframes inside the fenced frame.
 
@@ -107,7 +107,7 @@ publisher&mdash;aren't available in fenced frames.
 Fenced frames behave like a [top-level browsing
 context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context)
 (such as a browser tab). Although a fenced frame in [certain use cases](https://github.com/WICG/fenced-frame/blob/master/explainer/use_cases.md)
-(such as `opaque-ads`) can contain cross-site data (such as a FLEDGE interest
+(such as `opaque-ads`) can contain cross-site data (such as a Protected Audience API interest
 group), the frame cannot access unpartitioned storage or cookies. An
 `opaque-ads` fenced frame can access a unique, nonce-based cookie and storage
 partition.
@@ -165,14 +165,14 @@ to existing iframe features.
       <td>Yes (dependent on use case)</td>
    </tr>
 </tbody></table>
-  
+
 
 Fenced frames support fewer external communication options to preserve privacy.
 
 ### Will fenced frames replace iframes?
 
 Ultimately, fenced frames won't replace iframes and you won't have to use them.
-Fenced frames are proposed for a more private frame for usage when data from
+Fenced frames are a more private frame for usage when data from
 different top-level partitions needs to be displayed on the same page.
 
 Same-site iframes (sometimes known as friendly iframes) are considered trusted
@@ -180,14 +180,14 @@ content.
 
 ## Use fenced frames {: #use-cases }
 
-Fenced frames will work in combination with other Privacy Sandbox proposals to
+Fenced frames will work in combination with other Privacy Sandbox APIs to
 display documents from different storage partitions within a single page.
 Potential APIs are currently in discussion.
 
 Current candidates for this combination include:
 
 * From the [TURTLEDOVE API](https://github.com/WICG/turtledove) family (which is
-   the basis for FLEDGE), fenced frames could work with [Conversion Lift
+   the basis for the Protected Audience API), fenced frames could work with [Conversion Lift
    Measurement](https://github.com/w3c/web-advertising/blob/main/support_for_advertising_use_cases.md#conversion-lift-measurement)
    using [Shared Storage](https://github.com/pythagoraskitty/shared-storage).
 * Another option is to allow fenced frames to be
@@ -201,9 +201,9 @@ use cases explainer](https://github.com/WICG/fenced-frame/blob/master/explainer/
 
 ### Examples
 
-To obtain a fenced frame `config` object, you must pass in `resolveToConfig: true` to FLEDGE’s `runAdAuction()` call or Shared Storage’s `selectURL()` call. If the property is not added (or is set to `false`), the resulting promise will resolve to a URN that can only be used in an iframe.
+To obtain a fenced frame `config` object, you must pass in `resolveToConfig: true` to Protected Audience API’s `runAdAuction()` call or Shared Storage’s `selectURL()` call. If the property is not added (or is set to `false`), the resulting promise will resolve to a URN that can only be used in an iframe.
 
-{% Compare 'better', 'Get fenced frame config from FLEDGE auction' %}
+{% Compare 'better', 'Get fenced frame config from Protected Audience API auction' %}
 ```js
 const frameConfig = await navigator.runAdAuction({
   // ...auction configuration
@@ -249,7 +249,7 @@ Supports-Loading-Mode: fenced-frame
 
 ### Shared Storage context
 
-You may want to use Private Aggregation to report event-level data in fenced frames associated with contextual data from the embedder. By using the `fencedFrameConfig.setSharedStorageContext()` method, you can pass some contextual data, such as an event ID, from the embedder to shared storage worklets initiated by FLEDGE.
+You may want to use Private Aggregation to report event-level data in fenced frames associated with contextual data from the embedder. By using the `fencedFrameConfig.setSharedStorageContext()` method, you can pass some contextual data, such as an event ID, from the embedder to shared storage worklets initiated by the Protected Audience API.
 
 In the following example, we store some data available on the embedder page and some data available in the fenced frame in shared storage. From the embedder page, a mock event ID is set as the shared storage context. From the fenced frame, the frame event data is passed in.
 
@@ -275,7 +275,7 @@ const frameData = {
 await window.sharedStorage.worklet.addModule('reporting-worklet.js');
 
 await window.sharedStorage.run('send-report', {
-  data: { 
+  data: {
     frameData
   },
 });
@@ -305,7 +305,7 @@ class ReportingOperation {
 register('send-report', ReportingOperation);
 ```
 
-To learn more about the embedder’s context in a fenced frame config object, see the [explainer](https://github.com/WICG/fenced-frame/blob/master/explainer/fenced_frame_config_context.md). 
+To learn more about the embedder’s context in a fenced frame config object, see the [explainer](https://github.com/WICG/fenced-frame/blob/master/explainer/fenced_frame_config_context.md).
 
 ## Try fenced frames
 
@@ -355,18 +355,18 @@ browsers](https://chromestatus.com/feature/5699388062040064#consensus).
 
 ## Engage and share feedback
 
-The Fenced Frame proposal is under active discussion and subject to change in
+Fenced Frames are under active discussion and subject to change in
 the future. If you try this API and have feedback, we'd love to hear it.
 
-*  **GitHub**: Read the [proposal](https://github.com/shivanigithub/fenced-frame), 
-   [raise questions, and follow 
+*  **GitHub**: Read the [explainer](https://github.com/shivanigithub/fenced-frame),
+   [raise questions, and follow
    discussion](https://github.com/shivanigithub/fenced-frame/issues).
 *  **Developer support**: Ask questions and join discussions on the
-   [Privacy Sandbox Developer Support 
+   [Privacy Sandbox Developer Support
    repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Find out more
 
 *  [Chrome Platform Status](https://chromestatus.com/feature/5699388062040064)
-*  [Blink Intent to 
+*  [Blink Intent to
    Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/Ko9UXQYPgUE/m/URRsB-qvAAAJ)

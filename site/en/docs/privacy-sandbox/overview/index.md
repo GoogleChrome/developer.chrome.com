@@ -2,15 +2,17 @@
 layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
 subhead: >
-  A series of proposals to satisfy cross-site use cases without
+  A series of APIs to satisfy cross-site use cases without
   third-party cookies or other tracking mechanisms.
 description: "What's in it, what's it for, and how to get involved."
 date: 2021-05-18
-updated: 2023-02-27
+updated: 2023-10-11
 authors:
   - samdutton
   - alexandrawhite
 ---
+
+{% Partial 'privacy-sandbox/ot-end.njk' %}
 
 The Privacy Sandbox initiative aims to create technologies that both
 protect people's privacy online and give companies and developers tools to
@@ -34,7 +36,7 @@ direction for browsers.
 The Privacy Sandbox's vision of the future has browsers providing specific
 tools to satisfy specific use cases, while preserving user privacy.
 
-## What are the Privacy Sandbox proposals?
+## What are the Privacy Sandbox APIs?
 
 Chrome and other ecosystem stakeholders have offered more than 30 proposals to
 date, which can be found in the
@@ -52,12 +54,12 @@ Several key proposals are listed below.
 
 ### Strengthen cross-site privacy boundaries
 
-* [**CHIPS**](/docs/privacy-sandbox/chips/): Allow developers to opt-in a
+* [**CHIPS**](/docs/privacy-sandbox/chips/) (released): Allow developers to opt-in a
   cookie to partitioned storage, with a separate cookie jar per top-level site.
-* [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): Allow related
+* [**Related Website Sets**](/docs/privacy-sandbox/related-website-sets/) ([Formerly called First-Party Sets](/blog/related-website-sets/). Released.): Allow related
   domain names owned by the same entity to declare themselves as belonging to
   the same first party.
-* [**Shared Storage**](/docs/privacy-sandbox/shared-storage/): Create a
+* [**Shared Storage**](/docs/privacy-sandbox/shared-storage/) (released): Create a
   general-purpose API which allows sites to store and access unpartitioned
   cross-site data. This data must be read in a secure environment to prevent leakage.
 * [**Storage Partitioning**](https://github.com/privacycg/storage-partitioning):
@@ -65,39 +67,39 @@ Several key proposals are listed below.
   such as `localStorage` or cookies, to be double-keyed: by the top-level site
   as well as the origin of the resource being loaded, rather than a single
   origin or site.
-* [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame): Securely embed
+* [**Fenced Frames**](/docs/privacy-sandbox/fenced-frame/) (released): Securely embed
   content onto a page without sharing cross-site data.
 * [**Network State Partitioning**](https://github.com/MattMenke2/Explainer---Partition-Network-State):
   Prevent browser network resources being shared across first-party contexts,
   by ensuring that every request has a network partition key that must match in
   order for resources to be reused.
-* [**Federated Credential Management (FedCM)**](/docs/privacy-sandbox/fedcm/):
+* [**Federated Credential Management (FedCM)**](/docs/privacy-sandbox/fedcm/) (released):
   Support federated identity without sharing the user's email address or other
   identifying information with a third-party service or website, unless the
   user explicitly agrees to do so.
 
 ### Show relevant content and ads
 
-* [**Topics API**](/docs/privacy-sandbox/topics): Enable interest-based
+* [**Topics API**](/docs/privacy-sandbox/topics) (released): Enable interest-based
   advertising without use of third-party cookies or tracking user behavior
   across sites.
-* [**FLEDGE**](/docs/privacy-sandbox/fledge): Ad selection to serve remarketing
+* [**Protected Audience API**](/docs/privacy-sandbox/protected-audience/) (released): Ad selection to serve remarketing
   and custom audience use cases, designed so that it cannot be used by third
-  parties to track user browsing behavior across sites. FLEDGE is the first
+  parties to track user browsing behavior across sites. The Protected Audience API is the first
   experiment to be implemented in Chromium from the
-  [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
+  [TURTLEDOVE](https://github.com/WICG/turtledove) family of APIs.
 
 ### Measure digital ads
 
-* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting):
+* [**Attribution Reporting**](/docs/privacy-sandbox/attribution-reporting/) (released):
   Correlate ad clicks or ad views with conversions. Ad techs can generate
-  event-level or [summary reports](/docs/privacy-sandbox/summary-reports).
-* [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/):
+  event-level or [summary reports](/docs/privacy-sandbox/summary-reports/).
+* [**Private Aggregation API**](/docs/privacy-sandbox/private-aggregation/) (released):
   Generate noisy summary reports with cross-site data.
 
 ### Prevent covert tracking
 
-* [**User-Agent reduction and User-Agent Client Hints**](/docs/privacy-sandbox/user-agent/):
+* [**User-Agent reduction and User-Agent Client Hints**](/docs/privacy-sandbox/user-agent/) (released):
   Limit passively shared browser data to reduce the volume of sensitive
   information which leads to fingerprinting. Client Hints allow developers to
   actively request only the information they need about the user's device or
@@ -112,7 +114,7 @@ Several key proposals are listed below.
 
 ### Fight spam and fraud on the web
 
-* [**Private State Tokens**](/docs/privacy-sandbox/trust-tokens): Allow
+* [**Private State Tokens**](/docs/privacy-sandbox/private-state-tokens/) (released): Allow
   websites to convey a limited amount of information from one browsing context
   to another (for example, across sites) to help combat fraud, without passive
   tracking.
@@ -131,29 +133,42 @@ the [Privacy Community Group](https://www.w3.org/community/privacycg/participant
 
 ## Where are the Privacy Sandbox APIs available?
 
-Five API implementations are currently available for testing in Chrome.
+Privacy Sandbox APIs are implemented in [Chromium](https://wikipedia.org/wiki/Chromium_(web_browser)),
+which is the open-source browser used to make Chrome. Code for the Privacy Sandbox APIs 
+can be accessed with [Chromium Code Search](https://source.chromium.org/search). You can 
+[download Chromium](http://chromium.org/getting-involved/download-chromium), then 
+[run it with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to allow access to APIs that are in the process of implementation.
 
-The APIs are implemented in
-[Chromium](https://en.wikipedia.org/wiki/Chromium_(web_browser)), which
-is the open-source browser used to make Chrome. Code for the Privacy Sandbox
-APIs can be accessed via
-[Chromium Code Search](https://source.chromium.org/search?q=floc).
+Privacy Sandbox technologies, including [relevance and measurement APIs](/blog/shipping-privacy-sandbox/#whats-shipping) 
+as well as [CHIPS](/docs/privacy-sandbox/chips/) and 
+[Related Website Sets](/docs/privacy-sandbox/related-website-sets/), 
+are now available for all users for all Chrome channels on Android and desktop. As with all technologies, use feature detection to check for support and availability before accessing a Privacy Sandbox feature.
 
-You can
-[download Chromium](http://chromium.org/getting-involved/download-chromium),
-then [run it with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
-to allow access to APIs that are in the process of implementation.
+[Chrome Platform Status](chromestatus.com) details browser and implementation status on desktop, Android, iOS, and Android WebView, for individual APIs:
+* The [All features](https://chromestatus.com/features) section of the Chrome status page provides shipping  milestones, standardization signals, relevant [Blink](https://www.youtube.com/watch?v=CVRLeOX-TGI) 
+  components, and other information for an individual feature. You can star a feature to be notified of  updates,  and view your starred features from [My features](https://chromestatus.com/myfeatures).
+* [HTML & JavaScript usage metrics](https://chromestatus.com/metrics/feature/popularity) 
+shows the percentage of page loads in Chrome that use a feature across all channels and 
+platforms. Note that this reflects how often the API is being called from pages, not how many users 
+have a feature enabled on their browser.
 
-{% Aside 'caution' %}  
-Chrome origin trials are designed to work for Chrome users. Don't rely on Chrome
-origin trial tokens to allow trial features in other browsers, including Chromium,
-and other Chromium-based browsers.
+Chrome Status metrics charts for Privacy Sandbox ads APIs are collated on [pscs.glitch.me](https://pscs.glitch.me).
 
-For more detailed information, see
-[Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
+### MacOS, iOS and iPadOS
+Chrome on MacOS supports the Privacy Sandbox APIs, but Safari on MacOS (which uses WebKit) does not.
 
-Chrome on iOS and iPadOS does not support Chrome origin trials.
-{% endAside%}  
+[Apple's App Store rules](https://developer.apple.com/app-store/review/guidelines/#:~:text=2.5.6) mean that Chrome and other browsers on iOS and iPadOS must use the WebKit browser engine, which does not support the Privacy Sandbox APIs. 
+
+### Android WebView
+
+[WebView](https://developer.android.com/reference/android/webkit/WebView) allows you to display web content in an app, but lacks some of the features of 
+fully developed browsers. We don't currently include WebView at this stage of third-party 
+cookie deprecation or Privacy Sandbox API rollout and testing, beyond enabling [Cross App and Web Attribution Measurement](https://github.com/WICG/attribution-reporting-api/blob/main/app_to_web.md) (more on [measurement with WebView](https://developer.android.com/design-for-safety/privacy-sandbox/attribution-app-to-web#register-attribution)). Third-party cookies have been off by default in WebView since Android 5 - Lollipop, but in practice many apps enable them for web content. If we do make announcements in the future, these will be communicated through both Android and Chrome channels. For individual APIs and features, support in WebView will be shown on the feature's Chrome Status entry.
+
+### Custom Tabs
+
+[Custom Tabs](/docs/android/custom-tabs/) allow a customized 
+browser experience directly within an Android app. Custom Tabs support all the Privacy Sandbox APIs.
 
 ## When will the APIs be implemented?
 
@@ -177,14 +192,6 @@ may be made available for testing.
    within the more accessible `chrome://flags` interface.
    `chrome://flags#enable-experimental-web-platform-features` bundles together
    current experimental features.
--  **For your users, in an origin trial**  
-   Once an iteration of a new feature is code-complete and relatively stable,
-   an [origin trial](/docs/web-platform/origin-trials/) may be provided to allow
-   individual sites to turn on the feature for Chrome users on their site. If
-   an [origin trial](/docs/web-platform/origin-trials/) is available for an API you
-   want to test with your users,
-   [register for the origin trial](/origintrials/#/trials/active) and provide
-   a valid trial token with every page load.
 -  **For users of early Chrome releases**  
    When a feature is approved to ship in a given release, it will progress
    through each [Chrome release channel](/docs/web-platform/chrome-release-channels/),
@@ -192,9 +199,9 @@ may be made available for testing.
    be turned on by default for all users of those channels.
 
 {% Aside 'caution' %}  
-Chrome offers users the ability to opt-out of Privacy Sandbox trials in
+Chrome offers users the ability to opt-out of Privacy Sandbox APIs in
 browser settings. Users who opt-out will not have Privacy Sandbox features
-turned on, even on pages which provide a valid origin trial token.  
+turned on.  
 {% endAside%}  
 
 ## Will `SameSite` become irrelevant after third-party cookies are deprecated?
@@ -211,8 +218,8 @@ turned on, even on pages which provide a valid origin trial token.
 
 The exception is cookies that are modified by either the
 [CHIPS](/docs/privacy-sandbox/chips/) or
-[First-Party Sets](/docs/privacy-sandbox/first-party-sets/) proposal.
-These allow for a subset of cross-site use cases. As these proposals are
+[Related Website Sets](/docs/privacy-sandbox/related-website-sets/).
+These allow for a subset of cross-site use cases. As these features and APIs are
 under active discussion, the final formats and functionality may change.
 
 
@@ -238,12 +245,12 @@ and the [Web Incubator Community Group](https://github.com/WICG).
 
 You can follow the monthly updates to the [Progress in the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/) series of articles which also includes an [RSS / Atom feed where you can subscribe](/feeds/progress-in-the-privacy-sandbox.xml) with your preferred reader.
 
-The article series links to the matching monthly updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) which shows the current status and schedule for proposals.
+The article series links to the matching monthly updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) which shows the current status and schedule for Privacy Sandbox APIs.
 
-These high-level resources will provide signposts to changes across the project, but for individual proposals where you want to follow in detail you should:
+These high-level resources will provide signposts to changes across the project, but for individual APIs where you want to follow in detail you should:
 
- - Watch or Star proposal repos on GitHub to get notification of new issues and updates: the Privacy Sandbox [status page](/docs/privacy-sandbox/status/) provides a link to the repo for each proposal
- - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the proposal detail
+ - Watch or Star API repos on GitHub to get notification of new issues and updates: the Privacy Sandbox [status page](/docs/privacy-sandbox/status/) provides a link to the repo for each API.
+ - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the API detail.
  - Star the associated entry on [Chrome Platform Status](https://chromestatus.com) for email updates on Chrome implementation changes.
 
 ### Get involved

@@ -1,11 +1,11 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Override files and HTTP response headers locally"
+title: "Override web content and HTTP response headers locally"
 authors:
   - sofiayem
 date: 2023-04-12
-#updated: YYYY-MM-DD
-description: "Use local overrides to keep changes you make in DevTools across page loads."
+updated: 2023-09-20
+description: "Use local overrides to mock remote resources and keep the changes you make in DevTools across page loads."
 tags:
   - prototype-fixes
   - javascript
@@ -13,7 +13,7 @@ tags:
   - network
 ---
 
-With local overrides, you can keep the changes you make in DevTools across page loads. You can also [override HTTP response headers](#override-headers).
+With local overrides, you can [override HTTP response headers](#override-headers) and [web content](#make-changes), including [XHR and fetch requests](#override-xhr-fetch), to mock remote resources even if you don't have access to them. This lets you prototype changes without waiting for the backend to support them. Local overrides also lets you keep the changes you make in DevTools across page loads.
 
 How it works:
 
@@ -26,65 +26,93 @@ You can also save your changes directly to source files. See [Edit and save file
 
 ## Limitations {: #limitations }
 
-Local overrides work for network response headers and for most file types, with a couple of exceptions:
+Local overrides work for network response headers and for most file types, including XHR and fetch requests, with a couple of exceptions:
 
 - DevTools doesn't save changes made in the DOM tree of the [**Elements**](/docs/devtools/dom/) panel.
 - If you edit CSS in the **Styles** pane, and the source of that CSS is an HTML file, DevTools won't save the change.
 
 Instead, you can edit HTML files in the [**Sources**](/docs/devtools/sources/) panel.
 
-## Enable or disable local overrides {: #enable-overrides }
+## Set up local overrides {: #set-up }
 
-Specify a folder where DevTools will keep your changes:
+You can override web content or response headers right away in the **Network** panel:
 
-1. [Open DevTools](/docs/devtools/open) on a page.
-1. Go to [**Sources**](/docs/devtools/sources/) > **Overrides** and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/eY8MaTQqlXF3oiT6STmy.svg", alt="Add.", width="20", height="20" %} **Select folder for overrides**.
+1. [Open DevTools](/docs/devtools/open), navigate to the **Network** panel, right-click a request you want to override, choose **Override headers** or **Override content** from the drop-down menu.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/qOixESNMKApJdBaw0Kcy.png", alt="Choosing override content from the right-click menu of a request.", width="800", height="425" %}
+1. If you haven't set up local overrides yet, in the action bar at the top, DevTools prompts you to:
+   1. **Select a folder** to store the override files in.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/oEWmbPqoEmv7uOF1KwAg.png", alt="DevTools prompts you to select a folder.", width="800", height="515" %}
+   1. Click **Allow** to grant DevTools access rights to it.
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/RkMW3bOZAroc83TujxBq.png", alt="DevTools requests access.", width="800", height="515" %}
+1. If you have local overrides set up but disabled, DevTools automatically enables them.
+1. Once local overrides are set up and enabled, depending on what you are about to override, DevTools takes you to:
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Mcwf0iY9MPSBTsbm3MWH.png", alt="The 'Select folder for overrides' button.", width="800", height="425" %}
+   - The **Sources** panel to let you make changes to [web content](#make-changes).
+   - The editor in **Network** > **Headers** > **Response Headers** to let you make changes to [response headers](#override-headers).
 
-1. Pick a folder and, when prompted, allow DevTools access to it.
+To temporarily disable local overrides or delete all the override files, navigate to **Sources** > **Overrides** and clear the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Empty checkbox.", width="24", height="24" %} **Enable Local Overrides** checkbox or click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/mMGdymtMmpYX2j3PRSfa.svg", alt="Clear.", width="24", height="24" %} **Clear** respectively.
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Uq6nmriJ6PMGAWqRzTtq.png", alt="Local overrides enabled in a specified folder.", width="800", height="404" %}
+To delete a single override file or all overrides in a folder, right-click the file or folder in **Sources** > **Overrides**, select **Delete**, then click **OK** in the dialog. This action can't be undone and you will have to manually recreate the deleted overrides.
 
-To view the files served by the server again, clear {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZtDyFg7cjkxacORB3GQn.svg", alt="Cleared checkbox.", width="24", height="24" %} **Enable local overrides** at any time.
+To quickly see all overrides, in the **Network** panel, right-click a request and select **Show all overrides**. DevTools will take you to **Sources** > **Overrides**.
 
-To delete all the files with changes, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MadqZsIZpo1sj3qQ3GsZ.svg", alt="Clear.", width="24", height="24" %}.
+## Override web content {: #make-changes }
 
-## Make changes {: #make-changes }
+To override web content:
+1. [Set up local overrides](#set-up).
+1. Make changes to files and save them in DevTools.
 
-Make changes to your code, for example, edit [CSS in the **Elements** panel](/docs/devtools/css/reference/#change-declaration), or [JavaScript in **Sources**](/docs/devtools/javascript/reference/#edit).
+{% Aside 'note' %}
+You can't override [source-mapped](/docs/devtools/javascript/source-maps/) files. If you right-click a request in the **Network** panel and select **Override content** DevTools shows you a dialog that takes you to the original source files instead.
+{% endAside %}
 
-DevTools saves the modified files, lists them in **Sources** > **Overrides**, and shows you the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s81rU6SgdmbseeBDGbPl.png", alt="Saved.", width="17", height="20" %} icon next to the overridden files.
+For example, you can edit [files in **Sources**](/docs/devtools/javascript/reference/#edit) or [CSS in **Elements** > **Styles**](/docs/devtools/css/reference/#change-declaration), unless the CSS lives in [HTML files](#limitations).
 
-{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/FPuaWwuQ3HFlgOuc4ZP4.png", alt="Overridden files listed in the Sources > Overrides and icons next to these files.", width="800", height="540" %}
+DevTools saves the modified files, lists them in **Sources** > **Overrides**, and shows you the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/s81rU6SgdmbseeBDGbPl.png", alt="Saved.", width="17", height="20" %} icon next to the overridden files in the relevant panels and panes: **Elements** > **Styles**, **Network**, and **Sources** > **Overrides**.
 
-## Track your local changes {: #track-changes }
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/fpsd3XU6dnDWVhHJa2ID.png", alt="The corresponding icons next to overridden files in Sources, Network, and Elements > Styles", width="800", height="649" %}
 
-You can keep track of all the changes you make in one place—the [**Changes**](/docs/devtools/changes/) drawer tab.
+### Override XHR or fetch requests to mock remote resources {: #override-xhr-fetch }
+
+With local overrides, you don't need access to the backend and don't have to wait for it to support your changes. Mock and experiment on the fly:
+
+1. [Set up local overrides](#set-up).
+1. In **Network**, [filter for **XHR/fetch** requests](/docs/devtools/network/reference/#filter-by-type), find the one you need, right-click it, and select **Override content**.
+1. Make your changes to the fetched data and save the file.
+1. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Refresh.", width="24", height="24" %} **Refresh** the page and observe your changes applied.
+
+To learn this workflow, watch the following video:
+
+{% Video src="video/NJdAV9UgKuN8AhoaPBquL7giZQo1/TNcd8DCxoK6OmHQqJjKT.mp4", autoplay="false", loop="true", muted="true", controls="true", width="800", height="704", class="screenshot" %}
+
+### Track your local changes {: #track-changes }
+
+You can keep track of all the changes you make to web content in one place—the [**Changes**](/docs/devtools/changes/) drawer tab.
 
 ## Override HTTP response headers {: #override-headers }
 
-From the **Network** panel, you can override HTTP response headers without the access to the web server.
+From the **Network** panel, you can override HTTP response headers without access to the web server.
 
 With response header overrides, you can locally prototype fixes for various headers, including but not limited to:
 
 - [Cross-Origin Resource Sharing (CORS) Headers](https://developer.mozilla.org/docs/Web/HTTP/CORS)
 - [Permissions-Policy Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Permissions-Policy)
-- [Cross-Origin Isolation Headers](https://web.dev/coop-coep/)
+- [Cross-Origin Isolation Headers](https://web.dev/articles/coop-coep)
 
 To override a response header:
 
-1. [Open DevTools](/docs/devtools/open), for example, on [this demo page](https://cors-demo-devtools.glitch.me/).
-1. Go to **Network**, select a request from the table, open **Headers** > **Response Headers**.
-1. Hover over a response header value and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %}.
+1. [Set up local overrides](#set-up) and inspect, for example, [this demo page](https://cors-demo-devtools.glitch.me/).
+1. Go to **Network**, find a request, right-click it, and select **Override headers**. DevTools takes you to the **Headers** > **Response Headers** editor.
+1. Hover over a response header value and place a cursor there.
 
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/U9f8IhtBACotmtYUNjtO.png", alt="The edit button next to a response header.", width="800", height="552" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/6u5U79XxwBavyHX8nEOc.png", alt="The Response Headers editor.", width="800", height="608" %}
 
-1. If prompted, pick a folder for DevTools to save changes to and allow access.
-1. Modify a header.
+   Alternatively, to enable the **Response Headers** editor, hover over a response header value and click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/JJEyylF1sToNKTtoFm4Q.svg", alt="Edit.", width="22", height="22" %}.
+
+1. Modify or add a new header.
 
    {% Aside %}
-   This example adds the `Access-Control-Allow-Origin: *` header to get rid of a [CORS error](https://web.dev/cross-origin-resource-sharing/).
+   This example adds the `Access-Control-Allow-Origin: *` header to get rid of a [CORS error](https://web.dev/articles/cross-origin-resource-sharing).
    {% endAside %}
 
    {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/IhXa4zihNp5Gsi9eBPhN.png", alt="Modifying an existing header value, adding a new one, and removing an override.", width="800", height="653" %}
@@ -92,7 +120,7 @@ To override a response header:
    - To edit a header value, click it.
    - To add a new header, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/eY8MaTQqlXF3oiT6STmy.svg", alt="Add.", width="20", height="20" %} **Add header**.
    - To remove a header override, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Bg5rfKrzHBaF621Ag9IN.svg", alt="Delete.", width="20", height="20" %} next to it. This removes the headers you added or reverts modified values back to original values.
-   
+
    DevTools highlights modified headers <span style="background-color:#e9f2ec;">in green</span> and removed overrides <span style="background-color:#ffeff0;text-decoration-line: line-through;">in red</span>.
 
 1. {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/sX65QEDYhwBFHCM24BtV.svg", alt="Refresh.", width="20", height="20" %} Refresh the page to apply the changes.

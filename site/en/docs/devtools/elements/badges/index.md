@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Badges reference"
 date: 2022-08-02
-#updated: YYYY-MM-DD
+updated: 2023-07-18
 description: "Toggle various overlays and speed up DOM tree navigation with badges."
 authors:
   - sofiayem
@@ -20,7 +20,7 @@ To show or hide badges:
 
 1. [Open DevTools](/docs/devtools/open/#elements).
 1. Right-click an element in the DOM tree and select **Badge settings...**.
-   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/xpRsrsvl9BxxANM4Xuiy.png", alt="Badge settings.", width="800", height="337" %}
+   {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/ZHBJYFxTAsvxBucNfl56.png", alt="Badge settings.", width="800", height="344" %}
 1. Select or clear checkboxes next to the desired badges.
 
 The **Elements** panel shows the selected badges next to the appropriate elements in the DOM tree. The next sections explain every badge.
@@ -47,6 +47,26 @@ The overlay shows columns, rows, their numbers, and gaps.
 
 To learn how to debug grid layout, see [Inspect CSS grid](/docs/devtools/css/grid/).
 
+## Subgrid {: #subgrid }
+
+A [subgrid](https://developer.mozilla.org/docs/Web/CSS/CSS_grid_layout/Subgrid) is a nested grid that uses the same tracks as its parent grid. An element is a subgrid container if one or both of its `grid-template-columns`, `grid-template-rows` properties are set to `subgrid`. Such elements have `subgrid` badges next to them that toggle the corresponding overlays.
+
+Toggle the overlay on the following preview:
+
+{% Codepen {
+  user: 'sofiayem',
+  id: 'KKrajpZ',
+  height: 255,
+  allow: ['geolocation']
+} %}
+
+1. [Inspect the element][1] in the preview.
+1. In the DOM tree, click the `subgrid` badge next to the element and observe the overlay.
+
+{% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/T7u7x1ojB1VmKvX6Yf6x.png", alt="Subgrid overlay.", width="800", height="641" %}
+
+The overlay shows columns, rows, their numbers, and gaps of a subgrid.
+
 ## Flex
 
 An HTML element is a [flex container](https://developer.mozilla.org/docs/Web/CSS/CSS_Flexible_Box_Layout) if its `display` CSS property is set to `flex` or `inline-flex`. Such elements have `flex` badges next to them that toggle the corresponding overlays.
@@ -65,13 +85,13 @@ Toggle the overlay on the following preview:
 
 {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/MmkJORNp3sOKHHK1CI4h.png", alt="Flex overlay.", width="800", height="646" %}
 
-The overlay shows child element positions. 
+The overlay shows child element positions.
 
 To learn how to debug flex layouts, see [Inspect and debug CSS flexbox](/docs/devtools/css/flexbox/).
 
 ## Ad
 
-DevTools can detect some [ad frames and tag them](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md). Such frames have `ad` badges next to them. 
+DevTools can detect some [ad frames and tag them](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md). Such frames have `ad` badges next to them.
 
 Discover an ad in the following preview:
 
@@ -115,7 +135,7 @@ The overlay shows element positions and snap points.
 An HTML element is a [container](https://developer.mozilla.org/docs/Web/CSS/CSS_Container_Queries) if it has the `container-type` CSS property. Such elements have `container` badges next to them that toggle the corresponding overlays.
 
 {% Aside %}
-CSS container queries is an experimental feature. To enable its support in DevTools, under [`chrome://flags`](chrome://flags), set the `Enable CSS Container Queries` experiment to `Enabled`.
+CSS container queries is an experimental feature. To enable its support in DevTools, under `chrome://flags`, set the `Enable CSS Container Queries` experiment to `Enabled`.
 Otherwise, the preview below doesn't work.
 {% endAside %}
 
@@ -165,7 +185,7 @@ Discover the {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/Zml4roc9tWR2DU1Yb9ix
 
 ## Top layer
 
-This badge helps you understand the concept of the [top layer](/blog/what-is-the-top-layer/) and visualize it. The top layer renders content on top of all other layers, regardless of [`z-index`][2]. When you open a [`<dialog>` element](https://web.dev/building-a-dialog-component/) using the [`.showModal()` method][3], the browser puts it into the top layer.
+This badge helps you understand the concept of the [top layer](/blog/what-is-the-top-layer/) and visualize it. The top layer renders content on top of all other layers, regardless of [`z-index`][2]. When you open a [`<dialog>` element](https://web.dev/articles/building-a-dialog-component) using the [`.showModal()` method][3], the browser puts it into the top layer.
 
 To help you visualize top layer elements, the **Elements** panel adds a `#top-layer` container to the DOM tree after the closing `</html>` tag.
 

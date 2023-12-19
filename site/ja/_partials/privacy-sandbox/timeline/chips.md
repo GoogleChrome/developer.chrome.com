@@ -1,0 +1,3 @@
+- [Chrome プラットフォームのステータス](https://chromestatus.com/feature/5179189105786880)。
+- [オリジントライアルは](/origintrials/#/view_trial/1239615797433729025) Chrome 100 から 106 まで利用可能でした。
+- 「[Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/_dJFNJpf91U)」と「[Intent to Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/JNOQvsTxecI/m/V-OewM3lAwAJ)」をお読みください。

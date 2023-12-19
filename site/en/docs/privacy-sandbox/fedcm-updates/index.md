@@ -8,7 +8,7 @@ description: >
 authors:
  - agektmr
 date: 2022-11-09
-updated: 2023-02-27
+updated: 2023-09-18
 ---
 
 The Federated Credential Management API is
@@ -21,7 +21,7 @@ These updates are for you if:
 
 -   You are an IdP using the Federated Credential Management API—for
     example,
-    [you have run an origin trial](/blog/fedcm-origin-trial/).
+    [you've run an origin trial](/blog/fedcm-origin-trial/).
 -   You are an IdP or RP and interested in extending the API to fit your use
     case – e.g. you've been observing or participating in
     [the discussions on the FedID CG repository](https://github.com/fedidcg/FedCM/issues)
@@ -37,7 +37,23 @@ If you're new to this API or have not experimented with it yet, read the
 To stay updated on the FedCM API changes, please subscribe to [our
 newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 
-**Chrome 110 (February 2023)**
+### Chrome 117 (Sep 2023)
+
+- Origin trial for Idp Sign-In Status API is available on Android from Chrome 117. Learn more about it in [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/#idp-signin-status).
+
+### Chrome 116 (Aug 2023)
+
+- Added support for following three features in Chrome 116:
+  - **Login Hint API**: Specify a preferred user account to be signed in.
+  - **User Info API**: Fetch the information of the returning user so that the identity provider (IdP) can render a personalized sign-in button within an iframe.
+  - **RP Context API**: Use a title different from 'Sign in' in the FedCM dialog.
+- Origin Trial for IdP Sign-In Status API is available. Learn more about it in [FedCM updates: IdP Sign-In Status API, Login Hint, and more](/blog/fedcm-chrome-116-updates/).
+
+### Chrome 115 (June 2023)
+
+- Added support for auto-reauthentication which let users reauthenticate automatically when they come back after their initial authentication using FedCM. This improves the user experiences and enables a more streamlined reauthentication to the RP after the initial consent. Learn more about [FedCM auto-reauthentication](/blog/fedcm-auto-reauthn/). 
+
+### Chrome 110 (February 2023)
 
 - For the ID assertion endpoint, IdPs need to check the `Origin` header (instead of the `Referer` header) to see if the value matches the origin of the client ID.
 - Cross-origin iframe support for FedCM is now available. The
@@ -49,7 +65,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
 - Added a new Chrome flag `chrome://flags/#fedcm-without-third-party-cookies`. With this flag, you can test FedCM functionality in Chrome
   by blocking third-party cookies. Learn more from [the FedCM documentation](/docs/privacy-sandbox/fedcm/#block-third-party-cookies).
 
-**Chrome 108 (October 2022)**
+### Chrome 108 (October 2022)
 
 -   "top-level manifest" is now called "well-known file" in the document.
     No implementation changes are required.
@@ -61,7 +77,7 @@ newsletter](https://groups.google.com/g/fedcm-developer-newsletter).
     [`Sec-Fetch-Dest: webidentity`](https://fedidcg.github.io/FedCM/#sec-fetch-dest-header)
     header instead of a `Sec-FedCM-CSRF: ?1` header.
 
-**Chrome 105 (August 2022)**
+### Chrome 105 (August 2022)
 
 -   Added important security information to the document. The identity
     provider (IdP) needs to check if the `Referer` header matches the origin
@@ -103,7 +119,7 @@ const credential = await navigator.credentials.get({
 const { token } = credential;
 ```
 
-**Chrome 104 (June 2022)**
+### Chrome 104 (June 2022)
 
 -   `consent_acquired` parameter sent to the ID token endpoint is now
     [`disclosure_text_shown`](https://fedidcg.github.io/FedCM/#dom-id_assertion_endpoint_request-disclosure_text_shown).
@@ -114,7 +130,7 @@ const { token } = credential;
     RP's
     [Content Security Policy](https://developer.mozilla.org/docs/Web/HTTP/CSP).
 
-**Chrome 103 (May 2022)**
+### Chrome 103 (May 2022)
 
 -   Supports desktop environments.
 -   Supports per-RP settings on desktop.
@@ -125,5 +141,6 @@ const { token } = credential;
 
 ## Resources
 
--   Read the introduction to
-    [Federated Credential Management](/docs/privacy-sandbox/fedcm/).
+-   [Introduction to Federated Credential Management](/docs/privacy-sandbox/fedcm/)
+-   [Federated Credential Management API: developer guide](/docs/privacy-sandbox/fedcm-developer-guide/)
+

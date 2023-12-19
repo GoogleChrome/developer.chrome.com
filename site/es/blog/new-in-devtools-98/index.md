@@ -84,9 +84,9 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 
 Ahora puede ajustar la configuración de **Tiempo de espera** (_timeout_) en el panel [Recorder](/docs/devtools/recorder/) para todos los pasos o para un paso específico. Esto es útil especialmente para páginas con solicitudes de red lentas y animación prolongada.
 
-<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
+<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fish/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
 
-Por ejemplo, [registré un flujo de usuario](/docs/devtools/recorder/#record) en esta [página de demostración](https://jec.fyi/demo/pup-slow-result) para cargar y hacer clic en la opción del menú. Sin embargo, la carga de los elementos del menú es lenta (esta tarda 6 segundos). La [reproducción](/docs/devtools/recorder/#replay) de este flujo de usuario falló porque supera los 5 segundos (el tiempo de espera predeterminado).
+Por ejemplo, [registré un flujo de usuario](/docs/devtools/recorder/#record) en esta [página de demostración](https://jec.fish/demo/pup-slow-result) para cargar y hacer clic en la opción del menú. Sin embargo, la carga de los elementos del menú es lenta (esta tarda 6 segundos). La [reproducción](/docs/devtools/recorder/#replay) de este flujo de usuario falló porque supera los 5 segundos (el tiempo de espera predeterminado).
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 
@@ -105,9 +105,9 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 ## Asegúrese de que sus páginas se puedan almacenar en caché con la pestaña de caché Atrás/adelante {: #bfcache }
 
-<!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
+<!-- [Back/forward cache (or bfcache)](https://web.dev/articles/bfcache) is a browser optimization that enables instant back and forward navigation.  -->
 
-[Caché Atrás/adelante (o bfcache)](https://web.dev/bfcache/) es una optimización del navegador que permite la navegación instantánea hacia atrás y hacia adelante.
+[Caché Atrás/adelante (o bfcache)](https://web.dev/articles/bfcache) es una optimización del navegador que permite la navegación instantánea hacia atrás y hacia adelante.
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
 
@@ -244,9 +244,9 @@ Vaya a los [atajos de teclado](/docs/devtools/shortcuts/) para consultar los ata
 
 El panel **Lighthouse** ahora ejecuta Lighthouse 9. Lighthouse ahora enumerará todos los elementos que comparten la misma identificación.
 
-<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
+<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/articles/duplicate-id-aria).  -->
 
-La identificación de elemento no único es un problema de accesibilidad común. Por ejemplo, la identificación a la que se hace referencia en un atributo `aria-labelledby` se usa en [múltiples elementos](https://web.dev/duplicate-id-aria/).
+La identificación de elemento no único es un problema de accesibilidad común. Por ejemplo, la identificación a la que se hace referencia en un atributo `aria-labelledby` se usa en [múltiples elementos](https://web.dev/articles/duplicate-id-aria).
 
 <!-- Check out the [What's new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 
@@ -314,9 +314,9 @@ El panel experimental **API Reporting** se introdujo en [Chrome 96](/blog/new-in
 
 La sección **Endpoints** ya está disponible. Le brinda una descripción general de todos los `endpoints` configurados en el encabezado `Reporting-Endpoints`.
 
-<!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
+<!-- Learn to use the [Reporting API](https://web.dev/articles/reporting-api) to monitor security violations, deprecated API calls, and more. -->
 
-Aprenda a usar la [API de informes](https://web.dev/reporting-api/) para monitorear violaciones de seguridad, llamadas a API obsoletas y más.
+Aprenda a usar la [API de informes](https://web.dev/articles/reporting-api) para monitorear violaciones de seguridad, llamadas a API obsoletas y más.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Panel de informes de API", width="800", height="560" %}
 

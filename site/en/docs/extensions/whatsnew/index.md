@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2023-05-02
+updated: 2023-10-30
 tags:
   - extensions-news
 
@@ -13,10 +13,203 @@ tags:
 <!--lint disable no-duplicate-headings-->
 <!--lint disable first-heading-level-->
 
-Check this page often to learn about changes to the Chrome extensions platform, its documentation,
-and related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about many of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).)
+Check this page often to learn about changes to Chrome extensions, extensions documentation, or related policy or other changes. You'll find other notices posted on the [Extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions). The [Extensions News](/tags/extensions-news/) tag lists articles about some of the topics listed here. (It even has [an RSS feed](/feeds/extensions-news.xml).) The [Chrome schedule](https://chromiumdash.appspot.com/schedule) lists stable and beta release dates.
 
-### New extension service worker tutorial and help
+
+### Blog post: Resuming the transition to Manifest V3 {: #blog-mv2-timeline-restart }
+<p class="color-secondary-text type--caption">Posted on <time>November 16, 2023</time></p>
+
+The Manifest V2 support timeline has been updated. See our [November 2023 blog post](/blog/resuming-the-transition-to-mv3/) for details.
+
+### Blog post: Improvements to content filtering support in Manifest V3 {: #blog-content=filtering-improvements }
+<p class="color-secondary-text type--caption">Posted on <time>November 15, 2023</time></p>
+
+Learn about how we improved the declarativeNetRequest API in our [new blog post](/blog/improvements-to-content-filtering-in-manifest-v3/).
+
+### Blog post: What's new in Chrome 120 for Extensions {: #blog-whats-new-extensions-chrome-120 }
+
+<p class="color-secondary-text type--caption">Posted on <time>November 6, 2023</time></p>
+
+[Chrome 120 Beta](/blog/chrome-120-beta/) was recently released. For a summary of the important updates relevant to extension developers, read our new blog post:  [What's new in Chrome 120 for Extensions](/blog/chrome-120-beta-whats-new-for-extensions/). This release also marks a major milestone as it removes the final two items (userScripts, file handler on ChromeOS) from the [list of critical platform gaps](/docs/extensions/migrating/known-issues/). 
+
+### PSA: Change to handling of privacy policy URLs in Developer Dashboard {: #privacy-policy-per-item }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 30, 2023</time></p>
+
+Privacy policies in the Developer Dashboard are now added at the item level. This allows you to provide a different privacy policy per item. Read more about this
+change in our [PSA](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/c4hhdgSbn5g).
+
+### Video: A chat with Matt Frisbie {: #video-interview-oct-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 26, 2023</time></p>
+
+We've just published a new video on the Chrome for Developers YouTube channel chatting with Google Developer Expert and author Matt Frisbie. Watch it
+[here](https://www.youtube.com/watch?v=8P-Sc8ZaViY).
+
+### New guidance on testing extensions {: #testing-guidance-oct-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 23, 2023</time></p>
+
+We've just published new guidance on how to write automated tests for extensions, including [how
+to write unit tests](/docs/extensions/mv3/unit-testing/) and both
+[general guidance](/docs/extensions/mv3/end-to-end-testing/) and a
+[tutorial](/docs/extensions/mv3/tut_puppeteer-testing/) on end-to-end testing.
+
+### Blog post: What's happening in Chrome Extensions - October 2023 {: #whats-happening-10-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+We've just published the second edition of [What’s Happening in Chrome Extensions](/blog/extension-news-october-2023/). The post discusses what the extension team has been working on for the past few months, including, addressing service worker stability issues, and making good progress on closing all MV3 platform gaps. We also share exciting upcoming API releases like the Reading List API and the User Scripts API.
+
+### Increased static ruleset limits in Declarative Net Request API {: #canary-dnr-rules-increase }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+Following [feedback](https://github.com/w3c/webextensions/issues/318) in the Web Extensions
+Community Group, we are significantly increasing the limit on enabled static rulesets from 10 to 50.
+Additionally, we are increasing the total number of allowed static rulesets from 50 to 100. This is
+currently available in Canary.
+
+### Improved guidance around remotely-hosted code {: #remotely-hosted-code }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 17, 2023</time></p>
+
+A requirement for Manifest V3 is that extensions may no longer use remotely-hosted code. Although this has been [part of our migration guide](/docs/extensions/migrating/improve-security/#remove-remote-code) from the beginning, we thought it was worth improving the guidance around this issue. That page now provides more information, describing what's still possible in Manifest V3 and providing more information on strategies for upgrading.
+
+There is a related addition to the [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/). A new section describes common reasons that extensions with remotely-hosted code are rejected.
+
+### Chrome 118: isUrlFilterCaseSensitive now defaults to false {: #118-url-filter-case-sensitive }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 11, 2023</time></p>
+
+Starting in Chrome 118, the [`isUrlFilterCaseSensitive`](/docs/extensions/reference/declarativeNetRequest/#property-RuleCondition-isUrlFilterCaseSensitive)
+property in the [chrome.declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest/)
+API has been changed to default to `false`. If you wish to keep the old behavior, you can explicitly set `isUrlFilterCaseSensitive` to `true` in
+your declarativeNetRequest rules.
+
+This follows [discussions](https://github.com/w3c/webextensions/issues/269) in the Web Extensions
+Community Group. Firefox and Safari have already implemented a similar change.
+
+### Documentation on cookies and web storage APIs {: #storage-and-cookies-guide }
+
+<p class="color-secondary-text type--caption">Posted on <time>October 9, 2023</time></p>
+
+We published a new guide on [how cookies and web storage APIs work in Chrome extensions](/docs/extensions/mv3/storage-and-cookies/).
+It includes details on cookie and storage partitioning changes in
+[Privacy Sandbox](/docs/privacy-sandbox/), an ongoing project to deprecate third-party cookies
+through the creation of a series of new web platform APIs, and details on how they work in extensions.
+
+### Extension samples now searchable {: #extension-samples-searchable }
+
+<p class="color-secondary-text type--caption">Posted on <time>September 29, 2023</time></p>
+
+We recently created a page that lets you [search Chrome extension samples](/docs/extensions/samples/). The search page has multiple options. A search box lets you search for text in sample titles. You can restrict the search by permission or extension API. An additional filter lets you restrict search to either API or functional (use case) samples.
+
+This new sample page was built by a Google Summer of Code participant, Xuezhou Dai, who also contributed several new samples. You can read about their experiences this past summer in [their post on our blog](/blog/google-summer-of-code-and-chrome-extensions/).
+
+As before, [our code samples](https://github.com/GoogleChrome/chrome-extensions-samples) are still available on GitHub for cloning or forking.
+
+### Chrome 118: Changes to opening file: scheme URLs {: #changes-to-file-scheme }
+
+<p class="color-secondary-text type--caption">Posted on <time>September 15, 2023</time></p>
+
+Beginning in Chrome 118, extensions will need the "Allow access to file URLs" setting enabled from the `chrome://extensions` page to open file:// scheme URLs using the [Tabs](/docs/extensions/reference/tabs/) or [Windows](/docs/extensions/reference/windows/) APIs. You can programmatically check for this access by calling [`chrome.extension.isAllowedFileSchemeAccess()`](/docs/extensions/reference/extension/#method-isAllowedFileSchemeAccess). Firefox already restricts file URLs, and Safari supports the change. For more information, read the [post in the extensions Google Group](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/ZtCvVISQU54/m/tOjjlzkfAgAJ).
+
+### Chrome 117: Expanded URL protections on extension API navigations {: #expanded-kill-url }
+
+<p class="color-secondary-text type--caption">Posted on <time>August 23, 2023</time></p>
+
+Previously navigation triggered from extension API calls for [`tabs.update()`](/docs/extensions/reference/tabs/#method-update), [`tabs.create()`](/docs/extensions/reference/tabs/#method-create), and [`windows.create()`](/docs/extensions/reference/windows/#method-create) emitted an error for some chrome:// URLs. Additionally, calling `tabs.update()` with a JavaScript URL was forbidden. In 117, these protections on JavaScript URLs have been expanded to the `tabs.create()` method and a number of additional chrome:// URLs have been added to the list of forbidden URLs that applies to all of the previously mentioned methods.
+
+### Improved guidance for the declarativeNetRequest API {: #new-dnr-guidance }
+
+<p class="color-secondary-text type--caption">Posted on <time>August 8, 2023</time></p>
+
+The [`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/) API blocks or modifies network requests by specifying declarative rules. This lets extensions modify network requests without intercepting them and viewing their content, thus providing more privacy to users. It's also tricky to use. With that in mind, we've rewritten the guidance in a way that we think paints a clearer picture of how to implement declarative rulesets. Read the new section at the link above.
+
+### Using your Google Analytics account with the Chrome Web Store {: #ga-with-cws }
+
+<p class="color-secondary-text type--caption">Posted on <time>August 7, 2023</time></p>
+
+The Chrome Web Store offers integration with Google Analytics, which allows you to see analytics for your Chrome Web Store listing in addition to the view offered in the Developer Dashboard. For more information, read [Using your Google Analytics account with the Chrome Web Store](/docs/webstore/google-analytics/).
+
+### Chrome 115: DevTools steps over content scripts by default {: #step-over-content-script }
+
+<p class="color-secondary-text type--caption">Posted on <time>July 28, 2023</time></p>
+
+Injected content scripts are now in the DevTools ignore list by default. This doesn't affect breakpoints, but it does mean that content scripts will be stepped over during debugging and exceptions from these scripts will be ignored. When a content script is open in the **Sources** tab, a banner alerts you if this is on and provides an option to remove your content script from the ignore list. To turn this behavior off, open DevTools, go to **Settings** then **Ignore list**. To learn more, see [What's new in DevTools](/blog/new-in-devtools-115/#content-script).
+
+### Chrome 116 beta: More than we can fit here {: #chrome-116 }
+
+<p class="color-secondary-text type--caption">Posted on <time>July 21, 2023</time></p>
+
+Chrome 116 is a big release for extensions. You can now open side panels programmatically. A new method lets you learn if there's an active offscreen document. Service workers got serveral improvements. There's enough improvements in 116 that we've written [a blog post to cover them](/blog/chrome-116-beta-whats-new-for-extensions/). Chrome 116 is in beta as of July 19.
+
+### Blog post: What's happening in Chrome Extensions {: #whats-happening-7-23 }
+
+<p class="color-secondary-text type--caption">Posted on <time>July 17, 2023</time></p>
+
+We've just published an overview of this year's [changes and improvements to extensions](/blog/extension-news-july-2023/). The post discusses the year's big new features, including the Side Panel API, service worker enhancements, and offscreen documents. You'll also get a peek at what we're working on for this quarter. The article lists much more, with links to all.
+
+### New guidance and sample: Learn how to use Google Analytics 4 in your Chrome extension {: #guide-ga }
+
+<p class="color-secondary-text type--caption">Posted on <time>June 23, 2023</time></p>
+
+We published new Google Analytics and geolocation guidance and samples:
+
+* An [updated version of our Google Analytics guidance](/docs/extensions/mv3/tut_analytics/) explaining how you can use [Google Analytics 4](https://support.google.com/analytics/answer/10089681) in your Chrome extension. We've also added a working [Google Analytics 4 sample](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/tutorial.google-analytics) to our Github sample repository. Check out [`google-analytics.js`](https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/functional-samples/tutorial.google-analytics/scripts/google-analytics.js) for the relevant code related to Google Analytics.
+* A new [Geolocation guide](/docs/extensions/mv3/geolocation/) and [three samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples) demonstrating how to access geolocation in service workers, content scripts, popups and side panels.
+
+### Chrome 115: Specify multiple reasons in chrome.offscreen.createDocument() {: #m115-offscreen-multiple-reasons }
+
+<p class="color-secondary-text type--caption">Posted on <time>June 7, 2023</time></p>
+
+You can now specify multiple [`reason`](/docs/extensions/reference/offscreen/#type-Reason) enums when calling [`chrome.offscreen.createDocument()`](/docs/extensions/reference/offscreen/#method-createDocument). Use this when an offscreen document will be used for multiple different purposes. The browser uses the supplied reasons to determine the lifetime of the offscreen document.
+
+### New tool: Extension Update Testing Tool {: #update-testing-tool }
+
+<p class="color-secondary-text type--caption">Posted on <time>June 5, 2023</time></p>
+
+We've just released the [Extension Update Testing Tool](https://github.com/GoogleChromeLabs/extension-update-testing-tool), a local extension update server that can be used for testing updates to Chrome Extensions during local development, including permission grants. The tool shows the user's update flow, including keeping an extension disabled until a user grants any newly requested permissions. This tool is particularly useful for simulating the permission changes requested when updating an extension from Manifest V2 to Manifest V3.
+
+### Chrome 114: New Side Panel API {: #side-panel-launch }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 30, 2023</time></p>
+
+Introducing the new Side Panel API, a companion surface that allows users to access tools alongside the content they are browsing. To learn more, visit the [Side Panel API reference](/docs/extensions/reference/sidePanel/). Additionally, we've added many side panel samples to our [GitHub sample repository](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples). We also share more about side panels in the new blog post [Designing a Superior User Experience with the New Side Panel API](/blog/extension-side-panel-launch). Our [quality guidelines policy](/docs/webstore/program-policies/quality-guidelines/) and [best practices](/docs/webstore/best_practices/#design-a-high-quality-extension) have also been reviewed to provide further guidance on creating high-quality side panel extensions.
+
+Your feedback is important in crafting this API; please share your thoughts and feature requests in the [chromium-groups](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/cJmdMLmpbjg/m/zYGc54AaAQAJ). Stay tuned for new updates as we continue to enhance the Side Panel API.
+
+### New Samples: WASM in extensions {: #samples-wasm }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 17, 2023</time></p>
+
+There are two new samples available that demonstrate how to use WASM in an extension:
+
+- [Using WASM in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print-nomodule) shows the general method for including a WASM module.
+- [Using WASM as a module in Manifest V3](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.wasm-helloworld-print) shows how to use it in a module.
+
+Special thanks to GitHub contributor [@daidr](https://github.com/daidr) for these samples.
+
+### Updated Manifest V3 migration guidance {: #doc-mv3-migration }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 10, 2023</time></p>
+
+We've updated the [Known Issues](/docs/extensions/migrating/known-issues/) section of our [Manifest V3 migration guidance](/docs/extensions/migrating/) with an updated list of extension platform gaps that we intend to close before announcing a new Manifest V2 deprecation timeline.
+
+### Recording audio and video with Manifest V3 {: #screen-audio-capture }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 10, 2023</time></p>
+
+We've just published a new article called [Audio recording and screen capture](/docs/extensions/mv3/screen_capture/), which covers recording audio or video from a tab, window, or screen in Manifest V3. This article describes multiple approaches to recording involving the [`chrome.tabCapture`](/docs/extensions/reference/tabCapture/) API and the [`getDisplayMedia()`](https://developer.mozilla.org/docs/Web/API/MediaDevices/getDisplayMedia) function.
+
+### Chrome 114: Increased storage.local quota {: #m114-storage-local-quota }
+
+<p class="color-secondary-text type--caption">Posted on <time>May 9, 2023</time></p>
+
+We have increased the quota for the [`storage.local`](/docs/extensions/reference/storage/#property-local) property to approximately 10 MB. This was [agreed to in the Web Extensions Community Group](https://github.com/w3c/webextensions/issues/351#issuecomment-1514420881). This brings `storage.local` in line with [`storage.session`](/docs/extensions/reference/storage/#property-session) which was changed in Chrome 112.
+
+### New extension service worker tutorial and help {: #doc-service-worker }
 
 <p class="color-secondary-text type--caption">Posted on <time>May 3, 2023</time></p>
 
@@ -32,13 +225,13 @@ To help with Chrome Web Store publishing, we added new guidance in two areas. Gu
 
 <p class="color-secondary-text type--caption">Posted on <time>April 14, 2023</time></p>
 
-We've rewritten the README for the [Extension Manifest Converter](https://github.com/GoogleChromeLabs/extension-manifest-converter) to make it easier to see what you need to do after running the tool. The converter helps helps migrate extensions built on Manifest V2 to Manifest V3. The new README describes what the tool does using words that closely match those in the [migration guide's checklist](/docs/extensions/migrating/checklist/). The converter doesn't do everything, but it does eliminate many tasks that don't require a human judgement call. 
+We've rewritten the README for the [Extension Manifest Converter](https://github.com/GoogleChromeLabs/extension-manifest-converter) to make it easier to see what you need to do after running the tool. The converter helps helps migrate extensions built on Manifest V2 to Manifest V3. The new README describes what the tool does using words that closely match those in the [migration guide's checklist](/docs/extensions/migrating/checklist/). The converter doesn't do everything, but it does eliminate many tasks that don't require a human judgement call.
 
 ### Chrome 113: New reasons for offscreen documents
 
 <p class="color-secondary-text type--caption">Posted on <time>April 7, 2023</time></p>
 
-We have added two new [reason types](/docs/extensions/reference/offscreen/#type-Reason) to the Offscreen Documents API. Use `LOCAL_STORAGE` to access the web platform's [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) API. Use `WORKER` when creating web workers. 
+We have added two new [reason types](/docs/extensions/reference/offscreen/#type-Reason) to the Offscreen Documents API. Use `LOCAL_STORAGE` to access the web platform's [localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) API. Use `WORKER` when creating web workers.
 
 ### Google Analytics 4 now in the Developer Dashboard
 
@@ -54,8 +247,8 @@ The File Handler API is available for experimentation on ChromeOS in Canary for 
 
 To enable file handling:
 
-* Starting in 112, launch Chrome using the `--enable-features=ExtensionWebFileHandlers` flag, starting in 112 
-* Starting in 113, paste `os://flags/#extension-web-file-handlers` into the Chrome omnibox and select 'Enabled' from the dropdown menu. 
+* Starting in 112, launch Chrome using the `--enable-features=ExtensionWebFileHandlers` flag, starting in 112
+* Starting in 113, paste `os://flags/#extension-web-file-handlers` into the Chrome omnibox and select 'Enabled' from the dropdown menu.
 
 We hope to launch this feature in Chrome 115, in late June. Watch this space for updates.
 
@@ -71,7 +264,7 @@ We've built a [new sample](https://github.com/GoogleChrome/chrome-extensions-sam
 
 [Three new samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/declarativeNetRequest) are available demonstrating the [Declarative Net Request API](/docs/extensions/reference/declarativeNetRequest/). Each demonstrates implementation of a single use case. The first shows how to block cookies. The remaining two demonstrate blocking and redirecting URLs.
 
-### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota}
+### Chrome 112: Increased storage.session quota {: #m112-storage-session-quota }
 
 <p class="color-secondary-text type--caption">Posted on <time>March 3, 2023</time></p>
 
@@ -83,7 +276,7 @@ From Chrome 112, the quota for the [`storage.session`](/docs/extensions/referenc
 
 Offscreen documents are now available in Manifest V3 extensions. These help with the transition from background pages to extension service workers by providing support for DOM-related features and APIs. For more information, [read the blog post](/blog/Offscreen-Documents-in-Manifest-v3/).
 
-### Chrome 109: Is an extension enabled {: #m110-action }
+### Chrome 110: Is an extension enabled {: #m110-action }
 
 <p class="color-secondary-text type--caption">Posted on <time>January 12, 2023</time></p>
 
@@ -103,7 +296,7 @@ Previously, an extension service worker would frequently shut down at the five m
 
 The Manifest V2 deprecation timelines are under review and the experiments scheduled for early 2023 are being postponed. For more information, [read the update](https://groups.google.com/u/1/a/chromium.org/g/chromium-extensions/c/zQ77HkGmK9E) in the chromium-extensions Google Group.
 
-### Chrome 108: Setting badge colors {: #m110-badge-color }
+### Chrome 110: Setting badge colors {: #m110-badge-color }
 
 <p class="color-secondary-text type--caption">Posted on <time>November 29, 2022</time></p>
 
@@ -225,6 +418,12 @@ dependencies on DOM capabilities.
 
 Manifest V3 extensions can now include `wasm-unsafe-eval` in their `content_security_policy`
 declarations. This change allows Manifest V3 extensions to use WebAssembly.
+
+### Chrome 102: New storage.session API {: #m102-storage-session }
+
+<p class="color-secondary-text type--caption">Posted on <time>March 22, 2022</time></p>
+
+Manifest V3 extensions can now use in memory storage [storage.session](/docs/extensions/reference/storage/#property-session) .
 
 ### Docs update: Chrome Web Store item discovery {: #cws-discovery-doc }
 
@@ -456,7 +655,7 @@ at a time.
 
 Both [Manifest V2](/docs/extensions/mv2/cross-origin-isolation/) and [Manifest
 V3](/docs/extensions/mv3/cross-origin-isolation/) extensions can now opt into [cross origin
-isolation](https://web.dev/cross-origin-isolation-guide/). This feature limits which cross-origin
+isolation](https://web.dev/articles/cross-origin-isolation-guide). This feature limits which cross-origin
 resources can load an extension's pages and enables the use of low level web platform features like
 [`SharedArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer). Opt in will be required starting in Chrome 95.
 

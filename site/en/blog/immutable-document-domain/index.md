@@ -7,6 +7,8 @@ subhead: >
   If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-11
 updated: 2023-04-07
+is_outdated: true
+new_available_content_url: /blog/document-domain-setter-deprecation
 authors:
   - agektmr
 tags:
@@ -14,10 +16,13 @@ tags:
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/grGMzuhOjsGhN150dONe.jpg'
 alt: >
   A dog in disguise.
+
 ---
 
 **Updates**
 
+- **May 30, 2023**: we've [announced](/blog/document-domain-setter-deprecation) that
+  the deprecation of `document.domain` setter will be effective in Chrome 115.
 - **April 7, 2023**: We've identified [an issue](https://crbug.com/1429587)
   before shipping this change in Chrome 112. `document.domain` setter to be
   removed by default is currently suspended and the new shipping milestone is
@@ -60,7 +65,7 @@ header, as will all other documents that require that behavior (note that
 ## Why make `document.domain` immutable?
 
 Many websites set `document.domain` to allow communication between [same-site
-but cross-origin](https://web.dev/same-site-same-origin/) pages. 
+but cross-origin](https://web.dev/articles/same-site-same-origin) pages.
 
 {% Aside 'key-term' %}
 
@@ -145,11 +150,11 @@ panel.", width="800", height="472" %}
 
 If you have a reporting endpoint set up, you will also be sent deprecation
 reports. Learn more about [how to use the Reporting
-API](https://web.dev/reporting-api/) with either existing report collection
+API](https://web.dev/articles/reporting-api) with either existing report collection
 services or by building your own in-house solution.
 
 You can run your site through the [LightHouse deprecated API
-audit](https://web.dev/deprecations/) to find all APIs that are scheduled to
+audit](https://web.dev/articles/deprecations) to find all APIs that are scheduled to
 be removed from Chrome.
 
 ## Alternative cross-origin communication
@@ -158,7 +163,7 @@ At this time, you have three options to replace `document.domain` for your websi
 
 ### Use `postMessage()` or Channel Messaging API
 
-In most use cases, cross-origin 
+In most use cases, cross-origin
 [`postMessage()`](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
 or [Channel Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API)
 can replace `document.domain`.
@@ -222,7 +227,7 @@ Origin-Agent-Cluster: ?0
 The `Origin-Agent-Cluster` header instructs the browser whether the document
 should be handled by the origin-keyed agent cluster or not. To learn more about
 `Origin-Agent-Cluster`, read [Requesting performance isolation with the
-`Origin-Agent-Cluster` header](https://web.dev/origin-agent-cluster/).
+`Origin-Agent-Cluster` header](https://web.dev/articles/origin-agent-cluster).
 
 When you send this header, your document can continue to set `document.domain`
 even after it becomes immutable by default.

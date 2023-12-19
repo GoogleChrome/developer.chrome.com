@@ -767,6 +767,10 @@ class Transform {
             chromeOsOnly = false;
           }
           break;
+        case 'chrome-install-location':
+          if (text === 'policy') {
+            out.requiresPolicyInstall = true;
+          }
       }
     });
 
@@ -796,7 +800,7 @@ class Transform {
       const raw = text.split(' ')[0].replace(/\\_/g, '_');
       const value = JSON.parse(raw);
 
-      const rest = text.substr(raw.length + 1).trim();
+      const rest = text.substring(text.indexOf(' ') + 1).trim();
       enums.push({value, description: rest});
     });
 

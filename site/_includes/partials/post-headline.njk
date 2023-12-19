@@ -7,11 +7,15 @@
 {% if date %}
   <p class="type--caption color-secondary-text">
     {{ 'i18n.common.published_on' | i18n(locale) }}
-    <time>{{ helpers.formatDateLong(date, locale) }}</time>
+    <time datetime="{{ helpers.formatDateNumeric(date) }}">
+      {{ helpers.formatDateLong(date, locale) }}
+    </time>
     {% if updated %}
     <span>•</span>
     {{ 'i18n.common.updated_on' | i18n(locale) }}
-    <time>{{ helpers.formatDateLong(updated, locale) }}</time>
+    <time datetime="{{ helpers.formatDateNumeric(updated) }}">
+      {{ helpers.formatDateLong(updated, locale) }}
+    </time>
   {% endif %}
   </p>
 {% endif %}

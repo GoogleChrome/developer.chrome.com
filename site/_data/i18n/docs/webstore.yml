@@ -3,19 +3,19 @@ developer_dashboard:
 developer_dashboard_description:
   en: >
     Publish and manage your extensions and themes.
-overviews:
-  en: 'Overviews'
-payments:
-  en: 'Payments'
-identity:
-  en: 'Identity'
-policies:
-  en: 'Chrome Web Store policies'
+before:
+  en: 'Prepare your extension'
+enterprise:
+  en: 'Enterprise'
 publish:
   en: 'Publish your extension'
-details:
-  en: 'Item detail pages'
-develop:
-  en: 'Prepare your extension'
-api:
-  en: 'Chrome Web Store API'
+policies:
+  en: 'Chrome Web Store policies'
+manage:
+  en: 'Manage your item'
+promote:
+  en: 'Promote your item'
+guidelines:
+  en: 'Store item guidelines'
+sunset:
+  en: 'Phase out your extension'

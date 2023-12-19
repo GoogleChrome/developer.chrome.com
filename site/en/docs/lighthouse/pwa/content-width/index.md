@@ -32,7 +32,7 @@ The audit fails if `window.innerWidth` does not equal `window.outerWidth`.
 This audit is a roundabout way of determining
 if your page is optimized for mobile devices.
 See Google's
-[Responsive Web Design Basics](https://web.dev/responsive-web-design-basics/)
+[Responsive Web Design Basics](https://web.dev/articles/responsive-web-design-basics)
 for an overview of how to create a mobile-friendly page.
 
 You can ignore this audit if:
@@ -44,4 +44,4 @@ You can ignore this audit if:
 ## Resources
 
 - [Source code for **Content is not sized correctly for the viewport** audit](https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/content-width.js)
-- [Responsive Web Design Basics](https://web.dev/responsive-web-design-basics/)
+- [Responsive Web Design Basics](https://web.dev/articles/responsive-web-design-basics)

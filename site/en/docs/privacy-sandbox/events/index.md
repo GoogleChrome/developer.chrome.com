@@ -6,7 +6,7 @@ subhead: >
 description: >
  Information and resources for online and in-person events.
 date: 2022-08-19
-updated: 2023-01-13
+updated: 2023-11-15
 authors:
  - samdutton
  - mihajlija
@@ -20,8 +20,9 @@ already taken place.
 Subscribe to the following mailing lists to be notified of other events:
 
 * [Attribution Reporting](https://groups.google.com/u/2/a/chromium.org/g/attribution-reporting-api-dev)
-* [FLEDGE](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce)
+* [Protected Audience API](https://groups.google.com/u/2/a/chromium.org/g/fledge-api-announce)
 * [Topics](https://groups.google.com/u/2/a/chromium.org/g/topics-api-announce)
+* [Shared Storage](https://groups.google.com/a/chromium.org/g/shared-storage-api-announcements)
 
 ## Ongoing events
 
@@ -30,12 +31,27 @@ Subscribe to the following mailing lists to be notified of other events:
 Make sure to join the [W3C](https://www.w3.org/participate/) and [WICG](https://www.w3.org/community/wicg/) 
 if you plan on participating.
 
-* [FLEDGE](https://github.com/WICG/turtledove/tree/main/meetings)
+* [Protected Audience API](https://github.com/WICG/turtledove/tree/main/meetings)
 * [Attribution Reporting](https://github.com/WICG/attribution-reporting-api/tree/main/meetings): 
 announcements are also made on [this issue](https://github.com/WICG/attribution-reporting-api/issues/80)
 * [Topics](https://github.com/patcg-individual-drafts/topics/issues/115#issue-1442748960)
 
 ## Past events
+
+### Protected Audience webinars
+**Series #1: Protected Audience fundamentals**  
+
+September 27, 2023     
+* [Deck](https://goo.gle/ps-protected-audience-webinar-1-deck)   
+* [AMER Recording](https://goo.gle/ps-protected-audience-webinar-1-recording-amer)
+* [EMEA Recording](https://goo.gle/ps-protected-audience-webinar-1-recording-emea)  
+
+**Series #2: Sequential auction setup**  
+
+November 7, 2023     
+* [Deck](https://goo.gle/ps-protected-audience-webinar-2-deck)    
+* [AMER Recording](https://goo.gle/ps-protected-audience-webinar-2-recording-amer)
+* [EMEA Recording](https://goo.gle/ps-protected-audience-webinar-2-recording-emea)  
 
 ### First-Party Sets Office Hours {: #oh06}
 

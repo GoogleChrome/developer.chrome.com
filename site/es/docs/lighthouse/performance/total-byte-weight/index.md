@@ -24,22 +24,22 @@ Según los datos de [HTTP Archive](https://httparchive.org/reports/state-of-the-
 
 ## Cómo reducir el tamaño de la carga útil
 
-Trata de mantener tu tamaño total de bytes por debajo de los 1,600 KiB. Este objetivo se basa en la cantidad de datos que teóricamente se pueden descargar en una conexión 3G sin dejar de alcanzar un [Time to Interactive (TTI): Tiempo para interactuar](https://web.dev/tti/) de 10 segundos o menos.
+Trata de mantener tu tamaño total de bytes por debajo de los 1,600 KiB. Este objetivo se basa en la cantidad de datos que teóricamente se pueden descargar en una conexión 3G sin dejar de alcanzar un [Time to Interactive (TTI): Tiempo para interactuar](https://web.dev/articles/tti) de 10 segundos o menos.
 
 A continuación, se muestran algunas formas de reducir el tamaño de la carga útil:
 
-- Aplazar las solicitudes hasta que sean necesarias. Consulta el [patrón PRPL](https://web.dev/apply-instant-loading-with-prpl/) para ver una posible aproximación.
+- Aplazar las solicitudes hasta que sean necesarias. Consulta el [patrón PRPL](https://web.dev/articles/apply-instant-loading-with-prpl) para ver una posible aproximación.
 - Optimiza las consultas para que sean lo más pequeñas posible. Las posibles técnicas incluyen:
-  - [Minimiza y comprime las cargas útiles de la red](https://web.dev/reduce-network-payloads-using-text-compression/).
-  - [Utiliza WebP en lugar de JPEG o PNG para tus imágenes](https://web.dev/serve-images-webp/).
-  - [Establece el nivel de compresión de las imágenes JPEG en 85](https://web.dev/use-imagemin-to-compress-images/).
-- Almacena las solicitudes en caché para que la página no vuelva a descargar los recursos en visitas repetidas. (Consulta la [confiabilidad de la página de inicio de la red](https://web.dev/reliable/) para aprender cómo funciona el almacenamiento en caché y cómo implementarlo).
+  - [Minimiza y comprime las cargas útiles de la red](https://web.dev/articles/reduce-network-payloads-using-text-compression).
+  - [Utiliza WebP en lugar de JPEG o PNG para tus imágenes](https://web.dev/articles/serve-images-webp).
+  - [Establece el nivel de compresión de las imágenes JPEG en 85](https://web.dev/articles/use-imagemin-to-compress-images).
+- Almacena las solicitudes en caché para que la página no vuelva a descargar los recursos en visitas repetidas. (Consulta la [confiabilidad de la página de inicio de la red](https://web.dev/explore/reliable) para aprender cómo funciona el almacenamiento en caché y cómo implementarlo).
 
 ## Orientación de recursos tecnológicos específicos
 
 ### Angular
 
-Aplica la [división de código a nivel de ruta](https://web.dev/route-level-code-splitting-in-angular/) para minimizar el tamaño de tus paquetes de JavaScript. Además, considera almacenar en caché los archivos con los [service workers de Angular](https://web.dev/precaching-with-the-angular-service-worker/).
+Aplica la [división de código a nivel de ruta](https://web.dev/articles/route-level-code-splitting-in-angular) para minimizar el tamaño de tus paquetes de JavaScript. Además, considera almacenar en caché los archivos con los [service workers de Angular](https://web.dev/articles/precaching-with-the-angular-service-worker).
 
 ### Drupal
 

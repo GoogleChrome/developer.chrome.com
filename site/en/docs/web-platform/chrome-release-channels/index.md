@@ -236,7 +236,7 @@ Chrome Canary, Beta or Dev, and maintain control over software roll-out to their
  
 The operating system used by Chromebooks, Chrome OS, works the same way. If you're feeling
 adventurous or you want to try out new features early on, you can [switch your Chromebook to a
-different Chrome OS channel](support.google.com/chromebook/answer/1086915).
+different Chrome OS channel](https://support.google.com/chromebook/answer/1086915).
  
 ## Find out more
  

@@ -43,7 +43,7 @@ tags:
 접근성 트리는 **접근성** 패널에서 이용가능했습니다만, 그 뷰 자체는 오직 싱글 노드 및 그 노드의 조상들만을 볼 수 있을 만큼 제한적이었습니다.
 
 <!-- Our team is still actively working on this preview feature. We are looking for your [feedback](https://goo.gle/devtools-a11y-tree-feedback) for further enhancements! -->
-우리는 아직 이 미리보기 기능 구현에 대해 적극적으로 작업하고 있으며, 앞으로의 개선점에 대한 여러분들의 [의견](https://goo.gle/devtools-a11y-tree-feedback)을 기다리고 있습니다! 
+우리는 아직 이 미리보기 기능 구현에 대해 적극적으로 작업하고 있으며, 앞으로의 개선점에 대한 여러분들의 [의견](https://goo.gle/devtools-a11y-tree-feedback)을 기다리고 있습니다!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/o4BY07JabERFd6OieU8b.png", alt="전체 페이지 접근성 트리", width="800", height="505" %}
 
@@ -71,8 +71,8 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
 이제 여러분들은 [Recorder](/docs/devtools/recorder/)에서 모든 단계 혹은 특정한 단계에서의 **타임아웃** 설정을 조정할 수 있게 됐습니다. 이 기능은 느린 네트워크 요청과 긴 애니메이션이 포함된 페이지에서 유용하게 사용될 것입니다.
 
-<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
-예를 들어, [데모 페이지](https://jec.fyi/demo/pup-slow-result)에서 [유저 플로우 녹화](/docs/devtools/recorder/#record) 를 시작하고 메뉴 항목을 클릭하여 로드합니다. 그러나 메뉴를 불러들이는 것이 6초가 걸렸습니다. 로딩 시간이 5초를 초과-기본 타임아웃-했기 때문에 이 유저 플로우의 [다시보기](/docs/devtools/recorder/#replay)는 정상적으로 동작하지 않았습니다.
+<!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fish/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
+예를 들어, [데모 페이지](https://jec.fish/demo/pup-slow-result)에서 [유저 플로우 녹화](/docs/devtools/recorder/#record) 를 시작하고 메뉴 항목을 클릭하여 로드합니다. 그러나 메뉴를 불러들이는 것이 6초가 걸렸습니다. 로딩 시간이 5초를 초과-기본 타임아웃-했기 때문에 이 유저 플로우의 [다시보기](/docs/devtools/recorder/#replay)는 정상적으로 동작하지 않았습니다.
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 
@@ -80,7 +80,7 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
 추가적으로, 여러분은 모든 단계에 대한 **타임아웃**을 **Replay settings**에서도 조정할 수 있습니다. **Replay settings**을 확장한 다음 **타임아웃** 값을 수정합니다.
- 
+
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="유저 플로우 녹화를 위한 타임아웃 설정", width="800", height="530" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
@@ -88,8 +88,8 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 <!-- ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache } -->
 ## 뒤로/앞으로 캐쉬 탭을 이용해 페이지가 캐쉬 가능한지 확인하기 {: #bfcache }
-<!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
-[뒤로/앞으로 캐쉬(혹은 bfcache)](https://web.dev/bfcache/)는 브라우저 최적화의 하나로, 즉각적인 앞뒤 내비게이션을 가능하게 해 주는 기능입니다.
+<!-- [Back/forward cache (or bfcache)](https://web.dev/articles/bfcache) is a browser optimization that enables instant back and forward navigation.  -->
+[뒤로/앞으로 캐쉬(혹은 bfcache)](https://web.dev/articles/bfcache)는 브라우저 최적화의 하나로, 즉각적인 앞뒤 내비게이션을 가능하게 해 주는 기능입니다.
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
 새롭게 선보이는 **뒤로/앞으로 캐쉬** 탭을 사용하여, 웹 페이지들이 bfcache에 대해 최적화되었는지를 테스트할 수 있으며, 또한 페이지가 bfcache를 사용하지 못하도록 하는 이슈들을 파악할 수 있습니다.
@@ -98,7 +98,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 특정 페이지를 테스트하기 위해, 크롬에서 해당 페이지로 이동한 다음 DevTools에서 **애플리케이션** > **뒤로-앞으로 캐쉬** 를 선택합니다. 그리고 **뒤로/앞으로 캐쉬 테스트** 버튼을 클릭하여 DevTools가 앞으로 혹은 뒤로 페이지 탐색을 시작하도록 하여, 해당 페이지가 bfcache 로부터 복구 가능한지를 확인할 수 있습니다.
 
 <!-- As web developers, it's critical to know how to optimize your pages for bfcache across all browsers because it will significantly improve the browsing experience for users—especially those with slower networks or devices.  -->
-웹 개발자는 페이지가 모든 브라우저에서 bfcache에 맞게 최적화하는 방법을 이해하는 것이 매우 중요합니다. 이는 특히 느린 네트워크 혹은 기기에서의 사용자 탐색 경험을 크게 향상시킬 수 있기 때문입니다. 
+웹 개발자는 페이지가 모든 브라우저에서 bfcache에 맞게 최적화하는 방법을 이해하는 것이 매우 중요합니다. 이는 특히 느린 네트워크 혹은 기기에서의 사용자 탐색 경험을 크게 향상시킬 수 있기 때문입니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="뒤로/앞으로 캐쉬 탭", width="800", height="516" %}
 
@@ -112,7 +112,7 @@ Chromium issue: [1110752](https://crbug.com/1110752)
 <!-- If you want to focus on a specific property in the **Properties** pane, you can now type that property name or value in the new **Filter** textbox.  -->
 **속성** 창의 특정 속성에 초점을 맞추고 싶으시다면, 배포판에 새로 추가된 **필터** 입력창에 프로퍼티의 이름이나 값을 기입하면 됩니다.
 
-<!-- By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all** 
+<!-- By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all**
 checkbox to view all properties.  -->
 기본적으로 `null` 이나 `undefined` 값을 가지는 속성들은 표시되지 않습니다. **모두 보기** 체크박스를 클릭하여 모든 속성을 볼 수 있도록 합니다.
 
@@ -121,8 +121,8 @@ checkbox to view all properties.  -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="속성 창 필터", width="800", height="505" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}  
-  
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}
+
 Chromium issue: [1269674](https://crbug.com/1269674)
 
 
@@ -145,7 +145,7 @@ Chromium issue: [1130859](https://crbug.com/1130859)
 ## 마우스를 가져가면 눈금자 표시 {: #show-rulers }
 
 <!-- You can now open the [Command Menu](/docs/devtools/command-menu/) and run the **Show rulers on hover** command. The page rulers make it easier to measure the width and height of an element. -->
-여러분은 이제 [Command Menu](/docs/devtools/command-menu/) 를 열고 **마우스를 가져가면 눈금자 표시**를 실행할 수 있습니다. 페이지의 눈금 기능을 이용하여 우리는 각 요소의 길이와 넓이를 좀더 쉽게 측정할 수 있습니다. 
+여러분은 이제 [Command Menu](/docs/devtools/command-menu/) 를 열고 **마우스를 가져가면 눈금자 표시**를 실행할 수 있습니다. 페이지의 눈금 기능을 이용하여 우리는 각 요소의 길이와 넓이를 좀더 쉽게 측정할 수 있습니다.
 
 <!-- Previously, you can only enable the page rulers via **Settings** > **Show rulers** checkbox. -->
 이전에는 **설정** > **눈금자 표시** 체크박스를 통해 페이지의 눈금 모드를 활성화할 수 있었습니다.
@@ -182,7 +182,7 @@ Chromium issue: [1263866](https://crbug.com/1263866)
 
 Chromium issue: [1050021](https://crbug.com/1050021)
 
- 
+
 <!-- ### Keyboard shortcut to expand all search results {: #toggle-search-result } -->
 ### 모든 검색 결과 키보드 단축키 {: #toggle-search-result }
 
@@ -210,8 +210,8 @@ Chromium issue: [1255073](https://crbug.com/1255073)
 <!-- The **Lighthouse** panel is now running Lighthouse 9. Lighthouse will now list all the elements sharing the same id. -->
 **Lighthouse** 패널은 현재 Lighthouse 9를 구동하고 있습니다. Lighthouse는 곧 같은 아이디를 공유하는 모든 요소들을 나열할 것입니다.
 
-<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
-요소들의 비고유한 아이디는 흔히 발생하는 접근성 문제입니다. 예를 들면, `aria-labelledby` 속성이 참조하는 아이디는 [Multiple elements](https://web.dev/duplicate-id-aria/) 에서 사용됩니다.
+<!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/articles/duplicate-id-aria).  -->
+요소들의 비고유한 아이디는 흔히 발생하는 접근성 문제입니다. 예를 들면, `aria-labelledby` 속성이 참조하는 아이디는 [Multiple elements](https://web.dev/articles/duplicate-id-aria) 에서 사용됩니다.
 
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) 에서 구체적인 사항들과 업데이트를 확인해 보세요!
@@ -234,11 +234,11 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 - 대용량 파일들을 열 때의 속도가 향상되었습니다. (예: WASM, JavaScript)
 - 코드를 단계별로 실행할 때 무작위 스크롤이 더 이상 발생하지 않습니다.
-- 편집가능한 소스(예: snippets, local override)에 대한 자동완성 제안이 개선되었습니다. 
+- 편집가능한 소스(예: snippets, local override)에 대한 자동완성 제안이 개선되었습니다.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c1ab112d9002d5c3b3bb70cf2839bac182f0cdb5 #}
 
-Chromium issue: [1241848](https://crbug.com/1241848) 
+Chromium issue: [1241848](https://crbug.com/1241848)
 
 <!-- ## Miscellaneous highlights {: #misc } -->
 ## 기타 하이라이트 {: #misc }
@@ -247,12 +247,12 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 
 <!-- - Properly displaying the waterfall diagram of network requests. Previously, the style was broken. ([1275501](https://crbug.com/1275501))
 - The code highlight was broken when searching in documents with very long lines in the **Sources** panel. It’s now fixed. ([1275496](https://crbug.com/1275496))
-- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972)) 
+- No more duplicate **Payload** tab in network requests. ([1273972](https://crbug.com/1273972))
 - Fixed the missing layout shifts details in the **Summary** section of the **Performance** panel. ([1259606](https://crbug.com/1259606))
 - Support arbitrary characters (e.g. `,`, `.`),  in **Network Search** queries. ([1267196](https://crbug.com/1267196)) -->
 
 - **Sources** 패널에서 너무 긴 문서를 검색할 때 코드 하이라이트가 동작하지 않았던 문제가 수정되었습니다. ([1275496](https://crbug.com/1275496))
-- 네트워크 요청에서 중복된 **페이로드** 탭이 더 이상 없습니다. ([1273972](https://crbug.com/1273972)) 
+- 네트워크 요청에서 중복된 **페이로드** 탭이 더 이상 없습니다. ([1273972](https://crbug.com/1273972))
 - **성능** 패널의 **요약** 섹션에서 누락된 레이아웃 변경 세부정보가 수정되었습니다. ([1259606](https://crbug.com/1259606))
 - **네트워크 검색** 쿼리에서 임의의 문자(예: `,`, `.`)를 지원합니다.
 
@@ -270,12 +270,12 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 <!-- The **Endpoints** section is now available. It gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header. -->
 현재 **Endpoints** 섹션이 사용가능해졌으며, 이는 `Reporting-Endpoints` 헤더에 구성된 모든 엔드포인트에 대한 개요를 제공합니다.
 
-<!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
-[Reporting API](https://web.dev/reporting-api/)를 이용하여, 보안수칙 위반, 더 이상 사용되지 않는 API의 호출 등을 모니터링할 수 있게 되었습니다. 이 기능을 어떻게 사용하는지 알아보세요! 
+<!-- Learn to use the [Reporting API](https://web.dev/articles/reporting-api) to monitor security violations, deprecated API calls, and more. -->
+[Reporting API](https://web.dev/articles/reporting-api)를 이용하여, 보안수칙 위반, 더 이상 사용되지 않는 API의 호출 등을 모니터링할 수 있게 되었습니다. 이 기능을 어떻게 사용하는지 알아보세요!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Reporting API 창", width="800", height="560" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #} 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #}
 
 Chromium issue: [1200732](https://crbug.com/1200732)
 

@@ -1,7 +1,7 @@
 ---
 layout: "layouts/blog-post.njk"
 title: "Prepare for User-Agent Reduction changes in October"
-subhead: > 
+subhead: >
   What's happening with the User-Agent string, why Chrome is making this change, and what you can do to prepare.
 description: >
   In October, Chrome will take the next step in reducing the information
@@ -14,9 +14,15 @@ alt: "Timeline of User-Agent Reduction changes."
 authors:
   - jney
 date: 2022-08-25
+updated: 2023-09-23
 tags:
   - privacy
+is_outdated: true
 ---
+
+{% Aside 'warning'%}
+This article is outdated as User-Agent reduction is complete. Learn how to [migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch) and read about why this change was made in [User-Agent reduction](/docs/privacy-sandbox/user-agent/).
+{% endAside %}
 
 In October, Chrome will take the next step in reducing the information
 available in the browser's User-Agent (UA) string, to improve privacy for users. With
@@ -41,7 +47,7 @@ identify and track a user across the web. And not all websites and services need
 the information the UA string provides.
 
 That's why Chrome is reducing the information shared by default in the UA
-string, and introducing [a new API](https://web.dev/user-agent-client-hints/),
+string, and introducing [a new API](https://web.dev/articles/user-agent-client-hints),
 User-Agent Client Hints (UA-CH), that will let sites and services request only
 the information they need.  We first
 [announced](https://groups.google.com/a/chromium.org/g/blink-dev/c/-2JIRNMWJ7s/m/yHe4tQNLCgAJ)
@@ -52,7 +58,7 @@ information in the UA string.
 
 ## Phased approach
 
-Chrome began removing parts of the UA string to improve privacy in late April, 
+Chrome began removing parts of the UA string to improve privacy in late April,
 beginning with the [minor
 version](https://chromestatus.com/feature/6311349754789888). This is what we've
 been calling the

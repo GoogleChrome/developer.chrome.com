@@ -7,7 +7,7 @@ description: >
   More in-depth information about the topics themselves and how they are chosen.
   
 date: 2022-01-25
-updated: 2023-03-08
+updated: 2023-08-29
 authors:
   - samdutton
 ---
@@ -37,6 +37,9 @@ This suggests several questions. For example:
 - How could the taxonomy be structured to make it more useful?
 - What specific items should the taxonomy include?
 
+{% Partial 'privacy-sandbox/topics-taxonomy-v2.njk' %}
+
+
 ## How the API infers topics for a site
 
 Topics are derived from a [classifier model](https://github.com/jkarlin/topics#:~:text=classifier) that maps website [hostnames](https://web.dev/same-site-same-origin/#origin) to zero or more topics.
@@ -44,9 +47,12 @@ Analyzing additional information (such as full URLs or page contents) might allo
 
 The classifier model for mapping hostnames to topics is publicly available, and as the [explainer](https://github.com/patcg-individual-drafts/topics) notes, it is possible to view the topics for a site via browser developer tools. The model is expected to evolve and improve over time and be updated periodically; the frequency of this is still under consideration.
 
-Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service callingß the API.
+Only sites that include code that calls the Topics API are included in the browsing history eligible for topic frequency calculations, and API callers only receive topics they've observed. In other words, sites are not eligible for topic frequency calculations without the site or an embedded service calling the API.
 
 {: #caller}
+
+In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code. Note that because the API now includes ancestors as having been observed, the example above, `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, would also cause `Autos & Vehicles` and `Motor Vehicles` to be observed.
+
 {% Aside 'key-term' %}
 
 A Topics API _caller_ is the entity that observes and requests topics with
@@ -61,9 +67,13 @@ call the Topics API from an iframe you own.
 To retrieve one or more topics with `document.browsingTopics()`, an API
 caller must observe and request topics from the same origin.
 
+A caller can access topics via the JavaScript API from [within an iframe](/docs/privacy-sandbox/topics/integration-guide/#implement-with-javascript-and-iframes) using `document.browsingTopics()`.
+
+A caller can also access topics from the [`Sec-Browsing-Topics` header](docs/privacy-sandbox/topics/integration-guide/#implement-with-http-headers) of a `fetch()` request, or of an iframe request. XHR requests were  enabled during the now-completed origin trials (only).
+
 {% endAside %}
 
-In addition, a caller can only receive topics that their code has "seen." So if another caller's code registered a topic, say `/Autos & Vehicles/Motor Vehicles (By Type)/Hatchbacks`, for a user's browser and your code did not cause that topic to be registered for that user's browser, you will not be able to learn of that topic of interest for that user's browser when you call the API from your embedded code.
+Topics returned for a user are recalculated for a caller depending on the top-level site. For example, if `adtech.example` requests the user's topics on `news-a.example`, then on `news-b.example`, and then on `news-c.example`, topics returned to them will be recalculated on each site. This means a caller is likely to get different topics for a user on different top-level sites, since the (maximum) three topics returned for a user are chosen at random from the top five for the past three [epochs](/docs/privacy-sandbox/topics/overview/#epoch) (with a 5% chance of getting a random topic). That makes it harder for a caller to identify a user by their topics, since these are likely to be different across different top-level sites (even for the same user, caller, and epoch).
 
 ## The classifier model {: #classifier-model}
 
@@ -98,7 +108,7 @@ A full [taxonomy of topics with IDs](https://github.com/patcg-individual-drafts/
 
 ### Providing feedback or input on the classifier model
 
-There are [several channels](/docs/privacy-sandbox/feedback/) for providing feedback on the Topics proposal. For feedback on the classifier model, we recommend [submitting a GitHub issue](https://github.com/patcg-individual-drafts/topics/issues) or replying to an existing issue. For example:
+There are [several channels](/docs/privacy-sandbox/feedback/) for providing feedback on the Topics API. For feedback on the classifier model, we recommend [submitting a GitHub issue](https://github.com/patcg-individual-drafts/topics/issues) or replying to an existing issue. For example:
 
 - [What topics taxonomy should be used long term?](https://github.com/patcg-individual-drafts/topics/issues/3)
 - [What if a site disagrees with the topics assigned?](https://github.com/patcg-individual-drafts/topics/issues/2)
@@ -157,7 +167,7 @@ The table below outlines an example (though unrealistically small) of a hypothet
   </tbody>
 </table>
 
-At the end of the epoch (currently proposed to be one week) the Topics API generates the browser's top topics for the week.
+At the end of the epoch (currently one week) the Topics API generates the browser's top topics for the week.
 
 - adtech1.example is now eligible to receive the "Fitness" and "Crafts" topics, since it observed them on yoga.example and also on knitting.example.
 - adtech1.example is not eligible to receive the "Travel &amp; Transportation" topic for this user as it is not present on any sites the user visited recently that are associated with that topic.
@@ -241,6 +251,8 @@ Learn more here:
 
 ## Next steps
 
-If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. Read the [developer guide](/docs/privacy-sandbox/topics/) for more in-depth resources.
+- If you're an ad tech developer, [experiment and participate](/docs/privacy-sandbox/topics-experiment/) with the Topics API. 
+- Read the [developer guide](/docs/privacy-sandbox/topics/) for more in-depth resources.
+- Check out the [Topics API integration guide](/docs/privacy-sandbox/topics/integration-guide/) for details on specific ad tech use cases.
 
 {% Partial 'privacy-sandbox/topics-feedback.njk' %}

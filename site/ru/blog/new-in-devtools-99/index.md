@@ -49,8 +49,8 @@ tags:
 <!-- Use the new **Reporting API** pane to monitor the reports generated on your page and their status. -->
 Используйте новую панель **Reporting API**, чтобы отслеживать созданные на вашей страницы отчёты и их статус.
 
-<!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
-[Reporting API](https://web.dev/reporting-api/) помогает отслеживать нарушения безопасности на вашем сайте, устаревшие запросы API и многое другое.
+<!-- The [Reporting API](https://web.dev/articles/reporting-api) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+[Reporting API](https://web.dev/articles/reporting-api) помогает отслеживать нарушения безопасности на вашем сайте, устаревшие запросы API и многое другое.
 
 <!-- Open a page which uses the Reporting API (e.g. [demo page](https://reporting-api-demo.glitch.me/)). In the **Application** panel, scroll down to the **Background services** section and select the **Reporting API** pane.  -->
 Откроейте страницу, которая использует Reporting API (например, [демо страница](https://reporting-api-demo.glitch.me/)). Во вкладке **Приложение** (Application) проскрольте до раздела **Фоновые службы** (Background services) и выберите панель **Reporting API**.
@@ -170,8 +170,8 @@ tags:
 <!-- ### Display worker source files in the Sources panel {: #worker-sourcemap } -->
 ### Отображение исходных файлов воркеров во вкладке Источники (Sources) {: #worker-sourcemap }
 
-<!-- [Worker](https://web.dev/workers-overview/) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
-Исходные файлы [воркера](https://web.dev/workers-overview/) (веб-воркера, сервис-воркера) с относительным SourceURL теперь отображаются во вкладке **Источники** (Sources). Ранее исходные файлы воркеров обрабатывались неправильно.
+<!-- [Worker](https://web.dev/articles/workers-overview) (e.g. web worker, service worker) source files with relative SourceURL are now displayed in the **Source** panel. Previously, worker source files were not handled correctly. -->
+Исходные файлы [воркера](https://web.dev/articles/workers-overview) (веб-воркера, сервис-воркера) с относительным SourceURL теперь отображаются во вкладке **Источники** (Sources). Ранее исходные файлы воркеров обрабатывались неправильно.
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/apH5n92bqYWINMQn5VXa.png", alt="Исходный файл сервис-вордекра во вкладке Источники", width="800", height="509" %}
@@ -228,10 +228,10 @@ Chrome 96 анонсировал [ранний доступ](/blog/origin-trials
 - Исправлены неполадки с [редактированием cookies](/docs/devtools/storage/cookies/#edit) в панели **Файлы cookie** (Cookies). ([1290196](https://crbug.com/1290196))
 <!-- - Use `Shift` + `Tab` to select the previous command in the [Command menu](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743)) -->
 - Использование `Shift` + `Tab` для выбора предыдущей команды в [Командном меню (Command menu)](/docs/devtools/command-menu/). ([1278743](https://crbug.com/1278743))
-<!-- - Report [CORS preflight request](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
-- Вывод сообщений о проблемах с [предварительным запросом CORS](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls) во вкладке [Проблемы (Issues)](/docs/devtools/issues/). ([1272445](https://crbug.com/1272445))
-<!-- - Report [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
-- Вывод сообщений о проблемах с [User-Agent Client Hints](https://web.dev/user-agent-client-hints/) во вкладке [Проблемы (Issues)](/docs/devtools/issues/). ([1219359](https://crbug.com/1219359))
+<!-- - Report [CORS preflight request](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) issues in the [Issues](/docs/devtools/issues/) tab. ([1272445](https://crbug.com/1272445)). -->
+- Вывод сообщений о проблемах с [предварительным запросом CORS](https://web.dev/articles/cross-origin-resource-sharing#preflight_requests_for_complex_http_calls) во вкладке [Проблемы (Issues)](/docs/devtools/issues/). ([1272445](https://crbug.com/1272445))
+<!-- - Report [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) issues in the [Issues](/docs/devtools/issues/) tab. ([1219359](https://crbug.com/1219359)). -->
+- Вывод сообщений о проблемах с [User-Agent Client Hints](https://web.dev/articles/user-agent-client-hints) во вкладке [Проблемы (Issues)](/docs/devtools/issues/). ([1219359](https://crbug.com/1219359))
 <!-- - Fixed `Shift` + `Delete` and `Page up` / `Page down` behaviors in the **Sources** and **Console** panel. ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662)) -->
 - Исправлено поведение `Shift` + `Delete` и `Page up` / `Page down` во вкладках **Источники** (Sources) и **Консоль** (Console). ([1278461](https://crbug.com/1278461), [1285662](https://crbug.com/1285662))
 <!-- - Close the breakpoint edit dialog on breakpoint removal in the **Sources** panel. (922513)  -->

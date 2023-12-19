@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Discovery on the Chrome Web Store
 date: 2022-03-21
-#updated: 2022-03-21
+updated: 2023-08-24
 description: >
   An overview of how users find items on the Chrome Web Store, and how our editors select items to
   feature.
@@ -11,7 +11,20 @@ description: >
 We strive to make it easy for users to discover great items on the Chrome Web Store. A positive
 discovery experience means making it simple for users to find the items they know and love, as well
 as new and undiscovered items. From browsing the home page to searching by title, we want users to
-find the best item to fit their needs. Learn more about discovery on the Chrome Web Store below.
+find the best item to fit their needs. 
+
+Items in the store are ranked or featured in order to make it easier for users to find high quality
+content. Ranking is performed by a heuristic that takes into account ratings from users as well as
+usage statistics, such as the number of downloads vs. uninstalls over time.
+
+Other factors include the following:
+
+- The design is pleasant to the eye.
+- The item provides a clear purpose and fills a real user need.
+- The setup and onboarding flow are intuitive.
+- The item is easy to use.
+
+Learn more about discovery on the Chrome Web Store below.
 
 ## Search {: #search }
 
@@ -21,12 +34,31 @@ including metadata from your item's listing page. Making sure that your store li
 complete, accurate, and optimized is important to ensuring your item is discoverable through search.
 Learn more about [crafting a great listing page][best-listing].
 
+{% Aside %}
+If your extension isn't appearing in search results it could be because you recently published your
+extension, it may take a few hours for it to be indexed. Also, check the regions you selected in the
+Distribution tab.
+{% endAside %}
+
+## Featured items and collections
+
+The Chrome Web Store team occasionally selects interesting listings as "Featured" listings. We're not accepting requests to be featured at this point, since that would quickly become unmanageable. Here are a few tips to increase the likelihood that we'll feature your listing:
+
+- Write a great piece of software
+- Make sure your listing looks really nice (nice icon, good descriptions, crisp screenshots and/or videos)
+- Promote your listing independently so that it starts to rise in the rankings
+
+The collections are curated, and are not intended to be comprehensive. A collection is curated using the ranking criteria already listed and may be selected to provide helpful results for certain circumstantial situations, such as work-from-home extensions. Solicitations to be placed in a collection are not accepted.
+
 ## Categories {: #categories }
 
 Categories on the Chrome Web Store organize items based on their main function. Users can browse
-category pages, like Shopping, Productivity, or Fun, to find relevant items to install. To determine
-which category an item will appear under, developers can select one on the Developer Dashboard.
-Categories are only available for extensions at this time.
+categories such as Shopping, Education, or Just for Fun, to find relevant items to install. To
+assign a category, open an item in the Developer Dashboard. You'll find the Category list on the
+Store Listing tab under Product Details.
+
+In mid 2023 the categories changed. For information on choosing a new category, see
+[best practices][chose-category].
 
 ## Extensions home page {: #home-page }
 
@@ -39,8 +71,10 @@ but there is no set checklist developers can follow to guarantee being featured.
 pay to be featured on the home page. The best thing a developer can do to increase their chances of
 being featured on the home page is to build a useful, high-quality extension that is a joy to use.
 
-{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/O4HjVbAcyIvYCxmCRB9H.png", width="800", height="571",
-   class="screenshot", alt="Screenshot of the Chrome Web Store home page." %}
+<figure data-size="full">
+   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/Hl9EIC00L5beXdmY1t07.png", alt="Screenshot of the Chrome Web Store home page.", width="800", height="536" %}
+  <figcaption>Screenshot of the Chrome Web Store home page.</figcaption>
+</figure>
 
 ## Editors' Picks {: #editors-picks }
 
@@ -60,8 +94,10 @@ and off Chrome Web Store. Learn more about badges below.
 
 ### Featured badge {: #featured-badge }
 
-{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/FL4P4tqG0jrhTdLuQ4Jp.png", width="800", height="400",
-   alt="Screenshot of an extension listing that has a featured badge.", class="screenshot" %}
+<figure data-size="full">
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/4C4d7JFnLhi0TFNH372V.png", alt="Screenshot of an extension listing that has a featured badge.", width="800", height="678" %}
+  <figcaption>Screenshot of an extension listing that has a featured badge.</figcaption>
+</figure>
 
 The Featured badge is assigned to extensions that follow our technical best practices and meet a
 high standard of user experience and design. Chrome team members manually evaluate each extension
@@ -75,9 +111,10 @@ before it receives the badge, paying special attention to the following:
 
 ### Established Publisher badge {: #publisher-badge }
 
-{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/vZQXBcGDZaWBWQLPCM95.png", width="800", height="400",
-   alt="Screenshot of an extension listing that has an established publisher badge.",
-   class="screenshot" %}
+<figure data-size="full">
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/iyXfCsc4vSX0BeDNBwu2.png", alt="Screenshot of an extension listing that has an established publisher badge.", width="800", height="180" %}
+  <figcaption>Screenshot of an extension listing that has an established publisher badge.</figcaption>
+</figure>
 
 The Established Publisher badge showcases developers who have verified their identity and
 demonstrated compliance with the developer program policies. This badge is granted automatically to
@@ -106,6 +143,7 @@ receive the Featured badge, the following additional criteria must be met:
 
 [best-listing]: /docs/webstore/best_listing/
 [best-practices]: /docs/webstore/best_practices/
+[chose-category]: /docs/webstore/best_practices/#choose-category-well
 [one-stop-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [user-privacy]: /docs/extensions/mv3/user_privacy/
 [verified]: /docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status

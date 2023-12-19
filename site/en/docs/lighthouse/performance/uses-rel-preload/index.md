@@ -71,7 +71,7 @@ as soon as possible.
   </figcaption>
 </figure>
 
-See also [Preload critical assets to improve loading speed](https://web.dev/preload-critical-assets/)
+See also [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets)
 for more guidance.
 
 ### Browser compatibility
@@ -89,7 +89,7 @@ page.
 
 ### Angular
 
-[Preload routes](https://web.dev/route-preloading-in-angular/) ahead of time to speed up navigation.
+[Preload routes](https://web.dev/articles/route-preloading-in-angular) ahead of time to speed up navigation.
 
 ### Magento
 

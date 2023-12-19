@@ -152,6 +152,18 @@ might impact advertising performance. It's helpful to examine these
 concepts since they underlie several of the Privacy Sandbox APIs.
 {% endAside %}
 
+### Update asides
+
+```md
+{% raw %}{% Aside 'update' %}
+Use the update aside for important updates, such as a name change.
+{% endAside %}{% endraw %}
+```
+
+{% Aside 'update' %}
+The end date has been extended to May 2023.
+{% endAside %}
+
 ## Blockquotes
 Use blockquotes to emphasize a quotation that's important to
 the main idea of a post. (For example, in a case study you might include
@@ -266,7 +278,7 @@ Use `ChromeDate` when you want to refer to a specific milestone date in the Chro
 
 developer.chrome.com uses the same syntax highlighter as web.dev.
 
-See the [Code](https://web.dev/handbook/markup-code/) post for more details.
+See the [Code](https://web.dev/articles/handbook/markup-code) post for more details.
 
 ## Columns
 
@@ -360,6 +372,14 @@ const config = {
 {% endColumn %}
 
 {% endColumns %}
+
+## Comments
+
+If you want comments that are stripped out during rendering, you can place your comment text between {&num; and  &num;}.
+
+```md
+{% raw %}{% your comment here %}{% endraw %}
+```
 
 ## Compare
 
@@ -694,7 +714,7 @@ place the `Img` shortcode snippet inside:
 
 ## Labels
 
-Labels can be used to display a filename associated with a [code](https://web.dev/handbook/markup-code/) snippet.
+Labels can be used to display a filename associated with a [code](https://web.dev/articles/handbook/markup-code) snippet.
 
 ````text
 {% raw %}{% Label %}filename.js:{% endLabel %}{% endraw %}

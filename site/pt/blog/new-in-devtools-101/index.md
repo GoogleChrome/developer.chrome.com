@@ -50,8 +50,8 @@ Issue relacionada: [1257499](https://crbug.com/1257499)
 ## Visualize cascade layers no painel Estilos {: #layer }
 <!-- [Cascade layers](/blog/cascade-layers/) enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications. -->
 [Cascade Layers](/blog/cascade-layers/) permitem um controle mais explícito de seus arquivos CSS para evitar conflitos de especificidade de estilo. Isso é particularmente útil para grandes bases de código, sistemas de design e ao gerenciar estilos de terceiros em aplicativos.
-<!-- In this [example](https://jec.fyi/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
-Neste [exemplo](https://jec.fyi/demo/cascade-layer), existem 3 camadas em cascata definidas: `page`, `component` e `base`. No painel **Estilos**, você pode visualizar cada camada e seus estilos.
+<!-- In this [example](https://jec.fish/demo/cascade-layer), there are 3 cascade layers defined: `page`, `component` and `base`. In the **Styles** pane, you can view each layer and its styles. -->
+Neste [exemplo](https://jec.fish/demo/cascade-layer), existem 3 camadas em cascata definidas: `page`, `component` e `base`. No painel **Estilos**, você pode visualizar cada camada e seus estilos.
 <!-- Click on the layer name to view the layer order. The `page` layer has the highest specificity, therefore the `box` background is green.  -->
 Clique no nome da camada para ver a ordem das camadas. A camada `page` tem a maior especificidade, portanto o fundo `box` é verde.
 
@@ -91,12 +91,12 @@ Issues relacionadas: [1296855](https://crbug.com/1296855), [https://crbug.com/13
 ## Destaques diversos {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
 Estas são algumas correções notáveis nesta versão:
-<!-- - The [Back/forward cache](/blog/new-in-devtools-98/#bfcache) now displays the extension ID which blocked [bfcache](https://web.dev/bfcache/) when present.( [1284548](https://crbug.com/1284548)) -->
+<!-- - The [Back/forward cache](/blog/new-in-devtools-98/#bfcache) now displays the extension ID which blocked [bfcache](https://web.dev/articles/bfcache) when present.( [1284548](https://crbug.com/1284548)) -->
 <!-- - Fixed autocompletion support for array-like objects, CSS class names, `map.get` and HTML tags. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983](https://crbug.com/1296983)) -->
 <!-- - Fixed incorrect highlights when double-clicking on words and undoing autocomplete. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667)) -->
 <!-- - Fixed comment keyboard shortcut in the **Sources** panel. ([1296535](https://crbug.com/1296535)) -->
 <!-- - Re-enable support for using **Alt** (Options) key for multi selection in the **Sources** panel. ([1304070](https://crbug.com/1304070)) -->
-- O [cache de retorno/avanço](/blog/new-in-devtools-98/#bfcache) agora exibe o ID da extensão que bloqueou o [bfcache](https://web.dev/bfcache/) quando presente.([1284548](https://crbug.com/1284548))
+- O [cache de retorno/avanço](/blog/new-in-devtools-98/#bfcache) agora exibe o ID da extensão que bloqueou o [bfcache](https://web.dev/articles/bfcache) quando presente.([1284548](https://crbug.com/1284548))
 - Corrigido suporte de autocompletar para objetos do tipo array, nomes de classe CSS, `map.get` e tags HTML. ([1297101](https://crbug.com/1297101), [1297491](https://crbug.com/1297491), [1293807](https://crbug.com/1293807), [1296983]( https://crbug.com/1296983))
 - Corrigido destaques incorretos ao clicar duas vezes nas palavras e desfazer o preenchimento automático. ([1298437](https://crbug.com/1298437), [1298667](https://crbug.com/1298667))
 - Correção do atalho de teclado para comentários no painel **Fontes**. ([1296535](https://crbug.com/1296535))
@@ -112,8 +112,8 @@ Para ativar o experimento, ative a caixa de seleção **Usar painel Lighthouse c
 
 <!-- Apart from the existing **navigation** mode, the **Lighthouse** panel now support two more modes on measuring user flows - **timespan** and **snapshot**. -->
 Além do modo de **navegação** existente, o painel **Lighthouse** agora oferece suporte a mais dois modos de medição de fluxos de usuários - **timespan** e **snapshot**.
-<!-- For example, you can use the **timespan** reports to analyze user interactions. Open this [demo](https://coffee-cart.netlify.app/) page. Select the **Timespan** mode and click on **Start timespan**. On the page, click on a coffee and end the timespan. Read the report to find out the [Total Blocking Time](https://web.dev/tbt/) and [Cumulative Layout Shift](https://web.dev/cls/) that were caused by the interaction. -->
-Por exemplo, você pode usar os relatórios de **timespan** para analisar as interações do usuário. Abra esta página [demo](https://coffee-cart.netlify.app/). Selecione o modo **Timespan** e clique em **Começar timespan**. Na página, clique em um café e encerre o intervalo de tempo. Leia o relatório para descobrir o [Total Blocking Time](https://web.dev/tbt/) e [Cumulative Layout Shift](https://web.dev/cls/) que foram causados pela interação.
+<!-- For example, you can use the **timespan** reports to analyze user interactions. Open this [demo](https://coffee-cart.netlify.app/) page. Select the **Timespan** mode and click on **Start timespan**. On the page, click on a coffee and end the timespan. Read the report to find out the [Total Blocking Time](https://web.dev/articles/tbt) and [Cumulative Layout Shift](https://web.dev/articles/cls) that were caused by the interaction. -->
+Por exemplo, você pode usar os relatórios de **timespan** para analisar as interações do usuário. Abra esta página [demo](https://coffee-cart.netlify.app/). Selecione o modo **Timespan** e clique em **Começar timespan**. Na página, clique em um café e encerre o intervalo de tempo. Leia o relatório para descobrir o [Total Blocking Time](https://web.dev/articles/tbt) e [Cumulative Layout Shift](https://web.dev/articles/cls) que foram causados pela interação.
 
 <!-- Each mode has its own unique use cases, benefits, and limitations. Please refer to the [Lighthouse documentation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) for more information. -->
 Cada modo tem seus próprios casos de uso, benefícios e limitações. Consulte a [documentação do Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/master/docs/user-flows.md) para obter mais informações.

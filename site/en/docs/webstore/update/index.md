@@ -93,7 +93,7 @@ minimal impact.
 {% Aside %}
 
 This is only available for new versions of an **already-published** item with over **10,000 seven-day
-active users**
+active users. The section does not appear until a new draft has been uploaded.**
 
 {% endAside %}
 
@@ -180,5 +180,5 @@ Changing the %rollout does *not* trigger a new review.
 [upgrade-item]: #upgrade-your-item
 [visibility]: /docs/webstore/cws-dashboard-distribution#setting-the-visibility
 [visibility-private]: /docs/webstore/cws-dashboard-distribution/#private-visibility-trusted-testers
-[test-production-extension]: /docs/webstore/spam-faq/#test-version
+[test-production-extension]: /docs/webstore/program-policies/spam-faq/#test-version
 

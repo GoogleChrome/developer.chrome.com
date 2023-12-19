@@ -3,12 +3,14 @@ layout: "layouts/doc-post.njk"
 title: "What are themes?"
 seoTitle: "Chrome Extensions: What are themes?"
 date: 2012-09-18
-updated: 2022-07-14
+updated: 2023-09-29
 description: Guidelines on how to create a theme.
 ---
 
 A _theme_ is a special kind of extension that changes the way the browser looks. Themes are
 [packaged][1] like regular extensions, but they don't contain JavaScript or HTML code.
+
+Themes are uploaded to the Chrome Web Store using the [same procedure as an extension](/docs/webstore/). During upload, you'll be asked to select a category. You'll find a list of theme categories in Chrome Web Store documentation [under Best practices](/docs/webstore/best_practices/#choose-theme-category-well).
 
 You can find and try a bunch of themes at the [Chrome Web Store][2].
 
@@ -93,7 +95,7 @@ You can alternatively use `-1.0` for any of the HSL values to specify _no change
 [1]: /docs/extensions/mv3/linux_hosting/#packaging
 [2]: https://chrome.google.com/webstore/category/themes
 [3]: /docs/extensions/mv3/manifest/
-[4]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kOverwritableColorTable
+[4]: https://source.chromium.org/chromium/chromium/src/+/main:chrome/browser/themes/browser_theme_pack.cc;l=222
 [5]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kPersistingImages$
 [6]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kDisplayProperties$
 [7]: https://source.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kTintTable$

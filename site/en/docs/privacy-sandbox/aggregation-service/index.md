@@ -8,6 +8,7 @@ description: >
   Deploy and manage this service to produce summary reports for the
   Attribution Reporting API or the Private Aggregation API.
 date: 2022-11-29
+updated: 2023-10-09
 authors:
   - alexandrawhite
 ---
@@ -20,14 +21,18 @@ create a [summary report](/docs/privacy-sandbox/summary-report/).
 
 ## Implementation status
 
-* The [Aggregation Service proposal](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md)
-  is available for discussion.
+* The [Aggregation Service](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md)
+  has [now moved to general availability](/blog/privacy-sandbox-launch/).
 * The [Aggregation Service can be tested](#test) with the
-  Attribution Reporting API and the Private Aggegration API for FLEDGE and Shared Storage.
+  Attribution Reporting API and the Private Aggegration API for Protected Audience API and Shared Storage.
 
-The proposal outlines
+The explainer outlines
 [key terms](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md#key-terms),
 useful for understanding the Aggregation Service.
+
+### Availability
+
+{% Partial 'privacy-sandbox/timeline/aggregation-service.njk' %}
 
 ## Secure data processing
 
@@ -135,14 +140,14 @@ data by a scaling factor to reduce the impact of noise.
 
 To understand how noise is added, your controls, and the impact on your
 reports, refer to the
-[Contribution section of the Attribution Reporting strategy guide](https://docs.google.com/document/d/1bU0a_njpDcRd9vDR0AJjwJjrf3Or8vAzyfuK8JZDEfo/edit#heading=h.683u7t2q1xk2). 
+[Contribution budget](/docs/privacy-sandbox/attribution-reporting/contribution-budget/) and [Scale up to contribution budget](/docs/privacy-sandbox/attribution-reporting/working-with-noise/#scale-up-to-contribution-budget) in [Working with noise](/docs/privacy-sandbox/attribution-reporting/working-with-noise/).
 
 ## Generate summary reports
 
 Summary report generation is dependent on your API usage. Learn more about
 generating summary reports for the
-[Private Aggregation API](/docs/privacy-sandbox/summary-reports#private-aggregation) 
-and the [Attribution Reporting API](/docs/privacy-sandbox/summary-reports#attribution-reporting).
+[Private Aggregation API](/docs/privacy-sandbox/private-aggregation/) 
+and the [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting/).
 
 ## Test the Aggregation Service {: #test}
 
@@ -151,25 +156,13 @@ We recommend reading the corresponding experiment and participate guide for the 
 * [Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-experiment/)
 * [Private Aggregation API](/docs/privacy-sandbox/private-aggregation-experiment/)
 
-### Local testing
+To test the Aggregation Service on AWS, see [these instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md#test-on-aws-with-support-for-encrypted-reports). 
 
-We've created a local testing tool to process aggregatable reports for Attribution Reporting and the Private Aggregation API. [Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md).
-
-
-### Test on AWS
-
-To test the Aggregation Service on AWS, [register for the origin trial](/origintrials/#/view_trial/771241436187197441) and complete the
-[onboarding form](https://forms.gle/EHoecersGKhpcLPNA).
-Once submitted, we'll contact you to verify your information and send the remaining instructions.
-
-To test on AWS, install [Terraform](https://www.terraform.io/) and the latest
-[AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-
-[Read the instructions](https://github.com/privacysandbox/aggregation-service/blob/main/README.md#test-on-aws-with-support-for-encrypted-reports).
+A [local testing tool](https://github.com/privacysandbox/aggregation-service/blob/main/README.md) is also available to process aggregatable reports for Attribution Reporting and the Private Aggregation API.
 
 ## Engage and share feedback
 
-The Aggregation Service is a key piece of the Privacy Sandbox measurement proposals. Like other Privacy Sandbox proposals, this is documented and discussed publicly on GitHub.
+The Aggregation Service is a key piece of the Privacy Sandbox measurement APIs. Like other Privacy Sandbox APIs, this is documented and discussed publicly on GitHub.
   
-* **Github**: Read the [proposal](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md), [raise questions and participate in the discussion](https://github.com/WICG/attribution-reporting-api/issues). Also take a look at the [Aggregation Service implementation](https://github.com/privacysandbox/aggregation-service) and provide [feedback on the implementation](https://github.com/privacysandbox/aggregation-service/issues).
+* **Github**: Read the [explainer](https://github.com/WICG/attribution-reporting-api/blob/main/AGGREGATION_SERVICE_TEE.md), [raise questions and participate in the discussion](https://github.com/WICG/attribution-reporting-api/issues). Also take a look at the [Aggregation Service implementation](https://github.com/privacysandbox/aggregation-service) and provide [feedback on the implementation](https://github.com/privacysandbox/aggregation-service/issues).
 * **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).

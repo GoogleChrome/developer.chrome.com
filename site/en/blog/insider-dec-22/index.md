@@ -13,7 +13,7 @@ authors:
 
 tags:
   - insider
- 
+
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/8d0zCSMHxpgkFZTmXCGk.jpg'
 
 thumbnail: 'image/kheDArv5csY6rvQUJDbWRscckLr1/kn68o6p4dsShB0tAI3Jc.png'
@@ -26,9 +26,9 @@ We started the [Chrome Dev Insider](/insider/) series this year to bring you clo
 
 I couldn't think of a better person to talk about this than [Parisa Tabriz](https://twitter.com/laparisa), our VP of Engineering and Product. Parisa took the reins of our work on both the browser and the open web platform, earlier this year. I hope you enjoy this interview as much as I did.
 
-_**Let's start with your self-appointed "Security Princess" tag. What's the story?**_  
+_**Let's start with your self-appointed "Security Princess" tag. What's the story?**_
 
-**Parisa:** I actually started my career in cybersecurity because a web application I built in college got hacked and defaced by spammers, and I was curious about what happened. (What happened was SQL injection since I hadn't sanitized untrusted input!) I joined a security-focused student club to learn more and ended up getting more experience with practical hacking and system security, while also meeting fellow students that became close friends. 
+**Parisa:** I actually started my career in cybersecurity because a web application I built in college got hacked and defaced by spammers, and I was curious about what happened. (What happened was SQL injection since I hadn't sanitized untrusted input!) I joined a security-focused student club to learn more and ended up getting more experience with practical hacking and system security, while also meeting fellow students that became close friends.
 
 I joined Google back in 2007 as a "hired hacker" to apply some of my security experience on software products like Search, Gmail, and Youtube. I adopted the self-appointed "Security Princess" title and put it on a business card before going to an industry conference in Tokyo, Japan, and it stuck!
 
@@ -46,7 +46,7 @@ Figuring all this out will require close collaboration with designers, researche
 
 _**Talking about developers, how do you see your team's role in 2023 and beyond, particularly for developers and the web ecosystem?**_
 
-**Parisa:** As someone that got into tech via web development over 20 years ago, it's amazing to see how the platform has advanced and what the web enables today. The web has always been a great community of passionate developers and creators, so I'm excited to see how deeply our platform teams continue to connect with and support the developer community. 
+**Parisa:** As someone that got into tech via web development over 20 years ago, it's amazing to see how the platform has advanced and what the web enables today. The web has always been a great community of passionate developers and creators, so I'm excited to see how deeply our platform teams continue to connect with and support the developer community.
 
 I talked about the opportunity to deliver personalized and private experiences to users and Chrome; a user agent should provide developers with the platform and tools to achieve that. Developers from around the world have been building Chrome Extensions that make browsing easier, more productive, and more personalized, and I continue to be amazed at what our extension developer community creates. We're committed to continually working with and listening to developers to improve our extension platform and ecosystem, so users and enterprises can install extensions with confidence. We're currently working on a major migration to [Manifest v3](/docs/extensions/mv3/intro/), which increases the security, privacy, and performance of extensions, and represents one of the most significant shifts in the extensions platform since it launched a decade ago.
 
@@ -54,11 +54,11 @@ In the open web, we've continued to be strong believers and active participants 
 
 _**I'm very excited about projects like Compat, Interop and Project Aurora that are having a great impact on developer productivity. Ok, let's end on a high. What were the biggest highlights of 2022 for you?**_
 
-**Parisa:** Yes! For me, projects like [Interop](https://wpt.fyi/interop-2022) are critical in making the web the easiest platform to build on. Our partnerships with ecosystem players like Igalia and other major browser vendors have been the most meaningful in the past couple years, and I'm very excited about the direction we're all collectively taking to reduce development friction for web developers. 
+**Parisa:** Yes! For me, projects like [Interop](https://wpt.fyi/interop-2022) are critical in making the web the easiest platform to build on. Our partnerships with ecosystem players like Igalia and other major browser vendors have been the most meaningful in the past couple years, and I'm very excited about the direction we're all collectively taking to reduce development friction for web developers.
 
 I'm also particularly excited about us by improving the browser's capabilities across speed, safety and stability. From improving [Chrome's speed](https://blog.chromium.org/search/label/the%20fast%20and%20the%20curious), to working with the community on solutions like [FedCM](/en/docs/privacy-sandbox/fedcm/) and [Passkeys](https://blog.google/technology/safety-security/one-step-closer-to-a-passwordless-future/) for better, safer identity management, there's so much great stuff happening all around and our hope is that we enable developers to achieve more by doing less.
 
-Finally, I'm amazed at the pace of innovation happening in computing generally, and am particularly excited about Chrome using [on-device machine learning](https://blog.google/products/chrome/building-a-more-helpful-browser-with-machine-learning) in new ways to create a smarter, more adaptive browsing experience that keeps users safer, translates web pages instantly, and finds information more quickly, and what we can enable for developers by bringing [GPU Compute to the web](https://web.dev/gpu-compute/).
+Finally, I'm amazed at the pace of innovation happening in computing generally, and am particularly excited about Chrome using [on-device machine learning](https://blog.google/products/chrome/building-a-more-helpful-browser-with-machine-learning) in new ways to create a smarter, more adaptive browsing experience that keeps users safer, translates web pages instantly, and finds information more quickly, and what we can enable for developers by bringing [GPU Compute to the web](https://web.dev/articles/gpu-compute).
 
 Our focus in 2022 was to **make the web work better for everyone**. And for me, it's going to be our mission for the years to come.
 

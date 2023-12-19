@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
 date: 2020-11-16
-updated: 2023-04-21
+updated: 2023-10-05
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
@@ -16,6 +16,38 @@ violation. In order to make it easier to reference specific violations, the Chro
 each violation a human-readable ID. These IDs are composed of two words: a color and an element. For
 example, Yellow Magnesium corresponds to the general class of errors where the extension does not
 behave as expected.
+
+## Additional requirements for Manifest V3 {: #additional-requirements-for-manifest-v3 }
+
+Corresponds to notification ID: `Blue Argon`
+
+The intent of this policy is to ensure that Manifest V3 extensions are not including remotely hosted code.
+
+### Common reasons for rejection
+
+* Including a `<script>` tag that points to a resource that is not within the extension's package.
+
+* Using JavaScript's `eval()`` method or other mechanisms to execute a string fetched from a remote source.
+
+* Building an interpreter to run complex commands fetched from a remote source, even if those commands are fetched as data.
+
+### How can you rectify this? {: #how-can-you-rectify-this_23 }
+
+* Double check all code for references to external JavaScript files, which should be replaced with internal extension files.
+
+* Review the Manifest V3 migration guide [Improve extension security](/docs/extensions/migrating/improve-security/) for a walkthrough on alternatives to execution of arbitrary strings and remotely hosted code.
+
+### Relevant policy
+
+This section addresses extensions that are in violation of the following section of the Chrome Web Store [developer program policies](/docs/webstore/program-policies/mv3-requirements/):
+
+{% Aside %}
+
+**Additional Requirements for Manifest V3**
+
+Extensions using Manifest V3 must meet additional requirements related to the extension's code. Specifically, the full functionality of an extension must be easily discernible from its submitted code. This means that the logic of how each extension operates should be self-contained. The extension may reference and load data and other information sources that are external to the extension, but these external resources must not contain any logic.
+
+{% endAside %}
 
 ## Functionality not working {: #does-not-work }
 
@@ -318,8 +350,9 @@ that users are aware of what data is collected, and how it is collected, used, a
 
 - Add a valid, working and accessible link to your privacy policy [in the designated
   field][docs-publish-setup].
-    - Visit the Chrome Web Store item listing for your extension to verify that a privacy policy
-      link appears in the "Additional Information" box and that the link works as expected.
+    - Visit the Privacy tab for your extension to verify that a privacy policy link appears
+      in the "Privacy Policy" box (located at the bottom of the Privacy tab) and that the
+      link works as expected.
 - Ensure the privacy policy talks about data collection, usage, handling, and sharing.
 - If you have done the above but are still encountering review issues, [contact developer
   support][dev-support] to request clarification or appeal the verdict.
@@ -1195,7 +1228,7 @@ catalog of the Chrome Web Store. Some examples of common violations include:
 - Extensions with functionality that is not directly provided by the extension (e.g. file
   converters which only link to other file conversion services).
 - Click-baity template extensions that only vary slightly in functionality with negligible
-  utility (e.g. a "Word of the Day" extension and a "Daily Inspirational Quotes" extension, 
+  utility (e.g. a "Word of the Day" extension and a "Daily Inspirational Quotes" extension,
   which use the same general extension template).
 {% endAside %}
 
@@ -1277,9 +1310,9 @@ Store
 [docs-override-page]: /docs/extensions/mv3/override/
 [docs-override-settings]: /docs/extensions/mv3/settings_override/
 [docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
-[docs-publish-setup]: /docs/webstore/publish/#setup-a-developer-account
+[docs-publish-setup]: /docs/webstore/cws-dashboard-privacy/#set-privacy-policy
 [docs-service-workers]: /docs/extensions/mv3/service_workers/
-[docs-single-purpose-faq]: /docs/extensions/mv3/single_purpose/
+[docs-single-purpose-faq]: /docs/webstore/program-policies/quality-guidelines-faq
 [lie-fi]: https://web.dev/performance-poor-connectivity/#what-is-lie-fi
 [mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content
 [mdn-cookie-store]: https://developer.mozilla.org/docs/Web/API/Cookie_Store_API

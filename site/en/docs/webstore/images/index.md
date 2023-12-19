@@ -279,7 +279,7 @@ To replace a promotional image, hover over the image to bring up the remove imag
 Use screenshots to convey capabilities, the look and feel, and experience of your extension to users. You must provide at **least 1**—and preferably the maximum allowed 5—screenshots of your extension to be displayed in the extension's store listing. Screenshots should demonstrate the actual user experience, focusing on the core features and content so users can anticipate what the extension's experience will be like.
 
 If your extension supports multiple locales, you can provide
-locale-specific screenshots as described in [Internationalizing Your Extension][internationalize].
+locale-specific screenshots as described in [Localize your store listing][internationalize].
 
 When you edit your extensions's listing, mousing over a screenshot's thumbnail brings up controls that let
 you delete the screenshot or change its position.
@@ -312,7 +312,7 @@ Next, read [Submit your extension for publishing][submit-item].
 [icon-perspective]: #icon-perspective
 [icon-size]: #icon-size
 [images]: #promo
-[internationalize]: /docs/webstore/i18n
+[internationalize]: /docs/webstore/cws-dashboard-listing/#localize-your-listing
 [screenshots]: #screenshots
 [submit-item]: /docs/webstore/publish/#submit-your-item-for-publishing
 [zip-file]: /docs/webstore/publish#create-your-items-zip-file

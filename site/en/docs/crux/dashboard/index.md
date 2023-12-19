@@ -37,7 +37,7 @@ tags:
   - crux
 ---
 
-The CrUX Dashboard is a [Looker Studio](https://cloud.google.com/looker-studio) (formerly Data Studio) dashboard that links to the raw origin-level CrUX data on [BigQuery](/docs/crux/bigquery/) and the visualizes the data for you. It eliminates the need for users of the dashboard to write any queries or generate any charts. Everything is built for you; all you need is to provide an origin and the dashboard will be generated for you.
+The CrUX Dashboard is a [Looker Studio](https://cloud.google.com/looker-studio) (formerly Data Studio) dashboard that links to the raw origin-level CrUX data on [BigQuery](/docs/crux/bigquery/) and then visualizes the data for you. It eliminates the need for users of the dashboard to write any queries or generate any charts. Everything is built for you; all you need is to provide an origin and the dashboard will be generated for you.
 
 ## Accessing the CrUX Dashboard
 
@@ -150,7 +150,7 @@ The monthly datasets are released on the second Tuesday of every month. For exam
 
 ### Core Web Vitals overview
 
-The first page is an overview of the origin's monthly [Core Web Vitals](https://web.dev/vitals/) performance. These are the most important UX metrics that Google recommends you focus on.
+The first page is an overview of the origin's monthly [Core Web Vitals](https://web.dev/articles/vitals) performance. These are the most important UX metrics that Google recommends you focus on.
 
 {% Img src="image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/S9mRhx2J0LD2GQONzfqv.png", alt="CrUX Dashboard Core Web Vitals overview", width="800", height="918" %}
 
@@ -164,7 +164,7 @@ After the Core Web Vitals page, you'll find standalone pages for all [metrics](/
 
 Atop each page is the **Device** filter, which you can use to restrict the form factors included in the experience data. For example, you can drill down specifically into phone experiences. This setting persists across pages.
 
-The primary visualizations on these pages are the monthly distributions of experiences categorized as "Good", "Needs Improvement", and "Poor". The color-coded legend below the chart indicates the range of experiences included in the category. For example, in the screenshot above, you can see the percent of "good" [Largest Contentful Paint](https://web.dev/lcp/#what-is-a-good-lcp-score) (LCP) experiences fluctuating slightly and getting slightly worse in recent months.
+The primary visualizations on these pages are the monthly distributions of experiences categorized as "Good", "Needs Improvement", and "Poor". The color-coded legend below the chart indicates the range of experiences included in the category. For example, in the screenshot above, you can see the percent of "good" [Largest Contentful Paint](https://web.dev/articles/lcp#what_is_a_good_lcp_score) (LCP) experiences fluctuating slightly and getting slightly worse in recent months.
 
 The most recent month's percentages of "good" and "poor" experiences are shown above the chart along with an indicator of the percent difference from the previous month. For this origin, "good" LCP experiences fell by 0.8% to 83.25% month-over-month, the p75 number had 0 movement and stayed at 1,500 month-over-month, and the "poor" LCP experiences increased by 3.6% (shown in red as an increase here is bad) to 7.42%. Note the percentage movements are actual percentage movements, and not percentage point movements—for example 83.93% to 83.25% is a 0.68 percentage point movement, or 0.8% decrease of the 83.93% previous total.
 
@@ -198,7 +198,7 @@ Similarly, the ECT distribution page shows you the breakdown of 4G, 3G, 2G, slow
 Effective connection types are considered _effective_ because they're based on bandwidth measurements on users' devices, and don't imply any particular technology used. For example, a desktop user on fast Wi-Fi may be labelled as 4G while a slower mobile connection might be labelled as 2G.
 {% endAside %}
 
-The distributions for these dimensions are calculated using segments of the [First Contentful Paint](https://web.dev/fcp/) (FCP) histogram data.
+The distributions for these dimensions are calculated using segments of the [First Contentful Paint](https://web.dev/articles/fcp) (FCP) histogram data.
 
 ## FAQ
 

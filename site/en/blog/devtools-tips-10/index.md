@@ -16,7 +16,7 @@ tags:
   - devtools-tips
 ---
 
-[User preference media features](https://web.dev/new-responsive/#responsive-to-the-user) give you the ability to style web experiences that align with the user's own specific preferences and needs. In other words, preference media features allow you to adapt your user experiences to your user's expectations.
+[User preference media features](https://web.dev/articles/new-responsive#responsive_to_the_user) give you the ability to style web experiences that align with the user's own specific preferences and needs. In other words, preference media features allow you to adapt your user experiences to your user's expectations.
 
 {% YouTube id='gOkM1L6azEI' %}
 

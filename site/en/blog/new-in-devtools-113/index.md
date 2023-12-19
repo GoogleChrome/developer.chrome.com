@@ -16,10 +16,7 @@ tags:
 <!--image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gctGASDKBFTUtOQqVq2H.png  -->
 
 {% Partial 'devtools/banner.md' %}
-
-*There is no 'What's new in DevTools' video for this release, but you can watch this quick recap of the recent features.*
-
-{% YouTube id='CrSmjooOEiE' %}
+{% YouTube id='e8tl_yp5BQg' %}
 
 <!-- $contentStart -->
 
@@ -31,7 +28,7 @@ With response header overrides, you can locally prototype fixes for various head
 
 - [Cross-Origin Resource Sharing (CORS) Headers](https://developer.mozilla.org/docs/Web/HTTP/CORS)
 - [Permissions-Policy Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers/Permissions-Policy)
-- [Cross-Origin Isolation Headers](https://web.dev/coop-coep/)
+- [Cross-Origin Isolation Headers](https://web.dev/articles/coop-coep)
 
 To override a header, navigate to **Network** > **Headers** > **Response Headers**, hover over a header's value, click {% Img src="image/NJdAV9UgKuN8AhoaPBquL7giZQo1/k3WKQOAItcJ2pliOyD47.svg", alt="Edit.", width="24", height="24" %} and edit it.
 

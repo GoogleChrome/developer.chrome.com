@@ -10,13 +10,22 @@ sections:
     - url: /blog/introducing-aurora
       title: Why is Aurora important?
       description: Best practices are constantly evolving. The Aurora team helps bake the latest best practices into web frameworks, so framework developers get the benefits with minimal effort. 
-    - url: /blog/introducing-aurora
+    - url: /blog/aurora-update-2023
       title: What is Aurora focusing on now?
       description: In 2023, the Aurora team is focusing on improving Core Web Vitals for applications using web frameworks. We are currently partnering with Next.js, Angular, and Nuxt to ship performance features.
-  projects:
+  blogs:
+    - url: /blog/aurora-update-2023/ 
+      title: "What's New with Aurora?"
+      description: "Check out our recent project releases, as well as a roadmap for 2023 and beyond."
     - url: /blog/framework-tools-font-fallback/ 
       title: "Framework tools for font fallbacks"
       description: "Master how to adjust the size of your font fallbacks to prevent Cumulative Layout Shift (CLS), using tools in Next.js, Nuxt, Vite, and Capsize."
+    - url: /blog/font-fallbacks
+      title: "Improved font fallbacks"
+      description: "Dive deep into the methodology behind generating font fallbacks and the size-adjust, ascent-override, descent-override, and line-gap-override APIs. "
+    - url: /blog/inside-the-container-query-polyfill/ 
+      title: "Inside the container query polyfill"
+      description: "Take a peek inside how the polyfill works, the challenges it overcomes, and the best practices when using it to provide a great user experience."
     - url: /blog/angular-image-directive/ 
       title: "Optimizing Images with the Angular Image Directive"
       description: "Learn how the Angular image directive can improve Largest Contentful Paint (LCP), now available from version 14."
@@ -24,6 +33,9 @@ sections:
       title: "Optimizing third-party script loading in Next.js"
       description: "Understand the vision behind the Next.js Script component—a built-in solution to optimize the loading of third-party scripts."
   videos:
+    - url: https://www.youtube.com/watch?v=UGiG6u5UvUQ
+      title: "Fireside Chat: Chrome Aurora"
+      description: "useReactNYC 2023: Fireside Chat with Houssein Djirdeh from the Chrome Aurora team. "
     - url: https://www.youtube.com/watch?v=9Yy9BaRr5Fs 
       title: "Chrome Aurora"
       description: "Infobip Shift 2022: Learn how the Chrome Aurora team is working to advance the web framework ecosystem by collaborating with Next.js, Nuxt, and Angular. "
@@ -81,9 +93,9 @@ sections:
 }}
 
 {{ landingSection(
-  'Recent Projects',
+  'Recent Blog Posts',
   'Read about our 2022-2023 focus areas in more detail.',
-  sections.projects,
+  sections.blogs,
   'green',
   'top-3',
   true,

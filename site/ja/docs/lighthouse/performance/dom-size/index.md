@@ -49,11 +49,11 @@ Lighthouse は DOM ツリーのあるページに以下のようなフラグを�
 
 ### Angular
 
-大規模なリストをレンダリングする場合は、Component Dev Kit（CDK）の[仮想スクロール](https://web.dev/virtualize-lists-with-angular-cdk/)を使用してください。
+大規模なリストをレンダリングする場合は、Component Dev Kit（CDK）の[仮想スクロール](https://web.dev/articles/virtualize-lists-with-angular-cdk)を使用してください。
 
 ### React
 
-- ページで多数の反復要素をレンダリングしている場合は、[`react-window`](https://web.dev/virtualize-long-lists-react-window/) などの「ウィンドウイング」ライブラリを使用して、作成される DOM の数を最小限に抑えてください。
+- ページで多数の反復要素をレンダリングしている場合は、[`react-window`](https://web.dev/articles/virtualize-long-lists-react-window) などの「ウィンドウイング」ライブラリを使用して、作成される DOM の数を最小限に抑えてください。
 - [`shouldComponentUpdate`](https://reactjs.org/docs/optimizing-performance.html#shouldcomponentupdate-in-action)、[`PureComponent`](https://reactjs.org/docs/react-api.html#reactpurecomponent)、または [`React.memo`](https://reactjs.org/docs/react-api.html#reactmemo) を使って、不要な再レンダリングを最小限に抑えてください。
 - ランタイムのパフォーマンスを改善するために `Effect` フックを使用している場合は、特定の依存関係が変更するまでのみ[効果をスキップ](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects)してください。
 

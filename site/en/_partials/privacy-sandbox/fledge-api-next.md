@@ -5,10 +5,10 @@ works for everyone.
 
 ### Discuss the API
 
-Like other Privacy Sandbox proposals, this API is documented and
-[discussed publicly](/docs/privacy-sandbox/fledge/#engage).
+Like other Privacy Sandbox APIs, this API is documented and
+[discussed publicly](/docs/privacy-sandbox/protected-audience/#engage).
 
 ### Experiment with the API
 
-You can [experiment and participate](/docs/privacy-sandbox/fledge-experiment/)
-in conversation about the FLEDGE API.
+You can [experiment and participate](/docs/privacy-sandbox/protected-audience-experiment/)
+in conversation about the Protected Audience API.

@@ -6,10 +6,13 @@ subhead: >
 description: >
  Updates and enhancements to the design and implementation of the API.
 date: 2023-01-24
+updated: 2023-11-21
 authors:
  - leeronisrael
  - joeytrotz
 ---
+
+{% Partial 'privacy-sandbox/ot-end.njk' %}
 
 {% Aside %}
 
@@ -21,6 +24,45 @@ For technical resources, see the developer guides:
 For a non-technical introduction, see the [Topics overview on privacysandbox.com](https://privacysandbox.com/intl/en_us/proposals/topics/).
 
 {% endAside %}
+
+
+## New top topics selection and launching the updated classifier and taxonomy  
+
+**November 21, 2023**  
+
+### Taxonomy
+The [updated taxonomy](/blog/topics-enhancements/#taxonomy) is [ramping up](https://groups.google.com/a/chromium.org/g/topics-api-announce/c/iNYk69wKnJs/m/sSWAr6NPAgAJ) to general availability. Testers should have begun to see topics from the new taxonomy on the vast majority of traffic by mid-November 2023. 
+
+### Classifier
+Along with the updated taxonomy, an updated hostname classifier is ramping up to general availability. This includes a larger override list—50k rather than 10k websites—and an enhanced classifier. Together, these two changes improve the performance of Topics API classification. 
+
+### Top topics selection
+In response to [feedback](https://github.com/patcg-individual-drafts/topics/issues/42) that the current top topic selection often results in topics that are less useful for ad relevance (such as "News" or "Arts & Entertainment") Chrome is introducing an enhancement to the method for selecting top topics. This updated approach considers the utility of topics following this approach:
+
+1. At the end of each epoch, Chrome converts participating hostnames from the user’s browsing history into topics.
+1. Topics are sorted first by bucket, and then by frequency. That is, if two topics are in the same bucket but have different frequency, the higher frequency topic is sorted higher.
+1. Lastly, Chrome selects the top five as the user’s top topics for that epoch, which are eligible to be shared with callers.   
+
+Chrome will be rolling out this update in Q4 2023.  There are no changes required for testers that have implemented Topics.  See [this post](/blog/topics-enhancements) for more information.
+
+## Shipping the Privacy Sandbox relevance and measurement APIs
+
+**August 9, 2023**
+
+We have begun the [ramp up for the Ads Measurement and Relevance APIs, and testers can expect to see traffic levels increase over the next few days](https://groups.google.com/a/chromium.org/g/topics-api-announce/c/6G8SVRWijy4/m/MndCUVf4AgAJ).
+For more information, see [Shipping the Privacy Sandbox relevance and measurement APIs](/blog/privacy-sandbox-launch/).
+
+## New taxonomy and expanding support for headers
+
+**June 15, 2023**
+
+**Taxonomy** - The Topics taxonomy has been [expanded and improved](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v2.md). We've added 280 commercially focused categories, like "Athletic Apparel", "Mattresses", and "Luxury Travel," while removing 160 categories including topics such as "Civil Engineering" and "Equestrian". Chrome will begin using the new taxonomy later this year, but you can take a look and provide feedback.
+
+**Request headers** - The initial topics proposal required developers to call `document.browsingTopics()` from a cross-origin iframe. We received feedback that this requirement would introduce latency that could pose challenges in digital ad auctions and potentially slow down web pages. Last year, we announced support for Topics via headers, in requests initiated via fetch and (temporarily) XHR. Recently, we announced that we plan to extend support to request headers for iframes that include a `browsingtopics` attribute. These changes will improve the performance of Topics, and limit potential negative impacts on developers and users.
+
+**Observing ancestor topics** - Chrome has updated the definition of "observation" to include all ancestors of a given topic. Now, if a caller observes `/Shopping/Apparel/Footwear/Boots`, they will observe Boots, but also Shopping, Apparel, and Footwear. Previously, in order for a caller to observe Shopping, Apparel, or Footwear, a caller must have observed a user visit a page with that topic.
+
+For more information on these and upcoming changes, refer to [Enhancements to the Topics API](/blog/topics-enhancements/).
 
 ## Chrome’s commitment to Topics
 

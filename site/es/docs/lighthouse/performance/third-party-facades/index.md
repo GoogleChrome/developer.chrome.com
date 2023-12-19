@@ -7,7 +7,7 @@ description: |2
 date: 2020-12-01
 ---
 
-Los [recursos de terceros](https://web.dev/third-party-javascript/) se utilizan a menudo para mostrar anuncios o videos e integrarse con las redes sociales. El enfoque predeterminado es cargar los recursos de terceros tan pronto como se carga la página, pero esto puede ralentizar innecesariamente la carga de la misma. Si el contenido de terceros no es crítico, este costo de rendimiento se puede reducir [al cargarlo de forma diferida](https://web.dev/fast/#lazy-load-images-and-video).
+Los [recursos de terceros](https://web.dev/articles/third-party-javascript) se utilizan a menudo para mostrar anuncios o videos e integrarse con las redes sociales. El enfoque predeterminado es cargar los recursos de terceros tan pronto como se carga la página, pero esto puede ralentizar innecesariamente la carga de la misma. Si el contenido de terceros no es crítico, este costo de rendimiento se puede reducir [al cargarlo de forma diferida](https://web.dev/articles/fast#lazy_load_images_and_video).
 
 Esta auditoría destaca las incrustaciones de terceros que se pueden cargar de forma diferida durante la interacción. En ese caso, se utiliza una _fachada_ en lugar del contenido de terceros hasta que el usuario interactúe con él.
 
@@ -51,11 +51,15 @@ En general, las incrustaciones de video, los widgets de botones sociales y los w
 
 - [Daugilas/lazyYT](https://github.com/Daugilas/lazyYT)
 
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
+
 ### Reproductor incrustado de Vimeo
 
 - [luwes/lite-vimeo-embed](https://github.com/luwes/lite-vimeo-embed)
 
 - [slightlyoff/lite-vimeo](https://github.com/slightlyoff/lite-vimeo)
+
+- [ngx-lite-video](https://github.com/karim-mamdouh/ngx-lite-video)
 
 ### Chat en vivo (Intercom, Drift, Help Scout, Facebook Messenger)
 

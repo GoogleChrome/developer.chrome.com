@@ -22,7 +22,7 @@
     - url: /docs/lighthouse/performance/uses-webp-images/
     - url: /docs/lighthouse/performance/uses-text-compression/
     - url: /docs/lighthouse/performance/uses-rel-preconnect/
-    - url: /docs/lighthouse/performance/time-to-first-byte/
+    - url: /docs/lighthouse/performance/server-response-time/
     - url: /docs/lighthouse/performance/redirects/
     - url: /docs/lighthouse/performance/uses-rel-preload/
     - url: /docs/lighthouse/performance/efficient-animated-content/

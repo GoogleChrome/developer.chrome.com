@@ -15,7 +15,7 @@ alt: Carpetas de muchos colores.
 
 {% Aside %} La API para administrar archivos forma parte del [proyecto funciones](/blog/fugu-status/) y actualmente está en desarrollo. Esta publicación se actualizará conforme avance la implementación. {% endAside %}
 
-Ahora que las aplicaciones web son [capaces de leer y escribir archivos](https://web.dev/file-system-access/), el siguiente paso lógico es permitir que los desarrolladores declaren estas mismas aplicaciones web como administradores de archivos para los archivos que sus aplicaciones pueden crear y procesar. La API de administración de archivos le permite hacer exactamente esto. Después de registrar una aplicación de editor de texto como administrador de archivos y después de instalarla, puede hacer clic con el botón derecho en un archivo `.txt` en macOS y seleccionar "Obtener información" para indicar al sistema operativo que siempre debe abrir los archivos `.txt` con esta aplicación de forma predeterminada.
+Ahora que las aplicaciones web son [capaces de leer y escribir archivos](https://web.dev/articles/file-system-access), el siguiente paso lógico es permitir que los desarrolladores declaren estas mismas aplicaciones web como administradores de archivos para los archivos que sus aplicaciones pueden crear y procesar. La API de administración de archivos le permite hacer exactamente esto. Después de registrar una aplicación de editor de texto como administrador de archivos y después de instalarla, puede hacer clic con el botón derecho en un archivo `.txt` en macOS y seleccionar "Obtener información" para indicar al sistema operativo que siempre debe abrir los archivos `.txt` con esta aplicación de forma predeterminada.
 
 ## Casos de uso sugeridos para la API de administración de archivos {: #use-cases }
 
@@ -35,8 +35,8 @@ Para experimentar con la API de administración de archivos de forma local, sin 
 
 La API de administración de archivos por sí misma no puede ser polivalente. Sin embargo, la capacidad de abrir archivos con una aplicación web puede conseguirse por otros dos medios:
 
-- La [API de objetivo compartido web](https://web.dev/web-share-target/) permite a los desarrolladores especificar su aplicación como un objetivo compartido para que los archivos puedan abrirse desde la hoja compartida del sistema operativo.
-- La [API de acceso al sistema de archivos](https://web.dev/file-system-access/) puede integrarse con la función de arrastrar y soltar archivos, para que los desarrolladores puedan administrar los archivos soltados en la aplicación que ya está abierta.
+- La [API de objetivo compartido web](https://web.dev/articles/web-share-target) permite a los desarrolladores especificar su aplicación como un objetivo compartido para que los archivos puedan abrirse desde la hoja compartida del sistema operativo.
+- La [API de acceso al sistema de archivos](https://web.dev/articles/file-system-access) puede integrarse con la función de arrastrar y soltar archivos, para que los desarrolladores puedan administrar los archivos soltados en la aplicación que ya está abierta.
 
 ### Detección de funciones
 
@@ -52,7 +52,7 @@ if ('launchQueue' in window && 'files' in LaunchParams.prototype) {
 
 ### La parte declarativa de la API de administración de archivos
 
-Como primer paso, las aplicaciones web necesitan describir de forma declarativa en su [manifiesto de aplicación web](https://web.dev/add-manifest/) qué tipo de archivos pueden administrar. La API de administración de archivos amplía el manifiesto de la aplicación web con una nueva propiedad llamada `"file_handlers"` que acepta una serie de, precisamente, administradores de archivos. Un administrador de archivos es un objeto con dos propiedades:
+Como primer paso, las aplicaciones web necesitan describir de forma declarativa en su [manifiesto de aplicación web](https://web.dev/articles/add-manifest) qué tipo de archivos pueden administrar. La API de administración de archivos amplía el manifiesto de la aplicación web con una nueva propiedad llamada `"file_handlers"` que acepta una serie de, precisamente, administradores de archivos. Un administrador de archivos es un objeto con dos propiedades:
 
 - Una propiedad `"action"` que señala como valor una URL dentro del alcance de la aplicación.
 - Una propiedad `"accept"` con un objeto de tipos MIME como claves y listas de extensiones de archivos entre sus valores.
@@ -109,7 +109,7 @@ El siguiente ejemplo, que muestra solo el fragmento correspondiente del manifies
 
 Esto se utiliza para una aplicación hipotética que administra archivos de valores separados por comas (`.csv`) en `/open-csv`, gráficos vectoriales escalables (`. svg`) en `/open-svg`, y un formato de archivo Grafr formado por `.grafr`, `.graf`, o `.graph` como extensión en `/open-graf`.
 
-{% Aside %} Para que esta declaración tenga algún efecto, la aplicación debe estar instalada. Puede obtener más información en una serie de artículos de este mismo sitio sobre [cómo hacer que su aplicación se pueda instalar](https://web.dev/progressive-web-apps/#make-it-installable). {% endAside %}
+{% Aside %} Para que esta declaración tenga algún efecto, la aplicación debe estar instalada. Puede obtener más información en una serie de artículos de este mismo sitio sobre [cómo hacer que su aplicación se pueda instalar](https://web.dev/explore/progressive-web-apps#make-it-installable). {% endAside %}
 
 ### La parte imperativa de la API de administración de archivos
 

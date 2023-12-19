@@ -6,31 +6,25 @@ subhead: >
 description: >
   Learn how to work with the API, including how to use Chrome flags for testing.
 date: 2022-01-25
-updated: 2023-03-29
+updated: 2023-06-26
 authors:
   - samdutton
 ---
+
+{% Partial 'privacy-sandbox/ot-end.njk' %}
 
 ## Implementation status
 
 {% Partial 'privacy-sandbox/ps-implementation-status.njk' %}
 
-## Try the Topics API
+## Try the demo {: #demo}
 
-Topics is not currently available by default in any version of Chrome, but you can activate the API in two ways, as a single user or at scale:
-
--   The Topics API demo allows you to try it out as a single user.
--   The Topics origin trial allows you to try the API at scale with your website users.
-
-### Try the demo {: #demo}
+The Topics API demo allows you to try it out as a single user.
 
 The demo of the Topics API is at [topics-demo.glitch.me](https://topics-demo.glitch.me/). It explains how to try out and debug the API for a single user.
 
 You can also run the Topics [colab](/docs/privacy-sandbox/topics/colab/) to try out the Topics [classifier model](/docs/privacy-sandbox/topics/topic-classification/#classifier-model).
 
-### Test Topics in an origin trial {: #origin-trial}
-
-A Privacy Sandbox Relevance and Measurement [origin trial](/docs/privacy-sandbox/unified-origin-trial/) has been made available in Chrome Beta 101.0.4951.26 and above on desktop for the Topics, [FLEDGE](/docs/privacy-sandbox/fledge/), and [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) APIs.
 
 ## Get and set topics {: #epoch}
 
@@ -46,7 +40,7 @@ Each topic object in the array returned by `document.browsingTopics()` will have
 
 The parameters described in this article, and details of the API (such as taxonomy size, the number of topics calculated per week and the number of topics returned per call) are subject to change as we incorporate ecosystem feedback and iterate on the API.
 
-### Detect support for document.browsingTopics
+### Detect support for document.browsingTopics {: #feature-detection}
 
 Before using the API, check if it's supported by the browser and available in the document:
 
@@ -64,25 +58,30 @@ Feature support on the current page isn't a guarantee that an API is usable: the
 
 ### Access topics with the JavaScript API {: #access-topics}
 
-Here is a basic example of possible API usage to access topics for the current user. To keep it simple, there's no error handling.
+Here is a basic example of possible API usage to access topics for the current user. 
 
 ```javascript
-// Get the array of top topics for this user.
-const topics = await document.browsingTopics();
+try {
+  // Get the array of top topics for this user.
+  const topics = await document.browsingTopics();
+  
+  // Request an ad creative.
+  const response = await fetch('https://ads.example/get-creative', {
+   method: 'POST',
+   headers: {
+     'Content-Type': 'application/json',
+   },
+   body: JSON.stringify(topics)
+  })
+  
+  // Get the JSON from the response.
+  const creative = await response.json();
+  
+  // Display ad.
 
-// Request an ad creative.
-const response = await fetch('https://ads.example/get-creative', {
- method: 'POST',
- headers: {
-   'Content-Type': 'application/json',
- },
- body: JSON.stringify(topics)
-})
-
-// Get the JSON from the response.
-const creative = await response.json();
-
-// Display ad.
+} catch (error) {
+  // Handle error.
+}
 ```
 
 ### Access topics without modifying state {: #skipobservation}
@@ -124,6 +123,10 @@ Topics can be accessed and observed with HTTP Headers in two ways:
   registrable domain for topic observation.
   * For example: `<iframe src="https://example.com" browsingtopics></iframe>`
   * This is available from Chrome M114 and onward.
+ 
+{% Aside 'important' %}
+[CSP](https://developer.mozilla.org/docs/Web/HTTP/CSP) directives may disallow execution of third-party code included on a page, such as a `fetch()` call in an ad tech script.
+{% endAside %}
 
 Some additional notes about headers:
 
@@ -173,6 +176,8 @@ Use hostnames only (without protocol or path) to view inferred topics from the `
 
 You can find information about the Topics API implementation and settings, such as the [taxonomy](https://github.com/jkarlin/topics/blob/main/taxonomy_v1.md) version and epoch duration, in `chrome://topics-internals`. These values reflect default settings for the API or parameters successfully set [from the command line](#feature-flags). This may be helpful to confirm that command line flags have worked as expected.
 
+{% Partial 'privacy-sandbox/topics-taxonomy-v2.njk' %}
+
 In the example below, `time_period_per_epoch` has been set to 15 seconds (the default is seven days).
 
 <figure>
@@ -186,7 +191,7 @@ In the example below, `time_period_per_epoch` has been set to 15 seconds (the de
 The parameters shown in the screenshot correspond to flags that can be set when running Chrome from the command line. For example, the demo at [topics-demo.glitch.me](https://topics-demo.glitch.me/) recommends using the following flags:
 
 ```text
---enable-features=BrowsingTopics:time_period_per_epoch/15s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings3,OverridePrivacySandboxSettingsLocalTesting
+--enable-features=BrowsingTopics:time_period_per_epoch/15s,PrivacySandboxAdsAPIsOverride,PrivacySandboxSettings4,OverridePrivacySandboxSettingsLocalTesting
 ```
 
 Each parameter, its default value, and its purpose is explained in the list below.
@@ -202,12 +207,12 @@ Each parameter, its default value, and its purpose is explained in the list belo
     <dt>
       <dd><code>PrivacySandboxAdsAPIsOverride</code></dd>
       <dd><strong>Default value:</strong> enabled</dd>
-      <dd>Enables ads APIs: Attribution Reporting, FLEDGE, Topics, Fenced Frames.</dd>
+      <dd>Enables ads APIs: Attribution Reporting, Protected Audience, Topics, Fenced Frames.</dd>
     </dt><br />
     <dt>
-      <dd><code>PrivacySandboxSettings3</code></dd>
+      <dd><code>PrivacySandboxSettings4</code></dd>
       <dd><strong>Default value:</strong> disabled</dd>
-      <dd>Enables the third release of the Privacy Sandbox UI settings.</dd>
+      <dd>Enables the fourth release of the Privacy Sandbox UI settings.</dd>
     </dt><br />
     <dt>
       <dd><code>OverridePrivacySandboxSettingsLocalTesting</code></dd>
@@ -232,7 +237,7 @@ context. The browser will internally keep up to N+1 epochs.</dd>
       <dd><code>BrowsingTopics:time_period_per_epoch</code></dd>
       <dd><strong>Default value:</strong> 7d-0h-0m-0s</dd>
       <dd>Duration of each epoch.
-      For debugging, it can be useful to set this to (say) 15 seconds, rather than the default 7 days.</dd>
+      For debugging, it can be useful to set this to (say) 15 seconds, rather than the default seven days.</dd>
     </dt><br />
     <dt>
       <dd><code>BrowsingTopics:number_of_top_topics_per_epoch</code></dd>
@@ -256,28 +261,28 @@ filtering the topics for a calling context.</dd>
     <dt>
       <dd><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_keep_per_topic</code></dd>
       <dd><strong>Default value:</strong> 1000</dd>
-      <dd>The max number of observed-by context domains to keep for each top topic. The intent
-is to cap the in-use memory.</dd>
+      <dd>The maximum number of observed-by context domains to keep for each top topic. The intent
+is to cap in-use memory.</dd>
     </dt><br />
     <dt>
       <dd><code>BrowsingTopics:max_number_of_api_usage_context_entries_to_load_per_epoch</code></dd>
       <dd><strong>Default value:</strong> 100000</dd>
-      <dd>The max number of entries allowed to be retrieved from the database for each query
+      <dd>The maximum number of entries allowed to be retrieved from the database for each query
 for the API usage contexts. The query will occur once per epoch at topics calculation
-time. The intent is to cap the peak memory usage.</dd>
+time. The intent is to cap peak memory usage.</dd>
     </dt><br />
     <dt>
       <dd><code>BrowsingTopics:max_number_of_api_usage_context_domains_to_store_per_page_load</code></dd>
       <dd><strong>Default value:</strong> 30</dd>
-      <dd>The max number of API usage context domains allowed to be stored per page load.</dd>
+      <dd>The maximum number of API usage context domains allowed to be stored per page load.</dd>
     </dt><br />
     <dt>
       <dd><code>BrowsingTopics:config_version</code></dd>
       <dd><strong>Default value:</strong> 1</dd>
       <dd>Encodes the Topics API configuration parameters. Each version number should only be
 mapped to one configuration set. Updating the configuration parameters without updating the <code>config_version</code> should
-be usually fine for local testing, but in some situations could leave the browser in an
-inconsistent state and/or could let the browser crash, e.g. updating the
+usually be fine for local testing, but in some situations could leave the browser in an
+inconsistent state and/or could result in a browser crash, e.g. updating the
 <code>number_of_top_topics_per_epoch</code>.</dd>
     </dt><br />
     <dt>
@@ -291,22 +296,18 @@ version used by the API.</dd>
 
 ## Opt out your site {: #site-opt-out}
 
-You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected. If you set a policy to block the Topics API on one page, this won't affect other pages.
+You can opt out of topic calculation for specific pages on your site by including the `Permissions-Policy: browsing-topics=()` [Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected: if you set a policy to block the Topics API on one page, this won't affect other pages.
 
-You can also control which third parties have access to topics on your page by using the Permission Policy header to control third-party access to the Topics API.
-
-Use `self` and any domains you would like to allow access to the API as parameters.
-
-For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and those whose origin is `https://example.com`, set the following HTTP response header: 
+You can also control which third parties have access to topics on your page by using the `Permissions-Policy` header to control third-party access to the Topics API. As parameters to the header, use `self` and any domains you would like to allow access to the API. For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and `https://example.com`, set the following HTTP response header: 
 
 ```text
-Permissions-Policy: geolocation=(self "https://example.com")
+Permissions-Policy: browsing-topics=(self "https://example.com")
 ```
 
 ## Next steps
 
 - Learn more about [what topics are and how they work](/docs/privacy-sandbox/topics/topic-classification). <!-- topic classification page and demo and trial links needed-->
-- Try out the [demo](/docs/privacy-sandbox/topics/demo) or join an [origin trial](/docs/web-platform/origin-trials/).
+- Try out the [demo](/docs/privacy-sandbox/topics/demo).
 
 ## Find out more
 
