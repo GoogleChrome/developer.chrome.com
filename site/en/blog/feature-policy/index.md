@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: 'Chacmool: Augmented reality in Chrome Canary'
+title: 'Introduction to Feature Policy'
 authors:
   - ericbidelman
 date: 2018-06-26
