@@ -8,7 +8,7 @@ date: 2019-05-02
 updated: 2021-06-04
 ---
 
-First Contentful Paint (FCP) is one of six metrics
+First Contentful Paint (FCP) is one of five metrics
 tracked in the **Performance** section of the Lighthouse report.
 Each metric captures some aspect of page load speed.
 
