@@ -4,6 +4,8 @@
  * https://github.com/GoogleChrome/chrome-extensions-samples
  */
 
+require('dotenv').config();
+
 const {
   getGitHubApiClient,
 } = require('../../gulp-tasks/stageGitHub/lib/gitHubApi.js');

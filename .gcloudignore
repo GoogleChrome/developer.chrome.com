@@ -12,7 +12,6 @@
 /.stylelintrc.js
 /algolia.js
 /ava.config.js
-/cloud-secrets.js
 /CODE_OF_CONDUCT.md
 /CONTRIBUTING.md
 /database.rules.json

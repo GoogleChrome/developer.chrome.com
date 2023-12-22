@@ -17,6 +17,8 @@
  * @fileoverview Fetches the most recent playlists by specified channels from YouTube
  */
 
+require('dotenv').config();
+
 const fs = require('fs').promises;
 const path = require('path');
 const ms = require('ms');
