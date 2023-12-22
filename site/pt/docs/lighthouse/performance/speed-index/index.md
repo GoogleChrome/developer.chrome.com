@@ -6,7 +6,7 @@ date: 2019-05-02
 updated: 2021-06-04
 ---
 
-O Speed Index (índice de velocidade) é uma das seis métricas monitoradas na seção **Desempenho** do relatório Lighthouse. Cada métrica captura algum aspecto da velocidade de carregamento da página.
+O Speed Index (índice de velocidade) é uma das cinco métricas monitoradas na seção Desempenho do relatório Lighthouse. Cada métrica captura algum aspecto da velocidade de carregamento da página.
 
 O Lighthouse apresenta a métrica Speed Index em segundos:
 
