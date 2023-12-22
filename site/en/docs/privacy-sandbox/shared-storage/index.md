@@ -173,4 +173,12 @@ For the Private Aggregation demo, you can preview unique
 [demographics measurement](/docs/privacy-sandbox/shared-storage/user-demographics), and
 [K-frequency measurement](/docs/privacy-sandbox/shared-storage/k-freq-reach).
 
+### DevTools integration
+
+Starting from Chrome Canary M110, you can view and modify Shared Storage entries in DevTools. 
+
+{% Img src="image/hVf1flv5Jdag8OQKYqOcJgWUvtz1/GHrD4x12BqA8QOPH44VS.png", alt="Shared Storage section in Chrome DevTools", width="426", height="554" %}
+
+In **Application**, you can find a list of origins that have Shared Storage entries. Edit the origin by right clicking on the entry. The `Budget` value represents the [daily entropy budget](https://github.com/WICG/shared-storage#budgeting) for Fenced Frames top-level navigation. 
+
 {% Partial 'privacy-sandbox/shared-storage-engage.md' %}
