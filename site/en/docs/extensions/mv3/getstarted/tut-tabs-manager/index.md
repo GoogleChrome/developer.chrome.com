@@ -5,7 +5,7 @@ seoTitle: 'Chrome Extensions Tutorial: Manage tabs'
 subhead: 'Build your first tabs manager.'
 description: 'Learn how to programmatically organize tabs using tab groups.'
 date: 2022-10-04
-# updated: 2022-06-13
+updated: 2022-10-30
 ---
 
 ## Overview {: #overview }
@@ -272,12 +272,13 @@ In `popup.js`, add the following code to create a button that will group all the
 move them into the current window.
 
 ```js
-...
-const button = document.querySelector("button");
-button.addEventListener("click", async () => {
+const button = document.querySelector('button');
+button.addEventListener('click', async () => {
   const tabIds = tabs.map(({ id }) => id);
-  const group = await chrome.tabs.group({ tabIds });
-  await chrome.tabGroups.update(group, { title: "DOCS" });
+  if (tabIds.length) {
+    const group = await chrome.tabs.group({ tabIds });
+    await chrome.tabGroups.update(group, { title: 'DOCS' });
+  }
 });
 ```
 
