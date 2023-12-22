@@ -9,7 +9,7 @@ description: >
   websites a user has previously visited, designed so it cannot be
   used by third parties to track user browsing behavior across sites.
 date: 2022-01-27
-updated: 2022-09-18
+updated: 2023-10-31
 authors:
   - samdutton
   - kevinkiklee
@@ -157,20 +157,18 @@ which features are already implemented and what's still in progress.
 
 ### What browser configuration is available? {: #user-controls}
 
-Users can adjust their participation for Privacy Sandbox trials in Chrome by
-enabling or disabling the top-level setting in
-`chrome://settings/privacySandbox`. During initial testing, users can opt out of the Protected Audience API using the
-Privacy Sandbox settings. 
+Users can control access to Privacy Sandbox APIs from `chrome://settings/privacySandbox`. 
 
-Chrome plans to allow users to see and manage the list of interest groups
-they've been added to across the sites they've visited. As with the Privacy
-Sandbox technologies, user settings may evolve with feedback from users,
+`chrome://settings/adPrivacy/sites` lists sites where the user has been added to an interest group.
+Chrome DevTools [shows interest groups](/blog/fledge-api/#observe-fledge-events)
+that have been joined, left, or that participated in an auction.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/1cZU24BcqUZ4LbbUtYcY.png", 
+  alt="Chrome settings for Protected Audience", width="800", height="499" %}
+
+As with other Privacy Sandbox technologies, user settings will evolve
+[based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#testing) from users,
 regulators, and others.
-
-We'll update the available settings in Chrome as the Protected Audience API progresses,
-[based on tests and feedback](/docs/privacy-sandbox/proposal-lifecycle/#testing).
-In the future, we'll offer more granular settings to manage Protected Audience and
-associated data.
 
 API callers can't access group membership when users browse in Incognito mode,
 and membership is removed when users clear their site data.
