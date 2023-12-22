@@ -21,17 +21,16 @@
 * [Emulate reduced contrast](/ru/blog/new-in-devtools-112/#reduced-contrast)
 * [Lighthouse 10](/ru/blog/new-in-devtools-112/#lighthouse)
 * [Miscellaneous highlights](/ru/blog/new-in-devtools-112/#misc)
- #}
+#}
 
-{# ### Chrome 111 {: #chrome111 }
+### Chrome 111 {: #chrome111 }
 
-* [Debugging HD color with the Styles pane](/ru/blog/new-in-devtools-111/#color)
-* [Enhanced breakpoint UX](/ru/blog/new-in-devtools-111/#breakpoint-redesign)
-* [Customizable Recorder shortcuts](/ru/blog/new-in-devtools-111/#recorder)
-* [Better syntax highlight for Angular](/ru/blog/new-in-devtools-111/#syntax)
-* [Reorganize caches in the Application panel](/ru/blog/new-in-devtools-111/#cache)
-* [Miscellaneous highlights](/ru/blog/new-in-devtools-111/#misc)
- #}
+* [Отладка HD-цветов в панели Стили](/ru/blog/new-in-devtools-111/#color)
+* [Улучшенный UX точек останова](/ru/blog/new-in-devtools-111/#breakpoint-redesign)
+* [Настраиваемые шорткаты Регистратора](/ru/blog/new-in-devtools-111/#recorder)
+* [Улучшенная подсветка синтаксиса для Angular](/ru/blog/new-in-devtools-111/#syntax)
+* [Реорганизация кэшей во вкладке Приложение](/ru/blog/new-in-devtools-111/#cache)
+* [Другие важные моменты](/ru/blog/new-in-devtools-111/#misc)
 
 
 ### Chrome 110 {: #chrome110 }
