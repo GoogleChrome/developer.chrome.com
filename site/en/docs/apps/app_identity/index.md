@@ -270,6 +270,6 @@ your app). Note that we do not enforce gesture requirement.
 [7]: http://www.chromium.org/user-experience/user-data-directory
 [8]: https://code.google.com/apis/console/
 [9]: #token
-[10]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/gdrive
+[10]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/_archive/apps/samples/gdrive
 [11]: /apps/identity#method-getAuthToken
 [12]: /apps/identity#method-removeCachedAuthToken
