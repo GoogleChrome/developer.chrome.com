@@ -26,8 +26,8 @@ including the ability to pass extra information into the app via [Intent Extras]
 The basic syntax for an intent-based URI is as follows:
 
 ```text
-intent:  
-   HOST/URI-path // Optional host  
+intent://  
+   HOST[:PORT]/URI-path // Optional host  
    #Intent;  
       package=\[string\];  
       action=\[string\];  
