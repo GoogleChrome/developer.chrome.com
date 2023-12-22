@@ -11,6 +11,9 @@ subtitle: >
   General availability for these APIs begins in late July with Chrome
   Stable 115.
 date: 2023-05-18
+updated: 2023-07-21
+is_outdated: true
+new_available_content_url: /blog/privacy-sandbox-launch/
 hero: 'image/VbsHyyQopiec0718rMq2kTE1hke2/tcYqpA0B5VEJXN27w0ZW.png'
 alt: >
   The Privacy Sandbox with logo.

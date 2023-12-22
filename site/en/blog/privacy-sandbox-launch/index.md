@@ -9,6 +9,7 @@ description: >
 subhead: >
   Plans and timeline for gradually enabling the Privacy Sandbox relevance and measurement APIs in Chrome 115, ending the origin trial, and enrollment updates.
 date: 2023-07-20
+updated: 2023-07-21
 thumbnail: 'image/80mq7dk16vVEg8BBhsVe42n6zn82/s3iDQJUgLZV25YbtYxs1.png'
 alt: >
   Shipping the Privacy Sandbox relevance and measurement APIs
@@ -41,7 +42,7 @@ Alongside the web platform APIs, the [Aggregation Service](/docs/privacy-sandbox
 
 ## Gradually enabling APIs
 
-As with some previous Privacy Sandbox features, we'll gradually enable the relevance and measurement APIs for an increasing percentage of browser instances to make sure that we can monitor and respond to any potential issues. Our aim is to start this process a few days after the 115 Stable date of July 18, 2023, most likely the week of July 24. Then we intend to ramp up to enabling the APIs for approximately 35% of browsers over about a week. Similar to the [unified origin trial](/docs/privacy-sandbox/unified-origin-trial/#status), this ramp-up will include a main group with all APIs enabled and several smaller isolated groups with a subset of APIs enabled. These isolated groups provide a quicker route for identifying potential issues with the APIs.
+As with some previous Privacy Sandbox features, we'll gradually enable the relevance and measurement APIs for an increasing percentage of desktop and Android browser instances to make sure that we can monitor and respond to any potential issues. Our aim is to start this process a few days after the 115 Stable date of July 18, 2023, most likely the week of July 24. Then we intend to ramp up to enabling the APIs for approximately 35% of browsers over about a week. Similar to the [unified origin trial](/docs/privacy-sandbox/unified-origin-trial/#status), this ramp-up will include a main group with all APIs enabled and several smaller isolated groups with a subset of APIs enabled. These isolated groups provide a quicker route for identifying potential issues with the APIs.
 
 {% Aside %}
 
