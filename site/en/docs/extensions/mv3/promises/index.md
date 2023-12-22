@@ -27,7 +27,7 @@ To check whether a method supports promises, look for the "Promise" label in its
 There are many places where using promises results in cleaner, easier-to-maintain code. You
 should consider using promises in situations such as the following:
 
-* Any time you want to clean up your code by using a more "synchronous" invocation style.
+* Any time you want to clean up your code by using [direct style](https://en.wikipedia.org/wiki/Continuation-passing_style).
 * Where error handling would be too difficult using callbacks.
 * When you want a more condensed way to invoke several concurrent methods and gather the results into a single thread of code.
 
@@ -52,13 +52,12 @@ chrome.permissions.request(newPerms, (granted) => {
 {% Compare 'better', 'Promise' %}
 ```js
 const newPerms = { permissions: ['topSites'] };
-chrome.permissions.request(newPerms)
-.then((granted) => {
-  if (granted) {
-    console.log('granted');
-  } else {
-    console.log('not granted');
-  }
+const granted = await chrome.permissions.request(newPerms)
+if (granted) {
+  console.log('granted');
+} else {
+  console.log('not granted');
+}
 });
 
 ```
