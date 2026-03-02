@@ -81,7 +81,7 @@ toolbar.
 
 ```js
 let userSettings = await chrome.action.getUserSettings();
-console.log(`Is the action pinned? ${userSettings.isOnToolbar ? 'Yes' : 'No'}.`);
+console.log(`Is the action pinned? ${userSettings.isOnToolbar ? 'Yes', 'No'}.`);
 ```
 
 "getUserSettings" may seem like a bit of an unusual name for this functionality compared to, say,
