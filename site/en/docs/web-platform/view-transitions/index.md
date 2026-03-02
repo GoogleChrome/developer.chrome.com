@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Smooth and simple transitions with the View Transitions API
+title: Smooth and simple transitions with the View Transition API
 authors:
   - jakearchibald
 description: >
